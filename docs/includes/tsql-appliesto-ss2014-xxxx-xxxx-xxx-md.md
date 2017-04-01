@@ -1,0 +1,1 @@
+<Token>**QUESTO ARGOMENTO SI APPLICA A:**![sì](../includes/media/yes.png)SQL Server (a partire dalla versione 2014)![no](../includes/media/no.png)Database SQL di Azure![no](../includes/media/no.png)Azure SQL Data Warehouse![no](../includes/media/no.png)Parallel Data Warehouse </Token>

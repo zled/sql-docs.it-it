@@ -1,0 +1,1 @@
+ failover automatico impostato 

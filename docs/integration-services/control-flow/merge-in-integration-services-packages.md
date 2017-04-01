@@ -1,0 +1,70 @@
+---
+title: "MERGE in Integration Services Packages | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "MERGE - istruzione [SQL Server]"
+ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
+caps.latest.revision: 22
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 22
+---
+# MERGE in Integration Services Packages
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'istruzione SQL in un'attività Esegui SQL può contenere un'istruzione MERGE. che consente di eseguire più operazioni INSERT, UPDATE e DELETE in una singola istruzione.  
+  
+ Per utilizzare l'istruzione MERGE in un pacchetto, effettuare le operazioni seguenti:  
+  
+-   Creare un'attività Flusso di dati per caricare, trasformare e salvare l'origine dati in una tabella temporanea o di gestione temporanea.  
+  
+-   Creare un'attività Esegui SQL contenente l'istruzione MERGE.  
+  
+-   Connettere l'attività Flusso di dati all'attività Esegui SQL e utilizzare i dati della tabella di gestione temporanea come input per l'istruzione MERGE.  
+  
+    > [!NOTE]  
+    >  Anche se un'istruzione MERGE richiede in genere una tabella di gestione temporanea in questo scenario, le prestazioni dell'istruzione MERGE sono solitamente superiori a quelle della ricerca riga per riga eseguita con la trasformazione Ricerca. MERGE risulta utile anche quando, a causa delle dimensioni elevate di una tabella di ricerca, viene verificata la memoria a disposizione della trasformazione Ricerca per la memorizzazione nella cache della relativa tabella di riferimento.  
+  
+ Per un componente di destinazione di esempio che supporta l'utilizzo dell'istruzione MERGE, vedere l'esempio nella community CodePlex relativo alla [destinazione MERGE](http://go.microsoft.com/fwlink/?LinkId=141215).  
+  
+## Utilizzo di MERGE  
+ In genere, si utilizza l'istruzione MERGE quando si desidera applicare modifiche quali inserimenti, aggiornamenti ed eliminazioni da una tabella a un'altra. Prima di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], per eseguire questo processo erano necessarie una trasformazione Ricerca e più trasformazioni Comando OLE DB. Con la trasformazione Ricerca veniva eseguita una ricerca riga per riga per determinare se ogni riga era nuova o era stata modificata. Con la trasformazione Comando OLE DB venivano quindi eseguite tutte le necessarie operazioni INSERT, UPDATE e DELETE. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]una singola istruzione MERGE può sostituire sia la trasformazione Ricerca sia le trasformazioni Comando OLE DB corrispondenti.  
+  
+### MERGE con caricamenti incrementali  
+ La funzionalità Change Data Capture, una novità di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , rende più affidabile l'esecuzione di caricamenti incrementali in un data warehouse. Come alternativa all'utilizzo di trasformazioni Comando OLE DB con parametri per l'esecuzione di inserimenti e aggiornamenti, è possibile utilizzare l'istruzione MERGE per combinare le due operazioni.  
+  
+ Per altre informazioni, vedere [Applicazione delle modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
+  
+#### MERGE in altri scenari  
+ Negli scenari seguenti è possibile utilizzare l'istruzione MERGE all'esterno o all'interno di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , tuttavia, è spesso richiesto per caricare questi dati da più origini eterogenee e quindi per combinare e pulire i dati. Pertanto, valutare la possibilità di utilizzare l'istruzione MERGE in un pacchetto per praticità e facilità di manutenzione.  
+  
+##### Rilevare le abitudini di acquisto  
+ Nella tabella FactBuyingHabits del data warehouse viene rilevata l'ultima data in cui un cliente ha acquistato un determinato prodotto. La tabella è costituita dalle colonne ProductID, CustomerID e PurchaseDate. Ogni settimana, il database transazionale genera una tabella PurchaseRecords che include gli acquisti eseguiti durante tale settimana. L'obiettivo è quello di utilizzare una singola istruzione MERGE per unire le informazioni della tabella PurchaseRecords nella tabella FactBuyingHabits. Per le coppie prodotto-cliente che non esistono, l'istruzione MERGE inserisce nuove righe. Per le coppie prodotto-cliente che esistono, l'istruzione MERGE aggiorna la data di acquisto più recente.  
+  
+###### Rilevare la cronologia dei prezzi  
+ La tabella DimBook rappresenta l'elenco di libri nell'inventario di un libraio e identifica la cronologia dei prezzi di ogni libro. La tabella contiene le colonne ISBN, ProductID, Price, Shelf e IsCurrent. Include inoltre un'unica riga per ogni prezzo assegnato al libro. Una di queste righe contiene il prezzo corrente. Per indicare quale riga contiene il prezzo corrente, il valore della colonna IsCurrent per tale riga è impostato su 1.  
+  
+ Ogni settimana, il database genera una tabella WeeklyChanges che contiene le modifiche di prezzo e i nuovi libri aggiunti durante la settimana. Utilizzando una singola istruzione MERGE, è possibile applicare le modifiche della tabella WeeklyChanges alla tabella DimBook. L'istruzione MERGE inserisce nuove righe per i libri appena aggiunti e imposta la colonna IsCurrent su 0 per le righe di libri esistenti il cui prezzo è stato modificato. Inserisce inoltre nuove righe per i libri il cui prezzo è stato modificato e, per queste nuove righe, imposta il valore della colonna IsCurrent su 1.  
+  
+### Unire una tabella contenente nuovi dati con la tabella precedente  
+ Il database modella le proprietà di un oggetto utilizzando uno "schema aperto", ovvero una tabella contiene coppie nome-valore per ogni proprietà. La tabella Properties contiene tre colonne: EntityID, PropertyID e Value. È necessario sincronizzare una versione più recente della tabella, denominata NewProperties, con la tabella Properties. A tale scopo, è possibile utilizzare una singola istruzione MERGE per effettuare le operazioni seguenti:  
+  
+-   Eliminare proprietà dalla tabella Properties se non si trovano nella tabella NewProperties.  
+  
+-   Aggiornare i valori per le proprietà presenti nella tabella Properties con i nuovi valori della tabella NewProperties.  
+  
+-   Inserire nuove proprietà per le proprietà presenti nella tabella NewProperties ma che non si trovano nella tabella Properties.  
+  
+ Questo approccio risulta utile negli scenari simili agli scenari di replica, in cui l'obiettivo è quello di mantenere sincronizzati i dati di due tabelle in due server.  
+  
+### Tenere traccia dell'inventario  
+ Il database Inventory contiene una tabella ProductsInventory con le colonne ProductID e StockOnHand. In una tabella Shipments con le colonne ProductID, CustomerID e Quantity vengono rilevate le spedizioni di prodotti ai clienti. La tabella ProductInventory deve essere aggiornata ogni giorno in base alle informazioni presenti nella tabella Shipments. Con una singola istruzione MERGE è possibile ridurre l'inventario nella tabella ProductInventory in base alle spedizioni effettuate. Se l'inventario per un prodotto è stato ridotto a 0, con l'istruzione MERGE è possibile eliminare anche la riga di tale prodotto dalla tabella ProductInventory.  
+  
+  

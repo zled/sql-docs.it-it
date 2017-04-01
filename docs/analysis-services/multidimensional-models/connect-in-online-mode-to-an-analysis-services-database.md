@@ -1,0 +1,46 @@
+---
+title: "Connettersi in modalit&#224; online a un database di Analysis Services | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/multidimensional-tabular"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Analysis Services, connessione"
+ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
+caps.latest.revision: 13
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 13
+---
+# Connettersi in modalit&#224; online a un database di Analysis Services
+  È possibile connettersi direttamente a un database esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e modificare gli oggetti al suo interno. In caso di connessione diretta a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modifiche agli oggetti vengono implementate in modo immediato e non viene creato alcun progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+### Per connettersi direttamente a un database di Analysis Services mediante gli strumenti dati di SQL Server  
+  
+1.  Aprire [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Scegliere **Apri** dal menu **File** e quindi fare clic su **Database di Analysis Services**.  
+  
+3.  Selezionare **Connetti a database esistente**.  
+  
+4.  Specificare il nome del server e il nome del database.  
+  
+     È possibile digitare il nome del database oppure eseguire una query sul server per visualizzare i database esistenti in tale server.  
+  
+5.  Scegliere **OK**.  
+  
+     È ora possibile modificare direttamente qualsiasi oggetto all'interno del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  
+## Vedere anche  
+ [Utilizzo di progetti e database di Analysis Services durante la fase di sviluppo](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+  
+  

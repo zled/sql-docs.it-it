@@ -1,0 +1,119 @@
+---
+title: "Utilizzare il provider PowerShell per eventi estesi | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+  - "xevents"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "PowerShell [SQL Server], xevent"
+  - "eventi estesi [SQL Server], PowerShell"
+  - "PowerShell [SQL Server], eventi estesi"
+ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
+caps.latest.revision: 14
+author: "MightyPen"
+ms.author: "genemi"
+manager: "jhubbard"
+caps.handback.revision: 14
+---
+# Utilizzare il provider PowerShell per eventi estesi
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+
+  È possibile gestire eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sottocartella XEvent è disponibile all'interno dell'unità SQLSERVER. È possibile accedere alla cartella utilizzando uno dei metodi seguenti:  
+  
+-   Al prompt dei comandi digitare **sqlps**, quindi premere INVIO. Digitare **cd xevent**, quindi premere INVIO. È quindi possibile usare i comandi **cd** e **dir** o i cmdlet **Set-Location** e **Get-Childitem** per passare al nome del server e al nome dell'istanza.  
+  
+-   In Esplora oggetti espandere il nome dell'istanza, espandere **Gestione**, fare clic con il pulsante destro del mouse su **Eventi estesi**, quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell nel percorso seguente:  
+  
+     PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*>  
+  
+    > [!NOTE]  
+    >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni** e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
+  
+ È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Se, ad esempio, dal percorso PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*> si digita **cd sessions**, si preme INVIO, si digita **dir** e quindi si preme INVIO, sarà possibile visualizzare l'elenco delle sessioni archiviate nell'istanza specificata. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
+  
+ Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Per visualizzare, ad esempio, gli eventi e i relativi predicati associati alla sessione di integrità del sistema predefinita, dal percorso PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*\Sessions> digitare **cd system_health\events**, premere INVIO, digitare **dir**, quindi premere INVIO.  
+  
+ Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
+  
+## Esempi  
+ Negli esempi seguenti notare quanto segue:  
+  
+-   È necessario eseguire gli script dal prompt PS SQLSERVER:\\>, disponibile digitando **sqlps** al prompt dei comandi.  
+  
+-   Gli script utilizzano l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+-   È necessario salvare gli script con estensione ps1.  
+  
+-   I criteri di esecuzione di PowerShell devono consentire l'esecuzione dello script. Per impostare i criteri di esecuzione, usare il cmdlet **Set-Executionpolicy** Per altre informazioni, digitare **get-help set-executionpolicy -detailed**, quindi premere INVIO.  
+  
+ Nello script seguente viene creata una nuova sessione denominata 'TestSession'.  
+  
+```  
+#Script for creating a session.  
+cd XEvent  
+$h = hostname  
+cd $h  
+  
+#Use the default instance.  
+$store = dir | where {$_.DisplayName -ieq 'default'}  
+$session = new-object Microsoft.SqlServer.Management.XEvent.Session -argumentlist $store, "TestSession"  
+$event = $session.AddEvent("sqlserver.file_written")  
+$event.AddAction("package0.callstack")  
+$session.Create()  
+```  
+  
+ Nello script seguente viene aggiunta la destinazione del buffer circolare alla sessione creata nell'esempio precedente. Questo esempio illustra l'uso del metodo **Alter** Tenere presente che è possibile aggiungere la destinazione quando si crea la sessione per la prima volta.  
+  
+```  
+#Script to alter a session.  
+cd XEvent  
+$h = hostname  
+cd $h  
+cd DEFAULT\Sessions  
+  
+#Used to find the specified session.  
+$session = dir|where {$_.Name -eq 'TestSession'}  
+  
+#Add the ring buffer target and call the Alter method.  
+$session.AddTarget("package0.ring_buffer")  
+$session.Alter()  
+```  
+  
+ Nello script seguente viene creata una nuova sessione in cui è utilizzata un'espressione di predicato. In questo caso la sessione raccoglie informazioni per il momento in cui verrà scritto il file c:\temp.log tramite l'evento sqlserver.file_written.  
+  
+```  
+#Script for creating a session.  
+cd XEvent  
+$h = hostname  
+cd $h  
+  
+#Use the default instance.  
+$store = dir | where {$_.DisplayName -ieq 'default'}  
+$session = new-object Microsoft.SqlServer.Management.XEvent.Session -argumentlist $store, "TestSession2"  
+$event = $session.AddEvent("sqlserver.file_written")  
+  
+#Construct a predicate "equal_i_unicode_string(path, N'c:\temp.log')".  
+$column = $store.SqlServerPackage.EventInfoSet["file_written"].DataEventColumnInfoSet["path"]  
+$operand = new-object Microsoft.SqlServer.Management.XEvent.PredOperand -argumentlist $column  
+$value = new-object Microsoft.SqlServer.Management.XEvent.PredValue -argumentlist "c:\temp.log"  
+$compare = $store.Package0Package.PredCompareInfoSet["equal_i_unicode_string"]  
+$predicate = new-object Microsoft.SqlServer.Management.XEvent.PredFunctionExpr -argumentlist $compare, $operand, $value  
+$event.SetPredicate($predicate)  
+$session.Create()  
+```  
+  
+## Sicurezza  
+ Per creare, modificare o eliminare una sessione di eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
+  
+## Vedere anche  
+ [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
+ [Utilizzare la sessione system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
+ [Strumenti degli eventi estesi](../../relational-databases/extended-events/extended-events-tools.md)  
+  
+  

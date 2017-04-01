@@ -1,0 +1,66 @@
+---
+title: "Finestra di dialogo Valuta criteri, pagina Selezione criteri | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.dmf.runnow.f1"
+ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
+caps.latest.revision: 36
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 36
+---
+# Finestra di dialogo Valuta criteri, pagina Selezione criteri
+  Utilizzare questa finestra di dialogo per valutare criteri della gestione basata su criteri. Selezionando la pagina **Risultati valutazione** , è possibile applicare criteri agli elementi non conformi ai criteri inclusi in un set di destinazioni.  
+  
+## Opzioni  
+ **Origine**  
+ Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine**.  
+  
+ **File**  
+ Digitare il percorso o usare il pulsante Sfoglia (**...**) per selezionare un file che contiene i criteri della gestione basata su criteri.  
+  
+ **Server**  
+ Selezionare questa opzione per eseguire una connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che contiene i criteri desiderati.  
+  
+ **Criteri: Criteri**  
+ Fare clic su questa opzione per aprire la finestra di dialogo relativa ai criteri specificati.  
+  
+ **Criteri: Categoria**  
+ Categoria dei criteri. Il contenuto di questa casella è di sola lettura.  
+  
+ **Criteri: Facet**  
+ Facet implementato dai criteri. Il contenuto di questa casella è di sola lettura.  
+  
+ **Valuta**  
+ Esegue i criteri in modalità di valutazione. Verrà generato un report sulla conformità per il set di destinazioni, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riconfigurato, né verrà applicata la conformità successiva.  
+  
+## Possibili errori  
+  
+-   **Impossibile trovare destinazioni**  
+  
+     È possibile che il set di destinazioni sia vuoto a causa di uno dei motivi seguenti:  
+  
+    -   Non sono disponibili destinazioni nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo specificato dai criteri.  
+  
+    -   È possibile che la restrizione server escluda l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che contiene la destinazione.  
+  
+    -   Se i criteri riguardano un oggetto di un database, ad esempio una tabella, una vista o un utente, è possibile che il database non sottoscriva la categoria dei criteri.  
+  
+    -   È possibile che il filtro del set di destinazioni escluda tutte le destinazioni nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+    -   Il tipo di server di destinazione è diverso dal tipo di server in cui vengono valutati i criteri. Se, ad esempio, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] si tenta di valutare i criteri creati per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si riceverà un set di destinazioni vuoto.  
+  
+## Vedere anche  
+ [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Finestra di dialogo Valuta criteri, pagina Risultati valutazione](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
+  
+  

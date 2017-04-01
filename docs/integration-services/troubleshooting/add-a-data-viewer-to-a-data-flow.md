@@ -1,0 +1,64 @@
+---
+title: "Aggiunta di un visualizzatore dati a un flusso di dati | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "visualizzatori dati [Integration Services]"
+  - "flusso di dati [Integration Services], visualizzatori dati"
+  - "aggiunta di visualizzatori dati"
+ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
+caps.latest.revision: 50
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 50
+---
+# Aggiunta di un visualizzatore dati a un flusso di dati
+  In questo argomento viene descritta la procedura per l'aggiunta e la configurazione di un visualizzatore dati in un flusso di dati. In un visualizzatore dati vengono visualizzati i dati in transito tra due componenti flusso di dati, ad esempio i dati estratti da un'origine dei dati prima che vengano modificati da una trasformazione del flusso di dati.  
+  
+ Un percorso collega i componenti in un flusso di dati connettendo l'output di un componente all'input dell'altro.  
+  
+ Per poter aggiungere visualizzatori dati in un pacchetto, è necessario che il pacchetto includa un'attività Flusso di dati e almeno due componenti flusso di dati connessi tra di loro.  
+  
+ Aggiungere un visualizzatore dati a un output di errore per visualizzare la descrizione dell'errore e il nome della colonna in cui si è verificato l'errore. Per impostazione predefinita l'output di errore include solo gli identificatori numerici per l'errore e la colonna.  
+  
+### Per aggiungere un visualizzatore dati in un flusso di dati  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+  
+2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
+  
+3.  Fare clic sulla scheda **Flusso di controllo** se non è già visualizzata.  
+  
+4.  Fare clic sull'attività Flusso di dati nel cui flusso di dati si vuole aggiungere un visualizzatore dati e quindi dare clic sulla scheda **Flusso di dati**.  
+  
+5.  Fare clic con il pulsante destro del mouse su un percorso tra due componenti del flusso di dati e quindi scegliere **Modifica**.  
+  
+6.  Nella pagina **Generale** è possibile visualizzare e modificare le proprietà del percorso. Ad esempio, nell'elenco a discesa **PathAnnotation** è possibile selezionare l'annotazione visualizzata accanto al percorso.  
+  
+7.  Nella pagina **Metadati** è possibile visualizzare i metadati delle colonne e copiarli negli Appunti.  
+  
+8.  Nella pagina **Visualizzatore dati** fare clic su **Abilita visualizzatore dati**.  
+  
+9. Nell'area Colonne da visualizzare selezionare le colonne che si desidera visualizzare nel visualizzatore dati. Per impostazione predefinita, nell'elenco **Colonne visualizzate** sono elencate e selezionate tutte le colonne disponibili. Spostare le colonne da non usare nell'elenco **Colonne inutilizzate** selezionandole e facendo clic sulla freccia sinistra.  
+  
+    > [!NOTE]  
+    >  I valori nella griglia che rappresentano i tipi di dati DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET vengono visualizzati come stringhe in formato ISO 8601. Uno spazio separatore sostituisce il separatore **T**. I valori che rappresentano i tipi di dati DT_DATE e DT_FILETIME includono sette cifre per i secondi frazionari. Poiché il tipo di dati DT_FILETIME memorizza solo tre cifre dei secondi frazionari, nella griglia viene visualizzato zero per le quattro cifre rimanenti. I valori che rappresentano il tipo di dati DT_DBTIMESTAMP includono tre cifre per i secondi frazionari. Per i valori che rappresentano i tipi di dati DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, il numero di cifre dei secondi frazionari corrisponde alla scala specificata per il tipo di dati della colonna. Per altre informazioni sui formati ISO 8601, vedere [Formati di data e ora](../Topic/Date%20and%20Time%20Formats.md). Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
+  
+10. Scegliere **OK**.  
+  
+## Vedere anche  
+ [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Flusso di dati](../../integration-services/data-flow/data-flow.md)   
+ [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
+  
+  

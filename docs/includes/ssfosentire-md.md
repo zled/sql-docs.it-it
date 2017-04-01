@@ -1,0 +1,1 @@
+ failover intero impostato 

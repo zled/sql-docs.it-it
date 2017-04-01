@@ -1,0 +1,105 @@
+---
+title: "Vincoli di precedenza | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.precedenceconstraint.f1"
+helpviewer_keywords: 
+  - "attività [Integration Services], vincoli di precedenza"
+  - "flusso di controllo [Integration Services], vincoli di precedenza"
+  - "vincoli di precedenza [Integration Services]"
+  - "vincoli [Integration Services]"
+  - "opzioni relative all'esecuzione di una sequenza [Integration Services]"
+  - "contenitori [Integration Services], vincoli di precedenza"
+ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
+caps.latest.revision: 51
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 50
+---
+# Vincoli di precedenza
+  I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
+  
+ Un vincolo di precedenza collega due eseguibili: l'eseguibile con precedenza e l'eseguibile soggetto al vincolo. L'eseguibile con precedenza viene eseguito prima dell'eseguibile soggetto al vincolo e il risultato della sua esecuzione può determinare se l'eseguibile soggetto al vincolo verrà eseguito o meno. Nella figura seguente vengono illustrati due eseguibili collegati da vincoli di precedenza.  
+  
+ ![Eseguibili collegati con un vincolo di precedenza](../../integration-services/control-flow/media/ssis-pcsimple.gif "Eseguibili collegati con un vincolo di precedenza")  
+  
+ In un flusso di controllo lineare, ovvero senza diramazioni, la sequenza di esecuzione delle attività è regolata unicamente dai vincoli di precedenza. In un flusso di controllo con diramazioni l'ordine di esecuzione delle attività e dei contenitori situati immediatamente dopo una diramazione è determinato dal motore di run-time di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Il motore di run-time determina anche l'ordine di esecuzione dei flussi di lavoro non connessi in un flusso di controllo.  
+  
+ L'architettura a contenitori nidificati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente a tutti i contenitori, ad eccezione del contenitore Host attività che incapsula una sola attività, di includere altri contenitori, ognuno con un proprio flusso di controllo. I contenitori Ciclo For, Ciclo Foreach e Sequenza possono includere più attività e altri contenitori, che a loro volta possono includere più attività e contenitori. Un pacchetto con un'attività Script e un contenitore Sequenza può ad esempio includere un vincolo di precedenza che collega l'attività Script e il contenitore Sequenza. Il contenitore Sequenza include tre attività Script e i relativi vincoli di precedenza collegano le tre attività Script in modo da formare un flusso di controllo. Nella figura seguente vengono illustrati i vincoli di precedenza utilizzati in un pacchetto con due livelli di nidificazione.  
+  
+ ![Vincoli di precedenza in un pacchetto](../../integration-services/control-flow/media/mw-dts-12.gif "Vincoli di precedenza in un pacchetto")  
+  
+ Poiché il pacchetto è al livello principale della gerarchia dei contenitori di [!INCLUDE[ssIS](../../includes/ssis-md.md)], non è possibile collegare più pacchetti tramite vincoli di precedenza. È tuttavia possibile aggiungere un'attività Esegui pacchetto a un pacchetto e in tal modo collegare indirettamente un altro pacchetto al flusso di controllo.  
+  
+ Per configurare i vincoli di precedenza, procedere nel modo seguente:  
+  
+-   Specificare un'operazione di valutazione. Il vincolo di precedenza utilizza un valore di vincolo, un'espressione o entrambi o per determinare se l'eseguibile deve essere eseguito o meno.  
+  
+-   Se il vincolo di precedenza utilizza il risultato di un'esecuzione, sarà possibile specificare se l'esecuzione deve avere esito positivo, negativo o essere semplicemente completata.  
+  
+-   Se il vincolo di precedenza utilizza il risultato di una valutazione, sarà possibile specificare un'espressione che restituisce un valore booleano.  
+  
+-   Specificare se il vincolo di precedenza deve essere valutato singolarmente o insieme ad altri vincoli applicati all'eseguibile soggetto al vincolo.  
+  
+## Operazioni di valutazione  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre le operazioni di valutazione seguenti:  
+  
+-   Un vincolo che utilizza solo il risultato dell'esecuzione dell'eseguibile con precedenza per determinare se l'eseguibile soggetto al vincolo deve essere eseguito o meno. Il risultato dell'esecuzione dell'eseguibile con precedenza indica se l'esecuzione ha avuto esito positivo, negativo o semplicemente se è stata completata. Si tratta dell'operazione predefinita.  
+  
+-   Un'espressione che viene valutata per determinare se l'eseguibile soggetto al vincolo deve essere eseguito o meno. Se l'espressione restituisce True, l'eseguibile soggetto al vincolo verrà eseguito.  
+  
+-   Un'espressione e un vincolo che combinano i requisiti del risultato dell'esecuzione dell'eseguibile con precedenza e del risultato restituito dalla valutazione dell'espressione.  
+  
+-   Un'espressione o un vincolo che utilizza il risultato dell'esecuzione dell'eseguibile con precedenza o il risultato restituito dalla valutazione dell'espressione.  
+  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] In Progettazione SSIS vengono usati i colori per identificare il tipo di vincolo di precedenza. Il vincolo Success è verde, il vincolo Failure è rosso e il vincolo Completion è blu. Per visualizzare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] etichette di testo che indicano il tipo di vincolo, è necessario configurare le funzionalità di accessibilità di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+  
+ L'espressione deve essere un'espressione [!INCLUDE[ssIS](../../includes/ssis-md.md)] valida e in essa possono essere incluse funzioni, operatori, nonché variabili personalizzate e di sistema. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+  
+## Risultati di esecuzione  
+ I vincoli di precedenza possono utilizzare i risultati di esecuzione seguenti, singolarmente o in combinazione con un'espressione.  
+  
+-   Il vincolo Completion richiede solo che l'eseguibile con precedenza abbia completato l'esecuzione, indipendentemente dall'esito, affinché l'eseguibile soggetto al vincolo venga eseguito.  
+  
+-   Il vincolo Success richiede che l'eseguibile con precedenza abbia completato correttamente l'esecuzione, affinché l'eseguibile soggetto al vincolo venga eseguito.  
+  
+-   Il vincolo Failure richiede che l'eseguibile con precedenza non abbia completato correttamente l'esecuzione, affinché l'eseguibile soggetto al vincolo venga eseguito.  
+  
+> [!NOTE]  
+>  È possibile raggruppare in una condizione con AND logico solo **vincoli di precedenza** appartenenti alla stessa raccolta. Non è ad esempio possibile combinare i vincoli di precedenza utilizzati in due contenitori Ciclo Foreach diversi.  
+  
+## Configurazione del vincolo di precedenza  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
+  
+ Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], vedere [Editor vincoli di precedenza](../Topic/Precedence%20Constraint%20Editor.md).  
+  
+ Per informazioni sull'impostazione di queste proprietà a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
+  
+## Attività correlate  
+ Per informazioni dettagliate sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
+  
+-   [Impostazione delle proprietà di un vincolo di precedenza](../Topic/Set%20the%20Properties%20of%20a%20Precedence%20Constraint.md)  
+  
+-   [Impostazione del valore di un vincolo di precedenza tramite il menu di scelta rapida](../Topic/Set%20the%20Value%20of%20a%20Precedence%20Constraint%20by%20Using%20the%20Shortcut%20Menu.md)  
+  
+-   [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)  
+  
+     In questo argomento sono fornite informazioni sulla modalità di impostazione del comportamento predefinito dei vincoli di precedenza e sulla modalità di connessione di file eseguibili tramite i vincoli di precedenza predefiniti.  
+  
+## Contenuto correlato  
+ Articolo tecnico [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761) (Esempi di espressioni SSIS) nel sito Web social.technet.microsoft.com  
+  
+## Vedere anche  
+ [Aggiunta di espressioni ai vincoli di precedenza](../Topic/Add%20Expressions%20to%20Precedence%20Constraints.md)   
+ [Più vincoli di precedenza](../Topic/Multiple%20Precedence%20Constraints.md)  
+  
+  

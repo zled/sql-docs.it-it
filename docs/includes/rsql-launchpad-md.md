@@ -1,0 +1,1 @@
+ Launchpad attendibile di SQL Server 
