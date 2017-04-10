@@ -1,0 +1,2 @@
+  Fare clic su **OK**.
+   

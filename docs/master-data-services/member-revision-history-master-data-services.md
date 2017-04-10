@@ -1,0 +1,74 @@
+---
+title: "Cronologia delle revisioni del membro (Master Data Services) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
+caps.latest.revision: 7
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 7
+---
+# Cronologia delle revisioni del membro (Master Data Services)
+  La cronologia delle revisioni di un membro viene registrata ogni volta che un membro viene modificato, se il log delle transazioni delle entità è di tipo member.  
+  
+ Per informazioni sui tipi di log delle transazioni, vedere [Modificare il tipo di log delle transazioni dell'entità &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md).  
+  
+ Le cronologie delle revisioni dei membri vengono registrate quando si verificano le modifiche seguenti.  
+  
+-   Vengono creati, eliminati, riattivati o eliminati membri.  
+  
+-   Vengono modificati i valori degli attributi.  
+  
+-   I membri vengono spostati in una gerarchia o raccolta  
+  
+## Visualizzare e gestire la cronologia delle revisioni in base all'entità  
+ Nell'area funzionale Visualizzatore è possibile visualizzare le revisioni per tutti i membri nell'entità. Se si hanno le autorizzazioni di aggiornamento, è possibile eseguire il rollback del membro a una revisione precedente.  
+  
+ **Per visualizzare e gestire la cronologia delle revisioni**  
+  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]selezionare il modello e la versione e fare clic su **Visualizzatore**.  
+  
+2.  Selezionare l'entità dal menu **Entità** .  
+  
+3.  Fare clic su **Visualizza cronologia** per visualizzare tutti i dati cronologici dell'entità.  
+  
+4.  Fare clic su **Filtro** per filtrare i dati.  
+  
+5.  Fare clic sull'intestazione di colonna per ordinare i dati.  
+  
+6.  Se si hanno di autorizzazioni per l'aggiornamento, fare clic su **Ripristina membro** per eseguire il rollback alla versione selezionata.  
+  
+## Visualizzare e gestire la cronologia delle revisioni in base al membro  
+ Nell'area funzionale Visualizzatore è possibile visualizzare le revisioni per un membro se si hanno le autorizzazioni di lettura per il membro. Se si hanno le autorizzazioni di aggiornamento, è possibile eseguire il rollback del membro a una revisione precedente o aggiungere annotazioni alla revisione.  
+  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]selezionare il modello e la versione e fare clic su **Visualizzatore**.  
+  
+2.  Selezionare l'entità dal menu **Entità** .  
+  
+3.  Selezionare il membro.  
+  
+4.  Fare clic su **Visualizza cronologia** nel riquadro di destra.  
+  
+## Impostazione di conservazione dei log  
+ È possibile configurare il periodo di conservazione dei dati cronologici impostando la proprietà **Conservazione log in giorni** nelle impostazioni di sistema per il database di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e impostando **Giorni di conservazione log** quando si crea o si modifica un modello.  
+  
+## Attività correlate  
+  
+|Descrizione dell'attività|Argomento|  
+|----------------------|-----------|  
+|Eseguire il rollback della cronologia delle revisioni del membro|[Rollback della cronologia delle revisioni del membro &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
+  
+## Vedere anche  
+ [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
+ [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
+  
+  

@@ -1,0 +1,136 @@
+---
+title: "Modificare i valori di dominio | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/08/2011"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "data-quality-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dqs.dm.values.f1"
+ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
+caps.latest.revision: 31
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 31
+---
+# Modificare i valori di dominio
+  In questo argomento viene descritto come modificare e aumentare i metadati in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dopo avere generato le informazioni mediante l'individuazione delle informazioni, importato le informazioni nella Knowledge Base o nei domini oppure basato una Knowledge Base su un'altra Knowledge Base, è possibile modificare in modo interattivo i valori dei dati. La generazione della Knowledge Base non solo sfrutta i processi computerizzati, ma consente di utilizzare informazioni personalizzate per verificare i valori dei dati e modificarli nei modi seguenti:  
+  
+-   Aggiungere un valore di dominio all'elenco di valori o selezionare un valore ed eliminarlo dall'elenco  
+  
+-   Modificare lo stato di un valore di dominio rispetto a come viene definito dal processo di individuazione DQS, impostandolo come corretto, in errore o non valido  
+  
+-   Immettere un valore di sostituzione per un valore in errore o non valido. Un valore è non valido se non fa parte del dominio, ad esempio se non è conforme al tipo di dati del dominio o non supera una regola di dominio. Un valore è in errore se fa parte del dominio, ma contiene un errore di sintassi.  
+  
+-   Impostare due o più valori come sinonimi e modificare il valore iniziale rispetto a come è stato impostato dal processo di individuazione, in modo che il valore iniziale sostituisca il valore del sinonimo, se durante la creazione del dominio è stata impostata la proprietà **Utilizza valori iniziali**  
+  
+-   Importare i valori di dominio da un file di Excel  
+  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+  
+###  <a name="Prerequisites"></a> Prerequisiti  
+ Per modificare un valore di dominio, è necessario disporre di una Knowledge Base e di un dominio aperto nell'attività Gestione dominio.  
+  
+###  <a name="Security"></a> Sicurezza  
+  
+####  <a name="Permissions"></a> Autorizzazioni  
+ Per modificare i valori di dominio, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
+  
+##  <a name="Change"></a> Modificare i valori di dominio  
+ Nella tabella **Valore** vengono visualizzate le informazioni aggiunte alla Knowledge Base per un singolo dominio. È possibile selezionare un dominio diverso nell'elenco di domini in qualsiasi momento per visualizzare i valori di tale dominio. Le colonne del campo sono le seguenti:  
+  
+-   Nella colonna **Valore** vengono visualizzati tutti i valori aggiunti dal processo di individuazione al dominio selezionato da un campo nei dati di esempio. Qualsiasi valore indicato come in errore verrà visualizzato come sinonimo di un valore indicato come corretto.  
+  
+-   Nella colonna **Tipo** viene visualizzato lo stato del valore, come determinato dal processo di individuazione. Un segno di spunta verde indica che il valore è corretto o che sono state apportate correzioni, una croce rossa indica che il valore è in errore, mentre un triangolo arancione con un punto esclamativo indica che il valore non è valido. Un valore non valido non è conforme ai requisiti dei dati per il dominio. Un valore in errore può essere valido, ma non è il valore corretto per la finalità dei dati.  
+  
+-   Nella colonna **Correggi in** viene visualizzato il valore corretto in cui verrà modificato il valore originale, contrassegnato come in errore o non valido. Il valore corretto viene proposto da DQS come risultato del processo di individuazione.  
+  
+ Per modificare i valori, procedere come segue:  
+  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Client Data Quality](../data-quality-services/run-the-data-quality-client-application.md).  
+  
+2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) o [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+  
+    > [!NOTE]  
+    >  La gestione del dominio viene eseguita in una pagina del client Data Quality Services che contiene cinque schede per le operazioni di gestione del dominio separate. Non si tratta di un processo basato su procedure guidate. Ciascuna operazione di gestione può essere eseguita separatamente.  
+  
+3.  Dall'elenco di domini ** ** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera modificare i valori o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Create a Domain](../data-quality-services/create-a-domain.md). Fare clic sulla scheda **Valori di dominio** .  
+  
+4.  Visualizzare i valori che è necessario modificare nella tabella **Valore** . Per altre informazioni, vedere [Modalità di visualizzazione dei valori appropriati](#Display) più avanti.  
+  
+5.  Per modificare lo stato di un valore, procedere come segue:  
+  
+    -   **Impostare i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da errori o non validi in corretti, selezionare il valore e quindi fare clic sui **Imposta i valori di dominio selezionati come corretti** (controllo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
+  
+    -   **Impostare i valori di dominio selezionati come errori**: per modificare lo stato di un valore da corretti o non validi in errore, selezionare il valore e quindi fare clic su di **Set i valori di dominio selezionati come errori** icona (croce) dalla freccia in giù nella barra delle icone o dall'elenco a discesa tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+  
+    -   **Impostare i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da corretti o errori in non validi, selezionare il valore e quindi fare clic su di **Set i valori di dominio selezionati come non validi** icona (triangolo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+  
+    -   **Correggi in**: dopo avere impostato un valore come in errore o non invalido, immettere un nuovo valore nella colonna **Correggi in** . In DQS verrà aggiunta una nuova riga per il valore sostitutivo che verrà designato come valore corretto, quindi verranno raggruppati i due valori. Il nuovo valore verrà visualizzato come valore iniziale, con il valore iniziale in grassetto e il valore in errore o non valido rientrato.  
+  
+6.  Per designare i valori come gruppo di sinonimi, selezionare più valori corretti, quindi procedere come segue:  
+  
+    -   **Imposta i valori di dominio selezionati come sinonimi**: per impostare i sinonimi, selezionare più valori corretti, quindi fa clic sull'icona **Imposta i valori di dominio selezionati come sinonimi** . I valori verranno raggruppati e uno dei valori verrà definito come valore iniziale con cui verranno sostituiti gli altri valori. Si noti che se vengono raggruppati due valori, ma uno dei due valori del gruppo è in errore o non valido, i valori non saranno sinonimi.  
+  
+        > [!NOTE]  
+        >  Se si selezionano due o più valori in un gruppo e un altro valore all'esterno del gruppo e quindi si impostano come sinonimi, verrà generato un messaggio di errore non corretto. Dopo avere chiuso la finestra popup del messaggio di errore, i valori verranno impostati correttamente come sinonimi.  
+  
+    -   **Interrompi relazione tra sinonimi selezionati**: per annullare la designazione di sinonimo per due o più valori, selezionare i valori, quindi fare clic sull'icona **Interrompi relazione tra sinonimi selezionati** . È necessario che i valori siano raggruppati ed entrambi devono essere corretti affinché l'annullamento del raggruppamento dei sinonimi venga eseguito correttamente.  
+  
+    -   **Imposta il valore di dominio selezionato come valore iniziale del gruppo**: per modificare il valore iniziale del gruppo, selezionare un valore nel gruppo non designato come valore iniziale, quindi fare clic sul pulsante **Imposta il valore di dominio selezionato come valore iniziale del gruppo** . In questo modo il valore iniziale verrà impostato come sostituzione dell'altro valore. Questa operazione funziona solo se sono stati impostati due o più valori raggruppati e si desidera modificare il valore iniziale rispetto al valore designato da DQS. Si noti che il valore iniziale viene indicato da una riga blu con il valore in grassetto.  
+  
+7.  **Correttore ortografico**: se un valore ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con la sottolineatura e selezionare una correzione, se appropriata. Il tipo di valore diventa (o rimane) verrà aggiunto per errore e la correzione di **corretto per** colonna. Fare clic sulla freccia in giù per visualizzare ulteriori correzioni proposte. Immettere una correzione manualmente per aggiungerla al dizionario del Correttore ortografico e poterla selezionare come correzione. Per ulteriori informazioni, vedere [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) e [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+  
+    > [!NOTE]  
+    >  Per utilizzare il correttore ortografico, è possibile abilitarlo nella **proprietà dominio** pagina, o se è disabilitato nel **proprietà dominio** pagina, è possibile fare clic il **Abilita/Disabilita correttore ortografico** icona il **i valori di dominio** pagina per abilitarlo in tale pagina.  
+  
+8.  **Aggiungi nuovo valore di dominio**: fare clic su questa opzione per aggiungere una riga alla fine della tabella. Dopo avere immesso un valore, la riga verrà riposizionata in ordine alfabetico preceduta da un asterisco per indicare che si tratta di una voce nuova.  
+  
+9. **Importa valori di dominio da Excel**: per aggiungere nuovi valori da un foglio di calcolo di Excel, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori di dominio da Excel**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Per altre informazioni, vedere [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+  
+10. **Importa valori progetto**: per aggiungere nuovi valori da un progetto Data Quality, fare clic sulla freccia in giù per l'icona **Importa valori** , quindi selezionare **Importa valori progetto**. Immettere il nome file, selezionare **Utilizza la prima riga come intestazione** se appropriato, quindi fare clic su **OK**. Selezionare il progetto da cui si desidera importare i valori, quindi fare clic su **OK**. Verranno visualizzati i valori importati. Fare clic su **Fine**. Per ulteriori informazioni, vedere Importare i valori di progetto in un dominio.  
+  
+11. **Eliminare i valori di dominio selezionati**: per rimuovere uno o più valori esistenti dal dominio, selezionare i valori nella tabella di valori e quindi fare clic sui **Elimina valori di dominio selezionati** icona. Non è possibile eliminare il valore DQS_NULL, pertanto se si scelgono più valori da eliminare e il valore DQS_NULL è tra questi, l'operazione non riuscirà.  
+  
+12. Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+  
+##  <a name="FollowUp"></a> Completamento: fasi successive alla modifica dei valori di dominio  
+ Dopo avere modificato i valori di dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per ulteriori informazioni, vedere [eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [gestione di un dominio](../data-quality-services/managing-a-domain.md), o [creare un criterio di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
+  
+##  <a name="Meaning"></a> Significato dei valori Corretti, Errori e Non validi  
+ A ogni valore nella tabella **Valore** della pagina **Valori di dominio** è assegnata un'impostazione **Tipo** di **Corretti**, **Errori**o **Non validi**. Il tipo del valore viene generato inizialmente dall'attività di individuazione delle informazioni ma è possibile modificarlo nel modo desiderato. Il tipo finale, basato sia sulle modifiche di individuazione che su quelle interattive, viene generato dall'attività di pulizia. Le impostazioni hanno il significato seguente:  
+  
+-   **Corretti:** si tratta di un valore che appartiene al dominio e non contiene errori di sintassi. Ad esempio, "Chicago" in un dominio Città è corretto.  
+  
+-   **Errori:** si tratta di un valore che appartiene al dominio, ma è un valore non corretto. Ad esempio, "Shicago" anziché "Chicago" in un dominio Città è in errore. In DQS un valore viene definito come in errore quando nel processo di individuazione vengono rilevati un errore di sintassi e una correzione associata. Gli errori di sintassi includono gli errori di ortografia.  
+  
+-   **Non validi:** si tratta di un valore che non appartiene al dominio e a cui non è associata una correzione. Ad esempio, il valore "12345" in un dominio Città non è valido. In DQS un valore viene definito come non valido quando non supera una regola di dominio.  
+  
+ È possibile modificare manualmente l'impostazione Tipo scegliendo uno degli altri due valori. In DQS non viene applica la semantica della validità e dell'errore nelle operazioni manuali. È possibile immettere una correzione per un valore Non validi senza modificarne lo stato. È possibile definire un valore come non valido anche se ha superato una regola di dominio. È possibile definire un valore come in errore anche se il processo di individuazione non ha rilevato un errore di sintassi. È inoltre possibile rimuovere una correzione a un valore Errori, contrassegnato come Corretti, senza modificarne lo stato.  
+  
+ Quando si esegue nella pulizia interattiva dei dati di **Gestisci e Visualizza risultati** pagina del **pulizia** attività, i valori non validi sia in errore sono inclusi nel **non valido** scheda il **Gestisci e Visualizza risultati** pagina.  
+  
+##  <a name="Display"></a> Modalità di visualizzazione dei valori appropriati  
+ È possibile modificare la visualizzazione come segue:  
+  
+-   **Filtro** i risultati desiderati nella tabella, in base al relativo stato, selezionando lo stato di **filtro** elenco a discesa.  
+  
+-   **Trovare** i dati che si desidera controllare o modificare immettendo una o più lettere da cercare nella casella di testo **Trova** . Tali lettere verranno evidenziate in tutti i valori visualizzati.  
+  
+-   Fare clic su **Mostra solo nuovi** per limitare i valori visualizzati nella tabella solo ai valori individuati nella sessione corrente, non nelle sessioni precedenti.  
+  
+-   Fare clic sul pulsante **Espandi tutto** per visualizzare tutti i valori in qualsiasi gruppo di sinonimi quando lo stato corrente è compresso.  
+  
+-   Fare clic sul pulsante **Comprimi tutto** per nascondere tutto tranne il valore iniziale in qualsiasi gruppo di sinonimi quando lo stato corrente è espanso.  
+  
+-   Fare clic su di **Mostra/nasconde il pannello di cronologia modifiche di valori di dominio** insieme di valori per visualizzare un'anteprima popup nella parte inferiore della tabella dei valori che mostra le modifiche più recenti del dominio.  
+  
+##  <a name="Null"></a> Modalità di gestione degli equivalenti di un valore Null  
+ Ogni tabella di valore di **i valori di dominio** scheda include un valore DQS_NULL. Un valore Null in un'origine dati verrà visualizzato come valore SQL_NULL nella tabella di valori. È possibile impostare uno o più equivalenti di un valore Null come sinonimo di DQS_NULL. In tal modo, tutti i valori Null e gli equivalenti dei valori Null vengono elaborati come valori DQS_NULL.  
+  
+  

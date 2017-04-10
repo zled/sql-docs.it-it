@@ -1,0 +1,1 @@
+   **root\Microsoft\SqlServer\ReportServer\\<*NomeIstanza*>\v13\Admin**  

@@ -1,0 +1,39 @@
+---
+title: "IntelliSense (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
+caps.latest.revision: 7
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 7
+---
+# IntelliSense (SQL Server Management Studio)
+  Gli editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supportano le opzioni IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] in grado di ridurre la digitazione, fornire l'accesso rapido alle informazioni sulla sintassi o facilitare la visualizzazione dei delimitatori di espressioni complesse.  
+  
+## Vantaggi di IntelliSense  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense offre una gamma di opzioni che rendono facilmente accessibili i riferimenti del linguaggio. Durante la scrittura di codice non è necessario uscire dall'editor per eseguire ricerche negli elementi del linguaggio. È infatti possibile rimanere nel contesto, trovare le informazioni necessarie, inserire gli elementi del linguaggio direttamente nel codice e ottenerne l'immissione automatica.  
+  
+## Attività di IntelliSense  
+  
+|Descrizione dell'attività|Argomento|  
+|----------------------|-----------|  
+|Descrive come configurare opzioni IntelliSense quali opzioni del completamento delle istruzioni o la dimensione di script Transact-SQL per cui si desidera IntelliSense disabilitata.|[Configurare IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
+|Descrive come utilizzare Informazioni sul parametro per ottenere informazioni sul numero, i nomi e le dimensioni di parametri per una funzione o una Stored procedure.|[Informazioni parametri &#40;IntelliSense&#41;](../../relational-databases/scripting/parameter-info-intellisense.md)|  
+|Descrive come utilizzare Informazioni rapide per ottenere descrizioni comando che descrivono un identificatore (come una tabella o un nome vista).|[Informazioni rapide &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
+|Descrive come fare completare da IntelliSense la parte rimanente di un identificatore dopo avere digitato una parte sufficiente del nome per ottenere un breve elenco di oggetti i cui nomi iniziano con la stessa stringa.|[Completare una parola &#40;IntelliSense&#41;](../../relational-databases/scripting/complete-word-intellisense.md)|  
+|Descrive in che modo IntelliSense è in grado di identificare entrambe le estremità di una coppia di delimitatori e come è possibile passare da un'estremità all'altra della coppia.|[Corrispondenza automatica di coppie della sintassi](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|Descrive le condizioni sotto le quali è possibile che IntelliSense non funzioni.|Risoluzione dei problemi di IntelliSense (SQL Server Management Studio)|  
+  
+## Vedere anche  
+ [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
+  
+  

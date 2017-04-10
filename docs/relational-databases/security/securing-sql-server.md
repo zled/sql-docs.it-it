@@ -1,0 +1,154 @@
+---
+title: "Sicurezza di SQL Server | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/31/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "Security [SQL Server]"
+helpviewer_keywords: 
+  - "oggetti di database [SQL Server], sicurezza"
+  - "SQL Server, sicurezza"
+  - "sistemi operativi [SQL Server], sicurezza"
+  - "sicurezza [SQL Server], pianificazione"
+  - "applicazioni [SQL Server], sicurezza"
+ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
+caps.latest.revision: 31
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 30
+---
+# Sicurezza di SQL Server
+  E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come una serie di passaggi che interessano quattro aree: la piattaforma, l'autenticazione, gli oggetti (inclusi i dati) e le applicazioni che accedono al sistema. Gli argomenti seguenti guideranno l'utente nella creazione e implementazione di un piano di sicurezza efficace.  
+  
+ Altre informazioni sulla sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili sul sito Web di [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629). che include una guida alle procedure consigliate e un elenco di controllo per la sicurezza. Questo sito contiene inoltre informazioni aggiornate sul service pack e i download più recenti.  
+  
+## Sicurezza della piattaforma e della rete  
+ La piattaforma per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprende l'hardware fisico e i sistemi di rete che collegano i client ai server di database, nonché i file binari utilizzati per elaborare le richieste di database.  
+  
+### Sicurezza fisica  
+ Le procedure consigliate per la sicurezza fisica limitano rigorosamente l'accesso al server fisico e ai componenti hardware. Le stanze in cui si trovano l'hardware del server di database e i dispositivi di rete, ad esempio, devono essere chiuse a chiave ed essere ad accesso limitato e i supporti di backup devono essere conservati in un luogo sicuro, fuori sede, per limitarvi l'accesso.  
+  
+ L'implementazione della sicurezza della rete fisica inizia dall'allontanamento degli utenti non autorizzati dalla rete. Nella tabella seguente è indicato come ottenere ulteriori informazioni sulla sicurezza della rete.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|[!INCLUDE[ssEW](../../includes/ssew-md.md)] e accesso di rete ad altre edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|"Configurazione e protezione dell'ambiente server" nella documentazione online di [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+  
+### Sicurezza del sistema operativo  
+ I service pack e gli aggiornamenti del sistema operativo comprendono importanti miglioramenti della sicurezza. Applicare tutti gli aggiornamenti al sistema operativo dopo averne eseguito il test con le applicazioni di database.  
+  
+ Anche i firewall rappresentano un metodo efficace per implementare la sicurezza. In termini logici, un firewall è un separatore o limitatore del traffico di rete che può essere configurato per applicare i criteri di sicurezza dei dati stabiliti dall'organizzazione. L'utilizzo di un firewall consente di aumentare la sicurezza a livello del sistema operativo, garantendo un punto di limitazione in cui è possibile implementare le misure di sicurezza. La tabella seguente contiene ulteriori informazioni sull'utilizzo di un firewall con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configurare un Windows Firewall per l'accesso al servizio SSIS](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Apertura di porte specifiche su un firewall per consentire l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|Configurazione del supporto per la protezione estesa per l'autenticazione tramite associazione di canale e associazione al servizio|[Connessione al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
+  
+ La riduzione della superficie di attacco è una misura di sicurezza che implica l'arresto o la disabilitazione dei componenti non utilizzati. Consente di migliorare la sicurezza offrendo un minor numero di percorsi per potenziali attacchi a un sistema. Per limitare la superficie di attacco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile eseguire i servizi necessari con privilegi minimi, garantendo a servizi e utenti solo i diritti appropriati. Nella tabella seguente è indicato come ottenere ulteriori informazioni su servizi e accesso al sistema.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Servizi richiesti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
+  
+ Se il sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Internet Information Services (IIS), per proteggere la superficie della piattaforma sono necessari ulteriori passaggi. Nella tabella seguente è indicato come ottenere informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Internet Information Services.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Sicurezza di IIS con [!INCLUDE[ssEW](../../includes/ssew-md.md)]|"Sicurezza IIS" nella documentazione online di [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Autenticazione|[Autenticazione in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
+|[!INCLUDE[ssEW](../../includes/ssew-md.md)] e accesso a IIS|"Diagramma di flusso della sicurezza di Internet Information Services" nella documentazione online di [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+  
+### Sicurezza dei file del sistema operativo con SQL Server  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa file del sistema operativo per il funzionamento e l'archiviazione dei dati. Le procedure consigliate per la sicurezza dei file richiedono la restrizione dell'accesso a tali file. Nella tabella riportata di seguito sono disponibili informazioni su questi file.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di programma|[Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service pack e aggiornamenti garantiscono una sicurezza avanzata. Per determinare quali sono i service pack più recenti disponibili per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere il sito Web di [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629).  
+  
+ È possibile utilizzare lo script seguente per determinare il service pack installato nel sistema:  
+  
+```  
+SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));  
+GO  
+```  
+  
+## Sicurezza di entità e oggetti di database  
+ Per entità si intendono individui, gruppi e processi a cui viene concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le "entità a protezione diretta" sono il server, il database e gli oggetti contenuti nel database. Ogni entità dispone di un set di autorizzazioni configurabili per ridurre la superficie di attacco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella tabella seguente sono disponibili informazioni su entità ed entità a protezione diretta.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Utenti del server e del database, ruoli e processi|[Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)|  
+|Sicurezza del server e degli oggetti di database|[Entità a protezione diretta](../../relational-databases/security/securables.md)|  
+|Gerarchia della sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)|  
+  
+### Crittografia e certificati  
+ La crittografia non risolve i problemi relativi al controllo di accesso, ma migliora la sicurezza limitando la perdita di dati anche nel raro caso in cui il controllo degli accessi venga eluso. Se, ad esempio, il computer host del database è configurato scorrettamente e un utente malintenzionato ottiene dati sensibili, ad esempio il numero di una carta di credito, le informazioni sottratte potrebbero essere inutilizzabili se crittografate. Nella tabella seguente sono disponibili ulteriori informazioni sulla crittografia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Gerarchia della crittografia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)|  
+|Implementazione di connessioni protette|[Abilitazione di connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md)|  
+|Funzioni di crittografia|[Funzioni di crittografia &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)|  
+  
+ I certificati sono chiavi software condivise tra due server che consentono comunicazioni protette grazie all'autenticazione avanzata. È possibile creare e utilizzare certificati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per migliorare la sicurezza degli oggetti e della connessione. La tabella seguente contiene informazioni sull'utilizzo di certificati con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Creazione di un certificato per l'uso con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|  
+|Utilizzo di un certificato con mirroring del database|[Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+  
+## Sicurezza dell'applicazione  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le procedure consigliate per la sicurezza comprendono la scrittura di applicazioni client protette.  
+  
+ Per altre informazioni sulla protezione delle applicazioni client a livello di rete, vedere [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md).  
+  
+## Strumenti di sicurezza, utilità, viste e funzioni di SQL Server  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprende strumenti, utilità, viste e funzioni utilizzabili per configurare e amministrare la sicurezza.  
+  
+### Strumenti di sicurezza e utilità di SQL Server  
+ Nella tabella seguente è indicato come ottenere informazioni sugli strumenti e le utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzabili per configurare e amministrare la sicurezza.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|Connessione, configurazione e controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Utilizzo di SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)|  
+|Connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed esecuzione di query dal prompt dei comandi|[Utilità sqlcmd](../../tools/sqlcmd-utility.md)|  
+|Configurazione e controllo della rete per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
+|Funzionalità di abilitazione e disabilitazione utilizzando la gestione basata sui criteri|[Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
+|Modifica di chiavi simmetriche per un server di report|[Utilità rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
+  
+### Viste e funzioni del catalogo relativo alla sicurezza di SQL Server  
+ Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] espone informazioni sulla sicurezza in diverse viste e funzioni ottimizzate in termini di prestazioni e usabilità. Nella tabella seguente è indicato come ottenere informazioni sulle viste e sulle funzioni di sicurezza.  
+  
+|Per informazioni su|Vedere|  
+|---------------------------|---------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Viste del catalogo relativo alla sicurezza che restituiscono informazioni su autorizzazioni, entità, ruoli e così via a livello di database e di server. Sono presenti viste del catalogo che forniscono informazioni su chiavi di crittografia, certificati e credenziali.|[Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funzioni di sicurezza che restituiscono informazioni su utente corrente, autorizzazioni e schemi.|[Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Viste a gestione dinamica relative alla sicurezza.|[Funzioni e viste a gestione dinamica relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
+  
+## Contenuto correlato  
+ [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+  
+ [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+
+[Procedure consigliate per la sicurezza di SQL Server 2012 - Attività operative e amministrative](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)
+
+[Blog sulla sicurezza di SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+[Procedura consigliata per la sicurezza e white paper di Label Security Toolkit](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)
+
+[Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+
+[Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)
+  

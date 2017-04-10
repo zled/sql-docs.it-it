@@ -1,0 +1,77 @@
+---
+title: "Trasformazione Colonna derivata | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.derivedcolumntrans.f1"
+helpviewer_keywords: 
+  - "più colonne derivate"
+  - "espressioni [Integration Services], colonne derivate"
+  - "colonne derivate"
+  - "colonne [Integration Services], derivazioni"
+  - "Trasformazione Colonna derivata"
+ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
+caps.latest.revision: 60
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 60
+---
+# Trasformazione Colonna derivata
+  La trasformazione Colonna derivata consente di creare nuovi valori di colonna tramite l'applicazione di espressioni alle colonne di input della trasformazione. Un'espressione può contenere qualsiasi combinazione di variabili, funzioni, operatori e colonne dell'input della trasformazione. Il risultato può essere aggiunto come nuova colonna o inserito in una colonna esistente come valore di sostituzione. La trasformazione Colonna derivata può definire più colonne derivate e qualsiasi variabile o colonna di input può comparire in più espressioni.  
+  
+ È possibile utilizzare questa trasformazione per eseguire le attività seguenti:  
+  
+-   Concatenare i dati di colonne diverse in una colonna derivata. È ad esempio possibile combinare i valori delle colonne **FirstName** e **LastName** in una singola colonna derivata di nome **FullName**, usando l'espressione `FirstName + " " + LastName`.  
+  
+-   Estrarre caratteri da dati stringa, tramite funzioni quali SUBSTRING, e quindi archiviare il risultato in una colonna derivata. È ad esempio possibile estrarre l'iniziale del nome di una persona dalla colonna **FirstName** usando l'espressione `SUBSTRING(FirstName,1,1)`.  
+  
+-   Applicare funzioni matematiche a dati numerici e archiviare i risultati in una colonna derivata. È ad esempio possibile modificare la lunghezza e la precisione della colonna numerica **SalesTax**impostandola su un numero con due cifre decimali, usando l'espressione `ROUND(SalesTax, 2)`.  
+  
+-   Creare espressioni che confrontano colonne di input e variabili. È ad esempio possibile usare l'espressione **per confrontare la variabile** Version **con i dati nella colonna**ProductVersion **e, a seconda del risultato del confronto, usare il valore di** Version **o**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`.  
+  
+-   Estrarre parti di un valore datetime. È ad esempio possibile usare le funzioni GETDATE e DATEPART per estrarre l'anno corrente usando l'espressione `DATEPART("year",GETDATE())`.  
+  
+-   Consente di convertire le stringhe di data in un formato specifico usando un'espressione.  
+  
+## <a name="configuration-of-the-derived-column-transformation"></a>Configurazione della trasformazione Colonna derivata  
+ Per configurare la trasformazione Colonna derivata, procedere nel modo seguente:  
+  
+-   Specificare un'espressione per ogni colonna di input o nuova colonna da modificare. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
+  
+    > [!NOTE]  
+    >  Se un'espressione fa riferimento a una colonna di input sovrascritta dalla trasformazione Colonna derivata, l'espressione utilizzerà il valore originale della colonna anziché il valore derivato.  
+  
+-   Se si aggiungono i risultati a nuove colonne e il tipo di dati è **string**, specificare una tabella codici. Per altre informazioni, vedere [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ La trasformazione Colonna derivata condizionale include la proprietà personalizzata FriendlyExpression, che può essere aggiornata da un'espressione di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Usare le espressioni di proprietà nei pacchetti](../../../integration-services/expressions/use-property-expressions-in-packages.md)e [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+ Questa trasformazione include un input, un output regolare e un output degli errori.  
+  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
+  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Colonna derivata** , vedere [Editor trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derived-column-transformation-editor.md).  
+  
+ Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
+  
+-   [Proprietà comuni](../Topic/Common%20Properties.md)  
+  
+-   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
+  
+-   [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="related-tasks"></a>Attività correlate  
+  
+-   [Derivare i valori di colonna tramite la trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
+  
+## <a name="related-content"></a>Contenuto correlato  
+ Articolo tecnico [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761)(Esempi di espressioni SSIS) nel sito Web social.technet.microsoft.com  

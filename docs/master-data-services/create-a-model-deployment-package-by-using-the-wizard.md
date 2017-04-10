@@ -1,0 +1,60 @@
+---
+title: "Creare un pacchetto di distribuzione di modelli tramite la procedura guidata | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "pacchetti di distribuzione [Master Data Services], creazione"
+  - "modelli [Master Data Services], creazione di un pacchetto di distribuzione"
+  - "creazione di pacchetti [Master Data Services]"
+ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
+caps.latest.revision: 8
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 8
+---
+# Creare un pacchetto di distribuzione di modelli tramite la procedura guidata
+  Utilizzare Distribuzione guidata modello [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per creare un pacchetto contenente solo oggetti modello. Se è necessario includere dati nel pacchetto, vedere [Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
+  
+## Prerequisiti  
+ Per eseguire questa procedura:  
+  
+-   Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] è necessario avere l'autorizzazione per accedere all'area funzionale **Amministrazione sistema**.  
+  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+  
+-   È necessario che sia disponibile un modello affinché sia possibile crearne un pacchetto. Per altre informazioni, vedere [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
+  
+### Per creare un pacchetto di distribuzione di modelli  
+  
+1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
+  
+2.  Nella barra dei menu della pagina **Vista modelli** scegliere **Sistema** , quindi fare clic su **Distribuzione**.  
+  
+3.  In **Distribuzione guidata modello** fare clic su **Crea**.  
+  
+4.  Nella pagina **Crea pacchetto** selezionare un modello dall'elenco **Modello**.  
+  
+5.  Scegliere **Avanti**.  
+  
+6.  Fare clic su **Download**.  
+  
+7.  Salvare il file.  
+  
+8.  Per chiudere la procedura guidata, fare clic su **Chiudi** .  
+  
+## Passaggi successivi  
+  
+-   [Distribuire un pacchetto di distribuzione di modelli tramite la procedura guidata](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+  
+## Vedere anche  
+ [Distribuzione di modelli &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+  
+  

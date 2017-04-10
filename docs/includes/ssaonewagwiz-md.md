@@ -1,0 +1,1 @@
+ Creazione guidata Gruppo di disponibilità 
