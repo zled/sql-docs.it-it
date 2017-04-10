@@ -302,7 +302,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le 
     -   Si basa sulle procedure helper dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck e dbo.GenerateUQCheck per generare il codice T-SQL necessario per eseguire i controlli di integrità.  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Misurazioni delle prestazioni con il carico di lavoro dimostrativo  
- Ostress è uno strumento da riga di comando sviluppato dal team di supporto [!INCLUDE[msCoName](../Token/msCoName_md.md)] CSS [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] . Questo strumento può essere utilizzato per eseguire query o stored procedure in parallelo. È possibile configurare il numero di thread per eseguire un'istruzione T-SQL fornita in parallelo e specificare il numero di esecuzioni dell'istruzione in questo thread. Tramite ostress viene eseguita l'accelerazione dei thread e l'istruzione viene eseguita in tutti i thread in parallelo. Al termine dell'esecuzione di tutti i thread, tramite ostress verrà segnalato il tempo impiegato per il completamento dell'esecuzione di tutti i thread.  
+ Ostress è uno strumento da riga di comando sviluppato dal team di supporto [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo strumento può essere utilizzato per eseguire query o stored procedure in parallelo. È possibile configurare il numero di thread per eseguire un'istruzione T-SQL fornita in parallelo e specificare il numero di esecuzioni dell'istruzione in questo thread. Tramite ostress viene eseguita l'accelerazione dei thread e l'istruzione viene eseguita in tutti i thread in parallelo. Al termine dell'esecuzione di tutti i thread, tramite ostress verrà segnalato il tempo impiegato per il completamento dell'esecuzione di tutti i thread.  
   
 ### <a name="installing-ostress"></a>Installazione di ostress  
  Ostress viene installato come parte delle utilità RML. La relativa installazione non viene eseguita in modalità autonoma.  
@@ -324,9 +324,9 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le 
   
  Le opzioni della riga di comando per ostress possono essere visualizzate eseguendo semplicemente ostress.exe senza opzioni della riga di comando. Le opzioni principali da considerare per eseguire ostress con questo esempio sono:  
   
--   -S. Nome dell'istanza di [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] alla quale connettersi  
+-   -S. Nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla quale connettersi  
   
--   -E. Utilizzare l'autenticazione di Windows per la connessione (valore predefinito); se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] , usare le opzioni –U e –P per specificare rispettivamente il nome utente e la password  
+-   -E. Utilizzare l'autenticazione di Windows per la connessione (valore predefinito); se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare le opzioni –U e –P per specificare rispettivamente il nome utente e la password  
   
 -   -d. Nome del database, per questo esempio AdventureWorks2014  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  In un server di prova con un numero totale di 8 core fisici (16 logici), l'operazione ha richiesto 41 minuti e 25 secondi. In un secondo server di prova con 24 core fisici (48 logici), l'operazione ha richiesto 52 minuti e 16 secondi.  
   
- Il fattore principale della differenza a livello di prestazioni tra le tabelle con ottimizzazione per la memoria e quelle basate su disco in questo test è che quando si utilizzano le tabelle basate su disco, tramite [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] non è possibile usare completamente la CPU. Il motivo è la contesa di latch: tramite le transazioni simultanee si tenta di scrivere nella stessa pagina di dati; i latch vengono utilizzati per garantire che in una pagina venga scritta una sola transazione per volta. Il motore [!INCLUDE[hek_2](../Token/hek_2_md.md)] è privo di latch e le righe di dati non sono organizzate in pagine. Di conseguenza, le transazioni simultanee non impediscono inserimenti reciproci, consentendo in questo modo l'utilizzo completo della CPU da parte di [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] .  
+ Il fattore principale della differenza a livello di prestazioni tra le tabelle con ottimizzazione per la memoria e quelle basate su disco in questo test è che quando si utilizzano le tabelle basate su disco, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è possibile usare completamente la CPU. Il motivo è la contesa di latch: tramite le transazioni simultanee si tenta di scrivere nella stessa pagina di dati; i latch vengono utilizzati per garantire che in una pagina venga scritta una sola transazione per volta. Il motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è privo di latch e le righe di dati non sono organizzate in pagine. Di conseguenza, le transazioni simultanee non impediscono inserimenti reciproci, consentendo in questo modo l'utilizzo completo della CPU da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  È possibile osservare l'utilizzo della CPU mentre il carico di lavoro è in esecuzione, ad esempio tramite Gestione attività. Si noterà che con le tabelle basate su disco l'utilizzo della CPU è lontano dal 100%. In una configurazione di prova con 16 processori logici, l'utilizzo si aggira intorno al 24%.  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Risoluzione dei problemi relativi ai test con esecuzione prolungata  
  I risultati dei test variano in genere a seconda dell'hardware e del livello di concorrenza utilizzato durante l'esecuzione del test. Se i risultati non sono quelli previsti, è opportuno verificare alcune informazioni:  
   
--   Numero di transazioni simultanee. Quando si esegue il carico di lavoro in un solo thread, il miglioramento delle prestazioni con [!INCLUDE[hek_2](../Token/hek_2_md.md)] sarà probabilmente inferiore di 2 volte. La contesa di latch è un grande problema solo se vi è un livello elevato di concorrenza.  
+-   Numero di transazioni simultanee. Quando si esegue il carico di lavoro in un solo thread, il miglioramento delle prestazioni con [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sarà probabilmente inferiore di 2 volte. La contesa di latch è un grande problema solo se vi è un livello elevato di concorrenza.  
   
--   Numero contenuto di core disponibili in [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]. Ciò significa che vi sarà un livello basso di concorrenza nel sistema, dal momento che vi possono essere tante esecuzioni simultanee di transazioni quanti sono i core disponibili in SQL.  
+-   Numero contenuto di core disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò significa che vi sarà un livello basso di concorrenza nel sistema, dal momento che vi possono essere tante esecuzioni simultanee di transazioni quanti sono i core disponibili in SQL.  
   
     -   Sintomo: se l'utilizzo della CPU è elevato durante l'esecuzione del carico di lavoro nelle tabelle basate su disco, ciò significa che non vi sono molte contese, puntando a una mancanza di concorrenza.  
   
--   Velocità dell'unità dei log: se l'unità dei log non resta sincronizzata con il livello di velocità effettiva delle transazioni nel sistema, il carico di lavoro diventa un collo di bottiglia nelle operazioni di I/O del log. Sebbene la registrazione sia più efficiente con [!INCLUDE[hek_2](../Token/hek_2_md.md)], se le operazioni di I/O del log rappresentano un collo di bottiglia, il potenziale miglioramento delle prestazioni sarà limitato.  
+-   Velocità dell'unità dei log: se l'unità dei log non resta sincronizzata con il livello di velocità effettiva delle transazioni nel sistema, il carico di lavoro diventa un collo di bottiglia nelle operazioni di I/O del log. Sebbene la registrazione sia più efficiente con [!INCLUDE[hek_2](../../includes/hek-2-md.md)], se le operazioni di I/O del log rappresentano un collo di bottiglia, il potenziale miglioramento delle prestazioni sarà limitato.  
   
     -   Sintomo: se l'utilizzo della CPU non è vicino al 100% o presenta molti problemi durante l'esecuzione del carico di lavoro nelle tabelle con ottimizzazione per la memoria, è possibile la presenza di un collo di bottiglia a livello di I/O del log. Questa situazione può essere verificata aprendo il monitoraggio risorse ed esaminando la lunghezza della coda per l'unità dei log.  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Utilizzo della memoria per le tabelle con ottimizzazione per la memoria  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilizzo complessivo del database  
- La query seguente può essere utilizzata per ottenere l'utilizzo totale della memoria per [!INCLUDE[hek_2](../Token/hek_2_md.md)] nel sistema.  
+ La query seguente può essere utilizzata per ottenere l'utilizzo totale della memoria per [!INCLUDE[hek_2](../../includes/hek-2-md.md)] nel sistema.  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Default|0|  
 |MEMORYCLERK_XTP|Default|0|  
   
- Come si può notare, tramite [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] viene utilizzato un bit in 8 GB per gli indici e le tabelle con ottimizzazione per la memoria nel database di esempio.  
+ Come si può notare, tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato un bit in 8 GB per gli indici e le tabelle con ottimizzazione per la memoria nel database di esempio.  
   
  Esaminare l'utilizzo dettagliato della memoria per tabella dopo un'esecuzione di esempio:  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Dopo la reimpostazione della dimostrazione  
  La stored procedure Demo.usp_DemoReset può essere utilizzata per reimpostare la dimostrazione. Tramite essa vengono eliminati i dati nelle tabelle SalesOrderHeader_inmem e SalesOrderDetail_inmem e vengono reinizializzati i dati dalle tabelle originali SalesOrderHeader e SalesOrderDetail.  
   
- A questo punto, anche se le righe nelle tabelle sono state eliminate, questo non significa che la memoria venga recuperata immediatamente. La memoria viene recuperata in background da [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] dalle righe eliminate nelle tabelle con ottimizzazione per la memoria, in base alle esigenze. Si noterà che subito dopo la reimpostazione della dimostrazione, senza il carico di lavoro transazionale nel sistema, la memoria non è ancora stata recuperata dalle righe eliminate:  
+ A questo punto, anche se le righe nelle tabelle sono state eliminate, questo non significa che la memoria venga recuperata immediatamente. La memoria viene recuperata in background da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalle righe eliminate nelle tabelle con ottimizzazione per la memoria, in base alle esigenze. Si noterà che subito dopo la reimpostazione della dimostrazione, senza il carico di lavoro transazionale nel sistema, la memoria non è ancora stata recuperata dalle righe eliminate:  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Come si può notare, la maggior parte dello spazio è utilizzato dai file differenziali e di dati creati in precedenza. Tramite [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] è stata creata preventivamente una coppia di file (differenziali e di dati) per processore logico. Inoltre, i file di dati vengono ridimensionati preventivamente a 128 MB mentre quelli differenziali a 8 MB, per poter consentire un inserimento di dati in questi file più efficiente.  
+ Come si può notare, la maggior parte dello spazio è utilizzato dai file differenziali e di dati creati in precedenza. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata creata preventivamente una coppia di file (differenziali e di dati) per processore logico. Inoltre, i file di dati vengono ridimensionati preventivamente a 128 MB mentre quelli differenziali a 8 MB, per poter consentire un inserimento di dati in questi file più efficiente.  
   
  I dati effettivi nelle tabelle con ottimizzazione per la memoria si trovano nel singolo file di dati.  
   
