@@ -1,0 +1,2 @@
+  È possibile creare e modificare file di definizioni report impaginati (con estensione rdl) in Generatore report e in Progettazione report di SQL Server Data Tools. Ogni ambiente di creazione offre modalità differenti per creare, aprire e salvare report ed elementi correlati.
+   

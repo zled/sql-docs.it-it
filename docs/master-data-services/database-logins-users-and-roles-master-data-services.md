@@ -1,0 +1,68 @@
+---
+title: "Account di accesso, utenti e ruoli di database (Master Data Services) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/04/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "sicurezza [Master Data Services], ruoli di database"
+  - "database [Master Data Services], utenti"
+  - "sicurezza [Master Data Services], utenti di database"
+  - "database [Master Data Services], ruoli"
+  - "database [Master Data Services], account di accesso"
+  - "sicurezza [Master Data Services], account di accesso al database"
+ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
+caps.latest.revision: 9
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 9
+---
+# Account di accesso, utenti e ruoli di database (Master Data Services)
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi account di accesso, utenti e ruoli installati automaticamente nell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui è ospitato il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questi account di accesso, utenti e ruoli non devono essere modificati.  
+  
+## Account di accesso  
+  
+|Account di accesso|Description|  
+|-----------|-----------------|  
+|**mds_dlp_login**|Consente la creazione di assembly UNSAFE. Per altre informazioni, vedere [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> - Account di accesso disabilitato con password generata casualmente.<br /><br /> - Esegue il mapping a dbo per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].<br /><br /> - Per msdb, mds_clr_user esegue il mapping a questo account di accesso.|  
+|**mds_email_login**|Account di accesso abilitato utilizzato per le notifiche.<br /><br /> Per msdb e il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], mds_email_user esegue il mapping a questo account di accesso.|  
+  
+## Utenti di msdb  
+  
+|Utente|Description|  
+|----------|-----------------|  
+|**mds_clr_user**|Non usato. Esegue il mapping a mds_dlp_login.|  
+|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> - Esegue il mapping a mds_email_login.<br /><br /> - È un membro del ruolo DatabaseMailUserRole.|  
+  
+## Utenti del database Master Data Services  
+  
+|Utente|Description|  
+|----------|-----------------|  
+|**mds_email_user**|Utilizzato per le notifiche.<br /><br /> - Dispone dell'autorizzazione SELECT per lo schema mdm.<br /><br /> - Dispone dell'autorizzazione EXECUTE per il tipo di tabella mdm.MemberGetCriteria definito dall'utente.<br /><br /> - Dispone dell'autorizzazione EXECUTE per la stored procedure mdm.udpNotificationQueueActivate.|  
+|**mds_schema_user**|È proprietario degli schemi mdm e mdq. Lo schema predefinito è mdm.<br /><br /> Non disporre di un account di accesso di cui è stato eseguito il mapping.|  
+|**mds_ssb_user**|Utilizzato per eseguire attività di Service Broker.<br /><br /> -Ha le autorizzazioni DELETE, INSERT, REFERENCES, SELECT e UPDATE per tutti gli schemi.<br /><br /> - Non ha un account di accesso a cui è stato eseguito il mapping.|  
+  
+## Ruolo del database Master Data Services  
+  
+|Ruolo|Description|Permissions|  
+|----------|-----------------|-----------------|  
+|**mds_exec**|Il ruolo contiene l'account impostato in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando si crea un'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e si definisce un account per il pool di applicazioni.|Autorizzazione EXECUTE per tutti gli schemi.<br /><br /> <br /><br /> Autorizzazioni ALTER, INSERT e SELECT per queste tabelle:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Autorizzazione SELECT per queste tabelle:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Autorizzazione SELECT per queste viste:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
+  
+## Schemi  
+  
+|Ruolo|Description|  
+|----------|-----------------|  
+|**mdm**|Contiene tutti gli oggetti di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e Service Broker diversi dalle funzioni contenute nello schema mdq.|  
+|**mdq**|Sono contenute le funzioni del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relative al filtro dei risultati dei membri in base a espressioni regolari o somiglianza e per la formattazione di messaggi di posta elettronica di notifica.|  
+|**stg**|Contiene tabelle di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , stored procedure e viste correlate al processo di gestione temporanea. Non eliminare alcun oggetto. Per altre informazioni sul processo di gestione temporanea, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
+  
+## Vedere anche  
+ [Sicurezza di oggetti di database &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+  
+  

@@ -1,0 +1,1 @@
+ Failover con commit sincrono impostato 

@@ -1,0 +1,1 @@
+<Token>![Serve aiuto?](/Image/Shiproom/needhelp_person_icon.png)  **Serve aiuto?** [Forum MSDN](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016), [Stackoverflow](http://stackoverflow.com/questions/tagged/sql-server-2016), [Connect](https://connect.microsoft.com/SQLServer/Feedback)</Token>

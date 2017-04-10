@@ -1,0 +1,60 @@
+---
+title: "Extensible Key Management tramite l&#39;insieme di credenziali delle chiavi di Azure (SQL Server) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "07/22/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Extensible Key Management con l'insieme di credenziali delle chiavi"
+  - "Transparent Data Encryption, con EKM e l'insieme di credenziali delle chiavi"
+  - "EKM, con l'insieme di credenziali delle chiavi"
+  - "TDE, EKM l'insieme di credenziali delle chiavi"
+  - "insieme di credenziali delle chiavi, Extensible Key Management"
+  - "Connettore SQL Server, informazioni"
+ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
+caps.latest.revision: 66
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 66
+---
+# Extensible Key Management tramite l&#39;insieme di credenziali delle chiavi di Azure (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Insieme credenziali chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure consente alla crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di usare il servizio dell'insieme di credenziali delle chiavi di Azure come provider di [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) per proteggere le chiavi di crittografia.  
+  
+ Questo argomento descrive il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Altre informazioni sono disponibili in [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md) e [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+  
+##  <a name="Uses"></a> Che cos'è Extensible Key Management (EKM) e perché usarlo?  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fornisce diversi tipi di crittografia che consentono di proteggere i dati sensibili, inclusi [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md), [Crittografia a livello di colonna](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) e [Crittografia dei backup](../../../relational-databases/backup-restore/backup-encryption.md). Nella gerarchia delle chiavi tradizionale di tutti questi casi i dati vengono crittografati usando una chiave (DEK) simmetrica. Per proteggerla ulteriormente, tale chiave viene crittografata con una gerarchia di chiavi archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'alternativa a questo modello è il modello di provider EKM. L'architettura del provider EKM consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di proteggere le chiavi DEK usando una chiave asimmetrica archiviata all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un provider del servizio di crittografia esterno. Questo modello aggiunge un altro livello di sicurezza e separa la gestione delle chiavi e dei dati.  
+   
+ L'immagine seguente confronta la tradizionale gerarchia delle chiavi con la gestione del servizio al sistema dell'insieme di credenziali delle chiavi di Azure.  
+  
+ ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+  
+   
+ Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funge da ponte tra [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'insieme di credenziali delle chiavi di Azure, in modo che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa sfruttare la scalabilità, le prestazioni elevate e la disponibilità elevata del servizio dell'insieme di credenziali delle chiavi di Azure. L'immagine seguente rappresenta il funzionamento della gerarchia delle chiavi nell'architettura del provider EKM con l'insieme di credenziali delle chiavi di Azure e il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+  L'insieme di credenziali delle chiavi di Azure può essere usato con le installazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle macchine virtuali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure e per i server locali. Il servizio dell'insieme di credenziali delle chiavi consente inoltre di usare i moduli di protezione hardware (HSM) controllati e monitorati rigorosamente per un livello di protezione maggiore per le chiavi di crittografia asimmetriche. Per altre informazioni sull'insieme di credenziali delle chiavi, vedere [Insieme di credenziali delle chiavi di Azure](http://go.microsoft.com/fwlink/?LinkId=521401).  
+  
+ L'immagine seguente illustra il flusso di processo di EKM con l'insieme di credenziali delle chiavi. I numeri dei passaggi del processo nell'immagine non sono concepiti per corrispondere ai numeri dei passaggi della configurazione riportati di seguito.  
+  
+ ![SQL Server EKM using the Azure Key Vault](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
+
+> [!NOTE]  
+>  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".
+  
+ Per il passaggio successivo, vedere [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md).  
+  
+ Per gli scenari di utilizzo, vedere [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
+  
+## Vedere anche  
+ [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+  
+  

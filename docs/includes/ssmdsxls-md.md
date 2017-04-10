@@ -1,0 +1,1 @@
+ Componente aggiuntivo di Excel 

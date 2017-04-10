@@ -1,0 +1,53 @@
+---
+title: "Opzione di configurazione del server clr enabled | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "assembly [integrazione con CLR], verifica esecuzione"
+  - "clr enabled - opzione"
+ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
+caps.latest.revision: 36
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 36
+---
+# Opzione di configurazione del server clr enabled
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Utilizzare l'opzione clr enabled per specificare se gli assembly utente possono essere eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'opzione clr enabled restituisce i valori riportati di seguito: 
+  
+|Valore|Descrizione|  
+|-----------|-----------------|  
+|0|Esecuzione degli assembly non consentita in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|1|Esecuzione degli assembly consentita in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+  
+Solo WOW64. Riavviare i server WOW64 per rendere effettive le modifiche alle impostazioni. Per altri tipi di server il riavvio non è necessario.  
+
+Quando si esegue RECONFIGURE e il valore dell'opzione clr enabled viene modificato da 1 a 0, vengono scaricati immediatamente tutti i domini dell'applicazione contenenti assembly utente.  
+  
+>  **Esecuzione CLR (Common Language Runtime) non supportata quando è attivo il lightweight pooling**. Disabilitare una delle due opzioni: "clr enabled" o "lightweight pooling". Le caratteristiche che si basano su CLR e che non funzionano correttamente in modalità fiber sono il tipo di dati **hierarchy**, la replica e la gestione basata su criteri.  
+  
+## Esempio  
+ Nell'esempio seguente viene prima visualizzata l'impostazione corrente dell'opzione clr enabled, quindi abilitata l'opzione impostandone il valore su 1. Per disabilitare l'opzione, impostare il valore su 0.  
+  
+```tsql  
+EXEC sp_configure 'clr enabled';  
+EXEC sp_configure 'clr enabled' , '1';  
+RECONFIGURE;    
+```  
+  
+## Vedere anche  
+ [Opzione di configurazione del server lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)   
+ [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [Opzione di configurazione del server lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)  
+  
+  

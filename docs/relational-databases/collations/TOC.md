@@ -1,0 +1,7 @@
+# [Scrittura di istruzioni Transact-SQL internazionali](write-international-transact-sql-statements.md)
+# [Impostazione di una lingua di sessione](set-a-session-language.md)
+# [Impostare o modificare le regole di confronto delle colonne](set-or-change-the-column-collation.md)
+# [Regole di confronto e supporto Unicode](collation-and-unicode-support.md)
+# [Impostazione o modifica di regole di confronto del server](set-or-change-the-server-collation.md)
+# [Impostare o modificare le regole di confronto del database](set-or-change-the-database-collation.md)
+# [Visualizzazione di informazioni sulle regole di confronto](view-collation-information.md)
