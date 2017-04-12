@@ -1,0 +1,1 @@
+ Replica a livello geografico attiva 

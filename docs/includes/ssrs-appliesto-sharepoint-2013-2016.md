@@ -1,0 +1,1 @@
+![Sì](media/yes.png)SharePoint 2013![Sì](media/yes.png)SharePoint 2016
