@@ -1,1 +1,2 @@
-**QUESTO ARGOMENTO SI APPLICA A:**![sì](../includes/media/yes.png)SQL Server (a partire dalla versione 2016)![no](../includes/media/no.png)Database SQL di Azure![no](../includes/media/no.png)Azure SQL Data Warehouse![no](../includes/media/no.png)Parallel Data Warehouse
+**QUESTO ARGOMENTO SI APPLICA A:**![sì](media/yes.png)SQL Server (a partire dalla versione 2016)![no](media/no.png)Database SQL di Azure![no](media/no.png)Azure SQL Data Warehouse![no](media/no.png)Parallel Data Warehouse
+
