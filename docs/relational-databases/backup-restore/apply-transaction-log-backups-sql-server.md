@@ -1,28 +1,32 @@
 ---
-title: "Applicazione dei backup di log delle transazioni (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristino [SQL Server], backup del log"
-  - "backup del log delle transazioni [SQL Server], applicazione di applicazioni"
-  - "ripristini online [SQL Server], backup del log"
-  - "backup del log delle transazioni [SQL Server], quantità necessaria per la sequenza di ripristino"
-  - "backup [SQL Server], backup del log"
+title: Applicare backup di log delle transazioni (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Applicazione dei backup di log delle transazioni (SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti solo per il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk.  
   
  In questo argomento viene descritta l'applicazione dei backup del log delle transazioni durante il ripristino di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -70,7 +74,7 @@ caps.handback.revision: 38
   
  **Alternativa 2: ripristino del database da un backup completo precedente**  
   
-> **NOTA:** questa procedura alternativa è utile nel caso non sia possibile usare il backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
+> **NOTA:** questa procedura alternativa è utile nel caso non sia possibile usare del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
@@ -87,9 +91,9 @@ caps.handback.revision: 38
   
  **Per eseguire il ripristino fino al punto di recupero**  
   
--   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

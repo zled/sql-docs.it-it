@@ -1,32 +1,36 @@
 ---
-title: "Modificare le impostazioni del pool di risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, modifica di un pool di risorse"
-  - "pool di risorse [SQL Server], modifica"
+title: Modificare le impostazioni del pool di risorse | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool alter
+- resource pools [SQL Server], alter
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27adde47bca4c894d044940d00bc6867e6f8e58f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificare le impostazioni del pool di risorse
+# <a name="change-resource-pool-settings"></a>Modificare le impostazioni del pool di risorse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   È possibile modificare le impostazioni di un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per modificare le impostazioni di un pool di risorse usando:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
+-   **To change the settings for a resource pool, using:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 15
   
 2.  Eseguire l'istruzione **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Esempio (Transact-SQL)  
+### <a name="example-transact-sql"></a>Esempio (Transact-SQL)  
  Nell'esempio seguente viene modificata l'impostazione relativa alla percentuale massima della CPU per il pool di risorse denominato `poolAdhoc`.  
   
 ```  
@@ -69,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Abilitare Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Creare un pool di risorse](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -82,3 +86,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

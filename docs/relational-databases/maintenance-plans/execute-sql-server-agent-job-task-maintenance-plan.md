@@ -1,31 +1,35 @@
 ---
-title: "Attivit&#224; Esegui processo di SQL Server Agent (Piano di manutenzione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.executejob.f1"
-helpviewer_keywords: 
-  - "Attività Esegui processo di SQL Server Agent - finestra di dialogo"
+title: "Attività Esegui processo di SQL Server Agent (Piano di manutenzione) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.executejob.f1
+helpviewer_keywords:
+- Execute SQL Server Agent Job Task dialog box
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39bb4179c7869d9a9fe0cbbb26263f9e3a91f1ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attivit&#224; Esegui processo di SQL Server Agent (Piano di manutenzione)
+# <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Attività Esegui processo di SQL Server Agent (Piano di manutenzione)
   Utilizzare la finestra di dialogo **Attività Esegui processo di SQL Server Agent** per eseguire i processi di Microsoft SQL Server Agent nell'ambito di un piano di manutenzione. Questa opzione non sarà disponibile se la connessione selezionata non contiene alcun processo di SQL Server Agent.  
   
- Questa attività usa l'istruzione **.sp_start_job**.  
+ Questa attività usa l'istruzione **.sp_start_job** .  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
-## Finestra di dialogo Nuova connessione  
+## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 21
  Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di Microsoft Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -66,9 +70,9 @@ caps.handback.revision: 21
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [Creazione di un processo](../../ssms/agent/create-a-job.md)   
+ [Creazione di un processo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)   
  [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

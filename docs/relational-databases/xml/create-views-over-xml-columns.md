@@ -1,25 +1,29 @@
 ---
-title: "Creazione di viste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste [XML in SQL Server]"
+title: Creare viste su colonne XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5f71a5ebacb8af3a58c6eada233c16b955b6ae5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di viste
-  Le colonne di tipo **xml** possono essere utilizzate per la creazione di viste. Nell'esempio seguente viene creata una vista nella quale il valore di una colonna di tipo `xml` viene recuperato utilizzando il metodo **value()** del tipo di dati **xml**.  
+# <a name="create-views-over-xml-columns"></a>Creazione di viste
+  Le colonne di tipo **xml** possono essere utilizzate per la creazione di viste. Nell'esempio seguente viene creata una vista nella quale il valore di una colonna di tipo `xml` viene recuperato utilizzando il metodo **value()** del tipo di dati **xml** .  
   
 ```  
 -- Create the table.  

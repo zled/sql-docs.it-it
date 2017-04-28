@@ -1,24 +1,28 @@
 ---
-title: "Gestione della sicurezza dei trigger | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trigger [SQL Server], sicurezza"
+title: Gestire la sicurezza dei trigger | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestione della sicurezza dei trigger
+# <a name="manage-trigger-security"></a>Gestione della sicurezza dei trigger
   Per impostazione predefinita, i trigger DML e DDL vengono eseguiti nel contesto dell'utente che li chiama. Il chiamante di un trigger è l'utente che esegue l'istruzione che causa l'esecuzione del trigger. Se ad esempio l'utente **Mary** esegue un'istruzione DELETE che causa l'esecuzione del trigger DML **DML_trigMary** , il codice all'interno di **DML_trigMary** viene eseguito nel contesto dei privilegi utente relativi a **Mary**. Il funzionamento predefinito può essere sfruttato dagli utenti che desiderano introdurre malware nel database o nell'istanza del server. Ad esempio, il trigger DDL seguente viene creato dall'utente `JohnDoe`:  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
@@ -33,12 +37,12 @@ caps.handback.revision: 19
   
  `GO`  
   
- Il trigger indica che non appena un utente che dispone dell'autorizzazione per l'esecuzione di un'istruzione `GRANT CONTROL SERVER`, ad esempio un membro del ruolo predefinito del server **sysadmin**, esegue un'istruzione `ALTER TABLE`, all'utente `JohnDoe` viene concessa l'autorizzazione `CONTROL SERVER`. In altre parole, anche se `JohnDoe` non può concedere l'autorizzazione `CONTROL SERVER` a se stesso, ha abilitato il codice del trigger che gli concede tale autorizzazione per l'esecuzione con privilegi con escalation. I trigger DML e DDL sono esposti a questo tipo di minaccia per la sicurezza.  
+ Il trigger indica che non appena un utente che dispone dell'autorizzazione per l'esecuzione di un'istruzione `GRANT CONTROL SERVER` , ad esempio un membro del ruolo predefinito del server **sysadmin** , esegue un'istruzione `ALTER TABLE` , all'utente `JohnDoe` viene concessa l'autorizzazione `CONTROL SERVER` . In altre parole, anche se `JohnDoe` non può concedere l'autorizzazione `CONTROL SERVER` a se stesso, ha abilitato il codice del trigger che gli concede tale autorizzazione per l'esecuzione con privilegi con escalation. I trigger DML e DDL sono esposti a questo tipo di minaccia per la sicurezza.  
   
-## Procedure consigliate per la sicurezza dei trigger  
+## <a name="trigger-security-best-practices"></a>Procedure consigliate per la sicurezza dei trigger  
  Per impedire l'esecuzione del codice del trigger con privilegi alzati di livello, è possibile adottare le misure seguenti:  
   
--   Individuare i trigger DML e DDL esistenti nel database e nell'istanza del server eseguendo query sulle viste del catalogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md). La query seguente restituisce tutti i trigger DML e DDL a livello di database nel database corrente e tutti i trigger DDL a livello di server nell'istanza del server:  
+-   Individuare i trigger DML e DDL esistenti nel database e nell'istanza del server eseguendo query sulle viste del catalogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . La query seguente restituisce tutti i trigger DML e DDL a livello di database nel database corrente e tutti i trigger DDL a livello di server nell'istanza del server:  
   
     ```  
     SELECT type, name, parent_class_desc FROM sys.triggers  
@@ -46,7 +50,7 @@ caps.handback.revision: 19
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
   
--   Per disabilitare i trigger che possono compromettere l'integrità del database o del server se vengono eseguiti con privilegi alzati di livello, usare [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). L'istruzione seguente disabilita tutti i trigger DDL a livello di database nel database corrente:  
+-   Per disabilitare i trigger che possono compromettere l'integrità del database o del server se vengono eseguiti con privilegi alzati di livello, usare [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) . L'istruzione seguente disabilita tutti i trigger DDL a livello di database nel database corrente:  
   
     ```  
     DISABLE TRIGGER ALL ON DATABASE  
@@ -91,7 +95,7 @@ caps.handback.revision: 19
     DEALLOCATE trig_cur;  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Trigger DML](../../relational-databases/triggers/dml-triggers.md)   
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)  

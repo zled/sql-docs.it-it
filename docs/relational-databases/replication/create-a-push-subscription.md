@@ -1,29 +1,33 @@
 ---
-title: "Creazione di una sottoscrizione push | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "push subscriptions [SQL Server replication], creating"
-  - "merge replication subscribing [SQL Server replication], push subscriptions"
-  - "subscriptions [SQL Server replication], push"
-  - "snapshot replication [SQL Server], subscribing"
-  - "replica transazionale, sottoscrizione"
+title: Creare una sottoscrizione push | Microsoft Docs
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- push subscriptions [SQL Server replication], creating
+- merge replication subscribing [SQL Server replication], push subscriptions
+- subscriptions [SQL Server replication], push
+- snapshot replication [SQL Server], subscribing
+- transactional replication, subscribing
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di una sottoscrizione push
-  In questo argomento viene descritto come creare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], o gli oggetti RMO (Replication Management Objects). Per informazioni sulla creazione di una sottoscrizione push per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore, vedere [creare una sottoscrizione per un sottoscrittore Non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+# <a name="create-a-push-subscription"></a>Creazione di una sottoscrizione push
+  In questo argomento viene descritto come creare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Per informazioni sulla creazione di una sottoscrizione push per un Sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -31,7 +35,7 @@ caps.handback.revision: 41
   
 -   Specificare il server di pubblicazione e la pubblicazione.  
   
--   Selezionare la posizione di esecuzione degli agenti di replica. Per una sottoscrizione push, selezionare **Esegui tutti gli agenti nel server di distribuzione (sottoscrizioni push)** sul **posizione agente di distribuzione** pagina o **posizione agente di Merge** pagina, a seconda del tipo di pubblicazione.  
+-   Selezionare la posizione di esecuzione degli agenti di replica. Per una sottoscrizione push, selezionare **Esegui tutti gli agenti nel server di distribuzione (sottoscrizioni push)** nella pagina **Posizione in cui eseguire l'agente di distribuzione** o nella pagina **Posizione in cui eseguire l'agente di merge** , in base al tipo di pubblicazione.  
   
 -   Specificare i Sottoscrittori e i database di sottoscrizione.  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 41
   
     -   Per effettuare sottoscrizioni di pubblicazioni di tipo merge, specificare le credenziali nella pagina **Sicurezza agente di merge** .  
   
-     Per informazioni sulle autorizzazioni necessarie per ogni agente, vedere [modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
+     Per informazioni sulle autorizzazioni richieste per ogni agente, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 -   Specificare una pianificazione della sincronizzazione e definire quando il Sottoscrittore dovrà essere inizializzato.  
   
@@ -51,25 +55,25 @@ caps.handback.revision: 41
   
 -   Facoltativamente, creare lo script della sottoscrizione.  
   
-#### Per creare una sottoscrizione push dal server di pubblicazione  
+#### <a name="to-create-a-push-subscription-from-the-publisher"></a>Per creare una sottoscrizione push dal server di pubblicazione  
   
 1.  Connettersi al server di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .  
   
-3.  Pulsante destro del mouse la pubblicazione per cui si desidera creare una o più sottoscrizioni e quindi fare clic su **nuove sottoscrizioni**.  
+3.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera creare una o più sottoscrizioni e scegliere **Nuove sottoscrizioni**.  
   
 4.  Completare i passaggi della Creazione guidata nuova sottoscrizione.  
   
-#### Per creare una sottoscrizione push dal Sottoscrittore  
+#### <a name="to-create-a-push-subscription-from-the-subscriber"></a>Per creare una sottoscrizione push dal Sottoscrittore  
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** .  
   
-3.  Pulsante destro del mouse il **sottoscrizioni locali** cartella e quindi fare clic su **nuove sottoscrizioni**.  
+3.  Fare clic col pulsante destro del mouse sulla cartella **Sottoscrizioni locali** e quindi scegliere **Nuove sottoscrizioni**.  
   
-4.  Nel **pubblicazione** pagina della creazione guidata sottoscrizione, selezionare **\< trovare di pubblicazione SQL Server>** o **\< Trova server di pubblicazione Oracle>** dal **Publisher** elenco a discesa.  
+4.  Nella pagina **Pubblicazione** della Creazione guidata nuova sottoscrizione selezionare **\<Trova server di pubblicazione SQL Server** o **\<Trova server di pubblicazione Oracle>** nell'elenco a discesa **Server di pubblicazione**.  
   
 5.  Connettersi al server di pubblicazione nella finestra di dialogo **Connetti a server** .  
   
@@ -82,70 +86,70 @@ caps.handback.revision: 41
   
 > **IMPORTANTE** Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-#### Per creare una sottoscrizione push di una pubblicazione snapshot o transazionale  
+#### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per creare una sottoscrizione push di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione nel database di pubblicazione, verificare che la pubblicazione supporta le sottoscrizioni push eseguendo [sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni push.  
   
-    -   Se il valore di **allow_push** è **1**, sono supportate le sottoscrizioni push.  
+    -   Se il valore di **allow_push** è **1**, le sottoscrizioni push sono supportate.  
   
-    -   Se il valore di **allow_push** è **0**, eseguire [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specificando **allow_push** per **@property** e **true** per **@value**.  
+    -   Se il valore di **allow_push** è **0**, eseguire [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)specificando **allow_push** per **@property** e **true** per **@value**.  
   
-2.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Specificare **@publication**, **@subscriber** e **@destination_db**. Specificare un valore di **push** per **@subscription_type**. Per informazioni su come aggiornare le sottoscrizioni, vedere [creare una sottoscrizione aggiornabile di una pubblicazione transazionale](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Specificare **@publication**, **@subscriber** e **@destination_db**. Specificare il valore **push** per **@subscription_type**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
   
-3.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
   
-    -   Il **@subscriber**, **@subscriber_db**, e **@publication** parametri.  
+    -   I parametri **@subscriber**, **@subscriber_db**e **@publication** .  
   
-    -   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] le credenziali di Windows con cui viene eseguito l'agente di distribuzione nel server di distribuzione per **@job_login** e **@job_password**.  
+    -   I parametri [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per **@job_login** e **@job_password**.  
   
-        > **Nota:** le connessioni stabilite utilizzando sempre l'autenticazione integrata di Windows utilizzano le credenziali Windows specificate da **@job_login** e **@job_password**. L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
+        > **NOTA:** per le connessioni effettuate con l'autenticazione integrata di Windows vengono usate sempre le credenziali di Windows specificate da **@job_login** e **@job_password**. L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
   
-    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di accesso per **@subscriber_login** e **@subscriber_password**. Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
+    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_login** e **@subscriber_password**. Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
   
     -   Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione. Per altre informazioni, vedere [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-    > **IMPORTANTE** Quando si crea una sottoscrizione push in un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+    > **IMPORTANTE** Quando si crea una sottoscrizione push in un server di pubblicazione per un server di distribuzione remoto, i valori specificati per tutti i parametri, compresi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-#### Per creare una sottoscrizione push di una pubblicazione di tipo merge  
+#### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Per creare una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione nel database di pubblicazione, verificare che la pubblicazione supporta le sottoscrizioni push eseguendo [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni push.  
   
     -   Se il valore di **allow_push** è **1**, la pubblicazione supporta le sottoscrizioni push.  
   
-    -   Se il valore di **allow_push** non **1**, eseguire [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specificando **allow_push** per **@property** e **true** per **@value**.  
+    -   Se il valore di **allow_push** non è **1**, eseguire [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)specificando **allow_push** per **@property** e **true** per **@value**.  
   
-2.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), specificando i parametri seguenti:  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)specificando i parametri seguenti:  
   
     -   **@publication**. Nome della pubblicazione.  
   
     -   **@subscriber_type**. Per una sottoscrizione client specificare **local** e per una sottoscrizione server specificare **global**.  
   
-    -   **@subscription_priority**. Per una sottoscrizione server, specificare una priorità per la sottoscrizione (**0.00** a **99,99**).  
+    -   **@subscription_priority**. Per una sottoscrizione server, specificare una priorità per la pubblicazione utilizzando un valore compreso tra**0.00** e **99.99**.  
   
          Per altre informazioni, vedere [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-3.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
   
-    -   Il **@subscriber**, **@subscriber_db**, e **@publication** parametri.  
+    -   I parametri **@subscriber**, **@subscriber_db**e **@publication** .  
   
-    -   Le credenziali di Windows con cui viene eseguito l'agente di Merge nel server di distribuzione per **@job_login** e **@job_password**.  
+    -   Le credenziali di Windows utilizzate per l'esecuzione dell'agente di merge nel server di distribuzione per **@job_login** e **@job_password**.  
   
-        > **Nota:**  le connessioni stabilite utilizzando sempre l'autenticazione integrata di Windows utilizzano le credenziali Windows specificate da **@job_login** e **@job_password**. L'agente di merge esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
+        > **NOTA:** per le connessioni effettuate con l'autenticazione integrata di Windows vengono usate sempre le credenziali di Windows specificate da **@job_login** e **@job_password**. L'agente di merge esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
   
-    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di accesso per **@subscriber_login** e **@subscriber_password**. Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
+    -   (Facoltativo) Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_login** e **@subscriber_password**. Specificare questi parametri se è necessario utilizzare l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
   
-    -   (Facoltativo) Il valore **0** per **@publisher_security_mode** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di accesso per **@publisher_login** e **@publisher_password**. Specificare questi valori se è necessario utilizzare l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
+    -   (Facoltativo) Il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Specificare questi valori se è necessario utilizzare l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
   
     -   Una pianificazione per il processo dell'agente di merge per la sottoscrizione. Per altre informazioni, vedere [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-    > **IMPORTANTE** Quando si crea una sottoscrizione push in un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+    > **IMPORTANTE** Quando si crea una sottoscrizione push in un server di pubblicazione per un server di distribuzione remoto, i valori specificati per tutti i parametri, compresi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
- Nell'esempio seguente viene creata una sottoscrizione push a una pubblicazione transazionale. I valori dell'account di accesso e della password vengono forniti in fase di esecuzione tramite le variabili di scripting **sqlcmd** .  
+ Nell'esempio seguente viene creata una sottoscrizione push a una pubblicazione transazionale. I valori dell'account di accesso e della password vengono forniti in fase di esecuzione tramite le variabili di scripting di **sqlcmd** .  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
   
- Nell'esempio seguente viene creata una sottoscrizione push a una pubblicazione di tipo merge. I valori dell'account di accesso e della password vengono forniti in fase di esecuzione tramite le variabili di scripting **sqlcmd** .  
+ Nell'esempio seguente viene creata una sottoscrizione push a una pubblicazione di tipo merge. I valori dell'account di accesso e della password vengono forniti in fase di esecuzione tramite le variabili di scripting di **sqlcmd** .  
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
@@ -154,104 +158,105 @@ caps.handback.revision: 41
   
 > **IMPORTANTE** Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](http://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
-#### Per creare una sottoscrizione push di una pubblicazione snapshot o transazionale  
+#### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per creare una sottoscrizione push di una pubblicazione snapshot o transazionale  
   
-1.  Creare una connessione al server di pubblicazione utilizzando il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.TransPublication> classe tramite la connessione server di pubblicazione dal passaggio 1. Specificare <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication> usando la connessione al server di pubblicazione creata nel passaggio 1. Specificare <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> metodo. Se il metodo restituisce **false**, le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce **false**, le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
   
-4.  Eseguire un'operazione con AND logico bit per bit (**&** in Visual c# e **e** in Visual Basic) tra il <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> proprietà e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> al risultato di un operatore logico OR bit per bit (**|** in Visual c# e **o** in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Quindi, chiamare <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni push.  
+4.  Eseguire un'operazione con AND logico bit per bit (**&** in Visual C# e **And** in Visual Basic) tra la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> sul risultato di un'operazione con OR logico bit per bit (**|** in Visual C# e **Or** in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Chiamare quindi <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni push.  
   
-5.  Se il database di sottoscrizione non esiste, crearlo utilizzando la <xref:Microsoft.SqlServer.Management.Smo.Database> (classe). Per ulteriori informazioni, vedere [creazione, modifica e rimozione di database](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Se il database di sottoscrizione non esiste, crearlo usando la classe <xref:Microsoft.SqlServer.Management.Smo.Database>. Per altre informazioni, vedere [Creazione, modifica e rimozione di database](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.TransSubscription> (classe).  
+6.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7.  Impostare le proprietà seguenti per la sottoscrizione:  
   
-    -   Il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> al server di pubblicazione creato nel passaggio 1 per <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> per il server di pubblicazione creato nel passaggio 1 per <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Nome del database di sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
   
-    -   Nome del sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
+    -   Nome del Sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
   
     -   Nome del database di pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
     -   Nome della pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Il <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> i campi di <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> per fornire le credenziali per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account Windows con cui viene eseguito l'agente di distribuzione nel server di distribuzione. Questo account viene utilizzato per attivare connessioni locali al server di distribuzione e stabilire connessioni remote con l'autenticazione di Windows.  
+    -   Per specificare le credenziali per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows usato per eseguire l'agente di distribuzione nel database di distribuzione, impostare i campi <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> di <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Questo account viene utilizzato per attivare connessioni locali al server di distribuzione e stabilire connessioni remote con l'autenticazione di Windows.  
   
-        > **Nota:** impostazione <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> non è richiesto per la creazione della sottoscrizione da un membro del **sysadmin** ruolo predefinito del server, tuttavia, è consigliabile. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **NOTA:** non è obbligatorio impostare <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> quando la sottoscrizione viene creata da un membro del ruolo predefinito del server **sysadmin**, tuttavia si tratta di un'impostazione consigliata. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Facoltativo) Il valore **true** (predefinito) per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> per creare un processo dell'agente che viene utilizzato per sincronizzare la sottoscrizione. Se si specifica **false**, la sottoscrizione può essere sincronizzata solo a livello di programmazione.  
+    -   (Facoltativo) Impostare il valore **true** (impostazione predefinita) per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> per creare un processo agente, usato per sincronizzare la sottoscrizione. Se si specifica **false**, la sottoscrizione può essere sincronizzata solo a livello di programmazione.  
   
-    -   (Facoltativo) Impostare il <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> i campi di <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> quando si utilizza l'autenticazione di SQL Server per la connessione al sottoscrittore.  
+    -   (Facoltativo) Impostare i campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> quando si usa l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
   
-8.  Chiamare il <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> metodo.  
+8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
   
-    > **IMPORTANTE!!**Quando si crea una sottoscrizione push in un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutte le proprietà, inclusi <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il relativo server di distribuzione remoto prima di chiamare il <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> metodo. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+    > **IMPORTANTE** Quando si crea una sottoscrizione push in un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutte le proprietà, compresa <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di chiamare il metodo <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-#### Per creare una sottoscrizione push di una pubblicazione di tipo merge  
+#### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Per creare una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Creare una connessione al server di pubblicazione utilizzando il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.MergePublication> classe tramite la connessione server di pubblicazione dal passaggio 1. Specificare <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> usando la connessione al server di pubblicazione creata nel passaggio 1. Specificare <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> metodo. Se il metodo restituisce **false**, le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce **false**, le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
   
-4.  Eseguire un'operazione con AND logico bit per bit (**&** in Visual c# e **e** in Visual Basic) tra il <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> proprietà e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> al risultato di un operatore logico OR bit per bit (**|** in Visual c# e **o** in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Quindi, chiamare <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni push.  
+4.  Eseguire un'operazione con AND logico bit per bit (**&** in Visual C# e **And** in Visual Basic) tra la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> sul risultato di un'operazione con OR logico bit per bit (**|** in Visual C# e **Or** in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Chiamare quindi <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni push.  
   
-5.  Se il database di sottoscrizione non esiste, crearlo utilizzando la <xref:Microsoft.SqlServer.Management.Smo.Database> (classe). Per ulteriori informazioni, vedere [creazione, modifica e rimozione di database](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Se il database di sottoscrizione non esiste, crearlo usando la classe <xref:Microsoft.SqlServer.Management.Smo.Database>. Per altre informazioni, vedere [Creazione, modifica e rimozione di database](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.MergeSubscription> (classe).  
+6.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7.  Impostare le proprietà seguenti per la sottoscrizione:  
   
-    -   Il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> al server di pubblicazione creato nel passaggio 1 per <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> per il server di pubblicazione creato nel passaggio 1 per <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Nome del database di sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
   
-    -   Nome del sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
+    -   Nome del Sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
   
     -   Nome del database di pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
     -   Nome della pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Il <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> i campi di <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> per fornire le credenziali per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account Windows con cui viene eseguito l'agente di Merge nel server di distribuzione. Questo account viene utilizzato per attivare connessioni locali al server di distribuzione e stabilire connessioni remote con l'autenticazione di Windows.  
+    -   Per specificare le credenziali per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows usato per eseguire l'agente di merge nel database di distribuzione, impostare i campi <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> di <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Questo account viene utilizzato per attivare connessioni locali al server di distribuzione e stabilire connessioni remote con l'autenticazione di Windows.  
   
-        > **Nota:** impostazione <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> non è richiesto per la creazione della sottoscrizione da un membro del **sysadmin** ruolo predefinito del server, tuttavia, è consigliabile. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **NOTA:** non è obbligatorio impostare <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> quando la sottoscrizione viene creata da un membro del ruolo predefinito del server **sysadmin**, tuttavia si tratta di un'impostazione consigliata. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Facoltativo) Il valore **true** (predefinito) per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> per creare un processo dell'agente che viene utilizzato per sincronizzare la sottoscrizione. Se si specifica **false**, la sottoscrizione può essere sincronizzata solo a livello di programmazione.  
+    -   (Facoltativo) Impostare il valore **true** (impostazione predefinita) per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> per creare un processo agente, usato per sincronizzare la sottoscrizione. Se si specifica **false**, la sottoscrizione può essere sincronizzata solo a livello di programmazione.  
   
-    -   (Facoltativo) Impostare il <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> i campi di <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> quando si utilizza l'autenticazione di SQL Server per la connessione al sottoscrittore.  
+    -   (Facoltativo) Impostare i campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> quando si usa l'autenticazione di SQL Server per la connessione al Sottoscrittore.  
   
-    -   (Facoltativo) Impostare il <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> i campi di <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> quando si utilizza l'autenticazione di SQL Server per connettersi al server di pubblicazione.  
+    -   (Facoltativo) Impostare i campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> quando si usa l'autenticazione di SQL Server per la connessione al server di pubblicazione.  
   
-8.  Chiamare il <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> metodo.  
+8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
   
-    > **IMPORTANTE**  Quando si crea una sottoscrizione push in un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutte le proprietà, inclusi <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il relativo server di distribuzione remoto prima di chiamare il <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> metodo. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+    > **IMPORTANTE**  Quando si crea una sottoscrizione push in un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutte le proprietà, compresa <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di chiamare il metodo <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene creata una nuova sottoscrizione push di una pubblicazione transazionale. Le credenziali dell'account di Windows utilizzate per eseguire il processo dell'agente di distribuzione vengono passate in fase di esecuzione.  
   
- [!code-csharp[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
+ [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
   
  [!code-vb[HowTo#rmo_vb_CreateTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpushsub)]  
   
  In questo esempio viene creata una nuova sottoscrizione push di una pubblicazione di tipo merge. Le credenziali dell'account di Windows utilizzate per eseguire il processo dell'agente di merge vengono passate in fase di esecuzione.  
   
- [!code-csharp[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
+ [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## Vedere anche  
- [Visualizzazione e modifica delle proprietà delle sottoscrizioni push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Visualizzare e modificare le proprietà delle sottoscrizioni push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Creazione di una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md)   
- [Concetti di base relativi a RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Sincronizzazione di una sottoscrizione push](../../relational-databases/replication/synchronize-a-push-subscription.md)   
- [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
- [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)  
+ [Creare una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Sincronizzare una sottoscrizione push](../../relational-databases/replication/synchronize-a-push-subscription.md)   
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Usare sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   
+

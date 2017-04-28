@@ -1,35 +1,39 @@
 ---
-title: "Creazione di variabili e colonne con tipo di dati XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo di dati XML [SQL Server], variabili"
-  - "tipo di dati XML [SQL Server], colonne"
+title: Creare variabili e colonne con tipo di dati XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di variabili e colonne con tipo di dati XML
+# <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
   Il tipo di dati **xml** è un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro, tipo restituito dalla funzione oppure in [CAST e CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-## Creazione di colonne e variabili  
+## <a name="creating-columns-and-variables"></a>Creazione di colonne e variabili  
  Per creare una colonna di tipo `xml` come parte di una tabella, usare un'istruzione `CREATE TABLE` come illustrato nell'esempio seguente:  
   
 ```  
 CREATE TABLE T1(Col1 int primary key, Col2 xml)   
 ```  
   
- È possibile usare una `DECLARE statement` per creare una variabile del tipo `xml`, come illustrato nell'esempio seguente.  
+ È possibile usare una `DECLARE statement` per creare una variabile del tipo `xml` , come illustrato nell'esempio seguente.  
   
 ```  
 DECLARE @x xml   
@@ -47,12 +51,12 @@ DECLARE @x xml (Sales.StoreSurveySchemaCollection)
 CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...   
 ```  
   
- È possibile utilizzare XQuery per eseguire query su istanze XML archiviate in colonne, parametri o variabili. È inoltre possibile utilizzare il linguaggio XML DML (Data Manipulation Language) per l'applicazione di aggiornamenti alle istanze XML. Poiché al momento dello sviluppo lo standard XQuery non prevedeva istruzioni DML per il linguaggio XQuery, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduce in XQuery le estensioni del [linguaggio XML DML (Data Modification Language)](../../t-sql/xml/xml-data-modification-language-xml-dml.md). Queste estensioni consentono l'esecuzione di operazioni di inserimento, aggiornamento ed eliminazione.  
+ È possibile utilizzare XQuery per eseguire query su istanze XML archiviate in colonne, parametri o variabili. È inoltre possibile utilizzare il linguaggio XML DML (Data Manipulation Language) per l'applicazione di aggiornamenti alle istanze XML. Poiché al momento dello sviluppo lo standard XQuery non prevedeva istruzioni DML per il linguaggio XQuery, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduce in XQuery le estensioni del [linguaggio XML DML (Data Modification Language)](../../t-sql/xml/xml-data-modification-language-xml-dml.md) . Queste estensioni consentono l'esecuzione di operazioni di inserimento, aggiornamento ed eliminazione.  
   
-## Assegnazione di valori predefiniti  
- All'interno di una tabella è possibile assegnare un'istanza XML predefinita a una colonna di tipo **xml**. È possibile fornire dati XML predefiniti in una delle due modalità: usando una costante XML o un cast esplicito al tipo **xml**.  
+## <a name="assigning-defaults"></a>Assegnazione di valori predefiniti  
+ All'interno di una tabella è possibile assegnare un'istanza XML predefinita a una colonna di tipo **xml** . È possibile fornire dati XML predefiniti in una delle due modalità: usando una costante XML o un cast esplicito al tipo **xml** .  
   
- Per fornire dati XML predefiniti come costante XML, utilizzare la sintassi come illustrato nell'esempio seguente. Si noti che la stringa è di tipo CAST implicito al tipo **xml**.  
+ Per fornire dati XML predefiniti come costante XML, utilizzare la sintassi come illustrato nell'esempio seguente. Si noti che la stringa è di tipo CAST implicito al tipo **xml** .  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -65,20 +69,20 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta anche i vincoli NULL e NOT NULL sulle colonne di tipo **xml**. Esempio:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta anche i vincoli NULL e NOT NULL sulle colonne di tipo **xml** . Esempio:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## Specifica dei vincoli  
+## <a name="specifying-constraints"></a>Specifica dei vincoli  
  Durante la creazione di colonne di tipo **xml** è possibile definire vincoli a livello di colonna o di tabella. Utilizzare i vincoli nelle situazioni seguenti:  
   
--   Le regole business non possono essere espresse negli elementi XML Schema. Se ad esempio l'indirizzo di recapito di un fiorista deve essere entro 80 Km dal negozio, tale condizione può essere espressa come vincolo sulla colonna XML. Il vincolo può includere metodi per il tipo di dati **xml**.  
+-   Le regole business non possono essere espresse negli elementi XML Schema. Se ad esempio l'indirizzo di recapito di un fiorista deve essere entro 80 Km dal negozio, tale condizione può essere espressa come vincolo sulla colonna XML. Il vincolo può includere metodi per il tipo di dati **xml** .  
   
 -   Il vincolo coinvolge altre colonne XML o non XML nella tabella. Un esempio è l'applicazione dell'ID di un cliente (`/Customer/@CustId`) trovato in un'istanza XML per la corrispondenza con il valore in una colonna relazionale CustomerID.  
   
- È possibile specificare vincoli per le colonne di tipi di dati **xml** tipizzate o non tipizzate. Nella specifica dei vincoli non è tuttavia possibile usare i [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md). Si noti anche che il tipo di dati **xml** non supporta i vincoli di colonna e tabella seguenti:  
+ È possibile specificare vincoli per le colonne di tipi di dati **xml** tipizzate o non tipizzate. Nella specifica dei vincoli non è tuttavia possibile usare i [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md) . Si noti anche che il tipo di dati **xml** non supporta i vincoli di colonna e tabella seguenti:  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   
@@ -92,7 +96,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
  Un'alternativa all'uso di vincoli è la creazione di un wrapper, una funzione definita dall'utente per eseguire il wrapping del metodo con tipo di dati **xml** e specificare la funzione definita dall'utente nel vincolo CHECK, come illustrato nell'esempio seguente.  
   
- Nell'esempio seguente, il vincolo in `Col2` specifica che tutte le istanze XML archiviate nella colonna devono avere un elemento `<ProductDescription>` contenente un attributo `ProductID`. Il vincolo viene imposto da questa funzione definita dall'utente:  
+ Nell'esempio seguente, il vincolo in `Col2` specifica che tutte le istanze XML archiviate nella colonna devono avere un elemento `<ProductDescription>` contenente un attributo `ProductID` . Il vincolo viene imposto da questa funzione definita dall'utente:  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- Si noti che il metodo `exist()` con tipo di dati `xml` restituisce `1` se l'elemento `<ProductDescription>` nell'istanza contiene l'attributo `ProductID`. In caso contrario, viene restituito `0`.  
+ Si noti che il metodo `exist()` con tipo di dati `xml` restituisce `1` se l'elemento `<ProductDescription>` nell'istanza contiene l'attributo `ProductID` . In caso contrario, viene restituito `0`.  
   
  A questo punto è possibile creare una colonna con vincoli a livello di colonna come illustrato di seguito:  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## Utilizzo di un'unica tabella o di più tabelle  
+## <a name="same-or-different-table"></a>Utilizzo di un'unica tabella o di più tabelle  
  È possibile creare una colonna con tipo di dati **xml** in una tabella che contiene altre colonne relazionali oppure in una tabella separata con una relazione di chiave esterna con una tabella principale.  
   
  Creare una colonna con tipo di dati **xml** nella stessa tabella quando si verifica una delle condizioni seguenti:  
@@ -136,7 +140,7 @@ INSERT INTO T values(1,'<Product />')
   
  Creare la colonna con tipo di dati **xml** in una tabella separata se si verificano le condizioni seguenti:  
   
--   Si vuole compilare un indice XML sulla colonna con tipo di dati **xml**, ma la chiave primaria della tabella principale è diversa dalla chiave di clustering, la tabella principale non ha una chiave primaria, oppure la tabella principale è un heap, ovvero è priva di chiave di clustering. Questa situazione può verificarsi quando si utilizza una tabella principale esistente.  
+-   Si vuole compilare un indice XML sulla colonna con tipo di dati **xml** , ma la chiave primaria della tabella principale è diversa dalla chiave di clustering, la tabella principale non ha una chiave primaria, oppure la tabella principale è un heap, ovvero è priva di chiave di clustering. Questa situazione può verificarsi quando si utilizza una tabella principale esistente.  
   
 -   Si desidera evitare che l'analisi della tabella venga rallentata a causa della presenza della colonna XML, che utilizza spazio sia che venga archiviata all'interno delle righe che all'esterno delle righe.  
   

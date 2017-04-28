@@ -1,25 +1,29 @@
 ---
-title: "Colonne con il nome di un test di nodo XPath | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomi [SQL Server], colonne con nomi"
-  - "test di nodo XPath"
+title: Colonne con il nome di un test di nodo XPath | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
+- XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41bc7b31ff9f5185dcdfde4a90bbfe631fbef089
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colonne con il nome di un test di nodo XPath
+# <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colonne con il nome di un test di nodo XPath
   Se il nome della colonna è uno dei test di nodo XPath, il mapping del contenuto viene eseguito come illustrato nella tabella seguente. Quando il nome della colonna è un test di nodo XPath, il mapping viene eseguito tra il contenuto e il nodo corrispondente. Se il tipo SQL della colonna è **xml**, viene generato un errore.  
   
 |Nome colonna|Comportamento|  
@@ -84,7 +88,7 @@ FOR XML PATH;
   
  `</row>`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

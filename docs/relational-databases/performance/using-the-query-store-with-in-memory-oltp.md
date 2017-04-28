@@ -1,25 +1,29 @@
 ---
-title: "Uso di Archivio query con OLTP in-memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Archivio query, in memoria"
+title: Uso dell&quot;archivio query con OLTP in memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# Uso di Archivio query con OLTP in-memoria
+# <a name="using-the-query-store-with-in-memory-oltp"></a>Uso di Archivio query con OLTP in-memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Archivio query consente di monitorare le prestazioni del codice compilato in modo nativo per i carichi di lavoro che eseguono OLTP in memoria.  
@@ -32,7 +36,7 @@ Esistono tuttavia alcuni aspetti specifici di cui gli utenti dovranno tenere con
   
 -   Quando Archivio query è abilitato, vengono raccolte per impostazione predefinita statistiche relative a query, piani e tempi di compilazione. La raccolta delle statistiche di runtime non è tuttavia attivata, a meno che non venga abilitata in modo esplicito con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Quando si imposta *@new_collection_value* su 0, Archivio query arresta la raccolta delle statistiche di runtime per la procedura interessata o per l'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Quando si imposta *@new_collection_value* su 0, Archivio query arresta la raccolta delle statistiche di runtime per la procedura interessata o per l'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Il valore configurato con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) non è persistente. Verificare di controllare e configurare nuovamente la raccolta delle statistiche dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +56,7 @@ Esistono tuttavia alcuni aspetti specifici di cui gli utenti dovranno tenere con
   
 -   Le metriche delle concessioni di memoria in [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) non vengono popolate per le query compilate in modo nativo e i valori sono sempre pari a 0. Le colonne per le concessioni di memoria sono: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory e stdev_query_max_used_memory.  
   
-## Abilitazione e uso di Archivio query con OLTP in-memoria  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Abilitazione e uso di Archivio query con OLTP in-memoria  
  Il semplice esempio seguente è una dimostrazione dell'uso di Archivio query con OLTP in memoria in uno scenario utente end-to-end. In questo esempio si presuppone che un database (`MemoryOLTP`) sia abilitato per OLTP in memoria.  
     Per altri dettagli sui prerequisiti per le tabelle con ottimizzazione per la memoria, vedere [Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -133,7 +137,7 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
@@ -141,3 +145,4 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

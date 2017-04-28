@@ -1,37 +1,41 @@
 ---
-title: "Esecuzione del debugger Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "debugger Transact-SQL, requisito di sysadmin"
-  - "debugger Transact-SQL, versioni supportate"
-  - "editor di query [Motore di database], menu di scelta rapida"
-  - "debug [SQL Server], debugger T-SQL"
-  - "debugger Transact-SQL, menu di scelta rapida dell'editor di query"
-  - "debugger Transact-SQL, arresto"
-  - "debugger Transact-SQL, menu Debug"
-  - "debug [SQL Server]"
-  - "debugger Transact-SQL, barra degli strumenti Debug"
-  - "debugger Transact-SQL, scelte rapide da tastiera"
-  - "debugger Transact-SQL, avvio"
+title: Eseguire il debugger Transact-SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, sysadmin requirement
+- Transact-SQL debugger, supported versions
+- Query Editor [Database Engine], right-click menu
+- debugging [SQL Server], T-SQL debugger
+- Transact-SQL debugger, Query Editor shortcut menu
+- Transact-SQL debugger, stopping
+- Transact-SQL debugger, Debug menu
+- debugging [SQL Server]
+- Transact-SQL debugger, Debug toolbar
+- Transact-SQL debugger, keyboard shortcuts
+- Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esecuzione del debugger Transact-SQL
+# <a name="run-the-transact-sql-debugger"></a>Esecuzione del debugger Transact-SQL
   È possibile avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] dopo avere aperto una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È quindi possibile eseguire il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] in modalità di debug fino a quando non si desidera arrestare il debugger. È possibile impostare le opzioni desiderate per personalizzare la modalità di esecuzione del debugger.  
   
-## Avvio e arresto del debugger  
+## <a name="starting-and-stopping-the-debugger"></a>Avvio e arresto del debugger  
  Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 -   Se l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connesso a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un altro computer, è necessario aver configurato il debugger per il debug remoto. Per altre informazioni, vedere [Configurazione del debugger Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
@@ -46,7 +50,7 @@ caps.handback.revision: 8
   
 -   Il debug è un'operazione che richiede privilegi elevati. Solo i membri del ruolo predefinito del server sysadmin possono pertanto eseguire il debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Le sessioni di debug spesso durano a lungo perché comportano il controllo dell'esecuzione di numerose istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. I blocchi, ad esempio i blocchi di aggiornamento, che vengono acquisiti dalla sessione potrebbero essere mantenuti per lunghi periodi di tempo, fino al termine della sessione o al commit o rollback della transazione.  
+-   Le sessioni di debug spesso durano a lungo perché comportano il controllo dell'esecuzione di numerose istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . I blocchi, ad esempio i blocchi di aggiornamento, che vengono acquisiti dalla sessione potrebbero essere mantenuti per lunghi periodi di tempo, fino al termine della sessione o al commit o rollback della transazione.  
   
  All'avvio del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , la finestra dell'editor di query entra nella modalità di debug e l'esecuzione del codice viene sospesa dal debugger in corrispondenza della prima riga. A questo punto, è possibile procedere istruzione per istruzione, sospendere l'esecuzione su istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] specifiche e utilizzare le finestre del debugger per visualizzare lo stato corrente dell'esecuzione: È possibile avviare il debugger facendo clic sul pulsante **Debug** nella barra degli strumenti **Query** oppure scegliendo **Avvia debug** dal menu **Debug** .  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 8
   
  È inoltre possibile arrestare la modalità di debug e consentire il completamento delle restanti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] scegliendo **Disconnetti tutto** dal menu **Debug** .  
   
-## Controllo del debugger  
+## <a name="controlling-the-debugger"></a>Controllo del debugger  
  È possibile controllare l'esecuzione del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando i comandi, le barre degli strumenti e le scelte rapide seguenti:  
   
 -   Il menu **Debug** e la barra degli strumenti **Debug** . Sia il menu **Debug** che la barra degli strumenti **Debug** sono inattivi fino a quando non viene attivata una finestra dell'editor di query aperta. Rimangono attivi fino alla chiusura del progetto corrente.  
@@ -87,8 +91,8 @@ caps.handback.revision: 8
 |**Finestra, Thread**|Non disponibile|**Punti di interruzione, Thread**|CTRL+ALT+H|Consente di visualizzare la finestra **Thread** .|  
 |**Continue**|Non disponibile|**Continue**|ALT+F5|Eseguire il codice fino al successivo punto di interruzione. **Continua** non è attivo fintanto che una finestra dell'editor di query in modalità di debug non ha lo stato attivo.|  
 |**Avvia debug**|Non disponibile|**Avvia debug**|ALT+F5|Consente di attivare la modalità di debug per una finestra dell'editor di query ed eseguire il codice fino al primo punto di interruzione. Se lo stato attivo si trova in una finestra dell'editor di query in modalità di debug, **Avvia debug** viene sostituito da **Continua**.|  
-|**Interrompi tutto**|Non disponibile|**Interrompi tutto**|CTRL+ALT+INTERR|Questa caratteristica non è utilizzata dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|**Arresta debug**|Non disponibile|**Arresta debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
+|**Interrompi tutto**|Non disponibile|**Interrompi tutto**|CTRL+ALT+INTERR|Questa caratteristica non è utilizzata dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**Debug**|Non disponibile|**Debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
 |**Disconnetti tutto**|Non disponibile|Non disponibile|Non disponibile|Consente di arrestare la modalità di debug, ma di eseguire le istruzioni restanti nella finestra dell'editor di query.|  
 |**Esegui istruzione**|Non disponibile|**Esegui istruzione**|F11|Consente di eseguire l'istruzione successiva e anche di aprire una nuova finestra dell'editor di query nella modalità di debug se l'istruzione successiva esegue una stored procedure, un trigger o una funzione.|  
 |**Esegui istruzione/routine**|Non disponibile|**Esegui istruzione/routine**|F10|Stessa funzione di **Esegui istruzione**eccetto per il fatto che con questo comando non viene eseguito il debug di funzioni, stored procedure o trigger.|  
@@ -103,7 +107,7 @@ caps.handback.revision: 8
 |**Disabilita tutti i punti di interruzione**|Non disponibile|Non disponibile|Non disponibile|Consente di disabilitare tutti i punti di interruzione.|  
 |Non disponibile|**Aggiungi espressione di controllo**|Non disponibile|Non disponibile|Consente di aggiungere l'espressione selezionata alla finestra **Espressione di controllo** .|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Esecuzione istruzione per istruzione del codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

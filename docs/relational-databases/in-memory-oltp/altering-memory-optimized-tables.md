@@ -1,28 +1,32 @@
 ---
-title: "Modifica di tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifica di tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica di tabelle con ottimizzazione per la memoria
+# <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le modifiche dello schema e dell'indice nelle tabelle con ottimizzazione per la memoria possono essere eseguite con l'istruzione ALTER TABLE. L'applicazione di database può proseguire l'esecuzione e qualsiasi operazione che accede alla tabella viene bloccata fino al termine del processo di modifica.  
   
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
 La sintassi ALTER TABLE viene usata per apportare modifiche allo schema della tabella e per aggiungere, eliminare e ricompilare gli indici. Gli indici sono considerati parte della definizione di tabella:  
   
@@ -75,12 +79,12 @@ La sintassi ALTER TABLE viene usata per apportare modifiche allo schema della ta
   
  Per altre informazioni sulla funzionalità ALTER TABLE e per la sintassi completa, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## Dipendenza associata a schema  
+## <a name="schema-bound-dependency"></a>Dipendenza associata a schema  
  Le stored procedure compilate in modo nativo devono essere associate a schema, ovvero devono avere una dipendenza associata a schema rispetto alle tabelle con ottimizzazione per la memoria a cui accedono e alle colonne a cui fanno riferimento. Una dipendenza associata a schema è una relazione tra due entità che impedisce l'eliminazione o la modifica incompatibile dell'entità a cui si fa riferimento finché esiste l'entità di riferimento.  
   
  Ad esempio, se una stored procedure compilata in modo nativo con associazione a schema fa riferimento a una colonna *c1* dalla tabella *mytable*, la colonna *c1* non può essere eliminata. Analogamente, se esiste una procedura con un'istruzione INSERT senza elenco di colonne, ad esempio, `INSERT INTO dbo.mytable VALUES (...)`, non è possibile eliminare alcuna colonna nella tabella.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  L'esempio seguente modifica il numero di bucket di un indice hash esistente. L'indice hash viene ricompilato con il nuovo numero di bucket mentre le altre proprietà dell'indice hash rimangono invariate.  
   
 ```tsql
@@ -145,7 +149,7 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## Registrazione di ALTER TABLE nelle tabelle con ottimizzazione per la memoria
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Registrazione di ALTER TABLE nelle tabelle con ottimizzazione per la memoria
 
 
 In una tabella con ottimizzazione per la memoria, la maggior parte degli scenari ALTER TABLE ora viene eseguita in parallelo, con conseguente ottimizzazione delle operazioni di scrittura nel log delle transazioni. L'ottimizzazione è consentita dal fatto che nel log delle transazioni vengono scritte solo le modifiche dei metadati. Le operazioni ALTER TABLE seguenti vengono tuttavia eseguite a thread singolo e non sono ottimizzate per il log.
@@ -167,7 +171,9 @@ Le operazioni a thread singolo richiedono che nel log venga scritto l'intero con
     - *Eccezione:* il prolungamento di una colonna già all'esterno di righe viene registrato in modo ottimizzato.
 
 
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 
 [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
+

@@ -1,31 +1,35 @@
 ---
-title: "Stima delle dimensioni di un indice non cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "allocazione spazio [SQL Server], dimensioni indice"
-  - "dimensioni [SQL Server], tabelle"
-  - "stima delle dimensioni di tabella [SQL Server]"
-  - "dimensioni di tabella [SQL Server]"
-  - "stima delle dimensioni di tabella"
-  - "indici cluster, dimensioni tabella"
-  - "progettazione di database [SQL Server], stima delle dimensioni"
-  - "calcolo delle dimensioni di tabella"
+title: Stimare le dimensioni di un indice non cluster | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stima delle dimensioni di un indice non cluster
+# <a name="estimate-the-size-of-a-nonclustered-index"></a>Stima delle dimensioni di un indice non cluster
   Per stimare la quantità di spazio necessaria per archiviare un indice non cluster, effettuare le operazioni seguenti:  
   
 1.  Calcolare le variabili da utilizzare nei passaggi 2 e 3.  
@@ -36,24 +40,24 @@ caps.handback.revision: 40
   
 4.  Sommare i valori calcolati.  
   
-## Passaggio 1. Calcolare le variabili da utilizzare nei passaggi 2 e 3  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>Passaggio 1. Calcolare le variabili da utilizzare nei passaggi 2 e 3  
  Per calcolare le variabili utilizzate per stimare la quantità di spazio necessario per archiviare i livelli superiori dell'indice, è possibile effettuare le operazioni seguenti:  
   
 1.  Specificare il numero di righe che verranno incluse nella tabella:  
   
-     ***Num_Rows*** = numero di righe della tabella  
+     ***Num_Rows***  = numero di righe della tabella  
   
 2.  Specificare il numero di colonne a lunghezza fissa e a lunghezza variabile incluse nella chiave dell'indice e calcolare lo spazio necessario per archiviarle:  
   
      Le colonne chiave di un indice possono includere colonne a lunghezza fissa e a lunghezza variabile. Per stimare le dimensioni delle righe di indice di livello interno, calcolare lo spazio occupato da ognuno di questi gruppi di colonne all'interno della riga di indice. Le dimensioni di una colonna dipendono dal tipo di dati e dalla lunghezza specificata.  
   
-     ***Num_Key_Cols*** = numero totale di colonne chiave (a lunghezza fissa e a lunghezza variabile)  
+     ***Num_Key_Cols***  = numero totale di colonne chiave (a lunghezza fissa e a lunghezza variabile)  
   
-     ***Fixed_Key_Size*** = dimensioni totali in byte di tutte le colonne chiave a lunghezza fissa  
+     ***Fixed_Key_Size***  = dimensioni totali in byte di tutte le colonne chiave a lunghezza fissa  
   
-     ***Num_Variable_Key_Cols*** = numero di colonne chiave a lunghezza variabile  
+     ***Num_Variable_Key_Cols***  = numero di colonne chiave a lunghezza variabile  
   
-     ***Max_Var_Key_Size*** = dimensioni massime in byte di tutte le colonne chiave a lunghezza variabile  
+     ***Max_Var_Key_Size***  = dimensioni massime in byte di tutte le colonne chiave a lunghezza variabile  
   
 3.  Considerare anche l'indicatore di posizione delle righe di dati, necessario se l'indice non è univoco:  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 40
   
      Se sono presenti colonne che ammettono i valori Null nella chiave dell'indice, incluse le eventuali colonne chiave di clustering necessarie descritte al passaggio 1.3, parte della riga di indice viene riservata alla mappa di bit Null.  
   
-     ***Index_Null_Bitmap*** = 2 + ((numero di colonne nella riga di indice + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((numero di colonne nella riga di indice + 7) / 8)  
   
      Deve essere utilizzata solo la parte Integer dell'espressione precedente. Eliminare le parti restanti.  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 40
   
      Se sono presenti colonne a lunghezza variabile nella chiave dell'indice, incluse eventuali colonne chiave dell'indice cluster necessarie, determinare lo spazio utilizzato per archiviare le colonne all'interno della riga di indice:  
   
-     ***Variable_Key_Size*** = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
+     ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
      I byte aggiunti a ***Max_Var_Key_Size*** servono a tenere traccia di ogni colonna variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Key_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
@@ -103,11 +107,11 @@ caps.handback.revision: 40
   
 7.  Calcolare il numero di righe di indice per pagina (8096 byte liberi per pagina):  
   
-     ***Index_Rows_Per_Page*** = 8096 / (***Index_Row_Size*** + 2)  
+     ***Index_Rows_Per_Page***  = 8096 / (***Index_Row_Size*** + 2)  
   
      Poiché le righe di indice non si estendono su più pagine, il numero di righe di indice per pagina deve essere arrotondato alla riga completa più vicina. Il numero 2 nella formula si riferisce alla voce della riga nella matrice di slot della pagina.  
   
-## Passaggio 2. Calcolare lo spazio utilizzato per l'archiviazione di informazioni sull'indice nel livello foglia  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Passaggio 2. Calcolare lo spazio utilizzato per l'archiviazione di informazioni sull'indice nel livello foglia  
  Per stimare la quantità di spazio necessaria per archiviare il livello foglia dell'indice, effettuare le operazioni seguenti. Per completare questo passaggio, sono necessari i valori preservati al passaggio 1.  
   
 1.  Specificare il numero di colonne a lunghezza fissa e a lunghezza variabile incluse a livello foglia e calcolare lo spazio necessario per archiviarle:  
@@ -116,7 +120,7 @@ caps.handback.revision: 40
     >  È possibile estendere un indice non cluster includendo colonne non chiave oltre alle colonne chiave. Tali colonne aggiuntive vengono archiviate solo al livello foglia dell'indice non cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary** o **sql_variant** che causano il superamento del limite di 8.060 byte previsto per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **varbinary** o **sql_variant** e di 4.000 byte per le colonne **nvarchar**. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella. Lo stesso vale inoltre per le righe foglia dell'indice non cluster che presentano colonne incluse.  
+    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che causano il superamento del limite di 8.060 byte previsto per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **varbinary**o **sql_variant** e di 4.000 byte per le colonne **nvarchar** . Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella. Lo stesso vale inoltre per le righe foglia dell'indice non cluster che presentano colonne incluse.  
   
      Se l'indice non cluster non dispone di colonne incluse, utilizzare i valori del passaggio 1, incluse le eventuali modifiche determinate al passaggio 1.3:  
   
@@ -164,7 +168,7 @@ caps.handback.revision: 40
   
 3.  Calcolare le dimensioni della mappa di bit Null:  
   
-     ***Leaf_Null_Bitmap*** = 2 + ((***Num_Leaf_Cols*** + 7) / 8)  
+     ***Leaf_Null_Bitmap***  = 2 + ((***Num_Leaf_Cols*** + 7) / 8)  
   
      Deve essere utilizzata solo la parte Integer dell'espressione precedente. Eliminare le parti restanti.  
   
@@ -172,11 +176,11 @@ caps.handback.revision: 40
   
      Se sono presenti colonne a lunghezza variabile nella chiave dell'indice, incluse eventuali colonne chiave di clustering necessarie descritte al passaggio 2.2, determinare lo spazio utilizzato per archiviare le colonne all'interno della riga di indice:  
   
-     ***Variable_Leaf_Size*** = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
+     ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      I byte aggiunti a ***Max_Var_Key_Size*** servono a tenere traccia di ogni colonna variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne di lunghezza variabile, è possibile modificare il valore ***Max_Var_Leaf_Size*** in base a tale percentuale per ottenere una stima più precisa delle dimensioni complessive della tabella.  
   
-     Se non sono disponibili colonne a lunghezza variabile, impostare ***Variable_Leaf_Size***su 0.  
+     Se non sono disponibili colonne a lunghezza variabile, impostare ***Variable_Leaf_Size*** su 0.  
   
 5.  Calcolare le dimensioni della riga di indice:  
   
@@ -184,13 +188,13 @@ caps.handback.revision: 40
   
 6.  Calcolare il numero di righe di indice per pagina (8096 byte liberi per pagina):  
   
-     ***Leaf_Rows_Per_Page*** = 8096 / (***Leaf_Row_Size*** + 2)  
+     ***Leaf_Rows_Per_Page***  = 8096 / (***Leaf_Row_Size*** + 2)  
   
      Poiché le righe di indice non si estendono su più pagine, il numero di righe di indice per pagina deve essere arrotondato alla riga completa più vicina. Il numero 2 nella formula si riferisce alla voce della riga nella matrice di slot della pagina.  
   
 7.  Calcolare il numero di righe libere riservate per pagina, sulla base del [fattore di riempimento](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) specificato:  
   
-     ***Free_Rows_Per_Page*** = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
+     ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
   
      Il fattore di riempimento utilizzato nel calcolo è un valore intero, non una percentuale. Poiché le righe non si estendono su più pagine, il numero di righe per pagina deve essere arrotondato alla riga completa più vicina. Aumentando il fattore di riempimento, in ciascuna pagina verrà archiviata una quantità maggiore di dati e il numero di pagine diminuirà. Il numero 2 nella formula si riferisce alla voce della riga nella matrice di slot della pagina.  
   
@@ -202,14 +206,14 @@ caps.handback.revision: 40
   
 9. Calcolare le dimensioni dell'indice (8192 byte totali per pagina):  
   
-     ***Leaf_Space_Used*** = 8192 x ***Num_Leaf_Pages***  
+     ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## Passaggio 3. Calcolare lo spazio utilizzato per l'archiviazione di informazioni sull'indice nei livelli non foglia  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Passaggio 3. Calcolare lo spazio utilizzato per l'archiviazione di informazioni sull'indice nei livelli non foglia  
  Per stimare la quantità di spazio necessaria per archiviare i livelli intermedio e radice dell'indice, effettuare le operazioni seguenti: Per completare questo passaggio, sono necessari i valori preservati ai passaggi 2 e 3.  
   
 1.  Calcolare il numero di livelli non foglia dell'indice:  
   
-     ***Non-leaf_Levels*** = 1 + log (Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non-leaf_Levels***  = 1 + log (Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Arrotondare questo valore per eccesso al numero intero più vicino. Nel valore non è incluso il livello foglia dell'indice non cluster.  
   
@@ -219,15 +223,15 @@ caps.handback.revision: 40
   
      Arrotondare ogni addendo al numero intero più vicino. Per un esempio semplice, considerare un indice in cui ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. Nel primo livello dell'indice sopra il livello foglia vengono archiviate 1000 righe di indice, ovvero una riga di indice per pagina foglia, ed è possibile inserire 25 righe di indice per pagina. Per archiviare le 1000 righe di indice, sono quindi necessarie 40 pagine. Nel livello successivo dell'indice devono invece essere archiviate 40 righe, pertanto sono necessarie 2 pagine. Nel livello finale dell'indice devono essere archiviate 2 righe, pertanto è necessaria una sola pagina. Si ottengono quindi 43 pagine di indice non foglia. Se nella formula precedente si utilizzano questi numeri, il risultato sarà il seguente:  
   
-     ***Non-leaf_Levels*** = 1 + log(25) (1000 / 25) = 3  
+     ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
   
      ***Num_Index_Pages*** = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, ovvero il numero di pagine descritto nell'esempio.  
   
 3.  Calcolare le dimensioni dell'indice (8192 byte totali per pagina):  
   
-     ***Index_Space_Used*** = 8192 x ***Num_Index_Pages***  
+     ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## Passaggio 4. Sommare i valori calcolati  
+## <a name="step-4-total-the-calculated-values"></a>Passaggio 4. Sommare i valori calcolati  
  Sommare i valori ottenuti nei due passaggi precedenti:  
   
  Dimensioni indice non cluster (byte) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -244,7 +248,7 @@ caps.handback.revision: 40
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml** e **image** è complesso. È comunque sufficiente aggiungere le dimensioni medie dei valori LOB previsti, moltiplicarle per ***Num_Rows*** e aggiungere il prodotto alle dimensioni totali dell'indice non cluster.  
+     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** è complesso. È comunque sufficiente aggiungere le dimensioni medie dei valori LOB previsti, moltiplicarle per ***Num_Rows***e aggiungere il prodotto alle dimensioni totali dell'indice non cluster.  
   
 -   Compressione  
   
@@ -254,7 +258,7 @@ caps.handback.revision: 40
   
      Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Descrizione di indici cluster e non cluster.](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

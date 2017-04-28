@@ -1,25 +1,29 @@
 ---
-title: "Configura compressione backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare la compressione dei backup (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 08c6e1ccb56a08309d2c904a8566884372dc3778
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configura compressione backup (SQL Server)
-  In fase di installazione, la compressione dei backup è disattivata per impostazione predefinita. Il comportamento predefinito della compressione dei backup è determinato dall'opzione di configurazione a livello di server **backup compression default**. È possibile tuttavia eseguire l'override dell'impostazione predefinita a livello del server durante la creazione di un singolo backup o la pianificazione di una serie di backup di routine. Per modificare il valore predefinito a livello di server, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
+# <a name="configure-backup-compression-sql-server"></a>Configura compressione backup (SQL Server)
+  In fase di installazione, la compressione dei backup è disattivata per impostazione predefinita. Il comportamento predefinito della compressione dei backup è determinato dall'opzione di configurazione a livello di server **backup compression default** . È possibile tuttavia eseguire l'override dell'impostazione predefinita a livello del server durante la creazione di un singolo backup o la pianificazione di una serie di backup di routine. Per modificare il valore predefinito a livello di server, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
-## Eseguire l'override dell'impostazione predefinita della compressione dei backup  
+## <a name="override-the-backup-compression-default"></a>Eseguire l'override dell'impostazione predefinita della compressione dei backup  
  È possibile modificare il comportamento della compressione dei backup per un singolo backup, processo di backup o configurazione per il log shipping.  
   
 -   **[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -50,9 +54,8 @@ caps.handback.revision: 6
   
          È possibile determinare il comportamento della compressione dei backup dei log.  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
   
   

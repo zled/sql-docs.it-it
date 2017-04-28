@@ -1,32 +1,36 @@
 ---
-title: "Scrittura di eventi di controllo di SQL Server nel registro di sicurezza | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registri [SQL Server], log di sicurezza"
-  - "controllo del server [SQL Server]"
-  - "controlli [SQL Server], scrittura nel log di sicurezza"
-  - "log di sicurezza [SQL Server]"
+title: Scrittura di eventi di controllo di SQL Server nel registro di sicurezza | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# Scrittura di eventi di controllo di SQL Server nel registro di sicurezza
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza
   In un ambiente con sicurezza elevata il registro di sicurezza di Windows rappresenta la posizione appropriata per la scrittura di eventi che registrano l'accesso agli oggetti. Sono supportati altre posizioni di controllo che tuttavia sono più soggette alla manomissione.  
   
  La scrittura dei controlli del server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel registro di sicurezza di Windows prevede due requisiti fondamentali:  
   
--   È necessario configurare l'impostazione di controllo dell'accesso agli oggetti per l'acquisizione degli eventi. Lo strumento dei criteri di controllo (`auditpol.exe`) espone varie impostazioni di criteri secondari nella categoria **controllo dell'accesso agli oggetti**. Per consentire il controllo dell'accesso agli oggetti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , configurare l'impostazione **generata dall'applicazione** .  
+-   È necessario configurare l'impostazione di controllo dell'accesso agli oggetti per l'acquisizione degli eventi. Lo strumento dei criteri di controllo (`auditpol.exe`) espone varie impostazioni di criteri secondari nella categoria **controllo dell'accesso agli oggetti** . Per consentire il controllo dell'accesso agli oggetti in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , configurare l'impostazione **generata dall'applicazione** .  
   
 -   L'account in cui viene eseguito il servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve disporre dell'autorizzazione **generazione controlli di sicurezza** per scrivere nel registro di sicurezza di Windows. Per impostazione predefinita, gli account LOCAL SERVICE e NETWORK SERVICE dispongono di questa autorizzazione. Questo passaggio non è obbligatorio se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito in uno di questi account.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 19
   
 5.  Nella scheda **Impostazioni di sicurezza locali** fare clic su **Aggiungi utente o gruppo**.  
   
-6.  Nella finestra di dialogo **Seleziona utenti, computer o gruppi** digitare il nome dell'account utente, ad esempio **dominio1\utente1**, quindi fare clic su **OK** oppure su **Avanzate** e cercare l'account.  
+6.  Nella finestra di dialogo **Seleziona utenti, computer o gruppi** digitare il nome dell'account utente, ad esempio **dominio1\utente1** , quindi fare clic su **OK**oppure su **Avanzate** e cercare l'account.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  Chiudere lo strumento Criteri di sicurezza.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

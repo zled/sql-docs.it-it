@@ -1,32 +1,36 @@
 ---
-title: "Sicurezza a livello di riga | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "predicati di controllo degli accessi"
-  - "sicurezza a livello di riga"
-  - "sicurezza [SQL Server], controllo degli accessi basato su predicato"
-  - "sicurezza a livello di riga descritta"
-  - "sicurezza basata su predicato"
+title: Sicurezza a livello di riga | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sicurezza a livello di riga
+# <a name="row-level-security"></a>Sicurezza a livello di riga
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![Immagine della sicurezza a livello di riga](../../relational-databases/security/media/row-level-security-graphic.png "Immagine della sicurezza a livello di riga")  
   
  La sicurezza a livello di consente ai clienti di controllare l'accesso alle righe in una tabella del database in base alle caratteristiche dell'utente che esegue una query (ad esempio, l'appartenenza al gruppo o il contesto di esecuzione).  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e i predicati creati come [funzioni inline con valori di tabella](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-||  
-|-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
-##  <a name="Top"></a> Contenuto dell'argomento  
-  
--   [Descrizione](#Description)  
-  
--   [Modalità di utilizzo comuni](#UseCases)  
-  
--   [Autorizzazioni](#Permissions)  
-  
--   [Procedure consigliate](#Best)  
-  
--   [Nota sulla sicurezza: attacchi al canale laterale](#SecNote)  
-  
--   [Compatibilità tra funzionalità](#Limitations)  
-  
--   [Esempi di codice](#CodeExamples)  
-  
-    -   [A. Scenario per utenti con connessione diretta](#Typical)  
-  
-    -   [B. Scenario di applicazioni di livello intermedio](#MidTier)  
-  
+
 ##  <a name="Description"></a> Descrizione  
  La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   Non sono state modificate le API in blocco, compresa l'API BULK INSERT. Questo significa che i predicati di blocco AFTER INSERT verranno applicati alle operazioni di inserimento in blocco come se fossero operazioni di inserimento regolari.  
   
- [Torna all'inizio](#Top)  
   
 ##  <a name="UseCases"></a> Modalità di utilizzo comuni  
  Di seguito sono riportati degli esempi di progettazione relativi alle modalità di utilizzo della sicurezza a livello di riga:  
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Comprende una valutazione basata su predicato flessibile e centralizzata che può prendere in considerazione i metadati o altri criteri ritenuti appropriati dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone o meno dell'accesso appropriato ai dati in base agli attributi utente. Il controllo degli accessi basato su etichetta può essere implementato usando un controllo degli accessi basato su predicato.  
   
- [Torna all'inizio](#Top)  
   
 ##  <a name="Permissions"></a> Autorizzazioni  
  La creazione, la modifica o l'eliminazione dei criteri di sicurezza richiede l'autorizzazione **ALTER ANY SECURITY POLICY** . La creazione o l'eliminazione dei criteri di sicurezza richiede l'autorizzazione **ALTER** nello schema.  
@@ -137,9 +118,8 @@ caps.handback.revision: 47
   
  I criteri di sicurezza sono applicati a tutti gli utenti, inclusi gli utenti dbo nel database. Gli utenti dbo possono modificare o eliminare i criteri di sicurezza, tuttavia tali modifiche ai criteri di sicurezza possono essere controllate. Se un utente con privilegi elevati, ad esempio sysadmin o db_owner, deve visualizzare tutte le righe per risolvere i problemi o convalidare i dati, il criterio di sicurezza deve essere scritto in modo da consentire tale operazione.  
   
- Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, per eseguire query sulla tabella di destinazione gli utenti devono avere l'autorizzazione **SELECT** o **EXECUTE** sulla funzione di predicato e su qualsiasi tabella, vista o funzione aggiuntiva usata nella funzione di predicato. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON` (impostazione predefinita), questi controlli delle autorizzazioni vengono ignorati quando gli utenti eseguono query sulla tabella di destinazione.  
+ Se i criteri di sicurezza vengono creati con `SCHEMABINDING = OFF`, per eseguire query sulla tabella di destinazione gli utenti devono avere l'autorizzazione  **SELECT** o **EXECUTE** sulla funzione di predicato e su qualsiasi tabella, vista o funzione aggiuntiva usata nella funzione di predicato. Se i criteri di sicurezza vengono creati con `SCHEMABINDING = ON` (impostazione predefinita), questi controlli delle autorizzazioni vengono ignorati quando gli utenti eseguono query sulla tabella di destinazione.  
   
- [Torna all'inizio](#Top)  
   
 ##  <a name="Best"></a> Procedure consigliate  
   
@@ -153,7 +133,7 @@ caps.handback.revision: 47
   
 -   Evitare di usare un numero eccessivo di join di tabella nelle funzioni di predicato per ottimizzare le prestazioni.  
   
- Evitare una logica di predicato dipendente da [opzioni SET](../../t-sql/statements/set-statements-transact-sql.md) specifiche della sessione. Nonostante sia improbabile che vengano usate in applicazioni pratiche, le funzioni di predicato la cui logica dipende da determinate opzioni **SET** specifiche della sessione possono causare perdite di informazioni se gli utenti possono eseguire query arbitrarie. Ad esempio, una funzione di predicato che converte implicitamente una stringa in **datetime** potrebbe filtrare righe diverse in base all'opzione **SET DATEFORMAT** per la sessione corrente. In generale le funzioni di predicato devono rispettare le regole seguenti:  
+ Evitare una logica di predicato dipendente da [opzioni SET](../../t-sql/statements/set-statements-transact-sql.md)specifiche della sessione. Nonostante sia improbabile che vengano usate in applicazioni pratiche, le funzioni di predicato la cui logica dipende da determinate opzioni **SET** specifiche della sessione possono causare perdite di informazioni se gli utenti possono eseguire query arbitrarie. Ad esempio, una funzione di predicato che converte implicitamente una stringa in **datetime** potrebbe filtrare righe diverse in base all'opzione **SET DATEFORMAT** per la sessione corrente. In generale le funzioni di predicato devono rispettare le regole seguenti:  
   
 -   Le funzioni di predicato non devono convertire implicitamente stringhe di caratteri in **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset** né viceversa, perché queste conversioni sono influenzate dalle opzioni [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) e [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Utilizzare invece la funzione **CONVERT** e specificare esplicitamente il parametro di stile.  
   
@@ -162,15 +142,13 @@ caps.handback.revision: 47
 -   Le funzioni di predicato non devono basarsi su espressioni aritmetiche o di aggregazione che restituiscono **NULL** in caso di errore, come overflow o divisione per zero, perché questo comportamento è influenzato dalle opzioni [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) e [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md).  
   
 -   Le funzioni di predicato non devono confrontare stringhe concatenate con **NULL**, perché questo comportamento è influenzato dall'opzione [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
-  
- [Torna all'inizio](#Top)  
+   
   
 ##  <a name="SecNote"></a> Nota sulla sicurezza: attacchi al canale laterale  
  **Gestore dei criteri di sicurezza malintenzionato:** è importante osservare che un gestore dei criteri di sicurezza malintenzionato, con autorizzazioni sufficienti per creare criteri di sicurezza per una colonna sensibile e per creare o modificare le funzioni inline con valori di tabella, può agire in collusione con un altro utente con autorizzazioni Select su una tabella al fine di estrarre dolosamente i dati creando funzioni inline con valori di tabella progettate per usare attacchi al canale laterale per estrapolare i dati. Questi attacchi richiedono la collusione con altre persone (o autorizzazioni eccessive concesse a un utente malintenzionato) e richiedono probabilmente diversi tentativi di modifica dei criteri (che richiede autorizzazioni per rimuovere il predicato per interrompere l'associazione allo schema), la modifica delle funzioni inline con valori di tabella e diverse esecuzioni delle istruzioni Select nella tabella di destinazione. Si consiglia di limitare le autorizzazioni concedendo solo quelle necessarie e di monitorare le attività sospette, ad esempio la modifica frequente dei criteri e delle funzioni inline con valori di tabella relativi alla sicurezza a livello di riga.  
   
  **Query create appositamente:** è possibile causare perdite di informazioni mediante l'utilizzo di query create appositamente. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
-  
- [Torna all'inizio](#Top)  
+   
   
 ##  <a name="Limitations"></a> Compatibilità tra funzionalità  
  In generale la sicurezza a livello di riga funziona tra varie funzionalità nel modo previsto. Esistono tuttavia alcune eccezioni a questa regola. Questa sezione contiene diverse note e avvertenze per l'uso della sicurezza a livello di riga con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -181,23 +159,22 @@ caps.handback.revision: 47
   
 -   La sicurezza a livello di riga**Polybase** non è compatibile con Polybase.  
   
--   **Tabelle con ottimizzazione per la memoria**. La funzione inline con valori di tabella usata come predicato di sicurezza in una tabella con ottimizzazione per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION`. Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle con ottimizzazione per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   **Tabelle con ottimizzazione per la memoria**. La funzione inline con valori di tabella usata come predicato di sicurezza in una tabella con ottimizzazione per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION` . Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle con ottimizzazione per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Viste indicizzate** In generale è possibile creare criteri di sicurezza nelle viste ed è possibile creare viste nelle tabelle associate a criteri di sicurezza. Non è possibile tuttavia creare viste indicizzate in tabelle con un criterio di sicurezza, poiché le ricerche di righe tramite l'indice potrebbero ignorare il criterio.  
   
--   **Change Data Capture**. Change Data Capture può causare la perdita di intere righe che devono essere filtrate per i membri di **db_owner** o gli utenti membri del ruolo di "controllo" specificato quando Change Data Capture viene abilitato per una tabella (si noti che è possibile impostare esplicitamente **NULL** per consentire a tutti gli utenti di accedere ai dati di modifica). I membri di questo ruolo di controllo e **db_owner** possono infatti visualizzare tutte le modifiche dei dati in una tabella anche se per la tabella esistono criteri di sicurezza.  
+-   **Change Data Capture** . Change Data Capture può causare la perdita di intere righe che devono essere filtrate per i membri di **db_owner** o gli utenti membri del ruolo di "controllo" specificato quando Change Data Capture viene abilitato per una tabella (si noti che è possibile impostare esplicitamente **NULL** per consentire a tutti gli utenti di accedere ai dati di modifica). I membri di questo ruolo di controllo e **db_owner** possono infatti visualizzare tutte le modifiche dei dati in una tabella anche se per la tabella esistono criteri di sicurezza.  
   
 -   **Rilevamento delle modifiche** Il rilevamento delle modifiche può provocare la perdita della chiave primaria delle righe che devono essere filtrate per gli utenti con autorizzazioni **SELECT** e **VIEW CHANGE TRACKING** . I valori dei dati effettivi non vengono perduti, ma va perduto solo il fatto che la colonna A è stata aggiornata/inserita/eliminata per la riga con la chiave primaria B. Questo rappresenta un problema se la chiave primaria contiene un elemento riservato, ad esempio un codice fiscale. In pratica però **CHANGETABLE** è quasi sempre unito alla tabella originale per ottenere i dati più recenti.  
   
--   **Ricerca full-text**. A causa di un join aggiuntivo introdotto per applicare la sicurezza a livello di riga ed evitare la perdita di chiavi primarie delle righe che devono essere filtrate, è previsto un calo di prestazioni per le query che usano le funzioni di ricerca semantica e ricerca full-text seguenti: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable e semanticsimilaritytable.  
+-   **Ricerca full-text** . A causa di un join aggiuntivo introdotto per applicare la sicurezza a livello di riga ed evitare la perdita di chiavi primarie delle righe che devono essere filtrate, è previsto un calo di prestazioni per le query che usano le funzioni di ricerca semantica e ricerca full-text seguenti: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable e semanticsimilaritytable.  
   
--   **Indici columnstore**. La sicurezza a livello di riga è compatibile con indici columnstore sia cluster che non cluster. Dato però che la sicurezza a livello di riga applica una funzione, l'ottimizzatore può modificare il piano di query in modo che non usi la modalità batch.  
+-   **Indici columnstore** . La sicurezza a livello di riga è compatibile con indici columnstore sia cluster che non cluster. Dato però che la sicurezza a livello di riga applica una funzione, l'ottimizzatore può modificare il piano di query in modo che non usi la modalità batch.  
   
 -   **Viste partizionate** Non è possibile definire predicati di blocco nelle viste partizionate e non è possibile creare viste partizionate in tabelle che usano predicati di blocco. I predicati di filtro sono compatibili con le viste partizionate.  
   
 -   **Le tabelle temporali** sono compatibili con la sicurezza a livello di riga. I predicati di sicurezza nella tabella corrente non vengono tuttavia replicati automaticamente nella tabella di cronologia. Per applicare un criterio di sicurezza alla tabella della cronologia e alla tabella corrente, è necessario aggiungere singolarmente un predicato di sicurezza in ogni tabella.  
   
- [Torna all'inizio](#Top)  
   
 ##  <a name="CodeExamples"></a> Esempi  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  Creare tre account utente per mostrare le diverse capacità di accesso.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,7 +273,6 @@ WITH (STATE = OFF);
   
  Ora gli utenti Sales1 e Sales2 possono visualizzare tutte e sei le righe.  
   
- [Torna all'inizio](#Top)  
   
 ###  <a name="MidTier"></a> B. Scenari per gli utenti che si connettono al database tramite un'applicazione di livello intermedio  
  Questo esempio mostra in che modo un'applicazione di livello intermedio può implementare il filtro della connessione, in cui gli utenti dell'applicazione (o i tenant) condividono lo stesso utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'applicazione). L'applicazione imposta l'ID utente dell'applicazione corrente in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) dopo la connessione al database, quindi i criteri di sicurezza filtrano in modo trasparente le righe che non devono essere visibili a tale ID e impediscono all'utente di inserire righe per l'ID utente errato. Non sono necessarie altre modifiche all'applicazione.  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

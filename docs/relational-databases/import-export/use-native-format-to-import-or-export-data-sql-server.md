@@ -1,31 +1,35 @@
 ---
-title: "Utilizzo del formato nativo per importare o esportare dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formato nativo di dati [SQL Server]"
-  - "formati di dati [SQL Server], nativi"
+title: Usare il formato nativo per importare o esportare dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo del formato nativo per importare o esportare dati (SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
 L'utilizzo del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati in cui non sono inclusi caratteri estesi o DBCS (Double Byte Character Set).  
 
 > [!NOTE]
->  Per il trasferimento bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati contenente caratteri estesi o DBCS, è consigliabile utilizzare il formato nativo Unicode. Per altre informazioni, vedere [Utilizzare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
+>  Per il trasferimento bulk di dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati contenente caratteri estesi o DBCS, è consigliabile utilizzare il formato nativo Unicode. Per altre informazioni, vedere [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
 
-Il formato nativo mantiene i tipi di dati nativi di un database e viene utilizzato per il trasferimento dei dati ad alta velocità tra le tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si utilizza un file di formato, non è necessario che le tabelle di origine e di destinazione siano identiche. Il trasferimento dei dati è costituito da due passaggi:  
+Il formato nativo mantiene i tipi di dati nativi di un database e viene utilizzato per il trasferimento dei dati ad alta velocità tra le tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizza un file di formato, non è necessario che le tabelle di origine e di destinazione siano identiche. Il trasferimento dei dati è costituito da due passaggi:  
   
 1.  Esportazione bulk dei dati da una tabella di origine in un file di dati  
   
@@ -57,22 +61,22 @@ Per importare correttamente i dati in formato nativo, verificare quanto segue:
  Un'importazione corretta non danneggerà la tabella di destinazione.  
   
 ## Gestione dei dati in formato nativo mediante l'utilità bcp<a name="considerations"></a>
- In questa sezione sono contenute considerazioni particolari sull'importazione e sull'esportazione dei dati in formato nativo mediante l'utilità **bcp**.  
+ In questa sezione sono contenute considerazioni particolari sull'importazione e sull'esportazione dei dati in formato nativo mediante l'utilità **bcp** .  
   
 -   Dati non di tipo carattere  
   
-     L'[utilità bcp](../../tools/bcp-utility.md) usa il formato dati binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per trasferire dati non di tipo carattere da una tabella in un file di dati.  
+     L' [utilità bcp](../../tools/bcp-utility.md) usa il formato dati binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per trasferire dati non di tipo carattere da una tabella in un file di dati.  
   
--   Dati [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
+-   Dati[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
-     All'inizio di ogni campo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), l'utilità [bcp](../../tools/bcp-utility.md) aggiunge la lunghezza del prefisso.  
+     All'inizio di ogni campo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) , l'utilità [bcp](../../tools/bcp-utility.md) aggiunge la lunghezza del prefisso.  
   
     > [!IMPORTANT]
-    >  Per impostazione predefinita, quando si usa la modalità nativa, l'utilità [bcp](../../tools/bcp-utility.md) converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. L'[utilità bcp](../../tools/bcp-utility.md) converte i caratteri di un file di dati in caratteri ANSI prima dell'importazione bulk in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.
+    >  Per impostazione predefinita, quando si usa la modalità nativa, l'utilità [bcp](../../tools/bcp-utility.md) converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. L' [utilità bcp](../../tools/bcp-utility.md) converte i caratteri di un file di dati in caratteri ANSI prima dell'importazione bulk in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.
   
--   Dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)  
+-   Dati[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)  
   
-     Se i dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) vengono archiviati come SQLVARIANT in un file di dati in formato nativo, verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengono usati per creare di nuovo il valore con lo stesso tipo di dati in una colonna di destinazione [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md).  
+     Se i dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) vengono archiviati come SQLVARIANT in un file di dati in formato nativo, verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengono usati per creare di nuovo il valore con lo stesso tipo di dati in una colonna di destinazione [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) .  
   
      Se il tipo di dati della colonna di destinazione è diverso da [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md), ogni valore viene convertito nel tipo di dati della colonna di destinazione, in base alle regole standard di conversione implicita dei dati. Se si verifica un errore durante la conversione dei dati, viene eseguito il rollback del batch corrente. Per i valori [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) e [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) trasferiti tra colonne [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) possono verificarsi problemi relativi alla conversione di tabelle codici.  
   
@@ -90,7 +94,7 @@ Il formato nativo è supportato dalle opzioni di comando seguenti:
 |OPENROWSET|N/D|Deve usare un file di formato|
 
   
- \*Per caricare i dati nativi (**-n**) in un formato compatibile con le versioni precedenti dei client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare l'opzione **-V**. Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Per caricare i dati nativi (**-n**) in un formato compatibile con le versioni precedenti dei client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  In alternativa, è possibile definire la formattazione di ogni singolo campo in un file di formato. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -126,7 +130,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **File di formato non XML di esempio**<a name="nonxml_format_file"></a>
-SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.  Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Il comando seguente userà l'[utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myNative.fmt`, sulla base dello schema di `myNative`.  Per usare un comando [bcp](../../tools/bcp-utility.md) per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f**.  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere i comandi seguenti:
+SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.  Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Il comando seguente userà l' [utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myNative.fmt`, sulla base dello schema di `myNative`.  Per usare un comando [bcp](../../tools/bcp-utility.md) per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f** .  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere i comandi seguenti:
 
 ```
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
@@ -145,7 +149,7 @@ Notepad D:\BCP\myNative.fmt
 Gli esempi seguenti usano il database e i file di formato creati in precedenza.
 
 ### **Uso di bcp e del formato nativo per l'esportazione di dati**<a name="bcp_native_export"></a>
-Opzione **-n** e comando **OUT**.  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere i comandi seguenti:
+Opzione**-n** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere i comandi seguenti:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -154,7 +158,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Uso di bcp e del formato nativo per l'importazione di dati senza un file di formato**<a name="bcp_native_import"></a>
-Opzione **-n** e comando **IN**.  Al prompt dei comandi immettere i comandi seguenti:
+Opzione**-n** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -167,7 +171,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Uso di bcp e del formato nativo per l'importazione di dati con un file di formato non XML**<a name="bcp_native_import_fmt"></a>
-Opzioni **-n** e **-f** e comando **IN**.  Al prompt dei comandi immettere i comandi seguenti:
+Opzioni**-n** e **-f** switches e **IN** comme.  Al prompt dei comandi immettere i comandi seguenti:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -180,7 +184,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Uso di BULK INSERT e del formato nativo senza un file di formato**<a name="bulk_native"></a>
-Argomento **DATAFILETYPE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -194,7 +198,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Uso di BULK INSERT e del formato nativo con un file di formato non XML**<a name="bulk_native_fmt"></a>
-Argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -208,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Uso di OPENROWSET e del formato nativo con un file di formato non XML**<a name="openrowset_native_fmt"></a>
-Argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
@@ -233,13 +237,14 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## Vedere anche  
- [Utilità bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
  [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Utilizzare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
+

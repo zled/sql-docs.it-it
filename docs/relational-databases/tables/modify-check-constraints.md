@@ -1,27 +1,31 @@
 ---
-title: "Modifica di vincoli CHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CHECK, modifica di vincoli"
-  - "modifica di vincoli"
-  - "vincoli [SQL Server], check"
-  - "vincoli [SQL Server], modifica"
+title: Modificare vincoli CHECK | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, modifying
+- modifying constraints
+- constraints [SQL Server], check
+- constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica di vincoli CHECK
+# <a name="modify-check-constraints"></a>Modifica di vincoli CHECK
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile modificare un vincolo CHECK in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] quando si desidera modificare l'espressione del vincolo o le opzioni che lo abilitano o disabilitano al verificarsi di specifiche condizioni.  
@@ -47,9 +51,9 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare un vincolo CHECK  
+#### <a name="to-modify-a-check-constraint"></a>Per modificare un vincolo CHECK  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella che contiene il vincolo CHECK e selezionare **Progetta**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella che contiene il vincolo CHECK e selezionare **Progetta**.  
   
 2.  Scegliere **Vincoli CHECK...** nel menu **Progettazione tabelle**.  
   

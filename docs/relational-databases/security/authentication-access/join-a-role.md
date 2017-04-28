@@ -1,27 +1,31 @@
 ---
-title: "Aggiungere un ruolo | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
-helpviewer_keywords: 
-  - "aggiunta di un membro a un ruolo"
-  - "aggiungere un ruolo"
+title: Aggiungere un ruolo | Microsoft Docs
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+helpviewer_keywords:
+- adding a member to a role
+- join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiungere un ruolo
+# <a name="join-a-role"></a>aggiungere un ruolo
   In questo argomento si descrive come assegnare ruoli agli account di accesso e agli utenti di database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilizzare i ruoli disponibili in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gestire in modo efficace le autorizzazioni. Assegnare autorizzazioni ai ruoli, quindi aggiungere e rimuovere utenti e account di accesso ai ruoli. Utilizzando i ruoli, non è necessario gestire singolarmente le autorizzazioni per ciascun utente.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta quattro tipi di ruoli.  
@@ -65,7 +69,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per aggiungere un membro a un ruolo predefinito del server  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Per aggiungere un membro a un ruolo predefinito del server  
   
 1.  In Esplora oggetti espandere il server in cui si desidera modificare un ruolo predefinito del server.  
   
@@ -77,11 +81,11 @@ caps.handback.revision: 13
   
 5.  Nella finestra di dialogo **Proprietà ruolo del server -***nome_ruolo_server* scegliere **Aggiungi** nella pagina **Membri**.  
   
-6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia…** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti** . Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del server - ****.  
+6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia…** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti** . Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del server -**** .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Per aggiungere un membro a un ruolo del database definito dall'utente  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Per aggiungere un membro a un ruolo del database definito dall'utente  
   
 1.  In Esplora oggetti espandere il server in cui si desidera modificare un ruolo del database definito dall'utente.  
   
@@ -97,15 +101,15 @@ caps.handback.revision: 13
   
 7.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-8.  Nella finestra di dialogo **Proprietà ruolo del database -** **fare clic su **Aggiungi** nella pagina **Generale**.  
+8.  Nella finestra di dialogo **Proprietà ruolo database -***database_role_name* scegliere **Aggiungi** nella pagina **Generale**.  
   
-9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia…** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti** . Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del database -** **.  
+9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia…** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti** . Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo database -***database_role_name* .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per aggiungere un membro a un ruolo predefinito del server  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Per aggiungere un membro a un ruolo predefinito del server  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 13
   
  Per altre informazioni, vedere [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
-#### Per aggiungere un membro a un ruolo del database definito dall'utente  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Per aggiungere un membro a un ruolo del database definito dall'utente  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -135,9 +139,10 @@ caps.handback.revision: 13
   
  Per altre informazioni, vedere [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli a livello di server](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Ruoli a livello di database](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Ruoli applicazione](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
+

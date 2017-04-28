@@ -1,31 +1,35 @@
 ---
-title: "Ripristino di un database in una nuova posizione (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristino di database [SQL Server], spostamento"
-  - "ripristini di database [SQL Server], creazione di nuovi database"
-  - "ripristino [SQL Server], con spostamento"
-  - "ripristini di database [SQL Server], creazione di nuovi database"
-  - "backup di database [SQL Server], creazione di nuovi database da"
-  - "backup di database [SQL Server], creazione di nuovi database da"
-  - "ripristino di database [SQL Server], ridenominazione"
-  - "creazione di database [SQL Server], ripristino con spostamento"
+title: Ripristinare un database in una nuova posizione (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring databases [SQL Server], moving
+- database restores [SQL Server], creating new databases
+- restoring [SQL Server], with move
+- restoring databases [SQL Server], creating new databases
+- database backups [SQL Server], creating new database from
+- backing up databases [SQL Server], creating new database from
+- restoring databases [SQL Server], renaming
+- database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 71
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23023f6f4d8fe277bfee15c467be88aaa04a5723
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino di un database in una nuova posizione (SQL Server)
+# <a name="restore-a-database-to-a-new-location-sql-server"></a>Ripristino di un database in una nuova posizione (SQL Server)
   Questo argomento illustra come ripristinare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo percorso e facoltativamente rinominare il database, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando SQL Server Management Studio (SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile spostare un database in un nuovo percorso di directory o crearne una copia nella stessa istanza server o in una diversa.  
     
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -36,7 +40,7 @@ caps.handback.revision: 71
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
--   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario eseguire il backup del log delle transazioni attivo. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario eseguire il backup del log delle transazioni attivo. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
 -   Per ripristinare un database crittografato, è necessario poter **accedere al certificato o alla chiave asimmetrica usata per crittografare il database**. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Il certificato usato per crittografare la chiave di crittografia del database deve essere mantenuto finché è necessario il backup. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 71
   
 -   Per altre considerazioni sullo spostamento di un database, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
--   Se si ripristina un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Se tuttavia un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **upgrade_option**. Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option**, usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+-   Se si ripristina un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Se tuttavia un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server  **upgrade_option** . Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ###  <a name="Security"></a> Sicurezza  
  Per motivi di sicurezza, è consigliabile non collegare o ripristinare database da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
@@ -55,10 +59,10 @@ caps.handback.revision: 71
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
   
-## Ripristinare un database in un nuovo percorso e facoltativamente rinominare il database usando SSMS 
+## <a name="restore-a-database-to-a-new-location-optionally-rename-the-database-using-ssms"></a>Ripristinare un database in un nuovo percorso e facoltativamente rinominare il database usando SSMS 
 
   
-1.  Connettersi all'istanza appropriata di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e quindi fare clic sul nome del server in Esplora oggetti per espandere l'albero del server.  
+1.  Connettersi all'istanza appropriata di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e quindi fare clic sul nome del server in Esplora oggetti per espandere l'albero del server.  
   
 2.  Fare clic con il pulsante destro del mouse su **Database**, quindi scegliere **Ripristina database**. Verrà visualizzata la finestra di dialogo **Ripristina database** .  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 71
   
     1.  **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup**. Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -92,18 +96,18 @@ caps.handback.revision: 71
   
 8.  Se lo si desidera, regolare le opzioni nella pagina **Opzioni** . Per altre informazioni su queste opzioni, vedere [Ripristina database &#40;(pagina Opzioni)&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).  
 
- ## Ripristinare un database in un nuovo percorso e facoltativamente rinominare il database usando T-SQL
+ ## <a name="restore-database-to-a-new-location-optionally-rename-the-database-using-t-sql"></a>Ripristinare un database in un nuovo percorso e facoltativamente rinominare il database usando T-SQL
  
  
 1.  Facoltativamente, determinare i nomi logici e fisici dei file del set di backup che contiene il backup di database completo da ripristinare. Questa istruzione restituisce un elenco dei file di database e di log contenuti nel set di backup. La sintassi di base è la seguente:  
   
      RESTORE FILELISTONLY FROM *<dispositivo_backup>* WITH FILE = *backup_set_file_number* 
   
-     Dove *backup_set_file_number* indica la posizione del backup nel set di supporti. È possibile ottenere la posizione di un set di backup utilizzando l'istruzione [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) . Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+     Dove *backup_set_file_number* indica la posizione del backup nel set di supporti. È possibile ottenere la posizione di un set di backup utilizzando l'istruzione [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) . Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     Questa istruzione supporta inoltre alcune opzioni WITH. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+     Questa istruzione supporta inoltre alcune opzioni WITH. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
-2.  Eseguire l'istruzione [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md) per ripristinare il backup di database completo. Per impostazione predefinita, i file di dati e di log vengono ripristinati nei percorsi originali. Per modificare il percorso di un database, utilizzare l'opzione MOVE per spostare ogni file di database e per evitare conflitti con i file esistenti.  
+2.  Eseguire l'istruzione [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) per ripristinare il backup di database completo. Per impostazione predefinita, i file di dati e di log vengono ripristinati nei percorsi originali. Per modificare il percorso di un database, utilizzare l'opzione MOVE per spostare ogni file di database e per evitare conflitti con i file esistenti.  
   
      La sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] di base per il ripristino del database in un nuovo percorso e con un nuovo nome è la seguente:  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 71
   
      ;  
   
-    > **NOTA** Quando si prepara lo spostamento di un database in un disco diverso, è necessario verificare che lo spazio disponibile sia sufficiente e identificare potenziali conflitti con i file esistenti. A tale scopo, utilizzare un'istruzione [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md) che specifica gli stessi parametri MOVE che si intende utilizzare nell'istruzione RESTORE DATABASE.  
+    > **NOTA** Quando si prepara lo spostamento di un database in un disco diverso, è necessario verificare che lo spazio disponibile sia sufficiente e identificare potenziali conflitti con i file esistenti. A tale scopo, utilizzare un'istruzione [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) che specifica gli stessi parametri MOVE che si intende utilizzare nell'istruzione RESTORE DATABASE.  
   
-     Nella tabella seguente vengono descritti argomenti di questa istruzione RESTORE ai fini del ripristino di un database in un nuovo percorso. Per altre informazioni su questi argomenti, vedere [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Nella tabella seguente vengono descritti argomenti di questa istruzione RESTORE ai fini del ripristino di un database in un nuovo percorso. Per altre informazioni su questi argomenti, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
      *new_database_name*  
      Nuovo nome del database.  
@@ -147,18 +151,18 @@ caps.handback.revision: 71
      In caso contrario, utilizzare l'opzione RECOVERY (impostazione predefinita).  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifica il set di backup da ripristinare. Il valore *1* per **backup_set_file_number** indica il primo set di backup nel supporto di backup, mentre il valore *2* per **backup_set_file_number** indica il secondo set di backup. È possibile ottenere il valore *backup_set_file_number* di un backup usando l'istruzione [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md).  
+     Identifica il set di backup da ripristinare. Il valore *1* per **backup_set_file_number** indica il primo set di backup nel supporto di backup, mentre il valore *2* per **backup_set_file_number** indica il secondo set di backup. È possibile ottenere il valore *backup_set_file_number* di un backup usando l'istruzione [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
      Se questa opzione non è specificata, per impostazione predefinita viene utilizzato il primo set di backup disponibili sul dispositivo di backup.  
   
-     Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+     Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Specifica che il file di dati o di log specificato da *logical_file_name_in_backup* deve essere ripristinato nel percorso specificato da *operating_system_file_name*. Specificare un'istruzione MOVE per ogni file logico che si desidera ripristinare dal set di backup in un nuovo percorso.  
   
     |Opzione|Descrizione|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|Specifica il nome logico di un file di dati o di log da includere nel set di backup. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.<br /><br /> <br /><br /> Nota: per ottenere un elenco dei file logici dal set di backup, usare [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).|  
+    |*logical_file_name_in_backup*|Specifica il nome logico di un file di dati o di log da includere nel set di backup. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.<br /><br /> <br /><br /> Nota: per ottenere un elenco dei file logici dal set di backup, usare [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
     |*operating_system_file_name*|Specifica un nuovo percorso per il file indicato da *logical_file_name_in_backup*. Il file verrà ripristinato a questo percorso.<br /><br /> Facoltativamente, *operating_system_file_name* specifica un nuovo nome per il file ripristinato. Questo passaggio è necessario se si crea una copia di un database esistente nella stessa istanza del server.|  
     |*n*|Segnaposto tramite cui viene indicata la possibilità di specificare istruzioni MOVE aggiuntive.|  
   
@@ -184,7 +188,7 @@ GO
   
 ```  
   
- Per un esempio relativo alla creazione di un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ Per un esempio relativo alla creazione di un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vedere [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -196,9 +200,10 @@ GO
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Vedere anche  
- [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   
   
+

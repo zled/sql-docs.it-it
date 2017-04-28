@@ -1,28 +1,32 @@
 ---
-title: "Creare vincoli univoci | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UNIQUE_TSQL"
-helpviewer_keywords: 
-  - "vincoli UNIQUE [SQL Server], creazione"
-  - "vincoli [SQL Server], creazione"
-  - "vincoli [SQL Server], UNIQUE"
+title: Creare vincoli univoci | Microsoft Docs
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UNIQUE_TSQL
+helpviewer_keywords:
+- UNIQUE constraints [SQL Server], creating
+- constraints [SQL Server], creating
+- constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare vincoli univoci
+# <a name="create-unique-constraints"></a>Creare vincoli univoci
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile creare un vincolo univoco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per assicurare non vengano immessi valori duplicat nelle colonne specifiche che non partecipano in una chiave primaria. La creazione automatica di un vincolo univoco crea un indice univoco corrispondente.  
@@ -48,21 +52,21 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un vincolo univoco  
+#### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella nella quale aggiungere un vincolo univoco e scegliere **Progetta**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella nella quale aggiungere un vincolo univoco e scegliere **Progetta**.  
   
 2.  Scegliere **Indici/chiavi** dal menu **Progettazione tabelle**.  
   
 3.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-4.  Nella griglia in **Generale** fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
+4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
   
 5.  Nel menu **File** scegliere **Salva***table name*.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un vincolo univoco  
+#### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Per creare un vincolo univoco in una tabella esistente  
+#### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>Per creare un vincolo univoco in una tabella esistente  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Per creare un vincolo univoco in una nuova tabella  
+#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Per creare un vincolo univoco in una nuova tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,6 +123,7 @@ caps.handback.revision: 18
   
     ```  
   
-     Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../Topic/table_constraint%20\(Transact-SQL\).md).  
+     Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

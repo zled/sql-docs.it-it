@@ -1,27 +1,31 @@
 ---
-title: "Categoria di eventi di notifica delle query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi di evento [SQL Server], categoria di eventi di notifiche delle query"
+title: Categoria di eventi di notifica delle query | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2156cef6f6d610a80410ffb468c5428da4152492
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria di eventi di notifica delle query
+# <a name="query-notifications-event-category"></a>Categoria di eventi di notifica delle query
   Nella categoria di eventi **Query Notifications** sono incluse classi di evento in cui sono disponibili informazioni che gli sviluppatori e gli amministratori possono usare per monitorare e risolvere i problemi relativi alle notifiche delle query.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Classe di evento QN:Dynamics](../../relational-databases/event-classes/qn-dynamics-event-class.md)  
  Vengono fornite informazioni sull'attività in background eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per supportare le notifiche delle query.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 12
  [Classe di evento QN:Template](../../relational-databases/event-classes/qn-template-event-class.md)  
  Vengono fornite informazioni sull'utilizzo interno di modelli di query.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

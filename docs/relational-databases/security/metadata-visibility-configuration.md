@@ -1,31 +1,35 @@
 ---
-title: "Configurazione della visibilit&#224; dei metadati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visibilità dei sottocomponenti [SQL Server]"
-  - "metadati [SQL Server], visibilità"
-  - "autorizzazioni [SQL Server], accesso ai metadati"
-  - "visualizzazione di metadati"
-  - "oggetti [SQL Server], metadati"
-  - "visualizzazione di metadati"
-  - "metadati di database [SQL Server]"
-  - "metadati [SQL Server], autorizzazioni"
+title: "Configurazione della visibilità dei metadati | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subcomponents visibility [SQL Server]
+- metadata [SQL Server], visibility
+- permissions [SQL Server], metadata access
+- viewing metadata
+- objects [SQL Server], metadata
+- displaying metadata
+- database metadata [SQL Server]
+- metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione della visibilit&#224; dei metadati
+# <a name="metadata-visibility-configuration"></a>Configurazione della visibilità dei metadati
   La visibilità dei metadati è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Ad esempio, la query seguente restituisce una riga se all'utente è stata concessa un'autorizzazione SELECT o INSERT per la tabella `myTable`.  
   
 ```  
@@ -37,12 +41,12 @@ GO
   
  Se invece l'utente non dispone di alcuna autorizzazione per `myTable`, la query restituisce un set di risultati vuoto.  
   
-## Ambito e impatto della configurazione della visibilità dei metadati  
+## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>Ambito e impatto della configurazione della visibilità dei metadati  
  È possibile configurare la visibilità dei metadati unicamente per le entità a protezione diretta seguenti:  
   
 |||  
 |-|-|  
-|Vista del catalogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Stored procedure **sp_help**|  
+|Viste del catalogo|Stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**|  
 |Metadati che espongono funzioni predefinite|Viste degli schemi delle informazioni|  
 |Viste di compatibilità|Proprietà estese|  
   
@@ -52,7 +56,7 @@ GO
 |-|-|  
 |Tabelle di sistema per il log shipping|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle di sistema dell'agente|  
 |Tabelle di sistema del piano di manutenzione database|Tabelle di sistema di backup|  
-|Tabelle di sistema di replica|Replica e stored procedure **sp_help** dell'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |  
+|Tabelle di sistema di replica|Replica e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **dell'agente** |  
   
  Un'accessibilità limitata ai metadati comporta quanto segue:  
   
@@ -62,7 +66,7 @@ GO
   
 -   È possibile che le funzioni predefinite per la creazione di metadati quali OBJECTPROPERTYEX restituiscano NULL.  
   
--   È possibile che le stored procedure **sp_help** di [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituiscano solo un subset di righe o NULL.  
+-   È possibile che le stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
   
  I moduli SQL, ad esempio le stored procedure e i trigger, vengono eseguiti nel contesto di sicurezza del chiamante e pertanto la relativa accessibilità ai metadati è limitata. Nel codice di esempio seguente, quando la stored procedure tenta di accedere ai metadati relativi alla tabella `myTable` per la quale il chiamante non dispone di alcun diritto, viene restituito un set di risultati vuoto. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene invece restituita una riga.  
   
@@ -81,7 +85,7 @@ GO
  È inoltre possibile modificare la stored procedure in modo che venga eseguita con le credenziali del proprietario. Se il proprietario della stored procedure è anche proprietario della tabella, verrà applicata la concatenazione della proprietà e il contesto di sicurezza del proprietario della procedura consentirà di accedere ai metadati relativi a `myTable`. In questo scenario, il codice seguente restituisce una riga di metadati al chiamante.  
   
 > [!NOTE]  
->  Nell'esempio seguente viene usata la vista del catalogo [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) anziché la vista di compatibilità [sys.sysobjects](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md).  
+>  Nell'esempio seguente viene usata la vista del catalogo [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) anziché la vista di compatibilità [sys.sysobjects](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md) .  
   
 ```  
 CREATE PROCEDURE does_not_assume_caller_can_access_metadata  
@@ -98,10 +102,10 @@ GO
 > [!NOTE]  
 >  Per passare temporaneamente al contesto di sicurezza del chiamante, è possibile utilizzare EXECUTE AS. Per altre informazioni, vedere [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md).  
   
-## Vantaggi e limiti della configurazione della visibilità dei metadati  
+## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Vantaggi e limiti della configurazione della visibilità dei metadati  
  La configurazione della visibilità dei metadati svolge un ruolo importante per il piano di sicurezza globale. In alcuni casi, tuttavia, un utente esperto potrebbe essere in grado di forzare la diffusione di alcuni metadati. È pertanto consigliabile prevedere un ulteriore livello di protezione tramite l'implementazione di autorizzazioni per i metadati.  
   
- In teoria, è possibile forzare la creazione di metadati nei messaggi di errore modificando l'ordine di valutazione del predicato nelle query. La possibilità di *attacchi trial-and-error* di questo tipo non è specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma è implicita nelle trasformazioni associative e commutative consentite nell'algebra relazionale. È possibile ridurre questo rischio limitando le informazioni restituite nei messaggi di errore. Per limitare ulteriormente la visibilità dei metadati in questo modo, è possibile avviare il server con il flag di traccia 3625, che limita la quantità di informazioni visualizzate nei messaggi di errore. Questa soluzione contribuisce a limitare la diffusione forzata di informazioni, ma è controbilanciata dal fatto che i messaggi di errore saranno concisi e potrebbero essere difficili da utilizzare a scopi di debug. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md) e [Flag di traccia &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+ In teoria, è possibile forzare la creazione di metadati nei messaggi di errore modificando l'ordine di valutazione del predicato nelle query. La possibilità di *attacchi trial-and-error* di questo tipo non è specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma è implicita nelle trasformazioni associative e commutative consentite nell'algebra relazionale. È possibile ridurre questo rischio limitando le informazioni restituite nei messaggi di errore. Per limitare ulteriormente la visibilità dei metadati in questo modo, è possibile avviare il server con il flag di traccia 3625, che limita la quantità di informazioni visualizzate nei messaggi di errore. Questa soluzione contribuisce a limitare la diffusione forzata di informazioni, ma è controbilanciata dal fatto che i messaggi di errore saranno concisi e potrebbero essere difficili da utilizzare a scopi di debug. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md) e [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  I metadati seguenti non sono soggetti alla diffusione forzata:  
   
@@ -122,9 +126,9 @@ GO
     |**sys.default_constraints**|**sys.computed_columns**|  
     |**sys.numbered_procedures**||  
   
--   Colonna **ctext** nella vista di compatibilità **syscomments**.  
+-   Colonna **ctext** nella vista di compatibilità **syscomments** .  
   
--   Output della procedura **sp_helptext**.  
+-   Output della procedura **sp_helptext** .  
   
 -   Le colonne seguenti nelle viste degli schemi delle informazioni:  
   
@@ -139,9 +143,9 @@ GO
 -   Valore archiviato nella colonna password_hash di **sys.sql_logins**.  Un utente che non dispone dell'autorizzazione CONTROL SERVER sarà in grado di visualizzare unicamente un valore NULL in questa colonna.  
   
 > [!NOTE]  
->  Le definizioni SQL delle procedure e delle funzioni di sistema predefinite sono visibili a livello pubblico tramite la vista del catalogo **sys.system_sql_modules**, la stored procedure **sp_helptext** e la funzione OBJECT_DEFINITION().  
+>  Le definizioni SQL delle procedure e delle funzioni di sistema predefinite sono visibili a livello pubblico tramite la vista del catalogo **sys.system_sql_modules** , la stored procedure **sp_helptext** e la funzione OBJECT_DEFINITION().  
   
-## Principi generali della visibilità dei metadati  
+## <a name="general-principles-of-metadata-visibility"></a>Principi generali della visibilità dei metadati  
  Di seguito sono illustrati alcuni principi generali da tenere in considerazione per la visibilità dei metadati:  
   
 -   Autorizzazioni implicite dei ruoli predefiniti  
@@ -152,28 +156,28 @@ GO
   
 -   Visibilità dei metadati dei sottocomponenti  
   
-### Autorizzazioni implicite dei ruoli predefiniti  
+### <a name="fixed-roles-and-implicit-permissions"></a>Autorizzazioni implicite dei ruoli predefiniti  
  I metadati accessibili ai ruoli predefiniti variano in base alle autorizzazioni implicite corrispondenti.  
   
-### Ambito delle autorizzazioni  
+### <a name="scope-of-permissions"></a>Ambito delle autorizzazioni  
  Le autorizzazioni valide in un ambito implicano la possibilità di visualizzare i metadati dell'ambito specifico e di tutti gli ambiti dipendenti. Ad esempio, l'autorizzazione SELECT per uno schema implica che il beneficiario dispone dell'autorizzazione SELECT per tutte le entità a protezione diretta contenute nello schema specifico. Se si concede a un utente l'autorizzazione SELECT per uno schema, l'utente potrà pertanto visualizzare i metadati dello schema e tutte le tabelle, le viste, le funzioni, le procedure, le code nonché i sinonimi, i tipi e le raccolte XML Schema in esso contenuti. Per altre informazioni, vedere [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
-### Precedenza di DENY  
+### <a name="precedence-of-deny"></a>Precedenza di DENY  
  DENY ha in genere la precedenza sulle altre autorizzazioni. Ad esempio, se a un utente del database viene concessa l'autorizzazione EXECUTE per uno schema, ma gli viene negata l'autorizzazione EXECUTE per una stored procedure dello schema specifico, l'utente non potrà visualizzare i metadati relativi alla stored procedure.  
   
  Inoltre, se a un utente viene negata l'autorizzazione EXECUTE per uno schema ma viene concessa l'autorizzazione EXECUTE per una stored procedure dello schema specifico, l'utente non potrà visualizzare i metadati relativi alla stored procedure.  
   
  Infine, se a un utente viene concessa e negata l'autorizzazione EXECUTE per una stored procedure, cosa che può accadere nel caso di appartenenza a diversi ruoli, DENY ha la precedenza e l'utente non potrà visualizzare i metadati della stored procedure.  
   
-### Visibilità dei metadati dei sottocomponenti  
+### <a name="visibility-of-subcomponent-metadata"></a>Visibilità dei metadati dei sottocomponenti  
  La visibilità dei sottocomponenti, quali gli indici, i vincoli CHECK e i trigger, è determinata dalle autorizzazioni per il componente padre. A questi sottocomponenti non è possibile concedere autorizzazioni. Ad esempio, se a un utente sono state concesse autorizzazioni per una tabella, l'utente potrà visualizzare i metadati relativi a tabelle, colonne, indici, vincoli CHECK, trigger e altri sottocomponenti.  
   
-#### Metadati accessibili a tutti gli utenti del database  
+#### <a name="metadata-that-is-accessible-to-all-database-users"></a>Metadati accessibili a tutti gli utenti del database  
  Alcuni metadati devono essere accessibili a tutti gli utenti di un database specifico. Ad esempio, non è possibile concedere autorizzazioni per i filegroup e pertanto non è possibile concedere a un utente l'autorizzazione per la visualizzazione dei metadati di un filegroup. Tutti gli utenti che possono creare una tabella devono tuttavia essere in grado di accedere ai metadati dei filegroup per poter usare le clausole *filegroup* ON o *filegroup* TEXTIMAGE_ON dell'istruzione CREATE TABLE.  
   
  I metadati restituiti dalle funzioni DB_ID() e DB_NAME() sono visibili a tutti gli utenti.  
   
- Nella tabella seguente sono elencate le viste del catalogo visibili al ruolo **pubblico**.  
+ Nella tabella seguente sono elencate le viste del catalogo visibili al ruolo **pubblico** .  
   
 |||  
 |-|-|  
@@ -186,12 +190,13 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste della compatibilità &#40;Transact-SQL&#41;](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)  
+ [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   
+

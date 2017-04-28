@@ -1,24 +1,28 @@
 ---
-title: "Contenuto dispositivo (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.bnrdevicecontents.f1"
+title: Contenuto dispositivo (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3a9d57f3c21ffc663d87d10eacaaca183d38ec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Contenuto dispositivo (SQL Server)
+# <a name="device-contents-sql-server"></a>Contenuto dispositivo (SQL Server)
   Utilizzare questa finestra di dialogo per visualizzazione le informazioni di backup. Vengono riportate informazioni sul dispositivo, sui supporti, sul set di supporti e sul set o i set di backup.  
   
  **Per utilizzare SQL Server Management Studio per visualizzare il contenuto di un dispositivo di backup**  
@@ -27,7 +31,7 @@ caps.handback.revision: 31
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Supporti**  
  Disco o set di nastri in cui sono archiviate le informazioni di backup.  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 31
 |**Nome utente**|Nome dell'utente che ha eseguito l'operazione di backup.|  
 |**Scadenza**|Data e ora di scadenza del set di backup.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

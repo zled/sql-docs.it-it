@@ -1,25 +1,29 @@
 ---
-title: "Utilizzo del formato carattere per l&#39;importazione o l&#39;esportazione di dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formati dati [SQL Server], carattere"
-  - "formati carattere [SQL Server]"
+title: Usare il formato carattere per importare o esportare dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], character
+- character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo del formato carattere per l&#39;importazione o l&#39;esportazione di dati (SQL Server)
+# <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
 È consigliabile adottare il formato carattere per l'esportazione bulk in file di testo utilizzati in altri programmi o per l'importazione bulk da file di testo creati in altri programmi.  
 
 Quando si utilizza il formato carattere, in tutte le colonne viene applicato il formato dati di tipo carattere. L'archiviazione in formato carattere risulta utile quando i dati vengono utilizzati in altri programmi, ad esempio in un foglio di calcolo, o quando è necessario copiare in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati di database di altri fornitori, ad esempio Oracle.  
@@ -66,7 +70,7 @@ Il formato carattere è supportato dalle opzioni di comando seguenti:
 |BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
 |OPENROWSET|N/D|Deve usare un file di formato|
   
- \**Per caricare dati di tipo carattere (**-c**) in un formato compatibile con le versioni precedenti dei client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare l'opzione **-V**. Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \**Per caricare dati di tipo carattere (**-c**) in un formato compatibile con le versioni precedenti dei client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
    
 > [!NOTE]
 >  In alternativa, è possibile definire la formattazione di ogni singolo campo in un file di formato. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -101,7 +105,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **File di formato non XML di esempio**<a name="nonxml_format_file"></a>
-SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.  Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Il comando seguente userà l'[utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myChar.fmt`, sulla base dello schema di `myChar`.  Per usare un comando [bcp](../../tools/bcp-utility.md) per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f**.  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
+SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.  Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Il comando seguente userà l' [utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myChar.fmt`, sulla base dello schema di `myChar`.  Per usare un comando [bcp](../../tools/bcp-utility.md) per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f** .  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
 
 ```
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
@@ -120,7 +124,7 @@ Notepad D:\BCP\myChar.fmt
 Gli esempi seguenti usano il database e i file di formato creati in precedenza.
 
 ### **Uso di bcp e del formato carattere per l'esportazione di dati**<a name="bcp_char_export"></a>
-Opzione **-c** e comando **OUT**.  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere il comando seguente:
+Opzione**-c** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere il comando seguente:
 ```
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
 
@@ -129,7 +133,7 @@ NOTEPAD D:\BCP\myChar.bcp
 ```
 
 ### **Uso di bcp e del formato carattere per l'importazione di dati senza un file di formato**<a name="bcp_char_import"></a>
-Opzione **-c** e comando **IN**.  Al prompt dei comandi immettere il comando seguente:
+Opzione**-c** e comando **IN** .  Al prompt dei comandi immettere il comando seguente:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
@@ -142,7 +146,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Uso di bcp e del formato carattere per l'importazione di dati con un file di formato non XML**<a name="bcp_char_import_fmt"></a>
-Opzioni **-c** e **-f** e comando **IN**.  Al prompt dei comandi immettere il comando seguente:
+Opzioni**-c** e **-f** switches e **IN** comme.  Al prompt dei comandi immettere il comando seguente:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
@@ -155,7 +159,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Uso di BULK INSERT e del formato carattere senza un file di formato**<a name="bulk_char"></a>
-Argomento **DATAFILETYPE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
@@ -169,7 +173,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **Uso di BULK INSERT e del formato carattere con un file di formato non XML**<a name="bulk_char_fmt"></a>
-Argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
@@ -183,7 +187,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **Uso di OPENROWSET e del formato carattere con un file di formato non XML**<a name="openrowset_char_fmt"></a>
-Argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing
 INSERT INTO TestDatabase.dbo.myChar
@@ -204,15 +208,16 @@ Per utilizzare formati di dati per l'importazione o l'esportazione bulk
   
 -   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## Vedere anche  
- [Utilità bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   
+

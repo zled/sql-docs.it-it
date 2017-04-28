@@ -1,56 +1,60 @@
 ---
-title: "Utenti di database indipendente: rendere portabile un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database indipendente, utenti"
-  - "utente [SQL Server], informazioni sugli utenti di database indipendente"
+title: 'Utenti di database indipendente: rendere portabile un database | Microsoft Docs'
+ms.custom: 
+ms.date: 08/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, users
+- user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utenti di database indipendente: rendere portabile un database
+# <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a livello di database. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si usa [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Questo argomento illustra le differenze e i vantaggi correlati all'uso del modello di database indipendente rispetto al modello tradizionale basato su account di accesso/utente e alle regole firewall a livello di server o Windows. L'uso del modello tradizionale basato su account di accesso/utente e delle regole firewall a livello di server può essere ancora necessario in scenari specifici, per la gestibilità o per la logica di business dell'applicazione.  
+  Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a livello di database. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Questo argomento illustra le differenze e i vantaggi correlati all'uso del modello di database indipendente rispetto al modello tradizionale basato su account di accesso/utente e alle regole firewall a livello di server o Windows. L'uso del modello tradizionale basato su account di accesso/utente e delle regole firewall a livello di server può essere ancora necessario in scenari specifici, per la gestibilità o per la logica di business dell'applicazione.  
   
 > [!NOTE]  
 >  Quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] evolverà il servizio [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e offrirà a contratti di servizi maggiormente garantiti, potrebbe essere necessario passare al modello basato sull'utente di database indipendente e a regole del firewall con ambito database per usufruire di contratti di servizio con maggiore disponibilità e di un numero superiore di account di accesso consentiti per un determinato database. [!INCLUDE[msCoName](../../includes/msconame-md.md)] invita quindi ad adottare questo approccio già a partire da oggi.  
   
-## Modello tradizionale basato su account di accesso e utente  
- Nel modello di connessione tradizionale gli utenti di Windows o i membri di gruppi di Windows si connettono al [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornendo le credenziali utente o di gruppo autenticate da Windows. In alternativa si può specificare un nome e una password e connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In entrambi i casi, il database master deve disporre di un account di accesso corrispondente alle credenziali di connessione. Dopo che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha verificato le credenziali di autenticazione di Windows o ha autenticato le credenziali di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la connessione in genere tenta di connettersi a un database utente. Per connettersi a un database utente, l'account di accesso deve poter essere sottoposto a mapping (ovvero associato) a un utente del database nel database utente. La stringa di connessione può inoltre specificare la connessione a un database specifico. Questo è facoltativo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma obbligatorio nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+## <a name="traditional-login-and-user-model"></a>Modello tradizionale basato su account di accesso e utente  
+ Nel modello di connessione tradizionale gli utenti di Windows o i membri di gruppi di Windows si connettono al [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornendo le credenziali utente o di gruppo autenticate da Windows. In alternativa si può specificare un nome e una password e connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In entrambi i casi, il database master deve disporre di un account di accesso corrispondente alle credenziali di connessione. Dopo che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha verificato le credenziali di autenticazione di Windows o ha autenticato le credenziali di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la connessione in genere tenta di connettersi a un database utente. Per connettersi a un database utente, l'account di accesso deve poter essere sottoposto a mapping (ovvero associato) a un utente del database nel database utente. La stringa di connessione può inoltre specificare la connessione a un database specifico. Questo è facoltativo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma obbligatorio nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  L'aspetto importante è che sia l'account di accesso (nel database master) che l'utente (nel database utente) devono esistere ed essere correlati tra loro. Ciò significa che la connessione al database utente presenta una dipendenza dall'account di accesso nel database master e questo limita la capacità del database di essere spostato in un server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] di hosting diverso. Se inoltre per qualsiasi motivo non è disponibile una connessione al database master (ad esempio è in corso un failover), aumenterà il tempo complessivo di connessione oppure potrà verificarsi un timeout della connessione. Questo potrebbe quindi ridurre la scalabilità della connessione.  
   
-## Modello di utente di database indipendente  
+## <a name="contained-database-user-model"></a>Modello di utente di database indipendente  
  Nel modello di utente di database indipendente l'account di accesso nel database master non è presente. Al contrario, il processo di autenticazione si verifica nel database utente e l'utente del database nel database utente non dispone di un account di accesso associato nel database master. Il modello di utente di database indipendente supporta sia l'autenticazione di Windows che l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può essere usato sia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Per connettersi come utente di database indipendente, la stringa di connessione deve sempre contenere un parametro per il database utente in modo che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] sappia quale database è responsabile della gestione del processo di autenticazione. L'attività dell'utente di database indipendente è limitata al database di autenticazione, pertanto durante la connessione come utente di database indipendente, l'account utente del database deve essere creato in modo indipendente in ogni database richiesto dall'utente. Per modificare i database, gli utenti del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devono creare una nuova connessione. Gli utenti di database indipendente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono modificare i database se è presente un utente identico in un altro database.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] supportano le identità di Azure Active Directory come utenti di database indipendente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supporta gli utenti di database indipendente che usano l'autenticazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], mentre [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non li supporta. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Quando si usa l'autenticazione di Azure Active Directory, è possibile stabilire una connessione da SQL Server Management Studio usando l'autenticazione universale di Active Directory.  Gli amministratori possono configurare l'autenticazione universale per richiedere l'autenticazione a più fattori, che consente di verificare l'identità con una telefonata, SMS, smart card con pin o la notifica dell'app mobile. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supporta gli utenti di database indipendente che usano l'autenticazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , mentre [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] non li supporta. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Quando si usa l'autenticazione di Azure Active Directory, è possibile stabilire una connessione da SQL Server Management Studio usando l'autenticazione universale di Active Directory.  Gli amministratori possono configurare l'autenticazione universale per richiedere l'autenticazione a più fattori, che consente di verificare l'identità con una telefonata, SMS, smart card con pin o la notifica dell'app mobile. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
- Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dal momento che il nome del database è sempre richiesto nella stringa di connessione, non sono necessarie modifiche della stringa di connessione quando si passa dal modello tradizionale al modello di utente di database indipendente. Per le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nome del database deve essere aggiunto alla stringa di connessione, se non è già presente.  
+ Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dal momento che il nome del database è sempre richiesto nella stringa di connessione, non sono necessarie modifiche della stringa di connessione quando si passa dal modello tradizionale al modello di utente di database indipendente. Per le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il nome del database deve essere aggiunto alla stringa di connessione, se non è già presente.  
   
 > [!IMPORTANT]  
 >  Quando si usa il modello tradizionale, i ruoli e le autorizzazioni a livello di server possono limitare l'accesso a tutti i database. Quando si usa il modello di database indipendente, i proprietari del database e gli utenti del database con autorizzazione ALTER ANY USER possono concedere l'accesso al database. In questo modo si riduce il controllo di accesso di account di accesso server con privilegi elevati e si espande il controllo di accesso per includere utenti di database con privilegi elevati.  
   
-## Firewall  
+## <a name="firewalls"></a>Firewall  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le regole di Windows Firewall si applicano a tutte le connessioni e producono gli stessi effetti sugli account di accesso (connessioni con modello tradizionale) e sugli utenti di database indipendente. Per altre informazioni su Windows Firewall, vedere [Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewall  
+### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewall  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] consente regole del firewall separate per connessioni a livello di server (account di accesso) e per connessioni a livello di database (utenti di database indipendente). Durante la connessione a un database utente vengono verificate per prime le regole del firewall a livello di database. Se non esistono regole che consentono l'accesso al database, vengono verificate le regole del firewall a livello di server, operazione che richiede l'accesso al database master del server logico. L'uso combinato di regole del firewall a livello di database e utenti di database indipendente consente di non dover accedere al database master del server durante la connessione e implica di conseguenza un miglioramento della scalabilità della connessione.  
   
- Per altre informazioni sulle regole del firewall del [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere gli argomenti seguenti:  
+ Per altre informazioni sulle regole del firewall del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vedere gli argomenti seguenti:  
   
 -   [Firewall del database SQL di Azure](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
@@ -60,19 +64,19 @@ caps.handback.revision: 33
   
 -   [sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
-## Differenze di sintassi  
+## <a name="syntax-differences"></a>Differenze di sintassi  
   
-|Modello tradizionale|Modello basato su utente di database indipendente|  
+|Modello tradizionale|Modello di utente di database indipendente|  
 |-----------------------|-----------------------------------|  
 |Quando connesso al database master:<br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> Quindi, quando connesso a un database utente:<br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|Quando connesso a un database utente:<br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-|Modello tradizionale|Modello basato su utente di database indipendente|  
+|Modello tradizionale|Modello di utente di database indipendente|  
 |-----------------------|-----------------------------------|  
 |Per cambiare la password, nel contesto del database master:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Per cambiare la password, nel contesto del database utente:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli utenti di database indipendente devono essere abilitati per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Opzione di configurazione del server contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gli utenti di database indipendente devono essere abilitati per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Opzione di configurazione del server contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   
 -   Gli account di accesso e gli utenti di database indipendente con nomi diversi possono coesistere nelle applicazioni.  
   
@@ -86,10 +90,11 @@ caps.handback.revision: 33
   
 -   Usare le stesse password complesse usate in genere per gli account di accesso.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
  [Procedure consigliate per la sicurezza in database indipendenti](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Connessione al database SQL con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
+ [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
+

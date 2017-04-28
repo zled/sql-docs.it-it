@@ -1,24 +1,28 @@
 ---
-title: "Esempio: Creazione di elementi di pari livello utilizzando la modalit&#224; EXPLICIT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Modalità EXPLICIT FOR XML"
+title: "Esempio: creazione di elementi di pari livello con la modalità EXPLICIT | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ada54a0e85cc9e03441ef008372d0df59a4030f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: Creazione di elementi di pari livello utilizzando la modalit&#224; EXPLICIT
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Esempio: Creazione di elementi di pari livello utilizzando la modalità EXPLICIT
   Si supponga di voler creare codice XML per fornire informazioni sugli ordini di vendita. <`SalesPerson`> e <`OrderDetail`> sono elementi di pari livello. Ogni ordine dispone di un elemento <`OrderHeader`>, un elemento <`SalesPerson`> e uno o più elementi <`OrderDetail`>.  
   
 ```  
@@ -108,7 +112,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

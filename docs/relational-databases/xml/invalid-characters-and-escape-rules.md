@@ -1,28 +1,32 @@
 ---
-title: "Caratteri non validi e regole di escape | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML - clausola, caratteri non validi"
-  - "FOR XML - clausola, regole di escape"
+title: Caratteri non validi e regole di escape | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, invalid characters
+- FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de1546c1f7adc1671cef873a594b9bc5444bc230
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caratteri non validi e regole di escape
+# <a name="invalid-characters-and-escape-rules"></a>Caratteri non validi e regole di escape
   Questo argomento descrive il modo in cui i caratteri XML non validi vengono gestiti dalla clausola FOR XML ed elenca le regole di escape per i caratteri non validi nei nomi XML.  
   
-## Per i caratteri XML non validi  
+## <a name="for-xml-and-invalid-characters"></a>Per i caratteri XML non validi  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sostituisce caratteri XML non validi con entità quando vengono restituiti all'interno di query FOR XML che non usano la direttiva TYPE.  
   
  Nei parser conformi a XML 1.0 vengono generati errori di analisi indipendentemente dal fatto che tali caratteri vengano sostituiti o meno con entità, tuttavia la forma con entità è maggiormente conforme a XML 1.1 ed è potenzialmente conforme alle versioni future dello standard XML. Semplifica inoltre il debug perché il punto di codice del carattere non valido diventa visibile.  
@@ -37,14 +41,14 @@ caps.handback.revision: 17
   
  Questi caratteri vengono mantenuti nell'output e non verranno normalizzati da un parser.  
   
-## Regole di escape  
+## <a name="escape-rules"></a>Regole di escape  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomi che includono caratteri non validi per i nomi XML, quali gli spazi, vengono convertiti in nomi XML in modo tale che i caratteri non validi vengano convertiti in codici numerici in sequenza escape.  
   
  In un nome XML possono essere presenti solo due caratteri non alfabetici, ovvero i due punti (:) e il carattere di sottolineatura (_). Poiché il carattere di due punti è già riservato per gli spazi dei nomi, come carattere di escape viene utilizzato il carattere di sottolineatura. Di seguito vengono illustrate le regole di escape utilizzate per la codifica:  
   
 -   Per i caratteri UCS-2 non validi per i nomi XML, in base alla specifica XML 1.0, vengono usati i caratteri di escape _xHHHH\_. dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere in base all'ordine del primo bit più significativo. Ad esempio, il nome della tabella **Order Details** viene convertito in Order_x0020_Details.  
   
--   I caratteri che non rientrano nelle specifiche UCS-2 (le aggiunte UCS-4 dell'intervallo da U+00010000 a U+0010FFFF) vengono convertiti in _xHHHHHHHH_,\_. dove HHHHHHHH rappresenta la codifica UCS-4 esadecimale a otto cifre del carattere, se è attiva la compatibilità con le versioni precedenti con SQL Server 2000. In caso contrario, i caratteri vengono convertiti in _xHHHHHH\_ per la compatibilità con lo standard ISO.  
+-   I caratteri che non rientrano nelle specifiche UCS-2 (le aggiunte UCS-4 dell'intervallo da U+00010000 a U+0010FFFF) vengono convertiti in _xHHHHHHHH_,\_. dove HHHHHHHH rappresenta la codifica UCS-4 esadecimale a otto cifre del carattere, se è attiva la compatibilità con le versioni precedenti con SQL Server 2000. In caso contrario, i caratteri vengono convertiti in _xHHHHHH\_per la compatibilità con lo standard ISO.  
   
 -   Per il carattere di sottolineatura è necessario utilizzare caratteri di escape solo se è seguito dal carattere x. Ad esempio, il nome della tabella **Order_Details** non viene codificato.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 17
   
      Si noti che per aggiungere spazi dei nomi XML è consigliabile utilizzare WITH XMLNAMESPACES.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

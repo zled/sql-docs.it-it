@@ -1,25 +1,29 @@
 ---
-title: "Stored procedure (Motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "archiviazione di programmi come stored procedure"
-  - "stored procedure [SQL Server], informazioni sulle stored procedure"
+title: Stored procedure (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- storing programs as stored procedures
+- stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14cb04aa946bed3cace30379ca2d78b3cd045b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stored procedure (Motore di database)
+# <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
   Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
   
 -   Accettare parametri di input e restituire più valori sotto forma di parametri di output al programma che esegue la chiamata.  
@@ -92,6 +96,6 @@ caps.handback.revision: 35
 |Viene descritta la modalità d'uso dei parametri in una stored procedure.|[Parametri](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Stored procedure CLR](../Topic/CLR%20Stored%20Procedures.md)  
+ [Stored procedure CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

@@ -1,30 +1,34 @@
 ---
-title: "Ripristino di file e filegroup sovrascrivendo file esistenti (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristino di file [SQL Server], procedure"
-  - "ripristino di file [SQL Server], passaggi"
-  - "ripristino di file [SQL Server], procedure"
-  - "filegroup [SQL Server], ripristino"
-  - "ripristino di filegroup [SQL Server]"
-  - "sovrascrittura di filegroup"
-  - "sovrascrittura di file"
+title: Ripristinare file e filegroup sovrascrivendo file esistenti (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
+- overwriting filegroups
+- overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino di file e filegroup sovrascrivendo file esistenti (SQL Server)
+# <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Ripristino di file e filegroup sovrascrivendo file esistenti (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto come ripristinare file e filegroup su file esistenti in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -58,17 +62,17 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti dei server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database (per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre).  
+ Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
- Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
+ Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per ripristinare file e filegroup sovrascrivendo file esistenti  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Per ripristinare file e filegroup sovrascrivendo file esistenti  
   
 1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
-2.  Fare clic con il pulsante destro del mouse sul database specifico, scegliere **Attività** e scegliere **Ripristina** e fare clic su **File e filegroup**.  
+2.  Fare clic con il pulsante destro del mouse sul database specifico, scegliere **Attività**e scegliere **Ripristina**e fare clic su **File e filegroup**.  
   
 3.  Nella pagina **Generale** nella casella di riepilogo **Database di destinazione** , immettere il database da ripristinare. È possibile immettere un nuovo database oppure sceglierne uno esistente dall'elenco a discesa. Nell'elenco sono inclusi tutti i database presenti nel server, ad eccezione dei database di sistema **master** e **tempdb**.  
   
@@ -88,9 +92,9 @@ caps.handback.revision: 29
   
     |Intestazione della colonna|Valori|  
     |-----------------|------------|  
-    |**Restore**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
+    |**Ripristina**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
     |**Nome**|Nome del set di backup.|  
-    |**Tipo di file**|Specifica il tipo di dati nel backup: **Dati**, **Log**o **Dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, Oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM**.|  
+    |**Tipo di file**|Specifica il tipo di dati nel backup: **Dati**, **Log**o **Dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
     |**Tipo**|Tipo di backup eseguito: **Completo**, **Differenziale**o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del Motore di database che ha eseguito l'operazione di backup.|  
     |**Nome file logico**|Nome logico del file.|  
@@ -102,13 +106,13 @@ caps.handback.revision: 29
   
 6.  Nel riquadro **Selezione pagina** fare clic sulla pagina **Opzioni** .  
   
-7.  Nel pannello **Opzioni di ripristino**, selezionare **Sovrascrivi il database esistente (WITH REPLACE)**. L'operazione di ripristino sovrascrive eventuali database esistenti e i file correlati, anche se esiste già un database o un file con lo stesso nome.  
+7.  Nel pannello **Opzioni di ripristino** , selezionare **Sovrascrivi il database esistente (WITH REPLACE)**. L'operazione di ripristino sovrascrive eventuali database esistenti e i file correlati, anche se esiste già un database o un file con lo stesso nome.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per ripristinare file e filegroup sovrascrivendo file esistenti  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Per ripristinare file e filegroup sovrascrivendo file esistenti  
   
 1.  Eseguire l'istruzione RESTORE DATABASE per ripristinare il backup di file e filegroup, specificando:  
   
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## Vedere anche  
- [Ripristinare un backup del database tramite SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Ripristinare file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   
  [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   

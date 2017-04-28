@@ -1,29 +1,33 @@
 ---
-title: "Creare indici univoci | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indici univoci"
-  - "progettazione di indici [SQL Server], univoci"
-  - "indici cluster, univoci"
-  - "indici [SQL Server], univoci"
-  - "indici non cluster [SQL Server], univoci"
-  - "indici univoci, linee guida per la progettazione"
+title: Creare indici univoci | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare indici univoci
+# <a name="create-unique-indexes"></a>Creare indici univoci
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si illustra come creare un indice univoco per una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. Non vi sono differenze significative tra la creazione di un vincolo UNIQUE e la creazione di un indice univoco indipendente da un vincolo. La convalida dei dati viene eseguita nello stesso modo e da Query Optimizer non viene applicata alcuna distinzione tra un indice univoco creato tramite un vincolo o manualmente. Tuttavia, se si crea un vincolo UNIQUE nella colonna, l'obiettivo dell'indice è chiaro. Per ulteriori informazioni sui vincoli UNIQUE, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -93,11 +97,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti dei database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un indice univoco tramite Progettazione tabelle  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Per creare un indice univoco tramite Progettazione tabelle  
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera creare un indice univoco.  
   
@@ -109,9 +113,9 @@ caps.handback.revision: 29
   
 5.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-6.  Selezionare il nuovo indice dalla casella di testo **Indice o chiave primari/univoci selezionati**.  
+6.  Selezionare il nuovo indice dalla casella di testo **Indice o chiave primari/univoci selezionati** .  
   
-7.  In **(Generale)** nella griglia principale selezionare **Tipo**, quindi scegliere **Indice** dall'elenco.  
+7.  In **(Generale)**nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
   
 8.  Selezionare **Colonne**, quindi fare clic sul pulsante con i puntini di sospensione **(…)**.  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 29
   
 10. Una volta selezionate tutte le colonne per l'indice, fare clic su **OK**.  
   
-11. In **(Generale)** nella griglia principale selezionare **Univoco**, quindi scegliere **Sì** dall'elenco.  
+11. In **(Generale)**nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
   
 12. Facoltativo: In **Progettazione tabelle**nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
   
@@ -127,7 +131,7 @@ caps.handback.revision: 29
   
 14. Nel menu **File** scegliere **Salva***nome_tabella*.  
   
-#### Creare un indice univoco tramite Esplora oggetti  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>Creare un indice univoco tramite Esplora oggetti  
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera creare un indice univoco.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 29
   
 3.  Espandere la tabella in cui si desidera creare un indice univoco.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 29
   
 7.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-8.  Nella finestra di dialogo **Seleziona colonne da** *nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
+8.  Nella finestra di dialogo **Seleziona colonne da***table_name* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
 9. Scegliere **OK**.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un indice univoco per una tabella  
+#### <a name="to-create-a-unique-index-on-a-table"></a>Per creare un indice univoco per una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

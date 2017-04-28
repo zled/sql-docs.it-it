@@ -1,32 +1,36 @@
 ---
-title: "Specifica del tipo di archiviazione di file tramite bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilità bcp [SQL Server], tipi di archiviazione di file"
-  - "importazione di dati, tipi di archiviazione di file"
-  - "formato nativo di dati [SQL Server]"
-  - "tipi di archiviazione di file [SQL Server]"
-  - "formati di dati [SQL Server], tipi di archiviazione di file"
+title: Specificare il tipo di archiviazione di file tramite bcp (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], file storage types
+- importing data, file storage types
+- native data format [SQL Server]
+- file storage types [SQL Server]
+- data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc454960a271c4fdfeb5e04337b2fb8ab1790127
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
+# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
   Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file usando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) oppure usando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo **smallint** come **int**. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
   
-## Richiesta del tipo di archiviazione di dati con bcp  
- Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato (**-f**) o al formato dei dati (**-n**, **-c**, **-w** o **-N**), viene richiesto il tipo di archiviazione di file di ogni campo di dati, come illustrato di seguito:  
+## <a name="the-bcp-prompt-for-file-storage-type"></a>Richiesta del tipo di archiviazione di dati con bcp  
+ Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato (**-f**) o al formato dei dati (**-n**, **-c**, **-w**o **-N**), viene richiesto il tipo di archiviazione di file di ogni campo di dati, come illustrato di seguito:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 31
   
 -   Per eseguire l'importazione in blocco di dati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file di dati, specificare il tipo di archiviazione di file **char** per i tipi archiviati nel formato carattere e, a seconda dei casi, uno dei tipi elencati di seguito per i dati archiviati nel formato nativo:  
   
-    |Tipo di archiviazione di file|Parametro da specificare nel prompt dei comandi|  
+    |tipo di archiviazione di file|Parametro da specificare nel prompt dei comandi|  
     |-----------------------|-----------------------------|  
     |**char***|**c**[**har**]|  
     |**varchar**|**c[har]**|  
@@ -72,14 +76,14 @@ caps.handback.revision: 31
     |**UDT** (tipo di dati definito dall'utente)|**U**|  
     |**XML**|**X**|  
   
-     \*L'interazione tra lunghezza del campo, lunghezza del prefisso e caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati ai dati non carattere esportati come tipo di archiviazione di file **char**.  
+     \*L'interazione tra lunghezza del campo, lunghezza del prefisso e caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati ai dati non carattere esportati come tipo di archiviazione di file **char** .  
   
-     \*\* I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. Usare in alternativa **nvarchar(max)**, **varchar(max)** e **varbinary(max)**.  
+     \*\* I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. Usare in alternativa **nvarchar(max)**, **varchar(max)**e **varbinary(max)** .  
   
-## Tipi di archiviazione di file nativi  
+## <a name="native-file-storage-types"></a>Tipi di archiviazione di file nativi  
  I tipi di archiviazione di file nativi vengono registrati nel file di formato come tipo di dati del file host corrispondente.  
   
-|Tipo di archiviazione di file|Tipo di dati del file host|  
+|tipo di archiviazione di file|Tipo di dati del file host|  
 |-----------------------|-------------------------|  
 |**char***|SQLCHAR|  
 |**varchar**|SQLCHAR|  
@@ -108,23 +112,23 @@ caps.handback.revision: 31
 |**timestamp**|SQLBINARY|  
 |UDT (tipo di dati definito dall'utente)|SQLUDT|  
   
- \*Il tipo di archiviazione dei file di dati archiviati nel formato carattere è **char**. Per questi file di dati di tipo carattere SQLCHAR costituisce pertanto l'unico tipo di dati incluso in file di formato.  
+ \*Il tipo di archiviazione dei file di dati archiviati nel formato carattere è **char** . Per questi file di dati di tipo carattere SQLCHAR costituisce pertanto l'unico tipo di dati incluso in file di formato.  
   
- \*\*Non è possibile eseguire l'importazione in blocco di dati in colonne **text**, **ntext** e **image** con valori DEFAULT.  
+ \*\*Non è possibile eseguire l'importazione in blocco di dati in colonne **text**, **ntext**e **image** con valori DEFAULT.  
   
-## Ulteriori considerazioni sui tipi di archiviazione di file  
+## <a name="additional-considerations-for-file-storage-types"></a>Ulteriori considerazioni sui tipi di archiviazione di file  
  Quando si esegue l'esportazione bulk da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati:  
   
--   È sempre possibile specificare il tipo di archiviazione di file **char**.  
+-   È sempre possibile specificare il tipo di archiviazione di file **char** .  
   
--   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo. Ad esempio, nonostante sia possibile specificare **int** per i dati **smallint**, se si specifica **smallint** per i dati **int** si verificheranno errori di overflow.  
+-   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo. Ad esempio, nonostante sia possibile specificare **int** per i dati **smallint** , se si specifica **smallint** per i dati **int** si verificheranno errori di overflow.  
   
--   Se i tipi di dati non carattere, quali **float**, **money**, **datetime** o **int**, vengono archiviati in base al tipo dei relativi database, i dati verranno scritti nel file di dati nel formato nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Se i tipi di dati non carattere, quali **float**, **money**, **datetime**o **int** , vengono archiviati in base al tipo dei relativi database, i dati verranno scritti nel file di dati nel formato nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

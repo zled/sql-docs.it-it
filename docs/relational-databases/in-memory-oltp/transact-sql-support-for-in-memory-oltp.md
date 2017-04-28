@@ -1,27 +1,31 @@
 ---
-title: "Supporto di Transact-SQL per OLTP in memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Supporto di Transact-SQL per OLTP in memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 caps.latest.revision: 52
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc975fbbdb4118158e4beacef63f45a63c479d38
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supporto di Transact-SQL per OLTP in memoria
+# <a name="transact-sql-support-for-in-memory-oltp"></a>Supporto di Transact-SQL per OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti includono opzioni della sintassi per supportare OLTP in memoria:  
   
--   [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md) (aggiunta di **MEMORY_OPTIMIZED_DATA**)  
+-   [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) (aggiunta di **MEMORY_OPTIMIZED_DATA**)  
   
 -   [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 52
   
  Per informazioni sui costrutti supportati nelle stored procedure compilate in modo nativo, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md) e [Costrutti supportati su stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
  [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Funzionalità di SQL Server non supportate per OLTP in memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)   

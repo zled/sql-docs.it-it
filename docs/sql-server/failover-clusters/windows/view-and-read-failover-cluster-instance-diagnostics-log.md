@@ -1,34 +1,38 @@
 ---
-title: "Visualizzazione e lettura del log di diagnostica dell&#39;istanza del cluster di failover | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Visualizzare e leggere il log di diagnostica dell&quot;istanza del cluster di failover| Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzazione e lettura del log di diagnostica dell&#39;istanza del cluster di failover
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
   Tutti gli errori critici e gli eventi di avviso relativi alla DLL risorse SQL Server vengono scritti nel registro eventi di Windows. Un log in esecuzione relativo a informazioni di diagnostica specifiche di SQL Server viene acquisito dalla stored procedure di sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e viene scritto nei file di log di diagnostica del cluster di failover di SQL Server, noti anche come log *SQLDIAG*.  
   
 -   **Prima di iniziare:**  [Indicazioni](#Recommendations), [Sicurezza](#Security)  
   
--   **Per visualizzare il log di diagnostica usando:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Per configurare le impostazioni del log di diagnostica usando:** [Transact-SQL](#TsqlConfigure)  
+-   **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Recommendations"></a> Indicazioni  
- Per impostazione predefinita, i file SQLDIAG vengono archiviati in una cartella LOG locale della directory dell'istanza di SQL Server, ad esempio "C\Programmi\Microsoft SQL Server\MSSQL13.\<NomeIstanza>\MSSQL\LOG", del nodo proprietario dell'istanza del cluster di failover (FCI) Always On. La dimensione di ogni file di log SQLDIAG è pari a 100 MB. Successivamente, tali file di log vengono archiviati nel computer prima di essere riciclati per i nuovi log.  
+ Per impostazione predefinita, i file SQLDIAG vengono archiviati in una cartella LOG locale della directory dell'istanza di SQL Server, ad esempio "C\Programmi\Microsoft SQL Server\MSSQL13.\<NomeIstanza>\MSSQL\LOG", del nodo proprietario dell'istanza del cluster di failover Always On. La dimensione di ogni file di log SQLDIAG è pari a 100 MB. Successivamente, tali file di log vengono archiviati nel computer prima di essere riciclati per i nuovi log.  
   
  Nei log viene utilizzato il formato di file degli eventi estesi. La funzione di sistema **sys.fn_xe_file_target_read_file** può essere usata per leggere i file creati dagli eventi estesi. Viene restituito un evento per riga in formato XML. Eseguire una query sulla vista di sistema per analizzare i dati XML come set di risultati. Per altre informazioni, vedere [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
@@ -96,24 +100,24 @@ ORDER BY Time;
   
 ###  <a name="ConfigTsqlExample"></a> Esempi (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Impostazione delle opzioni del log di diagnostica  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  Negli esempi inclusi in questa sezione viene illustrato come impostare i valori per l'opzione del log di diagnostica.  
   
-##### A. Avvio della registrazione dei dati di diagnostica  
+##### <a name="a-starting-diagnostic-logging"></a>A. Avvio della registrazione dei dati di diagnostica  
  Nell'esempio seguente viene avviata la registrazione dei dati di diagnostica.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### B. Arresto della registrazione dei dati di diagnostica  
+##### <a name="b-stopping-diagnostic-logging"></a>B. Arresto della registrazione dei dati di diagnostica  
  Nell'esempio seguente viene arrestata la registrazione dei dati di diagnostica.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### C. Definizione della posizione dei log di diagnostica  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. Definizione della posizione dei log di diagnostica  
  Nell'esempio seguente viene impostata la posizione dei log di diagnostica sul percorso di file specificato.  
   
 ```  
@@ -121,7 +125,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### D. Definizione della dimensione massima di ogni log di diagnostica  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Definizione della dimensione massima di ogni log di diagnostica  
  Nell'esempio seguente viene impostata su 10 megabyte la dimensione massima di ogni log di diagnostica.  
   
 ```  
@@ -129,7 +133,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,35 +1,39 @@
 ---
-title: "Creazione di stored procedure compilate in modo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione di stored procedure compilate in modo nativo | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 002507c03a66bd262e7d5dfa44283d2e3e0a901a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di stored procedure compilate in modo nativo
+# <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le stored procedure compilate in modo nativo non implementano la programmabilità completa di [!INCLUDE[tsql](../../includes/tsql-md.md)] e la superficie di attacco delle query. Alcuni costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] non possono essere utilizzati all'interno delle stored procedure compilate in modo nativo. Per altre informazioni, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Esistono, tuttavia, alcune funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che sono supportate solo per le stored procedure compilate in modo nativo:  
   
--   Blocchi atomici. Per altre informazioni, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/blocchi-atomici-nelle-procedure-native.md).  
+-   Blocchi atomici. Per altre informazioni, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
--   Vincoli **NOT NULL** su parametri e variabili nelle stored procedure compilate in modo nativo. Non è possibile assegnare valori **NULL** ai parametri o alle variabili dichiarati come **NOT NULL**. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+-   Vincoli**NOT NULL** su parametri e variabili nelle stored procedure compilate in modo nativo. Non è possibile assegnare valori **NULL** ai parametri o alle variabili dichiarati come **NOT NULL**. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"**; -- *(deve essere inizializzato su un valore).*  
+    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"**; -- *(deve essere inizializzato su un valore.)*  
   
     -   SET @myVarchar **= null**; -- *(viene compilato ma non riesce in fase di esecuzione).*  
   
@@ -63,9 +67,9 @@ go
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**SCHEMABINDING**|Una stored procedure compilata in modo nativo deve essere associata allo schema degli oggetti a cui fa riferimento. Ciò significa che le tabelle a cui fa riferimento la procedura non possono essere eliminate. Le tabelle a cui viene fatto riferimento nella procedura devono includere il nome dello schema e i caratteri jolly (\*) non sono consentiti nelle query (nessun `SELECT * from...`). **SCHEMABINDING** è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**BEGIN ATOMIC**|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Vedere [Transaction Isolation Levels for Memory-Optimized Tables](../Topic/Transaction%20Isolation%20Levels%20for%20Memory-Optimized%20Tables.md) (Livelli di isolamento delle transazioni per tabelle con ottimizzazione per la memoria) per i livelli di isolamento supportati.<br /><br /> **LANGUAGE**. Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
+|**BEGIN ATOMIC**|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Vedere [Transaction Isolation Levels for Memory-Optimized Tables](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) (Livelli di isolamento delle transazioni per tabelle con ottimizzazione per la memoria) per i livelli di isolamento supportati.<br /><br /> **LANGUAGE**. Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Backup database (pagina Generale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+title: Backup database (pagina Generale) | Microsoft Docs
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup database (pagina Generale)
+# <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Backup database** per visualizzare o modificare le impostazioni per un'operazione di backup del database.  
   
  Per altre informazioni di base sui backup di database, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   Per un backup parziale, è necessario utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) con l'opzione PARTIAL.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
-### Origine  
+### <a name="source"></a>Origine  
  Le opzioni del pannello **Origine** identificano il database e specificano il tipo di backup e il componente per l'operazione di backup.  
   
  **Database**  
@@ -63,7 +67,7 @@ caps.handback.revision: 64
  Selezionare questa opzione per creare un backup di sola copia. Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
->  Quando si seleziona l'opzione **Differenziale**, non è possibile creare un backup di sola copia.  
+>  Quando si seleziona l'opzione **Differenziale** , non è possibile creare un backup di sola copia.  
   
  **Componente di cui eseguire il backup**  
  Con questa opzione è possibile selezionare il componente del database di cui eseguire il backup. Se nell'elenco **Tipo backup** è selezionato **Log delle transazioni** , questa opzione non è attivata.  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**Database**|È possibile specificare di eseguire il backup dell'intero database.|  
 |**File e filegroup**|È possibile specificare di eseguire il backup dei file e/o dei filegroup specificati.<br /><br /> Selezionando questa opzione, viene visualizzata la finestra di dialogo **Seleziona file e filegroup** . Dopo avere selezionato i filegroup o i file di cui eseguire il backup e avere scelto **OK**, le opzioni selezionate verranno visualizzate nella casella **File e filegroup** .|  
   
-### Destinazione  
+### <a name="destination"></a>Destinazione  
  Con le opzioni del pannello **Destinazione** è possibile specificare il tipo di dispositivo di backup per l'operazione di backup e di trovare un dispositivo di backup logico o fisico esistente.  
   
 > [!NOTE]  
@@ -93,17 +97,17 @@ caps.handback.revision: 64
  Il set successivo di opzioni visualizzate dipende dal tipo di destinazione selezionata. Se si seleziona Disco o Nastro, vengono visualizzate le opzioni riportate di seguito.  
   
  **Aggiungi**  
- È possibile aggiungere un file o un dispositivo all'elenco **Backup su**. È possibile eseguire il backup su 64 dispositivi contemporaneamente su un disco locale o remoto. Per specificare un file su un disco remoto, utilizzare il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ È possibile aggiungere un file o un dispositivo all'elenco **Backup su** . È possibile eseguire il backup su 64 dispositivi contemporaneamente su un disco locale o remoto. Per specificare un file su un disco remoto, utilizzare il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
  
  
   
  **Rimuovi**  
- È possibile rimuovere uno o più dispositivi attualmente selezionati dall'elenco **Backup su**.  
+ È possibile rimuovere uno o più dispositivi attualmente selezionati dall'elenco **Backup su** .  
   
  **Sommario**  
-È possibile visualizzare il contenuto dei supporti per il dispositivo selezionato, se esistente.  Il pulsante non esegue una funzione se viene specificato un **URL**. 
+È possibile visualizzare il contenuto dei supporti per il dispositivo selezionato, se esistente.  Il pulsante non esegue una funzione se viene specificato un **URL** . 
    
-Finestra di dialogo **Seleziona destinazione di backup** La finestra di dialogo **Seleziona destinazione di backup** viene visualizzata dopo aver selezionato **Aggiungi**.   Il set di opzioni visualizzate dipende dal tipo di destinazione selezionata. 
+Finestra di dialogo**Seleziona destinazione di backup** La finestra di dialogo **Seleziona destinazione di backup** viene visualizzata dopo aver selezionato **Aggiungi**.   Il set di opzioni visualizzate dipende dal tipo di destinazione selezionata. 
 
 Se si seleziona **Disco** o **Nastro** come destinazione di backup, verranno visualizzate le opzioni seguenti.  
 
@@ -128,11 +132,12 @@ Se si seleziona **URL** come destinazione di backup, verranno visualizzate le op
   **Nuovo contenitore:**  
 Usato per registrare un contenitore esistente per il quale non si ha una firma di accesso condiviso.  Vedere [Connettersi a una sottoscrizione di Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## Vedere anche  
- [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
- [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
+ [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

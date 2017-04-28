@@ -1,33 +1,37 @@
 ---
-title: "Prepararsi all&#39;importazione bulk dei dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "importazione in blocco [SQL Server], informazioni sull'importazione in blocco"
-  - "istruzione BULK INSERT, linee guida"
-  - "istruzione BULK INSERT, restrizioni"
-  - "utilità bcp [SQL Server], linee guida"
-  - "utilità bcp [SQL Server], restrizioni"
-  - "caratteri nascosti"
-  - "Funzione OPENROWSET, linee guida per BCP"
+title: Prepararsi all&quot;importazione bulk dei dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prepararsi all&#39;importazione bulk dei dati (SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararsi all'importazione bulk dei dati (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Per importare dati in blocco solo da un file di dati, è possibile usare il comando **bcp**, l'istruzione BULK INSERT o la funzione OPENROWSET (BULK).  
+  Per importare dati in blocco solo da un file di dati, è possibile usare il comando **bcp** , l'istruzione BULK INSERT o la funzione OPENROWSET (BULK).  
   
 > [!NOTE]  
 >  È possibile scrivere un'applicazione personalizzata che esegua l'importazione bulk di dati da oggetti diversi da un file di testo. Per importare dati in blocco dai buffer della memoria, usare le estensioni bcp dell'interfaccia API (Application Programming Interface) Native Client (ODBC) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dell'interfaccia **IRowsetFastLoad** di OLE DB.  Per importare dati in blocco da una tabella dati C#, usare l'API della copia bulk ADO.NET, **SqlBulkCopy**.  
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      In molte utilità ed editor di testo vengono visualizzati i caratteri nascosti, che in genere sono presenti nella parte finale del file di dati. Durante un'operazione di importazione bulk, i caratteri nascosti in un file di dati ASCII possono causare problemi che generano un errore di tipo carattere NULL imprevisto. L'individuazione e la rimozione di tutti i caratteri nascosti dovrebbero consentire di risolvere questo problema.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Importare ed esportare dati per operazioni bulk usando l'utilità bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilità bcp](../../tools/bcp-utility.md)   

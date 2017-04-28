@@ -1,24 +1,28 @@
 ---
-title: "Esempio: Recupero di informazioni sui dipendenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Modalità EXPLICIT"
+title: 'Esempio: recupero di informazioni sui dipendenti | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01f3d95b92757ba51a7e8466a9c8d9d535a0a773
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: Recupero di informazioni sui dipendenti
+# <a name="example-retrieving-employee-information"></a>Esempio: Recupero di informazioni sui dipendenti
   In questo esempio vengono recuperati ID e nome di ogni dipendente. Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è possibile ottenere il valore employeeID dalla colonna BusinessEntityID della tabella Employee. I nomi dei dipendenti possono essere ottenuti dalla tabella Person. La colonna BusinessEntityID può essere utilizzata per unire in join le tabelle.  
   
  Si supponga di voler utilizzare la trasformazione FOR XML EXPLICIT per generare codice XML come illustrato di seguito:  
@@ -128,7 +132,7 @@ FOR XML EXPLICIT;
   
  Il processo viene ripetuto per tutte le righe del set di righe. Si noti l'importanza dell'ordinamento delle righe nella tabella universale, in modo che l'istruzione FOR XML EXPLICIT possa elaborare il set di righe nell'ordine corretto e generare il codice XML desiderato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "Verifiche di coerenza del sistema della tabella temporale | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verifiche di coerenza del sistema della tabella temporale | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 caps.latest.revision: 10
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb67454080657b99983e33e4c46858124b735433
+ms.lasthandoff: 04/11/2017
+
 ---
-# Verifiche di coerenza del sistema della tabella temporale
+# <a name="temporal-table-system-consistency-checks"></a>Verifiche di coerenza del sistema della tabella temporale
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Quando si usano le tabelle temporali, il sistema esegue una serie di verifiche di coerenza per assicurarsi che lo schema sia conforme ai requisiti per le tabelle temporali e che i dati siano coerenti e rimangano tali. Le verifiche temporali sono anche state aggiunte all'istruzione **DBCC CHECKCONSTRAINTS** .  
   
-## Verifiche di coerenza del sistema  
+## <a name="system-consistency-checks"></a>Verifiche di coerenza del sistema  
  Prima di impostare **SYSTEM_VERSIONING** su **ON**, viene eseguita una serie di verifiche sulla tabella di cronologia e sulla tabella corrente. Queste verifiche sono raggruppate in verifiche dello schema e verifiche dei dati (se la tabella di cronologia non è vuota). Il sistema esegue inoltre una verifica della coerenza di runtime.  
   
-### Verifica dello schema  
+### <a name="schema-check"></a>Verifica dello schema  
  Quando si crea o si modifica una tabella affinché diventi una tabella temporale, il sistema verifica che siano soddisfatti i requisiti seguenti:  
   
 1.  I nomi e il numero di colonne è lo stesso nella tabella corrente e nella tabella di cronologia  
@@ -48,7 +52,7 @@ caps.handback.revision: 10
   
 10. La tabella di cronologia non è configurata per il rilevamento delle modifiche o per Change Data Capture  
   
-### Verifica della coerenza dei dati  
+### <a name="data-consistency-check"></a>Verifica della coerenza dei dati  
  Prima di impostare **SYSTEM_VERSIONING** su **ON** e come parte di un'operazione DML, il sistema esegue la verifica seguente: **SysEndTime** ≥**SysStartTime**  
   
  Quando si crea un collegamento a una tabella di cronologia esistente, è possibile scegliere di eseguire una verifica della coerenza dei dati. Questa verifica della coerenza dei dati garantisce che i record esistenti non si sovrappongano e che siano soddisfatti i requisiti temporali per ogni singolo record. L'impostazione predefinita prevede l'esecuzione della verifica della coerenza dei dati. È in genere consigliabile eseguire la coerenza dei dati ogni volta che i dati tra le tabelle correnti e di cronologia non sono sincronizzati, ad esempio quando si incorpora una tabella di cronologia esistente popolata con dati cronologici.  
@@ -56,13 +60,13 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  Le modifiche manuali al clock di sistema causeranno un errore imprevisto del sistema poiché le verifiche della coerenza dei dati di runtime apportate per evitare condizioni di sovrapposizione (ossia l'ora di fine di un record non è inferiore all'ora di inizio) avranno esito negativo.  
   
-## DBCC CHECKCONSTRAINTS  
+## <a name="dbcc-checkconstraints"></a>DBCC CHECKCONSTRAINTS  
  Il comando **DBCC CHECKCONSTRAINTS** include verifiche della coerenza dei dati temporali. Per altre informazioni, vedere [DBCC CHECKCONSTRAINTS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md).  
   
-## Questo articolo è stato utile? Commenti e suggerimenti  
+## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20System%20Consistency%20Checks%20page)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   
  [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Partizionamento con le tabelle temporali](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
@@ -73,3 +77,4 @@ caps.handback.revision: 10
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

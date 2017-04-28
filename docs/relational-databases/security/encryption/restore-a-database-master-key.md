@@ -1,24 +1,28 @@
 ---
-title: "Ripristino di una chiave master del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiave master del database [SQL Server], importazione"
+title: Ripristinare la chiave master di un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2833a4b91d4465e126c0a393e756ab09106d1c8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino di una chiave master del database
+# <a name="restore-a-database-master-key"></a>Ripristino di una chiave master del database
   In questo argomento viene descritto come ripristinare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -50,7 +54,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio con Transact-SQL  
   
-#### Per ripristinare la chiave master del database  
+#### <a name="to-restore-the-database-master-key"></a>Per ripristinare la chiave master del database  
   
 1.  Recuperare una copia della chiave master del database da un supporto di backup fisico o da una directory nel file system locale.  
   

@@ -1,33 +1,37 @@
 ---
-title: "Visualizzare la definizione di una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "stored procedure [SQL Server], visualizzazione"
-  - "definizione di stored procedure"
-  - "visualizzazione di stored procedure"
-  - "visualizzazione di stored procedure"
+title: Visualizzare la definizione di una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], viewing
+- definition of stored procedure
+- viewing stored procedures
+- displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c47576b90eb7b14738d8612b99f36ed8a5ccb12
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare la definizione di una stored procedure
+# <a name="view-the-definition-of-a-stored-procedure"></a>Visualizzare la definizione di una stored procedure
     
 ##  <a name="Top"></a> In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile visualizzare la definizione di una stored procedure mediante le opzioni di menu di Esplora oggetti o mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]nell'editor di query. In questo argomento viene descritto come visualizzare la definizione di una stored procedura in Esplora oggetti e nell'editor di query mediante una stored procedure di sistema, una funzione di sistema e una vista del catalogo dell'oggetto.  
   
--   **Prima di iniziare:**  [Sicurezza](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
--   **Per visualizzare la definizione di una stored procedure usando:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 29
  È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
  Funzione di sistema: **OBJECT_DEFINITION**  
- Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin** e **db_securityadmin**.  
+ Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  Vista del catalogo dell'oggetto: **sys.sql_modules**  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -57,7 +61,7 @@ caps.handback.revision: 29
   
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
   
-3.  Espandere **Stored procedure**, fare clic con il pulsante destro del mouse sulla stored procedure, quindi scegliere **Crea script per stored procedure**, quindi fare clic su una delle opzioni seguenti: **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in** o **Genera codice per istruzioni DROP e CREATE in**.  
+3.  Espandere **Stored procedure**, fare clic con il pulsante destro del mouse sulla stored procedure, quindi scegliere **Crea script per stored procedure**, quindi fare clic su una delle opzioni seguenti: **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in**o **Genera codice per istruzioni DROP e CREATE in**.  
   
 4.  Selezionare **Nuova finestra editor di query**. Verrà visualizzata la definizione della stored procedure.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 29
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra Query immettere l'istruzione seguente che usa la stored procedure di sistema **sp_helptext**. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
+3.  Nella finestra Query immettere l'istruzione seguente che usa la stored procedure di sistema **sp_helptext** . Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
   
     ```  
     USE AdventureWorks2012;  
@@ -82,7 +86,7 @@ caps.handback.revision: 29
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra Query immettere le istruzioni seguenti che usano la funzione di sistema **OBJECT_DEFINITION**. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
+3.  Nella finestra Query immettere le istruzioni seguenti che usano la funzione di sistema **OBJECT_DEFINITION** . Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
   
     ```  
     USE AdventureWorks2012;  
@@ -95,7 +99,7 @@ caps.handback.revision: 29
   
 2.  Sulla barra degli strumenti fare clic su **Nuova query**.  
   
-3.  Nella finestra Query immettere le istruzioni seguenti che usano la vista del catalogo **sys.sql_modules**. Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
+3.  Nella finestra Query immettere le istruzioni seguenti che usano la vista del catalogo **sys.sql_modules** . Modificare il nome del database e della stored procedure in modo da indicare il database e la stored procedure desiderati.  
   
     ```  
     USE AdventureWorks2012;  
@@ -105,7 +109,7 @@ caps.handback.revision: 29
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modificare una stored procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Eliminare una stored procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   

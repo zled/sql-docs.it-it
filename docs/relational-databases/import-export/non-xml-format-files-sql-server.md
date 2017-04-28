@@ -1,27 +1,31 @@
 ---
-title: "File in formato non XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "file in formato non XML"
-  - "file di formato [SQL Server], file di formato non XML"
-  - "importazione bulk [SQL Server], file di formato"
+title: File in formato non XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-XML format files
+- format files [SQL Server], non-XML format files
+- bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.lasthandoff: 04/11/2017
+
 ---
-# File in formato non XML (SQL Server)
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportati due tipi di file di formato per l'esportazione e l'importazione bulk: *file di formato non XML* e *file di formato XML*.  
+# <a name="non-xml-format-files-sql-server"></a>File in formato non XML (SQL Server)
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]sono supportati due tipi di file di formato per l'esportazione e l'importazione bulk: *file di formato non XML* e *file di formato XML*.  
   
  **Contenuto dell'argomento**  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 63
   
 ##  <a name="Benefits"></a> Vantaggi dei file di formato non XML  
   
--   È possibile creare automaticamente un file di formato non XML specificando l'opzione **format** in un comando **bcp**.  
+-   È possibile creare automaticamente un file di formato non XML specificando l'opzione **format** in un comando **bcp** .  
   
 -   Quando si specifica un file di formato esistente in un comando **bcp** , quest'ultimo utilizza i valori registrati nel file di formato e non richiede il tipo di archiviazione di file, la lunghezza del prefisso, la lunghezza del campo o il carattere di terminazione del campo.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 63
   
  Nella figura seguente vengono illustrati i campi del file di formato per un file di formato non XML di esempio.  
   
- ![Identifica i campi di un file di formato non XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifica i campi di un file di formato non XML")  
+ ![Identifica i campi di un file in formato non XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifica i campi di un file in formato non XML")  
   
  I campi **Versione** e **Numero di colonne** sono presenti una sola volta. I significati di questi campi sono descritti nella tabella seguente.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 63
 >  È possibile modificare un file di formato per consentire l'importazione bulk da un file di dati in cui il numero o l'ordine dei campi è diverso dal numero o dall'ordine delle colonne della tabella. Per ulteriori informazioni, vedere l'elenco [Attività correlate](#RelatedTasks) più avanti in questo argomento.  
   
 ##  <a name="Examples"></a> Esempio di file di formato non XML  
- Nell'esempio seguente viene illustrato un file di formato non XML creato in precedenza (`myDepartmentIdentical-f-c.fmt`). Questo file descrive un campo dati di tipo carattere per ogni colonna della tabella `HumanResources.Department` nel database di esempio `AdventureWorks2012`.  
+ Nell'esempio seguente viene illustrato un file di formato non XML creato in precedenza (`myDepartmentIdentical-f-c.fmt`). Questo file descrive un campo dati di tipo carattere per ogni colonna della tabella `HumanResources.Department` nel database di esempio `AdventureWorks2012` .  
   
  Il file di formato generato, `myDepartmentIdentical-f-c.fmt`, contiene le informazioni seguenti:  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 63
 ```  
   
 > [!NOTE]  
->  Per una figura in cui vengono illustrati i campi del file di formato in relazione a questo file di formato non XML di esempio, vedere [Struttura dei file di formato non XML](#Structure) più indietro in questo argomento.  
+>  Per una figura in cui vengono illustrati i campi del file di formato in relazione a questo file di formato non XML di esempio, vedere [Struttura dei file di formato non XML](#Structure)più indietro in questo argomento.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 63
   
 -   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   

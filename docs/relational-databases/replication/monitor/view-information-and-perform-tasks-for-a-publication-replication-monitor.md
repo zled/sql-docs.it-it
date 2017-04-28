@@ -1,26 +1,30 @@
 ---
-title: "Visualizzare le informazioni ed eseguire attivit&#224; per una pubblicazione (Monitoraggio replica) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visualizzazione di informazioni di pubblicazioni"
-  - "pubblicazioni [replica di SQL Server], visualizzazione di informazioni"
-  - "pubblicazioni [replica di SQL Server], attività Monitoraggio replica"
+title: "Visualizzare le informazioni ed eseguire attività per una pubblicazione (Monitoraggio replica) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing publication information
+- publications [SQL Server replication], viewing information
+- publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d01adb7abcb4c110f826e0cd54814a66c83c0051
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare le informazioni ed eseguire attivit&#224; per una pubblicazione (Monitoraggio replica)
+# <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>Visualizzare le informazioni ed eseguire attività per una pubblicazione (Monitoraggio replica)
   In Monitoraggio replica sono disponibili le schede seguenti che includono le informazioni sulla pubblicazione selezionata:  
   
 -   **Tutte le sottoscrizioni**  
@@ -37,34 +41,34 @@ caps.handback.revision: 39
   
     -   Agente di lettura coda, utilizzato dalle pubblicazioni transazionali contenenti sottoscrizioni ad aggiornamento in coda.  
   
--   **Avvisi** (per i server di distribuzione in esecuzione [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive)  
+-   **Avvisi** (per server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive)  
   
     -   Questa scheda consente di specificare avvisi per gli agenti.  
   
--   **Token di traccia** (replica transazionale, solo per i server di distribuzione in esecuzione [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive)  
+-   **Token di traccia** (solo replica transazionale, per server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive).  
   
      Questa scheda consente di misurare la latenza, ovvero l'intervallo di tempo che intercorre tra il commit di una transazione nel server di pubblicazione e il commit della transazione corrispondente nel Sottoscrittore.  
   
- Per ulteriori informazioni sulle opzioni di ogni scheda, fare clic sulla scheda nel riquadro di destra e quindi fare clic su **Guida** nella barra dei menu. Per informazioni sull'avvio di monitoraggio replica, vedere [avviare Monitoraggio replica](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Per ulteriori informazioni sulle opzioni di ogni scheda, fare clic sulla scheda nel riquadro a destra e quindi fare clic su **?** sulla barra dei menu. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-### Per visualizzare le informazioni ed eseguire le attività per una pubblicazione  
+### <a name="to-view-information-and-perform-tasks-for-a-publication"></a>Per visualizzare le informazioni ed eseguire le attività per una pubblicazione  
   
 1.  Espandere un gruppo di server di pubblicazione nel riquadro sinistro, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
-2.  Per visualizzare e modificare le proprietà di pubblicazione, fare doppio clic su pubblicazione e quindi fare clic su **proprietà**.  
+2.  Per visualizzare e modificare le proprietà della pubblicazione, fare clic con il pulsante destro del mouse sulla pubblicazione e quindi scegliere **Proprietà**.  
   
-3.  Per visualizzare informazioni sulle sottoscrizioni, fare clic su di **tutte le sottoscrizioni** scheda.  
+3.  Per visualizzare le informazioni sulle sottoscrizioni, fare clic sulla scheda **Tutte le sottoscrizioni** .  
   
-     Per visualizzare e modificare le proprietà della sottoscrizione, fare doppio clic su sottoscrizione e quindi fare clic su **proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per ulteriori informazioni, vedere [visualizzare le informazioni ed esecuzione delle attività degli agenti associati con una sottoscrizione & #40; Monitoraggio replica & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+     Per visualizzare e modificare le proprietà della sottoscrizione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Proprietà**. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-4.  Per visualizzare le informazioni sugli agenti, fare clic su di **agenti** scheda. In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per ulteriori informazioni, vedere [visualizzare le informazioni ed esecuzione delle attività degli agenti associati con una pubblicazione & #40; Monitoraggio replica & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+4.  Per visualizzare informazioni sugli agenti, fare clic sulla scheda **Agenti** . In questa scheda è inoltre possibile accedere a informazioni più dettagliate ed eseguire altre attività. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
-5.  Per visualizzare informazioni sulle soglie e avvisi di agente, fare clic sui **avvisi** scheda. Per ulteriori informazioni, vedere [impostare soglie e avvisi in Monitoraggio replica](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+5.  Per visualizzare informazioni su avvisi e valore soglia dell'agente, fare clic sulla scheda **Avvisi** . Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  Per visualizzare informazioni sui token di traccia, fare clic su di **i token di traccia** scheda. Per ulteriori informazioni su come utilizzare i token di traccia, vedere [misurazione latenza e convalidare le connessioni per la replica transazionale](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Per visualizzare le informazioni sui token di traccia, fare clic sulla scheda **Token di traccia** . Per ulteriori informazioni sulle modalità di utilizzo dei token di traccia, vedere [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
-## Vedere anche  
- [Visualizzazione e modifica delle proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

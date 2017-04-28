@@ -1,30 +1,34 @@
 ---
-title: "Dati gerarchici [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gerarchie [SQL Server], tabelle da supportare"
-  - "hierarchyid [Motore di database], concetti"
-  - "tabelle gerarchiche [Motore di database]"
-  - "SqlHierarchyId"
-  - "hierarchyid [Motore di database]"
-  - "query gerarchiche [SQL Server], utilizzo del tipo di dati hierarchyid"
+title: Dati gerarchici (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hierarchies [SQL Server], tables to support
+- hierarchyid [Database Engine], concepts
+- hierarchical tables [Database Engine]
+- SqlHierarchyId
+- hierarchyid [Database Engine]
+- hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dati gerarchici [SQL Server]
-  Con il tipo di dati **hierarchyid** predefinito, l'archiviazione e l'esecuzione di query sui dati gerarchici risultano più semplici. **hierarchyid** è ottimizzato per la rappresentazione di alberi, ovvero il tipo più comune di dati gerarchici.  
+# <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
+  Con il tipo di dati **hierarchyid** predefinito, l'archiviazione e l'esecuzione di query sui dati gerarchici risultano più semplici. **hierarchyid** è ottimizzato per la rappresentazione di alberi, ovvero il tipo più comune di dati gerarchici.  
   
  I dati gerarchici vengono definiti come un set di elementi di dati correlati tra loro tramite relazioni gerarchiche. Si parla di relazioni gerarchiche quando un elemento di dati è l'elemento padre di un altro elemento. Di seguito sono riportati alcuni esempi dei dati gerarchici comunemente archiviati nei database:  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   Un grafico di collegamenti tra pagine Web  
   
- Usare [hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md) come tipo di dati per creare tabelle con una struttura gerarchica o per descrivere la struttura gerarchica dei dati archiviati in un altro percorso. Usare le [funzioni hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) di [!INCLUDE[tsql](../includes/tsql-md.md)] per eseguire query e gestire i dati gerarchici.  
+ Usare [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) come tipo di dati per creare tabelle con una struttura gerarchica o per descrivere la struttura gerarchica dei dati archiviati in un altro percorso. Usare le [funzioni hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) di [!INCLUDE[tsql](../includes/tsql-md.md)] per eseguire query e gestire i dati gerarchici.  
   
 ##  <a name="keyprops"></a> Proprietà chiave di hierarchyid  
  Un valore del tipo di dati **hierarchyid** rappresenta una posizione in un albero gerarchico. I valori per **hierarchyid** hanno le proprietà seguenti:  
@@ -53,9 +57,8 @@ caps.handback.revision: 39
   
 -   Supporto per eliminazioni e inserimenti arbitrari  
   
-     Usando il metodo [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md), è sempre possibile generare un elemento di pari livello a destra o a sinistra di un nodo oppure tra due elementi di pari livello. La proprietà del confronto è gestita quando un numero arbitrario di nodi viene inserito o eliminato dalla gerarchia. La maggior parte degli inserimenti e delle eliminazioni mantiene la proprietà di compattezza. Tuttavia, gli inserimenti tra due nodi produrranno i valori hierarchyid con una rappresentazione leggermente meno compatta.  
+     Usando il metodo [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) , è sempre possibile generare un elemento di pari livello a destra o a sinistra di un nodo oppure tra due elementi di pari livello. La proprietà del confronto è gestita quando un numero arbitrario di nodi viene inserito o eliminato dalla gerarchia. La maggior parte degli inserimenti e delle eliminazioni mantiene la proprietà di compattezza. Tuttavia, gli inserimenti tra due nodi produrranno i valori hierarchyid con una rappresentazione leggermente meno compatta.  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="limits"></a> Limitazioni di hierarchyid  
  Al tipo di dati **hierarchyid** vengono applicate le limitazioni seguenti:  
@@ -66,7 +69,6 @@ caps.handback.revision: 39
   
 -   Le relazioni gerarchiche rappresentate dai valori **hierarchyid** non sono applicate come una relazione della chiave esterna. È possibile e qualche volta appropriato avere una relazione gerarchica dove A ha un figlio B, A viene eliminato e lascia a B una relazione con un record inesistente. Se questo comportamento è inaccettabile, tramite l'applicazione deve essere eseguita una query per i discendenti prima di eliminare gli elementi padre.  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="alternatives"></a> Quando utilizzare le alternative a hierarchyid  
  Di seguito sono elencate due alternative a **hierarchyid** per la rappresentazione di dati gerarchici:  
@@ -77,7 +79,7 @@ caps.handback.revision: 39
   
  **hierarchyid** è generalmente superiore a queste alternative. Tuttavia, esistono determinate situazioni illustrate in dettaglio di seguito in cui le alternative sono superiori.  
   
-### Elemento padre/figlio  
+### <a name="parentchild"></a>Elemento padre/figlio  
  Quando si utilizza l'approccio dell'elemento padre/figlio, ogni riga contiene un riferimento all'elemento padre. La tabella seguente definisce una tabella tipica utilizzata per contenere le righe padre e figlio in una relazione padre/figlio:  
   
 ```  
@@ -121,9 +123,8 @@ GO
     GO  
     ```  
   
- [Contenuto dell'argomento](#top)  
   
-### XML  
+### <a name="xml"></a>XML  
  Un documento XML è un albero e pertanto una singola istanza del tipo di dati XML può rappresentare una gerarchia completa. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando viene creato un indice XML, i valori **hierarchyid** vengono usati internamente per rappresentare la posizione nella gerarchia.  
   
  L'utilizzo del tipo di dati XML può essere superiore quando tutte le seguenti condizioni sono vere:  
@@ -145,7 +146,6 @@ CREATE TABLE XMLOrg
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="indexing"></a> Strategie di indicizzazione per i dati gerarchici  
  Sono disponibili due strategie per indicizzare i dati gerarchici:  
@@ -164,9 +164,8 @@ GO
   
  La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
- [Contenuto dell'argomento](#top)  
   
-### Creazione di indici  
+### <a name="creating-indexes"></a>Creazione di indici  
  Il metodo GetLevel() può essere usato per creare un ordine breadth-first. Nell'esempio seguente vengono creati sia gli indici breadth-first sia quelli depth-first:  
   
 ```wmimof  
@@ -190,11 +189,10 @@ ON Organization(BusinessEntityID) ;
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
   
-### Esempio semplice  
+### <a name="simple-example"></a>Esempio semplice  
  L'esempio seguente è intenzionalmente semplicistico per agevolare l'utilizzo iniziale. Creare innanzitutto una tabella per contenere alcuni dati geography.  
   
 ```  
@@ -223,7 +221,7 @@ VALUES
 ('/3/1/', 'McMurdo Station', 'City');  
 ```  
   
- Selezionare i dati, aggiungendo una colonna in cui i dati del livello vengono convertiti in un valore di testo facile da capire. Tramite questa query è inoltre possibile ordinare il risultato in base al tipo di dati **hierarchyid**.  
+ Selezionare i dati, aggiungendo una colonna in cui i dati del livello vengono convertiti in un valore di testo facile da capire. Tramite questa query è inoltre possibile ordinare il risultato in base al tipo di dati **hierarchyid** .  
   
 ```  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
@@ -272,7 +270,6 @@ VALUES ('/', 'Earth', 'Planet');
 ###  <a name="migrating"></a> Migrazione dalla relazione elemento padre/figlio a hierarchyid  
  La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite **hierarchyid** consiste nell'usare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
  Un'applicazione può assicurarsi facilmente che una colonna **hierarchyid** rappresenti un albero anche se ciò non accade necessariamente.  
@@ -289,9 +286,8 @@ VALUES ('/', 'Earth', 'Planet');
   
     -   Determinare l'univocità di ogni nuovo nodo figlio e inserirlo come parte di una transazione serializzabile.  
   
- [Contenuto dell'argomento](#top)  
   
-#### Esempio di utilizzo del rilevamento degli errori  
+#### <a name="example-using-error-detection"></a>Esempio di utilizzo del rilevamento degli errori  
  Nell'esempio seguente, il codice consente calcola il nuovo valore **EmployeeId** figlio, quindi rileva eventuali violazioni di chiave e torna al marcatore **INS_EMP** per ricalcolare il valore **EmployeeId** per la nuova riga:  
   
 ```  
@@ -324,10 +320,9 @@ END ;
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
-#### Esempio di utilizzo di una transazione serializzabile  
- Con l'indice **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che potrebbero voler essere controllati da un'applicazione, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiunta di più dipendenti con lo stesso ID. Questa situazione richiede pertanto il ricalcolo di **@last_child**. Nel codice seguente sono utilizzati una transazione serializzabile e un indice breadth-first per calcolare il valore del nodo nuovo:  
+#### <a name="example-using-a-serializable-transaction"></a>Esempio di utilizzo di una transazione serializzabile  
+ Al tipo di dati **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che potrebbero voler essere controllati da un'applicazione, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiunta di più dipendenti con lo stesso ID. Questa situazione richiede pertanto il ricalcolo di **@last_child** . Nel codice seguente sono utilizzati una transazione serializzabile e un indice breadth-first per calcolare il valore del nodo nuovo:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -377,7 +372,6 @@ EmployeeId LastChild EmployeeName
 0x5AC0    NULL       Mary  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="BKMK_EnforcingTrees"></a> Applicazione di un albero  
  Negli esempi riportati in precedenza si illustra la possibilità di gestione di un albero da parte di un'applicazione. Per applicare un albero tramite vincoli, è possibile creare una colonna calcolata in cui viene definito l'elemento padre di ogni nodo con un vincolo di chiave esterna relativo all'ID della chiave primaria.  
@@ -396,7 +390,6 @@ GO
   
  Questo metodo dell'applicazione di una relazione è preferito quando per il codice considerato non affidabile per la gestione dell'albero gerarchico è disponibile un accesso DML diretto alla tabella. Tuttavia, questo metodo potrebbe ridurre le prestazioni poiché è necessario controllare il vincolo in ogni operazione DML.  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="findclr"></a> Individuazione di predecessori tramite CLR  
  Un'operazione comune che interessa due nodi in una gerarchia è la ricerca del predecessore comune minore. Questo può essere scritto in [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR poiché il tipo **hierarchyid** è disponibile per entrambi. Si consiglia di usare CLR poiché le prestazioni sono più rapide.  
@@ -444,7 +437,6 @@ FROM '<path to DLL>\ListAncestors.dll'
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="ancestors"></a> Elenco dei predecessori  
  La creazione di un elenco dei predecessori di un nodo è un'operazione comune che consente, ad esempio, di mostrare le posizioni di un'organizzazione. A questo scopo, è possibile usare una funzione con valori di tabella tramite la classe **HierarchyId_Operations** definita in precedenza:  
@@ -474,7 +466,6 @@ JOIN ListAncestors(@h) AS A
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="lowestcommon"></a> Ricerca del predecessore comune minore  
  Usando la classe **HierarchyId_Operations** definita in precedenza, creare la funzione [!INCLUDE[tsql](../includes/tsql-md.md)] seguente per cercare il predecessore comune minore che interessa due nodi di una gerarchia:  
@@ -507,7 +498,6 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
  Il nodo risultante è /1/1/  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="BKMK_MovingSubtrees"></a> Spostamento di sottoalberi  
  Un'altra operazione comune è lo spostamento di sottoalberi. La procedura descritta di seguito prende in considerazione il sottoalbero di **@oldMgr** e lo trasforma (includendo **@oldMgr**) in un sottoalbero di **@newMgr**.  
@@ -535,11 +525,10 @@ END ;
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
-## Vedere anche  
- [Guida di riferimento ai metodi per il tipo di dati hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Guida di riferimento ai metodi per il tipo di dati hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+ [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "Limiti della capacit&#224; di calcolo per edizione di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processori [SQL Server], supportati"
-  - "numero di processori supportati"
-  - "numero massimo di processori supportati"
+title: "Limiti della capacità di calcolo per edizione di SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Limiti della capacit&#224; di calcolo per edizione di SQL Server
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
   In questo argomento si illustrano i limiti della capacità di calcolo per differenti edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con i processori con l'Hyper-Threading.  
   
  ![Mapping per il calcolo dei limiti della capacità](../sql-server/media/compute-capacity-limits.gif "Mapping per il calcolo dei limiti della capacità")  
@@ -85,16 +89,18 @@ caps.handback.revision: 60
 |Sviluppatore|valore massimo del sistema operativo|valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 24 core|Limitato a meno di 4 socket o 24 core|  
 |Express|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
- *La licenza basata su Enterprise Edition con Server + Licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Non sono previsti limiti nel modello di licenza server basato su core.  
+ *La licenza basata su Enterprise Edition con Server + Licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 core per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Non sono previsti limiti nel modello di licenza server basato su core.  
   
  In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. È possibile eseguire il mapping di questi processori logici alle macchine virtuali sul server con il caricamento del calcolo delle macchine virtuali su quel processore logico di cui si è eseguito il mapping in un processore fisico nel server host.  
   
  È necessario disabilitare l'Hyper-Threading quando le prestazioni per processore virtuale sono importanti. È possibile abilitare o disabilitare l'Hyper-Threading utilizzando una impostazione BIOS per il processore durante l'impostazione del BIOS, ma è in genere un'operazione con ambito server che avrà un impatto su tutti i carichi di lavoro in esecuzione sul server. In tale situazione potrebbe essere consigliabile dividere i carichi di lavoro che saranno in esecuzione negli ambienti virtualizzati da quelli che beneficeranno del miglioramento delle prestazioni dell'Hyper-Threading in un ambiente fisico del sistema operativo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Edizioni e componenti di SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Specifiche di capacità massima per SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Guida introduttiva all'installazione di SQL Server 2016](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [Guida introduttiva all'installazione di SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

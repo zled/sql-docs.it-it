@@ -1,29 +1,33 @@
 ---
-title: "Query FOR XML e query nidificata FOR XML a confronto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query FOR XML."
-  - "query [XML in SQL Server], confronto tra tipi di query"
+title: Query FOR XML e query FOR XML annidate a confronto | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Query FOR XML e query nidificata FOR XML a confronto
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Query FOR XML e query nidificata FOR XML a confronto
   In questo argomento viene messa a confronto una query FOR XML con un solo livello con una query FOR XML nidificata. Uno dei vantaggi dell'utilizzo di query FOR XML consiste nella possibilità di specificare una combinazione di XML incentrati sia sugli attributi che sugli elementi per i risultati della query. Tutto ciò è dimostrato nell'esempio riportato di seguito.  
   
-## Esempio  
- La query seguente `SELECT` recupera informazioni sulla categoria e sulla sottocategoria di un prodotto dal database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. La query non include istruzioni FOR XML nidificate.  
+## <a name="example"></a>Esempio  
+ La query seguente `SELECT` recupera informazioni sulla categoria e sulla sottocategoria di un prodotto dal database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La query non include istruzioni FOR XML nidificate.  
   
 ```  
 USE AdventureWorks2012;  
@@ -50,7 +54,7 @@ GO
 ...  
 ```  
   
- Se nella query si specifica la direttiva `ELEMENTS`, verrà restituito un risultato incentrato sugli elementi, come illustrato nel frammento di risultato seguente:  
+ Se nella query si specifica la direttiva `ELEMENTS` , verrà restituito un risultato incentrato sugli elementi, come illustrato nel frammento di risultato seguente:  
   
 ```  
 <ProductCategory>  
@@ -117,9 +121,9 @@ FOR XML AUTO, TYPE
   
 -   La query `FOR XML` interna recupera informazioni sulla sottocategoria del prodotto. Nella query `ELEMENTS` interna viene aggiunta la direttiva `FOR XML` per generare un valore XML incentrato sugli elementi, che verrà aggiunto al valore XML generato dalla query esterna. Per impostazione predefinita la query esterna genera un valore XML incentrato sugli attributi.  
   
--   Nella query interna è specificata la direttiva `TYPE` in modo che venga restituito un risultato di tipo **xml**. Se la direttiva `TYPE` non viene specificata, verrà restituito un risultato di tipo **nvarchar(max)** e i dati XML verranno restituiti come entità.  
+-   Nella query interna è specificata la direttiva `TYPE` in modo che venga restituito un risultato di tipo **xml** . Se la direttiva `TYPE` non viene specificata, verrà restituito un risultato di tipo **nvarchar(max)** e i dati XML verranno restituiti come entità.  
   
--   Poiché la direttiva `TYPE` è specificata anche nella query esterna, il risultato della query verrà restituito al client come tipo **xml**.  
+-   Poiché la direttiva `TYPE` è specificata anche nella query esterna, il risultato della query verrà restituito al client come tipo **xml** .  
   
  Risultato parziale:  
   
@@ -135,7 +139,7 @@ FOR XML AUTO, TYPE
 </ProductCategory>  
 ```  
   
- La query seguente è semplicemente un'estensione della precedente. Visualizza la gerarchia dei prodotti completa nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], Sono inclusi gli elementi seguenti:  
+ La query seguente è semplicemente un'estensione della precedente. Visualizza la gerarchia dei prodotti completa nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , Sono inclusi gli elementi seguenti:  
   
 -   Categorie di prodotti  
   
@@ -145,7 +149,7 @@ FOR XML AUTO, TYPE
   
 -   Prodotti per ogni modello  
   
- Per comprendere l'organizzazione del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], è possibile utilizzare la query seguente:  
+ Per comprendere l'organizzazione del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , è possibile utilizzare la query seguente:  
   
 ```  
 SELECT ProductCategoryID, Name as CategoryName,  
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  Se si rimuove la direttiva `ELEMENTS` dalla query `FOR XML` nidificata che genera le sottocategorie di prodotti, il risultato sarà interamente incentrato sugli attributi. È pertanto possibile scrivere questa query senza nidificazione. L'aggiunta della direttiva `ELEMENTS` consente di ottenere un valore XML incentrato in parte sugli attributi ed in parte sugli elementi. Questo tipo di risultato non può essere generato da una query FOR XML con un solo livello.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di query FOR XML nidificate](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

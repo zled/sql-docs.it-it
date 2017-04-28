@@ -1,26 +1,30 @@
 ---
-title: "Gestione e monitoraggio della ricerca full-text per un&#39;istanza del server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ricerca full-text [SQL Server], informazioni"
-  - "ricerca full-text [SQL Server], gestione del server"
+title: Gestire e monitorare la ricerca full-text per un&quot;istanza del server | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], about
+- full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestione e monitoraggio della ricerca full-text per un&#39;istanza del server
+# <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
   L'amministrazione full-text per un'istanza del server include:  
   
 -   Attività di gestione del sistema quali la gestione del servizio dell'utilità di avvio di FDHOST (MSSQLFDLauncher), il riavvio del processo host del daemon di filtri se si modificano le credenziali dell'account del servizio, la configurazione delle proprietà full-text del server e il backup dei cataloghi full-text. A livello di server, ad esempio, è possibile specificare un linguaggio full-text predefinito che differisce dal linguaggio predefinito dell'istanza del server nel suo complesso.  
@@ -32,7 +36,7 @@ caps.handback.revision: 19
 ##  <a name="props"></a> Visualizzazione e modifica delle proprietà del server per la ricerca full-text  
  È possibile visualizzare le proprietà full-text di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-#### Per visualizzare e modificare le proprietà del server per la ricerca full-text  
+#### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Per visualizzare e modificare le proprietà del server per la ricerca full-text  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server e scegliere **Proprietà**.  
   
@@ -54,18 +58,18 @@ caps.handback.revision: 19
         > [!NOTE]  
         >  La ricompilazione può essere eseguita in modalità a thread multipli e, nel caso in cui siano disponibili più di 10 CPU, può risultare più veloce dell'importazione se si consente alla ricompilazione di utilizzare tutte le CPU.  
   
-         Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+         Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-         **Ricompilazione**  
+         **Ricompila**  
          I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere tempo e dopo l'aggiornamento potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
          **Reimposta**  
          I cataloghi full-text vengono ripristinati. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] I file del catalogo full-text vengono rimossi, ma i metadati per i cataloghi e per gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
-         Per informazioni sulla scelta dell'opzione di aggiornamento full-text, vedere [Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
+         Per informazioni sulla scelta dell'opzione di aggiornamento full-text, vedere[Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  L'opzione di aggiornamento full-text può anche essere impostata con l'azione [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option**.  
+        >  L'opzione di aggiornamento full-text può anche essere impostata con l'azione [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
 ##  <a name="metadata"></a> Visualizzazione di proprietà server full-text aggiuntive  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] È possibile usare le funzioni per ottenere il valore di varie proprietà a livello server della ricerca full-text. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  

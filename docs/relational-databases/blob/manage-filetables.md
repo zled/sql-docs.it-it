@@ -1,25 +1,29 @@
 ---
-title: "Gestione di tabelle FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], sicurezza"
-  - "FileTable [SQL Server], gestione dell'accesso"
+title: Gestire tabelle FileTable | Microsoft Docs
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestione di tabelle FileTable
+# <a name="manage-filetables"></a>Gestione di tabelle FileTable
   Vengono descritte attività amministrative comuni per la gestione di tabelle FileTable.  
   
 ##  <a name="HowToEnumerate"></a> Procedura: recuperare un elenco di tabelle FileTable e di oggetti correlati  
@@ -61,7 +65,7 @@ GO
   
      Se il comando ALTER DATABASE è annullato o termina con un timeout, il livello di accesso transazionale non viene modificato.  
   
--   Se viene chiamata l'istruzione ALTER DATABASE con una clausola WITH \<termination> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), vengono terminati tutti gli handle di file non transazionali aperti.  
+-   Se viene chiamata l'istruzione ALTER DATABASE con una clausola WITH \<terminazione> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), vengono terminati tutti gli handle di file non transazionali aperti.  
   
 > [!WARNING]  
 >  La terminazione di handle di file aperti può causare la perdita dei dati non salvati da parte degli utenti. Questo comportamento è coerente con quello del file system stesso.  
@@ -79,7 +83,7 @@ GO
 -   Nessuna delle directory a livello di database nell'istanza è visibile se FILESTREAM è disabilitato a livello di istanza.  
   
 ###  <a name="HowToDisable"></a> Procedura: disabilitare e riabilitare l'accesso non transazionale a livello di database  
- Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Per altre informazioni, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Per disabilitare l'accesso non transazionale completo**  
  Chiamare l'istruzione **ALTER DATABASE** e usare SET per impostare il valore di **NON_TRANSACTED_ACCESS** su **READ_ONLY** o **OFF**.  
@@ -115,7 +119,7 @@ GO
 3.  Una directory valida è stata specificata al livello di database.  
   
 ##  <a name="BasicsEnabling"></a> Disabilitare e riabilitare lo spazio dei nomi FileTable a livello di tabella  
- Disabilitando lo spazio dei nomi della tabella FileTable vengono disabilitati tutti i vincoli e i trigger definiti dal sistema creati con la tabella FileTable. Ciò è utile nei casi in cui una tabella FileTable deve essere riorganizzata su larga scala utilizzando operazioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ma si desidera evitare le spese correlate all'applicazione di semantica della tabella FileTable. Queste operazioni possono, tuttavia, lasciare la tabella FileTable in uno stato non coerente e impedire l'operazione di abilitazione dello spazio dei nomi di Filetable.  
+ Disabilitando lo spazio dei nomi della tabella FileTable vengono disabilitati tutti i vincoli e i trigger definiti dal sistema creati con la tabella FileTable. Ciò è utile nei casi in cui una tabella FileTable deve essere riorganizzata su larga scala utilizzando operazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , ma si desidera evitare le spese correlate all'applicazione di semantica della tabella FileTable. Queste operazioni possono, tuttavia, lasciare la tabella FileTable in uno stato non coerente e impedire l'operazione di abilitazione dello spazio dei nomi di Filetable.  
   
  La disabilitazione di uno spazio dei nomi FileTable comporta i risultati riportati di seguito:  
   
@@ -138,7 +142,7 @@ GO
 -   La directory FileTable, i file e le directory in essa contenute diventano visibili nel file system e disponibili per l'accesso I/O al file.  
   
 ###  <a name="HowToEnableNS"></a> Procedura: disabilitare e riabilitare lo spazio dei nomi FileTable a livello di tabella  
- Chiamare l'istruzione ALTER TABLE con l'opzione **{ ENABLE | DISABLE } FILETABLE_NAMESPACE**.  
+ Chiamare l'istruzione ALTER TABLE con l'opzione **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Per disabilitare lo spazio dei nomi FileTable**  
  ```tsql  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> Procedura: terminare gli handle di file aperti associati a una tabella FileTable  
- Chiamare la stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) con gli argomenti appropriati per terminare tutti gli handle di file aperti nel database o nella tabella FileTable o per terminare un handle specifico.  
+ Chiamare la stored procedure [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) con gli argomenti appropriati per terminare tutti gli handle di file aperti nel database o nella tabella FileTable o per terminare un handle specifico.  
   
 ```  
 USE database_name;  
@@ -202,7 +206,7 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> Sicurezza delle tabelle FileTable  
- I file e le directory archiviati nelle tabelle FileTable sono protetti solo dalla sicurezza di SQL. La sicurezza basata sulla tabella e sulla colonna è applicata per l'accesso al file system nonché per l'accesso a [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le API di sicurezza del file system di Windows e le impostazioni ACL non sono supportate.  
+ I file e le directory archiviati nelle tabelle FileTable sono protetti solo dalla sicurezza di SQL. La sicurezza basata sulla tabella e sulla colonna è applicata per l'accesso al file system nonché per l'accesso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le API di sicurezza del file system di Windows e le impostazioni ACL non sono supportate.  
   
  Alle tabelle File Table vengono applicate anche le autorizzazioni di sicurezza e accesso applicabili a filegroup e contenitori FILESTREAM, in quanto i dati dei file vengono archiviati come colonna FILESTREAM nella tabella FileTable.  
   
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC e tabelle FileTable  
  È possibile utilizzare DBCC CHECKCONSTRAINTS per convalidare i vincoli su una tabella FileTable, inclusi i vincoli definiti dal sistema.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità di FileTable con altre funzionalità di SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [DDL FileTable, funzioni, stored Procedure e viste](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

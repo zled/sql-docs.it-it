@@ -1,28 +1,32 @@
 ---
-title: "Creare vincoli CHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vincoli di tabella [SQL Server]"
-  - "collegamento di vincoli check"
-  - "colonne [SQL Server], vincoli"
-  - "vincoli [SQL Server], check"
-  - "vincoli CHECK, collegamento"
+title: Creare vincoli CHECK | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare vincoli CHECK
+# <a name="create-check-constraints"></a>Creare vincoli CHECK
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile creare un vincolo CHECK in una tabella per specificare i valori di dati accettabili in una o più colonne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,9 +52,9 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un nuovo vincolo CHECK  
+#### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
-1.  In **Esplora oggetti** espandere la tabella a cui si vuole aggiungere un vincolo CHECK, fare clic con il pulsante destro del mouse su **Vincoli** e scegliere **Nuovo vincolo**.  
+1.  In **Esplora oggetti**espandere la tabella a cui si vuole aggiungere un vincolo CHECK, fare clic con il pulsante destro del mouse su **Vincoli** e scegliere **Nuovo vincolo**.  
   
 2.  Nella finestra di dialogo **Vincoli CHECK** fare clic nel campo **Espressione** e quindi fare clic sui puntini di sospensione **(...)**.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un nuovo vincolo CHECK  
+#### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

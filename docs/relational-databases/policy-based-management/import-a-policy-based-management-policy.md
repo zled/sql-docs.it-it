@@ -1,24 +1,28 @@
 ---
-title: "Importare i criteri della gestione basata su criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestione basata su criteri, importazione di criteri"
+title: Importare i criteri della gestione basata su criteri | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, import policy
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Importare i criteri della gestione basata su criteri
+# <a name="import-a-policy-based-management-policy"></a>Importare i criteri della gestione basata su criteri
   In questo argomento verrà descritto come importare un'istanza dei criteri della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -45,9 +49,9 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per importare un'istanza dei criteri  
+#### <a name="to-import-a-policy-instance"></a>Per importare un'istanza dei criteri  
   
-1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si troverà l'istanza dei criteri appena importata.  
+1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si troverà l'istanza dei criteri appena importata.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   

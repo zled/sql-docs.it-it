@@ -1,22 +1,26 @@
 ---
-title: "Specificare percorsi e hint di ottimizzazione per indici XML selettivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Specificare percorsi e hint di ottimizzazione per indici XML selettivi | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c07b191fe73f8cab21a9f3876230d344ad99968
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specificare percorsi e hint di ottimizzazione per indici XML selettivi
+# <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
   In questo argomento viene descritto come specificare i percorsi del nodo da indicizzare e gli hint di ottimizzazione per l'indicizzazione in fase di creazione o modifica di indici XML selettivi.  
   
  Specificare contemporaneamente i percorsi del nodo e gli hint di ottimizzazione in una delle istruzioni seguenti:  
@@ -25,10 +29,10 @@ caps.handback.revision: 11
   
 -   Nella clausola **ADD** di un'istruzione **ALTER**. Per altre informazioni, vedere [ALTER INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
- Per altre informazioni sugli indici XML selettivi, vedere [Indici XML selettivi](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
+ Per altre informazioni sugli indici XML selettivi, vedere [Indici XML selettivi &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Informazioni sui tipi XQuery e SQL Server in dati XML non tipizzati  
- Negli indici XML selettivi sono supportati due sistemi di tipi: tipi XQuery e tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il percorso indicizzato può essere utilizzato per la corrispondenza di un'espressione XQuery o del tipo restituito del metodo value() del tipo di dati XML.  
+ Negli indici XML selettivi sono supportati due sistemi di tipi: tipi XQuery e tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il percorso indicizzato può essere utilizzato per la corrispondenza di un'espressione XQuery o del tipo restituito del metodo value() del tipo di dati XML.  
   
 -   Se un percorso da indicizzare non viene annotato oppure viene annotato con la parola chiave XQUERY, il percorso corrisponde a un'espressione XQuery. Esistono due varianti per i percorsi dei nodi con annotazioni XQuery:  
   
@@ -40,11 +44,11 @@ caps.handback.revision: 11
   
  Esistono differenze minime tra il sistema di tipi XML di espressioni XQuery e il sistema di tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validi per il metodo value() del tipo di dati XML. Di seguito sono riportate queste differenze:  
   
--   Il sistema di tipi XQuery riconosce gli spazi finali. Ad esempio, in base alla semantica del tipo XQuery, le stringhe "abc" e "abc " non sono uguali, a differenza di quanto accade in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Il sistema di tipi XQuery riconosce gli spazi finali. Ad esempio, in base alla semantica del tipo XQuery, le stringhe "abc" e "abc " non sono uguali, a differenza di quanto accade in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   I tipi di dati a virgola mobile XQuery supportano valori speciali di +/- zero e +/- infinito. Questi valori speciali non sono supportati nei tipi di dati a virgola mobile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   I tipi di dati a virgola mobile XQuery supportano valori speciali di +/- zero e +/- infinito. Questi valori speciali non sono supportati nei tipi di dati a virgola mobile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Tipi XQuery in dati XML non tipizzati  
+### <a name="xquery-types-in-untyped-xml"></a>Tipi XQuery in dati XML non tipizzati  
   
 -   I tipi XQuery corrispondono alle espressioni XQuery in tutti i metodi del tipo di dati XML, incluso il metodo value().  
   
@@ -87,7 +91,7 @@ mypath03 = '/a/b/d'
   
 -   **xs:dateTime**  
   
- Se il tipo viene omesso, il nodo verrà considerato del tipo di dati **xs:untypedAtomic**.  
+ Se il tipo viene omesso, il nodo verrà considerato del tipo di dati **xs:untypedAtomic** .  
   
  È possibile ottimizzare l'indice XML selettivo visualizzato nel modo seguente:  
   
@@ -105,13 +109,13 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
-### Tipi SQL Server in dati XML non tipizzati  
+### <a name="sql-server-types-in-untyped-xml"></a>Tipi SQL Server in dati XML non tipizzati  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi corrispondono al valore restituito del metodo value().  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi supportano l'hint di ottimizzazione SINGLETON.  
   
- È obbligatori specificare un tipo per i percorsi che restituiscono i tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare lo stesso tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrebbe utilizzato nel metodo value().  
+ È obbligatori specificare un tipo per i percorsi che restituiscono i tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilizzare lo stesso tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrebbe utilizzato nel metodo value().  
   
  Si consideri la query seguente:  
   
@@ -132,7 +136,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 )  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="typed"></a> Informazioni sul supporto degli indici XML selettivi per dati XML tipizzati  
  I dati XML tipizzati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresentano uno schema associato a uno specifico documento XML. Lo schema definisce la struttura generica del documento e i tipi di nodi. Se esiste uno schema, l'indice XML selettivo applica la sua struttura quando l'utente promuove i percorsi, pertanto non è necessario specificare i tipi XQUERY per i percorsi.  
@@ -211,7 +214,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ##  <a name="paths"></a> Specifica di percorsi  
  Un indice XML selettivo consente di indicizzare solo un subset di nodi dai dati XML archiviati rilevanti per le query che si intende eseguire. Se il subset dei nodi correlati è nettamente inferiore al numero totale di nodi nel documento XML, nell'indice XML selettivo vengono archiviati solo i nodi rilevanti. Per trarre vantaggio da un indice XML selettivo, identificare il corretto subset di nodi da indicizzare.  
   
-### Scelta dei nodi da indicizzare  
+### <a name="choosing-the-nodes-to-index"></a>Scelta dei nodi da indicizzare  
  Per identificare il subset corretto di nodi da aggiungere a un indice XML selettivo, è possibile utilizzare i due semplici principi indicati di seguito.  
   
 1.  **Principio 1**: per valutare una specifica espressione XQuery, indicizzare tutti i nodi da esaminare.  
@@ -247,7 +250,7 @@ FOR
 )  
 ```  
   
-### Indicizzazione di percorsi identici  
+### <a name="indexing-identical-paths"></a>Indicizzazione di percorsi identici  
  Non è possibile promuovere percorsi identici come tipo di dati identico in nomi di percorso diversi. Ad esempio, la query seguente genera un errore, in quanto `pathOne` e `pathTwo` sono identici:  
   
 ```tsql  
@@ -270,7 +273,7 @@ FOR
 )  
 ```  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  Di seguito sono riportati alcuni esempi aggiuntivi di scelta dei nodi corretti da indicizzare per tipi XQuery diversi.  
   
  **Esempio 1**  
@@ -343,7 +346,6 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/f**|Il valore del nodo `f` viene valutato nella clausola FLWOR.|  
 |**/a/b/c/d/e/g**|L'esistenza del nodo `g` viene valutata dal metodo exist().|  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="hints"></a> Specifica di hint di ottimizzazione  
  È possibile utilizzare hint di ottimizzazione facoltativi per specificare ulteriori dettagli sul mapping per un nodo indicizzato da un indice XML selettivo. È ad esempio possibile specificare il tipo di dati e la cardinalità del nodo, nonché determinate informazioni sulla struttura dei dati. Queste informazioni aggiuntive garantiscono un mapping più efficiente, oltre a determinare miglioramenti nelle prestazioni o risparmi in termini di archiviazione, se non entrambi i casi.  
@@ -352,7 +354,7 @@ WHERE T.xmldata.exist('
   
  Alcuni hint di ottimizzazione, ad esempio l'hint SINGLETON, introducono vincoli ai dati. In alcuni casi, potrebbero verificarsi errori se non si rispettano tali vincoli.  
   
-### Vantaggi degli hint di ottimizzazione  
+### <a name="benefits-of-optimization-hints"></a>Vantaggi degli hint di ottimizzazione  
  Nella tabella seguente vengono identificati gli hint di ottimizzazione che supportano livelli più efficienti di prestazioni e archiviazione.  
   
 |Hint di ottimizzazione|Archiviazione più efficiente|Miglioramento delle prestazioni|  
@@ -362,8 +364,8 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|Sì|Sì|  
 |**MAXLENGTH**|Sì|Sì|  
   
-### Hint di ottimizzazione e tipi di dati  
- È possibile indicizzare nodi come tipi di dati XQuery o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella tabella seguente vengono illustrati gli hint di ottimizzazione supportati da ogni tipo di dati.  
+### <a name="optimization-hints-and-data-types"></a>Hint di ottimizzazione e tipi di dati  
+ È possibile indicizzare nodi come tipi di dati XQuery o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella tabella seguente vengono illustrati gli hint di ottimizzazione supportati da ogni tipo di dati.  
   
 |Hint di ottimizzazione|Tipi di dati XQuery|Tipi di dati SQL|  
 |-----------------------|-----------------------|--------------------|  
@@ -372,7 +374,7 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|Sì|No|  
 |**MAXLENGTH**|Sì|No|  
   
-### hint di ottimizzazione node()  
+### <a name="node-optimization-hint"></a>hint di ottimizzazione node()  
  Si applica a: tipi di dati XQuery  
   
  È possibile utilizzare l'ottimizzazione node() per specificare un nodo il cui valore non è necessario per valutare la query tipica. Questo hint riduce i requisiti di archiviazione se la query tipica deve esclusivamente valutare l'esistenza del nodo. Per impostazione predefinita, un indice XML selettivo archivia il valore per tutti i nodi promossi, ad eccezione dei tipi di nodi complessi.  
@@ -390,32 +392,31 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
  Se una query richiede il valore di un nodo indicizzato con l'hint node(), non è possibile utilizzare l'indice XML selettivo.  
   
-### Hint di ottimizzazione SINGLETON  
+### <a name="singleton-optimization-hint"></a>Hint di ottimizzazione SINGLETON  
  Si applica a: tipi di dati XQuery o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  L'hint di ottimizzazione SINGLETON specifica la cardinalità di un nodo. Questo hint migliora le prestazioni delle query, poiché è risaputo che un nodo viene visualizzato al massimo una volta nel relativo elemento padre o predecessore.  
   
  Si consideri il [documento XML di esempio](#sample) in questo argomento.  
   
- Per utilizzare un indice XML selettivo per eseguire una query sul documento, è possibile specificare l'hint SINGLETON per il nodo `d`, poiché viene visualizzato al massimo una volta all'interno del relativo padre.  
+ Per utilizzare un indice XML selettivo per eseguire una query sul documento, è possibile specificare l'hint SINGLETON per il nodo `d` , poiché viene visualizzato al massimo una volta all'interno del relativo padre.  
   
  Se è stato specificato l'hint SINGLETON ma un nodo viene visualizzato più di una volta nell'elemento padre o predecessore, viene generato un errore in fase di creazione dell'indice (per i dati esistenti) oppure in fase di esecuzione di una query (per i nuovi dati).  
   
-### Hint di ottimizzazione DATA TYPE  
+### <a name="data-type-optimization-hint"></a>Hint di ottimizzazione DATA TYPE  
  Si applica a: tipi di dati XQuery  
   
  L'hint di ottimizzazione DATA TYPE consente di specificare un tipo di dati XQuery o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il nodo indicizzato. Il tipo di dati viene utilizzato per la colonna nella tabella dati dell'indice XML selettivo che corrisponde al nodo indicizzato.  
   
  Se l'esecuzione del cast di un valore esistente al tipo di dati specificato ha esito negativo, l'operazione di inserimento (nell'indice) ha esito positivo, ma viene inserito un valore Null nella tabella dati dell'indice.  
   
-### Hint di ottimizzazione MAXLENGTH  
+### <a name="maxlength-optimization-hint"></a>Hint di ottimizzazione MAXLENGTH  
  Si applica a: tipi di dati XQuery  
   
- L'hint di ottimizzazione MAXLENGTH consente di limitare la lunghezza dei dati di tipo xs:string. MAXLENGTH non è rilevante per i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poiché la lunghezza viene specificata contestualmente ai tipi di dati VARCHAR o NVARCHAR.  
+ L'hint di ottimizzazione MAXLENGTH consente di limitare la lunghezza dei dati di tipo xs:string. MAXLENGTH non è rilevante per i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poiché la lunghezza viene specificata contestualmente ai tipi di dati VARCHAR o NVARCHAR.  
   
  Se una stringa esistente è maggiore del valore MAXLENGTH specificato, l'inserimento di tale valore nell'indice ha esito negativo.  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="sample"></a> Documento XML di esempio  
  Negli esempi in questo argomento viene fatto riferimento al documento XML di esempio indicato di seguito:  
@@ -434,9 +435,8 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 </a>  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Indici XML selettivi &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Creare, modificare o eliminare indici XML selettivi](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

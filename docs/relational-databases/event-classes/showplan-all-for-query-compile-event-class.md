@@ -1,38 +1,42 @@
 ---
-title: "Classe di evento Showplan All for Query Compile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan All for Query Compile - classe di evento"
+title: Classe di evento Showplan All for Query Compile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan All for Query Compile event class
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14a4d2efcbb069e46c155e5beef01ce3b9ce5cce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Showplan All for Query Compile
+# <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile - classe di evento
   La classe di evento Showplan All for Query Compile viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila un'istruzione SQL. Includere questa classe di evento per identificare gli operatori Showplan. Le informazioni include sono un subset delle informazioni disponibili nella classe di evento Showplan XML For Query Compile.  
   
  Nella classe di evento Showplan All for Query Compile sono visualizzati dati completi relativi alla fase di compilazione e quindi le tracce che includono Showplan All for Query Compile possono determinare significativi overhead delle prestazioni. Per ridurre al minimo tale rischio, limitare l'utilizzo di questa classe di evento alle tracce che consentono di monitorare problemi specifici per brevi periodi di tempo.  
   
  Quando la classe di evento Showplan All for Query Compile è inclusa in una traccia, è necessario che la colonna di dati BinaryData sia selezionata. In caso contrario, le informazioni relative a questa classe di evento non verranno visualizzate nella traccia.  
   
-## Colonne di dati della classe di evento Showplan All for Query Compile  
+## <a name="showplan-all-for-query-compile-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan All for Query Compile  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BinaryData|**image**|Costo stimato della query.|2|No|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 169.|27|No|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -57,7 +61,7 @@ caps.handback.revision: 37
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

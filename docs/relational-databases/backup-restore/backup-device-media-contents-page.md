@@ -1,24 +1,28 @@
 ---
-title: "Dispositivo di backup (pagina Contenuto supporti) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.contents.f1"
+title: Dispositivo di backup (pagina Contenuto supporti)| Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dispositivo di backup (pagina Contenuto supporti)
+# <a name="backup-device-media-contents-page"></a>Dispositivo di backup (pagina Contenuto supporti)
   Utilizzare la finestra di dialogo **Dispositivo di backup** per visualizzare le informazioni di backup. Vengono riportate informazioni sul dispositivo, sui supporti, sul set di supporti e sul set o i set di backup.  
   
  **Per utilizzare SQL Server Management Studio per visualizzare il contenuto di un dispositivo di backup**  
@@ -27,7 +31,7 @@ caps.handback.revision: 38
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  Visualizzare informazioni relative al supporto specifico, al set di supporti e ai set di backup.  
   
  **Supporti**  
@@ -57,7 +61,7 @@ caps.handback.revision: 38
 |Intestazione|Valori|  
 |------------|------------|  
 |**Nome**|Nome del set di backup.|  
-|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<blank>*, nel caso dei log delle transazioni.|  
+|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<vuoto>*, nel caso dei log delle transazioni.|  
 |**Componente**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 -   [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

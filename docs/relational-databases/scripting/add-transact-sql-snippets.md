@@ -1,35 +1,39 @@
 ---
-title: "Aggiunta di frammenti Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere frammenti Transact-SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2498e15c9927adde026e426ead756be389ce08d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiunta di frammenti Transact-SQL
+# <a name="add-transact-sql-snippets"></a>Aggiunta di frammenti Transact-SQL
   È possibile aggiungere frammenti di codice Transact-SQL personalizzati al set di frammenti predefiniti incluso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Creazione di un file di frammento Transact-SQL  
+## <a name="creating-a-transact-sql-snippet-file"></a>Creazione di un file di frammento Transact-SQL  
  La prima parte della creazione di un frammento di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste nel creare un file XML con il testo del frammento di codice. Il file deve avere un'estensione di file snippet e soddisfare i requisiti dello [schema dei frammenti di codice](http://go.microsoft.com/fwlink/?LinkId=207504). Impostare la lingua del frammento su SQL.  
   
  È possibile utilizzare i frammenti predefiniti forniti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come esempi. Per trovare i frammenti predefiniti, aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selezionare il menu **Strumenti** e quindi fare clic su **Gestione frammenti di codice**. Selezionare **SQL** nella casella di riepilogo **Lingua** . Il percorso dei frammenti [!INCLUDE[tsql](../../includes/tsql-md.md)] verrà visualizzato nella casella **Percorso** .  
   
-## Registrazione del frammento di codice  
+## <a name="registering-the-code-snippet"></a>Registrazione del frammento di codice  
  Dopo avere creato il file di frammento, utilizzare Gestione frammenti di codice per registrare il frammento con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile aggiungere una cartella contenente più frammenti oppure importare singoli frammenti nella cartella **Frammenti di codice** .  
   
-## Procedure  
+## <a name="procedures"></a>Procedure  
   
-#### Aggiunta di una cartella per i frammenti  
+#### <a name="adding-a-snippet-folder"></a>Aggiunta di una cartella per i frammenti  
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 9
   
 4.  Passare alla cartella contenente i frammenti di codice e fare clic sul pulsante **Seleziona cartella** .  
   
-#### Importazione di un frammento  
+#### <a name="importing-a-snippet"></a>Importazione di un frammento  
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
 4.  Passare alla cartella contenente il frammento, fare clic sul file con estensione snippet e quindi sul pulsante **Apri** .  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  L'esempio seguente crea un frammento di inclusione **TRY-CATCH** e lo importa in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Incollare il codice seguente in Blocco note, quindi salvare il file con il nome TryCatch.snippet.  
@@ -109,7 +113,7 @@ caps.handback.revision: 9
   
 5.  Passare alla cartella contenente il file TryCatch.snippet, fare clic su tale file e quindi sul pulsante **Apri** . Nella cartella **Frammenti di codice** non dovrebbe essere presente un frammento TryCatch.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Inserimento di frammenti Transact-SQL racchiusi](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

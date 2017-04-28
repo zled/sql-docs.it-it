@@ -1,23 +1,27 @@
 ---
-title: "Utilizzo di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Uso di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
+# <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Utilizzo di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Questo argomento illustra in che modo l'utilizzo di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria è diverso dall'utilizzo di una tabella di temporale con controllo delle versioni di sistema basata su disco.  
@@ -25,7 +29,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  L'uso di tabelle temporali con ottimizzazione per la memoria è applicabile solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## Individuazione dei metadati  
+## <a name="discovering-metadata"></a>Individuazione dei metadati  
  Per trovare i metadati relativi a una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria, è necessario combinare informazioni provenienti da [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) e [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md). Una tabella temporale con controllo delle versioni di sistema viene presentata come parent_object_id della tabella di cronologia in memoria interna  
   
  Questo esempio mostra come eseguire una query e creare un join di tali tabelle.  
@@ -46,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
   
 ```  
   
-## Modifica dei dati  
+## <a name="modifying-data"></a>Modifica dei dati  
  È possibile modificare le tabelle temporali con ottimizzazione per la memoria attraverso le stored procedure compilate in modo nativo, che consentono di convertire le tabelle con ottimizzazione per la memoria non temporali in tabelle con controllo delle versioni e mantenere le stored procedure compilate in modo nativo.  
   
  Questo esempio mostra in che modo è possibile modificare una tabella creata in precedenza in un modulo compilato in modo nativo.  
@@ -72,10 +76,10 @@ GO ;
   
 ```  
   
-## Questo articolo è stato utile? Commenti e suggerimenti  
+## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Monitoraggio di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -86,3 +90,4 @@ GO ;
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

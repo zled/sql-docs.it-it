@@ -1,31 +1,35 @@
 ---
-title: "Codici restituiti e informazioni sugli errori di automazione OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "codici restituiti [SQL Server]"
-  - "automazione OLE [SQL Server], codici restituiti"
-  - "automazione OLE [SQL Server], errori"
+title: Codici restituiti e informazioni sugli errori di automazione OLE | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Codici restituiti e informazioni sugli errori di automazione OLE
+# <a name="ole-automation-return-codes-and-error-information"></a>Codici restituiti e informazioni sugli errori di automazione OLE
   Le stored procedure del sistema di automazione OLE restituiscono un codice **int** che corrisponde al valore HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un valore HRESULT diverso da zero corrisponde a un codice di errore OLE nel formato esadecimale 0x800*nnnnn*. Se viene restituito come valore di tipo **int** nel codice di restituzione di una stored procedure, HRESULT viene espresso nel formato 214*nnnnnnn*.  
   
  Se, ad esempio, si passa un nome di oggetto non valido (SQLDMO.Xyzzy) alla stored procedure sp_OACreate, viene restituito il valore HRESULT di tipo **int** 2147221005, ovvero 0x800401f3 in formato esadecimale.  
   
- È possibile usare `CONVERT(binary(4), @hresult)` per convertire un valore HRESULT di tipo **int** in un valore **binario**. Se tuttavia si utilizza `CONVERT(char(10), CONVERT(binary(4), @hresult))` viene generata una stringa illeggibile, in quanto ogni byte di HRESULT viene convertito in un singolo carattere ASCII. È possibile usare la stored procedure HexToChar di esempio riportata di seguito per convertire un valore HRESULT di tipo **int** in un valore **char** contenente una stringa esadecimale leggibile.  
+ È possibile usare `CONVERT(binary(4), @hresult)` per convertire un valore HRESULT di tipo **int** in un valore **binario** . Se tuttavia si utilizza `CONVERT(char(10), CONVERT(binary(4), @hresult))` viene generata una stringa illeggibile, in quanto ogni byte di HRESULT viene convertito in un singolo carattere ASCII. È possibile usare la stored procedure HexToChar di esempio riportata di seguito per convertire un valore HRESULT di tipo **int** in un valore **char** contenente una stringa esadecimale leggibile.  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- La stored procedure **sp_displayoaerrorinfo**dell'esempio seguente consente di visualizzare le informazioni sugli errori di automazione OLE quando una delle procedure di automazione OLE restituisce un codice di restituzione HRESULT diverso da zero. Questa stored procedure di esempio usa **HexToChar**.  
+ La stored procedure **sp_displayoaerrorinfo** dell'esempio seguente consente di visualizzare le informazioni sugli errori di automazione OLE quando una delle procedure di automazione OLE restituisce un codice di restituzione HRESULT diverso da zero. Questa stored procedure di esempio usa **HexToChar**.  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

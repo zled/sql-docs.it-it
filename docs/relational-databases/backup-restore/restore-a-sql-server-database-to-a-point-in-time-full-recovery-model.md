@@ -1,26 +1,30 @@
 ---
-title: "Ripristino di un database di SQL Server fino a un punto specifico all&#39;interno di un backup (modello di recupero con registrazione completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "STOPAT - clausola [istruzione RESTORE LOG]"
-  - "recupero temporizzato [SQL Server]"
-  - "ripristino dei database [SQL Server], temporizzazione"
+title: Ripristinare un database di SQL Server fino a un punto specifico (modello di recupero con registrazione completa) | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- STOPAT clause [RESTORE LOG statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino di un database di SQL Server fino a un punto specifico all&#39;interno di un backup (modello di recupero con registrazione completa)
+# <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto il ripristino temporizzato di un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante l'utilizzo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le informazioni contenute in questo argomento sono rilevanti solo per i database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene utilizzato il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -51,7 +55,7 @@ caps.handback.revision: 50
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT il database esiste sempre.  
+ Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 50
   
     -   **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo** Seleziona dispositivi di backup**. Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 50
 14. Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
- **Operazioni preliminari**  
+ **Before you begin**  
   
  Un momento specifico viene sempre ripristinato da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT identica. Come prerequisito per un ripristino temporizzato, è necessario innanzitutto ripristinare un backup completo del database il cui endpoint sia precedente rispetto al momento di ripristino di destinazione. Il backup completo del database può essere precedente rispetto al backup completo del database più recente purché vengano ripristinati tutti i backup del log successivi, fino al backup del log contenente la data e ora specifica di destinazione compreso.  
   
@@ -137,19 +141,19 @@ caps.handback.revision: 50
   
  Il punto di recupero è l'ultimo commit delle transazioni eseguito in corrispondenza o prima del valore **datetime** specificato da *time*.  
   
- Per ripristinare solo le modifiche apportate prima di un punto nel tempo specifico, specificare WITH STOPAT **=** *time* per ogni backup da ripristinare. Questo garantisce che il momento nel tempo desiderato non venga superato.  
+ Per ripristinare solo le modifiche apportate prima di un punto nel tempo specifico, specificare WITH STOPAT **=** *time* per ogni backup da ripristinare. Questo garantisce che il momento nel tempo desiderato non venga superato.  
   
  **Per ripristinare un database fino a un punto nel tempo**  
   
 > [!NOTE]  
->  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample) più avanti in questa sezione.  
+>  Per un esempio di questa procedura, vedere [Esempio (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
 1.  Connettersi all'istanza del server in cui si desidera ripristinare il database.  
   
 2.  Eseguire l'istruzione RESTORE DATABASE utilizzando l'opzione NORECOVERY.  
   
     > [!NOTE]  
-    >  Se una sequenza di ripristino parziale esclude qualsiasi filegroup [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), il ripristino temporizzato non è supportato. È possibile forzare la continuazione della sequenza di ripristino. Tuttavia i filegroup FILESTREAM omessi dall'istruzione RESTORE non potranno mai più essere ripristinati. Per forzare un ripristino temporizzato, specificare l'opzione CONTINUE_AFTER_ERROR insieme all'opzione STOPAT, STOPATMARK o STOPBEFOREMARK che è necessario specificare anche nelle istruzioni RESTORE LOG successive. Se si specifica CONTINUE_AFTER_ERROR, la sequenza di ripristino parziale ha esito positivo e il filegroup FILESTREAM non può più essere recuperato.  
+    >  Se una sequenza di ripristino parziale esclude qualsiasi filegroup [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , il ripristino temporizzato non è supportato. È possibile forzare la continuazione della sequenza di ripristino. Tuttavia i filegroup FILESTREAM omessi dall'istruzione RESTORE non potranno mai più essere ripristinati. Per forzare un ripristino temporizzato, specificare l'opzione CONTINUE_AFTER_ERROR insieme all'opzione STOPAT, STOPATMARK o STOPBEFOREMARK che è necessario specificare anche nelle istruzioni RESTORE LOG successive. Se si specifica CONTINUE_AFTER_ERROR, la sequenza di ripristino parziale ha esito positivo e il filegroup FILESTREAM non può più essere recuperato.  
   
 3.  Ripristinare l'ultimo backup del database differenziale, se presente, senza recuperare il database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
@@ -183,11 +187,11 @@ GO
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Ripristino di un backup del database (SQL Server Management Studio)](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup del database tramite SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Ripristinare un database al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Ripristinare un database al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Ripristino di un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -195,9 +199,9 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
   

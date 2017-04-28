@@ -1,22 +1,26 @@
 ---
-title: "Eliminazione dei file BLOB di backup con lease attivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Eliminazione dei file BLOB di backup con lease attivi | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminazione dei file BLOB di backup con lease attivi
+# <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminazione dei file BLOB di backup con lease attivi
   Quando si esegue il backup nell'archiviazione di Windows Azure o il ripristino dallo stesso, tramite SQL Server viene acquisito un lease infinito per bloccare l'accesso esclusivo al BLOB. Quando il processo di backup o ripristino viene completato correttamente, il lease viene rilasciato. Se il backup o il ripristino non viene completato, il processo di backup tenta di eliminare i BLOB non validi. Tuttavia, se il backup non viene completato a causa di un problema di connettività di rete che persiste nel tempo, è possibile che il processo di backup non sia in grado di accedere al BLOB e che quindi quest'ultimo rimanga orfano. Di conseguenza, il BLOB non può essere scritto o eliminato finché il lease non viene rilasciato. In questo argomento viene descritto come rilasciare il lease ed eliminare il BLOB.  
   
  Per altre informazioni sui tipi di lease, leggere questo [articolo](http://go.microsoft.com/fwlink/?LinkId=275664).  
@@ -25,12 +29,12 @@ caps.handback.revision: 16
   
  Se si verifica un errore di ripristino, i ripristini successivi non vengono bloccati e pertanto il lease attivo potrebbe non essere un problema. L'interruzione del lease è necessaria solo quando si deve sovrascrivere o eliminare il BLOB.  
   
-## Gestione dei BLOB orfani  
+## <a name="managing-orphaned-blobs"></a>Gestione dei BLOB orfani  
  Nei passaggi seguenti viene descritto come effettuare una rimozione dopo un backup non riuscito o un'attività di ripristino. Tutti i passaggi possono essere effettuati utilizzando gli script di PowerShell. Nella sezione seguente è disponibile un esempio di codice:  
   
 1.  **Identificazione di BLOB con lease:** se si dispone di uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.   È inoltre possibile utilizzare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, è consigliabile rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
   
-2.  **Interruzione del lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](http://go.microsoft.com/fwlink/?LinkID=275664).  
+2.  **Interruzione del lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](http://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  Tramite SQL Server viene generato un ID lease per stabilire l'accesso esclusivo durante l'operazione di ripristino. L'ID lease di ripristino è BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -154,7 +158,7 @@ if($lockedBlobs.Count -gt 0)
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

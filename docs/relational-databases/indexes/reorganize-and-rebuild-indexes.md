@@ -1,42 +1,46 @@
 ---
-title: "Riorganizzare e ricompilare gli indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.index.rebuild.f1"
-  - "sql13.swb.indexproperties.fragmentation.f1"
-  - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
-  - "deframmentazione di oggetti di grandi dimensioni"
-  - "indici [SQL Server], riorganizzazione"
-  - "riorganizzazione di indici [SQL Server]"
-  - "riorganizzazione di indici"
-  - "deframmentazione di tipi di dati LOB"
-  - "frammentazione di indici [SQL Server]"
-  - "ricompilazione di indici [SQL Server]"
-  - "ricompilazione di indici"
-  - "indici [SQL Server], ricompilazione"
-  - "deframmentazione di indici"
-  - "indici non cluster [SQL Server], deframmentazione"
-  - "frammentazione [SQL Server]"
-  - "deframmentazione di indici [SQL Server]"
-  - "dati LOB [SQL Server], deframmentazione"
-  - "indici cluster, deframmentazione"
+title: Riorganizzare e ricompilare gli indici | Microsoft Docs
+ms.custom: 
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.index.rebuild.f1
+- sql13.swb.indexproperties.fragmentation.f1
+- sql13.swb.index.reorg.f1
+helpviewer_keywords:
+- large object defragmenting
+- indexes [SQL Server], reorganizing
+- index reorganization [SQL Server]
+- reorganizing indexes
+- defragmenting large object data types
+- index fragmentation [SQL Server]
+- index rebuilding [SQL Server]
+- rebuilding indexes
+- indexes [SQL Server], rebuilding
+- defragmenting indexes
+- nonclustered indexes [SQL Server], defragmenting
+- fragmentation [SQL Server]
+- index defragmenting [SQL Server]
+- LOB data [SQL Server], defragmenting
+- clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.lasthandoff: 04/11/2017
+
 ---
-# Riorganizzare e ricompilare gli indici
+# <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la manutenzione degli indici viene automaticamente eseguita dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione.  
@@ -68,7 +72,7 @@ caps.handback.revision: 70
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Fragmentation"></a> Rilevamento della frammentazione  
- Il primo passaggio per decidere il metodo di deframmentazione da usare consiste nell'eseguire un'analisi dell'indice per determinare il grado di frammentazione. La funzione di sistema [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) consente di rilevare la frammentazione in un indice specifico, in tutti gli indici di una tabella o vista indicizzata, in tutti gli indici di un database o in tutti gli indici di tutti i database. Per gli indici partizionati, **sys.dm_db_index_physical_stats** fornisce anche informazioni sulla frammentazione per ogni partizione.  
+ Il primo passaggio per decidere il metodo di deframmentazione da usare consiste nell'eseguire un'analisi dell'indice per determinare il grado di frammentazione. La funzione di sistema [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)consente di rilevare la frammentazione in un indice specifico, in tutti gli indici di una tabella o vista indicizzata, in tutti gli indici di un database o in tutti gli indici di tutti i database. Per gli indici partizionati, **sys.dm_db_index_physical_stats** fornisce anche informazioni sulla frammentazione per ogni partizione.  
   
  Il set di risultati restituito dalla funzione **sys.dm_db_index_physical_stats** include le colonne seguenti.  
   
@@ -80,9 +84,9 @@ caps.handback.revision: 70
   
  Una volta noto il grado di frammentazione, usare la tabella seguente per determinare il metodo migliore per la correzione della frammentazione.  
   
-|Valore di **avg_fragmentation_in_percent**|Istruzione correttiva|  
+|Valore di**avg_fragmentation_in_percent** |Istruzione correttiva|  
 |-----------------------------------------------|--------------------------|  
-|> 5% e \< = 30%|ALTER INDEX REORGANIZE|  
+|> 5% e < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
@@ -98,7 +102,7 @@ caps.handback.revision: 70
   
 -   Durante la riorganizzazione, non è possibile specificare le opzioni relative a un indice.  
   
--   L'istruzione `ALTER INDEX REORGANIZE` richiede che nel file di dati che include l'indice sia disponibile spazio, perché l'operazione può allocare solo pagine di lavoro temporanee nello stesso file, non in un altro file nel filegroup.  Anche se nel filegroup possono essere disponibili pagine libere, è comunque possibile che l'utente riceva l'errore 1105 "Impossibile allocare spazio per l'oggetto \<nome indice>.\<nome tabella> nel database \<nome database>. Il filegroup 'PRIMARY' è pieno".
+-   L'istruzione `ALTER INDEX REORGANIZE` richiede che nel file di dati che include l'indice sia disponibile spazio, perché l'operazione può allocare solo pagine di lavoro temporanee nello stesso file, non in un altro file nel filegroup.  Anche se nel filegroup possono essere disponibili pagine libere, è comunque possibile che l'utente riceva l'errore 1105 "Impossibile allocare spazio per l'oggetto \<NomeIndice>.\<NomeTabella> nel database \<NomeDatabase>. Il filegroup 'PRIMARY' è pieno".
   
 -   La creazione e la ricompilazione di indici non allineati per una tabella con oltre 1.000 partizioni sono possibili, ma non supportate. Questo tipo di operazioni può causare riduzioni delle prestazioni e un eccessivo consumo della memoria.
   
@@ -108,11 +112,11 @@ caps.handback.revision: 70
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedureFrag"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per controllare la frammentazione di un indice  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>Per controllare la frammentazione di un indice  
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera controllare la frammentazione di un indice.  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureFrag"></a> Utilizzo di Transact-SQL  
   
-#### Per controllare la frammentazione di un indice  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>Per controllare la frammentazione di un indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -207,7 +211,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureReorg"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per riorganizzare o ricompilare un indice  
+#### <a name="to-reorganize-or-rebuild-an-index"></a>Per riorganizzare o ricompilare un indice  
   
 1.  In Esplora oggetti espandere il database che contiene la tabella in cui si desidera riorganizzare un indice.  
   
@@ -225,7 +229,7 @@ caps.handback.revision: 70
   
 8.  Scegliere **OK.**  
   
-#### Per riorganizzare tutti gli indici in una tabella  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>Per riorganizzare tutti gli indici in una tabella  
   
 1.  In Esplora oggetti espandere il database che contiene la tabella in cui si desidera riorganizzare gli indici.  
   
@@ -241,7 +245,7 @@ caps.handback.revision: 70
   
 7.  Scegliere **OK.**  
   
-#### Per ricompilare un indice  
+#### <a name="to-rebuild-an-index"></a>Per ricompilare un indice  
   
 1.  In Esplora oggetti espandere il database che contiene la tabella in cui si desidera riorganizzare un indice.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureReorg"></a> Utilizzo di Transact-SQL  
   
-#### Per riorganizzare un indice deframmentato  
+#### <a name="to-reorganize-a-defragmented-index"></a>Per riorganizzare un indice deframmentato  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -279,7 +283,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### Per riorganizzare tutti gli indici in una tabella  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>Per riorganizzare tutti gli indici in una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### Per ricompilare un indice deframmentato  
+#### <a name="to-rebuild-a-defragmented-index"></a>Per ricompilare un indice deframmentato  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -306,7 +310,7 @@ caps.handback.revision: 70
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
-#### Per ricompilare tutti gli indici in una tabella  
+#### <a name="to-rebuild-all-indexes-in-a-table"></a>Per ricompilare tutti gli indici in una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -318,7 +322,8 @@ caps.handback.revision: 70
   
  Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate relative alla deframmentazione degli indici in Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
   
   
+

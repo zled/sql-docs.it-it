@@ -1,25 +1,29 @@
 ---
-title: "Lezione 2: Creare credenziali di SQL Server usando una firma di accesso condiviso | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 2: Creare credenziali di SQL Server usando una firma di accesso condiviso | Microsoft Docs'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f6e88b211fc2a053ffeadb038298a28179a94d88
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lezione 2: Creare credenziali di SQL Server usando una firma di accesso condiviso
+# <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lezione 2: Creare credenziali di SQL Server usando una firma di accesso condiviso
 In questa lezione verranno create credenziali per archiviare le informazioni sulla sicurezza che saranno poi usate da SQL Server per scrivere e leggere dal contenitore di Azure creato nella [Lezione 1: creare i criteri per il contenitore e generare una chiave di firma di accesso condivisa (SAS, Shared Access Signature)](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 Una credenziale di SQL Server è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server. Nelle credenziali vengono archiviati il percorso URI del contenitore di archiviazione e i valori della firma di accesso condivisa per questo contenitore.  
@@ -27,7 +31,7 @@ Una credenziale di SQL Server è un oggetto utilizzato per archiviare le informa
 > [!NOTE]  
 > Se si vuole eseguire il backup di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la [sintassi deprecata](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) illustrata qui per creare credenziali di SQL Server sulla base della chiave dell'account di archiviazione.  
   
-## Creare credenziali di SQL Server  
+## <a name="create-sql-server-credential"></a>Creare credenziali di SQL Server  
 Per creare credenziali di SQL Server, seguire questa procedura:  
   
 1.  Connettersi a SQL Server Management Studio.  
@@ -64,8 +68,10 @@ Per creare credenziali di SQL Server, seguire questa procedura:
   
 [Lezione 3: Backup del database su URL](../relational-databases/lesson-3-database-backup-to-url.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Credenziali &#40;motore di database&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
+
+

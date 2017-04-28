@@ -1,25 +1,29 @@
 ---
-title: "Supporto dell&#39;applicazione livello dati per oggetti e versioni di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "applicazione livello dati [SQL Server], oggetti supportati"
-  - "oggetti [SQL Server], applicazioni livello dati"
+title: Supporto dell&quot;applicazione livello dati per oggetti e versioni di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], supported objects
+- objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supporto dell&#39;applicazione livello dati per oggetti e versioni di SQL Server
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
   Un'applicazione livello dati (DAC) supporta gli oggetti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] più comunemente utilizzati.  
   
  **Contenuto dell'argomento**  
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 -   Le operazioni di esportazione ed estrazione sono supportate in tutte le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Tutte le operazioni sono supportate nel [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] e in tutte le versioni di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+-   Tutte le operazioni sono supportate nel [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] e in tutte le versioni di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   
 -   Tutte le operazioni sono supportate in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) o versioni successive e [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 o versioni successive.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
 ##  <a name="DeploymentLimitations"></a> Limitazioni sulla distribuzione dei dati  
  Si notino le seguenti limitazioni di fedeltà nel motore di distribuzione dati di DAC Framework in SQL Server 2012 SP1. Le limitazioni si applicano alle azioni di DAC Framework seguenti: distribuzione o pubblicazione di un file con estensione dacpac e importazione di un file con estensione bacpac.  
   
-1.  Perdita di metadati in determinate situazioni e per alcuni tipi di base nelle colonne sql_variant. Nei casi interessati, verrà visualizzato un avviso con il messaggio seguente: **Determinate proprietà in tipi di dati specifici utilizzati in una colonna sql_variant non vengono mantenute se distribuite mediante DAC Framework**.  
+1.  Perdita di metadati in determinate situazioni e per alcuni tipi di base nelle colonne sql_variant. Nei casi interessati, verrà visualizzato un avviso con il messaggio seguente:  **Determinate proprietà in tipi di dati specifici utilizzati in una colonna sql_variant non vengono mantenute se distribuite mediante DAC Framework**.  
   
     -   Tipi di base MONEY, SMALLMONEY, NUMERIC, DECIMAL: la precisione non viene mantenuta.  
   
@@ -106,15 +110,15 @@ caps.handback.revision: 19
 ##  <a name="Considerations"></a> Considerazioni aggiuntive per le azioni di distribuzione  
  Si tengano presenti le considerazioni seguenti per le azioni di distribuzione dati di DAC Framework:  
   
--   **Estrazione/Esportazione**: queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere **[questo argomento](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Estrazione/Esportazione** : queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [questo argomento](http://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Distribuzione/Pubblicazione/Importazione**: queste limitazioni si applicano alle azioni che usano DAC Framework per distribuire un pacchetto in un database, ad esempio la distribuzione o pubblicazione di un file con estensione dacpac e l'importazione di un file con estensione bacpac. I dati presenti nel database di destinazione potrebbero non rappresentare in modo totalmente fedele quelli del pacchetto. Nel registro di distribuzione/importazione sarà contenuto un messaggio, indicato in precedenza, per ogni situazione in cui si è verificato il problema. L'operazione verrà bloccata da errori (vedere la categoria 3 precedente), ma continuerà con gli altri avvisi.  
   
      Per altre informazioni sui dati interessati in questo scenario e su come risolvere questa limitazione per le azioni di distribuzione/pubblicazione/importazione, vedere [questo argomento](http://go.microsoft.com/fwlink/?LinkId=267087).  
   
--   **Soluzioni alternative**: le operazioni di estrazione ed esportazione comporteranno la scrittura di file di dati BCP totalmente fedeli nei file con estensione bacpac o dacpac. Per evitare limitazioni, utilizzare l'utilità della riga di comando BCP.exe di SQL Server per distribuire dati totalmente fedeli in un database di destinazione da un pacchetto di applicazione livello dati.  
+-   **Soluzioni alternative** : le operazioni di estrazione ed esportazione comporteranno la scrittura di file di dati BCP totalmente fedeli nei file con estensione bacpac o dacpac. Per evitare limitazioni, utilizzare l'utilità della riga di comando BCP.exe di SQL Server per distribuire dati totalmente fedeli in un database di destinazione da un pacchetto di applicazione livello dati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

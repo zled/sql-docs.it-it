@@ -1,32 +1,36 @@
 ---
-title: "Forzare l&#39;avvio di un cluster WSFC senza un quorum | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di disponibilità [SQL Server], cluster WSFC"
-  - "quorum [SQL Server], AlwaysOn e quorum WSFC"
+title: Forzare l&quot;avvio di un cluster WSFC senza un quorum | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7cef5f82996bc541f55bc8ec6560edce2e0d9acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Forzare l&#39;avvio di un cluster WSFC senza un quorum
-  In questo argomento viene illustrato come forzare l'avvio senza un quorum di un nodo del cluster Windows Server Failover Clustering (WSFC).  Questa operazione potrebbe rivelarsi necessaria negli scenari multi-subnet e in caso di ripristino di emergenza per recuperare i dati e ristabilire completamente la disponibilità elevata per le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum
+  In questo argomento viene illustrato come forzare l'avvio senza un quorum di un nodo del cluster Windows Server Failover Clustering (WSFC).  Questa operazione potrebbe rivelarsi necessaria negli scenari multi-subnet e in caso di ripristino di emergenza per recuperare i dati e ristabilire completamente la disponibilità elevata per le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Prima di iniziare:**  [Indicazioni](#Recommendations), [Sicurezza](#Security)  
+-   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
   
--   **Per forzare l'avvio di un cluster senza un quorum usando:**  [Utilizzo di Gestione cluster di failover](#FailoverClusterManagerProcedure), [Utilizzo di Powershell](#PowerShellProcedure), [Utilizzo di Net.exe](#CommandPromptProcedure)  
+-   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
   
--   **Completamento:**  [Completamento: dopo avere forzato l'avvio senza un quorum di un cluster](#FollowUp)  
+-   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 21
   
 ##  <a name="FailoverClusterManagerProcedure"></a> Utilizzo di Gestione cluster di failover  
   
-##### Per forzare l'avvio di un cluster senza un quorum  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Per forzare l'avvio di un cluster senza un quorum  
   
 1.  Aprire Gestione cluster di failover e connettersi al nodo del cluster desiderato per forzare la modalità online.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di Powershell  
   
-##### Per forzare l'avvio di un cluster senza un quorum  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Per forzare l'avvio di un cluster senza un quorum  
   
 1.  Avviare Windows PowerShell con privilegi elevati tramite **Esegui come amministratore**.  
   
@@ -64,8 +68,8 @@ caps.handback.revision: 21
   
 6.  Restituire le proprietà del nodo del cluster in un formato leggibile.  
   
-### Esempio (Powershell)  
- L'esempio seguente forza l'avvio senza un quorum del servizio del cluster del nodo Always OnSrv02, imposta il valore `NodeWeight = 1` ed enumera lo stato del nodo del cluster dal nodo appena forzato.  
+### <a name="example-powershell"></a>Esempio (Powershell)  
+ L'esempio seguente forza l'avvio senza un quorum del servizio del cluster del nodo Always OnSrv02, imposta il valore `NodeWeight = 1`ed enumera lo stato del nodo del cluster dal nodo appena forzato.  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -83,7 +87,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##  <a name="CommandPromptProcedure"></a> Utilizzo di Net.exe  
   
-##### Per forzare l'avvio di un cluster senza un quorum  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Per forzare l'avvio di un cluster senza un quorum  
   
 1.  Utilizzare Desktop remoto per connettersi al nodo del cluster desiderato per attivare la modalità online.  
   
@@ -93,8 +97,8 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 4.  Utilizzo **net.exe** con `/forcequorum` per forzare l'avvio del servizio cluster locale.  
   
-### Esempio (Net.exe)  
- Nell'esempio seguente viene forzato l'avvio senza un quorum del servizio cluster del nodo, viene impostato il valore `NodeWeight = 1` e viene enumerato lo stato del nodo del cluster dal nodo appena forzato.  
+### <a name="example-netexe"></a>Esempio (Net.exe)  
+ Nell'esempio seguente viene forzato l'avvio senza un quorum del servizio cluster del nodo, viene impostato il valore `NodeWeight = 1`e viene enumerato lo stato del nodo del cluster dal nodo appena forzato.  
   
 ```ms-dos  
 net.exe stop clussvc  
@@ -125,7 +129,7 @@ net.exe start clussvc /forcequorum
   
 -   [Pagina relativa al cluster di failover Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configurare le impostazioni NodeWeight per il quorum del cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [Cmdlet del cluster di failover in Windows PowerShell elencati per attività](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

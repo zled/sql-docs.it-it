@@ -1,28 +1,32 @@
 ---
-title: "Backup parziali (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup completi [SQL Server]"
-  - "backup parziali [SQL Server]"
-  - "READ_WRITE_FILEGROUPS - opzione"
-  - "esecuzione del backup dei database [SQL Server], informazioni sull'esecuzione del backup dei database"
+title: Backup parziali (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- partial backups [SQL Server]
+- READ_WRITE_FILEGROUPS option
+- database backups [SQL Server], about backing up databases
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d0cb11ab284db2b79be1bea7dc4de4b81a6799a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup parziali (SQL Server)
-  Tutti i modelli di recupero di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano backup parziali, pertanto questo argomento è attinente per tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I backup parziali sono tuttavia progettati per l'utilizzo con il modello di recupero con registrazione minima e consentono di migliorare la flessibilità per i backup di database di dimensioni molto grandi contenenti uno o più filegroup di sola lettura.  
+# <a name="partial-backups-sql-server"></a>Backup parziali (SQL Server)
+  Tutti i modelli di recupero di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano backup parziali, pertanto questo argomento è attinente per tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I backup parziali sono tuttavia progettati per l'utilizzo con il modello di recupero con registrazione minima e consentono di migliorare la flessibilità per i backup di database di dimensioni molto grandi contenenti uno o più filegroup di sola lettura.  
   
  I backup parziali sono utili quando si desidera escludere i filegroup di sola lettura. Un *backup parziale* è simile a un backup completo del database, ma non contiene tutti i filegroup. Per un database di lettura/scrittura, un backup parziale contiene invece i dati del filegroup primario, tutti i filegroup di lettura/scrittura e uno o più file di sola lettura specificati facoltativamente. Il backup parziale di un database di sola lettura contiene esclusivamente il filegroup primario.  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 46
   
 -   [Esempio: Ripristino a fasi di alcuni filegroup &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  

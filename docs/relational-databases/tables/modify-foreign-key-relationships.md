@@ -1,28 +1,32 @@
 ---
-title: "Modifica di relazioni di chiave esterna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "chiavi esterne [SQL Server], modifica"
-  - "modifica di chiavi esterne"
+title: Modificare relazioni di chiave esterna | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica di relazioni di chiave esterna
+# <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile modificare il lato chiave esterna di una relazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cambiando la chiave esterna di una tabella vengono modificate le colonne correlate alle colonne della tabella della chiave primaria.  
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare una chiave esterna  
+#### <a name="to-modify-a-foreign-key"></a>Per modificare una chiave esterna  
   
 1.  In **Esplora oggetti**espandere la tabella contenente la chiave esterna, quindi espandere la cartella **Chiavi**.  
   
@@ -74,12 +78,12 @@ caps.handback.revision: 20
      Crea una nuova relazione. È necessario impostare l'opzione **Specifiche di tabelle e colonne** per rendere valida la relazione.  
   
      **Delete**  
-     Elimina la relazione selezionata dall'elenco **Relazione selezionata**. Per annullare l'aggiunta di una relazione, utilizzare questo pulsante per rimuovere la relazione.  
+     Elimina la relazione selezionata dall'elenco **Relazione selezionata** . Per annullare l'aggiunta di una relazione, utilizzare questo pulsante per rimuovere la relazione.  
   
      **Categoria Generale**  
      Viene espansa per visualizzare **Verifica dati esistenti durante la creazione o la riabilitazione** e **Specifica tabelle e colonne**.  
   
-     **Verifica dati esistenti durante la creazione o la riabilitazione**  
+     **Check Existing Data on Creation or Re-Enabling**  
      Consente di verificare in base al vincolo tutti i dati esistenti nella tabella prima della creazione o della riabilitazione del vincolo.  
   
      **Categoria Specifica tabelle e colonne**  
@@ -104,12 +108,12 @@ caps.handback.revision: 20
      Visualizza il nome della relazione. Quando viene creata una nuova relazione, le viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di **Progettazione tabelle**. Il nome può essere modificato in qualunque momento.  
   
      **Descrizione**  
-     Descrive la relazione. Per inserire una descrizione più dettagliata, fare clic su **Descrizione**, quindi sui puntini di sospensione (**…**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+     Descrive la relazione. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** , quindi sui puntini di sospensione ( **…** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
      **Categoria Progettazione tabelle**  
      Viene espansa per visualizzare le informazioni relative a **Verifica dati esistenti durante la creazione o la riabilitazione** e **Attiva per replica**.  
   
-     **Applicare per replica**  
+     **Enforce For Replication**  
      Viene indicato se applicare il vincolo quando un agente di replica esegue un'inserimento, un aggiornamento o un'eliminazione in questa tabella.  
   
      **Attiva vincolo della chiave esterna**  
@@ -145,6 +149,6 @@ caps.handback.revision: 20
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per modificare una chiave esterna**  
   
- Per modificare un vincolo FOREIGN KEY utilizzando Transact-SQL, è innanzitutto necessario eliminare il vincolo FOREIGN KEY esistente, quindi ricrearlo con la nuova definizione. Per ulteriori informazioni, vedere [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/creare-relazioni-di-chiave-esterna.md).  
+ Per modificare un vincolo FOREIGN KEY utilizzando Transact-SQL, è innanzitutto necessario eliminare il vincolo FOREIGN KEY esistente, quindi ricrearlo con la nuova definizione. Per ulteriori informazioni, vedere [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
 ###  <a name="TsqlExample"></a>  

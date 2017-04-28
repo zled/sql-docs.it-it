@@ -1,28 +1,32 @@
 ---
-title: "Creare e testare una funzione di classificazione definita dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, creazione di una funzione di classificazione"
-  - "funzione di classificazione [SQL Server], test"
-  - "funzione di classificazione [SQL Server], creazione"
-  - "Resource Governor, test di una funzione di classificazione"
+title: Creare e testare una funzione di classificazione definita dall&quot;utente | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare e testare una funzione di classificazione definita dall&#39;utente
-  In questo argomento viene illustrato come creare e testare una funzione di classificazione definita dall'utente. La procedura prevede l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Creare e testare una funzione di classificazione definita dall'utente
+  In questo argomento viene illustrato come creare e testare una funzione di classificazione definita dall'utente. La procedura prevede l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Nell'esempio incluso nella procedura seguente vengono illustrate le diverse opzioni disponibili per la creazione di una funzione di classificazione definita dall'utente piuttosto complessa.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  La funzione di classificazione prolunga i tempi di accesso. Una funzione eccessivamente complessa può provocare il timeout degli accessi o rallentare connessioni veloci.  
   
-### Per creare la funzione di classificazione definita dall'utente  
+### <a name="to-create-the-classifier-user-defined-function"></a>Per creare la funzione di classificazione definita dall'utente  
   
 1.  Creare e configurare i nuovi pool di risorse e i nuovi gruppi del carico di lavoro. Assegnare ogni gruppo del carico di lavoro al pool di risorse appropriato.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Per verificare i pool di risorse, i gruppi del carico di lavoro e la funzione di classificazione definita dall'utente  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Per verificare i pool di risorse, i gruppi del carico di lavoro e la funzione di classificazione definita dall'utente  
   
 1.  Ottenere la configurazione dei pool di risorse e dei gruppi del carico di lavoro utilizzando la query seguente.  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Procedure consigliate per l'utilizzo di tabelle di ricerca in una funzione di classificazione  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Procedure consigliate per l'utilizzo di tabelle di ricerca in una funzione di classificazione  
   
 1.  Non utilizzare una tabella di ricerca, a meno che non sia strettamente necessario. Se è necessario utilizzare una tabella di ricerca, può essere specificata a livello di codice nella funzione stessa. È necessario tuttavia tenere presente la complessità e le modifiche dinamiche della funzione di classificazione.  
   
@@ -254,14 +258,14 @@ caps.handback.revision: 25
   
     4.  Nessun trigger nella tabella.  
   
-    5.  In fase di aggiornamento dei contenuti della tabella, accertarsi di utilizzare una transazione a livello di isolamento dello snapshot per evitare che il Writer blocchi i lettori. Un altro metodo per evitare questo problema consiste nell'utilizzare l'hint `NOLOCK`.  
+    5.  In fase di aggiornamento dei contenuti della tabella, accertarsi di utilizzare una transazione a livello di isolamento dello snapshot per evitare che il Writer blocchi i lettori. Un altro metodo per evitare questo problema consiste nell'utilizzare l'hint `NOLOCK` .  
   
     6.  Se possibile, disabilitare la funzione di classificazione in fase di modifica dei contenuti della tabella.  
   
         > [!WARNING]  
         >  È consigliabile attenersi scrupolosamente a queste procedure consigliate. In caso non sia possibile seguire le procedure, contattare il supporto Microsoft per evitare in modo proattivo che si verifichino problemi in futuro.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Abilitare Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

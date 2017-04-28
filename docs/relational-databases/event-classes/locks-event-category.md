@@ -1,32 +1,36 @@
 ---
-title: "Categoria di eventi Blocchi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Blocchi - categoria di eventi [SQL Server]"
-  - "classi di evento SQL Server, categoria di eventi Blocchi"
-  - "classi di evento [SQL Server], categoria di eventi Blocchi"
-  - "escalation blocchi [SQL Server], categoria di eventi Blocchi"
+title: Categoria di eventi Blocchi| Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Locks event category [SQL Server]
+- SQL Server event classes, Locks event category
+- event classes [SQL Server], Locks event category
+- lock escalation [SQL Server], locks event category
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d1e11870107c27084efc54d0c9901f5f1be0f1a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria di eventi Blocchi
+# <a name="locks-event-category"></a>Categoria di eventi Blocchi
   Le classi di evento della categoria di eventi **Locks** consentono di monitorare l'attività di blocco in un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Queste classi di evento possono contribuire a esaminare problemi di blocco provocati dalla lettura e modifica dei dati da parte di più utenti simultaneamente.  
   
  Poiché nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono spesso elaborati più blocchi, l'acquisizione delle classi di evento **Locks** durante una traccia può provocare un overhead significativo e comportare la creazione di file o tabelle di traccia di grandi dimensioni.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

@@ -1,34 +1,38 @@
 ---
-title: "Configurazione di operazioni parallele sugli indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "operazioni parallele sugli indici [SQL Server]"
-  - "processori [SQL Server], operazioni parallele sugli indici"
-  - "max degree of parallelism - opzione"
-  - "MAXDOP - opzione indici, operazioni parallele sugli indici"
-  - "operazioni parallele sugli indici [SQL Server]"
+title: Configurare operazioni parallele sugli indici | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index parallel operations [SQL Server]
+- processors [SQL Server], parallel index operations
+- max degree of parallelism option
+- MAXDOP index option, parallel index operations
+- parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3e68d3b1d6d08153e24ec3afdb5102e5c1ae6c46
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione di operazioni parallele sugli indici
+# <a name="configure-parallel-index-operations"></a>Configurazione di operazioni parallele sugli indici
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento viene definito il massimo grado di parallelismo e viene spiegato come modificare questa impostazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nei computer multiprocessore che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition o versioni successive, le istruzioni per gli indici, proprio come le altre query, possono utilizzare più processori per eseguire le operazioni di analisi, ordinamento e indicizzazione associate all'istruzione. Il numero di processori usati per eseguire una singola istruzione per gli indici è determinato dall'opzione di configurazione [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) , dal carico di lavoro corrente e dalle statistiche dell'indice. L'opzione max degree of parallelism determina il numero massimo di processori da utilizzare nell'esecuzione di piani paralleli. Se in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene rilevato che il sistema è occupato, il grado di parallelismo dell'operazione di indice viene automaticamente ridotto prima che l'esecuzione dell'istruzione venga avviata. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente inoltre di ridurre il grado di parallelismo se la colonna chiave iniziale di un indice non partizionato ha un numero limitato di valori distinti o se la frequenza di ciascun valore distinto varia in modo significativo.  
   
 > [!NOTE]  
->  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere Funzionalità supportate dalle edizioni di SQL Server 2016  
   
  **Contenuto dell'argomento**  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per impostare l'opzione max degree of parallelism su un indice  
+#### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>Per impostare l'opzione max degree of parallelism su un indice  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera impostare l'opzione max degree of parallelism per un indice.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per impostare l'opzione max degree of parallelism su un indice esistente  
+#### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Per impostare l'opzione max degree of parallelism su un indice esistente  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 42
   
  Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-#### Impostare l'opzione max degree of parallelism su un nuovo indice  
+#### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>Impostare l'opzione max degree of parallelism su un nuovo indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -141,3 +145,4 @@ caps.handback.revision: 42
  Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

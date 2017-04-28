@@ -1,42 +1,46 @@
 ---
-title: "Debug di un gestore della logica di business (programmazione della replica) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "gestori della logica di business per la replica di tipo merge [replica di SQL Server]"
-  - "gestori della logica di business [replica di SQL Server]"
-  - "classe BusinessLogicModule"
+title: Eseguire il debug di un gestore della logica di business (programmazione della replica)| Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- merge replication business logic handlers [SQL Server replication]
+- business logic handlers [SQL Server replication]
+- BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Debug di un gestore della logica di business (programmazione della replica)
-  Utilizzare un gestore della logica di business per richiamare logica di business personalizzata quando viene sincronizzata una sottoscrizione di tipo merge. Per ulteriori informazioni, vedere [eseguire logica di Business durante la sincronizzazione di tipo Merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+# <a name="debug-a-business-logic-handler-replication-programming"></a>Debug di un gestore della logica di business (programmazione della replica)
+  Utilizzare un gestore della logica di business per richiamare logica di business personalizzata quando viene sincronizzata una sottoscrizione di tipo merge. Per altre informazioni, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
- Il Riconciliatore replica di tipo merge (replrec.dll) chiama l'assembly del codice gestito contenente la logica di business. Nella maggior parte dei casi, replrec.dll e la logica di business personalizzata vengono eseguiti nello stesso computer dell'agente di merge, ovvero nel Sottoscrittore per una sottoscrizione pull o nel server di distribuzione per una sottoscrizione push. Nel caso della sincronizzazione tramite il Web o nel caso di un Sottoscrittore [!INCLUDE[ssEW](../../includes/ssew-md.md)], il riconciliatore e la logica di business personalizzata vengono eseguiti nel server Web.  
+ Il Riconciliatore replica di tipo merge (replrec.dll) chiama l'assembly del codice gestito contenente la logica di business. Nella maggior parte dei casi, replrec.dll e la logica di business personalizzata vengono eseguiti nello stesso computer dell'agente di merge, ovvero nel Sottoscrittore per una sottoscrizione pull o nel server di distribuzione per una sottoscrizione push. Nel caso della sincronizzazione tramite il Web o nel caso di un Sottoscrittore [!INCLUDE[ssEW](../../includes/ssew-md.md)] , il riconciliatore e la logica di business personalizzata vengono eseguiti nel server Web.  
   
-### Per eseguire il debug di un gestore della logica di business in un computer locale  
+### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Per eseguire il debug di un gestore della logica di business in un computer locale  
   
-1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione della pubblicazione. Per ulteriori informazioni, vedere [Configura pubblicazione e distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md) e [Crea, modifica ed eliminare pubblicazioni e articoli e 40 #; Replica & #41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione della pubblicazione. Per altre informazioni, vedere [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md) e [Creare, modificare ed eliminare pubblicazioni e articoli &#40;replica&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
   
 2.  Creare e registrare un gestore della logica di business. Per altre informazioni, vedere [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Creare un progetto RMO (Replication Management Objects) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio che avvia a livello di programmazione l'agente di merge in modo sincrono. Per altre informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per ulteriori informazioni sui metodi che possono essere implementate in un gestore della logica di business, vedere il <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> argomento metodi.  
+4.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per altre informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
   
 5.  Compilare il gestore della logica di business in modalità debug e distribuire il file di simboli (pdb) del debug e dell'assembly nel percorso registrato nel passaggio 1.  
   
@@ -49,13 +53,13 @@ caps.handback.revision: 34
   
 8.  Presupponendo che non siano stati impostati altri punti di interruzione e che vengano replicati i comandi appropriati, l'esecuzione si arresta quando raggiunge il punto di interruzione nel gestore della logica di business.  
   
-### Per eseguire il debug di un gestore della logica di business in un server Web utilizzando la sincronizzazione tramite il Web oppure per un Sottoscrittore di SQL Server Compact  
+### <a name="to-debug-a-business-logic-handler-on-a-web-server-using-web-synchronization-or-for-a-sql-server-compact-subscriber"></a>Per eseguire il debug di un gestore della logica di business in un server Web utilizzando la sincronizzazione tramite il Web oppure per un Sottoscrittore di SQL Server Compact  
   
-1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione pull della pubblicazione. La pubblicazione deve supportare la sincronizzazione Web o [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori.  
+1.  Configurare la pubblicazione e la distribuzione, creare una pubblicazione, quindi creare una sottoscrizione pull della pubblicazione. La pubblicazione deve supportare la sincronizzazione Web o i Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
 2.  Creare e registrare un gestore della logica di business. Per altre informazioni, vedere [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per ulteriori informazioni sui metodi che possono essere implementate in un gestore della logica di business, vedere il <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> argomento metodi.  
+3.  Impostare un punto di interruzione nel codice del gestore della logica di business, in particolare nel metodo sottoposto a debug o nel costruttore della classe. Per altre informazioni sui metodi che è possibile implementare in un gestore della logica di business, vedere gli argomenti relativi ai metodi degli oggetti <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
   
 4.  Compilare il gestore della logica di business in modalità debug e distribuire il file di simboli (pdb) del debug e dell'assembly nel server Web nel percorso registrato nel passaggio 1.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 34
   
     -   inetinfo.exe - Windows 2000 e Windows XP.  
   
-7.  Nel **Output** finestra, controllare l'output di debug per verificare che i simboli per l'assembly registrato caricato correttamente. Se i simboli non sono stati caricati, assicurarsi che nel passaggio 4 sia stato copiato il file con estensione pbd corretto, quindi ripetere il passaggio 5.  
+7.  Nella finestra **Output** controllare l'output di debug per verificare che i simboli per l'assembly registrato siano stati caricati correttamente. Se i simboli non sono stati caricati, assicurarsi che nel passaggio 4 sia stato copiato il file con estensione pbd corretto, quindi ripetere il passaggio 5.  
   
 8.  Eseguire comandi di inserimento, aggiornamento o eliminazione sul database di sottoscrizione o pubblicazione. Il comando e il percorso di esecuzione dipendono dal metodo da sottoporre a debug.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
   
 11. Presupponendo che non siano stati impostati altri punti di interruzione e che vengano replicati i comandi appropriati, l'esecuzione si arresta quando raggiunge il punto di interruzione nel gestore della logica di business.  
   
-## Vedere anche  
- [Implementazione di un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

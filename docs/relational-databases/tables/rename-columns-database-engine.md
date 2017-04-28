@@ -1,26 +1,30 @@
 ---
-title: "Ridenominazione di colonne (motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne [SQL Server], nomi"
-  - "ridenominazione di colonne"
-  - "nomi di colonne [SQL Server]"
+title: Rinominare colonne (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], names
+- renaming columns
+- column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ridenominazione di colonne (motore di database)
+# <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile rinominare un nome tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,17 +55,17 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare una colonna utilizzando Esplora oggetti  
+#### <a name="to-rename-a-column-using-object-explorer"></a>Per rinominare una colonna utilizzando Esplora oggetti  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella in cui si vuole rinominare le colonne, quindi selezionare **Rinomina**.  
+2.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella in cui si vuole rinominare le colonne, quindi selezionare **Rinomina**.  
   
 3.  Digitare un nuovo nome colonna.  
   
-#### Per rinominare una colonna utilizzando Progettazione tabelle  
+#### <a name="to-rename-a-column-using-table-designer"></a>Per rinominare una colonna utilizzando Progettazione tabelle  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella di cui si vuole rinominare le colonne e selezionare **Progetta**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella di cui si vuole rinominare le colonne e selezionare **Progetta**.  
   
 2.  In **Nome colonna**, selezionare il nome da cambiare e digitarne uno nuovo.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 17
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per rinominare una colonna**  
   
-#### Per rinominare una colonna  
+#### <a name="to-rename-a-column"></a>Per rinominare una colonna  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,32 +1,36 @@
 ---
-title: "Creazione di una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "nuove stored procedure"
-  - "stored procedure [SQL Server], creazione"
-  - "creazione di stored procedure"
+title: Creare una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- new stored procedures
+- stored procedures [SQL Server], creating
+- creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di una stored procedure
+# <a name="create-a-stored-procedure"></a>Creazione di una stored procedure
   In questo argomento viene descritta la procedura per la creazione di una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
 ##  <a name="Top"></a>   
--   **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **Per creare una stored procedure:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui la stored procedure viene creata.  
@@ -45,7 +49,7 @@ caps.handback.revision: 37
   
 2.  Espandere **Database**, il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e quindi **Programmabilità**.  
   
-3.  Fare clic con il pulsante destro del mouse su **Stored procedure** e quindi scegliere **Nuova stored procedure**.  
+3.  Fare clic con il pulsante destro del mouse su **Stored procedure**e quindi scegliere **Nuova stored procedure**.  
   
 4.  Scegliere **Imposta valori per parametri modello** dal menu **Query**.  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 37
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

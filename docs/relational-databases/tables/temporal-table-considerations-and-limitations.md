@@ -1,23 +1,27 @@
 ---
-title: "Considerazioni e limitazioni delle tabelle temporali | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Considerazioni e limitazioni delle tabelle temporali | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Considerazioni e limitazioni delle tabelle temporali
+# <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Esistono alcune considerazioni e limitazioni da tenere presenti quando si lavora con le tabelle temporali, a causa della natura del controllo delle versioni di sistema.  
@@ -36,23 +40,23 @@ caps.handback.revision: 17
   
 -   Le tabelle temporali e di cronologia non possono essere **FILETABLE** e possono contenere colonne di qualsiasi tipo di dati supportato diverso da **FILESTREAM** poiché **FILETABLE** e **FILESTREAM** consentono la manipolazione dei dati all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi non può essere garantito il controllo delle versioni di sistema.  
   
--   Mentre le tabelle temporali supportano i tipi di dati BLOB, ad esempio **(n)varchar(max)**, **varbinary(max)**, **(n)text** e **image**, a causa delle loro dimensioni non si potranno evitare costi di archiviazione significativi e implicazioni sulle prestazioni. Di conseguenza, quando si progetta il sistema è importante prestare attenzione mentre si usano questi tipi di dati.  
+-   Mentre le tabelle temporali supportano i tipi di dati BLOB, ad esempio **(n)varchar(max)**, **varbinary(max)**, **(n)text**e **image**, a causa delle loro dimensioni non si potranno evitare costi di archiviazione significativi e implicazioni sulle prestazioni. Di conseguenza, quando si progetta il sistema è importante prestare attenzione mentre si usano questi tipi di dati.  
   
 -   La tabella di cronologia deve essere creata nello stesso database della tabella corrente. L'esecuzione di query temporali su **Linked Server** non è supportata.  
   
 -   La tabella di cronologia non può includere vincoli (chiave primaria, chiave esterna, vincoli di colonna o tabella).  
   
--   Le viste indicizzate non sono supportate sulle query temporali (query che usano una clausola **FOR SYSTEM_TIME**)  
+-   Le viste indicizzate non sono supportate sulle query temporali (query che usano una clausola **FOR SYSTEM_TIME** )  
   
 -   L'opzione online (**WITH (ONLINE = ON**) non ha alcun effetto su **ALTER TABLE ALTER COLUMN** nel caso di una tabella temporale con controllo delle versioni di sistema. La colonna ALTER non viene eseguita come online indipendentemente dal valore che è stato specificato per l'opzione ONLINE.  
   
--   Le istruzioni **INSERT** e **UPDATE** non possono fare riferimento a colonne periodo SYSTEM_TIME. Eventuali tentativi di inserire valori direttamente in tali colonne verranno bloccati.  
+-   Le istruzioni**INSERT** e **UPDATE** non possono fare riferimento a colonne periodo SYSTEM_TIME. Eventuali tentativi di inserire valori direttamente in tali colonne verranno bloccati.  
   
--   L'istruzione **TRUNCATE TABLE** non è supportata quando l'opzione **SYSTEM_VERSIONING** è impostata su **ON**  
+-   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
   
 -   La modifica diretta dei dati in una tabella di cronologia non è consentita.  
   
--   **ON DELETE CASCADE** e **ON UPDATE CASCADE** non sono consentiti nella tabella corrente. In altre parole, quando la tabella temporale fa riferimento alla tabella nella relazione di chiave esterna (corrispondente a *parent_object_id* in sys.foreign_keys) non sono consentite le opzioni CASCADE. Per risolvere questa limitazione, usare la logica dell'applicazione oppure i trigger AFTER per mantenere la coerenza su eliminazione nella tabella di chiave primaria (corrispondente a *referenced_object_id* in sys.foreign_keys). Se la tabella di chiave primaria è temporale e la tabella di riferimento non lo è, questa limitazione non sussiste.  
+-   **ON DELETE CASCADE** e **ON UPDATE CASCADE** non sono consentiti nella tabella corrente. In altre parole, quando la tabella temporale fa riferimento alla tabella nella relazione di chiave esterna (corrispondente a *parent_object_id* in sys.foreign_keys) non sono consentite le opzioni CASCADE. Per risolvere questa limitazione, usare la logica dell'applicazione oppure i trigger AFTER per mantenere la coerenza su eliminazione nella tabella di chiave primaria (corrispondente a  *referenced_object_id* in sys.foreign_keys). Se la tabella di chiave primaria è temporale e la tabella di riferimento non lo è, questa limitazione non sussiste.  
   
 -   Per non invalidare la logica DML, i trigger**INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger**AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   Una tabella di cronologia non può essere configurata come tabella corrente in una catena di tabelle di cronologia.  
   
-## Questo articolo è stato utile? Commenti e suggerimenti  
+## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   
  [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verifiche di coerenza del sistema della tabella temporale](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

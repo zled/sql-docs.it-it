@@ -1,25 +1,29 @@
 ---
-title: "Oggetto Definibile dall&#39;utente di SQLServer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Definibile dall'utente - oggetto"
-  - "SQLServer:User Settable"
+title: Oggetto User Settable di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- User Settable object
+- SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0852dd58d7b89a9cf222c234a18bcecbad1cd943
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetto Definibile dall&#39;utente di SQLServer
+# <a name="sql-server-user-settable-object"></a>Oggetto Definibile dall'utente di SQLServer
   L'oggetto **Definibile dall'utente** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare istanze di contatore personalizzate. Utilizzare istanze di contatore personalizzate per monitorare gli aspetti del server non monitorati dai contatori esistenti, quali i componenti specifici del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato (ad esempio, il numero di ordini registrati o l'inventario dei prodotti).  
   
  L'oggetto **Definibile dall'utente** contiene 10 istanze del contatore di query, da **User counter 1** a **User counter 10**. Tali contatori corrispondono alle stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **sp_user_counter1** a **sp_user_counter10**. Quando le stored procedure vengono eseguite dalle applicazioni utente, i valori impostati dalle stored procedure vengono visualizzati in Monitoraggio di sistema. Un contatore può monitorare qualsiasi valore integer, ad esempio una stored procedure che esegue il conteggio degli ordini di un prodotto specifico ricevuti in un giorno.  
@@ -27,13 +31,13 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Il polling delle stored procedure dei contatori utente non viene eseguito automaticamente da Monitoraggio di sistema. Per aggiornare i valori dei contatori, è necessario che le stored procedure vengano eseguite in modo esplicito da un'applicazione utente. Utilizzare un trigger per aggiornare automaticamente il valore del contatore. Ad esempio, per creare un contatore che esegue il monitoraggio del numero di righe di una tabella, creare un trigger INSERT e DELETE nella tabella per eseguire l'istruzione seguente: `SELECT COUNT(*) FROM table`. Ogni volta che il trigger viene attivato da un'operazione INSERT o DELETE eseguita nella tabella, il contatore di Monitoraggio di sistema viene aggiornato automaticamente.  
   
- Questa tabella illustra l'oggetto **Definibile dall'utente** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Questa tabella illustra l'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
   
 |Contatori di SQLServer:Definibile dall'utente|Descrizione|  
 |---------------------------------------|-----------------|  
 |**Query**|L'oggetto **Definibile dall'utente** contiene il contatore di query. Gli utenti configurano il valore delle istanze **User counter** all'interno dell'oggetto query.|  
   
- Questa tabella illustra le **istanze** del contatore **Query**.  
+ Questa tabella illustra le **istanze** del contatore **Query** .  
   
 |Istanze del contatore Query|Descrizione|  
 |-----------------------------|-----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 22
 EXECUTE sp_user_counter1 10  
 ```  
   
- Le stored procedure dei contatori utente possono essere chiamate da qualsiasi posizione da cui possono essere chiamate le altre stored procedure, ad esempio le stored procedure personalizzate. Ad esempio, è possibile creare la stored procedure seguente per eseguire il conteggio del numero di connessioni e tentativi di connessione eseguiti dall'avvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Le stored procedure dei contatori utente possono essere chiamate da qualsiasi posizione da cui possono essere chiamate le altre stored procedure, ad esempio le stored procedure personalizzate. Ad esempio, è possibile creare la stored procedure seguente per eseguire il conteggio del numero di connessioni e tentativi di connessione eseguiti dall'avvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
 DROP PROC My_Proc  
@@ -65,10 +69,10 @@ GO
 > [!IMPORTANT]  
 >  Le query definite nelle stored procedure dei contatori utente dovrebbero essere il più semplici possibile. Le query che impegnano molta memoria e che eseguono operazioni di ordinamento e di hashing di ampia portata o le query che eseguono grandi quantità di operazioni di I/O richiedono l'utilizzo di numerose risorse e possono determinare un peggioramento delle prestazioni del sistema.  
   
-## Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni  
  **sp_user_counter** è disponibile per tutti gli utenti, ma è possibile limitarne l'uso per qualsiasi contatore di query.  
   
-## Vedere anche  
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento OLEDB DataRead | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB DataRead - classe di evento"
+title: Classe di evento OLEDB DataRead | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB DataRead event class
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c36eeb6ff13c3bcaa5364375e3a19f90921e8ab3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento OLEDB DataRead
+# <a name="oledb-dataread-event-class"></a>OLEDB DataRead - classe di evento
   La classe di evento OLEDB DataRead viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama un provider OLE DB per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata per una richiesta di dati al provider OLE DB.  
   
  Quando la classe OLEDB DataRead viene inclusa in una traccia, l'overhead generato sarà elevato. È consigliabile limitare l'utilizzo di questa classe di evento alle tracce che eseguono il monitoraggio di problemi specifici per brevi periodi di tempo.  
   
-## Colonne di dati della classe di evento OLEDB DataRead  
+## <a name="oledb-dataread-event-class-data-columns"></a>Colonne di dati della classe di evento OLEDB DataRead  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -54,7 +58,7 @@ caps.handback.revision: 37
 |TextData|**nvarchar**|Parametri inviati e ricevuti nella chiamata OLE DB.|1|No|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Oggetti di automazione OLE in Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

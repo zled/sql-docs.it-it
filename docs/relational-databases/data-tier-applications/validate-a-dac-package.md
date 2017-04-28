@@ -1,39 +1,43 @@
 ---
-title: "Convalida di un pacchetto di applicazioni livello dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "applicazione livello dati [SQL Server], convalida"
-  - "applicazione livello dati [SQL Server], confronto"
-  - "convalida dell'applicazione livello dati"
-  - "confronto di applicazioni livello dati"
-  - "applicazione livello dati [SQL Server], visualizzazione"
-  - "visualizzazione dell'applicazione livello dati"
+title: Convalidare un pacchetto di applicazioni livello dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Convalida di un pacchetto di applicazioni livello dati
+# <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
   È consigliabile esaminare il contenuto di un pacchetto di un'applicazione livello dati prima di distribuirlo nella produzione nonché convalidare le azioni di aggiornamento prima di aggiornare un'applicazione livello dati esistente, in particolare nel caso in cui si distribuiscano pacchetti non sviluppati dalla propria organizzazione.  
   
-1.  **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Confronta applicazioni livello dati](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  
   
-##  <a name="ViewDACContents"></a> Visualizzare il contenuto di un'applicazione livello dati  
+##  <a name="ViewDACContents"></a> Visualizza il contenuto di un'applicazione livello dati  
  Sono disponibili due meccanismi per la visualizzazione del contenuto di un pacchetto di applicazione livello dati (DAC). È possibile importare il pacchetto di applicazione livello dati in un progetto di applicazione livello dati in SQL Server Developer Tools. In alternativa, è possibile decomprimere il contenuto del pacchetto in una cartella.  
   
  **Visualizzare un'applicazione livello dati in SQL Server Developer Tools**  
@@ -44,9 +48,9 @@ caps.handback.revision: 17
   
 3.  In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul nodo del progetto e selezionare **Proprietà…**.  
   
-4.  Nella scheda **Impostazioni progetto** selezionare la casella di controllo **Applicazione livello dati (file .dacpac)**nella sezione **Tipi di output** e quindi chiudere la finestra di dialogo delle proprietà.  
+4.  Nella scheda **Impostazioni progetto** selezionare la casella di controllo **Applicazione livello dati (file .dacpac)** nella sezione **Tipi di output** e quindi chiudere la finestra di dialogo delle proprietà.  
   
-5.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Importa applicazione livello dati**.  
+5.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Importa applicazione livello dati**.  
   
 6.  Usare **Esplora soluzioni** per aprire tutti i file dell'applicazione livello dati, ad esempio i criteri di selezione dei server e gli script pre-distribuzione e post-distribuzione.  
   
@@ -60,12 +64,12 @@ caps.handback.revision: 17
   
 -   Visualizzare il contenuto dei file di testo negli strumenti quale Blocco note.  
   
-##  <a name="ViewDBChanges"></a> Visualizzare modifiche al database  
+##  <a name="ViewDBChanges"></a> Visualizza modifiche al database  
  Dopo che la versione corrente di un'applicazione livello dati è distribuita a produzione, è possibile che le modifiche siano state apportate direttamente al database associato che potrebbe creare conflitti con lo schema definito in una nuova versione dell'applicazione livello dati. Prima di aggiornare a una nuova versione dell'applicazione livello dati, controllare per vedere se tali modifiche sono state apportate al database.  
   
  **Visualizzare modifiche al Database tramite una procedura guidata**  
   
-1.  Eseguire la procedura guidata **Aggiorna applicazione livello dati**, specificare l'applicazione livello dati attualmente distribuita e il pacchetto di applicazione livello dati contenente la nuova versione dell'applicazione stessa.  
+1.  Eseguire la procedura guidata **Aggiorna applicazione livello dati** , specificare l'applicazione livello dati attualmente distribuita e il pacchetto di applicazione livello dati contenente la nuova versione dell'applicazione stessa.  
   
 2.  Nella pagina **Rileva modifiche** , esaminare il report delle modifiche apportate al database.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 4.  Usare il metodo **GetDatabaseChanges()** per recuperare un oggetto **ChangeResults** e inoltrare tramite pipe l'oggetto a un file di testo per generare un report semplice degli oggetti nuovi, eliminati e modificati.  
   
-### Visualizzare esempio di modifiche al database (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>Visualizzare esempio di modifiche al database (PowerShell)  
  **Visualizzare esempio di modifiche al database (PowerShell)**  
   
  Nell'esempio seguente vengono segnalate eventuali modifiche apportate al database in un'applicazione livello dati distribuita denominata MyApplicaiton.  
@@ -105,12 +109,12 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Visualizzare azioni di aggiornamento  
+##  <a name="ViewUpgradeActions"></a> Visualizza azioni di aggiornamento  
  Prima di utilizzare una nuova versione di un pacchetto di applicazione livello dati per aggiornare un'applicazione livello dati distribuita da un pacchetto di applicazione livello dati precedente, è possibile generare un report in cui sono contenute le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che verranno eseguite durante l'aggiornamento, quindi controllare le istruzioni.  
   
  **Segnalare azioni di aggiornamento tramite una procedura guidata**  
   
-1.  Eseguire la procedura guidata **Aggiorna applicazione livello dati**, specificare l'applicazione livello dati attualmente distribuita e il pacchetto di applicazione livello dati contenente la nuova versione dell'applicazione stessa.  
+1.  Eseguire la procedura guidata **Aggiorna applicazione livello dati** , specificare l'applicazione livello dati attualmente distribuita e il pacchetto di applicazione livello dati contenente la nuova versione dell'applicazione stessa.  
   
 2.  Nella pagina **Riepilogo** , esaminare il report delle azioni di aggiornamento.  
   
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Chiudere il flusso di file usato per leggere il file del pacchetto di applicazione livello dati.  
   
-### Visualizzare esempio di azioni di aggiornamento (PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>Visualizzare esempio di azioni di aggiornamento (PowerShell)  
  **Visualizzare esempio di azioni di aggiornamento (PowerShell)**  
   
  Nell'esempio seguente vengono segnalate le istruzioni Transact-SQL che sarebbero eseguite per l'aggiornamento di una'applicazione livello dati con nome MyApplicaiton allo schema definito in un file MyApplicationVNext.dacpac.  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Confronto di applicazioni livello dati  
+##  <a name="CompareDACs"></a> Compare DACs  
  Prima di aggiornare un'applicazione del livello dati, è consigliabile controllare le differenze nel database e negli oggetti a livello di istanza tra il pacchetto di applicazioni livello dati corrente e quello nuovo. Se non si dispone di una copia del pacchetto di applicazione livello dati corrente, è possibile estrarre un pacchetto dal database corrente.  
   
  Se si importano entrambi i pacchetti di applicazione livello dati nei progetti di applicazione livello dati in SQL Server Developer Tools, è possibile utilizzare lo strumento di Confronto schema per analizzare le differenze tra i due pacchetti di applicazioni livello dati.  
   
  In alternativa, decomprimere le applicazioni livello dati in cartelle separate. È possibile quindi utilizzare uno strumento delle differenze, quale l'utilità WinDiff, per analizzare le differenze.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Distribuire un'applicazione livello dati](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Aggiornare un'applicazione livello dati](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

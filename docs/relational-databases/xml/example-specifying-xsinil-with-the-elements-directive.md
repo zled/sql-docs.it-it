@@ -1,27 +1,31 @@
 ---
-title: "Esempio: specifica di XSINIL con la direttiva ELEMENTS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Modalità RAW, specifica dell'esempio XSINIL"
+title: 'Esempio: specifica di XSINIL con la direttiva ELEMENTS | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16ba9c8328bf170976ba60d3e789117a3a7e37e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: specifica di XSINIL con la direttiva ELEMENTS
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Esempio: specifica di XSINIL con la direttiva ELEMENTS
   Nella query seguente viene specificata la direttiva `ELEMENTS` per generare codice XML incentrato sugli elementi dai risultati della query.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,7 +77,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
 </row>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

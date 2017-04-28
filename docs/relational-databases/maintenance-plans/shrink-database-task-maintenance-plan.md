@@ -1,28 +1,32 @@
 ---
-title: "Attivit&#224; Compatta database (Piano di manutenzione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Shrink Database Task"
-  - "Shrink Database(s) Task"
-  - "sql13.swb.maint.shrink.f1"
-helpviewer_keywords: 
-  - "Attività Compatta database - finestra di dialogo"
+title: "Attività Compatta database (Piano di manutenzione) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Shrink Database Task
+- Shrink Database(s) Task
+- sql13.swb.maint.shrink.f1
+helpviewer_keywords:
+- Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attivit&#224; Compatta database (Piano di manutenzione)
+# <a name="shrink-database-task-maintenance-plan"></a>Attività Compatta database (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Compatta database** per creare un'attività che cerchi di ridurre le dimensioni dei database selezionati. Le opzioni illustrate di seguito consentono di definire la quantità di spazio non utilizzato che deve rimanere nel database dopo la compattazione. Maggiore è la percentuale specificata, minore sarà il livello di compattazione del database. Il valore è basato sulla percentuale dei dati effettivi presenti nel database. Compattando ad esempio un database da 100 MB contenente 60 MB di dati e 40 MB di spazio disponibile con una percentuale di spazio disponibile del 50%, si ottiene un database con 60 MB di dati e 30 MB di spazio disponibile, perché il 50% di 60 MB è pari a 30 MB. Viene eliminato dal database solo lo spazio in eccesso. I valori validi sono compresi tra 0 e 100.  
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
@@ -32,7 +36,7 @@ caps.handback.revision: 28
   
  Questa attività esegue l'istruzione DBCC SHRINKDATABASE.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
@@ -44,15 +48,15 @@ caps.handback.revision: 28
   
 -   **Tutti i database**  
   
-     Genera un piano per l'esecuzione di attività di manutenzione in tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a eccezione di tempdb.  
+     Genera un piano per l'esecuzione di attività di manutenzione in tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a eccezione di tempdb.  
   
 -   **Tutti i database di sistema**  
   
-     Consente di generare un piano di manutenzione per l'esecuzione di attività di manutenzione su ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di tempdb. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
+     Consente di generare un piano di manutenzione per l'esecuzione di attività di manutenzione su ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di tempdb. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
   
 -   **Tutti i database utente**  
   
-     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **I database seguenti**  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
-## Finestra di dialogo Nuova connessione  
+## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
@@ -87,10 +91,10 @@ caps.handback.revision: 28
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Connette a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Connette a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication.  
   
  **Usa nome utente e password specifici**  
- Connette a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -98,7 +102,7 @@ caps.handback.revision: 28
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   

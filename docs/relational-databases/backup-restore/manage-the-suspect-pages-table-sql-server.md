@@ -1,39 +1,43 @@
 ---
-title: "Gestione della tabella suspect_pages (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "824 (errore del motore di database)"
-  - "ripristino di pagine [SQL Server]"
-  - "pagine [SQL Server], sospette"
-  - "pagine [SQL Server], ripristino"
-  - "tabella di sistema suspect_pages"
-  - "pagine sospette [SQL Server]"
-  - "ripristino [SQL Server], pagine"
+title: Gestire la tabella suspect_pages (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 824 (Database Engine error)
+- restoring pages [SQL Server]
+- pages [SQL Server], suspect
+- pages [SQL Server], restoring
+- suspect_pages system table
+- suspect pages [SQL Server]
+- restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestione della tabella suspect_pages (SQL Server)
-  In questo argomento viene descritto come gestire la tabella **suspect_pages** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La tabella **suspect_pages**, usata per la gestione di informazioni sulle pagine sospette, è importante per stabilire se è necessario un ripristino. La tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) è contenuta nel [database msdb](../../relational-databases/databases/msdb-database.md).  
+# <a name="manage-the-suspectpages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
+  In questo argomento viene descritto come gestire la tabella **suspect_pages** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La tabella **suspect_pages** , usata per la gestione di informazioni sulle pagine sospette, è importante per stabilire se è necessario un ripristino. La tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) è contenuta nel [database msdb](../../relational-databases/databases/msdb-database.md).  
   
  Una pagina è considerata "sospetta" quando nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] si verifica uno dei seguenti errori quando viene tentata la lettura di una pagina di dati:  
   
--   Un [errore 823](../Topic/MSSQLSERVER_823.md) causato da un controllo di ridondanza ciclico (CRC) generato dal sistema operativo, ad esempio un errore del disco (alcuni errori hardware)  
+-   Un errore 823 causato da un controllo di ridondanza ciclico (CRC) generato dal sistema operativo, ad esempio un errore del disco (alcuni errori hardware)  
   
--   Un [errore 824](../Topic/MSSQLSERVER_824.md), ad esempio una pagina incompleta (qualsiasi errore logico)  
+-   Un errore 824, ad esempio una pagina incompleta (qualsiasi errore logico)  
   
- L'ID di ogni pagina sospetta viene registrato nella tabella **suspect_pages**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le pagine sospette rilevate durante la normale elaborazione, ad esempio nei casi seguenti:  
+ L'ID di ogni pagina sospetta viene registrato nella tabella **suspect_pages** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le pagine sospette rilevate durante la normale elaborazione, ad esempio nei casi seguenti:  
   
 -   Una pagina deve essere letta da una query.  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 54
   
 -   **Errori registrati nella tabella suspect_pages**  
   
-     La tabella **suspect_pages** include una riga per ogni pagina che ha restituito un errore 824, fino a un limite di 1.000 righe. Nella seguente tabella vengono mostrati errori registrati nella colonna **event_type** della tabella **suspect_pages**.  
+     La tabella **suspect_pages** include una riga per ogni pagina che ha restituito un errore 824, fino a un limite di 1.000 righe. Nella seguente tabella vengono mostrati errori registrati nella colonna **event_type** della tabella **suspect_pages** .  
   
-    |Descrizione dell'errore|Valore **event_type**|  
+    |Descrizione dell'errore|Valore**event_type** |  
     |-----------------------|---------------------------|  
     |Errore 823 causato da un errore CRC del sistema operativo o errore 824 diverso da un errore nel checksum o da una pagina incompleta (ad esempio un ID pagina errato)|1|  
     |Errore nel checksum|2|  
@@ -78,7 +82,7 @@ caps.handback.revision: 54
   
 -   **Procedura di aggiornamento della tabella suspect_pages tramite il Motore di database**  
   
-     Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue le azioni seguenti nella tabella **suspect_pages**:  
+     Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue le azioni seguenti nella tabella **suspect_pages** :  
   
     -   Se la tabella non è piena, viene aggiornata per ogni errore 824 in modo da segnalare il verificarsi dell'errore e viene incrementato il contatore degli errori. Se una pagina contiene un errore dopo l'esecuzione di un'operazione di correzione, ripristino o deallocazione, il conteggio **number_of_errors** corrispondente viene incrementato e la relativa colonna **last_update** viene aggiornata  
   
@@ -94,13 +98,13 @@ caps.handback.revision: 54
   
     -   Un errore 824 (danneggiamento logico, ad esempio una pagina incompleta)  
   
-     Le azioni seguenti aggiornano anche automaticamente righe nella tabella **suspect_pages**.  
+     Le azioni seguenti aggiornano anche automaticamente righe nella tabella **suspect_pages** .  
   
     -   L'azione DBCC CHECKDB REPAIR_ALLOW_DATA_LOSS aggiorna la tabella **suspect_pages** per indicare ogni pagina deallocata o corretta.  
   
     -   In seguito a un ripristino (RESTORE) completo del file o della pagina, le voci della pagina vengono contrassegnate come ripristinate.  
   
-     Le azioni seguenti eliminano automaticamente righe dalla tabella **suspect_pages**.  
+     Le azioni seguenti eliminano automaticamente righe dalla tabella **suspect_pages** .  
   
     -   ALTER DATABASE REMOVE FILE  
   
@@ -110,18 +114,18 @@ caps.handback.revision: 54
   
      Gli amministratori dei database sono responsabili della gestione della tabella, in particolare dell'eliminazione delle righe meno recenti. Poiché le dimensioni della tabella **suspect_pages** sono limitate, se questa si riempie, non verranno registrati nuovi errori. Per evitare che lo spazio della tabella si esaurisca, l'amministratore del database o l'amministratore di sistema devono cancellare manualmente i dati meno recenti dalla tabella tramite l'eliminazione delle righe. È quindi consigliabile archiviare o eliminare periodicamente le righe aventi un valore **event_type** ripristinato o riparato oppure le righe con un valore **last_update** obsoleto.  
   
-     Per monitorare l'attività sulla tabella suspect_pages è possibile usare [Classe di evento Database Suspect Data Page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md). Talvolta, a causa di errori temporanei, vengono aggiunte righe alla tabella **suspect_pages**. Tuttavia se vengono aggiunte molte righe alla tabella è probabile che vi sia un problema con il sottosistema I/O. Se si nota un aumento improvviso nel numero di righe che vengono aggiunte alla tabella, si consiglia di esaminare possibili problemi nel sottosistema I/O.  
+     Per monitorare l'attività sulla tabella suspect_pages è possibile usare [Classe di evento Database Suspect Data Page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md). Talvolta, a causa di errori temporanei, vengono aggiunte righe alla tabella **suspect_pages** . Tuttavia se vengono aggiunte molte righe alla tabella è probabile che vi sia un problema con il sottosistema I/O. Se si nota un aumento improvviso nel numero di righe che vengono aggiunte alla tabella, si consiglia di esaminare possibili problemi nel sottosistema I/O.  
   
      L'amministratore del database può inoltre inserire o aggiornare i record. Ad esempio, l'aggiornamento di una riga potrebbe essere utile se l'amministratore del database è certo che una determinata pagina sospetta è in realtà rimasta invariata, ma desidera mantenere temporaneamente il record.  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages**. Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
+ Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per gestire la tabella suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Per gestire la tabella suspect_pages  
   
 1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 54
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per gestire la tabella suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Per gestire la tabella suspect_pages  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -149,7 +153,7 @@ GO
   
 ```  
   
- In questo esempio vengono restituite le pagine errate nella tabella `suspect_pages`.  
+ In questo esempio vengono restituite le pagine errate nella tabella `suspect_pages` .  
   
 ```  
 -- Select nonspecific 824, bad checksum, and torn page errors.  
@@ -159,14 +163,18 @@ GO
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [Ripristino di pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+
+

@@ -1,41 +1,45 @@
 ---
-title: "Configura topologia (replica peer-to-peer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.p2pwizard.peers.f1"
+title: Configura topologia (replica peer-to-peer) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a41d0a93fcee491dad6bc2b310720e65f9ee607
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configura topologia (replica peer-to-peer)
-  Utilizzare il **Configura topologia** pagina per eseguire attività di configurazione comuni, ad esempio l'aggiunta di nuovi nodi, l'eliminazione di nodi e aggiunta di nuove connessioni tra nodi esistenti. Il nodo selezionato nella **pubblicazione** nell'area di progettazione viene visualizzata la pagina della procedura guidata. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse su un nodo, su una connessione o sull'area di progettazione.  
+# <a name="configure-topology-peer-to-peer-replication"></a>Configura topologia (replica peer-to-peer)
+  La pagina **Configura topologia** consente di eseguire attività di configurazione comuni, ad esempio l'aggiunta di nuovi nodi, l'eliminazione di nodi e l'aggiunta di nuove connessioni tra nodi esistenti. Il nodo selezionato nella pagina **Pubblicazione** di questa procedura guidata viene visualizzato nell'area di progettazione. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse su un nodo, su una connessione o sull'area di progettazione.  
   
 > [!NOTE]  
 >  La Configurazione guidata topologia peer-to-peer richiede informazioni sulla topologia quando viene chiusa. Se la procedura guidata viene chiusa e riaperta prima che tutti i nodi rispondano alla richiesta di informazioni, è possibile che venga visualizzata una rete parziale.  
   
-## Opzioni  
- Il **Configura topologia** pagina contiene gli elementi dell'interfaccia e le opzioni disponibili facendo clic su un elemento. Nella tabella riportata di seguito viene descritto ogni elemento dell'interfaccia.  
+## <a name="options"></a>Opzioni  
+ La pagina **Configura topologia** contiene elementi e opzioni dell'interfaccia che sono disponibili quando si fa clic con il pulsante destro del mouse su un elemento. Nella tabella riportata di seguito viene descritto ogni elemento dell'interfaccia.  
   
 |Elemento dell'interfaccia|Descrizione|  
 |-----------------------|-----------------|  
 |Area di progettazione|Consente di visualizzare gli altri elementi dell'interfaccia. Per aggiungere elementi, fare clic con il pulsante destro del mouse sull'area di progettazione.|  
-|![Primo nodo di una topologia](../../relational-databases/replication/media/p2pwizard-firstnode.png "Primo nodo di una topologia")|Nodo originale nella topologia. I nuovi nodi vengono inizializzati utilizzando una copia del database di pubblicazione dal nodo originale.|  
-|![Nodo per cui si dispone di informazioni complete](../../relational-databases/replication/media/p2pwizard-complete.png "Nodo per cui si dispone di informazioni complete")|Un nodo in cui è in esecuzione un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva, per cui la replica dispone di informazioni complete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo.|  
-|![Nodo per cui si dispone di informazioni incomplete](../../relational-databases/replication/media/p2pwizard-incomplete.png "Nodo per cui si dispone di informazioni incomplete")|Nodo per cui la replica dispone di informazioni incomplete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo.<br /><br /> La replica dispone di informazioni incomplete a causa di una delle ragioni seguenti:<br /><br /> -Il nodo è in esecuzione un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], che non archivia tutti i metadati richiesti dalla procedura guidata.<br /><br /> -Il nodo è in esecuzione una versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la replica non può recuperare informazioni sulla sottoscrizione dal nodo. Per risolvere questa situazione:<br /><br /> Verificare che il database nel nodo sia online e che sia possibile connettersi utilizzando le stesse credenziali degli agenti di distribuzione che si connettono al nodo.<br /><br /> Verificare che l'agente di lettura log e tutti gli agenti di distribuzione che si connettono al nodo siano in esecuzione.<br /><br /> Verificare che il timeout di aggiornamento sia impostato su un valore abbastanza elevato per consentire di raccogliere tutte le informazioni sulla topologia. Per impostare il timeout, fare doppio clic su area di progettazione e fare clic su **Imposta Timeout aggiornamento**.|  
+|![Primo nodo in una topologia](../../relational-databases/replication/media/p2pwizard-firstnode.gif "Primo nodo in una topologia")|Nodo originale nella topologia. I nuovi nodi vengono inizializzati utilizzando una copia del database di pubblicazione dal nodo originale.|  
+|![Nodo per il quale sono disponibili informazioni complete](../../relational-databases/replication/media/p2pwizard-complete.gif "Nodo per il quale sono disponibili informazioni complete")|Nodo che esegue un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva per cui la replica dispone di informazioni complete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo.|  
+|![Nodo per il quale sono disponibili informazioni incomplete](../../relational-databases/replication/media/p2pwizard-incomplete.gif "Nodo per il quale sono disponibili informazioni incomplete")|Nodo per cui la replica dispone di informazioni incomplete. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse sul nodo.<br /><br /> La replica dispone di informazioni incomplete a causa di una delle ragioni seguenti:<br /><br /> -Il nodo esegue un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]che non archivia tutti i metadati richiesti dalla procedura guidata.<br /><br /> -Il nodo esegue una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la replica non è in grado di recuperare le informazioni sulla sottoscrizione dal nodo. Per risolvere questa situazione:<br /><br /> Verificare che il database nel nodo sia online e che sia possibile connettersi utilizzando le stesse credenziali degli agenti di distribuzione che si connettono al nodo.<br /><br /> Verificare che l'agente di lettura log e tutti gli agenti di distribuzione che si connettono al nodo siano in esecuzione.<br /><br /> Verificare che il timeout di aggiornamento sia impostato su un valore abbastanza elevato per consentire di raccogliere tutte le informazioni sulla topologia. Per impostare il timeout, fare clic con il pulsante destro del mouse sull'area di progettazione, quindi scegliere **Imposta timeout aggiornamento**.|  
 |Linea grigia con frecce|Connessione tra due nodi. Per aggiungere una connessione, fare clic con il pulsante destro del mouse su uno dei nodi che si desidera connettere. Per rimuovere una connessione, fare clic con il pulsante destro del mouse sulla connessione.<br /><br /> Se la linea ha una sola freccia, la replica dispone di informazioni incomplete per uno dei nodi.|  
   
-### Opzioni per l'area di progettazione  
+### <a name="options-for-the-design-surface"></a>Opzioni per l'area di progettazione  
  **Ridisegna grafico**  
  Consente di ridisegnare gli oggetti sull'area di progettazione senza aggiornare la topologia. Questa operazione potrebbe offrire una vista migliore della topologia.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 29
  Se durante la procedura guidata vengono richieste informazioni sulla topologia e si chiude e si riapre la procedura guidata prima che tutti i nodi rispondano alla richiesta, in questa pagina potrebbero non essere visualizzati tutti i nodi della topologia.  
   
  **Aggiungi nuovo nodo peer**  
- Aggiungere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla topologia peer-to-peer. L'aggiunta di un'istanza come nodo consente di creare una pubblicazione in tale istanza dopo il completamento della procedura guidata. Dopo avere aggiunto il nodo, fare clic con il pulsante destro del mouse su di esso per aggiungere una connessione tra il nuovo nodo e un nodo esistente.  
+ Consente di aggiungere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla topologia peer-to-peer. L'aggiunta di un'istanza come nodo consente di creare una pubblicazione in tale istanza dopo il completamento della procedura guidata. Dopo avere aggiunto il nodo, fare clic con il pulsante destro del mouse su di esso per aggiungere una connessione tra il nuovo nodo e un nodo esistente.  
   
  Per partecipare a una topologia peer-to-peer, l'istanza deve soddisfare i requisiti seguenti:  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 29
  **Imposta timeout aggiornamento**  
  Consente di specificare per quanto tempo può essere eseguito il processo di aggiornamento prima del timeout dell'operazione.  
   
-### Opzioni per ogni nodo  
+### <a name="options-for-each-node"></a>Opzioni per ogni nodo  
  **Aggiungi nuova connessione peer**  
  Consente di aggiungere una connessione tra due nodi. Se, ad esempio, si aggiunge una connessione tra Nodo A e Nodo B, tramite la replica vengono aggiunte due sottoscrizioni: la prima consente a Nodo A di ricevere le modifiche dalla pubblicazione in Nodo B e la seconda consente a Nodo B di ricevere le modifiche dalla pubblicazione in Nodo A.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 29
  Consente di rimuovere un nodo dalla topologia. Se, ad esempio, si rimuove Nodo C, la pubblicazione in quel nodo viene rimossa. Vengono rimosse anche le sottoscrizioni tra Nodo A e Nodo C e tra Nodo B e Nodo C. Il database in Nodo C non viene eliminato e la pubblicazione e la distribuzione non vengono disabilitate.  
   
 > [!NOTE]  
->  Quando si configura la replica peer-to-peer, viene specificato un ID per ogni nodo. Questo ID, che deve essere univoco in tutti i nodi nella topologia, viene archiviato nella colonna originator_id il [MSpeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) tabella di sistema. Se un nodo viene rimosso dalla topologia, l'ID viene comunque conservato nella tabella della cronologia per impedire falsi conflitti, qualora siano presenti modifiche provenienti dal nodo rimosso che continuano ad essere replicate nella topologia. Se si desidera riutilizzare l'ID per un nuovo nodo, è necessario prima eliminarlo manualmente dalla tabella MSpeer_originatorid_history in tutti i nodi. Prima di eliminare un ID per un nodo, eseguire [sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) verificare che tutte le modifiche provenienti dal nodo siano state replicate.  
+>  Quando si configura la replica peer-to-peer, viene specificato un ID per ogni nodo. Tale ID, che deve essere univoco in tutti i nodi nella topologia, viene archiviato nella colonna originator_id della tabella di sistema [MSpeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md). Se un nodo viene rimosso dalla topologia, l'ID viene comunque conservato nella tabella della cronologia per impedire falsi conflitti, qualora siano presenti modifiche provenienti dal nodo rimosso che continuano ad essere replicate nella topologia. Se si desidera riutilizzare l'ID per un nuovo nodo, è necessario prima eliminarlo manualmente dalla tabella MSpeer_originatorid_history in tutti i nodi. Prima di eliminare un ID per un nodo, eseguire [sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) per verificare che tutte le modifiche provenienti dal nodo siano state replicate.  
   
  **Connessione a TUTTI i nodi visualizzati**  
  Consente di aggiungere connessioni tra il nodo selezionato e tutti gli altri nodi. Se, ad esempio, si seleziona questa opzione per Nodo C in una topologia a tre nodi, tramite la replica vengono aggiunte quattro sottoscrizioni: due che consentono a Nodo A e Nodo B di ricevere le modifiche dalla pubblicazione in Nodo C e due che consentono a Nodo C di ricevere le modifiche dalle pubblicazioni in Nodo A e Nodo B.  
@@ -75,13 +79,13 @@ caps.handback.revision: 29
  **Seleziona nodo/i da visualizzare**  
  Consente di selezionare i nodi da visualizzare nell'area di progettazione. Questa opzione è utile se la topologia include molti di nodi. Tenere presente che è possibile aggiungere connessioni solo tra nodi visibili nell'area di progettazione.  
   
-### Opzioni per le frecce di connessione  
+### <a name="options-for-the-connection-arrows"></a>Opzioni per le frecce di connessione  
  **Rimuovi connessione peer**  
  Consente di rimuovere una connessione tra due nodi. Se, ad esempio, si rimuove una connessione tra Nodo A e Nodo B, tramite la replica vengono eliminate due sottoscrizioni: quella che consente a Nodo A di ricevere le modifiche dalla pubblicazione in Nodo B e quella che consente a Nodo B di ricevere le modifiche dalla pubblicazione in Nodo A.  
   
-## Vedere anche  
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Amministrare una topologia Peer-to-Peer & #40; Programmazione Transact-SQL della replica & #41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Replica transazionale peer-to-peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

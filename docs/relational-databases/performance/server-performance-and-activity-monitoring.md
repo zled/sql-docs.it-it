@@ -1,42 +1,46 @@
 ---
-title: "Monitoraggio delle prestazioni e dell&#39;attivit&#224; del server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "monitoraggio di attività [SQL Server]"
-  - "tracce [SQL Server], procedure"
-  - "monitoraggio delle prestazioni del server [SQL Server], monitoraggio di attività"
-  - "stored procedure [SQL Server], tracce"
-  - "prestazioni [SQL Server], server"
-  - "server [SQL Server], prestazioni"
-  - "SQL Server Profiler, procedure"
-  - "SQL Server Management Studio [SQL Server], sistema di monitoraggio"
-  - "Profiler [SQL Server Profiler], procedure"
+title: "Monitoraggio delle prestazioni e dell&quot;attività del server | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- activity monitoring [SQL Server]
+- traces [SQL Server], how-to topics
+- monitoring server performance [SQL Server], activity monitoring
+- stored procedures [SQL Server], traces
+- performance [SQL Server], servers
+- servers [SQL Server], performance
+- SQL Server Profiler, how-to topics
+- SQL Server Management Studio [SQL Server], monitoring system
+- Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a3f71afe41528eca49f37d5f81e30d3defa0d21
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitoraggio delle prestazioni e dell&#39;attivit&#224; del server
+# <a name="server-performance-and-activity-monitoring"></a>Monitoraggio delle prestazioni e dell'attività del server
   L'obiettivo del monitoraggio dei database consiste nella valutazione delle prestazioni di un server. Un monitoraggio efficace implica l'esecuzione di snapshot periodici delle prestazioni correnti al fine di isolare i processi che causano problemi, nonché la raccolta continua di dati nel tempo per tenere traccia delle tendenze delle prestazioni. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows offrono utilità che consentono di visualizzare la condizione corrente del database e di tenere traccia delle prestazioni in caso di variazioni.  
   
  Nella sezione seguente sono contenuti argomenti che descrivono l'utilizzo degli strumenti di monitoraggio delle prestazioni e dell'attività disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in Windows. Questa lezione contiene i seguenti argomenti:  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  **Per eseguire attività di monitoraggio con gli strumenti di Windows**  
   
 -   [Avvio di Monitoraggio di sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [Visualizzazione del log applicazioni di &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+-   [Visualizzazione del log applicazioni di &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
  **Per creare avvisi del database di SQL Server con gli strumenti di Windows**  
   
@@ -167,3 +171,4 @@ caps.handback.revision: 18
 -   [Correlare una traccia e i dati dei registri di prestazioni di Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Usare PowerShell per il backup di pi&#249; database nel servizio di archiviazione BLOB di Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Backup di più database nel servizio di archiviazione BLOB di Azure - PowerShell | Microsoft Docs"
+ms.custom: 
+ms.date: 05/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cda33e54db6382eaee5d4e5343fc2d1873600c8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usare PowerShell per il backup di pi&#249; database nel servizio di archiviazione BLOB di Microsoft Azure
+# <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Backup di più database nel servizio di archiviazione BLOB di Azure - PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento vengono forniti alcuni script di esempio che possono essere utilizzati per automatizzare i backup nel servizio di archiviazione BLOB di Windows Azure mediante i cmdlet di PowerShell.  
   
-## Panoramica dei cmdlet di PowerShell per il backup e il ripristino  
+## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Panoramica dei cmdlet di PowerShell per il backup e il ripristino  
  **Backup-SqlDatabase** e **Restore-SqlDatabase** sono i due principali cmdlet disponibili per eseguire operazioni di backup e ripristino. Inoltre, sono presenti altri cmdlet che possono essere necessari per automatizzare i backup nel servizio di archiviazione BLOB di Windows Azure come il set di cmdlet **SqlCredential** . Di seguito è riportato un elenco di cmdlet di PowerShell disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzati nelle operazioni di backup e ripristino:  
   
  Backup-SqlDatabase  
- Questo cmdlet viene utilizzato per creare un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Questo cmdlet viene utilizzato per creare un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Restore-SqlDatabase  
  Questo cmdlet viene utilizzato per ripristinare un database.  
@@ -45,20 +49,20 @@ caps.handback.revision: 13
 > [!TIP]  
 >  I cmdlet relativi alle credenziali vengono utilizzati nelle operazioni di backup e ripristino negli scenari del servizio di archiviazione BLOB di Windows Azure.  
   
-### PowerShell per le operazioni di backup di più istanze di più database  
+### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell per le operazioni di backup di più istanze di più database  
  Nelle sezioni seguenti vengono forniti alcuni script per diverse operazioni quali la creazione di credenziali SQL in più istanze di SQL Server, il backup di tutti i database utente in un'istanza di SQL Server e simili. È possibile utilizzare questi script per automatizzare e pianificare le operazioni di backup in base ai requisiti dell'ambiente. Gli script forniti di seguito sono esempi e possono essere modificati o estesi per l'ambiente in uso.  
   
  Di seguito sono riportate alcune considerazioni per gli script di esempio:  
   
 1.  **Spostamento all'interno dei percorsi di SQL Server PowerShell:** Windows PowerShell implementa alcuni cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
   
-2.  Cmdlet **Get-ChildItem**: le informazioni restituite da **Get-ChildItem** dipendono dal percorso di PowerShell per SQL Server. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Sempre a titolo di esempio, se il percorso è a livello di oggetto come i database, questo cmdlet restituisce un elenco di oggetti di database.  Per impostazione predefinita il cmdlet **Get-ChildItem** non restituisce oggetti di sistema.  Se si utilizza il parametro –Force è possibile visualizzare gli oggetti di sistema.  
+2.  Cmdlet**Get-ChildItem** : le informazioni restituite da **Get-ChildItem** dipendono dal percorso di PowerShell per SQL Server. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Sempre a titolo di esempio, se il percorso è a livello di oggetto come i database, questo cmdlet restituisce un elenco di oggetti di database.  Per impostazione predefinita il cmdlet **Get-ChildItem** non restituisce oggetti di sistema.  Se si utilizza il parametro –Force è possibile visualizzare gli oggetti di sistema.  
   
      Per altre informazioni, vedere [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
 3.  Ogni esempio di codice può essere utilizzato in modo indipendente modificando i valori di variabili, tuttavia la creazione di un account di archiviazione Windows Azure e delle credenziali SQL è un prerequisito necessario per tutte le operazioni di backup e ripristino nel servizio di archiviazione BLOB di Windows Azure.  
   
-### Creare le credenziali SQL in tutte le istanze di SQL Server  
+### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Creare le credenziali SQL in tutte le istanze di SQL Server  
  Sono disponibili due script di esempio, entrambi per la creazione delle credenziali SQL “mybackupToURL” in tutte le istanze di SQL Server in un computer. Il primo esempio è semplice e consente di creare le credenziali senza intercettare eccezioni.  Se ad esempio sono già presenti credenziali esistenti con lo stesso nome in una delle istanze del computer, lo script avrà esito negativo. Nel secondo esempio vengono intercettati gli errori consentendo allo script di continuare.  
   
 ```  
@@ -112,7 +116,7 @@ Catch [Exception]
   
 ```  
   
-### Rimuovere le credenziali SQL da tutte le istanze di SQL Server  
+### <a name="remove-a-sql-credential-from-all-the-instances-of-sql-server"></a>Rimuovere le credenziali SQL da tutte le istanze di SQL Server  
  Questo script può essere utilizzato per rimuovere credenziali specifiche da tutte le istanze di SQL Server installate nel computer. Se l'oggetto Credential non esiste in un'istanza specifica, viene visualizzato un messaggio di errore e lo script continua finché non vengono controllate tutte le istanze.  
   
 ```  
@@ -140,7 +144,7 @@ foreach ($instance in $instances)
     }  
 ```  
   
-### Backup completo del database per tutti i database (compresi i database di sistema)  
+### <a name="full-database-backup-for-all-databases-including-system-databases"></a>Backup completo del database per tutti i database (compresi i database di sistema)  
  Lo script seguente consente di creare i backup di tutti i database presenti nel computer, sia database utente che database di sistema **msdb** . Nello script vengono esclusi tramite filtro i database di sistema **tempdb** e **model** .  
   
 ```  
@@ -168,7 +172,7 @@ $instances = Get-childitem
   
 ```  
   
-### Backup completo del database per tutti i database utente  
+### <a name="full-database-backup-for-all-user-databases"></a>Backup completo del database per tutti i database utente  
  Lo script seguente può essere utilizzato per eseguire il backup di tutti i database utente in tutte le istanze di SQL Server presenti nel computer.  
   
 ```  
@@ -192,7 +196,7 @@ $instances = Get-childitem
  }  
 ```  
   
-### Backup completo del database per MASTER e MSDB (database di sistema) in tutte le istanze di SQL Server  
+### <a name="full-database-backup-for-master-and-msdb-system-databases-on-all-the-instances-of-sql-server"></a>Backup completo del database per MASTER e MSDB (database di sistema) in tutte le istanze di SQL Server  
  Lo script seguente può essere utilizzato per eseguire il backup dei database **master** e **msdb** in tutte le istanze di SQL Server installate nel computer.  
   
 ```  
@@ -218,7 +222,7 @@ Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -Backup
   
 ```  
   
-### Backup completo del database per tutti i database utente di un'istanza di SQL Server  
+### <a name="full-database-backup-for-all-user-databases-on-an-instance-of-sql-server"></a>Backup completo del database per tutti i database utente di un'istanza di SQL Server  
  Lo script seguente viene utilizzato per eseguire il backup solo dei database utente disponibili in un'istanza denominata di SQL Server. Lo stesso script può essere utilizzato per l'istanza predefinita del computer modificando il valore del parametro $srvPath.  
   
 ```  
@@ -241,8 +245,8 @@ $databases = dir $srvPath\databases
 $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
 ```  
   
-### Backup completo del database solo per i database di sistema (MASTER e MSDB) in un'istanza di SQL Server  
- Lo script seguente può essere utilizzato per eseguire il backup dei database **master** e **msdb** in un'istanza denominata di SQL Server. Lo stesso script può essere utilizzato per l'istanza predefinita del computer modificando il valore del parametro $srvpath.  
+### <a name="full-database-backup-for-only-system-databases-master-and-msdb-on-an-instance-of-sql-server"></a>Backup completo del database solo per i database di sistema (MASTER e MSDB) in un'istanza di SQL Server  
+ Lo script seguente può essere utilizzato per eseguire il backup dei database **master** e **msdb** in un'istanza denominata di SQL Server. Lo stesso script può essere utilizzato per l'istanza predefinita del computer modificando il valore del parametro $srvPath.  
   
 ```  
   
@@ -265,8 +269,9 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+

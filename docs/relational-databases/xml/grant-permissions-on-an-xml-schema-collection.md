@@ -1,28 +1,32 @@
 ---
-title: "Concedere autorizzazioni per una raccolta di XML Schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "concessione di autorizzazioni [SQL Server], raccolte di XML Schema"
-  - "ALTER - autorizzazione"
+title: Concedere le autorizzazioni per una raccolta di XML Schema | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Concedere autorizzazioni per una raccolta di XML Schema
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
   È possibile concedere autorizzazioni per la creazione di una raccolta di XML Schema, nonché per un oggetto di una raccolta di XML Schema.  
   
-## Concessione dell'autorizzazione per la creazione di una raccolta di XML Schema  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Concessione dell'autorizzazione per la creazione di una raccolta di XML Schema  
  Per creare una raccolta di XML Schema, sono necessarie le autorizzazioni seguenti:  
   
 -   Per l'entità è necessaria l'autorizzazione CREATE XML SCHEMA COLLECTION a livello di database.  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  Il proprietario dello schema relazionale diventa il proprietario della raccolta di XML Schema creata in tale schema e dispone quindi del controllo completo sulla raccolta di XML Schema. Pertanto, questo proprietario può modificare la raccolta di XML Schema, tipizzare una colonna XML o eliminare la raccolta di XML Schema.  
   
-## Concessione di autorizzazioni per un oggetto della raccolta di XML Schema  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>Concessione di autorizzazioni per un oggetto della raccolta di XML Schema  
  Per la raccolta di XML Schema sono consentite le autorizzazioni seguenti:  
   
 -   L'autorizzazione ALTER è necessaria per la modifica del contenuto di una raccolta di XML Schema esistente tramite l'istruzione ALTER XML SCHEMA COLLECTION.  
@@ -60,12 +64,12 @@ caps.handback.revision: 32
   
 -   L'autorizzazione VIEW DEFINITION consente all'entità di eseguire query sul contenuto di una raccolta di XML Schema tramite XML_SCHEMA_NAMESPACE o mediante le viste del catalogo, a condizione che l'entità disponga inoltre di una delle autorizzazioni ALTER, REFERENCES o CONTROL per la raccolta.  
   
--   L'autorizzazione EXECUTE è necessaria per convalidare i valori inseriti o aggiornati dall'entità in base alla raccolta di XML Schema utilizzata per tipizzare o vincolare le colonne di tipo **xml**, le variabili e i parametri. Questa autorizzazione è necessaria inoltre quando si eseguono query sui dati XML archiviati in tali colonne e variabili.  
+-   L'autorizzazione EXECUTE è necessaria per convalidare i valori inseriti o aggiornati dall'entità in base alla raccolta di XML Schema utilizzata per tipizzare o vincolare le colonne di tipo **xml** , le variabili e i parametri. Questa autorizzazione è necessaria inoltre quando si eseguono query sui dati XML archiviati in tali colonne e variabili.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di eliminazione necessario.  
   
-### A. Concessione di autorizzazioni per la creazione di una raccolta di XML Schema  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Concessione di autorizzazioni per la creazione di una raccolta di XML Schema  
  Nell'esempio seguente viene illustrato come concedere autorizzazioni per consentire a un'entità di creare una raccolta di XML Schema. Nell'esempio vengono creati un database di esempio e un utente di prova, `TestLogin1`. `TestLogin1` viene fornita quindi l'autorizzazione `ALTER` per lo schema relazionale e l'autorizzazione `CREATE XML SCHEMA COLLECTION` per il database. Con tali autorizzazioni, `TestLogin1` può creare una raccolta di XML Schema di esempio.  
   
 ```  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Concessione dell'autorizzazione per l'utilizzo di una raccolta di XML Schema esistente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Concessione dell'autorizzazione per l'utilizzo di una raccolta di XML Schema esistente  
  Nell'esempio seguente viene illustrato ulteriormente il modello di autorizzazione per la raccolta di XML Schema, con le diverse autorizzazioni necessarie per creare e utilizzare tale raccolta.  
   
  Nell'esempio vengono creati un database di prova e l'account di accesso `TestLogin1`. `TestLogin1` crea una raccolta di XML Schema nel database. L'account di accesso crea quindi una tabella e utilizza la raccolta di XML Schema per creare una colonna XML tipizzata. Successivamente, l'utente inserisce i dati ed esegue le relative query. Tutti questi passaggi richiedono le autorizzazioni necessarie per lo schema, come illustrato nel codice seguente.  
@@ -236,8 +240,8 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. Concessione dell'autorizzazione ALTER per una raccolta di XML Schema  
- Un utente deve disporre dell'autorizzazione ALTER per modificare una raccolta di XML Schema esistente nel database. Nell'esempio seguente viene illustrato come concedere l'autorizzazione `ALTER`.  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. Concessione dell'autorizzazione ALTER per una raccolta di XML Schema  
+ Un utente deve disporre dell'autorizzazione ALTER per modificare una raccolta di XML Schema esistente nel database. Nell'esempio seguente viene illustrato come concedere l'autorizzazione `ALTER` .  
   
 ```  
 SETUSER  
@@ -311,20 +315,20 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. Concessione dell'autorizzazione TAKE OWNERSHIP per una raccolta di XML Schema  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. Concessione dell'autorizzazione TAKE OWNERSHIP per una raccolta di XML Schema  
  Nell'esempio seguente viene illustrato il trasferimento della proprietà di XML Schema da un utente a un altro. Per rendere più interessante l'esempio, si supponga che gli utenti utilizzino schemi relazionali diversi.  
   
  In questo esempio vengono eseguite le operazioni seguenti:  
   
 -   Viene creato un database con due schemi relazionali, `dbo` e `myOtherDBSchema`.  
   
--   Vengono creati due account utente, `TestLogin1` e `TestLogin2`. `TestLogin2` viene definito come proprietario dello schema relazionale `myOtherDBSchema`.  
+-   Vengono creati due account utente, `TestLogin1` e `TestLogin2`. `TestLogin2` viene definito come proprietario dello schema relazionale `myOtherDBSchema` .  
   
--   `TestLogin1` crea una raccolta di XML Schema nello schema relazionale `dbo`.  
+-   `TestLogin1` crea una raccolta di XML Schema nello schema relazionale `dbo` .  
   
 -   `TestLogin1` concede quindi l'autorizzazione `TAKE OWNERSHIP` per la raccolta di XML Schema a `TestLogin2`.  
   
--   `TestLogin2` diventa il proprietario della raccolta di XML Schema in `myOtherDBSchema` senza modificarne lo schema relazionale.  
+-   `TestLogin2` diventa il proprietario della raccolta di XML Schema in `myOtherDBSchema`senza modificarne lo schema relazionale.  
   
 ```  
 CREATE LOGIN TestLogin1 with password='SQLSvrPwd1'  
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. Concessione dell'autorizzazione VIEW DEFINITION per una raccolta di XML Schema  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. Concessione dell'autorizzazione VIEW DEFINITION per una raccolta di XML Schema  
  Nell'esempio seguente viene illustrato come concedere autorizzazioni VIEW DEFINITION per una raccolta di XML Schema.  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

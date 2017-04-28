@@ -1,25 +1,29 @@
 ---
-title: "Rinominare un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database [SQL Server], ridenominazione"
-  - "ridenominazione di database"
+title: Rinominare un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], renaming
+- renaming databases
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edde7181074e6d5145cc957fa3ce10fa9b311887
+ms.lasthandoff: 04/11/2017
+
 ---
-# Rinominare un database
+# <a name="rename-a-database"></a>Rinominare un database
   In questo argomento si illustra come rinominare un database definito dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nel nome del database è possibile utilizzare qualsiasi carattere conforme alle regole per gli identificatori.  
   
  **Contenuto dell'argomento**  
@@ -36,7 +40,7 @@ caps.handback.revision: 19
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo la rinomina di un database](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare un database  
+#### <a name="to-rename-a-database"></a>Per rinominare un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per rinominare un database  
+#### <a name="to-rename-a-database"></a>Per rinominare un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -83,7 +87,7 @@ GO
 ##  <a name="FollowUp"></a> Completamento: Dopo la rinomina di un database  
  Dopo aver rinominato un database, eseguire il backup del database **master** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Identificatori del database](../../relational-databases/databases/database-identifiers.md)  
   

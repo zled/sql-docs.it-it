@@ -1,36 +1,40 @@
 ---
-title: "Configurare le regole del firewall prima di eseguire il debugger TSQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "debugger Transact-SQL, connessioni remote"
-  - "Windows Firewall [Motore di database], debugger Transact-SQL"
-  - "debugger Transact-SQL, Windows Firewall"
-  - "debugger Transact-SQL, configurazione"
-  - "porte [SQL Server], debugger Transact-SQL"
-  - "TCP/IP [SQL Server], numeri di porta"
+title: Configurare le regole del firewall prima di eseguire il debugger TSQL | Microsoft Docs
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurare le regole del firewall prima di eseguire il debugger TSQL
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurare le regole del firewall prima di eseguire il debugger TSQL
   È necessario configurare regole di Windows Firewall per abilitare il debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in un computer diverso da Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## Configurazione del debugger Transact-SQL  
+## <a name="configuring-the-transact-sql-debugger"></a>Configurazione del debugger Transact-SQL  
  Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] include componenti sia sul lato server sia sul lato client. I componenti del debugger lato server vengono installati con ogni istanza del motore di database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o versione successiva. Sono inclusi i componenti del debugger lato client:  
   
 -   In caso di installazione degli strumenti lato client da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  È possibile che l'abilitazione di regole in Windows Firewall esponga il computer a rischi per la sicurezza, per bloccare i quali è progettato il firewall. L'abilitazione di regole per il debug remoto determina lo sblocco delle porte e dei programmi elencati in questo argomento.  
   
-## Regole firewall nel server  
+## <a name="firewall-rules-on-the-server"></a>Regole firewall nel server  
  Nel computer in cui è in esecuzione l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]usare **Windows Firewall con protezione avanzata** per specificare le seguenti informazioni:  
   
 -   Aggiungere una regola di programma in entrata per sqlservr.exe. È necessario disporre di una regola per ogni istanza che richiede il supporto di sessioni di debug remoto.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   Se i criteri di dominio richiedono che le comunicazioni di rete vengano eseguite tramite IPSec, è necessario aggiungere anche regole in entrata per l'apertura delle porte UDP 4500 e UDP 500.  
   
-## Regole firewall nel client  
+## <a name="firewall-rules-on-the-client"></a>Regole firewall nel client  
  Nel computer in cui è in esecuzione l'editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] , con l'installazione di SQL Server o di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] potrebbe essere stato configurato Windows Firewall per consentire il debug remoto.  
   
  Se si verificano errori nel tentativo di aprire una sessione di debug remoto, è possibile configurare manualmente le eccezioni relative a programmi e porte usando **Windows Firewall con protezione avanzata** per configurare regole firewall:  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Porte dinamiche RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica**e **OK**.  
   
-## Requisiti per l'avvio del debugger  
+## <a name="requirements-for-starting-the-debugger"></a>Requisiti per l'avvio del debugger  
  Qualsiasi tentativo di avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] deve soddisfare anche i requisiti seguenti:  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * Il server deve ricomunicare con il client tramite RPC. L'account su cui è in esecuzione il servizio SQL Server deve disporre delle autorizzazioni di autenticazione per il client.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Esecuzione del debugger Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Esecuzione istruzione per istruzione del codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

@@ -1,34 +1,38 @@
 ---
-title: "Piani di manutenzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.AG.MAINTPLAN.LEGACY.F1"
-helpviewer_keywords: 
-  - "piani di manutenzione del database [SQL Server], informazioni"
-  - "piani di manutenzione [SQL Server], livello di compatibilità del database visualizzato nella finestra di progettazione"
-  - "piani di manutenzione [SQL Server]"
+title: Piani di manutenzione | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.AG.MAINTPLAN.LEGACY.F1
+helpviewer_keywords:
+- maintenance plans [SQL Server], about database maintenance plans
+- maintenance plans [SQL Server], database compatibility level displayed in designer
+- maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
+ms.lasthandoff: 04/11/2017
+
 ---
-# Piani di manutenzione
+# <a name="maintenance-plans"></a>Piani di manutenzione
   Con i piani di manutenzione è possibile creare un flusso di lavoro per le attività necessarie per assicurare prestazioni ottimali del database, eseguire regolarmente il backup del database e verificare che nel database non siano presenti incoerenze. Sebbene sia possibile utilizzare anche Creazione guidata piano di manutenzione per creare i piani di manutenzione principali, la creazione manuale dei piani offre una maggiore flessibilità.  
   
-## Vantaggi di piani di manutenzione  
+## <a name="benefits-of-maintenance-plans"></a>Vantaggi di piani di manutenzione  
  In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)], i piani di manutenzione vengono creati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], eseguiti tramite un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. I piani di manutenzione possono essere eseguiti manualmente o automaticamente in base a intervalli pianificati.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] I piani di manutenzione offrono le funzionalità seguenti:  
+ I piani di manutenzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offrono le funzionalità seguenti:  
   
 -   Creazione del flusso di lavoro tramite una vasta gamma di normali attività di manutenzione. È inoltre possibile creare script [!INCLUDE[tsql](../../includes/tsql-md.md)] personalizzati.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
 -   Supporto dell'autenticazione di Windows e dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-## Funzionalità piano di manutenzione  
+## <a name="maintenance-plan-functionality"></a>Funzionalità piano di manutenzione  
  È possibile creare piani di manutenzione per eseguire le attività seguenti:  
   
 -   Riorganizzazione dei dati e delle pagine di indice mediante la ricompilazione degli indici con un nuovo fattore di riempimento. Questa operazione assicura che le pagine di database includano una quantità di dati e di spazio libero equamente distribuita per consentire in futuro un più rapido aumento delle dimensioni. Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -57,15 +61,16 @@ caps.handback.revision: 44
   
  I risultati generati dalle attività di manutenzione possono essere scritti come report in un file di testo oppure nelle tabelle dei piani di manutenzione (**sysmaintplan_log** e **sysmaintplan_logdetail**) in **msdb**. Per visualizzare i risultati nel visualizzatore file di log, fare clic con il pulsante destro del mouse su **Piani di manutenzione** e quindi scegliere **Visualizza cronologia**.  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Utilizzare i seguenti argomenti per avere un'introduzione ai piani di manutenzione.  
   
 |||  
 |-|-|  
-|**Descrizione**|**Argomento**|  
+|**Description**|**Argomento**|  
 |Configurare l'opzione di configurazione server **Agent XPs** per abilitare le stored procedure estese di SQL Server Agent.|[Opzione di configurazione del server Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Viene illustrata la creazione di un piano di manutenzione tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Creare un piano di manutenzione](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
-|Viene illustrata la creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione.|[Creare un piano di manutenzione &#40;Area di progettazione del piano di manutenzione&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
+|Viene illustrata la creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione.|[Creare un piano di manutenzione &#40;area di progettazione del piano di manutenzione&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |Documenta la funzionalità del piano di manutenzione disponibile in Esplora oggetti.|[Nodo Piani di manutenzione &#40;Esplora oggetti&#41;](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
+

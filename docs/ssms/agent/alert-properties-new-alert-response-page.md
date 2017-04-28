@@ -1,0 +1,66 @@
+---
+title: "Proprietà avviso - Nuovo avviso (pagina Risposta) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ag.alert.response.f1
+ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
+caps.latest.revision: 4
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8714981cdc2c8135597a253a15753730c0e523c0
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="alert-properties---new-alert-response-page"></a>Proprietà avviso - Nuovo avviso (pagina Risposta)
+Usare questa pagina per specificare un processo che si vuole eseguire e per ottenere un elenco di operatori da notificare in risposta a un avviso di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+  
+## <a name="options"></a>Opzioni  
+**Esegui processo**  
+Abilita le opzioni **Elenco processi**, **Nuovo processo** e **Visualizza processo** .  
+  
+**Nuovo processo**  
+Apre la finestra di dialogo **Nuovo processo** . Questo pulsante non è disponibile se l'opzione **Esegui processo** non è selezionata.  
+  
+**Visualizza processo**  
+Consente di visualizzare o modificare il processo selezionato. Questa opzione non è disponibile se l'opzione **Esegui processo** non è selezionata.  
+  
+**Invia notifica a operatori**  
+Consente di abilitare i controlli che consentono di aggiungere, rimuovere o modificare operatori.  
+  
+**Elenco operatori**  
+In questo elenco sono presenti gli operatori da utilizzare per notificare che si è verificato un avviso. Per specificare un metodo di notifica, selezionare la casella di controllo **Posta elettronica**, **Cercapersone**o **Net send** visualizzate dopo il nome dell'operatore. Questa opzione non disponibile se l'opzione **Invia notifica a operatori** non è selezionata.  
+  
+**Posta elettronica**  
+Consente di utilizzare la posta elettronica per l'invio della notifica all'operatore.  
+  
+**Cercapersone**  
+Utilizzare l'indirizzo di posta elettronica del cercapersone per l'invio della notifica all'operatore.  
+  
+**Net send**  
+Usare **Net Send** per l'invio della notifica all'operatore.  
+  
+**Nuovo operatore**  
+Visualizza la finestra di dialogo **Nuovo operatore** in cui è possibile creare un nuovo operatore.  
+  
+**Visualizza operatore**  
+Visualizza la finestra di dialogo **Proprietà** per l'operatore attualmente selezionato. È possibile visualizzare e modificare le proprietà dell'operatore nella finestra di dialogo **Proprietà operatore** .  
+  
+## <a name="see-also"></a>Vedere anche  
+[Avvisi](../../ssms/agent/alerts.md)  
+[Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
+[Avvisi](../../ssms/agent/alerts.md)  
+[Edit an Alert](../../ssms/agent/edit-an-alert.md)  
+[Delete an Alert](../../ssms/agent/delete-an-alert.md)  
+  
+

@@ -1,30 +1,34 @@
 ---
-title: "Visualizzare le funzioni definite dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.udfproperties.general.f1"
-  - "sql13.swb.functionproperties.general.f1"
-helpviewer_keywords: 
-  - "visualizzazione delle funzioni definite dall'utente"
-  - "visualizzazione di funzioni definite dall'utente"
-  - "funzioni definite dall'utente [SQL Server], visualizzazione"
-  - "informazioni sullo stato [SQL Server], funzioni definite dall'utente"
+title: Visualizzare funzioni definite dall&quot;utente | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.udfproperties.general.f1
+- sql13.swb.functionproperties.general.f1
+helpviewer_keywords:
+- displaying user-defined functions
+- viewing user-defined functions
+- user-defined functions [SQL Server], viewing
+- status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare le funzioni definite dall&#39;utente
+# <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
   È possibile acquisire informazioni sulla definizione o le proprietà di una funzione definita dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della funzione per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla funzione.  
   
 > [!IMPORTANT]  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per mostrare le proprietà di una funzione definita dall'utente  
+#### <a name="to-show-a-user-defined-functions-properties"></a>Per mostrare le proprietà di una funzione definita dall'utente  
   
 1.  In **Esplora oggetti**fare clic sul segno più accanto al database contenente la funzione in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Programmabilità** .  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 30
   
 4.  Fare clic con il pulsante destro del mouse sulla funzione di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
   
-     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** *nome_funzione*.  
+     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** *nome_funzione* .  
   
      **Database**  
      Nome del database che contiene la funzione.  
@@ -110,7 +114,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per acquisire la definizione e le proprietà di una funzione  
+#### <a name="to-get-the-definition-and-properties-of-a-function"></a>Per acquisire la definizione e le proprietà di una funzione  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 30
   
  Per altre informazioni, vedere [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) e [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md).  
   
-#### Per acquisire le dipendenze di una funzione  
+#### <a name="to-get-the-dependencies-of-a-function"></a>Per acquisire le dipendenze di una funzione  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

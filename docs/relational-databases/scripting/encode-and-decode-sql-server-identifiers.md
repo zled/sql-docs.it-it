@@ -1,32 +1,36 @@
 ---
-title: "Codificare e decodificare identificatori di SLQ Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Codificare e decodificare identificatori di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e5499ddf0c36d277068cb222a5c438c720a4c3a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Codificare e decodificare identificatori di SLQ Server
+# <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SQL Server
   Gli identificatori delimitati di SQL Server possono contenere caratteri non supportati nei percorsi di Windows PowerShell. È possibile specificare questi caratteri codificando i valori esadecimali.  
   
-1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **Per elaborare caratteri speciali:**  [Codifica di un identificatore](#EncodeIdent), [Decodifica di un identificatore](#DecodeIdent)  
+2.  **To process special characters:**  [Encoding an Identifier](#EncodeIdent), [Decoding an Identifier](#DecodeIdent)  
   
-## Prima di iniziare  
+## <a name="before-you-begin"></a>Prima di iniziare  
  I caratteri non supportati nei nomi dei percorsi di Windows PowerShell possono essere rappresentati o codificati come il carattere "%" seguito dal valore esadecimale del modello di bit che rappresenta il carattere, come in "**%**xx". La codifica può sempre essere utilizzata per gestire i caratteri non supportati nei percorsi di Windows PowerShell.  
   
- Il cmdlet** Encode-SqlName** accetta come input un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene restituita una stringa con tutti i caratteri non supportati dal linguaggio di Windows PowerShell codificati con "% xx". Il cmdlet **Decode-SqlName** accetta come input un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] codificato e restituisce l'identificatore originale.  
+ Il cmdlet **Encode-SqlName** accetta come input un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Viene restituita una stringa con tutti i caratteri non supportati dal linguaggio di Windows PowerShell codificati con "% xx". Il cmdlet **Decode-SqlName** accetta come input un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] codificato e restituisce l'identificatore originale.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  I cmdlet **Encode-Sqlname** e **Decode-Sqlname** codificano o decodificano solo i caratteri consentiti negli identificatori delimitati di SQL Server, ma non sono supportati nei percorsi di PowerShell. Caratteri codificati da **Encode-SqlName** e decodificati da **Decode-SqlName**:  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
     -   Passare l'identificatore come stringa tra virgolette al cmdlet **Encode-Sqlname**  
   
-### Esempi (codifica)  
+### <a name="examples-encoding"></a>Esempi (codifica)  
  In questo esempio viene specificata la versione codificata del carattere ":" (% 3A):  
   
 ```  
@@ -63,14 +67,14 @@ Set-Location (Encode-SqlName "Table:Test")
   
  Usare il cmdlet **Decode-Sqlname** per sostituire le codifiche esadecimali con i caratteri rappresentati dalla codifica.  
   
-### Esempi (decodifica)  
+### <a name="examples-decoding"></a>Esempi (decodifica)  
  In questo esempio viene restituito "Table:Test":  
   
 ```  
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Identificatori di SQL Server in PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
  [Provider PowerShell per SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

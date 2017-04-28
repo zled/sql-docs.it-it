@@ -1,40 +1,44 @@
 ---
-title: "Creazione di trigger annidati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trigger DML ricorsivi [SQL Server]"
-  - "trigger DML, nidificati"
-  - "trigger [SQL Server], nidificati"
-  - "ricorsione diretta [SQL Server]"
-  - "trigger [SQL Server], ricorsivi"
-  - "trigger DML, ricorsivi"
-  - "RECURSIVE_TRIGGERS - opzione"
-  - "ricorsione indiretta [SQL Server]"
-  - "trigger DML nidificati"
+title: Creare trigger annidati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di trigger annidati
-  Entrambi i trigger DML e DDL vengono nidificati quando un trigger esegue un'operazione che ne avvia un altro. Tali operazioni possono quindi avviare altri trigger e così via. I trigger DML e DDL possono essere nidificati fino a un massimo di 32 livelli. Per gestire la nidificazione dei trigger AFTER, utilizzare l'opzione di configurazione del server **nested triggers**. I trigger INSTEAD OF (solo DML) possono essere nidificati indipendentemente da questa impostazione.  
+# <a name="create-nested-triggers"></a>Creazione di trigger annidati
+  Entrambi i trigger DML e DDL vengono nidificati quando un trigger esegue un'operazione che ne avvia un altro. Tali operazioni possono quindi avviare altri trigger e così via. I trigger DML e DDL possono essere nidificati fino a un massimo di 32 livelli. Per gestire la nidificazione dei trigger AFTER, utilizzare l'opzione di configurazione del server **nested triggers** . I trigger INSTEAD OF (solo DML) possono essere nidificati indipendentemente da questa impostazione.  
   
 > [!NOTE]  
 >  Qualsiasi riferimento a codice gestito da un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] viene conteggiato come un unico livello rispetto al limite dei 32 livelli di nidificazione. I metodi richiamati da codice gestito non vengono inclusi nel conteggio per questo limite.  
   
  Se è consentito l'utilizzo di trigger nidificati e un trigger della catena avvia un ciclo infinito, il livello di nidificazione viene superato e il trigger viene interrotto.  
   
- È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig`. Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail`, creare un trigger DELETE su `del_save`. Esempio:  
+ È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Esempio:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -50,24 +54,24 @@ AS
 > [!NOTE]  
 >  Poiché i trigger vengono eseguiti all'interno di una transazione, un errore a qualsiasi livello di un set di trigger nidificati annulla l'intera transazione con conseguente rollback di tutte le modifiche apportate ai dati. Per determinare la posizione in cui si è verificato l'errore, includere nei trigger le istruzioni PRINT.  
   
-## Trigger ricorsivi  
+## <a name="recursive-triggers"></a>Trigger ricorsivi  
  Un trigger AFTER non chiama se stesso in modo ricorsivo a meno che non sia stata impostata l'opzione di database RECURSIVE_TRIGGERS.  
   
  Esistono due tipi di ricorsione:  
   
 -   Ricorsione diretta  
   
-     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva nuovamente lo stesso trigger. Ad esempio, un'applicazione aggiorna la tabella **T3** che attiva il trigger **Trig3**. **Trig3** aggiorna nuovamente la tabella **T3**, che attiva nuovamente il trigger **Trig3**.  
+     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva nuovamente lo stesso trigger. Ad esempio, un'applicazione aggiorna la tabella **T3**che attiva il trigger **Trig3** . **Trig3** aggiorna nuovamente la tabella **T3** , che attiva nuovamente il trigger **Trig3** .  
   
-     La ricorsione diretta può inoltre verificarsi quando lo stesso trigger viene richiamato, ma solo dopo la chiamata di un trigger di tipo diverso (AFTER o INSTEAD OF). In altri termini, la ricorsione diretta di un trigger INSTEAD OF può verificarsi quando lo stesso trigger INSTEAD OF viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger AFTER. Analogamente, la ricorsione diretta di un trigger AFTER può verificarsi quando lo stesso trigger AFTER viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger INSTEAD OF. Ad esempio, un'applicazione aggiorna la tabella **T4**. L'aggiornamento attiva il trigger INSTEAD OF **Trig4**. **Trig4** aggiorna la tabella **T5**. L'aggiornamento attiva il trigger AFTER **Trig5**. **Trig5** aggiorna la tabella **T4** e questa operazione attiva nuovamente il trigger INSTEAD OF **Trig4**. Questa catena di eventi costituisce una ricorsione diretta per il trigger **Trig4**.  
+     La ricorsione diretta può inoltre verificarsi quando lo stesso trigger viene richiamato, ma solo dopo la chiamata di un trigger di tipo diverso (AFTER o INSTEAD OF). In altri termini, la ricorsione diretta di un trigger INSTEAD OF può verificarsi quando lo stesso trigger INSTEAD OF viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger AFTER. Analogamente, la ricorsione diretta di un trigger AFTER può verificarsi quando lo stesso trigger AFTER viene chiamato per la seconda volta, anche se nel frattempo sono stati chiamati uno o più trigger INSTEAD OF. Ad esempio, un'applicazione aggiorna la tabella **T4**. L'aggiornamento attiva il trigger INSTEAD OF **Trig4** . **Trig4** aggiorna la tabella **T5**. L'aggiornamento attiva il trigger AFTER **Trig5** . **Trig5** aggiorna la tabella **T4**e questa operazione attiva nuovamente il trigger INSTEAD OF **Trig4** . Questa catena di eventi costituisce una ricorsione diretta per il trigger **Trig4**.  
   
 -   Ricorsione indiretta  
   
-     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva un altro trigger dello stesso tipo (AFTER o INSTEAD OF). Il secondo esegue un'operazione che implica nuovamente l'attivazione del trigger originale. In altri termini, la ricorsione indiretta può verificarsi quando un trigger INSTEAD OF viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger INSTEAD OF. Analogamente, la ricorsione indiretta può verificarsi quando un trigger AFTER viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger AFTER. Ad esempio, un'applicazione aggiorna la tabella **T1**. L'aggiornamento attiva il trigger AFTER **Trig1**. **Trig1** aggiorna la tabella **T2** e questa operazione attiva il trigger AFTER **Trig2**. **Trig2** aggiorna, a sua volta, la tabella **T1** che attiva nuovamente il trigger AFTER **Trig1**.  
+     Questo tipo di ricorsione si verifica quando un trigger viene attivato ed esegue un'azione che attiva un altro trigger dello stesso tipo (AFTER o INSTEAD OF). Il secondo esegue un'operazione che implica nuovamente l'attivazione del trigger originale. In altri termini, la ricorsione indiretta può verificarsi quando un trigger INSTEAD OF viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger INSTEAD OF. Analogamente, la ricorsione indiretta può verificarsi quando un trigger AFTER viene chiamato per la seconda volta, ma non prima della chiamata di un altro trigger AFTER. Ad esempio, un'applicazione aggiorna la tabella **T1**. L'aggiornamento attiva il trigger AFTER **Trig1** . **Trig1** aggiorna la tabella **T2**e questa operazione attiva il trigger AFTER **Trig2** . **Trig2** aggiorna, a sua volta, la tabella **T1** che attiva nuovamente il trigger AFTER **Trig1** .  
   
  Se l'opzione di database RECURSIVE_TRIGGERS è impostata su OFF, viene evitata solo la ricorsione diretta dei trigger AFTER. Per disabilitare la ricorsione indiretta dei trigger AFTER, impostare su **0** anche l'opzione del server **nested triggers**.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo dei trigger ricorsivi per risolvere una relazione autoreferenziale, nota anche come chiusura transitiva. Ad esempio, nella tabella `emp_mgr` vengono definiti gli elementi seguenti:  
   
 -   Il dipendente (`emp`) di una società.  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **Per impostare l'opzione di database RECURSIVE_TRIGGERS**  
   
--   [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Configurare l'opzione di configurazione del server nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

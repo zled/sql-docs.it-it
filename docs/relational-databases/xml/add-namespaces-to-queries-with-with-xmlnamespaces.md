@@ -1,40 +1,44 @@
 ---
-title: "Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL - direttiva"
-  - "aggiunta di spazi dei nomi"
-  - "XSINIL - direttiva"
-  - "spazi dei nomi predefiniti"
-  - "query [XML in SQL Server], clausola WITH XMLNAMESPACES"
-  - "spazi dei nomi predefiniti [XML in SQL Server]"
-  - "clausola FOR XML, clausola WITH XMLNAMESPACES"
-  - "spazi dei nomi [XML in SQL Server]"
-  - "tipo di dati xml [SQL Server], clausola WITH XMLNAMESPACES"
-  - "Clausola WITH XMLNAMESPACES"
+title: Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES
-  La clausola [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) offre il supporto dell'URI dello spazio dei nomi nel modo seguente:  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES
+  La clausola[WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) offre il supporto dell'URI dello spazio dei nomi nel modo seguente:  
   
--   Rende disponibile il mapping tra il prefisso dello spazio dei nomi e l'URI durante le query di [costruzione di codice XML tramite la clausola FOR XML](../../relational-databases/xml/for-xml-sql-server.md).  
+-   Rende disponibile il mapping tra il prefisso dello spazio dei nomi e l'URI durante le query di [costruzione di codice XML tramite la clausola FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   
 -   Rende disponibile il mapping tra lo spazio dei nomi e l'URI nel contesto dello spazio dei nomi statico dei [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md).  
   
-## Utilizzo di WITH XMLNAMESPACES nelle query FOR XML  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>Utilizzo di WITH XMLNAMESPACES nelle query FOR XML  
  WITH XMLNAMESPACES consente di includere gli spazi dei nomi XML nelle query FOR XML. Si consideri, ad esempio, la query FOR XML seguente:  
   
 ```  
@@ -84,7 +88,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
   
 -   La clausola è supportata solo nelle modalità RAW, AUTO e PATH delle query FOR XML. La modalità EXPLICIT non è supportata.  
   
--   La clausola influisce solo sui prefissi dello spazio dei nomi delle query FOR XML e sui metodi con tipo di dati **xml**, ma non sul parser XML. Ad esempio, la query seguente restituisce un errore perché nel documento XML non è disponibile una dichiarazione dello spazio dei nomi per il prefisso myNS.  
+-   La clausola influisce solo sui prefissi dello spazio dei nomi delle query FOR XML e sui metodi con tipo di dati **xml** , ma non sul parser XML. Ad esempio, la query seguente restituisce un errore perché nel documento XML non è disponibile una dichiarazione dello spazio dei nomi per il prefisso myNS.  
   
 -   Se si utilizza una clausola WITH XMLNAMESPACES, non è possibile utilizzare le direttive FOR XML, ovvero XMLSCHEMA e XMLDATA.  
   
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## Utilizzo della direttiva XSINIL  
+## <a name="using-the-xsinil-directive"></a>Utilizzo della direttiva XSINIL  
  Se si utilizza la direttiva ELEMENTS XSINIL, non è possibile definire il prefisso xsi nella clausola WITH XMLNAMESPACES. Questo prefisso viene infatti aggiunto automaticamente quando si utilizza ELEMENTS XSINIL. La query seguente usa ELEMENTS XSINIL che genera codice XML incentrato sugli elementi nel quale viene eseguito il mapping dei valori Null a elementi con l'attributo **xsi:nil** impostato su True.  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Impostazione degli spazi dei nomi predefiniti  
+## <a name="specifying-default-namespaces"></a>Impostazione degli spazi dei nomi predefiniti  
  Anziché dichiarare un prefisso dello spazio dei nomi, è possibile dichiarare uno spazio dei nomi predefinito utilizzando la parola chiave DEFAULT. Nella query FOR XML, questa parola chiave associa lo spazio dei nomi predefinito ai nodi XML nel codice XML risultante. Nell'esempio seguente, la clausola WITH XMLNAMESPACES definisce due prefissi di spazio dei nomi che vengono definiti insieme a uno spazio dei nomi predefinito.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## Utilizzo degli spazi dei nomi predefiniti  
+## <a name="using-predefined-namespaces"></a>Utilizzo degli spazi dei nomi predefiniti  
  Quando si utilizzano gli spazi dei nomi predefiniti, è necessario specificare in modo esplicito l'associazione degli spazi dei nomi utilizzando WITH XMLNAMESPACES. Questa osservazione non è valida per lo spazio dei nomi xml e per lo spazio dei nomi xsi se si utilizza ELEMENTS XSINIL La query seguente definisce in modo esplicito l'associazione tra il prefisso dello spazio dei nomi e l'URI per lo spazio dei nomi predefinito (`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -189,7 +193,7 @@ FOR XML PATH ('Translation')
 go  
 ```  
   
- Gli attributi @xml:lang utilizzano lo spazio dei nomi xml predefinito. Poiché nella versione XML 1.0 non è necessario dichiarare in modo esplicito l'associazione dello spazio dei nomi xml, il risultato non includerà una dichiarazione esplicita di tale associazione.  
+ Gli attributi @xml:lang usano lo spazio dei nomi xml predefinito. Poiché nella versione XML 1.0 non è necessario dichiarare in modo esplicito l'associazione dello spazio dei nomi xml, il risultato non includerà una dichiarazione esplicita di tale associazione.  
   
  Risultato:  
   
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## Utilizzo di WITH XMLNAMESPACES con i metodi con tipo di dati xml  
- Tutti i [metodi con tipo di dati xml](../../t-sql/xml/xml-data-type-methods.md) specificati in una query SELECT o in UPDATE quando si tratta del metodo **modify()**, devono ripetere la dichiarazione dello spazio dei nomi nel prologo. e possono richiedere pertanto molto tempo. Ad esempio, la query seguente recupera gli ID dei modelli di prodotto per i quali esistono specifiche nelle descrizioni del catalogo, ovvero per i quali esiste l'elemento <`Specifications`>.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>Utilizzo di WITH XMLNAMESPACES con i metodi con tipo di dati xml  
+ Tutti i [metodi con tipo di dati xml](../../t-sql/xml/xml-data-type-methods.md) specificati in una query SELECT o in UPDATE quando si tratta del metodo **modify()** , devono ripetere la dichiarazione dello spazio dei nomi nel prologo. e possono richiedere pertanto molto tempo. Ad esempio, la query seguente recupera gli ID dei modelli di prodotto per i quali esistono specifiche nelle descrizioni del catalogo, ovvero per i quali esiste l'elemento <`Specifications`>.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -241,10 +245,10 @@ Go
   
  Si noti che una dichiarazione esplicita nel prologo della query XQuery ignora il prefisso e lo spazio dei nomi predefinito definiti nella clausola WITH.  
   
-## Vedere anche  
- [Metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>Vedere anche  
+ [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

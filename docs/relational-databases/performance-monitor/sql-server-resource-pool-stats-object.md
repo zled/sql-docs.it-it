@@ -1,25 +1,29 @@
 ---
-title: "SQL Server - Oggetto Statistiche del pool di risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "oggetto Statistiche del pool di risorse"
-  - "SQLServer: oggetto Statistiche del pool di risorse"
+title: Oggetto Resource Pool Stats di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server - Oggetto Statistiche del pool di risorse
+# <a name="sql-server-resource-pool-stats-object"></a>SQL Server - Oggetto Statistiche del pool di risorse
   L'oggetto SQLServer: Statistiche del pool di risorse contiene contatori delle prestazioni che forniscono informazioni sulle statistiche del pool di risorse di Resource Governor.  
   
  Ciascun pool di risorse attivo crea un'istanza dell'oggetto prestazioni SQLServer: Statistiche del pool di risorse con lo stesso nome dell'istanza del pool di risorse di Resource Governor. Nella seguente tabella vengono descritti i contatori supportati in questa istanza.  
@@ -58,7 +62,7 @@ caps.handback.revision: 14
 |**Memoria utilizzata (KB)**|Quantità di memoria utilizzata, in kilobyte (KB), per il pool di risorse.|  
 
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server - Oggetto Statistiche gruppi del carico di lavoro](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  

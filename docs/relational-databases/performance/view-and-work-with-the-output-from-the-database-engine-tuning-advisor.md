@@ -1,38 +1,42 @@
 ---
-title: "Visualizzare e utilizzare l&#39;output di Ottimizzazione guidata motore di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.sessionmonitor.f1"
-  - "sql13.dta.reports.f1"
-  - "sql13.dta.recommendations.f1"
-  - "sql13.dta.applyrecommendations.f1"
-helpviewer_keywords: 
-  - "visualizzazione di log"
-  - "indicazioni [Ottimizzazione guidata motore di database]"
-  - "informazioni di riepilogo di ottimizzazione [SQL Server]"
-  - "Ottimizzazione guidata motore di database [SQL Server], indicazioni"
-  - "Ottimizzazione guidata motore di database [SQL Server], log"
-  - "Ottimizzazione guidata motore di database [SQL Server], visualizzazione dell'output"
-  - "Ottimizzazione guidata motore di database [SQL Server], report"
-  - "log [SQL Server], ottimizzazione"
-  - "report [SQL Server], ottimizzazione"
-  - "visualizzazione di output di ottimizzazione"
+title: Visualizzare e usare l&quot;output di Ottimizzazione guidata motore di database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.sessionmonitor.f1
+- sql13.dta.reports.f1
+- sql13.dta.recommendations.f1
+- sql13.dta.applyrecommendations.f1
+helpviewer_keywords:
+- viewing logs
+- recommendations [Database Engine Tuning Advisor]
+- summary tuning information [SQL Server]
+- Database Engine Tuning Advisor [SQL Server], recommendations
+- Database Engine Tuning Advisor [SQL Server], logs
+- Database Engine Tuning Advisor [SQL Server], viewing output
+- Database Engine Tuning Advisor [SQL Server], reports
+- logs [SQL Server], tuning
+- reports [SQL Server], tuning
+- viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare e utilizzare l&#39;output di Ottimizzazione guidata motore di database
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se implementare le indicazioni o continuare l'ottimizzazione fino a migliorare le prestazioni di esecuzione delle query come necessario per l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -40,14 +44,14 @@ caps.handback.revision: 34
 ##  <a name="View"></a> Visualizzazione output di ottimizzazione  
  Nelle procedure indicate di seguito viene illustrata la visualizzazione di indicazioni, riepiloghi, report e log di ottimizzazione tramite l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database. Per ulteriori informazioni sulle opzioni dell'interfaccia utente, vedere [Descrizioni dell'interfaccia utente](#UI) più avanti in questo argomento.  
   
- È possibile usare la GUI anche per visualizzare l'output dell'ottimizzazione generato dall'utilità della riga di comando **dta**.  
+ È possibile usare la GUI anche per visualizzare l'output dell'ottimizzazione generato dall'utilità della riga di comando **dta** .  
   
 > [!NOTE]  
->  Se si usa l'utilità della riga di comando **dta** e si specifica che l'output venga scritto in un file XML con l'argomento **-ox**, sarà possibile aprire e visualizzare il file di output XML scegliendo **Apri file** dal menu **File** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md). Per informazioni sull'utilità della riga di comando **dta**, vedere [Utilità dta](../../tools/dta/dta-utility.md).  
+>  Se si usa l'utilità della riga di comando **dta** e si specifica che l'output venga scritto in un file XML con l'argomento **-ox** , sarà possibile aprire e visualizzare il file di output XML scegliendo **Apri file** dal menu **File** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Per informazioni sull'utilità della riga di comando **dta** , vedere [Utilità dta](../../tools/dta/dta-utility.md).  
   
-#### Per visualizzare le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
+#### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
-1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta**. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
+1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta** . Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
   
 2.  Avviare la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si vuole visualizzare le indicazioni relative a una sessione di ottimizzazione esistente, aprire la sessione facendo doppio clic sul nome nella finestra **Monitoraggio sessione**.  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 34
   
 6.  Se si desidera salvare tutti gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite cui vengono creati o eliminati tutti gli oggetti di database nell'indicazione in un file script, scegliere **Salva indicazioni** dal menu **Azioni** .  
   
-#### Per visualizzare il riepilogo e i report relativi all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
+#### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare il riepilogo e i report relativi all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
-1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta**. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
+1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta** . Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
   
 2.  Avviare la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Per visualizzare i riepiloghi e i report relativi a una sessione di ottimizzazione esistente, aprire la sessione facendo doppio clic sul nome nella finestra **Monitoraggio sessione**.  
   
@@ -73,20 +77,20 @@ caps.handback.revision: 34
   
 5.  Nel riquadro **Report ottimizzazione** fare clic su **Selezionare il report** per specificare un report di ottimizzazione da visualizzare.  
   
-#### Per visualizzare i log di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
+#### <a name="to-view-tuning-logs-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare i log di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
-1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta**. Verificare di avere selezionato l'opzione **Salva log di ottimizzazione** nella scheda **Generale** quando si ottimizza il carico di lavoro. Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
+1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta** . Verificare di avere selezionato l'opzione **Salva log di ottimizzazione** nella scheda **Generale** quando si ottimizza il carico di lavoro. Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
   
-2.  Avviare la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Per visualizzare i riepiloghi e i report relativi a una sessione di ottimizzazione esistente, aprirla facendo doppio clic sul nome della sessione nella finestra **Monitoraggio sessione**.  
+2.  Avviare la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Per visualizzare i riepiloghi e i report relativi a una sessione di ottimizzazione esistente, aprirla facendo doppio clic sul nome della sessione nella finestra **Monitoraggio sessione** .  
   
 3.  Al termine della nuova sessione di ottimizzazione oppure dopo che tramite lo strumento è stata caricata la sessione esistente, selezionare la scheda **Stato** . Nel riquadro **Log di ottimizzazione** verrà visualizzato il contenuto del log. Nel log sono incluse le informazioni relative agli eventi del carico di lavoro che non è stato possibile analizzare tramite Ottimizzazione guidata motore di database.  
   
      Se tutti gli eventi nella sessione di ottimizzazione sono stati analizzati tramite Ottimizzazione guidata motore di database, viene visualizzato un messaggio indicante che il log di ottimizzazione è vuoto per la sessione. Se l'opzione **Salva log di ottimizzazione** non è stata selezionata nella scheda **Generale** quando la sessione di ottimizzazione originale è stata eseguita, viene visualizzato un messaggio indicante questo aspetto.  
   
 ##  <a name="Implement"></a> implementazione delle indicazioni di ottimizzazione  
- È possibile implementare le indicazioni di Ottimizzazione guidata motore di database manualmente oppure automaticamente come parte della sessione di ottimizzazione. Per esaminare i risultati dell'ottimizzazione prima di implementarli, utilizzare la GUI di Ottimizzazione guidata motore di database. È quindi possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire manualmente gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] generati da Ottimizzazione guidata motore di database come risultato dell'analisi di un carico di lavoro per implementare le raccomandazioni. Se non è necessario esaminare i risultati prima di implementarli, è possibile usare l'opzione **-a** con l'utilità del prompt dei comandi **dta**. In tal modo l'utilità implementa automaticamente le indicazioni di ottimizzazione dopo che analizza il carico di lavoro. Nelle procedure seguenti viene illustrato come utilizzare entrambe le interfacce di Ottimizzazione guidata motore di database per implementare le indicazioni relative all'ottimizzazione.  
+ È possibile implementare le indicazioni di Ottimizzazione guidata motore di database manualmente oppure automaticamente come parte della sessione di ottimizzazione. Per esaminare i risultati dell'ottimizzazione prima di implementarli, utilizzare la GUI di Ottimizzazione guidata motore di database. È quindi possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguire manualmente gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] generati da Ottimizzazione guidata motore di database come risultato dell'analisi di un carico di lavoro per implementare le raccomandazioni. Se non è necessario esaminare i risultati prima di implementarli, è possibile usare l'opzione **-a** con l'utilità del prompt dei comandi **dta** . In tal modo l'utilità implementa automaticamente le indicazioni di ottimizzazione dopo che analizza il carico di lavoro. Nelle procedure seguenti viene illustrato come utilizzare entrambe le interfacce di Ottimizzazione guidata motore di database per implementare le indicazioni relative all'ottimizzazione.  
   
-#### Per implementare manualmente le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
+#### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Per implementare manualmente le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
 1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità del prompt dei comandi **dta** . Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 34
   
 5.  Fare clic su **OK** per applicare le indicazioni.  
   
-#### Per implementare automaticamente le indicazioni relative all'ottimizzazione tramite l'utilità della riga di comando dta  
+#### <a name="to-automatically-implement-tuning-recommendations-using-the-dta-command-prompt-utility"></a>Per implementare automaticamente le indicazioni relative all'ottimizzazione tramite l'utilità della riga di comando dta  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -125,10 +129,10 @@ caps.handback.revision: 34
   
  Le procedure seguenti illustrano l'utilizzo della funzionalità in entrambe le interfacce dello strumento di ottimizzazione.  
   
-### Valutazione delle indicazioni di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
+### <a name="using-database-engine-tuning-advisor-gui-to-evaluate-tuning-recommendations"></a>Valutazione delle indicazioni di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
  Questa procedura illustra come valutare un'indicazione generata da Ottimizzazione guidata motore di database tramite la GUI dello strumento, in cui tuttavia non è possibile specificare nuove strutture di progettazione fisica per la valutazione.  
   
-##### Per valutare indicazioni di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
+##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Per valutare indicazioni di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
 1.  Ottimizzare un database tramite la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Per valutare una sessione di ottimizzazione esistente, fare doppio clic sulla sessione in **Monitoraggio sessione**.  
   
@@ -140,10 +144,10 @@ caps.handback.revision: 34
   
 5.  Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. I risultati dell'ottimizzazione possono essere esaminati nella scheda **Indicazioni** .  
   
-### Esportazione dei risultati di una sessione di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database per analisi di simulazione  
- La procedura seguente descrive come esportare i risultati di una sessione di Ottimizzazione guidata motore di database in un file XML, che è quindi possibile modificare e ottimizzare con l'utilità della riga di comando **dta**. Ciò consente di eseguire l'analisi per l'ottimizzazione su nuove strutture di progettazione fisica ipotetiche evitando l'overhead associato all'implementazione delle strutture stesse nel database, in modo da determinare a priori se si ottengono i miglioramenti delle prestazioni necessari. L'uso della GUI di Ottimizzazione guidata motore di database per ottimizzare il database e la successiva esportazione dei risultati in un file con estensione **.xml** rappresenta un ottimo modo per gli utenti non esperti del linguaggio XML di sfruttare la flessibilità offerta dall'XML Schema di Ottimizzazione guidata motore di database per l'esecuzione dell'analisi di simulazione.  
+### <a name="using-database-engine-tuning-advisor-gui-to-export-tuning-session-results-for-what-if-tuning-analysis"></a>Esportazione dei risultati di una sessione di ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database per analisi di simulazione  
+ La procedura seguente descrive come esportare i risultati di una sessione di Ottimizzazione guidata motore di database in un file XML, che è quindi possibile modificare e ottimizzare con l'utilità della riga di comando **dta** . Ciò consente di eseguire l'analisi per l'ottimizzazione su nuove strutture di progettazione fisica ipotetiche evitando l'overhead associato all'implementazione delle strutture stesse nel database, in modo da determinare a priori se si ottengono i miglioramenti delle prestazioni necessari. L'uso della GUI di Ottimizzazione guidata motore di database per ottimizzare il database e la successiva esportazione dei risultati in un file con estensione **.xml** rappresenta un ottimo modo per gli utenti non esperti del linguaggio XML di sfruttare la flessibilità offerta dall'XML Schema di Ottimizzazione guidata motore di database per l'esecuzione dell'analisi di simulazione.  
   
-##### Per esportare i risultati della sessione di ottimizzazione dalla GUI di Ottimizzazione guidata motore di database per analisi di simulazione tramite l'utilità della riga di comando dta  
+##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>Per esportare i risultati della sessione di ottimizzazione dalla GUI di Ottimizzazione guidata motore di database per analisi di simulazione tramite l'utilità della riga di comando dta  
   
 1.  Ottimizzare un database tramite la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Per valutare una sessione di ottimizzazione esistente, fare doppio clic sulla sessione in **Monitoraggio sessione**.  
   
@@ -155,10 +159,10 @@ caps.handback.revision: 34
   
 5.  Specificare il file XML creato nel passaggio 4 come input dell'utilità della riga di comando **dta** . Per informazioni sull'utilizzo di file di input di XML con questo strumento, vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-### Utilizzo della funzionalità di configurazione specificata dall'utente tramite l'utilità da riga di comando dta  
+### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Utilizzo della funzionalità di configurazione specificata dall'utente tramite l'utilità da riga di comando dta  
  Gli sviluppatori XML esperti possono creare un file di input XML di Ottimizzazione guidata motore di database, in cui è possibile specificare un carico di lavoro e una configurazione ipotetica di strutture di progettazione di database fisiche, ad esempio indici, viste indicizzate o partizionamento. Con l'utilità della riga di comando **dta** è quindi possibile analizzare gli effetti di questa configurazione ipotetica sulle prestazioni delle query per il database. Questa procedura è descritta di seguito in dettaglio.  
   
-##### Per utilizzare la funzionalità di configurazione specificata dall'utente tramite l'utilità da riga di comando dta  
+##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Per utilizzare la funzionalità di configurazione specificata dall'utente tramite l'utilità da riga di comando dta  
   
 1.  Creare un carico di lavoro di ottimizzazione. Per informazioni sull'esecuzione di questa operazione, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 34
   
      L'XML Schema di Ottimizzazione guidata motore di database è inoltre disponibile online all'indirizzo [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox**. In tal modo viene creato un file di output XML con la configurazione indicata specificata nell'elemento **Configuration** . Se si desidera eseguire nuovamente Ottimizzazione guidata motore di database per verificare un'altra configurazione ipotetica basata sull'output, copiare il contenuto dell'elemento **Configuration** del file di output e incollarlo nel file di input XML originale o in un nuovo file XML. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox** . In tal modo viene creato un file di output XML con la configurazione indicata specificata nell'elemento **Configuration** . Se si desidera eseguire nuovamente Ottimizzazione guidata motore di database per verificare un'altra configurazione ipotetica basata sull'output, copiare il contenuto dell'elemento **Configuration** del file di output e incollarlo nel file di input XML originale o in un nuovo file XML. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
      Dopo il completamento dell'ottimizzazione visualizzare i report dell'operazione nella GUI di Ottimizzazione guidata motore di database oppure aprire il file di output XML ed esaminare le indicazioni di Ottimizzazione guidata motore di database negli elementi **TuningSummary** e **Configuration** . Per informazioni sulla visualizzazione dei risultati della sessione di ottimizzazione, vedere [Visualizzazione output di ottimizzazione](#View) precedentemente in questo argomento. Si noti inoltre che i report di analisi potrebbero essere contenuti anche nel file di output XML.  
   
@@ -187,10 +191,10 @@ caps.handback.revision: 34
   
  Prima di verificare le sessioni di ottimizzazione per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario creare sessioni di ottimizzazione sull'istanza del server, ottimizzando i carichi di lavoro tramite Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-### Verifica delle sessioni di ottimizzazione esistenti  
+### <a name="review-existing-tuning-sessions"></a>Verifica delle sessioni di ottimizzazione esistenti  
  Per sfogliare le sessioni di ottimizzazione esistenti in una determinata istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire la procedura seguente.  
   
-##### Per verificare le sessioni di ottimizzazione esistenti  
+##### <a name="to-review-existing-tuning-sessions"></a>Per verificare le sessioni di ottimizzazione esistenti  
   
 1.  Avviare la GUI di Ottimizzazione guidata motore di database. Per altre informazioni, vedere [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -200,10 +204,10 @@ caps.handback.revision: 34
   
 4.  Se si fa doppio clic sul nome di una sessione di ottimizzazione, le informazioni relative a tale sessione verranno caricate in Ottimizzazione guidata motore di database. Al termine del caricamento delle informazioni sulla sessione è possibile scegliere una delle schede disponibili per visualizzare le informazioni sulla sessione di ottimizzazione specifica.  
   
-### Valutazione delle sessioni di ottimizzazione esistenti come configurazioni ipotetiche  
- Per valutare una sessione di ottimizzazione esistente, eseguire la procedura seguente. La valutazione di una sessione di ottimizzazione esistente comporta la visualizzazione e la modifica delle indicazioni relative a tale sessione e quindi la ripetizione dell'ottimizzazione. Ad esempio, è possibile decidere che si desidera solo creare indici su **table1**. A tale scopo, si elimina quindi la creazione delle viste indicizzate e il partizionamento da una indicazione relativa a un'ottimizzazione esistente. Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione e ottimizza il carico di lavoro in rapporto ai database utilizzando le indicazioni modificate come configurazione ipotetica. Ciò significa che il carico di lavoro viene ottimizzato da Ottimizzazione guidata motore di database in rapporto ai database come se le indicazioni modificate fossero stati implementate, consentendo di eseguire analisi di simulazione limitate. È possibile eseguire solo analisi di simulazione limitate poiché l'utilizzo della GUI di Ottimizzazione guidata motore di database consente di scegliere solo un subset di una indicazione esistente. Per eseguire un'analisi di simulazione completa, specificando una configurazione ipotetica completamente nuova che non corrisponda a un subset di una sessione di ottimizzazione precedente, è necessario usare il file di input con estensione xml di Ottimizzazione guidata motore di database con l'utilità della riga di comando **dta**.  
+### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Valutazione delle sessioni di ottimizzazione esistenti come configurazioni ipotetiche  
+ Per valutare una sessione di ottimizzazione esistente, eseguire la procedura seguente. La valutazione di una sessione di ottimizzazione esistente comporta la visualizzazione e la modifica delle indicazioni relative a tale sessione e quindi la ripetizione dell'ottimizzazione. Ad esempio, è possibile decidere che si desidera solo creare indici su **table1**. A tale scopo, si elimina quindi la creazione delle viste indicizzate e il partizionamento da una indicazione relativa a un'ottimizzazione esistente. Ottimizzazione guidata motore di database crea una nuova sessione di ottimizzazione e ottimizza il carico di lavoro in rapporto ai database utilizzando le indicazioni modificate come configurazione ipotetica. Ciò significa che il carico di lavoro viene ottimizzato da Ottimizzazione guidata motore di database in rapporto ai database come se le indicazioni modificate fossero stati implementate, consentendo di eseguire analisi di simulazione limitate. È possibile eseguire solo analisi di simulazione limitate poiché l'utilizzo della GUI di Ottimizzazione guidata motore di database consente di scegliere solo un subset di una indicazione esistente. Per eseguire un'analisi di simulazione completa, specificando una configurazione ipotetica completamente nuova che non corrisponda a un subset di una sessione di ottimizzazione precedente, è necessario usare il file di input con estensione xml di Ottimizzazione guidata motore di database con l'utilità della riga di comando **dta** .  
   
-##### Per valutare una sessione di ottimizzazione esistente  
+##### <a name="to-evaluate-an-existing-tuning-session"></a>Per valutare una sessione di ottimizzazione esistente  
   
 1.  Dopo l'avvio di Ottimizzazione guidata motore di database, fare doppio clic su una sessione di ottimizzazione nella parte superiore di **Monitoraggio sessione**, in modo da caricare le informazioni sulla sessione in Ottimizzazione guidata motore di database.  
   
@@ -223,10 +227,10 @@ caps.handback.revision: 34
   
 9. Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. Ottimizzazione guidata motore di database avvia l'ottimizzazione dei database utilizzando la configurazione ipotetica. Al termine di Ottimizzazione guidata motore di database è possibile visualizzare i risultati della sessione in modo analogo ai risultati delle altre sessioni.  
   
-### Clonazione di sessioni di ottimizzazione esistenti  
+### <a name="clone-existing-tuning-sessions"></a>Clonazione di sessioni di ottimizzazione esistenti  
  È possibile creare nuove sessioni di ottimizzazione basate su sessioni esistenti, scegliendo l'opzione relativa alla clonazione in Ottimizzazione guidata motore di database. Quando si utilizza tale opzione, si basa una nuova sessione di ottimizzazione su una sessione esistente. È quindi possibile modificare le opzioni di ottimizzazione per la nuova sessione in base alla necessità. Quando si valuta una sessione esistente come illustrato nella procedura precedente, Ottimizzazione guidata motore di database crea anche una nuova sessione di ottimizzazione, ma non è possibile modificare le opzioni di ottimizzazione.  
   
-##### Per creare nuove sessioni di ottimizzazione clonando sessioni esistenti  
+##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Per creare nuove sessioni di ottimizzazione clonando sessioni esistenti  
   
 1.  Dopo l'avvio di Ottimizzazione guidata motore di database, fare doppio clic su una sessione di ottimizzazione nella parte superiore di **Monitoraggio sessione**, in modo da caricare le informazioni sulla sessione in Ottimizzazione guidata motore di database.  
   
@@ -242,15 +246,15 @@ caps.handback.revision: 34
   
 ##  <a name="UI"></a> Descrizioni dell'interfaccia utente  
   
-### Monitoraggio delle sessioni  
+### <a name="sessions-monitor"></a>Monitoraggio delle sessioni  
  **Monitoraggio sessione** consente di visualizzare informazioni sulle sessioni aperte in Ottimizzazione guidata motore di database. Selezionare un nome di sessione in **Monitoraggio sessione**per visualizzare informazioni sulla sessione nella finestra delle proprietà.  
   
-### Scheda Indicazioni  
+### <a name="recommendations-tab"></a>Scheda Indicazioni  
  La scheda **Indicazioni** viene visualizzata al termine dell'analisi di un carico di lavoro da parte di Ottimizzazione guidata motore di database. Questa griglia contiene le indicazioni relative a ogni oggetto analizzato. Le indicazioni relative alle partizioni, se presenti, vengono visualizzate nella griglia superiore, mentre quelle relative agli indici vengono visualizzate nella griglia inferiore. Se non vi sono indicazioni, non viene visualizzata alcuna griglia.  
   
  La colonna **Definizione** contiene la definizione della partizione o dell'indice per cui sono presenti indicazioni in formato di collegamento ipertestuale. Questa colonna in genere non è sufficientemente ampia per visualizzare la definizione per intero. Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente la definizione completa e il pulsante **Copia negli Appunti** .  
   
-#### Indicazioni relative alle partizioni  
+#### <a name="partition-recommendations"></a>Indicazioni relative alle partizioni  
  **Nome database**  
  Database contenente gli oggetti che è consigliabile modificare.  
   
@@ -263,13 +267,13 @@ caps.handback.revision: 34
  **Dettagli**  
  Descrizione di **Destinazione indicazione**. I valori possibili includono un intervallo per le funzioni di partizione o un valore vuoto per gli schemi di partizione.  
   
- **Numero di partizioni**  
+ **Numero partizioni**  
  Numero di partizioni definite dalle funzioni di partizione consigliate. Quando questa funzione viene utilizzata con un schema e quindi applicata a una tabella, i dati contenuti in tale tabella vengono divisi nel numero indicato di partizioni.  
   
  **Definizione**  
  Definizione di **Destinazione indicazione**. Fare clic sulla colonna per aprire la finestra di dialogo Anteprima script SQL, contenente uno script per l'azione consigliata.  
   
-##### Indicazioni relative agli indici  
+##### <a name="index-recommendations"></a>Indicazioni relative agli indici  
  **Nome database**  
  Database contenente gli oggetti che è consigliabile modificare.  
   
@@ -300,7 +304,7 @@ caps.handback.revision: 34
  **Fare clic su Report per visualizzare le dimensioni degli oggetti esistenti**  
  Selezionare questa opzione per visualizzare i report che indicano le dimensioni degli oggetti selezionati nella griglia delle indicazioni.  
   
-### Menu Azioni/Opzioni di Applica indicazioni  
+### <a name="actions-menuapply-recommendations-options"></a>Menu Azioni/Opzioni di Applica indicazioni  
  Dopo l'analisi di un carico di lavoro e la generazione di indicazioni, scegliere **Applica indicazioni** dal menu **Azioni** per aprire la finestra di dialogo **Applica indicazioni** .  
   
  **Applica ora**  
@@ -315,7 +319,7 @@ caps.handback.revision: 34
  **Time**  
  Consente di specificare l'ora in cui si desidera eseguire il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'applicazione delle indicazioni.  
   
-### Opzioni della scheda Report  
+### <a name="reports-tab-options"></a>Opzioni della scheda Report  
  La scheda **Report** viene visualizzata quando l'Ottimizzazione guidata motore di database ha completato l'analisi di un carico di lavoro.  
   
  **Riepilogo ottimizzazione**  
@@ -337,7 +341,7 @@ caps.handback.revision: 34
  Questa opzione viene visualizzata se il carico di lavoro è un file.  
   
  **Tabella del carico di lavoro**  
- Questa opzione viene visualizzata se il carico di lavoro è una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Questa opzione viene visualizzata se il carico di lavoro è una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Carico di lavoro**  
  Questa opzione viene visualizzata se il carico di lavoro è stato importato dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -384,11 +388,11 @@ caps.handback.revision: 34
  **Numero di statistiche che è consigliabile creare**  
  Numero consigliato di statistiche da creare nel database ottimizzato. Questa opzione viene visualizzata solo se le statistiche fanno parte dell'indicazione.  
   
- **Seleziona report**  
+ **Select Report**  
  Consente di visualizzare i dettagli del report selezionato. Le colonne della griglia cambiano a seconda del report.  
   
-## Vedere anche  
- [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Utilità dta](../../tools/dta/dta-utility.md)  
   
   

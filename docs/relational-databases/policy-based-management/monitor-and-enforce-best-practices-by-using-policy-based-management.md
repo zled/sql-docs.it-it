@@ -1,37 +1,41 @@
 ---
-title: "Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Procedure consigliate [Motore di database]"
+title: Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
+# <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
   La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un set di file di criteri che è possibile importare per le procedure consigliate e descrive come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database. Valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-## Criteri e regole per il Motore di database  
- La tabella seguente elenca i criteri disponibili con l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le informazioni relative alle regole per le procedure consigliate valutate dai singoli criteri. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+## <a name="policy-and-rules-for-database-engine"></a>Criteri e regole per il Motore di database  
+ La tabella seguente elenca i criteri disponibili con l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le informazioni relative alle regole per le procedure consigliate valutate dai singoli criteri. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Nome criteri|Regola per le procedure consigliate|  
 |-----------------|------------------------|  
 |Algoritmo di crittografia a chiavi asimmetriche|[Livello di crittografia delle chiavi asimmetriche](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Percorso di backup e del file di dati|[Posizionamento dei file di backup in dispositivi separati rispetto ai file di database](../Topic/Backup%20Files%20Must%20Be%20on%20Separate%20Devices%20from%20the%20Database%20Files.md)|  
+|Percorso di backup e del file di dati|[Posizionamento dei file di backup in dispositivi separati rispetto ai file di database](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Percorso dati e file di log|[Posizionamento di dati e file di log in unità distinte](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Chiusura automatica database|[Impostazione dell'opzione di database AUTO_CLOSE su OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Compattazione automatica database|[Impostazione dell'opzione di database AUTO_SHRINK su OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Regole di confronto del database|[Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello](../Topic/Set%20the%20Collation%20of%20User-defined%20Databases%20to%20Match%20Those%20of%20the%20master%20and%20model%20Databases.md)|  
+|Regole di confronto del database|[Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Verifica pagina di database|[Impostazione dell'opzione di database PAGE_VERIFY su CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Stato pagine del database|[Verifica del'integrità di un database contenente pagine sospette](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Autorizzazioni Guest|[Autorizzazioni Guest nei database utente](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -65,7 +69,7 @@ caps.handback.revision: 27
 |Errore registro eventi di Windows - Timeout I/O sistema di archiviazione|[Timeout di input o output del sistema di archiviazione](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Errore di sistema in registro eventi di Windows|[Errori di sistema imprevisti](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della copia di facet della gestione basata su criteri](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

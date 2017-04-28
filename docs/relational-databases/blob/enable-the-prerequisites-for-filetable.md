@@ -1,24 +1,28 @@
 ---
-title: "Abilitazione dei prerequisiti per la tabella FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], prerequisiti"
+title: Abilitare i prerequisiti per la tabella FileTable | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitazione dei prerequisiti per la tabella FileTable
+# <a name="enable-the-prerequisites-for-filetable"></a>Abilitazione dei prerequisiti per la tabella FileTable
   Viene descritto come abilitare i prerequisiti per la creazione e l'utilizzo di tabelle FileTable.  
   
 ##  <a name="EnablePrereq"></a> Abilitazione dei prerequisiti per la tabella FileTable  
@@ -81,10 +85,10 @@ GO
     ```  
   
  **Specificare il livello di accesso non transazionale tramite SQL Server Management Studio**  
- È possibile specificare il livello di accesso non transazionale nel campo **Accesso FILESTREAM non transazionale** della pagina **Opzioni** della finestra di dialogo **Proprietà database**. Per altre informazioni su questa finestra di dialogo, vedere [Proprietà del database &#40;pagina Opzioni&#41;](../../relational-databases/databases/database-properties-options-page.md).  
+ È possibile specificare il livello di accesso non transazionale nel campo **Accesso FILESTREAM non transazionale** della pagina **Opzioni** della finestra di dialogo **Proprietà database** . Per altre informazioni su questa finestra di dialogo, vedere [Proprietà del database &#40;pagina Opzioni&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
 ##  <a name="BasicsDirectory"></a> Specifica di una directory per tabelle FileTable a livello di database  
- Quando si abilita l'accesso non transazionale ai file a livello di database, è anche possibile specificare simultaneamente un nome di directory usando l'opzione **DIRECTORY_NAME**. Se non si specifica un nome di directory quando si abilita l'accesso non transazionale, è necessario specificarlo in seguito prima di poter creare le tabelle FileTable nel database.  
+ Quando si abilita l'accesso non transazionale ai file a livello di database, è anche possibile specificare simultaneamente un nome di directory usando l'opzione **DIRECTORY_NAME** . Se non si specifica un nome di directory quando si abilita l'accesso non transazionale, è necessario specificarlo in seguito prima di poter creare le tabelle FileTable nel database.  
   
  Nella gerarchia di cartelle FileTable questa directory a livello di database diventa l'elemento figlio del nome di condivisione specificato per FILESTREAM a livello di istanza e l'elemento padre delle tabelle FileTable create nel database. Per altre informazioni, vedere [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   Quando si **ripristina un database**, chiamare l'istruzione [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) con l'opzione FILESTREAM **DIRECTORY_NAME**.  
+-   Quando si **ripristina un database**, chiamare l'istruzione [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) con l'opzione FILESTREAM **DIRECTORY_NAME**.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -125,7 +129,7 @@ GO
     ```  
   
  **Specificare una directory per tabelle FileTable tramite SQL Server Management Studio**  
- È possibile specificare un nome di directory nel campo **Nome di directory FILESTREAM** della pagina **Opzioni** della finestra di dialogo **Proprietà database**. Per altre informazioni su questa finestra di dialogo, vedere [Proprietà del database &#40;pagina Opzioni&#41;](../../relational-databases/databases/database-properties-options-page.md).  
+ È possibile specificare un nome di directory nel campo **Nome di directory FILESTREAM** della pagina **Opzioni** della finestra di dialogo **Proprietà database** . Per altre informazioni su questa finestra di dialogo, vedere [Proprietà del database &#40;pagina Opzioni&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
 ###  <a name="viewnames"></a> Procedura: Visualizzazione dei nomi di directory esistenti per l'istanza  
  Per visualizzare l'elenco di nomi di directory esistenti per l'istanza, eseguire una query sulla vista del catalogo [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) e verificare la colonna **filestream_database_directory_name**.  
@@ -138,7 +142,7 @@ GO
   
 ###  <a name="ReqDirectory"></a> Requisiti e restrizioni per la directory a livello di database  
   
--   L'impostazione di **DIRECTORY_NAME** è facoltativa quando si chiama **CREATE DATABASE** o **ALTER DATABASE**. Se non si specifica un valore per **DIRECTORY_NAME**, il nome di directory rimane Null. Non è tuttavia possibile creare tabelle FileTable nel database se prima non si specifica un valore per **DIRECTORY_NAME**a livello di database.  
+-   L'impostazione di **DIRECTORY_NAME** è facoltativa quando si chiama **CREATE DATABASE** o **ALTER DATABASE**. Se non si specifica un valore per **DIRECTORY_NAME**, il nome di directory rimane Null. Non è tuttavia possibile creare tabelle FileTable nel database se prima non si specifica un valore per **DIRECTORY_NAME** a livello di database.  
   
 -   Il nome di directory specificato deve essere conforme ai requisiti del file system relativi ai nomi di directory validi.  
   

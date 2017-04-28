@@ -1,43 +1,47 @@
 ---
-title: "Abilitare e configurare FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], abilitazione"
+title: Abilitare e configurare FILESTREAM | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare e configurare FILESTREAM
+# <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
   Prima di iniziare a utilizzare FILESTREAM, è necessario abilitarlo nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In questo argomento viene descritto come abilitare FILESTREAM utilizzando Gestione configurazione SQL Server.  
   
 ##  <a name="enabling"></a> Abilitazione di FILESTREAM  
   
-#### Per abilitare e modificare le impostazioni FILESTREAM  
+#### <a name="to-enable-and-change-filestream-settings"></a>Per abilitare e modificare le impostazioni FILESTREAM  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Strumenti di configurazione** e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
-2.  Nell'elenco dei servizi fare clic con il pulsante destro del mouse su **Servizi di SQL Server** e quindi scegliere **Apri**.  
+2.  Nell'elenco dei servizi fare clic con il pulsante destro del mouse su **Servizi di SQL Server**e quindi scegliere **Apri**.  
   
 3.  Nello snap-in **Gestione configurazione SQL Server** trovare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si vuole abilitare FILESTREAM.  
   
 4.  Fare clic con il pulsante destro sull'istanza e quindi scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo delle proprietà di SQL Server**** fare clic sulla scheda **FILESTREAM**.  
+5.  Nella finestra di dialogo delle proprietà di SQL Server **** fare clic sulla scheda **FILESTREAM** .  
   
-6.  Selezionare la casella di controllo **Abilita FILESTREAM per l'accesso Transact-SQL**.  
+6.  Selezionare la casella di controllo **Abilita FILESTREAM per l'accesso Transact-SQL** .  
   
-7.  Se si vogliono leggere e scrivere dati FILESTREAM da Windows, fare clic su **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file**. Immettere il nome della condivisione di Windows nella casella **Nome condivisione di Windows**.  
+7.  Se si vogliono leggere e scrivere dati FILESTREAM da Windows, fare clic su **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file**. Immettere il nome della condivisione di Windows nella casella **Nome condivisione di Windows** .  
   
 8.  Se ai dati FILESTREAM archiviati in tale condivisione devono accedere client remoti, selezionare **Consenti ai client remoti l'accesso tramite flusso ai dati FILESTREAM**.  
   
@@ -54,9 +58,8 @@ caps.handback.revision: 24
   
 12. Fare clic su **Esegui**.  
   
-13. Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+13. Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [Contenuto dell'argomento](#TOP)  
   
 ##  <a name="best"></a> Procedure consigliate  
   
@@ -69,7 +72,7 @@ caps.handback.revision: 24
   
 -   Utilizzare cluster NTFS da 64 KB. I volumi compressi devono essere impostati su cluster NTFS da 4 KB.  
   
--   Disabilitare l'indicizzazione nei volumi FILESTREAM e impostare **disablelastaccess**. Per impostare **disablelastaccess**, usare l'utilità **fsutil** di Windows.  
+-   Disabilitare l'indicizzazione nei volumi FILESTREAM e impostare **disablelastaccess** . Per impostare **disablelastaccess**, usare l'utilità **fsutil** di Windows.  
   
 -   Disabilitare l'analisi per la ricerca di virus nei volumi FILESTREAM quando non è non necessaria. Se tale analisi è necessaria, evitare di impostare criteri per l'eliminazione automatica dei file infetti.  
   
@@ -82,14 +85,13 @@ caps.handback.revision: 24
 |RAID 0|Eccellenti|Eccellenti|Nessuno||  
 |RAID 5 + striping|Eccellenti|Eccellenti|Eccellenti|Opzione più costosa.|  
   
- [Contenuto dell'argomento](#TOP)  
   
 ###  <a name="database"></a> Progettazione fisica di database  
  Quando si progetta un database FILESTREAM, tenere presenti le linee guida seguenti:  
   
 -   Le colonne FILESTREAM devono essere associate a una corrispondente colonna ROWGUID **uniqueidentifier**. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  
   
--   Ai fini delle prestazioni, i contenitori e i filegroup FILESTREAM dovrebbero risiedere in volumi anziché nel sistema operativo, nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nel log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file di paging.  
+-   Ai fini delle prestazioni, i contenitori e i filegroup FILESTREAM dovrebbero risiedere in volumi anziché nel sistema operativo, nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nel log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file di paging.  
   
 -   La gestione dello spazio e i criteri non sono supportati direttamente da FILESTREAM. È tuttavia possibile gestire lo spazio e applicare criteri in modo indiretto assegnando ogni filegroup FILESTREAM a un volume distinto e utilizzando le funzionalità di gestione di quest'ultimo.  
   

@@ -1,34 +1,38 @@
 ---
-title: "Stima delle dimensioni di un indice cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "allocazione spazio [SQL Server], dimensioni indice"
-  - "dimensioni [SQL Server], tabelle"
-  - "spazio su disco [SQL Server], indici"
-  - "stima delle dimensioni di tabella [SQL Server]"
-  - "dimensioni di tabella [SQL Server]"
-  - "stima delle dimensioni di tabella"
-  - "spazio [SQL Server], indici"
-  - "indici cluster, dimensioni tabella"
-  - "indici non cluster [SQL Server], dimensioni tabella"
-  - "progettazione di database [SQL Server], stima delle dimensioni"
-  - "calcolo delle dimensioni di tabella"
+title: Stimare le dimensioni di un indice cluster | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- disk space [SQL Server], indexes
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- space [SQL Server], indexes
+- clustered indexes, table size
+- nonclustered indexes [SQL Server], table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stima delle dimensioni di un indice cluster
+# <a name="estimate-the-size-of-a-clustered-index"></a>Stima delle dimensioni di un indice cluster
   Per stimare la quantità di spazio necessaria per l'archiviazione dati in un indice cluster, è possibile utilizzare la procedura seguente:  
   
 1.  Calcolare lo spazio utilizzato per archiviare dati nel livello foglia dell'indice cluster.  
@@ -37,25 +41,25 @@ caps.handback.revision: 49
   
 3.  Sommare i valori calcolati.  
   
-## Passaggio 1. Calcolare lo spazio utilizzato per l'archiviazione di dati nel livello foglia  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Passaggio 1. Calcolare lo spazio utilizzato per l'archiviazione di dati nel livello foglia  
   
 1.  Specificare il numero di righe che verranno incluse nella tabella:  
   
-     ***Num_Rows*** = numero di righe della tabella  
+     ***Num_Rows***  = numero di righe della tabella  
   
 2.  Specificare il numero di colonne di lunghezza fissa e e variabile e calcolare lo spazio necessario per la loro archiviazione:  
   
      Calcolare lo spazio occupato da ognuno di questi gruppi di colonne all'interno della riga di dati. Le dimensioni di una colonna dipendono dal tipo di dati e dalla lunghezza specificata.  
   
-     ***Num_Cols*** = numero totale di colonne (a lunghezza fissa e a lunghezza variabile)  
+     ***Num_Cols***  = numero totale di colonne (a lunghezza fissa e a lunghezza variabile)  
   
-     ***Fixed_Data_Size*** = dimensioni totali in byte di tutte le colonne a lunghezza fissa  
+     ***Fixed_Data_Size***  = dimensioni totali in byte di tutte le colonne a lunghezza fissa  
   
-     ***Num_Variable_Cols*** = numero di colonne a lunghezza variabile  
+     ***Num_Variable_Cols***  = numero di colonne a lunghezza variabile  
   
-     ***Max_Var_Size*** = dimensioni massime in byte di tutte le colonne a lunghezza variabile  
+     ***Max_Var_Size***  = dimensioni massime in byte di tutte le colonne a lunghezza variabile  
   
-3.  Se l'indice cluster è non univoco, considerare la colonna *uniqueifier*:  
+3.  Se l'indice cluster è non univoco, considerare la colonna *uniqueifier* :  
   
      La colonna uniqueifier è una colonna a lunghezza variabile che ammette valori Null. Sarà una colonna non Null da 4 byte nelle righe che includono valori chiave non univoci. Questo valore fa parte della chiave di indice ed è necessario per garantire che ogni riga includa un valore di chiave univoco.  
   
@@ -79,12 +83,12 @@ caps.handback.revision: 49
   
      ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
-     I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
+     I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di uso dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary** o **sql_variant** che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **varbinary** o **sql_variant** e di 4.000 byte per le colonne **nvarchar**. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **varbinary**o **sql_variant** e di 4.000 byte per le colonne **nvarchar** . Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
-     Se non sono disponibili colonne di lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
+     Se non sono disponibili colonne a lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
   
 6.  Calcolare le dimensioni totali della riga:  
   
@@ -114,20 +118,20 @@ caps.handback.revision: 49
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## Passaggio 2. Calcolare lo spazio utilizzato per l'archiviazione di informazioni sull'indice  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Passaggio 2. Calcolare lo spazio utilizzato per l'archiviazione di informazioni sull'indice  
  Per stimare la quantità di spazio necessario per archiviare i livelli superiori dell'indice, è possibile utilizzare la seguente procedura:  
   
 1.  Specificare il numero di colonne a lunghezza fissa e a lunghezza variabile incluse nella chiave dell'indice e calcolare lo spazio necessario per archiviarle:  
   
      Le colonne chiave di un indice possono includere colonne a lunghezza fissa e a lunghezza variabile. Per stimare le dimensioni delle righe di indice di livello interno, calcolare lo spazio occupato da ognuno di questi gruppi di colonne all'interno della riga di indice. Le dimensioni di una colonna dipendono dal tipo di dati e dalla lunghezza specificata.  
   
-     ***Num_Key_Cols*** = numero totale di colonne chiave (a lunghezza fissa e a lunghezza variabile)  
+     ***Num_Key_Cols***  = numero totale di colonne chiave (a lunghezza fissa e a lunghezza variabile)  
   
-     ***Fixed_Key_Size*** = dimensioni totali in byte di tutte le colonne chiave a lunghezza fissa  
+     ***Fixed_Key_Size***  = dimensioni totali in byte di tutte le colonne chiave a lunghezza fissa  
   
-     ***Num_Variable_Key_Cols*** = numero di colonne chiave a lunghezza variabile  
+     ***Num_Variable_Key_Cols***  = numero di colonne chiave a lunghezza variabile  
   
-     ***Max_Var_Key_Size*** = dimensioni massime in byte di tutte le colonne chiave a lunghezza variabile  
+     ***Max_Var_Key_Size***  = dimensioni massime in byte di tutte le colonne chiave a lunghezza variabile  
   
 2.  Considerare le eventuali colonne uniqueifier necessarie se l'indice è non univoco:  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 49
   
      Se nella chiave di indice sono incluse colonne che ammettono valori Null, una parte della riga di indice viene riservata per la mappa di bit Null. Calcolarne le dimensioni:  
   
-     ***Index_Null_Bitmap*** = 2 + ((numero di colonne nella riga di indice + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((numero di colonne nella riga di indice + 7) / 8)  
   
      Deve essere utilizzata solo la parte Integer dell'espressione precedente. Eliminare le parti restanti.  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 49
   
 5.  Calcolare le dimensioni della riga di indice:  
   
-     ***Index_Row_Size***  = ***Fixed_Key_Size*** + ***Variable_Key_Size*** + ***Index_Null_Bitmap*** + 1 (per l'overhead dell'intestazione di una riga di indice) + 6 (per il puntatore ID della pagina figlio)  
+     ***Index_Row_Size***  = ***Fixed_Key_Size*** + ***Variable_Key_Size*** + ***Index_Null_Bitmap*** + 1 + 1 (per l'overhead dell'intestazione di una riga di indice) + 6 (per il puntatore ID della pagina figlio)  
   
 6.  Calcolare il numero di righe di indice per pagina (8096 byte liberi per pagina):  
   
@@ -193,7 +197,7 @@ caps.handback.revision: 49
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## Passaggio 3. Sommare i valori calcolati  
+## <a name="step-3-total-the-calculated-values"></a>Passaggio 3. Sommare i valori calcolati  
  Sommare i valori ottenuti nei due passaggi precedenti:  
   
  Dimensioni indice cluster (byte) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -210,7 +214,7 @@ caps.handback.revision: 49
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio utilizzata per archiviare i tipi di dati LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml** e **image** è complesso. È sufficiente aggiungere le dimensioni medie dei valori LOB previste, moltiplicare per ***Num_Rows*** e quindi aggiungere il valore ottenuto alle dimensioni totali dell'indice cluster.  
+     L'algoritmo per determinare con esattezza la quantità di spazio utilizzata per archiviare i tipi di dati LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** è complesso. È sufficiente aggiungere le dimensioni medie dei valori LOB previste, moltiplicare per ***Num_Rows***e quindi aggiungere il valore ottenuto alle dimensioni totali dell'indice cluster.  
   
 -   Compressione  
   
@@ -218,9 +222,9 @@ caps.handback.revision: 49
   
 -   Colonne di tipo sparse  
   
-     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Utilizzo di colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).  
+     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Descrizione di indici cluster e non cluster.](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Stima delle dimensioni di una tabella](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

@@ -1,33 +1,37 @@
 ---
-title: "Classe di evento SQLTransaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLTransaction - classe di evento"
+title: Classe di evento SQLTransaction | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLTransaction event class
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750e4d6ecc7fec06c3022ae8c48b4e8446de987b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SQLTransaction
+# <a name="sqltransaction-event-class"></a>SQLTransaction - classe di evento
   La classe di evento SQLTransaction consente di monitorare il momento di inizio e di fine delle transazioni, in particolare durante la verifica di applicazioni, trigger o stored procedure.  
   
-## Colonne di dati della classe di evento SQLTransaction  
+## <a name="sqltransaction-event-class-data-columns"></a>Colonne di dati della classe di evento SQLTransaction  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Durata|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|**datetime**|Ora di fine dell'evento.|15|Sì|  
@@ -52,7 +56,7 @@ caps.handback.revision: 36
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

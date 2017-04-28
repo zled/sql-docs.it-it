@@ -1,24 +1,28 @@
 ---
-title: "Backup della chiave master del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiave master del servizio [SQL Server], esportazione"
+title: Eseguire il backup della chiave master del servizio | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 630f9c3ecdf47e6cb7a5d9f2a7970bea99d330a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup della chiave master del servizio
+# <a name="back-up-the-service-master-key"></a>Backup della chiave master del servizio
   In questo argomento viene descritto come eseguire il backup di una chiave master del servizio in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La chiave master del servizio è l'elemento radice della gerarchia di crittografia. È consigliabile crearne una copia di backup e archiviarla in una posizione esterna sicura. La creazione di questa copia di backup dovrebbe essere una delle prime operazioni amministrative eseguite nel server.  
   
  **Contenuto dell'argomento**  
@@ -46,9 +50,9 @@ caps.handback.revision: 18
   
 ##  <a name="Procedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eseguire il backup della chiave master del servizio  
+#### <a name="to-back-up-the-service-master-key"></a>Per eseguire il backup della chiave master del servizio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente la chiave master del servizio di cui si desidera eseguire il backup.  
+1.  In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente la chiave master del servizio di cui si desidera eseguire il backup.  
   
 2.  Scegliere una password da utilizzare per crittografare la chiave master del servizio nel supporto di backup. Questa password è soggetta ai controlli di complessità delle password. Per ulteriori informazioni, vedere [Password Policy](../../../relational-databases/security/password-policy.md).  
   

@@ -1,27 +1,31 @@
 ---
-title: "Visualizzare le propriet&#224; delle statistiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.statistics.details.f1"
-helpviewer_keywords: 
-  - "visualizzazione delle proprietà delle statistiche"
-  - "statistiche [SQL Server], visualizzazione delle proprietà"
+title: "Visualizzare le proprietà delle statistiche | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.statistics.details.f1
+helpviewer_keywords:
+- viewing statistics properties
+- statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0418da029159564c125fb89eaed39fdb1d673c65
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare le propriet&#224; delle statistiche
+# <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
   È possibile visualizzare le statistiche di ottimizzazione delle query correnti per una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'oggetto statistiche include un'intestazione con metadati relativi alle statistiche, un istogramma con la distribuzione dei valori nella prima colonna chiave dell'oggetto stesso e un vettore di densità per misurare la correlazione tra colonne. Per altre informazioni sugli istogrammi e sui vettori di densità, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
  **Contenuto dell'argomento**  
@@ -41,11 +45,11 @@ caps.handback.revision: 10
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Per visualizzare l'oggetto statistiche, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** o **db_ddladmin**.  
+ Per visualizzare l'oggetto statistiche, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** o **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per visualizzare le proprietà delle statistiche  
+#### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il database in cui si desidera creare una nuova statistica.  
   
@@ -88,13 +92,13 @@ caps.handback.revision: 10
      Numero di intervalli nell'istogramma. Ogni intervallo comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Gli intervalli dell'istogramma vengono definiti nella prima colonna chiave delle statistiche. Il numero massimo di intervalli è 200.  
   
      **Density**  
-     Valore calcolato come 1/*valori distinct* per tutti i valori nella prima colonna chiave dell'oggetto statistiche, ad eccezione dei valori limite dell'istogramma. Questo valore Density non viene utilizzato da Query Optimizer e viene visualizzato per compatibilità con le versioni precedenti rispetto a SQL Server 2008.  
+     Valore calcolato come 1/ *valori distinct* per tutti i valori nella prima colonna chiave dell'oggetto statistiche, ad eccezione dei valori limite dell'istogramma. Questo valore Density non viene utilizzato da Query Optimizer e viene visualizzato per compatibilità con le versioni precedenti rispetto a SQL Server 2008.  
   
      **Average Key Length**  
      Numero medio di byte per valore per tutte le colonne chiave nell'oggetto statistiche.  
   
      **String Index**  
-     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** o **ntext**.  
+     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**o **ntext**.  
   
      **Espressione filtro**  
      Predicato per il subset di righe della tabella incluso nell'oggetto statistiche. NULL = statistiche non filtrate.  
@@ -105,7 +109,7 @@ caps.handback.revision: 10
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per il vettore di densità.  
   
      **All Density**  
-     Il valore Density viene calcolato come 1/*valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A, B) e (A, B, C). Utilizzando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Utilizzando il prefisso (A, B), agli stessi valori di colonna sono associati elenchi di valori distinti (3, 5), (4, 4) e (4, 5).  
+     Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A, B) e (A, B, C). Utilizzando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Utilizzando il prefisso (A, B), agli stessi valori di colonna sono associati elenchi di valori distinti (3, 5), (4, 4) e (4, 5).  
   
      **Average Length**  
      Lunghezza media, in byte, per archiviare un elenco di valori di colonna per il prefisso di colonna. Se per ogni valore presente nell'elenco (3, 5, 6), ad esempio, sono necessari 4 byte, la lunghezza media è di 12 byte.  
@@ -134,7 +138,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per visualizzare le proprietà delle statistiche  
+#### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 10
   
  Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
-#### Per trovare tutte le statistiche su una tabella o una vista  
+#### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>Per trovare tutte le statistiche su una tabella o una vista  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

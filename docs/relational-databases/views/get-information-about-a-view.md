@@ -1,33 +1,37 @@
 ---
-title: "Ottenere informazioni su una vista | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "viste [SQL Server], informazioni sullo stato"
-  - "metadati [SQL Server], viste"
-  - "dipendenze [SQL Server], viste"
-  - "visualizzazione di informazioni sulla vista"
-  - "viste [SQL Server], metadati"
-  - "visualizzazione di informazioni sulla vista"
-  - "informazioni sullo stato [SQL Server], viste"
-  - "dipendenze per le viste"
+title: Ottenere informazioni su una vista | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ottenere informazioni su una vista
+# <a name="get-information-about-a-view"></a>Ottenere informazioni su una vista
   Tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile acquisire informazioni sulla definizione o sulle proprietà di una vista in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della vista per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla vista.  
   
 > [!IMPORTANT]  
@@ -54,7 +58,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Acquisire le proprietà di visualizzazione tramite Esplora oggetti  
+#### <a name="get-view-properties-by-using-object-explorer"></a>Acquisire le proprietà di visualizzazione tramite Esplora oggetti  
   
 1.  In **Esplora oggetti**fare clic sul segno più accanto al database contenente la vista in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Viste** .  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 30
      **Associata a schema**  
      Indica se la vista è associata a uno schema. I valori sono True e False. Per informazioni sulle viste associate a schemi, vedere la sezione SCHEMABINDING di[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-#### Acquisizione di proprietà delle viste tramite lo strumento Progettazione viste  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Acquisizione di proprietà delle viste tramite lo strumento Progettazione viste  
   
 1.  In **Esplora oggetti**espandere il database contenente la vista in cui si desidera visualizzare le proprietà, quindi espandere la cartella **Viste** .  
   
@@ -139,7 +143,7 @@ caps.handback.revision: 30
      Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(…)** a destra della proprietà. Nei commenti è possibile specificare, ad esempio, quali utenti utilizzano la vista e quando.  
   
      **Specifica TOP**  
-     Si espande per visualizzare le proprietà **Top**, **Espressione**, **Percentuale** e **With Ties**  
+     Si espande per visualizzare le proprietà **Top**, **Espressione**, **Percentuale**e **With Ties**  
   
      **(In alto)**  
      Specifica che la vista includerà una clausola TOP che restituirà soltanto le prime n righe o il primo n% delle righe del set di risultati. Per impostazione predefinita, nella vista vengono restituite le prime 10 righe del set di risultati. Utilizzare questa proprietà per modificare il numero di righe restituito o specificare una percentuale diversa  
@@ -151,10 +155,10 @@ caps.handback.revision: 30
      Specifica che la query includerà una clausola **TOP** che restituirà soltanto il primo n percento di righe del set di risultati  
   
      **With Ties**  
-     Specifica che la vista includerà una clausola **WITH TIES**. **WITH TIES** è utile se nella vista sono incluse anche una clausola **ORDER BY** e una **TOP** basate sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata rientra in un set di righe con valori identici nella clausola **ORDER BY** , la vista verrà estesa fino a includere tutte queste righe.  
+     Specifica che la vista includerà una clausola **WITH TIES** . **WITH TIES** è utile se nella vista sono incluse anche una clausola **ORDER BY** e una **TOP** basate sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata rientra in un set di righe con valori identici nella clausola **ORDER BY** , la vista verrà estesa fino a includere tutte queste righe.  
   
      **Specifica aggiornamento**  
-     Si espande per visualizzare le proprietà **Aggiorna in base alle regole della vista** e **Opzione Check**.  
+     Si espande per visualizzare le proprietà **Aggiorna in base alle regole della vista** e **Opzione Check** .  
   
      **(Aggiorna in base alle regole della vista)**  
      Viene indicato che tutti gli aggiornamenti e gli inserimenti nella vista saranno convertiti da Microsoft Data Access Components (MDAC) in istruzioni SQL che fanno riferimento alla vista piuttosto che alle tabelle di base della vista.  
@@ -164,7 +168,7 @@ caps.handback.revision: 30
      **Opzione Check**  
      Indica che quando si apre questa vista e si modifica il riquadro **Risultati** l'origine dati verifica se i dati aggiunti o modificati soddisfano la clausola **WHERE** della definizione della vista. Se la modifica non soddisfa la clausola **WHERE** , verrà visualizzato un errore con ulteriori informazioni.  
   
-#### Per acquisire dipendenze dalla vista  
+#### <a name="to-get-dependencies-on-the-view"></a>Per acquisire dipendenze dalla vista  
   
 1.  In **Esplora oggetti**espandere il database contenente la vista in cui si desidera visualizzare le proprietà, quindi espandere la cartella **Viste** .  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per acquisire la definizione e le proprietà di una vista  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>Per acquisire la definizione e le proprietà di una vista  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  Per altre informazioni, vedere [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) e [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-#### Per acquisire le dipendenze di una vista  
+#### <a name="to-get-the-dependencies-of-a-view"></a>Per acquisire le dipendenze di una vista  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

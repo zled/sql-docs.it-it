@@ -1,23 +1,27 @@
 ---
-title: "Gestire sessioni di eventi in Esplora oggetti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestire sessioni di eventi in Esplora oggetti | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bfecba6078a80485bfcd9448c8be19d0c69328
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestire sessioni di eventi in Esplora oggetti
+# <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   In questo argomento vengono illustrate le azioni eseguibili in **Esplora oggetti** che influiscono su Eventi estesi:  
@@ -34,11 +38,11 @@ caps.handback.revision: 10
   
 -   Eliminare una sessione Eventi estesi  
   
-## Creare una sessione Eventi estesi  
- Per altre informazioni sulla creazione di una sessione Eventi estesi, vedere [Create an Extended Events Session](../Topic/Create%20an%20Extended%20Events%20Session.md) (Creare una sessione Eventi estesi).  
+## <a name="create-an-extended-events-session"></a>Creare una sessione Eventi estesi  
+ Per altre informazioni sulla creazione di una sessione Eventi estesi, vedere [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)(Creare una sessione Eventi estesi).  
   
-## Avviare o arrestare una sessione Eventi estesi  
- È possibile avviare o arrestare una sessione Eventi estesi tramite l'**Editor di query** usando l'istruzione **ALTER EVENT SESSION** oppure il nodo **Eventi estesi** di **Esplora oggetti**.  
+## <a name="starting-or-stopping-an-extended-events-session"></a>Avviare o arrestare una sessione Eventi estesi  
+ È possibile avviare o arrestare una sessione Eventi estesi tramite l' **Editor di query** usando l'istruzione **ALTER EVENT SESSION** oppure il nodo **Eventi estesi** di **Esplora oggetti**.  
   
  Quando si arresta una sessione eventi, questa non viene più elencata come sessione attiva nella DMV sys.dm_xe_sessions. La definizione della sessione rimane tuttavia intatta ed è possibile riavviare la sessione. Per rimuovere completamente una definizione di sessione, è necessario eliminare la sessione.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 10
   
  Quando si arresta una sessione che prevede l'uso di una destinazione in memoria, ad esempio destinazioni del contatore degli eventi sincroni, di abbinamento degli eventi, bucket o buffer circolare, tutte le informazioni archiviate nel buffer della sessione (colonna target_data della DMV sys.dm_xe_session_targets) andranno perse. Per accedere ai dati degli eventi dopo aver arrestato la sessione, è necessario salvare i dati prima dell'arresto della sessione oppure configurare la sessione in modo che venga utilizzata la destinazione file.  
   
-### Avviare o arrestare una sessione Eventi estesi tramite l'Editor di query  
+### <a name="start-or-stop-an-extended-events-session-using-query-editor"></a>Avviare o arrestare una sessione Eventi estesi tramite l'Editor di query  
  Per avviare una sessione, eseguire le istruzioni seguenti sostituendo *session_name* con il nome della sessione Eventi estesi:  
   
 ```  
@@ -63,51 +67,51 @@ ON SERVER
 STATE = STOP  
 ```  
   
-### Avviare o arrestare una sessione Eventi estesi in Esplora oggetti  
- Per avviare o arrestare una sessione Eventi estesi in **Esplora oggetti**, espandere i nodi **Gestione**, **Eventi estesi** e **Sessioni**, fare clic con il pulsante destro del mouse su una sessione, quindi scegliere **Avvia sessione** o **Arresta sessione**.  
+### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Avviare o arrestare una sessione Eventi estesi in Esplora oggetti  
+ Per avviare o arrestare una sessione Eventi estesi in **Esplora oggetti**, espandere i nodi **Gestione**, **Eventi estesi**e **Sessioni** , fare clic con il pulsante destro del mouse su una sessione, quindi scegliere **Avvia sessione** o **Arresta sessione**.  
   
-## Esportare un modello di sessione Eventi estesi  
- È possibile esportare una sessione Eventi estesi usando **Esplora oggetti** e salvarla come file modello xml. Ad esempio, è possibile esportare una sessione, quindi applicare il modello a una nuova sessione eventi usando la **Creazione guidata nuova sessione** o la procedura guidata **Nuova sessione**.  
+## <a name="export-an-extended-events-session-template"></a>Esportare un modello di sessione Eventi estesi  
+ È possibile esportare una sessione Eventi estesi usando **Esplora oggetti**e salvarla come file modello xml. Ad esempio, è possibile esportare una sessione, quindi applicare il modello a una nuova sessione eventi usando la **Creazione guidata nuova sessione** o la procedura guidata **Nuova sessione** .  
   
  Quando si esporta una sessione, assicurarsi di salvare il file modello in un percorso che utilizza il file system NTFS e di limitare l'accesso agli utenti autorizzati a visualizzare le informazioni.  
   
  Per esportare una sessione Eventi estesi in **Esplora oggetti**:  
   
-1.  Espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni**.  
+1.  Espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla sessione che si vuole esportare e selezionare **Esporta sessione**.  
   
-3.  Nella finestra di dialogo **Salva con nome** selezionare un percorso in cui salvare il file, digitare il nome del file nella casella **Nome file**, quindi fare clic su **Salva**.  
+3.  Nella finestra di dialogo **Salva con nome** selezionare un percorso in cui salvare il file, digitare il nome del file nella casella **Nome file** , quindi fare clic su **Salva**.  
   
-     Se si salva il file nel percorso predefinito dei modelli di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], il modello sarà visualizzato nell'elenco a discesa di modelli predefiniti quando si usano la **Creazione guidata nuova sessione** e la finestra di dialogo **Nuova sessione**.  
+     Se si salva il file nel percorso predefinito dei modelli di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , il modello sarà visualizzato nell'elenco a discesa di modelli predefiniti quando si usano la **Creazione guidata nuova sessione** e la finestra di dialogo **Nuova sessione** .  
   
-## Importare un modello di sessione Eventi estesi  
- Usando **Esplora oggetti** è possibile importare un modello per una sessione Eventi estesi. È possibile, ad esempio, effettuare questa operazione per creare una sessione da un modello esportato da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="import-an-extended-events-session-template"></a>Importare un modello di sessione Eventi estesi  
+ Usando **Esplora oggetti**è possibile importare un modello per una sessione Eventi estesi. È possibile, ad esempio, effettuare questa operazione per creare una sessione da un modello esportato da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per creare una sessione Eventi estesi, è necessario disporre dell'autorizzazione **ALTER ANY EVENT SESSION**.  
+ Per creare una sessione Eventi estesi, è necessario disporre dell'autorizzazione **ALTER ANY EVENT SESSION** .  
   
  Prima di importare un file modello, verificare che il file provenga da una fonte attendibile. È necessario salvare i file modello in un percorso che utilizza il file system NTFS e in cui l'accesso è limitato agli utenti autorizzati a visualizzare le informazioni.  
   
  Per importare una sessione Eventi estesi:  
   
-1.  In **Esplora oggetti** espandere i nodi **Gestione**, quindi **Eventi estesi**.  
+1.  In **Esplora oggetti**espandere i nodi **Gestione**, quindi **Eventi estesi** .  
   
 2.  Fare clic con il pulsante destro del mouse su **Sessioni** e selezionare **Nuova sessione**.  
   
 3.  Consente di specificare un nome per la sessione.  
   
-4.  Espandere la casella di riepilogo a discesa **Modello**.  
+4.  Espandere la casella di riepilogo a discesa **Modello** .  
   
 5.  Fare clic su **Apri \<file da…>** e individuare la sessione (file XML) da importare.  
   
- La sessione verrà visualizzata nel nodo **Sessioni**. Per impostazione predefinita,la sessione non viene avviata.  
+ La sessione verrà visualizzata nel nodo **Sessioni** . Per impostazione predefinita,la sessione non viene avviata.  
   
-## Modificare una sessione Eventi estesi  
+## <a name="edit-an-extended-events-session"></a>Modificare una sessione Eventi estesi  
  È possibile modificare una sessione Eventi estesi in Esplora oggetti.  
   
  Per modificare una sessione Eventi estesi:  
   
-1.  In **Esplora oggetti** espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni**.  
+1.  In **Esplora oggetti**espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse su una sessione e selezionare **Proprietà**.  
   
@@ -115,12 +119,12 @@ STATE = STOP
   
 4.  Dopo avere completato l'esame della sessione eventi, fare clic su **OK**.  
   
-## Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sia nella Creazione guidata nuova sessione che nella finestra di dialogo Nuova sessione è presente un'opzione Script che consente di generare codice [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire la sessione Eventi estesi.  
   
- Per accedere a [!INCLUDE[tsql](../../includes/tsql-md.md)] per una sessione Eventi estesi esistente, fare clic con il pulsante destro del mouse sul nome della sessione, scegliere **Crea script per sessione** e selezionare quindi **Genera codice per istruzione CREATE in**.  
+ Per accedere a [!INCLUDE[tsql](../../includes/tsql-md.md)] per una sessione Eventi estesi esistente, fare clic con il pulsante destro del mouse sul nome della sessione, scegliere **Crea script per sessione**e selezionare quindi **Genera codice per istruzione CREATE in**.  
   
-## Eliminare una sessione Eventi estesi  
+## <a name="delete-an-extended-events-session"></a>Eliminare una sessione Eventi estesi  
  È possibile eliminare una sessione Eventi estesi:  
   
 -   Nell'Editor di query usando **DROP EVENT SESSION**.  
@@ -136,7 +140,7 @@ STATE = STOP
   
  Per eliminare una sessione Eventi estesi in **Esplora oggetti**:  
   
-1.  Espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni**.  
+1.  Espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse su una sessione e selezionare **Elimina**.  
   
@@ -144,7 +148,7 @@ STATE = STOP
   
 4.  Dopo avere completato l'esame della sessione eventi, fare clic su **OK**.  
   
- Per eliminare una sessione Eventi estesi nell'**Editor di query**, eseguire le istruzioni seguenti, sostituendo *session_name* con il nome della sessione Eventi estesi da eliminare:  
+ Per eliminare una sessione Eventi estesi nell' **Editor di query**, eseguire le istruzioni seguenti, sostituendo *session_name* con il nome della sessione Eventi estesi da eliminare:  
   
 ```  
 DROP EVENT SESSION [session_name]  

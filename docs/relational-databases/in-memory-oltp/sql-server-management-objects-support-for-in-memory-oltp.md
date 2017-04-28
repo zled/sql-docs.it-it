@@ -1,22 +1,26 @@
 ---
-title: "Supporto di SQL Server Management Objects per OLTP in memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Supporto di SQL Server Management Objects per OLTP in memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supporto di SQL Server Management Objects per OLTP in memoria
+# <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Objects per OLTP in memoria
   In questo argomento vengono descritte le modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) per OLTP in memoria.  
   
  OLTP in memoria è supportato dai seguenti tipi e membri:  
@@ -47,7 +51,7 @@ caps.handback.revision: 28
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## Codice di esempio  
+## <a name="code-sample"></a>Codice di esempio  
  In questo esempio vengono creati gli elementi seguenti:  
   
 -   Filegroup e file con ottimizzazione per la memoria.  
@@ -164,7 +168,7 @@ public class A {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di SQL Server per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

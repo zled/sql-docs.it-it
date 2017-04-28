@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento Broker:Message Drop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Message Drop - classe di evento"
+title: Classe di evento Broker:Message Drop | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Drop event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47fd82b02e3d808d2609e5c9830099d11627795f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Broker:Message Drop
+# <a name="brokermessage-drop-event-class"></a>Broker:Message Drop - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Drop** quando Service Broker non è in grado di trattenere un messaggio ricevuto che avrebbe dovuto essere recapitato a un servizio dell'istanza. Per i messaggi che avrebbero dovuto essere inoltrati, vedere [Classe di evento Broker:Forwarded Message Dropped](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
   
-## Colonne di dati della classe di evento Broker:Message Drop  
+## <a name="brokermessage-drop-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Message Drop  
   
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -31,7 +35,7 @@ caps.handback.revision: 25
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**Errore**|**int**|Numero di ID del messaggio in **sys.messages** relativo al testo dell'evento.|31|No|  
-|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:MessageDrop**, corrisponde sempre a **160**.|27|No|  
+|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:MessageDrop** , corrisponde sempre a **160**.|27|No|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|**nvarchar**|Indica se il messaggio eliminato è un messaggio in sequenza. È possibile specificare uno dei due valori seguenti:<br /><br /> **Messaggio in sequenza**. Il messaggio eliminato è un messaggio in sequenza.<br /><br /> **Messaggio non in sequenza**. Il messaggio eliminato non è un messaggio in sequenza.|21|Sì|  
 |**GUID**|**uniqueidentifier**|ID della conversazione a cui appartiene il messaggio eliminato. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
@@ -53,7 +57,7 @@ caps.handback.revision: 25
 |**TextData**|**ntext**|Motivo per cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eliminato il messaggio.|1|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

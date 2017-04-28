@@ -1,25 +1,29 @@
 ---
-title: "Compatibilit&#224; FILESTREAM con altre funzionalit&#224; di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], altre funzionalità di SQL Server"
-  - "FILESTREAM [SQL Server], limitazioni"
+title: "Compatibilità FILESTREAM con altre funzionalità di SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], other SQL Server features and
+- FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17a8348b6d4f3b89668128d28e3bca27fbc468b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilit&#224; FILESTREAM con altre funzionalit&#224; di SQL Server
+# <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
   Poiché i dati FILESTREAM sono nel file system, in questo argomento vengono fornite alcune considerazioni, linee guida e limitazioni per l'utilizzo di FILESTREAM con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]indicate di seguito.  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
@@ -50,7 +54,7 @@ caps.handback.revision: 42
  È possibile utilizzare la trasformazione Importa colonna per caricare file dal file system e inserirli in una colonna FILESTREAM. È inoltre possibile utilizzare la trasformazione Esporta colonna per estrarre i file da una colonna FILESTREAM e inserirli in un'altra posizione nel file system.  
   
 ##  <a name="distqueries"></a> Query distribuite e server collegati  
- È possibile utilizzare i dati FILESTREAM tramite query distribuite e server collegati trattandoli come dati **varbinary(max)**. Non è possibile utilizzare la funzione FILESTREAM **PathName()** in query distribuite in cui viene utilizzato un nome in quattro parti, anche quando il nome si riferisce al server locale. Tuttavia, è possibile utilizzare **PathName()** nella query interna di una query pass-through in cui viene utilizzato **OPENQUERY()**.  
+ È possibile utilizzare i dati FILESTREAM tramite query distribuite e server collegati trattandoli come dati **varbinary(max)** . Non è possibile utilizzare la funzione FILESTREAM **PathName()** in query distribuite in cui viene utilizzato un nome in quattro parti, anche quando il nome si riferisce al server locale. Tuttavia, è possibile utilizzare **PathName()** nella query interna di una query pass-through in cui viene utilizzato **OPENQUERY()**.  
   
 ##  <a name="encryption"></a> Crittografia  
  I dati FILESTREAM non vengono crittografati anche se è abilitata la crittografia dei dati trasparenti.  
@@ -65,21 +69,21 @@ caps.handback.revision: 42
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replica  
- Una colonna **varbinary(max)** che ha l'attributo FILESTREAM abilitato sul server di pubblicazione può essere replicata in un sottoscrittore con o senza l'attributo FILESTREAM. Per specificare la modalità di replica della colonna, utilizzare la finestra di dialogo **Proprietà articolo - <Articolo>\>** oppure il parametro @schema_option di [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). I dati replicati in una colonna **varbinary(max)** che non dispone dell'attributo FILESTREAM non devono superare il limite di 2 GB per quel tipo di dati; in caso contrario, viene generato un errore di runtime. Si consiglia di replicare l'attributo FILESTREAM, a meno che non si stia effettuando la replica dei dati in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM in Sottoscrittori [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] non è supportata, indipendentemente dall'opzione di schema specificata.  
+ Una colonna **varbinary(max)** che ha l'attributo FILESTREAM abilitato sul server di pubblicazione può essere replicata in un sottoscrittore con o senza l'attributo FILESTREAM. Per specificare la modalità di replica della colonna, usare la finestra di dialogo **Proprietà articolo - \<Articolo>** oppure il parametro @schema_option di [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). I dati replicati in una colonna **varbinary(max)** che non dispone dell'attributo FILESTREAM non devono superare il limite di 2 GB per quel tipo di dati; in caso contrario, viene generato un errore di runtime. Si consiglia di replicare l'attributo FILESTREAM, a meno che non si stia effettuando la replica dei dati in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM in Sottoscrittori [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] non è supportata, indipendentemente dall'opzione di schema specificata.  
   
 > [!NOTE]  
 >  La replica di valori di dati di dimensioni elevate da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è limitata a dati con dimensioni massime pari a 256 MB. Per ulteriori informazioni, vedere la pagina Web [Specifiche di capacità massima](http://go.microsoft.com/fwlink/?LinkId=103810).  
   
-### Considerazioni sulla replica transazionale  
+### <a name="considerations-for-transactional-replication"></a>Considerazioni sulla replica transazionale  
  Se si utilizzano colonne FILESTREAM in tabelle pubblicate per replica transazionale, considerare quanto riportato di seguito.  
   
--   Se in una tabella qualsiasi sono incluse colonne con attributo FILESTREAM, non è possibile usare valori di *database snapshot* o *database snapshot character* per la proprietà @sync_method di [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
+-   Se in una tabella qualsiasi sono incluse colonne con attributo FILESTREAM, non è possibile usare i valori *database snapshot* o *database snapshot character* per la proprietà @sync_method di [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
 -   L'opzione max text repl size consente di specificare la quantità massima di dati che è possibile inserire in una colonna pubblicata per la replica. Questa opzione può essere utilizzata per controllare le dimensioni dei dati FILESTREAM replicati.  
   
--   Se si specifica l'opzione dello schema per replicare l'attributo FILESTREAM, ma si esclude la colonna **uniqueidentifier** richiesta da FILESTREAM o si specifica di non replicare il vincolo UNIQUE per la colonna, la replica dell'attributo FILESTREAM non viene effettuata. La colonna viene replicata solo come **varbinary(max)**.  
+-   Se si specifica l'opzione dello schema per replicare l'attributo FILESTREAM, ma si esclude la colonna **uniqueidentifier** richiesta da FILESTREAM o si specifica di non replicare il vincolo UNIQUE per la colonna, la replica dell'attributo FILESTREAM non viene effettuata. La colonna viene replicata solo come **varbinary(max)** .  
   
-### Considerazioni per la replica di tipo merge  
+### <a name="considerations-for-merge-replication"></a>Considerazioni per la replica di tipo merge  
  Se si utilizzano colonne FILESTREAM in tabelle pubblicate per replica di tipo merge, considerare quanto riportato di seguito.  
   
 -   Le repliche di tipo merge e FILESTREAM richiedono una colonna di tipo di dati **uniqueidentifier** per identificare ogni riga in una tabella. La replica di tipo merge consente di aggiungere automaticamente una colonna se la tabella non ne contiene neanche una. La replica di tipo merge richiede l'impostazione della proprietà ROWGUIDCOL per la colonna e che vi sia un'impostazione predefinita di NEWID () o NEWSEQUENTIALID (). Oltre a questi requisiti, è necessario che per FILESTREAM vi sia un vincolo UNIQUE definito per la colonna. In base a questi requisiti si verificano le seguenti conseguenze:  
@@ -90,7 +94,7 @@ caps.handback.revision: 42
   
     -   Per impostazione predefinita, la replica di tipo merge consente di utilizzare NEWSEQUENTIALID () perché può fornire migliori prestazioni rispetto a NEWID (). Se si aggiunge una colonna **uniqueidentifier** a una tabella che sarà pubblicata per la replica di tipo merge, specificare NEWSEQUENTIALID () come impostazione predefinita.  
   
--   La replica di tipo merge include un'ottimizzazione per la replica di tipi di oggetto di grandi dimensioni. Questa ottimizzazione è controllata dal parametro @stream_blob_columns di [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Se si imposta l'opzione dello schema per replicare l'attributo FILESTREAM, il valore del parametro @stream_blob_columns è impostato su **true**. L'override di questa ottimizzazione può essere eseguito utilizzando [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Questa stored procedure consente di impostare @ stream_blob_columns su **false**. Se si aggiunge una colonna FILESTREAM a una tabella che è già pubblicata per la replica di tipo merge, si consiglia di impostare l'opzione su **true** utilizzando sp_changemergearticle.  
+-   La replica di tipo merge include un'ottimizzazione per la replica di tipi di oggetto di grandi dimensioni. Questa ottimizzazione è controllata dal parametro @stream_blob_columns di [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Se si imposta l'opzione dello schema per replicare l'attributo FILESTREAM, il valore del parametro @stream_blob_columns è impostato su **true**. L'override di questa ottimizzazione può essere eseguito utilizzando [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Questa stored procedure consente di impostare @stream_blob_columns su **false**. Se si aggiunge una colonna FILESTREAM a una tabella che è già pubblicata per la replica di tipo merge, si consiglia di impostare l'opzione su **true** utilizzando sp_changemergearticle.  
   
 -   L'abilitazione dell'opzione dello schema per FILESTREAM dopo la creazione di un articolo potrebbe non consentire la replica se i dati in una colonna FILESTREAM superano 2 GB e si verifica un conflitto durante tale operazione. Se le probabilità che ciò si verifichi sono alte, è consigliabile rimuovere e creare di nuovo l'articolo della tabella con l'opzione dello schema FILESTREAM appropriata abilitata al momento della creazione.  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 42
  Il mirroring del database non supporta FILESTREAM. Non è possibile creare un filegroup FILESTREAM nel server principale, né configurare il mirroring per un database in cui sono contenuti filegroup FILESTREAM.  
   
 ##  <a name="FullText"></a> Indicizzazione full-text  
- [L'indicizzazione full-text](../../relational-databases/search/populate-full-text-indexes.md) viene eseguita per una colonna FILESTREAM nello stesso modo in cui avviene per una colonna **varbinary(max)**. La tabella FILESTREAM deve avere una colonna che contiene l'estensione del nome file per ogni BLOB FILESTREAM. Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md), [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md) e [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+ [L'indicizzazione full-text](../../relational-databases/search/populate-full-text-indexes.md) viene eseguita per una colonna FILESTREAM nello stesso modo in cui avviene per una colonna **varbinary(max)** . La tabella FILESTREAM deve avere una colonna che contiene l'estensione del nome file per ogni BLOB FILESTREAM. Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md), [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md) e [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
  Il motore full-text consente di indicizzare il contenuto dei BLOB FILESTREAM. L'indicizzazione di file di immagini, ad esempio, potrebbe non essere utile. Un BLOB FILESTREAM viene reindicizzato quando viene aggiornato.  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 42
   
  È possibile impostare l'indipendenza del database su PARTIAL se si desidera utilizzare alcune funzionalità dei database indipendenti, ad esempio gli utenti indipendenti. In tal caso, tuttavia, è necessario tenere presente che alcune impostazioni del database non sono contenute nel database e non vengono spostate automaticamente quando viene spostato il database.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

@@ -1,38 +1,42 @@
 ---
-title: "Creare una nuova guida di piano | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.designer.newplanguide.f1"
-helpviewer_keywords: 
-  - "creazione di guide di piano"
-  - "guide di piano [SQL Server] creazione"
+title: Creare una nuova guida di piano | Microsoft Docs
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.designer.newplanguide.f1
+helpviewer_keywords:
+- creating plan guides
+- plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare una nuova guida di piano
+# <a name="create-a-new-plan-guide"></a>Creare una nuova guida di piano
 Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint o di un piano di query fisso. Nella guida di piano è necessario specificare l'istruzione che si vuole ottimizzare e una clausola OPTION che contiene gli hint per la query da usare. In alternativa, un piano di query specifico che si vuole usare per ottimizzare la query. Quando viene eseguita la query, in Query Optimizer è possibile far corrispondere l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano e associare la clausola OPTION alla query in fase di esecuzione oppure utilizzare il piano di query specificato.  
 
 Una guida di piano applica a una query un piano di query fisso e/o hint per la query.
   
 ##  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica **@name =**, è necessario specificare anche **@stmt =**, **@type =** e così via. Analogamente, se **@name =** viene omesso e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
+-   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica **@name =**, è necessario specificare anche **@stmt =** , **@type =** e così via. Analogamente, se si omette **@name =** e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
   
 -   È possibile creare più guide di piano OBJECT o SQL per la stessa query e batch o modulo. Tuttavia è possibile abilitare una sola guida di piano alla volta.  
   
--   Non è possibile creare guide di piano di tipo OBJECT per un valore @module_or_batch che fa riferimento a una stored procedure, una funzione o un trigger DML che specifica la clausola WITH ENCRYPTION o è temporaneo.  
+-   Non è possibile creare guide di piano di tipo OBJECT per un valore @module_or_batch che fa riferimento a una stored procedure, una funzione o un trigger DML che specifica la clausola WITH ENCRYPTION o che è temporaneo.  
   
 -   Se si tenta di eliminare o modificare una funzione, una stored procedure o un trigger DML a cui viene fatto riferimento in una guida di piano abilitata o disabilitata, viene generato un errore. Viene generato un errore anche se si cerca di eliminare una tabella per la quale è stato definito un trigger a cui una guida di piano fa riferimento.  
  
@@ -54,11 +58,11 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
   
 5.  Nell'elenco **Tipo di ambito** selezionare il tipo di entità in cui l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene visualizzata. Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL**e **TEMPLATE**.  
   
-6.  Nella casella **Batch ambito** immettere il testo del batch in cui l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene visualizzata. Nel testo del batch non può essere inclusa un'istruzione USE``*database*. La casella **Batch ambito** è disponibile solo quando come tipo di ambito è selezionato **SQL** . Se non è stato immesso alcun dato nella casella relativa al batch ambito quando SQL è il tipo di ambito, il valore del testo del batch viene impostato sullo stesso valore inserito nella casella **Istruzione** .  
+6.  Nella casella **Batch ambito** immettere il testo del batch in cui l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene visualizzata. Nel testo del batch non può essere inclusa un'istruzione USE``*database* . La casella **Batch ambito** è disponibile solo quando come tipo di ambito è selezionato **SQL** . Se non è stato immesso alcun dato nella casella relativa al batch ambito quando SQL è il tipo di ambito, il valore del testo del batch viene impostato sullo stesso valore inserito nella casella **Istruzione** .  
   
 7.  Nell'elenco **Nome schema ambito** immettere il nome dello schema in cui è contenuto l'oggetto. La casella **Nome schema ambito** è disponibile solo quando come tipo di ambito è selezionato **Oggetto** .  
   
-8.  Nella casella **Nome oggetto ambito** immettere il nome della stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], della funzione scalare definita dall'utente, della funzione con valori di tabella con istruzioni multiple o del trigger DML in cui viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La casella **Nome oggetto ambito** è disponibile solo quando come tipo di ambito è selezionato **Oggetto** .  
+8.  Nella casella **Nome oggetto ambito** immettere il nome della stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , della funzione scalare definita dall'utente, della funzione con valori di tabella con istruzioni multiple o del trigger DML in cui viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . La casella **Nome oggetto ambito** è disponibile solo quando come tipo di ambito è selezionato **Oggetto** .  
   
 9. Nella casella **Parametri** immettere il nome e il tipo di dati di tutti i parametri incorporati nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -100,3 +104,4 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
  Per altre informazioni, vedere [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
   
   
+

@@ -1,33 +1,37 @@
 ---
-title: "Record di SQL Server Audit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "record di controllo [SQL Server]"
+title: Record di SQL Server Audit | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Record di SQL Server Audit
+# <a name="sql-server-audit-records"></a>Record di SQL Server Audit
   La caratteristica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- I controlli sono costituiti da zero o più attività di controllo, che vengono registrate in una *destinazione* del controllo. La destinazione del controllo può essere un file binario, il registro eventi applicazioni di Windows o il registro eventi di sicurezza di Windows. I record inviati alla destinazione possono contenere gli elementi descritti nella tabella seguente.  
+ I controlli sono costituiti da zero o più attività di controllo, che vengono registrate in una *destinazione*del controllo. La destinazione del controllo può essere un file binario, il registro eventi applicazioni di Windows o il registro eventi di sicurezza di Windows. I record inviati alla destinazione possono contenere gli elementi descritti nella tabella seguente.  
   
 |Nome colonna|Descrizione|Tipo|Sempre disponibile|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data e ora di generazione dell'azione controllabile.|**datetime2**|Sì|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|**int**|Sì|  
-|**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx) (Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
+|**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
 |**succeeded**|Indica se l'azione che ha generato l'evento ha avuto esito positivo|**bit** - 1 = Esito positivo, 0 = Esito negativo|Sì|  
 |**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|**bigint**|No|  
 |**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|**bit** - 1 = True, 0 = False|No|  
@@ -52,7 +56,7 @@ caps.handback.revision: 19
 |**istruzione**|istruzione TSQL (se presente)|**nvarchar(4000)**|No|  
 |**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|**nvarchar(4000)**|No|  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Alcune azioni non consentono l'inserimento di un valore di colonna perché il valore potrebbe non essere valido per l'azione.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit archivia 4000 caratteri di dati per ogni campo di tipo carattere in un record di controllo. Quando i valori **additional_information** e **statement** restituiti da un'azione controllabile sono costituiti da più di 4000 caratteri, viene usata la colonna **sequence_no** per scrivere più record nel report del controllo in modo che i dati vengano registrati da una singola azione di controllo. Il processo è il seguente:  
@@ -61,13 +65,13 @@ caps.handback.revision: 19
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit scrive i dati parziali come prima riga del record di controllo. Tutti gli altri campi vengono duplicati in ogni riga.  
   
--   Viene incrementato il valore di **sequence_no**.  
+-   Viene incrementato il valore di **sequence_no** .  
   
 -   Questo processo viene ripetuto fino a registrare tutti i dati.  
   
  È possibile connettere i dati leggendo le righe in sequenza con il valore **sequence_no** e le colonne **event_Time**, **action_id** e **session_id** per identificare l'azione.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-audit-transact-sql.md)  

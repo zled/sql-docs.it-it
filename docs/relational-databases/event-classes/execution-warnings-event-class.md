@@ -1,33 +1,37 @@
 ---
-title: "Classe di evento Execution Warnings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Execution Warnings - classe di evento"
+title: Classe di evento Execution Warnings | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29117ed6015875dd09b515e78ac6cb23e5a4f22f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Execution Warnings
-  La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
+# <a name="execution-warnings-event-class"></a>Execution Warnings - classe di evento
+  La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
   
-## Colonne di dati della classe di evento Execution Warnings  
+## <a name="execution-warnings-event-class-data-columns"></a>Colonne di dati della classe di evento Execution Warnings  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Durata|**bigint**|Tempo, in millisecondi, di attesa della query per ottenere la memoria necessaria. Valore valido solo quando EventSubClass = 1 (attesa della query).|13|Sì|  
 |Errore|**int**|Non usato.|31|Sì|  
@@ -49,7 +53,7 @@ caps.handback.revision: 35
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

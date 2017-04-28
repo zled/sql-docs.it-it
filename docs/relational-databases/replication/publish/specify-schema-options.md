@@ -1,27 +1,31 @@
 ---
-title: "Impostazione delle opzioni dello schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "schemi [replica di SQL Server], opzioni"
-  - "articoli [replica di SQL Server], opzioni di replica transazionale"
-  - "articoli [replica di SQL Server], opzioni di replica di tipo merge"
-  - "articoli [replica di SQL Server], opzioni dello schema"
+title: Specificare le opzioni dello schema | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schemas [SQL Server replication], options
+- articles [SQL Server replication], transactional replication options
+- articles [SQL Server replication], merge replication options
+- articles [SQL Server replication], schema options
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ef7d237d005c8be5892125841de73084110f1e5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impostazione delle opzioni dello schema
+# <a name="specify-schema-options"></a>Impostazione delle opzioni dello schema
   In questo argomento si illustra come impostare le opzioni dello schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando si pubblica una tabella o una vista, è possibile controllare le opzioni di creazione degli oggetti che vengono replicate per l'oggetto pubblicato. È possibile impostare queste opzioni quando viene creato l'articolo ed è possibile modificarle anche successivamente. Se queste opzioni non vengono specificate in modo esplicito per un articolo, verrà definito un set predefinito di opzioni.  
   
 > [!NOTE]  
@@ -49,78 +53,78 @@ caps.handback.revision: 39
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Per l'elenco completo delle opzioni di schema, vedere il **@schema_option** parametro [sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+-   Per un elenco completo delle opzioni dello schema, vedere il parametro **@schema_option** di [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Specificare le opzioni di schema, ad esempio se copiare i vincoli e trigger ai sottoscrittori, nel **proprietà** scheda della finestra di **Proprietà articolo - \< articolo>** la finestra di dialogo. Questa scheda è disponibile nella creazione guidata pubblicazione e la **Proprietà pubblicazione - \< pubblicazione>** la finestra di dialogo. Per ulteriori informazioni sull'utilizzo della procedura guidata e l'accesso nella finestra di dialogo, vedere [creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [visualizzare e modificare le proprietà di pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Specificare le opzioni dello schema, ad esempio se copiare i vincoli e i trigger nei Sottoscrittori, nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>**. Questa scheda è disponibile in Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### Per specificare le opzioni dello schema  
+#### <a name="to-specify-schema-options"></a>Per specificare le opzioni dello schema  
   
-1.  Nel **articoli** pagina della procedura guidata nuova pubblicazione o **Proprietà pubblicazione - \< pubblicazione>** la finestra di dialogo, selezionare un articolo e quindi fare clic su **Proprietà articolo**.  
+1.  Nella pagina **Articoli** di Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un articolo e quindi fare clic su **Proprietà articolo**.  
   
 2.  Selezionare gli articoli a cui si applicano le modifiche delle opzioni dello schema:  
   
-    -   Fare clic su **impostare proprietà di evidenziate \< ObjectType> articolo** per avviare il **Proprietà articolo - \< ObjectName>** la finestra di dialogo; Proprietà le modifiche apportate in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro degli oggetti nel **articoli** pagina.  
+    -   Fare clic su **Imposta proprietà dell'articolo di \<TipoOggetto> evidenziato** per aprire la finestra di dialogo **Proprietà articolo - \<NomeOggetto>**. Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro degli oggetti nella pagina **Articoli**.  
   
-    -   Fare clic su **impostare le proprietà di tutti \< ObjectType> articoli** per avviare il **le proprietà per tutti \< ObjectType> articoli** la finestra di dialogo; Proprietà le modifiche apportate in questa finestra di dialogo vengono applicate a tutti gli oggetti di quel tipo nel riquadro degli oggetti nel **articoli** pagina, inclusi quelli non ancora selezionati per la pubblicazione.  
+    -   Fare clic su **Imposta proprietà di tutti gli articoli di \<TipoOggetto>** per aprire la finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>**. Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate a tutti gli oggetti del tipo indicato nel riquadro degli oggetti all'interno della pagina **Articoli**, inclusi quelli non ancora selezionati per la pubblicazione.  
   
         > [!NOTE]  
-        >  Modifiche delle proprietà apportate nel **le proprietà per tutti \< ObjectType> articoli** la finestra di dialogo sostituire qualsiasi apportate in precedenza il **Proprietà articolo - \< ObjectName>** la finestra di dialogo. Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
+        >  Le modifiche apportate alle proprietà nella finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** sostituiscono tutte le modifiche eseguite precedentemente nella finestra di dialogo **Proprietà articolo - \<NomeOggetto>**. Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
   
-3.  Nel **Copia oggetti e impostazioni nel Sottoscrittore** e **oggetto di destinazione** sezioni del **proprietà** scheda il **Proprietà articolo - \< articolo>** finestra di dialogo specificare valori per le opzioni.  
+3.  Nelle sezioni **Copia oggetti e impostazioni nel Sottoscrittore** e **Oggetto di destinazione** della scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>** specificare i valori per le opzioni.  
   
 4.  Se necessario, modificare le proprietà e quindi fare clic su **OK**.  
   
-5.  Se è la **Proprietà pubblicazione - \< pubblicazione>** la finestra di dialogo, fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
+5.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
- Le opzioni dello schema vengono specificate come un valore esadecimale di [| (OR bit per bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) risultato di una o più opzioni. Per ulteriori informazioni, vedere [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+ Le opzioni dello schema vengono specificate come valore esadecimale che corrisponde al risultato [| (OR bit per bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) di una o più opzioni. Per ulteriori informazioni, vedere [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 > [!NOTE]  
->  È necessario convertire i valori delle opzioni dello schema da **binario** a **int** prima di eseguire un'operazione bit per bit. Per ulteriori informazioni, vedere [CAST e CONVERT & #40; Transact-SQL & #41;](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  È necessario convertire i valori delle opzioni dello schema da **binario** a **int** prima di eseguire un'operazione bit per bit. Per altre informazioni, vedere [CAST and CONVERT &#40;Transact-SQL&#41;](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-#### Per specificare le opzioni dello schema durante la definizione di un articolo per una pubblicazione snapshot o transazionale  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>Per specificare le opzioni dello schema durante la definizione di un articolo per una pubblicazione snapshot o transazionale  
   
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione a cui appartiene l'articolo per **@publication**, un nome per l'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, il tipo di oggetto di database per **@type**, e [| (OR bit per bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) risultato di uno o più opzioni dello schema per **@schema_option**. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**il tipo di oggetto di database per **@type**e il risultato [| (OR bit per bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) di una o più opzioni dello schema per **@schema_option**. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Per specificare le opzioni dello schema durante la definizione di un articolo per una pubblicazione di tipo merge  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>Per specificare le opzioni dello schema durante la definizione di un articolo per una pubblicazione di tipo merge  
   
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare il nome della pubblicazione a cui appartiene l'articolo per **@publication**, un nome per l'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, e [| (OR bit per bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) risultato di uno o più opzioni dello schema per **@schema_option**. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**e il risultato [| (OR bit per bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) di una o più opzioni dello schema per **@schema_option**. Per altre informazioni, vedere [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Per modificare le opzioni dello schema per un articolo esistente in una pubblicazione snapshot o transazionale  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>Per modificare le opzioni dello schema per un articolo esistente in una pubblicazione snapshot o transazionale  
   
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication** e il nome dell'articolo per **@article**. Si noti il valore di **schema_option** colonna nel set di risultati.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication** e il nome dell'articolo per **@article**. Si noti il valore della colonna **schema_option** nel set di risultati.  
   
-2.  Eseguire un [& (AND bit per bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) valore per determinare se l'impostazione dell'opzione operazione utilizzando il valore del passaggio 1 e lo schema desiderato.  
-  
-    -   Se il risultato è **0**, l'opzione non è impostata.  
-  
-    -   Se il risultato corrisponde al valore dell'opzione, l'opzione è già impostata.  
-  
-3.  Se l'opzione non è impostata, eseguire una [| (OR bit per bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) operazione utilizzando il valore ottenuto al passaggio 1 e il valore dell'opzione dello schema desiderato.  
-  
-4.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specificare il nome della pubblicazione a cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, un valore di **schema_option** per **@property**, e il risultato esadecimale del passaggio 3 per **@value**.  
-  
-5.  Eseguire l'agente snapshot per generare un nuovo snapshot. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
-  
-#### Per modificare le opzioni dello schema per un articolo esistente in una pubblicazione di tipo merge  
-  
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication** e il nome dell'articolo per **@article**. Si noti il valore di **schema_option** colonna nel set di risultati.  
-  
-2.  Eseguire un [& (AND bit per bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) valore per determinare se l'impostazione dell'opzione operazione utilizzando il valore del passaggio 1 e lo schema desiderato.  
+2.  Eseguire un'operazione [& (AND bit per bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) usando il valore del passaggio 1 e il valore dell'opzione dello schema desiderata per determinare se l'opzione è impostata.  
   
     -   Se il risultato è **0**, l'opzione non è impostata.  
   
     -   Se il risultato corrisponde al valore dell'opzione, l'opzione è già impostata.  
   
-3.  Se l'opzione non è impostata, eseguire una [| (OR bit per bit)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) operazione utilizzando il valore ottenuto al passaggio 1 e il valore dell'opzione dello schema desiderato.  
+3.  Se l'opzione non è impostata, eseguire un'operazione [| (OR bit per bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) utilizzando il valore del passaggio 1 e il valore dell'opzione dello schema desiderata.  
   
-4.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare il nome della pubblicazione a cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, un valore di **schema_option** per **@property**, e il risultato esadecimale del passaggio 3 per **@value**.  
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, il valore **schema_option** per **@property**e il risultato esadecimale del passaggio 3 per **@value**.  
   
 5.  Eseguire l'agente snapshot per generare un nuovo snapshot. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-## Vedere anche  
- [Pubblicazione di dati e oggetti di database](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Per modificare le opzioni dello schema per un articolo esistente in una pubblicazione di tipo merge  
+  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication** e il nome dell'articolo per **@article**. Si noti il valore della colonna **schema_option** nel set di risultati.  
+  
+2.  Eseguire un'operazione [& (AND bit per bit)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) usando il valore del passaggio 1 e il valore dell'opzione dello schema desiderata per determinare se l'opzione è impostata.  
+  
+    -   Se il risultato è **0**, l'opzione non è impostata.  
+  
+    -   Se il risultato corrisponde al valore dell'opzione, l'opzione è già impostata.  
+  
+3.  Se l'opzione non è impostata, eseguire un'operazione [| (OR bit per bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) utilizzando il valore del passaggio 1 e il valore dell'opzione dello schema desiderata.  
+  
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, il valore **schema_option** per **@property**e il risultato esadecimale del passaggio 3 per **@value**.  
+  
+5.  Eseguire l'agente snapshot per generare un nuovo snapshot. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Pubblicare dati e oggetti di database](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Opzioni degli articoli per la replica transazionale](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

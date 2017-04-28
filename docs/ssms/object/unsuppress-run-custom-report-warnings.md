@@ -1,0 +1,57 @@
+---
+title: Visualizzare gli avvisi relativi all&quot;esecuzione di report personalizzati | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], custom reports
+ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
+caps.latest.revision: 4
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 20c37528ddb6bc1c93d86135ddcdf1ed0b9e2aa1
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="unsuppress-run-custom-report-warnings"></a>Visualizzazione di avvisi relativi all'esecuzione di report personalizzati
+Per i report personalizzati sono disponibili due finestre di dialogo di avviso. In questo argomento vengono descritte le modalità per consentire la visualizzazione delle caselle in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+  
+Per impostazione predefinita, prima dell'esecuzione di un report personalizzato viene visualizzata la finestra di dialogo **Esegui report personalizzato** . Se si seleziona la casella di controllo **Non visualizzare più questo avviso** , la finestra di dialogo non verrà più visualizzata. Per impostazione predefinita, la finestra di dialogo **Esegui report personalizzato** viene visualizzata anche quando si apre un report personalizzato e quindi si fa clic su un collegamento a un altro report personalizzato. La finestra di dialogo contiene il percorso del file di report personalizzato drill-through. Se si seleziona la casella di controllo **Non visualizzare più questo avviso** , la finestra di dialogo non verrà più visualizzata.  
+  
+## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+  
+#### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Per consentire la visualizzazione della finestra di dialogo di avviso relativa al report personalizzato principale  
+  
+1.  Connettersi a \<*Server*>\\<*Condivisione*>|\<*Unità*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
+  
+2.  Fare clic con il pulsante destro del mouse su **reports.xml**e quindi scegliere **Modifica**.  
+  
+3.  Modificare **<SuppressWarning>true\<\/SuppressWarning> in <SuppressWarning>false\<\/SuppressWarning>**.  
+  
+4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+  
+#### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Per consentire la visualizzazione della finestra di dialogo di avviso relativa al report personalizzato drill-through  
+  
+1.  Connettersi a \<*Server*>\\<*Condivisione*>|\<*Unità*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
+  
+2.  Fare clic con il pulsante destro del mouse su **reports.xml**, quindi fare clic su **Modifica**.  
+  
+3.  Modificare **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> in <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**.  
+  
+4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+  
+## <a name="see-also"></a>Vedere anche  
+[Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
+[Aggiunta di un report personalizzato a Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
+[Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+  
+

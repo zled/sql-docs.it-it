@@ -1,28 +1,32 @@
 ---
-title: "Database master | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database master [SQL Server], informazioni"
-  - "database master [SQL Server]"
+title: Database master | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database master
-  Nel database **master** vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. inclusi i metadati a livello globale dell'istanza quali gli account di accesso, gli endpoint, i server collegati e le impostazioni di configurazione di sistema. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli oggetti di sistema non sono più archiviati nel database **master** , ma sono archiviati nel [database Resource](../../relational-databases/databases/resource-database.md). Nel database **master** vengono inoltre registrate l'esistenza di tutti gli altri database e la posizione dei relativi file di database, nonché le informazioni di inizializzazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è pertanto possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se il database **master** non è disponibile.  
+# <a name="master-database"></a>Database master
+  Nel database **master** vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . inclusi i metadati a livello globale dell'istanza quali gli account di accesso, gli endpoint, i server collegati e le impostazioni di configurazione di sistema. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli oggetti di sistema non sono più archiviati nel database **master** , ma sono archiviati nel [database Resource](../../relational-databases/databases/resource-database.md). Nel database **master** vengono inoltre registrate l'esistenza di tutti gli altri database e la posizione dei relativi file di database, nonché le informazioni di inizializzazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è pertanto possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se il database **master** non è disponibile.  
   
-## Proprietà fisiche del database master  
+## <a name="physical-properties-of-master"></a>Proprietà fisiche del database master  
  Nella tabella seguente sono illustrati i valori di configurazione iniziali dei file di dati e di log del database **master** . Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Aumento di dimensioni del file|  
@@ -30,9 +34,9 @@ caps.handback.revision: 50
 |Dati primari|master|master.mdf|Aumento automatico del 10% fino a quando il disco risulta pieno.|  
 |File di log|mastlog|mastlog.ldf|Aumento automatico del 10% fino a un massimo di 2 terabyte.|  
   
- Per informazioni su come spostare i file di dati e di log del database **master**, vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
+ Per informazioni su come spostare i file di dati e di log del database **master** , vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### Opzioni di database  
+### <a name="database-options"></a>Opzioni di database  
  Nella tabella seguente è illustrato il valore predefinito di ogni opzione del database **master** e viene specificato se il valore è modificabile. Per visualizzare le impostazioni correnti di queste opzioni, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opzione di database|Valore predefinito|Modificabile|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Restrizioni  
+## <a name="restrictions"></a>Restrizioni  
  Nel database **master** non è possibile eseguire le operazioni seguenti:  
   
 -   Aggiunta di file o di filegroup.  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   Impostazione del database o del filegroup primario su READ_ONLY.  
   
-## Indicazioni  
+## <a name="recommendations"></a>Indicazioni  
  Quando si utilizza il database **master** , è consigliabile attenersi alle indicazioni seguenti:  
   
 -   Tenere sempre a disposizione un backup aggiornato del database **master** .  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   Non impostare l'opzione TRUSTWORTHY su ON per il database **master** .  
   
-## Cosa fare se il database master diventa inutilizzabile  
+## <a name="what-to-do-if-master-becomes-unusable"></a>Cosa fare se il database master diventa inutilizzabile  
  Se il database **master** diventa inutilizzabile, è possibile ripristinare uno stato utilizzabile del database in uno dei modi seguenti:  
   
 -   Ripristinare il database **master** da un backup del database corrente.  
@@ -129,7 +133,7 @@ caps.handback.revision: 50
     > [!IMPORTANT]  
     >  La ricompilazione del database **master** comporta la ricompilazione di tutti i database di sistema.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Ricompilare database di sistema](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Database di sistema.](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [Spostare file del database](../../relational-databases/databases/move-database-files.md)  
   
   
+

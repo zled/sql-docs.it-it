@@ -1,31 +1,35 @@
 ---
-title: "Transazioni posticipate (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "I/O [SQL Server], recupero del database"
-  - "ripristino di pagine [SQL Server]"
-  - "transazioni posticipate"
-  - "modifica dello stato di transazione posticipata"
+title: Transazioni posticipate (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transazioni posticipate (SQL Server)
+# <a name="deferred-transactions-sql-server"></a>Transazioni posticipate (SQL Server)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise una transazione danneggiata può diventare posticipata se i dati necessari per il rollback (annullamento) sono offline durante l'avvio del database. Una *transazione posticipata* è una transazione di cui non è stato eseguito il commit al termine della fase di rollforward e per la quale si è verificato un errore che ne impedisce il rollback. Non essendo possibile eseguire il rollback, la transazione viene posticipata.  
   
 > [!NOTE]  
->  Le transazioni danneggiate vengono posticipate solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Nelle altre edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una transazione danneggiata causa un errore di avvio.  
+>  Le transazioni danneggiate vengono posticipate solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Nelle altre edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]una transazione danneggiata causa un errore di avvio.  
   
  In genere, una transazione posticipata si verifica perché durante il rollforward del database un errore di I/O ha impedito la lettura di una pagina necessaria per la transazione. Anche un errore a livello di file può tuttavia determinare transazioni posticipate. Una transazione posticipata si può verificare anche quando una sequenza di ripristino parziale si arresta in un punto in cui è necessario eseguire il rollback della transazione e i dati richiesti dalla transazione sono offline.  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 45
   
 |Azione|Risoluzione (se si verificano problemi di I/O oppure i dati necessari sono offline)|  
 |------------|-----------------------------------------------------------------------|  
-|Avvio del server|Transazione posticipata|  
-|Restore|Transazione posticipata|  
+|Avvio del server|transazione posticipata|  
+|Restore|transazione posticipata|  
 |Collega|Il collegamento ha esito negativo|  
-|Riavvio automatico|Transazione posticipata|  
+|Riavvio automatico|transazione posticipata|  
 |Creazione di database o di snapshot del database|La creazione ha esito negativo|  
-|Rollforward nel mirroring del database|Transazione posticipata|  
-|Filegroup offline|Transazione posticipata|  
+|Rollforward nel mirroring del database|transazione posticipata|  
+|Filegroup offline|transazione posticipata|  
   
-## Annullamento dello stato di transazione posticipata  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Annullamento dello stato di transazione posticipata  
   
 > [!IMPORTANT]  
 >  Le transazioni posticipate mantengono attivo il log delle transazioni. Un file di log virtuale contenente transazioni posticipate non può essere troncato fino a quando lo stato di transazione posticipata non viene annullato. Per altre informazioni sul troncamento del log, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          Per informazioni sulla modalità di emergenza, vedere [Stati del database](../../relational-databases/databases/database-states.md).  
   
-    -   Correggere quindi gli errori del database usando l'opzione DBCC REPAIR_ALLOW_DATA_LOSS in una delle istruzioni DBCC seguenti: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) o [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Correggere quindi gli errori del database usando l'opzione DBCC REPAIR_ALLOW_DATA_LOSS in una delle istruzioni DBCC seguenti: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)o [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Quando rileva la pagina danneggiata, DBCC ne esegue la deallocazione e corregge gli eventuali errori correlati. Questo approccio consente di attivare di nuovo la modalità online per il database in uno stato fisicamente consistente. È tuttavia possibile che vengano persi dati aggiuntivi. Utilizzare pertanto questo approccio solo se strettamente necessario.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Rimuovere filegroup inattivi &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [Ripristinare pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

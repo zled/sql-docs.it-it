@@ -1,29 +1,33 @@
 ---
-title: "Attivit&#224; Riorganizza indice (Piano di manutenzione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.defrag.f1"
-helpviewer_keywords: 
-  - "Attività Riorganizza indice - finestra di dialogo"
+title: "Attività Riorganizza indice (Piano di manutenzione) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.defrag.f1
+helpviewer_keywords:
+- Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attivit&#224; Riorganizza indice (Piano di manutenzione)
-  Usare la finestra di dialogo **Attività Riorganizza indice** per razionalizzare l'ordine di ricerca delle pagine dell'indice. In questa attività viene utilizzata l'istruzione `ALTER INDEX REORGANIZE` con i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+# <a name="reorganize-index-task-maintenance-plan"></a>Attività Riorganizza indice (Piano di manutenzione)
+  Usare la finestra di dialogo **Attività Riorganizza indice** per razionalizzare l'ordine di ricerca delle pagine dell'indice. In questa attività viene utilizzata l'istruzione `ALTER INDEX REORGANIZE` con i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
@@ -35,15 +39,15 @@ caps.handback.revision: 33
   
 -   **Tutti i database**  
   
-     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di tempdb.  
+     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di tempdb.  
   
 -   **Tutti i database di sistema**  
   
-     Consente di generare un piano per l'esecuzione delle attività di manutenzione in ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di **tempdb**. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
+     Consente di generare un piano per l'esecuzione delle attività di manutenzione in ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di **tempdb**. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
   
 -   **Tutti i database utente**  
   
-     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Database specifici**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 33
  Consente di limitare la griglia **Selezione** per visualizzare tabelle, viste o entrambe.  
   
  **Selezione**  
- Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella **Oggetto**.  
+ Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella **Oggetto** .  
   
  **Compatta oggetti di grandi dimensioni**  
  Dealloca spazio per tabelle e viste, se possibile. Questa opzione utilizza l'istruzione `ALTER INDEX LOB_COMPACTION = ON`  
@@ -64,7 +68,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
-## Finestra di dialogo Nuova connessione  
+## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
@@ -78,10 +82,10 @@ caps.handback.revision: 33
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -89,7 +93,7 @@ caps.handback.revision: 33
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   

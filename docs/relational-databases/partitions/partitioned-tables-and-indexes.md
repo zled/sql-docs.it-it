@@ -1,31 +1,35 @@
 ---
-title: "Tabelle e indici partizionati | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelle partizionate [SQL Server], informazioni sulle tabelle partizionate"
-  - "indici partizionati [SQL Server], architettura"
-  - "tabelle partizionate [SQL Server], architettura"
-  - "indici partizionati [SQL Server], informazioni sugli indici partizionati"
+title: Tabelle e indici partizionati | Microsoft Docs
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitioned tables [SQL Server], about partitioned tables
+- partitioned indexes [SQL Server], architecture
+- partitioned tables [SQL Server], architecture
+- partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabelle e indici partizionati
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+# <a name="partitioned-tables-and-indexes"></a>Tabelle e indici partizionati
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
-> Per impostazione predefinita, in  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene supportato un massimo di 15.000 partizioni. Nelle versioni precedenti di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il numero di partizioni è stato limitato a 1.000 per impostazione predefinita. Nei sistemi x86, creare una tabella o un indice con più di 1000 partizioni è possibile, ma non è supportato.  
+> Per impostazione predefinita, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene supportato un massimo di 15.000 partizioni. Nelle versioni precedenti di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il numero di partizioni è stato limitato a 1.000 per impostazione predefinita. Nei sistemi x86, creare una tabella o un indice con più di 1000 partizioni è possibile, ma non è supportato.  
   
 ## <a name="benefits-of-partitioning"></a>Vantaggi del partizionamento  
  Il partizionamento di tabelle o indici di grandi dimensioni può offrire i vantaggi in termini di gestibilità e prestazioni descritti di seguito.  
@@ -117,10 +121,11 @@ caps.handback.revision: 46
   
 -   [Caricamento bulk in una tabella partizionata](http://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Progetto REAL: ciclo di vita dei dati -- Partizionamento](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Progetto REAL: ciclo di vita dei dati -- Partizionamento](https://technet.microsoft.com/library/cc966424.aspx)  
   
 -   [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](http://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [Le 10 migliori procedure consigliate per la compilazione di un data warehouse relazionale su vasta scala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   
+

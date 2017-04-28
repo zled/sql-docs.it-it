@@ -1,25 +1,29 @@
 ---
-title: "Ottimizzazione guidata per la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.memoryoptimizationwizard.f1"
-  - "sql13.swb.memoryoptimizationwizard.f1"
+title: Ottimizzazione guidata per la memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.memoryoptimizationwizard.f1
+- sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04ee098de4740d0d4a3d3c195d24869ee41cea9a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ottimizzazione guidata per la memoria
+# <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   I report di analisi delle prestazioni delle transazioni (vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indicano quali tabelle del database trarranno vantaggio se trasferite per usare OLTP in memoria. Dopo aver identificato la tabella da trasferire per usare OLTP in memoria, è possibile usare l'Ottimizzazione guidata per la memoria per eseguire la migrazione della tabella basata su disco in una tabella con ottimizzazione per la memoria.  
@@ -30,19 +34,19 @@ caps.handback.revision: 17
   
 -   Eseguire la migrazione di una tabella e dei dati a una tabella con ottimizzazione della memoria (in assenza di funzionalità non supportate).  
     
- Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sui modelli di carico di lavoro comuni e sulla migrazione).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sui modelli di carico di lavoro comuni e sulla migrazione).  
   
-## Procedura dettagliata per l'utilizzo di Ottimizzazione guidata per la memoria  
- In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella che si vuole convertire, quindi selezionare **Ottimizzazione guidata per la memoria**. Verrà visualizzata la pagina introduttiva per **Ottimizzazione guidata per la memoria della tabella**.  
+## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procedura dettagliata per l'utilizzo di Ottimizzazione guidata per la memoria  
+ In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella che si vuole convertire, quindi selezionare **Ottimizzazione guidata per la memoria**. Verrà visualizzata la pagina introduttiva per **Ottimizzazione guidata per la memoria della tabella**.  
   
-### Elenco di controllo relativo all'ottimizzazione per la memoria  
- Quando si fa clic su **Avanti** nella pagina introduttiva di **Ottimizzazione guidata per la memoria della tabella**, viene visualizzato l'elenco di controllo relativo all'ottimizzazione per la memoria. Le tabelle con ottimizzazione per la memoria non supportano tutte le funzionalità di una tabella basata su disco. Nell'elenco di controllo relativo all'ottimizzazione per la memoria viene indicato se la tabella basata su disco utilizza qualche funzionalità che non è compatibile con un tabella con ottimizzazione per la memoria. Poiché l'**Ottimizzazione guidata per la memoria della tabella** non modifica la tabella basata su disco, è possibile effettuare la migrazione della tabella per usare OLTP in memoria. È necessario effettuare queste modifiche manualmente prima di continuare con la migrazione. Per ogni incompatibilità riscontrata, in **Ottimizzazione guidata per la memoria della tabella** viene visualizzato un collegamento a informazioni utili per la modifica delle tabelle basate su disco.  
+### <a name="memory-optimization-checklist"></a>Elenco di controllo relativo all'ottimizzazione per la memoria  
+ Quando si fa clic su **Avanti** nella pagina introduttiva di **Ottimizzazione guidata per la memoria della tabella**, viene visualizzato l'elenco di controllo relativo all'ottimizzazione per la memoria. Le tabelle con ottimizzazione per la memoria non supportano tutte le funzionalità di una tabella basata su disco. Nell'elenco di controllo relativo all'ottimizzazione per la memoria viene indicato se la tabella basata su disco utilizza qualche funzionalità che non è compatibile con un tabella con ottimizzazione per la memoria. Poiché l' **Ottimizzazione guidata per la memoria della tabella** non modifica la tabella basata su disco, è possibile effettuare la migrazione della tabella per usare OLTP in memoria. È necessario effettuare queste modifiche manualmente prima di continuare con la migrazione. Per ogni incompatibilità riscontrata, in **Ottimizzazione guidata per la memoria della tabella** viene visualizzato un collegamento a informazioni utili per la modifica delle tabelle basate su disco.  
   
  Se si desidera conservare l'elenco delle incompatibilità, per pianificare la migrazione, fare clic su **Genera report** per generare un elenco HTML.  
   
  Se la tabella non presenta incompatibilità e si è connessi a un'istanza di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con OLTP in memoria, fare clic su **Avanti**.  
   
-### Avvisi sull'ottimizzazione per la memoria  
+### <a name="memory-optimization-warnings"></a>Avvisi sull'ottimizzazione per la memoria  
  Nella pagina successiva, quella degli avvisi relativi all'ottimizzazione per la memoria, è mostrato un elenco di problemi che non impediscono la migrazione della tabella per l'uso di OLTP in memoria, ma che influiscono sul comportamento di altri oggetti (come le stored procedure o le funzioni CLR) generando errori o comportamenti inaspettati.  
   
  I primi avvisi nell'elenco hanno scopo informativo e possono o meno valere per la tabella. I collegamenti nella colonna di destra della tabella permettono di accedere a ulteriori informazioni.  
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
  Per generare un report HTML di questi avvisi, fare clic su **Genera report** . Fare clic su **Avanti** per continuare.  
   
-### Verifica opzioni di ottimizzazione  
+### <a name="review-optimization-options"></a>Verifica opzioni di ottimizzazione  
  Nella schermata successiva è possibile modificare le opzioni di migrazione a OLTP in memoria:  
   
  Filegroup con ottimizzazione per la memoria  
@@ -91,12 +95,12 @@ caps.handback.revision: 17
   
  Per continuare, fare clic su **Avanti** .  
   
-### Verifica conversione chiave primaria  
+### <a name="review-primary-key-conversion"></a>Verifica conversione chiave primaria  
  La schermata successiva è denominata **Verifica conversione chiave primaria**. In Ottimizzazione guidata per la memoria viene rilevato se nella tabella sono presenti una o più chiavi primarie e viene popolato l'elenco di colonne in base ai metadati delle chiavi primarie. Se non è presente alcuna chiave primaria, per eseguire la migrazione a una tabella con ottimizzazione per la memoria durevole, sarà necessario crearne una.  
   
  Se non esiste una chiave primaria e viene eseguita la migrazione della tabella in una tabella non durevole, questa schermata non verrà visualizzata.  
   
- Per le colonne testuali (le colonne con i tipi **char**, **nchar**, **varchar** e **nvarchar**) è necessario selezionare le regole di confronto appropriate. OLTP in memoria supporta solo le regole di confronto BIN2 per le colonne in una tabella con ottimizzazione per la memoria e non supporta le regole di confronto con i caratteri supplementari. Per informazioni sulle regole di confronto supportate e sull'impatto potenziale di una modifica a una regola di confronto, vedere [Collations and Code Pages](../Topic/Collations%20and%20Code%20Pages.md) .  
+ Per le colonne testuali (le colonne con i tipi **char**, **nchar**, **varchar**e **nvarchar**) è necessario selezionare le regole di confronto appropriate. OLTP in memoria supporta solo le regole di confronto BIN2 per le colonne in una tabella con ottimizzazione per la memoria e non supporta le regole di confronto con i caratteri supplementari. Per informazioni sulle regole di confronto supportate e sull'impatto potenziale di una modifica a una regola di confronto, vedere [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) .  
   
  È possibile configurare i seguenti parametri per la chiave primaria:  
   
@@ -110,23 +114,23 @@ caps.handback.revision: 17
   
 -   L'indice NON CLUSTER. Questo tipo di indice è ideale per gli indici con molte query di intervallo. È possibile configurare l'ordinamento per ciascuna colonna nell'elenco **Colonna di ordinamento e ordine** .  
   
- Per individuare il tipo di indice più adatto alla chiave primaria, vedere [Indici hash](../Topic/Hash%20Indexes.md).  
+ Per individuare il tipo di indice più adatto alla chiave primaria, vedere [Indici hash](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Una volta selezionate le opzioni per la chiave primaria, fare clic su **Avanti** .  
   
-### Verifica conversione indice  
+### <a name="review-index-conversion"></a>Verifica conversione indice  
  La pagina successiva è denominata **Verifica conversione indice**. In Ottimizzazione guidata per la memoria viene rilevato se nella tabella sono presenti uno o più indici e vengono popolati l'elenco di colonne e il tipo di dati. I parametri che è possibile configurare nella pagina **Verifica conversione indice** sono simili a quelli della pagina **Verifica conversione chiave primaria** .  
   
  Se la tabella contiene solo una chiave primaria e viene sottoposta a migrazione in una tabella durevole, questa schermata non verrà visualizzata.  
   
  Una volta impostate le opzioni per ciascun indice nella tabella, fare clic su **Avanti**.  
   
-### Verifica azioni di migrazione  
+### <a name="verify-migration-actions"></a>Verifica azioni di migrazione  
  La pagina successiva è denominata **Verifica azioni di migrazione**. Per generare lo script dell'operazione di migrazione, fare clic su **Script** per generare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Sarà quindi possibile modificare ed eseguire lo script. Fare clic su **Esegui migrazione** per avviare la migrazione della tabella.  
   
  Al termine, aggiornare **Esplora oggetti** per visualizzare la nuova tabella con ottimizzazione per la memoria e la vecchia tabella basata su disco. La vecchia tabella può essere conservata o eliminata a seconda delle proprie esigenze.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

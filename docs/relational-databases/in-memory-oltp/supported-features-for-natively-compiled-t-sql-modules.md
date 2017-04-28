@@ -1,22 +1,26 @@
 ---
-title: "Funzionalit&#224; supportate per i moduli T-SQL compilati in modo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Funzionalità supportate per i moduli T-SQL compilati in modo nativo | Microsoft Docs"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funzionalit&#224; supportate per i moduli T-SQL compilati in modo nativo
+# <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -42,7 +46,7 @@ caps.handback.revision: 44
 
  Per informazioni complete sui costrutti non supportati e per informazioni su come sopperire ad alcune funzionalità non supportate nei moduli compilati in modo nativo, vedere [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Per altre informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="a-nameqsancspa-query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Superficie di attacco delle query nei moduli nativi  
+##  <a name="qsancsp"></a> Superficie di attacco delle query nei moduli nativi  
 
 Sono supportati i costrutti delle query indicati di seguito:  
 
@@ -79,19 +83,19 @@ Clausola WHERE:
 -   AND, OR, NOT, IN, EXISTS, BETWEEN  
 
 
-Clausola[GROUP BY](../Topic/GROUP%20BY%20%28Transact-SQL%29.md) :
+Clausola[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
 
 - Funzioni di aggregazione AVG, COUNT, COUNT_BIG, MIN, MAX e SUM.  
 
 - MIN e MAX non sono supportate per i tipi nvarchar, char, varchar, varchar, varbinary e binary.  
 
-Clausola[ORDER BY](../Topic/ORDER%20BY%20Clause%20%28Transact-SQL%29.md) :
+Clausola[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) :
 
 
 - **DISTINCT** non è supportato nella clausola **ORDER BY** .
 
 
-- Supportata con [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md) se un'espressione nell'elenco ORDER BY appare in modo identico nell'elenco GROUP BY.
+- Supportata con [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md) se un'espressione nell'elenco ORDER BY appare in modo identico nell'elenco GROUP BY.
   - Ad esempio, l'espressione GROUP BY a + b ORDER BY a + b è supportata, ma GROUP BY a, b ORDER BY a + b non lo è.  
 
 
@@ -123,7 +127,7 @@ Tuttavia, una costante nella clausola **TOP** assicura prestazioni migliori risp
 Queste limitazioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] non si applicano all'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato nelle tabelle con ottimizzazione per la memoria.  
 
 
-##  <a name="a-namedmla-data-modification"></a><a name="dml"></a> Modifica dei dati  
+##  <a name="dml"></a> Modifica dei dati  
 
 Sono supportate le istruzioni DML seguenti.  
 
@@ -135,7 +139,7 @@ Sono supportate le istruzioni DML seguenti.
 
 -   La clausola WHERE è supportata con le istruzioni UPDATE e DELETE.  
 
-##  <a name="a-namecofa-control-of-flow-language"></a><a name="cof"></a> Elementi del linguaggio per il controllo di flusso  
+##  <a name="cof"></a> Elementi del linguaggio per il controllo di flusso  
  Sono supportati i seguenti costrutti degli elementi del linguaggio per il controllo di flusso.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -154,9 +158,9 @@ Sono supportate le istruzioni DML seguenti.
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
--   BEGIN ATOMIC (al livello esterno della stored procedure). Per altri dettagli, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/blocchi-atomici-nelle-procedure-native.md).  
+-   BEGIN ATOMIC (al livello esterno della stored procedure). Per altri dettagli, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="a-namesoa-supported-operators"></a><a name="so"></a> Operatori supportati  
+##  <a name="so"></a> Operatori supportati  
  Di seguito vengono elencati gli operatori supportati.  
 
 -   [Operatori di confronto &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (ad esempio >, \<, >= e <=)  
@@ -172,10 +176,10 @@ Sono supportate le istruzioni DML seguenti.
 -   Operatori bit per bit ~, &, | e ^  
 
 -   APPLY - operatore
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato nei moduli compilati in modo nativo.
 
-##  <a name="a-namebfncspa-built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Funzioni integrate nei moduli compilati in modo nativo  
+##  <a name="bfncsp"></a> Funzioni integrate nei moduli compilati in modo nativo  
  Le seguenti funzioni sono supportate nei vincoli nelle tabelle con ottimizzazione per la memoria e nei moduli T-SQL compilati in modo nativo.  
 
 -   Tutte le [funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -183,7 +187,7 @@ Sono supportate le istruzioni DML seguenti.
 -   Funzioni di data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
 
 -   Funzioni stringa: LEN, LTRIM, RTRIM e SUBSTRING.  
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, sono supportate anche le funzioni integrate seguenti: TRIM, TRANSLATE e CONCAT_WS.  
 
 -   Funzione di identità: SCOPE_IDENTITY  
@@ -193,26 +197,26 @@ Sono supportate le istruzioni DML seguenti.
 -   Funzioni di identificazione univoca: NEWID e NEWSEQUENTIALID  
 
 -   Funzioni JSON  
-    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le funzioni JSON sono supportate nei moduli compilati in modo nativo.
 
 -   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
 
--   Funzioni di sistema: @@rowcount. Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno di tale stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
+-   Funzioni di sistema: @@rowcount. Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno della stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
 
 -   Funzioni di sicurezza: IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Le esecuzioni dei moduli nativi possono essere annidate.
 
-##  <a name="a-nameauditinga-auditing"></a><a name="auditing"></a> Controllo  
+##  <a name="auditing"></a> Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo.  
 
  Per ulteriori informazioni sul controllo, vedere [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="a-nametqha-table-and-query-hints"></a><a name="tqh"></a> Hint di tabella e per la query  
+##  <a name="tqh"></a> Hint di tabella e per la query  
  Sono supportati gli elementi seguenti:  
 
--   Gli hint INDEX, FORCESCAN e FORCESEEK, nella sintassi di hint di tabella o nella [clausola OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) della query. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   Gli hint INDEX, FORCESCAN e FORCESEEK, nella sintassi di hint di tabella o nella [clausola OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) della query. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
 
 -   FORCE ORDER  
 
@@ -220,12 +224,12 @@ Sono supportate le istruzioni DML seguenti.
 
 -   OPTIMIZE FOR  
 
- Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="a-namelosa-limitations-on-sorting"></a><a name="los"></a> Limitazioni relative all'ordinamento  
- È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) può ordinare fino a 8.000 righe, meno se sono presenti join.  
+##  <a name="los"></a> Limitazioni relative all'ordinamento  
+ È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) può ordinare fino a 8.000 righe, meno se sono presenti join.  
 
- Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) che una [clausola ORDER BY &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe viene visualizzato il messaggio di errore **Messaggio 41398, livello 16, stato 1, procedura *<nomeProcedura>\>*, riga *<numeroRiga>\>*. L'operatore TOP può restituire un massimo di 8192 righe. *\<numero>***.  
+ Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) che una [clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe, viene visualizzato il messaggio di errore: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>*, riga *\<<numeroRiga>*. L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>*.**  
 
  Se non si dispone di una clausola TOP, è possibile ordinare qualsiasi numero di righe con ORDER BY.  
 
@@ -284,4 +288,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+
+
 

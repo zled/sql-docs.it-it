@@ -1,31 +1,35 @@
 ---
-title: "Stima delle dimensioni di un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "allocazione dello spazio [SQL Server], dimensioni di database"
-  - "calcolo delle dimensioni di database"
-  - "aumento delle dimensioni di database"
-  - "dimensioni di database [SQL Server], stima"
-  - "stima delle dimensioni di database"
-  - "dimensioni [SQL Server], database"
-  - "stima delle dimensioni di database"
-  - "progettazione di database [SQL Server], stima delle dimensioni"
+title: Stimare le dimensioni di un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stima delle dimensioni di un database
+# <a name="estimate-the-size-of-a-database"></a>Stima delle dimensioni di un database
   Durante la progettazione di un database potrebbe essere necessario stimare le dimensioni che il database può raggiungere quando viene riempito di dati. La stima delle dimensioni del database può consentire di determinare la configurazione hardware necessaria per raggiungere gli obiettivi seguenti:  
   
 -   Ottenere il livello di prestazioni necessario per eseguire correttamente le applicazioni.  
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  Per stimare le dimensioni del database, è possibile stimare le dimensioni di ogni singola tabella e quindi sommare i valori ottenuti. Le dimensioni di una tabella dipendono dalla presenza o meno di indici e dal tipo di indici.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

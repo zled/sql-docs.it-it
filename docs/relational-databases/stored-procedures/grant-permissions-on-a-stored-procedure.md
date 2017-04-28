@@ -1,24 +1,28 @@
 ---
-title: "Concedere autorizzazioni per una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "stored procedure [SQL Server], autorizzazioni"
+title: Concedere autorizzazioni per una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], permissions
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c18a425db4969c7ca75a02737c8b64e3360557c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Concedere autorizzazioni per una stored procedure
+# <a name="grant-permissions-on-a-stored-procedure"></a>Concedere autorizzazioni per una stored procedure
   In questo argomento viene illustrato come concedere autorizzazioni per una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le autorizzazioni possono essere concesse a un utente, a un ruolo del database o a un ruolo applicazione nel database.  
   
  **Contenuto dell'argomento**  
@@ -48,7 +52,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per concedere autorizzazioni per una stored procedure  
+#### <a name="to-grant-permissions-on-a-stored-procedure"></a>Per concedere autorizzazioni per una stored procedure  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e quindi espanderla.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per concedere autorizzazioni per una stored procedure  
+#### <a name="to-grant-permissions-on-a-stored-procedure"></a>Per concedere autorizzazioni per una stored procedure  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,7 +89,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [GRANT - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

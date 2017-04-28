@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento Audit Database Mirroring Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notifiche di eventi [SQL Server], mirroring del database"
-  - "Classe di evento Audit Database Mirroring Login"
-  - "mirroring del database [SQL Server], notifiche di eventi"
+title: Classe di evento Audit Database Mirroring Login | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Audit Database Mirroring Login
+# <a name="audit-database-mirroring-login-event-class"></a>Classe di evento Audit Database Mirroring Login
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Database Mirroring Login** per segnalare messaggi di controllo relativi alla sicurezza del trasporto per il mirroring di database.  
   
-## Colonne di dati della classe di evento Audit Database Mirroring Login  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Database Mirroring Login  
   
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -33,14 +37,14 @@ caps.handback.revision: 16
 |**EventClass**|**int**|Tipo di classe di evento acquisita. Sempre **154** per la classe di evento **Audit Database Mirroring Login**.|27|No|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Nella tabella seguente sono elencati i valori di sottoclasse per questo evento.|21|Sì|  
-|**FileName**|**nvarchar**|Supporta il metodo di autenticazione configurato nell'endpoint del mirroring del database remoto. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> <br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master**.<br /><br /> **NTLM, CERTIFICATE**. Accetta un'autenticazione NTLM o il certificato di autenticazione dell'endpoint.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta un'autenticazione Kerberos o il certificato di autenticazione dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta un certificato di autenticazione dell'endpoint o il metodo di autenticazione viene negoziato da Windows.|36|No|  
+|**FileName**|**nvarchar**|Supporta il metodo di autenticazione configurato nell'endpoint del mirroring del database remoto. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> <br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master** .<br /><br /> **NTLM, CERTIFICATE**. Accetta un'autenticazione NTLM o il certificato di autenticazione dell'endpoint.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta un'autenticazione Kerberos o il certificato di autenticazione dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta un certificato di autenticazione dell'endpoint o il metodo di autenticazione viene negoziato da Windows.|36|No|  
 |**HostName**|**nvarchar**|Non utilizzata per questa classe di evento.|8|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|No|  
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  
 |**ObjectName**|**nvarchar**|La stringa di connessione utilizzata per questa connessione.|34|No|  
-|**OwnerName**|**nvarchar**|Supporta il metodo di autenticazione configurato nell'endpoint del mirroring del database locale. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> <br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master**.<br /><br /> **NTLM, CERTIFICATE**. Accetta un'autenticazione NTLM o il certificato di autenticazione dell'endpoint.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta un'autenticazione Kerberos o il certificato di autenticazione dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta un certificato di autenticazione dell'endpoint o il metodo di autenticazione viene negoziato da Windows.|37|No|  
+|**OwnerName**|**nvarchar**|Supporta il metodo di autenticazione configurato nell'endpoint del mirroring del database locale. Se è disponibile più di un metodo, l'endpoint di accettazione (destinazione) determina quale metodo viene utilizzato per primo. I valori possibili sono:<br /><br /> <br /><br /> **None**. Non è configurato alcun metodo di autenticazione.<br /><br /> **NTLM**. Richiede un'autenticazione NTLM.<br /><br /> **KERBEROS**. Richiede un'autenticazione Kerberos.<br /><br /> **NEGOTIATE**. Il metodo di autenticazione viene negoziato da Windows.<br /><br /> **CERTIFICATE**. Richiede il certificato configurato per l'endpoint, archiviato nel database **master** .<br /><br /> **NTLM, CERTIFICATE**. Accetta un'autenticazione NTLM o il certificato di autenticazione dell'endpoint.<br /><br /> **KERBEROS, CERTIFICATE**. Accetta un'autenticazione Kerberos o il certificato di autenticazione dell'endpoint.<br /><br /> **NEGOTIATE, CERTIFICATE**. Il metodo di autenticazione viene negoziato da Windows oppure per l'autenticazione può essere utilizzato un certificato dell'endpoint.<br /><br /> **CERTIFICATE, NTLM**. Accetta un certificato dell'endpoint o un'autenticazione NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Accetta il certificato di un endpoint o l'autenticazione Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Accetta un certificato di autenticazione dell'endpoint o il metodo di autenticazione viene negoziato da Windows.|37|No|  
 |**ProviderName**|**nvarchar**|Metodo di autenticazione utilizzato per questa connessione.|46|No|  
 |**RoleName**|**nvarchar**|Ruolo della connessione. I valori possibili sono **initiator** o **target**.|38|No|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
@@ -59,9 +63,9 @@ caps.handback.revision: 16
 |3|Message Format Error|Un evento Message Format Error segnala che durante l'accesso per il mirroring del database è stato ricevuto un messaggio non conforme al formato previsto. Il messaggio potrebbe essere stato danneggiato oppure un programma diverso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe inviare messaggi alla porta utilizzata per il mirroring del database.|  
 |4|Negotiate Failure|Un evento Negotiate Failure segnala che l'endpoint del mirroring del database locale e l'endpoint del mirroring del database remoto supportano livelli di autenticazione che si escludono a vicenda.|  
 |5|Authentication Failure|Un evento Authentication Failure segnala che un endpoint del mirroring del database non può eseguire l'autenticazione per la connessione in seguito a un errore. Per l'autenticazione di Windows, questo evento segnala che l'endpoint del mirroring del database non è in grado di utilizzare l'autenticazione di Windows. Per l'autenticazione basata su certificati, questo evento segnala che l'endpoint del mirroring del database non è in grado di accedere al certificato.|  
-|6|Authorization Failure|Un evento Authorization Failure segnala che un endpoint del mirroring del database ha negato l'autorizzazione per la connessione. Per l'autenticazione di Windows, questo evento segnala che l'ID di sicurezza per la connessione non corrisponde a un utente del database. Per l'autenticazione basata su certificati, questo evento segnala che la chiave pubblica recapitata nel messaggio non corrisponde a un certificato contenuto nel database **master**.|  
+|6|Authorization Failure|Un evento Authorization Failure segnala che un endpoint del mirroring del database ha negato l'autorizzazione per la connessione. Per l'autenticazione di Windows, questo evento segnala che l'ID di sicurezza per la connessione non corrisponde a un utente del database. Per l'autenticazione basata su certificati, questo evento segnala che la chiave pubblica recapitata nel messaggio non corrisponde a un certificato contenuto nel database **master** .|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

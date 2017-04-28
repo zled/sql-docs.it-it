@@ -1,24 +1,28 @@
 ---
-title: "Colonne provviste di un nome | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomi [SQL Server], colonne con nomi"
+title: Colonne provviste di un nome | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colonne provviste di un nome
+# <a name="columns-with-a-name"></a>Colonne provviste di un nome
   Di seguito vengono illustrate le condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante, con distinzione tra maiuscole e minuscole:  
   
 -   Il nome di colonna inizia con un simbolo di chiocciola (@)  
@@ -31,7 +35,7 @@ caps.handback.revision: 8
   
 -   Una colonna ha un nome diverso.  
   
-## Il nome di colonna inizia con un simbolo di chiocciola (@)  
+## <a name="column-name-starts-with-an-at-sign-"></a>Il nome di colonna inizia con un simbolo di chiocciola (@)  
  Se il nome della colonna inizia con un simbolo di chiocciola (@) e non contiene una barra (/), viene creato un attributo dell'elemento <`row`> con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (@PmId, Name). Nel codice XML risultante, un attributo **PmId** viene aggiunto all'elemento <`row`> corrispondente e gli viene assegnato un valore di ProductModelID.  
   
 ```  
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## Il nome di colonna non inizia con un simbolo di chiocciola (@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (@)  
  Se il nome di colonna non inizia con un simbolo di chiocciola (@), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga, per impostazione predefinita <`row`>.  
   
  La query seguente specifica il nome della colonna, il risultato. Un elemento figlio <`result`> viene pertanto aggiunto all'elemento <`row`>.  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## Il nome di colonna non inizia con un simbolo di chiocciola (@) e contiene una barra (/)  
- Se il nome di colonna non inizia con un simbolo di chiocciola (@), ma contiene una barra (/), il nome della colonna indica una gerarchia XML. Ad esempio, se il nome della colonna è "Name1/Name2/Name3.../Name***n*** ", ogni Name***i***rappresenta un nome di elemento nidificato nell'elemento di riga corrente (per i=1) o che si trova sotto l'elemento il cui nome è Name***i-1***. Se Name***n*** inizia con il simbolo @, viene eseguito il mapping a un attributo dell'elemento Name***n-1***.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (@) e contiene una barra (/)  
+ Se il nome di colonna non inizia con un simbolo di chiocciola (@), ma contiene una barra (/), il nome della colonna indica una gerarchia XML. Ad esempio, se il nome della colonna è "Name1/Name2/Name3.../Name***n*** ", ogni Name***i*** rappresenta un nome di elemento nidificato nell'elemento di riga corrente (per i=1) o che si trova sotto l'elemento il cui nome è Name***i-1***. Se Name***n*** inizia con il simbolo @, viene eseguito il mapping a un attributo dell'elemento Name***n-1*** .  
   
  Ad esempio, la query seguente restituisce l'ID e il nome di un dipendente rappresentati come un elemento complesso EmpName che contiene nome, secondo nome e cognome.  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## Più colonne condividono lo stesso prefisso di percorso  
+## <a name="several-columns-share-the-same-path-prefix"></a>Più colonne condividono lo stesso prefisso di percorso  
  Se più colonne successive condividono lo stesso prefisso di percorso, vengono raggruppate sotto lo stesso nome. Se vengono utilizzati prefissi degli spazi dei nomi diversi, anche se associati allo stesso spazio dei nomi, un percorso viene considerato diverso. Nella query precedente, le colonne FirstName, MiddleName e LastName condividono lo stesso prefisso EmpName. Vengono pertanto aggiunte come elementi figlio dell'elemento <`EmpName`>. Ciò si verifica anche nell'esempio precedente, nella fase di creazione dell'elemento <`Address`>.  
   
-## Una colonna ha un nome diverso  
+## <a name="one-column-has-a-different-name"></a>Una colonna ha un nome diverso  
  Se è presente una colonna con un nome diverso, interromperà il raggruppamento, come illustrato nella query modificata seguente. La query interrompe il raggruppamento di FirstName, MiddleName e LastName, come specificato nella query precedente, aggiungendo colonne di indirizzi fra le colonne FirstName e MiddleName.  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

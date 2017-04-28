@@ -1,25 +1,29 @@
 ---
-title: "Funzioni definite dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funzioni definite dall'utente [SQL Server], componenti"
-  - "user-defined functions [SQL Server], about user-defined functions"
+title: Funzioni definite dall&quot;utente | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funzioni definite dall&#39;utente
+# <a name="user-defined-functions"></a>Funzioni definite dall'utente
   In modo analogo alle funzioni dei linguaggi di programmazione, le funzioni definite dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono routine che accettano parametri, eseguono un'azione (ad esempio un calcolo complesso) e restituiscono il risultato dell'azione sotto forma di valore. Il valore restituito può essere un valore scalare singolo o un set di risultati.  
    
 ##  <a name="Benefits"></a> Funzioni definite dall'utente  
@@ -33,7 +37,7 @@ Perché usarle?
   
      In maniera simile alle stored procedure, le funzioni definite dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)] riducono le risorse necessarie per la compilazione di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] memorizzando nella cache e riutilizzando i piani per esecuzioni ripetute. Ciò significa che una funzione definita dall'utente non deve essere analizzata e ottimizzata nuovamente ogni volta che viene utilizzata, con una conseguente e sensibile riduzione dei tempi di esecuzione.  
   
-     Le funzioni CLR offrono un significativo vantaggio nelle prestazioni rispetto alle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le attività di calcolo, modifica delle stringhe e logiche di business. [!INCLUDE[tsql](../../includes/tsql-md.md)] le funzioni sono più adatte per logica intensiva di accesso ai dati.  
+     Le funzioni CLR offrono un significativo vantaggio nelle prestazioni rispetto alle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le attività di calcolo, modifica delle stringhe e logiche di business. Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono più adatte per logica intensiva di accesso ai dati.  
   
 -   Consentono di ridurre il traffico di rete.  
   
@@ -50,10 +54,10 @@ Perché usarle?
  Le funzioni con valori di tabella definite dall'utente restituiscono un tipo di dati **table**. Per una funzione inline con valori di tabella non è disponibile alcun corpo della funzione. La tabella corrisponde al set di risultati di una singola istruzione SELECT. **[Esempi.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
 **Funzioni di sistema**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre molte funzioni di sistema che consentono di eseguire diverse operazioni. Tali funzioni non possono essere modificate. Per altre informazioni, vedere [Funzioni predefinite &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md), [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md), and [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md).  
+In  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili molte funzioni di sistema che è possibile utilizzare per eseguire diverse operazioni. Tali funzioni non possono essere modificate. Per altre informazioni, vedere [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md), and [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-##  <a name="Guidelines"></a> Indicazioni  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] gli errori che causano l'annullamento di un'istruzione e l'esecuzione dell'istruzione successiva nel modulo (ad esempio trigger o stored procedure) vengono trattati in modo diverso all'interno di una funzione. Nelle funzioni tali errori arrestano l'esecuzione della funzione, che a sua volta comporta l'interruzione dell'istruzione che ha richiamato la funzione.  
+##  <a name="Guidelines"></a> Linee guida  
+ Gli errori [!INCLUDE[tsql](../../includes/tsql-md.md)] che causano l'annullamento di un'istruzione e l'esecuzione dell'istruzione successiva nel modulo (ad esempio trigger o stored procedure) vengono trattati in modo diverso all'interno di una funzione. Nelle funzioni tali errori arrestano l'esecuzione della funzione, che a sua volta comporta l'interruzione dell'istruzione che ha richiamato la funzione.  
   
  Le istruzioni in un blocco BEGIN...END non possono avere effetti collaterali. Gli effetti collaterali di una funzione sono le modifiche permanenti allo stato di una risorsa il cui ambito è al di fuori della funzione, ad esempio la modifica di una tabella di database. Le uniche modifiche che possono essere apportate dalle istruzioni nella funzione sono le modifiche agli oggetti locali rispetto alla funzione, ad esempio variabili o cursori locali. Modifiche a tabelle di database, operazioni su cursori che non sono locali rispetto alla funzione, invio di messaggi di posta elettronica, tentativi di modifica del catalogo e generazione di un set di risultati da restituire all'utente sono esempi di azioni che non possono essere eseguite in una funzione.  
   
@@ -78,7 +82,7 @@ Perché usarle?
   
 -   Istruzioni EXECUTE che chiamano stored procedure estese.  
   
-### Funzioni di sistema predefinite  
+### <a name="built-in-system-functions"></a>Funzioni di sistema predefinite  
  Le funzioni predefinite non deterministiche seguenti possono essere utilizzate nelle funzioni Transact-SQL definite dall'utente.  
   
 |||  
@@ -125,11 +129,15 @@ Perché usarle?
 |**Descrizione dell'attività**|**Argomento**|  
 |Viene descritto come creare una funzione Transact-SQL definita dall'utente.|[Creare funzioni definite dall'utente &#40;motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Viene descritto come creare una funzione CLR.|[Creare funzioni CLR](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
-|Viene descritto come creare una funzione di aggregazione definita dall'utente.|[Creazione di funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
+|Viene descritto come creare una funzione di aggregazione definita dall'utente.|[Creare funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Viene descritto come modificare una funzione Transact-SQL definita dall'utente.|[Modificare funzioni definite dall'utente](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
 |Viene descritto come eliminare una funzione definita dall'utente.|[Eliminare funzioni definite dall'utente](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
 |Viene descritto come eseguire una funzione definita dall'utente.|[Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|Viene descritto come rinominare una funzione definita dall'utente.|[Ridenominare funzioni definite dall'utente](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
-|Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare le funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
+|Viene descritto come rinominare una funzione definita dall'utente.|[Rinominare funzioni definite dall'utente](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

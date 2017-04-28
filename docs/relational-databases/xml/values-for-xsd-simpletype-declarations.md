@@ -1,24 +1,28 @@
 ---
-title: "Valori per dichiarazioni &lt;xsd:simpleType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dichiarazioni xsd:simpleType"
+title: Valori per dichiarazioni &lt;<xsd:simpleType>&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5ba2b2137935919d420f2eab0349a26dc8d9c87
+ms.lasthandoff: 04/11/2017
+
 ---
-# Valori per dichiarazioni &lt;xsd:simpleType&gt;
+# <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valori per dichiarazioni &lt;<xsd:simpleType>&gt;
   Nella tabella seguente vengono descritte le restrizioni applicate, basate su tutte le enumerazioni di tipi semplici XSD riconosciute.  
   
  Inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore NaN nelle dichiarazioni **\<xsd:simpleType>**. Gli schemi che includono valori NaN verranno rifiutati dal server.  
@@ -34,12 +38,12 @@ caps.handback.revision: 14
 |**gDay**|La parte del giorno deve essere compresa nell'intervallo da 1 a 31|  
 |**gMonth**|La parte del mese deve essere compresa nell'intervallo da 1 a 12.|  
 |**decimal**|I valori di questo tipo devono essere conformi al formato di tipo numeric SQL. Questo rappresenta internamente il supporto per i numeri costituiti da un massimo di 38 cifre complessive, di cui 10 posizioni sono riservate alla precisione frazionaria.|  
-|**float**|I valori di questo tipo devono essere conformi al formato del tipo SQL **reale**.|  
-|**double**|I valori di questo tipo devono essere conformi al formato del tipo SQL **float**.|  
-|**string**|I valori di questo tipo devono essere conformi al formato del tipo SQL **nvarchar(max)**.|  
+|**float**|I valori di questo tipo devono essere conformi al formato del tipo SQL **reale** .|  
+|**double**|I valori di questo tipo devono essere conformi al formato del tipo SQL **float** .|  
+|**string**|I valori di questo tipo devono essere conformi al formato del tipo SQL **nvarchar(max)** .|  
 |**anyURI**|La lunghezza dei valori di questo tipo non deve superare i 4000 caratteri Unicode.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

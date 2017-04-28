@@ -1,24 +1,28 @@
 ---
-title: "Gestione categorie di criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policycategories.f1"
+title: Gestire categorie di criteri | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestione categorie di criteri
+# <a name="manage-policy-categories"></a>Gestione categorie di criteri
   In questo argomento viene descritto come applicare uno o tutti i criteri disponibili in una categoria all'istanza intera di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per applicare i criteri di categoria a un'istanza di SQL Server  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Per applicare i criteri di categoria a un'istanza di SQL Server  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera applicare i criteri di categoria.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per applicare i criteri di categoria a un'istanza di SQL Server  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Per applicare i criteri di categoria a un'istanza di SQL Server  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

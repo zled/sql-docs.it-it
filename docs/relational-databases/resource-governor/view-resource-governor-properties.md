@@ -1,26 +1,30 @@
 ---
-title: "View Resource Governor Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Resource Governor, properties"
+title: "Visualizzare proprietà di Resource Governor | Microsoft Docs"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# View Resource Governor Properties
+# <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   È possibile creare o configurare entità Resource Governor, ad esempio pool di risorse e gruppi di carico di lavoro, tramite la pagina Proprietà di Resource Governor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**.  
   
-2.  Fare clic con il pulsante destro del mouse su **Resource Governor**, quindi fare clic su **Proprietà**. In questo modo viene aperta la pagina **Proprietà di Resource Governor**.  
+2.  Fare clic con il pulsante destro del mouse su **Resource Governor** , quindi fare clic su **Proprietà**. In questo modo viene aperta la pagina **Proprietà di Resource Governor** .  
   
 3.  Per le descrizioni dei campi nella pagina, vedere [Proprietà di Resource Governor](#RGProp).  
   
 4.  Per salvare eventuali modifiche, fare clic su **OK**.  
   
-##  <a name="RGProp"></a> Proprietà di Resource Governor  
+##  <a name="RGProp"></a> Resource Governor properties  
  **Nome della funzione di classificazione**  
  Consente di specificare la funzione di classificazione selezionandola nell'elenco.  
   
@@ -115,14 +119,14 @@ caps.handback.revision: 28
   
  Per altre informazioni, vedere [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).  
   
-## Visualizzare le proprietà di Resource Governor mediante Transact-SQL  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Visualizzare le proprietà di Resource Governor mediante Transact-SQL  
  **Visualizzare le proprietà di Resource Governor utilizzando Transact-SQL**  
   
 1.  Per visualizzare le definizioni delle entità resource governor, usare le [Viste del catalogo di Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
 2.  Per visualizzare le configurazioni correnti delle entità resource governor, usare le [Viste a gestione dinamica relative a Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
-## Ulteriori informazioni
+## <a name="more-information"></a>Ulteriori informazioni
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Abilitare Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
@@ -130,3 +134,4 @@ caps.handback.revision: 28
  [Funzione di classificazione di Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG002601 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG002601 - errore"
+title: MSSQL_ENG002601 | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG002601 error
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2454732812315b948f11f3a78fcc531bf87fbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG002601
+# <a name="mssqleng002601"></a>MSSQL_ENG002601
     
-## Dettagli messaggio  
+## <a name="message-details"></a>Dettagli messaggio  
   
 |||  
 |-|-|  
@@ -29,9 +33,9 @@ caps.handback.revision: 15
 |Origine evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbolico|N/D|  
-|Testo del messaggio|Impossibile inserire la riga di chiave duplicata nell'oggetto ' %. * ls' con indice univoco ' %.\*ls'.|  
+|Testo del messaggio|Non è possibile inserire la riga di chiave duplicata nell'oggetto '%.*ls!' con indice univoco '%.\*ls'.|  
   
-## Spiegazione  
+## <a name="explanation"></a>Spiegazione  
  Questo errore generale può essere generato indipendentemente dal fatto che un database venga o meno replicato. Nei database replicati l'errore viene di solito generato in quanto le chiavi primarie non sono state gestite correttamente nella topologia. In un ambiente distribuito è fondamentale garantire che lo stesso valore non venga inserito in una colonna chiave primaria o in qualsiasi altra colonna univoca in più di un nodo. Le cause possibile includono:  
   
 -   Le operazioni di inserimento e aggiornamento su una riga vengono eseguite in più di un nodo. Sebbene la replica di tipo merge e le sottoscrizioni aggiornabili per la replica transazionale consentano il rilevamento e la risoluzione dei conflitti, è preferibile inserire o aggiornare una determinata riga in un unico nodo. La replica transazionale di tipo peer-to-peer non fornisce funzioni di rilevamento e risoluzione dei conflitti e richiede il partizionamento degli inserimenti e degli aggiornamenti.  
@@ -40,14 +44,14 @@ caps.handback.revision: 15
   
 -   Viene utilizzata una tabella con una colonna Identity, ma la colonna non è gestita in modo appropriato.  
   
--   Replica di tipo merge, questo errore può verificarsi anche durante un inserimento nella tabella di sistema **MSmerge_contents**; l'errore generato è simile a: Impossibile inserire la riga di chiave duplicata nell'oggetto 'MSmerge_contents' con indice univoco 'ucl1SycContents'.  
+-   Nella replica di tipo merge questo errore può verificarsi anche durante un inserimento nella tabella di sistema **MSmerge_contents**. L'errore generato è simile all'errore "Impossibile inserire la riga di chiave duplicata nell'oggetto 'MSmerge_contents' con indice univoco 'ucl1SycContents'".  
   
-## Azione dell'utente  
+## <a name="user-action"></a>Azione dell'utente  
  L'azione richiesta dipende dal motivo per il quale è stato generato l'errore:  
   
 -   Le operazioni di inserimento e aggiornamento su una riga vengono eseguite in più di un nodo.  
   
-     Indipendentemente dal tipo di replica utilizzato, è consigliabile partizionare inserimenti e aggiornamenti quando possibile, in modo da ridurre l'elaborazione richiesta per il rilevamento e la risoluzione dei conflitti. Per la replica transazionale peer-to-peer, è richiesto il partizionamento di inserimenti e aggiornamenti. Per ulteriori informazioni, vedere [la replica transazionale Peer-to-Peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+     Indipendentemente dal tipo di replica utilizzato, è consigliabile partizionare inserimenti e aggiornamenti quando possibile, in modo da ridurre l'elaborazione richiesta per il rilevamento e la risoluzione dei conflitti. Per la replica transazionale peer-to-peer, è richiesto il partizionamento di inserimenti e aggiornamenti. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
 -   È stata inserita una riga in un Sottoscrittore che dovrebbe essere di sola lettura.  
   
@@ -55,13 +59,13 @@ caps.handback.revision: 15
   
 -   Viene utilizzata una tabella con una colonna Identity, ma la colonna non è gestita in modo appropriato.  
   
-     Per la replica di tipo merge e la replica transazionale con sottoscrizioni aggiornabili, le colonne Identity devono essere gestite automaticamente dalla replica. Per la replica transazionale peer-to-peer, devono invece essere gestite manualmente. Per ulteriori informazioni, vedere [replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
+     Per la replica di tipo merge e la replica transazionale con sottoscrizioni aggiornabili, le colonne Identity devono essere gestite automaticamente dalla replica. Per la replica transazionale peer-to-peer, devono invece essere gestite manualmente. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
--   L'errore si verifica durante un'operazione di inserimento nella tabella di sistema **MSmerge_contents**.  
+-   L'errore si verifica durante un inserimento nella tabella di sistema **MSmerge_contents**.  
   
-     Questo errore può verificarsi a causa di un valore non corretto per la proprietà di filtro di join **join_unique_key**. Tale proprietà deve essere impostata su TRUE solo se la colonna unita in join nella tabella padre è univoca. Se la proprietà è impostata su TRUE ma la colonna non è univoca, viene generato l'errore. Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [definizione e modifica di un Join filtro tra articoli di Merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Tale errore può verificarsi a causa di un valore non corretto per la proprietà del filtro join **join_unique_key**. Tale proprietà deve essere impostata su TRUE solo se la colonna unita in join nella tabella padre è univoca. Se la proprietà è impostata su TRUE ma la colonna non è univoca, viene generato l'errore. Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-## Vedere anche  
- [Errori e gli eventi riferimento & #40; Replica & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Guida di riferimento a errori ed eventi &#40;replica&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

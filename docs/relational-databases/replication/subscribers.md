@@ -1,41 +1,45 @@
 ---
-title: "Sottoscrittori | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subscribers.f1"
-helpviewer_keywords: 
-  - "Sottoscrittori [Replica di SQL Server]"
+title: Sottoscrittori | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newsubwizard.subscribers.f1
+helpviewer_keywords:
+- Subscribers [SQL Server replication]
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a7a3174c0eab10b0a05dd4844e214f3ab70ee75
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sottoscrittori
-  Specificare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori che riceveranno una sottoscrizione della pubblicazione selezionata.  
+# <a name="subscribers"></a>Sottoscrittori
+  Consente di specificare i Sottoscrittori [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che riceveranno una sottoscrizione della pubblicazione selezionata.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Sottoscrittori**  
- Selezionare la casella di controllo nella griglia per abilitare il corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati come sottoscrittore della pubblicazione scelta nella **pubblicazione** pagina. Se il Sottoscrittore non è incluso nell'elenco, fare clic su **Aggiungi Sottoscrittore** o su **Aggiungi Sottoscrittore SQL Server**.  
+ Selezionare la casella di controllo nella griglia per abilitare l'origine dei dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente come Sottoscrittore della pubblicazione scelta nella pagina **Pubblicazione** . Se il Sottoscrittore non è incluso nell'elenco, fare clic su **Aggiungi Sottoscrittore** o su **Aggiungi Sottoscrittore SQL Server**.  
   
  **Database di sottoscrizione**  
- Le informazioni visualizzate in e le azioni disponibili in questa colonna dipendono dal tipo di sottoscrittore visualizzato nella **sottoscrittori** colonna:  
+ Le informazioni visualizzate e le azioni disponibili in questa colonna dipendono dal tipo di Sottoscrittore visualizzato nella colonna **Sottoscrittori** :  
   
 -   Per i Sottoscrittori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionare un database di sottoscrizione nell'elenco **Database di sottoscrizione** oppure creare un nuovo database selezionando il comando **Nuovo database** nello stesso elenco.  
   
     > [!NOTE]  
     >  Se si sta abilitando il server di pubblicazione come Sottoscrittore, il database di sottoscrizione deve essere diverso dal database di pubblicazione.  
   
--   Il database di sottoscrizione non viene visualizzato per i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare il database, insieme ad altre informazioni di connessione, nel **nome dell'origine dati** campo di **aggiungere Non SQL Server** la finestra di dialogo. Questa finestra di dialogo è disponibile facendo **Aggiungi Sottoscrittore** e quindi fare clic su **Aggiungi Sottoscrittore Non SQL Server**.  
+-   Il database di sottoscrizione non viene visualizzato per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Specificare il database e le altre informazioni di connessione nel campo **Nome origine dati** della finestra di dialogo **Aggiungi Sottoscrittore non SQL Server** . Questa finestra di dialogo è disponibile facendo clic su **Aggiungi Sottoscrittore** e quindi facendo clic su **Aggiungi Sottoscrittore non SQL Server**.  
   
  **Aggiungi Sottoscrittore**  
  Consente di aggiungere un server all'elenco dei server attivabili come Sottoscrittori. Questo pulsante viene visualizzato se vengono soddisfatte tutte le condizioni seguenti:  
@@ -43,13 +47,13 @@ caps.handback.revision: 26
 -   La pubblicazione selezionata è una pubblicazione snapshot o transazionale che non supporta le sottoscrizioni aggiornabili.  
   
     > [!NOTE]  
-    >  Se la pubblicazione che si sta sottoscrivendo dispone di sottoscrizioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è ancora abilitata per i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è possibile aggiungere una sottoscrizione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    >  Se la pubblicazione che si sta sottoscrivendo dispone di sottoscrizioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è ancora abilitata per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è possibile aggiungere una sottoscrizione non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   La sottoscrizione è una sottoscrizione push.  
   
 -   Nel server di pubblicazione della pubblicazione selezionata è in esecuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
- Fare clic su **Aggiungi Sottoscrittore** viene visualizzato un menu con due opzioni: **Aggiungi Sottoscrittore SQL Server** e **Aggiungi Sottoscrittore Non SQL Server**. Fare clic su **Aggiungi Sottoscrittore Non SQL Server** per aggiungere un Oracle o un sottoscrittore IBM DB2.  
+ Facendo clic su **Aggiungi Sottoscrittore** viene visualizzato un menu con due opzioni: **Aggiungi Sottoscrittore SQL Server** e **Aggiungi Sottoscrittore non SQL Server**. Scegliere **Aggiungi Sottoscrittore non SQL Server** per aggiungere un Sottoscrittore Oracle o IBM DB2.  
   
  **Aggiungi Sottoscrittore SQL Server**  
  Consente di aggiungere un server all'elenco dei server attivabili come Sottoscrittori. Questo pulsante viene visualizzato se viene soddisfatta una o più delle condizioni seguenti:  
@@ -66,10 +70,10 @@ caps.handback.revision: 26
   
     -   La pubblicazione consente le sottoscrizioni anonime.  
   
-## Vedere anche  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Sottoscrittori non SQL Server](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

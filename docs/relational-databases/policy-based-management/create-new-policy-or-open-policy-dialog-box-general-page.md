@@ -1,29 +1,33 @@
 ---
-title: "Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policy.f1"
-  - "sql13.swb.dmf.policy.filter.f1"
-  - "sql13.swb.dmf.newgroup.f1"
+title: Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policy.f1
+- sql13.swb.dmf.policy.filter.f1
+- sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17c975de731604cb3bec9586735b344f532a50ab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale
+# <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale
   Utilizzare questa finestra di dialogo per creare nuovi criteri della gestione basata su criteri o per modificarne uno esistente. Utilizzare le aree **In base alle destinazioni** e **Restrizione server** come filtro per limitare i criteri a un subset di tutte le destinazioni possibili. Per poter utilizzare le condizioni come filtri delle destinazioni, è necessario che siano definite in un facet fisico, che non contengano funzioni e che non contengano l'operatore LIKE. Durante il calcolo del set di oggetti per i criteri, per impostazione predefinita gli oggetti di sistema sono esclusi.  Ad esempio, se il set di oggetti dei criteri si riferisce a tutte le tabelle, i criteri non verranno applicati alle tabelle di sistema. Se gli utenti desiderano valutare i criteri negli oggetti di sistema, possono aggiungere in modo esplicito questi oggetti al set di oggetti. Tuttavia, sebbene tutti i criteri siano supportati per la modalità di valutazione **Controllo su pianificazione** , per motivi di prestazioni, non tutti i criteri con i set di oggetti arbitrari sono supportati per la modalità di valutazione **Controllo su modifiche** . Per altre informazioni, vedere la pagina all'indirizzo [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  In caso di criteri nuovi digitare il relativo nome. In caso di criteri esistenti, il nome è già visualizzato.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 42
  Consente di selezionare la modalità di valutazione per i criteri. Alcuni criteri possono essere controllati ma non applicati. Di seguito vengono elencate le modalità di valutazione:  
   
  **Su richiesta**  
- I criteri verranno eseguiti solo se vengono avviati dalla finestra di dialogo **Valuta**.  
+ I criteri verranno eseguiti solo se vengono avviati dalla finestra di dialogo **Valuta** .  
   
  **Su pianificazione**  
  I criteri vengono valutati periodicamente. Viene registrata una voce di log per i criteri non conformi e viene creato un report. La casella **Pianificazione** viene abilitata.  
@@ -63,12 +67,12 @@ caps.handback.revision: 42
  Quando l'utente tenta di apportare modifiche, questa opzione impedisce le modifiche che violerebbero i criteri.  
   
  **Pianificazione**  
- Questa opzione viene visualizzata quando è selezionata la modalità di valutazione **Su pianificazione**. Digitare il nome della pianificazione, fare clic su **Seleziona** per effettuare una selezione da un elenco oppure scegliere **Nuova** per creare una nuova pianificazione. Per abilitare l'area di pianificazione, è necessario che l'opzione **Su pianificazione** sia selezionata.  
+ Questa opzione viene visualizzata quando è selezionata la modalità di valutazione **Su pianificazione** . Digitare il nome della pianificazione, fare clic su **Seleziona** per effettuare una selezione da un elenco oppure scegliere **Nuova** per creare una nuova pianificazione. Per abilitare l'area di pianificazione, è necessario che l'opzione **Su pianificazione** sia selezionata.  
   
  **Restrizione server**  
  Selezionare i tipi di server appropriati per i criteri. Le opzioni disponibili sono **Nessuno** o la selezione di una condizione che filtra i server possibili.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

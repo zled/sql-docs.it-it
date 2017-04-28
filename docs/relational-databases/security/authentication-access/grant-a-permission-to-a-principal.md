@@ -1,24 +1,28 @@
 ---
-title: "Concedere un&#39;autorizzazione a un&#39;entit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Concedere un'autorizzazione a un'entità"
+title: "Concedere un&quot;autorizzazione a un&quot;entità| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# Concedere un&#39;autorizzazione a un&#39;entit&#224;
+# <a name="grant-a-permission-to-a-principal"></a>Concedere un'autorizzazione a un'entità
   In questo argomento viene descritto come concedere un'autorizzazione a un'entità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per concedere un'autorizzazione a un'entità  
+#### <a name="to-grant-permission-to-a-principal"></a>Per concedere un'autorizzazione a un'entità  
   
 1.  In Esplora oggetti espandere il database contenente l'oggetto a cui si desiderano concedere autorizzazioni.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 12
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per concedere un'autorizzazione a un'entità  
+#### <a name="to-grant-permission-to-a-principal"></a>Per concedere un'autorizzazione a un'entità  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  Per altre informazioni, vedere [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) e [GRANT - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Entità &#40;Motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

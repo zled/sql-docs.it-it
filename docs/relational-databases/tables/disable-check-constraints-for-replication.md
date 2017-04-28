@@ -1,27 +1,31 @@
 ---
-title: "Disabilitare un vincolo CHECK per la replica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vincoli CHECK, disabilitazione"
-  - "vincoli [SQL Server], disabilitazione"
-  - "disabilitazione di vincoli"
-  - "vincoli [SQL Server], check"
+title: Disabilitare un vincolo CHECK per la replica | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, disabling
+- constraints [SQL Server], disabling
+- disabling constraints
+- constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f8ff552993defe940576ea5cf0a35943a417b1b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Disabilitare un vincolo CHECK per la replica
+# <a name="disable-check-constraints-for-replication"></a>Disabilitare un vincolo CHECK per la replica
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile disabilitare i vincoli CHECK in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I vincoli CHECK possono essere espressamente disabilitati per la replica e ciò può essere utile quando si pubblicano dati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per disabilitare un vincolo CHECK per la replica  
+#### <a name="to-disable-a-check-constraint-for-replication"></a>Per disabilitare un vincolo CHECK per la replica  
   
 1.  In **Esplora oggetti**espandere la tabella contenente il vincolo CHECK che si desidera modificare, quindi espandere la cartella **Vincoli** .  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per disabilitare un vincolo CHECK per la replica  
+#### <a name="to-disable-a-check-constraint-for-replication"></a>Per disabilitare un vincolo CHECK per la replica  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 19
  Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>   
-## Vedere anche  
- [Impostazione delle opzioni dello schema](../../relational-databases/replication/publish/specify-schema-options.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Specificare le opzioni dello schema](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "SQL Server XTP Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Database XTP di SQL Server 2016"
+title: XTP Databases di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP Databases
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 L'oggetto prestazione **SQL Server XTP Databases** fornisce contatori specifici del database OLTP in memoria.
@@ -26,7 +30,7 @@ L'oggetto prestazione **SQL Server XTP Databases** fornisce contatori specifici 
 > [!NOTE]
 >  I contatori di SQL Server XTP Databases non sono attualmente visibili da sys.dm_os_performance_counters.  I contatori possono essere visualizzati da [Monitor di sistema](../../relational-databases/performance/start-system-monitor-windows.md).
 
-Questa tabella descrive i contatori di **SQL Server XTP Databases**.
+Questa tabella descrive i contatori di **SQL Server XTP Databases** .
 
 |Contatore|Descrizione| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ Questa tabella descrive i contatori di **SQL Server XTP Databases**.
 |**Conteggio massimo pagine cache finale**|Numero massimo di pagine allocate nella cache finale. Si tratta di un contatore di livello molto basso, non destinato all'uso da parte del cliente.|
 
 
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Contatori delle prestazioni XTP &#40;OLTP in memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

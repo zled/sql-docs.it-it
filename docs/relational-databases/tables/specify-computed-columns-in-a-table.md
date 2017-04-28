@@ -1,24 +1,28 @@
 ---
-title: "Specificare le colonne calcolate in una tabella | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne calcolate, definire"
+title: Specificare le colonne calcolate in una tabella | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specificare le colonne calcolate in una tabella
+# <a name="specify-computed-columns-in-a-table"></a>Specificare le colonne calcolate in una tabella
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Una colonna calcolata è una colonna virtuale che non viene archiviata fisicamente nella tabella, a meno che non sia contrassegnata come PERSISTED. In un'espressione di colonna calcolata possono essere utilizzati dati di altre colonne per calcolare un valore per la colonna di appartenenza. È possibile specificare un'espressione per una colonna calcolata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,11 +60,11 @@ caps.handback.revision: 19
   
 1.  In **Esplora oggetti**espandere la tabella per cui si desidera aggiungere la nuova colonna calcolata. Fare clic con il pulsante destro del mouse su **Colonne** e scegliere **Nuova colonna**.  
   
-2.  Immettere il nome della colonna e accettare il tipo di dati predefinito, **nchar**(10). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina il tipo di dati della colonna calcolata applicando le regole sulla precedenza dei tipi di dati alle espressioni specificate nella formula. Ad esempio, se la formula fa riferimento a una colonna di tipo **money** e una colonna di tipo **int**, la colonna calcolata sarà di tipo **money** perché tale tipo di dati ha precedenza maggiore. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+2.  Immettere il nome della colonna e accettare il tipo di dati predefinito,**nchar**(10). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina il tipo di dati della colonna calcolata applicando le regole sulla precedenza dei tipi di dati alle espressioni specificate nella formula. Ad esempio, se la formula fa riferimento a una colonna di tipo **money** e una colonna di tipo **int**, la colonna calcolata sarà di tipo **money** perché tale tipo di dati ha precedenza maggiore. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 3.  Nella scheda **Proprietà colonne** espandere la proprietà **Specifica della colonna calcolata** .  
   
-4.  Nella proprietà figlio **(Formula)** immettere l'espressione per la colonna nella cella della griglia a destra. Ad esempio, in una colonna `SalesTotal`, la formula immessa potrebbe essere `SubTotal+TaxAmt+Freight`, che aggiunge il valore in queste colonne per ogni riga della tabella.  
+4.  Nella proprietà figlio **(Formula)** immettere l'espressione per la colonna nella cella della griglia a destra. Ad esempio, in una colonna `SalesTotal` , la formula immessa potrebbe essere `SubTotal+TaxAmt+Freight`, che aggiunge il valore in queste colonne per ogni riga della tabella.  
   
     > [!IMPORTANT]  
     >  Quando una formula combina due espressioni di tipi di dati diversi, le regole per la precedenza dei tipi di dati specificano che i tipi con precedenza inferiore vengano convertiti nei tipi con precedenza superiore. Se la conversione non è una conversione implicita supportata, viene restituito l'errore`Error validating the formula for column column_name.`. Utilizzare la funzione CAST o CONVERT per risolvere il conflitto del tipo di dati. Ad esempio, se una colonna di tipo **nvarchar** viene combinata con una colonna di tipo **int**, il tipo integer deve essere convertito in **nvarchar** come mostrato in questa formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Per altre informazioni, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -69,9 +73,9 @@ caps.handback.revision: 19
   
 6.  Nel menu **File** scegliere **Salva***table name*.  
   
-#### Per aggiungere una definizione di colonna calcolata a una colonna esistente  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Per aggiungere una definizione di colonna calcolata a una colonna esistente  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella con la colonna per cui si vuole modificare ed espandere la cartella **Colonne**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella con la colonna per cui si vuole modificare ed espandere la cartella **Colonne** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla colonna per cui si vuole specificare una formula di colonna calcolata e scegliere **Elimina**. Scegliere **OK**.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per aggiungere una colonna calcolata quando si crea una tabella  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>Per aggiungere una colonna calcolata quando si crea una tabella  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Per aggiungere una nuova colonna calcolata a una tabella esistente  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>Per aggiungere una nuova colonna calcolata a una tabella esistente  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Per impostare una colonna esistente su una colonna calcolata  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>Per impostare una colonna esistente su una colonna calcolata  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

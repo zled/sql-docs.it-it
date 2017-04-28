@@ -1,31 +1,35 @@
 ---
-title: "Funzionalit&#224; deprecate della ricerca full-text in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funzionalità deprecate [ricerca full-text]"
-  - "ricerca full-text [SQL Server], funzionalità deprecate"
-  - "query full-text [SQL Server], prossimità"
+title: "Funzionalità deprecate della ricerca full-text in SQL Server 2016 | Microsoft Docs"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [full-text search]
+- full-text search [SQL Server], deprecated features
+- full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funzionalit&#224; deprecate della ricerca full-text in SQL Server 2016
-  Questo argomento descrive le funzionalità deprecate della ricerca full-text ancora disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tali funzionalità verranno rimosse a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non usare funzionalità deprecate nelle nuove applicazioni.  
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Funzionalità deprecate della ricerca full-text in SQL Server 2016
+  Questo argomento descrive le funzionalità deprecate della ricerca full-text ancora disponibili in SQL Server. Tali funzionalità verranno rimosse a partire da una delle prossime versioni. Non usare funzionalità deprecate nelle nuove applicazioni.  
   
- È possibile monitorare l'uso delle funzionalità deprecate usando il contatore delle prestazioni dell'oggetto **SQL Server:Deprecated Features** e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
+È possibile monitorare l'uso delle funzionalità deprecate usando il contatore delle prestazioni dell'oggetto **SQL Server:Deprecated Features** e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-## Funzionalità non supportate nella prossima versione di SQL Server  
+## <a name="features-no-longer-supported"></a>Funzionalità non più supportate  
 
   
 |Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
@@ -40,19 +44,20 @@ caps.handback.revision: 32
 |Colonna sys.dm_fts_memory_buffers:<br /><br /> row_count|nessuna.|dm_fts_memory_buffers.row_count|225|  
 |Colonne sys.fulltext_catalogs:<br /><br /> percorso<br /><br /> data_space_id<br /><br /> colonne file_id|nessuna.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
-## Funzionalità non supportate in una futura versione di SQL Server  
+## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Funzionalità non supportate in una futura versione di SQL Server  
  Le funzionalità seguenti di ricerca full-text sono supportate nella versione successiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma in seguito verranno rimosse. La versione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stata determinata.  
   
  Il valore **Nome funzionalità** viene visualizzato negli eventi di traccia come nome dell'oggetto, mentre nei contatori delle prestazioni e in sys.dm_os_performance_counters viene visualizzato come nome dell'istanza. Il valore **ID funzionalità** viene visualizzato negli eventi di traccia come ID dell'oggetto.  
   
 |Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |------------------------|-----------------|------------------|----------------|  
-|Operatore NEAR generico CONTAINS e CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Operatore NEAR personalizzato:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Operatore NEAR generico CONTAINS e CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Operatore NEAR personalizzato:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Opzione CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|nessuna.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> nessuna.<sup>*</sup>|237<br /><br /> Nessuno.*|  
 |Proprietà di DATABASEPROPERTYEX: IsFullTextEnabled|nessuna.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |Opzione di sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|nessuna.|sp_detach_db @keepfulltextindexfile|226|  
 |Valori azione sp_fulltext_service: resource_usage non ha nessuna funzione.|Nessuno|sp_fulltext_service @action=resource_usage|200|  
   
- \*L'oggetto **SQL Server:Deprecated Features** non monitora le occorrenze di CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
+ *L'oggetto **SQL Server:Deprecated Features** non monitora le occorrenze di CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
   
   
+

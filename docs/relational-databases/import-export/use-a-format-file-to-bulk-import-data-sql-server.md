@@ -1,28 +1,32 @@
 ---
-title: "Utilizzo di un file di formato per l&#39;importazione bulk dei dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "importazione bulk [SQL Server], file di formato"
-  - "file di formato [SQL Server], importazione di dati con"
+title: Usare un file di formato per l&quot;importazione in blocco dei dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], format files
+- format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56c7e17bb97577907d21c0e1109ee3336337164b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di un file di formato per l&#39;importazione bulk dei dati (SQL Server)
+# <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utilizzo di un file di formato per l'importazione bulk dei dati (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-In questo argomento viene illustrato l'utilizzo di un file di formato per operazioni di importazione bulk.  Un file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md).
+In questo argomento viene illustrato l'utilizzo di un file di formato per operazioni di importazione bulk.  Un file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
 
 |Riquadro|
 |---|
@@ -97,7 +101,7 @@ Invoke-Item $bcpFile;
 SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.
 
 ### **Creazione di un file di formato non XML**<a name="nonxml_format_file"></a>
-Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Il comando seguente userà l'[utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myFirstImport.fmt`, sulla base dello schema di `myFirstImport`.  Per usare un comando bcp per creare un file di formato, specificare l'argomento **format** e usare **null** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f**.  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere, **t,** viene usato per specificare la virgola come [carattere di terminazione del campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md) e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
+Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Il comando seguente userà l' [utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myFirstImport.fmt`, sulla base dello schema di `myFirstImport`.  Per usare un comando bcp per creare un file di formato, specificare l'argomento **format** e usare **null** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f** .  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere, **t,** viene usato per specificare la virgola come [carattere di terminazione del campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
 
 ```
 bcp TestDatabase.dbo.myFirstImport format nul -c -f D:\BCP\myFirstImport.fmt -t, -T
@@ -123,7 +127,7 @@ Il file di formato non XML `D:\BCP\myFirstImport.fmt` dovrebbe essere simile a q
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
 ### **Creazione di un file di formato XML**<a name="xml_format_file"></a>  
-Per informazioni dettagliate, vedere [File in formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  Il comando seguente userà l'[utilità bcp](../../tools/bcp-utility.md) per creare un file di formato XML, `myFirstImport.xml`, sulla base dello schema di `myFirstImport`. Per usare un comando bcp per creare un file di formato, specificare l'argomento **format** e usare **null** anziché un percorso del file di dati.  L'opzione format richiede sempre l'opzione **-f** e per creare un file di formato XML è necessario anche specificare l'opzione **-x**.  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere, **t,** viene usato per specificare la virgola come [carattere di terminazione del campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md) e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
+Per informazioni dettagliate, vedere [File in formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Il comando seguente userà l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato XML, `myFirstImport.xml`, sulla base dello schema di `myFirstImport`. Per usare un comando bcp per creare un file di formato, specificare l'argomento **format** e usare **null** anziché un percorso del file di dati.  L'opzione format richiede sempre l'opzione **-f** e per creare un file di formato XML è necessario anche specificare l'opzione **-x** .  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere, **t,** viene usato per specificare la virgola come [carattere di terminazione del campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
 ```
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
 
@@ -133,19 +137,19 @@ Notepad D:\BCP\myFirstImport.xml
 
 Il file di formato XML `D:\BCP\myFirstImport.xml` dovrebbe essere simile al seguente:
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="11"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="11"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>
 ```
@@ -213,7 +217,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e di un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"></a> 
+### **Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e di un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"></a>    
 Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
@@ -251,17 +255,18 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
   
-## Altri esempi  
+## <a name="more-examples"></a>Altri esempi  
  [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
  [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
  [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
  [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## Vedere anche  
- [Utilità bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [File di formato per l'importazione o l'esportazione di dati (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Cercare gli oggetti con il maggior numero di blocchi acquisiti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "oggetti [SQL Server], eventi estesi"
-  - "xe"
-  - "eventi estesi [SQL Server], blocchi"
-  - "oggetti [SQL Server], blocchi"
+title: Cercare gli oggetti con il maggior numero di blocchi acquisiti | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- objects [SQL Server], extended events
+- xe
+- extended events [SQL Server], locks
+- objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd171596bf52ebc25887b378103ffe751955fd03
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cercare gli oggetti con il maggior numero di blocchi acquisiti
+# <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Cercare gli oggetti con il maggior numero di blocchi acquisiti
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Gli amministratori di database hanno spesso la necessità di individuare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.  
@@ -31,7 +35,7 @@ caps.handback.revision: 15
   
  A questo scopo, utilizzare l'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-### Per cercare gli oggetti con il maggior numero di blocchi  
+### <a name="to-find-the-objects-that-have-the-most-locks"></a>Per cercare gli oggetti con il maggior numero di blocchi  
   
 1.  Nell'editor di query eseguire le istruzioni indicate di seguito.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 15
   
 -   lock_count  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   

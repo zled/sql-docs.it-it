@@ -1,35 +1,39 @@
 ---
-title: "Password server di distribuzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.configuredistributionwizard.distributorpassword.f1"
+title: Password server di distribuzione | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.configuredistributionwizard.distributorpassword.f1
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7953ccc253ba95706dad8a05e49527462028c8f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Password server di distribuzione
-  Se, nel **editori** pagina della procedura guidata è stata abilitata una o più server di pubblicazione per l'utilizzo di questo server come server di distribuzione remoto, è necessario specificare una password per la replica di connessione stabilisce tra il server di pubblicazione e il server di distribuzione remoto utilizzando il **distributor_admin** account di accesso. È necessario specificare la stessa password per ogni server di pubblicazione che utilizza questo server di distribuzione remoto nella pagina **Password amministrativa** della Creazione guidata nuova pubblicazione o della Configurazione guidata distribuzione. Per ulteriori informazioni sulla sicurezza per i server di distribuzione, vedere [proteggere il server di distribuzione](../../relational-databases/replication/security/secure-the-distributor.md).  
+# <a name="distributor-password"></a>Password server di distribuzione
+  Se nella pagina **Server di pubblicazione** di questa procedura guidata uno più server di pubblicazione sono stati abilitati all'utilizzo del server corrente come server di distribuzione remoto, è necessario specificare una password per la connessione eseguita dalla replica tra il server di pubblicazione e il server di distribuzione remoto utilizzando l'account di accesso **distributor_admin** . È necessario specificare la stessa password per ogni server di pubblicazione che utilizza questo server di distribuzione remoto nella pagina **Password amministrativa** della Creazione guidata nuova pubblicazione o della Configurazione guidata distribuzione. Per altre informazioni sulla sicurezza dei database di distribuzione, vedere [Proteggere il database di distribuzione](../../relational-databases/replication/security/secure-the-distributor.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Password**  
  Consente di immettere una password complessa per la connessione tra il server di pubblicazione e il server di distribuzione remoto.  
   
  **Conferma password**  
  Consente di immettere nuovamente la password per verificarne la corretta immissione.  
   
-## Vedere anche  
- [Configurazione della distribuzione](../../relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)   
+ [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
   

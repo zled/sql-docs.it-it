@@ -1,24 +1,28 @@
 ---
-title: "Creare un piano di manutenzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "piani di manutenzione [SQL Server], creazione"
+title: Creare un piano di manutenzione | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare un piano di manutenzione
+# <a name="create-a-maintenance-plan"></a>Creare un piano di manutenzione
   In questo argomento viene illustrato come creare un piano di manutenzione a uno o più server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]è possibile creare questi piani di manutenzione in uno di due modi: utilizzando la Creazione guidata piano di manutenzione o l'area di progettazione. La procedura guidata è più appropriata per la creazione di piani di manutenzione di base, mentre con l'area di progettazione sono disponibili funzionalità avanzate per i flussi di lavoro.  
   
  **Contenuto dell'argomento**  
@@ -43,7 +47,7 @@ caps.handback.revision: 31
  Per creare un piano di manutenzione multiserver, è necessario configurare un ambiente multiserver composto da un server master e uno o più server di destinazione. I piani di manutenzione multiserver devono essere creati e gestiti nel server master. Questi piani possono essere visualizzati, ma non gestiti, nei server di destinazione. 
  
 ###  <a name="Prerequisite"></a> Prerequisiti  
-È necessario abilitare [Opzione di configurazione del server Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
+È necessario abilitare [Opzione di configurazione del server Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) .
   
 ###  <a name="Security"></a> Security  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un piano di manutenzione utilizzando la Creazione guidata piano di manutenzione  
+#### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>Per creare un piano di manutenzione utilizzando la Creazione guidata piano di manutenzione  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il server in cui si desidera creare un piano di manutenzione.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 4.  Eseguire i passaggi della procedura guidata per creare un piano di manutenzione. Per altre informazioni, vedere [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
-#### Per creare un piano di manutenzione utilizzando l'area di progettazione  
+#### <a name="to-create-a-maintenance-plan-using-the-design-surface"></a>Per creare un piano di manutenzione utilizzando l'area di progettazione  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il server in cui si desidera creare un piano di manutenzione.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un piano di manutenzione  
+#### <a name="to-create-a-maintenance-plan"></a>Per creare un piano di manutenzione  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 31
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Classe di evento Showplan All | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan All - classe di evento"
+title: Classe di evento Showplan All | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan All event class
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4714cd313bef93a5b91b5124ee739fb10824a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Showplan All
+# <a name="showplan-all-event-class"></a>Showplan All - classe di evento
   La classe di evento Showplan All viene generata quando in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL. Le informazioni incluse sono tuttavia un subset delle informazioni disponibili nelle classi di evento Showplan XML Statistics o Showplan XML.  
   
  Nella classe di evento Showplan All vengono visualizzati i dati completi della fase di compilazione e, pertanto, le tracce che contengono Showplan All possono causare una riduzione significativa delle prestazioni. Per ridurre al minimo tale rischio, limitare l'utilizzo di questa classe di evento alle tracce che consentono di monitorare problemi specifici per brevi periodi di tempo.  
   
  Quando si include la classe di evento Showplan All in una traccia, è necessario selezionare la colonna di dati BinaryData. In caso contrario, le informazioni relative a questa classe di evento non verranno visualizzate nella traccia.  
   
-## Colonne di dati della classe di evento Showplan All  
+## <a name="showplan-all-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan All  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 38
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   

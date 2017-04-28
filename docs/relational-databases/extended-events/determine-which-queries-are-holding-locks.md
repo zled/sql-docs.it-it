@@ -1,29 +1,33 @@
 ---
-title: "Individuare le query che mantengono attivi i blocchi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query [SQL Server], eventi estesi"
-  - "query [SQL Server], attivazione di blocchi"
-  - "xe"
-  - "eventi estesi [SQL Server], blocchi"
-  - "eventi estesi [SQL Server], attivazione di blocchi"
+title: Individuare le query che mantengono attivi i blocchi | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Individuare le query che mantengono attivi i blocchi
+# <a name="determine-which-queries-are-holding-locks"></a>Individuare le query che mantengono attivi i blocchi
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Gli amministratori di database hanno spesso la necessità di individuare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.  
@@ -32,14 +36,14 @@ caps.handback.revision: 15
   
  Nei risultati dell'esecuzione di una query su sys.dm_tran_locks viene indicato che sono presenti numerosi blocchi in sospeso, ma che per le sessioni a cui sono stati concessi i blocchi non è disponibile alcuna richiesta attiva mostrata in sys.dm_exec_requests.  
   
- In questo esempio viene illustrato un metodo che consente di individuare la query che ha attivato il blocco, il piano della query e lo stack [!INCLUDE[tsql](../../includes/tsql-md.md)] nel momento in cui è stato attivato il blocco. Nell'esempio viene inoltre illustrato l'utilizzo della destinazione di abbinamento in una sessione di Eventi estesi.  
+ In questo esempio viene illustrato un metodo che consente di individuare la query che ha attivato il blocco, il piano della query e lo stack [!INCLUDE[tsql](../../includes/tsql-md.md)] nel momento in cui è stato attivato il blocco. Nell'esempio viene inoltre illustrato l'utilizzo della destinazione di abbinamento in una sessione di Eventi estesi.  
   
  Il completamento di questa attività comporta l'utilizzo dell'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per effettuare la procedura descritta di seguito.  
   
 > [!NOTE]  
 >  In questo esempio viene utilizzato il database AdventureWorks.  
   
-### Per individuare le query che mantengono attivi i blocchi  
+### <a name="to-determine-which-queries-are-holding-locks"></a>Per individuare le query che mantengono attivi i blocchi  
   
 1.  Nell'editor di query eseguire le istruzioni indicate di seguito.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

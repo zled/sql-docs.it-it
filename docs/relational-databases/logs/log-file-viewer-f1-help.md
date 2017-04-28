@@ -1,44 +1,48 @@
 ---
-title: "Guida sensibile al contesto del Visualizzatore file di log | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.configurelogs.errorlog.f1"
-helpviewer_keywords: 
-  - "Visualizzatore file di log"
+title: Guida sensibile al contesto del Visualizzatore file di log | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74f75dddf710244e52115612b99483237ce3d7b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guida sensibile al contesto del Visualizzatore file di log
+# <a name="log-file-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore file di log
   Nel Visualizzatore file di log sono visualizzate informazioni sui log relativi a molti componenti diversi. Quando il Visualizzatore file di log è aperto, selezionare i log che si desidera visualizzare nel riquadro **Seleziona log** . In ogni log vengono visualizzate le colonne appropriate per il tipo di log specifico.  
   
  I log disponibili dipendono dalla modalità di apertura del Visualizzatore file di log. Per altre informazioni, vedere [Aprire il visualizzatore file di log](../../relational-databases/logs/open-log-file-viewer.md).  
   
  Il numero di righe visualizzate per i log di controllo può essere configurato nella pagina **Esplora oggetti di SQL Server/Comandi** della finestra di dialogo **Strumenti/Opzioni**. Per le descrizioni delle colonne visualizzate per i log di controllo, vedere [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Carica log**  
  Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
   
  **Esportazione**  
- Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log**.  
+ Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log** .  
   
  **Aggiorna**  
  Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
  **Filtra**  
- Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data** o altri criteri di filtro **generali**.  
+ Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni utilizzate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
  **Cerca**  
  Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
@@ -55,7 +59,7 @@ caps.handback.revision: 38
  **Istanza**  
  Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come *nome computer*\\*nome istanza*.  
   
-## Colonne generalmente visualizzate  
+## <a name="frequently-displayed-columns"></a>Colonne generalmente visualizzate  
  **Data**  
  Visualizza la data dell'evento.  
   
@@ -71,12 +75,12 @@ caps.handback.revision: 38
  **Origine log**  
  Visualizza una descrizione del log di origine in cui viene acquisito l'evento.  
   
-## Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni  
  Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] online, è necessaria l'appartenenza al ruolo predefinito del server securityadmin.  
   
- Per accedere a file di log per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** sia alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](../../relational-databases/logs/view-offline-log-files.md).  
+ Per accedere ai file di log per le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** che alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](../../relational-databases/logs/view-offline-log-files.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzatore file di log](../../relational-databases/logs/log-file-viewer.md)   
  [Aprire il visualizzatore file di log](../../relational-databases/logs/open-log-file-viewer.md)   
  [Visualizzare file di log offline](../../relational-databases/logs/view-offline-log-files.md)  

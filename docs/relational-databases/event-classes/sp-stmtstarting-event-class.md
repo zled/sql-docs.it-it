@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento SP:StmtStarting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:StmtStarting - classe di evento"
+title: Classe di evento SP:StmtStarting | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:StmtStarting event class
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 214ce5d5b71539655e07632068645b53a2b1a8a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SP:StmtStarting
+# <a name="spstmtstarting-event-class"></a>SP:StmtStarting - classe di evento
   La classe di evento SP:StmtStarting indica che è stata avviata un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in una stored procedure.  
   
-## Colonne di dati della classe di evento SP:StmtStarting  
+## <a name="spstmtstarting-event-class-data-columns"></a>Colonne di dati della classe di evento SP:StmtStarting  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -44,7 +48,7 @@ caps.handback.revision: 36
 |ObjectID|**int**|ID dell'oggetto assegnato dal sistema.|22|Sì|  
 |ObjectName|**nvarchar**|Nome dell'oggetto a cui si fa riferimento.|34|Sì|  
 |ObjectType|**int**|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Questo valore corrisponde alla colonna type nella vista del catalogo sys.objects. Per i valori, vedere [Colonna ObjectType per gli eventi di traccia](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sì|  
-|Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
+|Offset|**Int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
@@ -56,7 +60,7 @@ caps.handback.revision: 36
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

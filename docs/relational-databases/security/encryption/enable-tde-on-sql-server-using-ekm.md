@@ -1,27 +1,31 @@
 ---
-title: "Abilitare TDE in SQL Server con EKM | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crittografia [SQL Server], TDE con EKM"
-  - "TDE, procedure per EKM"
-  - "EKM, procedure per TDE"
-  - "Transparent Data Encryption, uso di EKM"
+title: Abilitare TDE in SQL Server con EKM | Microsoft Docs
+ms.custom: 
+ms.date: 04/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], TDE using an EKM
+- TDE, EKM how to
+- EKM, TDE how to
+- Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8c98c5335ab148d1d36f56c1375ec1f89219908
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare TDE in SQL Server con EKM
+# <a name="enable-tde-on-sql-server-using-ekm"></a>Abilitare TDE in SQL Server con EKM
   In questo argomento viene descritto come abilitare Transparent Data Encryption (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per proteggere una chiave di crittografia del database tramite una chiave asimmetrica archiviata in un modulo Extensible Key Management (EKM) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Transparent Data Encryption crittografa l'archivio di un intero database utilizzando una chiave simmetrica denominata chiave di crittografia del database. È inoltre possibile proteggere la chiave di crittografia del database utilizzando un certificato protetto dalla chiave master del database master. Per altre informazioni sulla protezione della chiave di crittografia del database tramite la chiave master del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md). Per informazioni sulla configurazione di TDE quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è in esecuzione in una macchina virtuale di Azure, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Per informazioni sulla configurazione di Transparent Data Encryption usando una chiave nell'insieme di credenziali delle chiavi di Azure, vedere [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
@@ -56,9 +60,9 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per abilitare Transparent Data Encryption tramite Extensible Key Management  
+#### <a name="to-enable-tde-using-ekm"></a>Per abilitare Transparent Data Encryption tramite Extensible Key Management  
   
-1.  Copiare i file forniti dal provider EKM in un percorso appropriato nel computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo esempio viene usata la cartella **C:\EKM**.  
+1.  Copiare i file forniti dal provider EKM in un percorso appropriato nel computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In questo esempio viene usata la cartella **C:\EKM** .  
   
 2.  Installare i certificati nel computer in base a quanto richiesto dal provider EKM.  
   
@@ -155,7 +159,8 @@ caps.handback.revision: 26
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Transparent Data Encryption con il database SQL di Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   
   
+

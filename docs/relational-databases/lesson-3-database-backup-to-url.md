@@ -1,25 +1,29 @@
 ---
-title: "Lezione 3: Backup del database su URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 3: Backup del database su URL | Microsoft Docs'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lezione 3: Backup del database su URL
+# <a name="lesson-3-database-backup-to-url"></a>Lezione 3: Backup del database su URL
 In questa lezione si eseguirà il backup del database AdventureWorks2014 nell'istanza di SQL Server 2016 locale nel contenitore di Azure creato nella [Lezione 1: Creare criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
@@ -50,9 +54,10 @@ Per eseguire il backup di un database nell'archiviazione BLOB, seguire questi pa
   
 5.  Espandere i contenitori, espandere il contenitore creato nella lezione 1 e verificare che il file di backup usato nel passaggio 3 sia visualizzato in questo contenitore.  
   
-    ![On-premises backup file appears as blob in Azure container](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "On-premises backup file appears as blob in Azure container")  
+    ![File di backup locale visualizzato come file BLOB in un contenitore di Azure](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "File di backup locale visualizzato come file BLOB in un contenitore di Azure")  
   
 **Lezione successiva:**  
   
 [Lezione 4: Ripristinare il database in una macchina virtuale da un URL](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Utilizzare directory e percorsi in FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], directory"
+title: Usare directory e percorsi in FileTable | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzare directory e percorsi in FileTable
+# <a name="work-with-directories-and-paths-in-filetables"></a>Utilizzare directory e percorsi in FileTable
   Descrive la struttura di directory nella quale vengono archiviati i file in FileTable.  
   
 ##  <a name="HowToDirectories"></a> Procedura: Utilizzare directory e percorsi in FileTable  
@@ -60,7 +64,7 @@ GO
 ##  <a name="fullpath"></a> Percorso completo di un elemento archiviato in una tabella FileTable  
  Il percorso completo di un file o di una directory in una tabella FileTable inizia con gli elementi seguenti:  
   
-1.  Condivisione abilitata per l'accesso di I/O ai file FILESTREAM a livello dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Condivisione abilitata per l'accesso di I/O ai file FILESTREAM a livello dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  **DIRECTORY_NAME** specificato a livello di database.  
   
@@ -77,7 +81,7 @@ GO
 ##  <a name="roots"></a> Semantica delle directory radice a livello di istanza, database e tabella FileTable  
  Questa gerarchia di directory osserva la semantica seguente:  
   
--   La condivisione FILESTREAM del livello di istanza viene configurata da un amministratore e archiviata come proprietà del server. È possibile rinominare la condivisione mediante Gestione configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'operazione di ridenominazione non viene applicata finché il server non viene riavviato.  
+-   La condivisione FILESTREAM del livello di istanza viene configurata da un amministratore e archiviata come proprietà del server. È possibile rinominare la condivisione mediante Gestione configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'operazione di ridenominazione non viene applicata finché il server non viene riavviato.  
   
 -   Per impostazione predefinita, l'elemento **DIRECTORY_NAME** a livello di database è null quando si crea un nuovo database. Un amministratore può impostare o modificare il nome mediante l'istruzione **ALTER DATABASE** . Il nome deve essere univoco (in un confronto senza distinzione fra maiuscole e minuscole) nell'istanza in questione.  
   
@@ -105,10 +109,11 @@ GO
   
 -   Ogni accesso a dati FILESTREAM o FileTable tramite le API del file system deve utilizzare VNN anziché nomi computer. Per altre informazioni, vedere [FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Abilitazione dei prerequisiti per la tabella FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Creare, modificare e rilasciare FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

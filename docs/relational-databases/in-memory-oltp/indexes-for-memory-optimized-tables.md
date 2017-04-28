@@ -1,25 +1,29 @@
 ---
-title: "Indici per tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Indici per tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.lasthandoff: 04/11/2017
+
 ---
-# Indici per tabelle con ottimizzazione per la memoria
+# <a name="indexes-for-memory-optimized-tables"></a>Indici per tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,13 +34,13 @@ Questo articolo descrive i tipi di indice disponibili per una tabella con ottimi
 - Spiega in quali circostanze ciascun tipo di indice con ottimizzazione per la memoria rappresenta la scelta ottimale.  
   
   
-Gli indici *hash* sono descritti in dettaglio in un [articolo strettamente correlato](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
+Gli indici*hash* sono descritti in dettaglio in un [articolo strettamente correlato](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
   
   
-Gli indici *columnstore* sono illustrati in [un altro articolo](Columnstore%20Indexes%20Guide.xml).  
+Gli indici*columnstore* sono illustrati in [un altro articolo](~/relational-databases/indexes/columnstore-indexes-overview.md).  
   
   
-## A. Sintassi per gli indici con ottimizzazione per la memoria  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintassi per gli indici con ottimizzazione per la memoria  
   
 Ogni istruzione CREATE TABLE per una tabella con ottimizzazione per la memoria deve includere tra 1 e 8 clausole per dichiarare gli indici. Il tipo di indice deve essere uno dei seguenti:  
   
@@ -63,7 +67,7 @@ Per essere dichiarata con DURABILITY = SCHEMA_AND_DATA predefinita, la tabella c
   
   
   
-### A.1 Esempio di codice per la sintassi  
+### <a name="a1-code-sample-for-syntax"></a>A.1 Esempio di codice per la sintassi  
   
 Questa sottosezione contiene un blocco di codice Transact-SQL che mostra la sintassi per creare vari indici in una tabella con ottimizzazione per la memoria. Il codice dimostra quanto segue:  
   
@@ -118,7 +122,7 @@ Questa sottosezione contiene un blocco di codice Transact-SQL che mostra la sint
   
   
   
-## B. Natura degli indici con ottimizzazione per la memoria.  
+## <a name="b-nature-of-memory-optimized-indexes"></a>B. Natura degli indici con ottimizzazione per la memoria.  
   
 In una tabella con ottimizzazione per la memoria, ogni indice è anche ottimizzato per la memoria. Le differenze tra un indice in un indice con ottimizzazione per la memoria e un indice tradizionale in una tabella basata su disco sono molte.  
   
@@ -139,7 +143,7 @@ Gli indici con ottimizzazione per la memoria non hanno pagine fisse come gli ind
   
 - Non presentano il tipo tradizionale di frammentazione all'interno di una pagina e non usano quindi il fattore di riempimento.  
   
-## C. Valori duplicati delle chiavi di indice
+## <a name="c-duplicate-index-key-values"></a>C. Valori duplicati delle chiavi di indice
 
 I valori duplicati delle chiavi di indice possono influire sulle prestazioni delle operazioni su tabelle con ottimizzazione per la memoria. Un numero elevato di duplicati (ad esempio, 100+) rende inefficienti le attività di gestione di un indice perché la maggior parte delle operazioni di indice deve attraversare catene di duplicati. L'impatto può essere notato nelle operazioni INSERT, UPDATE e DELETE sulle tabelle con ottimizzazione per la memoria. Questo problema è più evidente nel caso di indici hash, sia per il costo inferiore per ogni operazione per gli indici hash sia per l'interferenza di catene di duplicati di grandi dimensioni con la catena di collisioni hash. Per ridurre la duplicazione di un indice, usare un indice non cluster e aggiungere colonne aggiuntive, ad esempio dalla chiave primaria, alla fine della chiave di indice per ridurre il numero di duplicati.
 
@@ -156,7 +160,7 @@ La query seguente mostra il numero medio di valori di chiave di indice duplicati
 
 Per valutare il numero medio di duplicati di chiave di indice per la tabella e l'indice in uso, sostituire `Sales.Customers` con il nome della tabella e `CustomerCategoryID` con l'elenco delle colonne di chiave di indice.
 
-## D. Confronto tra le situazioni in cui usare ogni tipo di indice  
+## <a name="d-comparing-when-to-use-each-index-type"></a>D. Confronto tra le situazioni in cui usare ogni tipo di indice  
   
   
 La scelta del tipo di indice ottimale dipende dalla natura query.  
@@ -164,7 +168,7 @@ La scelta del tipo di indice ottimale dipende dalla natura query.
 Quando si implementano tabelle con ottimizzazione per la memoria in un'applicazione esistente, la raccomandazione generale consiste nell'iniziare con gli indici non cluster, poiché le relative funzionalità sono più simili alle funzionalità degli indici non cluster e cluster tradizionali sulle tabelle basate su disco. 
   
   
-### D.1 Punti di forza degli indici non cluster  
+### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 Punti di forza degli indici non cluster  
   
   
 Un indice non cluster è da preferirsi a un indice hash quando:  
@@ -196,7 +200,7 @@ Un indice non cluster è da preferirsi a un indice hash in tutte le istruzioni S
   
   
   
-### D.2 Punti di forza degli indici hash  
+### <a name="d2-strengths-of-hash-indexes"></a>D.2 Punti di forza degli indici hash  
   
   
 Un [indice hash](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) è da preferirsi a un indice non cluster quando:  
@@ -210,7 +214,7 @@ Un [indice hash](../../relational-databases/in-memory-oltp/hash-indexes-for-memo
   
   
   
-### D.3 Tabella riepilogativa dei punti di forza degli indici a confronto  
+### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 Tabella riepilogativa dei punti di forza degli indici a confronto  
   
   
 Nella tabella seguente sono elencate tutte le operazioni supportate dai vari tipi di indice.  
@@ -248,3 +252,6 @@ GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child artic
   
   
   
+
+
+

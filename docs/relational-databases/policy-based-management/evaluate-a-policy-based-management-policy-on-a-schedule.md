@@ -1,24 +1,28 @@
 ---
-title: "Valutare i criteri della gestione basata su criteri in una pianificazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestione basata su criteri, valutazione criteri"
+title: Valutare i criteri della gestione basata su criteri in una pianificazione | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, evaluate policy
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8bd8881f2c7ed11141091e117cefa037818f7ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Valutare i criteri della gestione basata su criteri in una pianificazione
+# <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Valutare i criteri della gestione basata su criteri in una pianificazione
   In questo argomento verrà descritto come valutare i criteri della gestione basata su criteri in una pianificazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -40,7 +44,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per valutare i criteri in una pianificazione  
+#### <a name="to-evaluate-a-policy-on-a-schedule"></a>Per valutare i criteri in una pianificazione  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente la pianificazione dei criteri da valutare.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 6
   
 5.  Fare clic con il pulsante destro del mouse sui criteri di cui si desidera valutare la pianificazione, quindi scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo **Apri criteri –***nome_criterio*, nell'elenco **Modalità di valutazione**, selezionare **Su pianificazione**.  
+6.  Nella finestra di dialogo **Apri criteri –***nome_criterio* , nell'elenco **Modalità di valutazione** , selezionare **Su pianificazione**.  
   
 7.  In **Pianificazione**fare clic su **Seleziona** per specificare una pianificazione esistente o su **Nuova** per creare una nuova pianificazione.  
   

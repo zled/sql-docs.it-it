@@ -1,34 +1,38 @@
 ---
-title: "Abilitare la compressione in una tabella o un indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.compwiz.compressiontype.f1"
-  - "sql13.swb.compwiz.outputoptions.f1"
-  - "sql13.swb.compwiz.summary.f1"
-  - "sql13.swb.compwiz.scriptfileoption.f1"
-  - "sql13.swb.compwiz.progress.f1"
-  - "sql13.swb.compwiz.welcome.f1"
-  - "sql13.swb.compwiz.createjob.f1"
-  - "sql13.swb.compwiz.selectaction.f1"
-helpviewer_keywords: 
-  - "Compressione guidata dati"
-  - "compressione [SQL Server], abilitazione"
+title: Abilitare la compressione in una tabella o un indice | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.compwiz.compressiontype.f1
+- sql13.swb.compwiz.outputoptions.f1
+- sql13.swb.compwiz.summary.f1
+- sql13.swb.compwiz.scriptfileoption.f1
+- sql13.swb.compwiz.progress.f1
+- sql13.swb.compwiz.welcome.f1
+- sql13.swb.compwiz.createjob.f1
+- sql13.swb.compwiz.selectaction.f1
+helpviewer_keywords:
+- data compression wizard
+- compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7eb93de0ce823f0f7efe02dc1c69b590a317237f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare la compressione in una tabella o un indice
+# <a name="enable-compression-on-a-table-or-index"></a>Abilitare la compressione in una tabella o un indice
   In questo argomento viene descritto come abilitare la compressione in una tabella o un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -62,7 +66,7 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per abilitare la compressione in una tabella o un indice  
+#### <a name="to-enable-compression-on-a-table-or-index"></a>Per abilitare la compressione in una tabella o un indice  
   
 1.  In Esplora oggetti espandere il database contenente la tabella che si desidera comprimere, quindi espandere la cartella **Tabelle** .  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 10
   
      Le opzioni seguenti sono disponibili nella pagina **Seleziona tipo di compressione** :  
   
-     Casella di controllo **Usa lo stesso tipo di compressione per tutte le partizioni**  
+     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**   
      Selezionare questa opzione per configurare la stessa impostazione di compressione per tutte le partizioni. La casella di selezione viene abilitata e la colonna **Tipo di compressione** nella griglia viene disabilitata. Se viene selezionata, le opzioni nell'elenco adiacente sono **Nessuno**, **Riga**e **Pagina**.  
   
      **Numero partizioni**  
@@ -95,10 +99,10 @@ caps.handback.revision: 10
      Visualizza lo spazio corrente occupato dalla partizione, espresso in megabyte (MB). Questa colonna è di sola lettura.  
   
      **Spazio compresso richiesto**  
-     Quando si fa clic su **Calcola**, in questa colonna vengono visualizzate le dimensioni stimate di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione**. Questa colonna è di sola lettura.  
+     Quando si fa clic su **Calcola**, in questa colonna vengono visualizzate le dimensioni stimate di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione** . Questa colonna è di sola lettura.  
   
      **Calcola**  
-     Fare clic per eseguire la stima delle dimensioni di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione**.  
+     Fare clic per eseguire la stima delle dimensioni di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione** .  
   
 6.  Nella pagina **Seleziona un'opzione di output** specificare il modo in cui si desidera completare la compressione. Selezionare **Crea script** per creare uno script SQL in base alle pagine precedenti della procedura guidata. Selezionare **Esegui immediatamente** per creare la nuova tabella partizionata dopo aver completato tutte le pagine rimanenti della procedura guidata. Selezionare **Pianifica** per creare la nuova tabella partizionata in un momento predeterminato nel futuro.  
   
@@ -141,7 +145,7 @@ caps.handback.revision: 10
   
                 -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo venga eseguita il giorno 15 del mese e a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 10
      Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report di testo dello stato della Creazione guidata partizione.  
   
      **Salva report su file**  
-     Apre la finestra di dialogo **Salva report con nome**.  
+     Apre la finestra di dialogo **Salva report con nome** .  
   
      **Copia report negli Appunti**  
      Copia i risultati del report dello stato della procedura guidata negli Appunti.  
@@ -198,7 +202,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per abilitare la compressione in una tabella  
+#### <a name="to-enable-compression-on-a-table"></a>Per abilitare la compressione in una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -216,7 +220,7 @@ caps.handback.revision: 10
     GO  
     ```  
   
-#### Per abilitare la compressione in un indice  
+#### <a name="to-enable-compression-on-an-index"></a>Per abilitare la compressione in un indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -244,7 +248,7 @@ caps.handback.revision: 10
   
  Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compressione dei dati](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

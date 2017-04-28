@@ -1,37 +1,41 @@
 ---
-title: "Vincoli di chiavi primarie ed esterne | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiavi esterne [SQL Server], integrità referenziale di propagazione"
-  - "vincoli FOREIGN KEY"
-  - "chiavi esterne [SQL Server]"
-  - "chiavi esterne [SQL Server], informazioni sui vincoli di chiave esterna"
+title: Vincoli di chiavi primarie ed esterne | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], cascading referential integrity
+- FOREIGN KEY constraints
+- foreign keys [SQL Server]
+- foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vincoli di chiavi primarie ed esterne
+# <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Le chiavi primarie e le chiavi esterne sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta di importanti oggetti di database.  
+  Le chiavi primarie e le chiavi esterne sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta di importanti oggetti di database.  
   
  In questo argomento sono contenute le sezioni seguenti.  
   
  [Vincoli di chiave primaria](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Vincoli di chiave esterna](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Attività correlate](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
@@ -56,10 +60,10 @@ caps.handback.revision: 20
   
 -   Se si definisce una chiave primaria in una colonna di tipo CLR definito dall'utente, è necessario che l'implementazione del tipo supporti l'ordinamento binario.  
   
-##  <a name="FKeys"></a> Vincoli di chiave esterna  
+##  <a name="FKeys"></a> Foreign Key Constraints  
  Per chiave esterna si intende una colonna o combinazione di colonne utilizzata per stabilire e applicare un collegamento tra i dati di due tabelle per controllare i dati che possono essere archiviati nella tabella della chiave esterna. In un riferimento a una chiave esterna viene creato un collegamento tra tabelle quando le colonne contenenti il valore della chiave primaria per una tabella vengono utilizzate come riferimento dalle colonne di un'altra tabella. Questa colonna diventa una chiave esterna nella seconda tabella.  
   
- Nella tabella **Sales.SalesOrderHeader**, ad esempio, è incluso un collegamento di chiave esterna alla tabella **Sales.SalesPerson**, in quanto esiste una relazione logica tra gli ordini di vendita e i venditori. La colonna **SalesPersonID** della tabella **SalesOrderHeader** corrisponde alla colonna chiave primaria della tabella **SalesPerson**. La colonna **SalesPersonID** della tabella **SalesOrderHeader** rappresenta la chiave esterna alla tabella **SalesPerson**. Creando questa relazione di chiave esterna, non è possibile inserire un valore per **SalesPersonID** nella tabella **SalesOrderHeader** se non esiste già nella tabella **SalesPerson**.  
+ Nella tabella **Sales.SalesOrderHeader** , ad esempio, è incluso un collegamento di chiave esterna alla tabella **Sales.SalesPerson** , in quanto esiste una relazione logica tra gli ordini di vendita e i venditori. La colonna **SalesPersonID** della tabella **SalesOrderHeader** corrisponde alla colonna chiave primaria della tabella **SalesPerson** . La colonna **SalesPersonID** della tabella **SalesOrderHeader** rappresenta la chiave esterna alla tabella **SalesPerson** . Creando questa relazione di chiave esterna, non è possibile inserire un valore per **SalesPersonID** nella tabella **SalesOrderHeader** se non esiste già nella tabella **SalesPerson** .  
   
  Una tabella può fare riferimento a un massimo di 253 altre tabelle e colonne come chiavi esterne (riferimenti in uscita). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] incrementa da 253 a 10.000 il limite per il numero di altre tabelle e colonne che possono fare riferimento alle colonne in una singola tabella (riferimenti in ingresso). (richiede almeno il livello di compatibilità 130). All'incremento vengono applicate le seguenti restrizioni:  
   
@@ -69,26 +73,26 @@ caps.handback.revision: 20
   
 -   I riferimenti di chiave esterna maggiori di 253 non sono attualmente disponibili per gli indici columnstore, le tabelle con ottimizzazione per la memoria, Estensione database o tabelle di chiave esterna partizionate.  
   
-### Indici nei vincoli di chiave esterna  
+### <a name="indexes-on-foreign-key-constraints"></a>Indici nei vincoli di chiave esterna  
  A differenza di quanto avviene per i vincoli di chiave primaria, la creazione di un vincolo di chiave esterna non determina automaticamente la creazione di un indice corrispondente. La creazione manuale di un indice in una chiave esterna, tuttavia, rappresenta spesso un'operazione utile per i motivi seguenti:  
   
 -   Le colonne chiave esterna vengono in genere utilizzate nei criteri di join quando i dati provenienti da tabelle correlate vengono riuniti in query confrontando le colonne nel vincolo di chiave esterna di una tabella con le colonne chiave primaria o univoca nell'altra tabella. Un indice consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di trovare rapidamente i dati correlati nella tabella della chiave esterna. La creazione di questo indice, tuttavia, non è un requisito necessario. È possibile riunire i dati di due tabelle correlate anche se non è stato definito alcun vincolo di chiave primaria o di chiave esterna tra le tabelle, ma una relazione di chiave esterna tra due tabelle indica che le due tabelle sono state ottimizzate per essere riunite in una query che utilizza le chiavi come criteri.  
   
 -   Le modifiche apportate ai vincoli di chiave primaria vengono confrontate con i vincoli di chiave esterna nelle tabelle correlate.  
   
-### Integrità referenziale  
- Benché lo scopo primario di un vincolo di chiave esterna consista nel controllare i dati che è possibile archiviare nella tabella della chiave esterna, tale vincolo controlla inoltre le modifiche apportate ai dati nella tabella della chiave primaria. Se, ad esempio, la riga relativa a un venditore viene eliminata dalla tabella **Sales.SalesPerson** e l'ID del venditore viene usato per gli ordini di vendita inclusi nella tabella **Sales.SalesOrderHeader**, viene interrotta l'integrità relazionale tra le due tabelle. Gli ordini di vendita del venditore eliminato risultano isolati (orfani) nella tabella **SalesOrderHeader** e privi di un collegamento ai dati inclusi nella tabella **SalesPerson**.  
+### <a name="referential-integrity"></a>Integrità referenziale  
+ Benché lo scopo primario di un vincolo di chiave esterna consista nel controllare i dati che è possibile archiviare nella tabella della chiave esterna, tale vincolo controlla inoltre le modifiche apportate ai dati nella tabella della chiave primaria. Se, ad esempio, la riga relativa a un venditore viene eliminata dalla tabella **Sales.SalesPerson** e l'ID del venditore viene usato per gli ordini di vendita inclusi nella tabella **Sales.SalesOrderHeader** , viene interrotta l'integrità relazionale tra le due tabelle. Gli ordini di vendita del venditore eliminato risultano isolati (orfani) nella tabella **SalesOrderHeader** e privi di un collegamento ai dati inclusi nella tabella **SalesPerson** .  
   
  Un vincolo di chiave esterna impedisce il verificarsi di tale situazione e applica l'integrità referenziale assicurando che non sia possibile apportare modifiche alla tabella della chiave primaria se tali modifiche annullano il collegamento ai dati della tabella della chiave esterna. Se si tenta di eliminare la riga in una tabella della chiave primaria oppure di modificare un valore della chiave primaria, l'azione avrà esito negativo se il valore della chiave primaria eliminato o modificato corrisponde a un valore nel vincolo di chiave esterna di un'altra tabella. Per modificare o eliminare correttamente una riga in un vincolo di chiave esterna, è necessario innanzitutto modificare o eliminare i dati della chiave esterna nella tabella della chiave esterna e collegare quindi la chiave esterna ad altri dati della chiave primaria.  
   
-#### Integrità referenziale di propagazione  
+#### <a name="cascading-referential-integrity"></a>Integrità referenziale di propagazione  
  I vincoli di integrità referenziale di propagazione consentono di definire le operazioni eseguite da [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando un utente tenta di eliminare o aggiornare una chiave alla quale fa riferimento una chiave esterna. È possibile definire le azioni di propagazione seguenti.  
   
  NO ACTION  
  Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore e viene eseguito il rollback dell'operazione di eliminazione o di aggiornamento sulla riga nella tabella padre.  
   
  CASCADE  
- Le righe corrispondenti vengono aggiornate o eliminate nella tabella di riferimento quando la riga viene aggiornata o eliminata nella tabella padre. Non è possibile specificare la clausola CASCADE se nella chiave esterna o nella chiave a cui si fa riferimento è presente una colonna **timestamp**. Non è possibile specificare ON DELETE CASCADE per una tabella in cui è presente un trigger INSTEAD OF DELETE. Non è possibile specificare ON UPDATE CASCADE per tabelle in cui sono presenti trigger INSTEAD OF UPDATE.  
+ Le righe corrispondenti vengono aggiornate o eliminate nella tabella di riferimento quando la riga viene aggiornata o eliminata nella tabella padre. Non è possibile specificare la clausola CASCADE se nella chiave esterna o nella chiave a cui si fa riferimento è presente una colonna **timestamp** . Non è possibile specificare ON DELETE CASCADE per una tabella in cui è presente un trigger INSTEAD OF DELETE. Non è possibile specificare ON UPDATE CASCADE per tabelle in cui sono presenti trigger INSTEAD OF UPDATE.  
   
  SET NULL  
  Tutti i valori che costituiscono la chiave esterna vengono impostati su NULL quando viene aggiornata o eliminata la riga corrispondente nella tabella padre. Per l'esecuzione di questo vincolo, è necessario che le colonne chiave esterna ammettano valori Null. Il vincolo non può essere specificato per tabelle in cui sono presenti trigger INSTEAD OF UPDATE.  
@@ -98,7 +102,7 @@ caps.handback.revision: 20
   
  È possibile combinare le azioni CASCADE, SET NULL, SET DEFAULT e NO ACTION in tabelle con relazioni referenziali reciproche. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] rileva l'azione NO ACTION, l'operazione viene arrestata e viene eseguito il rollback delle azioni CASCADE, SET NULL e SET DEFAULT correlate. Quando un'istruzione DELETE genera una combinazione di azioni CASCADE, SET NULL, SET DEFAULT e NO ACTION, tutte le azioni CASCADE, SET NULL e SET DEFAULT vengono applicate prima che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifichi l'esistenza di azioni NO ACTION.  
   
-### Trigger e operazioni referenziali di propagazione  
+### <a name="triggers-and-cascading-referential-actions"></a>Trigger e operazioni referenziali di propagazione  
  Le operazioni referenziali di propagazione attivano i trigger AFTER UPDATE o AFTER DELETE nel modo seguente:  
   
 -   Vengono eseguite per prime tutte le operazioni referenziali di propagazione determinate direttamente dall'istruzione DELETE o UPDATE originale.  
@@ -125,7 +129,7 @@ caps.handback.revision: 20
 |Viene descritto come creare una chiave primaria.|[Creazione di chiavi primarie](../../relational-databases/tables/create-primary-keys.md)|  
 |Si descrive come eliminare una chiave primaria.|[Eliminazione di chiavi primarie](../../relational-databases/tables/delete-primary-keys.md)|  
 |Si descrive come modificare una chiave primaria.|[Modifica di chiavi primarie](../../relational-databases/tables/modify-primary-keys.md)|  
-|Si descrive come creare relazioni di chiave esterna|[Creare relazioni di chiave esterna](../../relational-databases/tables/creare-relazioni-di-chiave-esterna.md)|  
+|Si descrive come creare relazioni di chiave esterna|[Creare relazioni di chiave esterna](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |Si descrive come modificare relazioni di chiave esterna.|[Modifica di relazioni di chiave esterna](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |Si descrive come eliminare relazioni di chiave esterna.|[Eliminazione di relazioni di chiave esterna](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Viene descritto come visualizzare le proprietà di chiave esterna.|[Visualizzare Proprietà di chiave esterna](../../relational-databases/tables/view-foreign-key-properties.md)|  
@@ -133,3 +137,4 @@ caps.handback.revision: 20
 |Viene descritto come disabilitare un vincolo di chiave esterna durante l'istruzione INSERT o UPDATE.|[Disabilitazione di vincoli di chiave esterna con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
+

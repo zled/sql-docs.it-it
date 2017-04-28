@@ -1,28 +1,32 @@
 ---
-title: "Deframmentazione degli indici columnstore | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Indici columnstore - Deframmentazione | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: eea1da9c6a3c9dd30b89c72488570ae98737eaa5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Deframmentazione degli indici columnstore
+# <a name="columnstore-indexes---defragmentation"></a>Indici columnstore - Deframmentazione
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Attività per la deframmentazione degli indici columnstore.  
   
-## Usare ALTER INDEX REORGANIZE per deframmentare un indice columnstore online  
+## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Usare ALTER INDEX REORGANIZE per deframmentare un indice columnstore online  
  SI APPLICA A: SQL Server (a partire dalla versione 2016), database SQL di Azure  
   
   Dopo l'esecuzione di carichi di qualsiasi tipo, è possibile che rimangano più rowgroup piccoli nel deltastore. È possibile usare ALTER INDEX REORGANIZE per forzare l'inserimento di tutti i rowgroup in columnstore, per poi combinare i rowgroup in un numero inferiore di rowgroup con più righe.  L'operazione di riorganizzazione rimuoverà anche le righe che sono state eliminate dal columnstore.  
@@ -33,12 +37,12 @@ caps.handback.revision: 15
   
 -   [Indici columnstore e criteri di unione per rowgroup](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-### Suggerimenti per la riorganizzazione  
+### <a name="recommendations-for-reorganizing"></a>Suggerimenti per la riorganizzazione  
  Riorganizzare un indice columnstore dopo uno o più caricamenti di dati per migliorare rapidamente le prestazioni delle query. La riorganizzazione inizialmente richiede risorse di CPU aggiuntive per comprimere i dati, il che potrebbe globalmente ridurre le prestazioni del sistema. Tuttavia, non appena i dati sono compressi, le prestazioni delle query possono migliorare.  
   
  Usare l'esempio in [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) per calcolare la frammentazione. Questo permette di determinare se vale la pena eseguire un'operazione REORGANIZE.  
   
-### Esempio: funzionamento della riorganizzazione  
+### <a name="example-how-reorganizing-works"></a>Esempio: funzionamento della riorganizzazione  
  Questo esempio mostra come usare ALTER INDEX REORGANIZE per forzare l'inserimento di tutti i rowgroup di deltastore in columnstore, per poi combinare i rowgroup.  
   
 1.  Eseguire questo codice Transact-SQL per creare una tabella di gestione temporanea contenente 300.000 righe. Questa tabella verrà usata per il caricamento bulk di righe in un indice columnstore.  
@@ -147,7 +151,7 @@ caps.handback.revision: 15
   
      In questo esempio, i risultati mostrano 8 rowgroup OPEN ognuno con 37.500 righe. Il numero di rowgroup OPEN dipende dall'impostazione max_degree_of_parallelism.  
   
-     ![OPEN rowgroups](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN rowgroups")  
+     ![Rowgroup OPEN](../../relational-databases/indexes/media/cci-openrowgroups.png "Rowgroup OPEN")  
   
 5.  Usare ALTER INDEX REORGANIZE con l'opzione COMPRESS_ALL_ROW_GROUPS per forzare la compressione di tutti i rowgroup nel columnstore.  
   
@@ -165,7 +169,7 @@ caps.handback.revision: 15
   
      I risultati mostrano 8 rowgroup COMPRESSED e 8 rowgroup TOMBSTONE. Ogni rowgroup viene compresso nel columnstore indipendentemente dalle dimensioni. I rowgroup TOMBSTONE verranno rimossi dal sistema.  
   
-     ![TOMBSTONE and COMPRESSED rowgroups](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE and COMPRESSED rowgroups")  
+     ![Rowgroup TOMBSTONE e COMPRESSED](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "Rowgroup TOMBSTONE e COMPRESSED")  
   
 6.  Per le prestazioni delle query, è molto meglio combinare i rowgroup piccoli.  ALTER INDEX REORGANIZE combinerà i rowgroup COMPRESSED. Ora che i rowgroup delta sono compressi nel columnstore, eseguire di nuovo ALTER INDEX REORGANIZE per combinare i rowgroup COMPRESSED piccoli. Questa volta non è necessaria l'opzione COMPRESS_ALL_ROW_GROUPS.  
   
@@ -182,21 +186,21 @@ caps.handback.revision: 15
   
      I risultati mostrano che gli 8 rowgroup COMPRESSED sono ora combinati in un solo rowgroup COMPRESSED.  
   
-     ![Combined rowgroups](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Combined rowgroups")  
+     ![Rowgroup combinati](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Rowgroup combinati")  
   
 ##  <a name="rebuild"></a> Usare ALTER INDEX REORGANIZE per deframmentare un indice columnstore offline  
  Per SQL Server 2016 e versioni successive, la ricompilazione dell'indice columnstore in genere non è necessaria perché REORGANIZE esegue gli aspetti principali di una ricompilazione in background come operazione online.  
   
  La ricompilazione di un indice columnstore consente di rimuovere la frammentazione e spostare tutte le righe nel columnstore. È possibile usare [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) per eseguire la ricompilazione completa di un indice columnstore cluster esistente. Inoltre, è possibile usare ALTER INDEX... REBUILD per ricompilare una partizione specifica.  
   
-### Processo di ricompilazione  
+### <a name="rebuild-process"></a>Processo di ricompilazione  
  Per ricompilare un indice columnstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Acquisisce un blocco esclusivo sulla tabella o partizione durante la ricompilazione.  I dati sono "offline" e non disponibili durante la ricompilazione, anche quando si usa NOLOCK, RCSI o SI.  
   
 2.  Ricomprime tutti i dati nel columnstore. Durante la ricompilazione esistono due copie dell'indice columnstore. Al termine della ricompilazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina l'indice columnstore originale.  
   
-### Suggerimenti per la ricompilazione di un indice columnstore  
+### <a name="recommendations-for-rebuilding-a-columnstore-index"></a>Suggerimenti per la ricompilazione di un indice columnstore  
  La ricompilazione di un indice columnstore è utile per rimuovere la frammentazione e spostare tutte le righe nel columnstore. Tenere presenti le seguenti indicazioni:  
   
 1.  Ricompilare una partizione anziché l'intera tabella.  
@@ -213,13 +217,13 @@ caps.handback.revision: 15
   
     -   In questo modo viene garantita l'archiviazione di tutti i dati nel columnstore. Quando i processi simultanei caricano ognuno meno di 100.000 righe nella stessa partizione contemporaneamente, si possono creare più deltastore nella partizione. La ricompilazione sposterà tutte le righe del deltastore nel columnstore.  
   
-## Vedere anche  
- [Guida agli indici columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Caricamento dati di indici columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Riepilogo delle funzionalità con versione degli indici columnstore](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Indici columnstore per il data warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [Attività di manutenzione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+## <a name="see-also"></a>Vedere anche        
+[Indici columnstore - Novità](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+
+[Indici columnstore - Prestazioni delle query](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+[Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [Indici columnstore - Data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+   
   
   
+

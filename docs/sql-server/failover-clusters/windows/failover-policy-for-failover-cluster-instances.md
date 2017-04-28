@@ -1,27 +1,31 @@
 ---
-title: "Criteri di failover per istanze del cluster di failover | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criteri di failover flessibili"
+title: Criteri di failover per istanze del cluster di failover | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criteri di failover per istanze del cluster di failover
-  In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
+# <a name="failover-policy-for-failover-cluster-instances"></a>Criteri di failover per istanze del cluster di failover
+  In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
   
- Un'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dipende dal servizio WSFC sottostante per il rilevamento del failover. Pertanto, due meccanismi determinano il comportamento del failover per l'istanza FCI: la prima è la funzionalità di WSFC nativa e la seconda è la funzionalità aggiunta dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dipende dal servizio WSFC sottostante per il rilevamento del failover. Pertanto, due meccanismi determinano il comportamento del failover per l'istanza FCI: la prima è la funzionalità di WSFC nativa e la seconda è la funzionalità aggiunta dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Il cluster WSFC gestisce la configurazione del quorum che assicura una destinazione del failover univoca in un failover automatico. Il servizio WSFC determina se il cluster è sempre nell'integrità del quorum ottimale e porta di conseguenza il gruppo di risorse online e offline.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 45
   
  Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

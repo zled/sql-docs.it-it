@@ -1,24 +1,28 @@
 ---
-title: "Nomi di colonna con il percorso specificato come dati() | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomi [SQL Server], colonne con nomi"
+title: Nomi di colonna con il percorso specificato come data() | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7684de73d40f3ac587f0307d904931c99a9a822a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Nomi di colonna con il percorso specificato come dati()
+# <a name="column-names-with-the-path-specified-as-data"></a>Nomi di colonna con il percorso specificato come dati()
   Se il percorso specificato come nome di colonna è "data()", il valore viene gestito nel codice XML generato come valore atomico. Se anche l'elemento successivo nella serializzazione è un valore atomico, al codice XML viene aggiunto uno spazio. Ciò risulta utile quando si creano valori di elementi e di attributi di tipo elenco. La query seguente recupera l'ID del modello di prodotto e l'elenco dei prodotti di quel modello.  
   
 ```  
@@ -44,7 +48,7 @@ FOR XML PATH('ProductModelData');
   
  `ProductIDs="885 887 888 889 890 891 892 893" />`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

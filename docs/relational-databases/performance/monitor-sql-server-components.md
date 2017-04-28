@@ -1,25 +1,29 @@
 ---
-title: "Monitorare i componenti di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Monitorare i componenti di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorare i componenti di SQL Server
-  Il monitoraggio è importante perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un servizio in un ambiente dinamico. i dati nell'applicazione cambiano, il tipo di accesso richiesto dagli utenti cambia, la modalità di connessione degli utenti cambia. Possono cambiare anche i tipi delle applicazioni che accedono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di gestire automaticamente le risorse a livello di sistema, quali la memoria e lo spazio su disco, per ridurre al minimo la necessità di ingenti interventi di ottimizzazione manuale a livello di sistema. Il monitoraggio consente agli amministratori di identificare le tendenze delle prestazioni per determinare i casi in cui è necessario apportare modifiche.  
+# <a name="monitor-sql-server-components"></a>Monitorare i componenti di SQL Server
+  Il monitoraggio è importante perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un servizio in un ambiente dinamico. i dati nell'applicazione cambiano, il tipo di accesso richiesto dagli utenti cambia, la modalità di connessione degli utenti cambia. Possono cambiare anche i tipi delle applicazioni che accedono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di gestire automaticamente le risorse a livello di sistema, quali la memoria e lo spazio su disco, per ridurre al minimo la necessità di ingenti interventi di ottimizzazione manuale a livello di sistema. Il monitoraggio consente agli amministratori di identificare le tendenze delle prestazioni per determinare i casi in cui è necessario apportare modifiche.  
   
- Per monitorare in modo efficiente qualsiasi componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effettuare le operazioni seguenti:  
+ Per monitorare in modo efficiente qualsiasi componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , effettuare le operazioni seguenti:  
   
 1.  Determinare gli obiettivi del monitoraggio.  
   
@@ -35,8 +39,8 @@ caps.handback.revision: 8
   
  I singoli passaggi sono descritti in dettaglio di seguito.  
   
-## Individuazione degli obiettivi del monitoraggio  
- Per eseguire in modo efficace il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario identificare chiaramente il motivo del monitoraggio. Di seguito sono riportati alcuni dei possibili motivi:  
+## <a name="determine-your-monitoring-goals"></a>Individuazione degli obiettivi del monitoraggio  
+ Per eseguire in modo efficace il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario identificare chiaramente il motivo del monitoraggio. Di seguito sono riportati alcuni dei possibili motivi:  
   
 -   Definire una base di riferimento delle prestazioni.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 8
   
 -   Stabilire i casi in cui è necessario modificare la configurazione hardware.  
   
-## Selezione dello strumento appropriato  
+## <a name="select-the-appropriate-tool"></a>Selezione dello strumento appropriato  
  Dopo aver determinato i motivi per cui eseguire il monitoraggio, è necessario selezionare gli strumenti appropriati per il tipo di monitoraggio scelto. Nell'ambiente operativo Windows e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è incluso un set completo di strumenti per il monitoraggio dei server in ambienti caratterizzati da un elevato numero di transazioni. Tali strumenti consentono di ottenere informazioni sulla condizione di un'istanza di Motore di database di SQL Server o di un'istanza di SQL Server Analysis Services.  
   
  Di seguito sono riportati gli strumenti disponibili in Windows per il monitoraggio delle applicazioni in esecuzione in un server:  
@@ -93,18 +97,18 @@ caps.handback.revision: 8
   
 -   Flag di traccia  
   
- Per altre informazioni sugli strumenti di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
+ Per altre informazioni sugli strumenti di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
   
-## Identificazione dei componenti di cui eseguire il monitoraggio  
+## <a name="identify-the-components-to-monitor"></a>Identificazione dei componenti di cui eseguire il monitoraggio  
  Il terzo passaggio della procedura di monitoraggio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nell'identificazione dei componenti monitorati. Se, ad esempio, si utilizza [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per tracciare un server, è possibile definire la traccia per raccogliere dati su eventi specifici. È inoltre possibile escludere eventi non applicabili alla situazione corrente.  
   
-## Selezione della metrica per i componenti monitorati  
+## <a name="select-metrics-for-monitored-components"></a>Selezione della metrica per i componenti monitorati  
  Dopo aver identificato i componenti di cui eseguire il monitoraggio, è necessario determinarne la metrica. Dopo aver selezionato gli eventi da includere in una traccia, è, ad esempio, possibile scegliere di includere solo i dati specifici sugli eventi. Limitando la traccia ai soli dati pertinenti si ridurranno al minimo le risorse di sistema necessarie per eseguire la traccia.  
   
-## Monitoraggio del server  
+## <a name="monitor-the-server"></a>Monitoraggio del server  
  Per eseguire il monitoraggio del server, utilizzare lo strumento configurato per la raccolta dei dati. Dopo aver definito una traccia, è, ad esempio, possibile eseguire la traccia per raccogliere i dati sugli eventi generati nel server.  
   
-## Analisi dei dati  
+## <a name="analyze-the-data"></a>Analisi dei dati  
  Al termine della traccia, analizzare i dati per verificare se sono stati raggiunti gli obiettivi di monitoraggio. In caso contrario, modificare i componenti o la metrica utilizzati per il monitoraggio del server.  
   
  Di seguito viene descritto il processo di acquisizione dei dati di evento e di utilizzo di tali dati.  
@@ -115,11 +119,11 @@ caps.handback.revision: 8
   
 2.  Eseguire il monitoraggio degli eventi (acquisizione).  
   
-     Non appena viene abilitato, il monitoraggio acquisisce i dati dall'applicazione specificata, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dal sistema operativo. Se, ad esempio, si esegue il monitoraggio dell'attività del disco tramite Monitor di sistema, vengono acquisiti dati evento quali le letture e le scritture su disco. Questi dati verranno quindi visualizzati sullo schermo. Per altre informazioni, vedere [Monitoraggio dell'utilizzo delle risorse&#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+     Non appena viene abilitato, il monitoraggio acquisisce i dati dall'applicazione specificata, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o dal sistema operativo. Se, ad esempio, si esegue il monitoraggio dell'attività del disco tramite Monitor di sistema, vengono acquisiti dati evento quali le letture e le scritture su disco. Questi dati verranno quindi visualizzati sullo schermo. Per altre informazioni, vedere [Monitoraggio dell'utilizzo delle risorse&#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
 3.  Salvare i dati evento acquisiti.  
   
-     Il salvataggio dei dati evento acquisiti consente di poterli analizzare in un secondo momento o persino di riprodurli tramite Distributed Replay Utility o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. I dati evento acquisiti vengono salvati in un file che può essere ricaricato e analizzato nello strumento in cui è stato creato in origine. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente il salvataggio dei dati evento in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il salvataggio dei dati evento acquisiti è importante per la creazione di dati di riferimento per le prestazioni. I dati di riferimento per le prestazioni vengono salvati e utilizzati per il confronto con dati evento più recenti allo scopo di verificare se le prestazioni sono ottimali. Per altre informazioni, vedere [Modelli e autorizzazioni di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     Il salvataggio dei dati evento acquisiti consente di poterli analizzare in un secondo momento o persino di riprodurli tramite Distributed Replay Utility o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. I dati evento acquisiti vengono salvati in un file che può essere ricaricato e analizzato nello strumento in cui è stato creato in origine. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente il salvataggio dei dati evento in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il salvataggio dei dati evento acquisiti è importante per la creazione di dati di riferimento per le prestazioni. I dati di riferimento per le prestazioni vengono salvati e utilizzati per il confronto con dati evento più recenti allo scopo di verificare se le prestazioni sono ottimali. Per altre informazioni, vedere [Modelli e autorizzazioni di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Creare modelli di traccia contenenti le impostazioni specificate per l'acquisizione degli eventi.  
   

@@ -1,26 +1,30 @@
 ---
-title: "Modifica o ridenominazione di trigger DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ridenominazione di trigger"
-  - "modifica di trigger"
-  - "trigger DML, modifica"
+title: Modificare o rinominare trigger DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica o ridenominazione di trigger DML
+# <a name="modify-or-rename-dml-triggers"></a>Modifica o ridenominazione di trigger DML
   In questo argomento viene illustrato come modificare o rinominare un trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -47,7 +51,7 @@ caps.handback.revision: 29
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   È consigliabile non usare la stored procedure [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) per rinominare un trigger. La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. La ridenominazione di un trigger non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md). È consigliabile eliminare e ricreare il trigger.  
+-   È consigliabile non usare la stored procedure [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) per rinominare un trigger. La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. La ridenominazione di un trigger non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . È consigliabile eliminare e ricreare il trigger.  
   
 -   Se si modifica il nome di un oggetto a cui fa riferimento un trigger DML, è necessario modificare il trigger in modo che il testo corrisponda al nuovo nome. Pertanto, prima di rinominare un oggetto, visualizzare le dipendenze dell'oggetto per determinare se la modifica proposta interessa i trigger.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare un trigger DML  
+#### <a name="to-modify-a-dml-trigger"></a>Per modificare un trigger DML  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 29
   
 4.  Modificare il trigger e fare clic su **Esegui**.  
   
-#### Per rinominare un trigger DML  
+#### <a name="to-rename-a-dml-trigger"></a>Per rinominare un trigger DML  
   
 1.  [Eliminare il trigger](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) che si desidera rinominare.  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per modificare un trigger utilizzando ALTER TRIGGER  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>Per modificare un trigger utilizzando ALTER TRIGGER  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare gli esempi seguenti nella query. Eseguire il primo esempio per creare un trigger DML per la stampa di un messaggio definito dall'utente nel client quando un utente tenta di aggiungere o modificare i dati delle modifiche nella tabella `SalesPersonQuotaHistory`. Eseguire l'istruzione [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) per modificare il trigger in modo che venga attivato solo con le attività `INSERT` . Questo trigger risulta molto utile, in quanto ricorda all'utente che aggiorna o inserisce righe nella tabella di inviare una notifica al reparto `Compensation` .  
+3.  Copiare e incollare gli esempi seguenti nella query. Eseguire il primo esempio per creare un trigger DML per la stampa di un messaggio definito dall'utente nel client quando un utente tenta di aggiungere o modificare i dati delle modifiche nella tabella `SalesPersonQuotaHistory` . Eseguire l'istruzione [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) per modificare il trigger in modo che venga attivato solo con le attività `INSERT` . Questo trigger risulta molto utile, in quanto ricorda all'utente che aggiorna o inserisce righe nella tabella di inviare una notifica al reparto `Compensation` .  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### Per rinominare un trigger utilizzando DROP TRIGGER e ALTER TRIGGER  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Per rinominare un trigger utilizzando DROP TRIGGER e ALTER TRIGGER  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

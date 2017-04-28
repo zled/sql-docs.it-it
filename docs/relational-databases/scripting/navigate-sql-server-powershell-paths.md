@@ -1,25 +1,29 @@
 ---
-title: "Spostarsi all&#39;interno dei percorsi di SQL Server PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Spostarsi all&quot;interno dei percorsi di SQL Server PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfdebbe0e80cbe5b1b852a86254f577f52d304a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Spostarsi all&#39;interno dei percorsi di SQL Server PowerShell
+# <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell
   Il provider [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell espone il set di oggetti in un'istanza di SQL Server in una struttura analoga a un percorso di file. È possibile utilizzare cmdlet di Windows PowerShell per spostarsi all'interno del percorso del provider e creare unità personalizzate per rendere più breve il percorso da digitare.  
   
-## Prima di iniziare  
+## <a name="before-you-begin"></a>Prima di iniziare  
  Windows PowerShell implementa cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente. Poiché vengono utilizzati frequentemente, i cmdlet dispongono di alias brevi e canonici. È inoltre presente un set di alias che esegue il mapping dei cmdlet a comandi simili del prompt dei comandi e un altro set per i comandi della shell di UNIX.  
   
  Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa un subset di cmdlet del provider, illustrato nella tabella seguente.  
@@ -36,8 +40,8 @@ caps.handback.revision: 8
 > [!IMPORTANT]  
 >  Alcuni identificatori (nomi di oggetto) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contengono caratteri non supportati da Windows PowerShell nei nomi dei percorsi. Per altre informazioni sull'uso dei nomi che contengono questi caratteri, vedere [Identificatori di SQL Server in PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md).  
   
-### Informazioni su SQL Server restituite da Get-ChildItem  
- Le informazioni restituite da **Get-ChildItem** (o dai relativi alias **dir** e **ls**) dipendono dalla posizione in un percorso SQLSERVER.  
+### <a name="sql-server-information-returned-by-get-childitem"></a>Informazioni su SQL Server restituite da Get-ChildItem  
+ Le informazioni restituite da **Get-ChildItem** (o dai relativi alias **dir** e **ls** ) dipendono dalla posizione in un percorso SQLSERVER.  
   
 |Posizione nel percorso|Risultati di Get-ChildItem|  
 |-------------------|----------------------------|  
@@ -47,17 +51,17 @@ caps.handback.revision: 8
 |Nodo della classe di oggetto, ad esempio Database|Elenco di oggetti del tipo, ad esempio l'elenco di database: master, model, AdventureWorks2008R2.|  
 |Nodo del nome dell'oggetto, ad esempio AdventureWorks2012|Elenco dei tipi di oggetto contenuti all'interno dell'oggetto. Per un database, ad esempio, vengono elencati tipi di oggetto come tabelle e viste.|  
   
- Per impostazione predefinita, **Get-ChildItem** non elenca oggetti di sistema. Usare il parametro *Force* per visualizzare gli oggetti di sistema, ad esempio gli oggetti nello schema **sys**.  
+ Per impostazione predefinita, **Get-ChildItem** non elenca oggetti di sistema. Usare il parametro *Force* per visualizzare gli oggetti di sistema, ad esempio gli oggetti nello schema **sys** .  
   
-### Unità personalizzate  
+### <a name="custom-drives"></a>Unità personalizzate  
  Windows PowerShell consente agli utenti di definire unità virtuali, definite come unità di PowerShell. Per tali unità viene eseguito il mapping ai nodi iniziali di un'istruzione di percorso. Tali unità vengono in genere utilizzate per abbreviare percorsi digitati con frequenza. I percorsi SQLSERVER: possono diventare lunghi, occupando spazio nella finestra di Windows PowerShell e richiedendo molta digitazione. Se si prevede di lavorare molto in un particolare nodo del percorso, è possibile definire un'unità di Windows PowerShell personalizzata di cui è stato eseguito il mapping a tale nodo.  
   
-## Utilizzare alias di cmdlet di PowerShell  
+## <a name="use-powershell-cmdlet-aliases"></a>Utilizzare alias di cmdlet di PowerShell  
  **Utilizzare un alias di cmdlet**  
   
 -   Anziché digitare il nome completo di un cmdlet, digitare un alias più breve o uno con mapping a un comando comune del prompt dei comandi.  
   
-### Esempio di alias (PowerShell)  
+### <a name="alias-example-powershell"></a>Esempio di alias (PowerShell)  
  È ad esempio possibile utilizzare uno dei set di cmdlet o alias seguenti per recuperare un elenco delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili passando alla cartella SQLSERVER:\SQL e richiedendo l'elenco di elementi figlio per la cartella:  
   
 ```  
@@ -78,14 +82,14 @@ cd SQLSERVER:\SQL
 ls  
 ```  
   
-## Utilizzare Get-ChildItem  
+## <a name="use-get-childitem"></a>Utilizzare Get-ChildItem  
  **Restituire informazioni utilizzando Get-ChildItem**  
   
 1.  Passare al nodo per il quale si desidera un elenco di childrem  
   
 2.  Eseguire Get-ChildItem per ottenere l'elenco.  
   
-### Esempio di Get-ChildItem (PowerShell)  
+### <a name="get-childitem-example-powershell"></a>Esempio di Get-ChildItem (PowerShell)  
  In questi esempi sono illustrate le informazioni restituite da Get-ChildItem per i nodi diversi in un percorso del provider SQL Server.  
   
 ```  
@@ -110,14 +114,14 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases
 Get-ChildItem -force  
 ```  
   
-## Creare un'unità personalizzata  
+## <a name="create-a-custom-drive"></a>Creare un'unità personalizzata  
  **Creare e utilizzare un'unità personalizzata**  
   
 1.  Usare **New-PSDrive** per definire un'unità personalizzata. Usare il parametro **Root** per specificare il percorso rappresentato dal nome di unità personalizzato.  
   
 2.  Fare riferimento al nome di unità personalizzata nei cmdlet di navigazione come **Set-Location**.  
   
-### Esempio di unità personalizzata (PowerShell)  
+### <a name="custom-drive-example-powershell"></a>Esempio di unità personalizzata (PowerShell)  
  Questo esempio crea un'unità virtuale denominata AWDB con mapping al nodo di una copia distribuita del database di esempio di AdventureWorks2012. L'unità virtuale è utilizzata quindi per passare a una tabella nel database.  
   
 ```  
@@ -128,7 +132,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Provider PowerShell per SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Utilizzo di percorsi di SQL Server PowerShell](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)   
  [Conversione di URN in percorsi di provider di SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

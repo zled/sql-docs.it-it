@@ -1,28 +1,32 @@
 ---
-title: "Modifica di viste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste [SQL Server], ridenominazione"
-  - "viste [SQL Server], modifica"
-  - "modifica di viste"
-  - "ridenominazione di viste"
+title: Modificare viste | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- views [SQL Server], modifying
+- modifying views
+- renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica di viste
-  Dopo aver definito una vista, è possibile modificarne la definizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], senza eliminare e ricreare la vista, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="modify-views"></a>Modifica di viste
+  Dopo aver definito una vista, è possibile modificarne la definizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , senza eliminare e ricreare la vista, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 22
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare una vista  
+#### <a name="to-modify-a-view"></a>Per modificare una vista  
   
 1.  In **Esplora oggetti**fare clic sul segno più accanto al database in cui si trova la vista, quindi fare di nuovo clic sul segno più accanto alla cartella **Viste** .  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 22
   
     1.  Selezionare o deselezionare le caselle di controllo di qualsiasi elemento che si desidera aggiungere o rimuovere.  
   
-    2.  Fare clic con il pulsante destro del mouse all'interno del riquadro del diagramma, selezionare **Aggiungi tabella**, quindi scegliere le ulteriori colonne da aggiungere alla vista nella finestra di dialogo **Aggiungi tabella**.  
+    2.  Fare clic con il pulsante destro del mouse all'interno del riquadro del diagramma, selezionare **Aggiungi tabella**, quindi scegliere le ulteriori colonne da aggiungere alla vista nella finestra di dialogo **Aggiungi tabella** .  
   
     3.  Fare clic con il pulsante destro del mouse sulla barra del titolo della tabella da rimuovere e selezionare **Rimuovi**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 22
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per modificare una vista  
+#### <a name="to-modify-a-view"></a>Per modificare una vista  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

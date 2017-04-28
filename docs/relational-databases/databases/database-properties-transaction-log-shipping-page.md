@@ -1,29 +1,33 @@
 ---
-title: "Propriet&#224; database (pagina Log shipping) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.f1"
+title: "Proprietà database (pagina Log shipping delle transazioni) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriet&#224; database (pagina Log shipping)
+# <a name="database-properties-transaction-log-shipping-page"></a>Proprietà database (pagina Log shipping)
   Utilizzare questa pagina per configurare e modificare le proprietà di log shipping per un database.  
   
  Per una spiegazione dei concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Abilita come database primario in una configurazione per il log shipping**  
  Consente di abilitare il database corrente come database primario per il log shipping. Selezionare l'opzione e quindi configurare le altre opzioni disponibili in questa pagina. Se si deseleziona questa casella di controllo, la configurazione di log shipping verrà eliminata per questo database.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  Prima di generare uno script delle impostazioni per un database secondario, è necessario richiamare la finestra di dialogo **Impostazioni database secondario** . Questa operazione consente di connettersi al server secondario e di recuperare le impostazioni correnti del database secondario necessarie per generare lo script.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure per il log shipping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
  [Tabelle di log shipping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   

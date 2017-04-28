@@ -1,32 +1,36 @@
 ---
-title: "Visualizzare le dipendenze di una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "stored procedure [SQL Server], dipendenze"
-  - "visualizzazione delle dipendenze di una stored procedure"
-  - "analisi delle dipendenze di una stored procedure"
+title: Visualizzare le dipendenze di una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], dependencies
+- displaying stored procedure dependencies
+- viewing stored procedure dependencies
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43bd4ec5070a9174a0cfd488157dd043dc4084bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare le dipendenze di una stored procedure
+# <a name="view-the-dependencies-of-a-stored-procedure"></a>Visualizzare le dipendenze di una stored procedure
   In questo argomento viene descritto come visualizzare le dipendenze di una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Top"></a>   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **Per visualizzare le dipendenze di una stored procedure usando:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To view the dependencies of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -262,7 +266,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Rinominare una stored procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   

@@ -1,31 +1,35 @@
 ---
-title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML - clausola, informazioni"
-  - "PATH FOR XML - modalità, costruzione"
-  - "Modalità EXPLICIT FOR XML"
-  - "RAW FOR XML - modalità"
-  - "recupero di dati XML"
-  - "XML [SQL Server], clausola FOR XML"
-  - "modalità AUTO FOR XML"
-  - "XML [SQL Server], creazione"
+title: FOR XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML (SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Una query SELECT restituisce i risultati sotto forma di set di righe. È possibile recuperare facoltativamente i risultati di una query SQL come codice XML specificando la clausola FOR XML nella query. È possibile utilizzare la clausola FOR XML nelle query di livello principale e nelle sottoquery. La clausola FOR XML di livello principale può essere utilizzata solo nell'istruzione SELECT. Nelle sottoquery, è possibile utilizzare FOR XML nelle istruzioni INSERT, UPDATE e DELETE. La clausola può inoltre essere utilizzata nelle istruzioni di assegnazione.  
   
  In una clausola FOR XML, è necessario specificare una delle modalità seguenti:  
@@ -52,8 +56,8 @@ caps.handback.revision: 44
   
  FOR XML non è valida per qualsiasi selezione utilizzata con una clausola FOR BROWSE.  
   
-## Esempio  
- L'istruzione `SELECT` seguente recupera informazioni dalle tabelle `Sales.Customer` e `Sales.SalesOrderHeader` del database `AdventureWorks2012`. La query seguente specifica la modalità `AUTO` nella clausola `FOR XML`:  
+## <a name="example"></a>Esempio  
+ L'istruzione `SELECT` seguente recupera informazioni dalle tabelle `Sales.Customer` e `Sales.SalesOrderHeader` del database `AdventureWorks2012` . La query seguente specifica la modalità `AUTO` nella clausola `FOR XML` :  
   
 ```  
 USE AdventureWorks2012  
@@ -68,7 +72,7 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## Clausola FOR XML e nomi di server  
+## <a name="the-for-xml-clause-and-server-names"></a>Clausola FOR XML e nomi di server  
  Se un'istruzione SELECT con una clausola FOR XML specifica un nome in quattro parti nella query, il nome del server non viene restituito nel documento XML risultante quando la query viene eseguita nel computer locale. Viene tuttavia restituito come nome in quattro parti se la query viene eseguita in un server di rete.  
   
  Ad esempio, si consideri la query seguente:  
@@ -105,11 +109,11 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sintassi di base della clausola FOR XML](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
- [Utilizzo della modalità AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
+ [Usare la modalità AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)   
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  

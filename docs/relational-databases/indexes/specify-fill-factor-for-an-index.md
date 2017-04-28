@@ -1,25 +1,29 @@
 ---
-title: "Specificare un fattore di riempimento per un indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fattore di riempimento [SQL Server]"
-  - "divisioni di pagina [SQL Server]"
+title: Specificare un fattore di riempimento per un indice | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fill factor [SQL Server]
+- page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60356d04463b7905e092ddb8ccc6374fe410719b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specificare un fattore di riempimento per un indice
+# <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si descrive il fattore di riempimento e come specificare un valore del fattore di riempimento in un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,22 +53,22 @@ caps.handback.revision: 45
   
 ###  <a name="Performance"></a> Considerazioni sulle prestazioni  
   
-#### Divisioni di pagina  
+#### <a name="page-splits"></a>Divisioni di pagina  
  Un valore del fattore di riempimento scelto correttamente consente di ridurre le potenziali divisioni di pagina rendendo disponibile uno spazio sufficiente per l'espansione dell'indice durante l'aggiunta di dati alla tabella sottostante. Quando viene aggiunta una nuova riga a una pagina di indice completa, tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene spostata circa la metà delle righe in una nuova pagina per lasciare spazio per la nuova riga. Questa riorganizzazione è nota come divisione di pagina. Una divisione di pagina consente di creare spazio per nuovi record, ma può richiedere una certa quantità di tempo e un elevato utilizzo di risorse. Può inoltre provocare la frammentazione, che a sua volta causa l'aumento delle operazioni di I/O. Quando si verificano frequenti divisioni di pagina, l'indice può essere ricompilato utilizzando un valore del fattore di riempimento nuovo o esistente per ridistribuire i dati. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  Benché un valore del fattore di riempimento basso e diverso da 0 può ridurre la necessità di dividere le pagine con l'aumento delle dimensioni dell'indice, l'indice richiederà uno spazio di archiviazione maggiore, con possibili effetti negativi sulle prestazioni di lettura. Anche per un'applicazione progettata per il supporto di numerose operazioni di inserimento e aggiornamento, il numero di letture nel database è in genere maggiore del numero di scritture in base a un fattore di 5 a 11. Se pertanto si specifica un fattore di riempimento diverso dal valore predefinito, è possibile che le prestazioni di lettura del database risultino ridotte in misura inversamente proporzionale all'impostazione del fattore di riempimento. Un valore del fattore di riempimento pari a 50 può ad esempio dimezzare le prestazioni di lettura del database. Ciò avviene perché l'indice contiene più pagine, aumentando pertanto le operazioni di I/O su disco necessarie per recuperare i dati.  
   
-#### Aggiunta di dati alla fine della tabella  
+#### <a name="adding-data-to-the-end-of-the-table"></a>Aggiunta di dati alla fine della tabella  
  Un valore del fattore di riempimento diverso da 0 o 100 può risultare efficace per le prestazioni se i nuovi dati vengono distribuiti uniformemente in tutta la tabella. Se tuttavia tutti i dati vengono aggiunti alla fine della tabella, lo spazio vuoto nelle pagine di indice non verrà riempito. Se ad esempio la colonna chiave dell'indice è una colonna IDENTITY, la chiave per le nuove righe aumenta di continuo e le righe di indice vengono aggiunte logicamente alla fine dell'indice. Se le righe esistenti verranno aggiornate con dati che ne aumentano le dimensioni, utilizzare un fattore di riempimento minore di 100. I byte aggiuntivi in ogni pagina consentiranno di ridurre le divisioni di pagina causate dalla maggiore lunghezza delle righe.  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per specificare un fattore di riempimento tramite Progettazione tabelle  
+#### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Per specificare un fattore di riempimento tramite Progettazione tabelle  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera specificare il fattore di riempimento di un indice.  
   
@@ -80,9 +84,9 @@ caps.handback.revision: 45
   
 7.  Scegliere **Chiudi**.  
   
-8.  Selezionare **Salva****table_name** dal menu *File*.  
+8.  Selezionare **Salva** table_name **dal menu***File*.  
   
-#### Per specificare un fattore di riempimento in un indice tramite Esplora oggetti  
+#### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Per specificare un fattore di riempimento in un indice tramite Esplora oggetti  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera specificare il fattore di riempimento di un indice.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 45
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per specificare un fattore di riempimento in un indice esistente  
+#### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 45
     GO  
     ```  
   
-#### Modalità alternativa per specificare un fattore di riempimento in un indice  
+#### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Modalità alternativa per specificare un fattore di riempimento in un indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -144,3 +148,4 @@ caps.handback.revision: 45
  Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

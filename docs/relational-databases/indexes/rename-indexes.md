@@ -1,26 +1,30 @@
 ---
-title: "Ridenominazione di indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ridenominazione di indici"
-  - "nomi di indice [SQL Server]"
-  - "indici [SQL Server], ridenominazione"
+title: Rinominare indici | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming indexes
+- index names [SQL Server]
+- indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59c77e43b02e26626c280f6325cdb67a11021db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ridenominazione di indici
+# <a name="rename-indexes"></a>Ridenominazione di indici
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si descrive come rinominare un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La ridenominazione di un indice consiste nel sostituire il nome attuale dell'indice con il nuovo nome specificato dall'utente. Il nome specificato deve essere univoco all'interno della tabella o della vista. Ad esempio, due tabelle possono avere un indice denominato **XPK_1**, ma la stessa tabella non può contenere due indici denominati **XPK_1**. Non è possibile creare un indice con lo stesso nome di un indice disabilitato esistente. La ridenominazione di un indice non ne causa la ricompilazione.  
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare un indice utilizzando Progettazione tabelle  
+#### <a name="to-rename-an-index-by-using-the-table-designer"></a>Per rinominare un indice utilizzando Progettazione tabelle  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera rinominare un indice.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 27
   
 4.  Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.  
   
-5.  Selezionare l'indice che si desidera rinominare nella casella di testo **Indice o chiave primari/univoci selezionati**.  
+5.  Selezionare l'indice che si desidera rinominare nella casella di testo **Indice o chiave primari/univoci selezionati** .  
   
 6.  Nella griglia fare clic su **Nome** e digitare un nuovo nome nella casella di testo.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 8.  Nel menu **File** scegliere **Salva***table_name*.  
   
-#### Per rinominare un indice utilizzando Esplora oggetti  
+#### <a name="to-rename-an-index-by-using-object-explorer"></a>Per rinominare un indice utilizzando Esplora oggetti  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera rinominare un indice.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per rinominare un indice  
+#### <a name="to-rename-an-index"></a>Per rinominare un indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -105,3 +109,4 @@ caps.handback.revision: 27
  Per altre informazioni, vedere [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
   
   
+

@@ -1,22 +1,26 @@
 ---
-title: "Ruotare le chiavi Always Encrypted tramite PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ruotare le chiavi di Always Encrypted con PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 11/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ffa9047c43a263ceae52550b65d3d147a8c9928
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ruotare le chiavi Always Encrypted tramite PowerShell
+# <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 In questo articolo sono descritti i passaggi per ruotare le chiavi per Always Encrypted usando il modulo PowerShell SqlServer. Per informazioni su come usare il modulo PowerShell SqlServer per Always Encrypted, vedere [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
@@ -25,8 +29,8 @@ La rotazione delle chiavi Always Encrypted è il processo di sostituzione di una
 
 Always Encrypted usa due tipi di chiavi, quindi ci sono due flussi di lavoro principali per la rotazione delle chiavi: rotazione delle chiavi master della colonna e rotazione delle chiavi di crittografia della colonna.
 
-* **Rotazione della chiave di crittografia della colonna**: comporta la decrittografia dei dati crittografati con la chiave corrente e la nuova crittografia dei dati tramite la nuova chiave di crittografia della colonna. Poiché la rotazione di una chiave di crittografia della colonna richiede l'accesso alle chiavi e al database, questa può solo essere eseguita senza la separazione dei ruoli.
-* **Rotazione delle chiavi master della colonna**: comporta la decrittografia delle chiavi di crittografia della colonna che sono protette dalla chiave master corrente della colonna, la nuova crittografia tramite la nuova chiave master della colonna e l'aggiornamento dei metadati per entrambi i tipi di chiavi. La rotazione delle chiavi master della colonna può essere completata con o senza la separazione dei ruoli (quando si usa il modulo PowerShell SqlServer).
+* **Rotazione della chiave di crittografia della colonna** : comporta la decrittografia dei dati crittografati con la chiave corrente e la nuova crittografia dei dati tramite la nuova chiave di crittografia della colonna. Poiché la rotazione di una chiave di crittografia della colonna richiede l'accesso alle chiavi e al database, questa può solo essere eseguita senza la separazione dei ruoli.
+* **Rotazione delle chiavi master della colonna** : comporta la decrittografia delle chiavi di crittografia della colonna che sono protette dalla chiave master corrente della colonna, la nuova crittografia tramite la nuova chiave master della colonna e l'aggiornamento dei metadati per entrambi i tipi di chiavi. La rotazione delle chiavi master della colonna può essere completata con o senza la separazione dei ruoli (quando si usa il modulo PowerShell SqlServer).
 
 
 ## <a name="column-master-key-rotation-without-role-separation"></a>Rotazione delle chiavi master della colonna senza la separazione dei ruoli
@@ -93,7 +97,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 Il flusso di lavoro della rotazione delle chiavi master della colonna descritto in questa sezione assicura la separazione dei ruoli tra un amministratore della sicurezza e un amministratore di database.
 
 > [!IMPORTANT]
-> Prima di eseguire passaggi in cui *Accede a chiavi di testo non crittografato/archivio chiavi *=**Sì** (passaggi che accedono a chiavi di testo non crittografato/archivio chiavi), assicurarsi che l'ambiente PowerShell venga eseguito su un computer protetto diverso da un computer che ospita il database. Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+> Prima di eseguire passaggi in cui *Accede a chiavi di testo non crittografato/archivio chiavi*=**Sì** (passaggi che accedono a chiavi di testo non crittografato/archivio chiavi), assicurarsi che l'ambiente PowerShell venga eseguito su un computer protetto diverso da un computer che ospita il database. Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
 
 ### <a name="part-1-dba"></a>Parte 1: Amministratore di database
@@ -118,8 +122,8 @@ L'amministratore della sicurezza genera una nuova chiave master della colonna, r
 |Passaggio 1. Ottenere dall'amministratore del database il percorso della chiave master precedente della colonna e i valori crittografati delle chiavi di crittografia corrispondenti della colonna, protette con la chiave master precedente della colonna.|N/D<br>Vedere gli esempi seguenti.|No| No
 |Passaggio 2. Creare una nuova chiave master della colonna in un archivio chiavi.<br><br>**Nota:** il modulo SqlServer non supporta questo passaggio. Per eseguire questa attività da una riga di comando, è necessario usare gli strumenti specifici del tipo di archivio chiavi.|[Creazione e archiviazione di chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Sì | No
 |Passaggio 3. Avviare un ambiente PowerShell e importare il modulo SqlServer. | [Importare il modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-|Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della chiave master **precedente** della colonna. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria |New-SqlColumnMasterKeySettings| No | No
-|Passaggio 5. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della **nuova**chiave master della colonna. SqlColumnMasterKeySettings è un oggetto presente in memoria (PowerShell). Per crearlo, è necessario usare il cmdlet specifico dell'archivio chiavi. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)| No | No
+|Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della chiave master **precedente** della colonna. SqlColumnMasterKeySettings è un oggetto presente in memoria (PowerShell). |New-SqlColumnMasterKeySettings| No | No
+|Passaggio 5. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della **nuova** chiave master della colonna. SqlColumnMasterKeySettings è un oggetto presente in memoria (PowerShell). Per crearlo, è necessario usare il cmdlet specifico dell'archivio chiavi. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)| No | No
 |Passaggio 6. Eseguire l'autenticazione in Azure, se la chiave master precedente (corrente) o nuova della colonna è archiviata nell'insieme di credenziali delle chiavi di Azure. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Sì | No
 |Passaggio 7. Crittografare nuovamente ogni valore della chiave di crittografia della colonna, attualmente protetta con la chiave master precedente della colonna, usando la nuova chiave master della colonna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)<br><br>**Nota:** quando si esegue questo cmdlet, è possibile eseguire il passaggio degli oggetti SqlColumnMasterKeySettings per la chiave master precedente e nuova della colonna, insieme a un valore della chiave di crittografia della colonna da crittografare di nuovo.|Sì|No
 |Passaggio 8. Condividere il percorso della nuova chiave master della colonna (nome del provider e percorso della chiave master della colonna) e il set di nuovi valori crittografati delle chiavi di crittografia della colonna con l'amministratore del database.| Vedere gli esempi seguenti. | No | No
@@ -137,7 +141,7 @@ L'amministratore di database crea metadati per la nuova chiave master della colo
 |Passaggio 1. Ottenere dall'amministratore del database il percorso della nuova chiave master della colonna e il set nuovo di valori crittografati delle corrispondenti chiavi di crittografia della colonna, protette con la chiave master precedente della colonna.| Vedere gli esempi seguenti. | No | No
 |Passaggio 2. Avviare un ambiente PowerShell e importare il modulo SqlServer. | [Importare il modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 |Passaggio 3. Connettersi al server e a un database. | [Connessione a un database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sì
-|Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della nuova chiave master della colonna. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria |New-SqlColumnMasterKeySettings| No| No
+|Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della nuova chiave master della colonna. SqlColumnMasterKeySettings è un oggetto presente in memoria (PowerShell). |New-SqlColumnMasterKeySettings| No| No
 |Passaggio 5. Creare i metadati relativi alla nuova chiave master della colonna nel database.|[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Nota:** questo cmdlet genera automaticamente l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) per creare i metadati della chiave. | No | Sì
 |Passaggio 6. Recuperare i metadati sulle chiavi di crittografia della colonna, protetti dalla chiave master precedente della colonna.| [Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)| No | Sì
 |Passaggio 7. Aggiungere un valore crittografato nuovo (creato tramite la nuova chiave master della colonna) ai metadati di ogni chiave di crittografia della colonna interessata.|[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)|No|Sì
@@ -298,7 +302,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 La rotazione di una chiave di crittografia della colonna comporta la decrittografia dei dati in tutte le colonne crittografate con la chiave da ruotare e la nuova crittografia dei dati che usano la nuova chiave di crittografia della colonna. Questo flusso di lavoro di rotazione richiede accesso alle chiavi e al database e quindi non può essere eseguito con la separazione dei ruoli. Si noti che la rotazione di una chiave di crittografia della colonna può richiedere molto tempo, se le tabelle contenenti le colonne crittografate con la chiave da ruotare sono di grandi dimensioni. Pertanto, l'organizzazione deve pianificare con molta attenzione una rotazione della chiave di crittografia della colonna.
 
-È possibile ruotare una chiave di crittografia della colonna usando un approccio online o offline. Il primo metodo è probabilmente il più veloce, ma le applicazioni non possono scrivere nelle tabelle interessate. Il secondo approccio richiederà probabilmente più tempo, ma è possibile limitare l'intervallo di tempo durante il quale le tabelle interessate non sono disponibili per le applicazioni. Per altre informazioni, vedere [Configurare la crittografia della colonna tramite PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) e [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx).
+È possibile ruotare una chiave di crittografia della colonna usando un approccio online o offline. Il primo metodo è probabilmente il più veloce, ma le applicazioni non possono scrivere nelle tabelle interessate. Il secondo approccio richiederà probabilmente più tempo, ma è possibile limitare l'intervallo di tempo durante il quale le tabelle interessate non sono disponibili per le applicazioni. Per altre informazioni, vedere [Configurare la crittografia della colonna tramite PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) e [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) .
 
 | Attività | Articolo | Accede alle chiavi di testo non crittografato o all'archivio chiavi| Accede al database
 |:---|:---|:---|:---
@@ -369,3 +373,5 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted (Motore di database)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog su Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

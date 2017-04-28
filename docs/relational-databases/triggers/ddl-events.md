@@ -1,26 +1,30 @@
 ---
-title: "Eventi DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventi DDL"
-  - "trigger DDL, eventi"
-  - "eventi [SQL Server], DDL"
+title: Eventi DDL | Microsoft Docs
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL events
+- DDL triggers, events
+- events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 411eb6c824b073818fbda216ba801d34ee5bcf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eventi DDL
+# <a name="ddl-events"></a>Eventi DDL
   Nelle tabelle seguenti sono elencati gli eventi DDL che possono essere utilizzati per attivare un trigger DDL o generare una notifica degli eventi. Si noti che ogni evento corrisponde a una stored procedure o un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] , con la sintassi modificata per includere un carattere di sottolineatura (_) fra le parole chiave.  
   
 > [!IMPORTANT]  
@@ -117,3 +121,4 @@ caps.handback.revision: 29
  [Gruppi di eventi DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   
   
+

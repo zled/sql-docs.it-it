@@ -1,25 +1,29 @@
 ---
-title: "Eliminare una guida di piano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guide di piano [SQL Server], eliminazione"
+title: Eliminare una guida di piano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare una guida di piano
-  È possibile eliminare una guida di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] è inoltre possibile eliminare tutte le guide di piano in un database.  
+# <a name="delete-a-plan-guide"></a>Eliminare una guida di piano
+  È possibile eliminare una guida di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]è inoltre possibile eliminare tutte le guide di piano in un database.  
   
  **Contenuto dell'argomento**  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare una guida di piano  
+#### <a name="to-delete-a-plan-guide"></a>Per eliminare una guida di piano  
   
 1.  Fare clic sul segno più per espandere il database in cui si desidera eliminare una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare una singola guida di piano:  
+#### <a name="to-delete-a-single-plan-guide"></a>Per eliminare una singola guida di piano:  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 7
     GO  
     ```  
   
-#### Per eliminare tutte le guide di piano in un database  
+#### <a name="to-delete-all-plan-guides-in-a-database"></a>Per eliminare tutte le guide di piano in un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

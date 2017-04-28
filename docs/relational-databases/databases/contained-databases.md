@@ -1,28 +1,32 @@
 ---
-title: "Database indipendenti | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database indipendente"
-  - "database_uncontained_usage - evento"
-  - "database parzialmente indipendente"
-  - "database indipendente, informazioni"
+title: Database indipendenti | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database
+- database_uncontained_usage event
+- partially contained database
+- contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40dc720b7c0e74efbd1602d29af26da6320f66c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database indipendenti
+# <a name="contained-databases"></a>Database indipendenti
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Un *database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  
@@ -35,7 +39,7 @@ caps.handback.revision: 37
   
 -   L'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare report (DMV, XEvents e così via) e agire in base alle informazioni di indipendenza.  
   
- Alcune funzionalità dei database parzialmente indipendenti, ad esempio l'archiviazione dei metadati nel database, si applicano a tutti i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alcuni vantaggi dei database parzialmente indipendenti, ad esempio l'autenticazione a livello di database e le regole di confronto del catalogo, devono essere abilitati per poter essere disponibili. L'indipendenza parziale si abilita tramite le istruzioni **CREATE DATABASE** e **ALTER DATABASE** o usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione dell'indipendenza parziale del database, vedere [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Alcune funzionalità dei database parzialmente indipendenti, ad esempio l'archiviazione dei metadati nel database, si applicano a tutti i database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alcuni vantaggi dei database parzialmente indipendenti, ad esempio l'autenticazione a livello di database e le regole di confronto del catalogo, devono essere abilitati per poter essere disponibili. L'indipendenza parziale si abilita tramite le istruzioni **CREATE DATABASE** e **ALTER DATABASE** o usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione dell'indipendenza parziale del database, vedere [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="Concepts"></a> Concetti di database parzialmente indipendente  
  In un database totalmente indipendente sono incluse tutte le impostazioni del database e i metadati necessari per definire il database, mentre non sono presenti dipendenze di configurazione nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui è installato il database. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la separazione di un database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può risultare un'operazione dispendiosa in termini di tempo e richiedere una conoscenza dettagliata della relazione tra il database e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con i database parzialmente indipendenti è più semplice la separazione di un database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dagli altri database.  
@@ -80,7 +84,7 @@ caps.handback.revision: 37
   
  All'interno del limite del database è presente il *modello di database*, nel quale i database vengono sviluppati e gestiti. Esempi di entità che si trovano all'interno del database includono tabelle di sistema, ad esempio **sys.tables**, utenti del database indipendente con password e tabelle utente nel database corrente a cui viene fatto riferimento con un nome in due parti.  
   
- All'esterno del limite del database è presente il *modello di gestione* che si riferisce alla gestione e alle funzioni a livello di istanza. Esempi di entità che si trovano all'esterno del limite del database includono tabelle di sistema, ad esempio **sys.endpoints**, utenti su cui viene eseguito il mapping ad account di accesso e tabelle utente in un altro database a cui viene fatto riferimento con un nome in tre parti.  
+ All'esterno del limite del database è presente il *modello di gestione*che si riferisce alla gestione e alle funzioni a livello di istanza. Esempi di entità che si trovano all'esterno del limite del database includono tabelle di sistema, ad esempio **sys.endpoints**, utenti su cui viene eseguito il mapping ad account di accesso e tabelle utente in un altro database a cui viene fatto riferimento con un nome in tre parti.  
   
 ##  <a name="containment"></a> Indipendenza  
  Le entità utente completamente residenti all'interno del database sono considerate *indipendenti*. Qualsiasi entità residente all'esterno del database o basata sull'interazione con le funzioni esterne al database è considerata *non indipendente*.  
@@ -91,7 +95,7 @@ caps.handback.revision: 37
   
 -   Entità utente non indipendenti, ovvero quelle che superano il limite del database, ad esempio sys.server_principals o una stessa entità server (accesso). Qualsiasi struttura di codice in cui vengano usate queste entità o qualsiasi funzione che faccia riferimento a queste entità è anch'essa non indipendente.  
   
-###  <a name="partial"></a> Database parzialmente indipendente  
+###  <a name="partial"></a> Partially Contained Database  
  La caratteristica di database indipendente è attualmente disponibile solo in uno stato parzialmente indipendente. Un database parzialmente indipendente è un database indipendente in cui è supportato l'utilizzo di funzionalità non indipendenti.  
   
  Usare le viste [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) e [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) per restituire informazioni relative a oggetti o funzionalità non indipendenti. Determinando lo stato di indipendenza degli elementi del database, è possibile individuare gli oggetti o le funzionalità che è necessario sostituire o modificare ai fini dell'indipendenza.  
@@ -104,7 +108,7 @@ caps.handback.revision: 37
 ##  <a name="benefits"></a> Vantaggi dell'utilizzo di database parzialmente indipendenti  
  Alcuni problemi e complessità associati ai database non indipendenti possono essere risolti con un database parzialmente indipendente.  
   
-### Spostamento di database  
+### <a name="database-movement"></a>Spostamento di database  
  Uno dei problemi che si verifica quando un database viene spostato da un'istanza a un'altra è che importanti informazioni possono non essere disponibili. Ad esempio, le informazioni di accesso sono archiviate all'interno dell'istanza anziché nel database. Quando si sposta un database non indipendente da un'istanza a un'altra di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tali informazioni vengono ignorate. È necessario identificare le informazioni mancanti e spostarle insieme al database nella nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo processo può richiedere tempi lunghi e risultare difficile.  
   
  È possibile archiviare importanti informazioni nel database parzialmente indipendente in modo che dopo lo spostamento le informazioni siano ancora disponibili nel database.  
@@ -112,15 +116,15 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  Un database parzialmente indipendente può fornire la documentazione che descrive le funzionalità usate da un database che non possono essere separate dall'istanza. tra cui un elenco di altri database correlati, le impostazioni di sistema richieste dal database ma non indipendenti e così via.  
   
-### Vantaggi degli utenti di database indipendenti con AlwaysOn  
+### <a name="benefit-of-contained-database-users-with-always-on"></a>Vantaggi degli utenti di database indipendenti con AlwaysOn  
  Riducendo i valori equivalenti all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database parzialmente indipendenti possono essere utili durante il failover quando si usano [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La creazione di utenti indipendenti consente all'utente di connettersi direttamente al database indipendente. Si tratta di una funzionalità molto significativa in scenari a disponibilità elevata e di ripristino di emergenza, ad esempio in una soluzione AlwaysOn. Se gli utenti sono indipendenti, in caso di failover può essere possibile connettersi al database secondario senza creare account di accesso sull'istanza che ospita il database secondario. Questo rappresenta un vantaggio immediato. Per altre informazioni, vedere [Panoramica di Gruppi di disponibilità Always On (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On (SQL Server)](../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ La creazione di utenti indipendenti consente all'utente di connettersi direttamente al database indipendente. Si tratta di una funzionalità molto significativa in scenari a disponibilità elevata e di ripristino di emergenza, ad esempio in una soluzione AlwaysOn. Se gli utenti sono indipendenti, in caso di failover può essere possibile connettersi al database secondario senza creare account di accesso sull'istanza che ospita il database secondario. Questo rappresenta un vantaggio immediato. Per altre informazioni, vedere [Panoramica di Gruppi di disponibilità Always On (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### Sviluppo iniziale di database  
+### <a name="initial-database-development"></a>Sviluppo iniziale di database  
  Poiché è possibile che uno sviluppatore non conosca l'ambiente nel quale verrà distribuita un nuovo database, limitando gli impatti ambientali distribuiti al database sarà possibile ridurre il lavoro e le problematiche per lo sviluppatore. Nel modello non indipendente lo sviluppatore deve quindi considerare i possibili impatti ambientali sul nuovo database e programmare di conseguenza. Tuttavia, usando i database parzialmente indipendenti, gli sviluppatori possono rilevare l'impatto a livello di istanza sul database e le problematiche a livello di istanza che è necessario affrontare.  
   
-### Amministrazione del database  
+### <a name="database-administration"></a>Amministrazione del database  
  La gestione delle impostazioni del database nel database, anziché nel database master, consente a ogni proprietario di database di avere più controllo sul database, senza fornire al proprietario di database l'autorizzazione **sysadmin** .  
   
 ##  <a name="Limitations"></a> Limitazioni  
@@ -142,17 +146,18 @@ caps.handback.revision: 37
 ##  <a name="Identifying"></a> Identificazione dell'indipendenza del database  
  Per consentire l'identificazione dello stato di indipendenza del database sono disponibili due strumenti. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) è una vista in cui sono riportate tutte le entità potenzialmente non indipendenti nel database. L'evento database_uncontained_usage si verifica quando viene identificata un'entità effettivamente non contenuta in fase di esecuzione.  
   
-### sys.dm_db_uncontained_entities  
+### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
  In questa vista vengono riportate tutte entità presenti nel database che potrebbero essere non indipendenti, ad esempio quelle che superano il limite del database. Sono incluse le entità utente che potrebbero usare oggetti al di fuori del modello di database. Poiché non è tuttavia possibile determinare lo stato di indipendenza di alcune entità, ad esempio quelle che usano SQL dinamico, fino alla fase di esecuzione, nella vista potrebbero essere presenti alcune entità che non sono effettivamente non indipendenti. Per altre informazioni, vedere [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### database_uncontained_usage - evento  
+### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage - evento  
  L'evento XEvent viene generato quando viene identificata un'entità non indipendente in fase di esecuzione. Sono incluse le entità che hanno origine nel codice client. Questo evento XEvent verrà generato solo per le entità effettivamente non indipendenti e solo in fase di esecuzione. Pertanto, qualsiasi entità utente non indipendente non eseguita non sarà identificata da questo XEvent.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità modificate &#40;database indipendente&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md)   
- [Procedure consigliate per la sicurezza in database indipendenti](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
- [Migrazione in un database parzialmente indipendente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
+ [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   
+

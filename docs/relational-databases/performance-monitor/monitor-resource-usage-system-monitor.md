@@ -1,46 +1,50 @@
 ---
-title: "Monitoraggio dell&#39;utilizzo delle risorse (Monitor di sistema) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "monitoraggio delle prestazioni [SQL Server], utilizzo di risorse"
-  - "Monitoraggio di sistema [SQL Server], informazioni su Monitoraggio di sistema di Windows"
-  - "monitoraggio dell’utilizzo di risorse [SQL Server]"
-  - "Monitor di sistema [SQL Server]"
-  - "contatori [SQL Server], oggetti di utilizzo di risorse"
-  - "contatori delle prestazioni [SQL Server], oggetti di utilizzo di risorse"
-  - "Monitoraggio di sistema di Windows [SQL Server], informazioni su Monitoraggio di sistema di Windows"
-  - "monitoraggio [SQL Server], utilizzo di risorse server"
-  - "monitoraggio dell’utilizzo di risorse [SQL Server]"
-  - "Monitoraggio di sistema di Windows [SQL Server]"
-  - "monitoraggio di database [SQL Server], utilizzo di risorse"
-  - "prestazioni di database [SQL Server], utilizzo di risorse"
-  - "ottimizzazione di database [SQL Server], utilizzo di risorse"
-  - "prestazioni server [SQL Server], utilizzo di risorse"
+title: Monitorare l&quot;utilizzo delle risorse (Monitor di sistema) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server], resource usage
+- System Monitor [SQL Server], about Windows System Monitor
+- resource usage monitoring [SQL Server]
+- System Monitor [SQL Server]
+- counters [SQL Server], resource usage subjects
+- performance counters [SQL Server], resource usage subjects
+- Windows System Monitor [SQL Server], about Windows System Monitor
+- monitoring [SQL Server], server resource usage
+- monitoring resource usage [SQL Server]
+- Windows System Monitor [SQL Server]
+- database monitoring [SQL Server], resource usage
+- database performance [SQL Server], resource usage
+- tuning databases [SQL Server], resource usage
+- server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitoraggio dell&#39;utilizzo delle risorse (Monitor di sistema)
-  Se si utilizza un sistema operativo server Microsoft Windows, è possibile misurare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante lo strumento grafico Monitoraggio di sistema. È possibile visualizzare oggetti e contatori delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nonché funzioni di altri oggetti ad esempio processori, memoria, cache, thread e processi. A ognuno di questi oggetti è associato un set di contatori che misurano l'utilizzo dei dispositivi, le lunghezze delle code, i ritardi e altri indicatori di velocità effettiva e congestione interna.  
+# <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
+  Se si utilizza un sistema operativo server Microsoft Windows, è possibile misurare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mediante lo strumento grafico Monitoraggio di sistema. È possibile visualizzare oggetti e contatori delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nonché funzioni di altri oggetti ad esempio processori, memoria, cache, thread e processi. A ognuno di questi oggetti è associato un set di contatori che misurano l'utilizzo dei dispositivi, le lunghezze delle code, i ritardi e altri indicatori di velocità effettiva e congestione interna.  
   
 > [!NOTE]  
 >  Monitoraggio di sistema sostituisce Performance Monitor nelle versioni successive a Windows NT 4.0.  
   
-## Vantaggi di Monitoraggio di sistema  
+## <a name="benefits-of-system-monitor"></a>Vantaggi di Monitoraggio di sistema  
  Monitoraggio di sistema consente di monitorare contemporaneamente i contatori del sistema operativo Windows e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allo scopo di determinare correlazioni tra le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows. Ad esempio, il monitoraggio parallelo dei contatori di I/O del disco di Windows e dei contatori Gestione buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di ottenere una panoramica del funzionamento globale del sistema.  
   
- Monitoraggio di sistema consente di ottenere statistiche sulle attività e le prestazioni correnti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tramite Monitoraggio di sistema è possibile:  
+ Monitoraggio di sistema consente di ottenere statistiche sulle attività e le prestazioni correnti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tramite Monitoraggio di sistema è possibile:  
   
 -   Visualizzare i dati simultaneamente da più computer.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 29
     > [!NOTE]  
     >  Monitoraggio di sistema ha sostituito Performance Monitor dopo Windows NT 4.0. Per tali attività è possibile utilizzare sia Monitoraggio di sistema che Performance Monitor.  
   
-## Prestazioni di Monitoraggio di sistema  
+## <a name="system-monitor-performance"></a>Prestazioni di Monitoraggio di sistema  
  Il monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e del sistema operativo Microsoft Windows per la verifica delle prestazioni viene eseguito per esaminare innanzitutto tre aspetti fondamentali:  
   
 -   Attività del disco  
@@ -74,7 +78,7 @@ caps.handback.revision: 29
   
  Il monitoraggio di un computer in cui è in esecuzione Monitoraggio di sistema può determinare un lieve peggioramento delle prestazioni del computer monitorato. Per questo motivo, è consigliabile registrare i dati generati da Monitoraggio di sistema in un altro disco o computer in modo da limitare il carico di lavoro sul computer monitorato oppure eseguire Monitoraggio di sistema da un computer remoto. È inoltre consigliabile monitorare solo i contatori a cui si è interessati. Se il numero dei contatori monitorati è eccessivamente elevato, al processo di monitoraggio verrà aggiunto l'overhead dell'utilizzo delle risorse, che può influire sulle prestazioni del computer monitorato.  
   
-## Attività di Monitoraggio di sistema  
+## <a name="system-monitor-tasks"></a>Attività di Monitoraggio di sistema  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

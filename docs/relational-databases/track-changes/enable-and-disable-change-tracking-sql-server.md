@@ -1,35 +1,39 @@
 ---
-title: "Abilitare e disabilitare il rilevamento delle modifiche (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rilevamento delle modifiche [SQL Server], disabilitazione"
-  - "modifiche ai dati [SQL Server]"
-  - "rilevamento delle modifiche [SQL Server], abilitazione"
-  - "rilevamento delle modifiche ai dati [SQL Server]"
-  - "rilevamento di modifiche [SQL Server], configurazione"
-  - "dati [SQL Server], modifica"
+title: Abilitare e disabilitare il rilevamento delle modifiche (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], disabling
+- data changes [SQL Server]
+- change tracking [SQL Server], enabling
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], configuring
+- data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare e disabilitare il rilevamento delle modifiche (SQL Server)
+# <a name="enable-and-disable-change-tracking-sql-server"></a>Abilitare e disabilitare il rilevamento delle modifiche (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto come abilitare e disabilitare il rilevamento delle modifiche per un database e una tabella.  
   
-## Abilitazione del rilevamento delle modifiche per un database  
- Prima di utilizzare il rilevamento delle modifiche, è necessario abilitarlo a livello di database. Nell'esempio seguente viene illustrato come abilitare il rilevamento delle modifiche usando [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+## <a name="enable-change-tracking-for-a-database"></a>Abilitazione del rilevamento delle modifiche per un database  
+ Prima di utilizzare il rilevamento delle modifiche, è necessario abilitarlo a livello di database. Nell'esempio seguente viene illustrato come abilitare il rilevamento delle modifiche usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -37,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- È anche possibile abilitare il rilevamento delle modifiche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite la finestra di dialogo [Proprietà database &#40;pagina Rilevamento modifiche&#41;](../../relational-databases/databases/database-properties-changetracking-page.md).  
+ È anche possibile abilitare il rilevamento delle modifiche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite la finestra di dialogo [Proprietà database &#40;pagina Rilevamento delle modifiche&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
   
  È possibile specificare le opzioni CHANGE_RETENTION e AUTO_CLEANUP quando si abilita il rilevamento delle modifiche ed è possibile modificare i valori in qualsiasi momento dopo l'abilitazione del rilevamento.  
   
@@ -51,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
 -   L'utilizzo dell'isolamento dello snapshot rappresenta il modo più semplice per garantire che tutte le informazioni sul rilevamento delle modifiche siano coerenti. Per questo motivo, è consigliabile impostare l'isolamento dello snapshot per il database su ON. Per altre informazioni, vedere [Usare il rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-## Abilitazione del rilevamento delle modifiche per una tabella  
+## <a name="enable-change-tracking-for-a-table"></a>Abilitazione del rilevamento delle modifiche per una tabella  
  Il rilevamento delle modifiche deve essere abilitato per ciascuna tabella per cui si desidera eseguirlo. Quando il rilevamento delle modifiche è abilitato, le relative informazioni vengono gestite per tutte le righe della tabella interessate da un'operazione DML.  
   
  Nell'esempio seguente viene illustrato come abilitare il rilevamento delle modifiche per una tabella tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -62,14 +66,14 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- È anche possibile abilitare il rilevamento delle modifiche per una tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite la finestra di dialogo [Proprietà database &#40;pagina Rilevamento modifiche&#41;](../../relational-databases/databases/database-properties-changetracking-page.md).  
+ È anche possibile abilitare il rilevamento delle modifiche per una tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite la finestra di dialogo [Proprietà database &#40;pagina Rilevamento delle modifiche&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
   
  Quando l'opzione TRACK_COLUMNS_UPDATED è impostata su ON, nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vengono archiviate informazioni aggiuntive sulle colonne aggiornate nella tabella del rilevamento delle modifiche interna. Il rilevamento a livello di colonna consente di sincronizzare solo le colonne aggiornate. Ciò può migliorare efficienza e prestazioni. Tuttavia, poiché la gestione delle informazioni sul rilevamento a livello della colonna aggiunge un ulteriore overhead di archiviazione, per impostazione predefinita questa opzione è impostata su OFF.  
   
-## Disabilitazione del rilevamento delle modifiche per un database o una tabella  
- Il rilevamento delle modifiche deve essere prima disabilitato per tutte le tabelle di cui sono state rilevate le modifiche prima che il rilevamento possa essere impostato su OFF per il database. Per determinare le tabelle in cui è abilitato il rilevamento delle modifiche per un database, usare la vista del catalogo [sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md).  
+## <a name="disable-change-tracking-for-a-database-or-table"></a>Disabilitazione del rilevamento delle modifiche per un database o una tabella  
+ Il rilevamento delle modifiche deve essere prima disabilitato per tutte le tabelle di cui sono state rilevate le modifiche prima che il rilevamento possa essere impostato su OFF per il database. Per determinare le tabelle in cui è abilitato il rilevamento delle modifiche per un database, usare la vista del catalogo [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) .  
   
- Quando non vengono rilevate modifiche in nessuna tabella di un database, è possibile disabilitare il rilevamento delle modifiche per il database. Nell'esempio seguente viene illustrato come disabilitare il rilevamento delle modifiche per un database tramite [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Quando non vengono rilevate modifiche in nessuna tabella di un database, è possibile disabilitare il rilevamento delle modifiche per il database. Nell'esempio seguente viene illustrato come disabilitare il rilevamento delle modifiche per un database tramite [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -83,14 +87,15 @@ ALTER TABLE Person.Contact
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà database &#40;pagina Rilevamento delle modifiche&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
- [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
+ [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Usare Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
+

@@ -1,22 +1,26 @@
 ---
-title: "Ripristinare e recuperare tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ripristinare e recuperare tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e6ac814b90fdd38f21be32f506846e542be977
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristinare e recuperare tabelle con ottimizzazione per la memoria
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>Ripristinare e recuperare tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Il meccanismo di base per recuperare o ripristinare un database con tabelle con ottimizzazione per la memoria è simile a quello per i database che hanno solo tabelle basate su disco. A differenza delle tabelle basate su disco, le tabelle con ottimizzazione per la memoria devono essere caricate in memoria prima di rendere disponibile il database per l'accesso utente. Si tratta di un nuovo passaggio nel processo di recupero del database.  
@@ -31,7 +35,7 @@ caps.handback.revision: 10
   
 -   Quantità di record di log nella parte attiva del log che devono essere ripetuti.  
   
- Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ogni database attraversa una fase di recupero suddivisa in tre parti:  
+ Al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ogni database attraversa una fase di recupero suddivisa in tre parti:  
   
 1.  Fase di analisi. Durante questa fase, viene eseguito un passaggio nei log delle transazioni attivi per rilevare le transazioni di cui è stato eseguito il commit e di cui non è stato eseguito il commit. Il motore OLTP in memoria identifica il checkpoint per caricare e precaricare le voci di log della tabella di sistema. Elabora inoltre alcuni record di log delle allocazioni di file.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 10
   
 -   L'utilizzo della CPU può risultare elevato per le tabelle con ottimizzazione per la memoria di grandi dimensioni con uno o più indici non cluster in quanto, a differenza di un indice hash in cui il numero di bucket è stabilito al momento della creazione, gli indici non cluster aumentano in modo dinamico.  
   
-## Vedere anche  
- [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

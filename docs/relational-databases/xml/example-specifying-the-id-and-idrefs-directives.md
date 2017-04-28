@@ -1,25 +1,29 @@
 ---
-title: "Esempio: specifica delle direttive ID, IDREFS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "direttiva IDREF"
-  - "direttiva ID"
+title: 'Esempio: specifica delle direttive ID e IDREFS | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDREFS directive
+- ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c567b0e66efc4d93789beb7d15ccda06ddb5eea5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: specifica delle direttive ID, IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Esempio: specifica delle direttive ID, IDREFS
   Un attributo dell'elemento può essere specificato come attributo di tipo **ID** e l'attributo **IDREFS** può quindi essere utilizzato per fare riferimento a tale attributo. In questo modo è possibile creare collegamenti tra più documenti, in modo analogo alla relazione esistente tra chiave primaria e chiave esterna nei database relazionali.  
   
  Nell'esempio seguente viene illustrato l'utilizzo delle direttive **ID** e **IDREFS** per la creazione di attributi dei tipi **ID** e **IDREFS** . Poiché gli ID non possono essere valori Integer, nell'esempio i valori di ID vengono convertiti, ovvero ne viene eseguito il cast di tipo. Vengono utilizzati prefissi per i valori degli ID.  
@@ -76,7 +80,7 @@ INNER JOIN Sales.SalesOrderHeader AS SOH
 FOR XML EXPLICIT;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

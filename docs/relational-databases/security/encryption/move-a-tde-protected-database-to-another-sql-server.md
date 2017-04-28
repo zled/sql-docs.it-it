@@ -1,25 +1,29 @@
 ---
-title: "Spostare un database protetto da TDE in un&#39;altra istanza di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transparent Data Encryption, spostamento"
-  - "TDE, spostamento di un database"
+title: Spostare un database protetto da TDE in un&quot;altra istanza di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, moving
+- TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Spostare un database protetto da TDE in un&#39;altra istanza di SQL Server
+# <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
   In questo argomento viene descritto come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database **master** del server o una chiave asimmetrica protetta da un modulo EKM.  
   
  **Contenuto dell'argomento**  
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 -   Ai fini del recupero del certificato, è necessario mantenere copie sia del file del certificato sia del file della chiave privata. La password per la chiave primaria non deve essere uguale a quella della chiave master del database.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] archivia i file creati qui in **C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA**. I nomi e i percorsi dei file possono essere diversi.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] archivia i file creati qui in **C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** . I nomi e i percorsi dei file possono essere diversi.  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -74,11 +78,11 @@ caps.handback.revision: 18
   
 4.  Nella finestra di dialogo **Nuovo database** digitare il nome del nuovo database nella casella **Nome database** .  
   
-5.  Nella casella **Proprietario** digitare il nome del proprietario del nuovo database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona proprietario database**. Per altre informazioni sulla creazione di un nuovo database, vedere [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Nella casella **Proprietario** digitare il nome del proprietario del nuovo database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona proprietario database** . Per altre informazioni sulla creazione di un nuovo database, vedere [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Database** .  
   
-7.  Fare clic con il pulsante destro del mouse sul database creato, scegliere **Attività** e quindi fare clic su **Gestione crittografia del database**.  
+7.  Fare clic con il pulsante destro del mouse sul database creato, scegliere **Attività**e quindi fare clic su **Gestione crittografia del database**.  
   
      Nella finestra di dialogo **Gestione crittografia del database** sono disponibili le opzioni indicate di seguito.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 18
   
 8.  Al termine, fare clic su **OK**.  
   
-###  <a name="TsqlCreate"></a> Utilizzo di Transact-SQL  
+###  <a name="TsqlCreate"></a> Uso di Transact-SQL  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -167,7 +171,7 @@ caps.handback.revision: 18
      **Database da scollegare**  
      Consente di visualizzare i database da scollegare.  
   
-     **Nome database**  
+     **Database Name**  
      Consente di visualizzare il nome del database da scollegare.  
   
      **Interrompi connessioni**  
@@ -180,7 +184,7 @@ caps.handback.revision: 18
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali statistiche di ottimizzazione non aggiornate prima di scollegare il database. Per aggiornare le statistiche di ottimizzazione esistenti, fare clic su questa casella di controllo.  
   
      **Mantieni cataloghi full-text**  
-     Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text**. Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Stato**  
      Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
@@ -208,7 +212,7 @@ caps.handback.revision: 18
   
 8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
   
-9. Nella finestra di dialogo **Individua file di database - ***server_name* selezionare il file di database da collegare al nuovo server e fare clic su **OK**.  
+9. Nella finestra di dialogo **Individua file di database -***server_name* selezionare il file di database da collegare al nuovo server e fare clic su **OK**.  
   
      Nella finestra di dialogo **Collega database** sono disponibili le opzioni seguenti.  
   
@@ -216,12 +220,12 @@ caps.handback.revision: 18
      Consente di visualizzare informazioni sui database selezionati.  
   
      \<nessuna intestazione di colonna>  
-     Consente di visualizzare un'icona che indica lo stato dell'operazione di collegamento. Le icone possibili sono illustrate di seguito nella descrizione di **Stato**.  
+     Consente di visualizzare un'icona che indica lo stato dell'operazione di collegamento. Le icone possibili sono illustrate di seguito nella descrizione di **Stato** .  
   
      **Percorso file MDF**  
      Consente di visualizzare il percorso e il nome del file MDF selezionato.  
   
-     **Nome database**  
+     **Database Name**  
      Consente di visualizzare il nome del database.  
   
      **Collega come**  
@@ -249,9 +253,9 @@ caps.handback.revision: 18
      Consente di individuare i file principali del database necessari. Se l'utente seleziona un file con estensione mdf, le informazioni appropriate vengono inserite automaticamente nei rispettivi campi della griglia **Database da collegare** .  
   
      **Rimuovi**  
-     Consente di rimuovere il file selezionato dalla griglia **Database da collegare**.  
+     Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     **dettagli del database "** *<database_name>* **"**  
+     **"** *<database_name>* **" dettagli database**  
      Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**…**).  
   
     > [!NOTE]  
@@ -267,9 +271,9 @@ caps.handback.revision: 18
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Message**  
-     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale **Impossibile trovare il file**.  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
-###  <a name="TsqlMove"></a> Utilizzo di Transact-SQL  
+###  <a name="TsqlMove"></a> Uso di Transact-SQL  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -320,7 +324,7 @@ caps.handback.revision: 18
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Transparent Data Encryption con il database SQL di Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   

@@ -1,26 +1,30 @@
 ---
-title: "Riepilogo delle funzionalit&#224; con versione degli indici columnstore | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Indici columnstore - Novità | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Riepilogo delle funzionalit&#224; con versione degli indici columnstore
+# <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Riepilogo delle funzionalità columnstore disponibili per ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per le versioni più recenti del database SQL di Azure Premium Edition, Azure SQL Data Warehouse e Parallel Data Warehouse.  
+  Riepilogo delle funzionalità columnstore disponibili per ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e per le versioni più recenti del database SQL di Azure Premium Edition, Azure SQL Data Warehouse e Parallel Data Warehouse.  
 
  >[!NOTE]
  > Per il database SQL di Azure gli indici columnstore sono disponibili solo nella Premium Edition.
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   L'elaborazione batch consente di raddoppiare o migliorare le prestazioni delle query, ma è disponibile solo per l'esecuzione di query parallele.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida agli indici columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Caricamento dati di indici columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Guida agli indici columnstore   
+ Caricamento dati di indici columnstore   
  [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Indici columnstore per il data warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ Indici columnstore per il data warehousing   
  [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Propriet&#224; pubblicazione - &lt;Publication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Proprietà pubblicazione - finestra di dialogo"
+title: "Proprietà pubblicazione - &lt;Pubblicazione&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31f80253fe7e0fa562e67c9bbf8d685fa72ec37d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriet&#224; pubblicazione - &lt;Publication&gt;
+# <a name="publication-properties----ltpublicationgt"></a>Proprietà pubblicazione - &lt;Pubblicazione&gt;
   In questa sezione vengono fornite informazioni su tutte le pagine della finestra di dialogo **Proprietà pubblicazione** :  
   
 -   [Proprietà pubblicazione, Generale](../../relational-databases/replication/publication-properties-general.md)  
@@ -35,14 +39,14 @@ caps.handback.revision: 19
   
 -   [Proprietà pubblicazione, Elenco accesso pubblicazione](../../relational-databases/replication/publication-properties-publication-access-list.md)  
   
--   [Proprietà pubblicazione (pagina sicurezza agente)](../../relational-databases/replication/publication-properties-agent-security.md)  
+-   [Proprietà pubblicazione, Sicurezza agente](../../relational-databases/replication/publication-properties-agent-security.md)  
   
 -   [Proprietà pubblicazione, Partizioni dati](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## Vedere anche  
- [Creazione di una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md)   
- [Visualizzazione e modifica delle proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Pubblicazione di dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Proprietà riferimento & #40; Replica & #41;](../../relational-databases/replication/properties-reference-replication.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [Riferimento alle proprietà &#40;replica&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

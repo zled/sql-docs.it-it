@@ -1,34 +1,38 @@
 ---
-title: "Categoria di eventi CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi di evento [SQL Server], categoria di eventi CLR"
-  - "classi di evento SQL Server, categoria di eventi CLR"
-  - "categoria di eventi CLR [SQL Server]"
+title: Categoria di eventi CLR | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], CLR event category
+- SQL Server event classes, CLR event category
+- CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31222b30465a65341e3a00c0567790ae93bf24ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria di eventi CLR
+# <a name="clr-event-category"></a>Categoria di eventi CLR
   La categoria di eventi **CLR** include le classi di eventi generate dall'esecuzione di oggetti CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
- ## Classe di evento Assembly Load 
+ ## <a name="assembly-load-event-class"></a>Classe di evento Assembly Load 
   La classe di evento **Assembly Load** viene generata quando viene eseguita la richiesta di caricamento di un assembly.  
   
  Includere la classe di evento **Assembly Load** nelle tracce quando si desidera monitorare i caricamenti di assembly. Può essere utile per la risoluzione dei problemi di una query che utilizza CLR (Common Language Runtime), per la risoluzione dei problemi di un server lento che esegue query CLR o per il monitoraggio di un server finalizzato alla raccolta di informazioni sugli utenti, i database, l'esito o altre informazioni relative ai caricamenti di assembly.  
   
-## Colonne di dati della classe di evento Assembly Load  
+## <a name="assembly-load-event-class-data-columns"></a>Colonne di dati della classe di evento Assembly Load  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Sì|  
-|**LoginSID**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals**. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|**LoginSID**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**ObjectID**|**int**|ID dell'assembly.|22|Sì|  
@@ -53,13 +57,13 @@ caps.handback.revision: 17
 |**Esito positivo**|**int**|Indica se il caricamento dell'assembly ha avuto esito positivo (1) o negativo (0).|23|Sì|  
 |**TextData**|**ntext**|"Assembly Load Succeeded" se il caricamento ha esito positivo, altrimenti "Assembly Load Failed".|1|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [Assembly &#40;Motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
   
    
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

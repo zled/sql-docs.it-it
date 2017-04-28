@@ -1,25 +1,29 @@
 ---
-title: "Modificare l&#39;ordine delle colonne in una tabella | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne [SQL Server], modifica dell'ordine in una tabella"
-  - "ordine colonne, modifica"
+title: Modificare l&quot;ordine delle colonne in una tabella | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], change order in a table
+- column order, change
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificare l&#39;ordine delle colonne in una tabella
+# <a name="change-column-order-in-a-table"></a>Modificare l'ordine delle colonne in una tabella
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   In Progettazione tabelle è possibile modificare l'ordine delle colonne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -37,9 +41,9 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare l'ordine delle colonne  
+#### <a name="to-change-the-column-order"></a>Per modificare l'ordine delle colonne  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulle colonne da riordinare e selezionare **Progetta**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulle colonne da riordinare e selezionare **Progetta**.  
   
 2.  Selezionare la casella a sinistra del nome della colonna che si desidera spostare.  
   

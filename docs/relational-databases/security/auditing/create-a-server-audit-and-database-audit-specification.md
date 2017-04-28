@@ -1,30 +1,34 @@
 ---
-title: "Creazione di un controllo del server e di una specifica del controllo del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlaudit.dbaudit.general.f1"
-helpviewer_keywords: 
-  - "controlli [SQL Server], creazione di specifiche del database"
-  - "controllo del database [SQL Server]"
+title: Creare un controllo del server e una specifica del controllo del database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlaudit.dbaudit.general.f1
+helpviewer_keywords:
+- audits [SQL Server], creating database specification
+- database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d5beb8f3b18bd4dd99039b0f2b38ce731140726
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di un controllo del server e di una specifica del controllo del database
+# <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
   In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. Anche l'oggetto *Database-Level Audit Specification* fa parte di un controllo. È possibile creare una specifica del controllo del database per ogni database di SQL Server e per ogni controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. Anche l'oggetto *Database-Level Audit Specification* fa parte di un controllo. È possibile creare una specifica del controllo del database per ogni database di SQL Server e per ogni controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **Contenuto dell'argomento**  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un controllo del server  
+#### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 17
   
 3.  Una volta selezionate le opzioni, fare clic su **OK**.  
   
-#### Per creare una specifica del controllo a livello di database  
+#### <a name="to-create-a-database-level-audit-specification"></a>Per creare una specifica del controllo a livello di database  
   
 1.  In Esplora oggetti espandere il database in cui si desidera creare una nuova specifica del controllo.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 17
      Specifica i gruppi di azioni di controllo a livello di database e le azioni di controllo da acquisire. Per l'elenco di gruppi di azioni di controllo a livello di database e di azioni di controllo e una descrizione degli eventi contenuti, vedere [Azioni e gruppi di azioni di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Schema dell'oggetto**  
-     Consente di visualizzare lo schema per il **nome oggetto** specificato.  
+     Consente di visualizzare lo schema per l'oggetto **Nome oggetto**specificato.  
   
      **Nome oggetto**  
      Nome dell'oggetto da controllare. Tale opzione è disponibile solo per le azioni di controllo e non si applica ai gruppi di controllo.  
@@ -105,7 +109,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un controllo del server  
+#### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -126,7 +130,7 @@ caps.handback.revision: 17
     WITH (STATE = ON) ;  
     ```  
   
-#### Per creare una specifica del controllo a livello di database  
+#### <a name="to-create-a-database-level-audit-specification"></a>Per creare una specifica del controllo a livello di database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

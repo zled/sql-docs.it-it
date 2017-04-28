@@ -1,32 +1,36 @@
 ---
-title: "Gruppi di eventi DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di eventi"
-  - "gruppi di eventi DDL"
-  - "trigger DDL, gruppi di eventi"
+title: Gruppi di eventi DDL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event groups
+- DDL event groups
+- DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gruppi di eventi DDL
+# <a name="ddl-event-groups"></a>gruppi di eventi DDL
   Nelle tabelle seguenti vengono elencati i gruppi di eventi DLL che è possibile utilizzare per eseguire un trigger DDL o una notifica degli eventi e vengono indicate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] incluse. Si noti la natura inclusiva dei gruppi di eventi. Ad esempio, un trigger DDL o una notifica degli eventi che specifica FOR DDL_TABLE_EVENTS (10018) include le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. In un trigger DDL o una notifica degli eventi che consente di specificare FOR DDL_TABLE_VIEW_EVENTS (type 10017) sono incluse tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nei tipi DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL o notifiche degli eventi. Testare i trigger DDL e le notifiche degli eventi per determinarne la risposta alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e la stored procedure **sp_addtype** consentono entrambe di attivare un trigger DDL o una notifica degli eventi creata in un evento CREATE_TYPE.  
   
-## Eventi  
+## <a name="events"></a>Eventi  
  Gli eventi elencati in DDL_DATABASE_LEVEL_EVENTS vengono eseguiti a livello di server (istanza) o di database. Gli eventi elencati in DDL_SERVER_LEVEL_EVENTS vengono eseguiti solo a livello di server.  
   
 ||||  
@@ -314,7 +318,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Notifiche degli eventi](../../relational-databases/service-broker/event-notifications.md)   
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Eventi DDL](../../relational-databases/triggers/ddl-events.md)  

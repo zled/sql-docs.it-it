@@ -1,24 +1,28 @@
 ---
-title: "Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], conflitti tra Win32 e Transact-SQL"
+title: Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
+# <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
   Le applicazioni che usano SqlOpenFilestream() per aprire gli handle di file Win32 per la lettura o la scrittura di dati BLOB FILESTREAM possono entrare in conflitto con le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] gestite in una transazione comune. Sono incluse le query [!INCLUDE[tsql](../../includes/tsql-md.md)] o MARS la cui esecuzione richiede molto tempo. È necessario progettare con attenzione le applicazioni per evitare questi tipi di conflitti.  
   
  Quando il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o le applicazioni provano ad aprire dati BLOB FILESTREAM, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] controlla il contesto di transazione associato. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente o nega la richiesta a seconda che l'operazione di apertura funzioni o meno con le istruzioni DDL, le istruzioni DML, il recupero dei dati o la gestione delle transazioni. Nella tabella seguente viene illustrato il modo in cui il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina se un 'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] verrà consentita o negata in base al tipo di file aperti nella transazione.  
@@ -34,10 +38,10 @@ caps.handback.revision: 16
   
  \* La transazione viene annullata e gli handle aperti per il contesto di transazione vengono invalidati. L'applicazione deve chiudere tutti gli handle aperti.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano come le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e l'accesso Win32 FILESTREAM possano creare conflitti.  
   
-### A. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
  Nell'esempio seguente viene mostrato l'effetto dell'apertura di un file per il solo accesso in scrittura.  
   
 ```  
@@ -60,7 +64,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### B. Apertura di dati BLOB FILESTREAM per l'accesso in lettura  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. Apertura di dati BLOB FILESTREAM per l'accesso in lettura  
  Nell'esempio seguente viene mostrato l'effetto dell'apertura di un file per il solo accesso in lettura.  
   
 ```  
@@ -78,7 +82,7 @@ CloseHandle(dstHandle);
 //SELECT statements will be allowed.  
 ```  
   
-### C. Apertura e chiusura di più file BLOB FILESTREAM  
+### <a name="c-opening-and-closing-multiple-filestream-blob-files"></a>C. Apertura e chiusura di più file BLOB FILESTREAM  
  Se sono aperti più file, viene utilizzata la regola più restrittiva. Nell'esempio seguente vengono aperti due file. Il primo file è aperto in lettura, il secondo in scrittura. Le istruzioni DML rimarranno negate finché non viene aperto il secondo file.  
   
 ```  
@@ -109,7 +113,7 @@ CloseHandle(dstHandle1);
 //SELECT statements will be allowed.  
 ```  
   
-### D. Chiusura non riuscita di un cursore  
+### <a name="d-failing-to-close-a-cursor"></a>D. Chiusura non riuscita di un cursore  
  Nell'esempio seguente viene illustrato come un cursore dell'istruzione non chiuso possa impedire a `OpenSqlFilestream()` di aprire i dati BLOB per l'accesso in scrittura.  
   
 ```  
@@ -139,7 +143,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso ai dati FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
   

@@ -1,34 +1,38 @@
 ---
-title: "Classe di evento Deprecation Final Support | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Deprecation Final Support - classe di evento"
-  - "funzionalità deprecate [SQL Server], supporto finale degli eventi"
+title: Classe di evento Deprecation Final Support | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Deprecation Final Support event class
+- deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a73d33e3e6ace9f1ac3d1b7ab02888f2ef6ca0f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Deprecation Final Support
-  La classe di evento **Deprecation Final Support** viene generata quando si utilizza una caratteristica che verrà rimossa dalla successiva versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per garantire la massima durata delle applicazioni, non utilizzare caratteristiche da cui viene generata la classe di evento **Deprecation Announcement** o **Deprecation Final Support**. Modificare le applicazioni che utilizzano le caratteristiche deprecate finali il prima possibile.  
+# <a name="deprecation-final-support-event-class"></a>Deprecation Final Support - classe di evento
+  La classe di evento **Deprecation Final Support** viene generata quando si utilizza una caratteristica che verrà rimossa dalla successiva versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per garantire la massima durata delle applicazioni, non utilizzare caratteristiche da cui viene generata la classe di evento **Deprecation Announcement** o **Deprecation Final Support** . Modificare le applicazioni che utilizzano le caratteristiche deprecate finali il prima possibile.  
   
-## Colonne di dati della classe di evento Deprecation Final Support  
+## <a name="deprecation-final-support-event-class-data-columns"></a>Colonne di dati della classe di evento Deprecation Final Support  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 126.|27|No|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -36,10 +40,10 @@ caps.handback.revision: 26
 |IntegerData2|**int**|Offset finale (in byte) dell'istruzione in esecuzione.|55|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
 |LoginName|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Sì|  
-|LoginSid|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals**. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|LoginSid|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
-|Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
+|Offset|**Int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
 |ObjectID|**int**|Numero ID della caratteristica deprecata.|22|Sì|  
 |ObjectName|**nvarchar**|Nome della caratteristica deprecata.|34|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
@@ -52,7 +56,7 @@ caps.handback.revision: 26
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe di evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Funzionalità del Motore di database deprecate in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  

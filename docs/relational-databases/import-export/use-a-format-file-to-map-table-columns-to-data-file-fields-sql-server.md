@@ -1,26 +1,30 @@
 ---
-title: "Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mapping tra campi e colonne durante l'importazione [SQL Server]"
-  - "file di formato [SQL Server], mapping di colonne a campi"
+title: Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mapping columns to fields during import [SQL Server]
+- format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
-Un file di dati può includere campi disposti in un ordine diverso da quello delle colonne corrispondenti presenti nella tabella. In questo argomento vengono descritti file di formato sia non XML che XML, modificati per adattarli a un file di dati contenente campi disposti un ordine diverso da quello delle colonne della tabella. Il file di formato modificato esegue il mapping tra i campi dati e le colonne corrispondenti della tabella.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md).
+# <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
+Un file di dati può includere campi disposti in un ordine diverso da quello delle colonne corrispondenti presenti nella tabella. In questo argomento vengono descritti file di formato sia non XML che XML, modificati per adattarli a un file di dati contenente campi disposti un ordine diverso da quello delle colonne della tabella. Il file di formato modificato esegue il mapping tra i campi dati e le colonne corrispondenti della tabella.  Per altre informazioni, vedere [Creazione di un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
 
 |Riquadro|
 |---|
@@ -63,15 +67,15 @@ Per eseguire un'importazione bulk dei dati da `myRemap.bcp` nella tabella `myRem
 * Mapping del terzo campo dati alla seconda colonna `FirstName`.
 * Mapping del quarto campo dati alla quarta colonna `Gender`.
 
-Il metodo più semplice per creare il file di formato consiste nell'usare l'[utilità bcp](../../tools/bcp-utility.md).  Prima di tutto, creare un file di formato di base dalla tabella esistente.  In secondo luogo, modificare il file di formato di base in modo da riflettere il file di dati effettivo.
+Il metodo più semplice per creare il file di formato consiste nell'usare l' [utilità bcp](../../tools/bcp-utility.md).  Prima di tutto, creare un file di formato di base dalla tabella esistente.  In secondo luogo, modificare il file di formato di base in modo da riflettere il file di dati effettivo.
 
 ### Creazione di un file di formato non XML<a name="nonxml_format_file"></a>
-Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md). Il comando seguente userà l'[utility bcp](../../tools/bcp-utility.md) per generare un file di formato non XML, `myRemap.fmt`, sulla base dello schema di `myRemap`.  Inoltre, il qualificatore `c` viene usato per specificare dati di tipo carattere, `t,` viene usato per specificare la virgola come carattere di terminazione del campo e `T` viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
+Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) . Il comando seguente userà l' [utility bcp](../../tools/bcp-utility.md) per generare un file di formato non XML, `myRemap.fmt`, sulla base dello schema di `myRemap`.  Inoltre, il qualificatore `c` viene usato per specificare dati di tipo carattere, `t,` viene usato per specificare la virgola come carattere di terminazione del campo e `T` viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### Modifica del file di formato non XML <a name="modify_nonxml_format_file"></a>
-Per la terminologia, vedere [Struttura dei file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure).  Aprire `D:\BCP\myRemap.fmt` nel Blocco note e apportare le modifiche seguenti:
+Per la terminologia, vedere [Struttura dei file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) .  Aprire `D:\BCP\myRemap.fmt` nel Blocco note e apportare le modifiche seguenti:
 1) Riorganizzare l'ordine delle righe del file di formato in modo che le righe siano nello stesso ordine dei dati in `myRemap.bcp`.
 2) Assicurarsi che i valori dell'ordine dei campi nel file host siano sequenziali.
 3) Verificare che dopo l'ultima riga del file di formato ci sia un ritorno a capo.
@@ -81,20 +85,20 @@ Confrontare le modifiche:
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **After**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 Il file di formato modificato riflette ora:
@@ -104,50 +108,50 @@ Il file di formato modificato riflette ora:
 * Il quarto campo dati in `myRemap.bcp` è mappato alla quarta colonna, ` myRemap.. Gender`
 
 ### Creazione di un file di formato XML <a name="xml_format_file"></a>  
-Per informazioni dettagliate, vedere [File in formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  Il comando seguente userà l'[utilità bcp](../../tools/bcp-utility.md) per creare un file di formato XML, `myRemap.xml`, sulla base dello schema di `myRemap`.  Inoltre, il qualificatore `c` viene usato per specificare dati di tipo carattere, `t,` viene usato per specificare la virgola come carattere di terminazione del campo e `T` viene usato per specificare una connessione trusted che usa la sicurezza integrata.  È necessario usare il qualificatore `x` per generare un file di formato basato su XML.  Al prompt dei comandi immettere il comando seguente:
+Per informazioni dettagliate, vedere [File in formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Il comando seguente userà l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato XML, `myRemap.xml`, sulla base dello schema di `myRemap`.  Inoltre, il qualificatore `c` viene usato per specificare dati di tipo carattere, `t,` viene usato per specificare la virgola come carattere di terminazione del campo e `T` viene usato per specificare una connessione trusted che usa la sicurezza integrata.  È necessario usare il qualificatore `x` per generare un file di formato basato su XML.  Al prompt dei comandi immettere il comando seguente:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### Modifica del file di formato XML <a name="modify_xml_format_file"></a>
-Per la terminologia, vedere [Sintassi dello schema per i file di formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs).  Aprire `D:\BCP\myRemap.xml` nel Blocco note e apportare le modifiche seguenti:
-1) L'ordine con cui gli elementi \<FIELD> vengono dichiarati nel file di formato corrisponde a quello con cui tali campi sono riportati nel file di dati, quindi invertire l'ordine degli elementi \<FIELD> con attributi ID 2 e 3..
+Per la terminologia, vedere [Sintassi dello schema per i file di formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) .  Aprire `D:\BCP\myRemap.xml` nel Blocco note e apportare le modifiche seguenti:
+1) L'ordine con cui gli elementi \<FIELD&gt; vengono dichiarati nel file di formato corrisponde a quello con cui tali campi sono riportati nel file di dati, quindi invertire l'ordine degli elementi \<FIELD&gt; con attributi ID 2 e 3.
 2) Assicurarsi che i valori dell'attributo ID \<FIELD> siano sequenziali.
 3) L'ordine degli elementi \<COLUMN> nell'elemento \<ROW> definisce l'ordine in cui tali elementi vengono restituiti dall'operazione in blocco.  Il file di formato XML assegna ogni elemento \<COLUMN> a un nome locale senza alcuna relazione con la colonna nella tabella di destinazione di un'operazione di importazione in blocco.  L'ordine degli elementi \<COLUMN> è indipendente da quello degli elementi \<FIELD> in una definizione \<RECORD>.  Ogni elemento \<COLUMN> corrisponde a un elemento \<FIELD>, il cui ID viene specificato nell'attributo SOURCE dell'elemento \<COLUMN>.  Di conseguenza, i valori per \<COLUMN> SOURCE sono gli unici attributi che richiedono revisione.  Invertire l'ordine per gli attributi \<COLUMN> SOURCE 2 e 3.
 
 Confrontare le modifiche  
 **Prima**
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
 **After**
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
@@ -205,7 +209,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e di un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a> 
+### Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e di un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Eseguire l'istruzione Transact-SQL seguente in Microsoft SQL Server Management Studio (SSMS):
 ```tsql
 USE TestDatabase;
@@ -245,9 +249,10 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 
   
-## Vedere anche  
-[Utilità bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+[bcp Utility](../../tools/bcp-utility.md)   
  [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   
+

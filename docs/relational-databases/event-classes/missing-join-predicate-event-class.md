@@ -1,33 +1,37 @@
 ---
-title: "Classe di evento Missing Join Predicate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Missing Join Predicate - classe di evento"
+title: Classe di evento Missing Join Predicate | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fdd6f18f8c2423c9118e27bfa5ae9bf1d67fad3a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Missing Join Predicate
-  La classe di evento Missing Join Predicate indica che è in esecuzione una query priva di predicato join. Ciò può comportare tempi di esecuzione della query prolungati. Per altre informazioni sui predicati di join, vedere [Predicati &#40;Transact-SQL&#41;](../Topic/Predicates%20\(Transact-SQL\).md).  
+# <a name="missing-join-predicate-event-class"></a>Missing Join Predicate - classe di evento
+  La classe di evento Missing Join Predicate indica che è in esecuzione una query priva di predicato join. Ciò può comportare tempi di esecuzione della query prolungati. Per altre informazioni sui predicati di join, vedere [Predicati &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
   
-## Colonne di dati della classe di evento Missing Join Predicate  
+## <a name="missing-join-predicate-event-class-data-columns"></a>Colonne di dati della classe di evento Missing Join Predicate  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 80.|27|No|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -46,8 +50,9 @@ caps.handback.revision: 33
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

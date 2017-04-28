@@ -1,25 +1,29 @@
 ---
-title: "Creare una guida di piano per le query con parametri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query parametrizzate, guide di piano"
-  - "guide di piano [SQL Server], query parametrizzate"
+title: Creare una guida di piano per le query con parametri | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameterized queries, plan guides for
+- plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare una guida di piano per le query con parametri
+# <a name="create-a-plan-guide-for-parameterized-queries"></a>Creare una guida di piano per le query con parametri
   Una guida di piano di tipo TEMPLATE corrisponde alle query autonome con parametrizzazioni specifiche.  
   
  Nel seguente esempio viene creata una guida di piano corrispondente a qualsiasi query che parametrizza un formato specifico e forza in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'esecuzione della parametrizzazione della query. Le due query seguenti sono equivalenti a livello sintattico. L'unica differenza risiede nei relativi valori letterali costanti.  
@@ -51,7 +55,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- Nell'esempio precedente il valore del parametro `@stmt` corrisponde al formato con parametri della query. L'unico modo affidabile per ottenere questo valore da usare in sp_create_plan_guide è usare la stored procedure di sistema [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md). Lo script seguente può essere utilizzato sia per ottenere la query con parametri che per creare una guida di piano in base a essa.  
+ Nell'esempio precedente il valore del parametro `@stmt` corrisponde al formato con parametri della query. L'unico modo affidabile per ottenere questo valore da usare in sp_create_plan_guide è usare la stored procedure di sistema [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) . Lo script seguente può essere utilizzato sia per ottenere la query con parametri che per creare una guida di piano in base a essa.  
   
 ```  
 DECLARE @stmt nvarchar(max);  

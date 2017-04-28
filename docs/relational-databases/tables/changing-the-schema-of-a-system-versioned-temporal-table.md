@@ -1,28 +1,32 @@
 ---
-title: "Modifica dello schema di una tabella temporale con controllo delle versioni di sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifica dello schema di una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica dello schema di una tabella temporale con controllo delle versioni di sistema
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Modifica dello schema di una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Usare l'istruzione **ALTER TABLE** per aggiungere, modificare o rimuovere una colonna.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Di seguito sono riportati alcuni esempi in cui viene modificato lo schema della tabella temporale.  
   
 ```  
@@ -52,7 +56,7 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### Note importanti  
+### <a name="important-remarks"></a>Note importanti  
   
 -   L'autorizzazione**CONTROL** nelle tabelle correnti e di cronologia è necessaria per modificare lo schema della tabella temporale.  
   
@@ -78,13 +82,13 @@ ALTER TABLE dbo.Department
   
     -   Aggiunta di una colonna **IDENTITY**  
   
-    -   Aggiunta di una colonna **SPARSE** o modifica della colonna esistente in **SPARSE** quando la tabella di cronologia è impostata su **DATA_COMPRESSION = PAGE** o **DATA_COMPRESSION = ROW**, ovvero il valore predefinito per la tabella di cronologia.  
+    -   Aggiunta di una colonna **SPARSE** o modifica della colonna esistente in **SPARSE**quando la tabella di cronologia è impostata su **DATA_COMPRESSION = PAGE** o **DATA_COMPRESSION = ROW**, ovvero il valore predefinito per la tabella di cronologia.  
   
     -   Aggiunta di **COLUMN_SET**  
   
     -   Aggiunta di una colonna **ROWGUIDCOL** o modifica della colonna esistente in **ROWGUIDCOL**  
   
-         L'esempio seguente mostra la modifica dello schema in cui l'impostazione **SYSTEM_VERSIONING = OFF** è comunque necessaria (aggiunta della colonna **IDENTITY**).   
+         L'esempio seguente mostra la modifica dello schema in cui l'impostazione **SYSTEM_VERSIONING = OFF** è comunque necessaria (aggiunta della colonna **IDENTITY** ).   
         Si noti che questo esempio disabilita la verifica della coerenza dei dati. Questa verifica non è necessaria quando viene effettuata la modifica dello schema all'interno di una transazione in quanto non possono verificarsi modifiche simultanee dei dati.  
   
         ```  
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## Questo articolo è stato utile? Commenti e suggerimenti  
+## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   
  [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

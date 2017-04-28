@@ -1,25 +1,29 @@
 ---
-title: "Tipo di sottoscrizione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subscriptiontype.f1"
+title: Tipo di sottoscrizione | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newsubwizard.subscriptiontype.f1
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0541842347278d70b5d759737bf0c37b1f91bfab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tipo di sottoscrizione
-  Replica di tipo merge offre due tipi di sottoscrizione: server e client (a cui le versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come globali e locali, rispettivamente). I Sottoscrittori con una sottoscrizione di tipo server sono in grado di:  
+# <a name="subscription-type"></a>Tipo di sottoscrizione
+  La replica di tipo merge offre due tipi di sottoscrizioni, ovvero server e client, definiti rispettivamente come globale e locale nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). I Sottoscrittori con una sottoscrizione di tipo server sono in grado di:  
   
 -   Ripubblicare i dati di altri Sottoscrittori.  
   
@@ -32,13 +36,13 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Dopo aver creato la sottoscrizione non è possibile modificarne il tipo.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Proprietà sottoscrizione**  
- Per ogni server di sottoscrizione, selezionare **Client** o **Server** dalla casella di riepilogo a discesa il **tipo di sottoscrizione** colonna. Per i sottoscrittori con sottoscrizioni server, immettere un numero compreso tra 0 e 99,99 nella **priorità per la risoluzione dei conflitti** colonna (maggiore è il numero, maggiore è la priorità per il sottoscrittore).  
+ Per ogni Sottoscrittore, selezionare **Client** o **Server** nell'elenco a discesa nella colonna **Tipo di sottoscrizione** . Per i Sottoscrittori con sottoscrizioni server, immettere un numero compreso tra 0 e 99,99 nella colonna **Priorità per la risoluzione dei conflitti** . Maggiore è questo numero, più alta è la priorità per il Sottoscrittore.  
   
-## Vedere anche  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

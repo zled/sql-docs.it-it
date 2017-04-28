@@ -1,45 +1,49 @@
 ---
-title: "Informazioni sulla cronologia e sull&#39;intestazione del backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "intestazioni di backup [SQL Server]"
-  - "tabelle di cronologia [SQL Server]"
-  - "ripristini di file [SQL Server], informazioni sullo stato"
-  - "set di backup [SQL Server], informazioni sullo stato"
-  - "elenco di database di cui è stato eseguito il backup"
-  - "informazioni sullo stato [SQL Server], backup"
-  - "backup [SQL Server], visualizzazione di set di backup"
-  - "ripristino [SQL Server], tabelle di cronologia"
-  - "ripristino di database [SQL Server], informazioni sullo stato"
-  - "backup [SQL Server], informazioni sullo stato"
-  - "intestazioni [SQL Server]"
-  - "intestazioni supporti [SQL Server]"
-  - "tabelle di cronologia di backup [SQL Server]"
-  - "visualizzazione di informazioni di backup"
-  - "ripristino di file [SQL Server], visualizzazione di informazioni sul backup"
-  - "ripristino di database [SQL Server], tabelle di cronologia"
-  - "visualizzazione di informazioni sullo stato"
-  - "ripristino di file [SQL Server], informazioni sullo stato"
-  - "informazioni cronologiche [SQL Server], backup"
-  - "ripristini di database [SQL Server], tabelle di cronologia"
-  - "tabelle di cronologia di ripristino [SQL Server]"
-  - "elenco di file di cui è stato eseguito il backup"
+title: Informazioni sulla cronologia e sull&quot;intestazione del backup (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informazioni sulla cronologia e sull&#39;intestazione del backup (SQL Server)
+# <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)
   Nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **viene archiviata una cronologia completa di tutte le operazioni di backup e ripristino di** eseguite in un'istanza del server. In questo argomento vengono fornite informazioni generali sulle tabelle di cronologia di backup e ripristino e sulle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzate per accedere alla cronologia di backup. L'argomento tratta anche dell'utilità dell'elenco di file del database e del log delle transazioni e di quando utilizzare informazioni sull'intestazione supporto rispetto alle informazioni dell'intestazione del backup.  
   
 > [!IMPORTANT]  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |Istruzione di tipo informativo|Tabella di cronologia di backup|Descrizione|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Restituisce un set di risultati con l'elenco dei file di database e del log contenuti nel set di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Elenco dei file di database e dei file del log delle transazioni" di seguito in questo argomento.|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera tutte le informazioni sull'intestazione del backup per tutti i set di backup di un dispositivo specifico. Il risultato dell'esecuzione di RESTORE HEADERONLY è un set di risultati.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione del backup" di seguito in questo argomento.|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Restituisce un set di risultati che include informazioni sul supporto di backup su un dispositivo di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione supporto" di seguito in questo argomento.|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Restituisce un set di risultati con l'elenco dei file di database e del log contenuti nel set di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Elenco dei file di database e dei file del log delle transazioni" di seguito in questo argomento.|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera tutte le informazioni sull'intestazione del backup per tutti i set di backup di un dispositivo specifico. Il risultato dell'esecuzione di RESTORE HEADERONLY è un set di risultati.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione del backup" di seguito in questo argomento.|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Restituisce un set di risultati che include informazioni sul supporto di backup su un dispositivo di backup specificato.<br /><br /> Per ulteriori informazioni, vedere "Visualizzazione delle informazioni sull'intestazione supporto" di seguito in questo argomento.|  
   
 ##  <a name="ListDbTlogFiles"></a> File di database e del log delle transazioni  
  Le informazioni visualizzate quando vengono elencati i file di database e i file del log delle transazioni disponibili in un backup includono il nome logico, il nome fisico, il tipo di file (database o log), l'appartenenza a un filegroup, le dimensioni del file in byte, le dimensioni massime consentite del file e l'aumento predefinito delle dimensioni del file in byte. Queste informazioni risultano utili nelle situazioni seguenti per determinare i nomi dei file inclusi in un backup del database prima di eseguire il ripristino:  
@@ -109,7 +113,7 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  La visualizzazione dell'intestazione supporto è un'operazione rapida.  
   
- Per altre informazioni, vedere [Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup](#CompareMediaHeaderBackupHeader) più avanti in questo argomento.  
+ Per altre informazioni, vedere [Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup](#CompareMediaHeaderBackupHeader)più avanti in questo argomento.  
   
 ##  <a name="BackupHeader"></a> Informazioni sull'intestazione del backup  
  La visualizzazione dell'intestazione del backup consente di ottenere informazioni su tutti i set di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel supporto. Le informazioni visualizzate includono i tipi di dispositivi di backup utilizzati, i tipi di backup (ad esempio del database, del log delle transazioni, del file o differenziali), nonché la data e l'ora di avvio e di arresto delle operazioni di backup. Queste informazioni risultano utili quando è necessario individuare il set di backup su nastro da ripristinare o i backup presenti sul supporto.  
@@ -117,9 +121,9 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  Nel caso di nastri ad alta capacità, la visualizzazione delle informazioni sull'intestazione del backup può richiedere parecchio tempo, in quanto per visualizzare le informazioni su ogni backup presente sul supporto è necessario eseguire l'analisi dell'intero supporto.  
   
- Per altre informazioni, vedere [Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup](#CompareMediaHeaderBackupHeader) più avanti in questo argomento.  
+ Per altre informazioni, vedere [Confronto tra le informazioni sull'intestazione supporto e le informazioni sull'intestazione del backup](#CompareMediaHeaderBackupHeader)più avanti in questo argomento.  
   
-### Quale set di backup ripristinare  
+### <a name="which-backup-set-to-restore"></a>Quale set di backup ripristinare  
  È possibile utilizzare le informazioni nell'intestazione del backup per individuare il set di backup da ripristinare. Il motore di database numera ogni set di backup sui supporti di backup. In questo modo è possibile individuare il set di backup da ripristinare utilizzando la relativa posizione sul supporto. Ad esempio, nei supporti seguenti sono contenuti tre set di backup.  
   
  ![Supporti di backup contenenti set di backup di SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Supporti di backup contenenti set di backup di SQL Server")  
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **Per visualizzare i file di dati e i file di log in un set di backup**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **Per visualizzare le informazioni sull'intestazione supporto**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **Per visualizzare le informazioni sull'intestazione del backup**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **Per visualizzare le informazioni sull'intestazione supporto**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **Per visualizzare le informazioni sull'intestazione del backup**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [Visualizzare i file di dati e i file di log in un set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **Per verificare un backup**  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

@@ -1,22 +1,26 @@
 ---
-title: "Indici columnstore per il data warehousing | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Indici columnstore - Data warehouse | Microsoft Docs
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Indici columnstore per il data warehousing
+# <a name="columnstore-indexes---data-warehouse"></a>Indici columnstore - Data warehouse
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gli indici columnstore, in combinazione con il partizionamento, sono essenziali per la creazione di un data warehouse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   Isolamento dello snapshot per il livello di compatibilità del database 130  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Migliorare le prestazioni con una combinazione di indici non cluster e columnstore  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile definire indici non cluster in un indice columnstore cluster.  
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]è possibile definire indici non cluster in un indice columnstore cluster.  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Esempio: migliorare l'efficienza del posizionamento all'interno delle tabelle con un indice non cluster  
  Per migliorare l'efficienza del posizionamento all'interno delle tabelle in un data warehouse, è possibile creare un indice non cluster progettato per l'esecuzione di query le cui prestazioni vengono ottimizzate dal posizionamento all'interno delle tabelle. Le query che cercano valori corrispondenti o restituiscono un intervallo ridotto di valori garantiscono prestazioni migliori con un indice BTree che con un indice columnstore. Tali query non richiedono l'analisi completa della tabella eseguita dall'indice columnstore e restituiscono il risultato corretto più velocemente eseguendo una ricerca binaria tramite un indice BTree.  
@@ -137,11 +141,12 @@ END TRAN
  Usare l'isolamento dello snapshot per garantire la coerenza transazionale e l'isolamento dello snapshot Read Committed per garantire la coerenza a livello di istruzione per le query su indici columnstore. Questo consente di eseguire le query senza bloccare le scritture di dati. Questo comportamento, oltre a non causare blocchi, riduce anche in modo significativo la probabilità di deadlock per le transazioni complesse. Per altre informazioni, vedere [Isolamento dello Snapshot in SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) in MSDN.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida agli indici columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Caricamento dati di indici columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Riepilogo delle funzionalità con versione degli indici columnstore](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Guida agli indici columnstore   
+ Caricamento dati di indici columnstore   
+ Riepilogo delle funzionalità con versione degli indici columnstore   
  [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

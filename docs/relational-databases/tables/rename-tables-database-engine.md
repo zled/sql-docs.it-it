@@ -1,27 +1,31 @@
 ---
-title: "Ridenominazione di tabelle (motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ridenominazione di tabelle [SQL Server]"
-  - "nomi di tabella [SQL Server]"
-  - "tabelle [SQL Server], Visual Database Tools"
-  - "ridenominazione di tabelle"
+title: Rinominare tabelle (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table renaming [SQL Server]
+- table names [SQL Server]
+- tables [SQL Server], Visual Database Tools
+- renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d65c475509d57577f691e656157c7754c7d8549f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ridenominazione di tabelle (motore di database)
+# <a name="rename-tables-database-engine"></a>Ridenominazione di tabelle (motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile rinominare una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare una tabella  
+#### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella da rinominare, quindi selezionare **Progetta** dal menu di scelta rapida.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per rinominare una tabella  
+#### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

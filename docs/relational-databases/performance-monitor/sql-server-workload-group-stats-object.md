@@ -1,26 +1,30 @@
 ---
-title: "SQL Server - Oggetto Statistiche gruppi del carico di lavoro | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "oggetto Statistiche gruppi del carico di lavoro"
-  - "SQLServer: Statistiche gruppi del carico di lavoro"
+title: Oggetto Workload Group Stats di SQL Server | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Workload Group Stats object
+- 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668f0f7cf7b38fb18144e58cccbc7e4902a39f75
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server - Oggetto Statistiche gruppi del carico di lavoro
+# <a name="sql-server-workload-group-stats-object"></a>SQL Server - Oggetto Statistiche gruppi del carico di lavoro
   L'oggetto SQLServer: Statistiche gruppi del carico di lavoro contiene contatori delle prestazioni che forniscono informazioni sulle statistiche del gruppo del carico di lavoro di Resource Governor.  
   
  Ciascun gruppo del carico di lavoro attivo crea un'istanza dell'oggetto prestazioni SQLServer: Statistiche gruppi del carico di lavoro con lo stesso nome dell'istanza del gruppo del carico di lavoro di Resource Governor. Nella seguente tabella vengono descritti i contatori supportati in questa istanza.  
@@ -45,9 +49,10 @@ caps.handback.revision: 14
 |**Richieste completate/sec**|Numero di richieste completate nel gruppo del carico di lavoro. Questo numero è cumulativo.|  
 |**Piani non ottimali/sec**|Numero di piani non ottimali generati nel gruppo del carico di lavoro al secondo.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server - Oggetto Statistiche del pool di risorse](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   
+

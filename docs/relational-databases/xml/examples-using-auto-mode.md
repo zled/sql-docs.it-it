@@ -1,27 +1,31 @@
 ---
-title: "Esempi di utilizzo della modalit&#224; AUTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modalità AUTO FOR XML, esempi"
+title: "Esempi d&quot;uso della modalità AUTO | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempi di utilizzo della modalit&#224; AUTO
-  Negli esempi seguenti viene illustrato l'utilizzo della modalità AUTO. Molte di queste query vengono eseguite sui documenti XML con istruzioni per la produzione di biciclette, archiviati nella colonna Instructions della tabella ProductModel del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+# <a name="examples-using-auto-mode"></a>Esempi di utilizzo della modalità AUTO
+  Negli esempi seguenti viene illustrato l'utilizzo della modalità AUTO. Molte di queste query vengono eseguite sui documenti XML con istruzioni per la produzione di biciclette, archiviati nella colonna Instructions della tabella ProductModel del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## Esempio: recupero di informazioni sul cliente, l'ordine e i dettagli dell'ordine  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: recupero di informazioni sul cliente, l'ordine e i dettagli dell'ordine  
  Questa query recupera informazioni sul cliente, sull'ordine e sui dettagli dell'ordine per un cliente specifico.  
   
 ```  
@@ -46,7 +50,7 @@ ORDER BY OrderHeader.CustomerID,
 FOR XML AUTO;  
 ```  
   
- Poiché la query identifica gli alias di tabella `Cust`, `OrderHeader`, `Detail` e `Product`, la modalità `AUTO` genera gli elementi corrispondenti. Anche in questo caso, la gerarchia di tali elementi è determinata dall'ordine in cui le tabelle vengono identificate dalle colonne specificate nella clausola `SELECT`.  
+ Poiché la query identifica gli alias di tabella `Cust`, `OrderHeader`, `Detail`e `Product` , la modalità `AUTO` genera gli elementi corrispondenti. Anche in questo caso, la gerarchia di tali elementi è determinata dall'ordine in cui le tabelle vengono identificate dalle colonne specificate nella clausola `SELECT` .  
   
  Di seguito è riportato il risultato parziale.  
   
@@ -92,7 +96,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## Esempio: specifica della clausola GROUP BY e di funzioni di aggregazione  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: specifica della clausola GROUP BY e di funzioni di aggregazione  
  La query seguente restituisce gli ID di singoli clienti e il numero degli ordini effettuati da tali clienti.  
   
 ```  
@@ -112,7 +116,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## Esempio: specifica di colonne calcolate in modalità AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: specifica di colonne calcolate in modalità AUTO  
  Questa query restituisce i nomi concatenati dei singoli clienti e le informazioni sugli ordini. Poiché la colonna calcolata viene assegnata al livello più interno rilevato fino a quel punto, che in questo esempio è l'elemento <`SOH`>, nel risultato i nomi concatenati dei clienti vengono aggiunti come attributi dell'elemento <`SOH`>.  
   
 ```  
@@ -137,7 +141,7 @@ FOR XML AUTO;
   
  Per recuperare gli elementi <`IndividualCustomer`> che hanno come sottoelemento un attributo `Name` contenente le informazioni di intestazione di ogni ordine di vendita, la query viene riscritta utilizzando un'istruzione sub-SELECT. L'istruzione SELECT interna crea una tabella `IndividualCustomer` temporanea con la colonna calcolata contenente i nomi dei singoli clienti. Tale tabella viene quindi unita in join alla tabella `SalesOrderHeader` per ottenere il risultato.  
   
- Nella tabella `Sales.Customer` sono archiviate informazioni sui singoli clienti, incluso il valore `PersonID` di ogni cliente. Tale valore `PersonID` viene quindi utilizzato per recuperare il nome del contatto dalla tabella `Person.Person`.  
+ Nella tabella `Sales.Customer` sono archiviate informazioni sui singoli clienti, incluso il valore `PersonID` di ogni cliente. Tale valore `PersonID` viene quindi utilizzato per recuperare il nome del contatto dalla tabella `Person.Person` .  
   
 ```  
 SELECT IndividualCustomer.Name, SOH.SalesOrderID  
@@ -165,8 +169,8 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## Esempio: recupero di dati binari  
- Questa query restituisce una foto del prodotto dalla tabella `ProductPhoto`. `ThumbNailPhoto` è una colonna **varbinary(max)** nella tabella `ProductPhoto`. Per impostazione predefinita, la modalità `AUTO` restituisce ai dati binari un riferimento costituito da un URL relativo alla radice virtuale del database in cui viene eseguita la query. Per identificare l'immagine, è necessario specificare l'attributo chiave `ProductPhotoID`. Per recuperare un riferimento a un'immagine come illustrato nell'esempio seguente, è inoltre necessario specificare la chiave primaria della tabella nella clausola `SELECT`, per identificare una riga in modo univoco.  
+## <a name="example-returning-binary-data"></a>Esempio: recupero di dati binari  
+ Questa query restituisce una foto del prodotto dalla tabella `ProductPhoto` . `ThumbNailPhoto` è una colonna **varbinary(max)** nella tabella `ProductPhoto` . Per impostazione predefinita, la modalità `AUTO` restituisce ai dati binari un riferimento costituito da un URL relativo alla radice virtuale del database in cui viene eseguita la query. Per identificare l'immagine, è necessario specificare l'attributo chiave `ProductPhotoID` . Per recuperare un riferimento a un'immagine come illustrato nell'esempio seguente, è inoltre necessario specificare la chiave primaria della tabella nella clausola `SELECT` , per identificare una riga in modo univoco.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -185,7 +189,7 @@ FOR XML AUTO;
   
  `ThumbNailPhoto= "dbobject/Production.ProductPhoto[@ProductPhotoID='70']/@ThumbNailPhoto" />`  
   
- Se si esegue la stessa query specificando l'opzione `BINARY BASE64`, i dati binari verranno restituiti in formato con codifica Base64.  
+ Se si esegue la stessa query specificando l'opzione `BINARY BASE64` , i dati binari verranno restituiti in formato con codifica Base64.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -221,7 +225,7 @@ FOR XML AUTO;
   
  Questo costituisce un problema soprattutto quando si eseguono query dbobject su un database con distinzione tra maiuscole e minuscole. Per evitarlo, è necessario che la combinazione di maiuscole e minuscole nel nome di tabella o colonna specificato nelle query corrisponda a quella del nome della tabella o colonna nel database.  
   
-## Esempio: informazioni sulla codifica  
+## <a name="example-understanding-the-encoding"></a>Esempio: informazioni sulla codifica  
  In questo esempio vengono illustrate le varie operazioni di codifica eseguite sul risultato.  
   
  Creare la tabella seguente:  
@@ -266,9 +270,9 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Se i valori degli elementi o degli attributi includono una delle cinque entità carattere XML standard (', "", \<, > e &), tali caratteri XML speciali verranno sempre codificati tramite la codifica dei caratteri XML. Nel risultato precedente il valore `&` nel valore dell'attributo <`Col1`> viene codificato come `&`. Il carattere #, tuttavia, rimane invariato perché è un carattere XML valido e non un carattere XML speciale.  
   
--   Se i valori degli elementi o degli attributi contengono eventuali caratteri URL speciali che hanno un significato particolare negli URL, tali caratteri verranno codificati solo nel valore URL DBOBJECT e unicamente se il carattere speciale fa parte del nome di una tabella o di una colonna. Nel risultato carattere `#`, che fa parte del nome di tabella `Col#&2`, viene codificato come `_x0023_ in the DBOJBECT URL`.  
+-   Se i valori degli elementi o degli attributi contengono eventuali caratteri URL speciali che hanno un significato particolare negli URL, tali caratteri verranno codificati solo nel valore URL DBOBJECT e unicamente se il carattere speciale fa parte del nome di una tabella o di una colonna. Nel risultato carattere `#` , che fa parte del nome di tabella `Col#&2` , viene codificato come `_x0023_ in the DBOJBECT URL`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

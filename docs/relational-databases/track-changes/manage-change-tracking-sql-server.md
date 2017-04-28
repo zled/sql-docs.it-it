@@ -1,44 +1,48 @@
 ---
-title: "Gestire il rilevamento delle modifiche (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rilevamento delle modifiche ai dati [SQL Server]"
-  - "rilevamento delle modifiche [SQL Server], oiverhead"
-  - "rilevamento delle modifiche [SQL Server]"
-  - "rilevamento delle modifiche [SQL Server], gestione"
+title: Gestire il rilevamento delle modifiche (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestire il rilevamento delle modifiche (SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>Gestire il rilevamento delle modifiche (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto come gestire il rilevamento delle modifiche. Nell'argomento viene descritto inoltre come configurare la sicurezza e determinare gli effetti sull'archiviazione e sulle prestazioni quando si utilizza il rilevamento delle modifiche.  
   
-## Gestione del rilevamento delle modifiche  
+## <a name="managing-change-tracking"></a>Gestione del rilevamento delle modifiche  
  Nelle sezioni seguenti vengono elencate le viste del catalogo, le autorizzazioni e le impostazioni per la gestione del rilevamento delle modifiche.  
   
-### Viste del catalogo  
+### <a name="catalog-views"></a>Viste del catalogo  
  Per determinare in quali tabelle e database è abilitato il rilevamento delle modifiche, è possibile utilizzare le seguenti viste del catalogo:  
   
--   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
  Inoltre, la vista del catalogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) elenca le tabelle interne create quando il rilevamento delle modifiche è abilitato per una tabella utente.  
   
-### Sicurezza  
+### <a name="security"></a>Sicurezza  
  Per accedere alle informazioni sul rilevamento delle modifiche utilizzando le [funzioni di rilevamento delle modifiche](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md), l'entità deve disporre delle autorizzazioni seguenti:  
   
 -   Autorizzazione SELECT almeno nelle colonne chiave primaria nella tabella di cui sono state rilevate le modifiche per la tabella in cui si sta eseguendo la query.  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   Le informazioni sul rilevamento delle modifiche possono archiviare informazioni sulle colonne modificate dalle operazioni di aggiornamento. A un'entità potrebbe essere stata negata l'autorizzazione relativa a una colonna che contiene informazioni riservate. Tuttavia, poiché le informazioni sul rilevamento delle modifiche sono disponibili, un'entità può determinare che un valore della colonna è stato aggiornato, ma non può determinare tale valore.  
   
-## Informazioni sull'overhead del rilevamento delle modifiche  
+## <a name="understanding-change-tracking-overhead"></a>Informazioni sull'overhead del rilevamento delle modifiche  
  Quando il rilevamento delle modifiche è abilitato per una tabella, sono interessate alcune operazioni di amministrazione. Nella tabella seguente sono elencate le operazioni e gli effetti da tenere in considerazione:  
   
 |Operazione|Se il rilevamento delle modifiche è abilitato|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  L'utilizzo del rilevamento delle modifiche provoca l'aumento di overhead delle operazioni DML a causa delle informazioni sul rilevamento delle modifiche archiviate come parte dell'operazione.  
   
-### Effetti sulle operazioni DML  
+### <a name="effects-on-dml"></a>Effetti sulle operazioni DML  
  Il rilevamento delle modifiche è stato ottimizzato per minimizzare l'overhead delle prestazioni nelle operazioni DML. L'overhead incrementale delle prestazioni associato all'utilizzo del rilevamento delle modifiche in una tabella è analogo all'overhead causato dalla creazione di un indice per una tabella e dalla relativa necessità di gestirlo.  
   
  Per ogni riga modificata da un'operazione DML, viene aggiunta una riga alla tabella del rilevamento delle modifiche interna. Il suo effetto in relazione all'operazione DML dipende da vari fattori, quali i seguenti:  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  L'isolamento dello snapshot, se utilizzato, influisce anche sulle prestazioni per tutte le operazioni DML, indipendentemente dall'abilitazione o meno del rilevamento delle modifiche.  
   
-### Effetti sull'archiviazione  
+### <a name="effects-on-storage"></a>Effetti sull'archiviazione  
  I dati relativi al rilevamento delle modifiche vengono archiviati nei seguenti tipi di tabelle interne:  
   
 -   Tabella delle modifiche interna  
@@ -95,22 +99,23 @@ caps.handback.revision: 9
   
 -   Per ogni transazione di cui è stato eseguito il commit, viene aggiunta una riga a una tabella delle transazioni interna.  
   
- Come per le altre tabelle interne, è possibile determinare lo spazio usato per le tabelle di rilevamento delle modifiche usando la stored procedure [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). I nomi delle tabelle interne possono essere ottenuti usando la vista del catalogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md), come illustrato nell'esempio seguente.  
+ Come per le altre tabelle interne, è possibile determinare lo spazio usato per le tabelle di rilevamento delle modifiche usando la stored procedure [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . I nomi delle tabelle interne possono essere ottenuti usando la vista del catalogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , come illustrato nell'esempio seguente.  
   
 ```tsql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Proprietà database &#40;pagina Rilevamento delle modifiche&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

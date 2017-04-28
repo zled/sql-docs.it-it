@@ -1,40 +1,44 @@
 ---
-title: "Guida sensibile al contesto della Gestione guidata partizione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.managepartition.createjob.f1"
-  - "sql13.swb.managepartition.progress.f1"
-  - "sql13.swb.managepartition.getstart.f1"
-  - "sql13.swb.managepartition.selectswitchtables.f1"
-  - "sql13.swb.managepartition.stagingtable.f1"
-  - "sql13.swb.managepartition.switchin.f1"
-  - "sql13.swb.managepartition.switchout.f1"
-  - "sql13.swb.managepartition.partitionaction.f1"
-  - "sql13.swb.managepartition.summary.f1"
-  - "sql13.swb.managepartition.selectoutput.f1"
-helpviewer_keywords: 
-  - "procedure guidate [SQL Server Management Studio] Vedere Gestione guidata partizione"
+title: Guida sensibile al contesto della Gestione guidata partizione | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.managepartition.createjob.f1
+- sql13.swb.managepartition.progress.f1
+- sql13.swb.managepartition.getstart.f1
+- sql13.swb.managepartition.selectswitchtables.f1
+- sql13.swb.managepartition.stagingtable.f1
+- sql13.swb.managepartition.switchin.f1
+- sql13.swb.managepartition.switchout.f1
+- sql13.swb.managepartition.partitionaction.f1
+- sql13.swb.managepartition.summary.f1
+- sql13.swb.managepartition.selectoutput.f1
+helpviewer_keywords:
+- wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b784bf0926f887baddf94594641ce0c1d35c69d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guida sensibile al contesto della Gestione guidata partizione
+# <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
   Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
   
-### Per avviare la Gestione guidata partizione  
+### <a name="to-start-the-manage-partition-wizard"></a>Per avviare la Gestione guidata partizione  
   
--   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] selezionare il database, fare clic con il pulsante destro del mouse sulla tabella in cui si desidera creare partizioni, scegliere **Archiviazione** e quindi fare clic su **Gestione partizione**.  
+-   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]selezionare il database, fare clic con il pulsante destro del mouse sulla tabella in cui si desidera creare partizioni, scegliere **Archiviazione**e quindi fare clic su **Gestione partizione**.  
   
      **Nota** Se **Gestione partizione** non è disponibile, potrebbe essere stata selezionata una tabella che non contiene partizioni. Fare clic su **Crea partizione** nel sottomenu **Archiviazione** e usare la **Creazione guidata partizione** per creare partizioni nella tabella.  
   
@@ -64,17 +68,17 @@ caps.handback.revision: 12
 ##  <a name="SelectPartitionAction"></a> Pagina Selezionare un'azione relativa alla partizione  
  Usare la pagina **Selezionare un'azione relativa alla partizione** per scegliere l'azione che si desidera eseguire sulla partizione.  
   
-### Creazione di una tabella di gestione temporanea  
+### <a name="create-a-staging-table"></a>Creazione di una tabella di gestione temporanea  
  Il cambio della partizione rappresenta un'attività di partizionamento comune se si dispone di una tabella partizionata in e da cui si esegue regolarmente la migrazione di dati, ad esempio se si dispone di una tabella partizionata in cui vengono archiviati dati trimestrali correnti ed è necessario spostare nuovi dati e archiviare i dati precedenti al termine di ogni trimestre.  
   
  La procedura guidata consente di progettare la tabella di gestione temporanea con la stessa colonna di partizionamento, la stessa struttura di tabelle e colonne e gli stessi indici e di archiviare la nuova tabella nel filegroup in cui è inclusa la partizione di origine.  
   
  Per creare una tabella di gestione temporanea in cui e da cui spostare i dati della partizione, selezionare **Crea tabella di gestione temporanea per il cambio della partizione**.  
   
-### Scenario basato su finestra temporale scorrevole  
+### <a name="sliding-window-scenario"></a>Scenario basato su finestra temporale scorrevole  
  Per gestire le partizioni in uno scenario basato su finestra temporale scorrevole, selezionare **Gestisci dati partizionati in uno scenario basato su finestra temporale scorrevole**.  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Crea tabella di gestione temporanea per il cambio della partizione**  
  Consente di creare una tabella di gestione temporanea per i dati da spostare all'interno o all'esterno della tabella partizionata esistente.  
   
@@ -87,29 +91,29 @@ caps.handback.revision: 12
  **Gestisci dati partizionati in uno scenario basato su finestra temporale scorrevole**  
  Consente di aggiungere una partizione vuota alla tabella esistente da utilizzare per spostare i dati. La procedura guidata supporta attualmente lo spostamento all'interno dell'ultima partizione e all'esterno della prima partizione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
  Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di gestione temporanea che si desidera attivare nella tabella partizionata.  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Mostra tutte le partizioni**  
  Selezionare questa opzione per visualizzare tutte le partizioni, incluse le partizioni correnti nella tabella partizionata.  
   
  **Griglia partizione**  
- Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup** e **Conteggio righe** delle partizioni selezionate.  
+ Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup**e **Conteggio righe** delle partizioni selezionate.  
   
  **Tabella di attivazione**  
  Consente di selezionare la tabella di gestione temporanea contenente la partizione che si desidera aggiungere alla tabella partizionata. È necessario creare questa tabella di gestione temporanea prima di attivare partizioni usando la **Gestione guidata partizione**.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
  Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di gestione temporanea contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Griglia partizione**  
- Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup** e **Conteggio righe** delle partizioni selezionate.  
+ Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup**e **Conteggio righe** delle partizioni selezionate.  
   
  **Tabella di disattivazione**  
  Consente di scegliere una nuova tabella o una esistente in cui spostare i dati.  
@@ -120,7 +124,7 @@ caps.handback.revision: 12
  **Esistente**  
  Consente di selezionare una tabella di gestione temporanea esistente che si desidera utilizzare per la partizione che si desidera disattivare per la tabella di origine corrente. Gli eventuali dati contenuti nella tabella verranno sovrascritti con i dati utilizzati per la disattivazione.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Pagina Seleziona opzioni per la tabella di gestione temporanea  
  Usare la pagina **Seleziona opzioni per la tabella di gestione temporanea** per creare la tabella di gestione temporanea che si desidera utilizzare per lo spostamento dei dati partizionati.  
@@ -129,7 +133,7 @@ caps.handback.revision: 12
   
  È inoltre possibile creare gli stessi indici nella tabella di gestione temporanea presenti nella partizione di origine. La tabella di gestione temporanea contiene automaticamente un vincolo basato sugli elementi della partizione di origine. In genere tale vincolo viene generato dal valore limite della partizione di origine.  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Nome tabella di gestione temporanea**  
  Consente di creare un nome per la tabella di gestione temporanea o di accettare il nome predefinito visualizzato nella casella di modifica.  
   
@@ -142,12 +146,12 @@ caps.handback.revision: 12
  **Filegroup**  
  Consente di selezionare un filegroup per la nuova tabella.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="OutputOption"></a> Pagina Seleziona un'opzione di output  
  Usare la pagina **Seleziona un'opzione di output** per specificare il modo in cui si desidera completare le modifiche alle partizioni.  
   
-### Crea script  
+### <a name="create-script"></a>Crea script  
  Al termine della procedura guidata, nell'editor di query viene creato uno script per la modifica delle partizioni nella tabella. Selezionare **Crea script** se si desidera controllare lo script e quindi eseguirlo manualmente.  
   
  **Genera script nel file**  
@@ -159,22 +163,22 @@ caps.handback.revision: 12
  **Genera script in nuova finestra Query**  
  Consente di generare lo script in una finestra dell'editor di query. Se non è aperta alcuna finestra dell'editor, ne viene aperta una nuova da utilizzare come destinazione per lo script.  
   
-### Esegui immediatamente  
- **Esegui immediatamente**  
+### <a name="run-immediately"></a>Esegui immediatamente  
+ **Run immediately**  
  Per completare l'applicazione di modifiche alle partizioni nella procedura guidata, fare clic su **Avanti** o **Fine**.  
   
-### Pianificazione  
+### <a name="schedule"></a>Pianificazione  
  Selezionare questa opzione per modificare le partizioni della tabella a una data e a un'ora pianificata.  
   
  **Cambia pianificazione**  
- Viene aperta la finestra di dialogo **Nuova pianificazione processo**, in cui è possibile selezionare, modificare o visualizzare le proprietà del processo pianificato.  
+ Viene aperta la finestra di dialogo **Nuova pianificazione processo** , in cui è possibile selezionare, modificare o visualizzare le proprietà del processo pianificato.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="NewJob"></a> Pagina Nuova pianificazione processo  
  Usare la pagina **Nuova pianificazione processo** per visualizzare e modificare le proprietà della pianificazione.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  Selezionare il tipo di pianificazione desiderata per il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
  **Nome**  
@@ -189,7 +193,7 @@ caps.handback.revision: 12
  **Abilitata**  
  Consente di abilitare o disabilitare la pianificazione.  
   
-### Opzioni relative ai tipi di pianificazione periodica  
+### <a name="recurring-schedule-types-options"></a>Opzioni relative ai tipi di pianificazione periodica  
  Selezionare la frequenza del processo pianificato.  
   
  **Ricorrenza**  
@@ -243,7 +247,7 @@ caps.handback.revision: 12
  **Nessuna data di fine**  
  Consente di specificare una validità illimitata per la pianificazione.  
   
-### Opzioni relative ai tipi di pianificazione da eseguire una sola volta  
+### <a name="one-time-schedule-types-options"></a>Opzioni relative ai tipi di pianificazione da eseguire una sola volta  
  Se si pianifica una singola esecuzione per un processo, è necessario selezionare una data e un'ora nel futuro.  
   
  **Data**  
@@ -252,21 +256,21 @@ caps.handback.revision: 12
  **Time**  
  Selezionare l'ora di esecuzione del processo.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="Summary"></a> Pagina Riepilogo  
  Usare la pagina **Riepilogo** per verificare le opzioni selezionate nelle pagine precedenti.  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Controlla selezioni**  
  Consente di visualizzare le opzioni selezionate in ogni pagina della procedura guidata. Fare clic su un nodo per espandere e visualizzare le opzioni selezionate in precedenza.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ##  <a name="Progress"></a> Pagina Stato  
  Usare la pagina **Stato** per monitorare le informazioni sullo stato delle azioni eseguite nella **Gestione guidata partizione**. A seconda delle opzioni selezionate nella procedura guidata, la pagina **Stato** può contenere una o più azioni. Nella casella superiore viene visualizzato lo stato complessivo della procedura guidata e viene indicato il numero di messaggi di stato, di errore e di avviso restituiti durante l'esecuzione della procedura guidata.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Dettagli**  
  Consente di visualizzare i messaggi di azione, di stato e di altro tipo restituiti dall'azione eseguita nella procedura guidata.  
   
@@ -294,14 +298,14 @@ caps.handback.revision: 12
 -   **Invia report per posta elettronica**  
   
  **Visualizza report**  
- Consente di aprire la finestra di dialogo **Visualizza report**, che contiene un report di testo dello stato della **Gestione guidata partizione**.  
+ Consente di aprire la finestra di dialogo **Visualizza report** , che contiene un report di testo dello stato della **Gestione guidata partizione**.  
   
  **Chiudi**  
  Consente di chiudere la procedura guidata.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Argomenti della sezione](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

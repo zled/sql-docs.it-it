@@ -1,30 +1,34 @@
 ---
-title: "Utilizzare i risultati di query FOR XML nel codice di un&#39;applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML, clausola, utilizzo del codice dell'applicazione"
-  - "XML [SQL Server], clausola FOR XML"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], dati FOR XML"
-  - "ADO [SQL Server]"
-  - "isole di dati XML [SQL Server]"
-  - "isole di dati [SQL Server]"
+title: Usare i risultati di query FOR XML nel codice di un&quot;applicazione | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzare i risultati di query FOR XML nel codice di un&#39;applicazione
+# <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
   L'utilizzo delle clausole FOR XML nelle query SQL consente di recuperare e inoltre di eseguire il cast dei risultati delle query come dati XML. Se i risultati di una query FOR XML possono essere utilizzati nel codice XML dell'applicazione, è possibile eseguire le operazioni seguenti:  
   
 -   Eseguire query nelle tabelle SQL per le istanze di valori di [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -33,8 +37,8 @@ caps.handback.revision: 23
   
  In questo argomento vengono forniti esempi di questi approcci.  
   
-## Recupero dei dati di query FOR XML con ADO e isole di dati XML  
- L'oggetto ADO **Stream** o altri oggetti che supportano l'interfaccia COM **IStream**, ad esempio gli oggetti ASP (Active Server Pages) **Request** e **Response** possono essere usati per includere i risultati quando si eseguono query FOR XML.  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recupero dei dati di query FOR XML con ADO e isole di dati XML  
+ L'oggetto ADO **Stream** o altri oggetti che supportano l'interfaccia COM **IStream** , ad esempio gli oggetti ASP (Active Server Pages) **Request** e **Response** possono essere usati per includere i risultati quando si eseguono query FOR XML.  
   
  Ad esempio, il codice ASP seguente mostra i risultati di una query eseguita sulla colonna con tipo di dati **xml** Demographics della tabella Sales.Store del database di esempio AdventureWorks. La query cerca specificatamente il valore dell'istanza della colonna relativo alla riga in cui CustomerID è uguale a 3.  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  Questa pagina ASP di esempio contiene codice VBScript sul lato server che utilizza ADO per eseguire la query FOR XML e restituire i risultati XML in un'isola di dati XML, MyDataIsle. L'isola di dati XML viene quindi restituita nel browser per un'ulteriore elaborazione sul lato client, durante la quale viene utilizzato codice VBScript aggiuntivo per elaborare il contenuto dell'isola di dati XML. Il processo viene eseguito prima di visualizzare il contenuto come parte del DHTML risultante e di aprire una finestra di messaggio in cui è visualizzato il contenuto pre-elaborato dell'isola di dati XML.  
   
-#### Per testare l'esempio  
+#### <a name="to-test-this-example"></a>Per testare l'esempio  
   
 1.  Verificare che IIS e il database di esempio AdventureWorks per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano installati.  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  I risultati visualizzati per la pagina HTML creata saranno simili all'output di esempio seguente:  
   
-##### Elaborazione sul lato server  
+##### <a name="server-side-processing"></a>Elaborazione sul lato server  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  Pushing XML to client for processing  
   
-##### Elaborazione sul lato client del documento XML MyDataIsle  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Elaborazione sul lato client del documento XML MyDataIsle  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## Recupero dei dati di query FOR XML con ASP.NET e .NET Framework  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>Recupero dei dati di query FOR XML con ASP.NET e .NET Framework  
  Come nell'esempio precedente, il codice ASP.NET seguente mostra i risultati di una query eseguita sulla colonna con tipo di dati **xml** Demographics della tabella Sales.Store del database di esempio AdventureWorks. Come nell'esempio precedente, la query cerca il valore dell'istanza della colonna relativo alla riga in cui CustomerID è uguale a 3.  
   
  Nell'esempio, per la restituzione e il rendering dei risultati della query FOR XML vengono utilizzate le API gestite di Microsoft .NET Framework seguenti:  
@@ -204,7 +208,7 @@ caps.handback.revision: 23
   
 2.  **SqlDataAdapter** funge quindi da adattatore dati e consente di eseguire la query FOR XML usando la connessione SQL e una stringa di query SQL specificata.  
   
-3.  Dopo avere eseguito la query, viene chiamato il metodo **SqlDataAdapter.Fill**, che viene quindi passato a un'istanza di un **DataSet** MyDataSet per riempire il set di dati con l'output della query FOR XML.  
+3.  Dopo avere eseguito la query, viene chiamato il metodo **SqlDataAdapter.Fill** , che viene quindi passato a un'istanza di un **DataSet** MyDataSet per riempire il set di dati con l'output della query FOR XML.  
   
 4.  Viene quindi chiamato il metodo **DataSet.GetXml** per restituire i risultati della query come una stringa visualizzabile nella pagina HTML generata dal server.  
   
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### Per testare l'esempio  
+#### <a name="to-test-this-example"></a>Per testare l'esempio  
   
 1.  Verificare che IIS e il database di esempio AdventureWorks per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano installati.  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  I risultati visualizzati per la pagina HTML creata saranno simili all'output di esempio seguente:  
   
-##### Elaborazione sul lato server  
+##### <a name="server-side-processing"></a>Elaborazione sul lato server  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -291,7 +295,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  Il supporto del tipo di dati **xml** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di richiedere che il risultato di una query FOR XML venga restituito come tipo di dati **xml** invece che come dati tipizzati di stringa o immagine, specificando la [direttiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

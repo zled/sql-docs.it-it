@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, oggetto di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], monitoraggio"
-  - "Database - oggetto"
-  - "SQLServer:Databases"
-  - "gruppi di disponibilità [SQL Server], contatori delle prestazioni"
+title: Oggetto Databases di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Databases object
+- SQLServer:Databases
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, oggetto di database
+# <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
   L'oggetto **SQLServer:Database** in SQL Server include contatori per il monitoraggio delle operazioni di copia bulk, della velocità effettiva dei backup e del ripristino e delle attività del log delle transazioni. Eseguire il monitoraggio delle transazioni e del log delle transazioni per determinare la quantità di attività degli utenti eseguita nel database e lo spazio disponibile nel log delle transazioni. La quantità di attività degli utenti ha effetto sulle prestazioni del database e sulle dimensioni del log, sul blocco e sulla replica. Il monitoraggio dell'attività del log di basso livello per misurare l'attività degli utenti e l'utilizzo delle risorse può essere utile per identificare eventuali colli di bottiglia.  
   
  È possibile monitorare contemporaneamente più istanze dell'oggetto **Databases** che rappresentano i singoli database.  
@@ -35,7 +39,7 @@ caps.handback.revision: 40
 |**Velocità effettiva di backup o ripristino/sec**|Velocità effettiva di lettura/scrittura delle operazioni di backup e ripristino di un database al secondo. Ad esempio, è possibile verificare come vengono modificate le prestazioni dell'operazione di backup del database quando vengono utilizzati più dispositivi di backup in parallelo o dispositivi più veloci. La velocità effettiva di un'operazione di backup o ripristino del database consente di determinare lo stato di avanzamento e le prestazioni delle operazioni di backup e di ripristino.|  
 |**Righe copia bulk/sec**|Numero di righe al secondo di cui viene eseguita la copia bulk.|  
 |**Velocità effettiva copia bulk/sec**|Quantità di copie bulk di dati eseguite al secondo (in kilobyte).|  
-|**Voci della tabella di commit**|Dimensioni della parte in memoria della tabella di commit per il database. Per altre informazioni, vedere [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md).|  
+|**Voci della tabella di commit**|Dimensioni della parte in memoria della tabella di commit per il database. Per altre informazioni, vedere [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Dimensioni file di dati (KB)**|Dimensioni cumulative in kilobyte di tutti i file di dati del database, inclusi eventuali incrementi automatici. Il monitoraggio di questo contatore consente, ad esempio, di determinare le dimensioni corrette di **tempdb**.|  
 |**Byte/sec analisi logiche DBCC**|Numero di byte di analisi di lettura logica al secondo per comandi DBCC (Database Command Console).|  
 |**Tempo di Commit gruppo/sec**|Tempo di blocco del gruppo (in microsecondi) al secondo.|
@@ -69,7 +73,7 @@ caps.handback.revision: 40
 |**Compattazioni log**|Numero totale di compattazioni del log del database corrente.|  
 |**Troncamenti log**|Numero di volte in cui il log delle transazioni è stato compattato.|  
 |**Percentuale log utilizzata**|Percentuale di spazio del log utilizzata.|  
-|**Velocità in sospeso**|Numero di transazioni nel log delle transazioni del database di pubblicazione contrassegnate per la replica, ma non ancora recapitate al database di distribuzione.|  
+|**Transazioni replica in sospeso**|Numero di transazioni nel log delle transazioni del database di pubblicazione contrassegnate per la replica, ma non ancora recapitate al database di distribuzione.|  
 |**Velocità transazioni replica**|Numero di transazioni al secondo lette dal log delle transazioni del database di pubblicazione e recapitate al database di distribuzione.|  
 |**Byte/sec spostamento dati per compattazione**|Quantità di dati spostati al secondo tramite le operazioni di compattazione automatica o l'istruzione DBCC SHRINKDATABASE o DBCC SHRINKFILE.|  
 |**Transazioni rilevate al secondo**|Numero di transazioni di cui è stato eseguito il commit nella tabella di commit per il database.|  
@@ -81,7 +85,7 @@ caps.handback.revision: 40
 |**Log del controller XTP elaborato/sec**|Quantità di byte di log elaborati dal thread del controller XTP al secondo.|
 |**Memoria XTP utilizzata (KB)**|Quantità di memoria usata da XTP nel database.| 
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, replica di database](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

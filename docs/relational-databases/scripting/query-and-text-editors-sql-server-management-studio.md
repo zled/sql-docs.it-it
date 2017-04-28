@@ -1,45 +1,49 @@
 ---
-title: "Editor di query e di testo (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TextEditor"
-helpviewer_keywords: 
-  - "editor di query [SQL Server Management Studio]"
-  - "editor del codice [SQL Server Management Studio], informazioni sull'editor di query"
-  - "editor di query [SQL Server Management Studio], modalità schermo intero"
-  - "editor di query [Motore di database], modelli"
-  - "modalità a schermo intero [SQL Server Management Studio]"
-  - "SQL Server Management Studio [SQL Server], modelli"
-  - "scrittura di script"
-  - "modifica di script"
-  - "SQL Server Management Studio [SQL Server], editor di query"
-  - "editor di query [SQL Server Management Studio], informazioni sull'editor di query"
-  - "scrittura di query"
-  - "SQL Server Management Studio [SQL Server], editor"
-  - "script [SQL Server], SQL Server Management Studio"
-  - "query [SQL Server], SQL Server Management Studio"
+title: Editor di query e di testo (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TextEditor
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio]
+- Code Editor [SQL Server Management Studio], about Query Editor
+- Query Editor [SQL Server Management Studio], full screen mode
+- Query Editor [Database Engine], templates
+- full screen mode [SQL Server Management Studio]
+- SQL Server Management Studio [SQL Server], templates
+- writing scripts
+- modifying scripts
+- SQL Server Management Studio [SQL Server], query editor
+- Query Editor [SQL Server Management Studio], about Query Editor
+- writing queries
+- SQL Server Management Studio [SQL Server], editor
+- scripts [SQL Server], SQL Server Management Studio
+- queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ff32d77b3e1503bd23e4ac0ecf040653265f141
+ms.lasthandoff: 04/11/2017
+
 ---
-# Editor di query e di testo (SQL Server Management Studio)
-  È possibile utilizzare uno degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per modificare e testare interattivamente uno script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A oppure per modificare un file XML o un file di testo normale. Ogni editor è supportato da un servizio specifico del linguaggio che assegna un colore alle parole chiave e controlla il codice per rilevare eventuali errori di sintassi e utilizzo. L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] include un debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] che è possibile utilizzare per correggere i problemi nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
+  È possibile utilizzare uno degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per modificare e testare interattivamente uno script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A oppure per modificare un file XML o un file di testo normale. Ogni editor è supportato da un servizio specifico del linguaggio che assegna un colore alle parole chiave e controlla il codice per rilevare eventuali errori di sintassi e utilizzo. L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] include un debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] che è possibile utilizzare per correggere i problemi nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Editor di SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Editor di SQL Server Management Studio  
  I quattro editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] condividono un'architettura comune. L'editor di testo implementa il livello di base della funzionalità e può essere utilizzato come editor di base per i file di testo. Gli altri tre editor, ossia gli editor di query, estendono questa base di funzionalità includendo un servizio di linguaggio che definisce la sintassi di uno dei linguaggi supportati in SQL Server. Gli editor di query implementano inoltre vari livelli di supporto per caratteristiche dell'editor quali IntelliSense il debug. Gli editor di query includono l'editor di query del Motore di database per l'utilizzo nella compilazione di script che contengono istruzioni Transact-SQL e XQuery, l'editor MDX per il linguaggio MDX, l'editor DMX per il linguaggio DMX e l'editor XML/A per il linguaggio XML for Analysis.  
   
-## Componenti comuni  
+## <a name="common-components"></a>Componenti comuni  
  Tutti gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] condividono questi componenti:  
   
  **Riquadro del codice**  
@@ -59,14 +63,14 @@ caps.handback.revision: 53
  **A capo automatico**  
  Visualizza le righe lunghe di testo o di codice su più righe per consentire la visualizzazione di tutto il testo. L'opzione A capo automatico non modifica l'aspetto del testo quando viene eseguito o stampato. È possibile attivarla nella finestra di dialogo **Strumenti**, **Opzioni** , nella pagina Editor di testo, Tutti i linguaggi, Generale o in una pagina specifica dell'editor.  
   
-## Componenti dell'editor del codice  
+## <a name="code-editor-components"></a>Componenti dell'editor del codice  
  Gli editor del codice contengono queste caratteristiche oltre a quelle condivise con gli editor di testo e XML:  
   
  **Risultati**  
  Questa finestra consente di visualizzare i risultati di una query I risultati nella finestra possono essere visualizzati in una griglia o sotto forma di testo, oppure è possibile indirizzarli in un file. È possibile visualizzare le griglie dei risultati come finestre a schede distinte.  
   
  **IntelliSense**  
- Negli editor scegliere **IntelliSense** dal menu **Modifica** per visualizzare le opzioni di IntelliSense di [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Negli editor scegliere **IntelliSense** dal menu **Modifica**per visualizzare le opzioni di IntelliSense di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **Codifica a colori**  
  Visualizza colori diversi per ogni tipo di elemento di sintassi, migliorando la leggibilità di istruzioni complesse.  
@@ -83,17 +87,17 @@ caps.handback.revision: 53
  **Barra di stato**  
  Visualizza informazioni sul sistema associate alla finestra dell'editor di query, ad esempio l'istanza a cui è connesso l'editor di query.  
   
-## Componenti dell'editor di query del Motore di database  
+## <a name="database-engine-query-editor-components"></a>Componenti dell'editor di query del Motore di database  
  Questi componenti sono disponibili soltanto nell'editor di query del Motore di database:  
   
  **Debugger**  
  Consente di sospendere l'esecuzione di codice su specifiche istruzioni. È pertanto possibile visualizzare dati e informazioni sul sistema per individuare errori nel codice.  
   
  **Elenco errori**  
- Visualizza errori semantici e di sintassi rilevati da IntelliSense. L'elenco di errori viene modificato dinamicamente durante la modifica degli script [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Visualizza errori semantici e di sintassi rilevati da IntelliSense. L'elenco di errori viene modificato dinamicamente durante la modifica degli script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Showplan grafico**  
- Visualizza i passaggi logici compilati nel piano di esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Visualizza i passaggi logici compilati nel piano di esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Statistiche client**  
  In questa finestra vengono visualizzate informazioni relative all'esecuzione delle query, raggruppate in categorie. Quando si seleziona l'opzione **Includi statistiche client** dal menu **Query** , durante l'esecuzione della query viene visualizzata una finestra **Statistiche client** . Le statistiche delle successive esecuzioni delle query vengono elencate insieme ai valori medi. Per reimpostare la media, selezionare **Reimposta statistiche client** dal menu **Query** .  
@@ -102,15 +106,15 @@ caps.handback.revision: 53
  Modelli che è possibile utilizzare come punto di partenza per l'aggiunta di istruzioni nell'editor di query del Motore di database. È possibile inserire i frammenti predefiniti forniti con SQL Server oppure aggiungere frammenti personalizzati.  
   
  **Modalità SQLCMD**  
- Esegue [!INCLUDE[tsql](../../includes/tsql-md.md)] script che includono il set di comandi supportato dall'utilità sqlcmd. Per altre informazioni, vedere [Procedure correlate a sqlcmd](../Topic/sqlcmd%20How-to%20Topics.md).  
+ Esegue [!INCLUDE[tsql](../../includes/tsql-md.md)] script che includono il set di comandi supportato dall'utilità sqlcmd. Per altre informazioni, vedere [Procedure correlate a sqlcmd](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4).  
   
-## Attività degli editor  
+## <a name="editor-tasks"></a>Attività degli editor  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query MDX.|[Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](../Topic/MDX%20Query%20Editor%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query DMX.|[Editor di query DMX &#40;Analysis Services - Data mining&#41;](../Topic/DMX%20Query%20Editor%20\(Analysis%20Services%20-%20Data%20Mining\).md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query MDX.|[Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query DMX.|[Editor di query DMX &#40;Analysis Services - Data mining&#41;](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query XML/A.|[Editor XML &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |Viene descritto come configurare opzioni per i vari editor, ad esempio numerazione delle righe e opzioni IntelliSense.|[Configurazione di editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Vengono descritti i vari modi in cui è possibile avviare gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Apertura di un editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
@@ -123,13 +127,13 @@ caps.handback.revision: 53
 |Viene descritto come effettuare operazioni di ricerca e sostituzione globale, ad esempio in caso di modifica dei nomi di colonna.|[Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)|  
 |Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestione di segnalibri](../../relational-databases/scripting/manage-bookmarks.md)|  
 |Viene descritto come visualizzare script o risultati in una finestra o in una griglia.|[Stampa di codice e risultati](../../relational-databases/scripting/print-code-and-results.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di sqlcmd nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Modifica di script SQLCMD con l'editor di query](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di sqlcmd nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifica di script SQLCMD con l'editor di query](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |Viene descritto come utilizzare le caratteristiche IntelliSense come il completamento automatico di nomi oggetto durante la digitazione o la verifica del corretto posizionamento dei punti di interruzione.|[IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
-|Vengono descritte le modalità di utilizzo dei frammenti di codice nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I frammenti sono modelli per istruzioni o blocchi di uso comune e possono essere personalizzati o estesi per includere frammenti specifici del sito.|[Frammenti di codice Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
+|Vengono descritte le modalità di utilizzo dei frammenti di codice nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . I frammenti sono modelli per istruzioni o blocchi di uso comune e possono essere personalizzati o estesi per includere frammenti specifici del sito.|[Frammenti di codice Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |Viene descritto come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice e visualizzare informazioni di debug, ad esempio i valori in variabili e parametri.|[Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
-|Viene descritto come impostare colori personalizzati per istanze diverse del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e come impostarli come sfondo della barra di stato nelle finestre dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Barra di stato &#40;editor di query del Motore di database&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
+|Viene descritto come impostare colori personalizzati per istanze diverse del [!INCLUDE[ssDE](../../includes/ssde-md.md)]e come impostarli come sfondo della barra di stato nelle finestre dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra di stato &#40;editor di query del Motore di database&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

@@ -1,22 +1,26 @@
 ---
-title: "Salvare i risultati della traccia in un file | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Salvare i risultati della traccia in un file | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6f62cfaeeb3be67b2a8e9bcf03b95464738a67c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Salvare i risultati della traccia in un file
+# <a name="save-trace-results-to-a-file"></a>Salvare i risultati della traccia in un file
   È possibile salvare i risultati della traccia in un file. Un file di traccia è un file nel quale vengono scritti i risultati della traccia. Un file di traccia può trovarsi in una directory locale (ad esempio C:\\*nomecartella*\\*nomefile.trc*) o in una directory di rete (ad esempio \\\nomecomputer\nomecondivisione\nomefile.trc).  
   
  I file di traccia consentono di:  
@@ -42,7 +46,7 @@ caps.handback.revision: 6
   
  Per altre informazioni sul salvataggio dei risultati della traccia, vedere [Salvare i risultati della traccia in una tabella &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md) e [Salvare i risultati della traccia in un file &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  

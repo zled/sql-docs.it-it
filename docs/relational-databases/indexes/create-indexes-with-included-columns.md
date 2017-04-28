@@ -1,35 +1,39 @@
 ---
-title: "Creare indici con colonne incluse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensioni di indice [SQL Server]"
-  - "chiavi di indice [SQL Server]"
-  - "colonne di indice [SQL Server]"
-  - "dimensioni [SQL Server], indici"
-  - "colonne chiave [SQL Server]"
-  - "colonne incluse"
-  - "indici non cluster [SQL Server], colonne incluse"
-  - "progettazione di indici [SQL Server], colonne incluse"
-  - "colonne non chiave"
+title: Creare indici con colonne incluse | Microsoft Docs
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index size [SQL Server]
+- index keys [SQL Server]
+- index columns [SQL Server]
+- size [SQL Server], indexes
+- key columns [SQL Server]
+- included columns
+- nonclustered indexes [SQL Server], included columns
+- designing indexes [SQL Server], included columns
+- nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare indici con colonne incluse
+# <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In questo argomento si illustra come aggiungere colonne incluse (o non chiave) per estendere la funzionalità di indici non cluster in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'inclusione di colonne non chiave è possibile creare indici non cluster in grado di coprire più query. Ciò è possibile perché le colonne non chiave presentano i vantaggi seguenti:  
+  In questo argomento si illustra come aggiungere colonne incluse (o non chiave) per estendere la funzionalità di indici non cluster in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'inclusione di colonne non chiave è possibile creare indici non cluster in grado di coprire più query. Ciò è possibile perché le colonne non chiave presentano i vantaggi seguenti:  
   
 -   Possono essere tipi di dati che non sono consentiti come colonne chiave indice.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 -   Progettare nuovamente gli indici non cluster con chiavi di indice dalle dimensioni elevate in modo da utilizzare come colonne chiave solo le colonne utilizzate per le ricerche. Modificare in colonne non chiave tutte le altre colonne che coprono la query. In questo modo si avranno tutte le colonne necessarie per coprire la query, contenendo al tempo stesso le dimensioni della chiave dell'indice e mantenendone l'efficienza.  
   
--   Includere colonne non chiave in un indice non cluster per evitare il superamento delle limitazioni di dimensione correnti degli indici (numero massimo di colonne chiave pari a 16 e dimensione massima delle chiavi di indice pari a 900 byte). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prende in esame le colonne non chiave durante il calcolo del numero di colonne chiave indice o della dimensione delle chiavi di indice.  
+-   Includere colonne non chiave in un indice non cluster per evitare il superamento delle limitazioni di dimensione correnti degli indici, ovvero numero massimo di colonne chiave pari a 32 e dimensione massima delle chiavi di indice pari a 1.700 byte (16 colonne chiave e 900 byte prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non prende in esame le colonne non chiave durante il calcolo del numero di colonne chiave indice o della dimensione delle chiavi di indice.  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
@@ -85,11 +89,11 @@ caps.handback.revision: 28
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un indice con colonne non chiave  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera creare un indice con colonne non chiave.  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 28
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice con colonne non chiave.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un indice con colonne non chiave  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -140,3 +144,4 @@ caps.handback.revision: 28
  Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

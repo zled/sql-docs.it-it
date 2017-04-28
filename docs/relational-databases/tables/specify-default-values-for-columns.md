@@ -1,25 +1,29 @@
 ---
-title: "Specificare valori predefiniti per le colonne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne [SQL Server], valori predefiniti"
-  - "valori predefiniti"
+title: Specificare valori predefiniti per le colonne | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], defaults
+- default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specificare valori predefiniti per le colonne
+# <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile specificare un valore predefinito che sarà immesso nella colonna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non si assegna un valore predefinito e l'utente lascia la colonna vuota, si verificherà quanto segue:  
@@ -61,9 +65,9 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per specificare un valore predefinito per una colonna  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Per specificare un valore predefinito per una colonna  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulle colonne della tabella di cui modificare la scala e scegliere **Progetta**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulle colonne della tabella di cui modificare la scala e scegliere **Progetta**.  
   
 2.  Selezionare la colonna per la quale si desidera specificare un valore predefinito.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per specificare un valore predefinito per una colonna  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Per specificare un valore predefinito per una colonna  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

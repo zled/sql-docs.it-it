@@ -1,32 +1,36 @@
 ---
-title: "Visualizzazione delle propriet&#224; e del contenuto di un dispositivo di backup logico (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visualizzazione del contenuto di backup"
-  - "visualizzazione del contenuto di backup"
-  - "backup dei database [SQL Server], visualizzazione del contenuto"
-  - "esecuzione del backup dei database [SQL Server], visualizzazione del contenuto"
-  - "esecuzione del backup dei database [SQL Server], proprietà"
-  - "visualizzazione delle proprietà di backup"
-  - "dispositivi di backup [SQL Server], visualizzazione delle informazioni"
-  - "visualizzazione delle proprietà di backup"
-  - "backup dei database [SQL Server], proprietà"
+title: "Visualizzare le proprietà e il contenuto di un dispositivo di backup logico (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying backup content
+- viewing backup content
+- database backups [SQL Server], viewing content
+- backing up databases [SQL Server], viewing content
+- backing up databases [SQL Server], properties
+- displaying backup properties
+- backup devices [SQL Server], viewing information
+- viewing backup properties
+- database backups [SQL Server], properties
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e0a3fad1cc54f9367d95ac36c903deeede0814b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzazione delle propriet&#224; e del contenuto di un dispositivo di backup logico (SQL Server)
+# <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>Visualizzazione delle proprietà e del contenuto di un dispositivo di backup logico (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene illustrato come visualizzare le proprietà e il contenuto di un dispositivo di backup logico in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,20 +50,20 @@ caps.handback.revision: 22
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
- Per informazioni sulla sicurezza, vedere [RESTORE LABELONLY &#40; Transact-SQL &#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md).  
+ Per informazioni sulla sicurezza, vedere [RESTORE LABELONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md).  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, per ottenere informazioni su un set o un dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per visualizzare le proprietà e il contenuto di un dispositivo di backup logico  
+#### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>Per visualizzare le proprietà e il contenuto di un dispositivo di backup logico  
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
   
 2.  Espandere **Oggetti server**e quindi **Dispositivi di backup**.  
   
-3.  Fare clic sul dispositivo e quindi fare clic con il pulsante destro del mouse su **Proprietà** per visualizzare la finestra di dialogo **Dispositivo di backup**.  
+3.  Fare clic sul dispositivo e quindi fare clic con il pulsante destro del mouse su **Proprietà**per visualizzare la finestra di dialogo **Dispositivo di backup** .  
   
 4.  Nella pagina **Generale** sono indicati il nome del dispositivo e la destinazione, costituita da un dispositivo nastro o da un percorso di file.  
   
@@ -82,13 +86,13 @@ caps.handback.revision: 22
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per visualizzare le proprietà e il contenuto di un dispositivo di backup logico  
+#### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>Per visualizzare le proprietà e il contenuto di un dispositivo di backup logico  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Utilizzare l'istruzione [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md) . In questo esempio vengono restituite informazioni sul dispositivo di backup logico `AdvWrks2008R2Backup`.  
+3.  Utilizzare l'istruzione [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) . In questo esempio vengono restituite informazioni sul dispositivo di backup logico `AdvWrks2008R2Backup` .  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -98,7 +102,7 @@ GO
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

@@ -1,31 +1,35 @@
 ---
-title: "Classe di evento Showplan XML For Query Compile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML For Query Compile - classe di evento"
+title: Classe di evento Showplan XML For Query Compile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML For Query Compile event class
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb668713091ff9f9d53173111bae4ee54ec73f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Showplan XML For Query Compile
-  La classe di evento Showplan XML For Query Compile viene generata quando viene compilata un'istruzione SQL in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Includere questa classe di evento per identificare gli operatori Showplan in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile - classe di evento
+  La classe di evento Showplan XML For Query Compile viene generata quando viene compilata un'istruzione SQL in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Includere questa classe di evento per identificare gli operatori Showplan in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Poiché la classe di evento Showplan XML For Query Compile consente di visualizzare dati completi relativi al momento della compilazione, le tracce che contengono questa classe di evento possono essere soggette a una riduzione significativa delle prestazioni. Per ridurre al minimo tale rischio, limitare l'utilizzo di questa classe di evento alle tracce che consentono di monitorare problemi specifici per brevi periodi di tempo.  
   
- Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740) o come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Colonne di dati della classe di evento Showplan XML for Query Compile  
+## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan XML for Query Compile  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -58,7 +62,7 @@ caps.handback.revision: 38
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   

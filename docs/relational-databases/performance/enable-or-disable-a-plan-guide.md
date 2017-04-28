@@ -1,27 +1,31 @@
 ---
-title: "Abilitare o disabilitare una guida di piano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guide di piano [SQL Server], disabilitazione"
-  - "abilitazione di guide di piano"
-  - "guide di piano [SQL Server], abilitazione"
-  - "disabilitazione di guide di piano"
+title: Abilitare o disabilitare una guida di piano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare o disabilitare una guida di piano
+# <a name="enable-or-disable-a-plan-guide"></a>Abilitare o disabilitare una guida di piano
   È possibile disabilitare e abilitare guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile abilitare o disabilitare una sola guida di piano o tutte le guide di piano in un database.  
   
  **Contenuto dell'argomento**  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per disabilitare o abilitare una guida di piano  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Per disabilitare o abilitare una guida di piano  
   
 1.  Fare clic sul segno più per espandere il database in cui si desidera disabilitare o abilitare una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
@@ -63,17 +67,17 @@ caps.handback.revision: 6
   
 4.  Nella finestra di dialogo **Disabilita guida di piano** o **Abilita guida di piano** , verificare che l'azione scelta venga completata correttamente, quindi fare clic su **Chiudi**.  
   
-#### Per disabilitare o abilitare tutte le guide di piano in un database  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Per disabilitare o abilitare tutte le guide di piano in un database  
   
 1.  Fare clic sul segno più per espandere il database in cui si desidera disabilitare o abilitare una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Guide di piano**, quindi scegliere **Abilita tutto** o **Disabilita tutto**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Guide di piano** , quindi scegliere **Abilita tutto** o **Disabilita tutto**.  
   
 3.  Nella finestra di dialogo **Disabilita tutte le guide di piano** o **Abilita tutte le guide di piano** , verificare che l'azione scelta venga completata correttamente, quindi fare clic su **Chiudi**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per disabilitare o abilitare una guida di piano  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Per disabilitare o abilitare una guida di piano  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### Per disabilitare o abilitare tutte le guide di piano in un database  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Per disabilitare o abilitare tutte le guide di piano in un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

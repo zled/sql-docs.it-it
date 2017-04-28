@@ -1,31 +1,35 @@
 ---
-title: "Snapshot del database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste statiche di database"
-  - "snapshot [snapshot del database di SQL Server]"
-  - "database di origine [SQL Server]"
-  - "snapshot [snapshot del database di SQL Server], informazioni sugli snapshot del database"
-  - "snapshot del database [SQL Server]"
-  - "viste di database di sola lettura"
-  - "snapshot del database [SQL Server], informazioni sugli snapshot del database"
+title: Snapshot del database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Snapshot del database (SQL Server)
-  Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  
+# <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
+  Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  
   
  È possibile generare più snapshot di uno stesso database di origine. Ogni snapshot del database viene mantenuto finché non viene eliminato esplicitamente dal proprietario del database.  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> Prerequisiti  
  Il database di origine, in cui può essere utilizzato qualsiasi modello di recupero, deve soddisfare i prerequisiti seguenti:  
   
--   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui sono supportati gli snapshot del database. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui sono supportati gli snapshot del database. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Il database di origine deve essere online, a meno che non si tratti di un database mirror nell'ambito di una sessione di mirroring del database.  
   
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mirroring e snapshot del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

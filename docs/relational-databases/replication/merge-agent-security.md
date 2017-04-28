@@ -1,41 +1,45 @@
 ---
-title: "Sicurezza agente di merge | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.security.MA.f1"
-helpviewer_keywords: 
-  - "Sicurezza agente di merge - finestra di dialogo"
+title: Sicurezza agente di merge | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.security.MA.f1
+helpviewer_keywords:
+- Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91b56fdfcd9865baf0063b15998572a228b83852
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sicurezza agente di merge
+# <a name="merge-agent-security"></a>Sicurezza agente di merge
   La finestra di dialogo **Sicurezza agente di merge** consente di specificare l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] con cui viene eseguito l'agente di merge. L'agente di merge viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
   
 -   Se si accede alla finestra di dialogo dalla Creazione guidata nuova sottoscrizione, è inoltre possibile specificare il contesto in cui l'agente di merge stabilisce le connessioni al Sottoscrittore (per le sottoscrizioni push) o ai server di pubblicazione e di distribuzione (per le sottoscrizioni pull). È possibile stabilire la connessione utilizzando l'account di Windows oppure nel contesto di un account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente.  
   
--   Se la finestra di dialogo è accessibile dal **le proprietà della sottoscrizione** finestra di dialogo specificare il contesto in cui l'agente di Merge stabilisce le connessioni facendo clic sul pulsante delle proprietà (**...**) nella **connessione al sottoscrittore** o **connessione server di pubblicazione** riga della finestra di dialogo. Per ulteriori informazioni sull'accesso di **le proprietà della sottoscrizione** la finestra di dialogo, vedere [visualizzare e modificare le proprietà di sottoscrizione Push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e come: [visualizzare e modificare le proprietà di sottoscrizione Pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Se si accede alla finestra di dialogo dalla finestra di dialogo **Proprietà sottoscrizione** , specificare il contesto in cui l'agente di merge stabilisce le connessioni facendo clic sul pulsante delle proprietà (**...**) nella riga **Connessione al Sottoscrittore** o **Connessione al server di pubblicazione** della finestra di dialogo. Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà sottoscrizione**, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Tutti gli account devono essere validi e per ogni account deve essere stata specificata la password corretta. Gli account e le password vengono convalidati solo dopo l'avvio dell'esecuzione di un agente.  
   
-## Opzioni  
- **Account processo**  
+## <a name="options"></a>Opzioni  
+ **Process Account**  
  Consente di immettere l'account di Windows con cui viene eseguito l'agente di merge.  
   
 -   Per le sottoscrizioni push, l'account deve:  
   
-    -   Appartenere almeno il **db_owner** ruolo predefinito del database nel database di distribuzione.  
+    -   Essere almeno un membro del ruolo predefinito del database **db_owner** nel database di distribuzione.  
   
     -   Essere un membro del ruolo PAL.  
   
@@ -43,22 +47,22 @@ caps.handback.revision: 24
   
     -   Disporre delle autorizzazioni di lettura per la condivisione snapshot.  
   
--   Per le sottoscrizioni pull, l'account deve essere almeno un membro del **db_owner** ruolo predefinito del database nel database di sottoscrizione.  
+-   Per le sottoscrizioni pull, l'account deve essere almeno un membro del ruolo predefinito del database **db_owner** nel database di sottoscrizione.  
   
  Sono necessarie autorizzazioni aggiuntive nel caso in cui l'account di processo sia rappresentato durante l'attivazione delle connessioni. Vedere le sezioni **Connetti al server di pubblicazione e al server di distribuzione** e **Connetti al Sottoscrittore** riportate di seguito.  
   
  Non è possibile specificare l'account di processo**** per le sottoscrizioni pull di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], in quanto l'agente di merge non viene eseguito nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
- **Password** e **Conferma Password**  
+ **Password** e **Conferma password**  
  Immettere la password per l'account di Windows.  
   
  **Connetti al server di pubblicazione e al server di distribuzione**  
- Per le sottoscrizioni push, le connessioni al server di pubblicazione e server di distribuzione vengono sempre stabilite tramite rappresentazione dell'account specificato nel **account di processo** casella di testo.  
+ Per le sottoscrizioni push, le connessioni al server di pubblicazione e al server di distribuzione vengono sempre stabilite tramite la rappresentazione dell'account specificato nella casella di testo **Account processo** .  
   
  Per le sottoscrizioni pull, scegliere se l'agente di merge deve stabilire le connessioni al server di pubblicazione e al server di distribuzione tramite la rappresentazione dell'account specificato nella casella di testo **Account processo** oppure utilizzando un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona l'opzione per l'utilizzo di un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , immettere un account di accesso e una password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di scegliere di rappresentare l'account di Windows anziché utilizzando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di scegliere di rappresentare l'account di Windows anziché di utilizzare un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  L'account di Windows o l'account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per la connessione deve:  
   
@@ -71,20 +75,20 @@ caps.handback.revision: 24
 -   Disporre delle autorizzazioni di lettura per la condivisione snapshot.  
   
  **Connetti al Sottoscrittore**  
- Per le sottoscrizioni pull, le connessioni al sottoscrittore vengono sempre stabilite tramite rappresentazione dell'account specificato nel **account di processo** casella di testo.  
+ Per le sottoscrizioni pull, le connessioni al Sottoscrittore vengono sempre stabilite tramite la rappresentazione dell'account specificato nella casella di testo **Account processo** .  
   
  Per le sottoscrizioni push, scegliere se l'agente di merge deve stabilire le connessioni al server di pubblicazione e al server di distribuzione tramite la rappresentazione dell'account specificato nella casella di testo **Account processo** oppure utilizzando un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona l'opzione per l'utilizzo di un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , immettere un account di accesso e una password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  È consigliabile scegliere di rappresentare l'account di Windows anziché di utilizzare un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  È consigliabile scegliere di rappresentare l'account di Windows anziché di utilizzare un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- L'account di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account utilizzato per la connessione al Sottoscrittore deve essere almeno un membro del **db_owner** ruolo predefinito del database nel database di sottoscrizione.  
+ L'account di Windows o l'account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per la connessione deve essere almeno un membro del ruolo del database predefinito **db_owner** nel database di sottoscrizione.  
   
-## Vedere anche  
- [Gestione degli account di accesso e delle password nella replica](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Gestire gli account di accesso e le password nella replica](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

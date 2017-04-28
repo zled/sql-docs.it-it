@@ -1,29 +1,33 @@
 ---
-title: "Gestire e monitorare la ricerca semantica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ricerca semantica [SQL Server], gestione"
-  - "ricerca semantica [SQL Server], monitoraggio"
+title: Gestire e monitorare la ricerca semantica | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], managing
+- semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6749d7f7db6e6e76cd940c166180a7ccd206aaf9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestire e monitorare la ricerca semantica
+# <a name="manage-and-monitor-semantic-search"></a>Gestire e monitorare la ricerca semantica
   Vengono illustrati il processo di indicizzazione semantica e le attività correlate alla gestione e al monitoraggio degli indici.  
   
-##  <a name="HowToMonitorStatus"></a> Procedura: Monitoraggio dello stato dell'indicizzazione semantica  
- **Verifica del completamento della prima fase dell'indicizzazione semantica**  
+##  <a name="HowToMonitorStatus"></a> Verificare lo stato dell'indicizzazione semantica  
+### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>Verifica del completamento della prima fase dell'indicizzazione semantica
  Eseguire una query sulla DMV [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md) e verificare lo **stato** e le colonne **status_description**.  
   
  La prima fase dell'indicizzazione include il popolamento dell'indice di parole chiave full-text e dell'indice di frasi chiave semantico, nonché l'estrazione dei dati di somiglianza dei documenti.  
@@ -36,7 +40,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **Verifica del completamento della seconda fase dell'indicizzazione semantica**  
+### <a name="is-the-second-phase-of-semantic-indexing-complete"></a>Verifica del completamento della seconda fase dell'indicizzazione semantica
  Eseguire una query sulla DMV [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md) e verificare lo **stato** e le colonne **status_description**.  
   
  La seconda fase dell'indicizzazione include il popolamento dell'indice di somiglianza dei documenti semantico.  
@@ -49,8 +53,8 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Procedura: Verificare le dimensioni degli indici semantici  
- **Individuazione della dimensione logica di un indice di frasi chiave semantico o di un indice di somiglianza dei documenti semantico**  
+##  <a name="HowToCheckSize"></a> Verificare le dimensioni degli indici semantici  
+### <a name="what-is-the-logical-size-of-a-semantic-key-phrase-index-or-a-semantic-document-similarity-index"></a>Individuazione della dimensione logica di un indice di frasi chiave semantico o di un indice di somiglianza dei documenti semantico
  Eseguire una query sulla DMV [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md).  
   
  La dimensione logica viene visualizzata in numero di pagine di indice.  
@@ -63,7 +67,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **Individuazione delle dimensioni totali degli indici full-text e semantici per un catalogo full-text**  
+### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Individuazione delle dimensioni totali degli indici full-text e semantici per un catalogo full-text  
  Eseguire una query sulla proprietà **IndexSize** della funzione per i metadati [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
 ```tsql  
@@ -71,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **Individuazione del numero di elementi indicizzati negli indici full-text e semantico per un catalogo full-text**  
+### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Individuazione del numero di elementi indicizzati negli indici full-text e semantico per un catalogo full-text  
  Eseguire una query sulla proprietà **ItemCount** della funzione per i metadati [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
 ```tsql  
@@ -79,7 +83,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Procedura: Forzare il popolamento degli indici semantici  
+##  <a name="HowToForcePopulation"></a> Forzare il popolamento degli indici semantici  
  È possibile forzare il popolamento degli indici full-text e semantici utilizzando la clausola START/STOP/PAUSE o RESUME POPULATION con la stessa sintassi e lo stesso comportamento descritti per gli indici full-text. Per altre informazioni, vedere [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) e [Popolamento degli indici full-texts](../../relational-databases/search/populate-full-text-indexes.md).  
   
  Poiché l'indicizzazione semantica dipende dall'indicizzazione full-text, gli indici semantici vengono popolati solo al popolamento degli indici full-text associati.  
@@ -97,7 +101,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Procedura: Disabilitare o riabilitare l'indicizzazione semantica  
+##  <a name="HowToDisableIndexing"></a> Disabilitare o riabilitare l'indicizzazione semantica  
  È possibile abilitare o disabilitare l'indicizzazione full-text o semantica utilizzando la clausola ENABLE/DISABLE con la stessa sintassi e lo stesso comportamento descritti per gli indici full-text. Per altre informazioni, vedere [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Quando l'indicizzazione semantica è disabilitata e sospesa, le query sui dati semantici continuano a funzionare correttamente e a restituire dati precedentemente indicizzati. Questo comportamento non è coerente con quello della ricerca full-text.  
@@ -133,13 +137,13 @@ GO
   
 ##  <a name="BestPracticeUnderstand"></a>   
 ##  <a name="ProblemNotPopulated"></a> Problema: gli indici semantici non vengono popolati  
- **Verificare se gli indici full-text associati sono stati popolati.**  
+### <a name="are-the-associated-full-text-indexes-populated"></a>Verificare se gli indici full-text associati sono stati popolati.  
  Poiché l'indicizzazione semantica dipende dall'indicizzazione full-text, gli indici semantici vengono popolati solo al popolamento degli indici full-text associati.  
   
- **Verificare se la ricerca full-text e la ricerca semantica sono state installate e configurate correttamente.**  
+### <a name="are-full-text-search-and-semantic-search-properly-installed-and-configured"></a>Verificare se la ricerca full-text e la ricerca semantica sono state installate e configurate correttamente.  
  Per altre informazioni, vedere [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
- **Controllare se il servizio FDHOST è disponibile o se si è verificata un'altra condizione che provoca la mancata esecuzione dell'indicizzazione full-text.**  
+### <a name="is-the-fdhost-service-not-available-or-is-there-another-condition-that-would-cause-full-text-indexing-to-fail"></a>Controllare se il servizio FDHOST è disponibile o se si è verificata un'altra condizione che provoca la mancata esecuzione dell'indicizzazione full-text.  
  Per altre informazioni, vedere [Risoluzione dei problemi nell'indicizzazione full-text](../../relational-databases/search/troubleshoot-full-text-indexing.md).  
   
   

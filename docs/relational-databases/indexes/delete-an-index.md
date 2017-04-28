@@ -1,28 +1,32 @@
 ---
-title: "Eliminare un indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rimozione di indici"
-  - "eliminazione di indici"
-  - "eliminazione di indici"
-  - "indici [SQL Server], eliminazione"
-  - "eliminazioni di indici [SQL Server]"
+title: Eliminare un indice | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- dropping indexes
+- indexes [SQL Server], dropping
+- index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare un indice
+# <a name="delete-an-index"></a>Eliminare un indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si descrive come eliminare (rimuovere) un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,11 +53,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare un indice utilizzando Esplora oggetti  
+#### <a name="to-delete-an-index-by-using-object-explorer"></a>Per eliminare un indice utilizzando Esplora oggetti  
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera eliminare un indice.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 29
   
 6.  Nella finestra di dialogo **Elimina oggetto** verificare che nella griglia **Oggetto da eliminare** sia presente l'indice corretto e fare clic su **OK**.  
   
-#### Per eliminare un indice utilizzando Progettazione tabelle.  
+#### <a name="to-delete-an-index-using-table-designer"></a>Per eliminare un indice utilizzando Progettazione tabelle.  
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera eliminare un indice.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare un indice  
+#### <a name="to-delete-an-index"></a>Per eliminare un indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -108,3 +112,4 @@ caps.handback.revision: 29
  Per altre informazioni, vedere [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
   
+

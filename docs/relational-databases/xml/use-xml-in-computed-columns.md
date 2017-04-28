@@ -1,28 +1,32 @@
 ---
-title: "Utilizzo del codice XML nelle colonne calcolate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne calcolate, XML"
-  - "XML [SQL Server], colonne calcolate"
+title: Usare codice XML nelle colonne calcolate | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo del codice XML nelle colonne calcolate
+# <a name="use-xml-in-computed-columns"></a>Utilizzo del codice XML nelle colonne calcolate
   Le istanze XML possono rappresentare o l'origine o il tipo di una colonna calcolata. Gli esempi contenuti in questo argomento mostrano come utilizzare il codice XML con le colonne calcolate.  
   
-## Creazione di colonne calcolate da colonne XML  
+## <a name="creating-computed-columns-from-xml-columns"></a>Creazione di colonne calcolate da colonne XML  
  Ad esempio, nell'istruzione seguente `CREATE TABLE` una colonna di tipo `xml` (`col2`) viene calcolata da `col1`:  
   
 ```  
@@ -35,7 +39,7 @@ CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) )
 CREATE TABLE T (col1 xml, col2 as cast(col1 as varchar(1000) ))   
 ```  
   
- È possibile creare una colonna calcolata mediante l'estrazione di un valore da una colonna di tipo `xml`, come illustrato nell'esempio seguente. Poiché non è possibile usare direttamente i metodi con tipo di dati **xml** per la creazione di colonne calcolate, nell'esempio viene definita innanzitutto una funzione (`my_udf`) che restituisce un valore da un'istanza XML. La funzione esegue il wrapping del metodo `value()` del tipo `xml`. Il nome della funzione viene quindi specificato nell'istruzione `CREATE TABLE` per la colonna calcolata.  
+ È possibile creare una colonna calcolata mediante l'estrazione di un valore da una colonna di tipo `xml` , come illustrato nell'esempio seguente. Poiché non è possibile usare direttamente i metodi con tipo di dati **xml** per la creazione di colonne calcolate, nell'esempio viene definita innanzitutto una funzione (`my_udf`) che restituisce un valore da un'istanza XML. La funzione esegue il wrapping del metodo `value()` del tipo `xml` . Il nome della funzione viene quindi specificato nell'istruzione `CREATE TABLE` per la colonna calcolata.  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns int  
@@ -55,7 +59,7 @@ FROM T
   
 ```  
   
- Come il precedente, l'esempio successivo definisce una funzione per la restituzione di un'istanza con tipo di dati **xml** per una colonna calcolata. All'interno della funzione, il metodo `query()` con tipo di dati `xml` recupera un valore da un parametro del tipo `xml`.  
+ Come il precedente, l'esempio successivo definisce una funzione per la restituzione di un'istanza con tipo di dati **xml** per una colonna calcolata. All'interno della funzione, il metodo `query()` con tipo di dati `xml` recupera un valore da un parametro del tipo `xml` .  
   
 ```  
 CREATE FUNCTION my_udf(@var xml)   
@@ -65,7 +69,7 @@ BEGIN
 END  
 ```  
   
- Nell'istruzione seguente `CREATE TABLE`, `Col2` rappresenta una colonna calcolata che utilizza i dati XML (elemento `<Features>`) restituiti dalla funzione:  
+ Nell'istruzione seguente `CREATE TABLE` , `Col2` rappresenta una colonna calcolata che utilizza i dati XML (elemento`<Features>` ) restituiti dalla funzione:  
   
 ```  
 CREATE TABLE T (Col1 xml, Col2 as dbo.my_udf(Col1) )  
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### Argomenti della sezione  
+### <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

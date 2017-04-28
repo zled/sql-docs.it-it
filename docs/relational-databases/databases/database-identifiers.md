@@ -1,35 +1,39 @@
 ---
-title: "Identificatori del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "identificatori regolari [SQL Server]"
-  - "identificatori [SQL Server]"
-  - "nomi [SQL Server], identificatori"
-  - "identificatori [SQL Server], informazioni sugli identificatori"
-  - "identificatori di SQL Server"
-  - "identificatori Transact-SQL"
-  - "oggetti di database [SQL Server],nomi"
+title: Identificatori del database | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- regular identifiers [SQL Server]
+- identifiers [SQL Server]
+- names [SQL Server], identifiers
+- identifiers [SQL Server], about identifiers
+- SQL Server identifiers
+- Transact-SQL identifiers
+- database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
+ms.lasthandoff: 04/11/2017
+
 ---
-# Identificatori del database
-  Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. È possibile associare un identificatore a qualunque elemento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  
+# <a name="database-identifiers"></a>Identificatori del database
+  Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. È possibile associare un identificatore a qualunque elemento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  
   
- L'identificatore viene creato in fase di definizione dell'oggetto e viene successivamente utilizzato per fare riferimento all'oggetto. Ad esempio, l'istruzione seguente crea una tabella a cui viene associato l'identificatore `TableX` e due colonne a cui vengono associati gli identificatori `KeyCol` e `Description`:  
+ L'identificatore viene creato in fase di definizione dell'oggetto e viene successivamente utilizzato per fare riferimento all'oggetto. Ad esempio, l'istruzione seguente crea una tabella a cui viene associato l'identificatore `TableX`e due colonne a cui vengono associati gli identificatori `KeyCol` e `Description`:  
   
 ```  
 CREATE TABLE TableX  
@@ -41,13 +45,13 @@ CREATE TABLE TableX
  Le regole di confronto di un identificatore dipendono dal livello nel quale viene definito. Agli identificatori degli oggetti a livello di istanza, quali gli account di accesso e i nomi di database, vengono assegnate le regole di confronto predefinite dell'istanza. Agli identificatori degli oggetti di un database, quali tabelle, viste e nomi di colonna, vengono assegnate le regole di confronto predefinite del database. Ad esempio, due tabelle i cui nomi si differenziano soltanto per l'utilizzo del maiuscolo e del minuscolo possono essere create in un database con regole di confronto in cui l'uso di maiuscole e minuscole è rilevante, ma non in un database con regole di confronto in cui l'uso di maiuscole e minuscole non è rilevante.  
   
 > [!NOTE]  
->  È necessario che i nomi di variabili o i parametri di funzioni e stored procedure siano conformi alle regole relative agli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  È necessario che i nomi di variabili o i parametri di funzioni e stored procedure siano conformi alle regole relative agli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Classi di identificatori  
+## <a name="classes-of-identifiers"></a>Classi di identificatori  
  Esistono due classi di identificatori:  
   
  Identificatori regolari  
- Sono conformi alle regole relative al formato degli identificatori. Gli identificatori regolari non vengono delimitati quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Sono conformi alle regole relative al formato degli identificatori. Gli identificatori regolari non vengono delimitati quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
 SELECT *  
@@ -74,8 +78,8 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
  Sia gli identificatori regolari che quelli delimitati devono includere da 1 a 128 caratteri. Gli identificatori delle tabelle temporanee locali possono includere al massimo 116 caratteri.  
   
-## Regole relative agli identificatori regolari  
- È necessario che i nomi di variabili, funzioni e stored procedure siano conformi alle seguenti regole relative agli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+## <a name="rules-for-regular-identifiers"></a>Regole relative agli identificatori regolari  
+ È necessario che i nomi di variabili, funzioni e stored procedure siano conformi alle seguenti regole relative agli identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 1.  Il primo carattere deve essere uno dei seguenti:  
   
@@ -95,18 +99,18 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   Il simbolo di chiocciola, il simbolo di dollaro ($), il simbolo di cancelletto o il carattere di sottolineatura.  
   
-3.  L'identificatore non deve essere una parola riservata [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riserva sia le versioni maiuscole sia quelle minuscole delle parole riservate. Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre. Le parole riservate dipendono dal livello di compatibilità del database. Questo livello può essere impostato usando l'istruzione [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+3.  L'identificatore non deve essere una parola riservata [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riserva sia le versioni maiuscole sia quelle minuscole delle parole riservate. Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre. Le parole riservate dipendono dal livello di compatibilità del database. Questo livello può essere impostato usando l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) .  
   
 4.  Non sono consentiti spazi incorporati o caratteri speciali.  
   
 5.  Non sono consentiti caratteri supplementari.  
   
- Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre.  
+ Quando vengono utilizzati in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , gli identificatori non conformi a queste regole devono essere racchiusi tra virgolette doppie o parentesi quadre.  
   
 > [!NOTE]  
->  Alcune regole relative al formato degli identificatori regolari dipendono dal livello di compatibilità del database. È possibile impostare tale livello con [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+>  Alcune regole relative al formato degli identificatori regolari dipendono dal livello di compatibilità del database. È possibile impostare tale livello con [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

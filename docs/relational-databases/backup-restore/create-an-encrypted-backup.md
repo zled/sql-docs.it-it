@@ -1,25 +1,29 @@
 ---
-title: "Creare un backup crittografato | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare un backup crittografato | Microsoft Docs
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare un backup crittografato
+# <a name="create-an-encrypted-backup"></a>Creare un backup crittografato
   In questo argomento vengono descritti i passaggi necessari per creare un backup crittografato tramite Transact-SQL.  Per un esempio dell'uso di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Creazione di un backup completo del database (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
-## Backup su disco con crittografia  
+## <a name="backup-to-disk-with-encryption"></a>Backup su disco con crittografia  
  **Prerequisiti:**  
   
 -   Accesso a un disco locale o a uno spazio di archiviazione con una quantità di spazio adeguata per creare un backup del database.  
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  Per un esempio di crittografia di un backup protetto da Extensible Key Management, vedere [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### Backup nel servizio di archiviazione Windows Azure con crittografia  
- Se si crea un backup nel servizio di archiviazione Windows Azure usando l'opzione **Backup di SQL Server nell'URL**, i passaggi di crittografia sono gli stessi, ma è necessario usare un URL come destinazione e le credenziali di SQL per autenticare il servizio di archiviazione Windows Azure. Se si desidera configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le opzioni di crittografia, vedere [Abilitare il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>Backup nel servizio di archiviazione Windows Azure con crittografia  
+ Se si crea un backup nel servizio di archiviazione Windows Azure usando l'opzione **Backup di SQL Server nell'URL** , i passaggi di crittografia sono gli stessi, ma è necessario usare un URL come destinazione e le credenziali di SQL per autenticare il servizio di archiviazione Windows Azure. Se si desidera configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con le opzioni di crittografia, vedere [Abilitare il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
- **Prerequisiti**  
+ **Prerequisiti:**  
   
--   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare gli oggetti della risorsa di archiviazione di Windows Azure](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md).  
+-   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare gli oggetti della risorsa di archiviazione di Windows Azure](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Chiave master di un database master e certificato o chiave asimmetrica nell'istanza di SQL Server. Per le autorizzazioni e i requisiti di crittografia, vedere [Crittografia dei backup](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

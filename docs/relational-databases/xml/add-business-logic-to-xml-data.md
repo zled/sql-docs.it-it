@@ -1,24 +1,28 @@
 ---
-title: "Aggiunta di una logica di business ai dati XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logica di business [XML]"
+title: Aggiungere una logica di business ai dati XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiunta di una logica di business ai dati XML
+# <a name="add-business-logic-to-xml-data"></a>Aggiunta di una logica di business ai dati XML
   Per aggiungere una logica di business ai dati XML è possibile procedere in vari modi:  
   
 -   È possibile creare vincoli a livello di riga o colonna per applicare vincoli specifici del dominio durante la modifica e l'inserimento dei dati XML.  
@@ -29,7 +33,7 @@ caps.handback.revision: 18
   
 -   È possibile creare funzioni e stored procedure Transact-SQL che avviano l'elaborazione della colonna XML in base alle esigenze aziendali.  
   
-## Esempio: applicazione della trasformazione XSL  
+## <a name="example-applying-xsl-transformation"></a>Esempio: applicazione della trasformazione XSL  
  Si consideri una funzione CLR **TransformXml()** che accetta un'istanza del tipo di dati **xml** e una trasformazione XSL archiviata in un file, applica la trasformazione ai dati XML e quindi restituisce il codice XML trasformato come risultato. Di seguito è riportato lo scheletro della funzione scritta in C#:  
   
 ```  
@@ -50,7 +54,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- Dopo aver registrato l'assembly e creato la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente **SqlXslTransform()** corrispondente a **TransformXml()** è possibile chiamare la funzione da Transact-SQL come illustrato nella query seguente:  
+ Dopo aver registrato l'assembly e creato la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente **SqlXslTransform()** corrispondente a **TransformXml()**è possibile chiamare la funzione da Transact-SQL come illustrato nella query seguente:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

@@ -1,29 +1,33 @@
 ---
-title: "Linee guida per operazioni di indice online | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indici cluster, operazioni online"
-  - "operazioni sugli indici online"
-  - "indici [SQL Server], operazioni online"
-  - "spazio su disco [SQL Server], indici"
-  - "indici non cluster [SQL Server], operazioni online"
-  - "log delle transazioni [SQL Server], indici"
+title: Linee guida per le operazioni sugli indici online | Microsoft Docs
+ms.custom: 
+ms.date: 04/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustered indexes, online operations
+- online index operations
+- indexes [SQL Server], online operations
+- disk space [SQL Server], indexes
+- nonclustered indexes [SQL Server], online operations
+- transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.lasthandoff: 04/11/2017
+
 ---
-# Linee guida per operazioni di indice online
+# <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Quando si eseguono operazioni sugli indici online sono da ritenersi valide le linee guida seguenti:  
@@ -32,14 +36,14 @@ caps.handback.revision: 60
   
 -   È possibile creare indici non cluster non univoci online quando la tabella contiene tipi di dati LOB ma nessuna di queste colonne è utilizzata nella definizione di indice come colonna chiave o non chiave (inclusa).  
   
--   Non è possibile creare, ricompilare o eliminare online indici su tabelle temporanee locali. Questa limitazione non è valida per gli indici su tabelle temporanee globali.  
-  
+-   Non è possibile creare, ricompilare o eliminare online indici su tabelle temporanee locali. Questa limitazione non è valida per gli indici su tabelle temporanee globali.
+
 > [!NOTE]  
->  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Nella tabella seguente sono riportate le operazioni sugli indici che è possibile eseguire online e gli indici che sono esclusi da queste operazioni online. Sono inoltre incluse ulteriori limitazioni.  
+ Nella tabella seguente sono riportate le operazioni sugli indici che è possibile eseguire online, gli indici che sono esclusi da queste operazioni online e le restrizioni per gli indici ripristinabili. Sono inoltre incluse ulteriori limitazioni.  
   
-|Operazione su indice online|Indici esclusi|Altre limitazioni|  
+| Operazione su indice online | Indici esclusi | Altre limitazioni |  
 |----------------------------|----------------------|------------------------|  
 |ALTER INDEX REBUILD|Indice cluster disabilitato o vista indicizzata disabilitata<br /><br /> Indice XML<br /><br />Indice columnstore <br /><br /> Indice di una tabella temporanea locale|L'operazione può avere esito negativo se la tabella contiene un indice escluso e si utilizza la parola chiave ALL.<br /><br /> Sono applicabili ulteriori restrizioni nella ricompilazione di indici disabilitati. Per altre informazioni, vedere [Disabilitazione di indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md).|  
 |CREATE INDEX|Indice XML<br /><br /> Indice cluster univoco iniziale su una vista<br /><br /> Indice di una tabella temporanea locale||  
@@ -61,7 +65,12 @@ caps.handback.revision: 60
  Non è possibile eseguire un'operazione online se un indice contiene una colonna di tipo di oggetti di grandi dimensioni e nella stessa transazione sono presenti operazioni di aggiornamento prima di questa operazione online. Per risolvere questo problema, posizionare l'operazione online all'esterno della transazione o prima degli aggiornamenti all'interno della transazione.  
   
 ## <a name="disk-space-considerations"></a>Considerazioni sullo spazio su disco  
- I requisiti dello spazio su disco sono generalmente gli stessi per operazioni sugli indici online e offline. Un'eccezione è costituita dallo spazio su disco aggiuntivo richiesto dall'indice di mapping temporaneo. Questo indice temporaneo è utilizzato nelle operazioni sugli indici online che creano, ricompilano o eliminano un indice cluster. L'eliminazione di un indice cluster online richiede lo stesso spazio che è necessario per la creazione di un indice cluster online. Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
+ Le operazioni sugli indici online hanno requisiti di spazio su disco maggiori rispetto alle operazioni sugli indici offline. 
+ - Durante le operazioni di creazione dell'indice e di ricompilazione dell'indice, è necessario spazio aggiuntivo per l'indice in corso di ricompilazione o ricompilato. 
+ - È richiesto anche spazio su disco aggiuntivo per l'indice di mapping temporaneo. Questo indice temporaneo è utilizzato nelle operazioni sugli indici online che creano, ricompilano o eliminano un indice cluster.
+- L'eliminazione di un indice cluster online richiede lo stesso spazio che è necessario per la creazione o la ricompilazione di un indice cluster online. 
+
+Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
  Sebbene le operazioni sugli indici online consentano l'esecuzione di attività simultanee di aggiornamento utente, le operazioni sugli indici impiegheranno più tempo se l'attività di aggiornamento genera un notevole carico. Le operazioni sugli indici online saranno generalmente più lente delle operazioni sugli indici offline equivalenti, indipendentemente dal livello di attività di aggiornamento simultanee.  
@@ -70,7 +79,7 @@ caps.handback.revision: 60
   
  Sebbene le operazioni online siano consigliabili, è opportuno valutare l'ambiente e i requisiti specifici, in base ai quali l'esecuzione delle operazioni sugli indici offline potrebbe essere la soluzione ottimale. In quest'ultimo caso gli utenti avrebbero un accesso limitato ai dati durante l'operazione, la quale però terminerebbe più rapidamente e utilizzerebbe meno risorse.  
   
- Nei computer multiprocessore che eseguono [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]le istruzioni per gli indici, analogamente ad altre query, possono utilizzare più processori per eseguire le operazioni di analisi e ordinamento associate all'istruzione. È possibile utilizzare l'opzione dell'indice MAXDOP per controllare il numero di processori dedicati all'operazione di indice online. In questo modo è possibile bilanciare le risorse utilizzate dall'operazione sugli indici con quelle occupate dagli utenti simultanei. Per altre informazioni, vedere [Configurare operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md). Per altre informazioni sulle edizioni di SQL Server che supportano le operazioni indicizzate parallele, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Nei computer multiprocessore che eseguono SQL Server 2016 le istruzioni per gli indici, analogamente ad altre query, possono usare più processori per eseguire le operazioni di analisi e ordinamento associate all'istruzione. È possibile utilizzare l'opzione dell'indice MAXDOP per controllare il numero di processori dedicati all'operazione di indice online. In questo modo è possibile bilanciare le risorse utilizzate dall'operazione sugli indici con quelle occupate dagli utenti simultanei. Per altre informazioni, vedere [Configurare operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md). Per altre informazioni sulle edizioni di SQL Server che supportano le operazioni indicizzate parallele, vedere [Funzionalità supportate dalle edizioni](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Poiché al termine dell'esecuzione dell'operazione sugli indici viene mantenuto un blocco S o Sch-M, è necessario prestare particolare attenzione quando si esegue un'operazione sugli indici online all'interno di una transazione utente esplicita, ad esempio un blocco BEGIN TRANSACTION...COMMIT. Una tale operazione causa il mantenimento del blocco fino alla fine della transazione, impedendo quindi la concorrenza degli utenti.  
   
@@ -78,7 +87,7 @@ caps.handback.revision: 60
   
 ## <a name="transaction-log-considerations"></a>Considerazioni sul log delle transazioni  
  Operazioni sugli indici su larga scala, eseguite online oppure offline, possono generare volumi di dati elevati i quali possono esaurire rapidamente lo spazio disponibile nel log delle transazioni. Per garantire la possibilità di eseguire il rollback dell'operazione sugli indici, non è possibile troncare il log delle transazioni fino al completamento dell'operazione. È tuttavia possibile eseguire il backup del log durante l'operazione sugli indici. È pertanto necessario che il log delle transazioni abbia spazio sufficiente per archiviare sia le transazioni dell'operazione sugli indici sia tutte le transazioni utente simultanee per l'intera durata dell'operazione sugli indici. Per altre informazioni, vedere [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
-  
+
 ## <a name="related-content"></a>Contenuto correlato  
  [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md)  
   
@@ -89,3 +98,4 @@ caps.handback.revision: 60
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Table Properties - SSMS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tableproperties.storage.f1"
-  - "sql13.swb.tableproperties.changetracking.f1"
-  - "sql13.swb.tableproperties.general.f1"
-  - "sql12.SWB.SELECTCOLUMNS.F1"
-  - "sql13.swb.tableproperties.filetable.f1"
+title: "Proprietà tabella - SSMS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tableproperties.storage.f1
+- sql13.swb.tableproperties.changetracking.f1
+- sql13.swb.tableproperties.general.f1
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
+ms.lasthandoff: 04/11/2017
+
 ---
-# Table Properties - SSMS
+# <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](../../relational-databases/tables/view-the-table-definition.md).  
@@ -82,7 +86,7 @@ caps.handback.revision: 43
  Evita che venga eseguita l'escalation blocchi nella maggior parte dei casi. I blocchi a livello di tabella non vengono completamente disattivati. Quando si esegue l'analisi di una tabella che non dispone di alcun indice cluster nel livello di isolamento serializzabile, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve acquisire un blocco di tabella per proteggere l'integrità dei dati.  
   
  **Tabella replicata**  
- Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori possibili sono **True** e **False**.  
+ Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori possibili sono **True** e **False**.  
   
 ##  <a name="ChangeTracking"></a> Pagina Rilevamento modifiche  
  **Rilevamento delle modifiche**  
@@ -112,7 +116,7 @@ caps.handback.revision: 43
 ##  <a name="Storage"></a> Pagina Archivio  
  Consente di visualizzare le proprietà relative all'archiviazione della tabella selezionata.  
   
-### Compressione  
+### <a name="compression"></a>Compressione  
  **Tipo di compressione**  
  Tipo di compressione della tabella. Questa proprietà è disponibile solo per le tabelle non partizionate. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 43
  **Partizioni che usano la compressione di riga**  
  Numeri di partizioni che usano la compressione di riga. Questa proprietà è disponibile solo per le tabelle partizionate.  
   
-### Filegroup  
+### <a name="filegroup"></a>Filegroup  
  **Filegroup dati di testo**  
  Nome del filegroup che contiene i dati di testo della tabella.  
   
@@ -140,12 +144,12 @@ caps.handback.revision: 43
   
  Se la tabella non contiene dati FILESTREAM, il campo è vuoto.  
   
-### Generale  
+### <a name="general"></a>Generale  
  **Formato di archiviazione vardecimal abilitato**  
  Se impostato su **True**, questo valore di sola lettura indica che i tipi di dati **decimal** e **numeric** vengono archiviati con il formato di archiviazione vardecimal. Per modificare questa opzione, usare l'opzione **vardecimal storage format** di [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
   
  **Spazio degli indici**  
- Quantità di spazio occupata dagli indici nella tabella, espresso in megabyte. Questo valore non include lo spazio usato dagli indici XML per la tabella. Se gli indici XML appartengono alla tabella, usare in alternativa [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
+ Quantità di spazio occupata dagli indici nella tabella, espresso in megabyte. Questo valore non include lo spazio usato dagli indici XML per la tabella. Se gli indici XML appartengono alla tabella, usare in alternativa [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
  **Numero di righe**  
  Numero di righe della tabella.  
@@ -153,7 +157,7 @@ caps.handback.revision: 43
  **Spazio dati**  
  Quantità di spazio occupata dai dati nella tabella, espressa in megabyte.  
   
-### Partizionamento  
+### <a name="partitioning"></a>Partizionamento  
  Questa sezione è disponibile solo se la tabella è partizionata. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Colonna di partizione**  
@@ -170,7 +174,7 @@ caps.handback.revision: 43
   
  Lo schema di partizione FILESTREAM deve essere simmetrico rispetto allo schema specificato nell'opzione **Schema partizione** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare la definizione di una tabella](../../relational-databases/tables/view-the-table-definition.md)   
  [Modificare colonne &#40;Motore di database&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   

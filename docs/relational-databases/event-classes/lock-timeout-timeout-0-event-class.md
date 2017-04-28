@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento Lock:Timeout (timeout &gt; 0) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Timeout - classe di evento"
+title: Classe di evento Lock:Timeout (timeout &gt; 0) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcc65d0dc158c705bc5fcd1314f1d60503faa47a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Lock:Timeout (timeout &gt; 0)
+# <a name="locktimeout-timeout-gt-0-event-class"></a>Classe di evento Lock:Timeout (timeout &gt; 0)
   La classe di evento **Lock:Timeout (timeout > 0)** indica che una richiesta di blocco su una risorsa, ad esempio una pagina, è scaduta perché la risorsa è bloccata da un'altra transazione. Il funzionamento di questa classe di evento è identico a quello della classe **Lock:Timeout**, con l'eccezione che non vengono inclusi gli eventi con valore di timeout pari a 0.  
   
  Includere la classe di evento **Lock:Timeout (timeout > 0)** nelle tracce in cui si usano probe per i blocchi o altri processi con valori di timeout pari a 0. In questo modo è possibile individuare solo gli effettivi timeout escludendo quelli con valore pari a zero.  
   
-## Colonne di dati della classe di evento Lock:Timeout (timeout > 0)  
+## <a name="locktimeout-timeout--0-event-class-data-columns"></a>Colonne di dati della classe di evento Lock:Timeout (timeout > 0)  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -57,7 +61,7 @@ caps.handback.revision: 38
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe di evento Lock:Timeout](../../relational-databases/event-classes/lock-timeout-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

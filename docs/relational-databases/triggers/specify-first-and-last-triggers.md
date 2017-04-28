@@ -1,31 +1,35 @@
 ---
-title: "Specifica dei primi e degli ultimi trigger | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "primi trigger [SQL Server]"
-  - "ultimi trigger"
-  - "trigger DML, primo e ultimo"
-  - "INSTEAD OF - trigger"
-  - "AFTER - trigger"
+title: Specificare i primi e gli ultimi trigger | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- first triggers [SQL Server]
+- last triggers
+- DML triggers, first or last triggers
+- INSTEAD OF triggers
+- AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99935796043bf8ea14c32a2f98867ca2c7612a2d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specifica dei primi e degli ultimi trigger
+# <a name="specify-first-and-last-triggers"></a>Specifica dei primi e degli ultimi trigger
   È possibile specificare che uno dei trigger AFTER associati a una tabella sia il primo oppure l'ultimo trigger AFTER che viene attivato per ogni azione di trigger INSERT, DELETE e UPDATE. I trigger AFTER compresi fra il primo e l'ultimo vengono eseguiti in base a un ordine non definito.  
   
- Per specificare l'ordine per un trigger AFTER, usare la stored procedure **sp_settriggerorder**. **sp_settriggerorder** ha le opzioni seguenti.  
+ Per specificare l'ordine per un trigger AFTER, usare la stored procedure **sp_settriggerorder** . **sp_settriggerorder** ha le opzioni seguenti.  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
@@ -50,11 +54,11 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Se il primo o l'ultimo trigger viene modificato da un'istruzione ALTER TRIGGER, l'attributo **First** o **Last** viene rimosso e il valore relativo all'ordine viene impostato su **None**. È necessario reimpostare l'ordine usando **sp_settriggerorder**.  
   
- La funzione OBJECTPROPERTY usa le proprietà **ExecIsFirstTrigger** e **ExecIsLastTrigger** per segnalare se un trigger è primo o ultimo.  
+ La funzione OBJECTPROPERTY usa le proprietà **ExecIsFirstTrigger** e **ExecIsLastTrigger**per segnalare se un trigger è primo o ultimo.  
   
  La replica genera automaticamente un primo trigger per ogni tabella inclusa in una sottoscrizione ad aggiornamento in coda o ad aggiornamento immediato. La replica richiede che il proprio trigger sia il primo trigger. La replica genera un errore se si cerca di includere una tabella con un primo trigger in una sottoscrizione ad aggiornamento immediato o ad aggiornamento in coda. Se si prova a impostare un trigger come primo dopo l'inclusione di una tabella in una sottoscrizione, **sp_settriggerorder** restituisce un errore. Se si usa ALTER sul trigger di replica oppure **sp_settriggerorder** per modificare il trigger di replica come ultimo trigger o come trigger senza un ordine di esecuzione specifico, la sottoscrizione non funzionerà in modo corretto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
   

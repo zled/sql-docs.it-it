@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento QN:Template | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi di evento [SQL Server], QN:Template"
+title: Classe di evento QN:Template | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65d04a6b62876481360a1c529363df811d5726e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento QN:Template
+# <a name="qntemplate-event-class"></a>Classe di evento QN:Template
   L'evento QN:Template fornisce informazioni sull'utilizzo interno dei modelli di query che rappresentano il meccanismo tramite il quale [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di condividere le definizioni di una query per la notifica. Questi modelli vengono creati insieme alle tabelle di parametri. [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un evento di questo tipo quando viene creato, utilizzato o eliminato un modello di query.  
   
-## Colonne dati della classe di evento QN:Template  
+## <a name="qntemplate-event-class-data-columns"></a>Colonne dati della classe di evento QN:Template  
   
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  

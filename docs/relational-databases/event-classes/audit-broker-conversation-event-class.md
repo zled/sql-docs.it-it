@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento Audit Broker Conversation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Conversation - classe di evento"
+title: Classe di evento Audit Broker Conversation | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Audit Broker Conversation
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Audit Broker Conversation** per visualizzare messaggi di controllo relativi alla sicurezza del dialogo di Service Broker.  
   
-## Colonne di dati della classe di evento Audit Broker Conversation  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Broker Conversation  
   
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -30,11 +34,11 @@ caps.handback.revision: 25
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**Errore**|**int**|Numero di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|31|No|  
-|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Audit Broker Conversation**, corrisponde sempre a **158**.|27|No|  
+|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Audit Broker Conversation** , corrisponde sempre a **158**.|27|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Nella tabella seguente sono elencati i valori di sottoclasse per questo evento.|21|Sì|  
 |**FileName**|**nvarchar**|Motivo dell'errore di accesso. Se l'accesso è riuscito, la colonna è vuota.|36|No|  
 |**GUID**|**uniqueidentifier**|ID di conversazione del dialogo. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
-|**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione **HOST_NAME**.|8|Sì|  
+|**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione **HOST_NAME** .|8|Sì|  
 |**IntegerData**|**int**|Numero di frammento del messaggio.|25|No|  
 |**NTDomainName**|**nvarchar**|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|Firma non valida|Service Broker non è riuscito a verificare la firma del messaggio fornita dal mittente utilizzando la chiave pubblica inclusa nel certificato del mittente. Ciò potrebbe indicare che il messaggio è corrotto, che il messaggio è stato alterato, che il servizio remoto e il servizio locale non sono configurati con lo stesso certificato utente o che il certificato non è aggiornato.|  
 |4|Autorizzazioni non disponibili per l'utente di destinazione|L'utente di destinazione non dispone delle autorizzazioni RECEIVE. Per impedire la ricezione di messaggi da parte di utenti non autorizzati, Service Broker non accoda i messaggi diretti a un utente di destinazione che non può ricevere dati dalla coda, indipendentemente dal fatto che l'utente di origine disponga o meno dell'autorizzazione per accodare i messaggi.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

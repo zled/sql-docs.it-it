@@ -1,32 +1,36 @@
 ---
-title: "Eseguire operazioni online sugli indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "operazioni online sugli indici [SQL Server]"
-  - "operazioni sugli indici online"
-  - "ONLINE - opzione"
+title: Eseguire operazioni online sugli indici | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index online operations [SQL Server]
+- online index operations
+- ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7be8dd139a8c377d67259df538b097f1337821ca
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eseguire operazioni online sugli indici
+# <a name="perform-index-operations-online"></a>Eseguire operazioni online sugli indici
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si illustra come creare, ricompilare o eliminare gli indici online in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione ONLINE consente l'accesso simultaneo degli utenti alla tabella sottostante o ai dati dell'indice cluster e a qualsiasi indice non cluster associato durante l'esecuzione di queste operazioni sugli indici. Durante la ricompilazione di un indice cluster da parte di un utente, ad esempio, tale utente e altri utenti possono continuare ad aggiornare ed eseguire query sui dati sottostanti. Quando si eseguono operazioni DDL (Data Definition Language) offline, ad esempio la compilazione o la ricompilazione di un indice cluster, tali operazioni mantengono blocchi esclusivi sui dati sottostanti e gli indici associati. Questo comportamento impedisce modifiche e query nei dati sottostanti fino al termine dell'operazione sull'indice.  
   
 > [!NOTE]  
->  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere Funzionalità supportate dalle edizioni di SQL Server 2016.  
   
  **Contenuto dell'argomento**  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per ricompilare un indice online  
+#### <a name="to-rebuild-an-index-online"></a>Per ricompilare un indice online  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera ricompilare un indice online.  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare, ricompilare o eliminare un indice online  
+#### <a name="to-create-rebuild-or-drop-an-index-online"></a>Per creare, ricompilare o eliminare un indice online  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -107,10 +111,11 @@ caps.handback.revision: 31
     GO  
     ```  
   
-     Nell'esempio seguente viene eliminato un indice cluster online e la tabella risultante (heap) viene spostata nel filegroup `NewGroup` tramite la clausola `MOVE TO`. Vengono eseguite query sulle viste del catalogo `sys.indexes`, `sys.tables`e `sys.filegroups` per verificare la posizione dell'indice e della tabella nei filegroup prima e dopo lo spostamento.  
+     Nell'esempio seguente viene eliminato un indice cluster online e la tabella risultante (heap) viene spostata nel filegroup `NewGroup` tramite la clausola `MOVE TO` . Vengono eseguite query sulle viste del catalogo `sys.indexes`, `sys.tables`e `sys.filegroups` per verificare la posizione dell'indice e della tabella nei filegroup prima e dopo lo spostamento.  
   
      [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
   
  Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Configurazione di FILESTREAM in un cluster di failover | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], configurazione in un cluster di failover"
+title: Configurare FILESTREAM in un cluster di failover | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], setting up on a failover cluster
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c5bcc49ace68aaf9d35fd3365e693ddd953a0ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione di FILESTREAM in un cluster di failover
+# <a name="set-up-filestream-on-a-failover-cluster"></a>Configurazione di FILESTREAM in un cluster di failover
   In questo argomento viene descritto come abilitare FILESTREAM in un cluster di failover. Prima di eseguire questa procedura, è consigliabile acquisire familiarità con il [clustering di failover](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) e abilitare FILESTREAM. Per informazioni su come abilitare FILESTREAM, vedere [Abilitare e configurare FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md).  
   
-### Per configurare FILESTREAM in un cluster di failover  
+### <a name="to-set-up-filestream-on-a-failover-cluster"></a>Per configurare FILESTREAM in un cluster di failover  
   
 1.  Configurare il nodo primario per il cluster di failover.  
   
@@ -37,10 +41,11 @@ caps.handback.revision: 20
   
 5.  Per aggiungere e abilitare nodi aggiuntivi nel cluster in qualsiasi momento, ripetere i passaggi 2, 3 e 4.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [Rimuovere un'istanza del cluster di failover di SQL Server &#40;programma di installazione&#41;](../../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)   
  [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
   
+

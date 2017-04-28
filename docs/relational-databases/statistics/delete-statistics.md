@@ -1,25 +1,29 @@
 ---
-title: "Eliminare statistiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "statistiche [SQL Server], eliminazione"
-  - "eliminazione di statistiche"
+title: Eliminare statistiche | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], deleting
+- deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51349f58a29f7a0702e719f83e5f60632fb8d7c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare statistiche
+# <a name="delete-statistics"></a>Eliminare statistiche
   È possibile eliminare statistiche da tabelle e viste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Contenuto dell'argomento**  
@@ -51,7 +55,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare statistiche da una tabella o una vista  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>Per eliminare statistiche da una tabella o una vista  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il database in cui si desidera eliminare una statistica.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare statistiche da una tabella o una vista  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>Per eliminare statistiche da una tabella o una vista  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

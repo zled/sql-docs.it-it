@@ -1,31 +1,35 @@
 ---
-title: "Eseguire una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "stored procedure [SQL Server], parametri"
-  - "stored procedure estese [SQL Server], esecuzione"
-  - "stored procedure di sistema [SQL Server], esecuzione"
-  - "stored procedure [SQL Server], esecuzione"
-  - "stored procedure definite dall'utente [SQL Server]"
+title: Eseguire una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eseguire una stored procedure
+# <a name="execute-a-stored-procedure"></a>Eseguire una stored procedure
   In questo argomento viene illustrato come eseguire una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Sono disponibili due modi diversi per eseguire una stored procedure. Il primo e più comune approccio consiste nella chiamata della stored procedure da parte di un'applicazione o un utente. Il secondo approccio consiste nell'impostare la stored procedure per l'esecuzione automatica all'avvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando una stored procedure viene chiamata da un'applicazione o da un utente, la parola chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE o EXEC viene dichiarata in modo esplicito nella chiamata. In alternativa, è possibile chiamare ed eseguire la stored procedure senza la parola chiave se la stored procedure è la prima istruzione nel batch [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -56,7 +60,7 @@ caps.handback.revision: 38
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
-     Per visualizzare i nomi esatti delle stored procedure di sistema, eseguire query nelle viste del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) e [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md).  
+     Per visualizzare i nomi esatti delle stored procedure di sistema, eseguire query nelle viste del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) e [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) .  
   
 -   Se una stored procedure definita dall'utente ha lo stesso nome di una stored procedure di sistema, potrebbe non essere possibile eseguire la prima.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 38
   
 -   Esecuzione di stored procedure definite dall'utente  
   
-     Quando si esegue una stored procedure definita dall'utente, si consiglia di specificare il nome completo della stored procedure con il nome di schema. In questo modo, le prestazioni risulteranno leggermente migliorate poiché si evita che debbano essere eseguite ricerche in più schemi tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si evita inoltre che venga eseguita la stored procedure errata se un database dispone di stored procedure con lo stesso nome in più schemi.  
+     Quando si esegue una stored procedure definita dall'utente, si consiglia di specificare il nome completo della stored procedure con il nome di schema. In questo modo, le prestazioni risulteranno leggermente migliorate poiché si evita che debbano essere eseguite ricerche in più schemi tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si evita inoltre che venga eseguita la stored procedure errata se un database dispone di stored procedure con lo stesso nome in più schemi.  
   
      Nell'esempio seguente viene illustrato il metodo consigliato per l'esecuzione di una stored procedure definita dall'utente. Si noti che la stored procedure accetta un parametro di input. Per informazioni su come specificare i parametri di input e di output, vedere [Specificare i parametri](../../relational-databases/stored-procedures/specify-parameters.md).  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   Esecuzione automatica di stored procedure  
   
-     Le stored procedure contrassegnate per l'esecuzione automatica vengono eseguite a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database **master** viene recuperato durante il processo di avvio. L'impostazione di stored procedure per l'esecuzione automatica può essere utile per le operazioni di manutenzione del database o per l'esecuzione continua delle stored procedure come processi di background. È inoltre possibile utilizzare l'esecuzione automatica delle stored procedure per eseguire attività di sistema o di manutenzione in **tempdb**, ad esempio per creare una tabella temporanea globale. In questo modo si è sempre certi della disponibilità di una tabella temporanea quando **tempdb** viene ricreato durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Le stored procedure contrassegnate per l'esecuzione automatica vengono eseguite a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il database **master** viene recuperato durante il processo di avvio. L'impostazione di stored procedure per l'esecuzione automatica può essere utile per le operazioni di manutenzione del database o per l'esecuzione continua delle stored procedure come processi di background. È inoltre possibile utilizzare l'esecuzione automatica delle stored procedure per eseguire attività di sistema o di manutenzione in **tempdb**, ad esempio per creare una tabella temporanea globale. In questo modo si è sempre certi della disponibilità di una tabella temporanea quando **tempdb** viene ricreato durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Una stored procedure eseguita automaticamente utilizza le stesse autorizzazioni dei membri del ruolo predefinito del server **sysadmin** . I messaggi di errore generati dalla stored procedure vengono scritti nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -126,7 +130,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eseguire una stored procedure  
+#### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   
 1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eseguire una stored procedure  
+#### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -170,7 +174,7 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### Per impostare o annullare l'esecuzione automatica di una stored procedure  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>Per impostare o annullare l'esecuzione automatica di una stored procedure  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -186,7 +190,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### Per arrestare l'esecuzione automatica di una stored procedure  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>Per arrestare l'esecuzione automatica di una stored procedure  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Specificare i parametri](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Configurare l'opzione di configurazione del server scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

@@ -1,27 +1,31 @@
 ---
-title: "Configurare le impostazioni della propriet&#224; FailureConditionLevel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurare le impostazioni della proprietà FailureConditionLevel | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 46e7f2aca995373d14ce0096a4dba4204cc69ece
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurare le impostazioni della propriet&#224; FailureConditionLevel
+# <a name="configure-failureconditionlevel-property-settings"></a>Configurare le impostazioni della proprietà FailureConditionLevel
   Usare la proprietà FailureConditionLevel (FCI) per impostare le condizioni per il failover o il riavvio dell'istanza del cluster di failover AlwaysOn. Le modifiche apportate a questa proprietà vengono applicate immediatamente senza richiedere il riavvio del servizio cluster di failover di Windows Server (WSFC) o della risorsa istanza cluster di failover.  
   
--   **Prima di iniziare:**  [Impostazioni della proprietà FailureConditionLevel](#Restrictions), [Sicurezza](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
--   **Per configurare le impostazioni della proprietà FailureConditionLevel usando ** [PowerShell](#PowerShellProcedure), [Gestione cluster di failover](#WSFC) e [Transact-SQL](#TsqlProcedure)  
+-   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -35,18 +39,18 @@ caps.handback.revision: 29
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
-##### Per configurare le impostazioni FailureConditionLevel  
+##### <a name="to-configure-failureconditionlevel-settings"></a>Per configurare le impostazioni FailureConditionLevel  
   
 1.  Avviare Windows PowerShell con privilegi elevati tramite **Esegui come amministratore**.  
   
 2.  Importare il modulo **FailoverClusters** per abilitare i cmdlet del cluster.  
   
-3.  Usare il cmdlet **Get-ClusterResource** per trovare la risorsa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi usare il cmdlet **Set-ClusterParameter** per impostare la proprietà **FailureConditionLevel** per un'istanza del cluster di failover.  
+3.  Usare il cmdlet **Get-ClusterResource** per trovare la risorsa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi usare il cmdlet **Set-ClusterParameter** per impostare la proprietà **FailureConditionLevel** per un'istanza del cluster di failover.  
   
 > [!TIP]  
->  Ogni volta che viene aperta una nuova finestra di PowerShell, è necessario importare il modulo **FailoverClusters**.  
+>  Ogni volta che viene aperta una nuova finestra di PowerShell, è necessario importare il modulo **FailoverClusters** .  
   
-### Esempio (PowerShell)  
+### <a name="example-powershell"></a>Esempio (PowerShell)  
  Nell'esempio seguente, l'impostazione FailureConditionLevel nella risorsa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] "`SQL Server (INST1)`" viene impostata per eseguire il failover o il riavvio in caso di errori critici del server.  
   
 ```powershell  
@@ -57,9 +61,9 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ```  
   
-### Contenuto correlato (PowerShell)  
+### <a name="related-content-powershell"></a>Contenuto correlato (PowerShell)  
   
--   [Clustering and High-Availability (Clustering e disponibilità elevata)](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog - Blog del team di clustering di failover e bilanciamento del carico di rete)  
+-   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
   
 -   [Introduzione a Windows PowerShell in un cluster di failover](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -72,7 +76,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  Espandere **Servizi e applicazioni** e selezionare l'istanza del cluster di failover.  
   
-3.  Fare clic con il pulsante destro del mouse su **Risorsa di SQL Server** in **Altre risorse**, quindi, nel menu, selezionare **Proprietà**. Verrà aperta la finestra di dialogo **Proprietà** della risorsa di SQL Server.  
+3.  Fare clic con il pulsante destro del mouse su **Risorsa di SQL Server** in **Altre risorse**, quindi, nel menu, selezionare **Proprietà** . Verrà aperta la finestra di dialogo **Proprietà** della risorsa di SQL Server.  
   
 4.  Selezionare la scheda **Proprietà** , immettere il valore desiderato per la proprietà **FailureConditionLevel** , quindi fare clic su **OK** per applicare la modifica.  
   
@@ -88,8 +92,8 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)   
- [Criteri di failover per istanze del cluster di failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

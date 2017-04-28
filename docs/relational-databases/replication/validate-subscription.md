@@ -1,31 +1,35 @@
 ---
-title: "Convalida sottoscrizione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.validate.validateandresynch.f1"
-helpviewer_keywords: 
-  - "Convalida sottoscrizione - finestra di dialogo"
+title: Convalida sottoscrizione | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.validate.validateandresynch.f1
+helpviewer_keywords:
+- Validate Subscription dialog box
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ec35a68110b658b505cb47324118af557b95d6c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Convalida sottoscrizione
-  Utilizzare il **Convalida sottoscrizione** la finestra di dialogo per specificare che una sottoscrizione di una pubblicazione di tipo merge deve essere convalidata alla successiva esecuzione l'agente di Merge per la sottoscrizione. I risultati della convalida vengono visualizzati in Monitoraggio replica. Per altre informazioni, vedere [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
+# <a name="validate-subscription"></a>Convalida sottoscrizione
+  Utilizzare la finestra di dialogo **Convalida sottoscrizione** per specificare che una sottoscrizione di una pubblicazione di tipo merge deve essere convalidata alla successiva esecuzione dell'agente di merge per la sottoscrizione. I risultati della convalida vengono visualizzati in Monitoraggio replica. Per altre informazioni, vedere [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
- È inoltre possibile convalidare tutte le sottoscrizioni di una pubblicazione di tipo merge facendo clic su una pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e facendo clic su **convalida tutte le sottoscrizioni**.  
+ Per convalidare tutte le sottoscrizioni di una pubblicazione di tipo merge è inoltre possibile fare clic con il pulsante destro del mouse su una pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e scegliere **Convalida tutte le sottoscrizioni**.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Data ultimo tentativo di convalida**  
  Data dell'ultima sessione dell'agente di merge che prevedeva la convalida della sottoscrizione, indipendentemente dal fatto che la convalida sia stata completata o meno.  
   
@@ -36,9 +40,9 @@ caps.handback.revision: 19
  Selezionare questa opzione per convalidare la sottoscrizione.  
   
  **Opzioni**  
- Fare clic su accesso il **le opzioni di convalida sottoscrizione** nella finestra di dialogo che consente di specificare se utilizzare la convalida mediante conteggio delle righe o convalida mediante checksum binario.  
+ Fare clic su questo pulsante per accedere alla finestra di dialogo **Opzioni di convalida delle sottoscrizioni** nella quale è possibile specificare se utilizzare la convalida mediante il conteggio delle righe oppure la convalida mediante checksum binario.  
   
-## Vedere anche  
- [Convalida dei dati replicati](../../relational-databases/replication/validate-replicated-data.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Convalidare i dati replicati](../../relational-databases/replication/validate-replicated-data.md)  
   
   

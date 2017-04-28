@@ -1,22 +1,26 @@
 ---
-title: "Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello in cui una quantità limitata di dati attivi viene mantenuta in una tabella con ottimizzazione per la memoria, mentre i dati usati meno di frequente vengono elaborati su disco. In genere, si tratta di uno scenario in cui i dati vengono archiviati in base a una chiave **datetime** .  
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   Aggiungere la partizione attiva.  
   
- ![Cambio di partizione.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Cambio di partizione.")  
+ ![Cambio di partizione.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 Manutenzione dei dati attivi  
   
  Le azioni che iniziano con Deleting ActiveOrders devono essere eseguite durante una sessione di manutenzione per evitare che le query non rilevino i dati durante il periodo tra l'eliminazione dei dati e il passaggio alla tabella di gestione temporanea.  
   
  Per un esempio correlato, vedere [Partizionamento a livello di applicazione](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
   
-## Codice di esempio  
+## <a name="code-sample"></a>Codice di esempio  
  Nell'esempio seguente viene illustrato come utilizzare una tabella con ottimizzazione per la memoria con una tabella basata su disco partizionata. I dati utilizzati frequentemente vengono archiviati in memoria. Per salvare i dati su disco, creare una nuova partizione e copiare i dati nella tabella partizionata.  
   
  Nella prima parte di questo esempio vengono creati il database e gli oggetti necessari. Nella seconda parte di questo esempio viene illustrato come spostare i dati da una tabella con ottimizzazione per la memoria in una tabella partizionata.  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

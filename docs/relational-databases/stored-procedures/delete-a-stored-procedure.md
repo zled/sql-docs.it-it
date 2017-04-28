@@ -1,32 +1,36 @@
 ---
-title: "Eliminare una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rimozione di stored procedure"
-  - "stored procedure [SQL Server], eliminazione"
-  - "eliminazione di stored procedure"
+title: Eliminare una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing stored procedures
+- stored procedures [SQL Server], deleting
+- deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9f9d65d2521299d34188897fbbf5675b5c9eea4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare una stored procedure
+# <a name="delete-a-stored-procedure"></a>Eliminare una stored procedure
     
 ##  <a name="Top"></a> In questo argomento viene descritto come eliminare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **Eliminare una stored procedure con **  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 26
   
 6.  Rimuovere i riferimenti alla stored procedure da tutti gli oggetti e script dipendenti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modificare una stored procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Rinominare una stored procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

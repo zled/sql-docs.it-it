@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento Broker:Remote Message Ack | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Remote Message Ack - classe di evento"
+title: Classe di evento Broker:Remote Message Ack | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 747d421d4a9e6a86295ce843aa6c2b943bf006cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Broker:Remote Message Ack
+# <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Remote Message Ack** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia o riceve l'acknowledgement di un messaggio.  
   
-## Colonne di dati della classe di evento Broker:Remote Message Ack  
+## <a name="brokerremote-message-ack-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Remote Message Ack  
   
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -29,8 +33,8 @@ caps.handback.revision: 29
 |**BigintData1**|**bigint**|Numero di sequenza del messaggio che contiene l'acknowledgement.|52|No|  
 |**BigintData2**|**bigint**|Numero di sequenza del messaggio che contiene l'acknowledgement.|53|No|  
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
-|**DatabaseID**|**int**|ID del database specificato dall'istruzione USE *database*. oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Message Ack**, corrisponde sempre a **149**.|27|No|  
+|**DatabaseID**|**int**|ID del database specificato dall'istruzione USE *database* . oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Message Ack** , corrisponde sempre a **149**.|27|No|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento che offre maggiori informazioni su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Message With Acknowledgement Sent**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Acknowledgement Sent**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha inviato un acknowledgement al di fuori di un normale messaggio in sequenza.<br /><br /> **Message With Acknowledgement Received**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement come parte di un normale messaggio in sequenza.<br /><br /> **Acknowledgement Received**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha ricevuto un acknowledgement al di fuori di un messaggio in sequenza.|21|Sì|  
 |**GUID**|**uniqueidentifier**|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  

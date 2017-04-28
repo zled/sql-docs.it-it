@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, replica di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], monitoraggio"
-  - "SQLServer: replica del database"
-  - "contatori delle prestazioni [SQL Server], gruppi di disponibilità AlwaysOn"
-  - "gruppi di disponibilità [SQL Server], contatori delle prestazioni"
+title: SQL Server, Database Replica | Microsoft Docs
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- SQLServer:Database Replica
+- performance counters [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc96130b21ccef9c95dbe8172ef5ef4fc5185616
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, replica di database
+# <a name="sql-server-database-replica"></a>SQL Server, replica di database
   L'oggetto prestazioni **SQLServer:Database Replica** contiene contatori delle prestazioni che forniscono informazioni sui database secondari di un gruppo di disponibilità Always On in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo oggetto è valido solo su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica secondaria.  
   
 |Nome contatore|Descrizione|Contenuto in...|  
@@ -40,10 +44,11 @@ caps.handback.revision: 27
 |**Totale log per cui è necessario il rollback**|Kilobyte di log totali che devono essere annullati.|Replica secondaria|  
 |**Ritardo transazioni**|Periodo di attesa in millisecondi dell'acknowledgement per un commit senza terminazione.|Replica primaria|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, replica di disponibilità](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, oggetto di database](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

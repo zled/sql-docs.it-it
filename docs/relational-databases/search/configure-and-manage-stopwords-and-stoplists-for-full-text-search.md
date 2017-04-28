@@ -1,34 +1,126 @@
 ---
-title: "Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elenchi di parole non significative [ricerca full-text]"
-  - "ricerca full-text [SQL Server], elenco di parole non significative"
-  - "ricerca full-text [SQL Server], parole non significative"
-  - "parole non significative [ricerca full-text]"
-  - "ricerca full-text [SQL Server], parole non significative"
-  - "parole non significative [ricerca full-text]"
+title: Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stoplists [full-text search]
+- full-text search [SQL Server], stoplists
+- full-text search [SQL Server], noise words
+- noise words [full-text search]
+- full-text search [SQL Server], stopwords
+- stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4a16a24b197a9fd6a2d1c89f3af8a19b2d2d308d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
+# <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
   Per garantire l'efficienza di un indice full-text, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è dotato di un meccanismo che rimuove le stringhe più frequenti, inutili ai fini della ricerca. Queste stringhe scartate vengono denominate *parole non significative*. Durante la creazione dell'indice, il motore di ricerca full-text omette le parole non significative dall'indice full-text, in modo che le query full-text non eseguano ricerche in tali parole.  
+   
+**Parole non significative**. Una parola non significativa può essere una parola con un significato in una lingua specifica. Nella lingua italiana, ad esempio, parole quali "circa", "con", "devo" e "cui" vengono escluse dall'indice full-text poiché in pratica risultano inutili ai fini della ricerca. Una parola non significativa può anche essere un *token* che non ha un significato linguistico.  
+
+**Elenchi di parole non significative**. Le parole non significative vengono gestite nei database utilizzando oggetti denominati elenchi di parole non significative. Un *elenco di parole non significative* è un elenco che, quando associato a un indice full-text, viene applicato alle query full-text su tale indice.
+   
+## <a name="use-an-existing-stoplist"></a>Usare un elenco di parole non significative esistente  
+ È possibile usare un elenco di parole non significative esistente in uno dei modi seguenti:  
   
-##  <a name="understand"></a> Conoscenza delle parole non significative ed elenchi di parole non significative  
- Una parola non significativa può essere una parola con un significato in un linguaggio specifico o può essere un *token* che non dispone di significato linguistico. Nella lingua italiana, ad esempio, parole quali "circa", "con", "devo" e "cui" vengono escluse dall'indice full-text poiché in pratica risultano inutili ai fini della ricerca.  
+-   Usare l'elenco di parole non significative fornito dal sistema nel database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un elenco di parole non significative che contiene le parole non significative più comuni per ogni lingua supportata, ovvero per ogni lingua associata a word breaker specifici per impostazione predefinita. È possibile copiare l'elenco di parole non significative di sistema e personalizzarne una copia aggiungendone e rimuovendone alcune.  
   
+     L'elenco di parole non significative di sistema è installato nel database [Resource](../../relational-databases/databases/resource-database.md) .  
+  
+-   Usare un elenco di parole non significative personalizzato esistente da qualsiasi altro database nell'istanza del server corrente e quindi aggiungere ed eliminare le parole non significative in base alle specifiche esigenze.  
+  
+## <a name="create-a-new-stoplist"></a>Creare un nuovo elenco di parole non significative 
+### <a name="create-a-new-stoplist-with-transact-sql"></a>Creare un nuovo elenco di parole non significative con Transact-SQL
+Usare [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md).
+
+### <a name="create-a-new-stoplist-with-management-studio"></a>Creare un nuovo elenco di parole non significative con Management Studio
+  
+1.  In Esplora oggetti espandere il server.  
+  
+2.  Espandere **Database**, quindi espandere il database in cui si vuole creare l'elenco di parole non significative full-text.  
+  
+3.  Espandere **Archivio**, quindi fare clic con il pulsante destro del mouse su **Elenchi di parole non significative full-text**.  
+  
+4.  Selezionare **Nuovo elenco di parole non significative full-text**.  
+  
+5.  Immettere il nome del nuovo elenco.  
+  
+6.  Facoltativamente, specificare un altro utente come proprietario dell'elenco di parole non significative.  
+  
+7.  Selezionare una delle opzioni di creazione di un elenco di parole non significative seguenti:  
+  
+    -   **Creare un elenco di parole non significative vuoto**  
+  
+    -   **Creare un elenco di parole non significative da un elenco di parole non significative di sistema**  
+  
+    -   **Creare un elenco di parole non significative da un elenco di parole non significative full-text esistente**  
+  
+     Per altre informazioni, vedere [Nuovo elenco di parole non significative full-text &#40;pagina Generale&#41;](http://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+  
+8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+##  <a name="use-a-stoplist-in-full-text-queries"></a>Usare un elenco di parole non significative nelle query full-text  
+ Per usare un elenco di parole non significative nelle query, è necessario associarlo a un indice full-text. È possibile associare un elenco di parole non significative a un indice full-text quando si crea l'indice oppure è possibile modificare l'indice in seguito per aggiungere un elenco.  
+  
+### <a name="create-a-full-text-index-and-associate-a-stoplist-with-it"></a>Creare un indice full-text e associare un elenco di parole non significative
+Usare [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).
+  
+### <a name="associate-or-disassociate-a-stoplist-with-an-existing-full-text-index"></a>Associare o annullare l'associazione di un elenco di parole non significative a un indice full-text esistente
+Usare [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md). 
+  
+## <a name="change-the-stopwords-in-a-stoplist"></a>Modificare le parole non significative in un elenco  
+### <a name="add-or-drop-stopwords-from-a-stoplist-with-transact-sql"></a>Aggiungere o eliminare parole non significative in un elenco con Transact-SQL
+Usare [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md).
+  
+### <a name="add-or-drop-stopwords-from-a-stoplist-with-management-studio"></a>Aggiungere o eliminare parole non significative in un elenco con Management Studio  
+  
+1.  In Esplora oggetti espandere il server.  
+  
+2.  Espandere **Database**, quindi espandere il database.  
+  
+3.  Espandere **Archiviazione**, quindi selezionare **Elenco di parole non significative full-text**.  
+  
+4.  Fare clic con il pulsante destro del mouse sull'elenco di parole non significative che si vuole modificare, quindi scegliere **Proprietà**.  
+  
+5.  Nella finestra di dialogo [Proprietà elenco di parole non significative full-text](http://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
+  
+    1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Aggiungi parola non significativa**, **Elimina parola non significativa**, **Elimina tutte le parole non significative**o **Cancella elenco di parole non significative**.  
+  
+    2.  Se la casella di testo **Parola non significativa** è abilitata per l'azione selezionata, immettere una singola parola non significativa. Questa parola deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
+  
+    3.  Se la casella di riepilogo **Full-text language** è abilitata per l'azione selezionata, selezionare una lingua.  
+  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+## <a name="manage-stoplists-and-their-usage"></a>Gestire gli elenchi di parole non significative e il relativo utilizzo
+  
+### <a name="view-all-the-stopwords-in-a-stoplist"></a>Visualizzare tutte le parole non significative riunite in un elenco
+Usare [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md). 
+  
+### <a name="get-info-about-all-the-stoplists-in-the-current-database"></a>Ottenere informazioni su tutti gli elenchi di parole non significative nel database corrente
+Usare [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md) e [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md).
+  
+### <a name="view-the-tokenization-result-of-a-word-breaker-thesaurus-and-stoplist-combination"></a>Visualizzare il risultato della suddivisione in token di una combinazione di word breaker, thesaurus ed elenchi di parole non significative
+Usare [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).
+
+### <a name="suppress-an-error-message-if-stopwords-cause-a-boolean-operation-on-a-full-text-query-to-fail"></a>Eliminare un messaggio di errore visualizzato nel caso in cui le parole non significative impediscono l'esecuzione di un'operazione booleana in una query full-text
+Usare l'[opzione di configurazione del server transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md). 
+   
+## <a name="more-info-about-stopword-position"></a>Altre informazioni sulla posizione delle parole non significative
  Anche se ignora l'inclusione di parole non significative, l'indice full-text ne prende in considerazione la posizione. Si consideri ad esempio la frase "Istruzioni non valide per questi modelli Adventure Works Cycles". Nella tabella seguente viene illustrata la posizione delle parole nella frase:  
   
 |Word|Posizione|  
@@ -43,123 +135,11 @@ caps.handback.revision: 79
 |Works|8|  
 |modelli|9|  
   
- Le parole non significative "sono", "in" e "questi" nelle posizioni 2, 4 e 5 vengono escluse dall'indice full-text. Le relative informazioni di posizione vengono comunque mantenute, lasciando invariata la posizione delle altre parole nella frase.  
+ Le parole non significative "sono", "in" e "questi" nelle posizioni 2, 4 e 5 vengono escluse dall'indice full-text. Le relative informazioni di posizione vengono comunque mantenute, lasciando invariata la posizione delle altre parole nella frase.   
   
- Le parole non significative vengono gestite nei database utilizzando oggetti denominati elenchi di parole non significative. Un *elenco di parole non significative* è un elenco che, quando associato a un indice full-text, viene applicato alle query full-text su tale indice.  
-  
- [Contenuto dell'argomento](#TOP)  
-  
-##  <a name="creating"></a> Creazione di un elenco di parole non significative  
- È possibile creare un elenco di parole non significative in uno dei modi seguenti:  
-  
--   Utilizzando l'elenco di parole non significative fornito dal sistema nel database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'elenco di parole non significative di sistema contiene le parole non significative più comuni per ogni lingua supportata, ovvero per ogni lingua associata a word breaker specifici per impostazione predefinita. L'elenco di parole non significative contiene le parole non significative comuni per tutte le lingue supportate.  È possibile copiare l'elenco di parole non significative di sistema e personalizzarne una copia aggiungendone e rimuovendone alcune.  
-  
-     L'elenco di parole non significative di sistema è installato nel database [Resource](../../relational-databases/databases/resource-database.md).  
-  
--   Creando un elenco di parole non significative personalizzato, quindi aggiungendovi altre parole non significative per ogni lingua specificata. Se necessario, è inoltre possibile eliminare parole non significative dall'elenco.  
-  
--   Utilizzando un elenco di parole non significative personalizzato esistente da qualsiasi altro database nell'instanza del server corrente e successivamente aggiungendo ed eliminando le parole non significative in base alle specifiche esigenze.  
-  
- **Per creare un elenco di parole non significative**  
-  
--   [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)  
-  
-#### Per creare un elenco di parole non significative full-text in Management Studio  
-  
-1.  In Esplora oggetti espandere il server.  
-  
-2.  Espandere **Database**, quindi espandere il database in cui si vuole creare l'elenco di parole non significative full-text.  
-  
-3.  Espandere **Archivio**, quindi fare clic con il pulsante destro del mouse su **Elenchi di parole non significative full-text**.  
-  
-4.  Selezionare **Nuovo elenco di parole non significative full-text**.  
-  
-5.  Specificare il nome dell'elenco di parole non significative.  
-  
-6.  Facoltativamente, specificare un altro utente come proprietario dell'elenco di parole non significative.  
-  
-7.  Selezionare una delle opzioni di creazione di un elenco di parole non significative seguenti:  
-  
-    -   **Creare un elenco di parole non significative vuoto**  
-  
-    -   **Creare un elenco di parole non significative da un elenco di parole non significative di sistema**  
-  
-    -   **Creare un elenco di parole non significative da un elenco di parole non significative full-text esistente**  
-  
-     Per altre informazioni, vedere [Nuovo elenco di parole non significative full-text &#40;pagina Generale&#41;](../Topic/New%20Full-Text%20Stoplist%20\(General%20Page\).md).  
-  
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- **Per eliminare un elenco di parole non significative**  
-  
--   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)  
-  
- [Contenuto dell'argomento](#TOP)  
-  
-##  <a name="queries"></a> Utilizzo di un elenco di parole non significative nelle query full-text  
- Per utilizzare un elenco di parole non significative nelle query, è necessario associarlo a un indice full-text. È possibile associare un elenco di parole non significative a un indice full-text quando si crea l'indice oppure è possibile modificare l'indice in seguito per aggiungere un elenco.  
-  
- **Per creare un indice full-text e associare un elenco di parole non significative**  
-  
--   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
-  
- **Per associare o annullare l'associazione di un elenco di parole non significative a un indice full-text esistente**  
-  
--   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
-  
- **Per eliminare un messaggio di errore visualizzato nel caso in cui le parole non significative impediscono l'esecuzione di un'operazione booleana in una query full-text**  
-  
--   [Opzione di configurazione del server transform noise words Server](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
-  
- [Contenuto dell'argomento](#TOP)  
-  
-##  <a name="viewing"></a> Visualizzazione di elenchi di parole non significative e relativi metadati  
- **Per visualizzare tutte le parole non significative di un elenco**  
-  
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
-  
- **Per ottenere informazioni su tutti gli elenchi di parole non significative nel database corrente**  
-  
--   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
-  
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
-  
- **Per visualizzare il risultato della suddivisione in token di una combinazione di word breaker, thesaurus ed elenchi di parole non significative**  
-  
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)  
-  
- [Contenuto dell'argomento](#TOP)  
-  
-##  <a name="change"></a> Modifica delle parole non significative riunite in un elenco  
- **Per aggiungere o eliminare parole non significative in un elenco**  
-  
--   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)  
-  
-#### Per modificare le parole non significative in un elenco di parole non significative in Management Studio  
-  
-1.  In Esplora oggetti espandere il server.  
-  
-2.  Espandere **Database**, quindi espandere il database.  
-  
-3.  Espandere **Archiviazione**, quindi selezionare **Elenco di parole non significative full-text**.  
-  
-4.  Fare clic con il pulsante destro del mouse sull'elenco di parole non significative che si vuole modificare, quindi scegliere **Proprietà**.  
-  
-5.  Nella finestra di dialogo [Proprietà elenco di parole non significative full-text](../Topic/Full-Text%20Stoplist%20Properties.md):  
-  
-    1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Aggiungi parola non significativa**, **Elimina parola non significativa**, **Elimina tutte le parole non significative** o **Cancella elenco di parole non significative**.  
-  
-    2.  Se la casella di testo **Parola non significativa** è abilitata per l'azione selezionata, immettere una singola parola non significativa. Questa parola deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
-  
-    3.  Se la casella di riepilogo **Full-text language** è abilitata per l'azione selezionata, selezionare una lingua.  
-  
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- [Contenuto dell'argomento](#TOP)  
-  
-##  <a name="upgrade"></a> Aggiornamento delle parole non significative da SQL Server 2005  
+## <a name="upgrade-noise-words-from-sql-server-2005"></a>Aggiornare le parole non significative da SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Le parole non significative di  sono state sostituite. Quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file delle parole non significative non vengono più utilizzati. Tali file vengono tuttavia archiviati nella cartella FTDATA\ FTNoiseThesaurusBak e possono essere utilizzati in seguito durante l'aggiornamento o la compilazione di elenchi di parole non significative corrispondenti. Per informazioni sull'aggiornamento dei file delle parole non significative agli elenchi corrispondenti, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
- [Contenuto dell'argomento](#TOP)  
   
   
+

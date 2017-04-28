@@ -1,27 +1,31 @@
 ---
-title: "Destinazione di Event Tracing for Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "destinazione di Event Tracing for Windows"
-  - "destinazione ETW"
-  - "destinazioni [eventi estesi di SQL Server], destinazione di Event Tracing for Windows"
+title: Destinazione di Event Tracing for Windows| Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Destinazione di Event Tracing for Windows
+# <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Prima di utilizzare Event Tracing for Windows (ETW) come destinazione, è consigliabile acquisire familiarità con tale funzionalità. L'analisi ETW è utilizzata in abbinamento a Eventi estesi o come un consumer di eventi estesi. I collegamenti esterni seguenti rappresentano un punto iniziale per ottenere informazioni di base su ETW:  
@@ -37,7 +41,7 @@ caps.handback.revision: 13
   
  La configurazione degli eventi presente in una sessione ETW è controllata dal processo che ospita il motore di Eventi estesi. Il motore controlla gli eventi da generare e le condizioni che devono essere soddisfatte perché l'evento si verifichi.  
   
- Dopo avere eseguito un'associazione a una sessione di Eventi estesi, il che allega per la prima volta la destinazione ETW per la durata di un processo, la destinazione ETW apre una sola sessione ETW sul provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se una sessione ETW esiste già, la destinazione ETW ottiene un riferimento alla sessione esistente. Questa sessione ETW è condivisa in tutte le istanze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un dato computer. Questa sessione ETW riceve tutti gli eventi da sessioni che possiedono la destinazione ETW.  
+ Dopo avere eseguito un'associazione a una sessione di Eventi estesi, il che allega per la prima volta la destinazione ETW per la durata di un processo, la destinazione ETW apre una sola sessione ETW sul provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se una sessione ETW esiste già, la destinazione ETW ottiene un riferimento alla sessione esistente. Questa sessione ETW è condivisa in tutte le istanze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un dato computer. Questa sessione ETW riceve tutti gli eventi da sessioni che possiedono la destinazione ETW.  
   
  Poiché ETW ha bisogno che i provider siano abilitati per utilizzare gli eventi e trasmetterli verso il basso a ETW, tutti i pacchetti di Eventi estesi sono attivati nella sessione. Quando un evento è generato, la destinazione ETW invia l'evento alla sessione sulla quale è abilitato il provider per l'evento.  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 13
     > [!IMPORTANT]  
     >  Impossibile modificare il percorso del file dopo l'inizio della prima sessione.  
   
--   I file Managed Object Format (MOF) si trovano in *<percorso di installazione>\>*\Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
+-   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>*\Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
   
-## Aggiunta della destinazione a una sessione  
+## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione ETW a una sessione di Eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  
   
 ```  
@@ -88,8 +92,8 @@ ADD TARGET package0.etw_classic_sync_target
   
  Per altre informazioni su un esempio completo che mostra come usare la destinazione ETW e come visualizzare i dati, vedere [Monitorare l'attività del sistema mediante gli eventi estesi](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## Vedere anche  
- [Destinazioni degli eventi estesi di SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Destinazioni degli eventi estesi di SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

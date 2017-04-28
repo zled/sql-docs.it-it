@@ -1,32 +1,36 @@
 ---
-title: "Creazione, modifica ed eliminazione di indici spaziali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indici [SQL Server], creazione"
-  - "indici spaziali [SQL Server], eliminazione"
-  - "indici spaziali [SQL Server], creazione"
-  - "indici [SQL Server], eliminazione"
-  - "indici [SQL Server], modifica"
-  - "indici spaziali [SQL Server], modifica"
+title: Creare, modificare ed eliminare indici spaziali | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], creating
+- spatial indexes [SQL Server], dropping
+- spatial indexes [SQL Server], creating
+- indexes [SQL Server], dropping
+- indexes [SQL Server], modifying
+- spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57aebfb8b20a0e6c751deb4b9914f8122b3c3cd3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione, modifica ed eliminazione di indici spaziali
-  Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** (*colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
+# <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
+  Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** ( *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
   
- La creazione di indici spaziali è soggetta a un certo numero di limitazioni. Per altre informazioni, vedere [Restrizioni relative agli indici spaziali](#restrictions).  
+ La creazione di indici spaziali è soggetta a un certo numero di limitazioni. Per altre informazioni, vedere [Restrizioni relative agli indici spaziali](#restrictions) .  
   
 > [!NOTE]  
 >  Per informazioni sulla relazione degli indici spaziali con la partizione e i filegroup, vedere la sezione "Osservazioni" in [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
@@ -38,9 +42,9 @@ caps.handback.revision: 22
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
  **Per creare un indice spaziale tramite la finestra di dialogo Nuovo indice in Management Studio**  
- ##### Per creare un indice spaziale in Management Studio  
+ ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Per creare un indice spaziale in Management Studio  
   
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
 2.  Espandere **Database**, espandere il database che contiene la tabella con l'indice specificato e quindi espandere **Tabelle**.  
   
@@ -54,15 +58,15 @@ caps.handback.revision: 22
   
 7.  Per specificare la colonna spaziale che si vuole indicizzare, fare clic su **Aggiungi**.  
   
-8.  Nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* selezionare una colonna di tipo **geometry** o **geography** facendo clic sulla casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
+8.  Nella finestra di dialogo **Seleziona colonne da** *\<<nome tabella>* selezionare una colonna di tipo **geometry** o **geography** facendo clic sulla casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
   
-9. Verificare la selezione della colonna nella griglia **Colonne chiave indice**.  
+9. Verificare la selezione della colonna nella griglia **Colonne chiave indice** .  
   
 10. Nel riquadro **Selezione pagina** della finestra di dialogo **Proprietà indice** fare clic su **Spaziale**.  
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in una colonna di tipo **geometry** è necessario specificare le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica**, perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
+     Quando si crea un indice in una colonna di tipo **geometry** è necessario specificare le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Per un indice in una colonna del tipo **geography** i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico **Griglia geografica** , perché lo schema a mosaico della griglia geografica non usa un rettangolo di selezione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -75,10 +79,9 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Per creare un altro indice spaziale nella stessa colonna spaziale o in una colonna diversa, ripetere i passaggi precedenti.  
   
- [Contenuto dell'argomento](#TOP)  
   
  **Per creare un indice spaziale tramite Progettazione tabelle in Management Studio**  
- ##### Per creare un indice spaziale in Progettazione tabelle  
+ ##### <a name="to-create-a-spatial-index-in-table-designer"></a>Per creare un indice spaziale in Progettazione tabelle  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella per la quale si vuole creare un indice spaziale e scegliere **Progetta**.  
   
@@ -90,9 +93,8 @@ caps.handback.revision: 22
   
 4.  Nella finestra di dialogo **Indici spaziali** fare clic su **Aggiungi**.  
   
-5.  Selezionare il nuovo indice dall'elenco **Indice spaziale selezionato** e impostarne le proprietà nella griglia a destra. Per informazioni sulle proprietà, vedere [Finestra di dialogo Indici spaziali &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md).  
+5.  Selezionare il nuovo indice dall'elenco **Indice spaziale selezionato** e impostarne le proprietà nella griglia a destra. Per informazioni sulle proprietà, vedere [Finestra di dialogo Indici spaziali &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
- [Contenuto dell'argomento](#TOP)  
   
 ###  <a name="alter"></a> Per modificare un indice spaziale  
   
@@ -105,7 +107,6 @@ caps.handback.revision: 22
   
 -   [Spostare un indice esistente in un filegroup diverso](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
- [Contenuto dell'argomento](#TOP)  
   
 ###  <a name="drop"></a> Per eliminare un indice spaziale  
  **Per eliminare un indice spaziale tramite Transact-SQL**  
@@ -115,7 +116,7 @@ caps.handback.revision: 22
  [Eliminare un indice](../../relational-databases/indexes/delete-an-index.md)  
   
  **Per eliminare un indice spaziale tramite Progettazione tabelle in Management Studio**  
- ##### Per eliminare un indice spaziale in Progettazione tabelle  
+ ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Per eliminare un indice spaziale in Progettazione tabelle  
   
 1.  In Esplora oggetti, selezionare con il pulsante destro del mouse la tabella contenente l'indice spaziale da eliminare, quindi selezionare **Progetta**.  
   
@@ -123,18 +124,17 @@ caps.handback.revision: 22
   
 2.  Scegliere **Indice spaziale** dal menu **Progettazione tabelle**.  
   
-     Verrà visualizzata la finestra di dialogo **Indice spaziale**.  
+     Verrà visualizzata la finestra di dialogo **Indice spaziale** .  
   
-3.  Fare clic sull'indice da eliminare nella colonna **Indice spaziale selezionato**.  
+3.  Fare clic sull'indice da eliminare nella colonna **Indice spaziale selezionato** .  
   
 4.  Fare clic su **Elimina**.  
   
- [Contenuto dell'argomento](#TOP)  
   
 ##  <a name="restrictions"></a> Restrizioni relative agli indici spaziali  
  Un indice spaziale può essere creato solo in una colonna di tipo **geometry** o **geography**.  
   
-### Restrizioni per viste e tabelle  
+### <a name="table-and-view-restrictions"></a>Restrizioni per viste e tabelle  
  È possibile definire indici spaziali solo per una tabella con chiave primaria. Il numero massimo di colonne chiave primaria in una tabella è pari a 15.  
   
  La dimensione massima dei record di una chiave di indice è 895 byte. Dimensioni maggiori generano un errore.  
@@ -144,20 +144,19 @@ caps.handback.revision: 22
   
  Non è possibile specificare indici spaziali in viste indicizzate.  
   
-### Restrizioni relative a più indici spaziali  
+### <a name="multiple-spatial-index-restrictions"></a>Restrizioni relative a più indici spaziali  
  È possibile creare fino a 249 indici spaziali in ognuna delle colonne spaziali in una tabella supportata. La creazione di più di un indice spaziale nella stessa colonna spaziale può essere utile, ad esempio, per indicizzare parametri della suddivisione a mosaico diversi in una sola colonna.  
   
  È possibile creare solo un indice spaziale alla volta.  
   
-### Indici spaziali e parallelismo di processi  
+### <a name="spatial-indexes-and-process-parallelism"></a>Indici spaziali e parallelismo di processi  
  Per la compilazione di un indice è possibile utilizzare il parallelismo di processi disponibile.  
   
-### Restrizioni della versione  
- Non è possibile eseguire la replica di schemi a mosaico spaziali introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. È necessario usare schemi a mosaico spaziali [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per gli indici spaziali quando è necessario garantire la compatibilità con i database di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+### <a name="version-restrictions"></a>Restrizioni della versione  
+ Non è possibile eseguire la replica di schemi a mosaico spaziali introdotti in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. È necessario usare schemi a mosaico spaziali [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per gli indici spaziali quando è necessario garantire la compatibilità con i database di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
- [Contenuto dell'argomento](#TOP)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

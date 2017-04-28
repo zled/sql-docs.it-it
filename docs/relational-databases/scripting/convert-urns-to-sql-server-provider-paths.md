@@ -1,25 +1,29 @@
 ---
-title: "Conversione di URN in percorsi di provider di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Convertire URN in percorsi di provider di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63d9ec197bba3ad691fd0c92feec5c8c4e542426
+ms.lasthandoff: 04/11/2017
+
 ---
-# Conversione di URN in percorsi di provider di SQL Server
-  Il modello SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) consente di compilare URN (Uniform Resource Name) per gli oggetti. Ogni URN identifica in modo univoco un oggetto SMO e può essere convertito in un percorso di provider PowerShell per SQL Server con il cmdlet **Convert-UrnToPath**.  
+# <a name="convert-urns-to-sql-server-provider-paths"></a>Conversione di URN in percorsi di provider di SQL Server
+  Il modello SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) consente di compilare URN (Uniform Resource Name) per gli oggetti. Ogni URN identifica in modo univoco un oggetto SMO e può essere convertito in un percorso di provider PowerShell per SQL Server con il cmdlet **Convert-UrnToPath** .  
   
-## Conversione di URN in percorsi  
+## <a name="converting-urns-to-paths"></a>Conversione di URN in percorsi  
  Ciascun URN dispone delle stesse informazioni di un percorso dell'oggetto, ma in formato diverso. Ad esempio, di seguito è riportato il percorso di una tabella:  
   
  SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Address  
@@ -38,7 +42,7 @@ caps.handback.revision: 8
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni di query e Uniform Resource Name](../../powershell/query-expressions-and-uniform-resource-names.md)   
  [Provider PowerShell per SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

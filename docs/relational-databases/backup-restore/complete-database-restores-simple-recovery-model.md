@@ -1,28 +1,32 @@
 ---
-title: "Ripristini di database completi (modello di recupero con registrazione minima) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristini di database completi"
-  - "database [SQL Server], ripristini di database completi"
-  - "ripristino di database [SQL Server], database completi"
-  - "modello di recupero con registrazione minima [SQL Server]"
-  - "database [SQL Server], ripristino"
+title: Ripristini di database completi (modello di recupero con registrazione minima) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- simple recovery model [SQL Server]
+- restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d64038885f4344df3fc09c58038a724d5fd11aab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristini di database completi (modello di recupero con registrazione minima)
+# <a name="complete-database-restores-simple-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione minima)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   L'obiettivo di un ripristino completo del database è il ripristino dell'intero database. L'intero database è offline per la tutta la durata del ripristino. Prima che sia possibile portare online una o più parti del database, tutti i dati vengono recuperati fino a un punto coerente in cui tutte le parti del database sono aggiornate allo stesso punto nel tempo e non sono presenti transazioni di cui non è stato eseguito il commit.  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
  Il modello di recupero con registrazione minima non consente di ripristinare il database fino a uno specifico punto nel tempo all'interno di un determinato backup.  
   
 > [!IMPORTANT]  
->  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Questi database potrebbero contenere malware che può eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare inoltre il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
+>  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Questi database potrebbero contenere malware che può eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare anche il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
   
  **Contenuto dell'argomento**  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 58
 -   [Attività correlate](#RelatedTasks)  
   
 > [!NOTE]  
->  Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="Overview"></a> Panoramica del ripristino del database nel modello di recupero con registrazione minima  
- Se si utilizza il modello di recupero con registrazione minima, il ripristino completo del database richiede solo una o due istruzioni [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) , a seconda che si desideri o meno ripristinare un backup differenziale del database. Se si utilizza solo un backup di database completo, ripristinare unicamente il backup più recente come illustrato nella figura seguente.  
+ Se si utilizza il modello di recupero con registrazione minima, il ripristino completo del database richiede solo una o due istruzioni [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , a seconda che si desideri o meno ripristinare un backup differenziale del database. Se si utilizza solo un backup di database completo, ripristinare unicamente il backup più recente come illustrato nella figura seguente.  
   
  ![Ripristino solo di un backup completo del database](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Ripristino solo di un backup completo del database")  
   
@@ -54,14 +58,14 @@ caps.handback.revision: 58
 >  Se si prevede di ripristinare un backup del database in un'istanza del server diversa, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
- La sintassi di base di [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) per il ripristino di un backup di database completo è la seguente:  
+ La sintassi di base di [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) per il ripristino di un backup di database completo è la seguente:  
   
  RESTORE DATABASE *nome_database* FROM *dispositivo_backup* [ WITH NORECOVERY ]  
   
 > [!NOTE]  
 >  Utilizzare WITH NORECOVERY se si desidera ripristinare anche un backup differenziale del database.  
   
- La sintassi di base di [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) per il ripristino di un backup del database è la seguente:  
+ La sintassi di base di [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) per il ripristino di un backup del database è la seguente:  
   
  RESTORE DATABASE *nome_database* FROM *dispositivo_backup* WITH RECOVERY  
   
@@ -106,7 +110,7 @@ GO
   
 -   [Ripristino di un backup del database con SQL Server Management Studio](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Ripristino di un database in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
  **Per ripristinare un backup differenziale del database**  
   
@@ -116,8 +120,8 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## Vedere anche  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

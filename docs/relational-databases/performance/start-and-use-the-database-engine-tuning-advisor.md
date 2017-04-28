@@ -1,31 +1,35 @@
 ---
-title: "Avvio e utilizzo di Ottimizzazione guidata motore di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.workload.f1"
-  - "sql13.dta.general.f1"
-  - "sql13.dta.advancedtuningoptions.f1"
-  - "sql13.dta.tuningoptions.f1"
-  - "sql13.dta.progress.f1"
-  - "sql13.dta.options.f1"
-helpviewer_keywords: 
-  - "Ottimizzazione guidata motore di database [SQL Server], avvio"
+title: Avviare e usare Ottimizzazione guidata motore di database | Microsoft Docs
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.workload.f1
+- sql13.dta.general.f1
+- sql13.dta.advancedtuningoptions.f1
+- sql13.dta.tuningoptions.f1
+- sql13.dta.progress.f1
+- sql13.dta.options.f1
+helpviewer_keywords:
+- Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3bb44cd4e105c09fc84822cb75222a14ce39af5f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Avvio e utilizzo di Ottimizzazione guidata motore di database
+# <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
   In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inizializzare Ottimizzazione guidata motore di database  
@@ -37,27 +41,27 @@ caps.handback.revision: 31
   
 -   Utilizzare l'utilità **dta** per ottimizzare il primo carico di lavoro. Per ulteriori informazioni, vedere [Utilizzare l'utilità dta](#dta) , più avanti in questo argomento.  
   
-##  <a name="Start"></a> Avviare lo strumento Ottimizzazione guidata motore di database  
+##  <a name="Start"></a> Avviare Ottimizzazione guidata motore di database  
  Esistono diverse modalità per avviare l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database e supportare l'ottimizzazione dei database in vari scenari. Ottimizzazione guidata motore di database può essere avviato: dal menu **Start** , dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e dal menu **Strumenti** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Quando Ottimizzazione guidata motore di database viene avviato per la prima volta, viene visualizzata la finestra di dialogo **Connetti al server** in cui è possibile specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera connettersi.  
   
 > [!WARNING]  
 >  Non avviare Ottimizzazione guidata motore di database quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in modalità utente singolo. Se l'applicazione viene avviata mentre il server è in modalità utente singolo, verrà restituito un errore e Ottimizzazione guidata motore di database non verrà avviata. Per altre informazioni sulla modalità utente singolo, vedere [Avviare SQL Server in modalità utente singolo](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).  
   
-#### Per avviare Ottimizzazione guidata motore di database dal menu Start di Windows  
+#### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Per avviare Ottimizzazione guidata motore di database dal menu Start di Windows  
   
 1.  Nel menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server 2005**, **Strumenti per le prestazioni**e fare clic su **Ottimizzazione guidata motore di database**.  
   
-#### Per avviare Ottimizzazione guidata motore di database in SQL Server Management Studio  
+#### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Per avviare Ottimizzazione guidata motore di database in SQL Server Management Studio  
   
 1.  Scegliere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Strumenti** Strumenti **Ottimizzazione guidata motore di database**.  
   
-#### Per avviare Ottimizzazione guidata motore di database dall'Editor di query di SQL Server Management Studio  
+#### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Per avviare Ottimizzazione guidata motore di database dall'Editor di query di SQL Server Management Studio  
   
 1.  Aprire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 2.  Selezionare una query nello script [!INCLUDE[tsql](../../includes/tsql-md.md)] o selezionare l'intero script, fare clic con il pulsante destro del mouse sulla selezione e scegliere **Analizza query in Ottimizzazione guidata motore di database**. Viene aperta l'interfaccia utente grafica di Ottimizzazione guidata motore di database e lo script viene importato come file XML del carico di lavoro. Per ottimizzare le query [!INCLUDE[tsql](../../includes/tsql-md.md)] selezionate come carico di lavoro è possibile specificare un nome di sessione e le opzioni di ottimizzazione.  
   
-#### Per avviare Ottimizzazione guidata motore di database in SQL Server Profiler  
+#### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>Per avviare Ottimizzazione guidata motore di database in SQL Server Profiler  
   
 1.  Scegliere **Ottimizzazione guidata motore di database** dal menu **Strumenti**di SQL Server Profiler.  
   
@@ -65,6 +69,13 @@ caps.handback.revision: 31
  Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. In Ottimizzazione guidata motore di database questi carichi di lavoro vengono analizzati allo scopo di fornire indicazioni sugli indici o sulle strategie di partizionamento che consentono di migliorare le prestazioni di esecuzione delle query nel server.  
   
  È possibile creare un carico di lavoro con uno dei metodi seguenti:  
+  
+-   Usare [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) come carico di lavoro. In questo modo, è possibile evitare di dover creare manualmente un carico di lavoro. Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).  
+
+      ||  
+      |-|  
+      |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+
   
 -   Utilizzare la cache dei piani come carico di lavoro. In questo modo, è possibile evitare di dover creare manualmente un carico di lavoro. Per ulteriori informazioni, vedere [Ottimizzare un database](#Tune) di seguito in questo argomento.  
   
@@ -117,10 +128,10 @@ caps.handback.revision: 31
   
  È inoltre possibile utilizzare la versione **Starting** degli eventi di traccia, ad esempio, **SQL:BatchStarting**. La versione **Completed** tuttavia include la colonna **Duration** che consente un'ottimizzazione più efficiente del carico di lavoro. Ottimizzazione guidata motore di database non supporta l'ottimizzazione di altri tipi di eventi di traccia. Per ulteriori informazioni su questi eventi di traccia, vedere [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) e [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md). Per informazioni sull'uso di stored procedure di Traccia SQL per la creazione di un carico di lavoro di file di traccia, vedere [Creare una traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-### Carichi di lavoro di file o tabella di traccia che includono la colonna di dati LoginName  
+### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>Carichi di lavoro di file o tabella di traccia che includono la colonna di dati LoginName  
  Ottimizzazione guidata motore di database inoltra le richieste Showplan come parte del processo di ottimizzazione. Quando una tabella o file di traccia che include la colonna di dati **LoginName** viene utilizzata come carico di lavoro, Ottimizzazione guidata motore di database rappresenta l'utente specificato in **LoginName**. Se tale utente non dispone dell'autorizzazione SHOWPLAN, che consente di eseguire e generare Showplan per le istruzioni incluse nella traccia, Ottimizzazione guidata motore di database non eseguirà l'ottimizzazione di queste istruzioni.  
   
-##### Per evitare di concedere l'autorizzazione SHOWPLAN a ogni utente specificato nella colonna LoginName della traccia  
+##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>Per evitare di concedere l'autorizzazione SHOWPLAN a ogni utente specificato nella colonna LoginName della traccia  
   
 1.  Ottimizzare il carico di lavoro del file o della tabella di traccia. Per ulteriori informazioni, vedere [Ottimizzare un database](#Tune) di seguito in questo argomento.  
   
@@ -130,7 +141,7 @@ caps.handback.revision: 31
   
 4.  Ripetere l'inoltro del nuovo carico di lavoro senza la colonna **LoginName** a Ottimizzazione guidata motore di database.  
   
- Ottimizzazione guidata motore di database eseguirà l'ottimizzazione del nuovo carico di lavoro dato che le informazioni di accesso non sono specificate nella traccia. Se **LoginName** non esiste per un'istruzione, Ottimizzazione guidata motore di database ottimizza l'istruzione rappresentando l'utente che ha avviato la sessione di ottimizzazione, ovvero un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner**.  
+ Ottimizzazione guidata motore di database eseguirà l'ottimizzazione del nuovo carico di lavoro dato che le informazioni di accesso non sono specificate nella traccia. Se **LoginName** non esiste per un'istruzione, Ottimizzazione guidata motore di database ottimizza l'istruzione rappresentando l'utente che ha avviato la sessione di ottimizzazione, ovvero un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** .  
   
 ##  <a name="Tune"></a> Ottimizzare un database  
  Per ottimizzare un database è possibile utilizzare la GUI o l'utilità da riga di comando **dta** di Ottimizzazione guidata motore di database.  
@@ -138,8 +149,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Prima di utilizzare una tabella di traccia come carico di lavoro per Ottimizzazione guidata motore di database, verificare che la traccia non sia più in esecuzione. Ottimizzazione guidata motore di database non consente di utilizzare come carico di lavoro una tabella di traccia nella quale è ancora in corso la scrittura di eventi di traccia.  
   
-### Utilizzare l'interfaccia utente grafica di Ottimizzazione guidata motore di database  
+### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Utilizzare l'interfaccia utente grafica di Ottimizzazione guidata motore di database  
  Nell'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database è possibile ottimizzare un database tramite la cache dei piani, i file o le tabelle del carico di lavoro. È possibile utilizzare GUI di Ottimizzazione guidata motore di database per visualizzare in modo semplice i risultati delle sessioni di ottimizzazione corrente e precedenti. Per ulteriori informazioni sulle opzioni dell'interfaccia utente, vedere [Descrizioni dell'interfaccia utente](#UI) più avanti in questo argomento. Per altre informazioni sull'utilizzo dell'output dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+
+####  <a name="PlanCache"></a> Per ottimizzare un database tramite l'archivio query
+Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
   
 ####  <a name="PlanCache"></a> Per ottimizzare un database tramite la cache dei piani  
   
@@ -166,9 +180,9 @@ caps.handback.revision: 31
     -   **Arresta analisi** per arrestare la sessione di ottimizzazione senza che vengano generate indicazioni.  
   
 > [!NOTE]  
->  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)**, Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
+>  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)** , Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
   
-##### Per ottimizzare un database utilizzando un file o una tabella del carico di lavoro come input  
+##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Per ottimizzare un database utilizzando un file o una tabella del carico di lavoro come input  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -208,7 +222,7 @@ caps.handback.revision: 31
     -   **Arresta analisi** per arrestare la sessione di ottimizzazione senza che vengano generate indicazioni.  
   
 > [!NOTE]  
->  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)**, Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
+>  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)** , Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
   
 ###  <a name="dta"></a> Utilizzare l'utilità dta  
  L'utilità [dta](../../tools/dta/dta-utility.md) fornisce un file eseguibile dal prompt dei comandi che consente di ottimizzare i database utilizzando le funzionalità di Ottimizzazione guidata motore di database in file batch e script. L'utilità **può essere utilizzato con l'interfaccia grafica di Ottimizzazione guidata motore di database e mediante l'utilità del prompt dei comandi** utilizza le voci della cache dei piani, i file di traccia, le tabelle di traccia e gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] come carichi di lavoro. Utilizza inoltre l'input XML conforme a XML Schema di Ottimizzazione guidata motore di database, disponibile presso il [sito Web di Microsoft specificato](http://go.microsoft.com/fwlink/?linkid=43100).  
@@ -223,9 +237,9 @@ caps.handback.revision: 31
   
  Per ulteriori informazioni sulla sintassi e per esempi dell'utilità **dta** , vedere [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### Per ottimizzare un database tramite la cache dei piani  
+##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Per ottimizzare un database tramite la cache dei piani  
   
-1.  Specificare l'opzione **-ip**. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati.  
+1.  Specificare l'opzione **-ip** . Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati.  
   
      Dal prompt dei comandi digitare quanto segue:  
   
@@ -239,13 +253,13 @@ caps.handback.revision: 31
     dta -E -D DatabaseName -ip –n 2000-s SessionName1  
     ```  
   
-3.  Per analizzare eventi per tutti i database nell'istanza, specificare l'opzione **-ipf**.  
+3.  Per analizzare eventi per tutti i database nell'istanza, specificare l'opzione **-ipf** .  
   
     ```  
     dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
     ```  
   
-##### Per ottimizzare un database utilizzando un carico di lavoro e le impostazioni predefinite dell'utilità dta  
+##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Per ottimizzare un database utilizzando un carico di lavoro e le impostazioni predefinite dell'utilità dta  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -261,7 +275,7 @@ caps.handback.revision: 31
   
      Le quattro opzioni illustrate (nome del database, carico di lavoro, tipo di connessione e nome della sessione) sono obbligatorie.  
   
-##### Per ottimizzare un database remoto o un'istanza denominata per un periodo di tempo specifico  
+##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Per ottimizzare un database remoto o un'istanza denominata per un periodo di tempo specifico  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -274,9 +288,9 @@ caps.handback.revision: 31
     -U LoginID -P Password -s SessionName -A TuningTimeInMinutes  
     ```  
   
-     dove `-S` specifica il nome e l'istanza di un server remoto (o un'istanza denominata nel server locale) e `-D` specifica il nome del database da ottimizzare. L'opzione `-it` specifica il nome della tabella del carico di lavoro, `-U` e `-P` specificano l'ID e la password di accesso al database remoto, `-s` specifica il nome della sessione di ottimizzazione e `-A` specifica la durata della sessione di ottimizzazione espressa in minuti. La durata di ottimizzazione predefinita dell'utilità **dta** è 8 ore. Per impostare una durata illimitata per l'ottimizzazione di un carico di lavoro eseguita da Ottimizzazione guidata motore di database, specificare **0** (zero) tramite l'opzione `-A`.  
+     dove `-S` specifica il nome e l'istanza di un server remoto (o un'istanza denominata nel server locale) e `-D` specifica il nome del database da ottimizzare. L'opzione `-it` specifica il nome della tabella del carico di lavoro, `-U` e `-P` specificano l'ID e la password di accesso al database remoto, `-s` specifica il nome della sessione di ottimizzazione e `-A` specifica la durata della sessione di ottimizzazione espressa in minuti. La durata di ottimizzazione predefinita dell'utilità **dta** è 8 ore. Per impostare una durata illimitata per l'ottimizzazione di un carico di lavoro eseguita da Ottimizzazione guidata motore di database, specificare **0** (zero) tramite l'opzione `-A` .  
   
-##### Per ottimizzare un database tramite un file di input XML  
+##### <a name="to-tune-a-database-using-an-xml-input-file"></a>Per ottimizzare un database tramite un file di input XML  
   
 1.  Stabilire quali funzionalità del database (indici, viste indicizzate, partizionamento) si desidera aggiungere, rimuovere o mantenere durante l'analisi eseguita con Ottimizzazione guidata motore di database.  
   
@@ -295,7 +309,7 @@ caps.handback.revision: 31
 5.  Dopo che l'utilità ha completato l'ottimizzazione del carico di lavoro, è possibile visualizzare i risultati delle sessioni tramite la GUI di Ottimizzazione guidata motore di database. In alternativa, è possibile specificare tramite l'opzione **-ox** che le indicazioni relative all'ottimizzazione verranno scritte in un file XML. Per altre informazioni, vedere [dta Utility](../../tools/dta/dta-utility.md).  
   
 ##  <a name="XMLInput"></a> Creare un file di input XML  
- Gli sviluppatori XML esperti possono creare file XML utilizzabili per l'ottimizzazione dei carichi di lavoro tramite Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per creare questi file XML, utilizzare gli strumenti XML desiderati per modificare un file di esempio o per generare un'istanza in base all'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Gli sviluppatori XML esperti possono creare file XML utilizzabili per l'ottimizzazione dei carichi di lavoro tramite Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Per creare questi file XML, utilizzare gli strumenti XML desiderati per modificare un file di esempio o per generare un'istanza in base all'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è disponibile nella directory di installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel percorso seguente:  
   
@@ -305,7 +319,7 @@ caps.handback.revision: 31
   
  in cui sono disponibili molti XML Schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Scorrere la pagina verso il basso fino a visualizzare la riga corrispondente a Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-#### Per creare un file input XML per l'ottimizzazione di carichi di lavoro  
+#### <a name="to-create-an-xml-input-file-to-tune-workloads"></a>Per creare un file input XML per l'ottimizzazione di carichi di lavoro  
   
 1.  Creare un carico di lavoro. A tale scopo è possibile utilizzare un file o una tabella di traccia tramite il modello di ottimizzazione di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]oppure creare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] che riproduca un carico di lavoro rappresentativo per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Creare un carico di lavoro](#Create) più indietro in questo argomento.  
   
@@ -313,7 +327,7 @@ caps.handback.revision: 31
   
     -   Copiare e incollare nell'editor XML preferito uno degli [Esempi di file di input XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md). Modificare i valori degli argomenti in modo appropriato per l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso e quindi salvare il file XML.  
   
-    -   Utilizzando lo strumento XML desiderato, generare un'istanza in base all'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+    -   Utilizzando lo strumento XML desiderato, generare un'istanza in base all'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 3.  Usare il file input XML creato come input dell'utilità da riga di comando **dta** per ottimizzare il carico di lavoro. Per informazioni sull'utilizzo di file di input di XML con questa utilità, vedere la sezione [Utilizzare l'utilità dta](#dta) più indietro in questo argomento.  
   
@@ -322,17 +336,17 @@ caps.handback.revision: 31
   
 ##  <a name="UI"></a> Descrizioni dell'interfaccia utente  
   
-### Menu Strumenti/Pagina Opzioni  
+### <a name="tools-menuoptions-page"></a>Menu Strumenti/Pagina Opzioni  
  Utilizzare questa finestra di dialogo per specificare i parametri di configurazione generale di Ottimizzazione guidata motore di database.  
   
  **All'avvio**  
- Consente di specificare l'operazione che deve essere eseguita da Ottimizzazione guidata motore di database all'avvio, ovvero avvio senza connessione al database, visualizzazione di una finestra di dialogo **Nuova connessione**, visualizzazione di una nuova sessione oppure caricamento dell'ultima sessione caricata.  
+ Consente di specificare l'operazione che deve essere eseguita da Ottimizzazione guidata motore di database all'avvio, ovvero avvio senza connessione al database, visualizzazione di una finestra di dialogo **Nuova connessione** , visualizzazione di una nuova sessione oppure caricamento dell'ultima sessione caricata.  
   
  **Modifica carattere**  
  Consente di specificare il tipo di carattere utilizzato nelle tabelle di Ottimizzazione guidata motore di database.  
   
  **Numero degli elementi negli elenchi degli ultimi elementi utilizzati**  
- Consente di specificare il numero di sessioni o file da visualizzare sotto la voce **Sessioni recenti** o **File recenti** del menu **File**.  
+ Consente di specificare il numero di sessioni o file da visualizzare sotto la voce **Sessioni recenti** o **File recenti** del menu **File** .  
   
  **Memorizza le ultime opzioni di ottimizzazione specificate**  
  Consente di mantenere le impostazioni delle opzioni di ottimizzazione tra più sessioni. L'opzione è selezionata per impostazione predefinita. Deselezionare questa casella di controllo per avviare ogni sessione con i valori predefiniti di Ottimizzazione guidata motore di database.  
@@ -343,7 +357,7 @@ caps.handback.revision: 31
  **Richiedi conferma prima di arrestare l'analisi della sessione**  
  Consente di visualizzare una finestra di dialogo di conferma prima di arrestare l'analisi di un carico di lavoro.  
   
-#### Opzioni della scheda Generale  
+#### <a name="general-tab-options"></a>Opzioni della scheda Generale  
  Prima di avviare una sessione di ottimizzazione è necessario configurare i campi contenuti nella scheda **Generale** , Non è necessario modificare le impostazioni contenute nella scheda **Opzioni di ottimizzazione** prima di avviare una sessione di ottimizzazione.  
   
  **Nome sessione**  
@@ -387,7 +401,7 @@ database_name.owner_name.table_name
  **Selezionare i database e le tabelle da ottimizzare**  
  Consente di specificare i database e le tabelle da ottimizzare. Per specificare tutti i database, selezionare la casella di controllo nell'intestazione della colonna **Nome** . Per specificare solo determinati database, selezionare le caselle di controllo accanto ai nomi dei database desiderati. Per impostazione predefinita, tutte le tabelle per i database selezionati vengono incluse automaticamente nella sessione di ottimizzazione. Per escludere determinate tabelle, fare clic sulla freccia nella colonna **Tabelle selezionate** e quindi deselezionare le caselle di controllo accanto alle tabelle che non si desidera ottimizzare.  
   
- Freccia in giù **Tabelle selezionate**  
+ Freccia in giù**Tabelle selezionate**   
  Consente di espandere l'elenco delle tabelle in cui è possibile selezionare singole tabelle per l'ottimizzazione.  
   
  **Salva log di ottimizzazione**  
@@ -396,7 +410,7 @@ database_name.owner_name.table_name
 > [!NOTE]  
 >  Le informazioni delle righe relative alle tabelle visualizzate nella scheda **Generale** non vengono aggiornate automaticamente in Ottimizzazione guidata motore di database. A tale scopo vengono utilizzati invece i metadati del database. Se si ritiene che le informazioni delle righe siano obsolete, eseguire il comando DBCC UPDATEUSAGE per i relativi oggetti.  
   
-##### Scheda Opzioni di ottimizzazione  
+##### <a name="tuning-tab-options"></a>Scheda Opzioni di ottimizzazione  
  La scheda **Opzioni di ottimizzazione** consente di modificare le impostazioni predefinite delle opzioni di ottimizzazione generali. Non è necessario modificare le impostazioni contenute nella scheda **Opzioni di ottimizzazione** prima di avviare una sessione di ottimizzazione.  
   
  **Limita tempo di ottimizzazione**  
@@ -433,7 +447,7 @@ database_name.owner_name.table_name
  Utilizzare questa opzione per generare solo indicazioni che consentono al server di rimanere online.  
   
  **Data e ora arresto**  
- Consente di specificare la data e l'ora di arresto dell'Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Consente di specificare la data e l'ora di arresto dell'Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  **Indici e viste indicizzate**  
  Selezionare questa casella per includere indicazioni per l'aggiunta di indici cluster, indici non cluster e viste indicizzate.  
@@ -477,7 +491,7 @@ database_name.owner_name.table_name
  **Mantieni partizionamento allineato**  
  Vengono mantenute le strutture di partizionamento attualmente allineate, ma viene consigliata l'eliminazione delle viste indicizzate, degli indici e delle partizioni non allineate non necessari. Qualsiasi partizionamento aggiuntivo consigliato verrà allineato allo schema di partizione corrente.  
   
-###### Opzioni della scheda Stato  
+###### <a name="progress-tab-options"></a>Opzioni della scheda Stato  
  La scheda **Stato** dell'Ottimizzazione guidata motore di database viene visualizzata dopo che l'Ottimizzazione guidata motore di database ha iniziato l'analisi di un carico di lavoro.  
   
  Per arrestare la sessione di ottimizzazione una volta avviata, scegliere una delle opzioni seguenti dal menu **Azioni** :  
@@ -504,8 +518,9 @@ database_name.owner_name.table_name
  **Log di ottimizzazione**  
  Include informazioni sulla sessione di ottimizzazione corrente. Per stampare il log fare clic con il pulsante destro del mouse sul log e quindi scegliere **Stampa**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [Utilità dta](../../tools/dta/dta-utility.md)  
+ [dta Utility](../../tools/dta/dta-utility.md)  
   
   
+

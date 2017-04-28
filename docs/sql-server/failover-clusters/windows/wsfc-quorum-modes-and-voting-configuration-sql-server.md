@@ -1,27 +1,31 @@
 ---
-title: "Modalit&#224; quorum WSFC e configurazione del voto (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], cluster WSFC"
-  - "quorum [SQL Server], AlwaysOn e quorum WSFC"
-  - "clustering di failover [SQL Server], gruppi di disponibilità AlwaysOn"
+title: "Modalità quorum WSFC e configurazione del voto (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modalit&#224; quorum WSFC e configurazione del voto (SQL Server)
-  Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], sia le istanze del cluster di failover Always On usano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata Always On, nonché per risolverne i problemi.  
+# <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
+  Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , sia le istanze del cluster di failover Always On usano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata Always On, nonché per risolverne i problemi.  
   
  **Contenuto dell'argomento:**  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 14
 > [!IMPORTANT]  
 >  Se un cluster WSFC viene impostato offline a causa di un errore del quorum, è necessario l'intervento manuale per reimpostare online il cluster.  
 >   
->  Per altre informazioni, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Per altre informazioni, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)periodico.  
   
 ##  <a name="QuorumModes"></a> Modalità quorum  
  Viene impostata una *modalità quorum* al livello del cluster WSFC che specifica la metodologia utilizzata per i voti quorum.  L'utilità Gestione cluster di failover specifica una modalità quorum consigliata basata sul numero di nodi nel cluster.  
@@ -113,7 +117,7 @@ caps.handback.revision: 14
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espone diverse DMW (viste a gestione dinamica) di sistema che semplificano la gestione delle impostazioni correlate alla configurazione del cluster WSFC e dei voti quorum dei nodi.  
 >   
->  Per altre informazioni, vedere [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
+>  Per altre informazioni, vedere  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -125,14 +129,15 @@ caps.handback.revision: 14
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Quorum vote configuration check in Always On Availability Group Wizards (Controllo della configurazione di voto quorum nelle procedure guidate dei gruppi di disponibilità Always On)](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/03/13/quorum-vote-configuration-check-in-Always%20On-availability-group-wizards-andy-jing.aspx)  
+-   [Quorum vote configuration check in Always On Availability Group Wizards (Controllo della configurazione di voto quorum nelle procedure guidate dei gruppi di disponibilità Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
 -   [Tecnologie di Windows Server: cluster di failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
 -   [Guida dettagliata al cluster di failover: configurazione del quorum in un cluster di failover](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
+

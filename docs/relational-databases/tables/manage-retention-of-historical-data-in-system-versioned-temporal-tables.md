@@ -1,23 +1,27 @@
 ---
-title: "Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le tabelle temporali con controllo delle versioni di sistema consentono alla tabella di cronologia di aumentare le dimensioni del database in modo superiore rispetto alle tabelle normali, in particolare se si verificano le condizioni seguenti:  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
   
  Una tabella di cronologia di grandi dimensioni e in continua crescita può costituire un problema, a causa dei semplici costi di archiviazione e dell'impatto sulle prestazioni delle query temporali. Lo sviluppo dei criteri di conservazione dei dati per la gestione dei dati nella tabella di cronologia è quindi un aspetto importante della pianificazione e della gestione del ciclo di vita di ogni tabella temporale.  
   
-## Gestione della conservazione dei dati per la tabella di cronologia  
+## <a name="data-retention-management-for-history-table"></a>Gestione della conservazione dei dati per la tabella di cronologia  
  Per gestire la conservazione dei dati della tabella temporale, è prima di tutto necessario determinare il periodo di conservazione obbligatorio per ogni tabella temporale. Nella maggior parte dei casi, i criteri di conservazione devono essere considerati come parte della logica di business dell'applicazione che usa le tabelle temporali. Ad esempio, le applicazioni negli scenari di controllo dei dati e di spostamento cronologico prevedono requisiti rigorosi a livello di durata della disponibilità dei dati cronologici per le query online.  
   
  Dopo avere determinato il periodo di conservazione dei dati, è necessario sviluppare un piano per la gestione dei dati cronologici, per la modalità e la posizione di archiviazione dei dati cronologici e per l'eliminazione dei dati cronologici precedenti ai requisiti di conservazione. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]offre i tre approcci seguenti per la gestione dei dati cronologici nella tabella di cronologia temporale:  
@@ -41,11 +45,11 @@ caps.handback.revision: 23
   
  In ogni approccio la logica per la migrazione o la pulizia dei dati cronologici è basata sulla colonna che corrisponde alla fine del periodo nella tabella corrente. Il valore relativo alla fine del periodo per ogni riga determina il momento in cui la versione della riga diventa "chiusa", ovvero quando viene inserita nella tabella di cronologia. Ad esempio, la condizione `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifica che i dati cronologici più vecchi di un mese devono essere rimossi o spostati dalla tabella di cronologia.  
   
-> **NOTA:** gli esempi in questo argomento usano questo [esempio di tabella temporale](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **NOTA:**  gli esempi in questo argomento usano questo [esempio di tabella temporale](https://msdn.microsoft.com/library/mt590957.aspx).  
   
-## Uso dell'approccio con Estensione database  
+## <a name="using-stretch-database-approach"></a>Uso dell'approccio con Estensione database  
   
-> **NOTA:** l'approccio con Estensione database si applica solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **NOTA:**  l'approccio con Estensione database si applica solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Estensione database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esegue la migrazione dei dati cronologici in modo trasparente in Azure. Per una maggiore sicurezza, è possibile crittografare i dati in transito usando la funzionalità [Crittografia sempre attiva](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) di SQL Server. È anche possibile usare la [sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) e altre funzionalità avanzate per la sicurezza di SQL Server con Estensione database e un database temporale per proteggere i dati.  
   
@@ -62,26 +66,26 @@ caps.handback.revision: 23
   
  È possibile configurare una tabella di cronologia temporale per l'estensione usando la procedura guidata per l'estensione o Transact-SQL ed è possibile abilitare una tabella di cronologia temporale per l'estensione se il controllo delle versioni di sistema è **attivato**. L'estensione della tabella corrente non è consentita perché si tratta di un'operazione superflua.  
   
-### Uso della procedura guidata per l'estensione per estendere l'intera tabella di cronologia  
- Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Uso della procedura guidata per l'estensione per estendere l'intera tabella di cronologia  
+ Il metodo più semplice per i principianti consiste nell'usare la procedura guidata per l'estensione per abilitare l'estensione per l'intero database e quindi selezionare la tabella di cronologia temporale all'interno della procedura guidata per l'estensione. Questo esempio presuppone che la tabella Department sia stata configurata come tabella temporale con controllo delle versioni di sistema in un database altrimenti vuoto. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]non è possibile fare clic con il pulsante destro del mouse sulla tabella di cronologia temporale stessa e scegliere Estendi.  
   
-1.  Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, quindi **Estendi** e infine **** per avviare la procedura guidata.  
+1.  Fare clic con il pulsante destro del mouse sul database e scegliere **Attività**, quindi **Estendi**e infine **** per avviare la procedura guidata.  
   
 2.  Nella finestra **Selezionare le tabelle** selezionare la casella di controllo della tabella di cronologia temporale e quindi fare clic su Avanti.  
   
-     ![Selecting the history table on the Select tables page](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecting the history table on the Select tables page")  
+     ![Selezione della tabella di cronologia nella pagina Selezione tabelle](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selezione della tabella di cronologia nella pagina Selezione tabelle")  
   
-3.  Nella finestra **Configura Azure** specificare le proprie credenziali di accesso. Accedere a Microsoft Azure o iscriversi per ottenere un account. Selezionare la sottoscrizione da usare e l'area di Azure. Creare quindi un nuovo server o selezionare un server esistente. Scegliere **Avanti**.  
+3.  Nella finestra **Configura Azure** specificare le proprie credenziali di accesso. Accedere a Microsoft Azure o iscriversi per ottenere un account. Selezionare la sottoscrizione da usare e l'area di Azure. Creare quindi un nuovo server o selezionare un server esistente. Fare clic su **Avanti**.  
   
-     ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+     ![Creare un nuovo server di Azure - Procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-4.png "Creare un nuovo server di Azure - Procedura guidata Estensione database")  
   
 4.  Nella finestra **Credenziali protette** specificare una password per la chiave master del database per proteggere le credenziali del database SQL Server di origine e quindi fare clic su Avanti.  
   
-     ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+     ![Pagina Credenziali protette della procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-6.png "Pagina Credenziali protette della procedura guidata Estensione database")  
   
 5.  Nella finestra **Selezionare l'indirizzo IP** specificare l'intervallo di indirizzi IP per SQL Server per consentire al server di Azure di comunicare con SQL Server. Se si seleziona un server esistente per cui esiste già una regola del firewall, è qui sufficiente fare clic su Avanti per usare tale regola. Fare clic su **Avanti** e quindi su **Fine** per abilitare Estensione database ed estendere la tabella di cronologia temporale.  
   
-     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+     ![Pagina Selezionare l'indirizzo IP della procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-7.png "Pagina Selezionare l'indirizzo IP della procedura guidata Estensione database")  
   
 6.  Al termine della procedura guidata, verificare che il database sia stato abilitato per l'estensione. Notare le icone in Esplora oggetti che indicano che il database è stato esteso.  
   
@@ -95,15 +99,15 @@ caps.handback.revision: 23
   
 -   [Abilitare Estensione database per una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### Uso di Transact-SQL per estendere l'intera tabella di cronologia  
- È anche possibile usare Transact-SQL per abilitare l'estensione sul server locale e [abilitare Estensione database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). È quindi possibile [usare Transact-SQL per abilitare Estensione database in una tabella](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Con un database già abilitato per l'estensione, eseguire lo script di Transact-SQL seguente per estendere una tabella di cronologia temporale con controllo delle versioni di sistema esistente:  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Uso di Transact-SQL per estendere l'intera tabella di cronologia  
+ È anche possibile usare Transact-SQL per abilitare l'estensione sul server locale e [abilitare Estensione database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). È quindi possibile  [usare Transact-SQL per abilitare Estensione database in una tabella](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Con un database già abilitato per l'estensione, eseguire lo script di Transact-SQL seguente per estendere una tabella di cronologia temporale con controllo delle versioni di sistema esistente:  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### Uso di Transact-SQL per estendere una parte della tabella di cronologia  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Uso di Transact-SQL per estendere una parte della tabella di cronologia  
  Per estendere solo una parte della tabella di cronologia, creare prima di tutto una [funzione di predicato inline](https://msdn.microsoft.com/library/mt613432.aspx). Per questo esempio si presupponga di aver configurato la funzione di predicato inline per la prima volta il 1° dicembre 2015 e di voler estendere in Azure tutta la cronologia precedente al 1° novembre 2015. Per ottenere questo risultato, creare prima di tutto la funzione seguente:  
   
 ```  
@@ -157,7 +161,7 @@ COMMIT ;
   
  Usare SQL Server Agent o un altro meccanismo di pianificazione per assicurare una definizione valida per la funzione di predicato in ogni momento.  
   
-## Uso dell'approccio con partizionamento delle tabelle  
+## <a name="using-table-partitioning-approach"></a>Uso dell'approccio con partizionamento delle tabelle  
  Il[partizionamento delle tabelle](https://msdn.microsoft.com/library/ms188730.aspx) può semplificare la gestione e il ridimensionamento di tabelle di grandi dimensioni. L'approccio con partizionamento delle tabelle consente di usare le partizioni delle tabelle di cronologia per implementare la pulizia dei dati personalizzata o l'archiviazione offline in base a una condizione temporale. Il partizionamento delle tabelle offrirà anche vantaggi a livello di prestazioni in caso di query su tabelle temporali relative a un subset di cronologia dei dati mediante l'eliminazione delle partizioni.  
   
  Il partizionamento delle tabelle consente di implementare un approccio con finestra temporale scorrevole per spostare le parti più vecchie dalla tabella di cronologia e mantenere costanti le dimensioni della parte conservata in termini di età, mantenendo i dati della tabella di cronologia uguali al periodo di conservazione necessario. L'operazione di disattivazione dei dati dalla tabella di cronologia è supportata se SYSTEM_VERSIONING è ON, ovvero è possibile pulire una parte dei dati di cronologia senza introdurre una finestra di manutenzione o bloccare i carichi di lavoro normali.  
@@ -176,7 +180,7 @@ COMMIT ;
   
  La figura seguente illustra la configurazione iniziale del partizionamento per la conservazione di 6 mesi di dati.  
   
- ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
+ ![Partizionamento](../../relational-databases/tables/media/partitioning.png "Partizionamento")  
   
 > **NOTA:** vedere la sezione Considerazioni sulle prestazioni con il partizionamento delle tabelle più avanti per informazioni sulle conseguenze dell'uso di RANGE LEFT invece di RANGE RIGHT sulle prestazioni durante la configurazione del partizionamento.  
   
@@ -185,7 +189,7 @@ Con il passare del tempo, le nuove righe della tabella di cronologia verranno in
   
  La figura seguente illustra le attività ricorrenti di manutenzione della partizione. Vedere la procedura dettagliata più avanti.  
   
- ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
+ ![Partizionamento2](../../relational-databases/tables/media/partitioning2.png "Partizionamento2")  
   
  Ecco la procedura dettagliata per le attività ricorrenti di manutenzione della partizione:  
   
@@ -201,7 +205,7 @@ Con il passare del tempo, le nuove righe della tabella di cronologia verranno in
   
 3.  SPLIT RANGE: creare una nuova partizione 7 vuota usando l'istruzione [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) con SPLIT RANGE. Vedere l'esempio A. Aggiungendo un nuovo limite superiore mediante questa funzione, si crea effettivamente una partizione separata per il mese successivo.  
   
-### Usare Transact-SQL per creare partizioni nella tabella di cronologia  
+### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Usare Transact-SQL per creare partizioni nella tabella di cronologia  
  Usare lo script di Transact-SQL nella finestra di codice seguente per creare la funzione di partizione e ricreare l'indice cluster in modo che sia allineato a livello di partizioni con lo schema delle partizioni e le partizioni. Per questo esempio verrà creato un approccio con finestra temporale scorrevole di sei mesi con partizioni mensili a partire dal mese di settembre 2015.  
   
 ```  
@@ -243,7 +247,7 @@ COMMIT TRANSACTION;
   
 ```  
   
-### Uso di Transact-SQL per la manutenzione di partizioni in uno scenario con finestra temporale scorrevole  
+### <a name="using-transact-sql-to-maintain-partitions-in-sliding-window-scenario"></a>Uso di Transact-SQL per la manutenzione di partizioni in uno scenario con finestra temporale scorrevole  
  Usare lo script di Transact-SQL nella finestra di codice seguente per la manutenzione delle partizioni nello scenario con finestra temporale scorrevole. Per questo esempio verrà disattivata la partizione per il mese di settembre 2015 mediante MERGE RANGE e quindi verrà aggiunta una nuova partizione per il mese di marzo 2016 mediante SPLIT RANGE.  
   
 ```  
@@ -326,12 +330,12 @@ COMMIT TRANSACTION
   
  La soluzione ottimale consiste tuttavia nell'eseguire uno script di Transact-SQL generico, in grado di eseguire l'azione appropriata ogni mese, senza modifiche allo script. È possibile generalizzare lo script precedente in modo che reagisca ai parametri specificati, ovvero un limite inferiore da unire e un nuovo limite che verrà creato con la suddivisione della partizione. Per evitare di creare ogni mese una tabella di gestione temporanea, è possibile crearne una prima e riutilizzarla cambiando il vincolo di verifica in modo che corrisponda alla partizione che verrà disattivata. Per informazioni su [come automatizzare completamente la finestra temporale scorrevole](https://msdn.microsoft.com/library/aa964122.aspx) usando uno script di Transact-SQL, vedere le pagine seguenti.  
   
-### Considerazioni sulle prestazioni con il partizionamento delle tabelle  
+### <a name="performance-considerations-with-table-partitioning"></a>Considerazioni sulle prestazioni con il partizionamento delle tabelle  
  È importante eseguire le operazioni MERGE e SPLIT RANGE per evitare qualsiasi spostamento di dati, perché lo spostamento di dati può provocare un overhead significativo delle prestazioni. Per altre informazioni, vedere [Modificare una funzione di partizione](../../relational-databases/partitions/modify-a-partition-function.md). Per ottenere questo risultato, usare RANGE LEFT invece di RANGE RIGHT quando si esegue l'istruzione [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
  Ecco prima di tutto una spiegazione visiva del significato delle opzioni RANGE LEFT e RANGE RIGHT:  
   
- ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
+ ![Partizionamento3](../../relational-databases/tables/media/partitioning3.png "Partizionamento3")  
   
  Quando si definisce una funzione di partizione come RANGE LEFT, i valori specificati corrispondono ai limiti superiori delle partizioni. Quando si usa RANGE RIGHT, i valori specificati sono i limiti inferiori delle partizioni. Quando si usa l'operazione MERGE RANGE per rimuovere un limite dalla definizione della funzione di partizione, l'implementazione sottostante rimuove anche la partizione che contiene il limite. Se tale partizione non è vuota, i dati verranno spostati nella partizione che è il risultato dell'operazione MERGE RANGE.  
   
@@ -343,7 +347,7 @@ COMMIT TRANSACTION
   
  Conclusione: l'uso di RANGE LEFT nella partizione con finestra temporale scorrevole è molto più semplice per la gestione delle partizioni e consente di evitare lo spostamento dei dati. La definizione dei limiti delle partizioni con RANGE RIGHT risulta tuttavia leggermente più semplice, perché non è necessario gestire i problemi di data/ora di tipo "time tick".  
   
-## Uso dell'approccio con script di pulizia personalizzato  
+## <a name="using-custom-cleanup-script-approach"></a>Uso dell'approccio con script di pulizia personalizzato  
  Nei casi in cui gli approcci con Estensione database e con partizionamento delle tabelle non sono opzioni valide, il terzo approccio consiste nell'eliminare i dati dalla tabella di cronologia usando lo script di pulizia personalizzato. L'eliminazione dei dati dalla tabella di cronologia è possibile solo se **SYSTEM_VERSIONING = OFF**. Per evitare l'incoerenza dei dati, eseguire una pulizia durante la finestra di manutenzione, quando i carichi di lavoro che modificano i dati non sono attivi, oppure entro una transazione, bloccando effettivamente altri carichi di lavoro.  Questa operazione richiede l'autorizzazione **CONTROL** sulla tabella corrente e sulla tabella di cronologia.  
   
  Per ridurre al minimo il blocco delle applicazioni normali e delle query utente, eliminare i dati in blocchi ridotti, con un ritardo durante l'esecuzione dello script di pulizia all'interno di una transazione. Anche se non esistono dimensioni ottimali per ogni blocco di dati da eliminare per tutti gli scenari, l'eliminazione di più di 10.000 righe in una singola transazione potrebbe avere un impatto significativo.  
@@ -421,7 +425,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   
  [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verifiche di coerenza del sistema della tabella temporale](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -432,3 +436,4 @@ COMMIT;
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Finestra di dialogo Valuta criteri, pagina Selezione criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.runnow.f1"
+title: Finestra di dialogo Valuta criteri, pagina Selezione criteri | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54f93115b0663a033fda00e85a2128a58a3db063
+ms.lasthandoff: 04/11/2017
+
 ---
-# Finestra di dialogo Valuta criteri, pagina Selezione criteri
+# <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Finestra di dialogo Valuta criteri, pagina Selezione criteri
   Utilizzare questa finestra di dialogo per valutare criteri della gestione basata su criteri. Selezionando la pagina **Risultati valutazione** , è possibile applicare criteri agli elementi non conformi ai criteri inclusi in un set di destinazioni.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Origine**  
- Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine**.  
+ Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine** .  
   
  **File**  
  Digitare il percorso o usare il pulsante Sfoglia (**...**) per selezionare un file che contiene i criteri della gestione basata su criteri.  
@@ -43,7 +47,7 @@ caps.handback.revision: 36
  **Valuta**  
  Esegue i criteri in modalità di valutazione. Verrà generato un report sulla conformità per il set di destinazioni, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riconfigurato, né verrà applicata la conformità successiva.  
   
-## Possibili errori  
+## <a name="possible-errors"></a>Possibili errori  
   
 -   **Impossibile trovare destinazioni**  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 36
   
     -   È possibile che il filtro del set di destinazioni escluda tutte le destinazioni nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Il tipo di server di destinazione è diverso dal tipo di server in cui vengono valutati i criteri. Se, ad esempio, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] si tenta di valutare i criteri creati per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si riceverà un set di destinazioni vuoto.  
+    -   Il tipo di server di destinazione è diverso dal tipo di server in cui vengono valutati i criteri. Se, ad esempio, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]si tenta di valutare i criteri creati per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si riceverà un set di destinazioni vuoto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Finestra di dialogo Valuta criteri, pagina Risultati valutazione](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

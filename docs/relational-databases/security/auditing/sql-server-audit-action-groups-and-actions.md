@@ -1,33 +1,37 @@
 ---
-title: "Azioni e gruppi di azioni di SQL Server Audit | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "azioni di controllo [SQL Server]"
-  - "controlli [SQL Server], gruppi"
-  - "azioni di controllo a livello di server [SQL Server]"
-  - "SQL Server Audit"
-  - "azioni di controllo a livello di controllo [SQL Server]"
-  - "azioni di controllo a livello di database [SQL Server]"
-  - "gruppi di azioni di controllo a livello di server"
-  - "controlli [SQL Server], azioni"
+title: Azioni e gruppi di azioni di SQL Server Audit | Microsoft Docs
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Azioni e gruppi di azioni di SQL Server Audit
+# <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
   La funzionalità [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi singoli a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono costituiti da zero o da più attività di controllo. Tali attività possono essere un gruppo di azioni, ad esempio Server_Object_Change_Group, oppure azioni singole, ad esempio operazioni SELECT da eseguire in una tabella.  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  Al momento della creazione, tutti i controlli sono disabilitati.  
   
-## Gruppi di azioni di controllo a livello di server  
+## <a name="server-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di server  
  I gruppi di azioni di controllo a livello di server sono analoghi alle classi degli eventi di controllo della sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di server e, dove applicabile, viene specificata la classe di evento di SQL Server equivalente.  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che la password di un utente del database indipendente viene modificata tramite l'istruzione ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Questo gruppo consente di monitorare gli eventi generati usando [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). In genere, i trigger o le stored procedure includono chiamate a **sp_audit_write** per abilitare il controllo di eventi importanti.|  
   
-### Considerazioni  
+### <a name="considerations"></a>Considerazioni  
  Nei gruppi di azioni a livello di server sono comprese azioni relative a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Qualsiasi controllo dell'accesso agli oggetti dello schema in un database, ad esempio, viene registrato se il gruppo di azioni appropriato viene aggiunto a una specifica del controllo del server. In una specifica del controllo del database vengono registrati solo gli accessi agli oggetti dello schema del database specifico.  
   
  Le azioni a livello di server non consentono di applicare filtri dettagliati sulle azioni a livello di database. Per implementare l'applicazione di filtri dettagliati sull'azione, è necessario un controllo a livello di database, ad esempio un controllo di azioni SELECT nella tabella relativa ai clienti  per account di accesso nel gruppo relativo ai dipendenti. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
   
-## Gruppi di azioni di controllo a livello di database  
+## <a name="database-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di database  
  I gruppi di azioni di controllo a livello di database sono analoghi alle classi di eventi di controllo della sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di database e, dove applicabile, viene specificata la classe di evento di SQL Server equivalente.  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che la password di un utente del database indipendente viene modificata tramite l'istruzione ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Questo gruppo consente di monitorare gli eventi generati usando [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
   
-## Azioni di controllo a livello di database  
+## <a name="database-level-audit-actions"></a>Azioni di controllo a livello di database  
  Le azioni a livello di database supportano il controllo di azioni specifiche direttamente nello schema del database e negli oggetti dello schema, ad esempio tabelle, viste, stored procedure, funzioni, stored procedure estese, code e sinonimi. Tipi, raccolte di XML Schema, database e schemi non sono controllati. Il controllo di oggetti dello schema può essere configurato nello schema o nel database, ovvero tutti gli eventi sugli oggetti dello schema contenuti nello schema o nel database specificato verranno controllati. Nella tabella seguente vengono descritte le azioni di controllo a livello di database.  
   
 |Azione|Descrizione|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|Questo evento viene generato ogni volta che viene eseguita un'istruzione RECEIVE.|  
 |REFERENCES|Questo evento viene generato ogni volta che viene controllata un'autorizzazione REFERENCES.|  
   
-### Considerazioni  
+### <a name="considerations"></a>Considerazioni  
 *  Le azioni di controllo a livello di database non si applicano alle colonne.  
   
 *  Quando Query Processor parametrizza la query, il parametro può apparire nel log degli eventi di controllo anziché nei valori di colonna della query. 
  
 *  Le istruzioni RPC non vengono registrate. 
   
-## Gruppi di azioni di controllo a livello di controllo  
+## <a name="audit-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di controllo  
  È possibile controllare le azioni anche durante il processo di controllo stesso. Questa operazione può essere eseguita sia nell'ambito del server che in quello del database. In quest'ultimo caso l'operazione può essere eseguita solo per le specifiche del controllo del database. Nella tabella seguente vengono descritti i gruppi di azioni di controllo a livello di controllo.  
   
 |Nome del gruppo di azioni|Descrizione|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Questo evento viene generato ogni volta che viene eseguito uno dei comandi seguenti:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Creazione di un controllo del server e di una specifica del controllo del database](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

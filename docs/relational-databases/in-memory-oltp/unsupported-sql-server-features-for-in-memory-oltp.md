@@ -1,27 +1,31 @@
 ---
-title: "Funzionalit&#224; di SQL Server non supportate per OLTP in memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Funzionalità di SQL Server non supportate per OLTP in memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1b1d4a26616fe83a241267bc87b9e799d883e26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funzionalit&#224; di SQL Server non supportate per OLTP in memoria
+# <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Questo argomento illustra le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportate per l'uso con oggetti con ottimizzazione per la memoria.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funzionalità non supportate per OLTP in memoria  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funzionalità non supportate per OLTP in memoria  
  Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicate di seguito non sono supportate in un database contenente oggetti con ottimizzazione per la memoria, incluso un filegroup di dati con ottimizzazione per la memoria.  
   
 |Funzionalità non supportata|Descrizione della funzionalità|  
@@ -49,7 +53,7 @@ caps.handback.revision: 55
 |Database delle risorse, tempdb|Sì|Non vi sono restrizioni per le transazioni tra database che, oltre a un singolo database utente, utilizzano solo un database delle risorse e tempdb.|  
 |master|Sola lettura|Il commit delle transazioni tra database che riguardano OLTP in memoria e il database master non viene eseguito se sono incluse scritture nel database master. Le transazioni tra database che eseguono solo letture dal master e utilizzano un solo database utente sono consentite.|  
   
-## Scenari non supportati  
+## <a name="scenarios-not-supported"></a>Scenari non supportati  
   
 -   L'indipendenza del database ([Database indipendenti](../../relational-databases/databases/contained-databases.md)) non è supportata con OLTP in memoria. L'autenticazione di database indipendenti è supportata, Tuttavia, tutti gli oggetti OLTP in memoria sono contrassegnati come entità che interrompono l'indipendenza nel file DMV dm_db_uncontained_entities.  
   
@@ -71,7 +75,8 @@ caps.handback.revision: 55
   
 -   Gestione basata su criteri. Le modalità "impedisci esecuzione" e "solo log" della funzionalità di gestione basata su criteri non sono supportate. La presenza di tali criteri nel server può impedire la corretta esecuzione della DDL di OLTP in memoria. Le modalità Su richiesta e Su pianificazione sono supportate.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di SQL Server per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
+

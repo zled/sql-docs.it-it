@@ -1,23 +1,27 @@
 ---
-title: "Ripristino a fasi di database con tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ripristino a fasi di database con tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino a fasi di database con tabelle con ottimizzazione per la memoria
-  Nei database con tabelle con ottimizzazione per la memoria è supportato il ripristino a fasi, tranne per la restrizione descritta di seguito. Per altre informazioni sul backup e sul ripristino a fasi, vedere[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) e [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Ripristino a fasi di database con tabelle con ottimizzazione per la memoria
+  Nei database con tabelle con ottimizzazione per la memoria è supportato il ripristino a fasi, tranne per la restrizione descritta di seguito. Per altre informazioni sul backup e sul ripristino a fasi, vedere[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  Il backup e ripristino di un filegroup con ottimizzazione per la memoria deve essere eseguito insieme al filegroup primario:  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
     -   Con la correzione della pagina, è possibile correggere i danneggiamenti di pagina ripristinando in particolare la pagina. Per altre informazioni, vedere [Ripristinare pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
-## Esempi  
+## <a name="samples"></a>Esempi  
  Negli esempi viene utilizzato lo schema seguente:  
   
 ```  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### Backup  
+### <a name="backup"></a>Backup  
  In questo esempio viene illustrato come eseguire il backup del filegroup primario e di quello con ottimizzazione per la memoria. È necessario specificare insieme sia il filegroup primario sia quello con ottimizzazione per la memoria.  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### Restore  
+### <a name="restore"></a>Restore  
  Nell'esempio seguente viene illustrato come ripristinare insieme il filegroup primario e quello con ottimizzazione per la memoria.  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## Vedere anche  
- [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

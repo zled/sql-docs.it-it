@@ -1,33 +1,37 @@
 ---
-title: "Requisiti di spazio su disco per operazioni DLL sugli indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "spazio su disco [SQL Server], indici"
-  - "spazio su disco degli indici [SQL Server]"
-  - "spazio [SQL Server], indici"
-  - "indici [SQL Server], requisiti di spazio su disco"
-  - "spazio su disco temporaneo [SQL Server]"
+title: Requisiti di spazio su disco per operazioni DLL sugli indici | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requisiti di spazio su disco per operazioni DLL sugli indici
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisiti di spazio su disco per operazioni DLL sugli indici
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Lo spazio su disco è un fattore che richiede particolare considerazione in fase di creazione, ricompilazione o eliminazione di indici. Uno spazio su disco non adeguato può comportare una riduzione delle prestazioni o provocare un errore dell'operazione sull'indice. In questo argomento vengono fornite informazioni generali utili per determinare la quantità di spazio su disco necessaria per operazioni DLL (Data Definition Language) sugli indici.  
   
-## Operazioni sugli indici che non richiedono spazio su disco aggiuntivo  
+## <a name="index-operations-that-require-no-additional-disk-space"></a>Operazioni sugli indici che non richiedono spazio su disco aggiuntivo  
  Le operazioni seguenti non richiedono spazio su disco aggiuntivo:  
   
 -   ALTER INDEX REORGANIZE. È tuttavia richiesto spazio nel log.  
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   CREATE TABLE (vincoli PRIMARY KEY o UNIQUE)  
   
-## Operazioni sugli indici che richiedono spazio su disco aggiuntivo  
+## <a name="index-operations-that-require-additional-disk-space"></a>Operazioni sugli indici che richiedono spazio su disco aggiuntivo  
  Tutte le altre operazioni DLL sugli indici richiedono spazio su disco aggiuntivo temporaneo da utilizzare durante l'operazione e spazio su disco permanente per l'archiviazione della nuova o delle nuove strutture dell'indice.  
   
  Quando viene creata una nuova struttura dell'indice, è necessario spazio su disco per la struttura vecchia (origine) e per quella nuova (destinazione) nei file e filegroup appropriati. La struttura di origine non viene deallocata finché non viene eseguito il commit della transazione di creazione dell'indice.  
@@ -57,7 +61,7 @@ caps.handback.revision: 39
   
 -   DROP INDEX MOVE TO (solo per indici cluster)  
   
-## Spazio su disco temporaneo per l'ordinamento  
+## <a name="temporary-disk-space-for-sorting"></a>Spazio su disco temporaneo per l'ordinamento  
  Oltre allo spazio su disco necessario per le strutture di origine e di destinazione, è necessario spazio su disco temporaneo per l'ordinamento, a meno che tramite Query Optimizer non venga individuato un piano di esecuzione che non richiede l'ordinamento.  
   
  L'ordinamento, se necessario, viene eseguito in un nuovo indice per volta. Quando, ad esempio, si ricompilano un indice cluster e gli indici non cluster associati in una singola istruzione, gli indici vengono ordinati uno dopo l'altro. Lo spazio su disco aggiuntivo temporaneo necessario per l'ordinamento corrisponde pertanto alle dimensioni dell'indice di dimensioni maggiori coinvolto nell'operazione, che è solitamente l'indice cluster.  
@@ -68,7 +72,7 @@ caps.handback.revision: 39
   
  Per un esempio di calcolo dello spazio su disco, vedere [Esempio di spazio su disco per gli indici](../../relational-databases/indexes/index-disk-space-example.md).  
   
-## Spazio su disco temporaneo per operazioni sugli indici online  
+## <a name="temporary-disk-space-for-online-index-operations"></a>Spazio su disco temporaneo per operazioni sugli indici online  
  Quando si eseguono operazioni sugli indici online, è necessario spazio su disco aggiuntivo temporaneo.  
   
  Quando viene creato, ricompilato o eliminato un indice cluster online, viene creato un indice non cluster temporaneo per l'esecuzione del mapping tra vecchi segnalibri e nuovi segnalibri. Se l'opzione SORT_IN_TEMPDB è impostata su ON, questo indice temporaneo viene creato in **tempdb**. Se l'opzione SORT_IN_TEMPDB è impostata su OFF, viene utilizzato lo stesso filegroup o schema di partizione dell'indice di destinazione. L'indice di mapping temporaneo contiene un record per ogni riga della tabella e i contenuti sono costituiti dall'unione delle colonne di segnalibri vecchi e nuovi, inclusi uniqueifier e identificatori di record e includono una singola copia di ogni colonna utilizzata in entrambi i segnalibri. Per altre informazioni sulle operazioni online sugli indici, vedere [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -76,9 +80,9 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  Non è possibile impostare l'opzione SORT_IN_TEMPDB per le istruzioni DROP INDEX. L'indice di mapping temporaneo viene sempre creato nello stesso filegroup o schema di partizione dell'indice di destinazione.  
   
- Nelle operazioni sugli indici online viene utilizzato il controllo delle versioni delle righe per isolare le operazioni dagli effetti delle modifiche apportate da altre transazioni. In questo modo, non è necessario richiedere blocchi di condivisione sulle righe lette. Le operazioni utente simultanee di aggiornamento ed eliminazione durante le operazioni sugli indici online richiedono spazio per i record di versione in **tempdb**. Per altre informazioni, vedere [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md).  
+ Nelle operazioni sugli indici online viene utilizzato il controllo delle versioni delle righe per isolare le operazioni dagli effetti delle modifiche apportate da altre transazioni. In questo modo, non è necessario richiedere blocchi di condivisione sulle righe lette. Le operazioni utente simultanee di aggiornamento ed eliminazione durante le operazioni sugli indici online richiedono spazio per i record di versione in **tempdb**. Per altre informazioni, vedere [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Esempio di spazio su disco per gli indici](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
@@ -91,7 +95,7 @@ caps.handback.revision: 39
   
  [Stima delle dimensioni di un heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
@@ -103,3 +107,4 @@ caps.handback.revision: 39
  [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
+

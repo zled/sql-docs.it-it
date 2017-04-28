@@ -1,24 +1,28 @@
 ---
-title: "Valutare i criteri della gestione basata su criteri da quei criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestione basata su criteri, valutazione criteri"
+title: Valutare i criteri della gestione basata su criteri da quei criteri | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, evaluate policy
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7d900248ead5e2de6b6aa2423296d0723f32ba5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Valutare i criteri della gestione basata su criteri da quei criteri
+# <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Valutare i criteri della gestione basata su criteri da quei criteri
   In questo argomento verrà descritto come valutare i criteri utilizzandoli in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -40,7 +44,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per valutare i criteri  
+#### <a name="to-evaluate-a-policy"></a>Per valutare i criteri  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente i criteri da valutare.  
   

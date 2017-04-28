@@ -1,39 +1,43 @@
 ---
-title: "Introduzione alle autorizzazioni del motore di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "autorizzazioni [SQL Server], introduzione"
+title: Introduzione alle autorizzazioni del motore di database | Microsoft Docs
+ms.custom: 
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introduzione alle autorizzazioni del motore di database
+# <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Le autorizzazioni del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vengono gestite a livello di server tramite gli account di accesso e i ruoli del server e a livello di database tramite gli utenti e i ruoli del database. Il modello per il [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] espone lo stesso sistema all'interno di ogni database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento illustra alcuni concetti di base sulla sicurezza e quindi descrive un'implementazione tipica delle autorizzazioni.  
   
-## Entità di sicurezza  
+## <a name="security-principals"></a>Entità di sicurezza  
  Con entità di sicurezza si definiscono le identità che usano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a cui è possibile assegnare delle autorizzazioni per eseguire varie azioni. Si tratta in genere di utenti o gruppi di utenti, ma possono essere altre entità che fingono di essere utenti. Le entità di sicurezza possono essere create e gestite con il linguaggio [!INCLUDE[tsql](../../../includes/tsql-md.md)] elencato o con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  Account di accesso  
  Gli account di accesso sono account utente singoli per l'accesso al [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] supportano account di accesso basati sull'autenticazione di Windows e account di accesso basati sull'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sui due tipi di account di accesso, vedere [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
  Ruoli predefiniti del server  
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i ruoli predefiniti del server sono costituiti da un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di server. Gli account di accesso possono essere aggiunti ai ruoli con l'istruzione `ALTER SERVER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non supporta i ruoli predefiniti del server, ma ha due ruoli nel database master (`dbmanager` e `loginmanager`) che fungono da ruoli del server.  
+ In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]i ruoli predefiniti del server sono costituiti da un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di server. Gli account di accesso possono essere aggiunti ai ruoli con l'istruzione `ALTER SERVER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non supporta i ruoli predefiniti del server, ma ha due ruoli nel database master (`dbmanager` e `loginmanager`) che fungono da ruoli del server.  
   
  Ruoli del server definiti dall'utente  
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile creare ruoli del server personalizzati e assegnarvi autorizzazioni a livello di server. Gli account di accesso possono essere aggiunti ai ruoli del server con l'istruzione `ALTER SERVER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non supporta i ruoli del server definiti dall'utente.  
+ In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]è possibile creare ruoli del server personalizzati e assegnarvi autorizzazioni a livello di server. Gli account di accesso possono essere aggiunti ai ruoli del server con l'istruzione `ALTER SERVER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non supporta i ruoli del server definiti dall'utente.  
   
  Utenti di database  
  Agli account di accesso viene concesso l'accesso a un database creando un utente in un database ed eseguendo il mapping di tale utente di database all'account di accesso. In genere, il nome utente di database è identico al nome dell'account di accesso, anche se non è necessario. Ogni utente di database esegue il mapping a un singolo account di accesso. Il mapping di un account di accesso può essere eseguito a un solo utente in un database, ma può essere eseguito come utente di database in diversi database.  
@@ -53,10 +57,10 @@ caps.handback.revision: 12
   
  Per un grafico che mostra le relazioni tra utenti di Windows, gruppi di Windows, account di accesso e utenti di database, vedere [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
   
-## Scenario tipico  
+## <a name="typical-scenario"></a>Scenario tipico  
  L'esempio seguente rappresenta un metodo comune e consigliato di configurazione delle autorizzazioni.  
   
-#### In Active Directory o Azure Active Directory:  
+#### <a name="in-active-directory-or-azure-active-directory"></a>In Active Directory o Azure Active Directory:  
   
 1.  Creare un utente di Windows per ogni utente.  
   
@@ -64,9 +68,9 @@ caps.handback.revision: 12
   
 3.  Aggiungere gli utenti di Windows ai gruppi di Windows.  
   
-#### Se l'utente che si connette verrà connesso a molti database  
+#### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Se l'utente che si connette verrà connesso a molti database  
   
-1.  Creare un account di accesso per i gruppi di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ignorare i passaggi di Active Directory e creare qui gli account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  Creare un account di accesso per i gruppi di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui gli account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 2.  Nel database utente creare un utente di database per l'account di accesso che rappresenta i gruppi di Windows.  
   
@@ -76,11 +80,11 @@ caps.handback.revision: 12
   
 5.  Concedere le autorizzazioni ai ruoli del database definiti dall'utente.  
   
-#### Se l'utente che si connette verrà connesso a un solo database  
+#### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Se l'utente che si connette verrà connesso a un solo database  
   
-1.  Creare un account di accesso per i gruppi di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ignorare i passaggi di Active Directory e creare qui gli account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  Creare un account di accesso per i gruppi di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui gli account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-2.  Nel database utente creare un utente di database indipendente per il gruppo di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ignorare i passaggi di Active Directory e creare qui l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gli utenti di database indipendente.  
+2.  Nel database utente creare un utente di database indipendente per il gruppo di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gli utenti di database indipendente.  
   
 3.  Nel database utente creare uno o più ruoli del database definiti dall'utente, ognuno dei quali rappresenta una funzione simile, ad esempio analista finanziario e analista vendite.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 12
   
  Il risultato tipico a questo punto è che un utente di Windows è un membro di un gruppo di Windows. Il gruppo di Windows ha un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Viene eseguito il mapping dell'account di accesso a un'identità utente nel database utente. L'utente è un membro di un ruolo del database. È necessario ora aggiungere le autorizzazioni al ruolo.  
   
-## Assegnazione delle autorizzazioni  
+## <a name="assigning-permissions"></a>Assegnazione delle autorizzazioni  
  Di seguito è riportato il formato della maggior parte delle istruzioni di autorizzazione:  
   
 ```  
@@ -99,7 +103,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` deve essere `GRANT`, `REVOKE` o `DENY`.  
   
--   `PERMISSION` stabilisce l'azione consentita o quella non consentita. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] può specificare 230 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] contiene meno autorizzazioni perché alcune azioni non sono rilevanti in Azure. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;Motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
+-   `PERMISSION` stabilisce l'azione consentita o quella non consentita. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] può specificare 230 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] contiene meno autorizzazioni perché alcune azioni non sono rilevanti in Azure. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
   
 -   `ON SECURABLE::NAME` specifica il tipo di oggetto a protezione diretta (server, oggetto server, database o oggetto di database) e il nome corrispondente. Alcune autorizzazioni non richiedono `ON SECURABLE::NAME` perché non è ambiguo o non è appropriato nel contesto. Ad esempio, l'autorizzazione `CREATE TABLE` non richiede la clausola `ON SECURABLE::NAME` . Ad esempio, l'istruzione `GRANT CREATE TABLE TO Mary;` consente a Mary di creare tabelle.  
   
@@ -111,7 +115,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
 GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;  
 ```  
   
- Le autorizzazioni vengono concesse alle entità di sicurezza (account di accesso, utenti e ruoli) con l'istruzione `GRANT`. Le autorizzazioni vengono negate in modo esplicito con il comando  `DENY` . Un'autorizzazione concessa o negata in precedenza viene rimossa con l'istruzione `REVOKE` . Le autorizzazioni sono cumulative, con l'utente che riceve tutte le autorizzazioni concesse all'utente, all'account di accesso e a qualsiasi appartenenza a un gruppo. Tuttavia, la negazione di un'autorizzazione prevale su tutte le concessioni.  
+ Le autorizzazioni vengono concesse alle entità di sicurezza (account di accesso, utenti e ruoli) con l'istruzione `GRANT` . Le autorizzazioni vengono negate in modo esplicito con il comando  `DENY` . Un'autorizzazione concessa o negata in precedenza viene rimossa con l'istruzione `REVOKE` . Le autorizzazioni sono cumulative, con l'utente che riceve tutte le autorizzazioni concesse all'utente, all'account di accesso e a qualsiasi appartenenza a un gruppo. Tuttavia, la negazione di un'autorizzazione prevale su tutte le concessioni.  
   
 > [!TIP]  
 >  Un errore comune consiste nel provare a rimuovere l'autorizzazione `GRANT` con `DENY` anziché `REVOKE`. Ciò può causare problemi quando un utente riceve autorizzazioni da più origini, e tale circostanza è piuttosto comune. L'esempio seguente illustra l'uso delle entità.  
@@ -125,7 +129,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 > [!NOTE]  
 >  Le autorizzazioni possono essere configurate con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Cercare l'oggetto a protezione diretta in Esplora oggetti, fare clic con il pulsante destro del mouse sull'oggetto e quindi scegliere **Proprietà**. Selezionare la pagina **Autorizzazioni** . Per informazioni sull'uso della pagina delle autorizzazioni, vedere [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
-## Gerarchia delle autorizzazioni  
+## <a name="permission-hierarchy"></a>Gerarchia delle autorizzazioni  
  Le autorizzazioni hanno una gerarchia padre/figlio, ovvero se si concede l'autorizzazione `SELECT` per un database, tale autorizzazione include l'autorizzazione `SELECT` per tutti gli schemi (figlio) presenti nel database. Se si concede l'autorizzazione `SELECT` per uno schema, tale autorizzazione include l'autorizzazione `SELECT` per tutte le tabelle e le viste (figlio) presenti nello schema. Le autorizzazioni sono transitive, ovvero se si concede l'autorizzazione `SELECT` per un database, tale autorizzazione include l'autorizzazione `SELECT` per tutti gli schemi (figlio) e tutte le tabelle e le viste (nipote).  
   
  Le autorizzazioni contengono anche le autorizzazioni implicite. L'autorizzazione `CONTROL` per un oggetto concede in genere tutte le altre autorizzazioni per l'oggetto.  
@@ -152,29 +156,29 @@ GRANT SELECT ON DATABASE::SalesDB TO Ted;
 GRANT CONTROL ON DATABASE::SalesDB TO Ted;  
 ```  
   
-## Concedere l'autorizzazione minima  
+## <a name="grant-the-least-permission"></a>Concedere l'autorizzazione minima  
  La prima autorizzazione elencata in precedenza (`GRANT SELECT ON OBJECT::Region TO Ted;`) è la più granulare, ovvero tale istruzione è l'autorizzazione minima possibile che concede l'autorizzazione `SELECT`. Non sono incluse autorizzazioni per gli oggetti subordinati. È un ottimo principio concedere sempre l'autorizzazione minima possibile, ma (contraddicendo ciò) concederla a livelli superiori per semplificare il sistema di concessione. Se quindi Ted deve ottenere le autorizzazioni per l'intero schema, concedere `SELECT` una sola volta a livello di schema, anziché concedere `SELECT` molte volte a livello di tabella o di vista. La progettazione del database ha un notevole impatto sull'efficacia di questa strategia. Questa strategia funziona meglio quando il database viene progettato in modo tale che gli oggetti che devono ottenere autorizzazioni identiche vengano inclusi in un singolo schema.  
   
-## Elenco di autorizzazioni  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e la [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] contengono meno autorizzazioni perché espongono solo una parte del motore di database, anche se contengono alcune autorizzazioni che non si applicano a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo argomento il poster è molto piccolo e non può essere consultato. Scaricare il poster relativo alle autorizzazioni del motore di database da [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+## <a name="list-of-permissions"></a>Elenco di autorizzazioni  
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e la [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] contengono meno autorizzazioni perché espongono solo una parte del motore di database, anche se contengono alcune autorizzazioni che non si applicano a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo argomento il poster è molto piccolo e non può essere consultato. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
   
- ![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG "Database Engine Permissions")  
+[![Autorizzazioni del motore di database](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ 
+ Per una rappresentazione grafica delle relazioni tra le entità del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e gli oggetti server e di database, vedere [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
- Per una rappresentazione grafica delle relazioni tra le entità del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e gli oggetti server e di database, vedere [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
-  
-## Autorizzazioni e ruoli predefiniti del server e ruoli predefiniti del database  
+## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Autorizzazioni e ruoli predefiniti del server e ruoli predefiniti del database  
  Le autorizzazioni dei ruoli predefiniti del server e dei ruoli predefiniti del database sono simili ma non esattamente uguali alle autorizzazioni granulari. Ad esempio, i membri del ruolo predefinito del server `sysadmin` hanno tutte le autorizzazioni per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come gli account di accesso con l'autorizzazione `CONTROL SERVER` . Ma concedere l'autorizzazione `CONTROL SERVER` non significa che un account di accesso diventa membro del ruolo predefinito del server sysadmin e aggiungere un account di accesso al ruolo predefinito del server  `sysadmin` non significa che all'account di accesso viene concessa in modo esplicito l'autorizzazione  `CONTROL SERVER` . Una stored procedure potrebbe talvolta verificare le autorizzazioni controllando il ruolo predefinito e non controllando l'autorizzazione granulare. Ad esempio, per scollegare un database è necessaria l'appartenenza al ruolo predefinito del database `db_owner` . L'autorizzazione `CONTROL DATABASE` equivalente non è sufficiente. Questi due sistemi operano in parallelo ma raramente interagiscono tra loro. Se possibile, Microsoft consiglia di usare il sistema più recente di autorizzazioni granulari anziché i ruoli predefiniti.  
   
-## Monitoraggio delle autorizzazioni  
+## <a name="monitoring-permissions"></a>Monitoraggio delle autorizzazioni  
  Le viste seguenti restituiscono informazioni sulla sicurezza.  
   
--   Gli account di accesso e i ruoli del server definiti dall'utente in un server possono essere esaminati con la vista `sys.server_principals`. Questa vista non è disponibile nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
+-   Gli account di accesso e i ruoli del server definiti dall'utente in un server possono essere esaminati con la vista `sys.server_principals` . Questa vista non è disponibile nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
--   Gli utenti e i ruoli definiti dall'utente in un database possono essere esaminati con la vista `sys.database_principals`.  
+-   Gli utenti e i ruoli definiti dall'utente in un database possono essere esaminati con la vista `sys.database_principals` .  
   
--   Le autorizzazioni concesse agli account di accesso e ai ruoli predefiniti del server definiti dall'utente possono essere esaminate con la vista `sys.server_permissions`. Questa vista non è disponibile nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
+-   Le autorizzazioni concesse agli account di accesso e ai ruoli predefiniti del server definiti dall'utente possono essere esaminate con la vista `sys.server_permissions` . Questa vista non è disponibile nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
--   Le autorizzazioni concesse agli utenti e ai ruoli predefiniti del database definiti dall'utente possono essere esaminate con la vista `sys.database_permissions`.  
+-   Le autorizzazioni concesse agli utenti e ai ruoli predefiniti del database definiti dall'utente possono essere esaminate con la vista `sys.database_permissions` .  
   
 -   L'appartenenza ai ruoli del database può essere esaminata con la vista `sys. sys.database_role_members` .  
   
@@ -182,30 +186,27 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   Per altre viste correlate alla sicurezza, vedere [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) .  
   
-### Istruzioni Transact-SQL utili  
+### <a name="useful-transact-sql-statements"></a>Istruzioni Transact-SQL utili  
  Le istruzioni seguenti restituiscono informazioni utili sulle autorizzazioni.  
   
  Per restituire le autorizzazioni esplicite concesse o negate in un database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), eseguire l'istruzione seguente nel database.  
   
-```  
+```tsql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
     obj.name AS [on Object],   
-    dPrinc.name AS [to User Name],   
-    sPrinc.name AS [who is Login Name]  
+    dPrinc.name AS [to User Name]  
 FROM sys.database_permissions AS perms  
 JOIN sys.database_principals AS dPrinc  
     ON perms.grantee_principal_id = dPrinc.principal_id  
 JOIN sys.objects AS obj  
-    ON perms.major_id = obj.object_id  
-LEFT OUTER JOIN sys.server_principals AS sPrinc  
-    ON dPrinc.sid = sPrinc.sid;  
+    ON perms.major_id = obj.object_id;  
 ```  
   
- Per restituire i membri dei ruoli del server (solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), eseguire l'istruzione seguente.  
+ Per restituire i membri dei ruoli del server (solo[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), eseguire l'istruzione seguente.  
   
-```  
+```tsql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -214,9 +215,10 @@ JOIN sys.server_principals AS sRole
     ON sRo.role_principal_id = sRole.principal_id;  
 ```  
   
+ 
  Per restituire i membri dei ruoli del database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), eseguire l'istruzione seguente nel database.  
   
-```  
+```tsql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -225,20 +227,22 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
  Per altri argomenti introduttivi, vedere:  
   
--   [Esercitazione: Introduzione al Motore di database](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Esercitazione per la creazione di un database](../../../t-sql/creating-a-database-tutorial.md)  
+-   [Esercitazione: Introduzione al motore di database](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creazione di un database &#40;esercitazione&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
 -   [Esercitazione su SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Esercitazione: Scrittura di istruzioni Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Funzioni e viste a gestione dinamica relative alla sicurezza &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)  
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Determinare le autorizzazioni valide per il motore di database](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

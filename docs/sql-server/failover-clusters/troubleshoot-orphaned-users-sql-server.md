@@ -1,30 +1,34 @@
 ---
-title: "Risolvere i problemi relativi agli utenti isolati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utenti isolati (orfani) [SQL Server]"
-  - "accessi [SQL Server], utenti isolati (orfani)"
-  - "risoluzione dei problemi [SQL Server], account utente"
-  - "account utente [SQL Server], utenti isolati (orfani)"
-  - "failover [SQL Server], gestione dei metadati"
-  - "mirroring del database [SQL Server], metadati"
-  - "utenti [SQL Server], utenti isolati (orfani)"
+title: Risolvere i problemi relativi agli utenti isolati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# Risolvere i problemi relativi agli utenti isolati (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli utenti isolati (orfani) appaiono quando un utente del database dipende da un account di accesso nel database **master** , ma tale account di accesso non esiste più in **master**. Ciò può verificarsi quando viene eliminato l'account di accesso o quando il database viene spostato in un altro server in cui l'accesso non esiste. In questo argomento viene descritto come trovare gli utenti isolati e come riassociarli agli account di accesso.  
@@ -32,8 +36,8 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  Per ridurre la creazione di utenti isolati, definire utenti del database indipendente per i database che potrebbero essere spostati. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## Background  
- Per connettersi a un database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un'entità di sicurezza (identità utente del database) basata su un account di accesso, l'entità deve avere un account di accesso valido nel database **master**. Tale account di accesso viene usato nel processo di autenticazione, che verifica l'identità dell'entità e determina se è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server sono riportati nella vista del catalogo **sys.server_principals** e nella vista di compatibilità **sys.sql_logins**.  
+## <a name="background"></a>Background  
+ Per connettersi a un database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un'entità di sicurezza (identità utente del database) basata su un account di accesso, l'entità deve avere un account di accesso valido nel database **master** . Tale account di accesso viene usato nel processo di autenticazione, che verifica l'identità dell'entità e determina se è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server sono riportati nella vista del catalogo **sys.server_principals** e nella vista di compatibilità **sys.sql_logins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di accedere a database singoli come "utente database", che viene mappato all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sono previste tre eccezioni a questa regola:  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
  Un utente del database (basato su un account di accesso) il cui account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. È possibile che si verifichi l'isolamento se l'utente del database è mappato a un SID di accesso non presente nell'istanza di `master` . Un utente del database può diventare isolato dopo il ripristino o il collegamento del database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella quale non è mai stato creato l'account di accesso. Inoltre un utente del database può diventare isolato (orfano) se l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente viene rimosso. Anche se viene ricreato, l'account di accesso avrà un SID diverso, pertanto l'utente del database resterà isolato.  
   
-## Per rilevare gli utenti isolati (orfani)  
+## <a name="to-detect-orphaned-users"></a>Per rilevare gli utenti isolati (orfani)  
 
 **Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e PDW**
 
@@ -68,7 +72,7 @@ WHERE sp.SID IS NULL
     AND authentication_type_desc = 'INSTANCE';  
 ```  
   
- Nell'output sono elencati gli utenti autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli identificatori di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nell'output sono elencati gli utenti autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli identificatori di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 **Per il database SQL e SQL Data Warehouse**
 
@@ -93,7 +97,7 @@ La tabella `sys.server_principals` non è disponibile nel database SQL o in SQL 
 
 3. Confrontare i due elenchi per determinare se nella tabella `sys.database_principals` del database utente sono presenti SID utente privi di SID di accesso corrispondente nella tabella `sql_logins` del database master. 
   
-## Per risolvere un utente isolato (orfano)  
+## <a name="to-resolve-an-orphaned-user"></a>Per risolvere un utente isolato (orfano)  
 Nel database master usare l'istruzione [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) con l'opzione SID per ricreare un account di accesso mancante, fornendo il `SID` dell'utente database ottenuto nella sezione precedente:  
   
 ```  
@@ -102,7 +106,7 @@ WITH PASSWORD = '<use_a_strong_password_here>',
 SID = <SID>;  
 ```  
   
- Per eseguire il mapping di un utente isolato (orfano) a un account di accesso già esistente in **master**, eseguire l'istruzione [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md), specificando il nome dell'account di accesso.  
+ Per eseguire il mapping di un utente isolato (orfano) a un account di accesso già esistente in **master**, eseguire l'istruzione [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) , specificando il nome dell'account di accesso.  
   
 ```  
 ALTER USER <user_name> WITH Login = <login_name>;  
@@ -119,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  La procedura deprecata [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) funziona anche con gli utenti isolati (orfani). `sp_change_users_login` non può essere usata con [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

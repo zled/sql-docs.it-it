@@ -1,26 +1,30 @@
 ---
-title: "Configurare le propriet&#224; generali della gestione basata su criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.PolicyManagement.f1"
-helpviewer_keywords: 
-  - "gestione basata su criteri, configurazione delle proprietà"
+title: "Configurare le proprietà generali della gestione basata su criteri | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.PolicyManagement.f1
+helpviewer_keywords:
+- Policy-Based Management, configure properties
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f7103ab22a01f6dcb60c31d7ad7fdcc503746db
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurare le propriet&#224; generali della gestione basata su criteri
+# <a name="configure-the-general-properties-of-policy-based-management"></a>Configurare le proprietà generali della gestione basata su criteri
   In questo argomento verrà descritto come configurare le proprietà per la gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -44,13 +48,13 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per configurare la gestione basata su criteri  
+#### <a name="to-configure-policy-based-management"></a>Per configurare la gestione basata su criteri  
   
-1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui configurare le proprietà della gestione basata su criteri.  
+1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui configurare le proprietà della gestione basata su criteri.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   
-3.  Fare clic con il pulsante destro del mouse su **Gestione criteri**, quindi scegliere **Proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su **Gestione criteri** , quindi scegliere **Proprietà**.  
   
      Nella finestra di dialogo **Proprietà Gestione criteri** sono disponibili le opzioni seguenti.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per configurare la gestione basata su criteri  
+#### <a name="to-configure-policy-based-management"></a>Per configurare la gestione basata su criteri  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

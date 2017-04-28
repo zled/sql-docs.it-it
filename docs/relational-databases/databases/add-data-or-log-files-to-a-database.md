@@ -1,30 +1,34 @@
 ---
-title: "Aggiungere file di dati o file di log a un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log [SQL Server], file"
-  - "aggiunta di file di dati"
-  - "aggiunta di file"
-  - "aggiunta di file di log"
-  - "aggiunte di file [SQL Server], passaggi"
-  - "file [SQL Server], aggiunta"
-  - "aggiunte di dati [SQL Server]"
+title: Aggiungere file di dati o file di log a un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- adding data files
+- adding files
+- adding log files
+- file additions [SQL Server], steps
+- files [SQL Server], adding
+- data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiungere file di dati o file di log a un database
+# <a name="add-data-or-log-files-to-a-database"></a>Aggiungere file di dati o file di log a un database
   In questo argomento si descrive come aggiungere file di dati o di log a un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per aggiungere file di dati o file di log a un database  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>Per aggiungere file di dati o file di log a un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
@@ -70,11 +74,11 @@ caps.handback.revision: 25
   
 6.  Selezionare il tipo di file, dati oppure log.  
   
-7.  Per un file di dati, selezionare il filegroup nel quale includere il file dall'elenco, oppure selezionare **<nuovo filegroup>\>** per creare un nuovo filegroup. Non è possibile inserire log delle transazioni nei filegroup.  
+7.  Per un file di dati, selezionare il filegroup nel quale includere il file dall'elenco oppure selezionare **\<NuovoFilegroup>** per creare un nuovo filegroup. Non è possibile inserire log delle transazioni nei filegroup.  
   
 8.  Specificare le dimensioni iniziali del file. Creare file di dati delle dimensioni maggiori possibili, corrispondenti alla quantità massima di dati che si prevede di includere nel database.  
   
-9. Per specificare le modalità di aumento delle dimensioni del file, fare clic su **...** nella colonna **Aumento automatico**. Selezionare una delle seguenti opzioni:  
+9. Per specificare le modalità di aumento delle dimensioni del file, fare clic su**...**nella colonna **Aumento automatico** . Selezionare una delle seguenti opzioni:  
   
     1.  Per consentire l'aumento del file attualmente selezionato qualora sia necessario un maggiore spazio per i dati, selezionare la casella di controllo **Abilita aumento automatico dimensioni** e quindi selezionare una delle opzioni seguenti:  
   
@@ -88,7 +92,7 @@ caps.handback.revision: 25
   
     2.  Per fare in modo che le dimensioni del file aumentino secondo le necessità, selezionare **Aumento illimitato**.  
   
-    3.  Per impedire che il file aumenti, deselezionare la casella di controllo **Abilita aumento automatico dimensioni** . Le dimensioni del file non aumenteranno oltre il valore specificato nella colonna **Dimensioni iniziali (MB)**.  
+    3.  Per impedire che il file aumenti, deselezionare la casella di controllo **Abilita aumento automatico dimensioni** . Le dimensioni del file non aumenteranno oltre il valore specificato nella colonna **Dimensioni iniziali (MB)** .  
   
     > [!NOTE]  
     >  Le dimensioni massime del database sono comunque determinate dalla quantità di spazio disponibile su disco e dalle limitazioni previste dalla licenza della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso.  
@@ -102,7 +106,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per aggiungere file di dati o file di log a un database  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>Per aggiungere file di dati o file di log a un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -112,10 +116,10 @@ caps.handback.revision: 25
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   
- Per altri esempi, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ Per altri esempi, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## Vedere anche  
- [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Eliminare file di dati o file di log da un database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [Aumentare le dimensioni di un database](../../relational-databases/databases/increase-the-size-of-a-database.md)  
   

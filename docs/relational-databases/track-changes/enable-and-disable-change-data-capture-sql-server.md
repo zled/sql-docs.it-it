@@ -1,30 +1,34 @@
 ---
-title: "Abilitare e disabilitare Change Data Capture (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Change Data Capture [SQL Server], abilitazione delle tabelle"
-  - "Change Data Capture [SQL Server], abilitazione dei database"
-  - "Change Data Capture [SQL Server], disabilitazione dei database"
-  - "Change Data Capture [SQL Server], disabilitazione delle tabelle"
+title: Abilitare e disabilitare Change Data Capture (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change data capture [SQL Server], enabling tables
+- change data capture [SQL Server], enabling databases
+- change data capture [SQL Server], disabling databases
+- change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf419d411328bd5c437dfbd93d419b7fd944a495
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare e disabilitare Change Data Capture (SQL Server)
+# <a name="enable-and-disable-change-data-capture-sql-server"></a>Abilitare e disabilitare Change Data Capture (SQL Server)
   In questo argomento viene descritto come abilitare e disabilitare Change Data Capture per un database e una tabella.  
   
-## Abilitazione di Change Data Capture per un database  
+## <a name="enable-change-data-capture-for-a-database"></a>Abilitazione di Change Data Capture per un database  
  Prima di creare un'istanza di acquisizione per le singole tabelle, è necessario che un membro del ruolo predefinito del server **sysadmin** abiliti il database per Change Data Capture. Questa operazione viene eseguita eseguendo la stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) nel contesto del database. Per determinare se un database è già abilitato, eseguire una query sulla colonna **is_cdc_enabled** nella vista del catalogo **sys.databases**.  
   
  Quando un database è abilitato per Change Data Capture, per il database vengono creati lo schema **cdc** , l'utente **cdc** , le tabelle dei metadati e altri oggetti di sistema. Lo schema **cdc** contiene le tabelle di metadati di Change Data Capture e, dopo l'abilitazione della funzionalità delle tabelle di origine, le singole tabelle delle modifiche fungono da repository per i dati delle modifiche. Lo schema **cdc** contiene anche le funzioni di sistema associate usate per eseguire query sui dati delle modifiche.  
@@ -46,7 +50,7 @@ EXEC sys.sp_cdc_enable_db
 GO  
 ```  
   
-## Disabilitazione di Change Data Capture per un database  
+## <a name="disable-change-data-capture-for-a-database"></a>Disabilitazione di Change Data Capture per un database  
  Un membro del ruolo predefinito del server **sysadmin** può eseguire la stored procedure [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) nel contesto del database per disabilitare Change Data Capture per un database. Non è necessario disabilitare singole tabelle prima di disabilitare il database. La disabilitazione del database comporta la rimozione di tutti i metadati di Change Data Capture associati, inclusi l'utente e lo schema **cdc** e i processi Change Data Capture. Eventuali ruoli di controllo creati da Change Data Capture, tuttavia, non verranno rimossi automaticamente e devono essere eliminati in modo esplicito. Per determinare se un database è abilitato, eseguire una query sulla colonna **is_cdc_enabled** nella vista del catalogo sys.databases.  
   
  Se viene eliminato un database abilitato per Change Data Capture, i processi Change Data Capture vengono automaticamente rimossi.  
@@ -66,8 +70,8 @@ EXEC sys.sp_cdc_disable_db
 GO  
 ```  
   
-## Abilitazione di Change Data Capture per una tabella  
- Dopo avere abilitato un database per Change Data Capture, i membri del ruolo predefinito del database **db_owner** possono creare un'istanza di acquisizione per le singole tabelle di origine usando la stored procedure **sys.sp_cdc_enable_table**. Per determinare se una tabella di origine è attualmente abilitata per Change Data Capture, esaminare la colonna is_tracked_by_cdc nella vista del catalogo **sys.tables**.  
+## <a name="enable-change-data-capture-for-a-table"></a>Abilitazione di Change Data Capture per una tabella  
+ Dopo avere abilitato un database per Change Data Capture, i membri del ruolo predefinito del database **db_owner** possono creare un'istanza di acquisizione per le singole tabelle di origine usando la stored procedure **sys.sp_cdc_enable_table**. Per determinare se una tabella di origine è attualmente abilitata per Change Data Capture, esaminare la colonna is_tracked_by_cdc nella vista del catalogo **sys.tables** .  
   
  Quando si crea un'istanza di acquisizione, è possibile specificare le opzioni seguenti:  
   
@@ -77,7 +81,7 @@ GO
   
  **Un filegroup per contenere la tabella delle modifiche.**  
   
- Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che vogliono controllare la posizione di singole tabelle delle modifiche possono usare il parametro *@filegroup_name* per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere il modello **Abilitare una tabella specificando l'opzione filegroup** per un esempio su come usare il parametro *@filegroup_name*.  
+ Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che vogliono controllare la posizione di singole tabelle delle modifiche possono usare il parametro *@filegroup_name* per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere il modello **Abilitare una tabella specificando l'opzione filegroup** per un esempio su come usare il parametro *@filegroup_name* .  
   
 ```tsql  
 -- =========  
@@ -118,11 +122,11 @@ GO
   
  **Una funzione per eseguire query per le modifiche delta.**  
   
- Un'istanza di acquisizione includerà sempre una funzione con valori di tabella per la restituzione di tutte le voci della tabella delle modifiche generate in un intervallo definito. Il nome di questa funzione viene creato aggiungendo il nome dell'istanza di acquisizione a "cdc.fn_cdc_get_all_changes_." Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_all_changes_%3Ccapture_instance%3E%20%20\(Transact-SQL\).md).  
+ Un'istanza di acquisizione includerà sempre una funzione con valori di tabella per la restituzione di tutte le voci della tabella delle modifiche generate in un intervallo definito. Il nome di questa funzione viene creato aggiungendo il nome dell'istanza di acquisizione a "cdc.fn_cdc_get_all_changes_." Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
- Se il parametro *@supports_net_changes* è impostato su 1, viene generata anche una funzione del rilevamento delle modifiche delta. Questa funzione restituisce solo una modifica per ogni riga distinta modificata nell'intervallo specificato nella chiamata. Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md).  
+ Se il parametro *@supports_net_changes* è impostato su 1, viene generata anche una funzione del rilevamento delle modifiche delta. Questa funzione restituisce solo una modifica per ogni riga distinta modificata nell'intervallo specificato nella chiamata. Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
- Per supportare le query sulle modifiche delta, è necessario che la tabella di origine disponga di una chiave primaria o di un indice univoco per identificare le righe in modo univoco. Se viene usato un indice univoco, il nome dell'indice deve essere specificato con il parametro *@index_name*. Le colonne definite nella chiave primaria o nell'indice univoco devono essere incluse nell'elenco delle colonne di origine da acquisire.  
+ Per supportare le query sulle modifiche delta, è necessario che la tabella di origine disponga di una chiave primaria o di un indice univoco per identificare le righe in modo univoco. Se viene usato un indice univoco, il nome dell'indice deve essere specificato con il parametro *@index_name* . Le colonne definite nella chiave primaria o nell'indice univoco devono essere incluse nell'elenco delle colonne di origine da acquisire.  
   
  Vedere il modello **Abilitare una tabella per le query All e Net Changes** per un esempio che descrive la creazione di un'istanza di acquisizione con entrambe le funzioni di query.  
   
@@ -143,8 +147,8 @@ GO
 > [!NOTE]  
 >  Se Change Data Capture è abilitato in una tabella con una chiave primaria esistente e non viene usato il parametro *@index_name* per identificare un indice univoco alternativo, la funzionalità Change Data Capture userà la chiave primaria. Non saranno consentite modifiche successive alla chiave primaria se prima non si disabilita Change Data Capture per la tabella. Questa regola è sempre valida, indipendentemente dal fatto che durante la configurazione di Change Data Capture sia stato o meno richiesto il supporto per le query sulle modifiche delta. Se in una tabella non è presente alcuna chiave primaria al momento dell'abilitazione di Change Data Capture, l'aggiunta successiva di una chiave primaria verrà ignorata da Change Data Capture. Poiché Change Data Capture non utilizzerà una chiave primaria creata in seguito all'abilitazione della tabella, la chiave e le colonne chiave possono essere rimosse senza restrizioni.  
   
-## Disabilitazione di Change Data Capture per una tabella  
- I membri del ruolo predefinito del database **db_owner** possono rimuovere un'istanza di acquisizione per le singole tabelle di origine usando la stored procedure **sys.sp_cdc_disable_table**. Per determinare se una tabella di origine è attualmente abilitata per Change Data Capture, esaminare la colonna **is_tracked_by_cdc** nella vista del catalogo **sys.tables**. Se in seguito alla disabilitazione non è presente alcuna tabella abilitata per il database, vengono rimossi anche i processi Change Data Capture.  
+## <a name="disable-change-data-capture-for-a-table"></a>Disabilitazione di Change Data Capture per una tabella  
+ I membri del ruolo predefinito del database **db_owner** possono rimuovere un'istanza di acquisizione per le singole tabelle di origine usando la stored procedure **sys.sp_cdc_disable_table**. Per determinare se una tabella di origine è attualmente abilitata per Change Data Capture, esaminare la colonna **is_tracked_by_cdc** nella vista del catalogo **sys.tables** . Se in seguito alla disabilitazione non è presente alcuna tabella abilitata per il database, vengono rimossi anche i processi Change Data Capture.  
   
  Se viene eliminata una tabella abilitata per Change Data Capture, i metadati di Change Data Capture associati alla tabella vengono automaticamente rimossi.  
   
@@ -163,7 +167,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

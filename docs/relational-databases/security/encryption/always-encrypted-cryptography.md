@@ -1,30 +1,34 @@
 ---
-title: "Crittografia sempre attiva | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Crittografia sempre attiva, sistema di crittografia"
+title: Crittografia Always Encrypted | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee5419dc374c545daa1249f2e6f76d8d13ac4695
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crittografia sempre attiva
+# <a name="always-encrypted-cryptography"></a>Crittografia sempre attiva
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Il documento descrive gli algoritmi e i meccanismi di crittografia necessari per derivare il materiale crittografico usato dalla funzionalità [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
-## Chiavi, archivi di chiavi e algoritmi di crittografia delle chiavi  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chiavi, archivi di chiavi e algoritmi di crittografia delle chiavi  
  La funzionalità Crittografia sempre attiva usa chiavi di due tipi: chiavi master della colonna e chiavi di crittografia della colonna.  
   
  La chiave CMK (Column Master Key, chiave master della colonna) è una chiave usata per crittografare altre chiavi che resta sempre sotto il controllo del client ed è memorizzata in un archivio di chiavi esterno. Il driver client abilitato per Always Encrypted interagisce con l'archivio delle chiavi tramite un provider di archiviazione CMK, che può far parte sia della libreria dei driver (provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/di sistema) che dell'applicazione client (provider personalizzato). Al momento, le librerie di driver client includono provider di archiviazione chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per l'[archivio certificati Windows](https://msdn.microsoft.com/library/windows/desktop/aa388160) e moduli di protezione hardware.  Per l'elenco aggiornato dei provider, vedere [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Uno sviluppatore di applicazioni può realizzare un provider personalizzato per un archivio arbitrario.  
@@ -33,16 +37,16 @@ caps.handback.revision: 11
   
  Tutti i provider di archiviazione CMK di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] eseguono la crittografia delle chiavi CEK con riempimento RSA-OAEP usando i parametri predefiniti specificati nella sezione A.2.1 di RFC 3447. Tali parametri usano una funzione hash SHA-1 e una funzione di generazione della maschera MGF1 con SHA-1.  
   
-## Algoritmo di crittografia dei dati  
+## <a name="data-encryption-algorithm"></a>Algoritmo di crittografia dei dati  
  La funzionalità Always Encrypted usa l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** per crittografare i dati nel database.  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** deriva dalla bozza della specifica disponibile all'indirizzo [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). L’algoritmo usa uno schema di crittografia autenticata con dati associati che adotta l’approccio Encrypt-then-MAC. Tale approccio prevede prima la crittografia del testo non crittografato e quindi la generazione del MAC in base al testo crittografato risultante.  
   
  Per nascondere i modelli, l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** usa la modalità operativa CBC (Cipher Block Chaining), che prevede l'immissione nel sistema di un valore iniziale denominato IV (vettore di inizializzazione). La descrizione completa della modalità CBC è disponibile all'indirizzo [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
- L'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** calcola il valore del testo crittografato per un determinato valore del testo non crittografato con la procedura seguente.  
+ L'algoritmo**AEAD_AES_256_CBC_HMAC_SHA_256** calcola il valore del testo crittografato per un determinato valore del testo non crittografato con la procedura seguente.  
   
-### Passaggio 1: Generare il vettore di inizializzazione (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Passaggio 1: Generare il vettore di inizializzazione (IV)  
  La funzionalità Always Encrypted supporta due varianti di **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   Casuale  
@@ -72,8 +76,8 @@ Di conseguenza, la crittografia deterministica genera sempre lo stesso testo cri
   
  La crittografia deterministica è più efficace nel nascondere i modelli rispetto ad alternative quali, ad esempio, l’uso di un valore IV predefinito.  
   
-### Passaggio 2: Calcolo del testo crittografato AES_256_CBC  
- Dopo avere calcolato l'IV viene generato il testo crittografato **AES_256_CBC**:  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>Passaggio 2: Calcolo del testo crittografato AES_256_CBC  
+ Dopo avere calcolato l'IV viene generato il testo crittografato **AES_256_CBC** :  
   
 ```  
 aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.  
@@ -85,7 +89,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### Passaggio 3: Calcolo del MAC  
+### <a name="step-3-computing-mac"></a>Passaggio 3: Calcolo del MAC  
  Successivamente, il MAC viene calcolato con l'algoritmo seguente:  
   
 ```  
@@ -99,14 +103,14 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### Passaggio 4: Concatenazione  
+### <a name="step-4-concatenation"></a>Passaggio 4: Concatenazione  
  Infine, il valore crittografato è generato concatenando il byte della versione dell’algoritmo, il MAC, l’IV e il testo crittografato AES_256_CBC:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
 ```  
   
-## Lunghezza del testo crittografato  
+## <a name="ciphertext-length"></a>Lunghezza del testo crittografato  
  La lunghezza in byte dei singoli componenti del testo crittografato **AEAD_AES_256_CBC_HMAC_SHA_256** è:  
   
 -   versionbyte: 1  
@@ -174,11 +178,12 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**varchar**|Variabile. Utilizzare la formula precedente.|  
 |**xml**|N/D (non supportato)|  
   
-## Guida di riferimento a .NET  
+## <a name="net-reference"></a>Guida di riferimento a .NET  
  Per altre informazioni sugli algoritmi illustrati in questo documento, vedere i file **SqlAeadAes256CbcHmac256Algorithm.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** della [Guida di riferimento a .NET](http://referencesource.microsoft.com/).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;client development&#41; (Always Encrypted - sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

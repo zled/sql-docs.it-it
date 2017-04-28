@@ -1,36 +1,40 @@
 ---
-title: "Creare trigger DML. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crittografia [SQL Server], trigger DML"
-  - "risoluzione dei nomi posticipata, trigger DML"
-  - "WITH ENCRYPTION - clausola"
-  - "IF UPDATE"
-  - "istruzione SET, trigger DML"
-  - "trigger DML, programmazione"
-  - "test di modifiche di colonne"
-  - "risultati [SQL Server], trigger DML"
+title: Creare trigger DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], DML triggers
+- deferred name resolution, DML triggers
+- WITH ENCRYPTION clause
+- IF UPDATE
+- SET statement, DML triggers
+- DML triggers, programming
+- testing column changes
+- results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare trigger DML.
+# <a name="create-dml-triggers"></a>Creare trigger DML.
   Questo argomento illustra come creare un trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
 ##  <a name="Top"></a> Prima di iniziare  
   
-### Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Per un elenco di limitazioni e restrizioni associate alla creazione di trigger DML, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ###  <a name="Permissions"></a> Autorizzazioni  
@@ -47,11 +51,11 @@ caps.handback.revision: 31
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database**, espandere il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], espandere **Tabelle** e quindi espandere la tabella **Purchasing.PurchaseOrderHeader**.  
+2.  Espandere **Database**, espandere il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , espandere **Tabelle** e quindi espandere la tabella **Purchasing.PurchaseOrderHeader**.  
   
 3.  Fare clic con il pulsante destro del mouse su **Trigger**, quindi scegliere **Nuovo trigger**.  
   
-4.  Scegliere **Imposta valori per parametri modello** dal menu **Query**. In alternativa, è possibile premere (CTRL+MAIUSC+M) per aprire la finestra di dialogo **Imposta valori per parametri modello**.  
+4.  Scegliere **Imposta valori per parametri modello** dal menu **Query**. In alternativa, è possibile premere (CTRL+MAIUSC+M) per aprire la finestra di dialogo **Imposta valori per parametri modello** .  
   
 5.  Nella finestra di dialogo **Imposta valori per parametri modello** immettere i seguenti valori per i parametri indicati.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 31
   
 6.  Scegliere **OK**.  
   
-7.  Nell'**Editor di query** sostituire il commento `-- Insert statements for trigger here` con l'istruzione seguente:  
+7.  Nell' **Editor di query**sostituire il commento `-- Insert statements for trigger here` con l'istruzione seguente:  
   
     ```tsql  
     IF @@ROWCOUNT = 1  

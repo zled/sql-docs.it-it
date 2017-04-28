@@ -1,22 +1,26 @@
 ---
-title: "Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
+# <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -29,7 +33,7 @@ Questo articolo illustra come è possibile usare le funzionalità avanzate di SQ
 
 
 
-### Prerequisiti
+### <a name="prerequisites"></a>Prerequisiti
 
 Il presente articolo presuppone che si sappia già come creare e avviare una sessione evento. Le istruzioni per creare una sessione evento sono già state illustrate nell'articolo seguente:
 
@@ -42,7 +46,7 @@ Questo articolo presuppone anche che sia stata installata una versione mensile m
 
 
 
-### Differenze con il database SQL di Azure
+### <a name="differences-with-azure-sql-database"></a>Differenze con il database SQL di Azure
 
 
 L'implementazione e le funzionalità degli eventi estesi nei due prodotti Microsoft SQL Server e database SQL di Azure sono molto simili, ma esistono alcune differenze relative all'interfaccia utente di SSMS.
@@ -66,7 +70,7 @@ Per la documentazione sugli eventi estesi specifica del database SQL di Azure, v
 
 
 
-## A. Opzioni generali
+## <a name="a-general-options"></a>A. Opzioni generali
 
 
 Le opzioni avanzate generalmente sono accessibili nei modi seguenti:
@@ -74,12 +78,12 @@ Le opzioni avanzate generalmente sono accessibili nei modi seguenti:
 
 - Dal normale menu **File** > **Apri** > **File**.
 - Facendo clic con il pulsante destro del mouse in **Esplora oggetti** su **Gestione** > **Eventi estesi**.
-- Dallo speciale menu **Eventi estesi** e dalla speciale barra degli strumenti per gli eventi estesi.
+- Dallo speciale menu **Eventi estesi**e dalla speciale barra degli strumenti per gli eventi estesi.
 - Facendo clic con il pulsante destro del mouse nel riquadro a schede che visualizza i dati di destinazione.
 
 
 
-## B. Trasferire i dati di destinazione in SSMS per visualizzarli
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. Trasferire i dati di destinazione in SSMS per visualizzarli
 
 
 È possibile trasferire i dati della destinazione event_file nell'interfaccia utente di SSMS in diversi modi. Quando si specifica una destinazione event_file, si impostano il percorso e il nome file:
@@ -112,7 +116,7 @@ SSMS può visualizzare dati da qualsiasi destinazione, ma le visualizzazioni son
 
 
 
-### B.1 Aprire il file XEL dal menu File > Apri > File
+### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Aprire il file XEL dal menu File > Apri > File
 
 
 È possibile aprire un singolo file XEL dal menu standard **File** > **Apri** > **File**.
@@ -121,7 +125,7 @@ SSMS può visualizzare dati da qualsiasi destinazione, ma le visualizzazioni son
 
 
 
-### B.2 Visualizzare i dati di destinazione
+### <a name="b2-view-target-data"></a>B.2 Visualizzare i dati di destinazione
 
 
 L'opzione **Visualizza dati di destinazione** visualizza i dati acquisiti finora.
@@ -138,11 +142,12 @@ I dati di destinazione vengono visualizzati in un riquadro a schede in SSMS, com
 ![Destinazione utente > Visualizza dati di destinazione](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **Visualizza dati di destinazione** visualizza i *dati accumulati da più file XEL* dalla sessione evento specificata. Ogni ciclo **Avvia**-**Arresta** crea un file con un numero intero derivato successivamente incorporato nel nome, ma ogni file condivide lo stesso nome radice.
+> [!NOTE] 
+> **Visualizza dati di destinazione** visualizza i *dati accumulati da più file XEL* dalla sessione evento specificata. Ogni ciclo **Avvia**-**Arresta** crea un file con un numero intero derivato successivamente incorporato nel nome, ma ogni file condivide lo stesso nome radice.
 
 
 
-#### B.3 Controllare i dati dinamici
+#### <a name="b3-watch-live-data"></a>B.3 Controllare i dati dinamici
 
 
 Quando la sessione evento è attiva, potrebbe essere necessario controllare i dati dell'evento in tempo reale, non appena vengono ricevuti dalla destinazione.
@@ -160,7 +165,7 @@ La visualizzazione dei dati viene aggiornata in base all'intervallo specificato.
 
 
 
-### B.4 Visualizzare il file XEL con la funzione sys.fn_xe_file_target_read_file
+### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Visualizzare il file XEL con la funzione sys.fn_xe_file_target_read_file
 
 
 Per l'elaborazione batch, la funzione di sistema seguente può generare il codice XML per i record in un file XEL:
@@ -169,7 +174,7 @@ Per l'elaborazione batch, la funzione di sistema seguente può generare il codic
 
 
 
-## C. Esportare i dati di destinazione
+## <a name="c-export-the-target-data"></a>C. Esportare i dati di destinazione
 
 
 Una volta che i dati di destinazione sono presenti in SSMS, è possibile esportarli in formati diversi eseguendo queste operazioni:
@@ -181,53 +186,53 @@ Una volta che i dati di destinazione sono presenti in SSMS, è possibile esporta
     ![Esportare i dati visualizzati, Eventi estesi > Esporta in > (CSV o XEL oppure una tabella)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
 2. Fare clic sulla nuova voce di menu **Eventi estesi**.
-3. Fare clic su **Esporta in** e quindi scegliere un formato.
+3. Fare clic su **Esporta in**e quindi scegliere un formato.
 
 
 
-## D. Modificare i dati nella visualizzazione
+## <a name="d-manipulate-data-in-the-display"></a>D. Modificare i dati nella visualizzazione
 
 
 L'interfaccia utente di SSMS consente di modificare i dati in diversi modi, ma anche di visualizzarli semplicemente così come sono.
 
 
 
-### D.1 Menu di scelta rapida nella visualizzazione dati
+### <a name="d1-context-menus-in-the-data-display"></a>D.1 Menu di scelta rapida nella visualizzazione dati
 
 
 Quando si fa clic con il pulsante destro del mouse nella visualizzazione dati, si aprono menu di scelta rapida diversi a seconda della posizione.
 
 
 
-#### D.1.1 Fare clic con il pulsante destro del mouse su una cella di dati
+#### <a name="d11-right-click-a-data-cell"></a>D.1.1 Fare clic con il pulsante destro del mouse su una cella di dati
 
 
-Lo screenshot seguente illustra il menu contestuale visualizzato quando si fa clic con il pulsante destro del mouse nella visualizzazione dati. Lo screenshot illustra anche l'espansione della voce di menu **Copia**.
+Lo screenshot seguente illustra il menu contestuale visualizzato quando si fa clic con il pulsante destro del mouse nella visualizzazione dati. Lo screenshot illustra anche l'espansione della voce di menu **Copia** .
 
 
 ![Clic con il pulsante destro del mouse su una cella, nella visualizzazione dei dati](../../relational-databases/extended-events/media/xevents-ssms-ui25-rightclickcell.png)
 
 
 
-#### D.1.2 Fare clic con il pulsante destro del mouse su un'intestazione di colonna
+#### <a name="d12-right-click-a-column-header"></a>D.1.2 Fare clic con il pulsante destro del mouse su un'intestazione di colonna
 
 
-Lo screenshot seguente illustra il menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse sull'intestazione **timestamp**.
+Lo screenshot seguente illustra il menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse sull'intestazione **timestamp** .
 
 
 ![Clic con il pulsante destro del mouse su un'intestazione di colonna, nella visualizzazione dei dati e griglia dei dettagli](../../relational-databases/extended-events/media/xevents-ssms-ui40-toolbar.png)
 
 
-Lo screenshot precedente illustra anche la speciale barra degli strumenti per gli eventi estesi. La luminosità del pulsante Dettagli indica che è attivo. L'immagine quindi illustra anche la scheda **Dettagli**. La griglia è una parte ulteriore della visualizzazione dati.
+Lo screenshot precedente illustra anche la speciale barra degli strumenti per gli eventi estesi. La luminosità del pulsante Dettagli indica che è attivo. L'immagine quindi illustra anche la scheda **Dettagli** . La griglia è una parte ulteriore della visualizzazione dati.
 
 
 
-### D.2 Scegliere e unire le colonne
+### <a name="d2-choose-columns-merge-columns"></a>D.2 Scegliere e unire le colonne
 
 
 L'opzione **Scegli colonne** consente di controllare quali colonne di dati vengono visualizzate e quali no. È possibile trovare la voce di menu **Scegli colonne** in alcune posizioni diverse:
 
-- Nel menu **Eventi estesi**.
+- Nel menu **Eventi estesi** .
 - Sulla barra degli strumenti Eventi estesi.
 - Nel menu di scelta rapida di un'intestazione nella visualizzazione dati.
 
@@ -239,7 +244,7 @@ Quando si fa clic su **Scegli colonne**, viene visualizzata la finestra di dialo
 
 
 
-#### D.2.1 Unire le colonne
+#### <a name="d21-merge-columns"></a>D.2.1 Unire le colonne
 
 
 La finestra di dialogo **Scegli colonne** ha una sezione dedicata all'unione di più colonne in una sola, a fini di:
@@ -249,7 +254,7 @@ La finestra di dialogo **Scegli colonne** ha una sezione dedicata all'unione di 
 
 
 
-### D.3 Filtri
+### <a name="d3-filters"></a>D.3 Filtri
 
 
 Nell'area degli eventi estesi è possibile specificare due tipi principali di filtri:
@@ -261,8 +266,8 @@ Nell'area degli eventi estesi è possibile specificare due tipi principali di fi
 
 I filtri per la visualizzazione in SSMS sono i seguenti:
 
-- Un filtro basato sull'*intervallo di tempo*, che esamina la colonna **timestamp**.
-- Un filtro basato sui *valori di colonna*.
+- Un filtro basato sull' *intervallo di tempo* , che esamina la colonna **timestamp** .
+- Un filtro basato sui *valori di colonna* .
 
 
 La relazione tra il filtro temporale e il filtro colonne è un operatore booleano "*AND*".
@@ -272,14 +277,14 @@ La relazione tra il filtro temporale e il filtro colonne è un operatore boolean
 
 
 
-### D.4 Raggruppamento e aggregazione
+### <a name="d4-grouping-and-aggregation"></a>D.4 Raggruppamento e aggregazione
 
 
 Il raggruppamento di righe in base ai valori corrispondenti in una determinata colonna è il primo passaggio per eseguire un'aggregazione di riepilogo dei dati.
 
 
 
-#### D.4.1 Raggruppamento
+#### <a name="d41-grouping"></a>D.4.1 Raggruppamento
 
 
 Sulla barra degli strumenti degli eventi estesi il pulsante **Raggruppamento** apre una finestra di dialogo che è possibile usare per raggruppare i dati visualizzati in base a una determinata colonna. Lo screenshot successivo illustra una finestra di dialogo usata per il raggruppamento in base alla colonna *name*.
@@ -292,7 +297,7 @@ Una volta eseguito il raggruppamento, la visualizzazione assume un nuovo aspetto
 
 
 
-#### D.4.2 Aggregazione
+#### <a name="d42-aggregation"></a>D.4.2 Aggregazione
 
 
 Una volta raggruppati i dati visualizzati, è possibile aggregarli in altre colonne.  Lo screenshot successivo illustra come i dati raggruppati vengono aggregati in base a *count*.
@@ -305,11 +310,13 @@ Una volta eseguita l'aggregazione, la visualizzazione assume un nuovo aspetto, c
 
 
 
-### D.5 Visualizzare il piano di query in fase di esecuzione
+### <a name="d5-view-run-time-query-plan"></a>D.5 Visualizzare il piano di query in fase di esecuzione
 
 
-L'evento **query_post_execution_showplan** consente di visualizzare il piano di query effettivo nell'interfaccia utente di SSMS. Quando il riquadro **Dettagli** è visibile, è possibile visualizzare un grafico del piano di query nella scheda **Query Plan**. Passando il puntatore su un nodo nel piano di query, è possibile visualizzare un elenco di nomi di proprietà e i rispettivi valori per il nodo.
+L'evento **query_post_execution_showplan** consente di visualizzare il piano di query effettivo nell'interfaccia utente di SSMS. Quando il riquadro **Dettagli** è visibile, è possibile visualizzare un grafico del piano di query nella scheda **Query Plan** . Passando il puntatore su un nodo nel piano di query, è possibile visualizzare un elenco di nomi di proprietà e i rispettivi valori per il nodo.
 
 
 ![Piano di query, con l'elenco di proprietà per un nodo](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
+
 

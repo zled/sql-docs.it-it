@@ -1,27 +1,31 @@
 ---
-title: "Creazione di un backup differenziale del database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup completi differenziali [SQL Server]"
-  - "backup dei database [SQL Server], backup completi differenziali"
-  - "esecuzione del backup dei database [SQL Server], backup completi differenziali"
-  - "backup [SQL Server], creazione"
+title: Creare un backup differenziale di database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di un backup differenziale del database (SQL Server)
+# <a name="create-a-differential-database-backup-sql-server"></a>Creazione di un backup differenziale del database (SQL Server)
   Creare un backup differenziale del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Sezioni dell'argomento**  
@@ -44,7 +48,7 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> Operazioni preliminari  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   Non è possibile utilizzare l'istruzione BACKUP in una transazione esplicita o implicita.  
   
@@ -59,19 +63,19 @@ caps.handback.revision: 34
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Verificare prima le autorizzazioni.  
- Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator**.  
+ Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
- Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup interferiscono con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riesca a leggere e scrivere sul dispositivo e che l'account usato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbia le autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, [non](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) vengono controllate dalla stored procedure **sp_addumpdevice**, che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. I problemi relativi alle autorizzazioni del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
+ Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup interferiscono con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riesca a leggere e scrivere sul dispositivo e che l'account usato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbia le autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, [non](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)vengono controllate dalla stored procedure **sp_addumpdevice** , che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. I problemi relativi alle autorizzazioni del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### Creare un backup differenziale del database  
+#### <a name="create-a-differential-database-backup"></a>Creazione di un backup differenziale del database  
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
 4.  Verificare il nome del database nella casella di riepilogo **Database** . È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
 5.  Nella casella di riepilogo **Tipo di backup** selezionare **Differenziale**.  
   
     > [!IMPORTANT]  
-    >  Quando si seleziona l'opzione **Differenziale**, verificare che la casella di controllo **Copia solo backup** sia deselezionata.  
+    >  Quando si seleziona l'opzione**Differenziale** , verificare che la casella di controllo **Copia solo backup** sia deselezionata.  
   
 6.  In **Componente di cui eseguire il backup**fare clic su **Database**.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 34
   
     -   Per impostare una scadenza specifica per il set di backup, fare clic su **Dopo** (opzione predefinita) e immettere il numero di giorni dopo la creazione del set trascorsi i quali il set scadrà. Il valore può essere compreso nell'intervallo da 0 a 99999 giorni. Se si specifica il valore 0 giorni, il set di backup non ha scadenza.  
   
-         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server**, nella pagina **Impostazioni database**. Per accedere a questa pagina, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere le proprietà, quindi selezionare la pagina **Impostazioni database**.  
+         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** , nella pagina**Impostazioni database** . Per accedere a questa pagina, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
   
     -   Per impostare una data di scadenza specifica per il set di backup, fare clic su **Il**e immettere la data di scadenza del set.  
   
@@ -123,9 +127,9 @@ caps.handback.revision: 34
 14. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** nella pagina **Generale**, l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
     > [!NOTE]  
-    >  Le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** nella pagina **Generale**.  
+    >  Le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** nella pagina **Generale** .  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup**. Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup** ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup** . Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
   
      **Per visualizzare l'impostazione predefinita corrente della compressione dei backup**  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### Creare un backup differenziale del database  
+#### <a name="create-a-differential-database-backup"></a>Creazione di un backup differenziale del database  
   
 1.  Per creare il backup differenziale del database, eseguire l'istruzione BACKUP DATABASE specificando:  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 34
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
- In questo esempio vengono creati un backup completo e un backup differenziale del database `MyAdvWorks`.  
+ In questo esempio vengono creati un backup completo e un backup differenziale del database `MyAdvWorks` .  
   
 ```tsql  
 -- Create a full database backup first.  
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

@@ -1,40 +1,44 @@
 ---
-title: "Informazioni sull&#39;importazione ed esportazione bulk di dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "esportazione di dati"
-  - "importazione in blocco [SQL Server], informazioni sull'importazione in blocco"
-  - "dati [SQL Server], esportazione e importazione in blocco"
-  - "trasferimento di dati"
-  - "importazione di dati, (vedere anche importazione in blocco [SQL Server])"
-  - "copia di dati [SQL Server]"
-  - "esportazione bulk [SQL Server]"
-  - "importazione di dati, importazione in blocco"
-  - "copia di dati [SQL Server], esportazione e importazione in blocco"
-  - "esportazione di dati, (vedere anche esportazione in blocco [SQL Server])"
-  - "esportazione in blocco [SQL Server], informazioni sull'esportazione in blocco"
-  - "importazione bulk [SQL Server]"
-  - "importazione di dati"
+title: Informazioni sull&quot;importazione ed esportazione bulk di dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exporting data
+- bulk importing [SQL Server], about bulk importing
+- data [SQL Server], bulk export and import
+- transferring data
+- importing data, (See also bulk importing [SQL Server])
+- copying data [SQL Server]
+- bulk exporting [SQL Server]
+- importing data, bulk import
+- copying data [SQL Server], bulk export and import
+- exporting data,(See also bulk exporting [SQL Server])
+- bulk exporting [SQL Server], about bulk exporting
+- bulk importing [SQL Server]
+- importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9526d50311db80bb7a4c8933ed3413436883f0f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informazioni sull&#39;importazione ed esportazione bulk di dati (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione in blocco dei dati (*dati in blocco*) da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione in blocco dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+# <a name="bulk-import-and-export-of-data-sql-server"></a>Informazioni sull'importazione ed esportazione bulk di dati (SQL Server)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione in blocco dei dati (*dati in blocco*) da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione in blocco dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
  Per*esportazione bulk* si intende la copia di dati da una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati. 
-L' *importazione in blocco* indica il caricamento di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ad esempio, è possibile esportare dati da un'applicazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel in un file di dati e quindi eseguire l'importazione bulk di tali dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+L' *importazione in blocco* indica il caricamento di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ad esempio, è possibile esportare dati da un'applicazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel in un file di dati e quindi eseguire l'importazione bulk di tali dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  
 ##  <a name="MethodsForBuliIE"></a> Metodi di importazione ed esportazione bulk di dati  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esportazione bulk dei dati da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'importazione bulk dei dati in una tabella o in una vista non partizionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sono disponibili le modalità di base seguenti.  
@@ -60,7 +64,7 @@ L' *importazione in blocco* indica il caricamento di dati da un file di dati a u
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: file di formato XML e file di formato non XML.  
   
- L'[utilità bcp](../../tools/bcp-utility.md) è il solo strumento in grado di generare un file di formato. Per altre informazioni, vedere [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Per altre informazioni sui file di formato, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+ L' [utilità bcp](../../tools/bcp-utility.md) è il solo strumento in grado di generare un file di formato. Per altre informazioni, vedere [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Per altre informazioni sui file di formato, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 > [!NOTE]
 > Nei casi in cui un file di formato non viene fornito durante un'operazione di esportazione o importazione bulk, è possibile ignorare la formattazione predefinita nella riga di comando.
@@ -68,14 +72,14 @@ L' *importazione in blocco* indica il caricamento di dati da un file di dati a u
 |Argomenti correlati|
 |---|
 |[Preparazione dei dati per l'importazione o l'esportazione bulk (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)|
-|[Formati di dati per l'importazione o l'esportazione bulk (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato nativo per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato carattere per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato nativo Unicode per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato carattere Unicode per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Importare dati in formato nativo e carattere dalle versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)|
-|[Impostazione dei formati di dati per la compatibilità mediante bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare il tipo di archiviazione di file tramite bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare la lunghezza del campo tramite bcp (SQL Server)](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare i caratteri di terminazione del campo e della riga (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)|
+|[Formati di dati per l'importazione o l'esportazione bulk (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato nativo per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato carattere per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato nativo Unicode per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare il formato carattere Unicode per importare o esportare dati (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)|
+|[Impostazione dei formati di dati per la compatibilità mediante bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare il tipo di archiviazione di file tramite bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare la lunghezza di campo tramite bcp (SQL Server)](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)<br />&emsp;&#9679;&emsp;[Specificare i caratteri di terminazione del campo e della riga (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)|
 |[Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)|
 |[Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)|
-|[File di formato per l'importazione o l'esportazione di dati (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Creare un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per l'importazione in blocco dei dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per ignorare una colonna di una tabella (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per ignorare un campo dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<p>                                                                                                                                                                                                                  </p>|
+|[File di formato per l'importazione o l'esportazione di dati (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Creare un file di formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per l'importazione bulk dei dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per ignorare una colonna di una tabella (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per ignorare un campo dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<p>                                                                                                                                                                                                                  </p>|
  
   
-## Altre informazioni!  
+## <a name="more-information"></a>Altre informazioni!  
  [Prerequisiti per la registrazione minima nell'importazione bulk](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [Esempi di importazione ed esportazione in blocco di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
@@ -85,3 +89,4 @@ L' *importazione in blocco* indica il caricamento di dati da un file di dati a u
 
   
   
+

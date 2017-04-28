@@ -1,22 +1,26 @@
 ---
-title: "Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
   In questo argomento vengono fornite informazioni aggiuntive per chiamare stored procedure compilate in modo nativo da applicazioni di accesso ai dati.  
   
  I cursori non sono in grado di scorrere una stored procedure compilata in modo nativo.  
@@ -35,7 +39,7 @@ caps.handback.revision: 10
   
  I suggerimenti seguenti si applicano alle chiamate di stored procedure compilate in modo nativo tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Il metodo più efficace per chiamare una volta una stored procedure consiste nell'inviare una chiamata RPC diretta usando **SQLExecDirect** e clausole ODBC CALL. Non usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.  
+ Il metodo più efficace per chiamare una volta una stored procedure consiste nell'inviare una chiamata RPC diretta usando **SQLExecDirect** e clausole ODBC CALL. Non usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** . Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.  
   
  Il metodo più efficace per chiamare una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] più di una volta consiste nell'utilizzare chiamate di procedure RPC preparate. Le chiamate RPC preparate vengono eseguite come indicato di seguito utilizzando il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -79,7 +83,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## Utilizzo di ODBC per eseguire una stored procedure compilata in modo nativo  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Utilizzo di ODBC per eseguire una stored procedure compilata in modo nativo  
  In questo esempio viene illustrato come associare i parametri ed eseguire le stored procedure utilizzando il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  Nell'esempio viene compilata un'applicazione console che inserisce un singolo ordine utilizzando l'esecuzione diretta e inserisce i dettagli dell'ordine utilizzando l'esecuzione preparata.  
   
  Per eseguire l'esempio:  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

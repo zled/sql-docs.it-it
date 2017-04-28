@@ -1,31 +1,35 @@
 ---
-title: "Sottoscrittori Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipi di dati [replica di SQL Server], Sottoscrittori non SQL Server"
-  - "Sottoscrittori Oracle [replica di SQL Server]"
-  - "Sottoscrittori non SQL Server, Oracle"
-  - "Sottoscrittori eterogenei, Oracle"
-  - "mapping di tipi di dati [replica di SQL Server]"
+title: Sottoscrittori Oracle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data types [SQL Server replication], non-SQL Server Subscribers
+- Oracle Subscribers [SQL Server replication]
+- non-SQL Server Subscribers, Oracle
+- heterogeneous Subscribers, Oracle
+- mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sottoscrittori Oracle
+# <a name="oracle-subscribers"></a>Sottoscrittori Oracle
   A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta le sottoscrizioni push a Oracle tramite il provider Oracle OLE DB fornito da Oracle.  
   
-## Configurazione di un Sottoscrittore Oracle  
+## <a name="configuring-an-oracle-subscriber"></a>Configurazione di un Sottoscrittore Oracle  
  Per configurare un Sottoscrittore Oracle, eseguire la procedura seguente:  
   
 1.  Installare e configurare il software client Oracle di rete e il provider OLE DB appropriato sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modo che questo possa connettersi al Sottoscrittore Oracle. Il software client Oracle di rete deve essere dell'ultima versione disponibile. È consigliabile installare l'ultima versione del software client. Per tale motivo, la versione del software client è spesso successiva a quella del software del database. Il modo più diretto per installare e configurare il software consiste nell'utilizzare Oracle Universal Installer presente nel disco di Oracle Client. In Oracle Universal Installer, è necessario inserire le informazioni seguenti:  
@@ -34,7 +38,7 @@ caps.handback.revision: 55
     |-----------------|-----------------|  
     |Oracle Home|Percorso della directory di installazione del software Oracle. Accettare il percorso predefinito (C:\oracle\ora90 o simile) o inserirne un altro. Per ulteriori informazioni su Oracle Home, vedere la sezione relativa alle considerazioni su Oracle Home più avanti in questo argomento.|  
     |Oracle home name|Alias del percorso di Oracle Home.|  
-    |Installation type|In Oracle 10g, selezionare il **Runtime** o **amministratore** opzione di installazione.|  
+    |Installation type|In Oracle 10g, selezionare l'opzione di installazione **Runtime** o **Administrator** .|  
   
 2.  Creare un nome TNS per il Sottoscrittore. TNS (Transparent Network Substrate) è un livello di comunicazione utilizzato dai database Oracle. Il nome del servizio TNS è il nome con cui un'istanza di database Oracle viene riconosciuta in una rete. Il nome del servizio TNS viene assegnato durante la configurazione della connettività per il database Oracle. La replica utilizza il TNS Service Name per identificare il Sottoscrittore e per stabilire le connessioni.  
   
@@ -47,66 +51,66 @@ caps.handback.revision: 55
     |Selezione del protocollo di rete|Selezionare i protocolli appropriati che si desidera supportare. La maggioranza delle applicazioni utilizza il protocollo TCP.|  
     |Inserimento dei dati host per identificare il listener del database|L'host è il nome o l'alias DNS del computer su cui viene eseguito il listener Oracle, in genere lo stesso computer contenente il database. Per alcuni protocolli è necessario indicare informazioni aggiuntive. Ad esempio, se si seleziona il protocollo TCP è necessario indicare la porta su cui il listener rimane in attesa di richieste di connessione al database di destinazione. La configurazione TCP predefinita utilizza la porta 1521.|  
   
-3.  Creare uno snapshot o una pubblicazione transazionale, abilitarlo per i Sottoscrittori non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi creare una sottoscrizione push per il Sottoscrittore. Per ulteriori informazioni, vedere [creare una sottoscrizione per un sottoscrittore Non SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Creare uno snapshot o una pubblicazione transazionale, abilitarlo per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi creare una sottoscrizione push per il Sottoscrittore. Per altre informazioni, vedere [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
-### Impostazione delle autorizzazioni di directory  
+### <a name="setting-directory-permissions"></a>Impostazione delle autorizzazioni di directory  
  All'account con cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponibile nel server di distribuzione devono essere concesse le autorizzazioni di lettura ed esecuzione per la directory e tutte le sottodirectory in cui è installato il software client Oracle di rete.  
   
-### Verifica della connettività tra il server di distribuzione SQL Server e il server di pubblicazione Oracle  
+### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>Verifica della connettività tra il server di distribuzione SQL Server e il server di pubblicazione Oracle  
  In una delle fasi conclusive di Net Configuration Assistant potrebbe essere disponibile l'opzione di verifica della connessione al Sottoscrittore Oracle. Prima di verificare la connessione, verificare che l'istanza del database Oracle sia online e che il listener Oracle sia in esecuzione. Se la verifica non riesce, rivolgersi al DBA Oracle responsabile del database a cui si tenta di connettersi.  
   
  Dopo essere riusciti a stabilire la connessione con il Sottoscrittore Oracle, tentare di accedere al database utilizzando l'account e la password configurati per l'agente di distribuzione per la sottoscrizione:  
   
-1.  Fare clic su **avviare**, quindi fare clic su **eseguire**.  
+1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
-2.  Tipo `cmd` e fare clic su **OK**.  
+2.  Digitare `cmd` e fare clic su **OK**.  
   
 3.  Al prompt dei comandi digitare:  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Esempio: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Ad esempio `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  Se la configurazione di rete è riuscita, sarà possibile accedere e verrà visualizzato il prompt `SQL`.  
+4.  Se la configurazione di rete è riuscita, sarà possibile accedere e verrà visualizzato il prompt `SQL` .  
   
-### Considerazioni su Oracle Home  
+### <a name="considerations-for-oracle-home"></a>Considerazioni su Oracle Home  
  Oracle supporta l'installazione side-by-side di file binari dell'applicazione, ma la replica può utilizzare un solo set di file binari alla volta. Ogni set di file binari è associato a un Oracle Home; tali file si trovano nella directory %ORACLE_HOME%\bin. È necessario verificare che quando la replica effettua connessioni al Sottoscrittore Oracle venga utilizzato il set di file binari corretto, in particolare, l'ultima versione del software client di rete.  
   
  Accedere al server di distribuzione con gli account utilizzati dal servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dal servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e impostare le corrette variabili d'ambiente. La variabile %ORACLE_HOME% deve essere impostata in modo da fare riferimento al punto di installazione specificato quando è stato installato il software client di rete. %PATH% deve includere la directory %ORACLE_HOME% \bin come prima voce Oracle rilevata. Per informazioni sull'impostazione delle variabili d'ambiente, vedere la documentazione di Windows.  
   
 > [!NOTE]  
->  Se sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono presenti più Oracle Home, verificare che l'agente di distribuzione utilizzi il provider OLE DB Oracle più recente. In alcuni casi, Oracle non aggiorna il provider OLE DB per impostazione predefinita quando vengono aggiornati i componenti del client sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Disinstallare il vecchio provider OLE DB e installare l'ultimo provider OLE DB. Per ulteriori informazioni sull'installazione e sulla disinstallazione del provider, vedere la documentazione di Oracle.  
+>  Se sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono presenti più Oracle Home, verificare che l'agente di distribuzione utilizzi il provider OLE DB Oracle più recente. In alcuni casi, Oracle non aggiorna il provider OLE DB per impostazione predefinita quando vengono aggiornati i componenti del client sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Disinstallare il vecchio provider OLE DB e installare l'ultimo provider OLE DB. Per ulteriori informazioni sull'installazione e sulla disinstallazione del provider, vedere la documentazione di Oracle.  
   
-## Considerazioni sui Sottoscrittori Oracle  
- Oltre alle considerazioni descritte nell'argomento [sottoscrittori Non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), prendere in considerazione i seguenti problemi durante la replica nei Sottoscrittori Oracle:  
+## <a name="considerations-for-oracle-subscribers"></a>Considerazioni sui Sottoscrittori Oracle  
+ Oltre alle considerazioni trattate nell'argomento [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), è necessario considerare i seguenti problemi relativi alla replica nei Sottoscrittori Oracle:  
   
 -   Oracle considera sia le stringhe vuote sia i valori NULL come NULL. Questo è importante se una colonna di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definita come NOT NULL e si replica tale colonna in un Sottoscrittore Oracle. Per evitare errori quando si applicano le modifiche al Sottoscrittore Oracle, è necessario eseguire una delle operazioni seguenti:  
   
     -   Verificare che le stringhe vuote non vengano inserite nella tabella pubblicata come valori di colonna.  
   
-    -   Utilizzare il **– SkipErrors** parametro dell'agente di distribuzione se è accettabile per la notifica degli errori nel log di cronologia dell'agente di distribuzione e continuare l'elaborazione. Specificare il codice di errore Oracle 1400 (**-SkipErrors1400**).  
+    -   Usare il parametro **–SkipErrors** per l'agente di distribuzione se è accettabile ricevere una notifica degli errori nel log della cronologia dell'agente di distribuzione e continuare l'elaborazione. Specificare il codice errore Oracle 1400 (**-SkipErrors1400**).  
   
-    -   Modificare lo script di tabella create generato, rimuovendo l'attributo NOT NULL da qualsiasi colonna di tipo carattere che può essere associate stringhe vuote e fornire lo script modificato come script di creazione personalizzata per l'articolo utilizzando il parametro @creation_script di [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+    -   Modificare lo script di creazione tabelle generato, rimuovendo l'attributo NOT NULL da qualsiasi colonna di tipo carattere a cui possano essere associate stringhe vuote e fornire lo script modificato come script di creazione personalizzato per l'articolo utilizzando il parametro @creation_script di [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
--   I Sottoscrittori Oracle supportano un'opzione di schema 0x4071. Per ulteriori informazioni sulle opzioni di schema, vedere [sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   I Sottoscrittori Oracle supportano un'opzione di schema 0x4071. Per altre informazioni sulle opzioni di schema, vedere [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
-## Mapping di tipi di dati da SQL Server ad Oracle  
+## <a name="mapping-data-types-from-sql-server-to-oracle"></a>Mapping di tipi di dati da SQL Server ad Oracle  
  Nella tabella seguente vengono mostrati i mapping dei tipi di dati utilizzati per la replica di dati in un Sottoscrittore in cui è eseguito Oracle.  
   
 |Tipo di dati di SQL Server|Tipo di dati Oracle|  
 |--------------------------|----------------------|  
 |**bigint**|NUMBER(19,0)|  
-|**Binary(1-2000)**|RAW(1-2000)|  
-|**Binary(2001-8000)**|BLOB|  
+|**binary(1-2000)**|RAW(1-2000)|  
+|**binary(2001-8000)**|BLOB|  
 |**bit**|NUMBER(1)|  
-|**Char(1-2000)**|CHAR(1-2000)|  
-|**Char(2001-4000)**|VARCHAR2(2001-4000)|  
-|**Char(4001-8000)**|CLOB|  
-|**data**|DATE|  
+|**char(1-2000)**|CHAR(1-2000)|  
+|**char(2001-4000)**|VARCHAR2(2001-4000)|  
+|**char(4001-8000)**|CLOB|  
+|**date**|DATE|  
 |**datetime**|DATE|  
 |**datetime2(0-7)**|TIMESTAMP(7) per Oracle 9 e Oracle 10; VARCHAR(27) per Oracle 8|  
-|**DateTimeOffset(0-7)**|TIMESTAMP(7) WITH TIME ZONE per Oracle 9 e Oracle 10; VARCHAR(34) per Oracle 8|  
-|**Decimal (1-38, 0-38)**|NUMBER(1-38, 0-38)|  
+|**datetimeoffset(0-7)**|TIMESTAMP(7) WITH TIME ZONE per Oracle 9 e Oracle 10; VARCHAR(34) per Oracle 8|  
+|**decimal(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**float(53)**|FLOAT|  
 |**float**|FLOAT|  
 |**geography**|BLOB|  
@@ -118,7 +122,7 @@ caps.handback.revision: 55
 |**nchar(1-1000)**|CHAR(1-1000)|  
 |**nchar(1001-4000)**|NCLOB|  
 |**ntext**|NCLOB|  
-|**numeriche (1-38, 0-38)**|NUMBER(1-38, 0-38)|  
+|**numeric(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
@@ -129,7 +133,7 @@ caps.handback.revision: 55
 |**sql_variant**|N/D|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
-|**Time(0-7)**|VARCHAR(16)|  
+|**time(0-7)**|VARCHAR(16)|  
 |**timestamp**|RAW(8)|  
 |**tinyint**|NUMBER(3,0)|  
 |**uniqueidentifier**|CHAR(38)|  
@@ -141,8 +145,8 @@ caps.handback.revision: 55
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## Vedere anche  
- [Sottoscrittori non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
- [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
+ [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

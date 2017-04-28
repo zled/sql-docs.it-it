@@ -1,29 +1,33 @@
 ---
-title: "Abilitare Resource Governor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, abilitazione"
+title: Abilitare Resource Governor | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4bcec1331a7878bf261aea8923fa8f8e66e7299
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare Resource Governor
+# <a name="enable-resource-governor"></a>Abilitare Resource Governor
   Resource Governor è disabilitato per impostazione predefinita. È possibile abilitare Resource Governor tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per abilitare Resource Governor usando:** [Esplora oggetti](#RGOnObjEx), [Proprietà di Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  L'abilitazione di Resource Governor determina i risultati riportati di seguito:  
@@ -52,7 +56,7 @@ caps.handback.revision: 12
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**.  
   
-2.  Fare clic con il pulsante destro del mouse su **Resource Governor**, quindi fare clic su **Proprietà**. In questo modo viene aperta la pagina **Proprietà di Resource Governor**.  
+2.  Fare clic con il pulsante destro del mouse su **Resource Governor** , quindi fare clic su **Proprietà**. In questo modo viene aperta la pagina **Proprietà di Resource Governor** .  
   
 3.  Fare clic sulla casella di controllo **Abilita Resource Governor** , quindi scegliere **OK**.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 1.  Eseguire l'istruzione **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Esempio (Transact-SQL)  
+### <a name="example-transact-sql"></a>Esempio (Transact-SQL)  
  Nell'esempio seguente viene abilitato Resource Governor.  
   
 ```  
@@ -69,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Disabilitare Resource Governor](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

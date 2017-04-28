@@ -1,24 +1,28 @@
 ---
-title: "Creazione di applicazioni client per dati FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32"
+title: Creare applicazioni client per dati FILESTREAM | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di applicazioni client per dati FILESTREAM
+# <a name="create-client-applications-for-filestream-data"></a>Creazione di applicazioni client per dati FILESTREAM
   Per leggere e scrivere dati in un oggetto BLOB FILESTREAM, è possibile utilizzare Win32. È necessario effettuare le operazioni seguenti:  
   
 -   Leggere il percorso del file FILESTREAM.  
@@ -46,19 +50,19 @@ caps.handback.revision: 18
 ##  <a name="steps"></a> Passaggi per l'accesso a dati FILESTREAM  
   
 ###  <a name="path"></a> Lettura del percorso del file FILESTREAM  
- A ogni cella di una tabella FILESTREAM è associato un percorso del file. Per leggere il percorso, usare la proprietà **PathName** di una colonna **varbinary(max)** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'esempio seguente illustra come leggere il percorso del file di una colonna **varbinary(max)**.  
+ A ogni cella di una tabella FILESTREAM è associato un percorso del file. Per leggere il percorso, usare la proprietà **PathName** di una colonna **varbinary(max)** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'esempio seguente illustra come leggere il percorso del file di una colonna **varbinary(max)** .  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
 ###  <a name="trx"></a> Lettura del contesto di transazione  
- Per ottenere il contesto di transazione corrente, usare la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md). Nell'esempio seguente si illustra come iniziare una transazione e come leggere il contesto di transazione corrente.  
+ Per ottenere il contesto di transazione corrente, usare la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) . Nell'esempio seguente si illustra come iniziare una transazione e come leggere il contesto di transazione corrente.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Ottenere un handle di file Win32  
  Per ottenere un handle di file Win32, chiamare l'API OpenSqlFilestream. Tale API viene esportata dal file sqlncli.dll. L'handle restituito può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Negli esempi seguenti si illustra come ottenere un handle di file Win32 e come utilizzarlo per leggere e scrivere dati in un oggetto BLOB FILESTREAM.  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
  [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/create-client-applicatio_4.vb)]  
   
@@ -78,13 +82,13 @@ caps.handback.revision: 18
   
 -   Evitare di utilizzare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per aggiornare, aggiungere o anteporre dati all'oggetto BLOB di FILESTREAM. In caso contrario, si verificherà lo spooling dei dati BLOB nel database tempdb e quindi in un nuovo file fisico.  
   
--   Evitare di aggiungere piccoli aggiornamenti BLOB a un oggetto BLOB di FILESTREAM. Con ogni operazione di aggiunta, vengono copiati i file FILESTREAM sottostanti. Se un'applicazione deve aggiungere piccoli oggetti BLOB, scrivere tali oggetti in una colonna **varbinary(max)**, quindi eseguire una sola operazione di scrittura nell'oggetto BLOB di FILESTREAM quando il numero di oggetti BLOB raggiunge un limite predeterminato.  
+-   Evitare di aggiungere piccoli aggiornamenti BLOB a un oggetto BLOB di FILESTREAM. Con ogni operazione di aggiunta, vengono copiati i file FILESTREAM sottostanti. Se un'applicazione deve aggiungere piccoli oggetti BLOB, scrivere tali oggetti in una colonna **varbinary(max)** , quindi eseguire una sola operazione di scrittura nell'oggetto BLOB di FILESTREAM quando il numero di oggetti BLOB raggiunge un limite predeterminato.  
   
 -   Evitare di recuperare la lunghezza dei dati di molti file BLOB in un'applicazione. Si tratta di un'operazione dispendiosa in termini di tempo perché le dimensioni non vengono archiviate nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se è necessario determinare la lunghezza di un file BLOB, usare la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() per determinare le dimensioni dell'oggetto BLOB, se è chiuso. DATALENGTH() non apre il file BLOB per determinarne le dimensioni.  
   
 -   Se in un'applicazione viene utilizzato il protocollo Message Block1 (SMB1), i dati BLOB di FILESTREAM devono essere letti in multipli di 60 KB per ottimizzare le prestazioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [Accesso ai dati FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Dati BLOB (Binary Large Object) &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

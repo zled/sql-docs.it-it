@@ -1,30 +1,34 @@
 ---
-title: "Eliminare un gruppo di carico di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di carico di lavoro [SQL Server], eliminazione"
-  - "Resource Governor, eliminazione di gruppi di carico di lavoro"
+title: Eliminare un gruppo di carico di lavoro | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare un gruppo di carico di lavoro
+# <a name="delete-a-workload-group"></a>Eliminare un gruppo di carico di lavoro
   È possibile eliminare un gruppo di carico di lavoro o un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **Per eliminare un gruppo di carico di lavoro utilizzando: **[Esplora oggetti](#DelWGObjEx), [Proprietà di Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **Per eliminare un gruppo di carico di lavoro utilizzando:** [Esplora oggetti](#DelWGObjEx), [Proprietà di Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Non è possibile eliminare un gruppo di carico di lavoro contenente sessioni attive.  
@@ -80,7 +84,7 @@ caps.handback.revision: 19
   
 3.  Eseguire l'istruzione **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Esempio (Transact-SQL)  
+### <a name="example-transact-sql"></a>Esempio (Transact-SQL)  
  Nell'esempio seguente viene eliminato un gruppo di carico di lavoro denominato `groupAdhoc`.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Creare un pool di risorse](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Creare un gruppo di carico di lavoro](../../relational-databases/resource-governor/create-a-workload-group.md)   

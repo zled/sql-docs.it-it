@@ -1,33 +1,37 @@
 ---
-title: "Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse | Microsoft Docs
+ms.custom: 
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca8ec6e27aebf60ba155580e505f0c338ff61348
+ms.lasthandoff: 04/11/2017
+
 ---
-# Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse
+# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Un pool di risorse rappresenta un subset di risorse fisiche che è possibile governare. Per impostazione predefinita, i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono associati alle risorse del pool di risorse predefinito e usano queste ultime. Per evitare che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutte le risorse vengano usate da una o più tabelle con ottimizzazione per la memoria e che altri utenti utilizzino la memoria necessaria per le tabelle con ottimizzazione per la memoria, è consigliabile creare un pool di risorse distinto per gestire l'utilizzo di memoria per il database con tabelle con ottimizzazione per la memoria.  
   
  Un database può essere associato a un solo pool di risorse. Tuttavia, è possibile associare più database allo stesso pool. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di associare un database senza tabelle con ottimizzazione per la memoria a un pool di risorse, ma questa operazione non ha alcun effetto. Può essere opportuno associare un database a un pool di risorse denominato se, in futuro, si intende creare tabelle con ottimizzazione per la memoria nel database.  
   
- Prima di poter associare un database a un pool di risorse, è necessario che sia presente sia il database che il pool di risorse. L'associazione viene applicata alla successiva connessione del database. Per altre informazioni, vedere [Stati del database](../../relational-databases/databases/database-states.md).  
+ Prima di poter associare un database a un pool di risorse, è necessario che sia presente sia il database che il pool di risorse. L'associazione viene applicata alla successiva connessione del database. Per altre informazioni, vedere [Stati del database](../../relational-databases/databases/database-states.md) .  
   
  Per informazioni sui pool di risorse, vedere [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
   
-## Passaggi per associare un database a un pool di risorse  
+## <a name="steps-to-bind-a-database-to-a-resource-pool"></a>Passaggi per associare un database a un pool di risorse  
   
 1.  [Creare il database e il pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_CreatePool)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 24
  È possibile creare il database e il pool di risorse in qualsiasi ordine. La cosa importante è che entrambi esistano prima di associare il database al pool di risorse.  
   
 ###  <a name="bkmk_CreateDatabase"></a> Creare il database  
- Con l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene creato un database denominato IMOLTP_DB in cui saranno incluse una o più tabelle con ottimizzazione per la memoria. Il percorso \<driveAndPath> deve esistere prima dell'esecuzione del comando.  
+ Con l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene creato un database denominato IMOLTP_DB in cui saranno incluse una o più tabelle con ottimizzazione per la memoria. Il percorso \<UnitàPercorso> deve esistere prima dell'esecuzione del comando.  
   
 ```tsql  
 CREATE DATABASE IMOLTP_DB  
@@ -85,7 +89,7 @@ In questo esempio si suppone che sia stato calcolato che gli indici e le tabelle
 ###  <a name="bkmk_CreateResourcePool"></a> Creare un pool di risorse e configurare la memoria  
  Quando si configura la memoria per le tabelle con ottimizzazione per la memoria, la pianificazione della capacità deve essere eseguita in base a MIN_MEMORY_PERCENT, non MAX_MEMORY_PERCENT.  Per informazioni su MIN_MEMORY_PERCENT e su MAX_MEMORY_PERCENT, vedere [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md). Ciò rende maggiormente stimabile la disponibilità di memoria per le tabelle con ottimizzazione per la memoria, poiché MIN_MEMORY_PERCENT causa un utilizzo elevato di memoria per gli altri pool di risorse, al fine di garantire la disponibilità. Per garantire che la memoria sia disponibile ed evitare condizioni di memoria insufficiente, i valori di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT devono essere uguali. Vedere la sezione relativa alla [percentuale di memoria disponibile per indici e tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) per i valori in base alla quantità di memoria riservata.  
   
- Per altre informazioni sull'uso di un ambiente di VM, vedere [Procedure consigliate: Uso di OLTP in memoria in un ambiente di VM](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md).  
+ Per altre informazioni sull'uso di un ambiente di VM, vedere [Procedure consigliate: Uso di OLTP in memoria in un ambiente di VM](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
   
  Con il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene creato un pool di risorse denominato Pool_IMOLTP con metà della memoria disponibile per l'utilizzo.  Dopo la creazione del pool, Resource Governor viene riconfigurato in modo da includere Pool_IMOLTP.  
   
@@ -141,7 +145,7 @@ GO
  Il database è ora associato al pool di risorse.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> Modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente  
- Se si aggiunge altra memoria al server o se cambia la quantità di memoria necessaria per le tabelle con ottimizzazione per la memoria, può essere necessario modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT. Nei passaggi seguenti viene illustrato come modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool di risorse. Per informazioni sui valori da usare per MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT, vedere la sezione seguente.  Per altre informazioni, vedere l'argomento [Procedure consigliate: Uso di OLTP in memoria in un ambiente di VM](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md).  
+ Se si aggiunge altra memoria al server o se cambia la quantità di memoria necessaria per le tabelle con ottimizzazione per la memoria, può essere necessario modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT. Nei passaggi seguenti viene illustrato come modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool di risorse. Per informazioni sui valori da usare per MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT, vedere la sezione seguente.  Per altre informazioni, vedere l'argomento [Procedure consigliate: Uso di OLTP in memoria in un ambiente di VM](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
   
 1.  Usare `ALTER RESOURCE POOL` per modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT.  
   
@@ -164,7 +168,7 @@ GO
 ##  <a name="bkmk_PercentAvailable"></a> Percentuale di memoria disponibile per indici e tabelle con ottimizzazione per la memoria  
  Se si esegue il mapping di un database con tabella con ottimizzazione per la memoria e un carico di lavoro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allo stesso pool di risorse, tramite Resource Governor viene impostata una soglia interna per l'utilizzo di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in modo tale che gli utenti del pool non abbiano conflitti per l'utilizzo del pool. In generale, la soglia per l'utilizzo di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è di circa l'80% del pool. Nella tabella seguente vengono illustrate le soglie effettive per varie dimensioni di memoria.  
   
- Quando si crea un pool di risorse dedicato per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)], è necessario stimare la quantità di memoria fisica necessaria per le tabelle in memoria dopo aver tenuto conto delle versioni di riga e della crescita dei dati. Dopo avere stimato la memoria necessaria, è possibile creare un pool di risorse con una percentuale della memoria di destinazione di commit per l'istanza di SQL come indicato nella colonna 'committed_target_kb' nella DMV `sys.dm_os_sys_info` (vedere [sys.dm_os_sys_information](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Ad esempio, è possibile creare un pool di risorse P1 con il 40% della memoria totale disponibile per l'istanza. Da questo 40%, il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ottiene una percentuale inferiore per archiviare i dati di [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  Ciò garantisce che [!INCLUDE[hek_2](../../includes/hek-2-md.md)] non utilizzi tutta la memoria del pool.  Il valore della percentuale inferiore dipende dalla memoria riservata alla destinazione. Nella tabella seguente viene descritta la memoria disponibile per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in un pool di risorse (denominato o predefinito) prima che venga generato un errore di memoria insufficiente.  
+ Quando si crea un pool di risorse dedicato per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , è necessario stimare la quantità di memoria fisica necessaria per le tabelle in memoria dopo aver tenuto conto delle versioni di riga e della crescita dei dati. Dopo avere stimato la memoria necessaria, è possibile creare un pool di risorse con una percentuale della memoria di destinazione di commit per l'istanza di SQL come indicato nella colonna 'committed_target_kb' nella DMV `sys.dm_os_sys_info` (vedere [sys.dm_os_sys_information](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Ad esempio, è possibile creare un pool di risorse P1 con il 40% della memoria totale disponibile per l'istanza. Da questo 40%, il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ottiene una percentuale inferiore per archiviare i dati di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Ciò garantisce che [!INCLUDE[hek_2](../../includes/hek-2-md.md)] non utilizzi tutta la memoria del pool.  Il valore della percentuale inferiore dipende dalla memoria riservata alla destinazione. Nella tabella seguente viene descritta la memoria disponibile per il database [!INCLUDE[hek_2](../../includes/hek-2-md.md)] in un pool di risorse (denominato o predefinito) prima che venga generato un errore di memoria insufficiente.  
   
 |Memoria riservata di destinazione|Percentuale disponibile per le tabelle in memoria|  
 |-----------------------------|---------------------------------------------|  
@@ -174,7 +178,7 @@ GO
 |\<= 96 GB|85%|  
 |> 96 GB|90%|  
   
- Ad esempio, se la "memoria riservata alla destinazione" è di 100 GB e si stima che gli indici e le tabelle con ottimizzazione per la memoria richiedano 60 GB di memoria, è possibile creare un pool di risorse con MAX_MEMORY_PERCENT = 67 (60 GB necessari/0,90 = 66,667 GB - arrotondamento per eccesso a 67 GB; 67 GB/100 GB installato = 67%) per garantire i 60 GB di memoria necessari agli oggetti di [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Ad esempio, se la "memoria riservata alla destinazione" è di 100 GB e si stima che gli indici e le tabelle con ottimizzazione per la memoria richiedano 60 GB di memoria, è possibile creare un pool di risorse con MAX_MEMORY_PERCENT = 67 (60 GB necessari/0,90 = 66,667 GB - arrotondamento per eccesso a 67 GB; 67 GB/100 GB installato = 67%) per garantire i 60 GB di memoria necessari agli oggetti di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
  Dopo l'associazione di un database a un pool di risorse denominato, usare la query seguente per visualizzare le allocazioni di memoria tra pool di risorse diversi.  
   
@@ -206,7 +210,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Se il database non viene associato a un pool di risorse denominato, viene associato al pool predefinito ('default'). Poiché il pool di risorse predefinito è usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la maggior parte delle altre allocazioni, non sarà possibile monitorare in modo accurato la memoria usata dalle tabelle con ottimizzazione per la memoria tramite la DMV sys.dm_resource_governor_resource_pools per il database di interesse.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
@@ -216,3 +220,4 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [Eliminare un pool di risorse](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
   
   
+

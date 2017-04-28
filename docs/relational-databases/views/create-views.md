@@ -1,24 +1,28 @@
 ---
-title: "Creare viste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste [SQL Server], creazione"
+title: Creare viste | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare viste
+# <a name="create-views"></a>Creare viste
   È possibile creare viste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una vista può essere utilizzata per gli scopi seguenti:  
   
 -   Per analizzare, semplificare e personalizzare la visualizzazione del database per ogni utente.  
@@ -55,11 +59,11 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare una vista tramite Progettazione query e Progettazione viste  
+#### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>Per creare una vista tramite Progettazione query e Progettazione viste  
   
 1.  In **Esplora oggetti**espandere il database in cui si desidera creare la nuova vista.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste**, quindi selezionare **Nuova vista**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste** , quindi selezionare **Nuova vista**.  
   
 3.  Nella finestra di dialogo **Aggiungi tabella** selezionare gli elementi che si desidera includere nella nuova vista da una delle schede seguenti: Tabelle, Viste, Funzioni e Sinonimi.  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 16
   
 8.  Nella finestra di dialogo **Scegli nome** immettere un nome per la nuova vista, quindi scegliere **OK**.  
   
-     Per altre informazioni su Progettazione query e Progettazione viste, vedere [Strumenti di progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md).  
+     Per altre informazioni su Progettazione query e Progettazione viste, vedere [Strumenti di progettazione di query e viste &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare una vista  
+#### <a name="to-create-a-view"></a>Per creare una vista  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

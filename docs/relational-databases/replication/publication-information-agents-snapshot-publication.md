@@ -1,27 +1,31 @@
 ---
-title: "Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1"
+title: Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e8cdcea6f91b4126170c7590cc5e98f4ae3af1f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot)
-  Il **agenti** scheda vengono visualizzate le informazioni sull'agente Snapshot per la pubblicazione selezionata.  
+# <a name="publication-information-agents-snapshot-publication"></a>Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot)
+  La scheda **Agenti** visualizza informazioni di riepilogo sull'agente snapshot per la pubblicazione selezionata.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  Per ulteriori informazioni sull'agente snapshot e sulle attività correlate, fare clic con il pulsante destro del mouse sulla riga dell'agente e quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
 -   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne** .  
@@ -46,7 +50,7 @@ caps.handback.revision: 23
 -   Completato  
   
  **Agente**  
- Agente snapshot. Si tratta dell'unico agente associato a una pubblicazione snapshot. L'agente di distribuzione è associato alle sottoscrizioni della pubblicazione. Per ulteriori informazioni, vedere [visualizzare le informazioni ed esecuzione delle attività degli agenti associati con una sottoscrizione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ Agente snapshot. Si tratta dell'unico agente associato a una pubblicazione snapshot. L'agente di distribuzione è associato alle sottoscrizioni della pubblicazione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
@@ -57,10 +61,10 @@ caps.handback.revision: 23
  **Ultima azione**  
  Ultima azione eseguita durante la più recente esecuzione dell'agente.  
   
-## Vedere anche  
- [Avvio di Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Consente di visualizzare informazioni ed eseguire attività per una pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Consente di visualizzare informazioni ed eseguire attività relative agli agenti associati a una pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività per una pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

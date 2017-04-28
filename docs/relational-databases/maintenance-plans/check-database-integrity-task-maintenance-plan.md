@@ -1,32 +1,36 @@
 ---
-title: "Attivit&#224; Controlla integrit&#224; database (Piano di manutenzione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.integrity.f1"
-  - "sql13.swb.maint.integrity.f1"
-helpviewer_keywords: 
-  - "Attività Controlla integrità database - finestra di dialogo"
+title: "Attività Controlla integrità database (piano di manutenzione) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.integrity.f1
+- sql13.swb.maint.integrity.f1
+helpviewer_keywords:
+- Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad37935a63e55d949aaad8b3792e3180e78be5c3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attivit&#224; Controlla integrit&#224; database (Piano di manutenzione)
+# <a name="check-database-integrity-task-maintenance-plan"></a>Attività Controlla integrità database (Piano di manutenzione)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Usare la finestra di dialogo **Attività Controlla integrità database** per controllare l'allocazione e l'integrità strutturale delle tabelle utente e di sistema e degli indici del database eseguendo l'istruzione `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)]. L'esecuzione di `DBCC` consente di individuare gli eventuali problemi di integrità nel database, in modo che l'amministratore di sistema o il proprietario del database possa analizzarli e correggerli in un secondo momento.  
+  Usare la finestra di dialogo **Attività Controlla integrità database** per controllare l'allocazione e l'integrità strutturale delle tabelle utente e di sistema e degli indici del database eseguendo l'istruzione `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . L'esecuzione di `DBCC` consente di individuare gli eventuali problemi di integrità nel database, in modo che l'amministratore di sistema o il proprietario del database possa analizzarli e correggerli in un secondo momento.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
@@ -38,15 +42,15 @@ caps.handback.revision: 24
   
 -   **Tutti i database**  
   
-     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di **tempdb**.  
+     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di **tempdb**.  
   
 -   **Tutti i database di sistema**  
   
-     Consente di generare un piano per l'esecuzione delle attività di manutenzione in ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad eccezione di **tempdb**. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
+     Consente di generare un piano per l'esecuzione delle attività di manutenzione in ogni database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di **tempdb**. Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
   
 -   **Tutti i database utente**  
   
-     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Database specifici**  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
-## Finestra di dialogo Nuova connessione  
+## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
@@ -84,10 +88,10 @@ caps.handback.revision: 24
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di Windows.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with Windows Authentication.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
@@ -95,7 +99,7 @@ caps.handback.revision: 24
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
   

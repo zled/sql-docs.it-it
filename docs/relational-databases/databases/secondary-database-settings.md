@@ -1,29 +1,33 @@
 ---
-title: "Impostazioni database secondario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: Impostazioni database secondario | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impostazioni database secondario
+# <a name="secondary-database-settings"></a>Impostazioni database secondario
   Utilizzare questa finestra di dialogo per configurare e modificare le proprietà di un database secondario nella configurazione per il log shipping.  
   
  Per approfondimenti sui concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Istanza del server secondario**  
  Visualizza il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente configurata come server secondario nella configurazione per il log shipping.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 32
  **Pianificazione**  
  Visualizza la pianificazione corrente del processo di SQL Server Agent utilizzato per copiare i file di backup dei log delle transazioni dal server primario a quello secondario. Fare clic su **Pianificazione**per apportarvi modifiche.  
   
- **Pianificazione...**  
+ **Pianificazione**  
  Consente di modificare i parametri del processo di SQL Server Agent utilizzato per copiare i file di backup dei log delle transazioni dal server primario a quello secondario.  
   
  **Disabilita questo processo**  
@@ -108,13 +112,13 @@ caps.handback.revision: 32
  **Pianificazione**  
  Visualizza la pianificazione corrente del processo di SQL Server Agent utilizzato per ripristinare i backup dei log delle transazioni nel database secondario. Fare clic su **Pianificazione**per apportarvi modifiche.  
   
- **Pianificazione...**  
+ **Pianificazione**  
  Consente di modificare i parametri relativi al processo di SQL Server Agent utilizzato per il ripristino.  
   
  **Disabilita questo processo**  
  Consente di sospendere le operazioni di ripristino nel database secondario.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

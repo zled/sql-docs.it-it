@@ -1,33 +1,37 @@
 ---
-title: "Gerarchia di crittografia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crittografia [SQL Server], gerarchie"
-  - "crittografia [SQL Server], gerarchie"
-  - "chiavi di crittografia [SQL Server]"
-  - "sicurezza [SQL Server], crittografia"
-  - "gerarchie [SQL Server], crittografia"
+title: Gerarchia di crittografia | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], hierarchies
+- cryptography [SQL Server], hierarchies
+- encryption keys [SQL Server]
+- security [SQL Server], encryption
+- hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gerarchia di crittografia
+# <a name="encryption-hierarchy"></a>Gerarchia di crittografia
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base ad una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
   
  Nella figura seguente viene indicato come nella gerarchia di crittografia ogni livello crittografi il livello sottostante e vengono visualizzate le configurazioni di crittografia più comuni. L'accesso all'inizio della gerarchia è in genere protetto da una password.  
   
- ![Visualizza alcune combinazioni di crittografia in uno stack](../../../relational-databases/security/encryption/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in uno stack")  
+ ![Visualizza alcune combinazioni di crittografia in un diagramma in pila. ] (../../../relational-databases/security/encryption/media/encryption-hierarchy-stack.gif "Visualizza alcune combinazioni di crittografia in un diagramma in pila.")  
   
  Tenere presenti i concetti seguenti:  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 41
   
  Le stesse informazioni vengono illustrate in modo diverso nella figura seguente.  
   
- ![Visualizzazione di alcune combinazioni di crittografia in una ruota.](../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "Visualizzazione di alcune combinazioni di crittografia in una ruota.")  
+ ![Visualizza alcune combinazioni di crittografia in una ruota. ] (../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "Visualizza alcune combinazioni di crittografia in una ruota.")  
   
  In questo diagramma vengono illustrati i concetti aggiuntivi seguenti:  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
 -   Le chiavi simmetriche e asimmetriche in EKM possono proteggere l'accesso alle chiavi simmetriche e asimmetriche archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La linea punteggiata associata a EKM indica che le chiavi in EKM potrebbero sostituire le chiavi simmetriche e asimmetriche archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## Meccanismi di crittografia  
+## <a name="encryption-mechanisms"></a>Meccanismi di crittografia  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprende i meccanismi di crittografia seguenti:  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] funzioni  
@@ -66,10 +70,10 @@ caps.handback.revision: 41
   
 -   Transparent Data Encryption  
   
-### Funzioni Transact-SQL  
+### <a name="transact-sql-functions"></a>Funzioni Transact-SQL  
  Singoli elementi possono essere crittografati mentre vengono inseriti o aggiornati con le funzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Per altre informazioni, vedere [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) e [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md).  
   
-### Certificati  
+### <a name="certificates"></a>Certificati  
  Un certificato a chiave pubblica, normalmente chiamato semplicemente un certificato, è un'istruzione firmata digitalmente che associa il valore di una chiave pubblica all'identità di una persona, un dispositivo o un servizio che detiene la corrispondente chiave privata. I certificati vengono rilasciati e firmati da un'autorità di certificazione (CA). L'entità che riceve un certificato da un'autorità di certificazione è il soggetto del certificato. Normalmente, i certificati contengono le informazioni seguenti.  
   
 -   Chiave pubblica del soggetto.  
@@ -78,7 +82,7 @@ caps.handback.revision: 41
   
 -   Periodo di validità. È il periodo di tempo durante il quale il certificato è considerato valido.  
   
-     Un certificato è valido solo per il periodo di tempo specificato nel certificato; e ogni certificato contiene le date **Valido dal** e **Valido fino al**. Queste date definiscono i limiti del periodo di validità. Quando il periodo di validità di un certificato viene superato, il soggetto del certificato scaduto deve richiedere un nuovo certificato.  
+     Un certificato è valido solo per il periodo di tempo specificato nel certificato; e ogni certificato contiene le date **Valido dal** e **Valido fino al** . Queste date definiscono i limiti del periodo di validità. Quando il periodo di validità di un certificato viene superato, il soggetto del certificato scaduto deve richiedere un nuovo certificato.  
   
 -   Informazioni di identificazione dell'emittente  
   
@@ -94,21 +98,21 @@ caps.handback.revision: 41
   
  I certificati autofirmati creati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono conformi allo standard X.509 e supportano i campi X.509 v1.  
   
-### Chiavi asimmetriche  
+### <a name="asymmetric-keys"></a>Chiavi asimmetriche  
  Una chiave asimmetrica è costituita da una chiave privata e dalla corrispondente chiave pubblica. Ogni chiave può decrittografare dati crittografati dall'altra chiave. La crittografia e la decrittografia asimmetrica richiedono un uso intensivo delle risorse ma offrono un livello di sicurezza superiore a quello della crittografia simmetrica. Una chiave asimmetrica può essere utilizzata per crittografare una chiave simmetrica da memorizzare in un database.  
   
-### Chiavi simmetriche  
+### <a name="symmetric-keys"></a>Chiavi simmetriche  
  Una chiave simmetrica è una chiave che viene utilizzata sia per la crittografia che per decrittografia. La crittografia e la decrittografia tramite una chiave simmetrica sono veloci e sono quindi adatte per essere utilizzate in modo ricorrente per informazioni riservate contenute in database.  
   
-### Transparent Data Encryption  
+### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
  Transparent Data Encryption è un caso speciale di crittografia che utilizza una chiave simmetrica. Transparent Data Encryption crittografa un intero database utilizzando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta da altri certificati o chiavi, a loro volta protetti dalla chiave master del database o da una chiave asimmetrica archiviata in un modulo EKM. Per altre informazioni, vedere [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Sicurezza di SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Entità a protezione diretta](../../../relational-databases/security/securables.md)  
   

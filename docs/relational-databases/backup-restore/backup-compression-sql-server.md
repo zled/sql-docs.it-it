@@ -1,30 +1,34 @@
 ---
-title: "Compressione backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log shipping [SQL Server], compressione dei backup"
-  - "compressione dei backup [SQL Server], informazioni sulla compressione dei backup"
-  - "compressione [SQL Server], compressione dei backup"
-  - "backup [SQL Server], compressione"
-  - "backup [SQL Server], compressione dei backup"
-  - "compressione backup [SQL Server]"
+title: Compressione dei backup (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compressione backup (SQL Server)
-  In questo argomento viene descritta la compressione dei backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluse le restrizioni, il compromesso di prestazioni previsto dalla compressione di backup, la configurazione della compressione di backup e il rapporto di compressione.  La compressione dei backup è supportata nelle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Developer, Standard ed Enterprise.  Ogni edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e successiva è in grado di ripristinare un backup compresso. 
+# <a name="backup-compression-sql-server"></a>Compressione backup (SQL Server)
+  In questo argomento viene descritta la compressione dei backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse le restrizioni, il compromesso di prestazioni previsto dalla compressione di backup, la configurazione della compressione di backup e il rapporto di compressione.  La compressione dei backup è supportata nelle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Developer, Standard ed Enterprise.  Ogni edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e successiva è in grado di ripristinare un backup compresso. 
  
   
 ##  <a name="Benefits"></a> Vantaggi  
@@ -44,8 +48,8 @@ caps.handback.revision: 51
 -   NTbackups non può condividere un nastro con backup compressi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-##  <a name="PerfImpact"></a> Impatto sulle prestazioni della compressione dei backup  
- Per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU, il che può avere un impatto negativo sulle operazioni simultanee. Quindi potrebbe essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per altre informazioni, vedere [Usare Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+##  <a name="PerfImpact"></a> Impatto sulle prestazioni della compressione di backup  
+ Per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU, il che può avere un impatto negativo sulle operazioni simultanee. Quindi potrebbe essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da[Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  Per conoscere le prestazioni di I/O del backup, è possibile isolare l'I/O del backup in/da dispositivi valutando i seguenti ordinamenti di contatori delle prestazioni:  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 51
   
    
 ##  <a name="CompressionRatio"></a> Calcolare il rapporto di compressione di un backup compresso  
- Per calcolare il rapporto di compressione di un backup, usare i valori per il backup nelle colonne **backup_size** e **compressed_backup_size** della tabella di cronologia [backupset](../../relational-databases/system-tables/backupset-transact-sql.md), come segue:  
+ Per calcolare il rapporto di compressione di un backup, usare i valori per il backup nelle colonne **backup_size** e **compressed_backup_size** della tabella di cronologia [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) , come segue:  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -105,8 +109,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Flag di traccia &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

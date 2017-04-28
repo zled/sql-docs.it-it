@@ -1,31 +1,35 @@
 ---
-title: "Modifica di una definizione dei criteri di integrit&#224; delle risorse (Utilit&#224; SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.UE.UTILITY.ADMINISTRATION.F1"
+title: "Modificare una definizione dei criteri di integrità delle risorse (Utilità SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: df3ba2fe80e7e6cb2f1a9a7834dc6d64b2e0cf42
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica di una definizione dei criteri di integrit&#224; delle risorse (Utilit&#224; SQL Server)
-  In questo argomento viene descritto come modificare una definizione di criteri di integrità di una risorsa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di modificare un criterio di utilizzo delle risorse in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario creare un punto di controllo dell'utilità. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+# <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modifica di una definizione dei criteri di integrità delle risorse (Utilità SQL Server)
+  In questo argomento viene descritto come modificare una definizione di criteri di integrità di una risorsa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di modificare un criterio di utilizzo delle risorse in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario creare un punto di controllo dell'utilità. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] È possibile configurare i criteri di utilizzo delle risorse di Utilità per applicazioni livello dati e istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I criteri di utilizzo delle risorse possono essere definiti a livello globale per tutte le applicazioni livello dati e le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure possono essere definiti singolarmente per ogni applicazione livello dati e per ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile implementare criteri globali e configurare le singole applicazioni livello dati o istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con definizioni dei criteri specifiche.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] È possibile configurare i criteri di utilizzo delle risorse di Utilità per applicazioni livello dati e istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I criteri di utilizzo delle risorse possono essere definiti a livello globale per tutte le applicazioni livello dati e le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure possono essere definiti singolarmente per ogni applicazione livello dati e per ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile implementare criteri globali e configurare le singole applicazioni livello dati o istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con definizioni dei criteri specifiche.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Modificare i criteri di utilizzo delle risorse globali in Utilità SQL Server.  
+#### <a name="modify-global-resource-utilization-policies-in-a-sql-server-utility"></a>Modificare i criteri di utilizzo delle risorse globali in Utilità SQL Server.  
   
 1.  Connettersi al punto di controllo dell'utilità in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -39,13 +43,13 @@ caps.handback.revision: 9
   
 6.  Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Amministrazione utilità** nel riquadro di spostamento di Esplora utilità e scegliere **Aggiorna**.  
   
-#### Modificare le definizioni dei criteri di integrità delle risorse per una singola applicazione del livello dati o istanza gestita di SQL Server in Utilità SQL Server  
+#### <a name="modify-resource-health-policy-definitions-for-an-individual-data-tier-application-or-an-individual-managed-instance-of-sql-server-in-a-sql-server-utility"></a>Modificare le definizioni dei criteri di integrità delle risorse per una singola applicazione del livello dati o istanza gestita di SQL Server in Utilità SQL Server  
   
 1.  Connettersi al punto di controllo dell'utilità in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Nel riquadro di spostamento di Esplora utilità fare clic su **Deployed Date-tier Applications** (Applicazioni livello dati distribuite) o su **Istanze gestite** per visualizzare o modificare i criteri di monitoraggio per una singola applicazione livello dati o istanza gestita.  
+2.  Nel riquadro di spostamento di Esplora utilità fare clic su **Deployed Date-tier Applications**(Applicazioni livello dati distribuite) o su **Istanze gestite**per visualizzare o modificare i criteri di monitoraggio per una singola applicazione livello dati o istanza gestita.  
   
-3.  Nella visualizzazione elenco del riquadro del contenuto di Esplora utilità fare clic sull'applicazione livello dati o sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cui criteri si vuole modificare, quindi fare clic sulla scheda **Dettagli criteri**.  
+3.  Nella visualizzazione elenco del riquadro del contenuto di Esplora utilità fare clic sull'applicazione livello dati o sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cui criteri si vuole modificare, quindi fare clic sulla scheda **Dettagli criteri** .  
   
 4.  Selezionare i criteri da visualizzare o modificare facendo clic sulla freccia o sulla descrizione dei criteri. I criteri globali sono selezionati per impostazione predefinita.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 9
   
 8.  Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) nel pannello di spostamento di Esplora utilità e scegliere **Aggiorna**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Visualizzare i risultati dei criteri di integrità delle risorse &#40;SQL Server Utility&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)  
   
