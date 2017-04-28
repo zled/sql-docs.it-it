@@ -1,26 +1,30 @@
 ---
-title: "Ottimizzazione delle prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rilevamento condizionale di eliminazioni [replica di SQL Server]"
-  - "replica di tipo merge [replica di SQL Server], rilevamento condizionale di eliminazioni"
-  - "articoli [replica di SQL Server], rilevamento condizionale di eliminazioni"
+title: Ottimizzare le prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional delete tracking [SQL Server replication]
+- merge replication [SQL Server replication], conditional delete tracking
+- articles [SQL Server replication], conditional delete tracking
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ottimizzazione delle prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni
+# <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Ottimizzazione delle prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -32,11 +36,11 @@ caps.handback.revision: 23
   
  Questa opzione può essere specificata alla creazione della pubblicazione oppure attivata e disattivata se un'applicazione richiede la replica di alcune eliminazioni e non di altre, ad esempio eliminazioni batch. Gli esempi seguenti illustrano le modalità di utilizzo di questa opzione in un'applicazione.  
   
--   Un'applicazione per una forza vendita mobile in genere contiene tabelle, ad esempio **SalesOrderHeader**, **SalesOrderDetail** e **prodotto**. Gli ordini vengono immessi nel Sottoscrittore e poi replicati nel server di pubblicazione, che spesso assicura i dati a un sistema di evasione degli ordini. Molti lavoratori mobili utilizzano dispositivi palmari che hanno una capacità di archiviazione limitata: quando l'ordine viene ricevuto nel server di pubblicazione, può essere eliminato nel Sottoscrittore. L'eliminazione non viene propagata al server di pubblicazione, perché l'ordine è ancora attivo nel sistema.  
+-   Un'applicazione per la forza vendita mobile in genere contiene tabelle come **SalesOrderHeader**, **SalesOrderDetail** e **Product**. Gli ordini vengono immessi nel Sottoscrittore e poi replicati nel server di pubblicazione, che spesso assicura i dati a un sistema di evasione degli ordini. Molti lavoratori mobili utilizzano dispositivi palmari che hanno una capacità di archiviazione limitata: quando l'ordine viene ricevuto nel server di pubblicazione, può essere eliminato nel Sottoscrittore. L'eliminazione non viene propagata al server di pubblicazione, perché l'ordine è ancora attivo nel sistema.  
   
-     In questo scenario, le eliminazioni non verrebbero rilevate per il **SalesOrderHeader** e **SalesOrderDetail** tabelle. Verrebbero invece rilevate per il **prodotto** tabella, perché se un prodotto viene eliminato nel server di pubblicazione, l'eliminazione deve essere inviato al server di sottoscrizione per mantenere aggiornato l'elenco dei prodotti.  
+     In questo scenario, le eliminazioni non verrebbero rilevate per le tabelle **SalesOrderHeader** e **SalesOrderDetail** . Verrebbero invece rilevate per la tabella **Product** perché se un prodotto viene eliminato nel server di pubblicazione l'eliminazione deve essere inviata al Sottoscrittore per mantenere aggiornato l'elenco dei prodotti.  
   
--   Un'applicazione potrebbe archiviare i dati cronologici in una tabella, ad esempio **TransactionHistory**, che vengono periodicamente eliminati i record meno recenti rispetto a un anno. La tabella potrebbe essere filtrata in modo che i Sottoscrittori ricevano solo i dati delle transazioni del mese corrente. Le eliminazioni batch mensili del server di pubblicazione, con cui vengono eliminati i dati più vecchi, non interessano i Sottoscrittori, ma verrebbero comunque rilevate ed enumerate per impostazione predefinita.  
+-   Un'applicazione potrebbe archiviare i dati storici in una tabella come **TransactionHistory**, da cui vengono periodicamente eliminati i record più vecchi di un anno. La tabella potrebbe essere filtrata in modo che i Sottoscrittori ricevano solo i dati delle transazioni del mese corrente. Le eliminazioni batch mensili del server di pubblicazione, con cui vengono eliminati i dati più vecchi, non interessano i Sottoscrittori, ma verrebbero comunque rilevate ed enumerate per impostazione predefinita.  
   
      In questo scenario, prima che abbia luogo l'elaborazione batch, sarebbe possibile arrestare l'attività del sistema e disabilitare il rilevamento delle eliminazioni dall'applicazione. Al termine dell'elaborazione, sarebbe possibile riabilitare la rilevazione.  
   
@@ -45,10 +49,10 @@ caps.handback.revision: 23
   
  **Per specificare di non rilevare le eliminazioni**  
   
--   Replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [specificare che elimina dovrebbe non essere rilevati per articoli di Merge & #40; Programmazione Transact-SQL della replica & #41;](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Disattivare del rilevamento delle eliminazioni per gli articoli di merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni degli articoli per la replica di tipo merge](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
- [Ottimizzazione delle prestazioni della replica di tipo merge con gli articoli di solo download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
+ [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

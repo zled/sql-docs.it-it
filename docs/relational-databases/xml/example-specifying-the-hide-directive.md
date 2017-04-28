@@ -1,24 +1,28 @@
 ---
-title: "Esempio: specifica della direttiva HIDE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "direttiva HIDE"
+title: 'Esempio: specifica della direttiva HIDE | Microsoft Docs'
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f76513d7db83b1b24f3fd5964689c47f5b96133b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: specifica della direttiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Esempio: specifica della direttiva HIDE
   Nell'esempio seguente viene illustrato l'utilizzo della direttiva **HIDE** . Questa direttiva si rivela utile quando si desidera la restituzione di un attributo in base al quale ordinare le righe nella tabella universale restituita dalla query, ma non si desidera che tale attributo venga visualizzato nel documento XML finale.  
   
  La query genera il codice XML seguente:  
@@ -80,7 +84,7 @@ go
 </ProductModel>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "XTP Cursors di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: XTP Cursors di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2442e178c91d459356330fe7342eb1319ccb270
+ms.lasthandoff: 04/11/2017
+
 ---
-# XTP Cursors di SQL Server
+# <a name="sql-server-xtp-cursors"></a>XTP Cursors di SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  L'oggetto prestazione SQL Server XTP Cursors contiene contatori correlati ai cursori interni del motore OLTP in memoria. I cursori sono i blocchi predefiniti di basso livello usati dal motore OLTP in memoria per elaborare query [!INCLUDE[tsql](../../includes/tsql-md.md)]. Di conseguenza, in genere non si ha controllo diretto su di essi.  
+  L'oggetto prestazione SQL Server XTP Cursors contiene contatori correlati ai cursori interni del motore OLTP in memoria. I cursori sono i blocchi predefiniti di basso livello usati dal motore OLTP in memoria per elaborare query [!INCLUDE[tsql](../../includes/tsql-md.md)] . Di conseguenza, in genere non si ha controllo diretto su di essi.  
   
- La tabella seguente descrive i contatori di **SQL Server XTP Cursors**.  
+ La tabella seguente descrive i contatori di **SQL Server XTP Cursors** .  
   
 |Contatore|Descrizione|  
 |-------------|-----------------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 6
 |**Righe interessate/sec**|Numero medio di righe interessate dai cursori, al secondo.|  
 |**Righe provvisoriamente eliminate interessate/sec**|Numero medio di righe in scadenza interessate dai cursori, al secondo. Una riga è in scadenza se la transazione che l'ha eliminata è ancora attiva (cioè non ne è stato ancora eseguito il commit o l'interruzione).|  
   
-## Vedere anche  
- [Contatori delle prestazioni XTP &#40;OLTP in memoria&#41; di SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Contatori delle prestazioni XTP &#40;OLTP in memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   
