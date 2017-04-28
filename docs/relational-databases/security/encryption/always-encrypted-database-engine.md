@@ -1,34 +1,38 @@
 ---
-title: "Always Encrypted (Motore di database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crittografia [SQL Server], Crittografia sempre attiva"
-  - "Crittografia sempre attiva"
-  - "TCE Crittografia sempre attiva"
-  - "Crittografia sempre attiva, informazioni"
-  - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
+title: Always Encrypted (motore di database) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], Always Encrypted
+- Always Encrypted
+- TCE Always Encrypted
+- Always Encrypted, about
+- SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Always Encrypted (Motore di database)
+# <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted è una funzionalità progettata per proteggere dati sensibili, ad esempio numeri di carta di credito, codici fiscali, passaporti, ecc. archiviati in database [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted consente ai client di crittografare dati sensibili all'interno di applicazioni client senza mai rivelare le chiavi di crittografia a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Di conseguenza, Crittografia sempre attiva crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi). Garantendo l'impossibilità di accesso ai dati crittografati da parte di amministratori di database locali, operatori di database cloud o altri utenti con privilegi elevati ma non autorizzati, Crittografia sempre attiva consente ai clienti di archiviare in modo sicuro i dati sensibili su cui non esercitano un controllo diretto. In questo modo le organizzazioni possono crittografare i dati inattivi e in uso per l'archiviazione in Azure, delegare l'amministrazione di database locali a terze parti o ridurre i requisiti di nulla osta di sicurezza per il proprio personale DBA.  
+ Always Encrypted è una funzionalità progettata per proteggere dati sensibili, ad esempio numeri di carta di credito, codici fiscali, passaporti, ecc. archiviati in database [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Always Encrypted consente ai client di crittografare dati sensibili all'interno di applicazioni client senza mai rivelare le chiavi di crittografia a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Di conseguenza, Crittografia sempre attiva crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi). Garantendo l'impossibilità di accesso ai dati crittografati da parte di amministratori di database locali, operatori di database cloud o altri utenti con privilegi elevati ma non autorizzati, Crittografia sempre attiva consente ai clienti di archiviare in modo sicuro i dati sensibili su cui non esercitano un controllo diretto. In questo modo le organizzazioni possono crittografare i dati inattivi e in uso per l'archiviazione in Azure, delegare l'amministrazione di database locali a terze parti o ridurre i requisiti di nulla osta di sicurezza per il proprio personale DBA.  
   
  Crittografia sempre attiva esegue la crittografia trasparente alle applicazioni. A questo scopo, un driver abilitato per Crittografia sempre attiva installato nel computer client esegue automaticamente la crittografia e la decrittografia dei dati sensibili nell'applicazione client. Il driver esegue la crittografia dei dati in colonne sensibili prima di passarli a [!INCLUDE[ssDE](../../../includes/ssde-md.md)]e riscrive automaticamente le query in modo da mantenere la semantica per l'applicazione. Analogamente, il driver esegue in modo trasparente la decrittografia dei dati, archiviati in colonne del database crittografato, contenuti nei risultati delle query.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 57
 ## <a name="typical-scenarios"></a>Scenari tipici  
   
 ### <a name="client-and-data-on-premises"></a>Client e dati in locale  
- Un cliente ha un'applicazione client e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], entrambi in esecuzione in locale presso la propria sede aziendale. Il cliente vuole affidare a un fornitore esterno la gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per proteggere i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il cliente usa Crittografia sempre attiva per garantire la separazione dei compiti tra amministratori di database e amministratori di applicazioni. Il cliente archivia i valori di testo non crittografato delle chiavi di Crittografia sempre attiva in un archivio di chiavi attendibili al quale l'applicazione client può accedere. Gli amministratori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non hanno accesso alle chiavi e, quindi, non possono decrittografare i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un cliente ha un'applicazione client e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , entrambi in esecuzione in locale presso la propria sede aziendale. Il cliente vuole affidare a un fornitore esterno la gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per proteggere i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il cliente usa Crittografia sempre attiva per garantire la separazione dei compiti tra amministratori di database e amministratori di applicazioni. Il cliente archivia i valori di testo non crittografato delle chiavi di Crittografia sempre attiva in un archivio di chiavi attendibili al quale l'applicazione client può accedere. Gli amministratori di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non hanno accesso alle chiavi e, quindi, non possono decrittografare i dati sensibili archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Client locale con dati in Azure  
  Un cliente ha un'applicazione client locale presso la propria sede aziendale. L'applicazione usa dati sensibili archiviati in un database ospitato in Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in una macchina virtuale in Microsoft Azure). Il cliente usa Always Encrypted e archivia le relative chiavi in un archivio attendibile ospitato localmente, per assicurarsi che gli amministratori cloud di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] non abbiano accesso ai dati sensibili.  
@@ -93,20 +97,20 @@ Per informazioni dettagliate sulla configurazione di Always Encrypted, vedere:
 
 ## <a name="getting-started-with-always-encrypted"></a>Introduzione a Crittografia sempre attiva
 
-Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura guidata Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md). La procedura guidata eseguirà il provisioning di chiavi necessarie e configurerà la crittografia per le colonne selezionate. Se le colonne, per le quali si sta impostando la crittografia, contengono già alcuni dati, la procedura guidata crittograferà i dati. L'esempio seguente descrive il processo per la crittografia di una colonna.
+Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura guidata Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) . La procedura guidata eseguirà il provisioning di chiavi necessarie e configurerà la crittografia per le colonne selezionate. Se le colonne, per le quali si sta impostando la crittografia, contengono già alcuni dati, la procedura guidata crittograferà i dati. L'esempio seguente descrive il processo per la crittografia di una colonna.
 
 > [!NOTE]  
 >  Per altre informazioni sull'uso della procedura guidata, vedere il video in [Getting Started with Always Encrypted with SSMS (Introduzione a Always Encrypted con SSMS)](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
-1.  Connettersi a un database esistente che contiene tabelle con colonne che si vuole crittografare usando **Esplora oggetti** di Management Studio oppure creare un nuovo database, creare una o più tabelle con colonne da crittografare e connettersi ad esso.
-2.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, quindi fare clic su **Crittografa colonne** per aprire la **Procedura guidata Always Encrypted**.
-3.  Leggere la pagina **Introduzione** , quindi fare clic su **Avanti**.
-4.  Nella pagina **Selezione colonne** espandere le tabelle e selezionare le colonne da crittografare.
-5.  Per ogni colonna selezionata da crittografare, impostare **Tipo di crittografia** su *Deterministico* o *Casuale*.
-6.  Per ogni colonna selezionata per la crittografia, selezionare una **Chiave di crittografia**. Se in precedenza non è stata creata una chiave di crittografia per il database, selezionare l'opzione predefinita di una nuova chiave generata automaticamente e quindi fare clic su **Avanti**.
-7.  Nella pagina **Configurazione chiave master**, selezionare un percorso per archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**.
-8.  Nella pagina **Convalida** scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
-9.  Nella pagina **Riepilogo** esaminare le opzioni selezionate e quindi fare clic su **Fine**. Al termine, chiudere la procedura guidata.
+1.    Connettersi a un database esistente che contiene tabelle con colonne che si vuole crittografare usando **Esplora oggetti** di Management Studio oppure creare un nuovo database, creare una o più tabelle con colonne da crittografare e connettersi ad esso.
+2.    Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Crittografa colonne** per aprire la **Procedura guidata Always Encrypted**.
+3.    Leggere la pagina **Introduzione** , quindi fare clic su **Avanti**.
+4.    Nella pagina **Selezione colonne** espandere le tabelle e selezionare le colonne da crittografare.
+5.    Per ogni colonna selezionata da crittografare, impostare **Tipo di crittografia** su *Deterministico* o *Casuale*.
+6.    Per ogni colonna selezionata per la crittografia, selezionare una **Chiave di crittografia**. Se in precedenza non è stata creata una chiave di crittografia per il database, selezionare l'opzione predefinita di una nuova chiave generata automaticamente e quindi fare clic su **Avanti**.
+7.    Nella pagina **Configurazione chiave master** , selezionare un percorso per archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**.
+8.    Nella pagina **Convalida** scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
+9.    Nella pagina **Riepilogo** esaminare le opzioni selezionate e quindi fare clic su **Fine**. Al termine, chiudere la procedura guidata.
 
   
 ## <a name="feature-details"></a>Informazioni sulle funzionalità  
@@ -118,6 +122,8 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
 -   Una chiave di crittografia della colonna può avere fino a due valori crittografati differenti, ciascuno crittografato con una chiave master della colonna diversa. Questa operazione facilita la rotazione delle chiavi master della colonna.  
   
 -   La crittografia deterministica richiede una colonna per disporre di uno del [*binary2* le regole di confronto](../../../relational-databases/collations/collation-and-unicode-support.md).  
+
+-   Dopo aver modificato la definizione di un oggetto codificato, eseguire [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) per aggiornare i metadati di Always Encrypted per l'oggetto.
   
  Always Encrypted non è supportata per le colonne con le caratteristiche seguenti (ad esempio, la clausola *Encrypted WITH* non può essere usata nell'istruzione **CREATE TABLE/ALTER TABLE** per una colonna, se alla colonna si applica una qualsiasi delle seguenti condizioni):  
   
@@ -159,9 +165,9 @@ Le funzionalità seguenti non sono supportate nelle colonne crittografate:
 
 Requisiti degli strumenti
 
-- SQL Server Management Studio può decrittografare i risultati recuperati da colonne crittografate se la connessione viene effettuata con *column encryption setting=enabled* nella scheda **Proprietà aggiuntive** della finestra di dialogo **Connetti al server**. È necessario almeno SQL Server Management Studio versione 17 per l'inserimento, l'aggiornamento o l'applicazione di un filtro alle colonne crittografate.
+- SQL Server Management Studio può decrittografare i risultati recuperati da colonne crittografate se la connessione viene effettuata con *column encryption setting=enabled* nella scheda **Proprietà aggiuntive** della finestra di dialogo **Connetti al server** . È necessario almeno SQL Server Management Studio versione 17 per l'inserimento, l'aggiornamento o l'applicazione di un filtro alle colonne crittografate.
 
-- Le connessioni crittografate da `sqlcmd` richiedono almeno la versione 13.1, disponibile nell'[Area download](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Le connessioni crittografate da `sqlcmd` richiedono almeno la versione 13.1, disponibile nell' [Area download](http://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Autorizzazioni per il database  
@@ -188,9 +194,9 @@ Requisiti degli strumenti
   
 -   Le due autorizzazioni *VIEW* sono necessarie quando si selezionano colonne crittografate, anche se l'utente non ha l'autorizzazione di decrittografare le colonne.  
   
--   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], entrambi le autorizzazioni *VIEW* sono assegnate per impostazione predefinita al ruolo predefinito del database `public`. Un amministratore di database può scegliere di revocare (o negare) le autorizzazioni *VIEW* per il ruolo `public` e assegnarle a specifici ruoli o utenti per implementare un controllo con maggiori restrizioni.  
+-   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], entrambi le autorizzazioni *VIEW* sono assegnate per impostazione predefinita al ruolo predefinito del database `public` . Un amministratore di database può scegliere di revocare (o negare) le autorizzazioni *VIEW* per il ruolo `public` e assegnarle a specifici ruoli o utenti per implementare un controllo con maggiori restrizioni.  
   
--   In [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], le autorizzazioni *VIEW* non sono assegnate per impostazione predefinita al ruolo predefinito del database `public`. In questo modo specifici strumenti esistenti (che usano le versioni precedenti di DacFx) funzionano correttamente. Di conseguenza, per usare le colonne crittografate (anche senza decrittografarle) un amministratore del database deve concedere esplicitamente le due autorizzazioni *VIEW*.  
+-   In [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], le autorizzazioni *VIEW* non sono assegnate per impostazione predefinita al ruolo predefinito del database `public` . In questo modo specifici strumenti esistenti (che usano le versioni precedenti di DacFx) funzionano correttamente. Di conseguenza, per usare le colonne crittografate (anche senza decrittografarle) un amministratore del database deve concedere esplicitamente le due autorizzazioni *VIEW* .  
 
   
 ## <a name="example"></a>Esempio  
@@ -230,19 +236,21 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-*  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-*  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-*  [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-*  [column_definition &#40;Transact-SQL&#41;](../Topic/column_definition%20\(Transact-SQL\).md)   
-*  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-*  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-*  [sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-*  [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-*  [Procedura guidata Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-*  [Migrare dati sensibili protetti da Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-*  [Always Encrypted &#40;sviluppo client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-*  [Crittografia Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-* [Configurare Always Encrypted tramite SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-* [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+[CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
+[column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+[Procedura guidata Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Migrare dati sensibili protetti da Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
+[Always Encrypted &#40;sviluppo client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
+[Crittografia Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+[Configurare Always Encrypted tramite SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+[Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Riferimento alla raccolta di XML Schema predefinita (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "raccolte di XML Schema sys [SQL Server]"
-  - "raccolte di schemi [SQL Server], predefinite"
-  - "raccolte di XML Schema predefinite [SQL Server]"
-  - "raccolte XML Schema [SQL Server], predefinite"
-  - "raccolte di XML Schema predefinite [SQL Server]"
+title: Fare riferimento alla raccolta di XML Schema predefinita (sys) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Riferimento alla raccolta di XML Schema predefinita (sys)
-  Per ogni database creato è disponibile una raccolta di XML Schema **sys** predefinita nello schema relazionale **sys**. Tale raccolta riserva questi schemi predefiniti, ai quali è possibile accedere da qualsiasi altra raccolta XML Schema creata dall'utente. I prefissi utilizzati negli schemi predefiniti sono significativi in XQuery. L'unico prefisso riservato è **xml**.  
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>Riferimento alla raccolta di XML Schema predefinita (sys)
+  Per ogni database creato è disponibile una raccolta di XML Schema **sys** predefinita nello schema relazionale **sys** . Tale raccolta riserva questi schemi predefiniti, ai quali è possibile accedere da qualsiasi altra raccolta XML Schema creata dall'utente. I prefissi utilizzati negli schemi predefiniti sono significativi in XQuery. L'unico prefisso riservato è **xml** .  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  
@@ -40,7 +44,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
   
 -   I tipi XSD  
   
--   Gli attributi XML **lang**, **base** e **space**  
+-   Gli attributi XML **lang**, **base**e **space**  
   
 -   I componenti dello spazio dei nomi **sqltypes**  
   
@@ -56,7 +60,7 @@ AND (SC.schema_id = 4))
 GO  
 ```  
   
- Nell'esempio seguente viene illustrato come viene fatto riferimento a tali componenti in uno schema utente. `CREATE XML SCHEMA COLLECTION` consente di creare una raccolta di XML Schema che fa riferimento al `varchar`tipo definito nello spazio dei nomi `sqltypes`. e inoltre all'attributo `lang` definito nello spazio dei nomi `xml`.  
+ Nell'esempio seguente viene illustrato come viene fatto riferimento a tali componenti in uno schema utente. `CREATE XML SCHEMA COLLECTION` consente di creare una raccolta di XML Schema che fa riferimento al `varchar` tipo definito nello spazio dei nomi `sqltypes` . e inoltre all'attributo `lang` definito nello spazio dei nomi `xml` .  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -91,7 +95,7 @@ GO
   
  Si noti quanto segue:  
   
--   Non è possibile modificare XML Schema con questi spazi dei nomi in nessuna raccolta XML Schema definita dall'utente. Ad esempio, la raccolta XML Schema seguente genera un errore perché aggiunge un componente allo spazio dei nomi protetto `sqltypes`:  
+-   Non è possibile modificare XML Schema con questi spazi dei nomi in nessuna raccolta XML Schema definita dall'utente. Ad esempio, la raccolta XML Schema seguente genera un errore perché aggiunge un componente allo spazio dei nomi protetto `sqltypes` :  
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
@@ -103,7 +107,7 @@ GO
     GO  
     ```  
   
--   Non è possibile utilizzare la raccolta XML Schema `sys` nelle colonne, variabili o parametri di tipo `xml`. Il codice seguente, ad esempio, restituisce un errore:  
+-   Non è possibile utilizzare la raccolta XML Schema `sys` nelle colonne, variabili o parametri di tipo `xml` . Il codice seguente, ad esempio, restituisce un errore:  
   
     ```  
     DECLARE @x xml (sys.sys)  
@@ -148,7 +152,7 @@ GO
   
  L'espressione `instance of sqltypes:varchar?`restituisce TRUE, perché il valore dell'elemento <`root`> è di un tipo derivato da **varchar** in base allo schema associato alla variabile `@var`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolte di XML Schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

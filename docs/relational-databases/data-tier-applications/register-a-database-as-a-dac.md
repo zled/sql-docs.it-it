@@ -1,40 +1,44 @@
 ---
-title: "Registrare un database come applicazione livello dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.registerdacwizard.summary.f1"
-  - "sql13.swb.registerdacwizard.introduction.f1"
-  - "sql13.swb.registerdacwizard.setproperties.f1"
-  - "sql13.swb.registerdacwizard.registerdac.f1"
-helpviewer_keywords: 
-  - "procedura guidata [DAC], registrazione"
-  - "procedura [DAC], registrazione"
-  - "registrazione dell'applicazione livello dati"
-  - "applicazione livello dati [SQL Server], registrazione"
+title: Registrare un database come applicazione livello dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.registerdacwizard.summary.f1
+- sql13.swb.registerdacwizard.introduction.f1
+- sql13.swb.registerdacwizard.setproperties.f1
+- sql13.swb.registerdacwizard.registerdac.f1
+helpviewer_keywords:
+- wizard [DAC], register
+- How to [DAC], register
+- register DAC
+- data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Registrare un database come applicazione livello dati
+# <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
   Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati tramite:** [la procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
-## Prima di iniziare  
- Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area **Esplora utilità** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e verrà segnalata nella pagina dei dettagli **Applicazioni livello dati distribuite**.  
+## <a name="before-you-begin"></a>Prima di iniziare  
+ Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applicazioni livello dati distribuite** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  La registrazione di un'applicazione livello dati può essere effettuata solo per un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. La registrazione di un'applicazione livello dati non può essere eseguita se è stata già registrata un'applicazione livello dati per il database. Se, ad esempio, il database è stato creato distribuendo un'applicazione livello dati, non è possibile eseguire la procedura guidata **Registra applicazione livello dati**.  
@@ -42,7 +46,7 @@ caps.handback.revision: 22
  Non è possibile registrare un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Autorizzazioni  
- La registrazione di un'applicazione livello dati in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]richiede almeno autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION per l'ambito del database, nonché autorizzazioni SELECT su **sys.sql_expression_dependencies**, oltre all'appartenenza al ruolo predefinito del server **dbcreator**. Possono registrare un'applicazione livello dati anche i membri del ruolo predefinito del server **sysadmin**o dell'account amministratore di sistema SQL Server predefinito denominato **sa**. La registrazione di un'applicazione livello dati che non contiene accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **dbmanager** o **serveradmin** . La registrazione di un'applicazione livello dati che contiene account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **loginmanager** o **serveradmin** .  
+ La registrazione di un'applicazione livello dati in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] richiede almeno autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION per l'ambito del database, nonché autorizzazioni SELECT su **sys.sql_expression_dependencies**, oltre all'appartenenza al ruolo predefinito del server **dbcreator** . Possono registrare un'applicazione livello dati anche i membri del ruolo predefinito del server **sysadmin** o dell'account amministratore di sistema SQL Server predefinito denominato **sa** . La registrazione di un'applicazione livello dati che non contiene accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **dbmanager** o **serveradmin** . La registrazione di un'applicazione livello dati che contiene account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli **loginmanager** o **serveradmin** .  
   
 ##  <a name="UsingRegisterDACWizard"></a> Utilizzo della procedura guidata Registra applicazione livello dati  
  **Per registrare un'applicazione livello dati tramite procedura guidata**  
@@ -70,7 +74,7 @@ caps.handback.revision: 22
   
  **Avanti >**: consente di passare alla pagina **Imposta proprietà**.  
   
- **Annulla**: consente di terminare la procedura guidata senza registrare un'applicazione livello dati.  
+ **Annulla** : consente di terminare la procedura guidata senza registrare un'applicazione livello dati.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 22
   
  **Descrizione** - (Facoltativa). Testo che illustra lo scopo dell'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione viene archiviata nel database **msdb** e può essere visualizzata successivamente nel nodo **Applicazioni livello dati** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **\< Indietro**: consente di tornare alla pagina **Introduzione**.  
+ **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
  **Avanti >**: consente di verificare che sia possibile compilare un'applicazione livello dati dagli oggetti nel database e di visualizzare i risultati nella pagina **Convalida e riepilogo**.  
   
- **Annulla**: consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
+ **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
@@ -96,49 +100,49 @@ caps.handback.revision: 22
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-### Recupero degli oggetti  
+### <a name="retrieving-objects"></a>Recupero degli oggetti  
  **Recupero di oggetti database e server.** - Consente di visualizzare un indicatore di stato durante il recupero di tutti gli oggetti richiesti dal database e dall'istanza del Motore di database.  
   
- **\< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
+ **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   
  **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
- **Annulla**: consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
+ **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-### Convalida degli oggetti  
- **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *NomeSchema***.***NomeOggetto* identifica l'oggetto attualmente sottoposto a verifica.  
+### <a name="validating-objects"></a>Convalida degli oggetti  
+ **Checking**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *NomeSchema***.***NomeOggetto* identifica l'oggetto attualmente sottoposto a verifica.  
   
- **\< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
+ **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   
  **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
- **Annulla**: consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
+ **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
-### Riepilogo  
+### <a name="summary"></a>Riepilogo  
  **Per la registrazione dell'applicazione livello dati verranno utilizzate le impostazioni seguenti.** - Consente di visualizzare un report delle proprietà e degli oggetti che verranno inclusi nell'applicazione livello dati.  
   
  **Salva report** consente di salvare una copia del report di convalida come file HTML. La cartella predefinita, **SQL Server Management Studio\DAC Packages**, si trova all'interno della cartella Documenti dell'account di Windows.  
   
- **\< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
+ **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   
  **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
- **Annulla**: consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
+ **Annulla** : consente di terminare la procedura guidata senza registrare l'applicazione livello dati.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
 ##  <a name="Register"></a> Pagina Registra DAC  
  In questa pagina viene riportato l'esito positivo o negativo della registrazione.  
   
- **Registrazione dell'applicazione livello dati**: consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per la registrazione dell'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
+ **Registrazione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per la registrazione dell'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
   
- **Salva report** consente di salvare il report della registrazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita, **SQL Server Management Studio\DAC Packages**, si trova all'interno della cartella Documenti dell'account di Windows. Il nome del file è nel formato <NomePacchettoDAC>\>_RegisterDACReport_aaaammgg.html, dove \<*NomePacchettoDAC*> è il nome del pacchetto da distribuire, *aaaa* indica l'anno corrente, *mm* il mese corrente e *gg* il giorno corrente.  
+ **Salva report** consente di salvare il report della registrazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita, **SQL Server Management Studio\DAC Packages** , si trova all'interno della cartella Documenti dell'account di Windows. Il nome del file è nel formato \<NomePacchettoDAC>_RegisterDACReport_aaaammgg, dove \<*NomePacchettoDAC*> è il nome del pacchetto da distribuire, *aaaa* indica l'anno corrente, *mm* il mese corrente e *gg* il giorno corrente.  
   
- **Fine**: consente di terminare la procedura guidata.  
+ **Fine** : consente di terminare la procedura guidata.  
   
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 22
   
 4.  Eseguire il metodo Register con le informazioni specificate in precedenza.  
   
-### Esempio (PowerShell)  
+### <a name="example-powershell"></a>Esempio (PowerShell)  
  Nell'esempio seguente viene registrato un database denominato MyDB come applicazione livello dati.  
   
 ```  
@@ -175,7 +179,8 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
+
