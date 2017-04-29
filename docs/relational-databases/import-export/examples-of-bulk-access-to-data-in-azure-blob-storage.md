@@ -2,7 +2,7 @@
 title: Esempi di accesso bulk ai dati nell&quot;archiviazione BLOB di Azure | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
