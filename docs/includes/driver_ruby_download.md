@@ -1,0 +1,1 @@
+![Download](../ssdt/media/download.png)[Installare il driver Ruby](http://msdn.microsoft.com/library/mt711041.aspx)

@@ -1,27 +1,30 @@
 ---
-title: "Abilitare Estensione database per una tabella | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Estensione database, abilitazione tabella"
-  - "abilitazione tabella per Estensione database"
+title: Abilitare Estensione database per una tabella | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling table
+- enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 407863b783be38aa9342361778cc22914f805033
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare Estensione database per una tabella
+# <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per configurare una tabella per Estensione database, selezionare **Estendi | Abilita** per una tabella in SQL Server Management Studio in modo da aprire la procedura guidata **Abilita la tabella per l'estensione**. È inoltre possibile usare Transact-SQL per abilitare Estensione database in una tabella esistente o creare una nuova tabella con la funzionalità Estensione database abilitata.  
@@ -34,7 +37,8 @@ caps.handback.revision: 43
   
  **Autorizzazioni**. L'abilitazione di Estensione database in un database o una tabella richiede autorizzazioni db_owner. L'abilitazione di Estensione database in una tabella richiede anche autorizzazioni ALTER sulla tabella.  
 
- >   [!NOTE] Se successivamente si disabilita Estensione database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente.
+ >   [!NOTE]
+ > Se successivamente si disabilita Estensione database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente.
  
 ##  <a name="EnableWizardTable"></a> Usare la procedura guidata per abilitare Estensione database in una tabella  
  **Avviare la procedura guidata**  
@@ -65,7 +69,7 @@ caps.handback.revision: 43
 ##  <a name="EnableTSQLTable"></a> Usare Transact-SQL per abilitare Estensione database in una tabella  
  È possibile usare Transact-SQL per abilitare Estensione database in una tabella esistente o creare una nuova tabella con la funzionalità Estensione database abilitata.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  Usare le opzioni seguenti quando si esegue CREATE TABLE o ALTER TABLE per abilitare Estensione database in una tabella.  
   
 -   Facoltativamente, usare la clausola `FILTER_PREDICATE = <function>` per specificare una funzione che selezioni le righe di cui eseguire la migrazione se la tabella contiene sia dati usati più di frequente sia dati usati meno di frequente. Il predicato deve eseguire la chiamata a una funzione inline con valori di tabella. Per altre informazioni, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Se non si specifica una funzione di filtro, viene eseguita la migrazione dell'intera tabella.  
@@ -75,7 +79,7 @@ caps.handback.revision: 43
   
 -   Specificare `MIGRATION_STATE = OUTBOUND` per avviare subito la migrazione dei dati o  `MIGRATION_STATE = PAUSED` per rimandare l'inizio della migrazione dei dati.  
   
-### Abilitare Estensione database per una tabella esistente  
+### <a name="enable-stretch-database-for-an-existing-table"></a>Abilitare Estensione database per una tabella esistente  
  Per configurare una tabella esistente per Estensione database, eseguire il comando ALTER TABLE.  
   
  Ecco un esempio in cui viene eseguita la migrazione dell'intera tabella e la migrazione dei dati viene avviata subito.  
@@ -102,7 +106,7 @@ ALTER TABLE <table name>
   
  Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-### Creare una nuova tabella con la funzionalità Estensione database abilitata  
+### <a name="create-a-new-table-with-stretch-database-enabled"></a>Creare una nuova tabella con la funzionalità Estensione database abilitata  
  Per creare una nuova tabella con la funzionalità Estensione database abilitata, eseguire il comando CREATE TABLE.  
   
  Ecco un esempio in cui viene eseguita la migrazione dell'intera tabella e la migrazione dei dati viene avviata subito.  
@@ -131,8 +135,9 @@ GO
   
  Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   
   
+

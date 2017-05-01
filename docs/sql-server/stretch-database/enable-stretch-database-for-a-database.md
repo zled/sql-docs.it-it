@@ -1,27 +1,30 @@
 ---
-title: "Abilitare Estensione database per un database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Estensione database, abilitazione database"
-  - "abilitazione database per Estensione database"
+title: Abilitare Estensione database per un database | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling database
+- enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitare Estensione database per un database
+# <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per configurare un database esistente per Estensione database, selezionare **Attività | Estensione | Abilita** per un database in SQL Server Management Studio in modo da aprire la procedura guidata **Abilitare il database per l'estensione**. È anche possibile usare Transact-SQL per abilitare Estensione database in un database.  
@@ -30,11 +33,12 @@ caps.handback.revision: 69
   
  L'abilitazione di Estensione database su un database o una tabella richiede autorizzazioni db_owner. L'abilitazione di Estensione database su un database richiede anche le autorizzazioni CONTROL DATABASE.  
 
- >   [!NOTE] Se successivamente si disabilita Estensione database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente. 
+ >   [!NOTE]
+ > Se successivamente si disabilita Estensione database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente. 
  
-## Prima di iniziare  
+## <a name="before-you-get-started"></a>Prima di iniziare  
   
--   Prima di configurare un database per Estensione, è consigliabile eseguire Stretch Database Advisor per identificare i database e le tabelle idonee per Estensione. Stretch Database Advisor identifica anche i problemi di blocco. Per altre informazioni, vedere [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md).  
+-   Prima di configurare un database per Estensione, è consigliabile eseguire Stretch Database Advisor per identificare i database e le tabelle idonee per Estensione. Stretch Database Advisor identifica anche i problemi di blocco. Per altre informazioni, vedere [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
 -   Rivedere [Limitazioni della superficie di attacco e problemi che causano il blocco per Estensione database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 69
   
 -   Se non si dispone delle autorizzazioni necessarie, l'amministratore deve abilitare l'opzione manualmente eseguendo **sp_configure** prima che venga avviata la procedura guidata o deve eseguire la procedura guidata.  
   
- Per abilitare manualmente Estensione database nel server, eseguire **sp_configure** e attivare l'opzione **remote data archive**. L'esempio seguente abilita l'opzione **remote data archive** impostandone il valore su 1.  
+ Per abilitare manualmente Estensione database nel server, eseguire **sp_configure** e attivare l'opzione **remote data archive** . L'esempio seguente abilita l'opzione **remote data archive** impostandone il valore su 1.  
   
 ```  
 EXEC sp_configure 'remote data archive' , '1';  
@@ -62,7 +66,7 @@ GO
  Per altre informazioni, vedere [Configure the remote data archive Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md) (Configurare l'opzione di configurazione remote data archive) e [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ##  <a name="Wizard"></a> Usare la procedura guidata per abilitare Estensione database in un database  
- Per informazioni sulla procedura guidata Abilitare il database per l'estensione e sulle informazioni da immettere e le scelte da compiere, vedere [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) (Iniziare eseguendo la procedura guidata Abilitare il database per l'estensione).  
+ Per informazioni sulla procedura guidata Abilitare il database per l'estensione e sulle informazioni da immettere e le scelte da compiere, vedere [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)(Iniziare eseguendo la procedura guidata Abilitare il database per l'estensione).  
   
 ##  <a name="EnableTSQLDatabase"></a> Usare Transact-SQL per abilitare Estensione database in un database  
  Prima di abilitare Estensione database sulle singole tabelle, è necessario abilitarla nel database.  
@@ -118,7 +122,7 @@ GO
   
 5.  Per configurare un database per Estensione database, eseguire il comando ALTER DATABASE.  
   
-    1.  Per l'argomento SERVER, specificare il nome di un server di Azure esistente, inclusa la parte del nome `.database.windows.net`, ad esempio `MyStretchDatabaseServer.database.windows.net`.  
+    1.  Per l'argomento SERVER, specificare il nome di un server di Azure esistente, inclusa la parte del nome `.database.windows.net` , ad esempio `MyStretchDatabaseServer.database.windows.net`.  
   
     2.  Fornire le credenziali di amministratore esistenti con l'argomento CREDENTIAL o specificare FEDERATED_SERVICE_ACCOUNT = ON. L'esempio seguente fornisce credenziali esistenti.  
   
@@ -132,7 +136,7 @@ GO
     GO
     ```  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) per abilitare altre tabelle.  
   
 -   [Monitor and troubleshoot data migration &#40;Stretch Database&#41; (Monitorare e risolvere i problemi relativi alla migrazione dei dati (Estensione database))](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) per visualizzare lo stato della migrazione dei dati.  
@@ -145,8 +149,9 @@ GO
   
 -   [Restore Stretch-enabled databases (Ripristinare database abilitati per l'estensione)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## Vedere anche  
- [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)   
- [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>Vedere anche  
+ [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

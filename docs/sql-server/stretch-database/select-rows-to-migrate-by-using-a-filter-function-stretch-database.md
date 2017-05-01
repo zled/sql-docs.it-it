@@ -1,34 +1,38 @@
 ---
-title: "Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Estensione database, predicati"
-  - "predicati per Estensione database"
-  - "Estensione database, funzioni inline con valori di tabella"
-  - "funzioni inline con valori di tabella per Estensione database"
+title: Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, predicates
+- predicates for Stretch Database
+- Stretch Database, inline table-valued functions
+- inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.lasthandoff: 04/11/2017
+
 ---
-# Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Se i dati usati meno di frequente vengono archiviati in una tabella separata, è possibile configurare Estensione database per eseguire la migrazione dell'intera tabella. Se invece la tabella contiene dati usati più di frequente e dati usati meno di frequente, è possibile specificare un predicato del filtro per selezionare le righe di cui eseguire la migrazione. Il predicato del filtro è una funzione inline con valori di tabella. Questo argomento illustra come scrivere una funzione inline con valori di tabella per selezionare le righe di cui eseguire la migrazione.  
   
-> [!IMPORTANT] Se si specifica una funzione di filtro dalle prestazioni scarse, anche la migrazione dei dati avrà prestazioni scarse. Estensione database applica la funzione di filtro alla tabella usando l'operatore CROSS APPLY.  
+> [!IMPORTANT]
+> Se si specifica una funzione di filtro dalle prestazioni scarse, anche la migrazione dei dati avrà prestazioni scarse. Estensione database applica la funzione di filtro alla tabella usando l'operatore CROSS APPLY.  
   
  Se non si specifica una funzione di filtro, viene eseguita la migrazione dell'intera tabella.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 42
   
  La sintassi di ALTER TABLE per l'aggiunta di una funzione è descritta più avanti in questo argomento.  
   
-## Requisiti di base per la funzione di filtro  
+## <a name="basic-requirements-for-the-filter-function"></a>Requisiti di base per la funzione di filtro  
  La funzione inline con valori di tabella necessaria per un predicato del filtro di Estensione database è simile alla seguente.  
   
 ```tsql  
@@ -56,10 +60,10 @@ RETURN  SELECT 1 AS is_eligible
   
  L'associazione allo schema è necessaria per evitare l'eliminazione o la modifica delle colonne usate dalla funzione di filtro.  
   
-### Valore restituito  
+### <a name="return-value"></a>Valore restituito  
  Se la funzione restituisce un risultato non vuoto, la riga è idonea per la migrazione. In caso contrario, ovvero se la funzione non restituisce un risultato, la riga non è idonea per la migrazione.  
   
-### Condizioni  
+### <a name="conditions"></a>Condizioni  
  Il &lt;*predicato*&gt; può essere costituito da una singola condizione oppure da più condizioni unite tramite l'operatore logico AND.  
   
 ```  
@@ -72,7 +76,7 @@ RETURN  SELECT 1 AS is_eligible
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
 ```  
   
-### Condizioni primitive  
+### <a name="primitive-conditions"></a>Condizioni primitive  
  Una condizione di primitiva può eseguire uno dei confronti seguenti.  
   
 ```  
@@ -109,7 +113,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Usare l'operatore IN per confrontare un parametro di funzione con un elenco di valori costanti.  
   
-     Ecco un esempio che controlla se il valore di una colonna *shipment_status* è `IN (N'Completed', N'Returned', N'Cancelled')`.  
+     Ecco un esempio che controlla se il valore di una colonna *shipment_status*  è `IN (N'Completed', N'Returned', N'Cancelled')`.  
   
     ```tsql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
@@ -127,7 +131,7 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
-### Operatori di confronto  
+### <a name="comparison-operators"></a>Operatori di confronto  
  Sono supportati gli operatori di confronto seguenti.  
   
  `<, <=, >, >=, =, <>, !=, !<, !>`  
@@ -136,7 +140,7 @@ RETURN  SELECT 1 AS is_eligible
 <comparison_operator> ::= { < | <= | > | >= | = | <> | != | !< | !> }  
 ```  
   
-### Espressioni costanti  
+### <a name="constant-expressions"></a>Espressioni costanti  
  Le costanti usate in una funzione di filtro possono essere costituite da qualsiasi espressione deterministica che può essere valutata quando si definisce la funzione. Le espressioni costanti possono contenere gli elementi seguenti.  
   
 -   Valori letterali. Ad esempio, `N’abc’, 123`.  
@@ -147,13 +151,13 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Conversioni deterministiche che usano CAST o CONVERT. Ad esempio, `CONVERT(datetime, '1/1/2016', 101)`.  
   
-### Altre espressioni  
+### <a name="other-expressions"></a>Altre espressioni  
  È possibile usare gli operatori BETWEEN e NOT BETWEEN se la funzione risultante è conforme alle regole descritte qui dopo la sostituzione degli operatori BETWEEN e NOT BETWEEN con le espressioni AND e OR equivalenti.  
   
  Non è possibile usare sottoquery o funzioni non deterministiche, ad esempio RAND() o GETDATE().  
   
-## Aggiungere una funzione di filtro a una tabella  
- Per aggiungere una funzione di filtro a una tabella, eseguire l'istruzione **ALTER TABLE** e specificare una funzione inline con valori di tabella esistente come valore del parametro **FILTER_PREDICATE**. Esempio:  
+## <a name="add-a-filter-function-to-a-table"></a>Aggiungere una funzione di filtro a una tabella  
+ Per aggiungere una funzione di filtro a una tabella, eseguire l'istruzione **ALTER TABLE** e specificare una funzione inline con valori di tabella esistente come valore del parametro **FILTER_PREDICATE** . Esempio:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -171,9 +175,10 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  Non è possibile eliminare la funzione inline con valori di tabella fino a quando una tabella usa la funzione come predicato del filtro. 
 
-> [!TIP] Per migliorare le prestazioni della funzione di filtro, creare un indice per le colonne usate dalla funzione.
+> [!TIP]
+> Per migliorare le prestazioni della funzione di filtro, creare un indice per le colonne usate dalla funzione.
 
- ### Passaggio di nomi di colonna alla funzione di filtro
+ ### <a name="passing-column-names-to-the-filter-function"></a>Passaggio di nomi di colonna alla funzione di filtro
  
  Quando si assegna una funzione di filtro a una tabella, specificare nomi in una parte per le colonne passate alla funzione di filtro. Se quando si passano i nomi di colonna si specificano nomi in tre parti, le query successive sulla tabella con estensione abilitata avranno esito negativo.
 
@@ -199,7 +204,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>Aggiungere una funzione di filtro dopo l'esecuzione della procedura guidata  
   
-Se si vuole usare una funzione che non è possibile creare nell'**Abilitazione guidata del database per l'estensione**, è possibile eseguire l'istruzione **ALTER TABLE** per specificare una funzione, dopo l'uscita dalla procedura guidata. Prima di applicare una funzione, tuttavia, è necessario interrompere la migrazione dei dati in corso e ripristinare i dati migrati. Per altre informazioni sul perché è necessario, vedere [Sostituire una funzione di filtro esistente](#replacePredicate).
+Se si vuole usare una funzione che non è possibile creare nell' **Abilitazione guidata del database per l'estensione** , è possibile eseguire l'istruzione **ALTER TABLE** per specificare una funzione, dopo l'uscita dalla procedura guidata. Prima di applicare una funzione, tuttavia, è necessario interrompere la migrazione dei dati in corso e ripristinare i dati migrati. Per altre informazioni sul perché è necessario, vedere [Sostituire una funzione di filtro esistente](#replacePredicate).
   
 1. Invertire la direzione della migrazione e ripristinare i dati già migrati. Non è possibile annullare questa operazione dopo l'avvio. In Azure, poi, i trasferimenti di dati in uscita (traffico in uscita) sono soggetti ad addebito. Per altre informazioni, vedere [Dettagli prezzi dei trasferimenti di dati](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
@@ -208,7 +213,7 @@ Se si vuole usare una funzione che non è possibile creare nell'**Abilitazione g
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Attendere il completamento della migrazione. È possibile controllare lo stato in **Monitoraggio dell'estensione database** da SQL Server Management Studio, oppure è possibile eseguire query sulla vista **sys.dm_db_rda_migration_status**. Per altre informazioni, vedere [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Monitoraggio e risoluzione dei problemi della migrazione dei dati) o [sys.dm_db_rda_migration_status](sys.dm_db_rda_migration_status%20\(Transact-SQL\).md).  
+2. Attendere il completamento della migrazione. È possibile controllare lo stato in **Monitoraggio dell'estensione database** da SQL Server Management Studio, oppure è possibile eseguire query sulla vista **sys.dm_db_rda_migration_status** . Per altre informazioni, vedere [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Monitoraggio e risoluzione dei problemi della migrazione dei dati) o [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Creare la funzione di filtro che si vuole applicare alla tabella.  
   
@@ -224,7 +229,7 @@ Se si vuole usare una funzione che non è possibile creare nell'**Abilitazione g
             );   
     ```  
   
-## Filtrare le righe in base alla data  
+## <a name="filter-rows-by-date"></a>Filtrare le righe in base alla data  
  L'esempio seguente esegue la migrazione delle righe in cui la colonna **date** contiene un valore precedente all'1 gennaio 2016.  
   
 ```tsql  
@@ -239,7 +244,7 @@ GO
   
 ```  
   
-## Filtrare le righe in base al valore della colonna status  
+## <a name="filter-rows-by-the-value-in-a-status-column"></a>Filtrare le righe in base al valore della colonna status  
  L'esempio seguente esegue la migrazione delle righe in cui la colonna **status** contiene uno dei valori specificati.  
   
 ```tsql  
@@ -254,7 +259,7 @@ GO
   
 ```  
   
-## Filtrare le righe usando una finestra temporale scorrevole  
+## <a name="filter-rows-by-using-a-sliding-window"></a>Filtrare le righe usando una finestra temporale scorrevole  
  Per filtrare le righe usando una finestra temporale scorrevole, tenere presente i requisiti seguenti per la funzione di filtro.  
   
 -   La funzione deve essere deterministica. Di conseguenza, non è possibile creare una funzione che ricalcola automaticamente la finestra temporale scorrevole col passare del tempo.  
@@ -322,7 +327,7 @@ COMMIT ;
   
 ```  
   
-## Altri esempi di funzioni di filtro valide  
+## <a name="more-examples-of-valid-filter-functions"></a>Altri esempi di funzioni di filtro valide  
   
 -   L'esempio seguente unisce due condizioni primitive usando l'operatore logico AND.  
   
@@ -395,7 +400,7 @@ COMMIT ;
   
     ```  
   
-## Esempi di funzioni di filtro non valide  
+## <a name="examples-of-filter-functions-that-arent-valid"></a>Esempi di funzioni di filtro non valide  
   
 -   La funzione seguente non è valida perché contiene una conversione non deterministica.  
   
@@ -483,7 +488,7 @@ COMMIT ;
   
     ```  
   
-## Come viene applicata la funzione di filtro da Estensione database  
+## <a name="how-stretch-database-applies-the-filter-function"></a>Come viene applicata la funzione di filtro da Estensione database  
  Estensione database applica la funzione di filtro alla tabella e individua le righe idonee usando l'operatore CROSS APPLY. Esempio:  
   
 ```tsql  
@@ -493,7 +498,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Se la funzione restituisce un risultato non vuoto per la riga, la riga è idonea per la migrazione.  
   
 ## <a name="replacePredicate"></a>Sostituire una funzione di filtro esistente  
- Per sostituire una funzione di filtro specificata in precedenza, eseguire di nuovo l'istruzione **ALTER TABLE** e specificare un valore nuovo per il parametro **FILTER_PREDICATE**. Esempio:  
+ Per sostituire una funzione di filtro specificata in precedenza, eseguire di nuovo l'istruzione **ALTER TABLE** e specificare un valore nuovo per il parametro **FILTER_PREDICATE** . Esempio:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -512,9 +517,9 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   Non è possibile modificare l'ordine degli argomenti degli operatori.  
   
--   Solo i valori costanti che fanno parte di un confronto `<, <=, >, >=` possono essere modificati in modo da rendere meno restrittiva la funzione.  
+-   Solo i valori costanti che fanno parte di un confronto `<, <=, >, >=`  possono essere modificati in modo da rendere meno restrittiva la funzione.  
   
-### Esempio di sostituzione valida  
+### <a name="example-of-a-valid-replacement"></a>Esempio di sostituzione valida  
  Si supponga che la funzione seguente sia la funzione di filtro corrente.  
   
 ```tsql  
@@ -543,7 +548,7 @@ GO
   
 ```  
   
-### Esempi di sostituzioni non valide  
+### <a name="examples-of-replacements-that-arent-valid"></a>Esempi di sostituzioni non valide  
  La funzione seguente non è una sostituzione valida perché la nuova costante di data, che specifica una data limite precedente, non rende meno restrittiva la funzione.  
   
 ```tsql  
@@ -587,8 +592,8 @@ GO
   
 ```  
   
-## Rimuovere una funzione di filtro da una tabella  
- Per eseguire la migrazione dell'intera tabella anziché delle righe selezionate, rimuovere la funzione esistente impostando **FILTER_PREDICATE** su null. Esempio:  
+## <a name="remove-a-filter-function-from-a-table"></a>Rimuovere una funzione di filtro da una tabella  
+ Per eseguire la migrazione dell'intera tabella anziché delle righe selezionate, rimuovere la funzione esistente impostando **FILTER_PREDICATE**  su null. Esempio:  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -600,17 +605,18 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  Dopo aver rimosso la funzione di filtro, tutte le righe della tabella sono idonee per la migrazione. Di conseguenza, è possibile specificare una funzione di filtro per la stessa tabella in un secondo momento solo se si recuperano prima tutti i dati remoti della tabella da Azure. Questa restrizione ha lo scopo di evitare che quando si specifica una nuova funzione di filtro le righe non idonee per la migrazione siano già state migrate in Azure.  
   
-## Controllare la funzione di filtro applicata a una tabella  
- Per controllare la funzione di filtro applicata a una tabella, aprire la vista del catalogo **sys.remote_data_archive_tables** e controllare il valore per la colonna **filter_predicate**. Se il valore è null, l'intera tabella è idonea per l'archiviazione. Per altre info, vedere [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md).  
+## <a name="check-the-filter-function-applied-to-a-table"></a>Controllare la funzione di filtro applicata a una tabella  
+ Per controllare la funzione di filtro applicata a una tabella, aprire la vista del catalogo **sys.remote_data_archive_tables** e controllare il valore per la colonna **filter_predicate** . Se il valore è null, l'intera tabella è idonea per l'archiviazione. Per altre info, vedere [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
   
-## Note sulla sicurezza per le funzioni di filtro  
+## <a name="security-notes-for-filter-functions"></a>Note sulla sicurezza per le funzioni di filtro  
 Un account compromesso con privilegi db_owner può eseguire le operazioni seguenti.  
   
 -   Creare e applicare una funzione con valori di tabella che usa grandi quantità di risorse del server o rimane in attesa per un lungo periodo, risultando in un risultante in un attacco Denial of Service.  
   
 -   Creare e applicare una funzione con valori di tabella che rende possibile dedurre il contenuto di una tabella per la quale all'utente è stato esplicitamente negato l'accesso in lettura.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

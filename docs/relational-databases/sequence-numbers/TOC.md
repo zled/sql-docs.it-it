@@ -1,2 +1,2 @@
-# [Numeri di sequenza](sequence-numbers.md)
-# [Proprietà sequenza (pagina Generale)](sequence-properties-general-page.md)
+# [Panoramica](sequence-numbers.md)  
+# [Proprietà sequenza](sequence-properties-general-page.md)  

@@ -1,0 +1,1 @@
+**QUESTO ARGOMENTO SI APPLICA A:**![no](media/no.png)SQL Server 2016![sì](media/yes.png)Technical Preview di gennaio 2017 dei report di Power BI in SQL Server Reporting Services

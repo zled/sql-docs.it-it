@@ -1,31 +1,35 @@
 ---
-title: "Analisi utilizzo software per SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssdt"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Analisi utilizzo software per SQL Server Data Tools | Microsoft Docs
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 caps.latest.revision: 11
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.lasthandoff: 04/11/2017
+
 ---
-# Analisi utilizzo software per SQL Server Data Tools
+# <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Analisi utilizzo software per SQL Server Data Tools
   Informazioni su come il programma Analisi utilizzo software consente a Microsoft di identificare modi per migliorare il software.  È possibile configurare gli strumenti per i quali si vuole o meno partecipare in qualsiasi momento.  
   
 > [!NOTE]  
 >  Per una spiegazione delle procedure di raccolta e di trattamento dei dati per le versioni di Microsoft SQL Server 2016 e qualsiasi altro prodotto o servizio, fare riferimento a questa [informativa sulla privacy da Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
   
-## Consenso o rifiuto esplicito per la partecipazione ad Analisi utilizzo software per SQL Server Data Tools  
+## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Consenso o rifiuto esplicito per la partecipazione ad Analisi utilizzo software per SQL Server Data Tools  
  Il programma Analisi utilizzo software è progettato per consentire a Microsoft di migliorare i propri prodotti nel tempo. Questo programma raccoglie informazioni sull'hardware del computer e la modalità di utilizzo del prodotto, senza interrompere gli utenti durante le attività nel computer. Le informazioni raccolte consentono a Microsoft di identificare le funzionalità da migliorare. Questo documento illustra le procedure per acconsentire in modo esplicito alla partecipazione (o rifiutarla in modo esplicito) al programma Analisi utilizzo software per SQL Server Data Tools (SSDT) sia per Visual Studio 2015 che per Visual Studio 2013.  
   
-### Scelta e controllo per il programma Analisi utilizzo software e SQL Server Data Tools per Visual Studio 2015  
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Scelta e controllo per il programma Analisi utilizzo software e SQL Server Data Tools per Visual Studio 2015  
  SSDT per Visual Studio 2015 è lo strumento di modellazione dei dati fornito con SQL Server 2016. Questo strumento usa le opzioni di Analisi utilizzo software integrate in Visual Studio 2015. In questo [documento della Guida da Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102)sono disponibili altre informazioni sull'invio di commenti e suggerimenti tramite Analisi utilizzo software in Visual Studio 2015.  
   
  Nelle versioni di anteprima di SQL Server 2016, la funzionalità Analisi utilizzo software è attivata per impostazione predefinita. È possibile disattivarla o riattivarla seguendo le istruzioni seguenti.  
@@ -67,7 +71,7 @@ caps.handback.revision: 11
   
  Per altre informazioni sui dati raccolti, elaborati o trasmessi tramite Analisi utilizzo software, vedere l' [Informativa sulla privacy per Analisi utilizzo software Microsoft](http://go.microsoft.com/fwlink/?LinkId=52143).  
   
-### Scelta e controllo per il programma Analisi utilizzo software e SQL Server Data Tools - BI (SSDT-BI)  
+### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Scelta e controllo per il programma Analisi utilizzo software e SQL Server Data Tools - BI (SSDT-BI)  
  Se si usa SSDT-BI, l'utente potrà scegliere di partecipare ad Analisi utilizzo software durante l'installazione. In seguito, le modifiche alla configurazione di Analisi utilizzo software per SSDT-BI possono essere apportate mediante gli strumenti client o modificando le impostazioni del Registro di sistema.  
   
  **In SSDT e SSDT-BI per Visual studio 2013**  
@@ -99,3 +103,4 @@ caps.handback.revision: 11
 -   1 è acconsentire esplicitamente  
   
   
+

@@ -1,2 +1,2 @@
-# [Creare sinonimi](create-synonyms.md)
-# [Sinonimi (Motore di database)](synonyms-database-engine.md)
+# [Panoramica](synonyms-database-engine.md)  
+# [Creare sinonimi](create-synonyms.md)  

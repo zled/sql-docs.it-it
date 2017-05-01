@@ -1,39 +1,43 @@
 ---
-title: "Cmdlet Invoke-Sqlcmd | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], Invoke-Sqlcmd"
-  - "Cmdlets [SQL Server], Invoke-Sqlcmd"
-  - "Cmdlet Invoke-Sqlcmd"
-  - "utilità sqlcmd, PowerShell"
+title: Cmdlet Invoke-Sqlcmd | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], Invoke-Sqlcmd
+- Cmdlets [SQL Server], Invoke-Sqlcmd
+- Invoke-Sqlcmd cmdlet
+- sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cmdlet Invoke-Sqlcmd
-  **Invoke-Sqlcmd** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che esegue script contenenti istruzioni CONTAIN provenienti dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **sqlcmd**.  
+# <a name="invoke-sqlcmd-cmdlet"></a>Cmdlet Invoke-Sqlcmd
+  **Invoke-Sqlcmd** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che esegue script contenenti istruzioni CONTAIN provenienti dai linguaggi ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e dai comandi supportati dall'utilità **sqlcmd** .  
   
-## Utilizzo di Invoke-Sqlcmd  
+## <a name="using-invoke-sqlcmd"></a>Utilizzo di Invoke-Sqlcmd  
  Il cmdlet **Invoke-Sqlcmd** consente di eseguire file di script **sqlcmd** in un ambiente Windows PowerShell. Molte delle operazioni consentite da **sqlcmd** possono essere eseguite anche tramite il cmdlet **Invoke-Sqlcmd**.  
   
- In questo esempio il cmdlet Invoke-Sqlcmd viene chiamato per eseguire una query semplice, analoga a **sqlcmd** con le opzioni **-Q** e **-S**:  
+ In questo esempio il cmdlet Invoke-Sqlcmd viene chiamato per eseguire una query semplice, analoga a **sqlcmd** con le opzioni **-Q** e **-S** :  
   
 ```  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
- In questo esempio il cmdlet **Invoke-Sqlcmd** viene chiamato specificando un file di input e inviando il pipe a un file, analogamente a quando si specifica **sqlcmd**con le opzioni **-i** e **-o**:  
+ In questo esempio il cmdlet **Invoke-Sqlcmd**viene chiamato specificando un file di input e inviando il pipe a un file, analogamente a quando si specifica **sqlcmd** con le opzioni **-i** e **-o** :  
   
 ```  
 Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
@@ -46,20 +50,20 @@ $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- In questo esempio il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell viene usato per passare a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)], quindi viene usato il cmdlet **Get-Item** di Windows PowerShell per recuperare un oggetto server SMO per l'istanza e passarlo a**Invoke-Sqlcmd**:  
+ In questo esempio il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell viene usato per passare a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)], quindi viene usato il cmdlet **Get-Item** di Windows PowerShell per recuperare un oggetto server SMO per l'istanza e passarlo a **Invoke-Sqlcmd**:  
   
 ```  
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
- Il parametro -Query è un parametro basato sulla posizione e non deve essere denominato. Se la prima stringa passata a **Invoke-Sqlcmd** è senza nome, viene trattata come parametro -Query.  
+ Il parametro -Query è un parametro basato sulla posizione e non deve essere denominato. Se la prima stringa passata a **Invoke-Sqlcmd**è senza nome, viene trattata come parametro -Query.  
   
 ```  
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
-## Contesto del percorso in Invoke-Sqlcmd  
+## <a name="path-context-in-invoke-sqlcmd"></a>Contesto del percorso in Invoke-Sqlcmd  
  Se non si utilizza il parametro -Database, il contesto del database per Invoke-Sqlcmd viene impostato dal percorso che è attivo al momento della chiamata di cmdlet.  
   
 |Percorso|Contesto del database|  
@@ -87,20 +91,20 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  Tramite Invoke-Sqlcmd viene visualizzato un avviso quando viene utilizzato il contesto del database per il percorso. È possibile utilizzare il parametro -SuppressProviderContextWarning per disattivare il messaggio di avviso. Il parametro -IgnoreProviderContext può essere utilizzato per indicare a Invoke-Sqlcmd di utilizzare sempre il database predefinito per l'accesso.  
   
-## Confronto tra Invoke-Sqlcmd e l'utilità sqlcmd  
- Il cmdlet **Invoke-Sqlcmd** può essere usato per eseguire molti degli script eseguibili tramite l'utilità **sqlcmd**. Il cmdlet **Invoke-Sqlcmd** viene tuttavia eseguito in un ambiente Windows PowerShell diverso dall'ambiente del prompt dei comandi in cui viene eseguito **sqlcmd**. Il comportamento di **Invoke-Sqlcmd** è stato modificato per l'uso in un ambiente Windows PowerShell.  
+## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Confronto tra Invoke-Sqlcmd e l'utilità sqlcmd  
+ Il cmdlet**Invoke-Sqlcmd** può essere usato per eseguire molti degli script eseguibili tramite l'utilità **sqlcmd** . Il cmdlet **Invoke-Sqlcmd** viene tuttavia eseguito in un ambiente Windows PowerShell diverso dall'ambiente del prompt dei comandi in cui viene eseguito **sqlcmd** . Il comportamento di **Invoke-Sqlcmd** è stato modificato per l'uso in un ambiente Windows PowerShell.  
   
- Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace** e **:serverlist**.  
+ Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
   
- Il cmdlet **Invoke-Sqlcmd** non inizializza l'ambiente o le variabili di scripting di **sqlcmd**, ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
+ Il cmdlet**Invoke-Sqlcmd** non inizializza l'ambiente o le variabili di scripting di **sqlcmd** , ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
   
- Il cmdlet **Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Esempio:  
+ Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Esempio:  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
- In un ambiente PowerShell non sono necessari tutti i parametri **sqlcmd** . Windows PowerShell, ad esempio, formatta tutto l'output dei cmdlet, pertanto i parametri **sqlcmd** che specificano le opzioni di formattazione non vengono implementati in **Invoke-Sqlcmd**. Nella tabella seguente viene specificata la relazione tra i parametri di **Invoke-Sqlcmd** e le opzioni **sqlcmd**:  
+ In un ambiente PowerShell non sono necessari tutti i parametri **sqlcmd** . Windows PowerShell, ad esempio, formatta tutto l'output dei cmdlet, pertanto i parametri **sqlcmd** che specificano le opzioni di formattazione non vengono implementati in **Invoke-Sqlcmd**. Nella tabella seguente viene specificata la relazione tra i parametri di **Invoke-Sqlcmd** e le opzioni **sqlcmd** :  
   
 |Descrizione|Opzione sqlcmd|Parametro Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
@@ -114,8 +118,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Arresta l'esecuzione in caso di errore|-b|-AbortOnError|  
 |Connessione amministrativa dedicata.|-A|-DedicatedAdministratorConnection|  
 |Disabilita i comandi interattivi, gli script di avvio e le variabili di ambiente.|-X|-DisableCommands|  
-|Disabilita la sostituzione delle variabili.|-x|-DisableVariables|  
-|Livello minimo di gravità da segnalare.|-V|-SeverityLevel|  
+|Disabilita la sostituzione delle variabili.|-X|-DisableVariables|  
+|Livello minimo di gravità da segnalare.|-v|-SeverityLevel|  
 |Livello minimo di errore da segnalare.|-m|-ErrorLevel|  
 |Intervallo di timeout di accesso.|-l|-ConnectionTimeout|  
 |Nome host.|-H|-HostName|  
@@ -126,28 +130,29 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Stabilisce la connessione utilizzando la crittografia SSL.|Nessun parametro|-EncryptConnection|  
 |Visualizza gli errori|Nessun parametro|-OutputSqlErrors|  
 |Esegue l'output dei messaggi in stderr.|-r|Nessun parametro|  
-|Utilizza le impostazioni locali del client|-R|Nessun parametro|  
-|Esegue la query specificata e rimane in esecuzione.|-q|Nessun parametro|  
+|Utilizza le impostazioni locali del client|-r|Nessun parametro|  
+|Esegue la query specificata e rimane in esecuzione.|-Q|Nessun parametro|  
 |Tabella codici da utilizzare per i dati di output.|-f|Nessun parametro|  
-|Modifica una password e rimane in esecuzione|-z|Nessun parametro|  
-|Dimensioni pacchetto|-a|Nessun parametro|  
-|Separatore delle colonne|-s|Nessun parametro|  
-|Controlla le intestazioni di output|-h|Nessun parametro|  
+|Modifica una password e rimane in esecuzione|-Z|Nessun parametro|  
+|Dimensioni pacchetto|-A|Nessun parametro|  
+|Separatore delle colonne|-S|Nessun parametro|  
+|Controlla le intestazioni di output|-H|Nessun parametro|  
 |Specifica i caratteri di controllo|-k|Nessun parametro|  
 |Larghezza visualizzazione lunghezza fissa|-Y|Nessun parametro|  
-|Larghezza visualizzazione lunghezza variabile|-y|Nessun parametro|  
+|Larghezza visualizzazione lunghezza variabile|-Y|Nessun parametro|  
 |Echo input|-e|Nessun parametro|  
-|Abilita gli identificatori delimitati|-I|Nessun parametro|  
-|Rimuove gli spazi finali|-W|Nessun parametro|  
-|Elenca le istanze|-L|Nessun parametro|  
-|Imposta il formato dell'output come Unicode|-u|Nessun parametro|  
-|Stampa statistiche|-p|Nessun parametro|  
+|Abilita gli identificatori delimitati|-i|Nessun parametro|  
+|Rimuove gli spazi finali|-w|Nessun parametro|  
+|Elenca le istanze|-l|Nessun parametro|  
+|Imposta il formato dell'output come Unicode|-U|Nessun parametro|  
+|Stampa statistiche|-P|Nessun parametro|  
 |Fine comando|-c|Nessun parametro|  
-|Stabilisce la connessione utilizzando l'autenticazione di Windows|-E|Nessun parametro|  
+|Stabilisce la connessione utilizzando l'autenticazione di Windows|-e|Nessun parametro|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di cmdlet del motore di database](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
  [Utilità sqlcmd](../tools/sqlcmd-utility.md)   
- [Utilizzo dell'utilità sqlcmd](../relational-databases/scripting/use-the-sqlcmd-utility.md)  
+ [Utilizzo dell'utilità sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   
+

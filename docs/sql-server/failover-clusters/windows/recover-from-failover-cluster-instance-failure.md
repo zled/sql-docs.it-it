@@ -1,27 +1,31 @@
 ---
-title: "Recuperare da un errore dell&#39;istanza del cluster di failover | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cluster [SQL Server], recupero da errori"
-  - "clustering di failover [SQL Server], recupero da errori"
-  - "errori hardware [SQL Server]"
-  - "recupero da errori di cluster di failover [SQL Server]"
+title: Recuperare da un errore dell&quot;istanza del cluster di failover | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], recovery from failure
+- failover clustering [SQL Server], recovery from failure
+- hardware failures [SQL Server]
+- recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b0e95b00a334c4c0391d800f7846e2f431107892
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recuperare da un errore dell&#39;istanza del cluster di failover
+# <a name="recover-from-failover-cluster-instance-failure"></a>Recuperare da un errore dell'istanza del cluster di failover
   In questo argomento viene descritta la modalità di recupero dagli errori del cluster tramite lo snap-in Gestione cluster di failover quando si verifica il failover in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Lo snap-in Gestione cluster di failover è l'applicazione di gestione cluster per il servizio Windows Server Failover Clustering (WSFC).  
   
 -   [Recuperare da un errore irreversibile](#Scenario1)  
