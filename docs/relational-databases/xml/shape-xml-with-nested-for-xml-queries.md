@@ -1,29 +1,33 @@
 ---
-title: "Determinazione della struttura dei valori XML tramite query nidificate FOR XML. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query FOR XML."
-  - "query [XML in SQL Server], FOR XML nidificate"
-  - "XML [SQL Server], query FOR XML"
+title: Determinare la struttura dei valori XML tramite query FOR XML annidate | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], nested FOR XML
+- XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dd8e345930a2e4ed7d036e9969ec8600f85853e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Determinazione della struttura dei valori XML tramite query nidificate FOR XML.
+# <a name="shape-xml-with-nested-for-xml-queries"></a>Determinazione della struttura dei valori XML tramite query nidificate FOR XML.
   Nell'esempio seguente viene eseguita una query sulla tabella `Production.Product` per recuperare i valori di `ListPrice` e `StandardCost` di un prodotto specifico. Per rendere la query più interessante, entrambi i prezzi vengono restituiti in un elemento <`Price`> e ogni elemento <`Price`> include un attributo `PriceType`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  La struttura prevista del valore XML è la seguente:  
   
 ```  
@@ -96,7 +100,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di query FOR XML nidificate](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

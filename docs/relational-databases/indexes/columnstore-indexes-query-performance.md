@@ -1,33 +1,37 @@
 ---
-title: "Prestazioni delle query per gli indici columnstore | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Indici columnstore - Prestazioni delle query | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 caps.latest.revision: 23
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prestazioni delle query per gli indici columnstore
+# <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Indicazioni per ottenere prestazioni delle query elevate che è possibile raggiungere con la progettazione degli indici columnstore.    
     
  Gli indici columnstore possono raggiungere un miglioramento fino a 100 volte in termini di prestazioni per le analisi e i carichi di lavoro di data warehouse e fino a 10 volte in termini di compressione dei dati rispetto agli indici rowstore tradizionali.   Queste indicazioni di ottenere prestazioni delle query elevate che è possibile raggiungere con la progettazione degli indici columnstore.  Alla fine dell'articolo vengono fornite ulteriori spiegazioni sulle prestazioni di columnstore.    
     
-## Indicazioni per migliorare le prestazioni delle query    
+## <a name="recommendations-for-improving-query-performance"></a>Indicazioni per migliorare le prestazioni delle query    
  Di seguito sono fornite alcune indicazioni per ottenere le prestazioni elevate che è possibile raggiungere con la progettazione degli indici columnstore.    
     
-### 1. Organizzare i dati per eliminare più rowgroup da una scansione di tabella completa    
+### <a name="1-organize-data-to-eliminate-more-rowgroups-from-a-full-table-scan"></a>1. Organizzare i dati per eliminare più rowgroup da una scansione di tabella completa    
     
 -   **Usare l'ordine di inserimento.** In genere, in un data warehouse tradizionale i dati vengono inseriti in ordine temporale e le analisi vengono eseguite in una dimensione temporale, come nel caso delle analisi delle vendite per trimestre. Per questo tipo di carico di lavoro, l'eliminazione del rowgroup viene eseguita automaticamente. In SQL Server 2016 diversi rowgroup vengono ignorati durante l'elaborazione della query.    
     
@@ -35,7 +39,7 @@ caps.handback.revision: 22
     
 -   **Usare il partizionamento delle tabelle.** È possibile partizionare l'indice columnstore e usare l'eliminazione delle partizioni per ridurre il numero di rowgroup da analizzare. Ad esempio, se si ha una tabella dei fatti in cui vengono archiviati gli acquisti eseguiti dai clienti e si usa un modello di query comune per cercare gli acquisti eseguiti trimestralmente da un determinato cliente, è possibile combinare l'ordine di inserimento con il partizionamento nella colonna del cliente. Ogni partizione contiene righe in ordine temporale per un determinato cliente.    
     
-### 2. Pianificare una quantità di memoria sufficiente per creare indici columnstore in parallelo    
+### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2. Pianificare una quantità di memoria sufficiente per creare indici columnstore in parallelo    
  Per impostazione predefinita, la creazione di un indice columnstore è un'operazione parallela, a meno che la memoria non sia vincolata. La creazione dell'indice in parallelo richiede più memoria rispetto alla creazione dell'indice in modo seriale. Se si dispone di un'ampia quantità di memoria, la creazione di un indice columnstore richiede un tempo di circa 1,5 volte superiore rispetto alla compilazione di un albero B nelle stesse colonne.    
     
  La memoria richiesta per la creazione di un indice columnstore dipende dal numero di colonne, dal numero di colonne stringa, dal grado di parallelismo e dalle caratteristiche dei dati. Ad esempio, se la tabella contiene meno di un milione di righe, SQL Server utilizzerà un solo thread per creare l'indice columnstore.    
@@ -44,12 +48,12 @@ caps.handback.revision: 22
     
  A partire da SQL Server 2016, la query viene eseguita sempre in modalità batch. Nelle versioni precedenti l'esecuzione batch viene usata solo quando DOP è maggiore di uno.    
     
-## Spiegazione delle prestazioni columnstore    
+## <a name="columnstore-performance-explained"></a>Spiegazione delle prestazioni columnstore    
  Gli indici columnstore raggiungono prestazioni delle query ottimali combinando l'elaborazione in modalità batch in memoria ad alta velocità con tecniche che riducono significativamente i requisiti per le operazioni I/O.  Poiché le query di analisi analizzano un numero elevato di righe, in genere sono associate alle operazioni I/O, quindi la riduzione di tali operazioni durante l'esecuzione delle query è fondamentale per la progettazione di indici columnstore.  Dopo la lettura dei dati in memoria, è molto importante ridurre il numero di operazioni in memoria.    
     
  Gli indici columnstore riducono le operazioni I/O e ottimizzano le operazioni in memoria grazie a un'elevata compressione dei dati, l'eliminazione di columnstore, l'eliminazione di rowgroup e l'elaborazione batch.    
     
-### Compressione dati    
+### <a name="data-compression"></a>Compressione dati    
  Gli indici columnstore raggiungono una compressione dei dati 10 volte superiore a quella degli indici rowstore.  Ciò riduce significativamente le operazioni I/O richieste per eseguire query di analisi e, di conseguenza, migliora le prestazioni delle query.    
     
 -   Gli indici columnstore leggono i dati compressi dal disco, quindi il numero di byte che deve essere letto nella memoria risulta ridotto.    
@@ -60,14 +64,14 @@ caps.handback.revision: 22
     
 -   Ad esempio, se una tabella dei fatti archivia gli indirizzi dei clienti e include una colonna per il paese, il numero totale di valori possibili è inferiore a 200.  Alcuni di questi valori saranno ripetuti più volte.  Se la tabella dei fatti contiene 100 milioni di righe, la colonna per il paese verrà compressa facilmente e non richiederà molto spazio di archiviazione. La compressione riga per riga non riesce a sfruttare appieno la somiglianza dei valori di colonna e userà più byte per comprimere i valori nella colonna per il paese.    
     
-### Eliminazione di colonne    
+### <a name="column-elimination"></a>Eliminazione di colonne    
  Gli indici columnstore non leggono le colonne non rilevanti ai fini della query. Questa capacità, denominata eliminazione di colonne, riduce ulteriormente le operazioni I/O per l'esecuzione delle query e, di conseguenza, migliora le prestazioni delle query.    
     
 -   L'eliminazione di colonne è possibile perché i dati sono organizzati e compressi colonna per colonna.   Al contrario, quando i dati sono archiviati riga per riga, i valori della colonna in ogni riga vengono archiviati fisicamente insieme e non possono essere separati facilmente. Query Processor deve leggere un'intera riga per recuperare specifici valori della colonna, aumentando così le operazioni I/O a causa delle letture superflue dei dati aggiuntivi in memoria.    
     
 -   Ad esempio, se una tabella contiene 50 colonne e la query ne usa solo 5, l'indice columnstore recupera solo le 5 colonne rilevanti dal disco. Non legge i dati delle altre 45 colonne. In questo modo, le operazioni I/O vengono ridotte di un altro 90%, presupponendo che tutte le colonne abbiano dimensioni simili.  Se gli stessi dati vengono archiviati in un rowstore, Query Processor deve leggere le altre 45 colonne.    
     
-### Eliminazione di rowgroup    
+### <a name="rowgroup-elimination"></a>Eliminazione di rowgroup    
  Per le scansioni di tabelle complete, un'alta percentuale di dati spesso non corrisponde ai criteri del predicato della query. Usando i metadati, l'indice columnstore può ignorare la lettura nei rowgroup che non contengono dati necessari per il risultato della query, senza eseguire operazioni I/O.  Questa capacità, denominata eliminazione di rowgroup, riduce le operazioni I/O per le scansioni di tabelle complete e, di conseguenza, migliora le prestazioni delle query.    
     
  **Quando è necessario che un indice columnstore esegua una scansione di tabella completa?**    
@@ -82,9 +86,9 @@ caps.handback.revision: 22
     
  Per determinare quali rowgroup eliminare, l'indice columnstore usa i metadati per archiviare i valori minimi e massimi di ogni segmento di colonna per ogni rowgroup. Se nessuno degli intervalli dei segmenti di colonna soddisfa i criteri del predicato della query, l'intero rowgroup viene ignorato senza eseguire alcuna operazione I/O. Questo procedimento funziona perché in genere i dati vengono caricati con un ordinamento e, anche se l'ordinamento delle righe non è sempre garantito, i valori dei dati simili spesso si trovano all'interno dello stesso rowgroup o in un rowgroup adiacente.    
     
- Per altre informazioni sui rowgroup, vedere [Guida agli indici columnstore](../Topic/Columnstore%20Indexes%20Guide.md)    
+ Per altri dettagli sui rowgroup, vedere Guida agli indici columnstore    
     
-### Esecuzione in modalità batch    
+### <a name="batch-mode-execution"></a>Esecuzione in modalità batch    
  L'esecuzione in modalità batch indica l'elaborazione congiunta di un set di righe, generalmente non più di 900, per migliorare l'efficienza di esecuzione. Ad esempio, la query  `Select SUM (Sales)from SalesData` aggrega le vendite totali della tabella SalesData.    Nell'esecuzione in modalità batch, il motore di esecuzione delle query calcola l'aggregato in gruppi di 900 valori.  In questo modo, invece di pagare il costo delle singole righe, i metadati, i costi di accesso e altri tipi di costi generali vengono suddivisi su tutte le righe in un batch, riducendo notevolmente il percorso del codice.  L'elaborazione in modalità batch funziona sui dati compressi, quando disponibili, ed elimina alcuni degli operatori di scambio usati dall'elaborazione in modalità riga.  Questo velocizza l'esecuzione delle query di analisi per ordini di grandezza.    
     
  Non tutti gli operatori di esecuzione delle query possono essere eseguiti in modalità batch. Ad esempio, le operazioni DML di inserimento, eliminazione o aggiornamento vengono eseguite una riga alla volta. Gli operatori in modalità batch fanno riferimento agli operatori per velocizzare le prestazioni delle query in operazioni di analisi, join, aggregazione, ordinamento e così via.  Poiché l'indice columnstore è stato introdotto in SQL Server 2012, si sta lavorando costantemente per aumentare gli operatori che possono essere eseguiti in modalità batch. La tabella seguente illustra gli operatori eseguiti in modalità batch in base alla versione del prodotto.    
@@ -110,7 +114,7 @@ caps.handback.revision: 22
     
  ¹Si applica a SQL Server 2016, database SQL V12 Premium Edition e SQL Data Warehouse    
     
-### Distribuzione dell'aggregazione    
+### <a name="aggregate-pushdown"></a>Distribuzione dell'aggregazione    
  Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch.  Questo metodo offre buone prestazioni, ma con SQL Server 2016 è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti    
     
 -   Gli operatori di aggregazione supportati sono MIN, MAX, SUM, COUNT, AVG    
@@ -135,7 +139,7 @@ SELECT  SUM(TotalProductCost)
 FROM FactResellerSalesXL_CCI    
 ```    
     
-### Distribuzione del predicato stringa    
+### <a name="string-predicate-pushdown"></a>Distribuzione del predicato stringa    
  Motivazione: quando si progetta uno schema del data warehouse, la modellazione dello schema consigliata consiste nell'usare uno schema star o snowflake costituito da una o più tabelle dei fatti e da più tabelle delle dimensioni. La [tabella dei fatti](https://en.wikipedia.org/wiki/Fact_table) archivia le misure o le transazioni aziendali e la [tabella delle dimensioni](https://en.wikipedia.org/wiki/Dimension_table) archivia le dimensioni di cui analizzare i fatti.    
     
  Ad esempio, un fatto può essere un record che rappresenta la vendita di un certo prodotto in un'area specifica, mentre la dimensione rappresenta un set di regioni, prodotti e così via. Le tabelle dei fatti e delle dimensioni sono connesse con una relazione di chiave primaria/esterna. Le query di analisi più diffuse creano un join di una o più tabelle delle dimensioni con la tabella dei fatti.    
@@ -154,13 +158,14 @@ FROM FactResellerSalesXL_CCI
     
 -   Le espressioni che restituiscono NULL non sono supportate    
     
-## Vedere anche    
- [Guida agli indici columnstore](../Topic/Columnstore%20Indexes%20Guide.md)     
- [Caricamento dati di indici columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)     
- [Riepilogo delle funzionalità con versione degli indici columnstore](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)     
+## <a name="see-also"></a>Vedere anche    
+ Guida agli indici columnstore     
+ Caricamento dati di indici columnstore     
+ Riepilogo delle funzionalità con versione degli indici columnstore     
  [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
  [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
- [Indici columnstore per il data warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)     
+ Indici columnstore per il data warehousing     
  [Deframmentazione degli indici columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     
   
+

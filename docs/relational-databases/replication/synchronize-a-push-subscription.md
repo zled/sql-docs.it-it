@@ -1,27 +1,31 @@
 ---
-title: "Synchronize a Push Subscription | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization [SQL Server replication], push subscriptions"
-  - "subscriptions [SQL Server replication], push"
-  - "sottoscrizioni push [replica di SQL Server], sincronizzazione"
+title: Sincronizzare una sottoscrizione push | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization [SQL Server replication], push subscriptions
+- subscriptions [SQL Server replication], push
+- push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c21b9e046bd2f5571816c21ad05ae2b67f92183
+ms.lasthandoff: 04/11/2017
+
 ---
-# Synchronize a Push Subscription
-  In questo argomento viene descritto come sincronizzare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [gli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md), o gli oggetti RMO (Replication Management Objects).  
+# <a name="synchronize-a-push-subscription"></a>Sincronizzazione di una sottoscrizione push
+  In questo argomento viene descritto come sincronizzare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)o RMO (Replication Management Objects).  
   
  **Contenuto dell'argomento**  
   
@@ -29,16 +33,16 @@ caps.handback.revision: 43
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-     [Agenti di replica](#ReplProg)  
+     [Replication Agents](#ReplProg)  
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione. Per ulteriori informazioni su come specificare le pianificazioni di sincronizzazione, vedere [specificare pianificazioni di sincronizzazione](../../relational-databases/replication/specify-synchronization-schedules.md).  
+ Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione. Per altre informazioni sull'impostazione delle pianificazioni della sincronizzazione, vedere [Specificare le pianificazioni della sincronizzazione](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
- Una sottoscrizione può essere sincronizzata su richiesta dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e the **Tutte le sottoscrizioni** in Monitoraggio replica. Le sottoscrizioni a pubblicazioni Oracle non possono essere sincronizzate su richiesta dal Sottoscrittore. Per informazioni sull'avvio di monitoraggio replica, vedere [avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Una sottoscrizione può essere sincronizzata su richiesta dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e the **Tutte le sottoscrizioni** in Monitoraggio replica. Le sottoscrizioni a pubblicazioni Oracle non possono essere sincronizzate su richiesta dal Sottoscrittore. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-#### Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel server di pubblicazione)  
+#### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel server di pubblicazione)  
   
 1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
   
@@ -46,40 +50,40 @@ caps.handback.revision: 43
   
 3.  Espandere la pubblicazione per cui sincronizzare le sottoscrizioni.  
   
-4.  Fare doppio clic su sottoscrizione si desidera sincronizzare e quindi fare clic su **Visualizza stato sincronizzazione**.  
+4.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera sincronizzare e quindi scegliere **Visualizza stato sincronizzazione**.  
   
-5.  Nel **Visualizza stato sincronizzazione - \< sottoscrittore>: \< SubscriptionDatabase>** la finestra di dialogo, fare clic su **avviare**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
+5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
 6.  Scegliere **Chiudi**.  
   
-#### Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel Sottoscrittore)  
+#### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Per sincronizzare una sottoscrizione push su richiesta in Management Studio (nel Sottoscrittore)  
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** e quindi la cartella **Sottoscrizioni locali** .  
   
-3.  Fare doppio clic su sottoscrizione si desidera sincronizzare e quindi fare clic su **Visualizza stato sincronizzazione**.  
+3.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera sincronizzare e quindi scegliere **Visualizza stato sincronizzazione**.  
   
 4.  Viene visualizzato un messaggio in cui si chiede di stabilire una connessione al server di distribuzione. Scegliere **OK**.  
   
-5.  Nel **Visualizza stato sincronizzazione - \< sottoscrittore>: \< SubscriptionDatabase>** la finestra di dialogo, fare clic su **avviare**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
+5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
 6.  Scegliere **Chiudi**.  
   
-#### Per sincronizzare una sottoscrizione push su richiesta in Monitoraggio replica  
+#### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>Per sincronizzare una sottoscrizione push su richiesta in Monitoraggio replica  
   
 1.  In Monitoraggio replica espandere un gruppo di server di pubblicazione nel riquadro di sinistra, espandere un server di pubblicazione e quindi fare clic su una pubblicazione.  
   
 2.  Fare clic sulla scheda **Tutte le sottoscrizioni** .  
   
-3.  Fare doppio clic su sottoscrizione si desidera sincronizzare e quindi fare clic su **Avvia sincronizzazione**.  
+3.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera sincronizzare e quindi scegliere **Avvia sincronizzazione**.  
   
-4.  Per visualizzare lo stato della sincronizzazione, fare doppio clic su sottoscrizione e quindi fare clic su **Visualizza dettagli**.  
+4.  Per visualizzare lo stato della sincronizzazione, fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza dettagli**.  
   
 ##  <a name="ReplProg"></a> Utilizzo degli agenti di replica  
  Le sottoscrizioni push possono essere sincronizzate a livello di programmazione e su richiesta richiamando il file eseguibile dell'agente di replica appropriato dal prompt dei comandi. Il file eseguibile dell'agente di replica richiamato dipenderà dal tipo di pubblicazione a cui appartiene la sottoscrizione push.  
   
-#### Per avviare l'agente di distribuzione per sincronizzare una sottoscrizione push di una pubblicazione transazionale  
+#### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Per avviare l'agente di distribuzione per sincronizzare una sottoscrizione push di una pubblicazione transazionale  
   
 1.  Eseguire **distrib.exe**dal prompt dei comandi o in un file batch nel server di distribuzione. Specificare gli argomenti della riga di comando seguenti:  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 43
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-#### Per avviare l'agente di merge per sincronizzare una sottoscrizione push di una pubblicazione di tipo merge  
+#### <a name="to-start-the-merge-agent-to-synchronize-a-push-subscription-to-a-merge-publication"></a>Per avviare l'agente di merge per sincronizzare una sottoscrizione push di una pubblicazione di tipo merge  
   
 1.  Eseguire **replmerg.exe**dal prompt dei comandi o in un file batch nel server di distribuzione. Specificare gli argomenti della riga di comando seguenti:  
   
@@ -205,84 +209,84 @@ REM -- The following command must be supplied without line breaks.
  È possibile sincronizzare le sottoscrizioni push a livello di programmazione tramite gli oggetti RMO (Replication Management Objects) e l'accesso tramite codice gestito alle funzionalità dell'agente di replica. Le classi usate per la sincronizzazione di una sottoscrizione push dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 > [!NOTE]  
->  Se si desidera avviare una sincronizzazione eseguita in modo autonomo senza effetti sull'applicazione, avviare l'agente in modo asincrono. Se invece si desidera monitorare i risultati della sincronizzazione e ricevere callback dall'agente durante il processo di sincronizzazione (ad esempio per la visualizzazione di una barra di stato) è necessario avviare l'agente in modo sincrono. L'agente deve essere avviato in modo sincrono per i Sottoscrittori [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] .  
+>  Se si desidera avviare una sincronizzazione eseguita in modo autonomo senza effetti sull'applicazione, avviare l'agente in modo asincrono. Se invece si desidera monitorare i risultati della sincronizzazione e ricevere callback dall'agente durante il processo di sincronizzazione (ad esempio per la visualizzazione di una barra di stato) è necessario avviare l'agente in modo sincrono. For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
   
-#### Per sincronizzare una sottoscrizione push di una pubblicazione snapshot o transazionale  
+#### <a name="to-synchronize-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Per sincronizzare una sottoscrizione push di una pubblicazione snapshot o transazionale  
   
-1.  Creare una connessione al server di distribuzione utilizzando il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.TransSubscription> classe e impostare le proprietà seguenti:  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSubscription> e impostare le proprietà seguenti:  
   
-    -   Il nome del database di pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
+    -   Nome del database di pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
-    -   Il nome della pubblicazione a cui appartiene la sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
+    -   Nome della pubblicazione a cui appartiene la sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Il nome del database di sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
+    -   Nome del database di sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
   
-    -   Il nome del sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
+    -   Nome del Sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
   
     -   La connessione creata nel passaggio 1 per <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> metodo per ottenere le proprietà rimanenti della sottoscrizione. Se questo metodo restituisce **false**, verificare che la sottoscrizione esista.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti della sottoscrizione. Se il metodo restituisce **false**, verificare che la sottoscrizione esista.  
   
 4.  Avviare l'agente di distribuzione nel server di distribuzione in uno dei modi seguenti:  
   
-    -   Chiamare il <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> metodo nell'istanza di <xref:Microsoft.SqlServer.Replication.TransSubscription> creata nel passaggio 2. Questo metodo consente di avviare l'agente di distribuzione in modo asincrono e il controllo viene restituito immediatamente all'applicazione durante l'esecuzione del processo dell'agente. È possibile chiamare questo metodo se è stata creata la sottoscrizione con un valore di **false** per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>.  
+    -   Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> nell'istanza di <xref:Microsoft.SqlServer.Replication.TransSubscription> creata al passaggio 2. Questo metodo consente di avviare l'agente di distribuzione in modo asincrono e il controllo viene restituito immediatamente all'applicazione durante l'esecuzione del processo dell'agente. Non è possibile chiamare questo metodo se la sottoscrizione è stata creata con il valore **false** per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>.  
   
-    -   Ottenere un'istanza del <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> classe il <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> proprietà e chiamare il <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> metodo. Questo metodo avvia l'agente in modo sincrono e il controllo rimane al processo dell'agente in esecuzione. Durante l'esecuzione sincrona è possibile gestire il <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> evento mentre è in esecuzione l'agente.  
+    -   Recuperare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> dalla proprietà <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> e chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A>. Questo metodo avvia l'agente in modo sincrono e il controllo rimane al processo dell'agente in esecuzione. Nella modalità sincrona è possibile gestire l'evento <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> durante l'esecuzione dell'agente.  
   
-#### Per sincronizzare una sottoscrizione push di una pubblicazione di tipo merge  
+#### <a name="to-synchronize-a-push-subscription-to-a-merge-publication"></a>Per sincronizzare una sottoscrizione push di una pubblicazione di tipo merge  
   
-1.  Creare una connessione al server di distribuzione utilizzando il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.MergeSubscription> classe e impostare le proprietà seguenti:  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> e impostare le proprietà seguenti:  
   
-    -   Il nome del database di pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
+    -   Nome del database di pubblicazione per <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
-    -   Il nome della pubblicazione a cui appartiene la sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
+    -   Nome della pubblicazione a cui appartiene la sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Il nome del database di sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
+    -   Nome del database di sottoscrizione per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
   
-    -   Il nome del sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
+    -   Nome del Sottoscrittore per <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
   
     -   La connessione creata nel passaggio 1 per <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> metodo per ottenere le proprietà rimanenti della sottoscrizione. Se questo metodo restituisce **false**, verificare che la sottoscrizione esista.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti della sottoscrizione. Se il metodo restituisce **false**, verificare che la sottoscrizione esista.  
   
 4.  Avviare l'agente di merge nel server di distribuzione in uno dei modi seguenti:  
   
-    -   Chiamare il <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> metodo nell'istanza di <xref:Microsoft.SqlServer.Replication.MergeSubscription> creata nel passaggio 2. Questo metodo consente di avviare l'agente di merge in modo asincrono e il controllo viene restituito immediatamente all'applicazione durante l'esecuzione del processo dell'agente. È possibile chiamare questo metodo se è stata creata la sottoscrizione con un valore di **false** per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>.  
+    -   Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> nell'istanza di <xref:Microsoft.SqlServer.Replication.MergeSubscription> creata al passaggio 2. Questo metodo consente di avviare l'agente di merge in modo asincrono e il controllo viene restituito immediatamente all'applicazione durante l'esecuzione del processo dell'agente. Non è possibile chiamare questo metodo se la sottoscrizione è stata creata con il valore **false** per <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>.  
   
-    -   Ottenere un'istanza del <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> classe il <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> proprietà e chiamare il <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> metodo. Questo metodo avvia l'agente di merge in modo sincrono e il controllo rimane al processo dell'agente in esecuzione. Durante l'esecuzione sincrona, è possibile gestire il <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> evento mentre è in esecuzione l'agente.  
+    -   Recuperare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> dalla proprietà <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> e chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A>. Questo metodo avvia l'agente di merge in modo sincrono e il controllo rimane al processo dell'agente in esecuzione. Nella modalità sincrona è possibile gestire l'evento <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> durante l'esecuzione dell'agente.  
   
 ###  <a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene illustrata la sincronizzazione di una sottoscrizione push di una pubblicazione transazionale, con avvio asincrono dell'agente usando il processo dell'agente.  
   
- [!code-csharp[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  
+ [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  
   
  [!code-vb[HowTo#rmo_vb_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub_withjob)]  
   
  In questo esempio viene illustrata la sincronizzazione di una sottoscrizione push di una pubblicazione transazionale, con avvio sincrono dell'agente.  
   
- [!code-csharp[HowTo#rmo_SyncTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub)]  
+ [!code-cs[HowTo#rmo_SyncTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub)]  
   
  [!code-vb[HowTo#rmo_vb_SyncTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub)]  
   
  In questo esempio viene illustrata la sincronizzazione di una sottoscrizione push di una pubblicazione di tipo merge, con avvio asincrono dell'agente usando il processo dell'agente.  
   
- [!code-csharp[HowTo#rmo_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub_withjob)]  
+ [!code-cs[HowTo#rmo_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub_withjob)]  
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub_withjob)]  
   
  In questo esempio viene illustrata la sincronizzazione di una sottoscrizione push di una pubblicazione di tipo merge, con avvio sincrono dell'agente.  
   
- [!code-csharp[HowTo#rmo_SyncMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub)]  
+ [!code-cs[HowTo#rmo_SyncMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub)]  
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti di base relativi a RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)   
- [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

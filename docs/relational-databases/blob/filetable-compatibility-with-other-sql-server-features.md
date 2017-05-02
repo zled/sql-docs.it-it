@@ -1,24 +1,28 @@
 ---
-title: "Compatibilit&#224; di FileTable con altre funzionalit&#224; di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], uso con altre funzionalità"
+title: "Compatibilità di FileTable con altre funzionalità di SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilit&#224; di FileTable con altre funzionalit&#224; di SQL Server
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
   Viene descritto il funzionamento delle tabelle FileTable con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Gruppi di disponibilità AlwaysOn e tabelle FileTable  
@@ -26,7 +30,7 @@ caps.handback.revision: 19
   
 -   La funzionalità FileTable è supportata parzialmente dai [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Dopo un failover, i dati FileTable sono accessibili nella replica primaria, ma non nelle repliche secondarie leggibili.  
   
-    > **NOTA:** si noti che dopo un failover, tutte le funzionalità FILESTREAM sono supportate. I dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
+    > **NOTA:**  si noti che dopo un failover, tutte le funzionalità FILESTREAM sono supportate. I dati FILESTREAM sono accessibili sia nelle repliche secondarie leggibili sia nella nuova primaria.  
   
 -   Le funzioni FILESTREAM e FileTable accettano o restituiscono nomi di rete virtuale anziché nomi computer. Per altre informazioni su queste funzioni, vedere [Funzioni FileStream e FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -117,7 +121,8 @@ caps.handback.revision: 19
   
  È possibile impostare l'indipendenza del database su PARTIAL se si desidera utilizzare alcune funzionalità dei database indipendenti, ad esempio gli utenti indipendenti. In tal caso, tuttavia, è necessario tenere presente che alcune impostazioni del database non sono contenute nel database e non vengono spostate automaticamente quando viene spostato il database.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   
+

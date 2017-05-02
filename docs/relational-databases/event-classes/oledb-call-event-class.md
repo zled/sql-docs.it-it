@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento OLEDB Call | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Call - classe di evento"
+title: Classe di evento OLEDB Call | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f8b5cb7e58f0005d66f9f1ed73991289de8f213
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento OLEDB Call
+# <a name="oledb-call-event-class"></a>OLEDB Call - classe di evento
   La classe di evento **OLEDB Call** viene generata quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la chiamata di un provider OLE DB per la richiesta di query distribuite e stored procedure remote.  
   
- È necessario includere questa classe di evento **OLEDB Call** nelle tracce per il monitoraggio delle sole chiamate che non richiedono dati o delle chiamate di elementi diversi dal metodo **QueryInterface**. Quando la classe di evento **OLEDB Call** viene inclusa in una traccia, l'overhead generato dipende dalla frequenza delle chiamate OLE DB nel database durante l'esecuzione della traccia. Nel caso di chiamate frequenti, è possibile che durante l'esecuzione della traccia le prestazioni risultino notevolmente ridotte.  
+ È necessario includere questa classe di evento **OLEDB Call** nelle tracce per il monitoraggio delle sole chiamate che non richiedono dati o delle chiamate di elementi diversi dal metodo **QueryInterface** . Quando la classe di evento **OLEDB Call** viene inclusa in una traccia, l'overhead generato dipende dalla frequenza delle chiamate OLE DB nel database durante l'esecuzione della traccia. Nel caso di chiamate frequenti, è possibile che durante l'esecuzione della traccia le prestazioni risultino notevolmente ridotte.  
   
-## Colonne di dati della classe di evento OLEDB Call  
+## <a name="oledb-call-event-class-data-columns"></a>Colonne di dati della classe di evento OLEDB Call  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -54,7 +58,7 @@ caps.handback.revision: 37
 |TextData|**nvarchar**|Parametri inviati e ricevuti nella chiamata OLE DB.|1|No|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Oggetti di automazione OLE in Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

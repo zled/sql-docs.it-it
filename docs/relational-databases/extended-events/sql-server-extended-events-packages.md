@@ -1,33 +1,37 @@
 ---
-title: "Pacchetti degli eventi estesi di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventi estesi [SQL Server], pacchetti"
-  - "xe"
+title: Pacchetti degli eventi estesi di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pacchetti degli eventi estesi di SQL Server
+# <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Un pacchetto è un contenitore per oggetti eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono indicati i tre tipi di pacchetti di eventi estesi:  
+  Un pacchetto è un contenitore per oggetti eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di seguito vengono indicati i tre tipi di pacchetti di eventi estesi:  
   
 -   package0 – Oggetti di sistema Eventi estesi. Questo è il pacchetto predefinito.  
   
--   sqlserver: oggetti correlati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   sqlserver: oggetti correlati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   sqlos: oggetti correlati al sistema operativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOS).  
   
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  Oggetti da pacchetti diversi possono essere combinati in una sessione dell'evento. Per altre informazioni, vedere [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
-## Contenuti del pacchetto  
+## <a name="package-contents"></a>Contenuti del pacchetto  
  Nella figura seguente si illustrano gli oggetti che possono essere presenti nei pacchetti, che sono contenuti in un modulo. Un modulo può essere un file eseguibile o una libreria a collegamento dinamico (DLL).  
   
- ![Relazione di un modulo, di pacchetti e di un oggetto](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relazione di un modulo, di pacchetti e di un oggetto")  
+ ![Relazione tra modulo, pacchetti e oggetti](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relazione tra modulo, pacchetti e oggetti")  
   
-### Eventi  
+### <a name="events"></a>Eventi  
  Gli eventi monitorano i punti di interesse nel percorso di esecuzione di un programma, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La generazione di un evento implica che il punto di interesse è stato raggiunto e fornisce informazioni sullo stato derivanti dall'ora in cui l'evento è stato generato.  
   
  Gli eventi possono essere utilizzati solamente per scopi di traccia o per azioni di trigger. Queste azioni possono essere sincrone o asincrone.  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  A tutti gli eventi è associato uno schema con versione che ne definisce il contenuto. Questo schema è costituito da colonne di evento con tipi ben definiti. Un evento di un tipo specifico deve sempre fornire i propri dati nell'ordine esatto specificato nello schema. Una destinazione dell'evento non deve tuttavia utilizzare tutti i dati forniti.  
   
-#### Categorizzazione dell'evento  
+#### <a name="event-categorization"></a>Categorizzazione dell'evento  
  Negli eventi estesi viene utilizzato un modello di categorizzazione dell'evento simile a Analisi eventi per Windows (ETW). Due proprietà dell'evento sono utilizzate per categorizzazione, canale e parola chiave. L'utilizzo di queste proprietà supporta l'integrazione degli eventi estesi con ETW e i suoi strumenti.  
   
  **Channel**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Le parole chiave eseguono il mapping ravvicinato degli eventi Traccia SQL.  
   
-### Server di destinazione  
- Le destinazioni sono consumer di eventi. Le destinazioni elaborano gli eventi, in modo sincrono nel thread che genera l'evento o in modo asincrono in un thread fornito dal sistema. Gli eventi estesi forniscono diverse destinazioni che è possibile utilizzare in base alle proprie esigenze per indirizzare l'output dell'evento. Per ulteriori informazioni, vedere [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+### <a name="targets"></a>Server di destinazione  
+ Le destinazioni sono consumer di eventi. Le destinazioni elaborano gli eventi, in modo sincrono nel thread che genera l'evento o in modo asincrono in un thread fornito dal sistema. Gli eventi estesi forniscono diverse destinazioni che è possibile utilizzare in base alle proprie esigenze per indirizzare l'output dell'evento. Per ulteriori informazioni, vedere [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
-### Azioni  
+### <a name="actions"></a>Azioni  
  Un'azione è una risposta o una serie di risposte a un evento a livello di programmazione. Le azioni sono associate a un evento e a ogni evento può essere associato un set univoco di azioni.  
   
 > [!NOTE]  
@@ -118,15 +122,15 @@ where name = 'keyword_map'
   
 -   Dumper dello stack  
   
--   Rilevamento del piano di esecuzione (solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   Rilevamento del piano di esecuzione (solo[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] raccolta di stack (solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] raccolta di stack (solo[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   Esecuzione di calcoli di statistiche temporali  
   
 -   Raccolta di input utente in caso di eccezione  
   
-### Predicati  
+### <a name="predicates"></a>Predicati  
  I predicati rappresentano un set di regole logiche utilizzate per valutare gli eventi quando vengono elaborati. In questo modo l'utente degli eventi estesi è in grado di acquisire selettivamente i dati dell'evento in base a criteri specifici.  
   
  I predicati possono archiviare i dati in un contesto locale che può essere usato per la creazione di predicati che restituiscono True ogni *n* minuti o ogni *n* volte che un evento viene generato. Questa archiviazione del contesto locale può essere utilizzata anche per aggiornare dinamicamente il predicato, sopprimendo con ciò le generazioni future dell'evento se l'evento contiene dati simili.  
@@ -136,7 +140,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  I predicati con effetti collaterali non possono essere valutati se una precedente verifica del predicato non riesce.  
   
-### Tipi  
+### <a name="types"></a>Tipi  
  Poiché i dati sono una raccolta di byte, la lunghezza e le funzionalità della raccolta dei byte sono necessarie per interpretarli. Queste informazioni sono incapsulate nell'oggetto Tipo. I tipi seguenti sono forniti per gli oggetti del pacchetto:  
   
 -   evento  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  Per altre informazioni, vedere [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
-### Mappe  
+### <a name="maps"></a>Mappe  
  Una tabella della mappa esegue il mapping di un valore interno a una stringa e ciò consente a un utente di conoscere ciò che rappresenta il valore. Anziché essere in grado di ottenere solo un valore numerico, un utente può ottenere una descrizione significativa del valore interno. Nella query seguente si illustra come ottenere valori della mappa.  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  Utilizzare tabella come esempio, supponendo di avere una modalità di colonna denominata il cui valore è 5. La tabella indica che è stato eseguito il mapping di 5 a X, ovvero il tipo di blocco è Esclusivo.  
   
-## Vedere anche  
- [Sessioni degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Destinazioni degli eventi estesi di SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "Esempio: specifica di un elemento radice per codice XML generato da FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modalità RAW, specifica di un esempio dell'elemento radice"
-  - "modalità RAW, con un esempio di FOR XML"
+title: 'Esempio: specifica di un elemento radice per codice XML generato da FOR XML | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, specifying root element example
+- RAW mode, with FOR XML example
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b29b195a3bff00b3c277767df4d18a0d001eb9ed
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: specifica di un elemento radice per codice XML generato da FOR XML
-  Specificando l'opzione `ROOT` nella query `FOR XML`, è possibile richiedere un singolo elemento di livello principale per il codice XML risultante, come illustrato nella query seguente. L'argomento specificato per la direttiva `ROOT` consente di ottenere il nome dell'elemento radice.  
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Esempio: specifica di un elemento radice per codice XML generato da FOR XML
+  Specificando l'opzione `ROOT` nella query `FOR XML` , è possibile richiedere un singolo elemento di livello principale per il codice XML risultante, come illustrato nella query seguente. L'argomento specificato per la direttiva `ROOT` consente di ottenere il nome dell'elemento radice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +48,7 @@ go
 </MyRoot>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

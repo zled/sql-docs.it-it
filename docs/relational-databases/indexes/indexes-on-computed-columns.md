@@ -1,28 +1,32 @@
 ---
-title: "Indici per le colonne calcolate | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne calcolate, creazione indice"
-  - "creazione indice [SQL Server], colonne calcolate"
-  - "colonne imprecise"
-  - "colonne calcolate persistenti"
-  - "precise [SQL Server]"
+title: Indici per le colonne calcolate | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, index creation
+- index creation [SQL Server], computed columns
+- imprecise columns
+- persisted computed columns
+- precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d41339f5e014e4f957000734d8019b0703f8d42
+ms.lasthandoff: 04/11/2017
+
 ---
-# Indici per le colonne calcolate
+# <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile definire gli indici per le colonne calcolate purché siano soddisfatti i requisiti seguenti:  
@@ -37,11 +41,11 @@ caps.handback.revision: 41
   
 -   Requisiti dell'opzione SET  
   
- **Requisiti di proprietà**  
+ **Ownership Requirements**  
   
  Tutti i riferimenti a funzioni nella colonna calcolata devono avere lo stesso proprietario della tabella.  
   
- **Requisiti di determinismo**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  Le espressioni sono deterministiche se restituiscono sempre lo stesso risultato per un determinato set di input. La proprietà **IsDeterministic** della funzione [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) indica se una *computed_column_expression* è deterministica.  
@@ -52,7 +56,7 @@ caps.handback.revision: 41
   
 -   Tutte le colonne alle quali viene fatto riferimento nell'espressione appartengono alla tabella contenente la colonna calcolata.  
   
--   Nessun riferimento a una colonna estrae dati da più righe. Ad esempio, funzioni di aggregazione quali SUM o AVG dipendono dai dati presenti in più righe e renderebbero non deterministica una *computed_column_expression*.  
+-   Nessun riferimento a una colonna estrae dati da più righe. Ad esempio, funzioni di aggregazione quali SUM o AVG dipendono dai dati presenti in più righe e renderebbero non deterministica una *computed_column_expression* .  
   
 -   L'espressione *computed_column_expression* è priva di accesso ai dati di sistema o ai dati utente.  
   
@@ -65,13 +69,13 @@ caps.handback.revision: 41
 >   
 >  Se l'impostazione del livello di compatibilità del database è 90, non è possibile creare indici su colonne calcolate contenenti tali espressioni. Tuttavia, le colonne calcolate esistenti che includono queste espressioni da un database aggiornato sono gestibili. Se si utilizzano colonne calcolate che includono conversioni implicite da valori di tipo stringa a valori di tipo data, verificare che le impostazioni LANGUAGE e DATEFORMAT siano consistenti nei database e nelle applicazioni per evitare l'eventuale danneggiamento dell'indice.  
   
- **Requisiti di precisione**  
+ **Precision Requirements**  
   
  La *computed_column_expression* deve essere precisa. Una *computed_column_expression* è precisa quando viene soddisfatta una o più delle condizioni seguenti:  
   
--   Non è un'espressione dei tipi di dati **float** o **real**.  
+-   Non è un'espressione dei tipi di dati **float** o **real** .  
   
--   Nella definizione dell'espressione non viene usato il tipo di dati **float** o **real**. Ad esempio, nell'istruzione seguente la colonna `y` è di tipo **int** ed è deterministica, ma non precisa.  
+-   Nella definizione dell'espressione non viene usato il tipo di dati **float** o **real** . Ad esempio, nell'istruzione seguente la colonna `y` è di tipo **int** ed è deterministica, ma non precisa.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -83,21 +87,21 @@ caps.handback.revision: 41
     ```  
   
 > [!NOTE]  
->  Le espressioni di tipo **float** o **real** sono considerate non precise e non possono essere usate come chiavi di un indice. Un'espressione **float** o **real** può essere usata in una vista indicizzata, ma non come chiave. Questa considerazione è valida anche per le colonne calcolate. Funzioni, espressioni oppure funzioni definite dall'utente sono considerate non precise se includono espressioni **float** o **real**. Sono comprese le espressioni logiche (confronti).  
+>  Le espressioni di tipo **float** o **real** sono considerate non precise e non possono essere usate come chiavi di un indice. Un'espressione **float** o **real** può essere usata in una vista indicizzata, ma non come chiave. Questa considerazione è valida anche per le colonne calcolate. Funzioni, espressioni oppure funzioni definite dall'utente sono considerate non precise se includono espressioni **float** o **real** . Sono comprese le espressioni logiche (confronti).  
   
  La proprietà **IsPrecise** della funzione COLUMNPROPERTY indica se una *computed_column_expression* è precisa.  
   
- **Requisiti del tipo di dati**  
+ **Data Type Requirements**  
   
--   L'espressione *computed_column_expression* definita per la colonna calcolata non può restituire i tipi di dati **text**, **ntext** o **image**.  
+-   L'espressione *computed_column_expression* definita per la colonna calcolata non può restituire i tipi di dati **text**, **ntext**o **image** .  
   
--   Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere indicizzate purché il tipo di dati della colonna calcolata sia consentito come colonna chiave dell'indice.  
+-   Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**e **xml** possono essere indicizzate purché il tipo di dati della colonna calcolata sia consentito come colonna chiave dell'indice.  
   
--   Le colonne calcolate derivate dai tipi di dati **image**, **ntext** e **text** possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
+-   Le colonne calcolate derivate dai tipi di dati **image**, **ntext**e **text** possono essere colonne non chiave (incluse) in un indice non cluster purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
   
- **Requisiti dell'opzione SET**  
+ **SET Option Requirements**  
   
--   Quando viene eseguita l'istruzione CREATE TABLE o ALTER TABLE che definisce la colonna calcolata, è necessario impostare su ON l'opzione a livello di connessione ANSI_NULL. La funzione [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) indica se l'opzione è impostata su ON nella proprietà **IsAnsiNullsOn**.  
+-   Quando viene eseguita l'istruzione CREATE TABLE o ALTER TABLE che definisce la colonna calcolata, è necessario impostare su ON l'opzione a livello di connessione ANSI_NULL. La funzione [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) indica se l'opzione è impostata su ON nella proprietà **IsAnsiNullsOn** .  
   
 -   Per la connessione in corrispondenza della quale viene creato l'indice e per tutte le connessioni che tentano di eseguire istruzioni INSERT, UPDATE o DELETE che modificano i valori dell'indice, sei opzioni SET devono essere impostate su ON e un'opzione SET deve essere impostata su OFF. Per tutte le eventuali istruzioni SELECT eseguite da una connessione per la quale non sono state definite esattamente le impostazioni delle opzioni indicate di seguito, Query Optimizer ignora gli indici definiti su una colonna calcolata.  
   
@@ -120,7 +124,8 @@ caps.handback.revision: 41
 ##  <a name="BKMK_persisted"></a> Creazione di indici per colonne calcolate persistenti  
  È possibile creare un indice su una colonna calcolata. definita da un'espressione deterministica, ma non precisa, se la colonna è contrassegnata come PERSISTED nell'istruzione CREATE TABLE oppure ALTER TABLE. Questo significa che [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivia i valori calcolati nella tabella e li aggiorna quando vengono aggiornate altre colonne da cui dipende la colonna calcolata. [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza questi valori persistenti quando crea un indice sulla colonna e quando viene fatto riferimento all'indice all'interno di una query. Questa opzione consente di creare un indice in una colonna calcolata quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] non è in grado di verificare esattamente se una funzione che restituisce espressioni di colonne calcolate, in particolare una funzione CLR creata in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], sia deterministica e precisa.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
   
   
+

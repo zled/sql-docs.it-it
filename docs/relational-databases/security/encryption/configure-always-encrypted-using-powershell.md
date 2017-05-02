@@ -1,22 +1,26 @@
 ---
-title: "Configurare Always Encrypted tramite PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare Always Encrypted tramite PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e3971933bb32cc47f761d18ba8c0dd57b139636
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurare Always Encrypted tramite PowerShell
+# <a name="configure-always-encrypted-using-powershell"></a>Configurare Always Encrypted tramite PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Il modulo PowerShell SqlServer include i cmdlet per la configurazione di [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) nel database SQL di Azure e in SQL Server 2016.
@@ -27,7 +31,7 @@ Poiché l'obiettivo principale di Always Encrypted è garantire la sicurezza dei
 
 I collegamenti ai singoli articoli dei cmdlet sono presenti alla [fine di questa pagina](#aecmdletreference).
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Installare il [modulo SqlServer](https://msdn.microsoft.com/library/mt740629.aspx) in un computer protetto che NON sia il computer che ospita l'istanza di SQL Server. 
 
@@ -38,8 +42,8 @@ Si noti che il modulo *SqlServer* è diverso dal modulo *sqlps* che non supporta
 
 Per caricare il modulo SqlServer:
 
-1.  Usare il cmdlet **Set-ExecutionPolicy** per impostare i criteri di esecuzione degli script appropriati.
-2.  Usare il cmdlet **Import-Module** per importare il modulo SqlServer.
+1.    Usare il cmdlet **Set-ExecutionPolicy** per impostare i criteri di esecuzione degli script appropriati.
+2.    Usare il cmdlet **Import-Module** per importare il modulo SqlServer.
 
 Questo esempio carica il modulo SqlServer.
 
@@ -54,7 +58,7 @@ Alcuni dei cmdlet Always Encrypted possono essere usati con dati o metadati del 
 1. Connettersi usando SQL Server PowerShell.
 2. Connettersi usando SQL Server Management Objects (SMO).
 
-### Utilizzo di SQL Server PowerShell
+### <a name="using-sql-server-powershell"></a>Utilizzo di SQL Server PowerShell
 
 Questo metodo si applica solo a SQL Server e non è supportato nel database SQL di Azure.
 
@@ -80,10 +84,10 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### Utilizzo di SMO
+### <a name="using-smo"></a>Utilizzo di SMO
 
 Questo metodo si applica al database SQL di Azure e a SQL Server.
-Con SMO, è possibile creare un oggetto di [classe Database](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx) e quindi passare l'oggetto usando il parametro **InputObject** di un cmdlet che si connette al database.
+Con SMO, è possibile creare un oggetto di [classe Database](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx)e quindi passare l'oggetto usando il parametro **InputObject** di un cmdlet che si connette al database.
 
 
 ```
@@ -112,7 +116,7 @@ In alternativa, è possibile usare il reindirizzamento:
 $database | Get-SqlColumnMasterKey
 ```
 
-## Attività Always Encrypted tramite PowerShell
+## <a name="always-encrypted-tasks-using-powershell"></a>Attività Always Encrypted tramite PowerShell
 
 - [Configure Always Encrypted Keys using PowerShell (Configurare le chiavi Always Encrypted tramite PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
 - [Ruotare le chiavi Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
@@ -123,33 +127,35 @@ $database | Get-SqlColumnMasterKey
 
 Per Always Encrypted sono disponibili i cmdlet di PowerShell seguenti:
 
-|CMDLET |Descrizione
+|CMDLET    |Descrizione
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**  |Esegue l'autenticazione in Azure e acquisisce un token di autenticazione.
+|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**    |Esegue l'autenticazione in Azure e acquisisce un token di autenticazione.
 |**[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)**    |Aggiunge un nuovo valore crittografato per un oggetto chiave di crittografia della colonna esistente nel database.
 |**[Complete-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759791.aspx)**    |Completa la rotazione di una chiave master della colonna.
-|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)** |Restituisce tutti gli oggetti chiave di crittografia della colonna definiti nel database oppure un solo oggetto chiave di crittografia della colonna con il nome specificato.
-|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)** |Restituisce tutti gli oggetti chiave master della colonna definiti nel database oppure un solo oggetto chiave master della colonna con il nome specificato.
-|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**  |Avvia la rotazione di una chiave master della colonna.
+|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)**    |Restituisce tutti gli oggetti chiave di crittografia della colonna definiti nel database oppure un solo oggetto chiave di crittografia della colonna con il nome specificato.
+|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)**    |Restituisce tutti gli oggetti chiave master della colonna definiti nel database oppure un solo oggetto chiave master della colonna con il nome specificato.
+|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**    |Avvia la rotazione di una chiave master della colonna.
 |**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata nell'insieme di credenziali delle chiavi di Azure.
-|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**  |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi che supporta l'API CNG (Cryptography Next Generation).
-|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)** |Crea un nuovo oggetto chiave di crittografia della colonna nel database.
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**   |Produce un valore crittografato di una chiave di crittografia della colonna.
+|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi che supporta l'API CNG (Cryptography Next Generation).
+|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)**    |Crea un nuovo oggetto chiave di crittografia della colonna nel database.
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**    |Produce un valore crittografato di una chiave di crittografia della colonna.
 |**[New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx)**    |Crea un nuovo oggetto SqlColumnEncryptionSettings che incapsula le informazioni sulla crittografia di una singola colonna, inclusi CEK e tipo di crittografia.
-|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)** |Crea un nuovo oggetto chiave master della colonna nel database.
+|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)**    |Crea un nuovo oggetto chiave master della colonna nel database.
 |**New-SqlColumnMasterKeySettings**|Crea un oggetto SqlColumnMasterKeySettings per una chiave master della colonna con il provider specificato e il percorso della chiave.
-|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**  |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi con un CSP (Cryptography Service Provider) che supporta l'API Cryptography (CAPI).
-|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**  |Rimuove l'oggetto chiave di crittografia della colonna dal database.
-|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)** |Rimuove un valore crittografato da un oggetto chiave di crittografia della colonna esistente nel database.
-|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**  |Rimuove l'oggetto chiave master della colonna dal database.
+|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi con un CSP (Cryptography Service Provider) che supporta l'API Cryptography (CAPI).
+|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**    |Rimuove l'oggetto chiave di crittografia della colonna dal database.
+|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)**    |Rimuove un valore crittografato da un oggetto chiave di crittografia della colonna esistente nel database.
+|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**    |Rimuove l'oggetto chiave master della colonna dal database.
 |**[Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)**    |Crittografa, decrittografa o ricrittografa le colonne specificate nel database.
 
 
 
-## Risorse aggiuntive
+## <a name="additional-resources"></a>Risorse aggiuntive
 
 - [Always Encrypted (Motore di database)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Using Always Encrypted with .NET Framework Data Provider for SQL Server (Uso di Always Encrypted con il provider di dati .NET Framework per SQL Server)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Configurare Always Encrypted usando SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+
+
 

@@ -1,28 +1,32 @@
 ---
-title: "Attacco intrusivo nel codice SQL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attacco intrusivo nel codice SQL"
+title: Attacco SQL injection | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attacco intrusivo nel codice SQL
+# <a name="sql-injection"></a>Attacco intrusivo nel codice SQL
   In un attacco SQL injection il malware viene inserito in stringhe successivamente passate un'istanza di SQL Server per l'analisi e l'esecuzione. Per la prevenzione degli attacchi di questo tipo è necessario esaminare tutte le procedure che creano istruzioni SQL perché SQL Server esegue tutte le query sintatticamente valide che riceve. Anche i dati con parametri possono essere modificati da un utente malintenzionato abile e determinato.  
   
-## Come funziona un attacco SQL injection  
+## <a name="how-sql-injection-works"></a>Come funziona un attacco SQL injection  
  La forma principale di un attacco intrusivo nel codice SQL consiste nell'inserimento diretto di codice in variabili di input utente concatenate a comandi SQL ed eseguite. Una forma meno diretta di attacco consiste nell'inserimento di malware in stringhe destinate all'archiviazione in una tabella o come metadati. Quando le stringhe archiviate vengono successivamente concatenate in un comando SQL dinamico, il codice dannoso viene eseguito.  
   
  Il processo di intrusione termina prematuramente una stringa di testo e aggiunge un nuovo comando. Poiché prima che venga eseguito è possibile che al comando inserito vengano aggiunte ulteriori stringhe, l'utente malintenzionato termina la stringa inserita con un contrassegno di commento "--". Al momento del'esecuzione, il testo successivo al segno di commento viene ignorato.  
@@ -57,7 +61,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
  Se il codice SQL inserito è sintatticamente corretto, le manomissioni non possono essere rilevate a livello di programmazione. È pertanto necessario convalidare tutti gli input utente e rivedere attentamente il codice per l'esecuzione dei comandi SQL generati nel server in uso. Nelle sezioni seguenti di questo argomento vengono illustrate le procedure consigliate relative al codice.  
   
-## Convalidare tutti gli input  
+## <a name="validate-all-input"></a>Convalidare tutti gli input  
  Convalidare sempre gli input utente testando tipo, lunghezza, formato e intervallo. Durante l'implementazione di precauzioni contro input dannosi, valutare gli scenari di distribuzione e l'architettura dell'applicazione in uso. È importante ricordare che i programmi destinati all'esecuzione in un ambiente sicuro possono essere copiati in un ambiente non sicuro. I suggerimenti seguenti vanno considerati procedure consigliate:  
   
 -   Non basarsi su presupposti relativi a dimensioni, tipo o contenuto dei dati ricevuti dall'applicazione. È ad esempio possibile valutare:  
@@ -91,12 +95,12 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|Delimitatore di query|  
 |**'**|Delimitatore di stringhe di dati di tipo carattere|  
-|**--**|Delimitatore di stringhe di dati di tipo carattere<br />.|  
+|**--**|Delimitatore di stringhe di dati di tipo carattere<br />,|  
 |**/\*** ... **\*/**|Delimitatori di commento. Il testo compreso fra **/\*** e **\*/** non viene valutato dal server.|  
 |**xp_**|Usato all'inizio del nome delle stored procedure estese di catalogo come `xp_cmdshell`.|  
   
-### Utilizzo di parametri SQL type safe  
- La raccolta **Parameters** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa il controllo del tipo e la convalida della lunghezza. Se si usa la raccolta **Parameters**, l'input viene interpretato come valore letterale e non come codice eseguibile. Un ulteriore vantaggio dell'utilizzo della raccolta **Parameters** consiste nella possibilità di applicare controlli sul tipo e sulla lunghezza. I valori non compresi nell'intervallo generano un'eccezione. Nel frammento di codice seguente viene illustrato l'utilizzo della raccolta **Parameters**:  
+### <a name="use-type-safe-sql-parameters"></a>Utilizzo di parametri SQL type safe  
+ La raccolta **Parameters** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa il controllo del tipo e la convalida della lunghezza. Se si usa la raccolta **Parameters** , l'input viene interpretato come valore letterale e non come codice eseguibile. Un ulteriore vantaggio dell'utilizzo della raccolta **Parameters** consiste nella possibilità di applicare controlli sul tipo e sulla lunghezza. I valori non compresi nell'intervallo generano un'eccezione. Nel frammento di codice seguente viene illustrato l'utilizzo della raccolta **Parameters** :  
   
 ```  
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
@@ -108,7 +112,7 @@ parm.Value = Login.Text;
   
  In questo esempio il parametro `@au_id` viene interpretato come valore letterale e non come codice eseguibile. Vengono controllati il tipo e la lunghezza del valore. Se il valore di `@au_id` non è conforme ai vincoli di tipo e lunghezza specificati, viene generata un'eccezione.  
   
-### Utilizzo di input con parametri nelle stored procedure  
+### <a name="use-parameterized-input-with-stored-procedures"></a>Utilizzo di input con parametri nelle stored procedure  
  Le stored procedure sono vulnerabili all'attacco intrusivo nel codice SQL se utilizzano input non filtrato. Ad esempio, il codice seguente è vulnerabile:  
   
 ```  
@@ -119,7 +123,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
   
  Se si utilizzano stored procedure è opportuno utilizzare come input solo parametri.  
   
-### Utilizzo dell'insieme Parameters nelle istruzioni SQL dinamiche  
+### <a name="use-the-parameters-collection-with-dynamic-sql"></a>Utilizzo dell'insieme Parameters nelle istruzioni SQL dinamiche  
  Se non si possono usare stored procedure, è comunque possibile usare parametri, come mostrato nell'esempio di codice seguente:  
   
 ```  
@@ -130,7 +134,7 @@ SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",
 Parm.Value = Login.Text;  
 ```  
   
-### Filtraggio dell'input  
+### <a name="filtering-input"></a>Filtraggio dell'input  
  È anche possibile filtrare l'input per proteggersi da attacchi intrusivi nel codice SQL tramite la rimozione di caratteri di escape. Dato il numero elevato di caratteri che potrebbero causare problemi, non è tuttavia possibile considerare affidabile questo metodo di difesa. Nell'esempio seguente viene eseguita la ricerca del delimitatore di stringhe di caratteri.  
   
 ```  
@@ -140,7 +144,7 @@ private string SafeSqlLiteral(string inputSQL)
 }  
 ```  
   
-### Clausole LIKE  
+### <a name="like-clauses"></a>Clausole LIKE  
  Si noti che se si usa una clausola `LIKE` sarà comunque necessario usare caratteri di escape per i caratteri jolly:  
   
 ```  
@@ -149,8 +153,8 @@ s = s.Replace("%", "[%]");
 s = s.Replace("_", "[_]");  
 ```  
   
-## Revisione del codice per attacchi intrusivi nel codice SQL  
- È necessario rivedere tutto il codice che chiama `EXECUTE`, `EXEC` o `sp_executesql`. È possibile utilizzare query simili alla seguente per identificare procedure contenenti queste istruzioni. Questa query verifica la presenza di 1, 2, 3 o 4 spazi dopo le parole `EXECUTE` o `EXEC`.  
+## <a name="reviewing-code-for-sql-injection"></a>Revisione del codice per attacchi intrusivi nel codice SQL  
+ È necessario rivedere tutto il codice che chiama `EXECUTE`, `EXEC`o `sp_executesql`. È possibile utilizzare query simili alla seguente per identificare procedure contenenti queste istruzioni. Questa query verifica la presenza di 1, 2, 3 o 4 spazi dopo le parole `EXECUTE` o `EXEC`.  
   
 ```  
 SELECT object_Name(id) FROM syscomments  
@@ -165,7 +169,7 @@ OR UPPER(text) LIKE '%EXEC    (%'
 OR UPPER(text) LIKE '%SP_EXECUTESQL%';  
 ```  
   
-### Wrapping di parametri con QUOTENAME() e REPLACE()  
+### <a name="wrapping-parameters-with-quotename-and-replace"></a>Wrapping di parametri con QUOTENAME() e REPLACE()  
  In ogni stored procedure selezionata verificare che tutte le variabili usate in Transact-SQL dinamico vengano gestite correttamente. Il wrapping dei dati provenienti dai parametri di input della stored procedure o letti da una tabella deve essere eseguito in QUOTENAME() o REPLACE(). Ricordare che il valore di @variable passato a QUOTENAME() è di tipo sysname e presenta una lunghezza massima di 128 caratteri.  
   
 |@variable|Wrapper consigliato|  
@@ -186,7 +190,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
   
-### Attacco intrusivo consentito dal troncamento dei dati  
+### <a name="injection-enabled-by-data-truncation"></a>Attacco intrusivo consentito dal troncamento dei dati  
  Qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamico assegnato a una variabile verrà troncato se risulta maggiore del buffer allocato per quella variabile. Un utente malintenzionato in grado di imporre il troncamento delle istruzioni passando stringhe inaspettatamente lunghe a una stored procedure può modificare il risultato. La stored procedure creata dallo script seguente, ad esempio, è vulnerabile agli attacchi intrusivi consentiti dal troncamento.  
   
 ```  
@@ -224,9 +228,9 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
   
- Per questo motivo, è consigliabile usare un buffer di grandi dimensioni per una variabile di comando oppure eseguire direttamente [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamico all'interno di un'istruzione `EXECUTE`.  
+ Per questo motivo, è consigliabile usare un buffer di grandi dimensioni per una variabile di comando oppure eseguire direttamente [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamico all'interno di un'istruzione `EXECUTE` .  
   
-### Troncamento se vengono utilizzati QUOTENAME(@variable, '''') e REPLACE()  
+### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>Troncamento se vengono usati QUOTENAME (@variable, '''') e REPLACE()  
  Le stringhe restituite da QUOTENAME() e REPLACE() verranno troncate senza avviso se superano lo spazio allocato. La stored procedure creata nell'esempio seguente illustra le conseguenze.  
   
 ```  
@@ -307,7 +311,7 @@ EXEC (@command);
 GO  
 ```  
   
- Come con QUOTENAME(), il troncamento delle stringhe da parte di REPLACE() può essere evitato dichiarando variabili temporanee sufficientemente lunghe per tutti i casi. Se possibile, è necessario chiamare QUOTENAME() o REPLACE() direttamente all'interno di [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamico. In caso contrario, è possibile calcolare la dimensione richiesta del buffer nel modo seguente. Per `@outbuffer = QUOTENAME(@input)`, la dimensione di `@outbuffer` deve essere `2*(len(@input)+1)`. Quando si usa `REPLACE()` e le virgolette doppie, come nell'esempio precedente, un buffer di `2*len(@input)` è sufficiente.  
+ Come con QUOTENAME(), il troncamento delle stringhe da parte di REPLACE() può essere evitato dichiarando variabili temporanee sufficientemente lunghe per tutti i casi. Se possibile, è necessario chiamare QUOTENAME() o REPLACE() direttamente all'interno di [!INCLUDE[tsql](../../includes/tsql-md.md)]dinamico. In caso contrario, è possibile calcolare la dimensione richiesta del buffer nel modo seguente. Per `@outbuffer = QUOTENAME(@input)`, la dimensione di `@outbuffer` deve essere `2*(len(@input)+1)`. Quando si usa `REPLACE()` e le virgolette doppie, come nell'esempio precedente, un buffer di `2*len(@input)` è sufficiente.  
   
  Il calcolo seguente tratta tutti i casi:  
   
@@ -317,7 +321,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
  + (LEN(@input) % LEN(@find_string))  
 ```  
   
-### Troncamento quando viene utilizzato QUOTENAME(@variable, ']')  
+### <a name="truncation-when-quotenamevariable--is-used"></a>Troncamento quando viene usato QUOTENAME(@variable, ']')  
  Può verificarsi il troncamento quando il nome di un'entità a sicurezza diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene passato a istruzioni che utilizzano la forma `QUOTENAME(@variable, ']')`. Nell'esempio riportato di seguito viene illustrata questa situazione.  
   
 ```  
@@ -334,9 +338,9 @@ SET @objectname = QUOTENAME(@schemaname)+'.'+ QUOTENAME(@tablename)
 GO  
 ```  
   
- Quando si concatenano valori di tipo sysname, è consigliabile usare variabili temporanee di lunghezza sufficiente per contenere 128 caratteri per valore. Se possibile, chiamare `QUOTENAME()` direttamente all'interno di [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamico. In caso contrario, è possibile calcolare la dimensione richiesta del buffer, come illustrato nella sezione precedente.  
+ Quando si concatenano valori di tipo sysname, è consigliabile usare variabili temporanee di lunghezza sufficiente per contenere 128 caratteri per valore. Se possibile, chiamare `QUOTENAME()` direttamente all'interno di [!INCLUDE[tsql](../../includes/tsql-md.md)]dinamico. In caso contrario, è possibile calcolare la dimensione richiesta del buffer, come illustrato nella sezione precedente.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

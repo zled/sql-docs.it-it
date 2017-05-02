@@ -1,28 +1,32 @@
 ---
-title: "Requisiti per l&#39;utilizzo di tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Requisiti per l&quot;uso di tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requisiti per l&#39;utilizzo di tabelle con ottimizzazione per la memoria
+# <a name="requirements-for-using-memory-optimized-tables"></a>Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Per l'uso di OLTP in memoria nel database di Azure, vedere [Introduzione alle tecnologie in memoria (anteprima) in database SQL](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- In aggiunta ai requisiti indicati in [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md), per usare OLTP in memoria sono necessari i requisiti seguenti:  
+ In aggiunta ai requisiti indicati in [Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), per usare OLTP in memoria sono necessari i requisiti seguenti:  
   
 -   SQL Server 2016 SP1 o versione successiva, qualsiasi edizione. Per SQL Server 2014 ed SQL Server 2016 RTM (pre-SP1) sono necessarie le edizioni Enterprise, Developer o Evaluation.
     - Nota: OLTP in memoria richiede la versione di SQL Server a 64 bit.  
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      Per installare la generazione del report ([Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (per gestire OLTP In memoria tramite Esplora oggetti [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   A partire da SQL Server 2016 non esiste alcun limite alle dimensioni delle tabelle con ottimizzazione per la memoria, ad eccezione della memoria disponibile. In SQL Server 2014 le dimensioni totali in memoria di tutte le tabelle durevoli di un database non devono superare i 250 GB per i database di SQL Server 2014. Per altre informazioni, vedere [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
     - Nota: a partire da SQL Server 2016 SP1, le edizioni Standard ed Express supportano OLTP in memoria, ma impongono quote sulla quantità di memoria che è possibile usare per le tabelle con ottimizzazione per la memoria in un database specifico. Nell'edizione Standard tale quota è di 32 GB per ogni database; nell'edizione Express è di 352 MB per ogni database. 
@@ -52,3 +56,4 @@ caps.handback.revision: 65
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

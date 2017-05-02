@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, oggetto Columnstore | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oggetto Columnstore di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 04/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 418dddd9e87b490170b6d07c03d93a6eea912edf
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, oggetto Columnstore
+# <a name="sql-server-columnstore-object"></a>SQL Server, oggetto Columnstore
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   L'oggetto **SQLServer:Columnstore** fornisce i contatori per monitorare l'esecuzione dell'indice columnstore in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Nella tabella seguente sono descritti i contatori **Columnstore** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nella tabella seguente sono descritti i contatori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
 |Contatori Columnstore|Descrizione|  
 |--------------------------|-----------------|  
@@ -38,7 +42,8 @@ caps.handback.revision: 8
 |**Totale rowgroup compressi tramite l'operazione MERGE**|Numero di rowgroup di destinazione compressi creati con l'operazione MERGE dall'avvio di SQL Server.|  
 |**Totale rowgroup di origine uniti**|Numero di rowgroup di origine uniti dall'avvio di SQL Server.|  
   
-## Vedere anche  
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Oggetti T-SQL PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase, nozioni fondamentali"
-  - "PolyBase, istruzioni SQL"
-  - "PolyBase, oggetti SQL"
+title: Oggetti T-SQL PolyBase | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase, fundamentals
+- PolyBase, SQL statements
+- PolyBase, SQL objects
 ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: be34605990368fbbccdb8b81c119318c01431ced
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetti T-SQL PolyBase
+# <a name="polybase-t-sql-objects"></a>Oggetti T-SQL PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per usare PolyBase, è necessario creare tabelle esterne per fare riferimento ai dati esterni.  
@@ -36,10 +40,10 @@ caps.handback.revision: 18
   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Configurare PolyBase. Vedere [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## Creare tabelle esterne per Hadoop  
+## <a name="create-external-tables-for-hadoop"></a>Creare tabelle esterne per Hadoop  
  **1. Creare credenziali con ambito database**  
   
  Questo passaggio è obbligatorio solo per i cluster Hadoop protetti da Kerberos.  
@@ -117,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## Creare tabelle esterne per l'archiviazione BLOB di Azure  
+## <a name="create-external-tables-for-azure-blob-storage"></a>Creare tabelle esterne per l'archiviazione BLOB di Azure  
  **1. Creare credenziali con ambito database**  
   
 ```sql  
@@ -191,12 +195,105 @@ WITH (LOCATION='/Demo/',
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
   
 ```  
+ 
+## <a name="create-external-tables-for-azure-data-lake-store"></a>Creare tabelle esterne per Azure Data Lake Store
+Azure Data Lake Store è supportato solo da PolyBase in SQL Data Warehouse.
+Per altre informazioni su ADLS e Azure SQL Data Warehouse, vedere [Caricare dati da Azure Data Lake Store a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+ 
+ **1. Creare credenziali con ambito database**  
   
-## Passaggi successivi  
+
+```sql
+-- Create a Database Master Key.
+-- Only necessary if one does not already exist.
+-- Required to encrypt the credential secret in the next step.
+
+CREATE MASTER KEY;
+
+-- Create a database scoped credential
+-- IDENTITY: Pass the client id and OAuth 2.0 Token Endpoint taken from your Azure Active Directory Application
+-- SECRET: Provide your AAD Application Service Principal key.
+-- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/en-us/library/mt270260.aspx
+
+CREATE DATABASE SCOPED CREDENTIAL ADL_User
+WITH
+    IDENTITY = '<client_id>@<OAuth_2.0_Token_EndPoint>'
+    ,SECRET = '<key>'
+;
+```  
+  
+ **2. Creare un'origine dati esterna**  
+  
+```sql  
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
+-- LOCATION: Provide Azure storage account name and blob container name.
+-- CREDENTIAL: Provide the credential created in the previous step.
+
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH (
+    TYPE = HADOOP,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    CREDENTIAL = AzureStorageCredential
+);
+```  
+  
+ **3. Creare un formato di file esterno**  
+  
+```sql  
+-- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
+-- STRING_DELIMITER: Specifies the field terminator for data of type string in the text-delimited file.
+-- DATE_FORMAT: Specifies a custom format for all date and time data that might appear in a delimited text file.
+-- Use_Type_Default: Store all Missing values as NULL
+
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH
+(   FORMAT_TYPE = DELIMITEDTEXT
+,    FORMAT_OPTIONS    (   FIELD_TERMINATOR = '|'
+                    ,    STRING_DELIMITER = ''
+                    ,    DATE_FORMAT         = 'yyyy-MM-dd HH:mm:ss.fff'
+                    ,    USE_TYPE_DEFAULT = FALSE
+                    )
+);
+```  
+  
+ **4. Creare una tabella esterna**  
+  
+```sql  
+-- LOCATION: Folder under the ADLS root folder.
+-- DATA_SOURCE: Specifies which Data Source Object to use.
+-- FILE_FORMAT: Specifies which File Format Object to use
+-- REJECT_TYPE: Specifies how you want to deal with rejected rows. Either Value or percentage of the total
+-- REJECT_VALUE: Sets the Reject value based on the reject type.
+
+-- DimProduct
+CREATE EXTERNAL TABLE [dbo].[DimProduct_external] (
+    [ProductKey] [int] NOT NULL,
+    [ProductLabel] [nvarchar](255) NULL,
+    [ProductName] [nvarchar](500) NULL
+)
+WITH
+(
+    LOCATION='/DimProduct/'
+,   DATA_SOURCE = AzureDataLakeStore
+,   FILE_FORMAT = TextFileFormat
+,   REJECT_TYPE = VALUE
+,   REJECT_VALUE = 0
+)
+;
+```  
+  
+ **5. Creare statistiche**  
+  
+```sql     
+CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
+```  
+
+## <a name="next-steps"></a>Passaggi successivi  
  Per esempi di query, vedere l'argomento relativo alle [query PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Introduzione a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guida a PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

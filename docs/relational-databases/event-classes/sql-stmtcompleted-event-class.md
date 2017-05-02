@@ -1,34 +1,38 @@
 ---
-title: "Classe di evento SQL:StmtCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtCompleted - classe di evento"
+title: Classe di evento SQL:StmtCompleted | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SQL:StmtCompleted
-  La classe di evento SQL:StmtCompleted indica il completamento di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted - classe di evento
+  La classe di evento SQL:StmtCompleted indica il completamento di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Colonne di dati della classe di evento SQL:StmtCompleted  
+## <a name="sqlstmtcompleted-event-class-data-columns"></a>Colonne di dati della classe di evento SQL:StmtCompleted  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |CPU|**int**|Tempo della CPU in millisecondi utilizzato dall'evento.|18|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Durata|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|**datetime**|Ora di fine dell'evento.|15|Sì|  
@@ -45,7 +49,7 @@ caps.handback.revision: 32
 |NestLevel|**int**|Livello di nidificazione della stored procedure se l'istruzione è stata eseguita all'interno di una stored procedure.|29|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
-|Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
+|Offset|**Int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
 |Reads|**bigint**|Numero di letture di pagine eseguite dall'istruzione SQL.|16|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |RowCounts|**bigint**|Numero di righe influenzate da un evento.|48|Sì|  
@@ -58,7 +62,7 @@ caps.handback.revision: 32
 |Writes|**bigint**|Numero di scritture di pagina eseguite dall'istruzione SQL.|17|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

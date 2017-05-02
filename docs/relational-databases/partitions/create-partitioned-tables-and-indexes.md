@@ -1,40 +1,44 @@
 ---
-title: "Creare tabelle e indici partizionati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.createpartition.progress.f1"
-  - "sql13.swb.createpartition.partitioncolumn.f1"
-  - "sql13.swb.createpartition.createjob.f1"
-  - "sql13.swb.createpartition.finish.f1"
-  - "sql13.swb.createpartition.selectoutput.f1"
-  - "sql13.swb.createpartition.partitionfunction.f1"
-  - "sql13.swb.createpartition.partitionscheme.f1"
-  - "sql13.swb.createpartition.getstart.f1"
-  - "sql13.swb.createpartition.mappartition.f1"
-  - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
-  - "indici partizionati [SQL Server], creazione"
-  - "schemi di partizione [SQL Server], creazione"
-  - "funzioni di partizione [SQL Server], creazione"
-  - "tabelle partizionate [SQL Server], creazione"
-  - "funzioni di partizione [SQL Server]"
-  - "schemi di partizione [SQL Server]"
+title: Creare tabelle e indici partizionati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.createpartition.progress.f1
+- sql13.swb.createpartition.partitioncolumn.f1
+- sql13.swb.createpartition.createjob.f1
+- sql13.swb.createpartition.finish.f1
+- sql13.swb.createpartition.selectoutput.f1
+- sql13.swb.createpartition.partitionfunction.f1
+- sql13.swb.createpartition.partitionscheme.f1
+- sql13.swb.createpartition.getstart.f1
+- sql13.swb.createpartition.mappartition.f1
+- sql13.swb.createpartition.summary.f1
+helpviewer_keywords:
+- partitioned indexes [SQL Server], creating
+- partition schemes [SQL Server], creating
+- partition functions [SQL Server], creating
+- partitioned tables [SQL Server], creating
+- partition functions [SQL Server]
+- partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare tabelle e indici partizionati
+# <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
   Utilizzando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile creare una tabella o un indice partizionato in [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati delle tabelle e degli indici partizionati vengono suddivisi orizzontalmente in unità che possono essere distribuite in più filegroup di un database. Il partizionamento semplifica la gestione delle tabelle e degli indici di grandi dimensioni e li rende più scalabili.  
   
  La creazione di una tabella o di un indice partizionato richiede generalmente quattro operazioni:  
@@ -74,7 +78,7 @@ caps.handback.revision: 35
 ####  <a name="Permissions"></a> Autorizzazioni  
  La creazione di una tabella partizionata richiede l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella. La creazione di un indice partizionato richiede l'autorizzazione ALTER per la tabella o la vista in cui viene creato l'indice. Per la creazione di una tabella o un indice partizionato è richiesta una delle seguenti autorizzazioni aggiuntive:  
   
--   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin**.  
+-   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
   
 -   Autorizzazione CONTROL o ALTER per il database in cui vengono creati la funzione e lo schema di partizione.  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 35
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per creare uno o più filegroup, i file corrispondenti e una tabella attenersi ai passaggi della procedura riportata di seguito. Gli oggetti della procedura descritta di seguito verranno utilizzati come riferimento quando si crea la tabella partizionata.  
   
-#### Per creare nuovi filegroup per una tabella partizionata  
+#### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Per creare nuovi filegroup per una tabella partizionata  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database in cui si vuole creare una tabella partizionata e scegliere **Proprietà**.  
   
-2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup** in **Selezione pagina**.  
+2.  Nella finestra di dialogo **Proprietà database -** *nome_database* selezionare **Filegroup**in **Selezione pagina**.  
   
 3.  In **Righe**fare clic su **Aggiungi**. Nella nuova riga immettere il nome del filegroup.  
   
@@ -106,9 +110,9 @@ caps.handback.revision: 35
   
 9. Espandere la cartella **Tabelle** e creare una tabella normalmente. Per altre informazioni, vedere [Creare tabelle &#40;Motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md). In alternativa, è possibile specificare una tabella esistente nella procedura descritta di seguito.  
   
-#### Per creare una tabella partizionata  
+#### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
-1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione** e quindi selezionare **Create Partition (Crea partizione)**.  
+1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)**.  
   
 2.  Nella pagina **Creazione guidata partizione**della relativa procedura guidata fare clic su **Avanti** . ****  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 35
      Consente di selezionare la data di inizio per i valori di intervallo delle partizioni.  
   
      **Data fine**  
-     Consente di selezionare la data di fine per i valori di intervallo delle partizioni. Se è stata selezionata l'opzione **Limite sinistro** nella pagina **Esegui mapping partizioni**, questa data costituirà l'ultimo valore per ogni filegroup/partizione. Se è stata selezionata l'opzione **Limite destro** nella pagina **Esegui mapping partizioni**, questa data costituirà il primo valore nel penultimo filegroup.  
+     Consente di selezionare la data di fine per i valori di intervallo delle partizioni. Se è stata selezionata l'opzione **Limite sinistro** nella pagina **Esegui mapping partizioni** , questa data costituirà l'ultimo valore per ogni filegroup/partizione. Se è stata selezionata l'opzione **Limite destro** nella pagina **Esegui mapping partizioni** , questa data costituirà il primo valore nel penultimo filegroup.  
   
      **Intervallo di date**  
      Consente di selezionare la granularità della data o l'incremento dei valori di intervallo desiderato per ogni partizione.  
@@ -200,7 +204,7 @@ caps.handback.revision: 35
   
                 -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo venga eseguita il giorno 15 del mese e a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
@@ -212,7 +216,7 @@ caps.handback.revision: 35
   
         3.  In **Durata**di **Data inizio**immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine**immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
   
-    5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza** immettere la data in cui verrà eseguita la pianificazione del processo nella casella **Data**. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
+    5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza**, nella casella **Data** immettere la data in cui verrà eseguita la pianificazione del processo. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
     6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
@@ -242,10 +246,10 @@ caps.handback.revision: 35
      Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti**e **Invia report per posta elettronica**.  
   
      **Visualizza report**  
-     Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report in formato testo dello stato della Creazione guidata partizione.  
+     Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report di testo dello stato della Creazione guidata partizione.  
   
      **Salva report su file**  
-     Apre la finestra di dialogo **Salva report con nome**.  
+     Apre la finestra di dialogo **Salva report con nome** .  
   
      **Copia report negli Appunti**  
      Copia i risultati del report dello stato della procedura guidata negli Appunti.  
@@ -259,7 +263,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare una tabella partizionata  
+#### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -342,7 +346,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Per determinare se una tabella è partizionata  
+#### <a name="to-determine-if-a-table-is-partitioned"></a>Per determinare se una tabella è partizionata  
   
 1.  Tramite la query seguente vengono restituite una o più righe se la tabella `PartitionTable` è partizionata. Se la tabella non è partizionata, non viene restituita alcuna query.  
   
@@ -358,7 +362,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Per determinare i valori limite per una tabella partizionata  
+#### <a name="to-determine-the-boundary-values-for-a-partitioned-table"></a>Per determinare i valori limite per una tabella partizionata  
   
 1.  Tramite la query seguente vengono restituiti i valori limite per ogni partizione nella tabella `PartitionTable` .  
   
@@ -379,7 +383,7 @@ caps.handback.revision: 35
     ORDER BY p.partition_number;  
     ```  
   
-#### Per determinare la colonna di partizione per una tabella partizionata  
+#### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>Per determinare la colonna di partizione per una tabella partizionata  
   
 1.  Tramite la query seguente viene restituito il nome della colonna di partizionamento per la tabella. `PartitionTable`.  
   
@@ -408,7 +412,7 @@ caps.handback.revision: 35
   
  Per altre informazioni, vedere:  
   
--   [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   

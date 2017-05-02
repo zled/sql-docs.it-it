@@ -1,25 +1,29 @@
 ---
-title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transazioni in tabelle con ottimizzazione per la memoria| Microsoft Docs
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transactions with Memory-Optimized Tables
+# <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -33,7 +37,7 @@ Per informazioni generali, vedere [SET TRANSACTION ISOLATION LEVEL (Transact-SQL
   
   
   
-#### Sezioni dell'articolo:  
+#### <a name="sections-in-this-article"></a>Sezioni dell'articolo:  
   
 - [Approccio pessimistico e approccio ottimistico](#pessvoptim22ni)  
 - [Modalità di avvio della transazione](#txninitmodes24ni)  
@@ -52,7 +56,7 @@ Per informazioni generali, vedere [SET TRANSACTION ISOLATION LEVEL (Transact-SQL
   
 <a name="pessvoptim22ni"/>  
   
-## Approccio pessimistico e approccio ottimistico  
+## <a name="pessimistic-versus-optimistic"></a>Approccio pessimistico e approccio ottimistico  
   
 Le differenze funzionali sono dovute a un diverso approccio, ottimistico o pessimistico, all'integrità delle transazioni. Le tabelle con ottimizzazione per la memoria usano l'approccio ottimistico:  
   
@@ -65,23 +69,23 @@ L'approccio ottimistico implica un sovraccarico minore ed è in genere più effi
   
 <a name="txninitmodes24ni"/>  
   
-## Modalità di avvio della transazione  
+## <a name="transaction-initiation-modes"></a>Modalità di avvio della transazione  
   
 SQL può avviare le transazioni con le modalità seguenti:  
   
-- **Commit automatico**: l'inizio di una semplice query o istruzione DML apre in modo implicito una transazione e la fine di questa istruzione esegue implicitamente il commit della transazione stessa. Impostazione predefinita.  
+- **Commit automatico** : l'inizio di una semplice query o istruzione DML apre in modo implicito una transazione e la fine di questa istruzione esegue implicitamente il commit della transazione stessa. Impostazione predefinita.  
   - In modalità autocommit non è di solito necessario codificare un hint di tabella sul livello di isolamento delle transazioni nella tabella con ottimizzazione per la memoria nella clausola FROM.  
   
-- **Esplicita**: Transact-SQL contiene il codice BEGIN TRANSACTION, insieme a un eventuale COMMIT TRANSACTION. Due o più istruzioni possono essere riunite nella stessa transazione.  
+- **Esplicita** : Transact-SQL contiene il codice BEGIN TRANSACTION, insieme a un eventuale COMMIT TRANSACTION. Due o più istruzioni possono essere riunite nella stessa transazione.  
   - In modalità esplicita è necessario usare l'opzione di database MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT o codificare un hint di tabella sul livello di isolamento della transazione nella tabella con ottimizzazione per la memoria nella clausola FROM.  
   
-- **Implicita**: quando è attiva SET IMPLICIT_TRANSACTION ON. Probabilmente IMPLICIT_BEGIN_TRANSACTION sarebbe un nome migliore, poiché questa opzione non fa altro che eseguire in modo implicito l'equivalente di un'istruzione BEGIN TRANSACTION esplicita prima di ogni istruzione UPDATE se 0 = @@trancount. Quindi dipende dal codice T-SQL se viene inviata un'istruzione COMMIT TRANSACTION esplicita.   
+- **Implicita** : quando è attiva SET IMPLICIT_TRANSACTION ON. Probabilmente IMPLICIT_BEGIN_TRANSACTION sarebbe un nome migliore, poiché questa opzione non fa altro che eseguire in modo implicito l'equivalente di un'istruzione BEGIN TRANSACTION esplicita prima di ogni istruzione UPDATE se 0 = @@trancount. Quindi dipende dal codice T-SQL se viene inviata un'istruzione COMMIT TRANSACTION esplicita.   
   
 - **ATOMIC BLOCK** tutte le istruzioni nei blocchi ATOMIC, necessari con le stored procedure compilate in modo nativo, vengono eseguite sempre come parte di una singola transazione: commit di tutte le azioni del blocco atomico oppure rollback di tutte in caso di errore.  
   
 <a name="codeexamexpmode25ni"/>  
   
-### Esempio di codice con modalità esplicita  
+### <a name="code-example-with-explicit-mode"></a>Esempio di codice con modalità esplicita  
   
 Il seguente script Transact-SQL interpretato usa:  
   
@@ -116,7 +120,7 @@ Si noti che l'hint `WITH (SNAPSHOT)` non è necessario se si usa l'opzione di da
   
 <a name="rowver28ni"/>  
   
-## Controllo delle versioni delle righe  
+## <a name="row-versioning"></a>Controllo delle versioni delle righe  
   
 Le tabelle con ottimizzazione per la memoria usano un sistema sofisticato per il controllo delle versioni di riga, che assicura l'efficacia dell'approccio ottimistico, anche al livello di isolamento più rigoroso, SERIALIZABLE. Per i dettagli, vedere [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -124,7 +128,7 @@ Le tabelle basate su disco hanno indirettamente un sistema per il controllo dell
   
 <a name="confdegreeiso30ni"/>  
   
-## Livelli di isolamento 
+## <a name="isolation-levels"></a>Livelli di isolamento 
   
 La tabella che segue indica i livelli di isolamento possibili per le transazioni, ordinate dall'isolamento minimo a quello massimo. Per informazioni dettagliate sui conflitti che possono verificarsi e sulla logica di ripetizione dei tentativi per affrontare questi conflitti, vedere [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#confdetretry34ni). 
   
@@ -141,7 +145,7 @@ La tabella che segue indica i livelli di isolamento possibili per le transazioni
 
 <a name="txnphaslife32ni"/>  
   
-## Fasi e durata delle transazioni  
+## <a name="transaction-phases-and-lifetime"></a>Fasi e durata delle transazioni  
   
 Quando è interessata una tabella con ottimizzazione per la memoria, la durata di una transazione attraversa le fasi illustrate nell'immagine seguente.  
   
@@ -149,17 +153,17 @@ Quando è interessata una tabella con ottimizzazione per la memoria, la durata d
   
 Seguono le descrizioni delle fasi.  
   
-#### Elaborazione normale: Fase 1 di 3  
+#### <a name="regular-processing-phase-1-of-3"></a>Elaborazione normale: Fase 1 di 3  
   
 - Questa fase comprende l'esecuzione di tutte le query e delle istruzioni DML nella query.  
 - Durante questa fase, le istruzioni vedono la versione delle tabelle con ottimizzazione per la memoria valida al momento dell'avvio logico della transazione.  
   
-#### Convalida: Fase 2 di 3  
+#### <a name="validation-phase-2-of-3"></a>Convalida: Fase 2 di 3  
   
 - La fase di convalida inizia con l'assegnazione dell'ora di fine, contrassegnando la transazione come completata a livello logico. In questo modo tutte le modifiche della transazione sono visibili alle altre transazioni, che assumeranno una dipendenza da questa transazione e non potranno eseguire il commit fino al commit di questa transazione. Inoltre, le transazioni che contengono queste dipendenze non possono restituire set di risultati al client per assicurare che il client veda solo i dati di cui è stato eseguito il commit nel database.  
 - Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Si noti che, come indicato nella tabella [Livelli di isolamento e conflitti](#confdegreeiso30ni), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
   
-#### Elaborazione del commit: Fase 3 di 3  
+#### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: Fase 3 di 3  
   
 - Durante la fase di commit, le modifiche apportate alle tabelle durevoli vengono scritte nel log, che a sua volta viene scritto su disco. Il controllo viene quindi restituito al client.  
 - Al termine dell'elaborazione del commit, a tutte le transazioni dipendenti viene indicato che possono eseguire il commit.  
@@ -168,7 +172,7 @@ Come sempre, è consigliabile ridurre l'entità e la durata delle unità di lavo
   
 <a name="confdetretry34ni"/>  
   
-## Rilevamento dei conflitti e logica di ripetizione dei tentativi 
+## <a name="conflict-detection-and-retry-logic"></a>Rilevamento dei conflitti e logica di ripetizione dei tentativi 
 
 Esistono due tipi di condizioni di errore relative alle transazioni che causano l'esito negativo e il rollback della transazione. Nella maggior parte dei casi, quando si verifica un errore di questo tipo è necessario ritentare la transazione, analogamente a quanto accade in caso di deadlock.
 - Conflitti tra le transazioni simultanee. Si tratta di conflitti di aggiornamento ed errori di convalida, che possono essere dovuti a violazioni a livello di isolamento della transazione o violazioni di vincoli.
@@ -185,7 +189,7 @@ Di seguito sono indicate le condizioni di errore che possono impedire l'accesso 
 | **41839** | La transazione ha superato il numero massimo di dipendenze di commit. | Il numero di transazioni da cui una determinata transazione (Tx1) può dipendere è limitato (dipendenze in uscita). Anche il numero di transazioni che possono dipendere da una determinata transazione (Tx1) è limitato (dipendenze in ingresso). Il limite in entrambi i casi è 8. <br/><br/> Lo scenario più comune per questo errore è la presenza di un ampio numero di transazioni di lettura che accedono a dati scritti da una singola transazione di scrittura. Le probabilità che si verifichi questa condizione aumentano se tutte le transazioni di lettura eseguono ampie analisi degli stessi dati e se l'elaborazione della convalida o del commit della transazione di scrittura richiede molto tempo, ad esempio quando la transazione di scrittura esegue vaste analisi con il livello di isolamento serializable (aumenta la durata della fase di convalida) o il log delle transazioni si trova in un dispositivo di I/O di log lento (aumenta la durata dell'elaborazione del commit). Se le transazioni di lettura eseguono ampie analisi ed è previsto che accedano solo a poche righe, questo potrebbe indicare la mancanza di un indice. Analogamente, se la transazione di scrittura usa l'isolamento serializable ed esegue ampie analisi, ma è previsto che acceda a poche righe, anche questo indica la mancanza di un indice. <br/><br/> Il limite sul numero delle dipendenze di commit può essere eliminato usando il flag di traccia **9926**. È importante usare questo flag di traccia solo se questa condizione di errore si presenta anche dopo avere verificato che non manca alcun indice, perché potrebbe mascherare questi problemi nei casi sopra indicati. Un'altra precauzione è il fatto che i grafici complessi delle dipendenze, in cui ogni transazione ha un numero elevato di dipendenze in ingresso e in uscita e ogni transazione può avere molti livelli di dipendenze, possono determinare inefficienze nel sistema.  |
  
   
-### Logica di ripetizione dei tentativi 
+### <a name="retry-logic"></a>Logica di ripetizione dei tentativi 
 
 Quando una transazione ha esito negativo a causa di una delle condizioni sopra indicate, è necessario ritentare la transazione.
   
@@ -193,7 +197,7 @@ La logica di ripetizione dei tentativi può essere implementata sul lato client 
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### Esempio di codice di ripetizione T-SQL  
+#### <a name="retry-t-sql-code-example"></a>Esempio di codice di ripetizione T-SQL  
   
 La logica di ripetizione dei tentativi sul lato server mediante T-SQL deve essere usata solo per le transazioni che non restituiscono set di risultati al client perché i tentativi ripetuti possono comportare la restituzione di ulteriori set di risultati imprevisti al client.  
   
@@ -254,7 +258,7 @@ Lo script T-SQL interpretato riportato di seguito illustra l'aspetto che può av
   
 <a name="crossconttxn38ni"/>  
   
-## Transazione tra contenitori  
+## <a name="cross-container-transaction"></a>Transazione tra contenitori  
   
   
 Una transazione è detta transazione tra contenitori se:  
@@ -278,7 +282,7 @@ Nell'esempio di codice Transact-SQL che segue:
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,13 +300,13 @@ Nell'esempio di codice Transact-SQL che segue:
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## Limitazioni  
+## <a name="limitations"></a>Limitazioni  
   
   
 - Le transazioni tra database non sono supportate per le tabelle con ottimizzazione per la memoria. Se una transazione accede a una tabella con ottimizzazione per la memoria, non può accedere a qualsiasi altro database, tranne:  
@@ -314,7 +318,7 @@ Nell'esempio di codice Transact-SQL che segue:
   
 <a name="natcompstorprocs42ni"/>  
   
-## Stored procedure compilate in modo nativo  
+## <a name="natively-compiled-stored-procedures"></a>Stored procedure compilate in modo nativo  
   
 - In una procedura nativa ATOMIC BLOCK deve dichiarare il livello di isolamento della transazione per l'intero blocco, ad esempio:  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
@@ -325,7 +329,7 @@ Nell'esempio di codice Transact-SQL che segue:
   
 <a name="othertxnlinks44ni"/>  
   
-## Altri collegamenti relativi alle transazioni  
+## <a name="other-transaction-links"></a>Altri collegamenti relativi alle transazioni  
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -350,7 +354,7 @@ e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-
 Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
 See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
   
-Transactions with In-Memory Tables and Procedures  
+Transazioni con tabelle e procedure in memoria  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
 Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
   
@@ -360,3 +364,5 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+
+

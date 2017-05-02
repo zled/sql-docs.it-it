@@ -1,23 +1,27 @@
 ---
-title: "Destinazioni per gli eventi estesi in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Destinazioni per gli eventi estesi in SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 66e1984acfa86bea31f2cedbea70dbac5195a090
+ms.lasthandoff: 04/11/2017
+
 ---
-# Destinazioni per gli eventi estesi in SQL Server
+# <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -27,13 +31,13 @@ Questo articolo illustra quando e come usare le destinazioni package0 per gli ev
 - I parametri, tranne nei casi in cui il parametro è facilmente comprensibile.
 
 
-#### Esempio di XQuery
+#### <a name="xquery-example"></a>Esempio di XQuery
 
 
 La [sezione ring_buffer](#h2_target_ring_buffer) include un esempio d'uso di [XQuery in Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) per copiare una stringa XML in un set di righe relazionale.
 
 
-### Prerequisiti
+### <a name="prerequisites"></a>Prerequisiti
 
 
 - Avere una certa familiarità con le nozioni di base relative agli eventi estesi, come descritto in [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
@@ -49,10 +53,10 @@ La [sezione ring_buffer](#h2_target_ring_buffer) include un esempio d'uso di [XQ
 
 
 
-## Parametri, azioni e campi
+## <a name="parameters-actions-and-fields"></a>Parametri, azioni e campi
 
 
-In Transact-SQL l'istruzione [CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%29.md) è fondamentale per gli eventi estesi. Per scrivere l'istruzione sono spesso necessari un elenco e una descrizione dei dati seguenti:
+In Transact-SQL l'istruzione [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) è fondamentale per gli eventi estesi. Per scrivere l'istruzione sono spesso necessari un elenco e una descrizione dei dati seguenti:
 
 - I campi associati all'evento selezionato.
 - I parametri associati alla destinazione selezionata.
@@ -71,7 +75,7 @@ Le istruzioni SELECT che restituiscono tali elenchi dalle visualizzazioni di sis
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## Destinazione etw_classic_sync_target
+## <a name="etwclassicsynctarget-target"></a>Destinazione etw_classic_sync_target
 
 
 Gli eventi estesi di SQL Server possono interagire con Event Tracing for Windows (ETW) per monitorare l'attività del sistema. Per altre informazioni, vedere:
@@ -83,15 +87,14 @@ Gli eventi estesi di SQL Server possono interagire con Event Tracing for Windows
 Questa destinazione di ETW elabora *in modalità sincrona* i dati ricevuti, mentre la maggior parte delle destinazioni esegue l'elaborazione *in modalità asincrona*.
 
 
-\<!--
-Revisit this ETW section later.
+\<!-- Rivedere questa sezione ETW più avanti.
 -->
 
 
 
 <a name="h2_target_event_counter"></a>
 
-## Destinazione event_counter
+## <a name="eventcounter-target"></a>Destinazione event_counter
 
 
 La destinazione event_counter calcola semplicemente la frequenza con cui si verifica ogni evento specificato.
@@ -107,7 +110,7 @@ A differenza di quasi tutte le altre destinazioni:
     - Il motore di database viene disconnesso da qualsiasi destinazione che risulta troppo lenta e che pertanto rischia di rallentare le prestazioni del motore. Questo è uno dei motivi per cui la maggior parte delle destinazioni elabora i dati *in modalità asincrona*.
 
 
-#### Output di esempio acquisito da event_counter
+#### <a name="example-output-captured-by-eventcounter"></a>Output di esempio acquisito da event_counter
 
 
 ```
@@ -139,20 +142,20 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## Destinazione event_file
+## <a name="eventfile-target"></a>Destinazione event_file
 
 
 La destinazione **event_file** scrive l'output della sessione eventi dal buffer in un file su disco:
 
 
 - Specificare il parametro *filename=* nella clausola ADD TARGET.
-    - L'estensione del file deve essere **xel**.
+    - L'estensione del file deve essere**xel** .
 
 
 - Il nome di file selezionato viene usato dal sistema come prefisso a cui viene aggiunto un valore long integer basato su data-ora, seguito dall'estensione xel.
 
 
-#### CREATE EVENT SESSION con destinazione **event_file**
+#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION con destinazione **event_file**
 
 
 Di seguito è riportata l'estensione CREATE EVENT SESSION usata per eseguire il test. Una delle clausole ADD TARGET specifica una destinazione event_file.
@@ -204,10 +207,10 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### Funzione sys.fn_xe_file_target_read_file
+#### <a name="sysfnxefiletargetreadfile-function"></a>Funzione sys.fn_xe_file_target_read_file
 
 
-La destinazione event_file archivia i dati ricevuti in un formato binario che non è leggibile. Transact-SQL può riportare il contenuto del file con estensione xel eseguendo un'istruzione SELECT FROM sui dati restituiti dalla funzione [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).
+La destinazione event_file archivia i dati ricevuti in un formato binario che non è leggibile. Transact-SQL può riportare il contenuto del file con estensione xel eseguendo un'istruzione SELECT FROM sui dati restituiti dalla funzione [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) .
 
 
 Per SQL Server **2016** e versioni successive, i dati sono stati riportati dall'istruzione T-SQL SELECT seguente. Nel codice viene usato il suffisso *.xel. 
@@ -240,7 +243,7 @@ SELECT f.*
 Naturalmente, per vedere i dati del file con estensione xel è possibile anche usare manualmente l'interfaccia utente di SSMS:
 
 
-#### Dati archiviati nella destinazione event_file
+#### <a name="data-stored-in-the-eventfile-target"></a>Dati archiviati nella destinazione event_file
 
 
 Di seguito è illustrato il report dell'esecuzione di SELECT FROM sui dati restituiti da **sys.fn_xe_file_target_read_file**, in SQL Server 2016.
@@ -249,15 +252,15 @@ Di seguito è illustrato il report dell'esecuzione di SELECT FROM sui dati resti
 ```
 module_guid                            package_guid                           object_name     event_data                                                                                                                                                                                                                                                                                          file_name                                                      file_offset
 -----------                            ------------                           -----------     ----------                                                                                                                                                                                                                                                                                          ---------                                                      -----------
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 ```
 
 
 
 <a name="h2_target_histogram"></a>
 
-## Destinazione histogram
+## <a name="histogram-target"></a>Destinazione histogram
 
 
 La destinazione **histogram** è più complessa rispetto a event_counter. Questa destinazione può eseguire le operazioni seguenti:
@@ -280,12 +283,12 @@ Il valore predefinito del parametro 'slots' è 256. Se si assegna un altro valor
 - Ad esempio, slots=59 viene arrotondato a =64.
 
 
-### Esempio di *azione* per histogram
+### <a name="action-example-for-histogram"></a>Esempio di*azione* per histogram
 
 
 Nella clausola TARGET...SET, l'istruzione Transact-SQL CREATE EVENT SESSION seguente specifica l'assegnazione del parametro di destinazione **source_type=1**. Il valore 1 significa che la destinazione histogram tiene traccia di un'azione.
 
-In questo esempio, la clausola EVENT...ACTION consente di selezionare una sola azione per la destinazione, ovvero **sqlos.system_thread_id**. Nella clausola TARGET...SET viene visualizzata l'assegnazione **source=N'sqlos.system_thread_id'**.
+In questo esempio, la clausola EVENT...ACTION consente di selezionare una sola azione per la destinazione, ovvero **sqlos.system_thread_id**. Nella clausola TARGET...SET viene visualizzata l'assegnazione **source=N'sqlos.system_thread_id'** .
 
 - Per tener traccia di più azioni di origine, è possibile aggiungere una seconda destinazione histogram all'istruzione CREATE EVENT SESSION.
 
@@ -310,7 +313,7 @@ CREATE EVENT SESSION [histogram_lockacquired]
         )
     WITH
         (
-        <.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
+        \<.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
         );
 ```
 
@@ -330,7 +333,7 @@ value   count
 ```
 
 
-#### Istruzione SELECT per individuare le azioni disponibili
+#### <a name="select-to-discover-available-actions"></a>Istruzione SELECT per individuare le azioni disponibili
 
 
 L'istruzione SELECT [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) può trovare le azioni che il sistema consente di specificare nell'istruzione CREATE EVENT SESSION. Nella clausola WHERE modificare prima di tutto il filtro **o.name LIKE** in modo da filtrare le azioni a cui si è interessati.
@@ -349,7 +352,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### Esempio di *campo* di evento per histogram
+### <a name="event-field-example-for-histogram"></a>Esempio di *campo* di evento per histogram
 
 
 L'esempio seguente imposta **source_type=0**. Il valore assegnato a **source=** è un campo di evento (non un'azione).
@@ -368,7 +371,7 @@ CREATE EVENT SESSION [histogram_checkpoint_dbid]
         source_type          = (0)
     )
     WITH
-    ( <....> );
+    ( \<....> );
 ```
 
 
@@ -384,7 +387,7 @@ value   count
 ```
 
 
-#### Istruzione SELECT per individuare i campi disponibili nell'evento selezionato
+#### <a name="select-to-discover-available-fields-on-your-chosen-event"></a>Istruzione SELECT per individuare i campi disponibili nell'evento selezionato
 
 
 L'istruzione [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT mostra i campi di evento che è possibile selezionare. Modificare prima di tutto il filtro **o.name LIKE** in modo da restituire il nome dell'evento selezionato.
@@ -403,7 +406,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## Destinazione pair_matching
+## <a name="pairmatching-target"></a>Destinazione pair_matching
 
 
 La destinazione pair_matching consente di individuare gli eventi iniziali che si verificano senza un evento finale corrispondente. Ad esempio, se si verifica un evento lock_acquired che non è seguito tempestivamente da un evento lock_released, questo può costituire un problema.
@@ -412,7 +415,7 @@ La destinazione pair_matching consente di individuare gli eventi iniziali che si
 Il sistema non stabilisce automaticamente la corrispondenza tra eventi iniziali ed eventi finali. Al contrario, la corrispondenza viene definita nell'istruzione CREATE EVENT SESSION. Quando viene stabilita una corrispondenza tra un evento iniziale e uno finale, la coppia viene eliminata per consentire di concentrarsi sugli eventi iniziali senza eventi finali corrispondenti.
 
 
-#### Ricerca di campi associabili per la coppia di eventi iniziale e finale
+#### <a name="finding-matchable-fields-for-the-start-and-end-event-pair"></a>Ricerca di campi associabili per la coppia di eventi iniziale e finale
 
 
 Usando [C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields), è possibile notare che nel set di righe seguente sono presenti circa 16 campi per l'evento lock_acquired. Il set di righe visualizzato qui è stato suddiviso manualmente per mostrare i campi in base ai quali è stata stabilita la corrispondenza. Per alcuni campi sarebbe inutile provare a stabilire la corrispondenza, come nel caso del campo **duration** di entrambi gli eventi.
@@ -441,7 +444,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### Esempio di pair_matching
+### <a name="example-of-pairmatching"></a>Esempio di pair_matching
 
 
 L'istruzione CREATE EVENT SESSION seguente specifica due eventi e due destinazioni. La destinazione pair_matching specifica due set di campi in modo da stabilire la corrispondenza tra gli eventi. La sequenza di campi delimitati da virgole assegnati a **begin_matching_columns=** e **end_matching_columns=** deve essere identica. Tra i campi indicati nel valore delimitato da virgole non sono consentiti caratteri di tabulazione o di nuova riga, ma possono essere usati gli spazi.
@@ -539,7 +542,7 @@ Le righe relative agli eventi lock_acquired non abbinati possono includere il te
 
 <a name="h2_target_ring_buffer"></a>
 
-## Destinazione ring_buffer
+## <a name="ringbuffer-target"></a>Destinazione ring_buffer
 
 
 La destinazione ring_buffer è utile per eseguire in modo semplice e rapido il test degli eventi. Quando si arresta la sessione eventi, l'output archiviato viene rimosso.
@@ -547,7 +550,7 @@ La destinazione ring_buffer è utile per eseguire in modo semplice e rapido il t
 In questa sezione ring_buffer viene inoltre illustrato come usare l'implementazione Transact-SQL di XQuery per copiare il contenuto XML di ring_buffer in un set di righe relazionale più leggibile.
 
 
-#### CREATE EVENT SESSION con ring_buffer
+#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION con ring_buffer
 
 
 Questa istruzione CREATE EVENT SESSION che usa la destinazione ring_buffer non presenta caratteristiche particolari.
@@ -581,7 +584,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### Output XML ricevuto per lock_acquired da ring_buffer
+### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Output XML ricevuto per lock_acquired da ring_buffer
 
 
 Quando è recuperato da un'istruzione SELECT, il contenuto è riportato in forma di stringa XML. Di seguito è riportata la stringa XML archiviata dalla destinazione ring_buffer durante il testing. Tuttavia, per limitare la quantità di codice XML visualizzata, sono stati cancellati tutti gli elementi tranne due &#x3c;event&#x3e;. Inoltre, per ogni elemento &#x3c;event&#x3e; sono stati eliminati diversi elementi &#x3c;data&#x3e; estranei.
@@ -593,7 +596,7 @@ Quando è recuperato da un'istruzione SELECT, il contenuto è riportato in forma
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -617,18 +620,18 @@ Quando è recuperato da un'istruzione SELECT, il contenuto è riportato in forma
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-05T23:59:56.012Z">
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -652,11 +655,11 @@ Quando è recuperato da un'istruzione SELECT, il contenuto è riportato in forma
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
 </RingBufferTarget>
@@ -692,7 +695,7 @@ SELECT * FROM #XmlAsTable;
 ```
 
 
-### XQuery per visualizzare il codice XML come set di righe
+### <a name="xquery-to-see-the-xml-as-a-rowset"></a>XQuery per visualizzare il codice XML come set di righe
 
 
 Per visualizzare il codice XML precedente come set di righe relazionale, continuare dall'istruzione SELECT precedente ed eseguire il codice T-SQL seguente. Le righe commentate spiegano ogni uso di XQuery.
@@ -723,7 +726,7 @@ SELECT
 ```
 
 
-#### Note di XQuery dall'istruzione SELECT precedente
+#### <a name="xquery-notes-from-preceding-select"></a>Note di XQuery dall'istruzione SELECT precedente
 
 
 (A)
@@ -749,7 +752,7 @@ SELECT
 - Questo vale per il codice XML restituito dalla clausola FROM precedente.
 
 
-#### Output di XQuery SELECT
+#### <a name="output-from-xquery-select"></a>Output di XQuery SELECT
 
 
 Di seguito è riportato il set di righe generato dal codice T-SQL precedente che include XQuery.
@@ -764,7 +767,7 @@ OccurredDtTm              Mode    DatabaseName
 
 
 
-## Spazi dei nomi XEvent .NET e C&#x23;
+## <a name="xevent-net-namespaces-and-cx23"></a>Spazi dei nomi XEvent .NET e C&#x23;
 
 
 Package0 ha altre due destinazioni che però non possono essere usate in Transact-SQL:
@@ -781,10 +784,13 @@ La destinazione event_stream può essere usata nei programmi .NET scritti in lin
 Se rilevato, l'errore **25726** indica che il flusso di eventi riempito più velocemente rispetto al client può avere determinato il consumo dei dati. Di conseguenza, il motore di database si è disconnesso dal flusso di eventi per evitare il rallentamento delle prestazioni del server.
 
 
-### Spazi dei nomi XEvent
+### <a name="xevent-namespaces"></a>Spazi dei nomi XEvent
 
 
 - [Spazio dei nomi Microsoft.SqlServer.Management.XEvent](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Spazio dei nomi Microsoft.SqlServer.XEvent.Linq](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
+
+
 

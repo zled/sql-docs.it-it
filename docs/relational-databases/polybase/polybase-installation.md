@@ -1,36 +1,40 @@
 ---
-title: "Installazione di PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase, installazione"
+title: Installazione di PolyBase | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
 caps.latest.revision: 25
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Installazione di PolyBase
+# <a name="polybase-installation"></a>Installazione di PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per installare una versione di valutazione di SQL Server, visitare [SQL Server Valutazioni](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   Copia di valutazione di SQL Server a 64 bit  
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE) versione 7.51 o successiva (64 bit) (è valido sia [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) che [JRE Server](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Passare a [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Download di Java SE). Il programma di installazione avrà esito negativo se JRE non è presente.  
+-   Oracle Java SE RunTime Environment (JRE) versione 7.51 o successiva (64 bit) (è valido sia [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) che [JRE Server](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) ). Passare a [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Download di Java SE). Il programma di installazione avrà esito negativo se JRE non è presente.  
   
 -   Memoria minima: 4 GB  
   
@@ -42,7 +46,15 @@ caps.handback.revision: 23
   
  È possibile installare PolyBase in una sola istanza di SQL Server per computer.  
   
-## Installare PolyBase tramite l'Installazione guidata  
+## <a name="single-node-or-polybase-scaleout-group"></a>Singolo nodo o gruppo di scalabilità orizzontale di PolyBase
+Prima di iniziare a installare PolyBase nelle istanze di SQL Server, è consigliabile pianificare se si desidera eseguire un'installazione in un singolo nodo o in un gruppo di scalabilità orizzontale di PolyBase. Per un gruppo di scalabilità orizzontale di PolyBase, è necessario verificare le condizioni seguenti. 
+- Tutti i computer si trovano nello stesso dominio.
+- Usare lo stesso account del servizio e la stessa password durante l'installazione.
+- Le istanze di SQL Server possono comunicare tra loro in rete.
+
+Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità orizzontale, non sarà più possibile apportare modifiche. Sarà necessario disinstallare e reinstallare la funzionalità per modificare questa impostazione.
+
+## <a name="install-using-the-installation-wizard"></a>Installare PolyBase tramite l'Installazione guidata  
   
 1.  Eseguire **Centro installazione SQL Server**. Inserire il supporto di installazione di SQL Server e fare doppio clic su **Setup.exe**.  
   
@@ -73,9 +85,9 @@ caps.handback.revision: 23
 |componente di SQL Server|Parametro e valori|Descrizione|  
 |--------------------------|--------------------------|-----------------|  
 |Controllo dell'installazione di SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Viene selezionata la funzionalità PolyBase.|  
-|Motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
-|Motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCPASSWORD|Viene specificata la password per l'account del servizio motore.|  
-|Motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio motore PolyBase: automatico (predefinito), disabilitato o manuale.|  
+|servizio motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
+|servizio motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCPASSWORD|Viene specificata la password per l'account del servizio motore.|  
+|servizio motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio motore PolyBase: automatico (predefinito), disabilitato o manuale.|  
 |SQL Server PolyBase Data Movement Service|**Facoltativo**<br /><br /> /PBDMSSVCACCOUNT|Viene specificato l'account per il servizio di spostamento dati. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase Data Movement Service|**Facoltativo**<br /><br /> /PBDMSSVCPASSWORD|Viene specificata la password per l'account di spostamento dati.|  
 |SQL Server PolyBase Data Movement Service|**Facoltativo**<br /><br /> /PBDMSSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio di spostamento dati: automatico (predefinito), disabilitato o manuale.|  
@@ -89,7 +101,7 @@ caps.handback.revision: 23
 ```  
   
 Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,Polybase   
-/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<fabric-domain>\Administrator"   
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="\<fabric-domain>\Administrator"   
 /INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE   
 /PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"   
 /PBENGSVCACCOUNT="<DomainName>\<UserName>" /PBENGSVCPASSWORD="<StrongPassword>"   
@@ -97,28 +109,28 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
   
 ```  
   
-## Note di post-installazione  
+## <a name="post-installation-notes"></a>Note di post-installazione  
  PolyBase installa tre database utente, DWConfiguration, DWDiagnostics e DWQueue.   I database sono destinatati all'uso con PolyBase e non devono essere modificati o eliminati.  
   
-### Procedura per confermare l'installazione  
+### <a name="how-to-confirm-installation"></a>Procedura per confermare l'installazione  
  Eseguire il comando seguente. Se installato, PolyBase restituisce 1; in caso contrario, restituisce 0.  
   
 ```tsql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-### Regole del firewall  
+### <a name="firewall-rules"></a>Regole del firewall  
  L'installazione di PolyBase di SQL Server crea sul computer le regole del firewall seguenti.  
   
--   PolyBase di SQL Server - Motore di database - \<SQLServerInstanceName> (TCP-In)  
+-   PolyBase di SQL Server - Motore di database - \<NomeIstanzaSQLServer> (TCP-In)  
   
--   PolyBase di SQL Server - Servizi PolyBase - \<SQLServerInstanceName> (TCP-In)  
+-   PolyBase di SQL Server - Servizi PolyBase - \<NomeIstanzaSQLServer> (TCP-In)  
   
 -   PolyBase di SQL Server - SQL Browser - (UDP-In)  
   
  Al momento dell'installazione, se si sceglie di usare l'istanza di SQL Server come parte di un gruppo di scalabilità orizzontale di PolyBase, queste regole vengono attivate e il firewall si apre per consentire le connessioni in ingresso al motore di database di SQL Server, al motore PolyBase di SQL Server, a SQL Server PolyBase Data Movement Service e a SQL Browser. Tuttavia, se il servizio Firewall nel computer non è in esecuzione durante l'installazione, l'installazione di SQL Server non è in grado di attivare queste regole. In tal caso, è necessario avviare il servizio Firewall sul computer e abilitare queste regole dopo l'installazione.  
   
-#### Per abilitare le regole del firewall  
+#### <a name="to-enable-the-firewall-rules"></a>Per abilitare le regole del firewall  
   
 -   Aprire il **Pannello di controllo**.  
   
@@ -128,10 +140,11 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Fare clic con il pulsante destro del mouse sulla regola disattivata e scegliere **Abilita regola**.  
   
-### Account del servizio PolyBase
+### <a name="polybase-service-accounts"></a>Account del servizio PolyBase
 Per modificare gli account del servizio per il motore PolyBase e PolyBase Data Movement Service, disinstallare e reinstallare la funzionalità PolyBase.
    
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
  Vedere [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
   
+

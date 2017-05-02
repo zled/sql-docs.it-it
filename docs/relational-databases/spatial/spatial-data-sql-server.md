@@ -1,35 +1,39 @@
 ---
-title: "Dati spaziali (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo di dati geography [SQL Server], progettazione dell’archiviazione spaziale"
-  - "dati spaziali planari [SQL Server], progettazione"
-  - "tipi di dati spaziali [SQL Server]"
-  - "dati spaziali geodetici [SQL Server]"
-  - "tipo di dati geometry [SQL Server], progettazione dell’archiviazione spaziale"
-  - "archiviazione spaziale [SQL Server]"
-  - "dati spaziali geodetici [SQL Server], progettazione"
+title: Dati spaziali (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server], spatial storage design
+- planar spatial data [SQL Server], designing
+- spatial data types [SQL Server]
+- geodetic spatial data [SQL Server]
+- geometry data type [SQL Server], spatial storage design
+- spatial storage [SQL Server]
+- geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7ed039271847202c8c84a03ec56d55a96593089
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dati spaziali (SQL Server)
+# <a name="spatial-data-sql-server"></a>Dati spaziali (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   I dati spaziali rappresentano informazioni sulla posizione fisica e sulla forma di oggetti geometrici. Questi oggetti possono essere posizioni dei punti oppure oggetti più complessi ad esempio paesi, strade o laghi.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di dati spaziali: il tipo di dati **geometry** e il tipo di dati **geography**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di dati spaziali: il tipo di dati **geometry** e il tipo di dati **geography** .  
   
 -   Il tipo **geometry** rappresenta i dati in un sistema di coordinate euclideo (piano).  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 34
  Entrambi i tipi di dati sono implementati come tipi di dati Common Language Runtime (CLR) .NET in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], scaricare il white paper [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407) (Nuove funzionalità spaziali in SQL Server 2012).  
+>  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], scaricare il white paper [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)(Nuove funzionalità spaziali in SQL Server 2012).  
   
 ##  <a name="reltasks"></a> Attività correlate  
  [Creazione, costruzione e query di istanze geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 34
  [Creazione, modifica ed eliminazione di indici spaziali](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Fornisce informazioni sulla creazione, la modifica e il rilascio di un indice spaziale.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)  
  Sono stati introdotti i tipi di dati spaziali.  
   

@@ -1,49 +1,53 @@
 ---
-title: "Configurazione della sincronizzazione Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.VIRDIRINFO.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.DIRACCESS.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.ANONACCESS.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.WEBSERV.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.COMPLETEWIZ.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.DIRACCESS.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.ANONACCESS.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.AUTHACCESS.F1"
-  - "SQL10.REP.CONFIGWEBSYNCWIZARD.AUTHACCESS.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.COMPLETEWIZ.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.VIRDIRINFO.F1"
-  - "SQL13.REP.CONFIGWEBSYNCWIZARD.WEBSERV.F1"
-helpviewer_keywords: 
-  - "sincronizzazione Web, procedure consigliate per la sicurezza"
-  - "sincronizzazione Web, configurazione"
+title: Configurare la sincronizzazione Web | Microsoft Docs
+ms.custom: 
+ms.date: 01/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.VIRDIRINFO.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.DIRACCESS.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.ANONACCESS.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.WEBSERV.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.COMPLETEWIZ.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.DIRACCESS.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.ANONACCESS.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.AUTHACCESS.F1
+- SQL10.REP.CONFIGWEBSYNCWIZARD.AUTHACCESS.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.COMPLETEWIZ.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.VIRDIRINFO.F1
+- SQL13.REP.CONFIGWEBSYNCWIZARD.WEBSERV.F1
+helpviewer_keywords:
+- Web synchronization, security best practices
+- Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 74
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione della sincronizzazione Web
+# <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  L'opzione di sincronizzazione Web per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replica di tipo Merge consente la replica dei dati tramite il protocollo HTTPS su Internet. Per utilizzare la sincronizzazione Web, è innanzitutto necessario eseguire le azioni di configurazione riportate di seguito:  
+  L'opzione di sincronizzazione Web per la replica di tipo merge di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la replica dei dati tramite il protocollo HTTPS su Internet. Per utilizzare la sincronizzazione Web, è innanzitutto necessario eseguire le azioni di configurazione riportate di seguito:  
   
-1.  Creare nuovi account di dominio ed eseguire il mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso.  
+1.  Creare nuovi account di dominio ed eseguire il mapping degli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Configurare il computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per la sincronizzazione delle sottoscrizioni.  
   
@@ -52,16 +56,16 @@ caps.handback.revision: 73
 4.  Configurare una o più sottoscrizioni per l'utilizzo della sincronizzazione Web.  
   
 > [!NOTE]  
->  Se si intende replicare volumi elevati di dati o utilizzare i tipi di dati di grandi dimensioni come **varchar (max)**, leggere la sezione "Replica grandi volumi di dati" in questo argomento.  
+>  Se si intende replicare volumi elevati di dati o utilizzare tipi di dati di grandi dimensioni, ad esempio **varchar(max)**, leggere la sezione "Replica di volumi elevati di dati" in questo argomento.  
   
  Per configurare correttamente la sincronizzazione Web, è necessario decidere come verrà configurata la sicurezza per soddisfare requisiti e criteri specifici. È preferibile prendere queste decisioni e creare gli account necessari prima di configurare IIS, la pubblicazione e le sottoscrizioni.  
   
  Nelle procedure riportate di seguito viene descritta una configurazione della sicurezza semplificata in cui vengono utilizzati account locali, per motivi di brevità. Questa configurazione semplificata è adatta per installazioni in cui sia IIS sia il server di pubblicazione e il server di distribuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguiti nello stesso computer, anche se è più probabile (e consigliabile) utilizzare una topologia a più server per un'installazione di produzione. È possibile sostituire gli account locali indicati nelle procedure con account di dominio.  
   
-## Creazione di nuovi account e mapping di account di accesso di SQL Server  
+## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>Creazione di nuovi account e mapping di account di accesso di SQL Server  
  Il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll) si connette al server di pubblicazione rappresentando l'account specificato per il pool di applicazioni associato al sito Web di replica.  
   
- L'account utilizzato per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Listener per la replica deve disporre delle autorizzazioni come descritto in [sicurezza agente di Merge](../../relational-databases/replication/merge-agent-security.md), nella sezione "Connetti al server di pubblicazione o server di distribuzione". In breve è necessario che l'account:  
+ L'account utilizzato per il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni come descritto in [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md), nella sezione relativa alla connessione al server di pubblicazione o al server di distribuzione". In breve è necessario che l'account:  
   
 -   sia membro dell'elenco di accesso alla pubblicazione;  
   
@@ -73,12 +77,12 @@ caps.handback.revision: 73
   
  Se si utilizza la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la prima volta è inoltre necessario creare account e account di accesso per gli agenti di replica. Per ulteriori informazioni, vedere le sezioni "Configurazione della pubblicazione" e "Configurazione della sottoscrizione" in questo argomento.  
   
- Prima di configurare la sincronizzazione Web, vedere la sezione "Procedure consigliate per la sicurezza nella sincronizzazione Web" in questo argomento. Per ulteriori informazioni sulla sicurezza per la sincronizzazione Web, vedere [architettura di sicurezza per la sincronizzazione Web](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md).  
+ Prima di configurare la sincronizzazione Web, vedere la sezione "Procedure consigliate per la sicurezza nella sincronizzazione Web" in questo argomento. Per ulteriori informazioni sulla sicurezza della sincronizzazione Web, vedere [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md).  
   
-## Configurazione del computer che esegue IIS  
+## <a name="configuring-the-computer-that-is-running-iis"></a>Configurazione del computer che esegue IIS  
  La sincronizzazione Web richiede l'installazione e la configurazione di IIS. Prima di poter configurare una pubblicazione per l'utilizzo della sincronizzazione Web, è necessario l'URL del sito Web di replica.  
   
- La sincronizzazione Web è supportata in inizio IIS versione 5.0. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0. A partire da SQL Server 2012, utilizzare il componente di sincronizzazione web sul server IIS, si consiglia di operazioni di installazione SQL Server con la replica. Può essere l'edizione gratuita di SQL Server Express.  
+ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0. A partire da SQL Server 2012, per usare il componente di sincronizzazione Web nel server IIS, è consigliabile installare SQL Server con la replica. Ad esempio, è possibile installare l'edizione gratuita SQL Server Express.  
   
  Per la sincronizzazione Web è richiesto SSL. È necessario un certificato di sicurezza rilasciato da un'autorità di certificazione. Solo ai fini del test, è possibile utilizzare un certificato di sicurezza autocertificato.  
    
@@ -89,40 +93,40 @@ caps.handback.revision: 73
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-## Creazione di un Web garden  
+## <a name="creating-a-web-garden"></a>Creazione di un Web garden  
  Il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due operazioni di sincronizzazione simultanee per thread. Il superamento di questo limite potrebbe causare interruzioni nella risposta del listener. Il numero di thread allocato a replisapi.dll è determinato dalla proprietà Numero massimo di processi di lavoro del pool di applicazioni. Il valore predefinito della proprietà è 1.  
   
  È possibile supportare un numero maggiore di operazioni di sincronizzazione simultanee per CPU aumentando il valore della proprietà Numero massimo di processi di lavoro. L'operazione di scalabilità orizzontale applicata attraverso l'aumento del numero di processi di lavoro per CPU è nota come creazione di un Web garden.  
   
  Il Web garden consente la sincronizzazione di più di due sottoscrittori contemporaneamente. Aumenterà inoltre l'utilizzo della CPU da parte di replisapi.dll, con un potenziale impatto negativo sulle prestazioni complessive del server. È importante valutare queste considerazioni quando si sceglie un valore per la proprietà Numero massimo di processi di lavoro.  
   
-#### Per aumentare la massima processi di lavoro in IIS 7  
+#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Per aumentare il valore di Numero massimo di processi di lavoro in IIS 7  
   
-1.  In **Gestione Internet Information Services (IIS)**, espandere il nodo del server locale e quindi fare clic sui **Pool di applicazioni** nodo.  
+1.  In **Gestione Internet Information Services (IIS)**espandere il nodo del server locale, quindi fare clic sul nodo **Pool di applicazioni** .  
   
-2.  Selezionare il pool di applicazioni associato al sito di sincronizzazione Web e quindi fare clic su **Impostazioni avanzate** sul **azioni** riquadro.  
+2.  Selezionare il pool di applicazioni associato al sito di sincronizzazione Web, quindi fare clic su **Impostazioni avanzate** nel riquadro **Azioni** .  
   
-3.  Nella finestra di dialogo Impostazioni avanzate, sotto il **modello di processo** titolo, fare clic sulla riga **massimo processi di lavoro**. Modificare il valore della proprietà e quindi fare clic su **OK**.  
+3.  Nella finestra di dialogo Impostazioni avanzate, sotto l'intestazione **Elabora modello** , fare clic sulla riga **Numero massimo di processi di lavoro**. Modificare il valore della proprietà, quindi fare clic su **OK**.  
   
-## Configurazione della pubblicazione  
- Per utilizzare la sincronizzazione Web, creare una pubblicazione con le stesse modalità utilizzate per una topologia di merge standard. Per ulteriori informazioni, vedere [pubblicare dati e oggetti di Database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+## <a name="configuring-the-publication"></a>Configurazione della pubblicazione  
+ Per utilizzare la sincronizzazione Web, creare una pubblicazione con le stesse modalità utilizzate per una topologia di merge standard. Per altre informazioni, vedere [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- Dopo aver creata la pubblicazione, abilitare l'opzione per consentire la sincronizzazione Web utilizzando uno dei metodi seguenti: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], o gli oggetti RMO (Replication Management Objects). Per abilitare la sincronizzazione Web, è necessario fornire l'indirizzo del server Web per le connessioni del sottoscrittore.  
+ Dopo la creazione della pubblicazione, abilitare l'opzione che consente la sincronizzazione Web utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o gli oggetti RMO (Replication Management Objects). Per abilitare la sincronizzazione Web, è necessario fornire l'indirizzo del server Web per le connessioni del sottoscrittore.  
   
- Se si utilizza un server di pubblicazione per la prima volta, è necessario configurare un server di distribuzione e una condivisione snapshot. L'agente di merge in ogni sottoscrittore deve disporre delle autorizzazioni di lettura per la condivisione snapshot. Per ulteriori informazioni, vedere [Configura distribuzione](../../relational-databases/replication/configure-distribution.md) e [sicurezza della cartella Snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+ Se si utilizza un server di pubblicazione per la prima volta, è necessario configurare un server di distribuzione e una condivisione snapshot. L'agente di merge in ogni sottoscrittore deve disporre delle autorizzazioni di lettura per la condivisione snapshot. Per altre informazioni, vedere [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md) e [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
- **generazione** è una parola riservata in websync file xml. Non tentare di pubblicare tabelle contenenti colonne denominate **gen**.  
+ **gen** è una parola riservata nei file XML websync. Non tentare di pubblicare tabelle contenenti colonne denominate **gen**.  
   
-## Configurazione della sottoscrizione  
+## <a name="configuring-the-subscription"></a>Configurazione della sottoscrizione  
  Dopo avere abilitato una pubblicazione e configurato IIS, creare una sottoscrizione pull e specificare che deve essere sincronizzata utilizzando IIS. La sincronizzazione Web è supportata solo per le sottoscrizioni pull.  
   
-## Aggiornamento da una versione precedente di SQL Server  
- Se si dispone di una topologia di sincronizzazione Web esistente configurata e si esegue l'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario assicurarsi che la versione più recente di replisapi. dll viene copiata nella directory virtuale utilizzata dalla sincronizzazione Web. Per impostazione predefinita, la versione più recente di replisapi. dll si trova in c:\Programmi\Microsoft SQL Server\\< nnn\>\COM..  
+## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>Aggiornamento da una versione precedente di SQL Server  
+ Se una topologia di sincronizzazione Web è presente e configurata e si aggiorna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario assicurarsi che la versione più recente di Replisapi.dll venga copiata nella directory virtuale utilizzata dalla sincronizzazione Web. Per impostazione predefinita, la versione più recente di Replisapi.dll si trova in C:\Programmi\ Microsoft SQL Server\\<nnn\>\COM.  
   
-## Replica di volumi elevati di dati  
+## <a name="replicating-large-volumes-of-data"></a>Replica di volumi elevati di dati  
  Per evitare potenziali problemi di memoria nei computer sottoscrittori, nella sincronizzazione Web si utilizza una dimensione massima predefinita di 100 MB per il file XML utilizzato per trasferire le modifiche. Il limite può essere aumentato impostando la chiave del Registro di sistema seguente:  
   
- **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\Replication**  
+ **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
   
  **WebSyncMaxXmlSize DWORD 2000000**  
   
@@ -130,18 +134,18 @@ caps.handback.revision: 73
   
  La dimensione massima per il file XML è 4 GB, ma la replica sincronizza le modifiche di quel file in batch. La dimensione massima dei batch di dati e metadati è di 25 MB. È necessario assicurarsi che i dati di ciascun batch non superino approssimativamente i 20 MB di dimensioni, per tenere conto dell'overhead dei metadati e di altro tipo. Questo limite presenta le implicazioni seguenti:  
   
--   Non è possibile replicare colonne che causano il superamento del limite di 25 MB per dati e metadati. Questo potrebbe essere un problema quando si replicano righe contenenti tipi di dati di grandi dimensioni, ad esempio **varchar (max)**.  
+-   Non è possibile replicare colonne che causano il superamento del limite di 25 MB per dati e metadati. Questo potrebbe essere un problema quando si replicano righe contenenti tipi di dati di grandi dimensioni, ad esempio **varchar(max)**.  
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- Dimensioni del batch per la replica di tipo merge sono misurata in *generazioni*, che sono insiemi di modifiche per articolo. Il numero di generazioni in un batch viene specificato utilizzando il –**DownloadGenerationsPerBatch** e –**UploadGenerationsPerBatch** i parametri dell'agente di Merge. Per ulteriori informazioni, vedere [agente Merge repliche](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch è specificato utilizzando i parametri **-DownloadGenerationsPerBatch** e **-UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
-## Procedure consigliate per la sicurezza nella sincronizzazione Web  
+## <a name="security-best-practices-for-web-synchronization"></a>Procedure consigliate per la sicurezza nella sincronizzazione Web  
  Sono disponibili numerose impostazioni relative alla sicurezza nella sincronizzazione Web. È consigliabile adottare l'approccio seguente:  
   
--   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di distribuzione e server di pubblicazione possono essere nello stesso computer (una configurazione tipica per la replica di tipo merge). È tuttavia necessario che IIS sia installato in un computer separato.  
+-   Il server di distribuzione e il server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono trovarsi nello stesso computer. Si tratta della configurazione tipica nella replica di tipo merge. È tuttavia necessario che IIS sia installato in un computer separato.  
   
 -   Utilizzare SSL (Secure Sockets Layer) per la crittografia della connessione tra il sottoscrittore e il computer che esegue IIS. Questa operazione è necessaria per la sincronizzazione Web.  
   
@@ -152,28 +156,29 @@ caps.handback.revision: 73
   
 -   Specificare che l'agente snapshot deve essere eseguito con un account di dominio di Windows e che deve utilizzare tale account per le connessioni. Si tratta della configurazione predefinita. Specificare che ogni agente di merge deve essere eseguito con l'account di dominio dell'utente che utilizza il computer Sottoscrittore e che deve utilizzare tale account per le connessioni.  
   
-     Per ulteriori informazioni sulle autorizzazioni richieste dagli agenti, vedere [modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
+     Per ulteriori informazioni sulle autorizzazioni richieste dagli agenti, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Specificare lo stesso account di dominio di quello dell'agente di Merge viene utilizzato quando si specifica un account e password nel **informazioni sul Server Web** pagina della procedura guidata nuova sottoscrizione o quando si specificano valori per il **@internet_url** e **@internet_login** parametri di [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
+-   Specificare lo stesso account di dominio utilizzato dall'agente di merge quando si specifica un account e una password nella pagina **Informazioni sul server Web** della Creazione guidata nuova sottoscrizione o quando si specificano i valori per i parametri **@internet_url** e **@internet_login** di [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
   
 -   Ogni pubblicazione deve utilizzare una directory virtuale separata per IIS.  
   
--   L'account con cui viene eseguito il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) è anche l'account utilizzato per la connessione al server di pubblicazione e al server di distribuzione durante la sincronizzazione. Deve essere eseguito il mapping di questo account a un account di accesso di SQL nel server di pubblicazione e nel server di distribuzione. Per ulteriori informazioni, vedere la sezione "Impostazione delle autorizzazioni per il Listener SQL Server la replica" nella [configurare IIS per la sincronizzazione Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   L'account con cui viene eseguito il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) è anche l'account utilizzato per la connessione al server di pubblicazione e al server di distribuzione durante la sincronizzazione. Deve essere eseguito il mapping di questo account a un account di accesso di SQL nel server di pubblicazione e nel server di distribuzione. Per altre informazioni, vedere la sezione "Impostazione delle autorizzazioni per Listener per la replica di SQL Server" in [Configurare IIS per la sincronizzazione Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   È possibile utilizzare la connessione FTP per trasferire lo snapshot dal server di pubblicazione al computer che esegue IIS. Lo snapshot viene sempre trasferito dal computer che esegue IIS al Sottoscrittore tramite HTTPS. Per ulteriori informazioni, vedere [trasferire gli snapshot tramite FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   È possibile utilizzare la connessione FTP per trasferire lo snapshot dal server di pubblicazione al computer che esegue IIS. Lo snapshot viene sempre trasferito dal computer che esegue IIS al Sottoscrittore tramite HTTPS. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 -   Se i server nella topologia di replica sono protetti da un firewall, potrebbe essere necessario aprire porte nel firewall per consentire la sincronizzazione Web.  
   
-    -   Il computer sottoscrittore si connette al computer che esegue IIS tramite HTTPS utilizzando SSL. In questo caso è in genere configurato l'utilizzo della porta 443. [!INCLUDE[ssEW](../../includes/ssew-md.md)] Gli abbonati possono inoltre connettersi tramite HTTP, in genere configurato per l'utilizzo della porta 80.  
+    -   Il computer sottoscrittore si connette al computer che esegue IIS tramite HTTPS utilizzando SSL. In questo caso è in genere configurato l'utilizzo della porta 443. I Sottoscrittori di[!INCLUDE[ssEW](../../includes/ssew-md.md)] possono inoltre connettersi tramite HTTP, in genere configurato per l'utilizzo della porta 80.  
   
     -   Il computer che esegue IIS si connette in genere al server di pubblicazione o al server di distribuzione mediante la porta 1433 (istanza predefinita). Quando il server di pubblicazione o di distribuzione corrisponde a un'istanza denominata in un server con un'altra istanza predefinita, per la connessione all'istanza denominata viene in genere utilizzata la porta 1500.  
   
-    -   Se il computer che esegue IIS e il server di distribuzione sono separati da un firewall e per il recapito di snapshot viene utilizzata una condivisione FTP, è necessario aprire le porte utilizzate per FTP. Per ulteriori informazioni, vedere [trasferire gli snapshot tramite FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Se il computer che esegue IIS e il server di distribuzione sono separati da un firewall e per il recapito di snapshot viene utilizzata una condivisione FTP, è necessario aprire le porte utilizzate per FTP. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  L'apertura di porte nel firewall potrebbe esporre il server ad attacchi dannosi. Prima di aprire una porta, verificare di comprenderne le implicazioni per un sistema firewall. Per altre informazioni, vedere [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sincronizzazione Web per la replica di tipo merge](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   
+

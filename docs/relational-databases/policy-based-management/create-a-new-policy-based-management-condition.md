@@ -1,24 +1,28 @@
 ---
-title: "Creare una nuova condizione della gestione basata su criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gestione basata su criteri, creazione delle condizioni dei criteri"
+title: Creare una nuova condizione della gestione basata su criteri | Microsoft Docs
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policy conditions
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare una nuova condizione della gestione basata su criteri
+# <a name="create-a-new-policy-based-management-condition"></a>Creare una nuova condizione della gestione basata su criteri
   Questo argomento descrive come creare una condizione della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -40,9 +44,9 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare una condizione  
+#### <a name="to-create-a-condition"></a>Per creare una condizione  
   
-1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui creare una condizione della gestione basata su criteri.  
+1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui creare una condizione della gestione basata su criteri.  
   
 2.  Fare clic sul segno più per espandere la cartella **Gestione** .  
   
@@ -61,3 +65,4 @@ caps.handback.revision: 11
 9. Al termine, fare clic su **OK**.  
   
   
+

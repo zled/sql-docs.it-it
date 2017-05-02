@@ -1,31 +1,35 @@
 ---
-title: "Classe di evento Showplan XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML - classe di evento"
+title: Classe di evento Showplan XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML event class
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da78c853075becf8d49fa00626b071bbbf5997c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Showplan XML
+# <a name="showplan-xml-event-class"></a>Showplan XML - classe di evento
   La classe di evento Showplan XML viene generata quando in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL. Includere la classe di evento Showplan XML per identificare gli operatori Showplan. In questa classe ciascun evento viene archiviato come documento XML correttamente definito.  
   
  Quando si include la classe di evento Showplan XML in una traccia, l'overhead generato influisce significativamente sulle prestazioni. La classe Showplan XML consente di archiviare un piano di query che viene creato durante l'ottimizzazione della query. Per ridurre al minimo l'overhead generato, limitare l'utilizzo di questa classe di eventi alle tracce che eseguono il monitoraggio di problemi specifici per brevi periodi di tempo.  
   
- Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web di Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740) o come parte dell'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web di Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Colonne di dati della classe di evento Showplan XML  
+## <a name="showplan-xml-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan XML  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -57,7 +61,7 @@ caps.handback.revision: 37
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

@@ -1,28 +1,32 @@
 ---
-title: "Preparazione dei dati per l&#39;importazione o l&#39;esportazione bulk (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "importazione bulk [SQL Server], pianificazione"
-  - "importazione bulk [SQL Server], da un file CSV"
-  - "formati di dati [SQL Server], operazioni di pianificazione"
-  - "file CSV [SQL Server]"
-  - "campi tra virgolette nei file CSV [SQL Server]"
+title: Preparare i dati per l&quot;importazione o l&quot;esportazione bulk (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], planning
+- bulk importing [SQL Server], from a CSV file
+- data formats [SQL Server], planning operations
+- CSV files [SQL Server]
+- quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fbcca0ce4e711ba22215e9e6ff09389b02d6e80b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Preparazione dei dati per l&#39;importazione o l&#39;esportazione bulk (SQL Server)
+# <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparazione dei dati per l'importazione o l'esportazione bulk (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In questa sezione vengono illustrati i fattori da considerare nella pianificazione di operazioni di esportazione bulk, nonché i requisiti per le operazioni di importazione bulk.  
@@ -30,8 +34,8 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  In caso di dubbio riguardo alla formattazione da applicare a un file di dati per l'importazione in blocco, usare l'utilità **bcp** per esportare i dati dalla tabella in un file di dati. La formattazione applicata a ogni campo dati di questo file indica la formattazione necessaria per l'importazione bulk dei dati nella colonna della tabella corrispondente. Usare la stessa formattazione per i campi del file di dati da importare.  
   
-## Considerazioni sul formato dei file di dati per l'esportazione bulk  
- Prima di eseguire un'operazione di esportazione in blocco usando il comando **bcp**, tenere presente quanto segue:  
+## <a name="data-file-format-considerations-for-bulk-export"></a>Considerazioni sul formato dei file di dati per l'esportazione bulk  
+ Prima di eseguire un'operazione di esportazione in blocco usando il comando **bcp** , tenere presente quanto segue:  
   
 -   Quando si esportano dati in un file, il comando **bcp** crea automaticamente il file di dati utilizzando il nome di file specificato. Se tale nome è già usato, il contenuto esistente del file di dati verrà sovrascritto con i dati di cui si intende eseguire la copia bulk.  
   
@@ -39,13 +43,13 @@ caps.handback.revision: 51
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare analisi parallele per recuperare i dati. Pertanto in generale non c'è nessuna garanzia che le righe della tabella di cui si esegue l'esportazione bulk da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano riportate in un determinato ordine nel file di dati. Per far sì che le righe della tabella siano disposte in un ordine specifico nel file di dati, usare l'opzione **queryout** per eseguire l'esportazione in blocco da una query e specificare una clausola ORDER BY.  
   
-## Requisiti relativi al formato dei file di dati per l'importazione bulk  
+## <a name="data-file-format-requirements-for-bulk-import"></a>Requisiti relativi al formato dei file di dati per l'importazione bulk  
  Per importare dati da un file di dati, il file deve soddisfare i requisiti di base seguenti:  
   
 -   È necessario che i dati siano disposti in righe e colonne.  
   
 > [!NOTE]  
->  Non è necessario che la struttura del file di dati corrisponda esattamente alla struttura della tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in quanto è possibile ignorare o riordinare le colonne durante il processo di importazione bulk.  
+>  Non è necessario che la struttura del file di dati corrisponda esattamente alla struttura della tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in quanto è possibile ignorare o riordinare le colonne durante il processo di importazione bulk.  
   
 -   È necessario che il file di dati sia in un formato supportato, ad esempio carattere o nativo.  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 51
   
     -   Nessuno o tutti i valori in un campo dati sono racchiusi tra virgolette ("").  
   
-     Per eseguire un'importazione bulk di dati da un file di tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro o Visual FoxPro (con estensione dbf) o da un foglio di lavoro di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xls), è necessario convertire i dati in un file CSV conforme alle restrizioni precedenti. L'estensione del file è in genere csv. È quindi possibile usare il file con estensione csv come file di dati in un'operazione di importazione bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Per eseguire un'importazione bulk di dati da un file di tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro o Visual FoxPro (con estensione dbf) o da un foglio di lavoro di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xls), è necessario convertire i dati in un file CSV conforme alle restrizioni precedenti. L'estensione del file è in genere csv. È quindi possibile usare il file con estensione csv come file di dati in un'operazione di importazione bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Nei sistemi a 32 bit è possibile importare dati CSV in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza operazioni di ottimizzazione dell'importazione in blocco usando [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con il provider OLE DB per Jet. In Jet i file di testo vengono considerati tabelle il cui schema è definito dal file schema.ini, che si trova nella stessa directory dell'origine dati.  Per i dati CSV, uno dei parametri nel file schema.ini sarà "FORMAT=CSVDelimited". Per usare questa soluzione, è necessario acquisire familiarità con le operazioni di Jet Test IISAMm, ovvero la sintassi della relativa stringa di connessione, l'utilizzo del file schema.ini, le opzioni di impostazione del Registro di sistema e così via.  Le origini migliori per tali informazioni sono costituite dalla Guida di Microsoft Access e dagli articoli della Knowledge Base (KB). Per altre informazioni, vedere [Inizializzazione del driver origine dati di testo](http://go.microsoft.com/fwlink/?LinkId=128503), [Come usare una query distribuita di SQL Server 7.0 con un server collegato a database di Access protetti](http://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDURA: Usare il provider OLE DB Jet 4.0 per la connessione a database ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)e [Come aprire file di testo delimitati mediante IIsam di testo del provider Jet](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     Nei sistemi a 32 bit è possibile importare dati CSV in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza operazioni di ottimizzazione dell'importazione in blocco usando [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con il provider OLE DB per Jet. In Jet i file di testo vengono considerati tabelle il cui schema è definito dal file schema.ini, che si trova nella stessa directory dell'origine dati.  Per i dati CSV, uno dei parametri nel file schema.ini sarà "FORMAT=CSVDelimited". Per usare questa soluzione, è necessario acquisire familiarità con le operazioni di Jet Test IISAMm, ovvero la sintassi della relativa stringa di connessione, l'utilizzo del file schema.ini, le opzioni di impostazione del Registro di sistema e così via.  Le origini migliori per tali informazioni sono costituite dalla Guida di Microsoft Access e dagli articoli della Knowledge Base (KB). Per altre informazioni, vedere [Inizializzazione del driver origine dati di testo](https://msdn.microsoft.com/library/office/ff834391.aspx), [Come usare una query distribuita di SQL Server 7.0 con un server collegato a database di Access protetti](http://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDURA: Usare il provider OLE DB Jet 4.0 per la connessione a database ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)e [Come aprire file di testo delimitati mediante IIsam di testo del provider Jet](http://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Per l'importazione bulk di dati da un file a una tabella devono inoltre verificarsi le condizioni seguenti:  
   
@@ -79,17 +83,17 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  L'importazione bulk in una vista partizionata non è supportata e avrà pertanto esito negativo.  
   
-## Risorse esterne  
+## <a name="external-resources"></a>Risorse esterne  
  [Come importare dati da Excel a SQL Server](http://support.microsoft.com/kb/321686)  
   
-## Cronologia modifiche  
+## <a name="change-history"></a>Cronologia modifiche  
   
 |Contenuto aggiornato|  
 |---------------------|  
 |Aggiunta di informazioni sull'utilizzo del provider OLE DB per Jet per importare dati CSV.|  
   
-## Vedere anche  
- [Utilità bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   

@@ -1,25 +1,29 @@
 ---
-title: "Guida sull&#39;architettura di elaborazione delle query | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guida, architettura di elaborazione delle query"
-  - "guida sull'architettura di elaborazione delle query"
+title: Guida sull&quot;architettura di elaborazione delle query | Microsoft Docs
+ms.custom: 
+ms.date: 10/26/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, query processing architecture
+- query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0f2edc5c0bbf2fba20b26826413ee4f659b379b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guida sull&#39;architettura di elaborazione delle query
+# <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Il motore di database consente di elaborare le query su diverse architetture di archiviazione dei dati, come tabelle locali, tabelle partizionate e tabelle distribuite su più server. Gli argomenti seguenti descrivono l'elaborazione delle query e l'ottimizzazione del riutilizzo delle query in SQL Server tramite la memorizzazione nella cache dei piani di esecuzione.
@@ -30,25 +34,25 @@ L'elaborazione di una singola istruzione SQL rappresenta la modalità più sempl
 
 #### <a name="optimizing-select-statements"></a>Ottimizzazione delle istruzioni SELECT
 
-Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT`, viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
+Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
 
 I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente:  
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Un'istruzione `SELECT` definisce soltanto gli elementi seguenti:  
-* Il formato del set di risultati. Questo elemento viene nella maggior parte dei casi specificato nell'elenco di selezione. Altre clausole, ad esempio `ORDER BY` e `GROUP BY`, possono tuttavia influire sul formato finale del set di risultati.
-* Le tabelle che contengono i dati di origine. La modalità è specificata nella clausola `FROM`.
-* La relazione logica tra le tabelle ai fini dell'istruzione `SELECT`. Questo elemento viene definito nelle specifiche di join, incluse nella clausola `WHERE` oppure in una clausola `ON` che segue una clausola `FROM`.
-* Condizioni che le righe delle tabelle di origine devono soddisfare per essere incluse nel risultato dell'istruzione `SELECT`. Queste condizioni vengono specificate nelle clausole `WHERE` ed `HAVING`.
+* Il formato del set di risultati. Questo elemento viene nella maggior parte dei casi specificato nell'elenco di selezione. Altre clausole, ad esempio `ORDER BY` e `GROUP BY` , possono tuttavia influire sul formato finale del set di risultati.
+* Le tabelle che contengono i dati di origine. La modalità è specificata nella clausola `FROM` .
+* La relazione logica tra le tabelle ai fini dell'istruzione `SELECT` . Questo elemento viene definito nelle specifiche di join, incluse nella clausola `WHERE` oppure in una clausola `ON` che segue una clausola `FROM`.
+* Condizioni che le righe delle tabelle di origine devono soddisfare per essere incluse nel risultato dell'istruzione `SELECT` . Queste condizioni vengono specificate nelle clausole `WHERE` ed `HAVING` .
 
 
 Il piano di esecuzione di una query è costituito dalla definizione degli elementi seguenti: 
 
 * La sequenza di accesso alle tabelle di origine.  
   In genere il server di database può utilizzare molte sequenze diverse per accedere alle tabelle di base e quindi compilare il set di risultati. Ad esempio, se l'istruzione `SELECT` fa riferimento a tre tabelle, il server di database può accedere innanzitutto a `TableA`, usare i dati di `TableA` per estrarre le righe corrispondenti da `TableB`, quindi usare i dati di `TableB` per estrarre i dati da `TableC`. Di seguito vengono indicate le altre sequenze di accesso alle tabelle utilizzabili dal server di database:  
-  `TableC`, `TableB`, `TableA` o  
-  `TableB`, `TableA`, `TableC` o  
-  `TableB`, `TableC`, `TableA` o  
+  `TableC`, `TableB`, `TableA`o  
+  `TableB`, `TableA`, `TableC`o  
+  `TableB`, `TableC`, `TableA`o  
   `TableC`, `TableA`, `TableB`  
 
 * I metodi utilizzati per estrarre i dati da ogni tabella.  
@@ -77,13 +81,13 @@ Di seguito viene illustrata la procedura di base necessaria per elaborare una si
 
 #### <a name="processing-other-statements"></a>Elaborazione di altre istruzioni
 
-La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è valida anche per altre istruzioni SQL, ad esempio `INSERT`, `UPDATE` e `DELETE`. Entrambe le istruzioni `UPDATE` e `DELETE` devono definire il set di righe da modificare o eliminare. usando un processo di identificazione delle righe corrispondente a quello che consente di identificare le righe di origine che formano il set di risultati di un'istruzione `SELECT`. Le istruzioni `UPDATE` e `INSERT` possono includere istruzioni SELECT incorporate che forniscono i valori dei dati da aggiornare o da inserire.
+La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è valida anche per altre istruzioni SQL, ad esempio `INSERT`, `UPDATE`e `DELETE`. Entrambe le istruzioni`UPDATE` e `DELETE` devono definire il set di righe da modificare o eliminare. usando un processo di identificazione delle righe corrispondente a quello che consente di identificare le righe di origine che formano il set di risultati di un'istruzione `SELECT` . Le istruzioni `UPDATE` e `INSERT` possono includere istruzioni SELECT incorporate che forniscono i valori dei dati da aggiornare o da inserire.
 
 Anche le istruzioni DDL (Data Definition Language), quali `CREATE PROCEDURE` o `ALTER TABL`E, vengono risolte in una serie di operazioni relazionali eseguite sulle tabelle del catalogo di sistema e in alcuni casi, ad esempio con `ALTER TABLE ADD COLUMN`, sulle tabelle di dati.
 
 ### <a name="worktables"></a>Tabelle di lavoro
 
-È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione SQL. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY` o `UNION`. Se, ad esempio, una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in `tempdb` e vengono eliminate automaticamente quando non sono più necessarie.
+È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione SQL. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY`o `UNION` . Se, ad esempio, una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in `tempdb` e vengono eliminate automaticamente quando non sono più necessarie.
 
 ### <a name="view-resolution"></a>Risoluzione delle viste
 
@@ -129,7 +133,7 @@ ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
-La funzionalità Showplan di SQL Server Management Studio indica che il motore relazionale compila lo stesso piano di esecuzione per entrambe le istruzioni `SELECT`.
+La funzionalità Showplan di SQL Server Management Studio indica che il motore relazionale compila lo stesso piano di esecuzione per entrambe le istruzioni `SELECT` .
 
 #### <a name="using-hints-with-views"></a>Utilizzo di hint con le viste
 
@@ -155,9 +159,9 @@ WHERE StateProvinceCode = 'WA';
 
 La query ha esito negativo perché l'hint `SERIALIZABLE` applicato nella vista `Person.AddrState` della query viene propagato a entrambe le tabelle `Person.Address` e `Person.StateProvince` quando la vista viene espansa. L'espansione della vista consente anche di rilevare l'hint `NOLOCK` nella tabella `Person.Address`. Gli hint `SERIALIZABLE` e `NOLOCK` sono in conflitto tra loro, pertanto la query risultante non è corretta. 
 
-Gli hint delle tabelle `PAGLOCK`, `NOLOCK`, `ROWLOCK`, `TABLOCK` o `TABLOCKX` sono in conflitto tra loro, così come gli hint delle tabelle `HOLDLOCK`, `NOLOCK`, `READCOMMITTED`, `REPEATABLEREAD` e `SERIALIZABLE`.
+Gli hint delle tabelle `PAGLOCK`, `NOLOCK`, `ROWLOCK`, `TABLOCK`o `TABLOCKX` sono in conflitto tra loro, così come gli hint delle tabelle `HOLDLOCK`, `NOLOCK`, `READCOMMITTED`, `REPEATABLEREAD`e `SERIALIZABLE` .
 
-Gli hint possono propagarsi in più livelli di viste nidificate. Si supponga, ad esempio, una query che applica l'hint `HOLDLOCK` in una vista `v1`. Espandendo `v1`, si noterà che la definizione di tale vista include la vista `v2`, `v2`la cui definizione include a `NOLOCK` sua volta un hint in una delle tabelle di base. Questa tabella eredita anche l'hint `HOLDLOCK` dalla query sulla vista `v1`. Gli hint `NOLOCK` e `HOLDLOCK` sono in conflitto tra loro, pertanto la query ha esito negativo.
+Gli hint possono propagarsi in più livelli di viste nidificate. Si supponga, ad esempio, una query che applica l'hint `HOLDLOCK` in una vista `v1`. Espandendo `v1` , si noterà che la definizione di tale vista include la vista `v2` , `v2`la cui definizione include a `NOLOCK` sua volta un hint in una delle tabelle di base. Questa tabella eredita anche l'hint `HOLDLOCK` dalla query sulla vista `v1`. Gli hint `NOLOCK` e `HOLDLOCK` sono in conflitto tra loro, pertanto la query ha esito negativo.
 
 Quando si usa l'hint `FORCE ORDER` in una query che contiene una vista, l'ordine di join delle tabelle all'interno della vista dipende dalla posizione della vista nel costrutto ordinato. La query seguente, ad esempio, consente di selezionare da tre tabelle e una vista:
 
@@ -177,13 +181,13 @@ SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
 ```
 
-L'ordine di join nel piano di query sarà quindi `Table1`,`Table2`, `TableA`, `TableB`, `Table3`.
+L'ordine di join nel piano di query sarà quindi `Table1`, `Table2`, `TableA`, `TableB`, `Table3`.
 
 ### <a name="resolving-indexes-on-views"></a>Risoluzione di indici nelle viste
 
 Come per qualsiasi indice, in SQL Server vengono usate viste indicizzate nel piano della query solo se tramite Query Optimizer viene determinato che tale operazione è vantaggiosa.
 
-Le viste indicizzate possono essere create con qualsiasi versione di SQL Server. In alcune edizioni di alcune versioni di SQL Server, query optimizer considera automaticamente la vista indicizzata. In alcune edizioni di alcune versioni di SQL Server, per usare una vista indicizzata è necessario usare l'hint della tabella `NOEXPAND`. Per i dettagli, vedere la documentazione relativa alla versione specifica.
+Le viste indicizzate possono essere create con qualsiasi versione di SQL Server. In alcune edizioni di alcune versioni di SQL Server, query optimizer considera automaticamente la vista indicizzata. In alcune edizioni di alcune versioni di SQL Server, per usare una vista indicizzata è necessario usare l'hint della tabella `NOEXPAND` . Per i dettagli, vedere la documentazione relativa alla versione specifica.
 
 In Query Optimizer di SQL Server usa una vista indicizzata se vengono soddisfatte le condizioni seguenti: 
 
@@ -199,7 +203,7 @@ In Query Optimizer di SQL Server usa una vista indicizzata se vengono soddisfatt
   * Predicati relativi a condizioni di ricerca nella clausola WHERE
   * Operazioni di join
   * Funzioni di aggregazione
-  * Clausole `GROUP BY`
+  * Clausole`GROUP BY` 
   * Riferimenti alla tabella
 * Il costo stimato necessario per l'utilizzo dell'indice è inferiore a quello di qualsiasi altro meccanismo di accesso considerato in Query Optimizer. 
 * Ogni tabella a cui si fa riferimento nella query, direttamente oppure espandendo una vista per accedere alle tabelle sottostanti, corrispondente a un riferimento alla tabella nella vista indicizzata, deve disporre dello stesso set di hint ad essa applicato nella query.
@@ -219,11 +223,11 @@ Query Optimizer elabora le viste indicizzate a cui fa riferimento la clausola `F
 
 L'opzione `EXPAND VIEWS` specifica che in Query Optimizer non verranno usati indici delle viste per l'intera query. 
 
-Se per una vista viene specificata l'opzione `NOEXPAND`, tramite Query Optimizer viene valuta l'opportunità di usare gli indici definiti per la vista. Se l'opzione `NOEXPAND` viene specificata con la clausola `INDEX()` facoltativa, Query Optimizer userà gli indici specificati. L'opzione `NOEXPAND` può essere specificata solo per le viste indicizzate e non è supportata per quelle non indicizzate.
+Se per una vista viene specificata l'opzione `NOEXPAND` , tramite Query Optimizer viene valuta l'opportunità di usare gli indici definiti per la vista. Se l'opzione`NOEXPAND` viene specificata con la clausola `INDEX()` facoltativa, Query Optimizer userà gli indici specificati. L'opzione`NOEXPAND` può essere specificata solo per le viste indicizzate e non è supportata per quelle non indicizzate.
 
-Quando non viene specificata né l'opzione `NOEXPAND` né `EXPAND VIEWS` in una query contenente una vista, la vista viene espansa per accedere alle tabelle sottostanti. Se la query che compone la vista contiene hint di tabella, tali hint vengono propagati alle tabelle sottostanti. Per altre informazioni su questo processo, vedere Risoluzione delle viste. Se i set di hint presenti nelle tabelle sottostanti della vista sono identici tra loro, la query può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. La maggior parte delle volte questi hint corrispondono tra loro in quanto vengono ereditati direttamente dalla vista. Se. tuttavia, la query fa riferimento a tabelle anziché a viste e gli hint applicati direttamente a tali tabelle non sono identici, la query non può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. Se gli hint `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK` o `XLOCK` vengono applicati a tabelle a cui fa riferimento la query dopo l'espansione della vista, la query non può essere usata per la ricerca della corrispondenza con una vista indicizzata.
+Quando non viene specificata né l'opzione `NOEXPAND` né `EXPAND VIEWS` in una query contenente una vista, la vista viene espansa per accedere alle tabelle sottostanti. Se la query che compone la vista contiene hint di tabella, tali hint vengono propagati alle tabelle sottostanti. Per altre informazioni su questo processo, vedere Risoluzione delle viste. Se i set di hint presenti nelle tabelle sottostanti della vista sono identici tra loro, la query può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. La maggior parte delle volte questi hint corrispondono tra loro in quanto vengono ereditati direttamente dalla vista. Se. tuttavia, la query fa riferimento a tabelle anziché a viste e gli hint applicati direttamente a tali tabelle non sono identici, la query non può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. Se gli hint `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`o `XLOCK` vengono applicati a tabelle a cui fa riferimento la query dopo l'espansione della vista, la query non può essere usata per la ricerca della corrispondenza con una vista indicizzata.
 
-Se un hint di tabella nel formato `INDEX (index_val[ ,...n] )` fa riferimento a una vista in una query e non viene specificato anche l'hint `NOEXPAND`, l'hint per l'indice viene ignorato. Per specificare l'uso di un determinato indice, usare l'opzione NOEXPAND. 
+Se un hint di tabella nel formato `INDEX (index_val[ ,...n] )` fa riferimento a una vista in una query e non viene specificato anche l'hint `NOEXPAND` , l'hint per l'indice viene ignorato. Per specificare l'uso di un determinato indice, usare l'opzione NOEXPAND. 
 
 In genere, quando tramite Query Optimizer viene trovata una corrispondenza tra una vista indicizzata e una query, eventuali hint specificati nelle tabelle o nelle viste nella query vengono applicati direttamente alla vista indicizzata. Se tramite Query Optimizer viene scelto di non utilizzare una vista indicizzata, eventuali hint vengono propagati direttamente alle tabelle a cui viene fatto riferimento nella vista. Per altre informazioni, vedere Risoluzione delle viste. Questa propagazione non riguarda gli hint di join, che vengono applicati solo nella relativa posizione originale nella query. Gli hint di join non vengono presi in considerazione da Query Optimizer durante la ricerca della corrispondenza tra query e viste indicizzate. Se in un piano della query viene utilizzata una vista indicizzata che corrisponde a una parte di una query contenente un hint di join, tale hint non viene utilizzato nel piano.
 
@@ -339,7 +343,7 @@ Alcune modifiche in un database possono provocare un piano di esecuzione ineffic
 * Chiamata esplicita a `sp_recompile`.
 * Grande quantità di modifiche alle chiavi, generate dalle istruzioni `INSERT` o `DELETE` eseguite da altri utenti che modificano una tabella a cui fa riferimento la query.
 * Nel caso di tabelle con trigger, aumento significativo del numero di righe della tabella inserite o eliminate.
-* Esecuzione di una stored procedure usando l'opzione `WITH RECOMPILE`.
+* Esecuzione di una stored procedure usando l'opzione `WITH RECOMPILE` .
 
 La maggior parte delle ricompilazioni è necessaria per garantire la correttezza dell'istruzione o per ottenere piani di esecuzione della query potenzialmente più veloci.
 
@@ -355,20 +359,20 @@ La colonna `EventSubClass` di `SP:Recompile` e `SQL:StmtRecompile` contiene un c
 
 |Valore di EventSubClass    |Description    |
 |----|----|
-|1  |Schema modificato.    |
-|2  |Statistiche modificate.    |
-|3  |Compilazione posticipata.  |
-|4  |Opzione SET modificata.    |
-|5  |Tabella temporanea modificata.   |
-|6  |Set di righe remoto modificato. |
-|7  |Autorizzazione `FOR BROWSE` modificata.   |
-|8  |Ambiente di notifica query modificato.    |
-|9  |Vista partizionata modificata.  |
-|10 |Opzioni cursore modificate.    |
-|11 |`OPTION (RECOMPILE)` richiesta. |
+|1    |Schema modificato.    |
+|2    |Statistiche modificate.    |
+|3    |Compilazione posticipata.    |
+|4    |Opzione SET modificata.    |
+|5    |Tabella temporanea modificata.    |
+|6    |Set di righe remoto modificato.    |
+|7    |Autorizzazione`FOR BROWSE` modificata.    |
+|8    |Ambiente di notifica query modificato.    |
+|9    |Vista partizionata modificata.    |
+|10    |Opzioni cursore modificate.    |
+|11    |`OPTION (RECOMPILE)` richiesta.    |
 
 > [!NOTE]
-> Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è `SET` su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è `SET` su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF`. Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che in SQL Server 2000, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inerite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
+> Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è `SET` su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è `SET` su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF` . Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che in SQL Server 2000, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inerite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
  
 
 ### <a name="parameters-and-execution-plan-reuse"></a>Parametri e riutilizzo del piano di esecuzione
@@ -376,9 +380,9 @@ La colonna `EventSubClass` di `SP:Recompile` e `SQL:StmtRecompile` contiene un c
 L'utilizzo dei parametri, inclusi i marcatori di parametro nelle applicazioni ADO, OLE DB e ODBC, può comportare un maggiore riutilizzo dei piani di esecuzione.
 
 > [!WARNING] 
-> L'uso di parametri o marcatori di parametro per includere i valori digitati dagli utenti offre una protezione maggiore rispetto alla concatenazione dei valori in una stringa eseguita usando un metodo API di accesso ai dati, l'istruzione `EXECUTE` o la stored procedure `sp_executesql`.
+> L'uso di parametri o marcatori di parametro per includere i valori digitati dagli utenti offre una protezione maggiore rispetto alla concatenazione dei valori in una stringa eseguita usando un metodo API di accesso ai dati, l'istruzione `EXECUTE` o la stored procedure `sp_executesql` .
  
-L'unica differenza tra le due istruzioni `SELECT` seguenti è rappresentata dai valori confrontati nella clausola `WHERE`:
+L'unica differenza tra le due istruzioni `SELECT` seguenti è rappresentata dai valori confrontati nella clausola `WHERE` :
 
 ```
 SELECT * 
@@ -391,7 +395,7 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-L'unica differenza tra i piani di esecuzione delle due query è rappresentata dal valore archiviato per il confronto con la colonna `ProductSubcategoryID`. L'obiettivo principale di SQL Server consiste nel riconoscere sempre che le istruzioni generano essenzialmente lo stesso piano e nel riusare i piani, benché ciò non sempre avvenga per istruzioni SQL complesse.
+L'unica differenza tra i piani di esecuzione delle due query è rappresentata dal valore archiviato per il confronto con la colonna `ProductSubcategoryID` . L'obiettivo principale di SQL Server consiste nel riconoscere sempre che le istruzioni generano essenzialmente lo stesso piano e nel riusare i piani, benché ciò non sempre avvenga per istruzioni SQL complesse.
 
 La separazione delle costanti dall'istruzione SQL tramite i parametri consente al motore relazionale di riconoscere i piani duplicati. È possibile utilizzare i parametri come indicato di seguito: 
 
@@ -429,7 +433,7 @@ La separazione delle costanti dall'istruzione SQL tramite i parametri consente a
 
 * Progettare stored procedure, che utilizzano parametri per schema.
 
-Se non si compilano parametri in modo esplicito nella progettazione dell'applicazione, è anche possibile basarsi su SQL Server Query Optimizer per parametrizzare automaticamente query specifiche usando il funzionamento predefinito di parametrizzazione semplice. In alternativa, è possibile forzare Query Optimizer affinché esegua la parametrizzazione di tutte le query nel database impostando su `FORCED` l'opzione `PARAMETERIZATION` dell'istruzione `ALTER DATABASE`.
+Se non si compilano parametri in modo esplicito nella progettazione dell'applicazione, è anche possibile basarsi su SQL Server Query Optimizer per parametrizzare automaticamente query specifiche usando il funzionamento predefinito di parametrizzazione semplice. In alternativa, è possibile forzare Query Optimizer affinché esegua la parametrizzazione di tutte le query nel database impostando su `PARAMETERIZATION` l'opzione `ALTER DATABASE` dell'istruzione `FORCED`.
 
 Quando viene attivata la parametrizzazione forzata, la parametrizzazione semplice può essere comunque eseguita. La query seguente, ad esempio, non può essere parametrizzata in base alle regole di parametrizzazione forzata:
 
@@ -445,7 +449,7 @@ La query può tuttavia essere parametrizzata in base alle regole di parametrizza
 In SQL Server l'uso di parametri o di marcatori di parametro nelle istruzioni di Transact-SQL consente di aumentare la capacità del motore relazionale di trovare una corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti compilati in precedenza.
 
 > [!WARNING] 
-> L'uso di parametri o marcatori di parametro per includere i valori digitati dagli utenti offre una protezione maggiore rispetto alla concatenazione dei valori in una stringa eseguita usando un metodo API di accesso ai dati, l'istruzione `EXECUTE` o la stored procedure `sp_executesql`.
+> L'uso di parametri o marcatori di parametro per includere i valori digitati dagli utenti offre una protezione maggiore rispetto alla concatenazione dei valori in una stringa eseguita usando un metodo API di accesso ai dati, l'istruzione `EXECUTE` o la stored procedure `sp_executesql` .
 
 Se un'istruzione SQL viene eseguita senza parametri, in SQL Server l'istruzione viene parametrizzata a livello interno per aumentare la possibilità di trovare una corrispondenza con un piano di esecuzione esistente. Questo processo viene definito parametrizzazione semplice. In SQL Server 2000 il processo è definito parametrizzazione automatica.
 
@@ -479,37 +483,37 @@ In alternativa, è possibile specificare la parametrizzazione di una singola que
 
 ### <a name="forced-parameterization"></a>parametrizzazione forzata
 
-È possibile ignorare il comportamento predefinito parametrizzazione semplice di SQL Server specificando la parametrizzazione di tutte le istruzioni `SELECT`, `INSERT`, `UPDATE` e `DELETE` di un database in base a limiti specifici. La parametrizzazione forzata viene attivata impostando l'opzione `PARAMETERIZATION` su `FORCED` nell'istruzione `ALTER DATABASE`. La parametrizzazione forzata può offrire un miglioramento delle prestazioni di alcuni database riducendo la frequenza delle operazioni di compilazione e ricompilazione delle query. I database che possono essere soggetti a un miglioramento delle prestazione grazie alla parametrizzazione forzata sono in genere quelli che ricevono volumi elevati di query simultanee da origini quali le applicazioni POS.
+È possibile ignorare il comportamento predefinito parametrizzazione semplice di SQL Server specificando la parametrizzazione di tutte le istruzioni `SELECT`, `INSERT`, `UPDATE`e `DELETE` di un database in base a limiti specifici. La parametrizzazione forzata viene attivata impostando l'opzione `PARAMETERIZATION` su `FORCED` nell'istruzione `ALTER DATABASE` . La parametrizzazione forzata può offrire un miglioramento delle prestazioni di alcuni database riducendo la frequenza delle operazioni di compilazione e ricompilazione delle query. I database che possono essere soggetti a un miglioramento delle prestazione grazie alla parametrizzazione forzata sono in genere quelli che ricevono volumi elevati di query simultanee da origini quali le applicazioni POS.
 
-Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, qualsiasi valore letterale visualizzato in un'istruzione `SELECT`, `INSERT`, `UPDATE` o `DELETE`, inviato in qualsiasi forma, viene convertito in un parametro durante la compilazione delle query. Le eccezioni consistono in valori letterali presenti nei costrutti di query seguenti: 
+Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, qualsiasi valore letterale visualizzato in un'istruzione `SELECT`, `INSERT`, `UPDATE`o `DELETE` , inviato in qualsiasi forma, viene convertito in un parametro durante la compilazione delle query. Le eccezioni consistono in valori letterali presenti nei costrutti di query seguenti: 
 
-* Istruzioni `INSERT...EXECUTE`.
+* Istruzioni`INSERT...EXECUTE` .
 * Istruzioni all'interno del corpo di stored procedure, trigger o funzioni definite dall'utente. SQL Server riutilizza già piani di query per tali routine.
 * Istruzioni preparate già parametrizzate nell'applicazione sul lato client.
-* Istruzioni contenenti chiamate al metodo XQuery, in cui il metodo appare in un contesto in cui i relativi argomenti verrebbero in genere parametrizzati, ad esempio una clausola `WHERE`. Se il metodo appare in un contesto in cui i relativi argomenti non verrebbero parametrizzati, il resto dell'istruzione viene parametrizzato.
-* Istruzioni all'interno di un cursore Transact-SQL. Le istruzioni `SELECT` all'interno dei cursori API vengono parametrizzate.
+* Istruzioni contenenti chiamate al metodo XQuery, in cui il metodo appare in un contesto in cui i relativi argomenti verrebbero in genere parametrizzati, ad esempio una clausola `WHERE` . Se il metodo appare in un contesto in cui i relativi argomenti non verrebbero parametrizzati, il resto dell'istruzione viene parametrizzato.
+* Istruzioni all'interno di un cursore Transact-SQL. Le istruzioni`SELECT` all'interno dei cursori API vengono parametrizzate.
 * Costrutti di query deprecati.
 * Qualsiasi istruzione che viene eseguita nel contesto di `ANSI_PADDING` o `ANSI_NULLS` impostata su `OFF`.
 * Istruzioni contenenti oltre 2.097 valori letterali idonei per la parametrizzazione.
 * Istruzioni che fanno riferimento a variabili, ad esempio `WHERE T.col2 >= @bb`.
-* Istruzioni contenenti l'hint per la query `RECOMPILE`.
-* Istruzioni contenenti una clausola `COMPUTE`.
-* Istruzioni contenenti una clausola `WHERE CURRENT OF`.
+* Istruzioni contenenti l'hint per la query `RECOMPILE` .
+* Istruzioni contenenti una clausola `COMPUTE` .
+* Istruzioni contenenti una clausola `WHERE CURRENT OF` .
 
 Le clausole di query seguenti sono inoltre senza parametri. Si noti che in questi casi soltanto le clausole sono senza parametri. Altre clausole all'interno della stessa query potrebbero essere idonee per la parametrizzazione forzata.
 
 * <select_list> di qualsiasi istruzione `SELECT`. Ciò include elenchi `SELECT` delle sottoquery ed elenchi `SELECT` all'interno delle istruzioni `INSERT`.
-* Istruzioni `SELECT` delle sottoquery incluse in un'istruzione `IF`.
-* Clausole `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` o `FOR XM`L di una query.
-* Argomenti, diretti o sottoespressioni, a `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML` o qualsiasi operatore `FULLTEXT`.
-* Argomenti pattern ed escape_character di una clausola `LIKE`.
-* Argomento style di una clausola `CONVERT`.
-* Costante integer all'interno di una clausola `IDENTITY`.
+* Istruzioni `SELECT` delle sottoquery incluse in un'istruzione `IF` .
+* Clausole `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`o `FOR XM`L di una query.
+* Argomenti, diretti o sottoespressioni, a `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`o qualsiasi operatore `FULLTEXT` .
+* Argomenti pattern ed escape_character di una clausola `LIKE` .
+* Argomento style di una clausola `CONVERT` .
+* Costante integer all'interno di una clausola `IDENTITY` .
 * Costanti specificate utilizzando la sintassi delle estensioni ODBC.
 * Espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione che rappresentano argomenti degli operatori +, -, *, / e %. Quando viene valutata l'idoneità per la parametrizzazione forzata, in SQL Server un'espressione viene considerata come idonea per l'elaborazione delle costanti in fase di compilazione quando si verificano le condizioni seguenti:  
   * Nell'espressione non è inclusa alcuna colonna, variabile o subquery.  
-  * L'espressione contiene una clausola `CASE`.  
-* Argomenti delle clausole degli hint per le query. Sono inclusi l'argomento `number_of_rows` dell'hint per la query `FAST`, l'argomento `number_of_processors` dell'hint per la query `MAXDOP` e l'argomento del numero dell'hint della query `MAXRECURSION`.
+  * L'espressione contiene una clausola `CASE` .  
+* Argomenti delle clausole degli hint per le query. Sono inclusi l'argomento `number_of_rows` dell'hint per la query `FAST` , l'argomento `number_of_processors` dell'hint per la query `MAXDOP` e l'argomento del numero dell'hint della query `MAXRECURSION` .
 
 
 La parametrizzazione viene eseguita a livello di singole istruzioni Transact-SQL. In altri termini, vengono parametrizzate le singole istruzioni presenti in un batch. In seguito alla compilazione, una query con parametri viene eseguita nel contesto del batch in cui è stata inviata originariamente. Se un piano di esecuzione per una query viene memorizzato nella cache, è possibile determinare se è stata eseguita la parametrizzazione della query facendo riferimento alla colonna sql della vista a gestione dinamica sys.syscacheobjects. Se è stata eseguita la parametrizzazione di una query, i nomi e i tipi di dati dei parametri precedono il testo del batch inviato nella colonna, ad esempio (@1 tinyint).
@@ -539,7 +543,7 @@ Quando si desidera impostare l'opzione `PARAMETERIZATION` su FORCED, considerare
 * L'impostazione dell'opzione `PARAMETERIZATION` è un'operazione online che richiede che non vi sia alcun blocco esclusivo a livello del database.
 * L'impostazione corrente dell'opzione `PARAMETERIZATION` viene mantenuta quando un database viene ricollegato o ripristinato.
 
-È possibile ignorare il comportamento della parametrizzazione forzata specificando che su una singola query, e su qualsiasi altra query sintatticamente equivalente ma che differisca solo nei valori dei parametri, venga eseguita la parametrizzazione semplice. Viceversa è possibile specificare che la parametrizzazione forzata venga tentata solo su un set di query sintatticamente equivalenti, anche se disabilitata nel database. A tale scopo, vengono usate le [guide di piano](../relational-databases/performance/plan-guides.md).
+È possibile ignorare il comportamento della parametrizzazione forzata specificando che su una singola query, e su qualsiasi altra query sintatticamente equivalente ma che differisca solo nei valori dei parametri, venga eseguita la parametrizzazione semplice. Viceversa è possibile specificare che la parametrizzazione forzata venga tentata solo su un set di query sintatticamente equivalenti, anche se disabilitata nel database. A tale scopo, vengono usate le[guide di piano](../relational-databases/performance/plan-guides.md) .
 
 > [!NOTE]
 > Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, il report dei messaggi di errore potrebbe presentare differenze rispetto a quello della parametrizzazione semplice: potrebbero essere segnalati più messaggi di errore nei casi in cui nella parametrizzazione semplice sarebbe stato segnalato un numero di messaggi di errore inferiore e i numeri di riga nei quali si sono verificati gli errori potrebbero non essere segnalati correttamente.
@@ -558,7 +562,7 @@ Le istruzioni preparate non possono essere usate per creare oggetti temporanei i
 
 L'utilizzo eccessivo del modello di preparazione/esecuzione può determinare un peggioramento delle prestazioni. Se un'istruzione viene eseguita una sola volta, è sufficiente l'esecuzione diretta, che richiede un solo ciclo di andata e ritorno in rete per il server. La preparazione e l'esecuzione di un'istruzione SQL che viene eseguita una sola volta richiedono un ciclo di andata e ritorno in rete aggiuntivo (uno per preparare l'istruzione e uno per eseguirla).
 
-È possibile preparare un'istruzione in modo più efficiente utilizzando i marcatori di parametro. Si supponga, ad esempio, che a un'applicazione venga richiesto occasionalmente di recuperare informazioni sui prodotti dal database di esempio `AdventureWorks`. L'applicazione può eseguire questa operazione in due modi diversi. 
+È possibile preparare un'istruzione in modo più efficiente utilizzando i marcatori di parametro. Si supponga, ad esempio, che a un'applicazione venga richiesto occasionalmente di recuperare informazioni sui prodotti dal database di esempio `AdventureWorks` . L'applicazione può eseguire questa operazione in due modi diversi. 
 
 L'applicazione può innanzitutto eseguire una query distinta per ogni prodotto richiesto:
 
@@ -592,9 +596,9 @@ In SQL Server, il modello di preparazione/esecuzione non presenta alcun vantaggi
 
 In SQL Server è possibile eseguire query parallele, che consentono di ottimizzare l'esecuzione delle query e le operazioni sugli indici nei computer che dispongono di più microprocessori (CPU). La possibilità di eseguire una query o un'operazione sugli indici in parallelo in SQL Server usando diversi thread del sistema operativo assicura maggiore velocità ed efficienza.
 
-Durante l'ottimizzazione delle query, SQL Server ricerca le query o le operazioni sugli indici che potrebbero trarre vantaggio dall'esecuzione parallela. Nel piano di esecuzione di tali query SQL Server inserisce operatori di scambio per preparare la query all'esecuzione parallela. Un operatore di scambio è un operatore del piano di esecuzione della query responsabile della gestione dei processi, della ridistribuzione dei dati e del controllo di flusso. L'operatore di scambio include gli operatori logici `Distribute Streams`, `Repartition Streams` e `Gather Streams` come sottotipi, ognuno dei quali può essere incluso nell'output Showplan del piano di esecuzione parallela di una query. 
+Durante l'ottimizzazione delle query, SQL Server ricerca le query o le operazioni sugli indici che potrebbero trarre vantaggio dall'esecuzione parallela. Nel piano di esecuzione di tali query SQL Server inserisce operatori di scambio per preparare la query all'esecuzione parallela. Un operatore di scambio è un operatore del piano di esecuzione della query responsabile della gestione dei processi, della ridistribuzione dei dati e del controllo di flusso. L'operatore di scambio include gli operatori logici `Distribute Streams`, `Repartition Streams`e `Gather Streams` come sottotipi, ognuno dei quali può essere incluso nell'output Showplan del piano di esecuzione parallela di una query. 
 
-Dopo l'inserimento degli operatori di scambio, si ottiene un piano di esecuzione parallela della query. Questo tipo di piano può utilizzare più di un thread. In un piano di esecuzione seriale, utilizzato da una query non parallela, l'esecuzione è invece affidata a un solo thread. Il numero effettivo di thread utilizzati da una query parallela viene determinato al momento dell'inizializzazione del piano di esecuzione della query e dipende dalla complessità del piano e dal grado di parallelismo. Il grado di parallelismo determina il numero massimo di CPU utilizzate, ma non il numero di thread utilizzati. Il valore del grado di parallelismo viene impostato a livello del server e può essere modificato usando la stored procedure di sistema sp_configure. Questo valore può essere sostituito per singole istruzioni di query o di indice specificando l'hint per la query `MAXDOP` o l'opzione di indice `MAXDOP`. 
+Dopo l'inserimento degli operatori di scambio, si ottiene un piano di esecuzione parallela della query. Questo tipo di piano può utilizzare più di un thread. In un piano di esecuzione seriale, utilizzato da una query non parallela, l'esecuzione è invece affidata a un solo thread. Il numero effettivo di thread utilizzati da una query parallela viene determinato al momento dell'inizializzazione del piano di esecuzione della query e dipende dalla complessità del piano e dal grado di parallelismo. Il grado di parallelismo determina il numero massimo di CPU utilizzate, ma non il numero di thread utilizzati. Il valore del grado di parallelismo viene impostato a livello del server e può essere modificato usando la stored procedure di sistema sp_configure. Questo valore può essere sostituito per singole istruzioni di query o di indice specificando l'hint per la query `MAXDOP` o l'opzione di indice `MAXDOP` . 
 
 Quando una delle condizioni seguenti è vera, Query Optimizer di SQL Server non usa un piano di esecuzione parallela per una query:
 
@@ -614,7 +618,7 @@ SQL Server rileva automaticamente il grado di parallelismo ottimale per ogni ist
   Per l'esecuzione di una query o di un'operazione su un indice è necessario un numero specifico di thread. L'esecuzione di un piano parallelo richiede un numero di thread maggiore rispetto all'esecuzione di un piano seriale e il numero di thread necessari aumenta con il grado di parallelismo. Se non è possibile rispettare i requisiti di thread del piano parallelo per un grado di parallelismo specifico, il motore di database aumenta automaticamente il grado di parallelismo o annulla completamente il piano parallelo nel contesto del piano di lavoro specificato. ed esegue il piano seriale (un thread). 
 
 3. Tipo di query o di operazione sull'indice eseguita.  
-  Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, il motore di database confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [soglia costo per parallelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile, ma non consigliabile, modificare il valore predefinito (pari a 5) usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, il motore di database confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [soglia costo per parallelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) . È possibile, ma non consigliabile, modificare il valore predefinito (pari a 5) usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
 
 4. Presenza di un numero sufficiente di righe da elaborare.  
   Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
@@ -634,7 +638,7 @@ I cursori statici e gestiti da keyset possono essere popolati tramite piani di e
 
 #### <a name="overriding-degrees-of-parallelism"></a>Sostituzione dei gradi di parallelismo
 
-È possibile usare l'opzione di configurazione del server [Massimo grado di parallelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) su [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) per limitare il numero di processori da usare per l'esecuzione del piano parallelo. L'opzione Massimo grado di parallelismo può essere ignorata per le singole istruzioni delle query e delle operazioni sugli indici specificando l'hint per le query MAXDOP o l'opzione per gli indici MAXDOP. MAXDOP offre un maggiore controllo sulle singole query e operazioni sugli indici. Ad esempio, è possibile utilizzare questa opzione per aumentare o diminuire il numero di processori dedicati a un'operazione sull'indice online. Ciò consente di bilanciare le risorse utilizzate per un'operazione sull'indice con quelle degli utenti simultanei. L'impostazione dell'opzione Massimo grado di parallelismo su 0 consente l'uso da parte di SQL Server di tutti i processori disponibili fino a un massimo di 64 nell'esecuzione di piani paralleli. L'impostazione di MAXDOP su 0 per query e indici consente l'uso da parte di SQL Server di tutti i processori disponibili fino a un massimo di 64 per le query o gli indici specificati nell'esecuzione di piani paralleli.
+È possibile usare l'opzione di configurazione del server [Massimo grado di parallelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) su [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) per limitare il numero di processori da usare per l'esecuzione del piano parallelo. L'opzione Massimo grado di parallelismo può essere ignorata per le singole istruzioni delle query e delle operazioni sugli indici specificando l'hint per le query MAXDOP o l'opzione per gli indici MAXDOP. MAXDOP offre un maggiore controllo sulle singole query e operazioni sugli indici. Ad esempio, è possibile utilizzare questa opzione per aumentare o diminuire il numero di processori dedicati a un'operazione sull'indice online. Ciò consente di bilanciare le risorse utilizzate per un'operazione sull'indice con quelle degli utenti simultanei. L'impostazione dell'opzione Massimo grado di parallelismo su 0 consente l'uso da parte di SQL Server di tutti i processori disponibili fino a un massimo di 64 nell'esecuzione di piani paralleli. L'impostazione di MAXDOP su 0 per query e indici consente l'uso da parte di SQL Server di tutti i processori disponibili fino a un massimo di 64 per le query o gli indici specificati nell'esecuzione di piani paralleli.
 
 
 ### <a name="parallel-query-example"></a>Esempio di query parallela
@@ -712,13 +716,13 @@ Di seguito viene riportato un possibile piano parallelo generato per la query in
 
 Nella figura è illustrato un piano di Query Optimizer eseguito con grado di parallelismo 4 e con un join a due tabelle.
 
-Il piano parallelo contiene tre operatori `Parallelism`. L'operatore `Index Seek` dell'indice `o_datkey_ptr` e l'operatore `Index Scan` dell'indice `l_order_dates_idx` vengono eseguiti in parallelo. In questo modo vengono creati diversi flussi esclusivi. Ciò può essere determinato dagli operatori Parallelism più vicini sopra gli operatori `Index Scan` e `Index Seek`, rispettivamente. Entrambi gli operatori eseguono la ripartizione del tipo di scambio, ovvero ridistribuiscono i dati tra i flussi creando nell'output lo stesso numero di flussi presenti nell'input. Questo numero di flussi equivale al grado di parallelismo.
+Il piano parallelo contiene tre operatori `Parallelism` . L'operatore `Index Seek` dell'indice `o_datkey_ptr` e l'operatore `Index Scan` dell'indice `l_order_dates_idx` vengono eseguiti in parallelo. In questo modo vengono creati diversi flussi esclusivi. Ciò può essere determinato dagli operatori Parallelism più vicini sopra gli operatori `Index Scan` e `Index Seek` , rispettivamente. Entrambi gli operatori eseguono la ripartizione del tipo di scambio, ovvero ridistribuiscono i dati tra i flussi creando nell'output lo stesso numero di flussi presenti nell'input. Questo numero di flussi equivale al grado di parallelismo.
 
-L'operatore `Parallelism ` sopra l'operatore `l_order_dates_idx` `Index Scan` esegue la ripartizione dei flussi di input usando il valore di `L_ORDERKEY` come chiave. In questo modo, lo stesso valore di `L_ORDERKEY` viene incluso nello stesso flusso di output. Allo stesso tempo, i flussi di output mantengono l'ordine della colonna `L_ORDERKEY` per soddisfare il requisito di input dell'operatore `Merge Join`.
+L'operatore `Parallelism `sopra l'operatore `l_order_dates_idx` `Index Scan` esegue la ripartizione dei flussi di input usando il valore di `L_ORDERKEY` come chiave. In questo modo, lo stesso valore di `L_ORDERKEY` viene incluso nello stesso flusso di output. Allo stesso tempo, i flussi di output mantengono l'ordine della colonna `L_ORDERKEY` per soddisfare il requisito di input dell'operatore `Merge Join` .
 
-L'operatore `Parallelism` sopra l'operatore `Index Seek` esegue la ripartizione dei flussi di input usando il valore di `O_ORDERKEY`. Poiché l'input non viene ordinato nei valori della colonna `O_ORDERKEY`, che rappresenta la colonna di join dell'operatore `Merge Join`, l'operatore Sort tra gli operatori `Parallelism` e `Merge Join` assicura che l'input venga ordinato per l'operatore `Merge Join` nelle colonne di join. Analogamente all'operatore `Merge Join`, l'operatore `Sort` viene eseguito in parallelo.
+L'operatore `Parallelism` sopra l'operatore `Index Seek` esegue la ripartizione dei flussi di input usando il valore di `O_ORDERKEY`. Poiché l'input non viene ordinato nei valori della colonna `O_ORDERKEY` , che rappresenta la colonna di join dell'operatore `Merge Join` , l'operatore Sort tra gli operatori `Parallelism` e `Merge Join` assicura che l'input venga ordinato per l'operatore `Merge Join` nelle colonne di join. Analogamente all'operatore `Sort` , l'operatore `Merge Join` viene eseguito in parallelo.
 
-L'operatore `Parallelism` superiore riunisce i risultati di numerosi flussi in un singolo flusso. Le aggregazioni parziali eseguite dall'operatore `Stream Aggregate` sottostante all'operatore `Parallelism` vengono quindi riunite in un singolo valore `SUM` per ogni valore diverso di `O_ORDERPRIORITY` nell'operatore `Stream Aggregate` sopra l'operatore `Parallelism`. Poiché include due segmenti di scambio con grado di parallelismo 4, questo piano utilizza otto thread.
+L'operatore `Parallelism` superiore riunisce i risultati di numerosi flussi in un singolo flusso. Le aggregazioni parziali eseguite dall'operatore `Stream Aggregate` sottostante all'operatore `Parallelism` vengono quindi riunite in un singolo valore `SUM` per ogni valore diverso di `O_ORDERPRIORITY` nell'operatore `Stream Aggregate` sopra l'operatore `Parallelism` . Poiché include due segmenti di scambio con grado di parallelismo 4, questo piano utilizza otto thread.
 
 
 ### <a name="parallel-index-operations"></a>Operazioni parallele sugli indici
@@ -728,7 +732,7 @@ I piani di query compilati ai fini della creazione o della ricompilazione di un 
 > [!NOTE]
 > Le operazioni parallele sugli indici sono disponibili solo in SQL Server 2008 Enterprise.
  
-In SQL Server, per determinare il grado di parallelismo (il numero totale di singoli thread da eseguire) delle operazioni sugli indici vengono usati gli stessi algoritmi impiegati per altre query. Il grado massimo di parallelismo per un'operazione sugli indici dipende dal valore impostato per l'opzione di configurazione del server [Massimo grado di parallelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). È possibile ignorare il valore dell'opzione Massimo grado di parallelismo per singole operazioni sull'indice impostando l'opzione per gli indici MAXDOP nelle istruzioni CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
+In SQL Server, per determinare il grado di parallelismo (il numero totale di singoli thread da eseguire) delle operazioni sugli indici vengono usati gli stessi algoritmi impiegati per altre query. Il grado massimo di parallelismo per un'operazione sugli indici dipende dal valore impostato per l'opzione di configurazione del server [Massimo grado di parallelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) . È possibile ignorare il valore dell'opzione Massimo grado di parallelismo per singole operazioni sull'indice impostando l'opzione per gli indici MAXDOP nelle istruzioni CREATE INDEX, ALTER INDEX, DROP INDEX e ALTER TABLE.
 
 Quando tramite il motore di database viene compilato un piano di esecuzione dell'indice, il numero di operazioni parallele è impostato sul valore più basso tra i seguenti: 
 
@@ -753,7 +757,7 @@ Singole istruzioni `CREATE TABLE` o `ALTER TABLE` possono avere più vincoli che
 Microsoft SQL Server supporta due metodi per fare riferimento a origini dati OLE DB eterogenee nelle istruzioni Transact-SQL:
 
 * Nomi di server collegati  
-  Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin`. Per fare riferimento agli oggetti di server collegati nelle istruzioni Transact-SQL, è possibile usare nomi in quattro parti. Se ad esempio si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di SQL Server, l'istruzione seguente fa riferimento a una tabella di tale server: 
+  Per assegnare il nome di un server a un'origine dei dati OLE DB vengono usate le stored procedure di sistema `sp_addlinkedserver` e `sp_addlinkedsrvlogin` . Per fare riferimento agli oggetti di server collegati nelle istruzioni Transact-SQL, è possibile usare nomi in quattro parti. Se ad esempio si definisce il nome del server collegato `DeptSQLSrvr` per un'altra istanza di SQL Server, l'istruzione seguente fa riferimento a una tabella di tale server: 
   
   ```
   SELECT JobTitle, HireDate 
@@ -780,7 +784,7 @@ Per ogni origine dei dati OLE DB accessibile come server collegato, è necessari
 
 Per ogni istanza di SQL Server, i membri del ruolo predefinito del server `sysadmin` possono abilitare o disabilitare l'uso di nomi di connettore ad hoc per un provider OLE DB tramite la proprietà `DisallowAdhocAccess` di SQL Server. Quando l'accesso ad hoc è disabilitato, qualsiasi utente collegato a tale istanza può eseguire istruzioni SQL contenenti nomi di connettore ad hoc che fanno riferimento a qualsiasi origine dei dati in rete accessibile tramite tale provider OLE DB. Per controllare l'accesso alle origini dei dati, i membri del ruolo `sysadmin` possono disabilitare l'accesso ad hoc per i provider OLE DB corrispondenti, limitando in tal modo l'accesso da parte degli utenti alle sole origini dei dati a cui viene fatto riferimento dai nomi dei server collegati definiti dagli amministratori. Per impostazione predefinita, l'accesso ad hoc è abilitato per il provider OLE DB di SQL Server e disabilitato per tutti gli altri provider OLE DB.
 
-Le query distribuite consentono agli utenti di accedere a un'altra origine dei dati (ad esempio file, origini dati non relazionali come Active Directory e così via) tramite il contesto di sicurezza dell'account di Microsoft Windows usato per l'esecuzione del servizio SQL Server. SQL Server rappresenta l'account di accesso appropriato nel caso degli account di accesso di Windows ma non per gli account di accesso di SQL Server. In tal modo, è possibile che l'utente di una query distribuita acceda a un'altra origine dei dati per cui non dispone delle autorizzazioni necessarie, ma l'account usato per l'esecuzione del servizio SQL Server dispone di tali autorizzazioni. Per definire gli account di accesso specifici autorizzati per l'accesso al server collegato corrispondente, usare la stored procedure `sp_addlinkedsrvlogin`. Poiché tale controllo non è disponibile per i nomi ad hoc, prestare attenzione quando si attiva l'accesso ad hoc in un provider OLE DB.
+Le query distribuite consentono agli utenti di accedere a un'altra origine dei dati (ad esempio file, origini dati non relazionali come Active Directory e così via) tramite il contesto di sicurezza dell'account di Microsoft Windows usato per l'esecuzione del servizio SQL Server. SQL Server rappresenta l'account di accesso appropriato nel caso degli account di accesso di Windows ma non per gli account di accesso di SQL Server. In tal modo, è possibile che l'utente di una query distribuita acceda a un'altra origine dei dati per cui non dispone delle autorizzazioni necessarie, ma l'account usato per l'esecuzione del servizio SQL Server dispone di tali autorizzazioni. Per definire gli account di accesso specifici autorizzati per l'accesso al server collegato corrispondente, usare la stored procedure `sp_addlinkedsrvlogin` . Poiché tale controllo non è disponibile per i nomi ad hoc, prestare attenzione quando si attiva l'accesso ad hoc in un provider OLE DB.
 
 Quando possibile, SQL Server invia operazioni relazionali quali join, restrizioni, proiezioni, ordinamenti e operazioni su gruppi all'origine dati OLE DB. SQL Server non analizza per impostazione predefinita la tabella di base in SQL Server e non esegue operazioni relazionali in autonomia. SQL Server esegue query sul provider OLE DB per determinare il livello di grammatica SQL supportata e, in base a tali informazioni, invia al provider il maggior numero possibile di operazioni relazionali. 
 
@@ -796,7 +800,7 @@ In SQL Server 2008 sono state migliorate le prestazioni di elaborazione delle qu
 
 ### <a name="new-partition-aware-seek-operation"></a>Nuova operazione di ricerca con riconoscimento delle partizioni
 
-In SQL Server, la rappresentazione interna di una tabella partizionata viene modificata in modo che la tabella sia visibile all'elaboratore di query come indice multicolonna con `PartitionID` come colonna iniziale. `PartitionID` è una colonna calcolata nascosta usata internamente per rappresentare il valore `ID` della partizione che contiene una riga specifica. Ad esempio, si supponga che la tabella T, definita come `T(a, b, c)`, venga partizionata in base alla colonna A e includa un indice cluster nella colonna B. In SQL Server questa tabella partizionata viene considerata internamente come una tabella non partizionata caratterizzata dallo schema `T(PartitionID, a, b, c)` e con un indice cluster sulla chiave composta (`(PartitionID, b)`). In tal modo Query Optimizer è in grado di eseguire su qualsiasi tabella o indice partizionato operazioni di ricerca basate su `PartitionID`. 
+In SQL Server, la rappresentazione interna di una tabella partizionata viene modificata in modo che la tabella sia visibile all'elaboratore di query come indice multicolonna con `PartitionID` come colonna iniziale. `PartitionID` è una colonna calcolata nascosta usata internamente per rappresentare il valore `ID` della partizione che contiene una riga specifica. Ad esempio, si supponga che la tabella T, definita come `T(a, b, c)`, venga partizionata in base alla colonna A e includa un indice cluster nella colonna B. In SQL Server questa tabella partizionata viene considerata internamente come una tabella non partizionata caratterizzata dallo schema `T(PartitionID, a, b, c)` e con un indice cluster sulla chiave composta ( `(PartitionID, b)`). In tal modo Query Optimizer è in grado di eseguire su qualsiasi tabella o indice partizionato operazioni di ricerca basate su `PartitionID` . 
 
 L'eliminazione della partizione viene ora eseguita durante tale operazione di ricerca.
 
@@ -820,11 +824,11 @@ Nell'illustrazione seguente è riportata una rappresentazione logica dell'operaz
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Visualizzazione di informazioni sul partizionamento nei piani di esecuzione delle query
 
-È possibile esaminare i piani di esecuzione delle query su tabelle e indici partizionati usando le istruzioni `SET` di Transact-SQL `SET SHOWPLAN_XML` o `SET STATISTICS XML` oppure l'output del piano di esecuzione grafico restituito in SQL Server Management Studio. È ad esempio possibile visualizzare il piano di esecuzione della fase di compilazione facendo clic su *Visualizza piano di esecuzione stimato* sulla barra degli strumenti dell'editor di query e il piano della fase di esecuzione facendo clic su *Includi piano di esecuzione effettivo*. 
+È possibile esaminare i piani di esecuzione delle query su tabelle e indici partizionati usando le istruzioni `SET` di Transact-SQL `SET SHOWPLAN_XML` o `SET STATISTICS XML`oppure l'output del piano di esecuzione grafico restituito in SQL Server Management Studio. È ad esempio possibile visualizzare il piano di esecuzione della fase di compilazione facendo clic su *Visualizza piano di esecuzione stimato* sulla barra degli strumenti dell'editor di query e il piano della fase di esecuzione facendo clic su *Includi piano di esecuzione effettivo*. 
 
 Questi strumenti consentono di verificare le informazioni seguenti:
 
-* Operazioni come `scans`, `seeks`, `inserts`, `updates`, `merges` e `deletes` che accedono alle tabelle partizionate o agli indici.
+* Operazioni come `scans`, `seeks`, `inserts`, `updates`, `merges`e `deletes` che accedono alle tabelle partizionate o agli indici.
 * Partizioni a cui viene effettuato l'accesso tramite la query. Ad esempio, il totale delle partizioni e gli intervalli relativi alle partizioni contigue a cui viene effettuato l'accesso sono disponibili nei piani di esecuzione della fase di esecuzione.
 * Utilizzo dell'operazione di skip scan in un'operazione di ricerca o analisi per recuperare dati da una o più partizioni.
 
@@ -832,7 +836,7 @@ Questi strumenti consentono di verificare le informazioni seguenti:
 
 SQL Server fornisce informazioni migliorate sul partizionamento per i piani di esecuzione sia della fase di compilazione che della fase di esecuzione. I piani di esecuzione includono ora le informazioni seguenti:
 
-* Un attributo `Partitioned` facoltativo per indicare che su una tabella partizionata viene eseguito un operatore, ad esempio `seek`, `scan`, `insert`, `update`, `merge` o `delete`.  
+* Un attributo `Partitioned` facoltativo per indicare che su una tabella partizionata viene eseguito un operatore, ad esempio `seek`, `scan`, `insert`, `update`, `merge`o `delete`.  
 * Un elemento `SeekPredicateNew` nuovo con un sottoelemento `SeekKeys` che include `PartitionID` come colonna chiave di indice iniziale e condizioni di filtro che specificano ricerche di intervallo su `PartitionID`. La presenza di due sottoelementi `SeekKeys` indica che su `PartitionID` viene usata un'operazione di skip scan.   
 * Informazioni di riepilogo che includono il totale delle partizioni a cui viene effettuato l'accesso. Queste informazioni sono disponibili solo nei piani della fase di esecuzione. 
 
@@ -849,7 +853,7 @@ Nella figura seguente sono illustrate le proprietà dell'operatore `Clustered In
 
 #### <a name="partitioned-attribute"></a>Attributo Partitioned
 
-Quando su una tabella o un indice partizionato si esegue un operatore quale `Index Seek`, l'attributo `Partitioned` viene incluso sia nel piano della fase di compilazione che in quello della fase di esecuzione ed è impostato su `True` (1). L'attributo non viene visualizzato quando è impostato su `False` (0).
+Quando su una tabella o un indice partizionato si esegue un operatore quale `Index Seek` , l'attributo `Partitioned` viene incluso sia nel piano della fase di compilazione che in quello della fase di esecuzione ed è impostato su `True` (1). L'attributo non viene visualizzato quando è impostato su `False` (0).
 
 L'attributo `Partitioned` può essere visualizzato negli operatori fisici e logici seguenti:  
 * `Table Scan`  
@@ -864,17 +868,17 @@ Come illustrato nella figura precedente, questo attributo viene visualizzato nel
 
 #### <a name="new-seek-predicate"></a>Nuovo predicato Seek
 
-Nell'output di Showplan XML l'elemento `SeekPredicateNew` è visualizzato nell'operatore nel quale è definito. Può contenere fino a due occorrenze del sottoelemento `SeekKeys`. Il primo elemento `SeekKeys` specifica l'operazione di ricerca di primo livello a livello di ID della partizione dell'indice logico. Tale ricerca consente di determinare le partizioni a cui è necessario accedere per soddisfare le condizioni della query. Il secondo elemento `SeekKeys` specifica la parte della ricerca di secondo livello dell'operazione di skip scan che viene eseguita all'interno di ciascuna partizione identificata nella ricerca di primo livello. 
+Nell'output di Showplan XML l'elemento `SeekPredicateNew` è visualizzato nell'operatore nel quale è definito. Può contenere fino a due occorrenze del sottoelemento `SeekKeys` . Il primo elemento `SeekKeys` specifica l'operazione di ricerca di primo livello a livello di ID della partizione dell'indice logico. Tale ricerca consente di determinare le partizioni a cui è necessario accedere per soddisfare le condizioni della query. Il secondo elemento `SeekKeys` specifica la parte della ricerca di secondo livello dell'operazione di skip scan che viene eseguita all'interno di ciascuna partizione identificata nella ricerca di primo livello. 
 
 #### <a name="partition-summary-information"></a>Informazioni di riepilogo sulle partizioni
 
 Nei piani di esecuzione della fase di esecuzione le informazioni di riepilogo sulle partizioni includono il totale delle partizioni e l'identità delle partizioni effettive a cui viene effettuato l'accesso. È possibile utilizzare queste informazioni per verificare che le partizioni a cui viene effettuato l'accesso tramite la query sono corrette e che tutte le altre partizioni non vengono considerate.
 
-Vengono fornite le informazioni seguenti: `Actual Partition Count` e `Partitions Accessed`. 
+Vengono fornite le informazioni seguenti: `Actual Partition Count`e `Partitions Accessed`. 
 
 `Actual Partition Count` corrisponde al numero totale di partizioni a cui si accede tramite la query.
 
-Nell'output di Showplan XML `Partitions Accessed` corrisponde alle informazioni di riepilogo sulle partizioni che vengono visualizzate nel nuovo elemento `RuntimePartitionSummary` del nodo `RelOp` dell'operatore nel quale è definito. Nell'esempio seguente è illustrato il contenuto dell'elemento `RuntimePartitionSummary`, in cui è indicato che viene eseguito l'accesso a due partizioni totali, ovvero la 2 e la 3.
+Nell'output di Showplan XML`Partitions Accessed`corrisponde alle informazioni di riepilogo sulle partizioni che vengono visualizzate nel nuovo elemento `RuntimePartitionSummary` del nodo `RelOp` dell'operatore nel quale è definito. Nell'esempio seguente è illustrato il contenuto dell'elemento `RuntimePartitionSummary` , in cui è indicato che viene eseguito l'accesso a due partizioni totali, ovvero la 2 e la 3.
 ```
 <RunTimePartitionSummary>
 
@@ -889,11 +893,11 @@ Nell'output di Showplan XML `Partitions Accessed` corrisponde alle informazioni 
 
 #### <a name="displaying-partition-information-by-using-other-showplan-methods"></a>Visualizzazione delle informazioni sulle partizioni utilizzando altri metodi di Showplan
 
-I metodi `SHOWPLAN_ALL`, `SHOWPLAN_TEXT` e `STATISTICS PROFILE` di Showplan non restituiscono le informazioni sulle partizioni descritte in questo argomento, con un'unica eccezione illustrata di seguito. In quanto incluse nel predicato `SEEK`, le partizioni a cui eseguire l'accesso sono identificate da un predicato di intervallo nella colonna calcolata che rappresenta l'ID di partizione. L'esempio seguente mostra il predicato `SEEK` per un operatore `Clustered Index Seek`. Viene effettuato l'accesso alle partizioni 2 e 3 e l'operatore di ricerca applica il filtro sulle righe che soddisfano la condizione `date_id BETWEEN 20080802 AND 20080902`.
+I metodi `SHOWPLAN_ALL`, `SHOWPLAN_TEXT`e `STATISTICS PROFILE` di Showplan non restituiscono le informazioni sulle partizioni descritte in questo argomento, con un'unica eccezione illustrata di seguito. In quanto incluse nel predicato `SEEK` , le partizioni a cui eseguire l'accesso sono identificate da un predicato di intervallo nella colonna calcolata che rappresenta l'ID di partizione. L'esempio seguente mostra il predicato `SEEK` per un operatore `Clustered Index Seek` . Viene effettuato l'accesso alle partizioni 2 e 3 e l'operatore di ricerca applica il filtro sulle righe che soddisfano la condizione `date_id BETWEEN 20080802 AND 20080902`.
 ```
 |--Clustered Index Seek(OBJECT:([db_sales_test].[dbo].[fact_sales].[ci]), 
 
-        SEEK:([PtnId1000] >= (2) AND [PtnId1000] <= (3) 
+        SEEK:([PtnId1000] >= (2) AND [PtnId1000] \<= (3) 
 
                 AND [db_sales_test].[dbo].[fact_sales].[date_id] >= (20080802) 
 
@@ -915,7 +919,7 @@ La collocazione dei join può verificarsi quando due tabelle vengono partizionat
 
 In un piano collocato il join `Nested Loops` legge una o più partizioni di tabelle o indici unite in join dal lato interno. I numeri all'interno degli operatori `Constant Scan` rappresentano i numeri della partizione. 
 
-Quando per le tabelle o gli indici partizionati si generano piani paralleli per join collocati, viene visualizzato un operatore Parallelism tra gli operatori di join `Constant Scan` e `Nested Loops`. In questo caso, ognuno dei thread nel lato esterno del join legge ed elabora una partizione diversa. 
+Quando per le tabelle o gli indici partizionati si generano piani paralleli per join collocati, viene visualizzato un operatore Parallelism tra gli operatori di join `Constant Scan` e `Nested Loops` . In questo caso, ognuno dei thread nel lato esterno del join legge ed elabora una partizione diversa. 
 
 Nella figura seguente viene illustrato un piano di query parallele per un join collocato.   
 ![colocated_join](../relational-databases/media/colocated-join.gif)
@@ -931,14 +935,14 @@ Se il numero di thread è maggiore di quello delle partizioni, Query Processor a
 ![thread3](../relational-databases/media/thread3.gif)  
 Sebbene negli esempi precedenti venga suggerito un modo semplice per allocare thread, la strategia effettiva è più complessa e tiene conto di altre variabili che possono presentarsi durante l'esecuzione di query. Ad esempio, se la tabella è partizionata e dispone di un indice cluster nella colonna A e se in una query è presente la clausola del predicato `WHERE A IN (13, 17, 25)`, Query Processor allocherà uno o più thread a ciascuno dei tre valori di ricerca (A=13, A=17 e A=25) anziché eseguire l'allocazione a ogni partizione della tabella. È necessario solo eseguire la query nelle partizioni che contengono questi valori e, se tutti i predicati SEEK si trovano nella stessa partizione della tabella, tutti i thread verranno assegnati alla partizione specifica.
 
-Per illustrare un altro esempio, si supponga che la tabella dispone di quattro partizioni nella colonna A con punti limite (10, 20, 30), un indice nella colonna B e che la query include una clausola `WHERE B IN (50, 100, 150)` del predicato. Dal momento che partizioni della tabella sono basate sui valori di A, i valori di B possono trovarsi in qualsiasi partizione della tabella. Di conseguenza Query Processor ricercherà ciascuno dei tre valori di B (50, 100, 150) in ognuna delle quattro partizioni della tabella e assegnerà proporzionatamente i thread in modo da eseguire ciascuna delle 12 analisi della query in parallelo.
+Per illustrare un altro esempio, si supponga che la tabella dispone di quattro partizioni nella colonna A con punti limite (10, 20, 30), un indice nella colonna B e che la query include una clausola `WHERE B IN (50, 100, 150)`del predicato. Dal momento che partizioni della tabella sono basate sui valori di A, i valori di B possono trovarsi in qualsiasi partizione della tabella. Di conseguenza Query Processor ricercherà ciascuno dei tre valori di B (50, 100, 150) in ognuna delle quattro partizioni della tabella e assegnerà proporzionatamente i thread in modo da eseguire ciascuna delle 12 analisi della query in parallelo.
 
-|Partizioni della tabella basate sulla colonna A |Ricerca della colonna B in ogni partizione della tabella |
+|Partizioni della tabella basate sulla colonna A    |Ricerca della colonna B in ogni partizione della tabella |
 |----|----|
-|Partizione della tabella 1: A \< 10   |B=50, B=100, B=150 |
-|Partizione della tabella 2: A >= 10 AND A \< 20   |B=50, B=100, B=150 |
-|Partizione della tabella 3: A >= 20 AND A \< 30   |B=50, B=100, B=150 |
-|Partizione della tabella 4: A >= 30  |B=50, B=100, B=150 |
+|Partizione della tabella 1: A < 10     |B=50, B=100, B=150 |
+|Partizione della tabella 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|Partizione della tabella 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|Partizione della tabella 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Procedure consigliate
 
@@ -950,7 +954,7 @@ Per migliorare le prestazioni di query che accedono a una grande quantità di da
 * Utilizzare un server con processori veloci e il maggior numero possibile di core del processore per sfruttare a pieno la funzionalità di elaborazione di query parallele.
 * Assicurarsi che per il server sia disponibile larghezza di banda sufficiente del controller I/O. 
 * Creare un indice cluster in ogni tabella partizionata grande per sfruttare le ottimizzazioni dell'analisi dell'albero B.
-* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper "[Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)" (Caricamento di bulk dati in una tabella partizionata).
+* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper " [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)" (Caricamento di bulk dati in una tabella partizionata).
 
 ### <a name="example"></a>Esempio
 
@@ -1021,3 +1025,4 @@ GO
 SET STATISTICS XML OFF;
 GO
 ```
+

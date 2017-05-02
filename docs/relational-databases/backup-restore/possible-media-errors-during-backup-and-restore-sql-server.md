@@ -1,47 +1,44 @@
 ---
-title: "Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "errori di supporti [SQL Server]"
-  - "CONTINUE_AFTER_ERROR - opzione"
-  - "errori [SQL Server], backup"
-  - "backup [SQL Server], errori"
-  - "RESTORE VERIFYONLY - istruzione"
-  - "supporti di backup [SQL Server], gestione degli errori"
-  - "checksum di pagina [SQL Server]"
-  - "checksum di backup [SQL Server]"
-  - "backup [SQL Server], errori dei supporti"
-  - "RESTORE - istruzione, errori dei supporti"
-  - "NO_CHECKSUM - opzione"
-  - "checksum [SQL Server]"
+title: Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- media errors [SQL Server]
+- CONTINUE_AFTER_ERROR option
+- errors [SQL Server], backups
+- backups [SQL Server], errors
+- RESTORE VERIFYONLY statement
+- backup media [SQL Server], error management
+- page checksums [SQL Server]
+- backup checksums [SQL Server]
+- backing up [SQL Server], media errors
+- RESTORE statement, media errors
+- NO_CHECKSUM option
+- checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
+# <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includono un'opzione che permette di recuperare un database anche in presenza di errori. Un importante e nuovo meccanismo di rilevazione degli errori prevede l'utilizzo facoltativo di un checksum del backup, creato durante un'operazione di backup e convalidato durante un'operazione di ripristino. È quindi possibile controllare se un'operazione verifica la presenza di errori e se ne deve essere o meno arrestata l'esecuzione quando viene rilevato un errore. Se un backup contiene un checksum, le istruzioni RESTORE e RESTORE VERIFYONLY verificano la presenza di errori.  
   
 > [!NOTE]  
 >  I backup con mirroring consentono di disporre di un massimo di quattro copie (mirror) di set di supporti, offrendo copie alternative per il recupero in caso di errori che dipendono da supporti danneggiati. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
- **Contenuto dell'argomento**  
-  
--   [Checksum di backup](#BckChecksums)  
-  
--   [Risposta a errori di checksum di pagina durante un'operazione di backup o ripristino](#ResponsetoPageChecksumErrors)  
-  
--   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="BckChecksums"></a> Checksum di backup  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati tre tipi di checksum: della pagine, dei blocchi dei log e del backup. Durante la generazione di un checksum del backup, l'istruzione BACKUP verifica che i dati letti dal database siano consistenti con l'eventuale indicazione di checksum o di pagina incompleta presente nel database.  
@@ -59,7 +56,7 @@ caps.handback.revision: 36
      Se durante la verifica dell'operazione di backup viene rilevato un errore di pagina, il backup non riesce.  
   
     > [!NOTE]  
-    >  Per ulteriori informazioni sui checksum delle pagine e sul rilevamento delle pagine incomplete, vedere l'opzione PAGE_VERIFY dell'istruzione ALTER DATABASE. Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+    >  Per ulteriori informazioni sui checksum delle pagine e sul rilevamento delle pagine incomplete, vedere l'opzione PAGE_VERIFY dell'istruzione ALTER DATABASE. Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 2.  Indipendentemente dalla presenza di valori di checksum per la pagina, viene generato un checksum di backup separato per i flussi di backup. Le operazioni di ripristino possono utilizzare facoltativamente il checksum del backup per verificare che il backup non sia danneggiato. Il checksum del backup viene archiviato nei supporti di backup e non nelle pagine del database. È possibile utilizzare facoltativamente il checksum del backup in fase di ripristino.  
   
@@ -67,7 +64,7 @@ caps.handback.revision: 36
   
  Durante un'operazione di ripristino, se nel supporto di backup sono presenti checksum di backup, per impostazione predefinita le istruzioni RESTORE e RESTORE VERIFYONLY verificheranno solo i checksum di backup e delle pagine. In assenza di un checksum di backup, l'operazione di backup proseguirà senza verifica, in quanto, in tal caso, l'operazione di ripristino non è in grado di verificare in modo affidabile i checksum delle pagine.  
   
-## Risposta a errori di checksum di pagina durante un'operazione di backup o ripristino  
+## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>Risposta a errori di checksum di pagina durante un'operazione di backup o ripristino  
  Per impostazione predefinita, dopo avere rilevato un errore di checksum della pagina, l'operazione BACKUP o RESTORE non riesce e l'operazione RESTORE VERIFYONLY continua. Tuttavia, è possibile controllare se un'operazione specificata non riesce sul rilevamento di un errore o continua nel migliore dei modi.  
   
  Se un'operazione BACKUP continua dopo aver rilevato errori, l'operazione esegue i passaggi indicati di seguito:  
@@ -87,14 +84,14 @@ caps.handback.revision: 36
   
  **Per controllare la risposta a un errore durante un'operazione di backup**  
   
--   [Specificare se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [Specificare se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Set di supporti di backup con mirroring &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
   

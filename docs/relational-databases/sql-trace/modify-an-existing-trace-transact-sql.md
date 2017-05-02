@@ -1,28 +1,32 @@
 ---
-title: "Modificare una traccia esistente (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tracce [SQL Server], modifica"
-  - "modifica di tracce"
+title: Modificare una traccia esistente (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], modifying
+- modifying traces
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f58e12e1c04c65974dbc985c8acc525ed44be06
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificare una traccia esistente (Transact-SQL)
+# <a name="modify-an-existing-trace-transact-sql"></a>Modificare una traccia esistente (Transact-SQL)
   In questo argomento viene descritto come utilizzare stored procedure per modificare una traccia esistente.  
   
-### Per modificare una traccia esistente  
+### <a name="to-modify-an-existing-trace"></a>Per modificare una traccia esistente  
   
 1.  Se la traccia è già in esecuzione, eseguire **sp_trace_setstatus** specificando **@status = 0** per arrestarla.  
   
@@ -32,11 +36,11 @@ caps.handback.revision: 18
   
     -   **@eventid** (ID evento)  
   
-    -   **@columnid**(ID colonna)  
+    -   **@columnid** (ID colonna)  
   
     -   **@on** (ON)  
   
-     Quando si modifica il parametro **@on**, tenere presente l'interazione con il parametro **@columnid**:  
+     Quando si modifica il parametro **@on** , tenere presente l'interazione con il parametro **@columnid** :  
   
     |ON|ID colonna|Risultato|  
     |--------|---------------|------------|  
@@ -48,7 +52,7 @@ caps.handback.revision: 18
 > [!IMPORTANT]  
 >  A differenza di quanto avviene con le normali stored procedure, i parametri di tutte le stored procedure di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_*xx***) sono fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

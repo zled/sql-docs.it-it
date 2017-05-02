@@ -1,50 +1,51 @@
 ---
-title: "Autorizzazioni (Motore di database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "REFERENCES - autorizzazione"
-  - "autorizzazioni [SQL Server]"
-  - "sicurezza [SQL Server], autorizzazioni"
-  - "convenzioni di denominazione [SQL Server]"
+title: Autorizzazioni (motore di database) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Autorizzazioni (Motore di database)
+# <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Le autorizzazioni in [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono gestite a livello di server assegnate agli account di accesso e ai ruoli del server e a livello di database assegnate agli utenti e ai ruoli del database. Il modello per il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ha lo stesso sistema di autorizzazioni del database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento contiene l'elenco completo delle autorizzazioni. Per un'implementazione tipica delle autorizzazioni, vedere [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è 236. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio non è possibile concedere le autorizzazioni a livello di server per il database SQL e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti. La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte.
+Il numero totale di autorizzazioni per [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è 237. La maggior parte delle autorizzazioni si applica a tutte le piattaforme, mentre alcune non si applicano a tutte le piattaforme. Ad esempio non è possibile concedere le autorizzazioni a livello di server per il database SQL e alcune autorizzazioni possono essere usate solo in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. L'argomento [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) specifica gli argomenti nuovi nelle versioni recenti. La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
   
-![Autorizzazioni del motore di database](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![Autorizzazioni del motore di database](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> Come parte di questo argomento il poster è molto piccolo e non può essere consultato. Scaricare il poster relativo alle autorizzazioni del motore di database da [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
-
-Una volta comprese le autorizzazioni, applicare le autorizzazioni a livello di server agli account di accesso e le autorizzazioni a livello di database agli utenti con le istruzioni [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOCARE](../../t-sql/statements/revoke-transact-sql.md) e [DENY](../../t-sql/statements/deny-transact-sql.md). Ad esempio:   
+Una volta comprese le autorizzazioni, applicare le autorizzazioni a livello di server agli account di accesso e le autorizzazioni a livello di database agli utenti con le istruzioni [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOCARE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Ad esempio:   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a> Convenzioni di denominazione delle autorizzazioni  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  Di seguito vengono descritte le convenzioni generali adottate per la denominazione delle autorizzazioni:  
   
 -   CONTROL  
@@ -55,7 +56,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
   
      Conferisce la capacità di modificare le proprietà, eccetto il diritto di proprietà, di una particolare entità a protezione diretta. Quando viene concessa in un ambito, l'autorizzazione ALTER concede la capacità di modificare, creare o eliminare una qualsiasi entità a protezione diretta contenuta in tale ambito. Un'autorizzazione ALTER in uno schema, ad esempio, include la capacità di creare, modificare ed eliminare oggetti contenuti nello schema.  
   
--   ALTER ANY \<*Entità a protezione diretta del server*>, dove * del server* può essere qualsiasi entità a protezione diretta del server.  
+-   ALTER ANY \<*Entità a protezione diretta del server*>, dove *Entità a protezione diretta del server* può essere qualsiasi entità a protezione diretta del server.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del server*. L'autorizzazione ALTER ANY LOGIN, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi account di accesso nell'istanza.  
   
@@ -75,7 +76,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
   
      Consente al beneficiario di rappresentare l'utente.  
   
--   CREARE \<*Entità a protezione diretta del server*>  
+-   CREATE \<*Entità a protezione diretta del server*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del server*.  
   
@@ -100,7 +101,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
  Per un grafico di grandi dimensioni di tutte le autorizzazioni [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato pdf, vedere [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Autorizzazioni applicabili a particolari entità a protezione diretta  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  Nella tabella seguente vengono elencati le classi principali di autorizzazione e i tipi di entità a protezione diretta a cui possono essere applicati.  
   
 |Autorizzazione|Applicabile a|  
@@ -111,7 +112,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |EXECUTE|Tipi CLR, script esterni, procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinonimi|  
 |IMPERSONATE|Account di accesso e utenti|  
 |INSERT|Sinonimi, tabelle e colonne, viste e colonne. L'autorizzazione può essere concesso a livello di database, schema oppure oggetto|  
-|RECEIVE|Code di [!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW e<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinonimi, tabelle e colonne, viste e colonne. L'autorizzazione può essere concesso a livello di database, schema oppure oggetto|  
 |TAKE OWNERSHIP|Tutte le classi di oggetti ad eccezione di DATABASE SCOPED CONFIGURATION LOGIN, SERVER e USER|  
@@ -122,8 +123,8 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 > [!CAUTION]  
 >  Le autorizzazioni predefinite concesso a oggetti di sistema durante l'installazione vengono valutati attentamente per individuare possibili minacce e non è quindi necessario modificarli per implementare misure di protezione avanzata dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eventuali modifiche alle autorizzazioni per gli oggetti di sistema possono limitare o compromettere la funzionalità e potrebbero lasciare l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno stato non supportato.  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a> Autorizzazioni di SQL Server  
- La tabella seguente contiene un elenco completo delle autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sono disponibili solo per entità a protezione diretta supportate. Non è possibile concedere autorizzazioni a livello di server in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tuttavia in alcuni casi sono disponibili invece autorizzazioni di database.  
+##  <a name="_permissions"></a> SQL Server Permissions  
+ La tabella seguente contiene un elenco completo delle autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni del[!INCLUDE[ssSDS](../../includes/sssds-md.md)] sono disponibili solo per entità a protezione diretta supportate. Non è possibile concedere autorizzazioni a livello di server in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tuttavia in alcuni casi sono disponibili invece autorizzazioni di database.  
   
 |Entità a protezione diretta di base|Autorizzazioni di granularità sull'entità a protezione diretta di base|Codice tipo di autorizzazione|Entità a protezione diretta contenente l'entità a protezione diretta di base|Autorizzazione sull'entità a protezione diretta contenente che implica un'autorizzazione di granularità sull'entità a protezione diretta di base|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -160,25 +161,25 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Si applica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -216,7 +217,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
@@ -224,10 +225,10 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
@@ -364,7 +365,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  Il controllo delle autorizzazioni può essere complesso. L'algoritmo di controllo delle autorizzazioni include le appartenenze a gruppi sovrapposti e il concatenamento di proprietà, nonché autorizzazioni esplicite e implicite. È inoltre possibile che le autorizzazioni per le classi di entità a protezione diretta contenenti l'entità a protezione diretta abbiano impatto su tale algoritmo. Il processo generale dell'algoritmo consiste nel raccogliere tutte le autorizzazioni rilevanti. Se non viene individuato alcun blocco DENY, l'algoritmo cerca un'istruzione GRANT che fornisce accesso sufficiente. L'algoritmo contiene tre elementi fondamentali, ovvero il **contesto di sicurezza**, lo **spazio di autorizzazione**e l' **autorizzazione necessaria**.  
   
 > [!NOTE]  
@@ -420,13 +421,13 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>Considerazioni speciali per le autorizzazioni a livello di colonna
 
-Le autorizzazioni a livello di colonna vengono concesse con la sintassi *\< nome_tabella > (\<nome_colonna>)*. Esempio:
+Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<NomeTabella>(\<NomeColonna>)*. Esempio:
 ```tsql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un'istruzione GRANT a livello di colonna esegue l'override di un'istruzione DENY a livello di tabella. Tuttavia, un'istruzione DENY successiva a livello di tabella rimuoverà l'istruzione GRANT a livello di colonna. 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a> Esempi  
+##  <a name="_examples"></a> Examples  
  Negli esempi inclusi in questa sezione viene illustrato come recuperare le informazioni sulle autorizzazioni.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
@@ -467,3 +468,4 @@ GO
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

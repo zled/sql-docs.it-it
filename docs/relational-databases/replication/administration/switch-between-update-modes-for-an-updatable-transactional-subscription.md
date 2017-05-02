@@ -1,27 +1,31 @@
 ---
-title: "Passaggio da una modalit&#224; di aggiornamento all&#39;altra per una sottoscrizione transazionale aggiornabile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replica transazionale, sottoscrizioni aggiornabili"
-  - "sottoscrizioni aggiornabili, modalità di aggiornamento"
-  - "sottoscrizioni [replica di SQL Server], aggiornabili"
+title: "Passare da una modalità di aggiornamento all&quot;altra per una sottoscrizione transazionale aggiornabile | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, updatable subscriptions
+- updatable subscriptions, update modes
+- subscriptions [SQL Server replication], updatable
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
+ms.lasthandoff: 04/11/2017
+
 ---
-# Passaggio da una modalit&#224; di aggiornamento all&#39;altra per una sottoscrizione transazionale aggiornabile
-  In questo argomento viene descritto come passare da una modalità di aggiornamento all'altra per una sottoscrizione con transazione aggiornabile in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Per specificare la modalità per le sottoscrizioni aggiornabili, utilizzare la Creazione guidata nuova sottoscrizione. Per informazioni sull'impostazione della modalità quando si utilizza questa procedura guidata, vedere [visualizzare e modificare le proprietà di sottoscrizione Pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+# <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Passaggio da una modalità di aggiornamento all'altra per una sottoscrizione transazionale aggiornabile
+  In questo argomento viene descritto come passare da una modalità di aggiornamento all'altra per una sottoscrizione con transazione aggiornabile in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Per specificare la modalità per le sottoscrizioni aggiornabili, utilizzare la Creazione guidata nuova sottoscrizione. Per informazioni sull'impostazione della modalità durante l'uso di questa procedura guidata, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  **Contenuto dell'argomento**  
   
@@ -45,46 +49,46 @@ caps.handback.revision: 38
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Se una sottoscrizione ad aggiornamento di una pubblicazione transazionale supporta il failover da una modalità di aggiornamento a un'altra, è possibile passare a livello programmatico tra le modalità di aggiornamento, al fine di gestire situazioni in cui la connettività cambia per un breve periodo di tempo. La modalità di aggiornamento può essere impostata a livello di programmazione e su richiesta utilizzando le stored procedure di replica. Per ulteriori informazioni, vedere [sottoscrizioni aggiornabili per la replica transazionale](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+-   Se una sottoscrizione ad aggiornamento di una pubblicazione transazionale supporta il failover da una modalità di aggiornamento a un'altra, è possibile passare a livello programmatico tra le modalità di aggiornamento, al fine di gestire situazioni in cui la connettività cambia per un breve periodo di tempo. La modalità di aggiornamento può essere impostata a livello di programmazione e su richiesta utilizzando le stored procedure di replica. Per altre informazioni, vedere [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 > [!NOTE]  
->  Per modificare la modalità di aggiornamento dopo aver creata la sottoscrizione, il **update_mode** proprietà deve essere impostata su **failover** (che consente di passare dall'aggiornamento immediato all'aggiornamento in coda) o **in coda failover** (che consente di passare dall'aggiornamento in coda all'aggiornamento immediato) quando viene creata la sottoscrizione. Queste proprietà vengono impostate automaticamente nella Creazione guidata nuova sottoscrizione.  
+>  Per cambiare la modalità di aggiornamento dopo avere creato la sottoscrizione, è necessario impostare la proprietà **update_mode** sul valore **failover** , che consente di passare dall'aggiornamento immediato all'aggiornamento in coda, oppure sul valore **queued failover** , che consente di passare dall'aggiornamento in coda all'aggiornamento immediato, quando viene creata la sottoscrizione. Queste proprietà vengono impostate automaticamente nella Creazione guidata nuova sottoscrizione.  
   
-#### Per impostare la modalità di aggiornamento per una sottoscrizione push  
+#### <a name="to-set-the-updating-mode-for-a-push-subscription"></a>Per impostare la modalità di aggiornamento per una sottoscrizione push  
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** e quindi la cartella **Sottoscrizioni locali** .  
   
-3.  Pulsante destro del mouse la sottoscrizione per il quale si desidera impostare la modalità di aggiornamento e quindi fare clic su **Imposta metodo di aggiornamento**.  
+3.  Fare clic con il pulsante destro del mouse sulla sottoscrizione per la quale si desidera impostare la modalità di aggiornamento e quindi scegliere **Imposta metodo di aggiornamento**.  
   
-4.  Nel **Imposta metodo di aggiornamento - \< sottoscrittore>: \< SubscriptionDatabase>** nella finestra di dialogo **ad aggiornamento immediato** o **aggiornamento in coda**.  
+4.  Nella finestra di dialogo **Imposta metodo di aggiornamento - \<Sottoscrittore>: \<DatabaseSottoscrizione>** selezionare **Aggiornamento immediato** o **Aggiornamento in coda**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Per impostare la modalità di aggiornamento per una sottoscrizione pull  
+#### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Per impostare la modalità di aggiornamento per una sottoscrizione pull  
   
-1.  Nel **Proprietà sottoscrizione - \< Publisher>: \< PublicationDatabase>** la finestra di dialogo, selezionare un valore di **immediatamente la replica delle modifiche** o **Accoda le modifiche** per il **metodo di aggiornamento del sottoscrittore** (opzione).  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Server di pubblicazione>: \<DatabasePubblicazione>** selezionare **Replica le modifiche immediatamente** o **Accoda le modifiche** per l'opzione **Modalità di aggiornamento del Sottoscrittore**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Per ulteriori informazioni sull'accesso di **Proprietà sottoscrizione - \< Publisher>: \< PublicationDatabase>** la finestra di dialogo, vedere [visualizzare e modificare le proprietà di sottoscrizione Pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà sottoscrizione - \<Server di pubblicazione>: \<DatabasePubblicazione>**, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per passare da una modalità di aggiornamento all'altra  
+#### <a name="to-switch-between-update-modes"></a>Per passare da una modalità di aggiornamento all'altra  
   
-1.  Verificare che la sottoscrizione supporta il failover eseguendo [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) per una sottoscrizione pull o [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) per una sottoscrizione push. Se il valore di **modalità di aggiornamento** nel set di risultati è **3** o **4**, il failover è supportato.  
+1.  Verificare che la sottoscrizione supporti il failover eseguendo [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) per una sottoscrizione pull o [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) per una sottoscrizione push. Se il valore di **update mode** nel set di risultati è **3** o **4**, il failover è supportato.  
   
-2.  Nel database di sottoscrizione del sottoscrittore, eseguire [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**, e uno dei seguenti valori per **@failover_mode**:  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**e uno dei valori riportati di seguito per **@failover_mode**.  
   
-    -   **in coda** -eseguire il failover all'aggiornamento in coda quando la connettività è stata temporaneamente interrotta.  
+    -   **queued** : viene eseguito il failover all'aggiornamento in coda in caso di perdita temporanea della connettività.  
   
-    -   **controllo immediato** -eseguire il failover all'aggiornamento immediato quando è stata ripristinata la connettività.  
+    -   **immediate** : viene eseguito il failover all'aggiornamento immediato quando la connettività viene ripristinata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

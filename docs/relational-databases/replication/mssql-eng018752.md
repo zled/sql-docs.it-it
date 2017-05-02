@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG018752 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG018752 - errore"
+title: MSSQL_ENG018752 | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG018752 error
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 929c5e1c6205ab46b89ce4818183bb5ba9084fbe
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG018752
+# <a name="mssqleng018752"></a>MSSQL_ENG018752
     
-## Dettagli messaggio  
+## <a name="message-details"></a>Dettagli messaggio  
   
 |||  
 |-|-|  
@@ -31,8 +35,8 @@ caps.handback.revision: 15
 |Nome simbolico||  
 |Testo del messaggio|A un database può connettersi un solo agente di lettura log o una sola procedura correlata ai log (sp_repldone, sp_replcmds e sp_replshowcmds) alla volta. Se è stata eseguita una procedura correlata ai log, eliminare la connessione utilizzata per eseguire la procedura oppure eseguire sp_replflush tramite tale connessione prima di avviare l'agente di lettura log o di eseguire un'altra procedura relativa ai log.|  
   
-## Spiegazione  
- Più connessioni correnti stanno tentando di eseguire le seguenti operazioni: **sp_repldone**, **sp_replcmds**, o **sp_replshowcmds**. Le stored procedure [sp_repldone & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) e [sp_replcmds & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) sono stored procedure utilizzate dall'agente di lettura Log per individuare e aggiornare le informazioni sulle transazioni replicate in un database pubblicato. La stored procedure [sp_replshowcmds & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) viene utilizzato per risolvere determinati tipi di problemi relativi alla replica transazionale.  
+## <a name="explanation"></a>Spiegazione  
+ È in corso da parte di più connessioni il tentativo di eseguire una delle procedure seguenti: **sp_repldone**, **sp_replcmds**o **sp_replshowcmds**. Le stored procedure [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) e [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) vengono usate dall'agente di lettura log per trovare e aggiornare le informazioni sulle transazioni replicate in un database pubblicato. La stored procedure [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) viene usata per la risoluzione di alcuni tipi di problemi relativi alla replica transazionale.  
   
  Questo errore viene generato nelle circostanze seguenti:  
   
@@ -40,27 +44,27 @@ caps.handback.revision: 15
   
      In una situazione in cui compaiono più agenti, è possibile che uno di loro sia il risultato di un processo orfano.  
   
--   Se l'agente di lettura Log per un database pubblicato viene avviato e un utente esegue **sp_repldone**, **sp_replcmds**, o **sp_replshowcmds** nello stesso database, viene generato l'errore nell'applicazione in cui è stata eseguita la stored procedure (ad esempio **sqlcmd**).  
+-   Se l'agente di lettura log di un database pubblicato viene avviato e un utente esegue **sp_repldone**, **sp_replcmds**o **sp_replshowcmds** sullo stesso database, viene generato l'errore nell'applicazione in cui è stata eseguita la stored procedure (ad esempio **sqlcmd**).  
   
--   Se nessun agente di lettura Log è in esecuzione per un database pubblicato e un utente esegue **sp_repldone**, **sp_replcmds**, o **sp_replshowcmds** e non chiude la connessione su cui è stata eseguita la procedura, l'errore viene generata quando l'agente di lettura Log tenta di connettersi al database.  
+-   Se l'agente di lettura log di un database pubblicato viene avviato e un utente esegue **sp_repldone**, **sp_replcmds**o **sp_replshowcmds** e non chiude la connessione su cui è stata eseguita la procedura, quando l'agente di lettura log tenta di connettersi al database viene generato l'errore.  
   
-## Azione dell'utente  
+## <a name="user-action"></a>Azione dell'utente  
  I passaggi seguenti possono contribuire alla risoluzione del problema. Se uno dei passaggi consente l'avvio senza errori dell'agente di lettura log, non è necessario completare i passaggi rimanenti.  
   
--   Verificare nella cronologia dell'agente di lettura log la presenza di eventuali altri errori che potrebbero contribuire a questo errore. Per informazioni sulla visualizzazione dei dettagli di errore e di stato dell'agente in Monitoraggio replica, vedere [visualizzare le informazioni ed esecuzione delle attività degli agenti associati con una pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+-   Verificare nella cronologia dell'agente di lettura log la presenza di eventuali altri errori che potrebbero contribuire a questo errore. Per informazioni sui dettagli di stato e di errore dell'agente di visualizzazione in Monitoraggio replica, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
--   Verificare nell'output di [sp_who & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) per i numeri di identificazione di processo (SPID) connessi al database pubblicato. Chiudere tutte le connessioni che potrebbero aver eseguito **sp_repldone**, **sp_replcmds**, o **sp_replshowcmds**.  
+-   Verificare nell'output di [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) la presenza di numeri di identificazione di processo (SPID) connessi al database pubblicato. Chiudere le connessioni che potrebbero aver eseguito **sp_repldone**, **sp_replcmds**o **sp_replshowcmds**.  
   
--   Riavviare l'agente di lettura log. Per ulteriori informazioni, vedere [avviare e arrestare un agente di replica & #40; SQL Server Management Studio & #41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+-   Riavviare l'agente di lettura log. Per altre informazioni, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (metterlo offline oppure online in un cluster) sul server di distribuzione. Se vi è possibilità che un processo pianificato abbia eseguito **sp_repldone**, **sp_replcmds**, o **sp_replshowcmds** da qualsiasi altro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'istanza, riavviare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente per anche tali istanze. Per ulteriori informazioni, vedere [avviare, arrestare o sospendere il servizio SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
+-   Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (metterlo offline oppure online in un cluster) sul server di distribuzione. Se vi è una possibilità che un processo pianificato abbia eseguito **sp_repldone**, **sp_replcmds**o **sp_replshowcmds** da altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , riavviare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent anche per queste istanze. Per altre informazioni, vedere [Avviare, arrestare o sospendere il servizio SQL Server Agent](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
   
--   Eseguire [sp_replflush & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) nel server di pubblicazione nel database di pubblicazione e quindi riavviare l'agente di lettura Log.  
+-   Eseguire [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) nel server di pubblicazione sul database di pubblicazione e quindi riavviare l'agente di lettura log.  
   
 -   Se l'errore continua a verificarsi, aumentare il livello di dettaglio per la registrazione delle operazioni dell'agente e specificare un file di output per il log. A seconda del contesto dell'errore, in questo modo si potrebbero ottenere ulteriori informazioni sui passaggi che conducono all'errore e/o messaggi di errore aggiuntivi.  
   
-## Vedere anche  
- [Errori e gli eventi riferimento & #40; Replica & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Guida di riferimento a errori ed eventi &#40;replica&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agente lettura log repliche](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
   

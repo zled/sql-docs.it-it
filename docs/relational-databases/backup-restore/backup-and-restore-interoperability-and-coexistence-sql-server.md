@@ -1,28 +1,32 @@
 ---
-title: "Backup e ripristino: interoperabilit&#224; e coesistenza (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristini di file [SQL Server], funzionalità correlate"
-  - "ripristino [SQL Server], file"
-  - "ripristino di file [SQL Server], funzionalità correlate"
-  - "backup [SQL Server], file o filegroup"
-  - "backup di file [SQL Server], funzionalità correlate"
+title: "Backup e ripristino: interoperabilità e coesistenza (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup e ripristino: interoperabilit&#224; e coesistenza (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento vengono fornite alcune considerazioni sul backup e il ripristino di alcune funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tra cui ripristino dei file e avvio del database, ripristino online e indici disabilitati, mirroring del database, ripristino a fasi e indici full-text.  
@@ -71,12 +75,12 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Per distribuire le copie di un subset dei filegroup in un database, è necessario replicare solo gli oggetti dei filegroup che si desidera copiare in altri server. Per altre informazioni sulla replica, vedere [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
-### Creazione del database mirror  
- Il database mirror viene creato ripristinando i backup del database principale nel server mirror senza eseguirne il recupero (WITH NORECOVERY). Il ripristino deve mantenere lo stesso nome del database. Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+### <a name="creating-the-mirror-database"></a>Creazione del database mirror  
+ Il database mirror viene creato ripristinando i backup del database principale nel server mirror senza eseguirne il recupero (WITH NORECOVERY). Il ripristino deve mantenere lo stesso nome del database. Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md),  
   
  È possibile creare il database mirror utilizzando una sequenza di ripristino a fasi, se supportata. Non è tuttavia possibile avviare l'esecuzione del mirroring fino a quando non sono stati ripristinati tutti i filegroup e, in genere, fino a quando non sono stati ripristinati i backup del log necessari per portare il database mirror a un punto nel tempo sufficientemente vicino al database principale. Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
-### Restrizioni relative a operazioni di backup e ripristino durante il mirroring  
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>Restrizioni relative a operazioni di backup e ripristino durante il mirroring  
  Mentre è attiva una sessione di mirroring del database, vengono applicate le restrizioni seguenti:  
   
 -   Non sono consentite operazioni di backup e ripristino del database mirror.  
@@ -93,14 +97,14 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Per visualizzare l'ID del filegroup che contiene un indice full-text, selezionare la colonna data_space_id di [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
-### Indici full-text e tabelle in filegroup distinti  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>Indici full-text e tabelle in filegroup distinti  
  Se un indice full-text si trova in un filegroup distinto rispetto ai dati delle tabelle associati, il funzionamento del ripristino a fasi dipenderà dal primo filegroup di cui viene eseguito il ripristino e per cui viene attivata la modalità online.  
   
 -   Se il ripristino e l'attivazione della modalità online vengono eseguiti prima per il filegroup contenente l'indice full-text e quindi per il filegroup contenente i dati delle tabelle associati, il funzionamento della ricerca full-text è quello previsto non appena l'indice full-text è online.  
   
 -   Se il ripristino e l'attivazione della modalità online vengono eseguiti prima per il filegroup contenente i dati delle tabelle e poi per il filegroup contenente l'indice full-text, è possibile che il comportamento della funzionalità full-text risulti diverso. Questa situazione si verifica poiché le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che attivano un popolamento, ricompilano il catalogo o riorganizzano il catalogo hanno esito negativo fino a quando non viene riattivata la modalità online per l'indice. Tali istruzioni includono CREATE FULLTEXT INDEX, ALTER FULLTEXT INDEX, DROP FULLTEXT INDEX e ALTER FULLTEXT CATALOG.  
   
-     In questo caso, considerare in particolare i fattori seguenti:   
+     In questo caso, considerare in particolare i fattori seguenti:  
   
     -   Se all'indice full-text è associato il rilevamento delle modifiche, le istruzioni DML eseguite dall'utente avranno esito negativo fino a quando non viene attivata la modalità online per il filegroup. Anche l'operazione di eliminazione avrà esito negativo se il filegroup dell'indice non è online.  
   
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Repliche secondarie attive: Backup in repliche secondarie \(gruppi di disponibilità Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

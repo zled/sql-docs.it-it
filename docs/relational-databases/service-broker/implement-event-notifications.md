@@ -1,33 +1,37 @@
 ---
-title: "Implementazione di notifiche degli eventi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notifiche degli eventi [SQL Server], servizio di destinazione"
-  - "servizio di destinazione [SQL Server]"
-  - "notifiche degli eventi [SQL Server], creazione"
+title: Implementare notifiche degli eventi | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], target service
+- target service [SQL Server]
+- event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementazione di notifiche degli eventi
+# <a name="implement-event-notifications"></a>Implementazione di notifiche degli eventi
   Per implementare una notifica degli eventi, è necessario prima creare un servizio di destinazione che riceverà le notifiche degli eventi.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. La sicurezza del dialogo deve essere configurata manualmente in base al modello di sicurezza avanzata.  
   
-## Creazione del servizio di destinazione  
- Non è necessario creare un servizio di origine di [!INCLUDE[ssSB](../../includes/sssb-md.md)] perché [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il tipo di messaggio e di contratto seguente specifico per le notifiche degli eventi:  
+## <a name="creating-the-target-service"></a>Creazione del servizio di destinazione  
+ Non è necessario creare un servizio di origine di [!INCLUDE[ssSB](../../includes/sssb-md.md)]perché [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il tipo di messaggio e di contratto seguente specifico per le notifiche degli eventi:  
   
 ```  
 http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
@@ -44,7 +48,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
 2.  Creare un servizio nella coda che faccia riferimento al contratto per le notifiche degli eventi.  
   
-3.  Creare una route nel servizio per definire l'indirizzo a cui verranno inviati i messaggi per il servizio tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per le notifiche dell'evento la cui destinazione è rappresentata da un servizio nello stesso database, specificare `ADDRESS = 'LOCAL'`.  
+3.  Creare una route nel servizio per definire l'indirizzo a cui verranno inviati i messaggi per il servizio tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Per le notifiche dell'evento la cui destinazione è rappresentata da un servizio nello stesso database, specificare `ADDRESS = 'LOCAL'`.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] Il routing determina il servizio che riceve i messaggi di notifica. Se la destinazione della notifica degli eventi è rappresentata da un servizio in un server remoto, il server di origine e il server di destinazione dovranno entrambi disporre di route definite che assicurino la corretta comunicazione bidirezionale.  
@@ -66,7 +70,7 @@ ADDRESS = 'LOCAL';
 GO  
 ```  
   
-## Creazione della notifica degli eventi  
+## <a name="creating-the-event-notification"></a>Creazione della notifica degli eventi  
  Le notifiche degli eventi vengono create utilizzando l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE EVENT NOTIFICATION e vengono eliminate utilizzando l'istruzione DROP EVENT NOTIFICATION. Per modificare la notifica di un evento, è necessario eliminarla e quindi ricrearla.  
   
  Nell'esempio seguente viene creata la notifica di evento `CreateDatabaseNotification`. Per ogni evento `CREATE_DATABASE` generato nel server, questa notifica invia un messaggio al servizio `NotifyService` creato in precedenza.  
@@ -95,7 +99,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Recupero di informazioni sulle notifiche degli eventi](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

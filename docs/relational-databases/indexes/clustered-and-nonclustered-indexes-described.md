@@ -1,25 +1,29 @@
 ---
-title: "Descrizione di indici cluster e non cluster. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Query Optimizer [SQL Server], utilizzo indice"
-  - "concetti di base su indici [SQL Server]"
+title: Descrizione di indici cluster e non cluster | Microsoft Docs
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- query optimizer [SQL Server], index usage
+- index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01dfceee2f0d4fb1e0c475333be49e6dacec1c3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Descrizione di indici cluster e non cluster.
+# <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Un indice è una struttura su disco associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Tali chiavi vengono archiviate in una struttura (albero B) che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
@@ -46,21 +50,22 @@ caps.handback.revision: 36
   
  Vedere [Indici](../../relational-databases/indexes/indexes.md) per altri tipi di indici usati per scopi speciali.  
   
-## Indici e vincoli  
+## <a name="indexes-and-constraints"></a>Indici e vincoli  
  Gli indici vengono creati automaticamente quando si definiscono vincoli PRIMARY KEY e UNIQUE sulle colonne della tabella. Quando, ad esempio, si crea una tabella e si identifica una colonna specifica da utilizzare come chiave primaria, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] verrà automaticamente creato un vincolo PRIMARY KEY e un indice su quella colonna. Per altre informazioni, vedere [Creare chiavi primarie](../../relational-databases/tables/create-primary-keys.md) e [Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md).  
   
-## Utilizzo degli indici in Query Optimizer  
- Se correttamente progettati, gli indici contribuiscono a ridurre le operazioni di I/O su disco e l'utilizzo di risorse di sistema, migliorando pertanto le prestazioni delle query. Gli indici possono inoltre risultare utili in una vasta gamma di query che contengono le istruzioni SELECT, UPDATE, DELETE o MERGE. Si consideri la query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Quando viene eseguita questa query, Query Optimizer valuta i singoli metodi disponibili per il recupero dei dati e seleziona quello più efficace. Il metodo può prevedere un'analisi di tabella oppure di uno o più indici eventualmente esistenti.  
+## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Utilizzo degli indici in Query Optimizer  
+ Se correttamente progettati, gli indici contribuiscono a ridurre le operazioni di I/O su disco e l'utilizzo di risorse di sistema, migliorando pertanto le prestazioni delle query. Gli indici possono inoltre risultare utili in una vasta gamma di query che contengono le istruzioni SELECT, UPDATE, DELETE o MERGE. Si consideri la query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Quando viene eseguita questa query, Query Optimizer valuta i singoli metodi disponibili per il recupero dei dati e seleziona quello più efficace. Il metodo può prevedere un'analisi di tabella oppure di uno o più indici eventualmente esistenti.  
   
  Durante un'analisi di tabella Query Optimizer legge tutte le righe della tabella ed estrae quelle che soddisfano i criteri della query. Pur generando molte operazioni di I/O su disco e talvolta utilizzando un elevato numero di risorse, un'analisi di tabella può costituire il metodo più efficace se, ad esempio, il set di risultati della query include un'elevata percentuale di righe della tabella.  
   
  Se invece Query Optimizer utilizza un indice, esegue la ricerca delle colonne chiave dell'indice, individua la posizione di archiviazione delle righe richieste dalla query ed estrae solo quelle corrispondenti. La ricerca basata sull'indice è in genere più rapida rispetto a quella basata sulla tabella perché, a differenza di una tabella, un indice contiene di frequente pochissime colonne per riga e le righe sono ordinate.  
   
- Query Optimizer seleziona in genere il metodo più efficace durante l'esecuzione delle query. Se, tuttavia, non è disponibile alcun indice, verrà utilizzata un'analisi di tabella. L'attività consiste nel progettare e creare indici adatti all'ambiente in modo che in Query Optimizer sia presente una selezione di indici efficienti da cui effettuare una selezione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'[Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md) per facilitare l'analisi dell'ambiente del database e la selezione di indici adatti.  
+ Query Optimizer seleziona in genere il metodo più efficace durante l'esecuzione delle query. Se, tuttavia, non è disponibile alcun indice, verrà utilizzata un'analisi di tabella. L'attività consiste nel progettare e creare indici adatti all'ambiente in modo che in Query Optimizer sia presente una selezione di indici efficienti da cui effettuare una selezione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l' [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md) per facilitare l'analisi dell'ambiente del database e la selezione di indici adatti.  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)  
   
  [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   
+

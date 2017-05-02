@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento Progress Report: Online Index Operation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Progress Report: Online Index Operation - classe di evento [SQL Server]"
+title: 'Classe di evento Progress Report: Online Index Operation | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'Progress Report: Online Index Operation event class [SQL Server]'
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74cab49e651efabd8862e4d6ddf78a8fbdf739b8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Classe di evento Progress Report: Online Index Operation
   La classe di evento Progress Report: Online Index Operation indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.  
   
-## Colonne di dati della classe di evento Progress Report: Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Colonne di dati della classe di evento Progress Report: Online Index Operation  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -29,7 +33,7 @@ caps.handback.revision: 23
 |BigintData1|**bigint**|Numero di righe inserite.|52|Sì|  
 |BigintData2|**bigint**|0 = piano seriale; altrimenti, ID del thread durante l'esecuzione parallela.|53|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Durata|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|**datetime**|Ora del completamento dell'operazione di creazione dell'indice online.|15|Sì|  
@@ -54,7 +58,7 @@ caps.handback.revision: 23
 |StartTime|**datetime**|Ora di inizio dell'evento.|14|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

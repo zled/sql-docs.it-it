@@ -1,35 +1,39 @@
 ---
-title: "Impostazione dei caratteri di terminazione del campo e della riga (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilità bcp [SQL Server], caratteri di terminazione"
-  - "caratteri di terminazione del campo [SQL Server]"
-  - "formati di dati [SQL Server], caratteri di terminazione"
-  - "caratteri di terminazione della riga [SQL Server]"
-  - "caratteri di terminazione [SQL Server]"
+title: Specificare i caratteri di terminazione del campo e della riga (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], terminators
+- field terminators [SQL Server]
+- data formats [SQL Server], terminators
+- row terminators [SQL Server]
+- terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
+# <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
   Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
   
 > [!IMPORTANT]  
->  Per il formato nativo o nativo Unicode, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. Possono verificarsi conflitti tra i dati in formato nativo e i caratteri di terminazione, perché un file di dati in formato nativo viene archiviato nel formato di dati binario interno di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Per il formato nativo o nativo Unicode, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. Possono verificarsi conflitti tra i dati in formato nativo e i caratteri di terminazione, perché un file di dati in formato nativo viene archiviato nel formato di dati binario interno di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Caratteri di terminazione supportati  
- Il comando **bcp**, l'istruzione BULK INSERT e il provider bulk per set di righe OPENROWSET supportano una vasta gamma di caratteri di terminazione del campo o della riga e cercano sempre la prima istanza di ogni carattere di terminazione. Nella tabella seguente sono inclusi i caratteri di terminazione supportati.  
+## <a name="characters-supported-as-terminators"></a>Caratteri di terminazione supportati  
+ Il comando **bcp** , l'istruzione BULK INSERT e il provider bulk per set di righe OPENROWSET supportano una vasta gamma di caratteri di terminazione del campo o della riga e cercano sempre la prima istanza di ogni carattere di terminazione. Nella tabella seguente sono inclusi i caratteri di terminazione supportati.  
   
 |Carattere di terminazione|Indicato da|  
 |---------------------------|------------------|  
@@ -48,14 +52,14 @@ caps.handback.revision: 39
 > [!IMPORTANT]  
 >  Se i dati contengono un carattere di terminazione, questo viene interpretato come tale e non come un'informazione, mentre i dati che seguono tale carattere vengono interpretati come parte del campo o del record successivo. Di conseguenza, è necessario scegliere con attenzione i caratteri di terminazione per evitare che vengano visualizzati nei dati. Un carattere di terminazione del campo di surrogato basso, ad esempio, non costituisce una buona scelta per un carattere di terminazione del campo se i dati contengono tale surrogato basso.  
   
-## Utilizzo di caratteri di terminazione della riga  
+## <a name="using-row-terminators"></a>Utilizzo di caratteri di terminazione della riga  
  Il carattere di terminazione della riga può essere identico al carattere di terminazione dell'ultimo campo. In genere, tuttavia, è consigliabile utilizzare un carattere di terminazione della riga distinto. Per generare un output in formato tabulare, ad esempio, è possibile terminare l'ultimo campo di ogni riga con il carattere di nuova riga (\n) e tutti gli altri campi con il carattere di tabulazione (\t). Per posizionare ogni record di dati nella riga corrispondente del file di dati, specificare la combinazione \r\n come carattere di terminazione della riga.  
   
 > [!NOTE]  
 >  Se si usa l'utilità **bcp** in modalità interattiva e si specifica il carattere di nuova riga \n come carattere di terminazione della riga, il comando **bcp** aggiunge automaticamente il carattere di ritorno a capo \r come prefisso, generando il carattere di terminazione della riga \r\n.  
   
-## Impostazione dei caratteri di terminazione per l'esportazione bulk  
- Se si esegue l'esportazione bulk di dati **char** o **nchar** e si vuole usare un carattere di terminazione non predefinito, è necessario specificare tale carattere nel comando **bcp**. È possibile specificare i caratteri di terminazione in uno dei modi seguenti:  
+## <a name="specifying-terminators-for-bulk-export"></a>Impostazione dei caratteri di terminazione per l'esportazione bulk  
+ Se si esegue l'esportazione bulk di dati **char** o **nchar** e si vuole usare un carattere di terminazione non predefinito, è necessario specificare tale carattere nel comando **bcp** . È possibile specificare i caratteri di terminazione in uno dei modi seguenti:  
   
 -   Con un file di formato che specifica il carattere di terminazione per ogni singolo campo.  
   
@@ -66,12 +70,12 @@ caps.handback.revision: 39
   
     -   Uso dell'opzione **-t** per specificare il carattere di terminazione del campo per tutti i campi, ad eccezione dell'ultimo campo della riga, e dell'opzione **-r** per specificare un carattere di terminazione della riga.  
   
-    -   Uso di un'opzione per il formato carattere (**-c** o **-w**) senza l'opzione **-t**, che imposta il carattere di terminazione del campo sul carattere di tabulazione, \t. Questa impostazione è equivalente all'uso di **-t**\t.  
+    -   Uso di un'opzione per il formato carattere (**-c** o **-w**) senza l'opzione **-t** , che imposta il carattere di terminazione del campo sul carattere di tabulazione, \t. Questa impostazione è equivalente all'uso di **-t**\t.  
   
         > [!NOTE]  
         >  Se si specifica l'opzione **-n** per i dati nativi o l'opzione **-N** per i dati nativi Unicode, i caratteri di terminazione non vengono inseriti.  
   
-    -   Se un comando **bcp** interattivo include l'opzione **in** o **out** senza l'opzione per il file di formato (**-f**) o per un formato dei dati (**-n**, **-c**, **-w** o **-N**) e si è scelto di non specificare la lunghezza del prefisso e del campo, il comando richiede di specificare il carattere di terminazione di ogni campo. L'impostazione predefinita none non prevede alcun carattere di terminazione:  
+    -   Se un comando **bcp** interattivo include l'opzione **in** o **out** senza l'opzione per il file di formato (**-f**) o per un formato dei dati (**-n**, **-c**, **-w**o **-N**) e si è scelto di non specificare la lunghezza del prefisso e del campo, il comando richiede di specificare il carattere di terminazione di ogni campo. L'impostazione predefinita none non prevede alcun carattere di terminazione:  
   
          `Enter field terminator [none]:`  
   
@@ -80,8 +84,8 @@ caps.handback.revision: 39
         > [!NOTE]  
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-### Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar**. Esempio:  
+### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Esempio:  
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 39
   
      In questa situazione, la definizione di un carattere di terminazione può ridurre lo spazio di archiviazione, facendo sì che il campo venga considerato un campo a lunghezza variabile.  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  In questo esempio viene eseguita l'esportazione bulk dei dati dalla tabella `AdventureWorks.HumanResources.Department` al file di dati `Department-c-t.txt` usando il formato carattere con la virgola come carattere di terminazione del campo e il carattere di nuova riga (\n) come terminazione di riga.  
   
  Per il comando **bcp** sono disponibili le opzioni seguenti.  
@@ -101,7 +105,7 @@ caps.handback.revision: 39
 |**-c**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola (,) come carattere di terminazione del campo.|  
 |**-r** \n|Specifica il carattere di nuova riga come carattere di terminazione della riga. Questo è il carattere di terminazione della riga predefinito e, pertanto, la relativa impostazione è facoltativa.|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T**, è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Per altre informazioni, vedere [bcp Utility](../../tools/bcp-utility.md).  
   
@@ -111,10 +115,10 @@ caps.handback.revision: 39
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
 ```  
   
- In questo modo viene creato il file di dati `Department-c-t.txt` contenente 16 record, ognuno con quattro campi. I campi sono separati da una virgola.  
+ In questo modo viene creato il file di dati `Department-c-t.txt`contenente 16 record, ognuno con quattro campi. I campi sono separati da una virgola.  
   
-## Impostazione dei caratteri di terminazione per l'importazione bulk  
- Quando si esegue l'importazione bulk di dati **char** o **nchar**, il relativo comando deve riconoscere i caratteri di terminazione usati nel file di dati. L'impostazione dei caratteri di terminazione varia in base al comando per l'importazione bulk, come illustrato di seguito:  
+## <a name="specifying-terminators-for-bulk-import"></a>Impostazione dei caratteri di terminazione per l'importazione bulk  
+ Quando si esegue l'importazione bulk di dati **char** o **nchar** , il relativo comando deve riconoscere i caratteri di terminazione usati nel file di dati. L'impostazione dei caratteri di terminazione varia in base al comando per l'importazione bulk, come illustrato di seguito:  
   
 -   **bcp**  
   
@@ -137,8 +141,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Per altre informazioni sulla clausola OPENROWSET BULK, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-### Esempi  
- Negli esempi di questa sezione viene eseguita l'importazione bulk di dati di tipo carattere dal file dei dati `Department-c-t.txt` creato nell'esempio precedente nella tabella `myDepartment` del database di esempio [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per crearla in base allo schema **dbo**, nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
+### <a name="examples"></a>Esempi  
+ Negli esempi di questa sezione viene eseguita l'importazione bulk di dati di tipo carattere dal file dei dati `Department-c-t.txt` creato nell'esempio precedente nella tabella `myDepartment` del database di esempio [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per crearla in base allo schema **dbo** , nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   
 ```tsql  
 USE AdventureWorks;  
@@ -153,8 +157,8 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### A. Utilizzo del comando bcp per l'impostazione interattiva dei caratteri di terminazione  
- Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un comando `bcp`. Per questo comando sono disponibili le stesse opzioni del comando di esportazione bulk. Per ulteriori informazioni, vedere "Impostazione dei caratteri di terminazione per l'esportazione bulk", più indietro in questo argomento.  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. Utilizzo del comando bcp per l'impostazione interattiva dei caratteri di terminazione  
+ Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un comando `bcp` . Per questo comando sono disponibili le stesse opzioni del comando di esportazione bulk. Per ulteriori informazioni, vedere "Impostazione dei caratteri di terminazione per l'esportazione bulk", più indietro in questo argomento.  
   
  Al prompt dei comandi di Windows digitare:  
   
@@ -162,7 +166,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
 |Opzione|Attribute|  
@@ -185,8 +189,8 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## Vedere anche  
- [Utilità bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Definizione della lunghezza di campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -194,3 +198,4 @@ GO
  [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

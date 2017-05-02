@@ -1,31 +1,35 @@
 ---
-title: "Creare indici cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione di indici [SQL Server], indici cluster"
-  - "indici cluster, creazione"
-  - "indici cluster, vincolo PRIMARY KEY"
-  - "indici cluster, vincolo UNIQUE"
-  - "indici [SQL Server], cluster"
+title: Creare indici cluster | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare indici cluster
+# <a name="create-clustered-indexes"></a>Creare indici cluster
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  È possibile creare indici cluster nelle tabelle di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).  
+  È possibile creare indici cluster nelle tabelle usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).  
   
  **Contenuto dell'argomento**  
   
@@ -73,15 +77,15 @@ caps.handback.revision: 32
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un indice cluster tramite Esplora oggetti  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Per creare un indice cluster tramite Esplora oggetti  
   
 1.  In Esplora oggetti espandere la tabella in cui si desidera creare un indice cluster.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice cluster**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice cluster**.  
   
 3.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 32
   
 7.  Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-#### Per creare un indice cluster tramite Progettazione tabelle  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>Per creare un indice cluster tramite Progettazione tabelle  
   
 1.  In Esplora oggetti espandere il database in cui si desidera creare una tabella con un indice cluster.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 32
   
 6.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-7.  Selezionare il nuovo indice nella casella di testo **Chiave o indice primario/univoco selezionato**.  
+7.  Selezionare il nuovo indice nella casella di testo **Chiave o indice primario/univoco selezionato** .  
   
 8.  Nella griglia selezionare **Crea come CLUSTERED**, quindi selezionare **Sì** dall'elenco a discesa a destra della proprietà.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un indice cluster  
+#### <a name="to-create-a-clustered-index"></a>Per creare un indice cluster  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di chiavi primarie](../../relational-databases/tables/create-primary-keys.md)   
  [Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

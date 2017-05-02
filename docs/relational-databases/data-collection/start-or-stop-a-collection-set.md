@@ -1,25 +1,29 @@
 ---
-title: "Avviare o arrestare un set di raccolta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "set di raccolta [SQL Server], arresto"
-  - "set di raccolta [SQL Server], avvio"
+title: Avviare o arrestare un set di raccolta | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection sets [SQL Server], stopping
+- collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Avviare o arrestare un set di raccolta
+# <a name="start-or-stop-a-collection-set"></a>Avviare o arrestare un set di raccolta
   In questo argomento viene descritto come avviare o arrestare un set di raccolte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -54,16 +58,16 @@ caps.handback.revision: 20
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Per ottenere informazioni sui set di raccolta, eseguire una query sulla vista del catalogo [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md).  
+-   Per ottenere informazioni sui set di raccolta, eseguire una query sulla vista del catalogo [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È necessaria l'appartenenza al ruolo predefinito del database **dc_operator**. Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Esempi  
+ È necessaria l'appartenenza al ruolo predefinito del database **dc_operator** . Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Esempi  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per avviare un set di raccolta  
+#### <a name="to-start-a-collection-set"></a>Per avviare un set di raccolta  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** , **Raccolta dati**, quindi **Set di raccolta dati di sistema**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 20
   
      In una finestra di messaggio verranno visualizzati i risultati di questa azione, mentre una freccia verde sull'icona del set di raccolta indica che il set di raccolta è stato avviato.  
   
-#### Per arrestare un set di raccolta  
+#### <a name="to-stop-a-collection-set"></a>Per arrestare un set di raccolta  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** , **Raccolta dati**, quindi **Set di raccolta dati di sistema**.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per avviare un set di raccolta  
+#### <a name="to-start-a-collection-set"></a>Per avviare un set di raccolta  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-#### Per arrestare un set di raccolta  
+#### <a name="to-stop-a-collection-set"></a>Per arrestare un set di raccolta  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,7 +113,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   

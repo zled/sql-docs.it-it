@@ -1,29 +1,33 @@
 ---
-title: "Eliminare un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rimozione di database [SQL Server], SQL Server Management Studio"
-  - "rimozione di database"
-  - "eliminazione di database"
-  - "database - eliminazione"
-  - "database [SQL Server], eliminazione"
-  - "rimozione di database [SQL Server]"
+title: Eliminare un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database removal [SQL Server], SQL Server Management Studio
+- removing databases
+- deleting databases
+- dropping databases
+- databases [SQL Server], dropping
+- database removal [SQL Server]
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17de8249b2c8117114f3bc63d9709f3b94ff048b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare un database
+# <a name="delete-a-database"></a>Eliminare un database
   In questo argomento si descrive come eliminare un database definito dall'utente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -44,7 +48,7 @@ caps.handback.revision: 31
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [ Dopo l'eliminazione di un database](#FollowUp)  
+-   **Follow Up:**  [After deleting a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare un database  
+#### <a name="to-delete-a-database"></a>Per eliminare un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare un database  
+#### <a name="to-delete-a-database"></a>Per eliminare un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +103,7 @@ GO
 ##  <a name="FollowUp"></a> Completamento: Dopo l'eliminazione di un database  
  Eseguire il backup del database **master** . Se è necessario ripristinare il database **master** , per qualsiasi database eliminato dopo l'ultimo backup del database **master** saranno ancora disponibili riferimenti nelle viste del catalogo di sistema, pertanto potranno essere generati messaggi di errore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

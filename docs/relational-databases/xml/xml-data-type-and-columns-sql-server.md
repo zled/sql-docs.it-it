@@ -1,25 +1,29 @@
 ---
-title: "Colonne e tipo di dati XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Colonne e tipo di dati XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 457cf9fb3c207a89467b96e0f1744f9371edb9a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colonne e tipo di dati XML (SQL Server)
+# <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
   In questo argomento vengono illustrati i vantaggi e le limitazioni del tipo di dati **xml** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e viene spiegato come scegliere la modalità di archiviazione dei dati XML.  
   
-## Modello di dati relazionale o XML  
+## <a name="relational-or-xml-data-model"></a>Modello di dati relazionale o XML  
  Se i dati utilizzati sono altamente strutturati in base a uno schema noto, il modello relazionale costituisce senz'altro il metodo di archiviazione ottimale. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili tutte le funzionalità e gli strumenti necessari. Se invece i dati sono semistrutturati, non strutturati o dotati di una struttura sconosciuta, sarà necessario prestare particolare attenzione alla modellazione.  
   
  XML costituisce la soluzione ottimale quando si desidera un modello indipendente dalla piattaforma, per garantire la portabilità dei dati tramite markup strutturale e semantico. Costituisce inoltre una soluzione appropriata nelle circostanze seguenti:  
@@ -32,9 +36,9 @@ caps.handback.revision: 6
   
 -   Si desidera eseguire query sui dati o aggiornarne alcune parti, in base alla struttura.  
   
- Se nessuna di queste condizioni è soddisfatta, è consigliabile utilizzare il modello di dati relazionale. Se ad esempio i dati sono in formato XML ma l'applicazione usa il database solo per archiviarli e recuperarli, è sufficiente usare una colonna di tipo **[n]varchar(max)**. L'archiviazione dei dati in una colonna XML offre ulteriori vantaggi, ad esempio la possibilità di determinare automaticamente se i dati sono validi e in formato corretto e includono anche il supporto per l'esecuzione di aggiornamenti e query dettagliate sui dati XML.  
+ Se nessuna di queste condizioni è soddisfatta, è consigliabile utilizzare il modello di dati relazionale. Se ad esempio i dati sono in formato XML ma l'applicazione usa il database solo per archiviarli e recuperarli, è sufficiente usare una colonna di tipo **[n]varchar(max)** . L'archiviazione dei dati in una colonna XML offre ulteriori vantaggi, ad esempio la possibilità di determinare automaticamente se i dati sono validi e in formato corretto e includono anche il supporto per l'esecuzione di aggiornamenti e query dettagliate sui dati XML.  
   
-## Motivi per l'archiviazione di dati XML in SQL Server  
+## <a name="reasons-for-storing-xml-data-in-sql-server"></a>Motivi per l'archiviazione di dati XML in SQL Server  
  Di seguito sono illustrati alcuni dei motivi per utilizzare le caratteristiche XML native di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , anziché gestire i dati XML nel file system:  
   
 -   Si desidera condividere, modificare ed eseguire query sui dati XML in un modo efficiente e basato sulle transazioni. Per l'applicazione è importante disporre di un accesso ai dati estremamente dettagliato, ad esempio perché si desidera estrarre alcune sezioni da un documento XML oppure inserire una nuova sezione senza sostituire l'intero documento.  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
  Se nessuna di queste condizioni è soddisfatta, è preferibile archiviare i dati in un formato diverso da XML usando un tipo di dati per oggetti di grandi dimensioni, ad esempio **[n]varchar(max)** o **varbinary(max)**.  
   
-## Opzioni di archiviazione per i dati XML  
+## <a name="xml-storage-options"></a>Opzioni di archiviazione per i dati XML  
  Le opzioni di archiviazione per i dati XML disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono le seguenti:  
   
 -   Archiviazione nativa tramite il tipo di dati **xml** .  
@@ -70,9 +74,9 @@ caps.handback.revision: 6
   
      Viene archiviata una copia identica dei dati. Questo è utile per le applicazioni specializzate per scopi particolari, ad esempio quelle per i documenti legali. Per la maggior parte delle applicazioni non è invece necessaria una copia esatta, ma è sufficiente il contenuto XML (conformità all'InfoSet).  
   
- È in genere necessario utilizzare una combinazione di questi approcci, ad esempio se si desidera archiviare i dati XML in una colonna con tipo di dati **xml** e promuovere le relative proprietà al livello di colonne relazionali, oppure se si vuole usare la tecnologia di mapping per archiviare le parti non ricorsive in colonne non XML e solo le parti ricorsive in colonne con tipo di dati **xml**.  
+ È in genere necessario utilizzare una combinazione di questi approcci, ad esempio se si desidera archiviare i dati XML in una colonna con tipo di dati **xml** e promuovere le relative proprietà al livello di colonne relazionali, oppure se si vuole usare la tecnologia di mapping per archiviare le parti non ricorsive in colonne non XML e solo le parti ricorsive in colonne con tipo di dati **xml** .  
   
-### Scelta della tecnologia XML  
+### <a name="choice-of-xml-technology"></a>Scelta della tecnologia XML  
  La scelta della tecnologia XML, ovvero tra XML nativo e visualizzazione XML, dipende in genere dai fattori seguenti:  
   
 -   Opzioni di archiviazione  
@@ -97,7 +101,7 @@ caps.handback.revision: 6
   
  A opzioni diverse corrispondono caratteristiche di prestazioni diverse.  
   
-### Archiviazione XML nativa  
+### <a name="native-xml-storage"></a>Archiviazione XML nativa  
  È possibile archiviare i dati XML in una colonna con tipo di dati **xml** nel server. Questa soluzione è particolarmente appropriata se:  
   
 -   Si desidera un metodo diretto per archiviare i dati XML nel server e, al tempo stesso, mantenere l'ordine e la struttura dei documenti.  
@@ -112,19 +116,19 @@ caps.handback.revision: 6
   
  L'archiviazione XML nativa è utile quando si utilizzano documenti XML con strutture diverse oppure conformi a schemi diversi o complessi, di cui è difficile eseguire il mapping a strutture relazionali.  
   
-#### Esempio: modellazione di dati XML tramite il tipo di dati xml  
- Si consideri un manuale di prodotto in formato XML, composto da un capitolo per ogni argomento e con più sezioni in ogni capitolo. Una sezione può contenere sottosezioni e, di conseguenza, l'elemento \<section> è ricorsivo. I manuali dei prodotti includono elevati volumi di contenuto eterogeneo, ad esempio diagrammi e materiale tecnico, e i dati sono semistrutturati. Gli utenti possono avere l'esigenza di ricercare gli argomenti di interesse in un contesto specifico, ad esempio la sezione dedicata agli indici cluster nel capitolo dedicato all'indicizzazione, e di eseguire query su quantità tecniche.  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati xml  
+ Si consideri un manuale di prodotto in formato XML, composto da un capitolo per ogni argomento e con più sezioni in ogni capitolo. Una sezione può contenere sottosezioni e, di conseguenza, l'elemento \<sezione> è ricorsivo. I manuali dei prodotti includono elevati volumi di contenuto eterogeneo, ad esempio diagrammi e materiale tecnico, e i dati sono semistrutturati. Gli utenti possono avere l'esigenza di ricercare gli argomenti di interesse in un contesto specifico, ad esempio la sezione dedicata agli indici cluster nel capitolo dedicato all'indicizzazione, e di eseguire query su quantità tecniche.  
   
  Una colonna con tipo di dati **xml** costituisce un modello di archiviazione particolarmente appropriato per i documenti XML, perché mantiene il contenuto InfoSet dei dati XML. È possibile indicizzare la colonna XML per migliorare le prestazioni delle query.  
   
-#### Esempio: conservazione di copie esatte dei dati XML  
- Si supponga che, per legge, sia necessario conservare copie testuali esatte dei propri documenti XML, quali documenti firmati, documenti legali oppure ordini di transazioni azionarie. È consigliabile archiviare i documenti in una colonna con tipo di dati **[n]varchar(max)**.  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>Esempio: conservazione di copie esatte dei dati XML  
+ Si supponga che, per legge, sia necessario conservare copie testuali esatte dei propri documenti XML, quali documenti firmati, documenti legali oppure ordini di transazioni azionarie. È consigliabile archiviare i documenti in una colonna con tipo di dati **[n]varchar(max)** .  
   
- Per le query, in fase di esecuzione è necessario convertire i dati nel tipo di dati **xml** ed eseguire query XQuery su di essi. La conversione in fase di esecuzione può essere tuttavia molto costosa, soprattutto se il documento è di grandi dimensioni. Se è necessario eseguire query di frequente, è possibile archiviare una seconda copia dei documenti in una colonna con tipo di dati **xml** e indicizzarla, mentre per restituire le copie esatte dei documenti si usa la colonna con tipo di dati **[n]varchar(max)**.  
+ Per le query, in fase di esecuzione è necessario convertire i dati nel tipo di dati **xml** ed eseguire query XQuery su di essi. La conversione in fase di esecuzione può essere tuttavia molto costosa, soprattutto se il documento è di grandi dimensioni. Se è necessario eseguire query di frequente, è possibile archiviare una seconda copia dei documenti in una colonna con tipo di dati **xml** e indicizzarla, mentre per restituire le copie esatte dei documenti si usa la colonna con tipo di dati **[n]varchar(max)** .  
   
- La colonna XML può essere una colonna calcolata, basata sulla colonna **[n]varchar(max)**. Non è tuttavia possibile creare un indice XML su una colonna calcolata di tipo XML, né su colonne di tipo **[n]varchar(max)** o **varbinary(max)**.  
+ La colonna XML può essere una colonna calcolata, basata sulla colonna **[n]varchar(max)** . Non è tuttavia possibile creare un indice XML su una colonna calcolata di tipo XML, né su colonne di tipo **[n]varchar(max)** o **varbinary(max)** .  
   
-### Tecnologia di visualizzazione XML  
+### <a name="xml-view-technology"></a>Tecnologia di visualizzazione XML  
  Definendo un mapping tra elementi XML Schema e le tabelle in un database, si crea una visualizzazione XML dei dati persistenti. Tramite la visualizzazione XML, è possibile utilizzare il caricamento bulk XML per popolare le tabelle sottostanti. È possibile eseguire query sulla visualizzazione XML utilizzando XPath versione 1.0. Le query vengono convertite in query SQL sulle tabelle. Analogamente, anche gli aggiornamenti vengono propagati a tali tabelle.  
   
  Questa tecnologia è utile nelle situazioni seguenti:  
@@ -141,31 +145,31 @@ caps.handback.revision: 6
   
  Questa tecnica viene utilizzata ad esempio per i dati relazionali esposti come XML per lo scambio di dati e i servizi Web e per i dati XML con schema fisso. Per ulteriori informazioni vedere [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### Esempio: modellazione di dati tramite un elemento XML Schema con annotazioni (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Esempio: modellazione di dati tramite un elemento XML Schema con annotazioni (AXSD)  
  Si supponga ad esempio di avere a disposizione dati relazionali relativi a clienti, ordini e voci, che si desidera gestire come XML. Definire una visualizzazione XML applicando uno schema AXSD ai dati relazionali. La visualizzazione XML consente di eseguire il caricamento bulk dei dati XML nelle tabelle, nonché di aggiornare ed eseguire query sui dati relazionali. Questo modello è utile quando è necessario scambiare dati contenenti markup XML con altre applicazioni, senza interrompere le applicazioni SQL.  
   
-### Modello ibrido  
+### <a name="hybrid-model"></a>Modello ibrido  
  La soluzione più appropriata per la modellazione dei dati è spesso costituita da una combinazione di dati relazionali e colonne con tipo di dati **xml** . È possibile archiviare parte dei dati XML in colonne relazionali e il resto, o l'intero valore XML, in una colonna XML. Questa soluzione può migliorare le prestazioni, perché offre un maggiore controllo sugli indici creati sulle colonne relazionali e sulle caratteristiche di blocco.  
   
  I valori da archiviare nelle colonne relazionali dipendono dal carico di lavoro. Se ad esempio per il recupero di tutti i valori XML si usa l'espressione del percorso, /Customer/@CustId, promuovendo il valore dell'attributo **CustId** in modo da ottenere una colonna relazionale e indicizzando tale colonna sarà possibile eseguire le query molto più rapidamente. Se tuttavia i dati XML sono estensivamente scomposti in colonne relazionali in modo non ridondante, il riassemblaggio potrebbe avere un costo significativo.  
   
  Se ad esempio per dati XML altamente strutturati il contenuto di una tabella viene convertito in XML, sarà possibile eseguire il mapping di tutti i valori a colonne relazionali ed eventualmente utilizzare la tecnologia della visualizzazione XML.  
   
-## Granularità dei dati XML  
+## <a name="granularity-of-xml-data"></a>Granularità dei dati XML  
  La granularità dei dati XML archiviata in una colonna XML è molto importante per le operazioni di blocco e, a un livello inferiore, è anche importante per gli aggiornamenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa lo stesso meccanismo di blocco sia per i dati XML che per i dati non XML. Di conseguenza, il blocco a livello di riga causa il blocco di tutte le istanze XML presenti nella riga. Quando la granularità è ampia, in uno scenario multiutente il blocco di istanze XML di grandi dimensioni per gli aggiornamenti provoca una diminuzione della velocità effettiva. Una scomposizione eccessiva, invece, comporta la perdita dell'incapsulamento degli oggetti e l'aumento del costo di riassemblaggio.  
   
  Il giusto equilibrio tra requisiti di modellazione dei dati e caratteristiche di blocco e aggiornamento è pertanto importante per una progettazione ottimale. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, le dimensioni delle istanze XML effettivamente archiviate non costituiscono un fattore critico.  
   
  Per aggiornare un'istanza XML, ad esempio, viene utilizzato il nuovo supporto per l'aggiornamento parziale degli oggetti BLOB (Binary Large Object) e degli indici, in cui l'istanza XML archiviata viene confrontata con la versione aggiornata. Nell'aggiornamento parziale degli oggetti BLOB viene eseguito un confronto differenziale tra le due istanze XML e l'aggiornamento viene limitato alle differenze. Nell'aggiornamento parziale degli indici vengono modificate solo le righe che devono essere modificate nell'indice XML.  
   
-## Limiti del tipo di dati xml  
+## <a name="limitations-of-the-xml-data-type"></a>Limiti del tipo di dati xml  
  Considerare i seguenti limiti generali validi per il tipo di dati **xml** :  
   
 -   La rappresentazione archiviata delle istanze con tipo di dati **xml** non può superare i 2 GB.  
   
--   Non è utilizzabile come sottotipo di un'istanza **sql_variant**.  
+-   Non è utilizzabile come sottotipo di un'istanza **sql_variant** .  
   
--   Non supporta il cast o la conversione in **text** o **ntext**. Usare invece **varchar(max)** or **nvarchar(max)**.  
+-   Non supporta il cast o la conversione in **text** o **ntext**. Usare invece **varchar(max)** or **nvarchar(max)** .  
   
 -   Non può essere confrontato o ordinato. Questo significa che un tipo di dati **xml** non può essere utilizzato in un'istruzione GROUP BY.  
   
@@ -173,7 +177,7 @@ caps.handback.revision: 6
   
 -   Non può essere utilizzato come colonna chiave in un indice. Può tuttavia essere inserito come tipo di dati in un indice cluster o essere aggiunto in modo esplicito a un indice non cluster utilizzando la parola chiave INCLUDE durante la creazione dell'indice.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

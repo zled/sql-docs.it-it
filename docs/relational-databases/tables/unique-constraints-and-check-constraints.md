@@ -1,25 +1,29 @@
 ---
-title: "Vincoli UNIQUE e CHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vincoli [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], vincoli"
+title: Vincoli UNIQUE e CHECK | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], Visual Database Tools
+- Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vincoli UNIQUE e CHECK
+# <a name="unique-constraints-and-check-constraints"></a>Vincoli UNIQUE e CHECK
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   I vincoli UNIQUE e CHECK sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta di importanti oggetti di database.  
@@ -44,15 +48,15 @@ caps.handback.revision: 20
 ##  <a name="Check"></a> Vincoli CHECK  
  I vincoli CHECK assicurano l'integrità di dominio limitando i valori accettati da una o più colonne. È possibile creare un vincolo CHECK con qualsiasi espressione logica (booleana) che restituisce TRUE o FALSE in base agli operatori logici. È ad esempio possibile limitare l'intervallo di valori di una colonna **salary** creando un vincolo CHECK che consente solo dati compresi tra 15.000 e 100.000 euro. In questo modo si evita di inserire stipendi con valori non compresi nell'intervallo regolare. L'espressione logica potrebbe essere la seguente: `salary >= 15000 AND salary <= 100000`.  
   
- È possibile applicare più vincoli CHECK a una colonna e inoltre applicare un singolo vincolo CHECK a più colonne creandolo a livello di tabella. È ad esempio possibile usare un vincolo CHECK in più colonne per confermare che a ogni riga con un valore di colonna **country_region** pari a **USA** corrisponda un valore di due caratteri nella colonna **state**. In questo modo è possibile verificare più condizioni simultaneamente.  
+ È possibile applicare più vincoli CHECK a una colonna e inoltre applicare un singolo vincolo CHECK a più colonne creandolo a livello di tabella. È ad esempio possibile usare un vincolo CHECK in più colonne per confermare che a ogni riga con un valore di colonna **country_region** pari a **USA** corrisponda un valore di due caratteri nella colonna **state** . In questo modo è possibile verificare più condizioni simultaneamente.  
   
  I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui vengono determinati i valori validi. I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
   
 > [!CAUTION]  
 >  I vincoli che prevedono la conversione implicita o esplicita di tipi di dati possono impedire l'esecuzione di operazioni specifiche. Ad esempio, i vincoli definiti nelle tabelle di origine per il cambio di partizione possono impedire l'esecuzione di un'operazione ALTER TABLE...SWITCH. Evitare la conversione di tipi di dati nelle definizioni dei vincoli.  
   
-### Limitazioni per i vincoli CHECK  
- I vincoli CHECK non accettano i valori che restituiscono FALSE. I valori Null restituiscono UNKNOWN e pertanto se vengono inseriti in un'espressione è possibile che un vincolo venga ignorato. Si supponga, ad esempio, di inserire un vincolo su una colonna di tipo **int** denominata **MyColumn** e di specificare che **MyColumn** possa contenere solo il valore 10: **MyColumn=10**. Se si inserisce il valore NULL in **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserisce NULL e non restituisce un errore.  
+### <a name="limitations-of-check-constraints"></a>Limitazioni per i vincoli CHECK  
+ I vincoli CHECK non accettano i valori che restituiscono FALSE. I valori Null restituiscono UNKNOWN e pertanto se vengono inseriti in un'espressione è possibile che un vincolo venga ignorato. Si supponga, ad esempio, di inserire un vincolo su una colonna di tipo **int** denominata **MyColumn** e di specificare che **MyColumn** possa contenere solo il valore 10:**MyColumn=10**. Se si inserisce il valore NULL in **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserisce NULL e non restituisce un errore.  
   
  Un vincolo CHECK restituisce TRUE se la verifica della condizione controllata non restituisce FALSE per nessuna riga della tabella. Un vincolo CHECK viene utilizzato a livello di riga. Se una tabella appena creata non contiene righe, tutti i vincoli CHECK sulla tabella sono considerati validi. Questa situazione può generare risultati imprevisti, come è illustrato nell'esempio seguente.  
   

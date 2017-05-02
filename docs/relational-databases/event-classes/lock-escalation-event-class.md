@@ -1,28 +1,32 @@
 ---
-title: "Classe di evento Lock:Escalation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Escalation - classe di evento"
-  - "escalation blocchi [SQL Server], classe di evento"
+title: Classe di evento Lock:Escalation | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Escalation event class
+- lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3210940a28a25e89e4e69dbcb044503be2ae20d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Lock:Escalation
+# <a name="lockescalation-event-class"></a>Classe di evento Lock:Escalation
   La classe di evento **Lock:Escalation** indica che un blocco con granularità fine è stato convertito in un blocco con granularità grossolana, ad esempio un blocco di riga è stato convertito in blocco di oggetto. La classe di evento dell'escalation è l'ID evento 60.  
   
-## Colonne di dati della classe di evento Lock:Escalation  
+## <a name="lockescalation-event-class-data-columns"></a>Colonne di dati della classe di evento Lock:Escalation  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,15 +42,15 @@ caps.handback.revision: 47
 |**IntegerData**|**int**|Conteggio dei blocchi HoBT. Numero di blocchi HoBT al momento dell'escalation dei blocchi.|25|Sì|  
 |**IntegerData2**|**int**|Conteggio dei blocchi alzati di livello. Numero totale di blocchi convertiti. Queste strutture di blocco vengono deallocate poiché già coperte dal blocco alzato di livello.|55|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|**LineNumber**|**int**|Numero di riga dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].|5|Sì|  
+|**LineNumber**|**int**|Numero di riga dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .|5|Sì|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Sì|  
-|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals**. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**Mode**|**int**|Modalità di blocco risultante dopo l'escalation:<br /><br /> 0=NULL - Compatibile con tutte le altre modalità di blocco (LCK_M_NL)<br /><br /> 1=Blocco di stabilità dello schema (LCK_M_SCH_S)<br /><br /> 1=Blocco di modifica dello schema (LCK_M_SCH_M)<br /><br /> 3=Blocco condiviso (LCK_M_S)<br /><br /> 4=Blocco di aggiornamento (LCK_M_U)<br /><br /> 5=Blocco esclusivo (LCK_M_X)<br /><br /> 6=Blocco condiviso preventivo (LCK_M_IS)<br /><br /> 7=Blocco di aggiornamento preventivo (LCK_M_IU)<br /><br /> 8=Blocco esclusivo preventivo (LCK_M_IX)<br /><br /> 9=Condiviso-Preventivo-Aggiornamento (LCK_M_SIU)<br /><br /> 10=Condiviso-Preventivo-Esclusivo (LCK_M_SIX)<br /><br /> 10=Aggiornamento-Preventivo-Esclusivo (LCK_M_SIX)<br /><br /> 12=Blocco aggiornamenti bulk (LCK_M_BU)<br /><br /> 13=Intervalli di chiavi-Condiviso/Condiviso (LCK_M_RS_S)<br /><br /> 14=Intervalli di chiavi-Condiviso/Aggiornamento (LCK_M_RS_U)<br /><br /> 15=Intervalli di chiavi-Inserimento-NULL (LCK_M_RI_NL)<br /><br /> 16=Intervalli di chiavi-Inserimento-Condiviso (LCK_M_RI_S)<br /><br /> 17=Intervalli di chiavi-Inserimento-Aggiornamento (LCK_M_RI_U)<br /><br /> 18=Intervalli di chiavi-Inserimento-Esclusivo (LCK_M_RI_X)<br /><br /> 19=Intervalli di chiavi-Esclusivo-Condiviso (LCK_M_RX_S)<br /><br /> 20=Intervalli di chiavi-Esclusivo-Aggiornamento (LCK_M_RX_U)<br /><br /> 21=Intervalli di chiavi-Esclusivo-Esclusivo (LCK_M_RX_X)|32|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**ObjectID**|**int**|ID assegnato dal sistema della tabella per la quale è stata generata l'escalation dei blocchi.|22|Sì|  
 |**ObjectID2**|**bigint**|ID dell'entità o dell'oggetto correlato. (ID HoBT per il quale è stata generata l'escalation dei blocchi).|56|Sì|  
-|**Offset**|**int**|Offset iniziale dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].|61|Sì|  
+|**Offset**|**int**|Offset iniziale dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sì|  
 |**OwnerID**|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Sì|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
@@ -57,7 +61,7 @@ caps.handback.revision: 47
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**Tipo**|**int**|Granularità dell'escalation dei blocchi:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (livello della tabella)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Sì|  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Nel seguente esempio viene utilizzata la procedura `sp_trace_create` per creare una traccia, viene utilizzato `sp_trace_setevent` per aggiungere colonne dell'escalation dei blocchi alla traccia, quindi `sp_trace_setstatus` per avviare la traccia. In istruzioni come `EXEC sp_trace_setevent @TraceID, 60, 22, 1`, il numero `60` indica la classe di evento dell'escalation, `22` indica la colonna **ObjectID** e `1` imposta l'evento di traccia su ON.  
   
 ```  
@@ -77,7 +81,7 @@ EXEC sp_trace_setstatus @TraceID, 1;
 GO  
 ```  
   
- Dal momento che la traccia è in esecuzione, eseguire le istruzioni che si desidera creare una traccia. Una volta terminato, eseguire il seguente codice per arrestare e chiudere la traccia. Nell'esempio seguente viene utilizzata la funzione `fn_trace_getinfo` affinché `traceid` venga utilizzato nelle istruzioni `sp_trace_setstatus`.  
+ Dal momento che la traccia è in esecuzione, eseguire le istruzioni che si desidera creare una traccia. Una volta terminato, eseguire il seguente codice per arrestare e chiudere la traccia. Nell'esempio seguente viene utilizzata la funzione `fn_trace_getinfo` affinché `traceid` venga utilizzato nelle istruzioni `sp_trace_setstatus` .  
   
 ```  
 -- After the trace is complete.  
@@ -95,7 +99,7 @@ EXEC sp_trace_setstatus @TraceID, 2;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

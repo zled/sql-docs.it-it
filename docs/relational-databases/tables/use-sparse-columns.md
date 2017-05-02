@@ -1,29 +1,33 @@
 ---
-title: "Utilizzo di colonne di tipo sparse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonne di tipo sparse, descrizione"
-  - "colonne Null"
-  - "colonne di tipo sparse"
+title: Usare le colonne di tipo sparse | Microsoft Docs
+ms.custom: 
+ms.date: 03/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, described
+- null columns
+- sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73aa2beab814a8cc36400ddd384bb7f5de3b9d5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di colonne di tipo sparse
+# <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. È consigliabile utilizzare colonne di tipo sparse quando la quantità di spazio risparmiata è compresa almeno tra il 20% e il 40%. Le colonne di tipo sparse e i set di colonne vengono definiti utilizzando l'istruzione [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+  Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. È consigliabile utilizzare colonne di tipo sparse quando la quantità di spazio risparmiata è compresa almeno tra il 20% e il 40%. Le colonne di tipo sparse e i set di colonne vengono definiti utilizzando l'istruzione [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
  Le colonne di tipo sparse possono essere utilizzate con set di colonne e indici filtrati:  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 47
   
  Le colonne di tipo sparse e gli indici filtrati consentono alle applicazioni, ad esempio [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], di archiviare in modo efficiente un elevato numero di proprietà definite dall'utente e accedervi usando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Proprietà delle colonne di tipo sparse  
+## <a name="properties-of-sparse-columns"></a>Proprietà delle colonne di tipo sparse  
  Le colonne di tipo sparse hanno le caratteristiche seguenti:  
   
 -   Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizza la parola chiave SPARSE nella definizione di una colonna per ottimizzare l'archiviazione dei valori in tale colonna. Di conseguenza, quando il valore della colonna è Null per qualsiasi riga della tabella, i valori non devono essere archiviati.  
@@ -65,7 +69,7 @@ caps.handback.revision: 47
 |**image**|**tipi di dati definiti dall'utente**|  
 |**ntext**||  
   
-## Risparmio stimato in termini di spazio in base al tipo di dati  
+## <a name="estimated-space-savings-by-data-type"></a>Risparmio stimato in termini di spazio in base al tipo di dati  
  Le colonne di tipo sparse richiedono una quantità maggiore di spazio di archiviazione per i valori non Null rispetto a quella necessaria per dati identici non contrassegnati come SPARSE. Nelle tabelle seguenti viene illustrato l'utilizzo dello spazio per ogni tipo di dati. La colonna **Percentuale valori Null** indica la percentuale di dati con valore Null necessaria per ottenere un risparmio netto del 40% in termini di spazio.  
   
  **Tipi di dati a lunghezza fissa**  
@@ -113,15 +117,15 @@ caps.handback.revision: 47
   
  *La lunghezza è uguale alla media dei dati contenuti nel tipo, più 2 o 4 byte.  
   
-## Overhead in memoria necessario per gli aggiornamenti alle colonne di tipo sparse  
+## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Overhead in memoria necessario per gli aggiornamenti alle colonne di tipo sparse  
  Quando si progettano tabelle con colonne di tipo sparse, ricordare che sono necessari 2 byte aggiuntivi di overhead per ogni colonna di tipo sparse non Null nella tabella quando viene aggiornata una riga. Dato questo requisito di memoria aggiuntivo, gli aggiornamenti potrebbero non riuscire in modo imprevisto con l'errore 576 quando le dimensioni totali della riga, incluso l'overhead di memoria, supera 8019 e nessuna colonna può essere spostata all'esterno della riga.  
   
  Si consideri l'esempio di una tabella contenente 600 colonne di tipo sparse di tipo bigint. Se le colonne non Null sono 571, la dimensione totale su disco è pari a 571 * 12 = 6852 byte. Dopo avere incluso l'overhead di riga aggiuntivo e l'intestazione della colonna di tipo sparse, i byte aumentano a 6895. Per la pagina sono ancora disponibili su disco 1124 byte. Ciò può dare l'impressione che sia possibile aggiornare correttamente le colonne aggiuntive. Durante l'aggiornamento, tuttavia, si verifica un ulteriore overhead in memoria pari a 2\*(numero di colonne di tipo sparse non Null). In questo esempio, incluso l'overhead aggiuntivo – 2 \* 571 = 1142 byte – le dimensioni della riga su disco aumentano a 8037 byte. Queste dimensioni superano le dimensioni massime consentite di 8019 byte. Poiché tutte le colonne sono tipi di dati a lunghezza fissa, non è possibile spostarle all'esterno della riga. Di conseguenza, durante l'aggiornamento si verificherà l'errore 576.  
   
-## Restrizioni relative all'utilizzo di colonne di tipo sparse  
+## <a name="restrictions-for-using-sparse-columns"></a>Restrizioni relative all'utilizzo di colonne di tipo sparse  
  Le colonne di tipo sparse possono essere di qualsiasi tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presentano un comportamento analogo a qualsiasi altra colonna, ma con le restrizioni seguenti:  
   
--   Una colonna di tipo sparse deve ammettere i valori Null e non può includere proprietà ROWGUIDCOL o IDENTITY. Una colonna di tipo sparse non può essere costituita dai tipi di dati **text**, **ntext**, **image**, **timestamp**, tipi di dati definiti dall'utente, **geometry** o **geography**, né disporre dell'attributo FILESTREAM.  
+-   Una colonna di tipo sparse deve ammettere i valori Null e non può includere proprietà ROWGUIDCOL o IDENTITY. Una colonna di tipo sparse non può essere costituita dai tipi di dati **text**, **ntext**, **image**, **timestamp**, tipi di dati definiti dall'utente, **geometry**o **geography**, né disporre dell'attributo FILESTREAM.  
   
 -   Una colonna di tipo sparse non può avere un valore predefinito.  
   
@@ -154,7 +158,7 @@ caps.handback.revision: 47
   
 -   Quando una colonna non di tipo sparse viene modificata in una di tipo sparse, quest'ultima utilizzerà una quantità di spazio maggiore per i valori non Null. Quando le dimensioni di una riga si avvicinano al limite massimo consentito, potrebbe non essere possibile completare l'operazione.  
   
-## Tecnologie SQL Server che supportano le colonne di tipo sparse  
+## <a name="sql-server-technologies-that-support-sparse-columns"></a>Tecnologie SQL Server che supportano le colonne di tipo sparse  
  In questa sezione viene descritto il supporto delle colonne di tipo sparse nelle tecnologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguenti:  
   
 -   Replica transazionale  
@@ -179,7 +183,7 @@ caps.handback.revision: 47
   
 -   La proprietà di tipo sparse di una colonna non viene mantenuta in caso di copia della tabella.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  In questo esempio viene illustrata una tabella Document che contiene un set comune in cui sono presenti le colonne `DocID` e `Title`. Il gruppo Production richiede una colonna `ProductionSpecification` e una colonna `ProductionLocation` per tutti i documenti relativi alla produzione, mentre il gruppo Marketing richiede una colonna `MarketingSurveyGroup` per i documenti relativi al marketing. Tramite il codice incluso nell'esempio viene creata una tabella che utilizza colonne di tipo sparse, vengono inserite due righe nella tabella, quindi vengono selezionati dati nella tabella.  
   
 > [!NOTE]  
@@ -234,10 +238,11 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
+

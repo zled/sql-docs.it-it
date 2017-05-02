@@ -1,26 +1,30 @@
 ---
-title: "Data warehouse di gestione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agente di raccolta dati [SQL Server], data warehouse di gestione"
-  - "data warehouse"
-  - "data warehouse di gestione"
+title: Data warehouse di gestione | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Data warehouse di gestione
+# <a name="management-data-warehouse"></a>data warehouse di gestione
   Il data warehouse di gestione è un database relazionale che contiene i dati raccolti da un server che costituisce una destinazione di raccolta dati. Questi dati vengono utilizzati per generare report per i set di raccolta dati di sistema e possono essere utilizzati anche per creare report personalizzati.  
   
  L'infrastruttura dell'agente di raccolta dati definisce i processi e piani di manutenzione necessari per implementare i criteri di memorizzazione definiti dall'amministratore del database.  
@@ -28,12 +32,12 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  Per questa versione dell'agente di raccolta dati il data warehouse di gestione viene creato utilizzando il modello di recupero con registrazione minima per ridurre al minimo la registrazione. È necessario implementare il modello di recupero adatto per la propria organizzazione.  
   
-## Distribuzione ed utilizzo del data warehouse  
+## <a name="deploying-and-using-the-data-warehouse"></a>Distribuzione ed utilizzo del data warehouse  
  È possibile installare il data warehouse di gestione nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene eseguito l'agente di raccolta dati. Tuttavia, se le risorse del server o le prestazioni costituiscono un problema per il server che si sta monitorando, è possibile installare il data warehouse di gestione in un computer diverso.  
   
  Gli schemi richiesti e i relativi oggetti per i set di raccolta di sistema predefiniti vengono creati quando viene creato il data warehouse di gestione. Gli schemi creati sono core e snapshot. Un terzo schema, custom_snapshots, viene creato quando vengono creati set di raccolta definiti dall'utente nei quali sono inclusi elementi di raccolta che usano il tipo agente di raccolta Query T-SQL generico.  
   
-###### Schema core  
+###### <a name="core-schema"></a>Schema core  
  Nello schema core vengono descritte le tabelle, le stored procedure e le viste utilizzate per l'organizzazione e l'identificazione dei dati raccolti. Queste tabelle sono condivise da tutte le tabelle di dati create per singoli tipi di agente di raccolta. Tale schema è bloccato e può essere modificato esclusivamente dal proprietario del database del data warehouse di gestione. Ai nomi delle tabelle di questo schema viene aggiunto il prefisso "core".  
   
  Nella tabella seguente vengono descritte le tabelle di database dello schema core. Grazie a queste tabelle di database l'agente di raccolta dati è in grado di registrare la provenienza dei dati, da chi sono stati inseriti e quando sono stati caricati sul data warehouse.  
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### Schema snapshot  
+###### <a name="snapshots-schema"></a>Schema snapshot  
  Lo schema snapshot descrive gli oggetti necessari ad archiviare e gestire i dati raccolti dai tipi di agente di raccolta forniti. Le tabelle contenute in questo schema sono corrette, pertanto non è necessario modificarle per l'intera durata del tipo di agente di raccolta. In caso di necessità, lo schema può essere modificato esclusivamente da membri del ruolo mdw_admin. Queste tabelle sono create per archiviare i dati raccolti dai set di raccolta dati di sistema.  
   
  Nelle tabelle seguenti è illustrata una parte dello schema del data warehouse di gestione richiesta per i set di raccolta Attività server e Statistiche query.  
@@ -108,7 +112,7 @@ caps.handback.revision: 43
   
  È possibile ottenere informazioni dettagliate sul contenuto e sul tipo di dati delle colonne delle tabelle di database leggendo la documentazione relativa alla stored procedure dell'agente di raccolta dati appropriata per ciascuna tabella.  
   
-### Procedure consigliate  
+### <a name="best-practices"></a>Procedure consigliate  
  Quando si utilizza il data warehouse di gestione si consiglia di attenersi alle seguenti procedure:  
   
 -   Non modificare i metadati di tabelle del data warehouse di gestione se non in caso di aggiunta di un nuovo tipo di agente di raccolta.  
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   Per accedere ai dati delle istanze e delle applicazioni, anziché utilizzare direttamente le tabelle, avvalersi delle stored procedure e delle funzioni fornite con l'agente di raccolta dati. I nomi e le definizioni delle tabelle possono cambiare, cambiano quando si aggiorna l'applicazione e potrebbero cambiare nelle versioni future.  
   
-## Cronologia modifiche  
+## <a name="change-history"></a>Cronologia modifiche  
   
 |Contenuto aggiornato|  
 |---------------------|  
 |Aggiunta della tabella core.performance_counter_report_group_items alla sezione "Schema core".|  
 |Aggiornamento dell'elenco di tabelle nella sezione "Schema snapshot". Aggiunta di snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory e snapshots.io_virtual_file_stats. Rimozione di snapshots.os_process_memory e snapshots.distinct_query_stats.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure del data warehouse di gestione &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   

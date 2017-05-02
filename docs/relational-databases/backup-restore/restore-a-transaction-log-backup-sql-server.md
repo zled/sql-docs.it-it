@@ -1,31 +1,35 @@
 ---
-title: "Ripristinare un backup del log delle transazioni (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "ripristino del log"
-  - "backup di log delle transazioni [SQL Server], ripristino"
-  - "backup di log delle transazioni [SQL Server], ripristino"
-  - "ripristino di log delle transazioni [SQL Server], ripristino dei backup"
-  - "ripristino di log delle transazioni [SQL Server], SQL Server Management Studio"
+title: Ripristinare un backup del log delle transazioni (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristinare un backup del log delle transazioni (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto il ripristino di un backup del log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -61,20 +65,20 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
+ Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 > [!WARNING]  
 >  Il normale processo di ripristino prevede la selezione dei backup di log nella finestra di dialogo **Ripristina database** insieme ai backup differenziali e dei dati.  
   
-#### Per ripristinare un backup del log delle transazioni  
+#### <a name="to-restore-a-transaction-log-backup"></a>Per ripristinare un backup del log delle transazioni  
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Log delle transazioni** per aprire la finestra di dialogo **Ripristina log delle transazioni**.  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Log delle transazioni**per aprire la finestra di dialogo **Ripristina log delle transazioni** .  
   
     > [!NOTE]  
     >  Se **Log delle transazioni** non è disponibile, potrebbe essere necessario ripristinare un backup completo o differenziale. Utilizzare la finestra di dialogo di backup **Database** .  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
   
     -   **Da file o nastro**  
   
-         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup**. Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 36
   
     |Intestazione|Valore|  
     |------------|-----------|  
-    |**Restore**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
+    |**Ripristina**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
     |**Nome**|Nome del set di backup.|  
     |**Componente**|Componente di cui viene eseguito il backup: **Database**, **File**, o \<blank> (nel caso di log delle transazioni).|  
     |**Database**|Nome del database su cui viene eseguita l'operazione di backup.|  
@@ -119,7 +123,7 @@ caps.handback.revision: 36
   
     -   **Temporizzazione**  
   
-         Mantenere l'impostazione predefinita (**Più recente**) oppure selezionare una data e un'ora specifiche, facendo clic sul pulsante Sfoglia per visualizzare la finestra di dialogo **Ripristino temporizzato**.  
+         Mantenere l'impostazione predefinita (**Più recente**) oppure selezionare una data e un'ora specifiche, facendo clic sul pulsante Sfoglia per visualizzare la finestra di dialogo **Ripristino temporizzato** .  
   
     -   **Transazione contrassegnata**  
   
@@ -131,9 +135,9 @@ caps.handback.revision: 36
   
         |Intestazione|Valore|  
         |------------|-----------|  
-        |\< vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
+        |\<vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
         |**Contrassegno transazione**|Nome della transazione contrassegnata specificato dall'utente durante l'esecuzione del commit della transazione.|  
-        |**Data**|Data e ora assegnate alla transazione quando ne è stato eseguito il commit. Vengono visualizzate la data e l'ora della transazione registrate nella tabella **msdbgmarkhistory**, non nella data e ora del computer client.|  
+        |**Data**|Data e ora assegnate alla transazione quando ne è stato eseguito il commit. Vengono visualizzate la data e l'ora della transazione registrate nella tabella **msdbgmarkhistory** , non nella data e ora del computer client.|  
         |**Descrizione**|Eventuale descrizione della transazione contrassegnata specificata dall'utente quando è stato eseguito il commit della transazione.|  
         |**LSN**|Numero di sequenza del file di log (LSN) della transazione contrassegnata.|  
         |**Database**|Nome del database in cui è stato eseguito il commit della transazione contrassegnata.|  
@@ -147,13 +151,13 @@ caps.handback.revision: 36
   
          Consente di mantenere le impostazioni di replica durante il ripristino di un database pubblicato in un server diverso da quello in cui è stato creato il database.  
   
-         Questa opzione è disponibile solo in combinazione con l'opzione **Lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit** (descritta più avanti), equivalente al ripristino di un backup con l'opzione **RECOVERY**.  
+         Questa opzione è disponibile solo in combinazione con l'opzione **Lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit** (descritta più avanti), equivalente al ripristino di un backup con l'opzione **RECOVERY** .  
   
-         La selezione di questa opzione equivale all'uso dell'opzione **KEEP_REPLICATION** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         La selezione di questa opzione equivale all'uso dell'opzione **KEEP_REPLICATION** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
     -   **Chiedi conferma prima del ripristino di ogni backup**  
   
-         Prima di ripristinare ogni set di backup successivo al primo, questa opzione visualizza la finestra di dialogo **Continua con il ripristino**, in cui viene richiesta conferma della continuazione della sequenza di ripristino. In questa finestra di dialogo vengono visualizzati il nome del set di supporti successivo, se disponibile, il nome del set di backup e la descrizione del set di backup.  
+         Prima di ripristinare ogni set di backup successivo al primo, questa opzione visualizza la finestra di dialogo **Continua con il ripristino** , in cui viene richiesta conferma della continuazione della sequenza di ripristino. In questa finestra di dialogo vengono visualizzati il nome del set di supporti successivo, se disponibile, il nome del set di backup e la descrizione del set di backup.  
   
          Questa opzione risulta particolarmente utile quando è necessario cambiare nastri per diversi set di supporti. Ad esempio, è possibile utilizzarla quando nel server è disponibile un solo dispositivo nastro. Attendere di essere pronti per procedere prima di fare clic su **OK**.  
   
@@ -161,21 +165,21 @@ caps.handback.revision: 36
   
     -   **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**  
   
-         Rende disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator** o **sysadmin**.  
+         Rende disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
   
-         La selezione di questa opzione equivale all'uso dell'opzione **RESTRICTED_USER** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         La selezione di questa opzione equivale all'uso dell'opzione **RESTRICTED_USER** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
 10. Nel gruppo di opzioni **Stato di recupero** specificare lo stato desiderato per il database dopo l'operazione di ripristino.  
   
-    -   **Lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. (RESTORE WITH RECOVERY)**  
+    -   **Lascia il database pronto per l'uso eseguendo il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi non possono essere ripristinati. (RESTORE WITH RECOVERY)**  
   
-         Esegue il recupero del database. Questa opzione equivale all'opzione **RECOVERY** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         Esegue il recupero del database. Questa opzione equivale all'opzione **RECOVERY** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
          Selezionare questa opzione solo se non sono disponibili file di log da ripristinare.  
   
     -   **Lascia il database non operativo e non eseguire il rollback delle transazioni di cui non è stato eseguito il commit. I log delle transazioni aggiuntivi possono essere ripristinati. (RESTORE WITH NORECOVERY)**  
   
-         Il database viene lasciato nello stato **RESTORING** . Questa opzione equivale all'uso dell'opzione **NORECOVERY** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         Il database viene lasciato nello stato **RESTORING** . Questa opzione equivale all'uso dell'opzione **NORECOVERY** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
          Quando si seleziona questa opzione, l'opzione **Mantieni le impostazioni di replica** non è disponibile.  
   
@@ -184,7 +188,7 @@ caps.handback.revision: 36
   
     -   **Lascia il database in modalità sola lettura. Annulla le transazioni di cui non è stato eseguito il commit e salva le azioni di rollback in un file standby in modo che gli effetti del recupero possano essere annullati. (RESTORE WITH STANDBY)**  
   
-         Il database viene lasciato nello stato di standby. Questa opzione equivale all'uso dell'opzione **STANDBY** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         Il database viene lasciato nello stato di standby. Questa opzione equivale all'uso dell'opzione **STANDBY** in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
          Se si seleziona questa opzione è necessario specificare un file standby.  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  È consigliabile specificare sempre in modo esplicito WITH NORECOVERY oppure WITH RECOVERY in ogni istruzione RESTORE per evitare ambiguità. Questa precauzione è particolarmente importante durante la scrittura di script.  
   
-#### Per ripristinare un backup del log delle transazioni  
+#### <a name="to-restore-a-transaction-log-backup"></a>Per ripristinare un backup del log delle transazioni  
   
 1.  Eseguire l'istruzione RESTORE LOG per applicare il backup del log delle transazioni specificando:  
   
@@ -242,7 +246,7 @@ caps.handback.revision: 36
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. Applicazione di un singolo backup del log delle transazioni  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Applicazione di un singolo backup del log delle transazioni  
  Nell'esempio seguente viene innanzitutto ripristinato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] da un backup completo del database che risiede in un dispositivo di backup denominato `AdventureWorks2012_1`. Viene quindi applicato il primo backup del log delle transazioni che risiede nel dispositivo di backup denominato `AdventureWorks2012_log`e infine viene recuperato il database.  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. Applicazione di più backup del log delle transazioni  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. Applicazione di più backup del log delle transazioni  
  Nell'esempio seguente viene innanzitutto ripristinato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] da un backup completo del database che risiede in un dispositivo di backup denominato `AdventureWorks2012_1`. Vengono quindi applicati in successione i primi tre backup del log delle transazioni che risiedono in uno dispositivo di backup denominato `AdventureWorks2012_log`e infine viene recuperato il database.  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Ripristinare un backup del database tramite SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Ripristinare un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## Vedere anche  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Applicare backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

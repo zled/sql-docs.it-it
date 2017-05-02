@@ -1,24 +1,28 @@
 ---
-title: "Manutenzione e risoluzione dei problemi di Connettore SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Connettore SQL Server, appendice"
+title: Manutenzione e risoluzione dei problemi di Connettore SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 04/05/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Manutenzione e risoluzione dei problemi di Connettore SQL Server
+# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Informazioni supplementari sul Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono disponibili in questo argomento. Per altre informazioni sul Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) e [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
@@ -26,11 +30,11 @@ caps.handback.revision: 21
   
 ##  <a name="AppendixA"></a> A. Istruzioni di manutenzione per Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-### Rollover della chiave  
+### <a name="key-rollover"></a>Rollover della chiave  
   
 > [!IMPORTANT]  
 >  Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che il nome della chiave usi soli i caratteri "a-z", "A-Z", "0-9", e "-", con un limite di 26 caratteri.   
-> Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ruotare una chiave dell'insieme di credenziali delle chiavi di Azure usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario creare una nuova chiave con un nuovo nome.  
+> Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ruotare una chiave dell'insieme di credenziali delle chiavi di Azure usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario creare una nuova chiave con un nuovo nome.  
   
  In genere, il controllo delle versioni delle chiavi asimmetriche del server per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere eseguito ogni 1-2 anni. È importante notare che, anche se l'insieme di credenziali delle chiavi consente il controllo delle versioni delle chiavi, i clienti non dovrebbero usare questa funzionalità per implementare il controllo delle versioni. Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può gestire le modifiche alla versione della chiave nell'insieme di credenziali delle chiavi. Per implementare il controllo delle versioni delle chiavi, è necessario che il cliente crei una nuova chiave nell'insieme di credenziali delle chiavi e quindi crittografi di nuovo la chiave di crittografia dei dati in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -93,15 +97,15 @@ caps.handback.revision: 21
     GO  
     ```  
   
-### Aggiornamento del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Aggiornamento del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Le versioni 1.0.1.0 e successive sono supportate negli ambienti di produzione. Usare le istruzioni seguenti per eseguire l'aggiornamento alla versione più recente disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
+Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Le versioni 1.0.1.0 e successive sono supportate negli ambienti di produzione. Usare le istruzioni seguenti per eseguire l'aggiornamento alla versione più recente disponibile nell' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
-Se è in uso la versione 1.0.1.0 o una versione successiva, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Queste istruzioni evitano di dover riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Se è in uso la versione 1.0.1.0 o una versione successiva, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Queste istruzioni evitano di dover riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
  
-1. Installare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). Nell'installazione guidata salvare il nuovo file DLL in un percorso di file diverso dal percorso del file DLL del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] originale. Il nuovo percorso di file potrebbe ad esempio essere: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
+1. Installare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). Nell'installazione guidata salvare il nuovo file DLL in un percorso di file diverso dal percorso del file DLL del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] originale. Il nuovo percorso di file potrebbe ad esempio essere: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. Nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eseguire il comando Transact-SQL seguente per fare in modo che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] punti alla nuova versione del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:
+2. Nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eseguire il comando Transact-SQL seguente per fare in modo che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] punti alla nuova versione del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -110,11 +114,11 @@ Se è in uso la versione 1.0.1.0 o una versione successiva, seguire questa proce
     GO  
     ```
 
-Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa procedura per eseguire l'aggiornamento alla versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
   
 1.  Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-2.  Arrestare il servizio del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+2.  Arrestare il servizio del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 3.  Disinstallare Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando Programmi e funzionalità di Windows.  
   
@@ -124,7 +128,7 @@ Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa pro
   
 5.  Riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-6.  Eseguire questa istruzione per modificare il provider EKM per iniziare a usare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Assicurarsi che il percorso file punti alla posizione in cui è stata scaricata la versione più recente. È possibile ignorare questo passaggio se la nuova versione viene installata nello stesso percorso della versione originale. 
+6.  Eseguire questa istruzione per modificare il provider EKM per iniziare a usare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Assicurarsi che il percorso file punti alla posizione in cui è stata scaricata la versione più recente. È possibile ignorare questo passaggio se la nuova versione viene installata nello stesso percorso della versione originale. 
   
     ```tsql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -137,10 +141,10 @@ Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa pro
   
 8.  Dopo aver verificato il corretto funzionamento dell'aggiornamento, è possibile eliminare la cartella precedente di Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si è scelto di rinominarla invece di disinstallarla nel passaggio 3.  
   
-### Rollover dell'entità servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi.  L'entità servizio ha un ID client e una chiave di autenticazione.  Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l'**ID client** e la **chiave di autenticazione**.  La **chiave di autenticazione** è valida per un determinato periodo di tempo (1 o 2 anni).   Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio.  Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
+### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Rollover dell'entità servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le entità servizio create in Azure Active Directory come credenziali per accedere all'insieme di credenziali delle chiavi.  L'entità servizio ha un ID client e una chiave di autenticazione.  Le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono configurate con il **nome dell'insieme di credenziali**, l' **ID client**e la **chiave di autenticazione**.  La **chiave di autenticazione** è valida per un determinato periodo di tempo (1 o 2 anni).   Prima della scadenza è necessario generare una nuova chiave in Azure AD per l'entità servizio.  Successivamente è necessario cambiare le credenziali in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una cache per le credenziali nella sessione corrente, per cui, quando vengono modificate le credenziali, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve essere riavviato.  
   
-### Backup e ripristino delle chiavi  
+### <a name="key-backup-and-recovery"></a>Backup e ripristino delle chiavi  
 È importante eseguire regolarmente il backup dell'insieme di credenziali delle chiavi. In caso di perdita di una chiave asimmetrica nell'insieme di credenziali, è possibile ripristinarla dal backup. La chiave deve essere ripristinata usando lo stesso nome precedente con il comando Restore di PowerShell (vedere i passaggi successivi).  
 In caso di perdita dell'insieme di credenziali, è necessario ricreare un insieme di credenziali e ripristinare la chiave asimmetrica al suo interno usando lo stesso nome assegnato in precedenza. Il nome dell'insieme di credenziali può essere diverso o uguale rispetto a prima. È necessario impostare anche le autorizzazioni di accesso nel nuovo insieme di credenziali per concedere all'entità servizio di SQL Server l'accesso richiesto per gli scenari di crittografia di SQL Server e quindi modificare le credenziali di SQL Server in modo che includano il nuovo nome dell'insieme di credenziali.  
 In sintesi, ecco i passaggi necessari:  
@@ -155,30 +159,35 @@ I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizi
   
   
 ##  <a name="AppendixB"></a> B. Domande frequenti  
-### Informazioni sull'insieme di credenziali delle chiavi di Azure  
+### <a name="on-azure-key-vault"></a>Informazioni sull'insieme di credenziali delle chiavi di Azure  
   
 **Come funzionano le operazioni relative alla chiave nell'insieme di credenziali delle chiavi di Azure?**  
- la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni crittografiche che usano la chiave asimmetrica vengono eseguite nel servizio dell'insieme di credenziali delle chiavi di Azure e sono protette dalla sicurezza del servizio.  
+ la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni crittografiche che usano la chiave asimmetrica vengono eseguite nel servizio dell'insieme di credenziali delle chiavi di Azure e sono protette dalla sicurezza del servizio.  
   
  **Che cos'è un URI della chiave?**  
  Ogni chiave nell'insieme di credenziali delle chiavi di Azure ha un URI (Uniform Resource Identifier) che può essere usato per fare riferimento alla chiave dell'applicazione. Usare il formato **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** per ottenere la versione corrente e usare il formato **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** per ottenere una versione specifica.  
   
-### Informazioni sulla configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Informazioni sulla configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+
+**Quali sono gli endpoint a cui deve accedere Connettore SQL Server?** 
+ Il connettore comunica con due endpoint che devono essere inclusi nell'elenco degli elementi consentiti. L'unica porta necessaria per la comunicazione in uscita a questi altri servizi è 443 per Https:
+-  login.microsoftonline.com/*:443
+-  *.vault.azure.net/*:443
   
 **Quali sono i livelli minimi di autorizzazione necessari per ogni passaggio di configurazione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Anche se è possibile eseguire tutti i passaggi di configurazione come membro del ruolo predefinito del server sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di ridurre al minimo le autorizzazioni. L'elenco seguente indica il livello di autorizzazione minima per ogni azione.  
   
--   Per creare un provider di crittografia è necessaria l'autorizzazione `CONTROL SERVER` o l'appartenenza al ruolo predefinito del server **sysadmin**.  
+-   Per creare un provider di crittografia è necessaria l'autorizzazione `CONTROL SERVER` o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
--   Per modificare un'opzione di configurazione ed eseguire l'istruzione `RECONFIGURE`, è necessaria l'autorizzazione a livello di server `ALTER SETTINGS`. L'autorizzazione `ALTER SETTINGS` è assegnata implicitamente ai ruoli predefiniti del server sysadmin e **serveradmin**.  
+-   Per modificare un'opzione di configurazione ed eseguire l'istruzione `RECONFIGURE` , è necessaria l'autorizzazione a livello di server `ALTER SETTINGS` . L'autorizzazione `ALTER SETTINGS` è assegnata implicitamente ai ruoli predefiniti del server sysadmin e **serveradmin** .  
   
--   Per creare le credenziali è necessaria l'autorizzazione `ALTER ANY CREDENTIAL`.  
+-   Per creare le credenziali è necessaria l'autorizzazione `ALTER ANY CREDENTIAL` .  
   
--   Per aggiungere le credenziali a un account di accesso è necessaria l'autorizzazione `ALTER ANY LOGIN`.  
+-   Per aggiungere le credenziali a un account di accesso è necessaria l'autorizzazione `ALTER ANY LOGIN` .  
   
--   Per creare una chiave asimmetrica è necessaria l'autorizzazione `CREATE ASYMMETRIC KEY`.  
+-   Per creare una chiave asimmetrica è necessaria l'autorizzazione `CREATE ASYMMETRIC KEY` .  
 
-### Come è possibile cambiare l'istanza predefinita di Active Directory in modo che l'insieme di credenziali delle chiavi venga creato nella stessa sottoscrizione dell'entità servizio di Active Directory creata per il Connettore [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]?
+**Come è possibile cambiare l'istanza predefinita di Active Directory in modo che l'insieme di credenziali delle chiavi venga creato nella stessa sottoscrizione dell'entità servizio di Active Directory creata per il Connettore [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -241,7 +250,7 @@ Se il codice di errore visualizzato non è presente in questa tabella, di seguit
   
 -   Il servizio dell'insieme di credenziali delle chiavi potrebbe non essere attivo. Riprovare in un altro momento.  
   
--   La chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potrebbe essere stata eliminata. Ripristinare la chiave.  
+-   La chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]potrebbe essere stata eliminata. Ripristinare la chiave.  
   
 -   Se viene visualizzato l'errore "Impossibile caricare la libreria", verificare che sia installata la versione più recente di Visual Studio C++ Redistributable nella versione di SQL Server in esecuzione. La tabella seguente specifica la versione da installare dall'Area download Microsoft.   
   
@@ -251,7 +260,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 2016 | [Visual C++ Redistributable per Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
   
   
-## Riferimenti aggiuntivi  
+## <a name="additional-references"></a>Riferimenti aggiuntivi  
  Altre informazioni su Extensible Key Management:  
   
 -   [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -288,9 +297,10 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
 -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://msdn.microsoft.com/library/dn868052.aspx)  
   
-## Vedere anche  
- [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
   
+

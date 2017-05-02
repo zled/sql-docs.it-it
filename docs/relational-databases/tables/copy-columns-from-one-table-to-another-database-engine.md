@@ -1,25 +1,29 @@
 ---
-title: "Copia di colonne da una tabella a un&#39;altra (Motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copia di colonne"
-  - "colonne [SQL Server], copia"
+title: Copiare colonne da una tabella a un&quot;altra (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copia di colonne da una tabella a un&#39;altra (Motore di database)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copia di colonne da una tabella a un'altra (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   In questo argomento viene illustrato come copiare colonne di una tabella a un'altra copiando solo la definizione di colonna oppure la definizione e i dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +54,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per copiare le definizioni delle colonne tra tabelle  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   
 1.  Aprire la tabella contenente le colonne da copiare e quella in cui verranno copiate le colonne facendo clic con il pulsante destro del mouse sulle tabelle, quindi scegliendo **Progetta**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  Selezionare la colonna prima della quale si desidera che vengano inserite le colonne appena copiate, quindi scegliere **Incolla** dal menu **Modifica**.  
   
-#### Per copiare dati tra tabelle  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Per copiare dati tra tabelle  
   
 1.  Seguire le istruzioni sopra riportate per copiare le definizioni delle colonne.  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 23
 
 3.  Fare clic con il pulsante destro sull’editor di query e quindi scegliere **Progetta query nell'editor**. 
 
-4.  Nella finestra di dialogo **Aggiungi tabella** selezionare la tabella di origine e destinazione, fare clic su **Aggiungi**, quindi chiudere la finestra di dialogo **Aggiungi tabella**. 
+4.  Nella finestra di dialogo **Aggiungi tabella** selezionare la tabella di origine e destinazione, fare clic su **Aggiungi**, quindi chiudere la finestra di dialogo **Aggiungi tabella** . 
 
-5.  Fare clic con il pulsante destro del mouse su un'area vuota dell'editor di query, scegliere **Modifica tipo** e quindi fare clic su **Accodamento**.  
+5.  Fare clic con il pulsante destro del mouse su un'area vuota dell'editor di query, scegliere **Modifica tipo**e quindi fare clic su **Accodamento**.  
 
 6.  Nella finestra di dialogo **Scegliere la tabella di destinazione per Accodamento** selezionare la tabella di destinazione. 
 
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per copiare le definizioni delle colonne tra tabelle  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   
-1.  Non è possibile copiare singole colonne da una tabella a un'altra tramite istruzioni Transact-SQL. È tuttavia possibile creare una nuova tabella nel filegroup predefinito e inserirvi le righe restituite dalla query. Per altre informazioni, vedere [Clausola INTO &#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md).  
+1.  Non è possibile copiare singole colonne da una tabella a un'altra tramite istruzioni Transact-SQL. È tuttavia possibile creare una nuova tabella nel filegroup predefinito e inserirvi le righe restituite dalla query. Per altre informazioni, vedere [Clausola INTO &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-#### Per copiare dati tra tabelle  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Per copiare dati tra tabelle  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

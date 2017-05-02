@@ -1,22 +1,26 @@
 ---
-title: "Eliminare funzioni definite dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Eliminare funzioni definite dall&quot;utente | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare funzioni definite dall&#39;utente
+# <a name="delete-user-defined-functions"></a>Eliminare funzioni definite dall'utente
   È possibile eliminare funzioni definite dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Contenuto dell'argomento**  
@@ -48,7 +52,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare una funzione definita dall'utente  
+#### <a name="to-delete-a-user-defined-function"></a>Per eliminare una funzione definita dall'utente  
   
 1.  Fare clic sul segno più accanto al database che contiene la funzione che si desidera modificare.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare una funzione definita dall'utente  
+#### <a name="to-delete-a-user-defined-function"></a>Per eliminare una funzione definita dall'utente  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

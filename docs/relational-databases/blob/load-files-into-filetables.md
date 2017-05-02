@@ -1,26 +1,30 @@
 ---
-title: "Caricamento di file in FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], migrazione di file"
-  - "FileTable [SQL Server], caricamento bulk"
-  - "FileTable [SQL Server], caricamento di file"
+title: Caricare file in FileTable | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caricamento di file in FileTable
+# <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
   Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
   
 ##  <a name="BasicsLoadNew"></a> Caricamento o migrazione di file in tabelle FileTable  
@@ -101,28 +105,28 @@ UPDATE PhotoMetadata
   
 -   **bcp**  
   
-    -   Eseguire una chiamata con la clausola **CHECK_CONSTRAINTS**.  
+    -   Eseguire una chiamata con la clausola **CHECK_CONSTRAINTS** .  
   
-    -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **CHECK_CONSTRAINTS**. Riabilitare quindi lo spazio dei nomi FileTable.  
+    -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **CHECK_CONSTRAINTS** . Riabilitare quindi lo spazio dei nomi FileTable.  
   
 -   **BULK INSERT**  
   
-    -   Eseguire una chiamata con la clausola **CHECK_CONSTRAINTS**.  
+    -   Eseguire una chiamata con la clausola **CHECK_CONSTRAINTS** .  
   
-    -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **CHECK_CONSTRAINTS**. Riabilitare quindi lo spazio dei nomi FileTable.  
+    -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **CHECK_CONSTRAINTS** . Riabilitare quindi lo spazio dei nomi FileTable.  
   
 -   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
   
-    -   Eseguire una chiamata con la clausola **IGNORE_CONSTRAINTS**.  
+    -   Eseguire una chiamata con la clausola **IGNORE_CONSTRAINTS** .  
   
-    -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **IGNORE_CONSTRAINTS**. Riabilitare quindi lo spazio dei nomi FileTable.  
+    -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **IGNORE_CONSTRAINTS** . Riabilitare quindi lo spazio dei nomi FileTable.  
   
  Per informazioni su come disabilitare i vincoli FileTable, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ###  <a name="disabling"></a> Procedura: Disabilitare i vincoli FileTable per il caricamento bulk  
  Per eseguire il caricamento bulk di file in una tabella FileTable senza la necessità di applicare vincoli definiti dal sistema, è possibile disabilitare temporaneamente i vincoli. Per altre informazioni, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

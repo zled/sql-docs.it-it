@@ -1,36 +1,40 @@
 ---
-title: "Impostazione di valore soglia e avvisi in Monitoraggio replica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "avvisi [replica di SQL Server]"
-  - "agente di merge, soglie e avvisi"
-  - "agente di distribuzione, soglie e avvisi"
-  - "soglie [replica di SQL Server]"
-  - "Monitoraggio replica, soglie e avvisi"
-  - "monitoraggio delle prestazioni [replica di SQL Server], soglie e avvisi"
+title: Impostare valori di soglia e avvisi in Monitoraggio replica | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- Merge Agent, thresholds and warnings
+- Distribution Agent, thresholds and warnings
+- thresholds [SQL Server replication]
+- Replication Monitor, thresholds and warnings
+- monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impostazione di valore soglia e avvisi in Monitoraggio replica
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
+# <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
+  In Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
   
  Quando si attiva un avviso, si specifica una soglia. Quando tale soglia viene soddisfatta o superata, viene visualizzato un avviso, a meno che non sia necessario visualizzare un problema con una priorità più elevata. Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. È possibile abilitare avvisi per le seguenti condizioni:  
   
 -   Imminente scadenza della sottoscrizione  
   
-     Applicabile a tutti i tipi di replica. Se la soglia specificata viene raggiunta o superata, lo stato della sottoscrizione viene visualizzato come **scadenza imminente/scaduta**.  
+     Applicabile a tutti i tipi di replica. Se il valore soglia specificato viene raggiunto o superato, lo stato della sottoscrizione diventa **Scadenza imminente/Scaduta**.  
   
 -   Superamento della latenza specificata (quantità di tempo trascorso tra l'esecuzione del commit di una transazione nel server di pubblicazione e l'esecuzione del commit della transazione corrispondente nel Sottoscrittore).  
   
@@ -38,13 +42,13 @@ caps.handback.revision: 33
   
 -   Superamento del tempo di sincronizzazione specificato.  
   
-     Si applica alla replica di tipo merge. Se la soglia specificata viene raggiunta o superata, lo stato viene visualizzato come **merge con esecuzione prolungata**. È possibile specificare valore soglia differenti per le connessioni remote e le connessioni LAN.  
+     Si applica alla replica di tipo merge. Se la soglia specificata viene raggiunta o superata, viene visualizzato lo stato **Merge con esecuzione prolungata**. È possibile specificare valore soglia differenti per le connessioni remote e le connessioni LAN.  
   
 -   Impossibilità di elaborare il numero di righe specificato in un determinato intervallo di tempo.  
   
      Si applica alla replica di tipo merge. Se la soglia specificata viene raggiunta o superata, viene visualizzato lo stato **Prestazioni critiche**. È possibile specificare valore soglia differenti per le connessioni remote e le connessioni LAN.  
   
- Per ulteriori informazioni sugli avvisi **prestazioni critiche** e **merge con esecuzione prolungata**, vedere [monitoraggio delle prestazioni con Monitoraggio replica](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
+ Per altre informazioni sugli avvisi **Prestazioni critiche** e **Merge con esecuzione prolungata**, vedere [Monitoraggio delle prestazioni con Monitoraggio replica](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
  **Contenuto dell'argomento**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 33
   
 5.  Fare clic su **Salva modifiche**.  
   
-#### Per configurare un avviso per una soglia  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
 1.  Fare clic su **Configura avvisi**.  
   
 2.  Nella finestra di dialogo **Configura avvisi di replica** selezionare un avviso e quindi fare clic su **Configura**.  
   
-     In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per ulteriori informazioni, vedere [utilizzare avvisi per gli eventi dell'agente di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+     In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le opzioni **\< AlertName> proprietà dell'avviso** la finestra di dialogo:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
-    -   Nel **risposta** specificare se deve essere inviato un messaggio di posta e/o un processo deve essere eseguito.  
+    -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 33
   
 5.  Fare clic su **Salva modifiche**.  
   
-#### Per configurare un avviso per una soglia  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
 1.  Fare clic su **Configura avvisi**.  
   
@@ -116,11 +120,11 @@ caps.handback.revision: 33
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie.  
   
-3.  Impostare le opzioni **\< AlertName> proprietà dell'avviso** la finestra di dialogo:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
-    -   Nel **risposta** specificare se deve essere inviato un messaggio di posta e/o un processo deve essere eseguito.  
+    -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.  
   
@@ -140,19 +144,19 @@ caps.handback.revision: 33
   
 5.  Fare clic su **Salva modifiche**.  
   
-#### Per configurare un avviso per una soglia  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Per configurare un avviso per una soglia  
   
 1.  Fare clic su **Configura avvisi**.  
   
 2.  Nella finestra di dialogo **Configura avvisi di replica** selezionare un avviso e quindi fare clic su **Configura**.  
   
-     In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per ulteriori informazioni, vedere [utilizzare avvisi per gli eventi dell'agente di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+     In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le opzioni **\< AlertName> proprietà dell'avviso** la finestra di dialogo:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
-    -   Nel **risposta** specificare se deve essere inviato un messaggio di posta e/o un processo deve essere eseguito.  
+    -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 33
   
 5.  Scegliere **Chiudi**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

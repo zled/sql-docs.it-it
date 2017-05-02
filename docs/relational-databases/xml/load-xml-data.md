@@ -1,37 +1,41 @@
 ---
-title: "Caricamento dati XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dati XML [SQL Server], caricamento"
-  - "caricamento di dati XML"
+title: Caricare dati XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML data [SQL Server], loading
+- loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 627870d10fb4a6d91a4570f14274b6b2d1c2119b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caricamento dati XML
+# <a name="load-xml-data"></a>Caricamento dati XML
   È possibile trasferire dati XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in diversi modi. Esempio:  
   
--   Se i dati si trovano in una colonna di tipo [n]text o image in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile importare la tabella utilizzando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modificare il tipo di colonna in XML utilizzando l'istruzione ALTER TABLE.  
+-   Se i dati si trovano in una colonna di tipo [n]text o image in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile importare la tabella utilizzando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modificare il tipo di colonna in XML utilizzando l'istruzione ALTER TABLE.  
   
--   È possibile eseguire una copia bulk dei dati da un altro database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando bcp out e quindi eseguire un inserimento bulk dei dati nel database di una versione successiva usando bcp in.  
+-   È possibile eseguire una copia bulk dei dati da un altro database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando bcp out e quindi eseguire un inserimento bulk dei dati nel database di una versione successiva usando bcp in.  
   
--   Se i dati si trovano in colonne relazionali in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creare una nuova tabella con una colonna di tipo [n]text e, facoltativamente, una colonna chiave primaria per un identificatore di riga. Usare la programmazione sul lato client per recuperare i dati XML generati nel server con FOR XML e scriverli nella colonna **[n]text** . Usare quindi le tecniche illustrate in precedenza per trasferire i dati in un database di una versione successiva. È possibile scegliere di scrivere i dati XML direttamente in una colonna XML nel database di una versione successiva.  
+-   Se i dati si trovano in colonne relazionali in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare una nuova tabella con una colonna di tipo [n]text e, facoltativamente, una colonna chiave primaria per un identificatore di riga. Usare la programmazione sul lato client per recuperare i dati XML generati nel server con FOR XML e scriverli nella colonna **[n]text** . Usare quindi le tecniche illustrate in precedenza per trasferire i dati in un database di una versione successiva. È possibile scegliere di scrivere i dati XML direttamente in una colonna XML nel database di una versione successiva.  
   
-## Caricamento bulk di dati XML  
+## <a name="bulk-loading-xml-data"></a>Caricamento bulk di dati XML  
  È possibile eseguire un caricamento bulk dei dati XML nel server utilizzando le funzionalità per il caricamento bulk disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio bcp. OPENROWSET consente di caricare dati in una colonna XML da uno o più file, come illustrato nell'esempio seguente.  
   
-##### Esempio: caricamento di dati XML da un file  
+##### <a name="example-loading-xml-from-files"></a>Esempio: caricamento di dati XML da un file  
  In questo esempio viene illustrato l'inserimento di una riga nella tabella T. Il valore della colonna XML viene caricato dal file C:\MyFile\xmlfile.xml come CLOB e alla colonna di tipo integer viene fornito il valore 10.  
   
 ```  
@@ -42,17 +46,17 @@ FROM    (SELECT *
  AS xCol) AS R(xCol)  
 ```  
   
-## Codifica del testo  
+## <a name="text-encoding"></a>Codifica del testo  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati XML in formato Unicode (UTF-16). I dati XML recuperati dal server vengono restituiti con la codifica UTF-16. Se si desidera una codifica diversa, sarà necessario eseguire la conversione appropriata sui dati recuperati. Per i dati XML viene talvolta utilizzata una codifica diversa. In questo caso è necessario prestare particolare attenzione durante il caricamento dei dati. Esempio:  
   
 -   Se il testo XML è in formato Unicode (UCS-2, UTF-16), sarà possibile assegnarlo senza problemi a una colonna, una variabile o un parametro XML.  
   
 -   Se viene utilizzata una codifica implicita diversa da Unicode, a causa della tabella codici di origine, la tabella codici per le stringhe nel database dovrà essere uguale o compatibile con i punti di codice da caricare. Se necessario, utilizzare COLLATE. Se tale tabella codici non esiste sul server, sarà necessario aggiungere una dichiarazione XML esplicita con la codifica appropriata.  
   
--   Per una codifica esplicita usare il tipo di dati **varbinary()**, che non interagisce in alcun modo con le tabelle codici, oppure usare un tipo stringa della tabella codici appropriata. Assegnare quindi i dati a una colonna, a una variabile o a un parametro XML.  
+-   Per una codifica esplicita usare il tipo di dati **varbinary()** , che non interagisce in alcun modo con le tabelle codici, oppure usare un tipo stringa della tabella codici appropriata. Assegnare quindi i dati a una colonna, a una variabile o a un parametro XML.  
   
-### Esempio: impostazione di una codifica in modo esplicito  
- Si consideri un documento XML di nome vcdoc, archiviato come **varchar(max)** e che non include una dichiarazione XML esplicita. L'istruzione seguente aggiunge una dichiarazione XML con la codifica "iso8859-1", concatena il documento XML, esegue il cast del risultato a **varbinary(max)**, in modo da mantenere la rappresentazione dei byte e infine esegue il cast al tipo di dati XML. Questo consente al processore XML di analizzare i dati in base alla codifica specificata, "iso8859-1", e di generare la rappresentazione UTF-16 corrispondente per i valori stringa.  
+### <a name="example-explicitly-specifying-an-encoding"></a>Esempio: impostazione di una codifica in modo esplicito  
+ Si consideri un documento XML di nome vcdoc, archiviato come **varchar(max)** e che non include una dichiarazione XML esplicita. L'istruzione seguente aggiunge una dichiarazione XML con la codifica "iso8859-1", concatena il documento XML, esegue il cast del risultato a **varbinary(max)** , in modo da mantenere la rappresentazione dei byte e infine esegue il cast al tipo di dati XML. Questo consente al processore XML di analizzare i dati in base alla codifica specificata, "iso8859-1", e di generare la rappresentazione UTF-16 corrispondente per i valori stringa.  
   
 ```  
 SELECT CAST(   
@@ -60,7 +64,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
  AS XML)  
 ```  
   
-### Stringa che codifica le incompatibilità  
+### <a name="string-encoding-incompatibilities"></a>Stringa che codifica le incompatibilità  
  Se si copia e si incolla XML come un valore letterale stringa nella finestra dell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], potrebbero verificarsi incompatibilità di codifica delle stringhe [N]VARCHAR, che dipendono dalla codifica dell'istanza XML utilizzata. In molti casi, è possibile rimuovere la dichiarazione XML. Esempio:  
   
 ```  
@@ -80,7 +84,7 @@ INSERT INTO T VALUES (N'…')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

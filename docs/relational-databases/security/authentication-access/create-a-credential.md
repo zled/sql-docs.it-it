@@ -1,26 +1,30 @@
 ---
-title: "Creazione di credenziali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "credenziali [SQL Server], creazione"
-  - "autenticazione [SQL Server], credenziali"
-  - "accesso [SQL Server], credenziali"
+title: Creare credenziali | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di credenziali
+# <a name="create-a-credential"></a>Creazione di credenziali
   In questo argomento viene descritto come creare credenziali in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Le credenziali consentono agli utenti che utilizzano l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di disporre di un'identità al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vengono principalmente utilizzate per eseguire codice negli assembly con set di autorizzazioni EXTERNAL_ACCESS. È inoltre possibile utilizzare le credenziali quando un utente che utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha la necessità di accedere a una risorsa di dominio, quale il percorso di un file in cui archiviare un backup.  
@@ -56,7 +60,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare una credenziale  
+#### <a name="to-create-a-credential"></a>Per creare una credenziale  
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 17
   
 4.  Nella casella **Identità** digitare il nome dell'account usato per le connessioni in uscita (quando si esce dal contesto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). In genere, sarà un account utente di Windows, ma l'identità può essere un account di altro tipo.  
   
-     In alternativa, fare clic sui puntini di sospensione **(…)** per aprire la finestra di dialogo **Seleziona utente o gruppo**.  
+     In alternativa, fare clic sui puntini di sospensione **(…)** per aprire la finestra di dialogo **Seleziona utente o gruppo** .  
   
 5.  Nelle caselle **Password** e **Conferma password** digitare la password dell'account specificato nella casella **Identità** . Se **Identità** corrisponde a un account utente di Windows, è la password di Windows. Se la password non è necessaria è possibile lasciare vuoto il campo **Password** .  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare una credenziale  
+#### <a name="to-create-a-credential"></a>Per creare una credenziale  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

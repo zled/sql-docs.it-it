@@ -1,24 +1,28 @@
 ---
-title: "Creazione della chiave master di un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiave master del database [SQL Server], creazione"
+title: Creare la chiave master di un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2ea4a853ecc29a2173b9a471cb380fb77ce39c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione della chiave master di un database
+# <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
   In questo argomento viene descritto come creare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -38,7 +42,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare la chiave master di un database  
+#### <a name="to-create-a-database-master-key"></a>Per creare la chiave master di un database  
   
 1.  Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.  
   

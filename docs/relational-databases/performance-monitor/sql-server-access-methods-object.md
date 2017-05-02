@@ -1,25 +1,29 @@
 ---
-title: "Oggetto Metodi di accesso di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Metodi di accesso - oggetto"
-  - "SQLServer:Access Methods"
+title: Oggetto Metodi di accesso di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetto Metodi di accesso di SQL Server
+# <a name="sql-server-access-methods-object"></a>Oggetto Metodi di accesso di SQL Server
   L'oggetto **Metodi di accesso** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare l'accesso ai dati logici all'interno del database. L'accesso fisico alle pagine del database su disco viene monitorato tramite i contatori di **Gestione buffer** . Il monitoraggio dei metodi utilizzati per accedere ai dati archiviati nel database consente di determinare se è possibile migliorare le prestazioni delle query aggiungendo o modificando gli indici, aggiungendo o spostando partizioni, aggiungendo file o gruppi di file, deframmentando gli indici o riscrivendo le query. I contatori dell'oggetto **Metodi di accesso** possono essere utilizzati anche per monitorare la quantità di dati, gli indici e lo spazio libero all'interno del database e determinare in tal modo il volume e la frammentazione dei dati per ogni istanza del server. Un'eccessiva frammentazione dell'indice può ridurre le prestazioni.  
   
  Per informazioni più dettagliate sul volume, la frammentazione e l'utilizzo dei dati, utilizzare le viste a gestione dinamica seguenti:  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
 |**Base tabelle di lavoro dalla cache**|Solo per uso interno.|  
 |**Percentuale tabelle di lavoro dalla cache**|Percentuale di tabelle di lavoro create in cui le due pagine iniziali della tabella di lavoro non sono state allocate ma sono risultate immediatamente disponibili dalla cache della tabella di lavoro. Quando si rimuove una tabella di lavoro, è possibile che due pagine rimangano allocate e vengano restituite alla cache della tabella di lavoro, incrementando le prestazioni.|  
   
-## Vedere anche  
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

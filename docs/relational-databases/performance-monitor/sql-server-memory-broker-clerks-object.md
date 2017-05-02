@@ -1,24 +1,28 @@
 ---
-title: "SQL Server, oggetto Memory Broker Clerks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Memory Broker Clerks"
+title: Oggetto Memory Broker Clerks di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Memory Broker Clerks
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 caps.latest.revision: 4
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7cf0f0a0d8ef7f7e8dec4a7a743dbc25bc98bb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, oggetto Memory Broker Clerks
+# <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, oggetto Memory Broker Clerks
 L'oggetto prestazione **SQLServer:Memory Broker Clerks** fornisce contatori per statistiche correlate ai clerk broker di memoria.
 
 La tabella seguente descrive gli oggetti prestazioni **Memory Broker Clerks** di SQL Server.
@@ -34,5 +38,5 @@ La tabella seguente descrive gli oggetti prestazioni **Memory Broker Clerks** di
 
 C'è un'istanza del contatore per il pool di buffer e il pool di oggetti dell'archivio colonne.
 
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -1,47 +1,51 @@
 ---
-title: "Configurazione del data warehouse di gestione (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "data warehouse [SQL Server], più istanze"
-  - "data warehouse [SQL Server], configurazione"
-  - "Configurazione guidata data warehouse di gestione"
-  - "data warehouse di gestione, configurazione"
+title: Configurare il data warehouse di gestione (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione del data warehouse di gestione (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurazione del data warehouse di gestione (SQL Server Management Studio)
   In questo argomento viene descritto come configurare il data warehouse di gestione per supportare l'archiviazione dei dati per una singola istanza o per più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano l'agente di raccolta dati. Queste istanze possono essere installate nello stesso server o in server diversi. In questo argomento vengono fornite anche le descrizioni dell'interfaccia utente per la finestra di dialogo [Configurazione guidata data warehouse di gestione](#Wizard) . Per ulteriori informazioni sulla configurazione di un agente di raccolta dati, vedere [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è configurato per essere eseguito utilizzando uno degli account di servizio del sistema (Sistema locale, Servizio di rete o Servizio locale) e il data warehouse di gestione viene creato in un'istanza diversa da quella dell'agente di raccolta dati, è necessario configurare i set di raccolta in modo che venga utilizzato un proxy per il caricamento di dati nel data warehouse di gestione.  
   
-### Configurare il data warehouse di gestione su una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurare il data warehouse di gestione su una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia in esecuzione.  
   
 2.  In Esplora oggetti espandere il nodo **Gestione** .  
   
-3.  Fare clic con il pulsante destro del mouse **Raccolta dati**, espandere **Attività** e fare clic su **Configura data warehouse di gestione**.  
+3.  Fare clic con il pulsante destro del mouse **Raccolta dati**, espandere **Attività**e fare clic su **Configura data warehouse di gestione**.  
   
 4.  Utilizzare la [Configurazione guidata data warehouse di gestione](#Wizard) per creare un data warehouse di gestione, configurare gli account di accesso, abilitare la raccolta dati e avviare i **Set di raccolta dati di sistema**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 28
   
     -   Utilizzare la Configurazione guidata data warehouse di gestione per configurare la raccolta dati per il data warehouse di gestione esistente.  
   
-    -   Fare clic con il pulsante destro del mouse su **Raccolta dati** e scegliere **Proprietà**. Nella scheda **Generale** specificare il data warehouse di gestione esistente e il server in cui è installato.  
+    -   Fare clic con il pulsante destro del mouse su **Raccolta dati**e scegliere **Proprietà**. Nella scheda **Generale** specificare il data warehouse di gestione esistente e il server in cui è installato.  
   
 6.  Ripetere il passaggio 5 fino a quando tutte le istanze del database che utilizzano l'agente di raccolta dati sono configurate per caricare dati sul data warehouse di gestione condiviso.  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 28
  Utilizzare questa pagina per visualizzare i risultati di ciascun passaggio di configurazione.  
   
  **Dettagli**  
- Consente di visualizzare ogni passaggio di configurazione in una riga nella griglia **Dettagli**. Ogni riga contiene una colonna **Azione** con la descrizione del passaggio e una colonna **Stato** con l'indicazione dell'esito positivo o negativo dello stesso. In presenza di errori, nella colonna **Messaggio** è visualizzato un messaggio.  
+ Consente di visualizzare ogni passaggio di configurazione in una riga nella griglia **Dettagli** . Ogni riga contiene una colonna **Azione** con la descrizione del passaggio e una colonna **Stato** con l'indicazione dell'esito positivo o negativo dello stesso. In presenza di errori, nella colonna **Messaggio** è visualizzato un messaggio.  
   
  **Arresta**  
  Consente di arrestare l'elaborazione della procedura guidata.  
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **Chiudi**  
  Consente di chiudere la procedura guidata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   

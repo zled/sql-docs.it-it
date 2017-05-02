@@ -1,35 +1,39 @@
 ---
-title: "Impostazione di metapropriet&#224; in OPENXML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "overflow nei documenti XML [SQL Server]"
-  - "metaproprietà [XML in SQL Server]"
-  - "dati non utilizzati"
-  - "estrazione di informazioni dei nodi XML [SQL Server]"
-  - "OPENXML, metaproprietà dell'istruzione"
+title: "Specificare metaproprietà in OPENXML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overflow in XML document [SQL Server]
+- metaproperties [XML in SQL Server]
+- unconsumed data
+- extracting information of XML nodes [SQL Server]
+- OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bc6d9b3e482869bd82daa13c167d0221639a95f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impostazione di metapropriet&#224; in OPENXML
+# <a name="specify-metaproperties-in-openxml"></a>Impostazione di metaproprietà in OPENXML
   Gli attributi delle metaproprietà in un documento XML sono attributi che descrivono le proprietà di un elemento XML (elemento, attributo o qualsiasi altro nodo DOM). Tali attributi non sono fisicamente presenti nel testo del documento XML, tuttavia OPENXML fornisce tali metaproprietà per tutti gli elementi XML. Queste metaproprietà consentono di estrarre informazioni, ad esempio la posizione locale o le informazioni sullo spazio dei nomi, dei nodi XML, ovvero informazioni più dettagliate rispetto a quelle disponibili nella rappresentazione testuale.  
   
  Per eseguire il mapping le metaproprietà alle colonne del set di righe, è possibile specificare il parametro *ColPattern* in un'istruzione OPENXML. Le colonne conterranno i valori delle metaproprietà alle quali è stato eseguito il mapping. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
- Per accedere agli attributi delle metaproprietà, è possibile utilizzare uno spazio dei nomi specifico di SQL Server, Questo spazio dei nomi, **urn:schemas-microsoft-com:xml-metaprop** consente all'utente di accedere agli attributi delle metaproprietà. Se il risultato di una query OPENXML viene restituito nel formato tabella edge, in tale tabella sarà inclusa una colonna per ogni attributo della metaproprietà, a eccezione della metaproprietà **xmltext**.  
+ Per accedere agli attributi delle metaproprietà, è possibile utilizzare uno spazio dei nomi specifico di SQL Server, Questo spazio dei nomi, **urn:schemas-microsoft-com:xml-metaprop** consente all'utente di accedere agli attributi delle metaproprietà. Se il risultato di una query OPENXML viene restituito nel formato tabella edge, in tale tabella sarà inclusa una colonna per ogni attributo della metaproprietà, a eccezione della metaproprietà **xmltext** .  
   
- Alcuni attributi delle metaproprietà vengono utilizzati per attività di elaborazione. Ad esempio, l'attributo della metaproprietà **xmltext** consente di gestire l'overflow. La gestione dell'overflow implica la gestione dei dati non utilizzati e non elaborati del documento. Una delle colonne del set di righe generato da OPENXML può essere identificata come la colonna di overflow. A tale scopo, è possibile eseguirne il mapping alla metaproprietà **xmltext** usando il parametro *ColPattern*. Nella colonna verranno inseriti i dati di overflow e il parametro *flags* determinerà se la colonna includerà solo i dati non utilizzati oppure tutti i dati.  
+ Alcuni attributi delle metaproprietà vengono utilizzati per attività di elaborazione. Ad esempio, l'attributo della metaproprietà **xmltext** consente di gestire l'overflow. La gestione dell'overflow implica la gestione dei dati non utilizzati e non elaborati del documento. Una delle colonne del set di righe generato da OPENXML può essere identificata come la colonna di overflow. A tale scopo, è possibile eseguirne il mapping alla metaproprietà **xmltext** usando il parametro *ColPattern* . Nella colonna verranno inseriti i dati di overflow e il parametro *flags* determinerà se la colonna includerà solo i dati non utilizzati oppure tutti i dati.  
   
  Nella tabella seguente sono elencati gli attributi delle metaproprietà per ogni elemento XML analizzato. Per accedere a tali attributi, è necessario usare lo spazio dei nomi **urn:schemas-microsoft-com:xml-metaprop**. Qualsiasi valore impostato dall'utente direttamente nel documento XML tramite queste metaproprietà verrà ignorato.  
   
@@ -50,23 +54,23 @@ caps.handback.revision: 23
 |Attributo della metaproprietà padre|Descrizione|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|Corrisponde a **../@mp:id**|  
-|**@mp:parentlocalname**|Corresponds to **../@mp:localname**|  
+|**@mp:parentlocalname**|Corrisponde a **../@mp:localname**|  
 |**@mp:parentnamespacerui**|Corrisponde a **../@mp:namespaceuri**|  
 |**@mp:parentprefix**|Corrisponde a **../@mp:prefix**|  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo di OPENXML per visualizzare i set di righe in modi diversi.  
   
-### A. Mapping tra le colonne del set di righe OPENXML e le metaproprietà  
- In questo esempio, l'istruzione OPENXML viene utilizzata per visualizzare il documento XML di esempio come un set di righe. In particolare, viene illustrato come eseguire il mapping di più attributi delle metaproprietà alle colonne del set di righe in un'istruzione OPENXML usando il parametro *ColPattern*.  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. Mapping tra le colonne del set di righe OPENXML e le metaproprietà  
+ In questo esempio, l'istruzione OPENXML viene utilizzata per visualizzare il documento XML di esempio come un set di righe. In particolare, viene illustrato come eseguire il mapping di più attributi delle metaproprietà alle colonne del set di righe in un'istruzione OPENXML usando il parametro *ColPattern* .  
   
  Nell'istruzione OPENXML si noti quanto segue:  
   
--   Viene eseguito il mapping della colonna **id** all'attributo della metaproprietà **@mp:id** per indicare che la colonna includerà l'ID XML univoco generato dal sistema dell'elemento.  
+-   e il parametro **id** all'attributo della metaproprietà **@mp:id** per indicare che la colonna includerà l'ID XML univoco generato dal sistema dell'elemento.  
   
--   Viene eseguito il mapping della colonna **parent** a **@mp:parentid** per indicare che la colonna includerà l'ID XML del padre dell'elemento.  
+-   e il parametro **parent** a **@mp:parentid** per indicare che la colonna includerà l'ID XML del padre dell'elemento.  
   
--   Viene eseguito il mapping della colonna **parentLocalName** a **@mp:parentlocalname** a indicare che la colonna includerà il nome locale del padre.  
+-   e il parametro **parentLocalName** a **@mp:parentlocalname** a indicare che la colonna includerà il nome locale del padre.  
   
  L'istruzione SELECT restituisce quindi il set di righe fornito da OPENXML:  
   
@@ -112,7 +116,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### B. Recupero dell'intero documento XML  
+### <a name="b-retrieving-the-whole-xml-document"></a>B. Recupero dell'intero documento XML  
  In questo esempio, l'istruzione OPENXML visualizza il documento XML di esempio come un set di righe a una colonna. Viene eseguito il mapping della colonna, **Col1**, alla metaproprietà **xmltext** e diventa una colonna di overflow, pertanto vi verranno inseriti i dati non utilizzati che in questo caso sono rappresentati dall'intero documento.  
   
  L'istruzione SELECT restituisce quindi l'intero set di righe.  
@@ -156,16 +160,16 @@ EXEC sp_xml_removedocument @idoc
   
  La query restituisce l'elemento radice insieme al relativo nome, nonché i dati contenuti in tale elemento.  
   
-### C. Impostazione della metaproprietà xmltext per il recupero dei dati non utilizzati in una colonna  
+### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Impostazione della metaproprietà xmltext per il recupero dei dati non utilizzati in una colonna  
  In questo esempio, l'istruzione OPENXML viene utilizzata per visualizzare il documento XML di esempio come un set di righe. L'esempio descrive inoltre come recuperare i dati XML non utilizzati tramite il mapping tra l'attributo della metaproprietà **xmltext** e una colonna del set di righe nell'istruzione OPENXML.  
   
- La colonna **comment** viene definita come colonna di overflow tramite il mapping alla metaproprietà **@mp:xmltext**. Il parametro *flags* viene impostato su **9** (XML_ATTRIBUTE e XML_NOCOPY), per indicare che il mapping è **incentrato sugli attributi** e che nella colonna di overflow verranno copiati solo i dati non utilizzati.  
+ e il parametro **comment** viene definita come colonna di overflow tramite il mapping alla metaproprietà **@mp:xmltext** . Il parametro *flags* viene impostato su **9** (XML_ATTRIBUTE e XML_NOCOPY), per indicare che il mapping è **incentrato sugli attributi** e che nella colonna di overflow verranno copiati solo i dati non utilizzati.  
   
  L'istruzione SELECT restituisce quindi il set di righe definito dall'istruzione OPENXML.  
   
  In questo esempio, la metaproprietà **@mp:parentlocalname** viene impostata per una colonna, **ParentLocalName**, del set di righe generato dall'istruzione OPENXML. Questa colonna includerà pertanto il nome locale dell'elemento padre.  
   
- Nel set di righe vengono definite altre due colonne, **parent** e **comment**. Viene eseguito il mapping della colonna **parent** a **@mp:parentid** per indicare che la colonna includerà l'ID XML dell'elemento padre dell'elemento. La colonna comment viene definita come colonna di overflow tramite il mapping alla metaproprietà **@mp:xmltext**.  
+ Nel set di righe vengono definite altre due colonne, **parent** e **comment**. e il parametro **parent** a **@mp:parentid** per indicare che la colonna includerà l'ID XML dell'elemento padre dell'elemento. La colonna comment viene definita come colonna di overflow tramite il mapping alla metaproprietà **@mp:xmltext** .  
   
 ```  
 DECLARE @idoc int  
@@ -210,7 +214,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

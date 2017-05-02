@@ -1,32 +1,36 @@
 ---
-title: "Amministrazione di server tramite la gestione basata su criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "facet"
-  - "Declarative Management Framework Vedere gestione basata su criteri"
-  - "configurazione della superficie di attacco [SQL Server], gestione basata su criteri"
-  - "Gestione basata su criteri"
-  - "facet [gestione basata su criteri]"
-  - "gestione basata su criteri, amministrazione"
-  - "condizioni [gestione basata su criteri]"
-  - "facets [gestione basata su criteri], informazioni sui facet"
-  - "PolicyAdministratorRole - ruolo"
+title: Amministrare server tramite la gestione basata su criteri | Microsoft Docs
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# Amministrazione di server tramite la gestione basata su criteri
+# <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
    La gestione basata su criteri è un sistema basato su criteri per la gestione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare la gestione basata su criteri per creare condizioni contenenti espressioni. Creare quindi i criteri per l'applicazione delle condizioni a oggetti di destinazione del database.  
 
 Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in alcuni server non venga abilitato Posta elettronica database e quindi creano una condizione e un criterio che imposta tale opzione del server. 
@@ -47,7 +51,7 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
   
 > **NOTA:** durante il calcolo del set di oggetti per i criteri, per impostazione predefinita gli oggetti di sistema sono esclusi.  Ad esempio, se il set di oggetti dei criteri si riferisce a tutte le tabelle, i criteri non verranno applicati alle tabelle di sistema. Se gli utenti desiderano valutare i criteri negli oggetti di sistema, possono aggiungere in modo esplicito questi oggetti al set di oggetti. Tuttavia, sebbene tutti i criteri siano supportati per la modalità di valutazione **Controllo su pianificazione** , per motivi di prestazioni, non tutti i criteri con i set di oggetti arbitrari sono supportati per la modalità di valutazione **Controllo su modifiche** . Per altre informazioni, vedere la pagina all'indirizzo [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Tre componenti della gestione basata su criteri  
+## <a name="three-policy-based-management-components"></a>Tre componenti della gestione basata su criteri  
  Nella gestione basata su criteri sono inclusi tre componenti:  
   
 -   Gestione dei criteri. Gli amministratori dei criteri creano i criteri.  
@@ -68,7 +72,7 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
   
      Quando i criteri automatici non sono abilitati, la gestione basata su criteri non influisce sulle prestazioni del sistema.  
   
-## Termini  
+## <a name="terms"></a>Termini  
  **Destinazione gestita della gestione basata su criteri** 
  Entità gestite tramite la gestione basata su criteri, ad esempio un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], un database, una tabella o un indice. Tutte le destinazioni in un'istanza del server formano una gerarchia di destinazioni. Un set di destinazioni è il set risultante dall'applicazione di un set di filtri di destinazione alla gerarchia di destinazioni, ad esempio tutte le tabelle del database di proprietà dello schema HumanResources.  
   
@@ -101,7 +105,7 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
   
 -   La destinazione o uno dei predecessori delle destinazioni sottoscrive il gruppo di criteri che contiene i criteri.  
   
-## Collegamenti a specifiche attività 
+## <a name="links-to-specific-tasks"></a>Collegamenti a specifiche attività 
 
  - [Archiviare i criteri della gestione basata su criteri](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [Configurare avvisi per notificare agli amministratori eventuali errori dei criteri](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ Gli amministratori di database potrebbero, ad esempio, volersi assicurare che in
  - [Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## Esempi
+ ## <a name="examples"></a>Esempi
  - [Creazione di criteri Disattivata per impostazione predefinita](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Configurazione di un server per l'esecuzione di criteri Disattivata per impostazione predefinita](https://msdn.microsoft.com/library/bb522470.aspx)
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

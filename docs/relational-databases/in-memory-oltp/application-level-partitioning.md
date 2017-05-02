@@ -1,29 +1,33 @@
 ---
-title: "Partizionamento a livello di applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Partizionamento a livello di applicazione | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Partizionamento a livello di applicazione
+# <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
   Questa applicazione elabora gli ordini. Gli ordini recenti vengono sottoposti a numerose elaborazioni. Gli ordini meno recenti non vengono sottoposti a numerose elaborazioni. Gli ordini recenti sono in una tabella con ottimizzazione per la memoria. Gli ordini meno recenti sono in una tabella basata su disco. Tutti gli ordini dopo *hotDate* sono nella tabella con ottimizzazione per la memoria. Tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella con ottimizzazione per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
   
  In questo esempio non viene utilizzata una tabella partizionata della tabella basata su disco ma si tiene traccia di un punto di divisione esplicito tra le due tabelle, utilizzando una terza tabella. Il punto di divisione può essere usato per garantire che i dati appena aggiunti vengano inseriti sempre nella tabella appropriata in base alla data. Inoltre, può essere usato per determinare la posizione in cui cercare i dati. I dati che arrivano in ritardo vengono ancora inseriti nella tabella appropriata.  
   
  Per un esempio correlato, vedere [Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md).  
   
-## Listato di codice  
+## <a name="code-listing"></a>Listato di codice  
   
 ```tsql  
 USE MASTER  
@@ -213,7 +217,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempi di codice di OLTP in memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

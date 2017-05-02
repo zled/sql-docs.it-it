@@ -1,38 +1,33 @@
 ---
-title: "Backup differenziali [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup differenziali"
-  - "backup differenziali, informazioni"
+title: Backup differenziali (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- differential backups
+- differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup differenziali [SQL Server]
+# <a name="differential-backups-sql-server"></a>Backup differenziali [SQL Server]
   Questo argomento relativo a backup e ripristino è applicabile a tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Un backup differenziale si basa sul backup dei dati completo precedente più recente. In un backup differenziale vengono acquisiti solo i dati che hanno subito modifiche dopo il backup completo. Il backup completo su cui si basa un backup differenziale è noto come *base* del backup differenziale. I backup completi, ad eccezione di backup di sola copia, possono servire come base per una serie di backup differenziali, compresi backup di database, backup parziali e backup di file. Il backup di base per un backup differenziale di file può essere contenuto in un backup completo, un backup di file o un backup parziale.  
   
- **Contenuto dell'argomento:**  
-  
--   [Vantaggi](#Benefits)  
-  
--   [Panoramica dei backup differenziali](#Overview)  
-  
--   [Backup differenziali di database di sola lettura](#ReadOnlyDbs)  
-  
--   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Vantaggi  
   
@@ -58,20 +53,20 @@ caps.handback.revision: 58
   
  Prima di ripristinare un backup differenziale, è necessario eseguire il ripristino della relativa base. Ripristinare quindi solo il backup differenziale più recente per riportare il database allo stato esistente nel momento in cui è stato creato tale backup differenziale. In genere, si ripristina il backup completo più recente, seguito dal backup differenziale più recente basato su tale backup completo.  
   
-## Backup differenziali di database con tabelle con ottimizzazione per la memoria  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backup differenziali di database con tabelle con ottimizzazione per la memoria  
  Per informazioni sui backup differenziali e sui database con tabelle con ottimizzazione per la memoria, vedere [Backup di un database con tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md).  
   
 ##  <a name="ReadOnlyDbs"></a> Backup differenziali di database di sola lettura  
- Per i database di sola lettura, i backup completi sono più semplici da gestire quando vengono utilizzati singolarmente anziché in combinazione con i backup differenziali. Quando un database è di sola lettura, il backup e le altre operazioni non sono in grado di modificare i metadati inclusi nel file. I metadati necessari per un backup differenziale, ad esempio il numero di sequenza del file di log in corrispondenza del quale il backup differenziale ha inizio (l'LSN di base del backup differenziale), vengono pertanto archiviati nel database **master**. Se la base differenziale viene creata quando il database è di sola lettura, la mappa di bit differenziale indicherà un numero maggiore di modifiche rispetto a quelle effettivamente apportate dopo il backup di base. I dati aggiuntivi vengono letti dal backup, ma non vengono scritti nel backup, perché tramite il valore **differential_base_lsn** archiviato nella tabella di sistema [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)viene determinato se i dati sono realmente cambiati dopo la creazione della base.  
+ Per i database di sola lettura, i backup completi sono più semplici da gestire quando vengono utilizzati singolarmente anziché in combinazione con i backup differenziali. Quando un database è di sola lettura, il backup e le altre operazioni non sono in grado di modificare i metadati inclusi nel file. I metadati necessari per un backup differenziale, ad esempio il numero di sequenza del file di log in corrispondenza del quale il backup differenziale ha inizio (l'LSN di base del backup differenziale), vengono pertanto archiviati nel database **master** . Se la base differenziale viene creata quando il database è di sola lettura, la mappa di bit differenziale indicherà un numero maggiore di modifiche rispetto a quelle effettivamente apportate dopo il backup di base. I dati aggiuntivi vengono letti dal backup, ma non vengono scritti nel backup, perché tramite il valore **differential_base_lsn** archiviato nella tabella di sistema [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) viene determinato se i dati sono realmente cambiati dopo la creazione della base.  
   
  Quando viene ricompilato, ripristinato oppure scollegato e collegato un database di sola lettura, le informazioni relative alla base differenziale vengono perse perché il database **master** non è sincronizzato con il database utente. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non è in grado di rilevare né evitare questo problema. Gli eventuali backup differenziali successivi non saranno basati sul backup completo più recente e potrebbero generare risultati imprevisti. Per creare una nuova base differenziale, è consigliabile eseguire un backup completo del database.  
   
-### Procedure consigliate per l'utilizzo di backup differenziali con un database di sola lettura  
- Se dopo la creazione di un backup completo di un database di sola lettura si ha intenzione di creare un successivo backup differenziale, eseguire il backup del database **master**.  
+### <a name="best-practices-for-using-differential-backups-with-a-read-only-database"></a>Procedure consigliate per l'utilizzo di backup differenziali con un database di sola lettura  
+ Se dopo la creazione di un backup completo di un database di sola lettura si ha intenzione di creare un successivo backup differenziale, eseguire il backup del database **master** .  
   
  In caso di perdita del database **master** , ripristinarlo prima dei backup differenziali di un database utente.  
   
- Se si scollega e si collega un database di sola lettura per il quale in seguito si prevede di usare backup differenziali, eseguire non appena possibile un backup completo sia del database di sola lettura che del database **master**.  
+ Se si scollega e si collega un database di sola lettura per il quale in seguito si prevede di usare backup differenziali, eseguire non appena possibile un backup completo sia del database di sola lettura che del database **master** .  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -79,9 +74,8 @@ caps.handback.revision: 58
   
 -   [Ripristino di un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

@@ -1,25 +1,29 @@
 ---
-title: "Ripristino in linea (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristini online [SQL Server]"
-  - "ripristini online [SQL Server], informazioni"
+title: Ripristino in linea (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino in linea (SQL Server)
+# <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
   Il ripristino in linea è supportato solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. In questa edizione un ripristino di file, pagina o a fasi viene eseguito online per impostazione predefinita. Le informazioni contenute in questo argomento sono importanti per i database che includono più file o filegroup e, in base al modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
   
  Il ripristino di dati mentre il database è online è denominato *ripristino online*. Un database viene considerato online quando il filegroup primario è online, anche se uno o più filegroup secondari sono offline. Tutti i modelli di recupero consentono di ripristinare un file offline mentre il database è online. Il modello di recupero con registrazione completa consente inoltre di ripristinare pagine mentre il database è online.  
@@ -46,7 +50,7 @@ caps.handback.revision: 45
 > [!CAUTION]  
 >  Quando si usano backup di snapshot, non è possibile eseguire un **ripristino in linea**. Per altre informazioni sul **backup di snapshot**, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-## Backup del log per il ripristino online  
+## <a name="log-backups-for-online-restore"></a>Backup del log per il ripristino online  
  In un ripristino online il punto di recupero corrisponde all'ultimo punto in cui è stata attivata la modalità offline o impostata l'autorizzazione di sola lettura per i dati in fase di ripristino. I backup del log delle transazioni fino a tale punto di recupero incluso devono essere tutti disponibili. In genere, è necessario eseguire un backup del log dopo tale punto in modo da includere il punto di recupero per il file. L'unica eccezione si verifica durante un ripristino online di dati di sola lettura da un backup dei dati che è stato eseguito dopo l'impostazione dell'autorizzazione di sola lettura. In tal caso, non è necessario che sia disponibile un backup del log.  
   
  In genere, è possibile eseguire backup del log delle transazioni mentre il database è online, anche dopo l'avvio della sequenza di ripristino. Il momento in cui deve essere eseguito l'ultimo backup del log dipende dalle proprietà del file in fase di ripristino:  
@@ -74,22 +78,22 @@ caps.handback.revision: 45
   
  Fino a quando il database rimane in modalità offline, tutti i ripristini eseguiti sono di tipo offline.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
   
 > [!NOTE]  
 >  La sintassi di una sequenza di ripristino online è la stessa di una sequenza di ripristino offline.  
   
 -   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Esempio: Ripristino a fasi di filegroup selezionati &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di alcuni filegroup &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Esempio: Ripristino in linea di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Esempio: Ripristino a fasi di filegroup selezionati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di un numero limitato di filegroup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Esempio: Ripristino in linea di un file di lettura/scrittura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di lettura/scrittura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [Esempio: Ripristino in linea di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [Rimuovere filegroup inattivi &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Ripristinare pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

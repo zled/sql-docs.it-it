@@ -1,25 +1,29 @@
 ---
-title: "Ripristinare un database e associarlo a un pool di risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ripristinare un database e associarlo a un pool di risorse | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd9e0ff8de0d4c7099200dfbb329709db437bb53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristinare un database e associarlo a un pool di risorse
+# <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Ripristinare un database e associarlo a un pool di risorse
   Anche se si dispone di memoria sufficiente per ripristinare un database con tabelle con ottimizzazione per la memoria, è possibile seguire le procedure consigliate e associare il database a un pool di risorse denominato. Poiché il database deve essere già presente per poter essere associato al pool, il ripristino del database è un processo costituito da più passaggi. In questo argomento viene illustrato tale processo.  
   
-## Ripristino di un database con tabelle con ottimizzazione per la memoria  
+## <a name="restoring-a-database-with-memory-optimized-tables"></a>Ripristino di un database con tabelle con ottimizzazione per la memoria  
  I passaggi seguenti consentono di ripristinare completamente il database IMOLTP_DB e di associarlo al pool Pool_IMOLTP.  
   
 1.  [Ripristino con NORECOVERY](../../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md#bkmk_NORECOVERY)  
@@ -71,7 +75,7 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_Monitor"></a> Monitoraggio delle prestazioni del pool di risorse  
  Dopo l'associazione del database al pool di risorse denominato e il ripristino con RECOVERY, monitorare l'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Statistiche del pool di risorse. Per ulteriori informazioni, vedere [SQL Server - Oggetto Statistiche del pool di risorse](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [SQL Server - Oggetto Statistiche del pool di risorse](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   

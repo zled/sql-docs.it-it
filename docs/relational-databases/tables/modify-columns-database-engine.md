@@ -1,26 +1,30 @@
 ---
-title: "Modificare colonne (motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modifica di tipi di dati"
-  - "tipi di dati di colonna [SQL Server]"
-  - "tipi di dati [SQL Server], colonne"
+title: Modificare colonne (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- column data types [SQL Server]
+- data types [SQL Server], columns
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b83dffa241040cf08e7f7d9410eaab80649af
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificare colonne (motore di database)
+# <a name="modify-columns-database-engine"></a>Modificare colonne (motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile modificare il tipo di dati di una colonna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,13 +53,13 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare il tipo di dati di una colonna  
+#### <a name="to-modify-the-data-type-of-a-column"></a>Per modificare il tipo di dati di una colonna  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulle colonne della tabella di cui modificare la scala e scegliere **Progetta**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulle colonne della tabella di cui modificare la scala e scegliere **Progetta**.  
   
 2.  Selezionare la colonna per la quale si desidera modificare il tipo di dati.  
   
-3.  Nella scheda **Proprietà colonne** fare clic sulla cella della griglia relativa alla proprietà **Tipo di dati**, quindi selezionare un nuovo tipo di dati dall'elenco a discesa.  
+3.  Nella scheda **Proprietà colonne** fare clic sulla cella della griglia relativa alla proprietà **Tipo di dati** , quindi selezionare un nuovo tipo di dati dall'elenco a discesa.  
   
 4.  Nel menu **File** scegliere **Salva***table name*.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per modificare il tipo di dati di una colonna  
+#### <a name="to-modify-the-data-type-of-a-column"></a>Per modificare il tipo di dati di una colonna  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

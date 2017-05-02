@@ -1,30 +1,34 @@
 ---
-title: "Utilizzare il provider PowerShell per eventi estesi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], xevent"
-  - "eventi estesi [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], eventi estesi"
+title: Usare il provider PowerShell per eventi estesi | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzare il provider PowerShell per eventi estesi
+# <a name="use-the-powershell-provider-for-extended-events"></a>Utilizzare il provider PowerShell per eventi estesi
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  È possibile gestire eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sottocartella XEvent è disponibile all'interno dell'unità SQLSERVER. È possibile accedere alla cartella utilizzando uno dei metodi seguenti:  
+  È possibile gestire eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sottocartella XEvent è disponibile all'interno dell'unità SQLSERVER. È possibile accedere alla cartella utilizzando uno dei metodi seguenti:  
   
 -   Al prompt dei comandi digitare **sqlps**, quindi premere INVIO. Digitare **cd xevent**, quindi premere INVIO. È quindi possibile usare i comandi **cd** e **dir** o i cmdlet **Set-Location** e **Get-Childitem** per passare al nome del server e al nome dell'istanza.  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 14
      PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*>  
   
     > [!NOTE]  
-    >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni** e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
+    >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni**e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
   
  È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Se, ad esempio, dal percorso PS SQLSERVER:\XEvent\\*NomeServer*\\*NomeIstanza*> si digita **cd sessions**, si preme INVIO, si digita **dir** e quindi si preme INVIO, sarà possibile visualizzare l'elenco delle sessioni archiviate nell'istanza specificata. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti notare quanto segue:  
   
 -   È necessario eseguire gli script dal prompt PS SQLSERVER:\\>, disponibile digitando **sqlps** al prompt dei comandi.  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## Sicurezza  
+## <a name="security"></a>Sicurezza  
  Per creare, modificare o eliminare una sessione di eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Utilizzare la sessione system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Strumenti degli eventi estesi](../../relational-databases/extended-events/extended-events-tools.md)  

@@ -1,29 +1,33 @@
 ---
-title: "Esempio di spazio su disco per gli indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "spazio su disco degli indici online"
-  - "spazio su disco [SQL Server], indici"
-  - "spazio su disco degli indici [SQL Server]"
-  - "spazio [SQL Server], indici"
-  - "indici [SQL Server], requisiti di spazio su disco"
-  - "spazio su disco degli indici offline [SQL Server]"
+title: Esempio di spazio su disco per gli indici | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index disk space
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbc1a254df5ff696cb99c9090aae37da70e8fbbf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio di spazio su disco per gli indici
+# <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
   Ogni volta che viene creato, ricompilato o eliminato un indice, nei file e nei filegroup appropriati è necessario spazio su disco per le strutture di origine (vecchie) e di destinazione (nuove). La struttura di origine non viene deallocata finché non viene eseguito il commit della transazione di creazione dell'indice. Potrebbe essere necessario spazio su disco temporaneo aggiuntivo per le operazioni di ordinamento. Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  In questo esempio vengono determinati i requisiti di spazio su disco per la creazione di un indice cluster.  
@@ -43,7 +47,7 @@ caps.handback.revision: 30
     > [!NOTE]  
     >  Dopo aver creato un indice cluster, è necessario ricompilare i due indici non cluster per sostituire l'indicatore di riga con la nuova chiave dell'indice cluster.  
   
-## Calcoli dello spazio su disco per un'operazione sull'indice offline  
+## <a name="disk-space-calculations-for-an-offline-index-operation"></a>Calcoli dello spazio su disco per un'operazione sull'indice offline  
  Nei passaggi seguenti vengono calcolati sia lo spazio su disco temporaneo da utilizzare durante l'operazione sull'indice, sia lo spazio su disco permanente necessario per l'archiviazione dei nuovi indici. I calcoli illustrati sono approssimativi, cioè i risultati vengono arrotondati per eccesso e vengono considerate solo le dimensioni del livello foglia dell'indice. Per indicare i calcoli approssimati viene utilizzata la tilde (~).  
   
 1.  Determinare le dimensioni delle strutture di origine.  
@@ -74,13 +78,13 @@ caps.handback.revision: 30
   
     1.  Quando SORT_IN_TEMPDB è impostato su ON, in **tempdb** deve essere disponibile spazio su disco sufficiente per contenere l'indice di dimensioni maggiori (1 milione * 200 byte ~ 200 MB). Nell'operazione di ordinamento non è considerato il fattore di riempimento.  
   
-         Spazio su disco aggiuntivo (nel percorso di **tempdb**) uguale al valore dell'[opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) = 2 MB.  
+         Spazio su disco aggiuntivo (nel percorso di **tempdb** ) uguale al valore dell' [opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) = 2 MB.  
   
          Dimensioni totali dello spazio su disco temporaneo con SORT_IN_TEMPDB impostata su ON ~ 202 MB.  
   
     2.  Quando SORT_IN_TEMPDB è impostato su OFF (impostazione predefinita), per l'ordinamento vengono utilizzati i 250 MB di spazio su disco già considerati per il nuovo indice nel passaggio 2.  
   
-         Spazio su disco aggiuntivo (nel percorso di destinazione) uguale al valore dell'[opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) = 2 MB.  
+         Spazio su disco aggiuntivo (nel percorso di destinazione) uguale al valore dell' [opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) = 2 MB.  
   
          Dimensioni totali dello spazio su disco temporaneo con SORT_IN_TEMPDB impostato su OFF = 2 MB.  
   
@@ -88,7 +92,7 @@ caps.handback.revision: 30
   
  Se non si usa **tempdb**, per creare gli indici cluster e non cluster sarebbero necessari in totale 818 MB (816+ 2).  
   
-## Calcoli dello spazio su disco per un'operazione sull'indice cluster online  
+## <a name="disk-space-calculations-for-an-online-clustered-index-operation"></a>Calcoli dello spazio su disco per un'operazione sull'indice cluster online  
  Quando si crea, elimina o ricompila un indice cluster online, è necessario spazio su disco aggiuntivo per compilare e gestire un indice di mapping temporaneo. L'indice di mapping temporaneo contiene un record per ogni riga della tabella e il suo contenuto è costituito dall'unione delle colonne di segnalibri vecchie e nuove.  
   
  Per calcolare lo spazio su disco necessario per un'operazione sull'indice cluster online, seguire la procedura illustrata per un'operazione su un indice offline e aggiungere i risultati a quelli ottenuti con il passaggio seguente.  
@@ -103,7 +107,7 @@ caps.handback.revision: 30
   
  Per altre informazioni sull'indice di mapping temporaneo, vedere [Requisiti di spazio su disco per operazioni DLL sugli indici](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## Riepilogo dello spazio su disco  
+## <a name="disk-space-summary"></a>Riepilogo dello spazio su disco  
  Nella tabella seguente sono riportati i risultati dei calcoli dello spazio su disco.  
   
 |Operazione sull'indice|Requisiti di spazio su disco per i percorsi delle strutture seguenti|  
@@ -117,8 +121,8 @@ caps.handback.revision: 30
   
  In questo esempio non viene considerato lo spazio su disco temporaneo aggiuntivo necessario in **tempdb** per i record delle versioni creati dalle operazioni simultanee di aggiornamento ed eliminazione.  
   
-## Contenuto correlato  
- [Requisiti di spazio su disco per operazioni DLL sugli indici](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+## <a name="related-content"></a>Contenuto correlato  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

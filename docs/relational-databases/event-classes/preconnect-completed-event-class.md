@@ -1,27 +1,31 @@
 ---
-title: "classe di evento PreConnect:Completed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classe di evento PreConnect:Completed"
+title: Classe di evento PreConnect:Completed | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f6bba668ddd25925ede8fe8cf71e4f1775f3dd9
+ms.lasthandoff: 04/11/2017
+
 ---
-# classe di evento PreConnect:Completed
+# <a name="preconnectcompleted-event-class"></a>classe di evento PreConnect:Completed
   La classe di evento PreConnect:Completed indica la fine dell'esecuzione di un trigger LOGON o di una funzione di classificazione di Resource Governor.  
   
-## Colonne di dati della classe di evento PreConnect:Completed  
+## <a name="preconnectcompleted-event-class-data-columns"></a>Colonne di dati della classe di evento PreConnect:Completed  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -41,7 +45,7 @@ caps.handback.revision: 18
 |TargetUserName|**sysname**|Valore restituito (nome del gruppo del carico di lavoro) per la funzione di classificazione definita dall'utente se non è possibile trovare un gruppo attivo corrispondente. Negli altri casi la colonna è impostata su NULL.|39|Sì|  
 |ObjectName|**nvarchar(256)**|Nome in due parti della funzione di classificazione definita dall'utente, ad esempio dbo.classifier.|34|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [Classe di evento PreConnect:Starting](../../relational-databases/event-classes/preconnect-starting-event-class.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  

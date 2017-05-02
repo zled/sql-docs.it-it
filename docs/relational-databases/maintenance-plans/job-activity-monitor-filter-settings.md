@@ -1,29 +1,33 @@
 ---
-title: "Monitoraggio attivit&#224; processi (Impostazioni filtro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.jobactivitymon.filter.f1"
+title: "Monitoraggio attività processi (Impostazioni filtro) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d5e707f42591b1f2255735e16de9c9eda22ad7f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitoraggio attivit&#224; processi (Impostazioni filtro)
-  Utilizzare questa pagina per ridurre il numero di righe visualizzate in Monitoraggio attività processi. Immettere i criteri in una o più caselle disponibili per visualizzare solo le righe che soddisfano i valori specificati. Alcune caselle, ad esempio **Stato** o **Tipo blocco**, consentono di immettere un numero finito di valori possibili, disponibili in un elenco a discesa. In altre caselle, ad esempio **Applicazione**, è invece possibile immettere qualsiasi tipo e numero di valori sotto forma di elenco delimitato da virgole. Le icone sulla barra degli strumenti possono essere utilizzate per ordinare le caselle disponibili alfabeticamente o in base alla categoria. Fare clic sui criteri per visualizzarne una breve descrizione.  
+# <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
+  Utilizzare questa pagina per ridurre il numero di righe visualizzate in Monitoraggio attività processi. Immettere i criteri in una o più caselle disponibili per visualizzare solo le righe che soddisfano i valori specificati. Alcune caselle, ad esempio **Stato** o **Tipo blocco** , consentono di immettere un numero finito di valori possibili, disponibili in un elenco a discesa. In altre caselle, ad esempio **Applicazione** , è invece possibile immettere qualsiasi tipo e numero di valori sotto forma di elenco delimitato da virgole. Le icone sulla barra degli strumenti possono essere utilizzate per ordinare le caselle disponibili alfabeticamente o in base alla categoria. Fare clic sui criteri per visualizzarne una breve descrizione.  
   
- Per filtrare il Monitoraggio attività processi, specificare un numero qualsiasi di criteri di filtro, fare clic su **Applica filtro** e quindi su **OK**.  
+ Per filtrare il Monitoraggio attività processi, specificare un numero qualsiasi di criteri di filtro, fare clic su **Applica filtro**e quindi su **OK**.  
   
-## Tutti i processi  
+## <a name="all-jobs"></a>Tutti i processi  
  Questo gruppo di criteri di filtro è disponibile per il filtraggio di Monitoraggio attività processi.  
   
  **Nome**  
@@ -53,17 +57,17 @@ caps.handback.revision: 13
  **Stato**  
  Consente di filtrare i processi in base allo stato.  
   
-## Area descrizione  
+## <a name="description-area"></a>Area descrizione  
  **Casella descrizione**  
  In questa casella senza nome viene visualizzata una breve descrizione dei criteri nel momento in cui vengono selezionati.  
   
- **Applicare il filtro**  
- Per applicare il filtro, fare clic su **Applica****filtro** e quindi su **OK**. Per conservare le impostazioni di filtro nella finestra di dialogo **Impostazioni****filtro** senza applicarle, deselezionare **Applica****filtro** e quindi fare clic su **OK** in modo da visualizzare tutte le righe.  
+ **Applica filtro**  
+ Per applicare il filtro, fare clic su **Applica****filtro** e quindi su **OK**. Per conservare le impostazioni di filtro nella finestra di dialogo **Impostazioni****filtro** senza applicarle, deselezionare **Applica****filtro**e quindi fare clic su **OK**in modo da visualizzare tutte le righe.  
   
  **Clear**  
  Consente di ripristinare le impostazioni di filtro predefinite.  
   
-## Vedere anche  
- [Monitoraggio delle attività del processo](../../ssms/agent/monitor-job-activity.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Monitoraggio delle attività del processo](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
   

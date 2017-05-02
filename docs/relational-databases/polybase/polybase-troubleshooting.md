@@ -1,33 +1,37 @@
 ---
-title: "Risoluzione dei problemi di PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PolyBase, monitoring"
-  - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-  - "PolyBase, risoluzione dei problemi"
+title: Risoluzione dei problemi di PolyBase | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PolyBase, monitoring
+- PolyBase, performance monitoring
+helpviewer_keywords:
+- PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Risoluzione dei problemi di PolyBase
+# <a name="polybase-troubleshooting"></a>Risoluzione dei problemi di PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per risolvere i problemi relativi a PolyBase, usare le tecniche illustrate in questo argomento.  
   
-## Viste del catalogo  
+## <a name="catalog-views"></a>Viste del catalogo  
  Usare le viste del catalogo elencate di seguito per gestire le operazioni di PolyBase.  
   
 |||  
@@ -37,7 +41,7 @@ caps.handback.revision: 18
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifica le origini dati esterne.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifica i formati di file esterni.|  
   
-## DMV  
+## <a name="dynamic-management-views"></a>DMV  
   
 |||  
 |-|-|  
@@ -47,7 +51,18 @@ caps.handback.revision: 18
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-## Per eseguire il monitoraggio delle query di PolyBase con DMV  
+  Le query PolyBase sono suddivise in una serie di passaggi all'interno di sys.dm_exec_distributed_request_steps. Nella tabella seguente è illustrato il mapping tra il nome del passaggio per la vista a gestione dinamica associata.
+  
+ |Passaggio PolyBase|Vista a gestione dinamica associata|  
+ |-|-| 
+ |HadoopJobOperation | sys.dm_exec_external_operations|
+ |RandomIdOperation | sys.dm_exec_distributed_request_steps|
+ |HadoopRoundRobinOperation | sys.dm_exec_dms_workers|
+ |StreamingReturnOperation | sys.dm_exec_dms_workers|
+ |OnOperation | sys.dm_exec_distributed_sql_requests |
+  
+  
+## <a name="to-monitor-polybase-queries-using-dmvs"></a>Per eseguire il monitoraggio delle query di PolyBase con DMV  
  Per eseguire il monitoraggio e risolvere i problemi relativi alle query di PolyBase, usare le viste DMV seguenti.  
   
 1.  **Individuare le query con il tempo di esecuzione più lungo**  
@@ -125,13 +140,13 @@ caps.handback.revision: 18
   
     ```  
   
-## Per visualizzare il piano di query di PolyBase  
+## <a name="to-view-the--polybase-query-plan"></a>Per visualizzare il piano di query di PolyBase  
   
 1.  In SSMS abilitare **Includi piano di esecuzione effettivo** (CTRL+M) ed eseguire la query.  
   
 2.  Fare clic sulla scheda **Piano di esecuzione** .  
   
-     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![Piano di query di PolyBase](../../relational-databases/polybase/media/polybase-query-plan.png "Piano di query di PolyBase")  
   
 3.  Fare clic con il pulsante destro del mouse sull' **operatore Remote Query** e selezionare **Proprietà**.  
   
@@ -196,7 +211,7 @@ caps.handback.revision: 18
     </dsql_query>  
     ```  
   
-## Per eseguire il monitoraggio dei nodi in un gruppo PolyBase  
+## <a name="to-monitor-nodes-in-a-polybase-group"></a>Per eseguire il monitoraggio dei nodi in un gruppo PolyBase  
  Dopo aver configurato un set di computer come appartenenti al gruppo con scalabilità orizzontale PolyBase, è possibile eseguire il monitoraggio dello stato dei computer. Per informazioni dettagliate sulla creazione di un gruppo con scalabilità orizzontale, vedere [Gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 1.  Connettersi a SQL Server sul nodo head di un gruppo.  
@@ -205,12 +220,15 @@ caps.handback.revision: 18
   
 3.  Eseguire la vista DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) per visualizzare lo stato di tutti i nodi del gruppo PolyBase.  
   
- ## Limitazioni note
+ ## <a name="known-limitations"></a>Limitazioni note
  
  PolyBase include le limitazioni seguenti: 
- - Le dimensioni massime consentite per la riga, inclusa la lunghezza totale delle colonne a lunghezza variabile, non possono superare i 32.767 byte.
+ - Le dimensioni massime consentite per la riga, inclusa la lunghezza totale delle colonne a lunghezza variabile, non possono superare 1 MB. 
  - PolyBase non supporta il tipo di dati Hive 0.12+ (ovvero Char(), VarChar())   
+ - In caso di esportazione di dati in un file in formato ORC da SQL Server o Azure SQL Data Warehouse le colonne contenenti molto testo possono essere limitate a un massimo di 50 colonne a causa degli errori Java di memoria insufficiente. Per risolvere questo problema, esportare solo un subset delle colonne.
+- [PolyBase non viene installato quando si aggiunge un nodo a un cluster di failover di SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
-## Messaggi di errore e possibili soluzioni
+## <a name="error-messages-and-possible-solutions"></a>Messaggi di errore e possibili soluzioni
 
 Per risolvere gli errori delle tabelle esterne, vedere il post [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "sugli errori e le possibili soluzioni relativi all'installazione di PolyBase")nel blog di Zaman Murshed.
+

@@ -1,31 +1,35 @@
 ---
-title: "Classe di evento CursorImplicitConversion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CursorImplicitConversion - classe di evento"
+title: Classe di evento CursorImplicitConversion | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 05ab5487811e411b6c2d301703eea2bfd3bdbb79
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento CursorImplicitConversion
-  La classe di evento **CursorImplicitConversion** descrive gli eventi di conversione implicita dei cursori generati nelle API o nei cursori [!INCLUDE[tsql](../../includes/tsql-md.md)]. Gli eventi di conversione implicita dei cursori vengono generati quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue un'istruzione Transact-SQL non supportata dai cursori del server del tipo richiesto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore indicante che il tipo di cursore è stato modificato.  
+# <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion - classe di evento
+  La classe di evento **CursorImplicitConversion** descrive gli eventi di conversione implicita dei cursori generati nelle API o nei cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] . Gli eventi di conversione implicita dei cursori vengono generati quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue un'istruzione Transact-SQL non supportata dai cursori del server del tipo richiesto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore indicante che il tipo di cursore è stato modificato.  
   
  Includere la classe di evento **CursorImplicitConversion** nelle tracce in cui vengono registrate le prestazioni dei cursori.  
   
  Quando questa classe di evento viene inclusa in una traccia, la quantità di overhead dipende dalla frequenza di utilizzo dei cursori che richiedono la conversione implicita nel database durante la traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   
-## Colonne di dati della classe di evento CursorImplicitConversion  
+## <a name="cursorimplicitconversion-event-class-data-columns"></a>Colonne di dati della classe di evento CursorImplicitConversion  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -42,7 +46,7 @@ caps.handback.revision: 34
 |**IntegerData**|**int**|Tipo di cursore richiesto. I valori possibili sono:<br /><br /> 1 = Keyset<br /><br /> 2 = Dinamico<br /><br /> 4 = Forward-only<br /><br /> 8 = Statico<br /><br /> 16 = Fast forward|25|No|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Sì|  
-|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals**. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|Identificatore della richiesta di conversione implicita.|49|Sì|  
@@ -53,7 +57,7 @@ caps.handback.revision: 34
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**XactSequence**|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -1,34 +1,38 @@
 ---
-title: "Funzionamento delle operazioni sugli indici online | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "operazioni sugli indici online"
-  - "indici di origine [SQL Server]"
-  - "indici preesistenti [SQL Server]"
-  - "indici di destinazione [SQL Server]"
-  - "mapping temporanei di indice [SQL Server]"
-  - "mapping temporanei di indice [SQL Server]"
+title: Funzionamento delle operazioni sugli indici online | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funzionamento delle operazioni sugli indici online
+# <a name="how-online-index-operations-work"></a>Funzionamento delle operazioni sugli indici online
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   In questo argomento vengono descritte le strutture esistenti durante un'operazione sugli indici online e illustra le attività associate a tali strutture.  
   
-## Strutture degli indici online  
+## <a name="online-index-structures"></a>Strutture degli indici online  
  Per consentire attività utente simultanee durante un'operazione DDL (Data Definition Language) sull'indice, durante l'operazione sull'indice online vengono utilizzate le strutture seguenti: indici di origine e preesistente, destinazione e, per la ricompilazione di un heap o l'eliminazione di un indice cluster online, un indice di mapping temporaneo.  
   
 -   **Indici di origine e preesistenti**  
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      Per le operazioni sugli indici online che consistono nella creazione, nell'eliminazione o nella ricompilazione di un indice cluster è inoltre necessario un indice di mapping temporaneo che viene utilizzato dalle transazioni simultanee per determinare i record da eliminare nei nuovi indici ricompilati quando vengono aggiornate o eliminate righe nella tabella sottostante. Questo indice non cluster viene creato contemporaneamente al nuovo indice cluster (o heap) e non richiede un'operazione di ordinamento separata. Le transazioni simultanee mantengono l'indice di mapping temporaneo in tutte le operazioni di inserimento, aggiornamento ed eliminazione.  
   
-## Attività sugli indici online  
+## <a name="online-index-activities"></a>Attività sugli indici online  
  Durante un'operazione sugli indici online semplice, ad esempio la creazione di un indice cluster in una tabella non indicizzata (heap), l'origine e la destinazione passano attraverso tre fasi: preparatoria, di compilazione e finale.  
   
  Nella figura seguente si illustra il processo per la creazione di un indice cluster iniziale online. L'oggetto di origine, l'heap, non presenta altri indici. Per ogni fase sono illustrate le attività sulle strutture di origine e di destinazione, nonché le operazioni utente simultanee di selezione, inserimento, aggiornamento ed eliminazione. Le fasi preparatoria, di compilazione e finale sono indicate insieme alle modalità di blocco utilizzate in ogni fase.  
   
  ![Attività eseguite durante l'operazione sull'indice online](../../relational-databases/indexes/media/online-index.gif "Attività eseguite durante l'operazione sull'indice online")  
   
-## Attività relative alla struttura di origine  
+## <a name="source-structure-activities"></a>Attività relative alla struttura di origine  
  Nella tabella seguente sono incluse le attività relative alle strutture di origine durante ogni fase dell'operazione sull'indice e la relativa strategia di blocco.  
   
 |Fase|Attività di origine|Blocchi di origine|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  Nella tabella precedente è incluso un solo blocco condiviso (S) acquisito durante la fase di compilazione di un'operazione sugli indici online relativa a un singolo indice. Quando si compilano o ricompilano indici cluster e non cluster, in una singola operazione sugli indici online, ad esempio durante la creazione dell'indice cluster iniziale in una tabella contenente uno o più indici non cluster, vengono acquisiti due blocchi S di breve durata durante la fase di compilazione seguiti da blocchi preventivi condivisi (IS) di lunga durata. Viene innanzitutto acquisito un blocco S per la creazione dell'indice cluster e, quando la creazione dell'indice cluster viene completata, viene acquisito un altro blocco S di breve durata per la creazione degli indici non cluster. Dopo la creazione degli indici non cluster, il blocco S viene abbassato di livello e portato a blocco IS fino alla fase finale dell'operazione sull'indice online.  
   
-### Attività relative alla struttura di destinazione  
+### <a name="target-structure-activities"></a>Attività relative alla struttura di destinazione  
  Nella tabella seguente sono incluse le attività relative alla struttura di destinazione durante ogni fase dell'operazione sull'indice e la relativa strategia di blocco.  
   
 |Fase|Attività di destinazione|Blocchi di destinazione|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  La durata di un cursore dichiarato in una tabella oggetto di un'operazione su un indice online è limitata dalle fasi dell'operazione sull'indice. I cursori di aggiornamento vengono invalidati in corrispondenza di ogni fase, mentre i cursori di sola lettura vengono invalidati solo dopo la fase finale.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Trigger DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trigger [SQL Server], informazioni sui trigger"
-  - "trigger DML, informazioni sui trigger DML"
-  - "trigger [SQL Server]"
+title: Trigger DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Trigger DML
+# <a name="dml-triggers"></a>Trigger DML
   Un trigger DML è un tipo speciale di stored procedure che diventa effettiva automaticamente quando viene eseguito un evento del linguaggio DML (Data Manipulation Language) che influisce sulla vista o tabella definita nel trigger. Gli eventi DML includono istruzioni INSERT, UPDATE o DELETE. I trigger DML possono essere utilizzati per applicare regole business e l'integrità dei dati, eseguire query su altre tabelle e includere istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] complesse. Il trigger e l'istruzione che lo attiva vengono considerati come una singola transazione, di cui è possibile eseguire il rollback dal trigger stesso. Se viene rilevato un errore grave, ad esempio un'insufficienza di spazio su disco, viene eseguito automaticamente il rollback dell'intera transazione.  
   
-## Vantaggi del trigger DML  
+## <a name="dml-trigger-benefits"></a>Vantaggi del trigger DML  
  I trigger DML sono simili ai vincoli in quanto sono in grado di applicare l'integrità di entità o di dominio. L'integrità di entità dovrebbe essere sempre applicata al livello più basso utilizzando indici che fanno parte dei vincoli PRIMARY KEY e UNIQUE oppure creati indipendentemente dai vincoli. Per applicare l'integrità di dominio è consigliabile utilizzare i vincoli CHECK, mentre per applicare l'integrità referenziale (RI) è consigliabile utilizzare i vincoli FOREIGN KEY. I trigger DML sono particolarmente utili quando le caratteristiche supportate dai vincoli non sono in grado di soddisfare le esigenze funzionali dell'applicazione.  
   
  Nell'elenco seguente i trigger DML vengono confrontati con i vincoli e vengono identificati i casi in cui i trigger DML presentano vantaggi rispetto ai vincoli.  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   Gli eventuali vincoli inclusi nella tabella di trigger vengono verificati dopo l'esecuzione del trigger INSTEAD OF e prima dell'esecuzione del trigger AFTER. In caso di violazione dei vincoli, viene eseguito il rollback delle azioni del trigger INSTEAD OF e il trigger AFTER non viene eseguito.  
   
-## Tipi di trigger DML  
+## <a name="types-of-dml-triggers"></a>Tipi di trigger DML  
  Trigger AFTER  
  I trigger AFTER vengono eseguiti dopo l'esecuzione dell'azione associata all'istruzione INSERT, UPDATE, MERGE o DELETE. I trigger AFTER non vengono mai eseguiti sei si verifica una violazione di un vincolo, pertanto non possono essere utilizzati per elaborazioni che potrebbero impedire violazioni dei vincoli. Per ogni istruzione INSERT, UPDATE o DELETE specificata in un'istruzione MERGE, viene generato il trigger corrispondente per ogni operazione DML.  
   
@@ -58,15 +62,15 @@ caps.handback.revision: 27
 |Applicabilità|Tabelle|Tabelle e viste|  
 |Quantità per tabella o vista|Multiplo per azione di trigger (UPDATE, DELETE e INSERT)|Singolo per azione di trigger (UPDATE, DELETE e INSERT)|  
 |Riferimenti di propagazione|Nessuna restrizione|I trigger INSTEAD OF UPDATE e DELETE non sono consentiti in tabelle che rappresentano le destinazioni di vincoli di integrità per operazioni referenziali di propagazione|  
-|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br /><br /> Operazioni referenziali dichiarative<br /><br /> Creazione di tabelle **inserted** e **deleted**<br /><br /> Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle **inserted** e **deleted**|  
+|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br /><br /> Operazioni referenziali dichiarative<br /><br /> Creazione di tabelle**inserted** e **deleted** <br /><br /> Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
 |Ordine di esecuzione|È possibile specificare la prima e l'ultima esecuzione|Non applicabile|  
-|Riferimenti a colonne **varchar (max)**, **nvarchar (max)** e **varbinary (max)** in tabelle **inserted** e **deleted**|Allowed|Allowed|  
-|Riferimenti a colonne **text**, **ntext** e **image** in tabelle **inserted** e **deleted**|Non consentiti|Allowed|  
+|Riferimenti a colonne**varchar (max)**, **nvarchar (max)**e **varbinary (max)** in tabelle **inserted** e **deleted** |Allowed|Allowed|  
+|Riferimenti a colonne**text**, **ntext**e **image** in tabelle **inserted** e **deleted** |Non consentiti|Allowed|  
   
  Trigger CLR  
- I trigger CLR includono i trigger AFTER e INSTEAD OF. Un trigger CLR può essere anche un trigger DDL. Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ I trigger CLR includono i trigger AFTER e INSTEAD OF. Un trigger CLR può essere anche un trigger DDL. Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |Vengono descritte le modalità di creazione, modifica e disabilitazione dei trigger DML.|[Eliminare o disabilitare trigger DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Viene descritto come gestire la sicurezza dei trigger.|[Gestione della sicurezza dei trigger](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

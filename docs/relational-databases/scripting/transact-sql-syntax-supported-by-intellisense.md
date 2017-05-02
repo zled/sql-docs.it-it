@@ -1,36 +1,40 @@
 ---
-title: "Sintassi Transact-SQL supportata da IntelliSense | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "IntelliSense Transact-SQL"
-  - "IntelliSense [SQL Server], sintassi Transact-SQL"
+title: Sintassi Transact-SQL supportata da IntelliSense | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sintassi Transact-SQL supportata da IntelliSense
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintassi Transact-SQL supportata da IntelliSense
   In questo argomento vengono descritti le istruzioni e gli elementi di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] supportati da IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Istruzioni supportate da IntelliSense  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense supporta solo le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di uso più frequente. Alcune condizioni generali dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbero impedire il funzionamento di IntelliSense. Per altre informazioni, vedere [Risoluzione dei problemi di IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense-sql-server-management-studio.md).  
+## <a name="statements-supported-by-intellisense"></a>Istruzioni supportate da IntelliSense  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense supporta solo le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di uso più frequente. Alcune condizioni generali dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbero impedire il funzionamento di IntelliSense. Per altre informazioni, vedere [Risoluzione dei problemi di IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense non è disponibile per gli oggetti di database crittografati, ad esempio stored procedure o funzioni definite dall'utente crittografate. Le funzionalità Guida relativa ai parametri e Informazioni rapide non sono disponibili per i parametri di stored procedure estese e per i tipi definiti dall'utente di Integrazione con CLR.  
   
-### Istruzione SELECT  
+### <a name="select-statement"></a>Istruzione SELECT  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] offre supporto IntelliSense per gli elementi della sintassi seguenti nell'istruzione SELECT:  
   
 |||  
@@ -41,12 +45,12 @@ caps.handback.revision: 28
 |FOR|GROUP BY|  
 |Torna all'inizio|OPTION (hint)|  
   
-### Istruzioni Transact-SQL aggiuntive supportate  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>Istruzioni Transact-SQL aggiuntive supportate  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] offre inoltre supporto IntelliSense per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] elencate nella tabella seguente.  
   
 |Istruzione Transact-SQL|Sintassi supportata|Eccezioni|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Tutta la sintassi, eccetto la clausola *execute_statement*.|Nessuno|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Tutta la sintassi, eccetto la clausola *execute_statement* .|Nessuno|  
 |[UPDATE](../../t-sql/queries/update-transact-sql.md)|Tutta la sintassi.|Nessuno|  
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|Tutta la sintassi.|Nessuno|  
 |[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Tutta la sintassi.|Nessuno|  
@@ -58,7 +62,7 @@ caps.handback.revision: 28
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Tutta la sintassi|Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|Tutta la sintassi.|Nessuno|  
   
-## IntelliSense in istruzioni supportate  
+## <a name="intellisense-in-supported-statements"></a>IntelliSense in istruzioni supportate  
  Nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta i seguenti elementi della sintassi quando vengono utilizzati in una delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] supportate:  
   
 -   Tutti i tipi di join, ad esempio APPLY  
@@ -90,10 +94,10 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  IntelliSense non è disponibile per le colonne di un'istruzione CREATE VIEW fino a che non è stata eseguita l'istruzione CREATE VIEW.  
   
- IntelliSense non è disponibile per gli elementi elencati sopra quando vengono usati in altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il supporto IntelliSense è ad esempio disponibile per i nomi di colonna utilizzati in un'istruzione SELECT, ma non per le colonne utilizzate nell'istruzione CREATE FUNCTION.  
+ IntelliSense non è disponibile per gli elementi elencati sopra quando vengono usati in altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il supporto IntelliSense è ad esempio disponibile per i nomi di colonna utilizzati in un'istruzione SELECT, ma non per le colonne utilizzate nell'istruzione CREATE FUNCTION.  
   
-## Esempi  
- All'interno di uno script o di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)], nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento. Negli esempi di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti sono mostrati le istruzioni e gli elementi della sintassi che IntelliSense supporta. Ad esempio, nel batch seguente, IntelliSense è disponibile per l'istruzione `SELECT` quando è codificata da sola, ma non quando `SELECT` è contenuta in un'istruzione `CREATE FUNCTION`.  
+## <a name="examples"></a>Esempi  
+ All'interno di uno script o di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] , nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento. Negli esempi di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti sono mostrati le istruzioni e gli elementi della sintassi che IntelliSense supporta. Ad esempio, nel batch seguente, IntelliSense è disponibile per l'istruzione `SELECT` quando è codificata da sola, ma non quando `SELECT` è contenuta in un'istruzione `CREATE FUNCTION` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -116,7 +120,7 @@ RETURN
   
  Questa funzionalità si applica anche ai set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nella clausola AS di un'istruzione CREATE PROCEDURE o ALTER PROCEDURE.  
   
- All'interno di uno script o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)], IntelliSense supporta gli oggetti che sono stati specificati in un'istruzione CREATE o ALTER, ma questi oggetti non esistono nel database perché le istruzioni non sono state eseguite. È possibile ad esempio immettere nell'editor di query il codice seguente:  
+ All'interno di uno script o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] , IntelliSense supporta gli oggetti che sono stati specificati in un'istruzione CREATE o ALTER, ma questi oggetti non esistono nel database perché le istruzioni non sono state eseguite. È possibile ad esempio immettere nell'editor di query il codice seguente:  
   
 ```  
 USE MyTestDB;  
@@ -129,6 +133,6 @@ GO
 SELECT   
 ```  
   
- Quando si digita `SELECT`, IntelliSense elenca **PrimaryKeyCol**, **FirstNameCol** e **LastNameCol** come possibili elementi dell'elenco di selezione, anche se lo script non è stato eseguito e `MyTable` non esiste ancora in `MyTestDB`.  
+ Quando si digita `SELECT`, IntelliSense elenca **PrimaryKeyCol**, **FirstNameCol**e **LastNameCol** come possibili elementi dell'elenco di selezione, anche se lo script non è stato eseguito e `MyTable` non esiste ancora in `MyTestDB`.  
   
   

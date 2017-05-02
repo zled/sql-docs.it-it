@@ -1,25 +1,29 @@
 ---
-title: "Componenti jolly e convalida del contenuto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "componenti jolly [XML]"
-  - "convalida del contenuto [XML]"
+title: Componenti jolly e convalida del contenuto | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Componenti jolly e convalida del contenuto
+# <a name="wildcard-components-and-content-validation"></a>Componenti jolly e convalida del contenuto
   I componenti jolly vengono utilizzati per consentire una maggiore flessibilità riguardo agli elementi che è possibile includere in un modello di contenuto. Tali componenti vengono supportati nel linguaggio XSD nei modi seguenti:  
   
 -   Elemento componenti jolly. Sono rappresentati dall'elemento **\<xsd:any>**.  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   Il valore **lax** specifica che viene eseguita solo la convalida di elementi e attributi per i quali sono disponibili definizioni di schemi.  
   
-## Elementi della convalida lax e del tipo xs:anyType  
+## <a name="lax-validation-and-xsanytype-elements"></a>Elementi della convalida lax e del tipo xs:anyType  
  La specifica di XML Schema utilizza la convalida **lax** per elementi del tipo **anyType** . Poiché [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] non supportava la convalida di tipo lax, per gli elementi di tipo **anyType**veniva applicata la convalida di tipo strict. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la convalida lax è supportata. Il contenuto degli elementi del tipo **anyType** sarà convalidato utilizzando la convalida lax.  
   
  L'esempio seguente illustra la convalida lax. L'elemento schema `e` è del tipo **anyType** . L'esempio crea variabili **xml** tipizzate e illustra la convalida lax dell'elemento di tipo **anyType** .  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento SQL:StmtRecompile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtRecompile - classe di evento"
+title: Classe di evento SQL:StmtRecompile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfed0cde775d2274f6a9e09e6f9dc43a9e5def23
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SQL:StmtRecompile
+# <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile - classe di evento
   La classe di evento SQL:StmtRecompile indica ricompilazioni a livello di istruzione causate da tutti i tipi di batch: stored procedure, trigger, batch ad hoc e query. Le query possono essere inviate utilizzando sp_executesql, linguaggio SQL dinamico, metodi Prepare, metodi Execute o interfacce simili. È consigliabile usare la classe di evento SQL:StmtRecompile anziché SP:Recompile.  
   
-## Colonne di dati della classe di evento SQL:StmtRecompile  
+## <a name="sqlstmtrecompile-event-class-data-columns"></a>Colonne di dati della classe di evento SQL:StmtRecompile  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -55,7 +59,7 @@ caps.handback.revision: 17
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe di evento SP:Recompile](../../relational-databases/event-classes/sp-recompile-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

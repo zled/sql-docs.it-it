@@ -1,29 +1,33 @@
 ---
-title: "Configurazione dell&#39;archiviazione per le tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurazione dell&quot;archiviazione per le tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione dell&#39;archiviazione per le tabelle con ottimizzazione per la memoria
+# <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
   È necessario configurare la capacità di archiviazione e le operazioni di input/output al secondo (IOPS).  
   
-## Capacità di archiviazione  
+## <a name="storage-capacity"></a>Capacità di archiviazione  
  Usare le informazioni in [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) per stimare le dimensioni in memoria delle tabelle con ottimizzazione per la memoria durevoli del database. Poiché gli indici non vengono mantenuti per le tabelle con ottimizzazione per la memoria, non includere le dimensioni degli indici. Una volta determinata la dimensione, è necessario fornire uno spazio libero su disco quattro volte superiore alla dimensione delle tabelle in memoria durevoli.  
   
-## IOPS di archiviazione  
+## <a name="storage-iops"></a>IOPS di archiviazione  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] consente di aumentare notevolmente la velocità effettiva del carico di lavoro. Pertanto, è importante verificare che le operazioni di IO non rappresentino un collo di bottiglia.  
   
 -   Quando si esegue la migrazione delle tabelle basate su disco nelle tabelle con ottimizzazione per la memoria, verificare che il log delle transazioni sia in un supporto di archiviazione che supporti l'attività aumentata del log delle transazioni. Ad esempio, se il supporto di archiviazione supporta le operazioni del log delle transazioni a 100 MB/sec e le tabelle con ottimizzazione per la memoria restituiscono prestazioni cinque volte superiori, anche il supporto di archiviazione del log delle transazioni deve essere in grado di supportare un incremento di cinque volte delle prestazioni, per impedire all'attività del log delle transazioni di diventare un collo di bottiglia.  
@@ -36,10 +40,10 @@ caps.handback.revision: 7
   
 -   Se il numero di spindle è pari, a differenza di SQL Server 2014 i file del checkpoint vengono distribuiti in modo uniforme tra tutti gli spindle.  
   
-## Crittografia  
+## <a name="encryption"></a>Crittografia  
  In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lo spazio di archiviazione per le tabelle con ottimizzazione per la memoria viene crittografato come parte dell'abilitazione di Transparent Data Encryption nel database. Per altre informazioni, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

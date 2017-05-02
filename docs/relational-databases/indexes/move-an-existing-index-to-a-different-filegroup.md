@@ -1,28 +1,32 @@
 ---
-title: "Spostare un indice esistente in un filegroup diverso | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "spostamento di tabelle"
-  - "cambio di filegroup per indice"
-  - "spostamento di indici"
-  - "indici [SQL Server], spostamento"
-  - "filegroup [SQL Server], spostamento"
+title: Spostare un indice esistente in un filegroup diverso | Microsoft Docs
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Spostare un indice esistente in un filegroup diverso
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>Spostare un indice esistente in un filegroup diverso
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritta la procedura per spostare un indice esistente dal relativo filegroup corrente in un filegroup diverso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,11 +56,11 @@ caps.handback.revision: 44
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
+ È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per spostare un indice esistente in un filegroup diverso tramite Progettazione tabelle  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Per spostare un indice esistente in un filegroup diverso tramite Progettazione tabelle  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella che contiene l'indice da spostare.  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 44
   
 8.  Scegliere **Chiudi**.  
   
-9. Selezionare **Salva***nome_tabella* dal menu **File**.  
+9. Selezionare **Salva** nome_tabella **dal menu***File*.  
   
-#### Per spostare un indice esistente in un filegroup diverso in Esplora oggetti  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Per spostare un indice esistente in un filegroup diverso in Esplora oggetti  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella che contiene l'indice da spostare.  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 44
   
      Per spostare un indice cluster, è possibile utilizzare l'elaborazione online. L'elaborazione online consente l'accesso simultaneo degli utenti ai dati sottostanti e agli indici non cluster durante l'operazione sull'indice. Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     Nei computer multiprocessore che utilizzano [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile configurare il numero di processori utilizzati per l'esecuzione dell'istruzione dell'indice specificando il valore massimo per il grado di parallelismo. La funzionalità Operazioni indicizzate parallele non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Per altre informazioni sulle operazioni indicizzate parallele, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     Nei computer multiprocessore che utilizzano [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile configurare il numero di processori utilizzati per l'esecuzione dell'istruzione dell'indice specificando il valore massimo per il grado di parallelismo. La funzionalità Operazioni indicizzate parallele non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere Funzionalità supportate dalle edizioni di SQL Server 2016. Per altre informazioni sulle operazioni indicizzate parallele, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Scegliere **OK**.  
   
- Le informazioni seguenti sono disponibili nella pagina **Archiviazione** della finestra di dialogo **Proprietà indice –** *nome_indice*:  
+ Le informazioni seguenti sono disponibili nella pagina **Archiviazione** della finestra di dialogo **Proprietà indice –** *nome_indice* :  
   
  **Filegroup**  
  Archivia l'indice nel filegroup specificato. Nell'elenco sono visualizzati solo filegroup standard (ROW). La selezione predefinita nell'elenco è il filegroup PRIMARY del database.  
@@ -144,7 +148,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per spostare un indice esistente in un filegroup diverso  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Per spostare un indice esistente in un filegroup diverso  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  Per altre informazioni, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

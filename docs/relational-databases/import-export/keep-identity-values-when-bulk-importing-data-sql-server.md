@@ -1,29 +1,33 @@
 ---
-title: "Mantenere i valori Identity durante l&#39;importazione bulk dei dati (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "valori Identity [SQL Server], importazioni in blocco"
-  - "formati di dati [SQL Server], valori Identity"
-  - "importazione in blocco [SQL Server], valori Identity"
+title: Mantenere i valori Identity durante l&quot;importazione bulk dei dati (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identity values [SQL Server], bulk imports
+- data formats [SQL Server], identity values
+- bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mantenere i valori Identity durante l&#39;importazione bulk dei dati (SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)
 È possibile eseguire l'importazione bulk di file di dati contenenti valori Identity in un'istanza di Microsoft SQL Server.  Per impostazione predefinita, i valori per la colonna Identity del file di dati importato vengono ignorati e sostituiti automaticamente da valori univoci assegnati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  I valori univoci si basano sui valori di inizializzazione e incremento specificati durante la creazione della tabella.
 
-Se il file di dati non contiene valori per la colonna dell'identificatore nella tabella, utilizzare un file di formato per specificare di ignorare la colonna dell'identificatore nella tabella durante l'importazione dei dati.  Per altre informazioni, vedere [Utilizzo di un file di formato per ignorare una colonna di una tabella (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md).
+Se il file di dati non contiene valori per la colonna dell'identificatore nella tabella, utilizzare un file di formato per specificare di ignorare la colonna dell'identificatore nella tabella durante l'importazione dei dati.  Per altre informazioni, vedere [Utilizzo di un file di formato per ignorare una colonna di una tabella (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) .
 
 |Riquadro|
 |---|
@@ -38,7 +42,7 @@ Per impedire l'assegnazione da parte di [!INCLUDE[ssNoVersion](../../includes/ss
 |BULK INSERT|KEEPIDENTITY|Argomento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...).|KEEPIDENTITY|Hint di tabella|  
    
- Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) e [Hint di tabella &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) e [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
 
 > [!NOTE]
 >  Per creare un numero a incremento automatico da usare in più tabelle o da chiamare dalle applicazioni senza fare riferimento ad alcuna tabella, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).
@@ -100,7 +104,7 @@ Invoke-Item $bcpFile;
 ```
 
 ### **File di formato non XML di esempio**<a name="nonxml_format_file"></a>
-SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.  Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Il comando seguente userà l'[utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myIdentity.fmt`, sulla base dello schema di `myIdentity`.  Per usare un comando [bcp](../../tools/bcp-utility.md) per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f**.  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere, **t,** viene usato per specificare la virgola come [carattere di terminazione del campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md) e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
+SQL Server supporta due tipi di file di formato, ovvero non XML e XML.  Il formato non XML è il formato originale supportato dalle versioni precedenti di SQL Server.  Per informazioni dettagliate, vedere [File in formato non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Il comando seguente userà l' [utility bcp](../../tools/bcp-utility.md) per generare un formato di file non XML, `myIdentity.fmt`, sulla base dello schema di `myIdentity`.  Per usare un comando [bcp](../../tools/bcp-utility.md) per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati.  L'opzione format richiede anche l'opzione **-f** .  Inoltre, in questo esempio il qualificatore **c** viene usato per specificare dati di tipo carattere, **t,** viene usato per specificare la virgola come [carattere di terminazione del campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)e **T** viene usato per specificare una connessione trusted che usa la sicurezza integrata.  Al prompt dei comandi immettere il comando seguente:
   
 ```
 bcp TestDatabase.dbo.myIdentity format nul -c -f D:\BCP\myIdentity.fmt -t, -T
@@ -119,7 +123,7 @@ Notepad D:\BCP\myIdentity.fmt
 Gli esempi seguenti usano il database, il file di dati e i file di formato creati in precedenza.
   
 ### **Uso di [bcp](../../tools/bcp-utility.md) e mantenimento dei valori Identity senza un file di formato**<a name="bcp_identity"></a>
-Opzione **-E**.  Al prompt dei comandi immettere il comando seguente:
+Opzione**-E** .  Al prompt dei comandi immettere il comando seguente:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -132,7 +136,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
 ### **Uso di [bcp](../../tools/bcp-utility.md) e mantenimento dei valori Identity con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
-Opzioni **-E** e **-f**.  Al prompt dei comandi immettere il comando seguente:
+Opzioni**-E** e **-f** .  Al prompt dei comandi immettere il comando seguente:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -158,7 +162,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Uso di [bcp](../../tools/bcp-utility.md) e dei valori Identity generati con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
-Uso dei valori predefiniti e dell'opzione **-f**.  Al prompt dei comandi immettere il comando seguente:
+Uso dei valori predefiniti e dell'opzione **-f** .  Al prompt dei comandi immettere il comando seguente:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -171,7 +175,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Uso di [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e mantenimento dei valori Identity senza un file di formato**<a name="bulk_identity"></a>
-Argomento **KEEPIDENTITY**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento**KEEPIDENTITY** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -190,7 +194,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Uso di [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e mantenimento dei valori Identity con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
-Argomenti **KEEPIDENTITY** e **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomenti**KEEPIDENTITY** e **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -226,7 +230,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Uso di [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e dei valori Identity generati con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
-Uso dei valori predefiniti e dell'argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Uso dei valori predefiniti e dell'argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -243,7 +247,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e mantenimento dei valori Identity con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
-Hint di tabella **KEEPIDENTITY** e argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Hint di tabella**KEEPIDENTITY** e argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -263,7 +267,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
 ### **Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e dei valori Identity generati con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
-Uso dei valori predefiniti e dell'argomento **FORMATFILE**.  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Uso dei valori predefiniti e dell'argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -305,9 +309,9 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 -   [Usare il formato carattere per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -319,11 +323,12 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [Specificare il tipo di archiviazione di file con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Hint di tabella &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
 [File di formato per l'importazione o l'esportazione di dati (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
+

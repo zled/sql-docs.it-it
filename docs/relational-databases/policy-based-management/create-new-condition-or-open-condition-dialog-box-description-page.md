@@ -1,28 +1,32 @@
 ---
-title: "Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Descrizione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.condition.description.f1"
-  - "sql13.swb.dmf.policy.description.f1"
+title: Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Descrizione | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.condition.description.f1
+- sql13.swb.dmf.policy.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e053294a414ae2baefc90f20ff3fc80adf78a0e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Descrizione
+# <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Descrizione
   Utilizzare questa finestra di dialogo per aggiungere una descrizione a una condizione della gestione basata su criteri.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Descrizione**  
  Consente di digitare una descrizione della condizione.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 37
  **Modificato da:**  
  Account di accesso che ha apportato la modifica più recente alla condizione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

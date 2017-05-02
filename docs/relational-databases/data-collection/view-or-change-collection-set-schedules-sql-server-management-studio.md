@@ -1,31 +1,35 @@
 ---
-title: "Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "set di raccolta [SQL Server], modifica delle pianificazioni"
-  - "pianificazioni [SQL Server], modifica del set di raccolta"
-  - "set di raccolta [SQL Server], visualizzazione delle pianificazioni"
-  - "pianificazioni [SQL Server], visualizzazione del set di raccolta"
+title: Visualizzare o modificare le pianificazioni dei set di raccolta (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
   È possibile visualizzare o modificare le pianificazioni dei set di raccolta utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  La modalità di raccolta, ovvero in cache o non in cache, determina il tipo di modifiche che è possibile apportare a una pianificazione. La modalità cache utilizza pianificazioni separate per la raccolta e il caricamento. La modalità non in cache utilizza la stessa pianificazione per la raccolta e il caricamento. I tipi di modalità di raccolta per ognuno dei set di raccolta dati di sistema sono i seguenti:  
@@ -36,21 +40,21 @@ caps.handback.revision: 26
   
 -   **Attività Server** utilizza la modalità di raccolta cache.  
   
-### Per visualizzare le pianificazioni dei set di raccolta  
+### <a name="to-view-collection-set-schedules"></a>Per visualizzare le pianificazioni dei set di raccolta  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** , **Raccolta dati**, quindi **Set di raccolta dati di sistema**.  
   
-2.  Fare clic con il pulsante destro del mouse sul nome di un set di raccolta e selezionare **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet).  
+2.  Fare clic con il pulsante destro del mouse sul nome di un set di raccolta e selezionare **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet) .  
   
-### Per modificare le pianificazioni per un set di raccolta in modalità cache  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>Per modificare le pianificazioni per un set di raccolta in modalità cache  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** , **Raccolta dati**, quindi **Set di raccolta dati di sistema**.  
   
-2.  Fare clic con il pulsante destro del mouse su un set di raccolta che usa una modalità cache, ad esempio **Statistiche query** e scegliere **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet).  
+2.  Fare clic con il pulsante destro del mouse su un set di raccolta che usa una modalità cache, ad esempio **Statistiche query**e scegliere **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet) .  
   
 3.  Per modificare la frequenza di raccolta, utilizzare la pagina **Generale** . A tale scopo, eseguire le operazioni seguenti:  
   
-    1.  Nel riquadro dei dettagli fare doppio clic sul numero visualizzato per la colonna **Frequenza di raccolta (sec)** nella tabella **Elementi della raccolta**.  
+    1.  Nel riquadro dei dettagli fare doppio clic sul numero visualizzato per la colonna **Frequenza di raccolta (sec)** nella tabella **Elementi della raccolta** .  
   
     2.  Per aumentare o ridurre la frequenza di raccolta, digitare un numero minore o maggiore, quindi premere INVIO per archiviare il nuovo valore.  
   
@@ -75,11 +79,11 @@ caps.handback.revision: 26
   
 5.  Fare clic su **OK** per salvare le modifiche apportate alla frequenza di raccolta e alla pianificazione del caricamento, quindi chiudere la finestra di dialogo **Proprietà set di raccolta dati** .  
   
-### Per modificare la pianificazione per un set di raccolta in modalità non in cache  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>Per modificare la pianificazione per un set di raccolta in modalità non in cache  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** , **Raccolta dati**, quindi **Set di raccolta dati di sistema**.  
   
-2.  Fare clic con il pulsante destro del mouse su un set di raccolta che usa una modalità non cache, ad esempio **Utilizzo disco** e scegliere **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet).  
+2.  Fare clic con il pulsante destro del mouse su un set di raccolta che usa una modalità non cache, ad esempio **Utilizzo disco**e scegliere **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet) .  
   
      Viene visualizzata la finestra di dialogo **Proprietà set di raccolta dati** in una vista a pagine contenente le proprietà del set di raccolta.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 26
   
  Utilizzare questa pagina per visualizzare una descrizione del set di raccolta a cui fa riferimento questa pagina delle proprietà.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire raccolta dati](../../relational-databases/data-collection/manage-data-collection.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   

@@ -1,24 +1,28 @@
 ---
-title: "Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.groupsubscription.f1"
+title: Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database
+# <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database
   In questo argomento verrà descritto come sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -42,13 +46,13 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database  
+#### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente il database in cui si desidera gestire le sottoscrizioni di categorie.  
   
 2.  Fare clic sul segno più per espandere la cartella **Database** .  
   
-3.  Fare clic con il pulsante destro del mouse sul database dove si desidera gestire sottoscrizioni di categorie, scegliere **Criteri** e selezionare **Categorie**.  
+3.  Fare clic con il pulsante destro del mouse sul database dove si desidera gestire sottoscrizioni di categorie, scegliere **Criteri**e selezionare **Categorie**.  
   
      Nella finestra di dialogo **Categorie** sono disponibili le opzioni seguenti:  
   
@@ -73,13 +77,13 @@ caps.handback.revision: 20
      **Cronologia**  
      Fare clic sul collegamento ipertestuale Visualizza cronologia per aprire il Visualizzatore file di log ed esaminare la cronologia dei criteri.  
   
-4.  Per sottoscrivere una categoria Gestione basata su criteri, selezionare la casella di controllo della categoria nella colonna **Sottoscritto**. Per annullare la sottoscrizione da una categoria, deselezionare la casella di controllo.  
+4.  Per sottoscrivere una categoria Gestione basata su criteri, selezionare la casella di controllo della categoria nella colonna **Sottoscritto** . Per annullare la sottoscrizione da una categoria, deselezionare la casella di controllo.  
   
 5.  Al termine, fare clic su **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per sottoscrivere una categoria di criteri per un database  
+#### <a name="to-subscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri per un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
   
  Per altre informazioni, vedere [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md).  
   
-#### Per annullare la sottoscrizione di una categoria di criteri per un database  
+#### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>Per annullare la sottoscrizione di una categoria di criteri per un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,30 +1,34 @@
 ---
-title: "Convalida delle informazioni sulle partizioni per un Sottoscrittore di tipo merge | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "convalida di dati di replica di tipo merge [replica di SQL Server], partizioni"
-  - "filtri con parametri [replica di SQL Server], convalida di informazioni di partizione"
-  - "convalida di informazioni di partizione"
+title: Convalidare le informazioni sulle partizioni per un Sottoscrittore di tipo merge | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication data validation [SQL Server replication], partitions
+- parameterized filters [SQL Server replication], validating partition information
+- validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0675e88ff16a1999d801d9cc43b44ad206dc3530
+ms.lasthandoff: 04/11/2017
+
 ---
-# Convalida delle informazioni sulle partizioni per un Sottoscrittore di tipo merge
-  Quando si definisce un filtro di riga con parametri per una pubblicazione di tipo merge, si utilizza una funzione che fa riferimento a informazioni sul Sottoscrittore, ad esempio il nome di accesso del Sottoscrittore. Per impostazione predefinita, le informazioni sul Sottoscrittore vengono convalidate dalla replica in base a tale funzione prima di ogni sincronizzazione e ogni volta che uno snapshot viene applicato al Sottoscrittore. Il processo di convalida garantisce il partizionamento corretto dei dati per ogni Sottoscrittore. Comportamento di convalida è controllato dal **validate_subscriber_info** Proprietà pubblicazione, che può essere modificato utilizzando [sp_changemergepublication & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) o il **Opzioni di sottoscrizione** pagina del **Proprietà pubblicazione** la finestra di dialogo. Per ulteriori informazioni sulla modifica delle proprietà di pubblicazione, vedere [visualizzare e modificare le proprietà di pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+# <a name="validate-partition-information-for-a-merge-subscriber"></a>Convalida delle informazioni sulle partizioni per un Sottoscrittore di tipo merge
+  Quando si definisce un filtro di riga con parametri per una pubblicazione di tipo merge, si utilizza una funzione che fa riferimento a informazioni sul Sottoscrittore, ad esempio il nome di accesso del Sottoscrittore. Per impostazione predefinita, le informazioni sul Sottoscrittore vengono convalidate dalla replica in base a tale funzione prima di ogni sincronizzazione e ogni volta che uno snapshot viene applicato al Sottoscrittore. Il processo di convalida garantisce il partizionamento corretto dei dati per ogni Sottoscrittore. Il comportamento di convalida è controllato dalla proprietà di pubblicazione **validate_subscriber_info**, che può essere modificata mediante [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) oppure nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione**. Per ulteriori informazioni sulla modifica delle proprietà di pubblicazione, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-## Funzionamento della convalida delle partizioni  
- Quando una pubblicazione viene filtrata, ad esempio, utilizzando la funzione **SUSER_SNAME ()**, l'agente di Merge applica lo snapshot iniziale per ogni sottoscrittore in base ai dati che sono validi per il **SUSER_SNAME ()** espressione.  
+## <a name="how-partition-validation-works"></a>Funzionamento della convalida delle partizioni  
+ Quando una pubblicazione viene filtrata, ad esempio mediante la funzione **SUSER_SNAME()**, l'agente di merge applica lo snapshot iniziale a ogni Sottoscrittore in base ai dati validi per l'espressione **SUSER_SNAME()** .  
   
  Se la convalida è abilitata, quando il Sottoscrittore si riconnette al server di pubblicazione per la successiva sincronizzazione, l'agente di merge convalida le informazioni nel Sottoscrittore e garantisce che la partizione di ogni Sottoscrittore corrisponda a quella ricevuta nello snapshot iniziale. Per ogni successiva applicazione di snapshot o merge, l'agente di merge convalida la partizione di ogni Sottoscrittore.  
   
@@ -32,10 +36,10 @@ caps.handback.revision: 36
   
  Quando l'agente di merge convalida una partizione, oltre a convalidare la partizione rispetto ai valori restituiti dalle funzioni utilizzate nelle espressioni di filtro, controlla se lo snapshot è stato generato prima di modifiche che ne compromettono la validità, come operazioni di pulizia dei metadati o modifiche dello schema. Se uno snapshot partizionato è obsoleto, l'agente di merge restituirà un errore e sarà necessario rigenerare uno snapshot partizionato per il Sottoscrittore in base a uno snapshot regolare corrente.  
   
-## Vedere anche  
- [Amministrazione & #40; Replica & #41;](../../relational-databases/replication/administration/administration-replication.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Amministrazione &#40;Replica&#41;](../../relational-databases/replication/administration/administration-replication.md)   
  [Procedure consigliate per l'amministrazione della replica](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Convalida dei dati replicati](../../relational-databases/replication/validate-replicated-data.md)  
+ [Convalidare i dati replicati](../../relational-databases/replication/validate-replicated-data.md)  
   
   

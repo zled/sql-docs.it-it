@@ -1,26 +1,30 @@
 ---
-title: "Stima della cardinalit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "strumento di stima della cardinalità"
-  - "CE (strumento di stima della cardinalità)"
-  - "estimating cardinality"
+title: "Stima della cardinalità (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cardinality estimator
+- CE (cardinality estimator)
+- estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6ef57f8467e87b97024fc08b4916ac4f8e7752b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stima della cardinalit&#224; (SQL Server)
+# <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -34,11 +38,11 @@ Il sistema di applicazioni può includere una query importante il cui piano vien
 Sono implementate tecniche per identificare una query che risulta più lenta con la nuova stima della cardinalità. Inoltre, sono disponibili opzioni per la risoluzione del problema di prestazioni.  
   
   
-## Versioni della stima della cardinalità  
+## <a name="versions-of-the-ce"></a>Versioni della stima della cardinalità  
   
  Nel 1998 è stato incluso un aggiornamento importante della stima della cardinalità nell'ambito di Microsoft SQL Server 7.0, per cui il livello di compatibilità era 70. Gli aggiornamenti successivi sono stati eseguiti con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, con livelli di compatibilità 120 e 130. Gli aggiornamenti della stima di cardinalità per i livelli 120 e 130 integrano presupposti e algoritmi che funzionano bene in carichi di lavoro di data warehouse moderni e in OLTP (elaborazione di transazioni online).  
   
- **Livello di compatibilità:** per assicurarsi che il database sia impostato su un determinato livello, è possibile usare il codice Transact-SQL seguente per [COMPATIBILITY_LEVEL](ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ **Livello di compatibilità:** per assicurarsi che il database sia impostato su un determinato livello, è possibile usare il codice Transact-SQL seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```tsql  
 SELECT ServerProperty('ProductVersion');  
@@ -56,7 +60,7 @@ go
   
  Per un database di SQL Server impostato sul livello di compatibilità 120, l'attivazione del flag di traccia 9481 impone al sistema di usare la stima della cardinalità per il livello 70.  
   
- **Stima di cardinalità legacy:** per un database di SQL Server impostato sul livello di compatibilità 130, è possibile attivare la stima della cardinalità di livello 70 usando l'istruzione Transact-SQL seguente relativa a [SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+ **Stima di cardinalità legacy:** per un database di SQL Server impostato sul livello di compatibilità 130, è possibile attivare la stima della cardinalità di livello 70 usando l'istruzione Transact-SQL seguente relativa a [SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .
   
 ```tsql  
 ALTER DATABASE
@@ -88,7 +92,7 @@ ALTER DATABASE <yourDatabase>
     SET QUERY_STORE CLEAR;  
 ```  
   
- *Suggerimento:* è consigliabile installare la versione più recente di [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) ogni mese.  
+ *Suggerimento:* è consigliabile installare la versione più recente di [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx)ogni mese.  
   
  Un'altra opzione per tenere traccia delle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**.  Il seguente codice T-SQL di esempio viene eseguito su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scrive un file con estensione xel in C:\Temp\ (percorso modificabile). Quando si apre il file con estensione xel in SQL Server Management Studio, i relativi dettagli vengono visualizzati in modo intuitivo.  
   
@@ -122,17 +126,17 @@ go
  Per informazioni sugli eventi estesi appositi per il database SQL di Azure, vedere [Eventi estesi nel database SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
-## Procedura per valutare la versione della stima di cardinalità  
+## <a name="steps-to-assess-the-ce-version"></a>Procedura per valutare la versione della stima di cardinalità  
   
  Di seguito sono indicate alcune operazioni da eseguire per stabilire se una delle query più importanti presenta prestazioni inferiori con la stima di cardinalità più recente. Alcuni dei passaggi vengono completati eseguendo un esempio di codice presentato in una sezione precedente.  
   
-1.  Aprire SSMS. Assicurarsi che il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia impostato sul massimo livello di compatibilità disponibile.  
+1.  Aprire SSMS. Assicurarsi che il database di  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sia impostato sul massimo livello di compatibilità disponibile.  
   
 2.  Seguire questa procedura preliminare:  
   
     1.  Aprire SSMS.  
   
-    2.  Eseguire T-SQL per assicurarsi che il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia impostato sul massimo livello di compatibilità disponibile.  
+    2.  Eseguire T-SQL per assicurarsi che il database di  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia impostato sul massimo livello di compatibilità disponibile.  
   
     3.  Assicurarsi che la configurazione LEGACY_CARDINALITY_ESTIMATION del database sia impostata su OFF.  
   
@@ -144,9 +148,9 @@ go
   
 4.  Eseguire la query importante.  
   
-5.  Nel riquadro dei risultati, nella scheda **Messaggi**, notare il numero effettivo di righe interessate.  
+5.  Nel riquadro dei risultati, nella scheda **Messaggi** , notare il numero effettivo di righe interessate.  
   
-6.  Nel riquadro dei risultati, nella scheda **Risultati**, fare doppio clic sulla cella che contiene le statistiche in formato XML. Viene visualizzato un piano di query grafico.  
+6.  Nel riquadro dei risultati, nella scheda **Risultati** , fare doppio clic sulla cella che contiene le statistiche in formato XML. Viene visualizzato un piano di query grafico.  
   
 7.  Fare clic con il pulsante destro del mouse nella prima casella del piano di query grafico e scegliere **Proprietà**.  
   
@@ -184,7 +188,7 @@ go
   
     -   Se però la query viene eseguita con un piano più veloce con la stima di cardinalità precedente, è possibile forzare il sistema affinché usi il piano più veloce e ignori la stima di cardinalità. In questo modo si può usare la stima di cardinalità più recente per tutto, mantenendo il piano più veloce nel caso particolare.  
   
-## Come attivare il piano di query ottimale  
+## <a name="how-to-activate-the-best-query-plan"></a>Come attivare il piano di query ottimale  
   
 Si supponga che con la nuova stima di cardinalità venga generato un piano di query più lento per la query. Ecco alcune opzioni per attivare il piano più veloce.  
   
@@ -198,22 +202,22 @@ Per fare in modo che l'intero database usi la stima di cardinalità precedente, 
   
 Per il massimo controllo, è possibile *forzare* il sistema SQL in modo da usare il piano generato con la stima di cardinalità precedente durante i test. Dopo avere *aggiunto* il piano preferito, è possibile impostare l'intero database per l'uso della compatibilità e della stima di cardinalità più recenti. L'opzione viene elaborata successivamente.  
   
-### Come forzare un piano di query specifico  
+### <a name="how-to-force-a-particular-query-plan"></a>Come forzare un piano di query specifico  
   
 L'archivio query offre diversi modi per forzare l'uso di un determinato piano di query:  
   
 - Eseguire **sp_query_store_force_plan**.  
   
-- In SSMS espandere **Archivio Query**, fare clic con il pulsante destro del mouse su **Top Resource Consuming Nodes** (Primi nodi per consumo risorse) e scegliere **View Top Resource Consuming Nodes** (Visualizza primi nodi per consumo risorse). Verranno visualizzati i pulsanti **Forza piano** e **Annulla forzatura piano**.  
+- In SSMS espandere **Archivio Query** , fare clic con il pulsante destro del mouse su **Top Resource Consuming Nodes**(Primi nodi per consumo risorse) e scegliere **View Top Resource Consuming Nodes**(Visualizza primi nodi per consumo risorse). Verranno visualizzati i pulsanti **Forza piano** e **Annulla forzatura piano**.  
   
  Per altre informazioni sull'archivio query, vedere [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
   
-## Descrizioni delle stime di cardinalità avanzate  
+## <a name="descriptions-of-advance-ce"></a>Descrizioni delle stime di cardinalità avanzate  
   
 Questa sezione descrive query di esempio che usufruiscono dai miglioramenti implementati nella stima di cardinalità nelle versioni recenti. Si tratta di informazioni in background che non richiedono un'azione specifica da parte dell'utente.  
   
-### Esempio A. La stima di cardinalità riconosce che il valore massimo potrebbe essere superiore rispetto al momento in cui sono state raccolte le statistiche  
+### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>Esempio A. La stima di cardinalità riconosce che il valore massimo potrebbe essere superiore rispetto al momento in cui sono state raccolte le statistiche  
   
 Si supponga che le statistiche per OrderTable siano state raccolte per l'ultima volta il 30-04-2016, quando il valore massimo per OrderAddedDate era 30-04-2016. La stima di cardinalità per il livello di compatibilità 120 (e livelli più elevati) comprende che le colonne in OrderTable con dati in ordine *crescente* potrebbero contenere valori maggiori rispetto al valore massimo registrato dalle statistiche. Questa consapevolezza migliora il piano di query per le istruzioni SQL SELECT come la seguente.  
   
@@ -223,7 +227,7 @@ SELECT CustomerId, OrderAddedDate
     WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
-### Esempio B. La stima di cardinalità riconosce che i predicati filtrati nella stessa tabella sono spesso correlati  
+### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Esempio B. La stima di cardinalità riconosce che i predicati filtrati nella stessa tabella sono spesso correlati  
   
 Nell'istruzione SELECT seguente sono presenti predicati filtrati su Make e Model. Intuitivamente, si comprende che quando la marca è "Honda" è probabile che il modello sia "Civic", dato che la Civic è prodotta da Honda.  
   
@@ -237,7 +241,7 @@ SELECT Model_Year, Purchase_Price
         Model = 'Civic';  
 ```  
   
-### Esempio C. La stima di cardinalità non presume più alcuna correlazione tra i predicati filtrati da tabelle diverse  
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Esempio C. La stima di cardinalità non presume più alcuna correlazione tra i predicati filtrati da tabelle diverse  
   
 Una nuova ricerca estesa su carichi di lavoro moderni e dati di business effettivi rivelano che i filtri del predicato da tabelle diverse in genere non sono correlati tra loro. Nella query seguente, la stima di cardinalità presuppone che non esista alcuna correlazione tra s.type e r.date. La stima di cardinalità riduce quindi la stima del numero di righe restituite.  
   
@@ -253,6 +257,8 @@ SELECT s.ticket, s.customer, r.store
 ```  
   
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
+
+

@@ -1,29 +1,33 @@
 ---
-title: "Barra di stato (editor di query del Motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Barra di stato (editor di query del motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.lasthandoff: 04/11/2017
+
 ---
-# Barra di stato (editor di query del Motore di database)
+# <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
   La barra di stato delle finestre dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] può apparire di colore diverso in modo da indicare a quale istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connessa ciascuna finestra.  
   
-1.  **Prima di iniziare:**  [Colori della barra di stato](#StatusBarColors)  
+1.  **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
   
-2.  **Per impostare un colore di stato del server in:**  [Esplora oggetti](#SetOEServerColor), [Server registrato](#SetRegServerColor)  
+2.  **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
   
-3.  **Per utilizzare un colore di stato:**  [Aprire l'editor di query con un colore per il server](#OpenServerColor), [Aprire l'editor di query specificato un colore di stato](#OpenSpecColor)  
+3.  **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Colori della barra di stato  
  È possibile associare un colore della barra di stato a uno specifico nodo server in **Esplora oggetti** o **Server registrati**. È possibile specificare i colori solo per nodi server connessi a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], non ai nodi server per altre tecnologie SQL Server. È inoltre possibile specificare anche un colore della barra di stato personalizzato ogni volta che si connette una nuova finestra dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile aprire una finestra dell'editor di query utilizzando il colore di stato definito per il nodo server oppure specificare un colore univoco per la finestra in questione.  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
   
 -   Immettere le altre informazioni di connessione, quindi fare clic sul pulsante **Connetti** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

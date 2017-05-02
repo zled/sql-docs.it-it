@@ -1,27 +1,31 @@
 ---
-title: "Aumentare le dimensioni di un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database [SQL Server], dimensioni"
-  - "aumento delle dimensioni di database"
-  - "dimensioni di database [SQL Server], aumento"
-  - "dimensioni [SQL Server], database"
+title: Aumentare le dimensioni di un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], size
+- increasing database size
+- database size [SQL Server], increasing
+- size [SQL Server], databases
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66895e3c9a74b60e570ccc6b451023da0d93da40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aumentare le dimensioni di un database
+# <a name="increase-the-size-of-a-database"></a>Aumentare le dimensioni di un database
   In questo argomento si descrive come aumentare le dimensioni di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il database viene espanso aumentando le dimensioni di un file di dati o di log o esistente oppure aggiungendo un nuovo file al database.  
   
  **Contenuto dell'argomento**  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per aumentare le dimensioni di un database  
+#### <a name="to-increase-the-size-of-a-database"></a>Per aumentare le dimensioni di un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per aumentare le dimensioni di un database  
+#### <a name="to-increase-the-size-of-a-database"></a>Per aumentare le dimensioni di un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -77,10 +81,10 @@ caps.handback.revision: 30
   
  [!code-sql[DatabaseDDL#AlterDatabase5](../../relational-databases/databases/codesnippet/tsql/increase-the-size-of-a-d_1.sql)]  
   
- Per altri esempi, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ Per altri esempi, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## Vedere anche  
- [Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [Compattare un database](../../relational-databases/databases/shrink-a-database.md)  
   
   

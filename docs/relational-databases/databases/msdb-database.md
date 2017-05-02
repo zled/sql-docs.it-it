@@ -1,27 +1,31 @@
 ---
-title: "Database msdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Agent, database msdb"
-  - "avvisi [SQL Server], database msdb"
-  - "processi [SQL Server], database msdb"
-  - "msdb - database [SQL Server]"
+title: Database msdb | Microsoft Docs
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database msdb
+# <a name="msdb-database"></a>Database msdb
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il database **msdb** viene usato dall'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la pianificazione di avvisi e processi e da altre funzionalità, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] e Posta elettronica database.  
@@ -102,7 +106,7 @@ caps.handback.revision: 46
 -   Impostazione del filegroup primario su READ_ONLY.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Database di sistema](../../relational-databases/databases/system-databases.md)  
+ [Database di sistema.](../../relational-databases/databases/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

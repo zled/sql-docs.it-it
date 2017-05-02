@@ -1,22 +1,26 @@
 ---
-title: "Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell&#39;URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell&quot;URL | Microsoft Docs
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell&#39;URL
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento sono inclusi i suggerimenti per la risoluzione dei problemi e le procedure consigliate relativi al backup e ripristino di SQL Server nel servizio BLOB di Windows Azure.  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## Gestione dei backup  
+## <a name="managing-backups"></a>Gestione dei backup  
  Nell'elenco seguente sono inclusi i consigli generali sulla gestione dei backup:  
   
 -   Per evitare la sovrascrittura accidentale dei BLOB, è consigliabile l'utilizzo di un nome file univoco per ogni backup.  
@@ -40,16 +44,16 @@ caps.handback.revision: 26
   
 -   L'utilizzo dell'opzione **WITH COMPRESSION** durante il backup consente di ridurre i costi di archiviazione e quelli delle transazioni di archiviazione. Inoltre, tramite questa opzione è possibile diminuire il tempo necessario per completare il processo di backup.  
   
-## Gestione di file di grandi dimensioni  
+## <a name="handling-large-files"></a>Gestione di file di grandi dimensioni  
   
 -   Nell'operazione di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzati più thread per ottimizzare il trasferimento dei dati ai servizi di archiviazione BLOB di Windows Azure.  Le prestazioni, tuttavia, dipendono da vari fattori, ad esempio la larghezza di banda del fornitore di software indipendente e le dimensioni del database. Se si intende eseguire il backup di database o filegroup di grandi dimensioni da un database di SQL Server locale, si consiglia di eseguire innanzitutto alcuni test della velocità effettiva. I [contratti di servizio della risorsa di archiviazione](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) di Azure presentano tempi di elaborazione massimi per i BLOB che è possibile prendere in considerazione.  
   
 -   L'uso dell'opzione **WITH COMPRESSION** come consigliato nella sezione **Gestione dei backup** è molto importante quando si esegue il backup di file di grandi dimensioni.  
   
-## Risoluzione dei problemi di backup nell'URL e di ripristino dallo stesso  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Risoluzione dei problemi di backup nell'URL e di ripristino dallo stesso  
  Di seguito sono elencate alcune modalità rapide per la risoluzione di errori durante l'esecuzione del backup nel servizio di archiviazione BLOB di Windows Azure o del ripristino dallo stesso.  
   
- Per evitare errori a causa di opzioni o limitazioni non supportate, esaminare l'elenco delle limitazioni e le informazioni sul supporto dei comandi BACKUP e RESTORE nell'articolo [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Per evitare errori a causa di opzioni o limitazioni non supportate, esaminare l'elenco delle limitazioni e le informazioni sul supporto dei comandi BACKUP e RESTORE nell'articolo [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Errori di autenticazione:**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 26
   
     ```  
   
--   Le credenziali esistono, ma all'account di accesso utilizzato per eseguire il comando di backup non sono associate autorizzazioni per accedere alle credenziali. Usare un account di accesso nel ruolo **db_backupoperator** con autorizzazioni **Modifica qualsiasi credenziale**.  
+-   Le credenziali esistono, ma all'account di accesso utilizzato per eseguire il comando di backup non sono associate autorizzazioni per accedere alle credenziali. Usare un account di accesso nel ruolo **db_backupoperator** con autorizzazioni **Modifica qualsiasi credenziale** .  
   
 -   Verificare il nome dell'account di archiviazione e i valori di chiave. Le informazioni archiviate nelle credenziali devono corrispondere ai valori delle proprietà dell'account di archiviazione di Windows Azure utilizzati nelle operazioni di backup e ripristino.  
   
  **Errori di backup:**  
   
--   L'esecuzione di backup paralleli nello stesso BLOB comporta il mancato completamento di uno dei backup con conseguente errore **Inizializzazione non riuscita**.  
+-   L'esecuzione di backup paralleli nello stesso BLOB comporta il mancato completamento di uno dei backup con conseguente errore **Inizializzazione non riuscita** .  
   
 -   Utilizzare i log degli errori seguenti per facilitare la risoluzione degli errori di backup:  
   
     -   Impostare il flag di traccia 3051 per abilitare la registrazione in un log degli errori specifico con il formato seguente in:  
   
-         BackupToUrl-\<nomeist>-\<nomedb>-action-\<PID>.log Dove \<azione> è uno fra:  
+         BackupToUrl-\<nomeist>-\<nomedb>-azione-\<PID.log Dove \<azione> è uno dei valori seguenti:  
   
         -   **DB**  
   
@@ -94,8 +98,8 @@ caps.handback.revision: 26
   
 -   Quando si esegue il ripristino da un backup compresso, è possibile che venga visualizzato l'errore seguente:  
   
-    -   **Si è verificata un'eccezione SqlException 3284. Gravità: 16, Stato: 5.**  
-        **Il contrassegno di file del messaggio nel dispositivo "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backup: '65536' potrebbe essere un possibile valore.**  
+    -   **Si è verificata un'eccezione SqlException 3284. Gravità: 16, Stato: 5**  
+        **Il contrassegno di file del messaggio nel dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backup: '65536' potrebbe essere un possibile valore.**  
   
          Per risolvere il problema, eseguire nuovamente l'istruzione **BACKUP** con il valore **BLOCKSIZE = 65536** specificato.  
   
@@ -111,7 +115,7 @@ caps.handback.revision: 26
   
      Quando si verifica un errore di questo tipo, i file BLOB devono essere eliminati. Per altre informazioni su questo scenario e su come risolvere il problema, vedere [Eliminazione dei file BLOB di backup con lease attivi](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
-## Errori del proxy  
+## <a name="proxy-errors"></a>Errori del proxy  
  Se si utilizzano server proxy per accedere a Internet, è possibile che si verifichino i problemi indicati di seguito:  
   
  **Limitazione della connessione da parte dei server proxy**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  Creare un file di configurazione denominato BackuptoURL.exe.config con il seguente codice XML:  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
-2.  Inserire il file di configurazione nella cartella Binn dell'istanza di SQL Server. Ad esempio, se SQL Server viene installato nell'unità C del computer, inserire il file di configurazione in: *C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn*.  
+2.  Inserire il file di configurazione nella cartella Binn dell'istanza di SQL Server. Ad esempio, se SQL Server viene installato nell'unità C del computer, inserire il file di configurazione in: *C:\Programmi\Microsoft SQL Server\MSSQL13.\<NomeIstanza\MSSQL\Binn*.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristino da backup archiviati in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

@@ -1,23 +1,27 @@
 ---
-title: "Problemi di migrazione relativi alle stored procedure compilate in modo nativo | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Problemi di migrazione relativi alle stored procedure compilate in modo nativo | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bec2e3337ff41756a7a23ba63627d420056d11fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Problemi di migrazione relativi alle stored procedure compilate in modo nativo
+# <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Problemi di migrazione relativi alle stored procedure compilate in modo nativo
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   In questa sezione vengono descritti vari problemi relativi alla creazione di stored procedure compilate in modo nativo.  
@@ -36,7 +40,7 @@ caps.handback.revision: 12
   
 -   [Implementazione di un outer join](../../relational-databases/in-memory-oltp/implementing-an-outer-join.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

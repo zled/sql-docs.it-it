@@ -1,29 +1,33 @@
 ---
-title: "Chiavi di crittografia del database e di SQL Server (Motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiavi [SQL Server], crittografia del database"
+title: Chiavi di crittografia del database e di SQL Server (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 909656391a0c51345860aece6f41f02de1dc360f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Chiavi di crittografia del database e di SQL Server (Motore di database)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le chiavi di crittografia per la protezione di dati, credenziali e informazioni di connessione archiviate in un database del server. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispone di due tipi di chiavi: *simmetrica* e *asimmetrica*. Le chiavi simmetriche utilizzano la stessa password per crittografare e decrittografare i dati. Le chiavi asimmetriche usano una password per crittografare i dati (chiave *pubblica*) e un'altra per decrittografare i dati (chiave *privata*).  
+# <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le chiavi di crittografia per la protezione di dati, credenziali e informazioni di connessione archiviate in un database del server. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispone di due tipi di chiavi: *simmetrica* e *asimmetrica*. Le chiavi simmetriche utilizzano la stessa password per crittografare e decrittografare i dati. Le chiavi asimmetriche usano una password per crittografare i dati (chiave *pubblica* ) e un'altra per decrittografare i dati (chiave *privata* ).  
   
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le chiavi di crittografia sono costituite da una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati riservati. La chiave simmetrica viene creata durante l'inizializzazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si avvia per la prima volta l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La chiave è utilizzata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare dati riservati archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che contiene dati riservati in un database viene creata una coppia di chiavi pubblica e privata.  
+ In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le chiavi di crittografia sono costituite da una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati riservati. La chiave simmetrica viene creata durante l'inizializzazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si avvia per la prima volta l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La chiave è utilizzata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare dati riservati archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che contiene dati riservati in un database viene creata una coppia di chiavi pubblica e privata.  
   
-## Applicazioni per chiavi del SQL Server e del database  
+## <a name="applications-for-sql-server-and-database-keys"></a>Applicazioni per chiavi del SQL Server e del database  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene due applicazioni principali per le chiavi: una *chiave master del servizio* (SMK) generata per un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e una *chiave master del database* (DMK) usata per un database.  
   
  La SMK viene generata automaticamente la prima volta che viene avviata e usata l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare la password, le credenziali o la chiave master del database di un server collegato. La SMK viene crittografata usando la chiave locale del computer che utilizza l'API Windows Data Protection (DPAPI). Il DPAPI usa una chiave derivata dalle credenziali Windows dell'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le credenziali del computer. La chiave master del servizio può essere decrittografata solo dall'account del servizio con cui è stata creata o da un'entità autorizzata ad accedere alle credenziali della macchina.  
@@ -32,9 +36,9 @@ caps.handback.revision: 18
   
  Al momento della creazione, la chiave master viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente. Per attivare la decrittografia automatica della chiave master, viene crittografata una copia della chiave utilizzando la SMK. Viene archiviata in entrambi i database dove è usata e nel database **master** di sistema.  
   
- La copia della DMK archiviata nel database **master** di sistema viene aggiornata automaticamente ogni qualvolta la DMK è modificata. È possibile modificare questa impostazione predefinita usando l'opzione **DROP ENCRYPTION BY SERVICE MASTER KEY** dell'istruzione **ALTER MASTER KEY**. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione **OPEN MASTER KEY** e una password.  
+ La copia della DMK archiviata nel database **master** di sistema viene aggiornata automaticamente ogni qualvolta la DMK è modificata. È possibile modificare questa impostazione predefinita usando l'opzione **DROP ENCRYPTION BY SERVICE MASTER KEY** dell'istruzione **ALTER MASTER KEY** . Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione **OPEN MASTER KEY** e una password.  
   
-## Gestione delle chiavi del SQL Server e del database  
+## <a name="managing-sql-server-and-database-keys"></a>Gestione delle chiavi del SQL Server e del database  
  La gestione delle chiavi di crittografia comprende la creazione di nuove chiavi di database, la creazione di un backup delle chiavi server e del database e informazioni su quando e come ripristinare, eliminare o modificare le chiavi.  
   
  Per la gestione delle chiavi simmetriche è possibile utilizzare gli strumenti inclusi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per eseguire le operazioni seguenti:  
@@ -49,7 +53,7 @@ caps.handback.revision: 18
   
 -   Aggiunta o rimozione di un'istanza del server da una distribuzione del server con scalabilità orizzontale in cui più server condividono sia un unico database sia la chiave che consente la crittografia reversibile per quel database.  
   
-## Importanti informazioni relative alla sicurezza  
+## <a name="important-security-information"></a>Importanti informazioni relative alla sicurezza  
  L'accesso a oggetti protetti dalla chiave master del servizio richiede l'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzato per creare la chiave o l'account del computer. In altre parole, il computer è legato al sistema sul quale la chiave è stata creata. È possibile modificare l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *o* l'account del computer senza perdere l'accesso alla chiave. Tuttavia, se si modificano entrambi, si perderà l'accesso alla chiave master del servizio. Se si verifica tale perdita senza disporre di uno di questi due elementi, non sarà possibile decrittografare i dati e gli oggetti crittografati usando la chiave originale.  
   
  Non è possibile ripristinare connessioni protette con la chiave master del servizio se non si dispone della stessa.  
@@ -59,14 +63,14 @@ caps.handback.revision: 18
 > [!CAUTION]  
 >  Se si perde ogni accesso alle chiavi descritte in precedenza, si perderà l'accesso agli oggetti, alle connessioni e ai dati protetti da quelle chiavi. È possibile ripristinare la chiave master del servizio, come viene descritto nei collegamenti qui riportati, oppure è possibile ritornare al sistema di crittografa originale per recuperare l'accesso. Non è possibile recuperare l'accesso in altro modo.  
   
-## Argomenti della sezione  
- [Chiave master del servizio](../../../relational-databases/security/encryption/service-master-key.md)  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
  Viene fornita una breve spiegazione della chiave master del servizio e delle procedure consigliate.  
   
  [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Viene illustrata la modalità di utilizzo dei sistemi di gestione delle chiavi di terze parti con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Backup della chiave master del servizio](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Ripristino della chiave master del servizio](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
@@ -85,16 +89,16 @@ caps.handback.revision: 18
   
  [Crittografia di una colonna di dati](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)  
   
  [Ripristino di una chiave master del database](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
   
-## Vedere anche  
- [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)   
- [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/delete-and-re-create-encryption-keys-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
   

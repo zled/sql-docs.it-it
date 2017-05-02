@@ -1,23 +1,27 @@
 ---
-title: "Scenari di utilizzo delle tabelle temporali | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Scenari di utilizzo delle tabelle temporali | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Scenari di utilizzo delle tabelle temporali
+# <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le tabelle temporali sono in genere utili negli scenari che richiedono il rilevamento della cronologia delle modifiche dei dati.    
@@ -33,8 +37,8 @@ caps.handback.revision: 10
   
 -   [Ripristino dal danneggiamento dei dati a livello di riga](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## Controllo dei dati  
- Usare il controllo delle versioni di sistema temporale nelle tabelle che archiviano informazioni critiche per le quali è necessario tenere traccia di cosa è stato modificato, quando e da chi ed eseguire analisi scientifiche dei dati in qualsiasi momento.    
+## <a name="data-audit"></a>Controllo dei dati  
+ Usare il controllo delle versioni di sistema temporale nelle tabelle che archiviano informazioni critiche per le quali è necessario tenere traccia di cosa è stato modificato e quando ed eseguire analisi scientifiche dei dati in qualsiasi momento.    
 Le tabelle temporali con controllo delle versioni di sistema consentono di pianificare scenari di controllo dei dati nelle prime fasi del ciclo di sviluppo o di aggiungere il controllo dei dati alle applicazioni o soluzioni esistenti quando necessario.  
   
  Il diagramma seguente mostra lo scenario di una tabella Employee con il campione di dati che include versioni di riga correnti, contrassegnate dal colore blu, e versioni di riga cronologiche, contrassegnate dal colore grigio.   
@@ -42,7 +46,7 @@ La parte destra del diagramma visualizza le versioni di riga sull'asse temporale
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### Abilitazione del controllo delle versioni di sistema in una nuova tabella per il controllo dei dati  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Abilitazione del controllo delle versioni di sistema in una nuova tabella per il controllo dei dati  
  Se sono state identificate le informazioni che richiedono il controllo dei dati, creare tabelle di database come tabelle temporali con controllo delle versioni di sistema. L'esempio seguente illustra uno scenario con informazioni su Employee in un ipotetico database delle risorse umane:  
   
 ```  
@@ -61,10 +65,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- In [Creating a System-Versioned Temporal Table](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md) (Creazione di una tabella temporale con controllo delle versioni di sistema) sono descritte varie opzioni per creare una tabella temporale con controllo delle versioni di sistema.  
+ In [Creating a System-Versioned Temporal Table](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)(Creazione di una tabella temporale con controllo delle versioni di sistema) sono descritte varie opzioni per creare una tabella temporale con controllo delle versioni di sistema.  
   
-### Abilitazione del controllo delle versioni di sistema in una tabella esistente per il controllo dei dati  
- Se è necessario eseguire il controllo dei dati nei database esistenti, usare ALTER TABLE per estendere le tabelle non temporali in modo che diventino tabelle con controllo delle versioni di sistema. Per evitare modifiche di rilievo nell'applicazione, aggiungere le colonne del periodo come HIDDEN, come descritto in [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3) (Modifica di una tabella non temporale in tabella temporale con controllo delle versioni di sistema). L'esempio seguente illustra l'abilitazione del controllo delle versioni di sistema in una tabella Employee esistente in un ipotetico database delle risorse umane:  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Abilitazione del controllo delle versioni di sistema in una tabella esistente per il controllo dei dati  
+ Se è necessario eseguire il controllo dei dati nei database esistenti, usare ALTER TABLE per estendere le tabelle non temporali in modo che diventino tabelle con controllo delle versioni di sistema. Per evitare modifiche di rilievo nell'applicazione, aggiungere le colonne del periodo come HIDDEN, come descritto in [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)(Modifica di una tabella non temporale in tabella temporale con controllo delle versioni di sistema). L'esempio seguente illustra l'abilitazione del controllo delle versioni di sistema in una tabella Employee esistente in un ipotetico database delle risorse umane:  
   
 ```  
 /*   
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  Dopo avere eseguito lo script precedente, tutte le modifiche dei dati verranno raccolte in modo trasparente nella tabella di cronologia.    
 In un tipico scenario di controllo dei dati si eseguono query per tutte le modifiche dei dati applicate a una singola riga in un periodo di tempo di interesse. La tabella di cronologia predefinita viene creata con albero B con rowstore cluster, per risolvere in modo efficiente questo caso d'uso.  
   
-### Esecuzione di analisi dei dati  
+### <a name="performing-data-analysis"></a>Esecuzione di analisi dei dati  
  Dopo l'abilitazione del controllo delle versioni di sistema con uno dei metodi precedenti, per il controllo dei dati è sufficiente eseguire una query. La query seguente esegue la ricerca di versioni delle righe del record Employee con EmployeeID = 1000 attive almeno per una parte del periodo compreso tra il 1° gennaio 2014 e il 1° gennaio 2015, incluso il limite superiore:  
   
 ```  
@@ -145,13 +149,13 @@ FROM Employee
   
 > [!TIP]  
 >  Le condizioni del filtro specificate nelle clausole temporali con FOR SYSTEM_TIME hanno requisiti SARG-able (Search ARGument ABLE), ovvero SQL Server può usare l'indice cluster sottostante per eseguire una ricerca anziché un'operazione di analisi.   
-> Se si esegue direttamente una query sulla tabella di cronologia, assicurarsi che la condizione di filtro abbia i requisiti SARGable specificando i filtri nel formato \<colonna PERIOD>  {\< | > | =, …} date_condition AT TIME ZONE 'UTC'.  
+> Se si esegue direttamente una query sulla tabella di cronologia, assicurarsi che la condizione di filtro abbia i requisiti SARGable specificando i filtri nel formato \<colonna PERIOD>  {< | > | =, …} date_condition AT TIME ZONE 'UTC'.  
 > Se si applica AT TIME ZONE alle colonne del periodo, SQL Server esegue un'analisi di tabella/indice, che può risultare molto costosa. Per ovviare a questo tipo di condizione nelle query:  
-> \<colonna PERIOD>  AT TIME ZONE '\<fuso orario>'  >  {\< | > | =, …} date_condition.  
+> \<colonna PERIOD>  AT TIME ZONE '\<<fuso orario'  >  {< | > | =, …} date_condition.  
   
- Vedere anche: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md) (Esecuzione di query sui dati in una tabella temporale con controllo delle versioni di sistema).  
+ Vedere anche: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)(Esecuzione di query sui dati in una tabella temporale con controllo delle versioni di sistema).  
   
-## Analisi temporizzate (spostamento cronologico)  
+## <a name="point-in-time-analysis-time-travel"></a>Analisi temporizzate (spostamento cronologico)  
  A differenza del controllo dei dati, in cui lo stato attivo è in genere sulle modifiche apportate ai singoli record, negli scenari di spostamento cronologico gli utenti vogliono visualizzare le modifiche di interi set di dati nel tempo. A volte lo spostamento cronologico include diverse tabelle temporali correlate, ognuna delle quali viene modificata con una frequenza diversa, per cui si vogliono analizzare:  
   
 -   Tendenze degli indicatori importanti in dati storici e correnti.  
@@ -162,9 +166,9 @@ FROM Employee
   
  Esistono molti scenari reali che richiedono l'analisi dello spostamento cronologico. Per illustrare questo scenario di utilizzo, si esaminerà OLTP con la cronologia generata automaticamente.  
   
-### OLTP con la cronologia dei dati generata automaticamente  
+### <a name="oltp-with-auto-generated-data-history"></a>OLTP con la cronologia dei dati generata automaticamente  
  Nei sistemi di elaborazione delle transazioni non è insolito analizzare l'importanza del cambiamento delle metriche nel tempo. Idealmente, l'analisi della cronologia non deve compromettere le prestazioni dell'applicazione OLTP in cui l'accesso allo stato più recente dei dati deve verificarsi con latenza e blocco dei dati minimi.  Le tabelle temporali con controllo delle versioni di sistema sono progettate per consentire agli utenti di mantenere in modo trasparente l'intera cronologia delle modifiche per analisi successive, separatamente dai dati correnti, con un impatto minimo sul carico di lavoro OLTP principale.  
-Per i carichi di lavoro con elaborazione delle transazioni elevata, è consigliabile usare [tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) che consentono di archiviare i dati correnti in memoria e l'intera cronologia delle modifiche su disco, in modo economicamente conveniente.  
+Per i carichi di lavoro con elaborazione delle transazioni elevata, è consigliabile usare [tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)che consentono di archiviare i dati correnti in memoria e l'intera cronologia delle modifiche su disco, in modo economicamente conveniente.  
   
  Per la tabella di cronologia è consigliabile usare un indice columnstore cluster per i motivi seguenti:  
   
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## Rilevamento di anomalie  
+## <a name="anomaly-detection"></a>Rilevamento di anomalie  
  Il rilevamento di anomalie, o rilevamento di outlier, è l'identificazione di elementi che non sono conformi a un modello previsto o altri elementi in un set di dati.   
 È possibile usare le tabelle temporali con controllo delle versioni di sistema per rilevare le anomalie che si verificano periodicamente o irregolarmente, perché è possibile usare query temporali per trovare rapidamente modelli specifici.  
 Il tipo di anomalie dipende dal tipo di dati raccolti e dalla logica di business.  
@@ -431,7 +435,7 @@ FROM CTE
 > [!NOTE]  
 >  Questo esempio è intenzionalmente semplificato. Negli scenari di produzione si useranno probabilmente metodi statistici avanzati per identificare i campioni che non seguono il modello comune.  
   
-## Dimensioni a modifica lenta  
+## <a name="slowly-changing-dimensions"></a>Dimensioni a modifica lenta  
  Le dimensioni nel data warehousing in genere contengono dati relativamente statici sulle entità, ad esempio posizioni geografiche, clienti o prodotti. Tuttavia, alcuni scenari richiedono di tenere traccia anche delle modifiche dei dati nelle tabelle delle dimensioni. Considerato che la modifica nelle dimensioni avviene meno frequentemente, in modo imprevedibile e al di fuori della normale pianificazione degli aggiornamenti che si applica alle tabelle dei fatti, questi tipi di tabelle delle dimensioni sono dette dimensioni a modifica lenta.  
   
  Esistono diverse categorie di dimensioni a modifica lenta basate sulla modalità di mantenimento della cronologia delle modifiche:  
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   Se si prevede un numero significativo di righe della cronologia nelle tabelle di dimensioni a modifica lenta, considerare l'uso di un indice columnstore cluster come opzione di archiviazione principale per la tabella di cronologia. In questo modo si ridurrà l'impatto l'impatto sulla tabella di cronologia, velocizzando le query analitiche.  
   
-## Ripristino dal danneggiamento dei dati a livello di riga  
+## <a name="repairing-row-level-data-corruption"></a>Ripristino dal danneggiamento dei dati a livello di riga  
  È possibile basarsi su dati cronologici nelle tabelle temporali con controllo delle versioni di sistema per ripristinare rapidamente singole righe a uno degli stati acquisiti in precedenza. Questa proprietà delle tabelle temporali è molto utile quando è possibile trovare le righe interessate e/o quando si conosce l'ora della modifica indesiderata dei dati, per eseguire un ripristino in modo molto efficiente senza usare backup.  
   
  Questo approccio presenta diversi vantaggi:  
@@ -589,7 +593,7 @@ Se un valore appena aggiornato non è corretto, in molti scenari il ripristino d
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   
  [Introduzione alle tabelle temporali con controllo delle versioni di sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verifiche di coerenza del sistema della tabella temporale](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ Se un valore appena aggiornato non è corretto, in molti scenari il ripristino d
  [Funzioni e viste per i metadati delle tabelle temporali](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

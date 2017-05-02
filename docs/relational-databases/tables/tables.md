@@ -1,25 +1,29 @@
 ---
-title: "Tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelle [SQL Server]"
-  - "componenti di tabella [SQL Server]"
+title: Tabelle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server]
+- table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7111c0043ebecaa5ca55480eb530ffd665ef4243
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabelle
+# <a name="tables"></a>Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Le tabelle sono oggetti di database che contengono tutti i dati presenti in un database. Nelle tabelle, i dati sono organizzati in modo logico in righe e colonne in un formato simile a quello di un foglio di calcolo. Ogni riga rappresenta un record univoco e ogni colonna rappresenta un campo all'interno del record. Ad esempio, una tabella che include i dati dei dipendenti di un'azienda può contenere una riga per ogni dipendente e colonne che rappresentano i dettagli dei dipendenti quali l'ID, il nome, l'indirizzo, la posizione e il numero di telefono dell'abitazione.  
@@ -30,7 +34,7 @@ caps.handback.revision: 30
   
 -   I dati nella tabella possono essere compressi per riga o per pagina. La compressione dei dati può consentire l'archiviazione di più righe su una pagina. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-## Tipi di tabelle  
+## <a name="types-of-tables"></a>Tipi di tabelle  
  Oltre al ruolo standard delle tabelle di base definite dall'utente, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili i tipi di tabelle seguenti per scopi specifici in un database:  
   
  Tabelle partizionate  
@@ -40,7 +44,7 @@ caps.handback.revision: 30
  Le tabelle temporanee vengono archiviate in **tempdb**. Esistono due tipi di tabelle temporanee, ovvero le tabelle locali e le tabelle globali. I due tipi differiscono per i nomi, la visibilità e la disponibilità. Le tabelle temporanee locali contengono un solo simbolo di cancelletto (#) come primo carattere del nome, sono visibili solo durante la connessione utente corrente e vengono eliminate quando l'utente chiude la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le tabelle temporanee globali contengono due simboli di cancelletto (##) come primi caratteri del nome, una volta create sono visibili per tutti gli utenti e vengono eliminate quando tutti gli utenti che fanno riferimento alla tabella chiudono la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tabelle di sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati che definiscono la configurazione del server e di tutte le relative tabelle in un set di tabelle speciale noto come tabelle di sistema. Gli utenti non possono eseguire una query direttamente o aggiornare le tabelle di sistema. Le informazioni delle tabelle di sistema vengono rese disponibili tramite le viste di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia i dati che definiscono la configurazione del server e di tutte le relative tabelle in un set di tabelle speciale noto come tabelle di sistema. Gli utenti non possono eseguire una query direttamente o aggiornare le tabelle di sistema. Le informazioni delle tabelle di sistema vengono rese disponibili tramite le viste di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Tabelle estese in larghezza  
  Le tabelle estese in larghezza usano le [colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md) per aumentare a 30.000 il numero totale di colonne che una tabella può contenere. Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. Una colonna estesa ha definito un [set di colonne](../../relational-databases/tables/use-column-sets.md), ovvero una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Anche il numero degli indici e delle statistiche viene portato rispettivamente a 1.000 e 30.000. Le dimensioni di una riga di tabella estesa in larghezza non possono superare 8.019 byte. Pertanto, la maggior parte dei dati di qualsiasi riga deve essere NULL. Il numero massimo di colonne di tipo nonsparse più le colonne calcolate di una tabella estesa in larghezza rimane 1.024.  
@@ -59,15 +63,15 @@ caps.handback.revision: 30
   
 -   I cursori di aggiornamento di colonne specifiche di una tabella estesa in larghezza dovrebbero elencare le colonne in modo esplicito per la clausola FOR UPDATE. In questo modo, è possibile ottimizzare le prestazioni quando si utilizzano i cursori.  
   
-## Attività comuni della tabella  
+## <a name="common-table-tasks"></a>Attività comuni della tabella  
  Nella tabella riportata di seguito vengono forniti i collegamenti a attività comuni associate alla creazione o alla modifica di una tabella.  
   
 |Attività tabella|Argomento|  
 |-----------------|-----------|  
-|Viene illustrato come creare una tabella.|[Creare tabelle &#40;Motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md)|  
-|Viene illustrato come eliminare una tabella.|[Eliminare tabelle &#40;Motore di database&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|  
+|Viene illustrato come creare una tabella.|[Creare tabelle &#40;motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md)|  
+|Viene illustrato come eliminare una tabella.|[Eliminare tabelle &#40;motore di database&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|  
 |Viene illustrato come creare una nuova tabella che contiene alcune o tutte le colonne in una tabella esistente.|[Duplicare le tabelle](../../relational-databases/tables/duplicate-tables.md)|  
-|Viene illustrato come ridenominare una tabella.|[Rinominare tabelle &#40;Motore di database&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|  
+|Viene illustrato come ridenominare una tabella.|[Rinominare tabelle &#40;motore di database&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|  
 |Viene illustrata la procedura per visualizzare le proprietà della tabella.|[Visualizzare la definizione di una tabella](../../relational-databases/tables/view-the-table-definition.md)|  
 |Viene illustrato come determinare se altri oggetti quali una vista o una stored procedure dipende da una tabella.|[Visualizzare le dipendenze di una tabella](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|  
   
@@ -75,16 +79,16 @@ caps.handback.revision: 30
   
 |Attività colonne|Argomento|  
 |------------------|-----------|  
-|Viene illustrato come aggiungere colonne a una tabella esistente.|[Aggiungere colonne a una tabella &#40;Motore di database&#41;](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)|  
+|Viene illustrato come aggiungere colonne a una tabella esistente.|[Aggiungere colonne a una tabella &#40;motore di database&#41;](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)|  
 |Viene illustrato come eliminare colonne da una tabella.|[Eliminare le colonne da una tabella](../../relational-databases/tables/delete-columns-from-a-table.md)|  
-|Viene illustrato come modificare il nome di una colonna.|[Rinominare colonne &#40;Motore di database&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|  
-|Viene illustrato come copiare colonne da una tabella a un'altra copiando solo la definizione di colonna oppure la definizione e i dati.|[Copiare colonne da una tabella a un'altra &#40;Motore di database&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|  
-|Viene illustrato come modificare una definizione di colonna, modificando il tipo di dati o altre proprietà.|[Modificare colonne &#40;Motore di database&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|  
+|Viene illustrato come modificare il nome di una colonna.|[Rinominare colonne &#40;motore di database&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|  
+|Viene illustrato come copiare colonne da una tabella a un'altra copiando solo la definizione di colonna oppure la definizione e i dati.|[Copiare colonne da una tabella a un'altra &#40;motore di database&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|  
+|Viene illustrato come modificare una definizione di colonna, modificando il tipo di dati o altre proprietà.|[Modificare colonne &#40;motore di database&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|  
 |Viene illustrato come modificare l'ordine di visualizzazione delle colonne.|[Modificare l'ordine delle colonne in una tabella](../../relational-databases/tables/change-column-order-in-a-table.md)|  
 |Viene illustrato come creare una colonna calcolata in una tabella.|[Specificare le colonne calcolate in una tabella](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Viene illustrato come specificare un valore predefinito per una colonna. Questo valore viene utilizzato nel caso non venga fornito alcun altro valore.|[Specificare valori predefiniti per le colonne](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Vincoli di chiavi primarie ed esterne](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

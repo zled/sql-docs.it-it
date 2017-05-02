@@ -1,33 +1,37 @@
 ---
-title: "Informazioni del debugger Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "debugger Transact-SQL, finestra Variabili locali"
-  - "debugger Transact-SQL, finestra Espressioni di controllo"
-  - "debugger Transact-SQL, finestra Thread"
-  - "debugger Transact-SQL, finestra Stack di chiamate"
-  - "debugger Transact-SQL, Controllo immediato"
-  - "debugger Transact-SQL, visualizzazione di informazioni"
+title: Informazioni del debugger Transact-SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, Locals Window
+- Transact-SQL debugger, Watch Window
+- Transact-SQL debugger, Threads Window
+- Transact-SQL debugger, Call Stack Window
+- Transact-SQL debugger, QuickWatch
+- Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 706952bff0744cb88d12a624ba4c68363cb85652
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informazioni del debugger Transact-SQL
+# <a name="transact-sql-debugger---information"></a>Debugger Transact-SQL - Informazioni
   Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile utilizzare le varie finestre del debugger per visualizzare lo stato corrente dell'esecuzione.  
   
-## Finestre del debugger  
- In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4**. La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando** e **Output**.  
+## <a name="debugger-windows"></a>Finestre del debugger  
+ In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4** . La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando**e **Output** .  
   
 > [!NOTE]  
 >  Le descrizioni precedenti indicano le posizioni predefinite delle finestre del debugger. È possibile trascinare una scheda per spostarla da una finestra all'altra oppure è possibile disancorare una scheda per creare una nuova finestra che potrà essere collocata ovunque si desideri.  
@@ -38,10 +42,10 @@ caps.handback.revision: 15
   
 -   Fare clic su **Punti di interruzione** sulla barra degli strumenti **Debug**, quindi selezionare la finestra desiderata.  
   
-## Espressioni di Transact-SQL  
- Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4**.  
+## <a name="transact-sql-expressions"></a>Espressioni di Transact-SQL  
+ Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4**.  
   
- La finestra **Variabili locali** visualizza informazioni sulle variabili locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il set di espressioni elencate nella finestra **Variabili locali** cambia man mano che il debugger viene eseguito sulle varie parti del codice.  
+ La finestra **Variabili locali** visualizza informazioni sulle variabili locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il set di espressioni elencate nella finestra **Variabili locali** cambia man mano che il debugger viene eseguito sulle varie parti del codice.  
   
  Le espressioni incluse in **Controllo immediato** e nelle quattro finestre **Espressione di controllo** non si limitano semplicemente a elencare l'identificatore di una variabile. È possibile specificare un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un valore singolo, ad esempio l'aggiunta di un numero a una variabile, oppure un'istruzione SELECT che restituisce un valore singolo. Esempi di tali situazioni:  
   
@@ -53,27 +57,27 @@ caps.handback.revision: 15
   
 -   Istruzione SELECT che restituisce un valore singolo, ad esempio SELECT CharCol FROM MyTable WHERE PrimaryKey = 1.  
   
- È possibile usare la finestra **Controllo immediato** per visualizzare il valore di un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)], quindi salvare quell'espressione in una finestra **Espressione di controllo**. Per selezionare un'espressione in **Controllo immediato**, selezionare o immettere il nome dell'espressione nella casella **Espressione**.  
+ È possibile usare la finestra **Controllo immediato** per visualizzare il valore di un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] , quindi salvare quell'espressione in una finestra **Espressione di controllo** . Per selezionare un'espressione in **Controllo immediato**, selezionare o immettere il nome dell'espressione nella casella **Espressione** .  
   
  Le quattro finestre **Espressione di controllo** visualizzano informazioni relative alle variabili e alle espressioni che sono state selezionate. Il set di espressioni elencate nelle finestre **Espressione di controllo** non cambia fintanto che non vengono aggiunte o eliminate espressioni nell'elenco.  
   
- Per aggiungere un'espressione a una finestra **Espressione di controllo**, è possibile selezionare **Aggiungi espressione di controllo** nella finestra di dialogo **Controllo immediato** oppure immette il nome dell'espressione nella colonna **Nome** di una riga vuota in una finestra **Espressione di controllo**.  
+ Per aggiungere un'espressione a una finestra **Espressione di controllo** , è possibile selezionare **Aggiungi espressione di controllo** nella finestra di dialogo **Controllo immediato** oppure immette il nome dell'espressione nella colonna **Nome** di una riga vuota in una finestra **Espressione di controllo** .  
   
- È possibile impostare i valori dei dati per le variabili nelle finestre **Variabili locali**, **Espressione di controllo** o **Controllo immediato** facendo clic con il pulsante destro del mouse nella riga e selezionando quindi **Modifica valore**. Le colonne **Valore** nelle finestre **Variabili locali** ed **Espressione di controllo** e nella finestra di dialogo **Controllo immediato** supportano tutte i visualizzatori di testo e di dati XML e HTML. I visualizzatori sono rappresentati da finestre di suggerimenti dati a forma di lente di ingrandimento sul lato destro della colonna **Valori**. È possibile utilizzare i visualizzatori per visualizzare valori di dati in formato testo, XML o HTML in visualizzazioni che corrispondono ai tipi di dati, ad esempio, per visualizzare file XML in una finestra del browser.  
+ È possibile impostare i valori dei dati per le variabili nelle finestre **Variabili locali**, **Espressione di controllo**o **Controllo immediato** facendo clic con il pulsante destro del mouse nella riga e selezionando quindi **Modifica valore**. Le colonne **Valore** nelle finestre **Variabili locali** ed **Espressione di controllo** e nella finestra di dialogo **Controllo immediato** supportano tutte i visualizzatori di testo e di dati XML e HTML. I visualizzatori sono rappresentati da finestre di suggerimenti dati a forma di lente di ingrandimento sul lato destro della colonna **Valori** . È possibile utilizzare i visualizzatori per visualizzare valori di dati in formato testo, XML o HTML in visualizzazioni che corrispondono ai tipi di dati, ad esempio, per visualizzare file XML in una finestra del browser.  
   
  In modalità debug, se si sposta il puntatore del mouse su un identificatore, viene visualizzata una finestra popup di **informazioni rapide** con il nome dell'espressione e il relativo valore corrente. Per altre informazioni, vedere [Informazioni rapide &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
   
-## Punti di interruzione  
+## <a name="breakpoints"></a>Punti di interruzione  
  È possibile usare la finestra **Punti di interruzione** per visualizzare e gestire i punti di interruzione attualmente impostati. Per altre informazioni, vedere [Esecuzione istruzione per istruzione del codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
   
-## Stack di chiamate  
+## <a name="call-stacks"></a>Stack di chiamate  
  Nella finestra **Stack di chiamate** vengono visualizzate la posizione di esecuzione corrente e informazioni sulla modalità con cui l'esecuzione passa dalla finestra dell'editor originale attraverso qualsiasi modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] (funzione, stored procedure o trigger) per raggiungere la posizione di esecuzione corrente. Ciascuna riga nella finestra **Stack di chiamate** è chiamata stack frame e rappresenta uno qualsiasi degli elementi seguenti:  
   
 -   Il percorso di esecuzione corrente.  
   
 -   Una chiamata da un modulo a un altro.  
   
--   Una chiamata da una finestra dell'editor a un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   Una chiamata da una finestra dell'editor a un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  L'ordine dello stack è inverso rispetto all'ordine di chiamata dei moduli. La posizione di esecuzione corrente si trova in cima allo stack, mentre la chiamata originale si trova in fondo. Una freccia gialla sul margine sinistro dello stack frame identifica il frame nel quale il debugger ha sospeso l'esecuzione.  
   
@@ -85,23 +89,23 @@ caps.handback.revision: 15
   
 -   Se la chiamata è diretta a una stored procedure o una funzione che accetta parametri, vengono elencati anche i nomi, i tipi di dati e i valori di tutti i parametri.  
   
- Le espressioni nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono valutate per lo stack frame corrente. Per impostazione predefinita, lo stack frame corrente è il frame in cima allo stack, dove il debugger ha sospeso l'esecuzione. Se si specifica un altro stack frame come frame corrente, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono rivalutate per il nuovo stack frame. È possibile cambiare lo stack frame corrente facendo doppio clic su un frame oppure facendo clic su un frame e selezionando **Passa al frame**. A questo punto, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono rivalutate per il nuovo frame. La presenza di una freccia verde sul margine sinistro dello stack frame identifica lo stack frame corrente, nei casi in cui lo stack frame corrente non è quello in cima allo stack.  
+ Le espressioni nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono valutate per lo stack frame corrente. Per impostazione predefinita, lo stack frame corrente è il frame in cima allo stack, dove il debugger ha sospeso l'esecuzione. Se si specifica un altro stack frame come frame corrente, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono rivalutate per il nuovo stack frame. È possibile cambiare lo stack frame corrente facendo doppio clic su un frame oppure facendo clic su un frame e selezionando **Passa al frame**. A questo punto, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono rivalutate per il nuovo frame. La presenza di una freccia verde sul margine sinistro dello stack frame identifica lo stack frame corrente, nei casi in cui lo stack frame corrente non è quello in cima allo stack.  
   
- Quando si fa clic con il pulsante destro del mouse su uno stack frame e si seleziona **Vai a codice sorgente**, il codice per quel frame viene visualizzato in una finestra dell'editor di query. Quel frame tuttavia non diventa il frame corrente e il contenuto delle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** non cambia.  
+ Quando si fa clic con il pulsante destro del mouse su uno stack frame e si seleziona **Vai a codice sorgente**, il codice per quel frame viene visualizzato in una finestra dell'editor di query. Quel frame tuttavia non diventa il frame corrente e il contenuto delle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** non cambia.  
   
-## Informazioni di sistema e risultati di Transact-SQL  
+## <a name="system-information-and-transact-sql-results"></a>Informazioni di sistema e risultati di Transact-SQL  
  I messaggi di stato e di evento del debugger vengono elencati nella finestra **Output** del debugger. Tra le informazioni visualizzate vi sono ad esempio il collegamento del debugger ad altri processi o il termine dei thread del debugger.  
   
- In modalità di debug, le schede **Risultati** e **Messaggi** sono ancora attive nell'editor di query. La scheda **Risultati** continua a visualizzare i set dei risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che vengono eseguite durante una sessione di debug. La scheda **Messaggi** continua a visualizzare messaggi di sistema, ad esempio "Righe interessate *xx*" e l'output delle istruzioni PRINT e RAISERROR.  
+ In modalità di debug, le schede **Risultati** e **Messaggi** sono ancora attive nell'editor di query. La scheda **Risultati** continua a visualizzare i set dei risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che vengono eseguite durante una sessione di debug. La scheda **Messaggi** continua a visualizzare messaggi di sistema, ad esempio "Righe interessate *xx* " e l'output delle istruzioni PRINT e RAISERROR.  
   
-## Vedere anche  
- [finestra Variabili locali](../../relational-databases/scripting/locals-window.md)   
- [finestra Espressioni di controllo](../../relational-databases/scripting/watch-window.md)   
- [Finestra di dialogo Controllo immediato](../../relational-databases/scripting/quickwatch-dialog-box.md)   
- [Finestra Punti di interruzione](../../relational-databases/scripting/breakpoints-window.md)   
- [Finestra Stack di chiamate](../../relational-databases/scripting/call-stack-window.md)   
- [Finestra Thread](../../relational-databases/scripting/threads-window.md)   
- [Finestra Output](../../relational-databases/scripting/output-window.md)   
+## <a name="see-also"></a>Vedere anche  
+ [finestra Variabili locali](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
+ [finestra Espressioni di controllo](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
+ [Finestra di dialogo Controllo immediato](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Finestra Punti di interruzione](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
+ [Finestra Stack di chiamate](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [Finestra Thread](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
+ [Finestra Output](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
  [Debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

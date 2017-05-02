@@ -1,29 +1,33 @@
 ---
-title: "Categoria di eventi Security Audit (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Controllo di sicurezza - categoria di eventi [SQL Server]"
-  - "classi di evento [SQL Server], categoria di eventi Security Audit"
-  - "SQL Server - classi di evento, categoria di eventi Security Audit"
+title: Categoria di eventi Security Audit (SQL Server Profiler) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [SQL Server], Security Audit event category
+- SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
+ms.lasthandoff: 04/11/2017
+
 ---
-# Categoria di eventi Security Audit (SQL Server Profiler)
+# <a name="security-audit-event-category-sql-server-profiler"></a>Categoria di eventi Security Audit (SQL Server Profiler)
   La categoria di eventi **Security Audit** include gli eventi relativi ai controlli di sicurezza.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -50,8 +54,8 @@ caps.handback.revision: 36
 |[Classe di evento Audit Database Scope GDR](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Indica che è stata eseguita un'istruzione GRANT, REVOKE o DENY per un'autorizzazione per le istruzioni da parte di un utente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe di evento Audit DBCC](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indica che è stato eseguito un comando DBCC.|  
 |[Classe di evento Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica che si è verificato un evento full-text.|  
-|[Classe di evento Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica che un utente ha modificato la password dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Classe di evento Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica che è stata usata **sp_defaultdb**, **sp_defaultlanguage** o ALTER LOGIN per modificare una proprietà di un account di accesso.|  
+|[Classe di evento Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica che un utente ha modificato la password dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Classe di evento Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica che è stata usata **sp_defaultdb**, **sp_defaultlanguage**o ALTER LOGIN per modificare una proprietà di un account di accesso.|  
 |[Classe di evento Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Indica che un utente è riuscito ad accedere correttamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe di evento Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Indica che un utente ha tentato di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'operazione ha avuto esito negativo.|  
 |[Classe di evento Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Indica che un diritto di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows è stato aggiunto o rimosso.|  
@@ -69,10 +73,10 @@ caps.handback.revision: 36
 |[Classe di evento Audit Server Principal Impersonation](../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)|Indica che all'interno dell'ambito del server si è verificata una rappresentazione.|  
 |[Classe di evento Audit Server Principal Management](../../relational-databases/event-classes/audit-server-principal-management-event-class.md)|Indica che si è verificato un evento CREATE, ALTER o DROP per un'entità del server.|  
 |[Classe di evento Audit Server Scope GDR](../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)|Indica che si è verificato un evento GDR per le autorizzazioni del server.|  
-|[Classe di evento Audit Server Starts and Stops](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Indica che è stato modificato lo stato del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Classe di evento Audit Server Starts and Stops](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Indica che è stato modificato lo stato del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Classe di evento Audit Statement Permission](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|Indica che è stata utilizzata un'autorizzazione per le istruzioni.|  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

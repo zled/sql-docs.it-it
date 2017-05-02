@@ -1,25 +1,29 @@
 ---
-title: "Ripristinare un database a uno snapshot del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot del database [SQL Server], ripristino"
-  - "ripristino di database"
+title: Ripristinare un database a uno snapshot del database | Microsoft Docs
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristinare un database a uno snapshot del database
+# <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
   Se i dati in un database online sono danneggiati, in alcuni casi il ripristino del database a un snapshot del database precedente alla data del danno può essere un'alternativa appropriata per ripristinare il database da un backup. Il ripristino di un database può, ad esempio, risultare utile per annullare un errore grave dell'utente verificatosi di recente, come l'eliminazione di una tabella. Tutte le modifiche apportate dopo la creazione dello snapshot verranno tuttavia perse.  
   
 -   **Prima di iniziare:**  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [Sicurezza](#Security)  
   
--   **Per ripristinare un database a uno snapshot del database tramite:** [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -86,9 +90,9 @@ caps.handback.revision: 58
  **Per ripristinare un database a uno snapshot del database**  
   
 > [!NOTE]  
->  Per un esempio di questa procedura, vedere [Esempi (Transact-SQL)](#TsqlExample) più avanti in questa sezione.  
+>  Per un esempio di questa procedura, vedere [Esempi (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
-1.  Individuare lo snapshot del database a cui ripristinare il database. È possibile visualizzare gli snapshot di un database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vedere [Visualizzare uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md). È anche possibile trovare il database di origine di una vista dalla colonna **source_database_id** della vista del catalogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+1.  Individuare lo snapshot del database a cui ripristinare il database. È possibile visualizzare gli snapshot di un database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Vedere [Visualizzare uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md). È anche possibile trovare il database di origine di una vista dalla colonna **source_database_id** della vista del catalogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 2.  Eliminare eventuali altri snapshot del database.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 58
   
      dove *nome_database* è il database di origine e *nome_snapshot_database* è il nome dello snapshot con cui ripristinare il database. Si noti che in questa istruzione è necessario specificare un nome di snapshot anziché un dispositivo di backup.  
   
-     Per altre informazioni, vedere [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Per altre informazioni, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  Durante l'operazione di ripristino sia lo snapshot che il database di origine risultano indisponibili e sono contrassegnati come in fase di ripristino. In caso di errori durante il ripristino, al riavvio del database verrà eseguito un tentativo di completamento dell'operazione.  
@@ -135,13 +139,13 @@ GO
 ```  
   
 ####  <a name="Reverting_Sales"></a> B. Ripristino di uno snapshot del database Sales  
- In questo esempio si suppone che esistano attualmente due snapshot del database **Sales**: **sales_snapshot0600** e **sales_snapshot1200**. Nell'esempio viene eliminato lo snapshot meno recente e il database viene ripristinato in base allo snapshot più recente.  
+ In questo esempio si suppone che esistano attualmente due snapshot del database **Sales** : **sales_snapshot0600** e **sales_snapshot1200**. Nell'esempio viene eliminato lo snapshot meno recente e il database viene ripristinato in base allo snapshot più recente.  
   
  Per il codice di creazione del database di esempio e degli snapshot su cui si basa questo esempio, vedere:  
   
 -   Per il database **Sales** e lo snapshot **sales_snapshot0600** vedere "Creazione di un database con filegroup" e "Creazione di uno snapshot del database" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
--   Per lo snapshot **sales_snapshot1200**, vedere "Creazione di uno snapshot del database Sales" in [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   Per il database **sales_snapshot1200** , vedere "Creazione di uno snapshot del database Sales" in [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -164,9 +168,9 @@ GO
   
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Mirroring e snapshot del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

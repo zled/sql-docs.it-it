@@ -1,24 +1,28 @@
 ---
-title: "Migrazione in un database parzialmente indipendente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database indipendente, migrazione"
+title: Eseguire la migrazione in un database parzialmente indipendente | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Migrazione in un database parzialmente indipendente
+# <a name="migrate-to-a-partially-contained-database"></a>Migrazione in un database parzialmente indipendente
   In questo argomento viene descritto come prepararsi al passaggio al modello del database parzialmente indipendente, quindi viene illustrata la procedura di migrazione.  
   
  **Contenuto dell'argomento:**  
@@ -49,7 +53,7 @@ caps.handback.revision: 17
 ##  <a name="enable"></a> Abilitazione di database indipendenti  
  Prima di poter creare database indipendenti, è necessario abilitarli nell'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### Abilitazione di database indipendenti tramite Transact-SQL  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Abilitazione di database indipendenti tramite Transact-SQL  
  Nell'esempio seguente vengono abilitati database indipendenti nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ```tsql  
@@ -59,7 +63,7 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### Abilitazione di database indipendenti tramite Management Studio  
+#### <a name="enabling-contained-databases-using-management-studio"></a>Abilitazione di database indipendenti tramite Management Studio  
  Nell'esempio seguente vengono abilitati database indipendenti nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Proprietà**.  
@@ -69,9 +73,9 @@ GO
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="convert"></a> Conversione di un database a parzialmente indipendente  
- Un database viene convertito in un database indipendente modificando l'opzione **CONTAINMENT**.  
+ Un database viene convertito in un database indipendente modificando l'opzione **CONTAINMENT** .  
   
-### Conversione di un database in parzialmente indipendente tramite Transact-SQL  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Conversione di un database in parzialmente indipendente tramite Transact-SQL  
  Nell'esempio seguente un database denominato `Accounting` viene convertito in un database parzialmente indipendente.  
   
 ```tsql  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Conversione di un database in parzialmente indipendente tramite Management Studio  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Conversione di un database in parzialmente indipendente tramite Management Studio  
  Nell'esempio seguente un database viene convertito in un database parzialmente indipendente.  
   
 1.  In Esplora oggetti espandere **Database**, fare clic con il pulsante destro del mouse sul database da convertire, quindi scegliere **Proprietà**.  
@@ -116,7 +120,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

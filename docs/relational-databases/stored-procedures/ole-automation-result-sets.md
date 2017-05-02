@@ -1,29 +1,33 @@
 ---
-title: "Set di risultati di automazione OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipi di dati [SQL Server], automazione OLE"
-  - "matrici bidimensionali"
-  - "matrici unidimensionali"
-  - "set di risultati [SQL Server], automazione OLE"
-  - "automazione OLE [SQL Server], set di risultati"
-  - "matrici [SQL Server]"
+title: Set di risultati di automazione OLE | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data types [SQL Server], OLE Automation
+- two-dimensional arrays
+- one-dimensional arrays
+- result sets [SQL Server], OLE Automation
+- OLE Automation [SQL Server], result sets
+- arrays [SQL Server]
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b3cf49bb4116a3cbf8bf58c327cdb6af5c11468
+ms.lasthandoff: 04/11/2017
+
 ---
-# Set di risultati di automazione OLE
+# <a name="ole-automation-result-sets"></a>Set di risultati di automazione OLE
   Se una proprietà o un metodo di automazione OLE restituisce dati in una matrice a una o a due dimensioni, tale matrice verrà restituita al client come set di risultati:  
   
 -   Una matrice unidimensionale viene restituita al client come set di risultati a riga singola con lo stesso numero di colonne del numero di elementi nella matrice. La matrice (10), ad esempio, viene restituita come singola riga con 10 colonne.  
@@ -44,7 +48,7 @@ caps.handback.revision: 21
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Stored procedure di automazione &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
  [Opzione di configurazione del server Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  

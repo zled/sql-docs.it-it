@@ -1,39 +1,43 @@
 ---
-title: "Creare una sottoscrizione aggiornabile di una pubblicazione transazionale con Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sottoscrizioni transazionali aggiornabili, T-SQL"
+title: Creare una sottoscrizione aggiornabile di una pubblicazione transazionale | Microsoft Docs
+ms.custom: 
+ms.date: 07/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare una sottoscrizione aggiornabile di una pubblicazione transazionale con Transact-SQL
+# <a name="create-updatable-subscription-to-transactional-publication"></a>Creare una sottoscrizione aggiornabile di una pubblicazione transazionale
 
 > [!NOTE]  
 >  Questa funzionalità continuerà a essere supportata nelle versioni di [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] dalla 2012 alla 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
 La replica transazionale consente di ripropagare al server di pubblicazione le modifiche apportate a un Sottoscrittore utilizzando sottoscrizioni ad aggiornamento immediato o ad aggiornamento in coda. È possibile creare una sottoscrizione ad aggiornamento a livello di programmazione tramite le stored procedure di replica. Vedere anche [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md). 
 
-## Per creare una sottoscrizione pull ad aggiornamento immediato ##
+## <a name="to-create-an-immediate-updating-pull-subscription"></a>Per creare una sottoscrizione pull ad aggiornamento immediato ##
 
-1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento immediato. 
+1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento immediato. 
 
     * Se il valore di `allow_sync_tran` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni ad aggiornamento immediato.
 
     * Se il valore di `allow_sync_tran` nel set di risultati è `0`, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento immediato.
 
-2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni pull. 
+2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni pull. 
 
     * Se il valore di `allow_pull` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni pull.
 
@@ -61,28 +65,28 @@ La replica transazionale consente di ripropagare al server di pubblicazione le m
 
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione. 
 
-5. Nel database di sottoscrizione del Sottoscrittore eseguire [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specificare `@publisher`, `@publication`, il nome del database di pubblicazione per `@publisher_db` e uno dei valori seguenti per `@security_mode`: 
+5. Nel database di sottoscrizione del Sottoscrittore eseguire [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specificare `@publisher`, `@publication`, il nome del database di pubblicazione per `@publisher_db`e uno dei valori seguenti per `@security_mode`: 
 
     * `0` - Usare l'autenticazione di SQL Server quando si eseguono aggiornamenti nel server di pubblicazione. Questa opzione richiede di specificare un account di accesso valido nel server di pubblicazione per `@login` e `@password`.
 
-    * `1` - Usare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md).
+    * `1` - Usare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .
 
     * `2` - Usare un account di accesso esistente e definito dall'utente per il server collegato, creato con [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
-6. Nel server di pubblicazione eseguire [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) specificando `@publication`, `@subscriber`, `@destination_db`, il valore pull per `@subscription_type` e lo stesso valore specificato al passaggio 3 per `@update_mode`.
+6. Nel server di pubblicazione eseguire [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) specificando `@publication`, `@subscriber`, `@destination_db`, il valore pull per `@subscription_type`e lo stesso valore specificato al passaggio 3 per `@update_mode`.
 
 La sottoscrizione pull verrà registrata nel server di pubblicazione. 
 
 
-## Per creare una sottoscrizione push ad aggiornamento immediato ##
+## <a name="to-create-an-immediate-updating-push-subscription"></a>Per creare una sottoscrizione push ad aggiornamento immediato ##
 
-1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento immediato. 
+1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento immediato. 
 
     * Se il valore di `allow_sync_tran` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni ad aggiornamento immediato.
 
     * Se il valore di `allow_sync_tran` nel set di risultati è `0`, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento immediato.
 
-2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni push. 
+2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni push. 
 
     * Se il valore di `allow_push` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni push.
 
@@ -99,7 +103,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
  
 4. Nel server di pubblicazione eseguire [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare i parametri seguenti:
 
-    * `@subscriber`, `@subscriber_db` e `@publication`. 
+    * `@subscriber`, `@subscriber_db`e `@publication`. 
 
     * Le credenziali di Windows usate per eseguire l'agente di distribuzione nel server di distribuzione per `@job_login` e `@job_password`. 
 
@@ -110,24 +114,24 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
 
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
 
-5. Nel database di sottoscrizione del Sottoscrittore eseguire [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specificare `@publisher`, `@publication`, il nome del database di pubblicazione per `@publisher_db` e uno dei valori seguenti per `@security_mode`: 
+5. Nel database di sottoscrizione del Sottoscrittore eseguire [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specificare `@publisher`, `@publication`, il nome del database di pubblicazione per `@publisher_db`e uno dei valori seguenti per `@security_mode`: 
 
      * `0` - Usare l'autenticazione di SQL Server quando si eseguono aggiornamenti nel server di pubblicazione. Questa opzione richiede di specificare un account di accesso valido nel server di pubblicazione per `@login` e `@password`.
 
-     * `1` - Usare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md).
+     * `1` - Usare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .
 
      * `2` - Usare un account di accesso esistente e definito dall'utente per il server collegato, creato con [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 
-## Per creare una sottoscrizione pull ad aggiornamento in coda ##
+## <a name="to-create-a-queued-updating-pull-subscription"></a>Per creare una sottoscrizione pull ad aggiornamento in coda ##
 
-1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento in coda. 
+1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento in coda. 
 
     * Se il valore di `allow_queued_tran` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni ad aggiornamento immediato.
 
     * Se il valore di `allow_queued_tran` nel set di risultati è `0`, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento in coda.
 
-2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni pull. 
+2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni pull. 
 
     * Se il valore di `allow_pull` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni pull.
 
@@ -144,7 +148,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
  
 4. Nel Sottoscrittore eseguire [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare i parametri seguenti:
 
-    * @publisher, `@publisher_db` e `@publication`. 
+    * @publisher, `@publisher_db`e `@publication`. 
 
     * Le credenziali di Windows per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per `@job_login` e `@job_password`. 
 
@@ -155,20 +159,20 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
 
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
 
-5. Nel server di pubblicazione eseguire [sp_addsubscriber](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) per registrare il Sottoscrittore nel server di pubblicazione specificando `@publication`, `@subscriber`, `@destination_db`, il valore pull per `@subscription_type` e lo stesso valore specificato al passaggio 3 per `@update_mode`.
+5. Nel server di pubblicazione eseguire [sp_addsubscriber](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) per registrare il Sottoscrittore nel server di pubblicazione specificando `@publication`, `@subscriber`, `@destination_db`, il valore pull per `@subscription_type`e lo stesso valore specificato al passaggio 3 per `@update_mode`.
 
 La sottoscrizione pull verrà registrata nel server di pubblicazione. 
 
 
-## Per creare una sottoscrizione push ad aggiornamento in coda ##
+## <a name="to-create-a-queued-updating-push-subscription"></a>Per creare una sottoscrizione push ad aggiornamento in coda ##
 
-1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento in coda. 
+1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento in coda. 
 
     * Se il valore di allow_queued_tran nel set di risultati è 1, la pubblicazione supporta le sottoscrizioni ad aggiornamento immediato.
 
     * Se il valore di allow_queued_tran nel set di risultati è 0, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento in coda. Per altre informazioni, vedere Procedura: Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali (programmazione Transact-SQL della replica).
 
-2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti le sottoscrizioni push. 
+2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni push. 
 
     * Se il valore di `allow_push` nel set di risultati è `1`, la pubblicazione supporta le sottoscrizioni push.
 
@@ -185,7 +189,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
 
 4. Nel server di pubblicazione eseguire [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare i parametri seguenti:
 
-    * `@subscriber`, `@subscriber_db` e `@publication`. 
+    * `@subscriber`, `@subscriber_db`e `@publication`. 
 
     * Le credenziali di Windows usate per eseguire l'agente di distribuzione nel server di distribuzione per `@job_login` e `@job_password`. 
 
@@ -197,7 +201,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
 
 
-## Esempio ##
+## <a name="example"></a>Esempio ##
 
 In questo esempio viene creata una sottoscrizione pull ad aggiornamento immediata di una pubblicazione che supporta le sottoscrizioni ad aggiornamento immediato. I valori per l'account di accesso e la relativa password vengono specificati in fase di esecuzione tramite variabili di scripting sqlcmd.
 
@@ -268,10 +272,12 @@ EXEC sp_addsubscription
 GO
 ```
 
-## Vedere anche ##
+## <a name="see-also"></a>Vedere anche ##
 
 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 
-[Utilizzo di sqlcmd con variabili di scripting](../../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)
+[Utilizzo di sqlcmd con variabili di scripting](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
 [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+
+

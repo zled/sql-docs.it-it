@@ -1,38 +1,42 @@
 ---
-title: "Dispositivi di backup (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dispositivi di backup su nastro, informazioni sui dispositivi di backup su nastro"
-  - "dispositivi di backup [SQL Server]"
-  - "dispositivi di backup su disco [SQL Server]"
-  - "backup dei database [SQL Server], dispositivi di backup"
-  - "dispositivi logici [SQL Server]"
-  - "dispositivi di backup [SQL Server], informazioni sui dispositivi di backup"
-  - "backup [SQL Server], dispositivi di backup"
-  - "supporti rimovibili [SQL Server]"
-  - "condivisioni di rete [SQL Server]"
-  - "backup [SQL Server], dispositivi di backup"
-  - "dispositivi di backup su nastro"
-  - "dispositivi fisici [SQL Server]"
-  - "backup di database [SQL Server], dispositivi di backup"
-  - "dispositivi [SQL Server]"
+title: Dispositivi di backup (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tape backup devices, about tape backup devices
+- backup devices [SQL Server]
+- disk backup devices [SQL Server]
+- database backups [SQL Server], backup devices
+- logical devices [SQL Server]
+- backup devices [SQL Server], about backup devices
+- backing up [SQL Server], backup devices
+- removable media [SQL Server]
+- network shares [SQL Server]
+- backups [SQL Server], backup devices
+- tape backup devices
+- physical devices [SQL Server]
+- backing up databases [SQL Server], backup devices
+- devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 93
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 93
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49a10147e48ece974a5ac64bead3b626556ad29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dispositivi di backup (SQL Server)
-  Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i dati sottoposti a *backup* vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
+# <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
+  Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i dati sottoposti a *backup*vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
    
 ##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
  disco di backup  
@@ -74,7 +78,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- La sintassi di base per specificare un dispositivo disco fisico in un'istruzione [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) è la seguente:  
+ La sintassi di base per specificare un dispositivo disco fisico in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) è la seguente:  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -111,9 +115,9 @@ GO
   
 -   È possibile connettersi all'account del servizio di rete utilizzando l'account del computer anziché un utente di dominio. Per consentire i backup da computer specifici in un'unità condivisa, concedere l'accesso agli account dei computer. Purché il processo Sqlservr.exe che scrive il backup abbia accesso, è irrilevante che l'utente che invia il comando BACKUP abbia accesso.  
   
-    > **IMPORTANTE** Il backup dei dati in una rete può essere soggetto agli errori della rete stessa. Quando si utilizza un disco remoto, è pertanto consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+    > **IMPORTANTE** Il backup dei dati in una rete può essere soggetto agli errori della rete stessa. Quando si utilizza un disco remoto, è pertanto consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## Specificare un nome UNC (Universal Naming Convention)  
+## <a name="specify-a-universal-naming-convention-unc-name"></a>Specificare un nome UNC (Universal Naming Convention)  
  Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario usare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato di un nome UNC è **\\\\***NomeSistema***\\***NomeCondivisione***\\***Percorso***\\***NomeFile*.  
   
  Esempio:  
@@ -154,7 +158,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
- La sintassi di base per specificare un dispositivo nastro fisico in un'istruzione [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) è la seguente:  
+ La sintassi di base per specificare un dispositivo nastro fisico in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) è la seguente:  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -171,15 +175,15 @@ GO
   
      È possibile controllare se il nastro viene mantenuto aperto da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo l'operazione di backup o ripristino oppure viene rilasciato e riavvolto quando è pieno. Il comportamento predefinito prevede il riavvolgimento del nastro (REWIND).  
   
-> **NOTA:** per altre informazioni sulla sintassi e sugli argomenti di BACKUP, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Per altre informazioni sulla sintassi e gli argomenti di RESTORE, vedere [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) e [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+> **NOTA:** per altre informazioni sulla sintassi e sugli argomenti di BACKUP, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Per altre informazioni sulla sintassi e gli argomenti di RESTORE, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ###  <a name="OpenTapes"></a> Gestione dei nastri aperti  
- Per visualizzare un elenco dei dispositivi nastro aperti e lo stato delle richieste di montaggio, eseguire una query nella DMV [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Questa vista contiene tutti i nastri aperti, inclusi i nastri in uso che risultano temporaneamente inattivi in quanto in attesa dell'operazione BACKUP o RESTORE successiva.  
+ Per visualizzare un elenco dei dispositivi nastro aperti e lo stato delle richieste di montaggio, eseguire una query nella DMV [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Questa vista contiene tutti i nastri aperti, inclusi i nastri in uso che risultano temporaneamente inattivi in quanto in attesa dell'operazione BACKUP o RESTORE successiva.  
   
- Se un nastro viene inavvertitamente lasciato aperto, il modo più rapido per rilasciarlo consiste nell'utilizzo del comando RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md).  
+ Se un nastro viene inavvertitamente lasciato aperto, il modo più rapido per rilasciarlo consiste nell'utilizzo del comando RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
-## Uso del servizio di archiviazione BLOB di Microsoft Azure  
+## <a name="using-the-windows-azure-blob-storage-service"></a>Uso del servizio di archiviazione BLOB di Microsoft Azure  
  I backup di SQL Server possono essere scritti nel servizio di archiviazione BLOB di Windows Azure.  Per altre informazioni su come usare il servizio di archiviazione BLOB di Microsoft Azure per i backup, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Usare un dispositivo di backup logico  
@@ -187,9 +191,9 @@ GO
   
  La definizione di un dispositivo di backup logico implica l'assegnazione di un nome logico a un dispositivo fisico. Ad esempio, un dispositivo logico, AdventureWorksBackups, può essere definito in modo da puntare al file Z:\SQLServerBackups\AdventureWorks2012.bak o all'unità nastro \\\\.\tape0. Nei comandi di backup e di ripristino è quindi possibile specificare come dispositivo di backup AdventureWorksBackups anziché DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' o TAPE = '\\\\.\tape0'.  
   
- Il nome del dispositivo logico deve essere univoco tra tutti i dispositivi di backup logici nell'istanza del server. Per visualizzare i nomi dei dispositivi logici esistenti, eseguire una query nella vista del catalogo [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md). Questa vista contiene il nome di ogni dispositivo di backup logico, nonché una descrizione del tipo e del nome di file o del percorso fisico del dispositivo di backup fisico corrispondente.  
+ Il nome del dispositivo logico deve essere univoco tra tutti i dispositivi di backup logici nell'istanza del server. Per visualizzare i nomi dei dispositivi logici esistenti, eseguire una query nella vista del catalogo [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) . Questa vista contiene il nome di ogni dispositivo di backup logico, nonché una descrizione del tipo e del nome di file o del percorso fisico del dispositivo di backup fisico corrispondente.  
   
- Dopo aver definito un dispositivo di backup logico, in un comando BACKUP o RESTORE è possibile specificare il dispositivo di backup logico anziché il nome fisico del dispositivo. Ad esempio, l'istruzione seguente esegue il backup del database `AdventureWorks2012` nel dispositivo di backup logico `AdventureWorksBackups`.  
+ Dopo aver definito un dispositivo di backup logico, in un comando BACKUP o RESTORE è possibile specificare il dispositivo di backup logico anziché il nome fisico del dispositivo. Ad esempio, l'istruzione seguente esegue il backup del database `AdventureWorks2012` nel dispositivo di backup logico `AdventureWorksBackups` .  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -235,7 +239,7 @@ GO
   
 -   [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.BackupDevice> (SMO)  
   
@@ -247,7 +251,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **Per visualizzare informazioni sui dispositivi di backup**  
   
@@ -263,15 +267,16 @@ GO
   
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Backup Device di SQL Server](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   
  [Set di supporti di backup con mirroring &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)  
   
   
+

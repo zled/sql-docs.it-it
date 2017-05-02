@@ -1,27 +1,31 @@
 ---
-title: "Aprire Monitoraggio attivit&#224; (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Monitoraggio attività [SQL Server], impostazione intervallo di aggiornamento"
-  - "intervallo di aggiornamento di Monitoraggio attività"
-  - "Monitoraggio attività [SQL Server], apertura"
-  - "opening Activity Monitor"
+title: "Aprire Monitoraggio attività (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Activity Monitor [SQL Server], setting the refresh interval
+- refresh interval for Activity Monitor
+- Activity Monitor [SQL Server], opening
+- opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45e63d53b65730136bbc0a4f20ad5d4215020c58
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aprire Monitoraggio attivit&#224; (SQL Server Management Studio)
+# <a name="open-activity-monitor-sql-server-management-studio"></a>Aprire Monitoraggio attività (SQL Server Management Studio)
 
    
  Monitoraggio attività esegue query sull'istanza monitorata per ottenere informazioni per i riquadri di visualizzazione di Monitoraggio attività. Quando l'intervallo di aggiornamento viene impostato su un valore inferiore a 10 secondi, il tempo utilizzato per eseguire queste query può ridurre le prestazioni del server  
@@ -33,21 +37,21 @@ caps.handback.revision: 38
  Per eseguire il comando KILL in un processo, è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin o processadmin.  
   
   
-## Aprire Monitoraggio attività  
+## <a name="open-activity-monitor"></a>Aprire Monitoraggio attività  
 
-### Scelta rapida da tastiera  
+### <a name="keyboard-shortcut"></a>Scelta rapida da tastiera  
  - Digitare **CTRL+ALT+A** per aprire Monitoraggio attività in qualsiasi momento.
 
  >**Hint.** Passare il mouse su un'icona di SQL Server Management Studio per ottenere informazioni su che cos'è e sulla scelta rapida da tastiera che la attiva.
 
-### Barra degli strumenti
+### <a name="toolbar"></a>Barra degli strumenti
 
-Nella barra degli strumenti Standard fare clic sull'icona **Monitoraggio attività**. L'icona di trova al centro, subito a destra dei pulsanti di annullamento/ripristino.
+Nella barra degli strumenti Standard fare clic sull'icona **Monitoraggio attività** . L'icona di trova al centro, subito a destra dei pulsanti di annullamento/ripristino.
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
 Completare la finestra di dialogo **Connetti al server** se non si è già connessi a un'istanza di SQL Server da monitorare.
   
-## Aprire Esplora oggetti e Monitoraggio attività all'avvio
+## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>Aprire Esplora oggetti e Monitoraggio attività all'avvio
   
 1.  Dal menu **Strumenti** scegliere **Opzioni**.  
   
@@ -60,10 +64,11 @@ Completare la finestra di dialogo **Connetti al server** se non si è già conne
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   
-## Impostare l'intervallo di aggiornamento di Monitoraggio attività  
+## <a name="set-the-activity-monitor-refresh-interval"></a>Impostare l'intervallo di aggiornamento di Monitoraggio attività  
   
 1.   Aprire il Monitoraggio attività.  
   
 2.   Fare clic con il pulsante destro del mouse su **Panoramica**, selezionare **Intervallo di aggiornamento**, quindi selezionare l'intervallo con cui Monitoraggio attività deve ottenere nuove informazioni sull'istanza.  
   
   
+

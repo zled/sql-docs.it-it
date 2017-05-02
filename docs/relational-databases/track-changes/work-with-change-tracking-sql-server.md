@@ -1,33 +1,37 @@
 ---
-title: "Utilizzare il rilevamento delle modifiche (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rilevamento delle modifiche [SQL Server], apportare modifiche"
-  - "rilevamento delle modifiche [SQL Server], risoluzione dei problemi"
-  - "aggiornamento di dati [SQL Server]"
-  - "risoluzione dei problemi [SQL Server], rilevamento delle modifiche"
-  - "modifiche ai dati [SQL Server]"
-  - "rilevamento delle modifiche ai dati [SQL Server]"
-  - "dati [SQL Server], modifica"
-  - "rilevamento delle modifiche [SQL Server], ripristino dei dati"
-  - "rilevamento delle modifiche [SQL Server], verifica della coerenza dei risultati"
-  - "rilevamento delle modifiche [SQL Server], gestione delle modifiche"
+title: Usare il rilevamento delle modifiche (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzare il rilevamento delle modifiche (SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Le applicazioni che utilizzano il rilevamento delle modifiche devono essere in grado di ottenere le modifiche registrate, di applicare tali modifiche a un altro archivio dati e di aggiornare il database di origine. In questo argomento viene descritto come eseguire queste attività e viene illustrato il ruolo svolto dal rilevamento delle modifiche quando si verifica un failover ed è necessario ripristinare un database da un backup.  
@@ -35,13 +39,13 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
  Viene descritto come utilizzare le funzioni di rilevamento delle modifiche per ottenere le modifiche apportate al database e le informazioni relative.  
   
-### Informazioni sulle funzioni di rilevamento delle modifiche  
+### <a name="about-the-change-tracking-functions"></a>Informazioni sulle funzioni di rilevamento delle modifiche  
  Per ottenere le modifiche apportate a un database e le relative informazioni, nelle applicazioni è possibile utilizzare le funzioni seguenti:  
   
  CHANGETABLE(CHANGES …)  
  Questa funzione per i set di righe viene utilizzata per eseguire query relative alle informazioni sulle modifiche. La funzione esegue una query sui dati archiviati nelle tabelle per il rilevamento delle modifiche interne e restituisce un set di risultati contenente le chiavi primarie delle righe modificate, insieme ad altre informazioni sulle modifiche, ad esempio l'operazione, le colonne aggiornate e la versione della riga.  
   
- CHANGETABLE(CHANGES ...) accetta l'ultima versione sincronizzata come argomento. L'ultima versione sincronizzata si ottiene utilizzando la variabile `@last_synchronization_version`. La semantica dell'ultima versione sincronizzata è la seguente:  
+ CHANGETABLE(CHANGES ...) accetta l'ultima versione sincronizzata come argomento. L'ultima versione sincronizzata si ottiene utilizzando la variabile `@last_synchronization_version` . La semantica dell'ultima versione sincronizzata è la seguente:  
   
 -   Il client chiamante ha ottenuto le modifiche e conosce tutte le modifiche fino all'ultima versione sincronizzata compresa.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  Funzione CHANGE_TRACKING_MIN_VALID_VERSION()  
  Questa funzione viene utilizzata per ottenere la versione minima valida che un client può avere per ottenere risultati validi da CHANGETABLE (). Il client deve controllare l'ultima versione sincronizzata rispetto al valore restituito dalla funzione. Se l'ultima versione sincronizzata è inferiore rispetto a quella restituita dalla funzione, il client non sarà in grado di ottenere risultati validi da CHANGETABLE() e sarà necessario reinizializzare i dati.  
   
-### Acquisizione dei dati iniziali  
+### <a name="obtaining-initial-data"></a>Acquisizione dei dati iniziali  
  Prima che un'applicazione sia in grado di ottenere modifiche per la prima volta, è necessario che invii una query per ottenere i dati iniziali e la versione sincronizzata. È necessario che nell'applicazione vengano ottenuti i dati appropriati direttamente dalla tabella, quindi venga utilizzata CHANGE_TRACKING_CURRENT_VERSION() per ottenere la versione iniziale. Tale versione verrà passata a CHANGETABLE(CHANGES ...) la prima volta che le modifiche vengono ottenute.  
   
  Nell'esempio seguente viene illustrato come ottenere la versione di sincronizzazione e il set di dati iniziali.  
@@ -73,8 +77,8 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
- Per ottenere le righe modificate in una tabella e le relative informazioni, utilizzare CHANGETABLE(CHANGES ...). La query seguente, ad esempio, consente di ottenere le modifiche per la tabella `SalesLT.Product`.  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Utilizzo delle funzioni di rilevamento delle modifiche per ottenere le modifiche  
+ Per ottenere le righe modificate in una tabella e le relative informazioni, utilizzare CHANGETABLE(CHANGES ...). La query seguente, ad esempio, consente di ottenere le modifiche per la tabella `SalesLT.Product` .  
   
 ```tsql  
 SELECT  
@@ -85,7 +89,7 @@ FROM
   
 ```  
   
- Poiché in un client viene in genere richiesto di ottenere i dati più recenti relativi a una riga anziché le sole chiavi primarie per la riga stessa, verrà creato un join tra i risultati di CHANGETABLE(CHANGES ...) e i dati presenti nella tabella utente. Nella query seguente, ad esempio, viene creato un join con la tabella `SalesLT.Product` per ottenere i valori per le colonne `Name` e `ListPrice`. Si noti l'utilizzo di `OUTER JOIN`, necessario per garantire che le informazioni sulle modifiche vengano restituite per le righe eliminate dalla tabella utente.  
+ Poiché in un client viene in genere richiesto di ottenere i dati più recenti relativi a una riga anziché le sole chiavi primarie per la riga stessa, verrà creato un join tra i risultati di CHANGETABLE(CHANGES ...) e i dati presenti nella tabella utente. Nella query seguente, ad esempio, viene creato un join con la tabella `SalesLT.Product` per ottenere i valori per le colonne `Name` e `ListPrice` . Si noti l'utilizzo di `OUTER JOIN`, necessario per garantire che le informazioni sulle modifiche vengano restituite per le righe eliminate dalla tabella utente.  
   
 ```tsql  
 SELECT  
@@ -125,10 +129,10 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### Numeri di versione  
+### <a name="version-numbers"></a>Numeri di versione  
  Un database in cui è abilitato il rilevamento delle modifiche dispone di un contatore di versione che aumenta in base alle modifiche apportate alle tabelle in cui il rilevamento è attivato. A ciascuna riga modificata è associato un numero di versione. Quando a un'applicazione viene inviata una richiesta per eseguire una query relativa alle modifiche, viene chiamata una funzione che specifica un numero di versione. Tale funzione restituisce informazioni su tutte le modifiche apportate a partire da tale versione. Per alcuni aspetti, la versione del rilevamento delle modifiche è concettualmente analoga al tipo di dati **rowversion** .  
   
-### Convalida dell'ultima versione sincronizzata  
+### <a name="validating-the-last-synchronized-version"></a>Convalida dell'ultima versione sincronizzata  
  Le informazioni sulle modifiche vengono mantenute per un periodo di tempo limitato, la cui lunghezza viene controllata dal parametro CHANGE_RETENTION che può essere specificato nell'istruzione ALTER DATABASE.  
   
  È necessario tenere presente che il periodo di tempo specificato per CHANGE_RETENTION determina la frequenza con cui per tutte le applicazioni è necessario richiedere le modifiche apportate al database. Se a un'applicazione è associato un valore relativo a *last_synchronization_version* meno recente rispetto a quello della versione sincronizzata valida minima per una tabella, tale applicazione non può eseguire un'enumerazione delle modifiche valida. poiché alcune informazioni sulle modifiche potrebbero essere state eliminate. Affinché in un'applicazione possano essere ottenute le modifiche tramite CHANGETABLE(CHANGES …), è necessario che venga convalidato il valore relativo a *last_synchronization_version* di cui è previsto il passaggio a CHANGETABLE(CHANGES …). Se il valore di *last_synchronization_version* non è valido, è necessario che nell'applicazione vengano reinizializzati tutti i dati.  
@@ -158,14 +162,14 @@ BEGIN
 END  
 ```  
   
-### Utilizzo del rilevamento a livello di colonna  
+### <a name="using-column-tracking"></a>Utilizzo del rilevamento a livello di colonna  
  Il rilevamento a livello di colonna consente di ottenere i dati relativi alle sole colonne modificate anziché all'intera riga. Si consideri ad esempio uno scenario in cui in una tabella sono presenti una o più colonne di notevoli dimensioni, ma modificate raramente, e altre colonne che subiscono modifiche frequenti. Senza il rilevamento a livello di colonna, un'applicazione è in grado di rilevare solo che una riga è stata modificata e che è necessario sincronizzare tutti i dati, inclusi quelli presenti nelle colonne di grandi dimensioni. Il rilevamento a livello di colonna consente tuttavia di stabilire se i dati presenti nelle colonne di grandi dimensioni sono stati modificati e di eseguire la sincronizzazione solo in quest'ultimo caso.  
   
  Le informazioni sul rilevamento a livello di colonna vengono visualizzate nella colonna SYS_CHANGE_COLUMNS restituita dalla funzione CHANGETABLE(CHANGES …).  
   
  Il rilevamento a livello di colonna può essere utilizzato in modo che per una colonna cui non sono state apportate modifiche venga restituito il valore NULL. Se la colonna può essere impostata su NULL, è necessario che venga restituita una colonna separata per indicare se la colonna è stata modificata.  
   
- Nell'esempio seguente se la colonna `CT_ThumbnailPhoto` non ha subito modifiche, verrà restituito il valore `NULL`. A tale colonna potrebbe inoltre essere associato il valore `NULL` poiché è stata impostata su `NULL`. È possibile utilizzare la colonna `CT_ThumbNailPhoto_Changed` per determinare se la colonna ha subito modifiche.  
+ Nell'esempio seguente se la colonna `CT_ThumbnailPhoto` non ha subito modifiche, verrà restituito il valore `NULL` . A tale colonna potrebbe inoltre essere associato il valore `NULL` poiché è stata impostata su `NULL` . È possibile utilizzare la colonna `CT_ThumbNailPhoto_Changed` per determinare se la colonna ha subito modifiche.  
   
 ```tsql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### Acquisizione di risultati coerenti e corretti  
+### <a name="obtaining-consistent-and-correct-results"></a>Acquisizione di risultati coerenti e corretti  
  Per ottenere i dati modificati relativi a una tabella, è necessario effettuare più operazioni. È necessario inoltre tenere presente che potrebbero venire restituiti risultati incoerenti o non corretti se non vengono considerati e gestiti problemi specifici.  
   
  Per ottenere le modifiche apportate a una tabella Sales e a una tabella SalesOrders, in un'applicazione è necessario ad esempio effettuare le operazioni seguenti:  
@@ -220,7 +224,7 @@ ON
   
  Per risolvere i problemi elencati in precedenza, è consigliabile utilizzare l'isolamento dello snapshot che consente di garantire la coerenza delle informazioni sulle modifiche e di evitare situazioni di race condition correlate all'attività di pulizia eseguita in background. Se non si utilizzano transazioni snapshot, lo sviluppo di un'applicazione che utilizza il rilevamento delle modifiche potrebbe risultare notevolmente più impegnativo.  
   
-#### Utilizzo dell'isolamento dello snapshot  
+#### <a name="using-snapshot-isolation"></a>Utilizzo dell'isolamento dello snapshot  
  Il rilevamento delle modifiche è stato progettato per funzionare in modo ottimale con l'isolamento dello snapshot. È necessario che l'isolamento dello snapshot sia abilitato nel database. Tutti i passaggi necessari per ottenere le modifiche devono essere contenuti in una transazione snapshot in modo che tutte le modifiche apportate ai dati durante l'acquisizione delle modifiche stesse non siano visibili alle query eseguite nella transazione snapshot.  
   
  Per ottenere dati all'interno di una transazione snapshot, effettuare le operazioni seguenti:  
@@ -264,7 +268,7 @@ COMMIT TRAN
   
  Per altre informazioni sulle transazioni snapshot, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
-#### Alternative all'utilizzo dell'isolamento dello snapshot  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>Alternative all'utilizzo dell'isolamento dello snapshot  
  Oltre all'isolamento dello snapshot, è possibile utilizzare metodi alternativi che tuttavia richiedono l'esecuzione di un numero maggiore di operazioni per garantire che tutti i requisiti relativi all'applicazione siano soddisfatti. Per garantire che il valore di *last_synchronization_version* sia valido e che i dati non vengano rimossi dal processo di pulizia prima dell'acquisizione delle modifiche, eseguire le operazioni seguenti:  
   
 1.  Verificare il valore di *last_synchronization_version* dopo le chiamate a CHANGETABLE ().  
@@ -287,7 +291,7 @@ COMMIT TRAN
 >  Poiché la scelta dell'approccio più efficiente per l'applicazione quando si utilizza il rilevamento delle modifiche o qualsiasi meccanismo di rilevamento personalizzato richiede l'esecuzione di un'analisi approfondita, l'utilizzo dell'isolamento dello snapshot è notevolmente più semplice.  
   
 ##  <a name="Handles"></a> Gestione delle modifiche in un database da parte del rilevamento delle modifiche  
- Alcune applicazioni che utilizzano il rilevamento delle modifiche eseguono la sincronizzazione bidirezionale con un altro archivio dati. Questo significa che le modifiche apportate al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornate nell'altro archivio dati, mentre le modifiche apportate all'archivio vengono aggiornate nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Alcune applicazioni che utilizzano il rilevamento delle modifiche eseguono la sincronizzazione bidirezionale con un altro archivio dati. Questo significa che le modifiche apportate al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornate nell'altro archivio dati, mentre le modifiche apportate all'archivio vengono aggiornate nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando aggiorna il database locale in base alle modifiche di un altro archivio dati, un'applicazione deve effettuare le operazioni seguenti:  
   
@@ -309,7 +313,7 @@ COMMIT TRAN
   
      Un'applicazione può utilizzare questa clausola per archiviare dati relativi al contesto.  
   
-### Verifica della presenza di conflitti  
+### <a name="checking-for-conflicts"></a>Verifica della presenza di conflitti  
  In uno scenario di sincronizzazione bidirezionale l'applicazione client deve determinare se una riga non è stata aggiornata dall'ultima volta in cui l'applicazione ha ottenuto le modifiche.  
   
  Nell'esempio seguente viene illustrato come utilizzare la funzione CHANGETABLE(VERSION ...) per verificare la presenza di conflitti nel modo più efficiente, senza eseguire una query separata. Nell'esempio, `CHANGETABLE(VERSION …)` determina `SYS_CHANGE_VERSION` per la riga specificata da `@product id`. `CHANGETABLE(CHANGES …)` può ottenere le stesse informazioni, ma sarebbe meno efficiente. Se il valore di `SYS_CHANGE_VERSION` per la riga è maggiore del valore di `@last_sync_version`, si verifica un conflitto. In questo caso la riga non verrà aggiornata. Il controllo `ISNULL()` è necessario perché per la riga potrebbero non essere disponibili informazioni sulle modifiche. Nel caso in cui la riga non sia stata aggiornata dal momento in cui è stato abilitato il rilevamento delle modifiche o dal momento in cui le informazioni sulle modifiche sono state eliminate, non sarebbe infatti disponibile alcuna informazione sulle modifiche.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### Impostazione delle informazioni sul contesto  
+### <a name="setting-context-information"></a>Impostazione delle informazioni sul contesto  
  Utilizzando la clausola WITH CHANGE_TRACKING_CONTEXT un'applicazione può archiviare le informazioni sul contesto con le informazioni sulle modifiche. Tali informazioni possono quindi essere ottenute dalla colonna SYS_CHANGE_CONTEXT restituita da CHANGETABLE(CHANGES ...).  
   
  Le informazioni sul contesto vengono utilizzate in genere per identificare l'origine delle modifiche. Se è possibile identificare l'origine della modifica, tali informazioni possono essere utilizzate da un archivio dati per evitare di ottenere modifiche alla successiva sincronizzazione.  
@@ -377,7 +381,7 @@ END
          0)  
 ```  
   
-### Come garantire risultati coerenti e corretti  
+### <a name="ensuring-consistent-and-correct-results"></a>Come garantire risultati coerenti e corretti  
  Al momento della convalida del valore di @last_sync_version, è necessario che in un'applicazione venga considerato il processo di pulizia poiché i dati potrebbero essere stati rimossi i dati dopo la chiamata a CHANGE_TRACKING_MIN_VALID_VERSION (), ma prima che sia stato eseguito l'aggiornamento.  
   
 > [!IMPORTANT]  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   Quando un client esegue una query per le modifiche, registrare il numero dell'ultima versione sincronizzata per ciascun client nel server. Se si verifica un problema con i dati, i numeri delle ultime versioni sincronizzate non corrispondono. Ciò indica che è necessario eseguire la reinizializzazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

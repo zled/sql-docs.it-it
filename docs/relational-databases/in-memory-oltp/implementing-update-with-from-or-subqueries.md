@@ -1,23 +1,27 @@
 ---
-title: "Implementazione di UPDATE con FROM o sottoquery | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Implementazione di UPDATE con FROM o sottoquery | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementazione di UPDATE con FROM o sottoquery
+# <a name="implementing-update-with-from-or-subqueries"></a>Implementazione di UPDATE con FROM o sottoquery
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 I moduli T-SQL compilati in modo nativo non supportano la clausola FROM e le sottoquery nelle istruzioni UPDATE (supportate in SELECT). Le istruzioni UPDATE con la clausola FROM vengono in genere usate per aggiornare le informazioni di una tabella in base a un parametro con valori di tabella (TVP) o per aggiornare le colonne di una tabella in un trigger AFTER. 
@@ -157,3 +161,4 @@ Il codice T-SQL di esempio di questa sezione illustra una soluzione in grado di 
   
   
   
+

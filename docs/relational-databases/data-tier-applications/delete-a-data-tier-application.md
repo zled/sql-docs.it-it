@@ -1,39 +1,43 @@
 ---
-title: "Eliminazione di un&#39;applicazione livello dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deletedacwizard.deletedac.f1"
-  - "sql13.swb.deletedacwizard.summary.f1"
-  - "sql13.swb.deletedacwizard.introduction.f1"
-  - "sql13.swb.deletedacwizard.choosemethod.f1"
-helpviewer_keywords: 
-  - "procedura [applicazione livello dati], eliminazione"
-  - "applicazione livello dati [SQL Server], eliminazione"
-  - "procedura guidata [applicazione livello dati], eliminazione"
-  - "eliminazione di un'applicazione livello dati"
+title: Eliminare un&quot;applicazione livello dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deletedacwizard.deletedac.f1
+- sql13.swb.deletedacwizard.summary.f1
+- sql13.swb.deletedacwizard.introduction.f1
+- sql13.swb.deletedacwizard.choosemethod.f1
+helpviewer_keywords:
+- How to [DAC], delete
+- data-tier application [SQL Server], delete
+- wizard [DAC], delete
+- delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a6c69a8bbd4fa63a427658ddc7b8fdbd79b0af3b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminazione di un&#39;applicazione livello dati
+# <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
   È possibile eliminare un'applicazione livello dati utilizzando la procedura guidata Elimina applicazione livello dati o uno script Windows PowerShell. È possibile specificare se il database associato viene mantenuto, scollegato o eliminato.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati (DAC) tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
-## Prima di iniziare  
+## <a name="before-you-begin"></a>Prima di iniziare  
  Quando si elimina un'istanza di applicazione livello dati (DAC), è necessario selezionare una tra tre opzioni in cui viene specificata l'azione che verrà eseguita con il database associato all'applicazione livello dati. Tutte e tre le opzioni consentono di eliminare i metadati che definiscono l'applicazione livello dati. Le opzioni differiscono tra loro per le azioni relative al database associato all'applicazione livello dati. Con la procedura guidata non viene eliminato alcun oggetto a livello di istanza associato all'applicazione livello dati o al database, come ad esempio gli account di accesso.  
   
 |Opzione|Azioni di database|  
@@ -55,7 +59,7 @@ caps.handback.revision: 16
 >  La ricompilazione di un'istanza di applicazione livello dati mediante la registrazione di un'applicazione livello dati da un database ripristinato o ricollegato non implica la ricreazione di alcune parti dell'applicazione originale, quali i criteri di selezione dei server.  
   
 ###  <a name="Permissions"></a> Autorizzazioni  
- Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa**.  
+ Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  
  **Per eliminare un'applicazione livello dati tramite una procedura guidata**  
@@ -64,7 +68,7 @@ caps.handback.revision: 16
   
 2.  Espandere il nodo **Gestione** .  
   
-3.  Espandere il nodo **Applicazioni livello dati**.  
+3.  Espandere il nodo **Applicazioni livello dati** .  
   
 4.  Fare clic con il pulsante destro del mouse sull'applicazione livello dati (DAC) da eliminare, quindi selezionare **Elimina applicazione livello dati**.  
   
@@ -85,52 +89,52 @@ caps.handback.revision: 16
   
  **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
   
- **Annulla**: consente di terminare la procedura guidata senza eliminare un'applicazione livello dati o un database.  
+ **Annulla** : consente di terminare la procedura guidata senza eliminare un'applicazione livello dati o un database.  
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
 ##  <a name="Choose_method"></a> Pagina Seleziona metodo  
  Utilizzare questa pagina per specificare l'opzione per la gestione del database associato all'applicazione livello dati da eliminare.  
   
- **Elimina registrazione**: consente di rimuovere i metadati che definiscono l'applicazione livello dati lasciando intatto il database associato.  
+ **Elimina registrazione** : consente di rimuovere i metadati che definiscono l'applicazione livello dati lasciando intatto il database associato.  
   
- **Scollega database**: consente di rimuovere i metadati che definiscono l'applicazione livello dati e scollegare il database associato.  
+ **Scollega database** : consente di rimuovere i metadati che definiscono l'applicazione livello dati e scollegare il database associato.  
   
- L'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] non può più fare riferimento al database, ma i dati e il file di log rimangono intatti.  
+ L'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]non può più fare riferimento al database, ma i dati e il file di log rimangono intatti.  
   
- **Elimina database**: consente di rimuovere i metadati che definiscono l'applicazione livello dati ed eliminare il database associato.  
+ **Elimina database** : consente di rimuovere i metadati che definiscono l'applicazione livello dati ed eliminare il database associato.  
   
  I dati e i file di log per il database vengono definitivamente eliminati.  
   
- **\< Indietro**: consente di tornare alla pagina **Introduzione**.  
+ **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
  **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
- **Annulla**: consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
+ **Annulla** : consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
 ##  <a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per verificare le azioni eseguite dalla procedura guidata in caso di eliminazione dell'istanza di applicazione livello dati.  
   
- **Controlla selezioni**: consente di verificare l'applicazione livello dati, il database e il metodo di eliminazione visualizzato nella casella. Se le informazioni sono corrette, selezionare **Avanti** o **Fine** per eliminare l'applicazione livello dati. Se l'applicazione livello dati e le informazioni del database non sono corrette, selezionare **Annulla** , quindi l'applicazione livello dati corretta. Se il metodo di eliminazione non è corretto, scegliere **Indietro** per tornare alla pagina **Seleziona metodo** e selezionare un altro metodo.  
+ **Controlla selezioni** : consente di verificare l'applicazione livello dati, il database e il metodo di eliminazione visualizzato nella casella. Se le informazioni sono corrette, selezionare **Avanti** o **Fine** per eliminare l'applicazione livello dati. Se l'applicazione livello dati e le informazioni del database non sono corrette, selezionare **Annulla** , quindi l'applicazione livello dati corretta. Se il metodo di eliminazione non è corretto, scegliere **Indietro** per tornare alla pagina **Seleziona metodo** e selezionare un altro metodo.  
   
- **\< Indietro**: consente di tornare alla pagina **Seleziona metodo** per selezionare un altro metodo di eliminazione.  
+ **< Indietro**: consente di tornare alla pagina **Seleziona metodo** per selezionare un altro metodo di eliminazione.  
   
  **Avanti >**: consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
   
- **Annulla**: consente di terminare la procedura guidata senza eliminare l'istanza di applicazione livello dati.  
+ **Annulla** : consente di terminare la procedura guidata senza eliminare l'istanza di applicazione livello dati.  
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
 ##  <a name="Delete_datatier_application"></a> Pagina Elimina applicazione livello dati  
  In questa pagina viene indicato l'esito positivo o negativo dell'operazione di eliminazione.  
   
- **Eliminazione dell'applicazione livello dati**: consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per l'eliminazione dell'istanza di applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
+ **Eliminazione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per l'eliminazione dell'istanza di applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
   
- **Salva report**: consente di salvare il report dell'eliminazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita è una cartella SQL Server Management Studio\DAC Packages contenuta all'interno della cartella Documenti dell'account di Windows.  
+ **Salva report** : consente di salvare il report dell'eliminazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita è una cartella SQL Server Management Studio\DAC Packages contenuta all'interno della cartella Documenti dell'account di Windows.  
   
- **Fine**: consente di terminare la procedura guidata.  
+ **Fine** : consente di terminare la procedura guidata.  
   
  [Utilizzo della procedura guidata Elimina applicazione livello dati](#UsingDeleteDACWizard)  
   
@@ -147,13 +151,13 @@ caps.handback.revision: 16
   
 5.  Utilizzare uno dei tre set di codice, in base all'opzione di eliminazione appropriata:  
   
-    -   Per eliminare la registrazione dell'applicazione livello dati e lasciare intatto il database, usare il metodo **Unmanage()**.  
+    -   Per eliminare la registrazione dell'applicazione livello dati e lasciare intatto il database, usare il metodo **Unmanage()** .  
   
     -   Per eliminare la registrazione dell'applicazione livello dati e scollegare il database, usare il metodo **Uninstall()** e specificare **DetachDatabase**.  
   
     -   Per eliminare la registrazione dell'applicazione livello dati ed eliminare il database, usare il metodo **Uninstall()** e specificare **DropDatabase**.  
   
-### Esempio di eliminazione dell'applicazione livello dati conservando il database (PowerShell)  
+### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati conservando il database (PowerShell)  
  L'esempio seguente mostra come eliminare un'applicazione livello dati denominata MyApplication usando il metodo **Unmanage()** per eliminare l'applicazione livello dati ma lasciare il database intatto.  
   
 ```  
@@ -179,7 +183,7 @@ $dacstore.Unmanage($dacName)
   
  [Eliminazione di un'applicazione livello dati con PowerShell](#DeleteDACPowerShell)  
   
-### Esempio di eliminazione dell'applicazione livello dati con scollegamento del database (PowerShell)  
+### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati con scollegamento del database (PowerShell)  
  L'esempio seguente mostra come eliminare un'applicazione livello dati denominata MyApplication usando il metodo **Uninstall()** per eliminare l'applicazione livello dati e scollegare il database.  
   
 ```  
@@ -205,7 +209,7 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
   
  [Eliminazione di un'applicazione livello dati con PowerShell](#DeleteDACPowerShell)  
   
-### Esempio di eliminazione dell'applicazione livello dati con eliminazione del database (PowerShell)  
+### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Esempio di eliminazione dell'applicazione livello dati con eliminazione del database (PowerShell)  
  L'esempio seguente mostra come eliminare un'applicazione livello dati denominata MyApplication usando il metodo **Uninstall()** per eliminare l'applicazione livello dati ed eliminare il database.  
   
 ```  
@@ -231,7 +235,7 @@ $dacName  = "MyApplication"
   
  [Eliminazione di un'applicazione livello dati con PowerShell](#DeleteDACPowerShell)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Distribuire un'applicazione livello dati](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
@@ -240,3 +244,4 @@ $dacName  = "MyApplication"
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Supporto del tipo di dati timestamp in FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "timestamp - tipo di dati"
+title: Supporto del tipo di dati timestamp in FOR XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 906c841b4c199aa226ad8d36c2b1c0c949c76c30
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supporto del tipo di dati timestamp in FOR XML
+# <a name="for-xml-support-for-the-timestamp-data-type"></a>Supporto del tipo di dati timestamp in FOR XML
   Nella trasformazione FOR XML, i valori di tipo **timestamp** vengono considerati come dati **varbinary(8)** e sono sempre codificati con Base64. Lo schema XSD o XDR, se necessario, rappresenta questo tipo di dati.  
   
 ```  
@@ -52,7 +56,7 @@ go
 <t xmlns="x-schema:#Schema1" c1="1" c2="AAAAAAAAH04=" />  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di FOR XML per vari tipi di dati di SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

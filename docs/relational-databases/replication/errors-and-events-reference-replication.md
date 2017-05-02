@@ -1,38 +1,42 @@
 ---
-title: "Guida di riferimento a errori ed eventi (replica) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "errori [replica di SQL Server], risoluzione dei problemi"
-  - "risoluzione dei problemi [replica di SQL Server], errori"
-  - "replica [SQL Server], risoluzione dei problemi"
-  - "errori [replica di SQL Server]"
-  - "riferimento per errori ed eventi [replica di SQL Server]"
+title: Guida di riferimento a errori ed eventi (replica) | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server replication], troubleshooting
+- troubleshooting [SQL Server replication], errors
+- replication [SQL Server], troubleshooting
+- errors [SQL Server replication]
+- errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guida di riferimento a errori ed eventi (replica)
+# <a name="errors-and-events-reference-replication"></a>Guida di riferimento a errori ed eventi (replica)
   In questa sezione della documentazione vengono fornite informazioni sulla causa e sulla risoluzione di diversi errori correlati alla replica.  
   
 |Errore|Message|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Impossibile inserire la riga di chiave duplicata nell'oggetto ' %. * ls' con indice univoco ' %.\*ls'.|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Violazione del vincolo %ls '%.*ls'. Impossibile inserire la chiave duplicata nell'oggetto ' %.\*ls'.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Non è possibile inserire la riga di chiave duplicata nell'oggetto '%.*ls!' con indice univoco '%.\*ls'.|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Violazione del vincolo %ls '%.*ls'. Non è possibile inserire la chiave duplicata nell'oggetto '%.\*ls'.|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|Il database '%ls' è stato ripristinato ma è stato rilevato un errore durante il ripristino o la rimozione della replica. Il database è stato lasciato offline. Vedere l'argomento MSSQL_ENG003165 della documentazione online di SQL Server.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Impossibile %S_MSG la %S_MSG '%.*ls' perché è in uso per la replica.|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|Impossibile modificare %S_MSG '%.*ls' perché è in corso di pubblicazione per la replica.|  
-|MSSQL_ENG007395. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile avviare una transazione nidificata per il provider OLE DB "%ls" per il server collegato "%ls". È necessaria una transazione nidificata perché l'opzione XACT_ABORT è stata impostata su OFF.|  
+|MSSQL_ENG007395. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile avviare una transazione nidificata per il provider OLE DB "%ls" per il server collegato "%ls". È necessaria una transazione nidificata perché l'opzione XACT_ABORT è stata impostata su OFF.|  
 |[MSSQL_ENG014005](../../relational-databases/replication/mssql-eng014005.md)|Impossibile eliminare la pubblicazione. Vi è associata una sottoscrizione.|  
 |[MSSQL_ENG014010](../../relational-databases/replication/mssql-eng014010.md)|Il server '%s' non è definito come server di sottoscrizione.|  
 |[MSSQL_ENG014114](../../relational-databases/replication/mssql-eng014114.md)|'%s' non è configurato come server di distribuzione.|  
@@ -50,7 +54,7 @@ caps.handback.revision: 25
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|È stata impostata la soglia [%s:%s] per la pubblicazione [%s]. Verificare che l'agente di merge sia in esecuzione e sia in grado di rispettare i requisiti previsti.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|È stata impostata la soglia [%s:%s] per la pubblicazione [%s]. Verificare che l'agente di merge sia in esecuzione e sia in grado di rispettare i requisiti previsti.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|È stata impostata la soglia [%s:%s] per la pubblicazione [%s]. Verificare che l'agente di merge sia in esecuzione e sia in grado di rispettare i requisiti previsti.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Accesso non riuscito per l'utente ' %. * ls'.%.\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Accesso non riuscito per l'utente '%.*ls'.%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|A un database può connettersi un solo agente di lettura log o una sola procedura correlata ai log (sp_repldone, sp_replcmds e sp_replshowcmds) alla volta. Se è stata eseguita una procedura correlata ai log, eliminare la connessione utilizzata per eseguire la procedura oppure eseguire sp_replflush tramite tale connessione prima di avviare l'agente di lettura log o di eseguire un'altra procedura relativa ai log.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|Nessun messaggio di stato registrato dall'agente di replica negli ultimi %ld minuti. Questa condizione può indicare che l'agente non risponde oppure che l'attività del sistema è elevata. Verificare che i record vengano replicati nella destinazione e che le connessioni al Sottoscrittore, al server di pubblicazione e al server di distribuzione siano ancora attive.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|Arresto dell'agente. Per ulteriori informazioni, cercare nella cronologia dei processi di SQL Server Agent il processo '%s'.|  
@@ -65,16 +69,16 @@ caps.handback.revision: 25
 |[MSSQL_ENG021330](../../relational-databases/replication/mssql-eng021330.md)|Impossibile creare una sottodirectory nella directory di lavoro della replica.(%1!)|  
 |[MSSQL_ENG021331](../../relational-databases/replication/mssql-eng021331.md)|Impossibile copiare il file script utente nel server di distribuzione.(%ls)|  
 |[MSSQL_ENG021385](../../relational-databases/replication/mssql-eng021385.md)|Lo snapshot non è in grado di elaborare la pubblicazione '%s', probabilmente perché sono in corso attività di modifica dello schema o di aggiunta di nuovi articoli.|  
-|MSSQL_ENG021617. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile eseguire SQL*PLUS. Verificare che nel server di distribuzione sia installata una versione corrente del codice client Oracle.|  
-|MSSQL_ENG021620. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|La versione di SQL*PLUS accessibile tramite la variabile di sistema Path non è aggiornata e non supporta la pubblicazione Oracle. Verificare che nel server di distribuzione sia installata una versione corrente del codice client Oracle.|  
-|MSSQL_ENG021624. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile trovare il provider OLEDB Oracle registrato, OraOLEDB.Oracle, nel server di distribuzione '%s'. Verificare che nel server di distribuzione sia installata e registrata una versione corrente del provider Oracle OLEDB.|  
-|MSSQL_ENG021626. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile connettersi al server di database Oracle '%s' utilizzando il provider Oracle OLEDB OraOLEDB.Oracle.|  
-|MSSQL_ENG021627. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile connettersi al server di database Oracle '%s' utilizzando il provider Microsoft OLEDB MSDAORA.|  
-|MSSQL_ENG021628. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile aggiornare il Registro di sistema del server di distribuzione "%s" per consentire l'esecuzione in-process del provider Oracle OLEDB OraOLEDB.Oracle con SQL Server. Verificare che l'account di accesso corrente sia autorizzato per la modifica delle chiavi del Registro di sistema di SQL Server.|  
-|MSSQL_ENG021629. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Nel server di distribuzione manca la chiave del Registro di sistema CLSID che indica che il provider Oracle OLEDB OraOLEDB.Oracle è stato registrato. Verificare che il provider Oracle OLEDB sia installato e registrato nel server di distribuzione.|  
-|MSSQL_ENG021642. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato '%s'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso.|  
-|MSSQL_ENG021663. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile trovare una chiave primaria valida per la tabella di origine [%s].[%s].|  
-|MSSQL_ENG021684. Vedere [risoluzione dei problemi di server di pubblicazione Oracle](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Le autorizzazioni associate all'account di accesso di amministratore per il server di pubblicazione Oracle '%s' non sono sufficienti.|  
+|MSSQL_ENG021617. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile eseguire SQL*PLUS. Verificare che nel server di distribuzione sia installata una versione corrente del codice client Oracle.|  
+|MSSQL_ENG021620. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|La versione di SQL*PLUS accessibile tramite la variabile di sistema Path non è aggiornata e non supporta la pubblicazione Oracle. Verificare che nel server di distribuzione sia installata una versione corrente del codice client Oracle.|  
+|MSSQL_ENG021624. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile trovare il provider OLEDB Oracle registrato, OraOLEDB.Oracle, nel server di distribuzione '%s'. Verificare che nel server di distribuzione sia installata e registrata una versione corrente del provider Oracle OLEDB.|  
+|MSSQL_ENG021626. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile connettersi al server di database Oracle '%s' utilizzando il provider Oracle OLEDB OraOLEDB.Oracle.|  
+|MSSQL_ENG021627. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile connettersi al server di database Oracle '%s' utilizzando il provider Microsoft OLEDB MSDAORA.|  
+|MSSQL_ENG021628. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile aggiornare il Registro di sistema del server di distribuzione "%s" per consentire l'esecuzione in-process del provider Oracle OLEDB OraOLEDB.Oracle con SQL Server. Verificare che l'account di accesso corrente sia autorizzato per la modifica delle chiavi del Registro di sistema di SQL Server.|  
+|MSSQL_ENG021629. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Nel server di distribuzione manca la chiave del Registro di sistema CLSID che indica che il provider Oracle OLEDB OraOLEDB.Oracle è stato registrato. Verificare che il provider Oracle OLEDB sia installato e registrato nel server di distribuzione.|  
+|MSSQL_ENG021642. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato '%s'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso.|  
+|MSSQL_ENG021663. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Impossibile trovare una chiave primaria valida per la tabella di origine [%s].[%s].|  
+|MSSQL_ENG021684. Vedere [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Le autorizzazioni associate all'account di accesso di amministratore per il server di pubblicazione Oracle '%s' non sono sufficienti.|  
 |[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' deve essere un account di accesso di Windows valido nel formato: 'COMPUTER\Account di accesso' o 'DOMINIO\Account di accesso'. Vedere la documentazione relativa a '%s'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Per continuare è necessario aggiungere il processo di agente '%s' tramite '%s'. Vedere la documentazione relativa a '%s'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|Impossibile eseguire '%1' in '%2'.|  

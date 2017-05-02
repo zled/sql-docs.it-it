@@ -1,25 +1,29 @@
 ---
-title: "Usare Connettore SQL Server con le funzionalit&#224; di crittografia SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Connettore SQL Server, uso"
-  - "EKM, con Connettore SQL Server"
+title: "Usare Connettore SQL Server con le funzionalità di crittografia SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 04/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Connector, using
+- EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e24c6b23aeafcbeebf5cf5515803c7eb909a65db
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usare Connettore SQL Server con le funzionalit&#224; di crittografia SQL
+# <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le attività di crittografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuni che usano una chiave asimmetrica protetta dall'insieme di credenziali delle chiavi di Azure includono le tre aree seguenti.  
@@ -30,12 +34,12 @@ caps.handback.revision: 13
   
 -   Crittografia a livello di colonna tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi  
   
- Completare le parti dalla 1 alla 4 dell'argomento [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) prima di seguire la procedura di questo argomento.  
+ Completare le parti dalla 1 alla 4 dell'argomento [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)prima di seguire la procedura di questo argomento.  
  
 > [!NOTE]  
->  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate in ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".  
+>  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate in ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".  
   
-## Transparent Data Encryption con una chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparent Data Encryption con una chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure  
  Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure, usare la chiave dell'insieme di credenziali delle chiavi di Azure per crittografare la chiave di crittografia del database con TDE.  
 È necessario creare le credenziali e un account di accesso, nonché una chiave di crittografia del database che consente di crittografare i dati e i log nel database. Per crittografare un database è necessaria l'autorizzazione **CONTROL** per il database. L'immagine seguente mostra la gerarchia della chiave di crittografia quando si usa l'insieme di credenziali delle chiavi di Azure.  
   
@@ -43,18 +47,18 @@ caps.handback.revision: 13
   
 1.  **Creare credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il motore di database da usare per TDE**  
   
-     Il motore di Database usa le credenziali per accedere all'insieme di credenziali delle chiavi durante il caricamento del database. Si consiglia di creare un altro **ID client** e un altro **segreto** di Azure Active Directory nella parte 1 per [!INCLUDE[ssDE](../../../includes/ssde-md.md)] per limitare le autorizzazioni concesse per l'insieme di credenziali delle chiavi.  
+     Il motore di Database usa le credenziali per accedere all'insieme di credenziali delle chiavi durante il caricamento del database. Si consiglia di creare un altro **ID client** e un altro **segreto** di Azure Active Directory nella parte 1 per [!INCLUDE[ssDE](../../../includes/ssde-md.md)]per limitare le autorizzazioni concesse per l'insieme di credenziali delle chiavi.  
   
      Modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] sottostante nei modi seguenti:  
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
         - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
-        - Se si usa un **cloud privato di Azure** (ad esempio Azure per enti pubblici, Azure Cina o Azure Germania), sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
+        - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l'**ID client** di Azure Active Directory della parte 1. In questo esempio l'**ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall'**ID Client**.  
+        >  È necessario rimuovere i trattini dall' **ID Client**.  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
     -- for the Database engine to use when it loads a database   
     -- encrypted by TDE.  
     CREATE LOGIN TDE_Login   
-    FROM ASYMMETRIC KEY ContosoRSAKey0;  
+    FROM ASYMMETRIC KEY CONTOSO_KEY;  
     GO   
   
     -- Alter the TDE Login to add the credential for use by the   
@@ -91,7 +95,7 @@ caps.handback.revision: 13
   
 3.  **Creare la chiave di crittografia del database (DEK)**  
   
-     La chiave DEK crittografa i file di dati e di log nell'istanza del database e a sua volta viene crittografata dalla chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure. La chiave DEK può essere creata usando qualsiasi lunghezza dell'algoritmo o della chiave supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+     La chiave DEK crittografa i file di dati e di log nell'istanza del database e a sua volta viene crittografata dalla chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure. La chiave DEK può essere creata usando qualsiasi lunghezza dell'algoritmo o della chiave supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     ```tsql  
     USE ContosoDatabase;  
@@ -99,7 +103,7 @@ caps.handback.revision: 13
   
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
-    ENCRYPTION BY SERVER ASYMMETRIC KEY ContosoRSAKey0;  
+    ENCRYPTION BY SERVER ASYMMETRIC KEY CONTOSO_KEY;  
     GO  
     ```  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 13
     GO  
     ```  
   
-     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verificare che TDE sia attivato connettendo il database con Esplora oggetti. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Gestisci crittografia del database**.  
+     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verificare che TDE sia attivato connettendo il database con Esplora oggetti. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Gestisci crittografia del database**.  
   
      ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  Il database `tempdb` viene crittografato automaticamente ogni volta che un database abilita TDE.  
   
-## Crittografia dei backup tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi  
+## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>Crittografia dei backup tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi  
  I backup crittografati sono supportati a partire da [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. L'esempio seguente crea e ripristina un backup crittografato di una chiave DEK protetta dalla chiave asimmetrica nell'insieme di credenziali delle chiavi.  
 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] richiede le credenziali quando si accede all'insieme di credenziali delle chiavi durante il caricamento del database. Si consiglia di creare un altro ID client e un altro segreto di Azure Active Directory nella parte 1 per il motore di database per limitare le autorizzazioni concesse per l'insieme di credenziali delle chiavi.  
   
@@ -146,12 +150,12 @@ caps.handback.revision: 13
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
         - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
-        - Se si usa un **cloud privato di Azure** (ad esempio Azure per enti pubblici, Azure Cina o Azure Germania), sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.    
+        - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.    
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l'**ID client** di Azure Active Directory della parte 1. In questo esempio l'**ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall'**ID Client**.  
+        >  È necessario rimuovere i trattini dall' **ID Client**.  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.   
   
@@ -169,7 +173,7 @@ caps.handback.revision: 13
   
 2.  **Creare un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per [!INCLUDE[ssDE](../../../includes/ssde-md.md)] per la crittografia dei backup**  
   
-     Creare un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da usare per [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e per i backup di crittografia e aggiungere le credenziali del passaggio 1. Questo esempio di [!INCLUDE[tsql](../../../includes/tsql-md.md)] usa la stessa chiave importata in precedenza.  
+     Creare un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da usare per [!INCLUDE[ssDE](../../../includes/ssde-md.md)]e per i backup di crittografia e aggiungere le credenziali del passaggio 1. Questo esempio di [!INCLUDE[tsql](../../../includes/tsql-md.md)] usa la stessa chiave importata in precedenza.  
   
     > [!IMPORTANT]  
     >  Non è possibile usare la stessa chiave asimmetrica per la crittografia dei backup se è già stata usata per la crittografia TDE (esempio precedente) o per la crittografia a livello di colonna (esempio successivo).  
@@ -194,7 +198,9 @@ caps.handback.revision: 13
   
 3.  **Eseguire il backup del database**  
   
-     Eseguire il backup del database specificando la crittografia con la chiave simmetrica archiviata nell'insieme di credenziali delle chiavi.  
+     Eseguire il backup del database specificando la crittografia con la chiave simmetrica archiviata nell'insieme di credenziali delle chiavi.
+     
+     Nell'esempio seguente si noti che se il database è stato già crittografato con TDE e la chiave asimmetrica `CONTOSO_KEY_BACKUP` è diversa dalla chiave asimmetrica TDE, il backup verrà crittografato sia con la chiave asimmetrica TDE che con `CONTOSO_KEY_BACKUP`. L'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione dovrà disporre di entrambe le chiavi per decrittografare il backup.
   
     ```tsql  
     USE master;  
@@ -207,6 +213,16 @@ caps.handback.revision: 13
     GO  
     ```  
   
+4.  **Ripristinare il database**  
+    
+    Per ripristinare un backup del database crittografato con TDE, l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione deve prima di tutto disporre di una copia della chiave dell'insieme di credenziali asimmetrica usata per la crittografia. Ecco come si ottiene questo risultato:  
+    
+    - Se la chiave asimmetrica originale usata per TDE non è più nell'insieme di credenziali chiave, ripristinare il backup della chiave dell'insieme di credenziali chiave o reimportare la chiave da un modulo HSM locale. **Importante:** per fare in modo che l'identificazione digitale della chiave corrisponda all'identificazione digitale registrata nel backup del database, la chiave deve avere lo **stesso nome della chiave dell'insieme di credenziali chiave** originale.
+    
+    - Applicare i passaggi 1 e 2 nell'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione.
+    
+    - Quando l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione ha accesso alle chiavi asimmetriche usate per crittografare il backup, ripristinare il database nel server.
+    
      Esempio del codice di ripristino:  
   
     ```tsql  
@@ -218,13 +234,13 @@ caps.handback.revision: 13
   
      Per altre informazioni sulle opzioni di backup, vedere [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md).  
   
-## Crittografia a livello di colonna tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi  
+## <a name="column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a>Crittografia a livello di colonna tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi  
  L'esempio seguente crea una chiave simmetrica protetta dalla chiave asimmetrica nell'insieme di credenziali delle chiavi. La chiave simmetrica viene quindi usata per crittografare i dati nel database.  
   
 > [!IMPORTANT]  
 >  Non è possibile usare la stessa chiave asimmetrica per la crittografia dei backup se è già stata usata per la crittografia TDE o dei backup (esempi precedenti).  
   
- Questo esempio usa la chiave asimmetrica `CONTOSO_KEY_COLUMNS` archiviata nell'insieme di credenziali delle chiavi che può essere importata o creata in precedenza, come descritto nel passaggio 3 della sezione 3 di [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md). Per usare questa chiave asimmetrica nel database `ContosoDatabase`, è necessario eseguire nuovamente l'istruzione `CREATE ASYMMETRIC KEY` in modo da fornire al database `ContosoDatabase` un riferimento alla chiave.  
+ Questo esempio usa la chiave asimmetrica `CONTOSO_KEY_COLUMNS` archiviata nell'insieme di credenziali delle chiavi che può essere importata o creata in precedenza, come descritto nel passaggio 3 della sezione 3 di [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md). Per usare questa chiave asimmetrica nel database `ContosoDatabase` , è necessario eseguire nuovamente l'istruzione `CREATE ASYMMETRIC KEY` in modo da fornire al database `ContosoDatabase` un riferimento alla chiave.  
   
 ```tsql  
 USE [ContosoDatabase];  
@@ -265,10 +281,11 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+

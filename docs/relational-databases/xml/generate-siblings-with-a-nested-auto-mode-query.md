@@ -1,35 +1,39 @@
 ---
-title: "Generare elementi di pari livello tramite query nidificate in modalit&#224; AUTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query [XML in SQL Server], nidificata in modalità AUTO"
-  - "query nidificata in modalità AUTO"
+title: "Generare elementi di pari livello tramite query annidate in modalità AUTO | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# Generare elementi di pari livello tramite query nidificate in modalit&#224; AUTO
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generare elementi di pari livello tramite query nidificate in modalità AUTO
   Nell'esempio seguente viene descritta la procedura per generare elementi di pari livello tramite una query nidificata in modalità AUTO. L'unico metodo alternativo per generare un valore XML di questo tipo è utilizzare la modalità EXPLICIT, ma ciò può rivelarsi eccessivamente complesso.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Questa query costruisce un valore XML che contiene informazioni sugli ordini di vendita, Sono inclusi gli elementi seguenti:  
   
--   Informazioni contenute nell'intestazione degli ordini di vendita, `SalesOrderID`, `SalesPersonID` e `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] archivia queste informazioni nella tabella `SalesOrderHeader`.  
+-   Informazioni contenute nell'intestazione degli ordini di vendita, `SalesOrderID`, `SalesPersonID`e `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] archivia queste informazioni nella tabella `SalesOrderHeader` .  
   
--   Informazioni dettagliate sugli ordini di vendita, che includono i prodotti ordinati, il prezzo unitario e la quantità ordinata. Tali informazioni sono archiviate nella tabella `SalesOrderDetail`.  
+-   Informazioni dettagliate sugli ordini di vendita, che includono i prodotti ordinati, il prezzo unitario e la quantità ordinata. Tali informazioni sono archiviate nella tabella `SalesOrderDetail` .  
   
--   Informazioni sul venditore, ovvero la persona che ha ricevuto l'ordine. Il codice `SalesPerson` è archiviato nella tabella `SalesPersonID`. Per questa query è necessario unire in join tale tabella con la tabella `Employee`, per trovare il nome del venditore.  
+-   Informazioni sul venditore, ovvero la persona che ha ricevuto l'ordine. Il codice `SalesPerson` è archiviato nella tabella `SalesPersonID`. Per questa query è necessario unire in join tale tabella con la tabella `Employee` , per trovare il nome del venditore.  
   
  Le due query `SELECT` che seguono generano valori XML con struttura lievemente diversa.  
   
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   Esegue una query sul set di righe `SalesOrder`, specificato nella clausola `FROM`. Viene restituito un valore XML con uno o più elementi <`SalesOrder`>.  
   
--   Specifica la modalità `AUTO` e la direttiva `TYPE`. `AUTO` trasforma il risultato della query in XML e la direttiva `TYPE` restituisce il risultato come tipo **xml**.  
+-   Specifica la modalità `AUTO` e la direttiva `TYPE` . `AUTO` trasforma il risultato della query in XML e la direttiva `TYPE` restituisce il risultato come tipo **xml** .  
   
 -   Include due istruzioni `SELECT` nidificate, separate da una virgola (,). La prima istruzione nidificata `SELECT` recupera le informazioni relative all'ordine di vendita, l'intestazione ed i dettagli, mentre la seconda istruzione `SELECT` recupera le informazioni relative al venditore.  
   
-    -   L'istruzione `SELECT` che recupera `SalesOrderID`, `SalesPersonID` e `CustomerID` include a sua volta un'altra istruzione nidificata `SELECT ... FOR XML` (con modalità `AUTO` e direttiva `TYPE`), che restituisce i dettagli dell'ordine di vendita..  
+    -   L'istruzione `SELECT` che recupera `SalesOrderID`, `SalesPersonID`e `CustomerID` include a sua volta un'altra istruzione nidificata `SELECT ... FOR XML` (con modalità `AUTO` e direttiva `TYPE` ), che restituisce i dettagli dell'ordine di vendita.  
   
- L'istruzione `SELECT` che recupera le informazioni relative al venditore esegue una query sul set di righe `SalesPerson`, creato nella clausola `FROM`. Per consentire l'esecuzione delle query `FOR XML`, è necessario specificare un nome per il set di righe anonimo generato nella clausola `FROM`. In tal caso viene specificato il nome `SalesPerson`.  
+ L'istruzione `SELECT` che recupera le informazioni relative al venditore esegue una query sul set di righe `SalesPerson`, creato nella clausola `FROM` . Per consentire l'esecuzione delle query `FOR XML` , è necessario specificare un nome per il set di righe anonimo generato nella clausola `FROM` . In tal caso viene specificato il nome `SalesPerson`.  
   
  Risultato parziale:  
   
@@ -139,11 +143,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- Poiché la direttiva `TYPE` restituisce il risultato della query come tipo **xml**, è possibile eseguire una query sul valore XML risultante usando vari metodi con tipo di dati **xml**. Per altre informazioni, vedere [Metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md). In questa query di esempio, si noti quanto segue:  
+ Poiché la direttiva `TYPE` restituisce il risultato della query come tipo **xml** , è possibile eseguire una query sul valore XML risultante usando vari metodi con tipo di dati **xml** . Per altre informazioni, vedere [Metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md). In questa query di esempio, si noti quanto segue:  
   
--   La query precedente viene aggiunta nella clausola `FROM`. Il risultato della query viene restituito sotto forma di tabella. Viene aggiunto l'alias `XmlCol`.  
+-   La query precedente viene aggiunta nella clausola `FROM` . Il risultato della query viene restituito sotto forma di tabella. Viene aggiunto l'alias `XmlCol` .  
   
--   La clausola `SELECT` specifica una query XQuery sul valore `XmlCol` restituito nella clausola `FROM`. Per specificare l'espressione XQuery viene usato il metodo **query()** del tipo di dati **xml**. Per altre informazioni, vedere [Metodo query&#40;&#41; con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md).  
+-   La clausola `SELECT` specifica una query XQuery sul valore `XmlCol` restituito nella clausola `FROM` . Per specificare l'espressione XQuery viene usato il metodo **query()** del tipo di dati **xml**. Per altre informazioni, vedere [Metodo query&#40;&#41; con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di query FOR XML nidificate](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

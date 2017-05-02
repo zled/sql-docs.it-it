@@ -1,25 +1,29 @@
 ---
-title: "Configurazione degli avvisi di replica predefiniti (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "avvisi [replica di SQL Server]"
-  - "avvisi di replica predefiniti [replica di SQL Server]"
+title: Configurare gli avvisi di replica predefiniti (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- predefined replication alerts [SQL Server replication]
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fdd1352c4f7f6c62c8adfc5fcf9b2932568c12d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurazione degli avvisi di replica predefiniti (SQL Server Management Studio)
+# <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurazione degli avvisi di replica predefiniti (SQL Server Management Studio)
   La replica offre gli avvisi predefiniti seguenti, configurabili in risposta a eventi di replica:  
   
 -   **Replica: operazione dell'agente riuscita**  
@@ -38,43 +42,43 @@ caps.handback.revision: 24
   
 -   **Replica: arresto dell'agente personalizzato**  
   
- Configurare gli avvisi dal **avvisi** cartella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o **avvisi** scheda in Monitoraggio replica. Per ulteriori informazioni sull'accesso a questa scheda, vedere [visualizzare le informazioni ed esecuzione delle attività per una sottoscrizione & #40; Monitoraggio replica & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Configurare questi avvisi nella cartella **Avvisi** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o nella scheda **Avvisi** in Monitoraggio replica. Per altre informazioni sull'accesso a questa scheda, vedere [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
- In aggiunta a questi avvisi, in Monitoraggio replica è disponibile un set di avvisi relativi allo stato e alle prestazioni. Per ulteriori informazioni, vedere [impostare soglie e avvisi in Monitoraggio replica](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). È inoltre possibile definire avvisi per altri eventi di replica utilizzando l'infrastruttura degli avvisi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [creare un evento definito dall'utente](../../../ssms/agent/create-a-user-defined-event.md).  
+ In aggiunta a questi avvisi, in Monitoraggio replica è disponibile un set di avvisi relativi allo stato e alle prestazioni. Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). È inoltre possibile definire avvisi per altri eventi di replica utilizzando l'infrastruttura degli avvisi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Creare un evento definito dall'utente](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
   
-### Per configurare un avviso di replica predefinito in Management Studio  
+### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Per configurare un avviso di replica predefinito in Management Studio  
   
 1.  Connettersi al server di distribuzione in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
   
-2.  Espandere il **SQL Server Agent** cartella, quindi espandere il **avvisi** cartella.  
+2.  Espandere la cartella **SQL Server Agent** e quindi la cartella **Avvisi** .  
   
-3.  Fare doppio clic su un avviso di replica e quindi fare clic su **proprietà**.  
+3.  Fare clic con il pulsante destro del mouse su un avviso di replica e quindi scegliere **Proprietà**.  
   
-4.  Impostare le opzioni **\< AlertName> proprietà dell'avviso** la finestra di dialogo:  
+4.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
-    -   Nel **risposta** specificare se deve essere inviato un messaggio di posta e/o un processo deve essere eseguito.  
+    -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
-         Se l'avviso è **replica: sottoscrittore non supera la convalida dei dati**, è possibile specificare il processo di risposta disponibile nella replica per questo avviso: selezionare **Esegui processo**, quindi fare clic sul pulsante Sfoglia (**...**). Nel **Individua processo** la finestra di dialogo, fare clic su **Sfoglia**. Nel **Cerca oggetti** nella finestra di dialogo **reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.  
+         Nel caso dell'avviso **Replica: la convalida dei dati nel Sottoscrittore non è riuscita**, è possibile specificare il processo di risposta disponibile nella replica per questo avviso. Selezionare **Esegui processo**e quindi fare clic sul pulsante Sfoglia**…**. Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.  
   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Per configurare un avviso per una soglia in Monitoraggio replica  
+### <a name="to-configure-an-alert-for-a-threshold-in-replication-monitor"></a>Per configurare un avviso per una soglia in Monitoraggio replica  
   
-1.  Nel **avvisi** fare clic sulla scheda **Configura avvisi**.  
+1.  Nella scheda **Avvisi** fare clic su **Configura avvisi**.  
   
 2.  Nella finestra di dialogo **Configura avvisi di replica** selezionare un avviso e quindi fare clic su **Configura**.  
   
-3.  Impostare le opzioni **\< AlertName> proprietà dell'avviso** la finestra di dialogo:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
-    -   Nel **risposta** specificare se deve essere inviato un messaggio di posta e/o un processo deve essere eseguito.  
+    -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
-         Se l'avviso è **replica: sottoscrittore non supera la convalida dei dati**, è possibile specificare il processo di risposta disponibile nella replica per questo avviso: selezionare **Esegui processo**, quindi fare clic sul pulsante Sfoglia (**...**). Nel **Individua processo** la finestra di dialogo, fare clic su **Sfoglia**. Nel **Cerca oggetti** nella finestra di dialogo **reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.  
+         Nel caso dell'avviso **Replica: la convalida dei dati nel Sottoscrittore non è riuscita**, è possibile specificare il processo di risposta disponibile nella replica per questo avviso. Selezionare **Esegui processo**e quindi fare clic sul pulsante Sfoglia**…**. Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.  
   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 24
   
 5.  Scegliere **Chiudi**.  
   
-## Vedere anche  
- [Utilizzare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Usare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
   
   

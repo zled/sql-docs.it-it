@@ -1,37 +1,41 @@
 ---
-title: "Numeri di sequenza | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "oggetto numero di sequenza, panoramica"
-  - "sequenza [motore di database]"
-  - "numerazioni automatiche, sequenze"
-  - "numeri di sequenza [SQL Server]"
-  - "oggetto numero di sequenza"
+title: Numeri di sequenza | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Numeri di sequenza
+# <a name="sequence-numbers"></a>Numeri di sequenza
   Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze. Le sequenze, a differenza delle colonne di identità, non sono associate a tabelle. In un'applicazione viene fatto riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. È possibile che nelle applicazioni utente si faccia riferimento a un oggetto sequenza e vengano coordinate le chiavi dei valori di più righe e tabelle.  
   
- Una sequenza viene creata indipendentemente delle tabelle usando l'istruzione **CREATE SEQUENCE**. Le opzioni consentono di controllare i valori di incremento, massimo e minimo, il punto iniziale, la funzionalità di riavvio automatico e la memorizzazione nella cache per migliorare le prestazioni. Per informazioni sulle opzioni, vedere [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
+ Una sequenza viene creata indipendentemente delle tabelle usando l'istruzione **CREATE SEQUENCE** . Le opzioni consentono di controllare i valori di incremento, massimo e minimo, il punto iniziale, la funzionalità di riavvio automatico e la memorizzazione nella cache per migliorare le prestazioni. Per informazioni sulle opzioni, vedere [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
- A differenza dei valori delle colonne di identità, che vengono generati quando si inseriscono righe, un'applicazione può ottenere il numero di sequenza successivo prima di inserire la riga chiamando la funzione [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Il numero di sequenza viene allocato quando viene chiamata tale funzione, anche se il numero non viene mai inserito in una tabella. La funzione NEXT VALUE FOR può essere utilizzata come valore predefinito per una colonna in una definizione della tabella. Usare [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) per ottenere un intervallo di numeri di sequenza.  
+ A differenza dei valori delle colonne di identità, che vengono generati quando si inseriscono righe, un'applicazione può ottenere il numero di sequenza successivo prima di inserire la riga chiamando la funzione [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) . Il numero di sequenza viene allocato quando viene chiamata tale funzione, anche se il numero non viene mai inserito in una tabella. La funzione NEXT VALUE FOR può essere utilizzata come valore predefinito per una colonna in una definizione della tabella. Usare [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) per ottenere un intervallo di numeri di sequenza.  
   
  Una sequenza può essere definita come qualsiasi tipo di dati integer. Se il tipo di dati non viene specificato, viene usata per impostazione predefinita la sequenza **bigint**.  
   
-## Utilizzo di sequenze  
+## <a name="using-sequences"></a>Utilizzo di sequenze  
  Utilizzare sequenze anziché colonne di identità negli scenari seguenti:  
   
 -   Nell'applicazione è richiesto un numero prima che venga effettuato l'inserimento nella tabella.  
@@ -46,16 +50,16 @@ caps.handback.revision: 31
   
 -   È necessario modificare la specifica della sequenza, ad esempio il valore di incremento.  
   
-## Limitazioni  
+## <a name="limitations"></a>Limitazioni  
  A differenza delle colonne di identità, i cui valori non possono essere modificati, i valori di sequenza non sono protetti automaticamente dopo l'inserimento nella tabella. Per evitare la modifica dei valori di sequenza, utilizzare un trigger di aggiornamento sulla tabella per eseguire il rollback delle modifiche.  
   
  L'univocità non viene applicata automaticamente per i valori di sequenza. Da progettazione, i valori di sequenza possono essere riutilizzati. Se è necessario che i valori di sequenza in una tabella siano univoci, creare un indice univoco nella colonna. Se è necessario che i valori di sequenza in una tabella siano univoci per un gruppo di tabelle, creare trigger per impedire duplicati a causa di istruzioni di aggiornamento o ripetizione di numeri di sequenza.  
   
  L'oggetto sequenza genera numeri in base alla definizione, ma non controlla come vengono utilizzati i numeri. Nei numeri di sequenza inseriti in una tabella possono essere presenti gap quando viene eseguito il rollback di una transazione, quando un oggetto sequenza è condiviso da più tabelle o quando i numeri di sequenza vengono allocati senza essere utilizzati nelle tabelle. In caso di creazione con l'opzione CACHE, un arresto imprevisto quale un'interruzione dell'alimentazione, può provocare la perdita dei numeri di sequenza nella cache.  
   
- Se sono presenti più istanze della funzione **NEXT VALUE FOR** che specificano lo stesso generatore di sequenze in un'unica istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], tutte le istanze restituiscono lo stesso valore per una determinata riga elaborata da questa istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questo comportamento è coerente con lo standard ANSI.  
+ Se sono presenti più istanze della funzione **NEXT VALUE FOR** che specificano lo stesso generatore di sequenze in un'unica istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] , tutte le istanze restituiscono lo stesso valore per una determinata riga elaborata da questa istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Questo comportamento è coerente con lo standard ANSI.  
   
-## Utilizzo tipico  
+## <a name="typical-use"></a>Utilizzo tipico  
  Per creare un numero di sequenza intero che viene incrementato di 1 da -2.147.483.648 a 2.147.483.647, utilizzare l'istruzione seguente.  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## Gestione di sequenze  
+## <a name="managing-sequences"></a>Gestione di sequenze  
  Per informazioni sulle sequenze, eseguire una query su [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Altri esempi sono disponibili negli argomenti [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) e [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
   
-### A. Utilizzo di un numero di sequenza in una singola tabella  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Utilizzo di un numero di sequenza in una singola tabella  
  Nell'esempio seguente viene creato uno schema denominato Test, una tabella denominata Orders e una sequenza denominata CountBy1, quindi vengono inserite righe nella tabella usando la funzione NEXT VALUE FOR.  
   
 ```  
@@ -125,8 +129,8 @@ GO
   
  `3        Brake   1`  
   
-### B. Chiamata a NEXT VALUE FOR prima di inserire una riga  
- Utilizzando la tabella `Orders` creata nell'esempio A, nell'esempio seguente viene dichiarata una variabile denominata `@nextID`, quindi viene utilizzata la funzione NEXT VALUE FOR per impostare la variabile sul successivo numero di sequenza disponibile. Si presuppone che nell'applicazione vengano eseguite alcune operazioni di elaborazione dell'ordine, ad esempio fornire al cliente il numero di `OrderID` dell'ordine potenziale, quindi convalidare l'ordine. Indipendentemente dalla durata di tale elaborazione o dal numero di ordini aggiunti durante il processo, viene mantenuto il numero originale per l'utilizzo da parte di questa connessione. Infine, viene aggiunto l'ordine alla tabella `INSERT` tramite l'istruzione `Orders`.  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. Chiamata a NEXT VALUE FOR prima di inserire una riga  
+ Utilizzando la tabella `Orders` creata nell'esempio A, nell'esempio seguente viene dichiarata una variabile denominata `@nextID`, quindi viene utilizzata la funzione NEXT VALUE FOR per impostare la variabile sul successivo numero di sequenza disponibile. Si presuppone che nell'applicazione vengano eseguite alcune operazioni di elaborazione dell'ordine, ad esempio fornire al cliente il numero di `OrderID` dell'ordine potenziale, quindi convalidare l'ordine. Indipendentemente dalla durata di tale elaborazione o dal numero di ordini aggiunti durante il processo, viene mantenuto il numero originale per l'utilizzo da parte di questa connessione. Infine, viene aggiunto l'ordine alla tabella `INSERT` tramite l'istruzione `Orders` .  
   
 ```  
 DECLARE @NextID int ;  
@@ -138,8 +142,8 @@ GO
   
 ```  
   
-### C. Utilizzo di un numero di sequenza in più tabelle  
- In questo esempio si presuppone che un processo di controllo di una linea di produzione riceva notifica di eventi che si verificano in tutta l'officina. Ogni evento riceve un numero `EventID` univoco e a incremento progressivo costante. Per tutti gli eventi viene utilizzato lo stesso numero di sequenza `EventID`, in modo che nei report in cui vengono combinati tutti gli eventi sia possibile identificare in modo univoco ogni evento. I dati degli eventi vengono tuttavia archiviati in tre tabelle diverse, a seconda del tipo di evento. L'esempio di codice illustra come creare uno schema denominato `Audit`, una sequenza denominata `EventCounter` e tre tabelle, ciascuna delle quali usa la sequenza `EventCounter` come valore predefinito. Nell'esempio vengono quindi aggiunte righe alle tre tabelle e vengono eseguite query sui risultati.  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>C. Utilizzo di un numero di sequenza in più tabelle  
+ In questo esempio si presuppone che un processo di controllo di una linea di produzione riceva notifica di eventi che si verificano in tutta l'officina. Ogni evento riceve un numero `EventID` univoco e a incremento progressivo costante. Per tutti gli eventi viene utilizzato lo stesso numero di sequenza `EventID` , in modo che nei report in cui vengono combinati tutti gli eventi sia possibile identificare in modo univoco ogni evento. I dati degli eventi vengono tuttavia archiviati in tre tabelle diverse, a seconda del tipo di evento. L'esempio di codice illustra come creare uno schema denominato `Audit`, una sequenza denominata `EventCounter`e tre tabelle, ciascuna delle quali usa la sequenza `EventCounter` come valore predefinito. Nell'esempio vengono quindi aggiunte righe alle tre tabelle e vengono eseguite query sui risultati.  
   
 ```  
 CREATE SCHEMA Audit ;  
@@ -228,7 +232,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### D. Generazione di numeri di sequenza ripetuti in un set di risultati  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Generazione di numeri di sequenza ripetuti in un set di risultati  
  Nell'esempio seguente vengono illustrate due caratteristiche dei numeri di sequenza: ripetizione e utilizzo di `NEXT VALUE FOR` in un'istruzione Select.  
   
 ```  
@@ -245,7 +249,7 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### E. Generazione di numeri di sequenza per un set di risultati tramite la clausola OVER  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>E. Generazione di numeri di sequenza per un set di risultati tramite la clausola OVER  
  Nell'esempio seguente viene utilizzata la clausola `OVER` per ordinare il set di risultati in base a `Name` prima che venga aggiunta la colonna di numeri di sequenza.  
   
 ```  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### F. Reimpostazione del numero di sequenza  
+### <a name="f-resetting-the-sequence-number"></a>F. Reimpostazione del numero di sequenza  
  Nell'esempio E sono stati utilizzati i primi 79 numeri di sequenza `Samples.IDLabel`. È possibile che la versione in uso di `AdventureWorks2012` restituisca un numero di risultati diverso. Eseguire gli elementi seguenti per utilizzare i successivi 79 numeri di sequenza (da 80 a 158).  
   
 ```  
@@ -280,14 +284,14 @@ ALTER SEQUENCE Samples.IDLabel
 RESTART WITH 1 ;  
 ```  
   
- Eseguire di nuovo l'istruzione SELECT per verificare che la sequenza `Samples.IDLabel`sia ripartita dal numero 1.  
+ Eseguire di nuovo l'istruzione SELECT per verificare che la sequenza `Samples.IDLabel` sia ripartita dal numero 1.  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### G. Modifica di una tabella da identità a sequenza  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>G. Modifica di una tabella da identità a sequenza  
  Nell'esempio seguente vengono creati uno schema e una tabella contenente tre righe per l'esempio. Viene quindi aggiunta una nuova colonna e viene eliminata la colonna precedente.  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni che usano `SELECT *`riceveranno la nuova colonna come ultima colonna anziché come prima. Se ciò non è accettabile, sarà necessario creare una tabella completamente nuova, spostare i dati in tale tabella, quindi ricreare le autorizzazioni nella nuova tabella.  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che utilizzano `SELECT *` riceveranno la nuova colonna come ultima colonna anziché come prima. Se ciò non è accettabile, sarà necessario creare una tabella completamente nuova, spostare i dati in tale tabella, quindi ricreare le autorizzazioni nella nuova tabella.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

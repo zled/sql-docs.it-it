@@ -1,26 +1,30 @@
 ---
-title: "Creare un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database [SQL Server], creazione"
-  - "creazione di database [SQL Server], SQL Server Management Studio"
-  - "creazione di database"
+title: Creare un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], creating
+- database creation [SQL Server], SQL Server Management Studio
+- creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare un database
+# <a name="create-a-database"></a>Creare un database
   In questo argomento si illustra come creare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -66,7 +70,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un database  
+#### <a name="to-create-a-database"></a>Per creare un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 8.  Per modificare il modello di recupero, selezionare la pagina **Opzioni** , quindi selezionare un modello di recupero nell'elenco.  
   
-9. Per modificare le opzioni di database, selezionare la pagina **Opzioni** , quindi modificare le opzioni di database. Per una descrizione di ogni opzione, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+9. Per modificare le opzioni di database, selezionare la pagina **Opzioni** , quindi modificare le opzioni di database. Per una descrizione di ogni opzione, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 10. Per aggiungere un nuovo filegroup, fare clic sulla pagina **Filegroup** . Fare clic su **Aggiungi** , quindi immettere i valori per il filegroup.  
   
@@ -101,13 +105,13 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un database  
+#### <a name="to-create-a-database"></a>Per creare un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si crea il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè `Sales`_`dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales`\_`dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales`\_`log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si crea il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè`Sales`_`dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales`\_`dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales`\_`log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
   
 ```tsql  
 USE master ;  
@@ -130,10 +134,10 @@ GO
   
  Per altri esempi, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

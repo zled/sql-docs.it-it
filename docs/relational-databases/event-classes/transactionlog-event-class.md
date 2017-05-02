@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento TransactionLog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TransactionLog - classe di evento"
+title: Classe di evento TransactionLog | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10d15b8736b871175db262d9c2a4d940b9489771
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento TransactionLog
+# <a name="transactionlog-event-class"></a>TransactionLog - classe di evento
   La classe di evento TransactionLog consente di eseguire il monitoraggio dell'attività nei log delle transazioni in un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## Colonne di dati della classe di evento TransactionLog  
+## <a name="transactionlog-event-class-data-columns"></a>Colonne di dati della classe di evento TransactionLog  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 33
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

@@ -1,34 +1,38 @@
 ---
-title: "Specificare i parametri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parametri [SQL Server], stored procedure"
-  - "stored procedure [SQL Server], parametri"
-  - "parametri di output [SQL Server]"
-  - "parametri di input [SQL Server]"
+title: Specificare i parametri | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [SQL Server], stored procedures
+- stored procedures [SQL Server], parameters
+- output parameters [SQL Server]
+- input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Specificare i parametri
+# <a name="specify-parameters"></a>Specificare i parametri
   Se si specificano parametri di procedura, i programmi chiamanti sono in grado di passare i valori nel corpo della procedura. Tali valori possono essere utilizzati per diversi scopi durante l'esecuzione della procedura. Inoltre, i parametri di procedura possono restituire valori al programma chiamante se il parametro è contrassegnato come parametro OUTPUT.  
   
  Una procedura può disporre al massimo di 2100 parametri, a ciascuno dei quali vengono assegnati un nome, un tipo di dati e una direzione. Facoltativamente, ai parametri possono essere assegnati i valori predefiniti.  
   
  Nella sezione seguente vengono fornite informazioni sul passaggio dei valori nei parametri e sulla modalità di utilizzo di ognuno degli attributi di parametro durante una chiamata alla procedura.  
   
-## Passaggio dei valori nei parametri  
+## <a name="passing-values-into-parameters"></a>Passaggio dei valori nei parametri  
  I valori dei parametri forniti con una chiamata alla procedura devono essere costanti o una variabile. Non è possibile utilizzare un nome di funzione come valore di parametro. Le variabili possono essere definite dall'utente oppure di sistema, ad esempio @@spid.  
   
  Negli esempi seguenti viene illustrato il passaggio dei valori dei parametri alla procedura `uspGetWhereUsedProductID`. Viene illustrato come passare i parametri come costanti e variabili e utilizzare una variabile per passare il valore di una funzione.  
@@ -56,21 +60,21 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-## Specifica dei nomi di parametri  
+## <a name="specifying-parameter-names"></a>Specifica dei nomi di parametri  
  Quando si crea una procedura e si dichiara un nome di parametro, tale nome deve iniziare con un singolo carattere @ e deve essere univoco nell'ambito della procedura.  
   
- La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **@first**, **@second** e **@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **@first**, **@second**e **@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Se un valore del parametro viene specificato nel formato **@parameter =***value*, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **@parameter =***value*, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
+>  Se un valore del parametro viene specificato nel formato **@parameter =***valore*, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **@parameter =***valore*, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Qualsiasi parametro passato nel formato **@parameter =***value* contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
+>  Qualsiasi parametro passato nel formato **@parameter =***valore* contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
   
-## Specifica dei tipi di dati per i parametri  
- I parametri devono essere definiti con un tipo di dati quando vengono dichiarati in un'istruzione CREATE PROCEDURE. Il tipo di dati di un parametro consente di determinare il tipo e l'intervallo di valori accettati per il parametro quando viene chiamata la procedura. Se ad esempio si definisce un parametro con un tipo di dati **tinyint**, verranno accettati solo i valori numerici nell'intervallo compreso tra 0 e 255 quando vengono passati in tale parametro. Se una procedura viene eseguita con un valore incompatibile con il tipo di dati, verrà restituito un errore.  
+## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri  
+ I parametri devono essere definiti con un tipo di dati quando vengono dichiarati in un'istruzione CREATE PROCEDURE. Il tipo di dati di un parametro consente di determinare il tipo e l'intervallo di valori accettati per il parametro quando viene chiamata la procedura. Se ad esempio si definisce un parametro con un tipo di dati **tinyint** , verranno accettati solo i valori numerici nell'intervallo compreso tra 0 e 255 quando vengono passati in tale parametro. Se una procedura viene eseguita con un valore incompatibile con il tipo di dati, verrà restituito un errore.  
   
-## Specifica dei valori predefiniti per i parametri  
+## <a name="specifying-parameter-default-values"></a>Specifica dei valori predefiniti per i parametri  
  Un parametro è considerato facoltativo se dispone di un valore predefinito specificato al momento della relativa dichiarazione. Non è necessario fornire un valore per un parametro facoltativo in una chiamata alla procedura.  
   
  Il valore predefinito di un parametro viene utilizzato quando:  
@@ -84,7 +88,7 @@ GO
   
  Se per il parametro non può essere specificato in modo appropriato alcun valore come predefinito, specificare come tale NULL. È consigliabile la restituzione di un messaggio personalizzato da parte della procedura se quest'ultima viene eseguita senza un valore per il parametro.  
   
- Nell'esempio seguente viene creata la procedura `usp_GetSalesYTD` con un parametro di input, `@SalesPerson`. NULL viene assegnato come valore predefinito per il parametro e utilizzato nelle istruzioni di gestione degli errori per restituire un messaggio di errore personalizzato nei casi in cui la procedura venga eseguita senza un valore per il parametro `@SalesPerson`.  
+ Nell'esempio seguente viene creata la procedura `usp_GetSalesYTD` con un parametro di input, `@SalesPerson`. NULL viene assegnato come valore predefinito per il parametro e utilizzato nelle istruzioni di gestione degli errori per restituire un messaggio di errore personalizzato nei casi in cui la procedura venga eseguita senza un valore per il parametro `@SalesPerson` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,14 +129,14 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Non è tuttavia possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **@parameter =***value*.  
+ Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Tuttavia, non è possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **@parameter =***valore*.  
   
-## Specifica della direzione di un parametro  
+## <a name="specifying-parameter-direction"></a>Specifica della direzione di un parametro  
  La direzione di un parametro può essere input, cioè un valore viene passato nel corpo della procedura, o output, vale a dire che tramite la procedura viene restituito un valore al programma chiamante. Il parametro di input è l'impostazione predefinita.  
   
  Per specificare un parametro di output, è necessario includere la parola chiave OUTPUT nella definizione del parametro nell'istruzione CREATE PROCEDURE. Tramite la procedura, al programma chiamante viene restituito il valore corrente del parametro di output quando la procedura è disponibile. Nel programma chiamante deve inoltre essere utilizzata la parola chiave OUTPUT quando si esegue la procedura per salvare il valore del parametro in una variabile utilizzabile nel programma chiamante.  
   
- Nell'esempio seguente viene creata la procedura `Production.usp`_`GetList`, mediante la quale viene restituito un elenco di prodotti i cui prezzi non superano un determinato importo. Nell'esempio viene illustrato l'utilizzo di più istruzioni SELECT e di più parametri OUTPUT. I parametri OUTPUT consentono a una procedura esterna, a un batch o a più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di accedere a un valore impostato durante l'esecuzione della procedura.  
+ Nell'esempio seguente viene creata la procedura `Production.usp`_`GetList` , mediante la quale viene restituito un elenco di prodotti i cui prezzi non superano un determinato importo. Nell'esempio viene illustrato l'utilizzo di più istruzioni SELECT e di più parametri OUTPUT. I parametri OUTPUT consentono a una procedura esterna, a un batch o a più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di accedere a un valore impostato durante l'esecuzione della procedura.  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,7 +167,7 @@ GO
   
 ```  
   
- Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri OUTPUT **@cost** e **@compareprices** vengono usati con elementi del linguaggio per il controllo di flusso per restituire un messaggio nella finestra **Messaggi**.  
+ Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri OUTPUT **@cost** e **@compareprices** vengono usati con elementi del linguaggio per il controllo di flusso per restituire un messaggio nella finestra **Messaggi** .  
   
 > [!NOTE]  
 >  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non si usi **@listprice=** *variabile*.  
@@ -201,7 +205,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

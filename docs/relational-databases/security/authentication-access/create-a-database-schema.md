@@ -1,29 +1,33 @@
 ---
-title: "Creazione di uno schema di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
-  - "creazione di schemi con Management Studio"
-  - "CREATE SCHEMA [Management Studio]"
-  - "schemi di database"
-  - "schemi [SQL Server], creazione"
+title: Creare uno schema di database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.schemas.general.f1
+helpviewer_keywords:
+- creating schemas with Management Studio
+- CREATE SCHEMA [Management Studio]
+- database schemas
+- schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di uno schema di database
+# <a name="create-a-database-schema"></a>Creazione di uno schema di database
   In questo argomento si illustra come creare uno schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -58,21 +62,21 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-##### Per creare uno schema  
+##### <a name="to-create-a-schema"></a>Per creare uno schema  
   
 1.  In Esplora oggetti espandere la cartella **Database** .  
   
 2.  Espandere il database in cui si desidera creare il nuovo schema di database.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo**, quindi selezionare **Schema**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** , scegliere **Nuovo**, quindi selezionare **Schema**.  
   
-4.  Nella finestra di dialogo **Schema - Nuovo** della pagina **Generale** immettere un nome per il nuovo schema nella casella **Nome schema**.  
+4.  Nella finestra di dialogo **Schema - Nuovo** della pagina **Generale** immettere un nome per il nuovo schema nella casella **Nome schema** .  
   
 5.  Nella casella **Proprietario schema** immettere il nome di un utente o ruolo del database proprietario dello schema. In alternativa, fare clic su **Cerca** per aprire la finestra di dialogo **Cerca ruoli e utenti** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opzioni aggiuntive  
+### <a name="additional-options"></a>Opzioni aggiuntive  
  Nella finestra di dialogo **Schema - Nuovo** sono inoltre disponibili opzioni in due pagine aggiuntive, cioè **Autorizzazioni** e **Proprietà estese**.  
   
 -   Nella pagina **Autorizzazioni** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare uno schema  
+#### <a name="to-create-a-schema"></a>Per creare uno schema  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

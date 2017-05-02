@@ -1,30 +1,34 @@
 ---
-title: "Creazione di server collegati (Motore di database di SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/20/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.linkedserver.properties.general.f1"
-  - "sql13.swb.linkedserver.properties.security.f1"
-  - "sql13.swb.linkedserver.properties.provider.f1"
-  - "sql13.swb.linkedserver.properties.options.f1"
-helpviewer_keywords: 
-  - "server collegati [SQL Server], creazione"
+title: Creare server collegati (motore di database di SQL Server) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/20/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.linkedserver.properties.general.f1
+- sql13.swb.linkedserver.properties.security.f1
+- sql13.swb.linkedserver.properties.provider.f1
+- sql13.swb.linkedserver.properties.options.f1
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di server collegati (Motore di database di SQL Server)
+# <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
   
 ##  <a name="Background"></a> Background  
@@ -34,8 +38,8 @@ caps.handback.revision: 18
   
 ##  <a name="Security"></a> Sicurezza  
   
-### Autorizzazioni  
- Quando si utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] è richiesta l'autorizzazione **ALTER ANY LINKED SERVER** per il server o l'appartenenza nel ruolo predefinito del server **setupadmin**. Quando si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è richiesta l'autorizzazione **CONTROL SERVER** o l'appartenenza al ruolo predefinito del server **sysadmin**.  
+### <a name="permissions"></a>Autorizzazioni  
+ Quando si utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] è richiesta l'autorizzazione **ALTER ANY LINKED SERVER** per il server o l'appartenenza nel ruolo predefinito del server **setupadmin** . Quando si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è richiesta l'autorizzazione **CONTROL SERVER** o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="Procedures"></a> Come creare un server collegato  
  È possibile utilizzare uno degli elementi seguenti:  
@@ -46,9 +50,9 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-##### Per creare un server collegato a un'altra istanza di SQL Server tramite SQL Server Management Studio  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aprire Esplora oggetti, espandere **Oggetti server**, fare clic con il pulsante destro del mouse su **Server collegati**, quindi **Nuovo server collegato**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti, espandere **Oggetti server**, fare clic con il pulsante destro del mouse su **Server collegati**, quindi **Nuovo server collegato**.  
   
 2.  Nella casella **Server collegato** della pagina **Generale** digitare il nome dell'istanza di **SQL Server** a cui si sta eseguendo il collegamento.  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 18
      Consente di specificare l'ID di accesso locale con cui è possibile connettersi al server collegato. L'account di accesso locale può essere un account basato sull'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account basato sull'autenticazione di Windows. Utilizzare questo elenco per limitare la connessione a determinati account di accesso o per consentire ad alcuni account di connettersi con un account di accesso diverso.  
   
      **Impersonate**  
-     Consente di passare il nome utente e la password dall'account di accesso locale al server collegato. Nel caso dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che nel server remoto esista un account di accesso con un nome e una password identici. Nel caso degli account di accesso Windows, è necessario che l'account di accesso sia valido nel server collegato.  
+     Consente di passare il nome utente e la password dall'account di accesso locale al server collegato. Nel caso dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che nel server remoto esista un account di accesso con un nome e una password identici. Nel caso degli account di accesso Windows, è necessario che l'account di accesso sia valido nel server collegato.  
   
      Per utilizzare la funzionalità di rappresentazione, è indispensabile che la configurazione risponda ai requisiti per la delega.  
   
@@ -136,33 +140,33 @@ caps.handback.revision: 18
      **Usa regole di confronto remote**  
      Determina se vengono utilizzate le regole di confronto di una colonna remota o di un server locale.  
   
-     Se è true, per le origini dei dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono adottate le regole di confronto delle colonne remote, mentre le regole di confronto specificate nel nome delle regole di confronto vengono utilizzate per origini dei dati diverse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Se è true, per le origini dei dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono adottate le regole di confronto delle colonne remote, mentre le regole di confronto specificate nel nome delle regole di confronto vengono utilizzate per origini dei dati diverse da[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Se è false, per le query distribuite vengono sempre utilizzate le regole di confronto predefinite del server locale, mentre il nome delle regole di confronto e le regole di confronto delle colonne remote vengono ignorati. Il valore predefinito è false.  
   
      **Nome regole di confronto**  
-     Consente di specificare il nome delle regole di confronto utilizzate dall'origine dei dati remota quando l'opzione Usa regole di confronto remote è true e l'origine dei dati non è un'origine dei dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Consente di specificare il nome delle regole di confronto utilizzate dall'origine dei dati remota quando l'opzione Usa regole di confronto remote è true e l'origine dei dati non è un'origine dei dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario specificare il nome di uno dei set di regole di confronto supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Utilizzare questa opzione per accedere a un'origine dei dati OLE DB diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]che utilizza regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Il server collegato deve supportare regole di confronto singole da utilizzare per tutte le colonne del server. Non impostare questa opzione quando il server collegato supporta più regole di confronto nella stessa origine dei dati oppure non è possibile stabilire se le regole di confronto del server collegato corrispondono a una delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Il server collegato deve supportare regole di confronto singole da utilizzare per tutte le colonne del server. Non impostare questa opzione quando il server collegato supporta più regole di confronto nella stessa origine dei dati oppure non è possibile stabilire se le regole di confronto del server collegato corrispondono a una delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Connection Timeout**  
      Valore di timeout espresso in secondi per la connessione al server collegato.  
   
-     Se il valore è 0, usare il valore predefinito **sp_configure** dell'opzione [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md).  
+     Se il valore è 0, usare il valore predefinito **sp_configure** dell'opzione [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
      **Timeout query**  
      Valore di timeout espresso in secondi per le query eseguite nel server collegato.  
   
-     Se 0, usare il valore predefinito **sp_configure** dell'opzione [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md).  
+     Se 0, usare il valore predefinito **sp_configure** dell'opzione [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
      **Abilita promozione delle transazioni distribuite**  
-     Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è impostata su TRUE, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. Per altre informazioni, vedere [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
+     Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è impostata su TRUE, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. Per altre informazioni, vedere [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
   
 6.  Scegliere **OK**.  
   
-##### Per visualizzare le opzioni del provider  
+##### <a name="to-view-the-provider-options"></a>Per visualizzare le opzioni del provider  
   
 -   Per visualizzare le opzioni rese disponibili dal provider, fare clic sulla pagina **Opzioni provider** .  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 18
      Indica che sul provider vengono richiamate solo le interfacce OLE DB di livello 0.  
   
      **Consenti in-process**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di un'istanza del provider come server in-process. Se questa opzione non viene impostata, per impostazione predefinita viene creata un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La creazione di un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di proteggere il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli errori che si verificano nel provider. Quando l'istanza del provider viene creata al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli aggiornamenti o gli inserimenti che fanno riferimento a colonne per valori di grandi dimensioni (**text**, **ntext** o **image**) non sono consentiti.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di un'istanza del provider come server in-process. Se questa opzione non viene impostata, per impostazione predefinita viene creata un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creazione di un'istanza del provider al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di proteggere il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli errori che si verificano nel provider. Quando l'istanza del provider viene creata al di fuori del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , gli aggiornamenti o gli inserimenti che fanno riferimento a colonne per valori di grandi dimensioni (**text**, **ntext**o **image**) non sono consentiti.  
   
      **Aggiornamenti non in transazioni**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente gli aggiornamenti anche se **ITransactionLocal** non è disponibile. Se questa opzione è abilitata, gli aggiornamenti sul provider non sono recuperabili poiché il provider non supporta le transazioni.  
@@ -195,7 +199,7 @@ caps.handback.revision: 18
 ###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Per creare un server collegato con [!INCLUDE[tsql](../../includes/tsql-md.md)], usare le istruzioni [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
-##### Per creare un server collegato a un'altra istanza di SQL Server tramite Transact-SQL  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite Transact-SQL  
   
 1.  Nell'Editor query immettere il comando [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per il collegamento a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominata `SRVR002\ACCTG`:  
   
@@ -222,7 +226,7 @@ caps.handback.revision: 18
   
 ##  <a name="FollowUp"></a> Completamento: passaggi da effettuare dopo aver creato un server collegato  
   
-#### Per testare il server collegato  
+#### <a name="to-test-the-linked-server"></a>Per testare il server collegato  
   
 -   Eseguire il codice riportato di seguito per testare la connessione al server collegato. In questo esempio vengono restituiti i nomi dei database nel server collegato.  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Scrittura di una query che consente creare un join di tabelle di un server collegato  
+#### <a name="writing-a-query-that-joins-tables-from-a-linked-server"></a>Scrittura di una query che consente creare un join di tabelle di un server collegato  
   
 -   Utilizzare nomi in quattro parti per fare riferimento a un oggetto in un server collegato. Eseguire il codice riportato di seguito per restituire un elenco di tutti gli account di accesso nel server locale e i relativi account di accesso corrispondenti nel server collegato.  
   
@@ -246,9 +250,10 @@ caps.handback.revision: 18
   
      Quando viene restituito NULL per l'account di accesso del server collegato, tale account di accesso non è presente nel server collegato. Questi account di accesso non potranno essere utilizzati dal server collegato a meno tale server non sia configurato per passare un contesto di sicurezza differente oppure il server collegato accetta connessioni anonime.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

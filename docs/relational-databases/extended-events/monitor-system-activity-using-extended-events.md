@@ -1,33 +1,37 @@
 ---
-title: "Monitorare l&#39;attivit&#224; del sistema mediante gli eventi estesi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "eventi estesi [SQL Server], monitoraggio dell'attività del sistema"
+title: "Monitorare l&quot;attività del sistema mediante gli eventi estesi | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b586a05981139acd687aaf712f01665f1650ac59
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitorare l&#39;attivit&#224; del sistema mediante gli eventi estesi
+# <a name="monitor-system-activity-using-extended-events"></a>Monitorare l'attività del sistema mediante gli eventi estesi
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   In questa procedura viene illustrato come utilizzare gli eventi estesi con Analisi eventi per Windows (ETW) al fine di monitorare l'attività del sistema. Viene inoltre indicata la modalità di utilizzo delle istruzioni CREATE EVENT SESSION, ALTER EVENT SESSION e DROP EVENT SESSION.  
   
  Il completamento di tali attività comporta l'utilizzo dell'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per effettuare la procedura descritta di seguito. La procedura richiede anche l'utilizzo del prompt dei comandi per eseguire comandi ETW.  
   
-### Per monitorare l'attività del sistema mediante gli eventi estesi  
+### <a name="to-monitor-system-activity-using-extended-events"></a>Per monitorare l'attività del sistema mediante gli eventi estesi  
   
 1.  Nell'editor di query eseguire le istruzioni indicate di seguito per creare una sessione eventi e aggiungere due eventi. Tali eventi, ovvero checkpoint_begin e checkpoint_end, vengono generati all'inizio e alla fine di un checkpoint del database.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
 7.  Al prompt dei comandi eseguire i comandi indicati di seguito per visualizzare i dati ETW.  
   
     > [!NOTE]  
-    >  Per informazioni sul comando **tracerpt**, al prompt dei comandi immettere `tracerpt /?`.  
+    >  Per informazioni sul comando **tracerpt** , al prompt dei comandi immettere `tracerpt /?`.  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -117,12 +121,12 @@ caps.handback.revision: 20
     go  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [Viste del catalogo degli eventi estesi &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Viste a gestione dinamica degli eventi estesi](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Destinazioni degli eventi estesi di SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [Destinazioni degli eventi estesi di SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

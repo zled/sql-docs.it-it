@@ -1,28 +1,32 @@
 ---
-title: "Creare funzioni CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funzioni CLR [SQL Server]"
-  - "funzioni definite dall'utente [SQL Server], CLR"
+title: Creare funzioni CLR | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CLR functions [SQL Server]
+- user-defined functions [SQL Server], CLR
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3589282697cb1a7d11c7e5c18db204140ad0653
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare funzioni CLR
+# <a name="create-clr-functions"></a>Creare funzioni CLR
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR). Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
+  È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR). Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
   
  La creazione di una funzione CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede i seguenti passaggi:  
   
@@ -30,16 +34,16 @@ caps.handback.revision: 34
   
 -   Registrare l'assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'istruzione CREATE ASSEMBLY. Per altre informazioni sugli assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Assembly &#40;Motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md).  
   
--   Creare la funzione che fa riferimento all'assembly registrato usando l'istruzione [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md).  
+-   Creare la funzione che fa riferimento all'assembly registrato usando l'istruzione [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) .  
   
 > [!NOTE]  
->  Con la distribuzione di un progetto SQL Server in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] viene registrato un assembly nel database specificato per il progetto. La distribuzione del progetto consente anche di creare funzioni CLR nel database per tutti i metodi annotati con l'attributo **SqlFunction**. Per altre informazioni, vedere [Distribuzione di oggetti di database CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+>  Con la distribuzione di un progetto SQL Server in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] viene registrato un assembly nel database specificato per il progetto. La distribuzione del progetto consente anche di creare funzioni CLR nel database per tutti i metodi annotati con l'attributo **SqlFunction** . Per altre informazioni, vedere [Distribuzione di oggetti di database CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
 >  Per impostazione predefinita, l'esecuzione di codice CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata. È possibile creare, modificare ed eliminare oggetti di database che fanno riferimento a moduli di codice gestito, ma tali riferimenti non verranno eseguiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a meno che non si abiliti l'opzione [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) usando [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-## Accesso a risorse esterne  
- Le funzioni CLR possono essere utilizzate per accedere a risorse esterne, ad esempio file, risorse di rete, servizi Web o altri database, comprese istanze remote di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A questo scopo è possibile utilizzare varie classi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ad esempio `System.IO`, `System.WebServices`, `System.Sql` e così via. L'assembly che contiene tali funzioni deve essere configurato almeno con l'autorizzazione EXTERNAL_ACCESS impostata a questo scopo. Per altre informazioni, vedere [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md). È possibile utilizzare il provider gestito SQL Client per accedere a istanze remote di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia nelle funzioni CLR le connessioni loopback al server di origine non sono supportate.  
+## <a name="accessing-external-resources"></a>Accesso a risorse esterne  
+ Le funzioni CLR possono essere utilizzate per accedere a risorse esterne, ad esempio file, risorse di rete, servizi Web o altri database, comprese istanze remote di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A questo scopo è possibile utilizzare varie classi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ad esempio `System.IO`, `System.WebServices`, `System.Sql`e così via. L'assembly che contiene tali funzioni deve essere configurato almeno con l'autorizzazione EXTERNAL_ACCESS impostata a questo scopo. Per altre informazioni, vedere [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md). È possibile utilizzare il provider gestito SQL Client per accedere a istanze remote di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia nelle funzioni CLR le connessioni loopback al server di origine non sono supportate.  
   
  **Per creare, modificare o eliminare assembly in SQL Server**  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 34
   
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
-## Accesso al codice nativo  
- Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](http://go.microsoft.com/fwlink/?LinkID=181929). In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
+## <a name="accessing-native-code"></a>Accesso al codice nativo  
+ Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](http://go.microsoft.com/fwlink/?LinkID=181929) . In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [Creazione di funzioni di aggregazione definite dall'utente](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)   
  [Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   

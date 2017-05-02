@@ -1,27 +1,31 @@
 ---
-title: "Collegare un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "collegamento di database [SQL Server]"
-  - "collegamento di database [SQL Server]"
+title: Collegare un database | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Collegare un database
+# <a name="attach-a-database"></a>Collegare un database
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento si illustra come collegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con questa funzionalità è possibile copiare, spostare o aggiornare un database di SQL Server.  
@@ -42,7 +46,7 @@ caps.handback.revision: 52
 Non è consigliabile usare le operazioni di collegamento e scollegamento da Backup e ripristino. Non esistono backup del log delle transazioni ed è possibile che i file vengano eliminati accidentalmente.
   
 ###  <a name="Security"></a> Sicurezza  
- Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento. Per informazioni sulle autorizzazioni per i file impostate quando un database viene collegato o scollegato, vedere [Protezione dei dati e dei file di log](http://technet.microsoft.com/library/ms189128.aspx) dalla [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]documentazione online (lettura ancora valida). 
+ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento. Per informazioni sulle autorizzazioni per i file impostate quando un database viene collegato o scollegato, vedere [Protezione dei dati e dei file di log](http://technet.microsoft.com/library/ms189128.aspx) dalla [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] documentazione online (lettura ancora valida). 
   
  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare anche il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente. Per altre informazioni sul collegamento di database e sulle modifiche apportate ai metadati in caso di collegamento di un database, vedere [Collegamento e scollegamento di un database (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
@@ -51,9 +55,9 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per collegare un database  
+#### <a name="to-attach-a-database"></a>Per collegare un database  
   
-1.  In Esplora oggetti[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere la vista di questa istanza in SSMS.  
+1.  In Esplora oggetti [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere la vista di questa istanza in SSMS.  
   
 2.  Fare clic con il pulsante destro del mouse su **Database** , quindi scegliere **Collega**.  
   
@@ -73,7 +77,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
      **Percorso file MDF**  
      Consente di visualizzare il percorso e il nome del file MDF selezionato.  
   
-     **Nome database**  
+     **Database Name**  
      Consente di visualizzare il nome del database.  
   
      **Collega come**  
@@ -123,7 +127,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per collegare un database  
+#### <a name="to-attach-a-database"></a>Per collegare un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -147,7 +151,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
 ##  <a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database di SQL Server  
  Una volta aggiornato utilizzando il metodo di collegamento, il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti anche che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati.  
   
- Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   > [!NOTE]
   > Se si collega un database da un'istanza che esegue SQL Server 2014 o versioni precedenti con Change Data Capture (CDC) abilitato, è necessario eseguire anche il comando seguente per aggiornare i metadati di Change Data Capture (CDC).
@@ -156,8 +160,9 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Scollegamento di un database](../../relational-databases/databases/detach-a-database.md)  
+ [Scollegare un database](../../relational-databases/databases/detach-a-database.md)  
   
   
+

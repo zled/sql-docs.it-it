@@ -1,26 +1,30 @@
 ---
-title: "File in formato XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "file di formato [SQL Server], file di formato XML"
-  - "importazione bulk [SQL Server], file di formato"
-  - "file in formato XML [SQL Server]"
+title: File di formato XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- format files [SQL Server], XML format files
+- bulk importing [SQL Server], format files
+- XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# File in formato XML (SQL Server)
+# <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene fornito un XML Schema che definisce la sintassi per la scrittura di *file di formato XML* da utilizzare per l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file di formato XML devono essere conformi a questo schema, definito in XML Schema Definition Language (XSDL). I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  È possibile usare un file di formato XML con un comando **bcp**, un'istruzione BULK INSERT o un'istruzione INSERT ... Istruzione SELECT \* FROM OPENROWSET(BULK...). Il comando **bcp** consente di generare automaticamente un file di formato XML per una tabella. Per ulteriori informazioni, vedere [bcp Utility](../../tools/bcp-utility.md).  
@@ -106,9 +110,9 @@ caps.handback.revision: 45
   
 -   [Sintassi di base di XML Schema](#BasicSyntax)  
   
--   [Utilizzo dell'elemento \<ROW> nell'importazione in blocco](#HowUsesROW)  
+-   [Uso dell'elemento \<ROW> nell'importazione in blocco](#HowUsesROW)  
   
--   [Utilizzo dell'elemento \<COLUMN> nell'importazione in blocco](#HowUsesColumn)  
+-   [Uso dell'elemento \<COLUMN> nell'importazione in blocco](#HowUsesColumn)  
   
 -   [Inserimento del valore xsi:type in un set di dati](#PutXsiTypeValueIntoDataSet)  
   
@@ -142,9 +146,9 @@ caps.handback.revision: 45
   
 -   [Elementi dello schema](#SchemaElements)  
   
--   [Attributi dell'elemento \<FIELD>](#AttrOfFieldElement) e [Valori Xsi:type dell'elemento \<FIELD>](#XsiTypeValuesOfFIELD)  
+-   [Attributi dell'elemento \<FIELD>](#AttrOfFieldElement) (e valori [Xsi:type dell'elemento \<FIELD>](#XsiTypeValuesOfFIELD))  
   
--   [Attributi dell'elemento \<COLUMN>](#AttrOfColumnElement) e [Valori Xsi:type dell'elemento \<COLUMN>](#XsiTypeValuesOfCOLUMN)  
+-   [Attributi dell'elemento \<COLUMN>](#AttrOfColumnElement) (e valori [Xsi:type dell'elemento \<COLUMN>](#XsiTypeValuesOfCOLUMN))  
   
 ####  <a name="SchemaElements"></a> Elementi dello schema  
  In questa sezione viene riepilogato lo scopo di ciascun elemento definito da XML Schema per i file di formato XML. Gli attributi sono descritti in apposite sezioni più avanti in questo argomento.  
@@ -163,12 +167,12 @@ caps.handback.revision: 45
  \<ROW .../>  
  Definisce un elemento complesso contenente uno o più elementi \<COLUMN>. L'ordine degli elementi \<COLUMN> è indipendente da quello degli elementi \<FIELD> in una definizione RECORD. L'ordine degli elementi \<COLUMN> in un file di formato determina invece l'ordine delle colonne del set di righe risultante. I campi di dati vengono caricati nell'ordine in cui vengono dichiarati gli elementi \<COLUMN> corrispondenti nell'elemento \<COLUMN>.  
   
- Per altre informazioni, vedere [Utilizzo dell'elemento \<ROW> nell'importazione in blocco](#HowUsesROW) più avanti in questo argomento.  
+ Per altre informazioni, vedere [Uso dell'elemento \<ROW> nell'importazione in blocco](#HowUsesROW) più avanti in questo argomento.  
   
  \<COLUMN>  
  Definisce una colonna come elemento (\<COLUMN>). Ogni elemento \<COLUMN> corrisponde a un elemento \<FIELD>, il cui ID viene specificato nell'attributo SOURCE dell'elemento \<COLUMN>.  
   
- Gli attributi di questo elemento vengono discussi in [Attributi dell'elemento \<COLUMN>](#AttrOfColumnElement) più avanti in questo argomento. Vedere anche [Utilizzo dell'elemento \<COLUMN> nell'importazione in blocco](#HowUsesColumn) più avanti in questo argomento.  
+ Gli attributi di questo elemento vengono discussi in [Attributi dell'elemento \<COLUMN>](#AttrOfColumnElement) più avanti in questo argomento. Vedere anche [Uso dell'elemento \<COLUMN> nell'importazione in blocco](#HowUsesColumn) più avanti in questo argomento.  
   
  \</BCPFORMAT>  
  Richiesto per terminare il file di formato.  
@@ -198,10 +202,10 @@ caps.handback.revision: 45
   
 |Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> esegue il mapping a \<COLUMN SOURCE**="***fieldID***"**/>|Required|  
+|ID **="***fieldID***"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> esegue il mapping a \<COLUMN SOURCE**="***fieldID***"**/>|Obbligatorio|  
 |xsi:type **="***fieldType***"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
 |LENGTH **="***n***"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
-|PREFIX_LENGTH **="***p***"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p* deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
+|PREFIX_LENGTH **="***p***"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
 |MAX_LENGTH **="***m***"**|Corrisponde al numero massimo di byte archiviabile in un campo specifico. In assenza di una tabella di destinazione, la lunghezza massima della colonna non è nota. L'attributo MAX_LENGTH limita la lunghezza massima di una colonna di testo di output e di conseguenza anche lo spazio di archiviazione allocato al valore della colonna. Tale limitazione risulta particolarmente comoda quando si utilizza l'opzione BULK della funzione OPENROWSET in una clausola SELECT FROM.<br /><br /> Il valore di *m* deve essere un numero intero positivo. Per impostazione predefinita, la lunghezza massima è pari a 8000 caratteri per una colonna **char** e a 4000 caratteri per una colonna **nchar** .|Facoltativo|  
 |COLLATION **="***collationName***"**|Questo attributo è consentito solo per i campi di tipo carattere. Per un elenco dei nomi delle regole di confronto SQL, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Facoltativo|  
 |TERMINATOR **= "***terminator***"**|Specifica il carattere di terminazione di un campo di dati. Il carattere di terminazione può essere costituito da un carattere qualsiasi, univoco e non facente parte dei dati.<br /><br /> Per impostazione predefinita, il carattere di terminazione corrisponde al carattere di tabulazione, rappresentato come \t. Per rappresentare un segno di paragrafo, utilizzare \r\n.|Viene utilizzato solo con un valore xsi:type di dati di tipo carattere, per il quale è necessario specificare questo attributo.|  
@@ -222,7 +226,7 @@ caps.handback.revision: 45
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH, COLLATION|  
   
- Per altre informazioni sui tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ Per altre informazioni sui tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 ####  <a name="AttrOfColumnElement"></a> Attributi dell'elemento \<COLUMN>  
  Questa sezione descrive gli attributi dell'elemento \<COLUMN>, riepilogati nella sintassi dello schema seguente:  
@@ -264,7 +268,7 @@ caps.handback.revision: 45
   
  L'elemento \<COLUMN> supporta i tipi di dati SQL nativi, come descritto di seguito:  
   
-|Categoria del tipo|Tipi di dati \<COLUMN>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
+|Categoria del tipo|Tipi di dati di \<COLUMN>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
 |Fisso|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|nessuna.|NULLABLE|  
 |Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|nessuna.|NULLABLE, PRECISION, SCALE|  
@@ -276,9 +280,9 @@ caps.handback.revision: 45
 > [!IMPORTANT]  
 >  Per eseguire l'esportazione o l'importazione bulk dei dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
   
- Per altre informazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ Per altre informazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
-###  <a name="HowUsesROW"></a> Utilizzo dell'elemento \<ROW> nell'importazione in blocco  
+###  <a name="HowUsesROW"></a> Uso dell'elemento \<ROW> nell'importazione in blocco  
  L'elemento \<ROW> viene ignorato in alcuni contesti. L'elemento \<ROW> può influire su un'operazione di importazione in blocco a seconda della modalità con cui viene eseguita l'operazione:  
   
 -   Comando **bcp**   
@@ -294,7 +298,7 @@ caps.handback.revision: 45
     > [!NOTE]  
     >  La clausola OPENROWSET BULK richiede un file di formato. Si noti che la conversione da un tipo di dati del campo al tipo di dati di una colonna è disponibile solo con un file di formato XML.  
   
-###  <a name="HowUsesColumn"></a> Utilizzo dell'elemento \<COLUMN> nell'importazione in blocco  
+###  <a name="HowUsesColumn"></a> Uso dell'elemento \<COLUMN> nell'importazione in blocco  
  Per consentire l'importazione in blocco dei dati in una tabella, gli elementi \<COLUMN> di un file di formato eseguono il mapping di un campo del file di dati alle colonne della tabella specificando:  
   
 -   La posizione di ogni campo all'interno di una riga del file di dati.  
@@ -320,7 +324,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
   
 ##  <a name="SampleXmlFFs"></a> File di formato XML di esempio  
- In questa sezione sono vengono fornite informazioni sull'utilizzo dei file di formato XML in una vasta gamma di situazioni, incluso un esempio relativo a [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)].  
+ In questa sezione sono vengono fornite informazioni sull'utilizzo dei file di formato XML in una vasta gamma di situazioni, incluso un esempio relativo a [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] .  
   
 > [!NOTE]  
 >  Nei file di dati degli esempi seguenti `<tab>` indica un carattere di tabulazione e `<return>` indica un ritorno a capo.  
@@ -380,7 +384,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], vedere [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
+>  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vedere [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordinamento dei campi dati diverso da quello delle colonne della tabella  
  Nell'esempio seguente viene illustrato un file di formato XML che descrive un file di dati contenente tre campi dati di tipo carattere. Il file di formato esegue il mapping tra il file di dati e una tabella che contiene tre colonne ordinate in modo diverso rispetto ai campi del file di dati.  
@@ -415,7 +419,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], vedere [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
+>  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vedere [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
 ###  <a name="OmitField"></a> C. Omissione di un campo dati  
  Nell'esempio seguente viene illustrato un file di formato XML che descrive un file di dati contenente quattro campi dati di tipo carattere. Il file di formato esegue il mapping tra il file di dati e una tabella che contiene tre colonne. Il secondo campo dati non corrisponde a nessuna colonna della tabella.  
@@ -454,9 +458,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], vedere [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
+>  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vedere [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
-###  <a name="MapXSItype"></a> D. Mapping di \<FIELD> xsi:type a \<COLUMN> xsi:type  
+###  <a name="MapXSItype"></a> D. Mapping tra il valore xsi:type dell'elemento \<FIELD> e il valore xsi:type dell'elemento \<COLUMN>  
  Nell'esempio seguente vengono illustrati tipi diversi di campi e i relativi mapping alle colonne.  
   
 ```  
@@ -494,7 +498,7 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ```  
   
 ###  <a name="MapXMLDataToTbl"></a> E. Mapping tra i dati XML e una tabella  
- Nell'esempio seguente viene creata una tabella vuota a due colonne denominata `t_xml` in cui viene eseguito il mapping tra la prima colonna e il tipo di dati `int` e tra la seconda colonna e il tipo di dati `xml`.  
+ Nell'esempio seguente viene creata una tabella vuota a due colonne denominata`t_xml`in cui viene eseguito il mapping tra la prima colonna e il tipo di dati `int` e tra la seconda colonna e il tipo di dati `xml` .  
   
 ```  
 CREATE TABLE t_xml (c1 int, c2 xml)  
@@ -542,26 +546,26 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
 -   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Creare un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
+-   [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
 -   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  nessuna.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'importazione ed esportazione in blocco di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   

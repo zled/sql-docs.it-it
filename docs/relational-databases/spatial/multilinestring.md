@@ -1,47 +1,51 @@
 ---
-title: "MultiLineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sottotipo di geometria MultiLineString [SQL Server]"
-  - "sottotipi di geometria [SQL Server]"
+title: MultiLineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiLineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 398a68b50469ffb778434f59b6895435a8da62c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiLineString
-  Un'istanza **MultiLineString** è una raccolta di zero o più istanze di tipo **geometry** o **geographyLineString**.  
+# <a name="multilinestring"></a>MultiLineString
+  Un'istanza **MultiLineString** è una raccolta di zero o più istanze di tipo **geometry** o **geographyLineString** .  
   
-## Istanze MultiLineString  
- La figura seguente illustra esempi di istanze **MultiLineString**.  
+## <a name="multilinestring-instances"></a>Istanze MultiLineString  
+ La figura seguente illustra esempi di istanze **MultiLineString** .  
   
- ![Esempi di istanze di geometria MultiLineString](../../relational-databases/spatial/media/multilinestring.png "Esempi di istanze di geometria MultiLineString")  
+ ![Esempi di istanze di geometria MultiLineString](../../relational-databases/spatial/media/multilinestring.gif "Esempi di istanze di geometria MultiLineString")  
   
  Come indicato nell'illustrazione:  
   
--   La figura 1 è un'istanza **MultiLineString**di tipo semplice il cui limite sono i quattro endpoint dei due elementi **LineString**.  
+-   La figura 1 è un'istanza **MultiLineString** di tipo semplice il cui limite sono i quattro endpoint dei due elementi **LineString** .  
   
--   La figura 2 è un'istanza di tipo semplice **MultiLineString** perché si intersecano solo gli endpoint degli elementi **LineString**. Il limite è rappresentato dai due endpoint non sovrapposti.  
+-   La figura 2 è un'istanza di tipo semplice **MultiLineString** perché si intersecano solo gli endpoint degli elementi **LineString** . Il limite è rappresentato dai due endpoint non sovrapposti.  
   
 -   La figura 3 è un'istanza di tipo non semplice **MultiLineString** perché l'interno di uno dei suoi elementi **LineString** è intersecato. Il limite di questa istanza **MultiLineString** è rappresentato dai quattro endpoint.  
   
 -   La figura 4 rappresenta un'istanza **MultiLineString** non semplice e non chiusa.  
   
--   La figura 5 rappresenta un'istanza **MultiLineString** semplice non chiusa. Non è chiusa perché gli elementi **LineString** non sono chiusi. È semplice perché nessuna delle parti interne di alcuna istanza **LineString** si interseca.  
+-   La figura 5 rappresenta un'istanza **MultiLineString**semplice non chiusa. Non è chiusa perché gli elementi **LineString** non sono chiusi. È semplice perché nessuna delle parti interne di alcuna istanza **LineString** si interseca.  
   
 -   La figura 6 rappresenta un'istanza **MultiLineString** semplice e chiusa. È chiusa perché tutti i suoi elementi sono chiusi. È semplice perché nessuno dei suoi elementi si interseca con le parti interne.  
   
-### Istanze accettate  
+### <a name="accepted-instances"></a>Istanze accettate  
  Per poter essere accettata, un'istanza **MultiLineString** deve essere vuota o comprendere esclusivamente istanze **LineString** accettate. Per altre informazioni sulle istanze **LineString** accettate, vedere [LineString](../../relational-databases/spatial/linestring.md). Gli esempi seguenti illustrano alcune istanze **MultiLineString** accettate.  
   
 ```  
@@ -51,13 +55,13 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- L'esempio seguente genera un'eccezione `System.FormatException`, perché la seconda istanza **LineString** non è valida.  
+ L'esempio seguente genera un'eccezione `System.FormatException` , perché la seconda istanza **LineString** non è valida.  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
-### Istanze valide  
+### <a name="valid-instances"></a>Istanze valide  
  Per poter essere valida, un'istanza **MultiLineString** deve soddisfare i criteri seguenti:  
   
 1.  Tutte le istanze che comprendono l'istanza **MultiLineString** devono essere istanze **LineString** valide.  
@@ -76,7 +80,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  `@g4` non è valida, perché la seconda istanza **LineString** si sovrappone alla prima istanza **LineString** in un intervallo. Si toccano in un numero infinito di punti.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  L'esempio seguente crea un'istanza `geometry``MultiLineString` che contiene due elementi `LineString` con SRID 0.  
   
 ```  
@@ -92,7 +96,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [STLength &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

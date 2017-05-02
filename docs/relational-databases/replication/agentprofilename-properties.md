@@ -1,29 +1,33 @@
 ---
-title: "Propriet&#224; di &lt;AgentProfileName&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileprops.f1"
-helpviewer_keywords: 
-  - "Profilo agente Proprietà - finestra di dialogo"
+title: "Proprietà &lt;NomeProfiloAgente&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.profiles.perfprofileprops.f1
+helpviewer_keywords:
+- Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6932152bce33b84877287560d2ec769005c0c20f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriet&#224; di &lt;AgentProfileName&gt;
-  Utilizzare il **profilo agente proprietà** la finestra di dialogo per visualizzare i valori specificati per ogni parametro dell'agente in un profilo e modificare i valori per i profili definiti dall'utente.  
+# <a name="ltagentprofilenamegt-properties"></a>Proprietà &lt;NomeProfiloAgente&gt;
+  Utilizzare la finestra di dialogo **Profilo agente Proprietà** per visualizzare i valori impostati per ogni parametro di agente in un profilo e modificare quelli relativi ai profili definiti dall'utente.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  Nome del profilo.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 17
   
 -   [Agente lettura log repliche](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Agente merge repliche](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
@@ -52,8 +56,8 @@ caps.handback.revision: 17
  **Mostra solo i parametri utilizzati in questo profilo**  
  Deselezionare questa casella di controllo per mostrare tutti i parametri validi per un determinato agente.  
   
-## Vedere anche  
- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md)  
   

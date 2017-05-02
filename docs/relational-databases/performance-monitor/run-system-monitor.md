@@ -1,28 +1,32 @@
 ---
-title: "Eseguire Monitoraggio di sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Monitor di sistema [SQL Server], esecuzione"
-  - "Monitor di sistema di Windows [SQL Server], esecuzione"
-  - "chiamate di procedure remote [SQL Server]"
-  - "avvio di Monitor di sistema di Windows NT"
-  - "RPC"
+title: Eseguire Monitoraggio di sistema | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- System Monitor [SQL Server], running
+- Windows System Monitor [SQL Server], running
+- remote procedure calls [SQL Server]
+- starting Windows NT System Monitor
+- RPC
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16624d722d65aceffa1582bce0d687cd66d1703
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eseguire Monitoraggio di sistema
+# <a name="run-system-monitor"></a>Eseguire Monitoraggio di sistema
   Monitoraggio di sistema utilizza chiamate di procedura remota (RPC, Remote Procedure Call) per raccogliere informazioni da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualunque utente che dispone di autorizzazioni di Microsoft Windows per l'esecuzione di Monitoraggio di sistema può utilizzare tale programma per monitorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

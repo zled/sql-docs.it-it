@@ -1,32 +1,36 @@
 ---
-title: "Ripristini a fasi (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aggiornamenti parziali [SQL Server]"
-  - "ripristini in più fasi [SQL Server]"
-  - "ripristini a fasi [SQL Server]"
-  - "ripristino [SQL Server], scenario di ripristino a fasi"
+title: Ripristini a fasi (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partial updates [SQL Server]
+- staged restores [SQL Server]
+- piecemeal restores [SQL Server]
+- restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristini a fasi (SQL Server)
+# <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition in cui sono contenuti più file o filegroup e, nel modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
   
  Per informazioni sui ripristini a fasi e tabelle con ottimizzazione per la memoria, vedere [Backup e ripristino a fasi di database con tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
- Il *ripristino a fasi* consente di ripristinare e recuperare a fasi i database in cui sono inclusi più filegroup. e comprende una serie di sequenze di ripristino, a partire dal filegroup primario e, in alcuni casi, da uno o più filegroup secondari. Permette inoltre di gestire i controlli per assicurarsi che il database sia sempre coerente. Dopo il completamento della sequenza di ripristino, i file recuperati, se validi e coerenti con il database, possono essere portati online direttamente.  
+ Il*ripristino a fasi* consente di ripristinare e recuperare a fasi i database in cui sono inclusi più filegroup. e comprende una serie di sequenze di ripristino, a partire dal filegroup primario e, in alcuni casi, da uno o più filegroup secondari. Permette inoltre di gestire i controlli per assicurarsi che il database sia sempre coerente. Dopo il completamento della sequenza di ripristino, i file recuperati, se validi e coerenti con il database, possono essere portati online direttamente.  
   
  Il ripristino a fasi può essere utilizzato con tutti i modelli di recupero, tuttavia la massima flessibilità si ottiene con i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk, piuttosto che con il modello di recupero con registrazione minima.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 74
   
  I requisiti esatti per l'esecuzione di un ripristino a fasi dipendono dal modello di recupero del database. Per ulteriori informazioni, vedere "Ripristino a fasi nel modello di recupero con registrazione minima" e "Ripristino a fasi nel modello di recupero con registrazione completa" di seguito in questo argomento.  
   
-## Scenari di ripristino a fasi  
+## <a name="piecemeal-restore-scenarios"></a>Scenari di ripristino a fasi  
  Tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano il ripristino a fasi offline. In Enterprise Edition, un ripristino a fasi può essere online oppure offline. Le implicazioni del ripristino a fasi offline e online sono le seguenti:  
   
 -   Scenari di ripristino a fasi offline  
@@ -49,16 +53,16 @@ caps.handback.revision: 74
   
      In un ripristino a fasi online, dopo la sequenza di ripristino parziale, il database è online e il filegroup primario è disponibile insieme ad eventuali filegroup secondari recuperati. I filegroup non ancora ripristinati rimangono offline, ma è possibile ripristinarli in base alle necessità mentre il database rimane online.  
   
-     Il ripristino a fasi online può coinvolgere le transazioni posticipate. Quando è stato ripristinato un solo subset di filegroup, le transazioni nel database che dipendono dai filegroup online possono diventare posticipate. Si tratta di una situazione comune, in quanto l'intero database deve essere coerente. Per altre informazioni, vedere [Transazioni posticipate &#40;SQL Server &#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
+     Il ripristino a fasi online può coinvolgere le transazioni posticipate. Quando è stato ripristinato un solo subset di filegroup, le transazioni nel database che dipendono dai filegroup online possono diventare posticipate. Si tratta di una situazione comune, in quanto l'intero database deve essere coerente. Per altre informazioni, vedere [Transazioni posticipate &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] scenario di ripristino a fasi  
   
      Per informazioni sui ripristini a fasi di database OLTP in memoria, vedere [Backup e ripristino a fasi di database con tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## Restrizioni  
- Se una sequenza di ripristino parziale esclude qualsiasi filegroup [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), il ripristino temporizzato non è supportato. È possibile forzare la continuazione della sequenza di ripristino. Tuttavia i filegroup FILESTREAM omessi dall'istruzione RESTORE non potranno mai più essere ripristinati. Per forzare un ripristino temporizzato, specificare l'opzione CONTINUE_AFTER_ERROR insieme all'opzione STOPAT, STOPATMARK o STOPBEFOREMARK che è necessario specificare anche nelle istruzioni RESTORE LOG successive. Se si specifica CONTINUE_AFTER_ERROR, la sequenza di ripristino parziale ha esito positivo e il filegroup FILESTREAM non può più essere recuperato.  
+## <a name="restrictions"></a>Restrizioni  
+ Se una sequenza di ripristino parziale esclude qualsiasi filegroup [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , il ripristino temporizzato non è supportato. È possibile forzare la continuazione della sequenza di ripristino. Tuttavia i filegroup FILESTREAM omessi dall'istruzione RESTORE non potranno mai più essere ripristinati. Per forzare un ripristino temporizzato, specificare l'opzione CONTINUE_AFTER_ERROR insieme all'opzione STOPAT, STOPATMARK o STOPBEFOREMARK che è necessario specificare anche nelle istruzioni RESTORE LOG successive. Se si specifica CONTINUE_AFTER_ERROR, la sequenza di ripristino parziale ha esito positivo e il filegroup FILESTREAM non può più essere recuperato.  
   
-## Ripristino a fasi nel modello di recupero con registrazione minima  
+## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Ripristino a fasi nel modello di recupero con registrazione minima  
  Nel modello di recupero con registrazione minima la sequenza del ripristino a fasi deve iniziare con un backup completo o parziale del database. Quindi, se il backup ripristinato è una base differenziale, ripristinare il backup differenziale più recente.  
   
  Durante la prima sequenza di ripristino parziale, se si ripristina solo un subset di filegroup di lettura/scrittura, qualsiasi filegroup non ripristinato diventa non attivo quando si recupera il database parzialmente ripristinato. L'omissione di un filegroup di lettura/scrittura dalla sequenza di ripristino parziale è adeguata solo nei casi seguenti:  
@@ -69,7 +73,7 @@ caps.handback.revision: 74
   
 -   Il backup completo è stato eseguito mentre il database utilizzava il modello di recupero con registrazione minima, ma il punto di recupero si trova in corrispondenza di un punto nel tempo in cui il database utilizza il modello di recupero con registrazione completa. Per ulteriori informazioni, vedere "Esecuzione di un ripristino a fasi di un database il cui modello di recupero è passato da semplice a completo" di seguito in questo argomento.  
   
-### Requisiti per il ripristino a fasi nel modello di recupero con registrazione minima  
+### <a name="requirements-for-piecemeal-restore-under-the-simple-recovery-model"></a>Requisiti per il ripristino a fasi nel modello di recupero con registrazione minima  
  Nel modello di recupero con registrazione minima, la fase iniziale ripristina e recupera il filegroup primario e tutti i filegroup secondari di lettura/scrittura. Dopo il completamento della fase iniziale, i file recuperati, se validi e consistenti con il database, possono essere portati online direttamente.  
   
  Quindi, è possibile ripristinare i filegroup di sola lettura in una o più fasi aggiuntive.  
@@ -90,7 +94,7 @@ caps.handback.revision: 74
   
 -   Perché il backup di un file di sola lettura sia coerente con il filegroup primario, è necessario che il filegroup secondario sia stato di sola lettura dal momento dell'esecuzione del backup fino al completamento del backup che contiene il filegroup primario. È possibile utilizzare backup differenziali dei file, a condizione che siano stati creati dopo che il filegroup è diventato di sola lettura.  
   
-### Fasi del ripristino a fasi (modello di recupero con registrazione minima  
+### <a name="piecemeal-restore-stages-simple-recovery-model"></a>Fasi del ripristino a fasi (modello di recupero con registrazione minima  
  Lo scenario del ripristino a fasi include le fasi seguenti:  
   
 -   Fase iniziale (ripristino e recupero del filegroup primario e di tutti i filegroup di lettura/scrittura)  
@@ -116,16 +120,16 @@ caps.handback.revision: 74
   
     -   I file danneggiati o inconsistenti con il database devono essere ripristinati prima che siano recuperati.  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
   
 -   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Esempio: Ripristino a fasi di alcuni filegroup &#40;Modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## Ripristino a fasi nel modello di recupero con registrazione completa  
+## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Ripristino a fasi nel modello di recupero con registrazione completa  
  Nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk, il ripristino a fasi è disponibile per qualsiasi database che contiene più filegroup, ed è possibile ripristinare un database rispetto a qualsiasi punto nel tempo. Le sequenze di ripristino di un ripristino a fasi funzionano nel modo seguente:  
   
--   Sequenza di ripristino parziale  
+-   sequenza di ripristino parziale  
   
      La sequenza di ripristino parziale ripristina il filegroup primario e, facoltativamente, alcuni dei filegroup secondari.  
   
@@ -141,16 +145,16 @@ caps.handback.revision: 74
   
      In Enterprise Edition, qualsiasi filegroup secondario offline può essere ripristinato e recuperato mentre il database rimane online. Se un file di sola lettura specifico è coerente con il database e non è danneggiato, non è necessario ripristinarlo. Per altre informazioni, vedere [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-### Applicazione dei backup del log  
+### <a name="applying-log-backups"></a>Applicazione dei backup del log  
  Se un filegroup di sola lettura è stato tale fin da prima della creazione del backup del file, l'applicazione dei backup del log al filegroup non è necessaria e non viene eseguita dal ripristino del file. Se il filegroup è di lettura/scrittura, per aggiornare il filegroup rispetto al file di log attuale è necessario che venga applicata una catena ininterrotta di backup del log all'ultimo ripristino completo o differenziale.  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
   
 -   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Esempio: Ripristino a fasi di alcuni filegroup &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
-## Esecuzione di un ripristino a fasi di un database il cui modello di recupero è passato da semplice a completo  
+## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Esecuzione di un ripristino a fasi di un database il cui modello di recupero è passato da semplice a completo  
  È possibile eseguire un ripristino a fasi di un database che è passato dal modello di recupero con registrazione minima al modello di recupero con registrazione completa a partire dal momento del backup completo o parziale del database. Ad esempio, si prenda in considerazione un database per cui vengono eseguiti i passaggi seguenti:  
   
 1.  Creare un backup parziale (backup_1) di un database con modello di recupero con registrazione minima.  
@@ -171,9 +175,9 @@ caps.handback.revision: 74
   
 4.  Il backup differenziale seguito da tutti i backup ripristinati durante la sequenza del ripristino a fasi originale per ripristinare i dati fino al punto di recupero originale.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicare backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

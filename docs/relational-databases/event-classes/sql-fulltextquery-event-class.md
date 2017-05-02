@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento SQL:FullTextQuery | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:FullTextQuery - classe di evento"
+title: Classe di evento SQL:FullTextQuery | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:FullTextQuery event class
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a925dc8cd1bb1ce3f91fd306b46d874712c55fae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SQL:FullTextQuery
+# <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery - classe di evento
   La classe di evento SQL:FullTextQuery viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una query full-text. È consigliabile includere questa classe di evento nelle tracce che eseguono il monitoraggio dei problemi associati ai cataloghi full-text.  
   
  Se viene inclusa la classe di evento SQL:FullTextQuery, l'overhead sarà elevato. Se tali eventi si verificano di frequente, la traccia potrebbe ridurre in modo significativo le prestazioni. Per ridurre questo effetto, è consigliabile limitare l'utilizzo della classe di evento alle tracce che eseguono il monitoraggio di problemi specifici per periodi di tempo brevi.  
   
-## Colonne di dati della classe di evento SQL:FullTextQuery  
+## <a name="sqlfulltextquery-event-class-data-columns"></a>Colonne di dati della classe di evento SQL:FullTextQuery  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -53,7 +57,7 @@ caps.handback.revision: 31
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

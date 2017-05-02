@@ -1,29 +1,33 @@
 ---
-title: "Classe Lock:Acquired Event | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Acquired - classe di evento"
+title: Classe di evento Lock:Acquired | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Acquired event class
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4aa4b166949b268fedf910fd4c9a7692e339d380
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe Lock:Acquired Event
+# <a name="lockacquired-event-class"></a>Classe Lock:Acquired Event
   La classe di evento Lock:Acquiredevent indica l'acquisizione di un blocco su una risorsa, ad esempio una pagina di dati.  
   
  Le classi di evento Lock:Acquired e Lock:Released consentono di monitorare i blocchi acquisiti sugli oggetti, il tipo di blocco applicato e la durata del blocco. I blocchi mantenuti per lunghi periodi di tempo possono causare problemi di contesa. Per questo è necessario esaminarli. Ad esempio, è possibile che un'applicazione acquisisca i blocchi sulle righe di una tabella e quindi rimanga in attesa dell'input utente. L'attesa dell'input utente può essere prolungata e pertanto bloccare altri utenti. In tal caso, sarà necessario riprogettare l'applicazione in modo che le richieste di blocco vengano attivate soltanto quando necessario e che al momento dell'acquisizione dei blocchi non venga richiesto l'input utente.  
   
-## Colonne di dati della classe di evento Lock:Acquired  
+## <a name="lockacquired-event-class-data-columns"></a>Colonne di dati della classe di evento Lock:Acquired  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -57,7 +61,7 @@ caps.handback.revision: 37
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe di evento Lock:Released](../../relational-databases/event-classes/lock-released-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

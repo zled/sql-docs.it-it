@@ -1,35 +1,39 @@
 ---
-title: "Testo di ricerca con espressioni regolari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "espressioni regolari [SQL Server Management Studio]"
-  - "editor di query [SQL Server Management Studio], ricerche con espressioni regolari"
-  - "ricerche [SQL Server Management Studio], espressioni regolari"
+title: Eseguire ricerche di testo con espressioni regolari | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# Testo di ricerca con espressioni regolari
+# <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
   
-#### Per eseguire la ricerca utilizzando espressioni regolari  
+#### <a name="to-find-using-regular-expressions"></a>Per eseguire la ricerca utilizzando espressioni regolari  
   
-1.  Per consentire l'uso di espressioni regolari nel campo **Trova** durante le operazioni **Ricerca veloce**, **Cerca nei file**, **Sostituzione veloce** o **Sostituisci nei file**, in **Opzioni di ricerca** selezionare **Usa** e scegliere **Espressioni regolari**.  
+1.  Per consentire l'uso di espressioni regolari nel campo **Trova** durante le operazioni **Ricerca veloce**, **Cerca nei file**, **Sostituzione veloce**o **Sostituisci nei file** , in **Opzioni di ricerca** selezionare **Usa**e scegliere **Espressioni regolari**.  
   
 2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per l'elenco dei riferimenti **** . Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 25
 |Accenti e segni diacritici|:Mn|Consente di ricercare accenti e segni diacritici.|  
 |Segno di combinazione|:Mc|Consente di ricercare segni di combinazione.|  
 |Segno di inclusione|:Me|Consente di ricercare segni di inclusione.|  
-|Simbolo matematico|:Sm|Cerca +, =, ~, &#124;, \< e >.|  
+|Simbolo matematico|:Sm|Consente di ricercare +, =, ~, &#124;, \< e >.|  
 |Simbolo di valuta|:Sc|Consente di ricercare il simbolo $ e altri simboli di valuta.|  
 |Simbolo modificatore|:Sk|Consente di ricercare simboli modificatori, ad esempio accenti circonflessi, accenti gravi e macron.|  
 |Altro simbolo|:So|Consente di ricercare altri simboli, ad esempio il simbolo di copyright, il simbolo di paragrafo e quello di grado.|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |Katakana|:Ka|Consente di ricercare caratteri katakana.|  
 |Ideogramma/Han/Kanji|:Id|Consente di ricercare caratteri ideografici, come i caratteri Han e Kanji.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
  [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

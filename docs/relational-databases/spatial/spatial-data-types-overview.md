@@ -1,32 +1,36 @@
 ---
-title: "Panoramica dei tipi di dati spaziali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo di dati geometry [SQL Server], introduzione"
-  - "tipo di dati geography [SQL Server], dati spaziali"
-  - "dati spaziali planari [SQL Server], tipo di dati geometry"
-  - "tipi di dati spaziali [SQL Server]"
+title: Panoramica dei tipi di dati spaziali | Microsoft Docs
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry data type [SQL Server], understanding
+- geography data type [SQL Server], spatial data
+- planar spatial data [SQL Server], geometry data type
+- spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.lasthandoff: 04/11/2017
+
 ---
-# Panoramica dei tipi di dati spaziali
+# <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Esistono due tipi di dati spaziali. Il tipo di dati **geometry** supporta dati planari o euclidei (terra piatta). Il tipo di dati **geometry** è conforme a Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0 e a SQL MM (standard ISO).  
   
- Inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il tipo di dati **geography**, che archivia dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
+ Inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il tipo di dati **geography** , che archivia dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
 > [!IMPORTANT]  
 >  Per una descrizione dettagliata e alcuni esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui i miglioramenti apportati ai tipi di dati spaziali, scaricare il white paper [Nuove funzionalità spaziali di SQL Server, nome in codice "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
@@ -36,15 +40,15 @@ caps.handback.revision: 51
   
  Nella figura seguente viene illustrata la gerarchia **geometry** sulla quale si basano i tipi di dati **geometry** e **geography** . I tipi di **geometry** e **geography** di cui è possibile creare istanze sono indicati in blu.  
   
- ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.png) 
+ ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
   
- Come indicato nella figura, i dieci tipi di cui è possibile creare istanze dei tipi di dati **geometry** e **geography** sono **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**e **GeometryCollection**. Vi è un tipo aggiuntivo di cui è possibile creare istanze per il tipo di dati geography, ovvero **FullGlobe**. I tipi **geometry** e **geography** sono in grado di riconoscere un'istanza specifica purché si tratti di un'istanza con formato corretto, anche se non definita in modo esplicito. Ad esempio, se si definisce un'istanza **Point** usando in modo esplicito il metodo STPointFromText(), **geometry** e **geography** riconoscono l'istanza come **Point**, purché il formato dell'input del metodo sia corretto. Se si definisce la stessa istanza utilizzando il metodo `STGeomFromText()`, entrambi i tipi di dati **geometry** e **geography** riconoscono l'istanza come **Point**.  
+ Come indicato nella figura, i dieci tipi di cui è possibile creare istanze dei tipi di dati **geometry** e **geography** sono **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**e **GeometryCollection**. Vi è un tipo aggiuntivo di cui è possibile creare istanze per il tipo di dati geography, ovvero **FullGlobe**. I tipi **geometry** e **geography** sono in grado di riconoscere un'istanza specifica purché si tratti di un'istanza con formato corretto, anche se non definita in modo esplicito. Ad esempio, se si definisce un'istanza **Point** usando in modo esplicito il metodo STPointFromText(), **geometry** e **geography** riconoscono l'istanza come **Point**, purché il formato dell'input del metodo sia corretto. Se si definisce la stessa istanza utilizzando il metodo `STGeomFromText()` , entrambi i tipi di dati **geometry** e **geography** riconoscono l'istanza come **Point**.  
   
  I sottotipi per i tipi geometry e geography sono divisi in tipi semplici e di raccolta.  Alcuni metodi come `STNumCurves()` possono essere utilizzati solo con tipi semplici.  
   
  I tipi semplici includono:  
   
--   [Punto](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -70,34 +74,34 @@ caps.handback.revision: 51
 ##  <a name="differences"></a> Differenze tra i tipi di dati geometry e geography  
  I due tipi di dati spaziali si comportano spesso in modo simile, ma esistono alcune differenze fondamentali nel modo in cui i dati vengono archiviati e modificati.  
   
-### Definizione dei bordi di collegamento  
+### <a name="how-connecting-edges-are-defined"></a>Definizione dei bordi di collegamento  
  I dati di definizione per i tipi **LineString** e **Polygon** sono solo vertici.  Il bordo di collegamento tra due vertici in un tipo geometry è una linea retta.  Tuttavia, il bordo di collegamento tra due vertici in un tipo geografico è un corto arco di grande ellissi tra i due vertici.  Una grande ellisse è l'intersezione dell'ellissoide con un piano attraverso il centro e un arco di grande ellisse è un segmento di arco sulla grande ellisse.  
   
-### Definizione di segmenti di arco circolare  
+### <a name="how-circular-arc-segments-are-defined"></a>Definizione di segmenti di arco circolare  
  I segmenti di arco circolare per i tipi geometry vengono definiti sul piano delle coordinate cartesiane XY (i valori Z vengono ignorati). I segmenti di arco circolare per i tipi geography vengono definiti da segmenti di curva su una sfera di riferimento. Qualsiasi parallelo sulla sfera di riferimento può essere definito da due archi circolari complementari in cui i punti per entrambi gli archi hanno un angolo di latitudine costante.  
   
-### Misurazioni nei tipi di dati spaziali  
- Nel sistema planare, o terra piatta, le misurazioni delle distanze e delle aree vengono fornite nella stessa unità di misurazione delle coordinate. Usando il tipo di dati **geometry**, la distanza tra (2, 2) e (5, 6) è 5 unità, indipendentemente dalle unità usate.  
+### <a name="measurements-in-spatial-data-types"></a>Misurazioni nei tipi di dati spaziali  
+ Nel sistema planare, o terra piatta, le misurazioni delle distanze e delle aree vengono fornite nella stessa unità di misurazione delle coordinate. Usando il tipo di dati **geometry** , la distanza tra (2, 2) e (5, 6) è 5 unità, indipendentemente dalle unità usate.  
   
- Nel sistema ellissoidale, o terra rotonda, le coordinate sono fornite in gradi di latitudine e longitudine. Tuttavia, le lunghezze e le aree sono misurate generalmente in metri e metri quadrati, sebbene la misurazione possa dipendere dall'identificatore di riferimento spaziale (SRID) dell'istanza **geography**. L'unità di misurazione più comune per il tipo di dati **geography** è il metro.  
+ Nel sistema ellissoidale, o terra rotonda, le coordinate sono fornite in gradi di latitudine e longitudine. Tuttavia, le lunghezze e le aree sono misurate generalmente in metri e metri quadrati, sebbene la misurazione possa dipendere dall'identificatore di riferimento spaziale (SRID) dell'istanza **geography** . L'unità di misurazione più comune per il tipo di dati **geography** è il metro.  
   
-### Orientamento dei dati spaziali  
+### <a name="orientation-of-spatial-data"></a>Orientamento dei dati spaziali  
  Nel sistema planare l'orientamento dell'anello di un poligono non è un fattore di particolare rilevanza. Ad esempio, un poligono descritto da ((0, 0), (10, 0), (0, 20), (0, 0)) è identico al poligono descritto da ((0, 0), (0, 20), (10, 0), (0, 0)). OGC Simple Features for SQL Specification non indica un ordinamento dell'anello e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non impone tale ordinamento.  
   
  In un sistema ellissoidale, un poligono non ha significato, o è ambiguo, senza un orientamento. Ad esempio, un anello intorno all'equatore descrive l'emisfero nord o sud? Se si utilizza il tipo di dati **geography** per archiviare l'istanza spaziale, è necessario specificare l'orientamento dell'anello e descrivere accuratamente la posizione dell'istanza. L'interno del poligono in un sistema ellissoidale è definito dal lato sinistro della regola.  
   
- Quando il livello di compatibilità è uguale o minore di 100 in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], al tipo di dati **geography** si applicano le restrizioni seguenti:  
+ Quando il livello di compatibilità è uguale o minore di 100 in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , al tipo di dati **geography** si applicano le restrizioni seguenti:  
   
 -   Ogni istanza **geography** deve adattarsi all'interno di un singolo emisfero. Non è possibile archiviare oggetti spaziali con dimensioni maggiori di un emisfero.  
   
 -   Qualsiasi istanza **geography** di una rappresentazione Well-Known Text (WKT) o Well-Known Binary (WKB) OCG che produca un oggetto più grande di un emisfero genera **ArgumentException**.  
   
--   I metodi del tipo di dati **geography** che richiedono l'input di due istanze **geography**, ad esempio STIntersection(), STUnion(), STDifference() e STSymDifference(), restituiranno Null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.  
+-   I metodi del tipo di dati **geography** che richiedono l'input di due istanze **geography** , ad esempio STIntersection(), STUnion(), STDifference() e STSymDifference(), restituiranno Null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **FullGlobe** è un tipo speciale di Polygon che copre l'intero globo. **FullGlobe** dispone di un'area, ma non ha bordi o vertici.  
   
-### Anelli interni ed esterni non rilevanti nel tipo di dati geography  
- In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è significativa per il tipo di dati **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile scegliere qualsiasi anello di un poligono come anello esterno.  
+### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anelli interni ed esterni non rilevanti nel tipo di dati geography  
+ In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è significativa per il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
   
  Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di seguito:  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  Se si specificano valori Z per segmenti di arco circolare, tali valori devono essere gli stessi per tutti i punti nel segmento di arco circolare perché questo venga accettato per l'input. Ad esempio, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` è ammesso, mentre `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` non lo è.  
   
-### Confronto tra LineString e CircularString  
+### <a name="linestring-and-circularstring-comparison"></a>Confronto tra LineString e CircularString  
  Nel diagramma seguente vengono illustrati triangoli isosceli identici. Nel triangolo A vengono utilizzati segmenti di linea per definire il triangolo, mentre nel triangolo B vengono utilizzati segmenti di arco circolare.  
   
   ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
@@ -158,9 +162,9 @@ LS LengthCS Length
   
  ![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
   
- Come illustrato nella figura precedente, le istanze **CircularString** utilizzano un numero minore di punti per archiviare i limiti delle curve con maggiore precisione delle istanze **LineString** . Le istanze **CircularString** sono ideali per l'archiviazione di limiti circolari come un raggio cercato di venti miglia da un punto specifico. Le istanze**LineString** sono ideali per l'archiviazione di limiti lineari come un blocco urbano quadrato.  
+ Come illustrato nella figura precedente, le istanze **CircularString** utilizzano un numero minore di punti per archiviare i limiti delle curve con maggiore precisione delle istanze **LineString** . Le istanze**CircularString** sono ideali per l'archiviazione di limiti circolari come un raggio cercato di venti miglia da un punto specifico. Le istanze**LineString** sono ideali per l'archiviazione di limiti lineari come un blocco urbano quadrato.  
   
-### Confronto tra LineString e CompoundCurve  
+### <a name="linestring-and-compoundcurve-comparison"></a>Confronto tra LineString e CompoundCurve  
  Negli esempi di codice seguenti viene illustrato come archiviare la stessa figura utilizzando istanze **LineString** e **CompoundCurve** :  
   
 ```tsql  
@@ -179,7 +183,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
   
  Un'istanza **CompoundCurve** consente di archiviare direttamente il segmento di arco circolare (2 2, 1 3, 0 2), mentre con un'istanza **LineString** è necessario convertire la curva in diversi segmenti di linea più piccoli.  
   
-### Confronto tra CircularString e CompoundCurve  
+### <a name="circularstring-and-compoundcurve-comparison"></a>Confronto tra CircularString e CompoundCurve  
  Nell'esempio di codice seguente viene illustrata l'archiviazione di una sezione di un grafico a torta in un'istanza **CircularString** :  
   
 ```tsql  
@@ -202,18 +206,19 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246
 SELECT @g.ToString(), @g.STLength();  
 ```  
   
-### Confronto tra Polygon e CurvePolygon  
+### <a name="polygon-and-curvepolygon-comparison"></a>Confronto tra Polygon e CurvePolygon  
  Le istanze**CurvePolygon** possono utilizzare istanze **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings.  Le istanze**Polygon** non possono utilizzare i tipi di segmento di arco circolare: **CircularString** e **CompoundCurve**.  
  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 
 - [Dati spaziali (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Guida di riferimento ai metodi per il tipo di dati geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Guida di riferimento ai metodi per il tipo di dati geography](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+- [Guida di riferimento ai metodi per il tipo di dati geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
 - [STGeomFromText &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
   
+

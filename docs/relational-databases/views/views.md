@@ -1,31 +1,35 @@
 ---
-title: "Viste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste [SQL Server], informazioni"
+title: Viste | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca3c02162484ebf4f12a8b98b1cad2b1aea89c22
+ms.lasthandoff: 04/11/2017
+
 ---
-# Viste
+# <a name="views"></a>Viste
   Una vista è una tabella virtuale il cui contenuto è definito da una query. In modo analogo a una tabella, una vista è costituita da un set di colonne e righe di dati denominate. A meno che non sia indicizzata, una vista non esiste come set archiviato di valori di dati in un database. Le righe e le colonne di dati provengono da tabelle a cui fa riferimento la query che definisce la vista e sono prodotte dinamicamente quando si fa riferimento alla vista.  
   
  Una vista esegue operazioni di filtro sulle tabelle sottostanti a cui fa riferimento. La query che definisce la vista può provenire da una o più tabelle o da altre viste del database corrente o di altri database. È inoltre possibile utilizzate le query distribuite per definire viste che utilizzano dati provenienti da più origini eterogenee. Questa caratteristica è utile, ad esempio, se si desidera combinare dati strutturati in modo simile e provenienti da server diversi, ognuno dei quali archivia i dati di una diversa area dell'organizzazione.  
   
- Tramite le viste è possibile analizzare, semplificare e personalizzare la visualizzazione del database per ogni singolo utente. Le viste rappresentano un meccanismo di sicurezza grazie al quale è possibile consentire agli utenti di accedere ai dati tramite una vista, senza concedere loro le autorizzazioni di accesso alle tabelle di base sottostanti. Le viste consentono di fornire un'interfaccia compatibile con le versioni precedenti tramite la quale è possibile emulare una tabella precedente il cui schema è stato modificato oppure possono essere utilizzate per migliorare le prestazioni e per partizionare i dati quando si copiano dati in e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tramite le viste è possibile analizzare, semplificare e personalizzare la visualizzazione del database per ogni singolo utente. Le viste rappresentano un meccanismo di sicurezza grazie al quale è possibile consentire agli utenti di accedere ai dati tramite una vista, senza concedere loro le autorizzazioni di accesso alle tabelle di base sottostanti. Le viste consentono di fornire un'interfaccia compatibile con le versioni precedenti tramite la quale è possibile emulare una tabella precedente il cui schema è stato modificato oppure possono essere utilizzate per migliorare le prestazioni e per partizionare i dati quando si copiano dati in e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Tipi di viste  
+## <a name="types-of-views"></a>Tipi di viste  
  Oltre alle viste di base definite dall'utente, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili i seguenti tipi di viste utilizzate per scopi specifici in un database.  
   
  Viste indicizzate  
@@ -35,23 +39,23 @@ caps.handback.revision: 21
  Una vista partizionata unisce i dati partizionati orizzontalmente di un set di tabelle membro in uno o più server. In tal modo i dati risulteranno appartenenti a un'unica tabella. Una vista che unisce tabelle membro nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce una vista partizionata locale.  
   
  Viste di sistema  
- Le visualizzazioni di sistema espongono metadati del catalogo. È possibile utilizzare visualizzazioni di sistema per ottenere informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti definiti nell'istanza. Ad esempio, è possibile eseguire una query sulla vista del catalogo sys.databases per ottenere informazioni sui database definiti dall'utente disponibili nell'istanza. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md).  
+ Le visualizzazioni di sistema espongono metadati del catalogo. È possibile utilizzare visualizzazioni di sistema per ottenere informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti definiti nell'istanza. Ad esempio, è possibile eseguire una query sulla vista del catalogo sys.databases per ottenere informazioni sui database definiti dall'utente disponibili nell'istanza. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## Attività comuni delle viste  
+## <a name="common-view-tasks"></a>Attività comuni delle viste  
  Nella tabella riportata di seguito vengono forniti i collegamenti ad attività comuni associate alla creazione o alla modifica di una vista.  
   
 |Attività relative alle viste|Argomento|  
 |----------------|-----------|  
 |Viene descritto come creare una vista.|[Creare viste](../../relational-databases/views/create-views.md)|  
-|Viene descritto come creare una vista indicizzata.|[Creazione di viste indicizzate](../../relational-databases/views/create-indexed-views.md)|  
-|Viene descritto come modificare la definizione di una vista.|[Modifica di viste](../../relational-databases/views/modify-views.md)|  
+|Viene descritto come creare una vista indicizzata.|[Creare viste indicizzate](../../relational-databases/views/create-indexed-views.md)|  
+|Viene descritto come modificare la definizione di una vista.|[Modificare viste](../../relational-databases/views/modify-views.md)|  
 |Viene descritto come modificare dati tramite una vista.|[Modificare i dati tramite una vista](../../relational-databases/views/modify-data-through-a-view.md)|  
 |Viene descritto come eliminare una vista.|[Eliminare viste](../../relational-databases/views/delete-views.md)|  
 |Viene descritto come ottenere informazioni su una vista quale la definizione della vista.|[Ottenere informazioni su una vista](../../relational-databases/views/get-information-about-a-view.md)|  
 |Viene descritto come rinominare una vista.|[Rinominare viste](../../relational-databases/views/rename-views.md)|  
   
-## Vedere anche  
- [Creazione di viste](../../relational-databases/xml/create-views-over-xml-columns.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creare viste su colonne XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   
   

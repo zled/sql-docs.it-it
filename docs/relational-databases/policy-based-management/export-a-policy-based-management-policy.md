@@ -1,24 +1,28 @@
 ---
-title: "Esportare i criteri della gestione basata su criteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestione basata su criteri, esportazione di criteri"
+title: Esportare i criteri della gestione basata su criteri | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, export policy
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c409fd3fc46ce2612290737bf658dd4358280495
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esportare i criteri della gestione basata su criteri
+# <a name="export-a-policy-based-management-policy"></a>Esportare i criteri della gestione basata su criteri
   In questo argomento verrà descritto come esportare i criteri della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -40,7 +44,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per esportare i criteri  
+#### <a name="to-export-a-policy"></a>Per esportare i criteri  
   
 1.  In Esplora oggetti fare clic sul segno più per espandere il server contenente i criteri della gestione basata su criteri da esportare.  
   

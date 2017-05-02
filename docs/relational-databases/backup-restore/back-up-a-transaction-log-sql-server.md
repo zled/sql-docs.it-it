@@ -1,55 +1,59 @@
 ---
-title: "Backup di un log delle transazioni (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup dei log delle transazioni [SQL Server], SQL Server Management Studio"
-  - "backup [SQL Server], creazione"
-  - "esecuzione del backup dei log delle transazioni [SQL Server], SQL Server Management Studio"
+title: Backup di un log delle transazioni (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 02/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log backups [SQL Server], SQL Server Management Studio
+- backups [SQL Server], creating
+- backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup di un log delle transazioni (SQL Server)
+# <a name="back-up-a-transaction-log-sql-server"></a>Backup di un log delle transazioni (SQL Server)
   In questo argomento viene descritto come eseguire il backup di un log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
    
 ##  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Non è possibile usare l'istruzione BACKUP in una transazione esplicita o [implicita](https://msdn.microsoft.com/library/ms187807.aspx).  Per transazione esplicita si intende una transazione di cui vengono definiti in modo esplicito l'inizio e la fine.
+-   Non è possibile usare l'istruzione BACKUP in una transazione esplicita o [implicita](https://msdn.microsoft.com/library/ms187807.aspx) .  Per transazione esplicita si intende una transazione di cui vengono definiti in modo esplicito l'inizio e la fine.
   
-###  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Indicazioni  
   
--   Se un database usa il [modello di recupero](https://msdn.microsoft.com/library/ms189275.aspx) con registrazione completa o con registrazione minima delle operazioni bulk, è necessario eseguire il backup del log delle transazioni con una frequenza sufficiente per garantire la protezione dei dati e per evitare il [riempimento del log delle transazioni](https://msdn.microsoft.com/library/ms175495.aspx) stesso. Tronca il log e supporta il ripristino del database in corrispondenza di uno specifico punto nel tempo. Non valido.
+-   Se un database usa il [modello di recupero](https://msdn.microsoft.com/library/ms189275.aspx) con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, è necessario eseguire il backup del log delle transazioni con una frequenza sufficiente per garantire la protezione dei dati e per evitare il [riempimento del log delle transazioni](https://msdn.microsoft.com/library/ms175495.aspx) stesso. Tronca il log e supporta il ripristino del database in corrispondenza di uno specifico punto nel tempo. 
   
--   Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questo caso è possibile eliminare tali voci di log di backup usando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
 **Controllare che le autorizzazioni siano corrette prima di iniziare.** 
 
-Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator**.  
+Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. I problemi relativi alle autorizzazioni del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla [risorsa fisica](https://msdn.microsoft.com/library/ms179313.aspx) quando si prova a eseguire il backup o il ripristino. Anche in questo caso, controllare le autorizzazioni prima di iniziare.
   
   
-## Eseguire il backup di un log delle transazioni con SQL Server Management Studio  
+## <a name="back-up-using-ssms"></a>Eseguire il backup usando SSMS  
   
 1.  Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Back Up**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
 4.  Verificare il nome del database nella casella di riepilogo **Database** . È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
@@ -69,7 +73,7 @@ Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazion
   
     -   Per impostare la scadenza del set di backup dopo un numero di giorni specifico, fare clic su **Dopo** (opzione predefinita) e immettere il numero di giorni dopo la creazione del set trascorsi i quali il set scadrà. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.  
   
-         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** (pagina **Impostazioni database**). Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti, scegliere Proprietà e quindi selezionare la pagina **Impostazioni database**.  
+         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** (pagina**Impostazioni database** ). Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti, scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
   
     -   Per impostare una data di scadenza specifica per il set di backup, fare clic su **Il**e immettere la data di scadenza del set.  
   
@@ -111,7 +115,7 @@ Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazion
   
 16. Se si esegue il backup su un'unità nastro (come specificato nella sezione **Destinazione** della pagina **Generale**) l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup**. Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup** ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup** . Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
   
      **Per visualizzare l'impostazione predefinita corrente della compressione dei backup**  
   
@@ -130,7 +134,7 @@ Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazion
 -   Triple DES  
   
  
-## Eseguire il backup di un log delle transazioni con T-SQL  
+## <a name="back-up-using-t-sql"></a>Eseguire il backup usando T-SQL  
   
 1.  Per eseguire il backup del log delle transazioni, eseguire l'istruzione BACKUP LOG specificando gli elementi seguenti:  
   
@@ -152,7 +156,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
-1.  Usare il cmdlet **Backup-SqlDatabase** e specificare **Log** per il valore del parametro **-BackupAction**.  
+1.  Usare il cmdlet **Backup-SqlDatabase** e specificare **Log** per il valore del parametro **-BackupAction** .  
   
      L'esempio seguente consente di creare un backup del log del database di `MyDB` nel percorso di backup predefinito dell'istanza del server `Computer\Instance`.  
   
@@ -173,10 +177,11 @@ GO
   
 -   [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## Ulteriori informazioni 
+## <a name="more-information"></a>Ulteriori informazioni 
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Backup completi del file &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
   
   
+

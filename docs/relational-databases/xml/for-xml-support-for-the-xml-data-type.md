@@ -1,28 +1,32 @@
 ---
-title: "Supporto del tipo di dati xml in FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funzioni definite dall'utente [SQL Server], XML"
-  - "tipo di dati XML [SQL Server], clausola FOR XML"
+title: Supporto del tipo di dati xml in FOR XML| Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supporto del tipo di dati xml in FOR XML
-  Se nella clausola SELECT di una query FOR XML è specificata una colonna di tipo **xml**, viene eseguito il mapping dei valori della colonna come elementi nel codice XML risultante, indipendentemente dal fatto che sia stata specificata o meno la direttiva ELEMENTS. Le dichiarazioni XML nella colonna di tipo **xml** non sono serializzate.  
+# <a name="for-xml-support-for-the-xml-data-type"></a>Supporto del tipo di dati xml in FOR XML
+  Se nella clausola SELECT di una query FOR XML è specificata una colonna di tipo **xml** , viene eseguito il mapping dei valori della colonna come elementi nel codice XML risultante, indipendentemente dal fatto che sia stata specificata o meno la direttiva ELEMENTS. Le dichiarazioni XML nella colonna di tipo **xml** non sono serializzate.  
   
- Ad esempio, la query seguente recupera le informazioni di contatto del cliente, quali le colonne `BusinessEntityID`, `FirstName` e `LastName`, e i numeri di telefono dalla colonna `AdditionalContactInfo` di tipo **xml**.  
+ Ad esempio, la query seguente recupera le informazioni di contatto del cliente, quali le colonne `BusinessEntityID`, `FirstName`e `LastName` , e i numeri di telefono dalla colonna `AdditionalContactInfo` di tipo **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,7 +43,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- Poiché nella query non è specificata la direttiva ELEMENTS, i valori di colonna vengono restituiti come attributi, ad eccezione delle informazioni aggiuntive sui contatti recuperate dalla colonna di tipo **xml**, che vengono restituite come elementi.  
+ Poiché nella query non è specificata la direttiva ELEMENTS, i valori di colonna vengono restituiti come attributi, ad eccezione delle informazioni aggiuntive sui contatti recuperate dalla colonna di tipo **xml** , che vengono restituite come elementi.  
   
  Risultato parziale:  
   
@@ -140,7 +144,7 @@ for xml auto;
 </root>  
 ```  
   
-## Restituzione di codice XML da una funzione definita dall'utente  
+## <a name="returning-xml-from-a-user-defined-function"></a>Restituzione di codice XML da una funzione definita dall'utente  
  Le query FOR XML consentono di restituire codice XML da una funzione definita dall'utente che restituisce quanto segue:  
   
 -   Una tabella con una singola colonna di tipo **xml**  
@@ -169,7 +173,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- È possibile eseguire la funzione definita dall'utente ed eseguire una query sulla tabella restituita dalla funzione. In questo esempio, il codice XML restituito dalla query eseguita sulla tabella viene assegnato a una variabile di tipo **xml**.  
+ È possibile eseguire la funzione definita dall'utente ed eseguire una query sulla tabella restituita dalla funzione. In questo esempio, il codice XML restituito dalla query eseguita sulla tabella viene assegnato a una variabile di tipo **xml** .  
   
 ```  
 declare @x xml;  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- Di seguito è riportato un altro esempio di una funzione definita dall'utente, che restituisce un'istanza del tipo **xml**. Nell'esempio la funzione definita dall'utente restituisce un'istanza di tipo XML perché è specificato lo spazio dei nomi dello schema.  
+ Di seguito è riportato un altro esempio di una funzione definita dall'utente, che restituisce un'istanza del tipo **xml** . Nell'esempio la funzione definita dall'utente restituisce un'istanza di tipo XML perché è specificato lo spazio dei nomi dello schema.  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -194,7 +198,7 @@ BEGIN
 END;  
 ```  
   
- Il codice XML restituito dalla funzione definita dall'utente può quindi essere assegnato a una variabile di tipo **xml**, come illustrato nell'esempio seguente:  
+ Il codice XML restituito dalla funzione definita dall'utente può quindi essere assegnato a una variabile di tipo **xml** , come illustrato nell'esempio seguente:  
   
 ```  
 declare @x xml;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di FOR XML per vari tipi di dati di SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

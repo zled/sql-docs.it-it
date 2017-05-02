@@ -1,25 +1,29 @@
 ---
-title: "Creare tracce manuali utilizzando stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare tracce manuali usando stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ee7ef604dc518fb4765ca5bd944c7fe01500035
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare tracce manuali utilizzando stored procedure
+# <a name="create-manual-traces-using-stored-procedures"></a>Creare tracce manuali utilizzando stored procedure
   In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili stored procedure di sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] per la creazione di tracce per un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile utilizzare tali stored procedure di sistema all'interno di applicazioni personalizzate per creare tracce in modo manuale anziché tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ciò consente di creare applicazioni personalizzate in grado di soddisfare esigenze aziendali specifiche.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  Nella tabella seguente sono elencate le stored procedure di sistema per la traccia di un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 |Stored procedure|Operazione eseguita|  
@@ -35,7 +39,7 @@ caps.handback.revision: 7
   
  **Per definire una traccia personalizzata tramite stored procedure**  
   
-1.  Tramite **sp_trace_setevent** specificare gli eventi da acquisire.  
+1.  Tramite **sp_trace_setevent**specificare gli eventi da acquisire.  
   
 2.  Specificare eventuali filtri per gli eventi. Per altre informazioni, vedere [Impostare un filtro di traccia &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md).  
   

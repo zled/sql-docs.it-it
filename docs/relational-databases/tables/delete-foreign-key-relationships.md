@@ -1,26 +1,30 @@
 ---
-title: "Eliminazione di relazioni di chiave esterna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiavi esterne [SQL Server], eliminazione"
-  - "rimozione di chiavi esterne"
-  - "eliminazione di chiavi esterne"
+title: Eliminare relazioni di chiave esterna | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], deleting
+- removing foreign keys
+- deleting foreign keys
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3187794a4854ed3fa298d8b72d8aae57a8bf21c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminazione di relazioni di chiave esterna
+# <a name="delete-foreign-key-relationships"></a>Eliminazione di relazioni di chiave esterna
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile eliminare un vincolo di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'eliminazione di un vincolo di chiave esterna comporta la rimozione del requisito di attivazione dell'integrità referenziale.  
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare un vincolo di chiave esterna  
+#### <a name="to-delete-a-foreign-key-constraint"></a>Per eliminare un vincolo di chiave esterna  
   
 1.  In **Esplora oggetti**espandere la tabella contenente il vincolo, quindi espandere **Chiavi**.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare un vincolo di chiave esterna  
+#### <a name="to-delete-a-foreign-key-constraint"></a>Per eliminare un vincolo di chiave esterna  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

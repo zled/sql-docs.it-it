@@ -1,41 +1,45 @@
 ---
-title: "Stati del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASESTATES.F1"
-helpviewer_keywords: 
-  - "stato di emergenza di un database [SQL Server]"
-  - "verifica degli stati di database"
-  - "visualizzazione degli stati di database"
-  - "visualizzazione di stati di database"
-  - "stati di database [SQL Server]"
-  - "stato corrente di database"
-  - "offline - stato di database [SQL Server]"
-  - "suspect - stato di database"
-  - "recupero in sospeso - stato di database [SQL Server]"
-  - "stati [SQL Server], database"
-  - "online - stato di database"
-  - "stati [SQL Server]"
-  - "restoring - stato di database [SQL Server]"
+title: Stati del database | Microsoft Docs
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASESTATES.F1
+helpviewer_keywords:
+- emergency database state [SQL Server]
+- verifying database states
+- viewing database states
+- displaying database states
+- database states [SQL Server]
+- current database state
+- offline database state [SQL Server]
+- suspect database state
+- recovery pending database state [SQL Server]
+- states [SQL Server], databases
+- online database state
+- states [SQL Server]
+- restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62c469f7504615a361025fd56bb4939e02c4d242
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stati del database
-  Lo stato di un database è sempre specifico e può essere ad esempio ONLINE, OFFLINE o SUSPECT. Per verificare lo stato corrente di un database, selezionare la colonna **state_desc** nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oppure la proprietà **Status** nella funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
+# <a name="database-states"></a>Stati del database
+  Lo stato di un database è sempre specifico e può essere ad esempio ONLINE, OFFLINE o SUSPECT. Per verificare lo stato corrente di un database, selezionare la colonna **state_desc** nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oppure la proprietà **Status** nella funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
   
-## Definizioni degli stati del database  
+## <a name="database-state-definitions"></a>Definizioni degli stati del database  
  Nella tabella seguente sono riportate le definizioni degli stati del database.  
   
 |State|Definizione|  
@@ -46,9 +50,9 @@ caps.handback.revision: 20
 |RECOVERING|È in corso il recupero del database. Il processo di recupero è uno stato temporaneo. Il database verrà portato automaticamente online se il recupero ha esito positivo. Se invece ha esito negativo, il database verrà contrassegnato come sospetto. Il database non è disponibile.|  
 |RECOVERY PENDING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato un errore correlato a una risorsa durante il recupero. Il database non è danneggiato, tuttavia i file potrebbero risultare mancanti oppure limitazioni relative alle risorse di sistema ne potrebbero impedire l'avvio. Il database non è disponibile. Per risolvere il problema che ha causato l'errore e consentire il completamento del processo di recupero, è necessario un ulteriore intervento da parte dell'utente.|  
 |SUSPECT|Almeno il filegroup primario è sospetto e potrebbe essere danneggiato. Non è possibile recuperare il database durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il database non è disponibile. Per risolvere il problema, è necessario l'intervento dell'utente.|  
-|EMERGENCY|L'utente ha modificato il database e impostato lo stato su EMERGENCY. Il database è in modalità utente singolo e può corretto o ripristinato. Il database è contrassegnato come READ_ONLY, la registrazione è disabilitata e l'accesso è limitato ai soli membri del ruolo predefinito del server **sysadmin**. L'opzione EMERGENCY viene usata principalmente per attività di risoluzione dei problemi. È ad esempio possibile impostare lo stato EMERGENCY per un database contrassegnato come sospetto in modo da consentire all'amministratore di sistema di accedere in sola lettura al database. Solo i membri del ruolo predefinito del server **sysadmin** possono impostare lo stato EMERGENCY per un database.|  
+|EMERGENCY|L'utente ha modificato il database e impostato lo stato su EMERGENCY. Il database è in modalità utente singolo e può corretto o ripristinato. Il database è contrassegnato come READ_ONLY, la registrazione è disabilitata e l'accesso è limitato ai soli membri del ruolo predefinito del server **sysadmin** . L'opzione EMERGENCY viene usata principalmente per attività di risoluzione dei problemi. È ad esempio possibile impostare lo stato EMERGENCY per un database contrassegnato come sospetto in modo da consentire all'amministratore di sistema di accedere in sola lettura al database. Solo i membri del ruolo predefinito del server **sysadmin** possono impostare lo stato EMERGENCY per un database.|  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
  [Stati di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
@@ -56,3 +60,4 @@ caps.handback.revision: 20
  [Stati dei file](../../relational-databases/databases/file-states.md)  
   
   
+

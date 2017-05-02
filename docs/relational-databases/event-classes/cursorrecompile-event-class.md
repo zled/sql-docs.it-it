@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento CursorRecompile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CursorRecompile - classe di evento"
+title: Classe di evento CursorRecompile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb8545540abe4396d76f35d9c029f7b4afb3732e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento CursorRecompile
+# <a name="cursorrecompile-event-class"></a>CursorRecompile - classe di evento
   La classe di evento **CursorRecompile** descrive gli eventi di ricompilazione del cursore che si verificano nei cursori API (Application Programming Interface). Gli eventi di questo tipo si verificano quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ricompila un cursore Transact-SQL a causa di una modifica dello schema.  
   
  È consigliabile includere la classe di evento **CursorRecompile** nelle tracce che registrano le prestazioni dei cursori. Quando la classe di evento **CursorRecompile** viene inclusa in una traccia, la quantità di overhead che si verifica dipende dalla frequenza con cui i cursori vengono usati nel database durante la traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   
-## Colonne di di dati della classe di evento CursorRecompile  
+## <a name="cursorrecompile-event-class-data-columns"></a>Colonne di di dati della classe di evento CursorRecompile  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,7 +41,7 @@ caps.handback.revision: 31
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Sì|  
-|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals**. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|Richiesto l'identificatore che ha ricompilato il cursore.|49|Sì|  
@@ -48,7 +52,7 @@ caps.handback.revision: 31
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**XactSequence**|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

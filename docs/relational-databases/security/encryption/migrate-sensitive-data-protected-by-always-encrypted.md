@@ -1,36 +1,40 @@
 ---
-title: "Migrare dati sensibili protetti da Crittografia sempre attiva | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Crittografia sempre attiva, importazione in blocco"
+title: Migrare dati sensibili protetti da Always Encrypted | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da73d0d20404f513e22dcdf0340e24fe85dc3184
+ms.lasthandoff: 04/11/2017
+
 ---
-# Migrare dati sensibili protetti da Crittografia sempre attiva
-  Per caricare i dati crittografati senza eseguire controlli dei metadati sul server durante le operazioni di copia bulk, creare l'utente con l'opzione **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS**. Questa opzione è destinata all'uso da parte di strumenti legacy appartenenti a versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (come bcp.exe) o con flussi di lavoro Extract-Transform-Load (ETL) di terze parti che non possono usare Always Encrypted. In questo modo un utente può spostare in sicurezza i dati crittografati da un set di tabelle contenenti colonne crittografate a un altro set di tabelle con colonne crittografate (nello stesso database o in un altro).  
+# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrare dati sensibili protetti da Crittografia sempre attiva
+  Per caricare i dati crittografati senza eseguire controlli dei metadati sul server durante le operazioni di copia bulk, creare l'utente con l'opzione **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Questa opzione è destinata all'uso da parte di strumenti legacy appartenenti a versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (come bcp.exe) o con flussi di lavoro Extract-Transform-Load (ETL) di terze parti che non possono usare Always Encrypted. In questo modo un utente può spostare in sicurezza i dati crittografati da un set di tabelle contenenti colonne crittografate a un altro set di tabelle con colonne crittografate (nello stesso database o in un altro).  
   
-## Opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
+## <a name="the-allowencryptedvaluemodifications-option"></a>Opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  Sia [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) che [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) hanno un'opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Quando è impostata su ON (il valore predefinito è OFF), questa opzione disattiva i controlli dei dati crittografici sul server nelle operazioni di copia bulk, il che consente all'utente di eseguire la copia bulk dei dati crittografati fra tabelle o database senza decrittografarli.  
   
-## Scenari di migrazione  
+## <a name="data-migration-scenarios"></a>Scenari di migrazione  
  La tabella seguente mostra le impostazioni consigliate appropriate per diversi scenari di migrazione.  
   
  ![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
   
-## Caricamento bulk di dati crittografati  
+## <a name="bulk-loading-of-encrypted-data"></a>Caricamento bulk di dati crittografati  
  Usare la seguente procedura per caricare dati crittografati.  
   
 1.  Impostare l'opzione su ON per l'utente nel database di destinazione dell'operazione di copia bulk. Esempio:  
@@ -39,7 +43,7 @@ caps.handback.revision: 11
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
     ```  
   
-2.  Eseguire l'applicazione o lo strumento di copia bulk connettendosi con le credenziali di quell'utente. Se l'applicazione usa un driver client con Always Encrypted, verificare che la stringa di connessione per l'origine dati non contenga **column encryption setting=enabled** per garantire che i dati recuperati dalle colonne crittografate rimangano crittografati. Per altre informazioni, vedere [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md) (Always Encrypted - sviluppo client).  
+2.  Eseguire l'applicazione o lo strumento di copia bulk connettendosi con le credenziali di quell'utente. Se l'applicazione usa un driver client con Always Encrypted, verificare che la stringa di connessione per l'origine dati non contenga **column encryption setting=enabled** per garantire che i dati recuperati dalle colonne crittografate rimangano crittografati. Per altre informazioni, vedere [Always Encrypted &#40;client development&#41; (Always Encrypted - sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted - sviluppo client).  
   
 3.  Impostare di nuovo l'opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su OFF. Esempio:  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 11
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
     ```  
   
-## Possibile danneggiamento dei dati  
+## <a name="potential-for-data-corruption"></a>Possibile danneggiamento dei dati  
  L'uso improprio di questa opzione può causare il danneggiamento dei dati. L'opzione **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** consente all'utente di inserire dati di qualsiasi tipo in colonne crittografate del database, compresi i dati crittografati con chiavi diverse, crittografati in modo non corretto o non crittografati. Se l'utente copia accidentalmente dati che non sono crittografati in modo corretto usando lo schema di crittografia (chiave di crittografia della colonna, algoritmo, tipo di crittografia) impostato per la colonna di destinazione, non sarà possibile decrittografare i dati (i dati verranno danneggiati). Questa opzione deve essere utilizzata con attenzione, in quanto può causare il danneggiamento dei dati nel database.  
   
  Lo scenario seguente dimostra come un'importazione non corretta può causare il danneggiamento dei dati:  
@@ -60,7 +64,7 @@ caps.handback.revision: 11
   
 4.  La stessa applicazione o un'altra si collega al database usando un driver con Always Encrypted e con **column encryption setting=enabled** nella stringa di connessione e recupera i dati. L'applicazione si aspetta che i dati siano decrittografati in modo trasparente. Tuttavia, il driver non riesce a decrittografare i dati perché sono costituiti da testo crittografato non corretto.  
   
-## Procedura consigliata  
+## <a name="best-practice"></a>Procedura consigliata  
   
 -   Usare account utente designati per i carichi di lavoro con esecuzione prolungata.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 11
   
 -   Evitare l'uso di questa opzione per sviluppare nuove applicazioni. Usare invece un driver client (ad esempio, ADO 4.6.1) che offre un'API per la disattivazione dei controlli dei metadati crittografici per una singola sessione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
  [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
@@ -76,3 +80,4 @@ caps.handback.revision: 11
  [Always Encrypted &#40;client development&#41; (Always Encrypted - sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

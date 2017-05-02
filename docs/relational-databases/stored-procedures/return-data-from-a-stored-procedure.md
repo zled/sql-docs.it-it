@@ -1,31 +1,35 @@
 ---
-title: "Restituire dati da una stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "stored procedure [SQL Server], restituzione di dati"
-  - "restituzione di dati da una stored procedure"
+title: Restituire dati da una stored procedure | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], returning data
+- returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restituire dati da una stored procedure
+# <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
   Sono disponibili due modalità di restituzione di set di risultati o di dati da una procedura a un programma chiamante, cioè i parametri di output e i codici restituiti. In questo argomento vengono fornite informazioni su entrambi gli approcci.  
   
-## Restituzione di dati tramite un parametro di output  
+## <a name="returning-data-using-an-output-parameter"></a>Restituzione di dati tramite un parametro di output  
  Se si specifica la parola chiave OUTPUT per un parametro nella definizione della procedura, il valore corrente del parametro può essere restituito al programma chiamante dalla procedura, se quest'ultima è disponibile. Per salvare il valore del parametro in una variabile che può essere utilizzata nel programma chiamante, in tale programma deve essere utilizzata la parola chiave OUTPUT durante l'esecuzione della procedura. Per altre informazioni sui tipi di dati che possono essere usati come parametri di output, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
-### Esempi di parametri di output  
+### <a name="examples-of-output-parameter"></a>Esempi di parametri di output  
  Nell'esempio seguente viene illustrata una procedura con un parametro di input e uno di output. Il parametro `@SalesPerson` riceve un valore di input specificato dal programma chiamante. L'istruzione SELECT usa il valore passato nel parametro di input per ottenere il valore `SalesYTD` corretto. Assegna anche il valore al parametro di output `@SalesYTD` che restituisce il valore al programma chiamante al termine della procedura.  
   
 ```  
@@ -49,7 +53,7 @@ GO
   
 ```  
   
- Nell'esempio seguente viene chiamata la procedura creata nel primo esempio e viene salvato il valore di output restituito dalla procedura chiamata nella variabile `@SalesYTD`, che è locale nel programma chiamante.  
+ Nell'esempio seguente viene chiamata la procedura creata nel primo esempio e viene salvato il valore di output restituito dalla procedura chiamata nella variabile `@SalesYTD` , che è locale nel programma chiamante.  
   
 ```  
 -- Declare the variable to receive the output value of the procedure.  
@@ -65,17 +69,17 @@ GO
   
 ```  
   
- Inoltre, è possibile specificare valori di input per i parametri OUTPUT quando la procedura viene eseguita. Questa operazione consente alla procedura di ricevere un valore dal programma chiamante, modificare o eseguire operazioni con il valore, quindi restituire il nuovo valore al programma chiamante. Nell'esempio precedente, è possibile assegnare un valore alla variabile `@SalesYTDBySalesPerson` prima che il programma chiami la procedura `Sales.uspGetEmployeeSalesYTD`. L'istruzione di esecuzione passa il valore della variabile `@SalesYTDBySalesPerson` nel parametro OUTPUT `@SalesYTD`. Nel corpo della procedura il valore può quindi essere utilizzato per calcoli che consentono di generare un nuovo valore. Il nuovo valore viene passato di nuovo alla procedura tramite il parametro OUTPUT, aggiornando il valore nella variabile `@SalesYTDBySalesPerson` al termine della procedura. Questa funzionalità viene in genere denominata "funzionalità di passaggio per riferimento".  
+ Inoltre, è possibile specificare valori di input per i parametri OUTPUT quando la procedura viene eseguita. Questa operazione consente alla procedura di ricevere un valore dal programma chiamante, modificare o eseguire operazioni con il valore, quindi restituire il nuovo valore al programma chiamante. Nell'esempio precedente, è possibile assegnare un valore alla variabile `@SalesYTDBySalesPerson` prima che il programma chiami la procedura `Sales.uspGetEmployeeSalesYTD` . L'istruzione di esecuzione passa il valore della variabile `@SalesYTDBySalesPerson` nel parametro OUTPUT `@SalesYTD` . Nel corpo della procedura il valore può quindi essere utilizzato per calcoli che consentono di generare un nuovo valore. Il nuovo valore viene passato di nuovo alla procedura tramite il parametro OUTPUT, aggiornando il valore nella variabile `@SalesYTDBySalesPerson` al termine della procedura. Questa funzionalità viene in genere denominata "funzionalità di passaggio per riferimento".  
   
  Se si specifica OUTPUT per un parametro quando si chiama una procedura e tale parametro non è stato definito utilizzando OUTPUT nella definizione della procedura, viene restituito un messaggio di errore. Tuttavia, è possibile eseguire una procedura con i parametri di output e non specificare OUTPUT in fase di esecuzione della procedura. Non viene restituito alcun errore, ma non è possibile utilizzare il valore di output nel programma chiamante.  
   
-### Utilizzo del tipo di dati cursor nei parametri OUTPUT  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di usare nelle procedure il tipo di dati **cursor** solo per i parametri OUTPUT. Se per un parametro viene specificato il tipo di dati **cursor**, nella definizione della procedura devono essere specificate per tale parametro entrambe le parole chiave VARYING e OUTPUT. Un parametro può essere specificato solo come OUTPUT, ma se nella dichiarazione del parametro è specificata la parola chiave VARYING, il tipo di dati deve essere **cursor** e deve essere specificata anche la parola chiave OUTPUT.  
+### <a name="using-the-cursor-data-type-in-output-parameters"></a>Utilizzo del tipo di dati cursor nei parametri OUTPUT  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di usare nelle procedure il tipo di dati **cursor** solo per i parametri OUTPUT. Se per un parametro viene specificato il tipo di dati **cursor** , nella definizione della procedura devono essere specificate per tale parametro entrambe le parole chiave VARYING e OUTPUT. Un parametro può essere specificato solo come OUTPUT, ma se nella dichiarazione del parametro è specificata la parola chiave VARYING, il tipo di dati deve essere **cursor** e deve essere specificata anche la parola chiave OUTPUT.  
   
 > [!NOTE]  
->  Il tipo di dati **cursor** non può essere associato a variabili di applicazione tramite API di database come OLE DB, ODBC, ADO e DB-Library. Poiché in un'applicazione è possibile eseguire una procedura solo in seguito all'associazione dei parametri OUTPUT, le procedure con parametri OUTPUT di tipo **cursor** non possono essere chiamate dalle API di database. È possibile chiamare queste procedure da trigger, procedure o batch [!INCLUDE[tsql](../../includes/tsql-md.md)] solo quando la variabile OUTPUT di tipo **cursor** è assegnata a una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)] di tipo **cursor**.  
+>  Il tipo di dati **cursor** non può essere associato a variabili di applicazione tramite API di database come OLE DB, ODBC, ADO e DB-Library. Poiché in un'applicazione è possibile eseguire una procedura solo in seguito all'associazione dei parametri OUTPUT, le procedure con parametri OUTPUT di tipo **cursor** non possono essere chiamate dalle API di database. È possibile chiamare queste procedure da trigger, procedure o batch [!INCLUDE[tsql](../../includes/tsql-md.md)] solo quando la variabile OUTPUT di tipo **cursor** è assegnata a una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)] di tipo **cursor** .  
   
-### Regole per parametri di output di tipo cursor  
+### <a name="rules-for-cursor-output-parameters"></a>Regole per parametri di output di tipo cursor  
  Quando si esegue la procedura, ai parametri di output di tipo **cursor** si applicano le regole seguenti:  
   
 -   Con cursori forward-only, nel set di risultati del cursore sono incluse solo le righe che al completamento della procedura si trovano oltre la posizione del cursore, ad esempio:  
@@ -102,8 +106,8 @@ GO
     > [!NOTE]  
     >  Lo stato chiuso di un cursore è rilevante solo in fase di restituzione. È possibile, ad esempio, chiudere un cursore nel corso di una procedura, riaprirlo in una fase successiva e restituire il set di risultati di tale cursore al trigger, alla procedura o al batch chiamante.  
   
-### Esempi di parametri di output di tipo cursor  
- Nell'esempio seguente viene creata una procedura in cui è specificato un parametro di output `@currency`_`cursor` usando il tipo di dati **cursor**. La procedura viene quindi chiamata in un batch.  
+### <a name="examples-of-cursor-output-parameters"></a>Esempi di parametri di output di tipo cursor  
+ Nell'esempio seguente viene creata una procedura in cui è specificato un parametro di output `@currency`_`cursor` usando il tipo di dati **cursor** . La procedura viene quindi chiamata in un batch.  
   
  Creare innanzitutto la procedura per la dichiarazione e l'apertura di un cursore per la tabella Currency.  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## Restituzione di dati tramite un codice restituito  
+## <a name="returning-data-using-a-return-code"></a>Restituzione di dati tramite un codice restituito  
  Una procedura può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per specificare il codice restituito per una procedura, utilizzare l'istruzione RETURN. Come per i parametri OUTPUT, è necessario salvare il codice restituito in una variabile quando la procedura viene eseguita per utilizzare il valore del codice restituito nel programma chiamante. La variabile di assegnazione `@result` del tipo di dati **int** viene ad esempio usata per archiviare il codice restituito dalla procedura `my_proc`:  
   
 ```  
@@ -151,9 +155,9 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- I codici restituiti vengono in genere utilizzati nei blocchi per il controllo di flusso all'interno delle procedure per impostare il valore del codice restituito per ogni possibile situazione di errore. È possibile utilizzare la funzione @@ERROR dopo un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] per rilevare se si è verificato un errore durante l'esecuzione dell'istruzione.  
+ I codici restituiti vengono in genere utilizzati nei blocchi per il controllo di flusso all'interno delle procedure per impostare il valore del codice restituito per ogni possibile situazione di errore. È possibile usare la funzione @@ERROR dopo un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] per rilevare se si è verificato un errore durante l'esecuzione dell'istruzione.  
   
-### Esempi di codici restituiti  
+### <a name="examples-of-return-codes"></a>Esempi di codici restituiti  
  Nell'esempio seguente viene illustrata la procedura `usp_GetSalesYTD` con una modalità di gestione degli errori che consente di impostare valori speciali del codice restituito per errori diversi. Nella tabella seguente sono inclusi i valori interi assegnati dalla procedura a ogni possibile errore e viene indicato il significato di ogni valore.  
   
 |Valore del codice restituito|Significato|  
@@ -222,7 +226,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
 ```  
   
- Nell'esempio seguente viene creato un programma per la gestione dei codici restituiti dalla procedura `usp_GetSalesYTD`.  
+ Nell'esempio seguente viene creato un programma per la gestione dei codici restituiti dalla procedura `usp_GetSalesYTD` .  
   
 ```  
 -- Declare the variables to receive the output value and return code   
@@ -252,7 +256,7 @@ GO
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   

@@ -1,39 +1,43 @@
 ---
-title: "MultiPolygon | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sottotipo di geometria MultiPolygon [SQL Server]"
-  - "sottotipi di geometria [SQL Server]"
+title: MultiPolygon | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiPolygon geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06a27579c5e54406093daf4eb318c2e004a9763b
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiPolygon
-  Un'istanza **MultiPolygon** è una raccolta di zero o più istanze **Polygon**.  
+# <a name="multipolygon"></a>MultiPolygon
+  Un'istanza **MultiPolygon** è una raccolta di zero o più istanze **Polygon** .  
   
-## Istanze Polygon  
- Nella figura seguente vengono illustrati esempi di istanze **MultiPolygon**.  
+## <a name="polygon-instances"></a>Istanze Polygon  
+ Nella figura seguente vengono illustrati esempi di istanze **MultiPolygon** .  
   
- ![Esempi di istanze di geometria MultiPolygon](../../relational-databases/spatial/media/multipolygon.png "Esempi di istanze di geometria MultiPolygon")  
+ ![Esempi di istanze di geometria MultiPolygon](../../relational-databases/spatial/media/multipolygon.gif "Esempi di istanze di geometria MultiPolygon")  
   
  Come indicato nell'illustrazione:  
   
--   La figura 1 rappresenta un'istanza **MultiPolygon** con due elementi **Polygon**. Il limite è definito dai due anelli esterni e dai tre anelli interni.  
+-   La figura 1 rappresenta un'istanza **MultiPolygon** con due elementi **Polygon** . Il limite è definito dai due anelli esterni e dai tre anelli interni.  
   
--   La figura 2 rappresenta un'istanza **MultiPolygon** con due elementi **Polygon**. Il limite è definito dai due anelli esterni e dai tre anelli interni. I due elementi **Polygon** si intersecano in un punto di tangenza.  
+-   La figura 2 rappresenta un'istanza **MultiPolygon** con due elementi **Polygon** . Il limite è definito dai due anelli esterni e dai tre anelli interni. I due elementi **Polygon** si intersecano in un punto di tangenza.  
   
-### Istanze accettate  
+### <a name="accepted-instances"></a>Istanze accettate  
  Viene accettata un'istanza **MultiPolygon** se viene soddisfatta una delle condizioni indicate di seguito.  
   
 -   È un'istanza **MultiPolygon** vuota.  
@@ -56,7 +60,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
  La seconda istanza in MultiPolygon è un'istanza di LineString e non un'istanza Polygon accettata.  
   
-### Istanze valide  
+### <a name="valid-instances"></a>Istanze valide  
  Un'istanza **MultiPolygon** è valida se è un'istanza **MultiPolygon** vuota o se soddisfa i criteri indicati di seguito.  
   
 1.  Tutte le istanze che comprendono l'istanza **MultiPolygon** sono istanze **Polygon** valide. Per le istanze **Polygon** valide, vedere [Polygon](../../relational-databases/spatial/polygon.md).  
@@ -74,8 +78,8 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g2` è valida perché le due istanze **Polygon** si toccano solo in corrispondenza di un punto tangente. `@g3` non è valida perché gli interni delle due istanze **Polygon** si sovrappongono.  
   
-## Esempi  
- L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  
+## <a name="examples"></a>Esempi  
+ L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  
   
 ```  
 DECLARE @g geometry;  
@@ -90,8 +94,8 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## Vedere anche  
- [Poligono](../../relational-databases/spatial/polygon.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Polygon](../../relational-databases/spatial/polygon.md)   
  [STArea &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STCentroid &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
  [STPointOnSurface &#40;tipodi dati geometry&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   

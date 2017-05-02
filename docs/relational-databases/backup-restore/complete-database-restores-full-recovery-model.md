@@ -1,29 +1,33 @@
 ---
-title: "Ripristini di database completi (modello di recupero con registrazione completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristini di database completi"
-  - "database [SQL Server], ripristini di database completi"
-  - "ripristino di database [SQL Server], database completi"
-  - "database [SQL Server], ripristino"
-  - "modello di recupero con registrazione completa [SQL Server], esecuzione dei ripristini"
-  - "backup di log [SQL Server]"
+title: Ripristini di database completi (modello di recupero con registrazione completa) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristini di database completi (modello di recupero con registrazione completa)
+# <a name="complete-database-restores-full-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   L'obiettivo di un ripristino completo del database è il ripristino dell'intero database. L'intero database è offline per la tutta la durata del ripristino. Prima che sia possibile portare online una o più parti del database, tutti i dati vengono recuperati fino a un punto coerente in cui tutte le parti del database sono aggiornate allo stesso punto nel tempo e non sono presenti transazioni di cui non è stato eseguito il commit.  
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [Attività correlate](#RelatedTasks)  
   
 > [!NOTE]  
->  Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="PointOfFailure"></a> Ripristino di un database fino al momento dell'errore  
  Il recupero dello stato di un database fino al momento dell'errore in genere include i passaggi seguenti:  
@@ -74,7 +78,7 @@ caps.handback.revision: 77
 >  Se si ripristina un backup del database in un'istanza del server diversa, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
- La sintassi di base [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] per la sequenza di ripristino nell'illustrazione precedente è la seguente:  
+ La sintassi di base [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] per la sequenza di ripristino nell'illustrazione precedente è la seguente:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> Ripristino di un database fino a un punto all'interno di un backup del log  
  Nel modello di recupero con registrazione completa, un ripristino del database completo può essere generalmente recuperato in un punto nel tempo, in una transazione contrassegnata o in un LSN all'interno di un backup del log. Quando si utilizza il modello di recupero con registrazione minima delle operazioni bulk, se il backup del log contiene modifiche con registrazione minima delle operazioni bulk, il recupero temporizzato non è tuttavia possibile.  
   
-### Scenari di ripristino temporizzato di esempio  
+### <a name="sample-point-in-time-restore-scenarios"></a>Scenari di ripristino temporizzato di esempio  
  Nell'esempio seguente viene illustrato un sistema di database di importanza critica per le strategie aziendali per il quale è necessaria la creazione di un backup completo del database ogni notte a mezzanotte, di un backup differenziale del database ogni ora da lunedì a sabato e di backup del log delle transazioni ogni 10 minuti per tutto il giorno. Per ripristinare lo stato in cui si trovava il database alle 05.19 di mercoledì, eseguire le operazioni seguenti:  
   
 1.  Ripristinare il backup completo del database creato martedì a mezzanotte.  
@@ -176,8 +180,8 @@ GO
   
 -   [Recupero fino a un numero di sequenza del file di log &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## Vedere anche  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

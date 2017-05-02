@@ -1,26 +1,30 @@
 ---
-title: "Creare, modificare e rilasciare FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], modifica"
-  - "FileTable [SQL Server], eliminazione"
-  - "FileTable [SQL Server], creazione"
+title: Creare, modificare ed eliminare FileTable | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], altering
+- FileTables [SQL Server], dropping
+- FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare, modificare e rilasciare FileTables
+# <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
   Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
 ##  <a name="BasicsCreate"></a> Creazione di una tabella FileTable  
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
     1.  Nelle regole di confronto specificate deve essere fatta una **distinzione tra maiuscole e minuscole** affinché siano conformi alla semantica di denominazione file di Windows.  
   
-    2.  Se non si specifica un valore per **FILETABLE_COLLATE_FILENAME** o si specifica **database_default**, la colonna eredita le regole di confronto del database corrente. Se nelle regole di confronto del database corrente viene applicata la distinzione tra maiuscole e minuscole, viene generato un errore e l'operazione **CREATE TABLE** non viene completata.  
+    2.  Se non si specifica un valore per **FILETABLE_COLLATE_FILENAME**o si specifica **database_default**, la colonna eredita le regole di confronto del database corrente. Se nelle regole di confronto del database corrente viene applicata la distinzione tra maiuscole e minuscole, viene generato un errore e l'operazione **CREATE TABLE** non viene completata.  
   
 3.  È inoltre possibile specificare i nomi da utilizzare per i 3 vincoli di chiave primaria e univoci creati automaticamente. Se non si forniscono nomi, vengono generati dal sistema come descritto più avanti in questo argomento.  
   
@@ -83,7 +87,7 @@ GO
 ```  
   
  **Creare una tabella FileTable tramite SQL Server Management Studio**  
- In Esplora oggetti espandere gli oggetti inclusi nel database selezionato, fare clic con il pulsante destro del mouse sulla cartella **Tabelle**, quindi scegliere **Nuova FileTable**.  
+ In Esplora oggetti espandere gli oggetti inclusi nel database selezionato, fare clic con il pulsante destro del mouse sulla cartella **Tabelle** , quindi scegliere **Nuova FileTable**.  
   
  Verrà visualizzata una nuova finestra di script contenente un modello di script Transact-SQL, che è possibile personalizzare ed eseguire per creare una tabella FileTable. Per personalizzare facilmente lo script, utilizzare l'opzione **Imposta valori per parametri modello** dal menu **Query** .  
   
@@ -108,7 +112,7 @@ GO
   
 ###  <a name="HowToChange"></a> Procedura: Modifica della directory per una tabella FileTable  
  **Modificare la directory per una tabella FileTable tramite Transact-SQL**  
- Chiamare l'istruzione ALTER TABLE e specificare un nuovo valore valido per l'opzione SET di **FILETABLE_DIRECTORY**.  
+ Chiamare l'istruzione ALTER TABLE e specificare un nuovo valore valido per l'opzione SET di **FILETABLE_DIRECTORY** .  
   
  **Esempio**  
   
@@ -119,7 +123,7 @@ GO
 ```  
   
  **Modificare la directory per una tabella FileTable tramite SQL Server Management Studio**  
- In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella FileTable e selezionare **Proprietà** per aprire la finestra di dialogo **Proprietà tabella**. Nella pagina **FileTable** immettere un nuovo valore per **Nome di directory FileTable**.  
+ In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella FileTable e selezionare **Proprietà** per aprire la finestra di dialogo **Proprietà tabella** . Nella pagina **FileTable** immettere un nuovo valore per **Nome di directory FileTable**.  
   
 ###  <a name="ReqAlter"></a> Requisiti e restrizioni per la modifica di una tabella FileTable  
   
@@ -174,13 +178,13 @@ GO
 |Vincoli CHECK|I vincoli CHECK definiti dal sistema applicano i requisiti seguenti:<br /><br /> Nomi file validi.<br /><br /> Attributi di file validi.<br /><br /> L'oggetto padre deve essere una directory.<br /><br /> La gerarchia dello spazio dei nomi è bloccata durante la modifica dei file.|  
   
  **Convenzione di denominazione per i vincoli definiti dal sistema**  
- I vincoli definiti dal sistema descritti in precedenza vengono denominati usando il formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>**, dove:  
+ I vincoli definiti dal sistema descritti in precedenza vengono denominati usando il formato **\<tipovincolo>_\<nometabella>[\_\<nomecolonna>]\_\<identificatoreunivoco>**, dove:  
   
--   *<constraint_type>* è CK (vincolo CHECK), DF (vincolo DEFAULT), FK (chiave esterna), PK (chiave primaria) o UQ (vincolo UNIQUE).  
+-   *<tipovincolo>* è CK (vincolo CHECK), DF (vincolo DEFAULT), FK (chiave esterna), PK (chiave primaria) o UQ (vincolo UNIQUE).  
   
--   *\<uniquifier>* è una stringa generata dal sistema per specificare un nome univoco. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
+-   *\<identificatoreunivoco* è una stringa generata dal sistema per specificare un nome univoco. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

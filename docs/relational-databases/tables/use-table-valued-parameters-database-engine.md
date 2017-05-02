@@ -1,30 +1,34 @@
 ---
-title: "Utilizzare parametri con valori di tabella (Motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parametri con valori di tabella"
-  - "parametri con valori di tabella, informazioni sui parametri con valori di tabella"
-  - "parametri [SQL Server], con valori di tabella"
-  - "TVP Vedere parametri con valori di tabella"
+title: Usare parametri con valori di tabella (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzare parametri con valori di tabella (Motore di database)
+# <a name="use-table-valued-parameters-database-engine"></a>Utilizzare parametri con valori di tabella (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  I parametri con valori di tabella vengono dichiarati utilizzando tipi di tabella definiti dall'utente. I parametri con valori di tabella consentono di inviare più righe di dati a un'istruzione o a una routine [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio una stored procedure o una funzione, senza creare una tabella temporanea o molti parametri.  
+  I parametri con valori di tabella vengono dichiarati utilizzando tipi di tabella definiti dall'utente. I parametri con valori di tabella consentono di inviare più righe di dati a un'istruzione o a una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio una stored procedure o una funzione, senza creare una tabella temporanea o molti parametri.  
   
  I parametri con valori di tabella sono analoghi alle matrici di parametri in OLE DB e ODBC, ma offrono più flessibilità e maggiore integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un ulteriore vantaggio consiste nel fatto che tali parametri possono essere utilizzati in operazioni basate su set.  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 31
   
  [Restrizioni](#Restrictions)  
   
- [Parametri con valori di tabella  e operazioni BULK INSERT](#BulkInsert)  
+ [Parametri con valori di tabella e operazioni BULK INSERT](#BulkInsert)  
   
  [Esempio](#Example)  
   
@@ -66,11 +70,11 @@ caps.handback.revision: 31
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non gestisce statistiche su colonne di parametri con valori di tabella.  
   
--   I parametri con valori di tabella devono essere passati come parametri READONLY di input alle routine [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è possibile eseguire operazioni DML, ad esempio UPDATE, DELETE o INSERT, su un parametro con valori di tabella nel corpo di una routine.  
+-   I parametri con valori di tabella devono essere passati come parametri READONLY di input alle routine [!INCLUDE[tsql](../../includes/tsql-md.md)] . Non è possibile eseguire operazioni DML, ad esempio UPDATE, DELETE o INSERT, su un parametro con valori di tabella nel corpo di una routine.  
   
 -   Non è possibile utilizzare un parametro con valori di tabella come destinazione di un'istruzione SELECT INTO o INSERT EXEC. Un parametro con valori di tabella può essere incluso nella clausola FROM di un'istruzione SELECT INTO o nella stringa o stored procedure INSERT EXEC.  
   
-##  <a name="BulkInsert"></a> Parametri con valori di tabella  e operazioni BULK INSERT  
+##  <a name="BulkInsert"></a> Parametri con valori di tabella e operazioni BULK INSERT  
  L'utilizzo di parametri con valori di tabella è confrontabile con altre modalità di utilizzo di variabili basate su set, ma può spesso risultare più rapido nel caso di set di dati di notevoli dimensioni. Rispetto alle operazioni bulk, che comportano costi di avvio maggiori, i parametri con valori di tabella garantiscono livelli di prestazioni ottimali per operazioni di inserimento di non oltre 1.000 righe.  
   
  I parametri con valori di tabella riutilizzati possono sfruttare il vantaggio derivante dalla memorizzazione nella cache della tabella temporanea, che consente di ottenere una migliore scalabilità rispetto alle operazioni BULK INSERT equivalenti. Se si eseguono operazioni di inserimento di righe di entità ridotta, è possibile ottenere vantaggi minimi in termini di prestazioni utilizzando elenchi di parametri o istruzioni batch anziché operazioni BULK INSERT o parametri con valori di tabella. Tali metodi, tuttavia, risultano meno efficaci da programmare e le prestazioni si riducono rapidamente con l'aumentare del numero di righe.  
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

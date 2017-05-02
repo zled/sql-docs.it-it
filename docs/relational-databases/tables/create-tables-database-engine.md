@@ -1,24 +1,28 @@
 ---
-title: "Creare tabelle (motore di database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione di tabelle [SQL Server], Visual Database Tools"
+title: Creare tabelle (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare tabelle (motore di database)
+# <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   È possibile creare una nuova tabella, assegnarle un nome e aggiungerla a un database esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,7 +39,7 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
  Se a una colonna nell'istruzione CREATE TABLE è associata una raccolta di XML Schema, è necessario che l'utente sia il proprietario della raccolta di XML Schema o disponga dell'autorizzazione REFERENCES.  
   
  
-## Uso di Progettazione tabelle  
+## <a name="using-table-designer"></a>Uso di Progettazione tabelle  
   
 1.  In SSMS, in **Esplora oggetti**, connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] contenente il database da modificare.  
   
@@ -55,7 +59,7 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
-     Per ulteriori informazioni su questi oggetti, vedere [Create Foreign Key Relationships](../../relational-databases/tables/creare-relazioni-di-chiave-esterna.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) e [Indexes](../../relational-databases/indexes/indexes.md).  
+     Per ulteriori informazioni su questi oggetti, vedere [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) e [Indexes](../../relational-databases/indexes/indexes.md).  
   
 8.  Per impostazione predefinita, la tabella è inclusa nello schema **dbo** . Per specificare uno schema diverso per la tabella, fare clic con il pulsante destro del mouse nel riquadro Progettazione tabelle e selezionare **Proprietà** come mostrato nell'illustrazione riportata di seguito. Nell'elenco a discesa **Schema** selezionare lo schema appropriato.  
   
@@ -71,7 +75,7 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-## Uso dell'editor di query  
+## <a name="using-query-editor"></a>Uso dell'editor di query  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,3 +100,4 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
  Per altri esempi, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
   
+

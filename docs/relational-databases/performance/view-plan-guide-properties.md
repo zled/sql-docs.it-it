@@ -1,27 +1,31 @@
 ---
-title: "Visualizzare le propriet&#224; delle guide di piano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "guide di piano [SQL Server], visualizzazione delle proprietà delle guide di piano"
-  - "visualizzazione delle proprietà delle guide di piano"
+title: "Visualizzare le proprietà delle guide di piano | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare le propriet&#224; delle guide di piano
+# <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
   È possibile visualizzare le proprietà delle guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Contenuto dell'argomento**  
@@ -45,7 +49,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per visualizzare le proprietà di una guida di piano  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
 1.  Fare clic sul segno più per espandere il database in cui si desidera visualizzare le proprietà di una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 19
      Le seguenti proprietà vengono visualizzate nella finestra di dialogo **Proprietà guida di piano** .  
   
      **Hint**  
-     Vengono visualizzati gli hint per la query o il piano di query da applicare all'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando un piano di query viene specificato come un hint, viene visualizzato l'output di Showplan XML per il piano.  
+     Vengono visualizzati gli hint per la query o il piano di query da applicare all'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Quando un piano di query viene specificato come un hint, viene visualizzato l'output di Showplan XML per il piano.  
   
      **Disabilitato**  
      Visualizza lo stato della guida di piano. I valori possibili sono **True** e **False**.  
@@ -65,19 +69,19 @@ caps.handback.revision: 19
      Visualizza il nome della guida di piano.  
   
      **Parametri**  
-     Quando il tipo di ambito è SQL o TEMPLATE, vengono visualizzati il nome e il tipo di dati di tutti i parametri incorporati nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Quando il tipo di ambito è SQL o TEMPLATE, vengono visualizzati il nome e il tipo di dati di tutti i parametri incorporati nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Batch ambito**  
-     Visualizza il testo del batch nel quale viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Visualizza il testo del batch nel quale viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Nome oggetto dell'ambito**  
-     Quando il tipo di ambito è OBJECT, viene visualizzato il nome della stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], della funzione scalare definita dall'utente o del trigger DML in cui viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Quando il tipo di ambito è OBJECT, viene visualizzato il nome della stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , della funzione scalare definita dall'utente o del trigger DML in cui viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Nome schema ambito**  
      Quando il tipo di ambito è OBJECT, viene visualizzato il nome dello schema che contiene l'oggetto.  
   
      **Tipo di ambito**  
-     Visualizza il tipo di entità nel quale viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL**e **TEMPLATE**.  
+     Visualizza il tipo di entità nel quale viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Viene specificato il contesto per adeguare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alla guida di piano. I valori possibili sono **OBJECT**, **SQL**e **TEMPLATE**.  
   
      **Istruzione**  
      Viene visualizzata l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] sulla quale deve essere applicata la guida di piano.  
@@ -86,7 +90,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per visualizzare le proprietà di una guida di piano  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

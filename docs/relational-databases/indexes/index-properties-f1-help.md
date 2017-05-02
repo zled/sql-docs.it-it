@@ -1,30 +1,34 @@
 ---
-title: "Guida sensibile al contesto di Propriet&#224; indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: "Guida sensibile al contesto di Proprietà indice | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guida sensibile al contesto di Propriet&#224; indice
+# <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le sezioni in questo argomento fanno riferimento a varie proprietà di indice disponibili tramite le finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -53,7 +57,7 @@ caps.handback.revision: 38
  Consente di visualizzare il nome dell'indice. Per un indice esistente questo campo è di sola lettura. Quando si crea un nuovo indice, digitare il nome dell'indice.  
   
  **Tipo di indice**  
- Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **AML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster** o **Columnstore non cluster**.  
+ Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **AML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster**o **Columnstore non cluster**.  
   
  **Nota** È consentito un solo indice cluster per ogni tabella. È consentito un solo indice columnstore con ottimizzazione per la memoria xVelocity per ogni tabella.  
   
@@ -63,11 +67,11 @@ caps.handback.revision: 38
  Se nel campo **Tipo di indice** si seleziona **Spaziale** , la casella di controllo **Univoco** è visualizzata in grigio.  
   
  **Colonne chiave indice**  
- Consente di aggiungere le colonne desiderate alla griglia **Colonne chiave indice**. Quando viene aggiunta più di una colonna, le colonne devono essere elencate nell'ordine desiderato. L'ordine delle colonne in un indice può influenzare notevolmente le prestazioni dell'indice.  
+ Consente di aggiungere le colonne desiderate alla griglia **Colonne chiave indice** . Quando viene aggiunta più di una colonna, le colonne devono essere elencate nell'ordine desiderato. L'ordine delle colonne in un indice può influenzare notevolmente le prestazioni dell'indice.  
   
  Non è possibile includere più di 16 colonne in un solo indice composto. Per un numero di colonne maggiore di 16, vedere la sezione dedicata a included_columns alla fine di questo argomento.  
   
- È possibile definire un indice spaziale solo in una colonna che contiene un tipo di dati spaziali (*colonna spaziale*).  
+ È possibile definire un indice spaziale solo in una colonna che contiene un tipo di dati spaziali ( *colonna spaziale*).  
   
  **Nome**  
  Consente di visualizzare il nome della colonna che partecipa alla chiave dell'indice.  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  Indica se la colonna che partecipa alla chiave dell'indice consente l'archiviazione di valori Null nella colonna della tabella o della vista.  
   
  **Aggiungi**  
- Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *<nome tabella>\>* che viene visualizzata facendo clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
+ Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* che viene visualizzata facendo clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
   
  **Rimuovi**  
  Consente di rimuovere la colonna selezionata dalla partecipazione alla chiave dell'indice.  
@@ -129,7 +133,7 @@ caps.handback.revision: 38
  **Identity**  
  Il valore indicato è **Sì** per le colonne Identity oppure **No** se la colonna non è di tipo Identity.  
   
- **Consenti valori NULL**  
+ **Allow Nulls**  
  Il valore indicato è **Sì** se la definizione della tabella consente valori Null per la colonna. oppure **No** se la definizione della tabella non consente valori Null per la colonna.  
   
 ##  <a name="Storage"></a> Opzioni della pagina Archiviazione  
@@ -178,7 +182,7 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> Opzioni di indice della pagina Spaziale  
  Usare la pagina **Spaziale** per visualizzare o specificare i valori delle proprietà spaziali. Per altre informazioni, vedere [Dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-### Riquadro  
+### <a name="bounding-box"></a>Riquadro  
  Si definisce *riquadro* il perimetro della griglia di livello principale di un piano geometrico. I parametri del riquadro sono presenti solo nello schema a mosaico griglia geometrica. Questi parametri non sono disponibili se **Schema a mosaico** è impostato su **Griglia geografica**.  
   
  Nel pannello sono visualizzate le coordinate **(***X-min***,***Y-min***)** e **(***X-max***,***Y-max***)** del rettangolo di selezione. Non esistono valori predefiniti, Quando si crea un indice spaziale nuovo su una colonna di tipo **geometry** , è quindi necessario specificare i valori delle coordinate.  
@@ -195,18 +199,18 @@ caps.handback.revision: 38
  **Y-max**  
  La coordinata Y dell'angolo superiore destro del riquadro.  
   
-### Generale  
+### <a name="general"></a>Generale  
  **Schema a mosaico**  
  Indica lo schema a mosaico dell'indice. Sono supportati gli schemi a mosaico seguenti.  
   
  **Griglia geometrica**  
- Specifica lo schema a mosaico per griglia geometrica che viene applicato a una colonna con il tipo di dati **geometry**.  
+ Specifica lo schema a mosaico per griglia geometrica che viene applicato a una colonna con il tipo di dati **geometry** .  
   
  **Griglia geometrica automatica**  
  Questa opzione è abilitata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando il livello di compatibilità del database è impostato su 110 o su un valore maggiore.  
   
  **Griglia geografica**  
- Specifica lo schema a mosaico per griglia geografica che viene applicato a una colonna con il tipo di dati **geography**.  
+ Specifica lo schema a mosaico per griglia geografica che viene applicato a una colonna con il tipo di dati **geography** .  
   
  **Griglia geografica automatica**  
  Questa opzione è abilitata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando il livello di compatibilità del database è impostato su 110 o su un valore maggiore.  
@@ -216,9 +220,9 @@ caps.handback.revision: 38
  **Celle per oggetto**  
  Indica il numero di celle per oggetto di mosaico utilizzabile per un singolo oggetto spaziale nell'indice. È possibile usare qualsiasi numero intero compreso tra 1 e 8192. Quando il livello di compatibilità del database è impostato su 110 o su un valore maggiore, il valore predefinito è 16, mentre è 8 per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Se al livello principale un oggetto include più celle rispetto a quanto specificato da *n*, l'indicizzazione usa il numero di celle necessario per offrire uno schema a mosaico di livello principale completo. In tali casi un oggetto può ricevere un numero di celle maggiore di quello specificato: il numero massimo è il numero di celle generate dalla griglia di livello principale che dipende dalla densità di **Livello 1**.  
+ Se al livello principale un oggetto include più celle rispetto a quanto specificato da *n*, l'indicizzazione usa il numero di celle necessario per offrire uno schema a mosaico di livello principale completo. In tali casi un oggetto può ricevere un numero di celle maggiore di quello specificato: il numero massimo è il numero di celle generate dalla griglia di livello principale che dipende dalla densità di **Livello 1** .  
   
-### Griglie  
+### <a name="grids"></a>Griglie  
  In questo pannello è visualizzata la densità della griglia a ogni livello dello schema a mosaico. Le opzioni disponibili sono **Bassa**, **Media**o **Alta**. Il valore predefinito è **Media**. **Bassa** rappresenta una griglia 4x4 (16 celle), **Media** una griglia 8x8 (64 celle) e **Alta** una griglia 16x16 (256 celle). Queste opzioni non sono disponibili se si scelgono le opzioni di schema a mosaico **Griglia geometrica automatica** o **Griglia geografica automatica** .  
   
  **Livello 1**  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **Espressione filtro**  
  Definisce le righe di dati da includere nell'indice filtrato. Ad esempio, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Propriet&#224; colonna (pagina Generale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+title: "Proprietà colonna (pagina Generale) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propriet&#224; colonna (pagina Generale)
+# <a name="column-properties-general-page"></a>Proprietà colonna (pagina Generale)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Utilizzare questa pagina per visualizzare le proprietà per la colonna selezionata.  
   
- Le informazioni visualizzate in questa pagina sono di sola lettura. Per modificare la colonna chiudere la finestra di dialogo **Proprietà colonna**, espandere la tabella e le colonne in Esplora oggetti, fare clic con il pulsante destro del mouse sulla colonna e quindi scegliere **Progetta**.  
+ Le informazioni visualizzate in questa pagina sono di sola lettura. Per modificare la colonna chiudere la finestra di dialogo **Proprietà colonna** , espandere la tabella e le colonne in Esplora oggetti, fare clic con il pulsante destro del mouse sulla colonna e quindi scegliere **Progetta**.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  Nome della colonna.  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 27
  Tipo di dati che è possibile inserire nella colonna. Se il tipo di dati è un tipo di dati di sistema, viene visualizzato il tipo di dati di sistema. Se il tipo di dati è un tipo di dati definito dall'utente, viene visualizzato il tipo di dati di sistema che costituisce il tipo di dati definito dall'utente.  
   
  **Chiave primaria**  
- Indica se la colonna è una chiave primaria. I valori possibili sono **True** e **False**.  
+ Indica se la colonna è una chiave primaria. I valori possibili sono **True**e **False**.  
   
  **Consenti valori NULL**  
  Indica se la colonna accetta valori NULL. I valori possibili sono **True** e **False**.  

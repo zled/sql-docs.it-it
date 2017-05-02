@@ -1,24 +1,28 @@
 ---
-title: "Informazioni sul server di pubblicazione, Agenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+title: Informazioni sul server di pubblicazione, Agenti | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informazioni sul server di pubblicazione, Agenti
+# <a name="publisher-information-agents"></a>Informazioni sul server di pubblicazione, Agenti
   Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione.  
   
 -   Agente snapshot, visualizzato per tutte le pubblicazioni.  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   Pulizia dei riferimenti alle sottoscrizioni scaduti  
   
- Per ulteriori informazioni su questi processi, vedere [amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md).  
+ Per altre informazioni su questi processi, vedere [Amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## Opzioni  
- Per visualizzare informazioni su un agente o un processo, selezionare il **agente e i tipi di processo** dal menu a discesa. Per ulteriori informazioni e per conoscere le attività correlate a un agente o a un processo, fare clic con il pulsante destro del mouse sulla riga dell'agente o del processo, quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
+## <a name="options"></a>Opzioni  
+ Per visualizzare le informazioni su un agente o su un processo, scegliere l'elemento desiderato dal menu a discesa ****  relativo ai tipi di agente e processo. Per ulteriori informazioni e per conoscere le attività correlate a un agente o a un processo, fare clic con il pulsante destro del mouse sulla riga dell'agente o del processo, quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
 -   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne** .  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per ogni agente o processo.  
   
-### agente snapshot  
+### <a name="snapshot-agent"></a>agente snapshot  
  **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 26
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit dei comandi di inizializzazione nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **#Trans**  
+ **N. transazioni**  
  Numero di transazioni di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **#Comandi recapitati**  
+ **N. comandi**  
  Numero di comandi di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente. Un comando è equivalente a una modifica dei dati, ad esempio un aggiornamento.  
   
-### Agente di lettura log  
+### <a name="log-reader-agent"></a>Agente di lettura log  
  **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
@@ -121,16 +125,16 @@ caps.handback.revision: 26
  **Latenza**  
  Quantità di tempo, in secondi, trascorsa tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
- **#Trans**  
+ **N. transazioni**  
  Numero di transazioni di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **#Comandi recapitati**  
+ **N. comandi**  
  Numero di comandi di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente. Un comando è equivalente a una modifica dei dati, ad esempio un aggiornamento.  
   
- **Microsec. #Comandi recapitati**  
+ **Media n. comandi**  
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
-### Agente di lettura coda  
+### <a name="queue-reader-agent"></a>Agente di lettura coda  
  **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
@@ -160,16 +164,16 @@ caps.handback.revision: 26
  **Latenza**  
  Quantità di tempo, in secondi, trascorsa tra il commit della modifica più recente in un database di sottoscrizione e il commit del comando corrispondente nel database di pubblicazione.  
   
- **#Trans**  
+ **N. transazioni**  
  Numero di transazioni di cui è stato eseguito il commit nel database di pubblicazione durante la più recente esecuzione dell'agente.  
   
- **#Comandi recapitati**  
+ **N. comandi**  
  Numero di comandi di cui è stato eseguito il commit nel database di pubblicazione durante la più recente esecuzione dell'agente. Un comando è equivalente a una modifica dei dati, ad esempio un aggiornamento.  
   
- **Microsec. #Comandi recapitati**  
+ **Media n. comandi**  
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
-### Processi di manutenzione  
+### <a name="maintenance-jobs"></a>Processi di manutenzione  
  **Stato**  
  Stato di ogni processo. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **Ultima azione**  
  Ultima azione eseguita durante la più recente esecuzione del processo.  
   
-## Vedere anche  
- [Avvio di Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Consente di visualizzare informazioni ed eseguire attività per un server di pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Consente di visualizzare informazioni ed eseguire attività relative agli agenti associati a una pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

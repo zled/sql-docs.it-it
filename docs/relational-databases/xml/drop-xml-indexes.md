@@ -1,32 +1,36 @@
 ---
-title: "Eliminazione di indici XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rimozione di indici"
-  - "eliminazione di indici"
-  - "indici XML [SQL Server], eliminazione"
+title: Eliminare indici XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminazione di indici XML
+# <a name="drop-xml-indexes"></a>Eliminazione di indici XML
   Per eliminare indici XML e non XML primari o secondari esistenti, è possibile usare l'istruzione [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Tuttavia, nessuna opzione dell'istruzione DROP INDEX si applica agli indici XML. Se si elimina l'indice XML primario, vengono eliminati anche gli indici secondari presenti.  
   
  La sintassi di DROP con *TableName.IndexName* è obsoleta e non è supportata per gli indici XML.  
   
-## Esempio: creazione ed eliminazione di un indice XML primario  
- Nell'esempio seguente viene creato un indice XML in una colonna di tipo **xml**.  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Esempio: creazione ed eliminazione di un indice XML primario  
+ Nell'esempio seguente viene creato un indice XML in una colonna di tipo **xml** .  
   
 ```  
 DROP TABLE T  
@@ -50,7 +54,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Quando si elimina una tabella, vengono eliminati automaticamente anche tutti i relativi indici XML. Non è tuttavia possibile eliminare una colonna XML da una tabella se in tale colonna è incluso un indice XML.  
   
- Nell'esempio seguente viene creato un indice XML in una colonna di tipo **xml**. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Nell'esempio seguente viene creato un indice XML in una colonna di tipo **xml** . Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  
@@ -67,8 +71,8 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## Esempio: creazione di un indice XML tramite l'opzione DROP_EXISTING  
- Nell'esempio seguente un indice XML viene creato in una colonna (`XmlColx`). Successivamente, viene creato un altro indice XML con lo stesso nome in una colonna diversa, (`XmlColy`). Poiché viene specificata l'opzione `DROP_EXISTING`, viene eliminato l'indice XML esistente in (`XmlColx)`) e creato un nuovo indice XML in (`XmlColy`).  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Esempio: creazione di un indice XML tramite l'opzione DROP_EXISTING  
+ Nell'esempio seguente un indice XML viene creato in una colonna (`XmlColx`). Successivamente, viene creato un altro indice XML con lo stesso nome in una colonna diversa, (`XmlColy`). Poiché viene specificata l'opzione `DROP_EXISTING` , viene eliminato l'indice XML esistente in (`XmlColx)` ) e creato un nuovo indice XML in (`XmlColy`).  
   
 ```  
 DROP TABLE T  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  Questa query restituisce il nome della colonna in cui viene creato l'indice XML specificato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

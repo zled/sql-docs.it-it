@@ -1,36 +1,40 @@
 ---
-title: "Guida sull&#39;architettura di pagina ed extent | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guida sull'architettura di pagina ed extent"
-  - "guida, architettura di pagina ed extent"
+title: Guida sull&quot;architettura di pagina ed extent | Microsoft Docs
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page and extent architecture guide
+- guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guida sull&#39;architettura di pagina ed extent
+# <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 La pagine è l'unità di base per l'archiviazione dei dati in SQL Server. Un extent è una raccolta di otto pagine fisicamente contigue. Gli extent aiutano a gestire le pagine in modo efficace. Questa guida descrive le strutture dei dati usate per gestire pagine ed extent in tutte le versioni di SQL Server. La comprensione dell'architettura delle pagine e degli extent è importante per la progettazione e lo sviluppo di database efficienti.
 
-## Pagine ed extent
+## <a name="pages-and-extents"></a>Pagine ed extent
 
 L'unità di base per l'archiviazione dei dati in SQL Server è la pagina. Lo spazio su disco allocato in un file di dati (con estensione mdf o ndf) di un database viene suddiviso logicamente in pagine numerate in modo sequenziale da 0 a n. Le operazioni di I/O su disco vengono eseguite al livello della pagina. Questo significa che SQL Server legge o scrive pagine di dati intere.
 
 Gli extent sono un gruppo di otto pagine fisicamente contigue e vengono utilizzati per gestire in maniera efficiente le pagine. Tutte le pagine sono archiviate in extent.
 
-### Pagine
+### <a name="pages"></a>Pagine
 
 In SQL Server la dimensione di una pagina è 8 KB. I database di SQL Server includono pertanto 128 pagine per megabyte. Ogni pagina inizia con un'intestazione di 96 byte utilizzata per archiviare informazioni di sistema relative alla pagina. Queste informazioni includono il numero della pagina, il tipo di pagina, la quantità di spazio disponibile nella pagina e l'ID dell'unità di allocazione dell'oggetto proprietario della pagina.
 
@@ -56,10 +60,10 @@ Le righe di dati vengono inserite in sequenza nella pagina iniziando immediatame
 
 **Supporto per righe di grandi dimensioni**  
 
-Le righe non possono estendersi su più pagine. È tuttavia possibile che parti di una riga vengano spostate all'esterno della pagina della riga in modo che questa possa di fatto essere di grandi dimensioni. La quantità massima di dati e overhead contenuti in una singola riga di una pagina è 8.060 byte (8 KB). Questa limitazione non include tuttavia i dati archiviati nel tipo di pagina Text/Image. Questa restrizione è assoluta per tabelle contenenti colonne di tipo varchar, nvarchar, varbinary o sql_variant. Quando la dimensione totale delle righe di tutte le colonne a lunghezza fissa e variabile di una tabella supera il limite di 8.060 byte, SQL Server sposta dinamicamente una o più colonne a lunghezza variabile all'interno di pagine nell'unità di allocazione ROW_OVERFLOW_DATA, iniziando dalla colonna con la larghezza maggiore. Questa operazione viene eseguita ogni volta che un aggiornamento o un inserimento aumenta la dimensione totale della riga fino a superare il limite di 8.060 byte. Quando una colonna viene spostata in una pagina nell'unità di allocazione ROW_OVERFLOW_DATA, viene mantenuto un puntatore di 24 byte sulla pagina originale nell'unità di allocazione IN_ROW_DATA. Se un'operazione successiva riduce la dimensione della riga, SQL Server sposta nuovamente le colonne nella pagina di dati originale in maniera dinamica. 
+Le righe non possono estendersi su più pagine. È tuttavia possibile che parti di una riga vengano spostate all'esterno della pagina della riga in modo che questa possa di fatto essere di grandi dimensioni. La quantità massima di dati e overhead contenuti in una singola riga di una pagina è 8.060 byte (8 KB). Questa limitazione non include tuttavia i dati archiviati nel tipo di pagina Text/Image. Questa restrizione è assoluta per tabelle contenenti colonne di tipo varchar, nvarchar, varbinary o sql_variant. Quando la dimensione totale delle righe di tutte le colonne a lunghezza fissa e variabile di una tabella supera il limite di 8.060 byte, SQL Server sposta dinamicamente una o più colonne a lunghezza variabile all'interno di pagine nell'unità di allocazione ROW_OVERFLOW_DATA, iniziando dalla colonna con la larghezza maggiore. Questa operazione viene eseguita ogni volta che un aggiornamento o un inserimento aumenta la dimensione totale della riga fino a superare il limite di 8.060 byte. Quando una colonna viene spostata in una pagina nell'unità di allocazione ROW_OVERFLOW_DATA, viene mantenuto un puntatore di 24 byte sulla pagina originale nell'unità di allocazione IN_ROW_DATA. Se un'operazione successiva riduce la dimensione della riga, SQL Server sposta nuovamente le colonne nella pagina di dati originale in maniera dinamica. 
 
 
-### Extents 
+### <a name="extents"></a>Extents 
 
 L'extent è l'unità di base in cui viene gestito lo spazio. Un extent è costituito da otto pagine fisicamente contigue, ovvero da 64 KB. I database di SQL Server includono pertanto 16 extent per megabyte.
 
@@ -71,9 +75,9 @@ Per allocare lo spazio con la massima efficienza, in SQL Server non vengono allo
 
 In una nuova tabella o nuovo indice vengono generalmente allocate pagine da extent misti. Se la tabella o l'indice aumenta di dimensioni fino a includere otto pagine, per le allocazioni successive a esso dirette vengono utilizzati extent uniformi. Se si crea un indice per una tabella esistente che contiene un numero di righe sufficiente per generare otto pagine nell'indice, tutte le allocazioni per l'indice appartengono a extent uniformi.
 
-![extent](../relational-databases/media/extents.gif)
+![Extents](../relational-databases/media/extents.gif)
 
-## Gestione delle allocazioni di extent e dello spazio libero 
+## <a name="managing-extent-allocations-and-free-space"></a>Gestione delle allocazioni di extent e dello spazio libero 
 
 Le strutture di dati di SQL Server che consentono di gestire le allocazioni degli extent e di tenere traccia dello spazio su disco sono organizzate in modo relativamente semplice. Tali strutture offrono i vantaggi seguenti: 
 
@@ -83,7 +87,7 @@ Le strutture di dati di SQL Server che consentono di gestire le allocazioni degl
 * La maggior parte delle informazioni relative all'allocazione non è concatenata. Questo aspetto semplifica la gestione delle informazioni sull'allocazione.    
   Ogni allocazione o deallocazione di pagina può essere eseguita in modo rapido. Questa caratteristica riduce la contesa tra attività simultanee di allocazione o deallocazione di pagine. 
 
-### Gestione delle allocazioni di extent
+### <a name="managing-extent-allocations"></a>Gestione delle allocazioni di extent
 
 In SQL Server vengono utilizzati due tipi di mappe per la registrazione delle allocazioni degli extent: 
 
@@ -103,7 +107,7 @@ Nelle pagine GAM e SGAM per ogni extent sono impostati gli schemi di bit indicat
  
 Ciò consente di utilizzare semplici algoritmi di gestione degli extent. Per allocare un extent uniforme, il motore di database cerca un bit 1 nella pagina GAM e lo imposta su 0. Per cercare un extent misto con pagine libere, il motore di database cerca un bit 1 nella pagina SGAM. Per allocare un extent misto, il motore di database cerca un bit 1 nella pagina GAM, lo imposta su 0 e quindi imposta su 1 anche il bit corrispondente nella pagina SGAM. Per deallocare un extent, il motore di database verifica che il bit GAM sia impostato su 1 e il bit SGAM su 0. Gli algoritmi effettivamente usati internamente dal motore di database sono più sofisticati rispetto a quanto descritto in questo argomento, poiché il motore di database distribuisce dati in un database in modo uniforme. Anche gli algoritmi reali, tuttavia, risultano semplificati, in quanto non devono gestire catene di informazioni sull'allocazione degli extent.
 
-### Rilevamento dello spazio libero
+### <a name="tracking-free-space"></a>Rilevamento dello spazio libero
 
 Le pagine PFS (Page Free Space, Spazio libero nella pagina) consentono di rilevare lo stato di allocazione di ogni pagina, se una singola pagina sia stata allocata e la quantità di spazio libero in ogni pagina. PFS include un bit per ogni pagina, indicando se la pagina è allocata e, in tal caso, se si tratta di una pagina vuota, in uso dall'1% al 50%, dal 51% all'80%, dall'81% al 95% o dal 96% al 100%.
 
@@ -113,7 +117,7 @@ La prima pagina dopo la pagina dell'intestazione di un file di dati (con il nume
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## Gestione dello spazio utilizzato dagli oggetti 
+## <a name="managing-space-used-by-objects"></a>Gestione dello spazio utilizzato dagli oggetti 
 
 Una pagina della mappa di allocazione degli indici (IAM) esegue il mapping degli extent in una parte da 4 gigabyte (GB) di un file di database utilizzato da un'unità di allocazione. Le unità di allocazione possono essere di tre tipi:
 
@@ -146,7 +150,7 @@ Se nel motore di database di SQL Server è necessario inserire una nuova riga ma
 In motore di database viene allocato un nuovo extent a un'unità di allocazione solo se non viene trovata rapidamente una pagina di un extent esistente in cui sia disponibile spazio sufficiente per la riga da inserire. Nel motore di database, gli extent da allocare vengono selezionati tra quelli disponibili nel filegroup usando un algoritmo di allocazione proporzionale. Se un filegroup include due file, in uno dei quali lo spazio libero è doppio rispetto all'altro, verranno allocate due pagine del file che include la quantità di spazio libero maggiore per ogni pagina allocata dell'altro file. Ciò significa che la percentuale di spazio utilizzato deve essere analoga in tutti i file di un filegroup. 
 
  
-## Rilevamento degli extent modificati 
+## <a name="tracking-modified-extents"></a>Rilevamento degli extent modificati 
 
 SQL Server usa due strutture di dati interne per rilevare gli extent modificati tramite operazioni di copia bulk e di quelli modificati successivamente al backup completo più recente. Queste strutture di dati consentono di accelerare in misura significativa le operazioni di backup differenziale. Esse accelerano inoltre la registrazione delle operazioni di copia bulk con database per i quali viene utilizzato il modello di recupero con registrazione minima delle operazioni bulk. Come le pagine mappa di allocazione globale (GAM, Global Allocation Map) e mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map), queste strutture sono mappe di bit in cui ogni bit rappresenta un singolo extent. 
 
@@ -160,3 +164,4 @@ L'intervallo tra le pagine DCM e BCM corrisponde all'intervallo tra le pagine GA
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

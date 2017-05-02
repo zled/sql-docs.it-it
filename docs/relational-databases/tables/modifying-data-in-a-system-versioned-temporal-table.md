@@ -1,31 +1,35 @@
 ---
-title: "Modifica dei dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifica dei dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifica dei dati in una tabella temporale con controllo delle versioni di sistema
+# <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modifica dei dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile modificare i dati in una tabella temporale con controllo delle versioni di sistema usando istruzioni DML regolari, tenendo però presente che i dati della colonna periodo non possono essere modificati direttamente. Quando i dati vengono aggiornati, sono sottoposti al controllo delle versioni e la versione precedente di ogni riga aggiornata viene inserita nella tabella di cronologia. Quando vengono eliminati, l'eliminazione è logica e la riga viene spostata dalla tabella corrente alla tabella di cronologia senza che i dati siano eliminati definitivamente.  
   
-## Inserimento di dati  
+## <a name="inserting-data"></a>Inserimento di dati  
  Quando si inseriscono nuovi dati è necessario tenere conto delle colonne **PERIOD** se non sono **HIDDEN**. Nelle tabelle temporali con controllo delle versioni di sistema è anche possibile usare il cambio della partizione.  
   
-### Inserire nuovi dati con colonne periodo visibili  
+### <a name="insert-new-data-with-visible-period-columns"></a>Inserire nuovi dati con colonne periodo visibili  
  È possibile costruire l’istruzione **INSERT** quando si hanno colonne **PERIOD** visibili come le seguenti, per tenere conto delle nuove colonne **PERIOD** :  
   
 -   Se si specifica l'elenco delle colonne nell’istruzione **INSERT** , è possibile omettere le colonne **PERIOD** , perché il sistema genera automaticamente i relativi valori.  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
   
     ```  
   
-### Inserire dati in una tabella con colonne periodo HIDDEN  
+### <a name="insert-data-into-a-table-with-hidden-period-columns"></a>Inserire dati in una tabella con colonne periodo HIDDEN  
  Se le colonne **PERIOD** vengono specificate come HIDDEN, quando si utilizza l’istruzione INSERT è necessario indicare solo i valori per le colonne visibili, senza specificare l'elenco colonne. Non è necessario tenere conto delle nuove colonne **PERIOD** nell’istruzione **INSERT** . In questo modo le applicazioni legacy continueranno a funzionare quando si abilita il controllo delle versioni di sistema nelle tabelle a cui verrà applicata la funzionalità.  
   
 ```  
@@ -74,9 +78,9 @@ VALUES  ('Headquarters', 'New York');
   
 ```  
   
-### Inserimento di dati con PARTITION SWITCH  
+### <a name="inserting-data-using-partition-switch"></a>Inserimento di dati con PARTITION SWITCH  
  Se la tabella corrente è partizionata è possibile usare il cambio di partizione per caricare in modo efficiente i dati in una partizione vuota oppure su più partizioni in parallelo.   
-La tabella di gestione temporanea usata nell'istruzione **PARTITION SWITCH IN** con una tabella temporale con controllo delle versioni di sistema deve avere la definizione di **SYSTEM_TIME PERIOD**, ma non deve essere necessariamente una tabella temporale con controllo delle versioni di sistema.    
+La tabella di gestione temporanea usata nell'istruzione **PARTITION SWITCH IN** con una tabella temporale con controllo delle versioni di sistema deve avere la definizione di **SYSTEM_TIME PERIOD** , ma non deve essere necessariamente una tabella temporale con controllo delle versioni di sistema.    
 Ciò assicura l’esecuzione di controlli di coerenza temporale durante l'inserimento di dati in una tabella di gestione temporanea o quando il periodo SYSTEM_TIME viene aggiunto a una tabella di gestione temporanea già popolata.  
   
 ```  
@@ -121,11 +125,11 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
  Se si tenta di eseguire l’istruzione PARTITION SWITCH da una tabella priva di definizione del periodo verrà visualizzato il messaggio di errore: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
-## Aggiornamento dati  
+## <a name="updating-data"></a>Aggiornamento dati  
  I dati nella tabella corrente vengono aggiornati con una normale istruzione **UPDATE** . È possibile aggiornare i dati nella tabella corrente dalla tabella di cronologia per lo scenario "oops". Non è tuttavia possibile aggiornare le colonne **PERIOD** né aggiornare direttamente i dati nella tabella di cronologia se **SYSTEM_VERSIONING = ON**.   
 Impostare **SYSTEM_VERSIONING = OFF** e aggiornare le righe dalla tabella corrente e di cronologia, tenendo presente che in questo modo il sistema non conserverà la cronologia delle modifiche.  
   
-### Aggiornamento della tabella corrente  
+### <a name="updating-the-current-table"></a>Aggiornamento della tabella corrente  
  In questo esempio, la colonna ManagerID viene aggiornata per ogni riga in cui DeptID = 10. Non c’è alcun riferimento alle colonne **PERIOD** .  
   
 ```  
@@ -144,7 +148,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
   
 ```  
   
-### Aggiornamento della tabella corrente dalla tabella di cronologia  
+### <a name="updating-the-current-table-from-the-history-table"></a>Aggiornamento della tabella corrente dalla tabella di cronologia  
  È possibile usare l'istruzione **UPDATE** nella tabella corrente per ripristinare lo stato corrente della riga a uno specifico stato valido precedente (ripristino all'ultima versione di riga valida nota). Nell'esempio seguente i valori nella tabella di cronologia vengono ripristinati al 25-04-2015, quando DeptID = 10.  
   
 ```  
@@ -157,13 +161,13 @@ AND Department.DeptID = 10 ;
   
 ```  
   
-## Eliminazione di dati  
+## <a name="deleting-data"></a>Eliminazione di dati  
  È possibile eliminare dati dalla tabella corrente con una normale istruzione **DELETE** . La colonna periodo finale delle righe eliminate verrà popolata con l'ora di inizio della transazione sottostante.   
 Non è possibile eliminare direttamente le righe dalla tabella di cronologia se **SYSTEM_VERSIONING = ON**.   
 Impostare **SYSTEM_VERSIONING = OFF** ed eliminare le righe dalla tabella corrente e di cronologia, tenendo presente che in questo modo il sistema non conserverà la cronologia delle modifiche.   
-Le istruzioni **TRUNCATE**, **SWITCH PARTITION OUT** della tabella corrente e l'istruzione **SWITCH PARTITION IN** della tabella di cronologia non sono supportate se **SYSTEM_VERSIONING = ON**.  
+Le istruzioni**TRUNCATE**, **SWITCH PARTITION OUT** della tabella corrente e l'istruzione **SWITCH PARTITION IN** della tabella di cronologia non sono supportate se **SYSTEM_VERSIONING = ON**.  
   
-## Utilizzo di MERGE per modificare i dati in una tabella temporale  
+## <a name="using-merge-to-modify-data-in-temporal-table"></a>Utilizzo di MERGE per modificare i dati in una tabella temporale  
  L’operazione**MERGE** è supportata con le stesse limitazioni delle istruzioni **INSERT** e **UPDATE** relativamente alle colonne **PERIOD** .  
   
 ```  
@@ -185,10 +189,10 @@ WHEN NOT MATCHED THEN
   
 ```  
   
-## Questo articolo è stato utile? Commenti e suggerimenti  
+## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   
  [Creazione di una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
@@ -196,3 +200,4 @@ WHEN NOT MATCHED THEN
  [Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

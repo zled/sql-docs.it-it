@@ -1,27 +1,31 @@
 ---
-title: "Negazione delle autorizzazioni per una raccolta di XML Schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "negazione di autorizzazioni [SQL Server], raccolte di server XML"
+title: Negare le autorizzazioni per una raccolta di XML Schema | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Negazione delle autorizzazioni per una raccolta di XML Schema
+# <a name="deny-permissions-on-an-xml-schema-collection"></a>Negazione delle autorizzazioni per una raccolta di XML Schema
   È possibile negare l'autorizzazione per la creazione di una nuova raccolta di XML Schema o per l'utilizzo di una raccolta esistente.  
   
-## Negazione dell'autorizzazione per la creazione di una raccolta di XML Schema  
+## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Negazione dell'autorizzazione per la creazione di una raccolta di XML Schema  
  È possibile negare l'autorizzazione per la creazione di una raccolta di XML Schema nei modi seguenti:  
   
 -   Negando l'autorizzazione ALTER per lo schema relazionale.  
@@ -30,7 +34,7 @@ caps.handback.revision: 34
   
 -   Negando l'autorizzazione ALTER ANY SCHEMA per il database. In tal caso, l'entità non può creare una raccolta di XML Schema in una posizione all'interno del database. Si noti inoltre che tramite la negazione dell'autorizzazione ALTER o CONTROL vengono negate tutte le autorizzazioni per tutti gli oggetti del database.  
   
-## Negazione di autorizzazioni per un oggetto di una raccolta di XML Schema  
+## <a name="denying-permissions-on-an-xml-schema-collection-object"></a>Negazione di autorizzazioni per un oggetto di una raccolta di XML Schema  
  Per una raccolta di XML Schema esistente e i relativi risultati è possibile negare le autorizzazioni seguenti:  
   
 -   Tramite la negazione dell'autorizzazione ALTER, all'entità viene negata la possibilità di modificare il contenuto di una raccolta di XML Schema.  
@@ -43,13 +47,13 @@ caps.handback.revision: 34
   
 -   Tramite la negazione dell'autorizzazione EXECUTE, all'entità viene negata la possibilità di inserire o aggiornare i valori in colonne, variabili e parametri tipizzati o vincolati dalla raccolta di XML Schema, nonché la possibilità di eseguire query sui valori nelle stesse variabili e colonne di tipo XML.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di pulizia necessario.  
   
-### A. Procedura per impedire a un utente di creare una raccolta di XML Schema  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Procedura per impedire a un utente di creare una raccolta di XML Schema  
  Uno dei modi per impedire a un utente di creare una raccolta di XML Schema consiste nel negare l'autorizzazione ALTER per uno schema relazionale, come illustrato nell'esempio seguente.  
   
- Nell'esempio vengono creati l'account utente `TestLogin1` e un database, nonché uno schema relazionale, in aggiunta allo schema `dbo`, nel database. Inizialmente, l'autorizzazione `CREATE XML SCHEMA` consente all'utente di creare una raccolta di schemi in una posizione qualsiasi all'interno del database. Nell'esempio viene negata all'utente l'autorizzazione `ALTER` per uno degli schemi relazionali. In questo modo, viene impedito all'utente di creare una raccolta di XML Schema in tale schema relazionale.  
+ Nell'esempio vengono creati l'account utente `TestLogin1`e un database, nonché uno schema relazionale, in aggiunta allo schema `dbo` , nel database. Inizialmente, l'autorizzazione `CREATE XML SCHEMA` consente all'utente di creare una raccolta di schemi in una posizione qualsiasi all'interno del database. Nell'esempio viene negata all'utente l'autorizzazione `ALTER` per uno degli schemi relazionali. In questo modo, viene impedito all'utente di creare una raccolta di XML Schema in tale schema relazionale.  
   
 ```  
 CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1'  
@@ -108,10 +112,10 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Procedura per negare autorizzazioni per una raccolta di XML Schema  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Procedura per negare autorizzazioni per una raccolta di XML Schema  
  Nell'esempio seguente viene illustrato come negare a un account di accesso un'autorizzazione specifica per una raccolta di XML Schema esistente. In questo esempio, a un account di accesso di prova viene negata l'autorizzazione REFERENCES per una raccolta di XML Schema esistente.  
   
- Nell'esempio vengono creati l'account utente `TestLogin1` e un database, nonché uno schema relazionale, in aggiunta allo schema `dbo`, nel database. Inizialmente, l'autorizzazione `CREATE XML SCHEMA` consente all'utente di creare una raccolta di schemi in una posizione qualsiasi all'interno del database.  
+ Nell'esempio vengono creati l'account utente `TestLogin1`e un database, nonché uno schema relazionale, in aggiunta allo schema `dbo` , nel database. Inizialmente, l'autorizzazione `CREATE XML SCHEMA` consente all'utente di creare una raccolta di schemi in una posizione qualsiasi all'interno del database.  
   
  L'autorizzazione `REFERENCES` per la raccolta di XML Schema consente a `TestLogin1` di utilizzare lo schema nella creazione di una colonna `xml` tipizzata in una tabella. Se viene negata l'autorizzazione `REFERENCES` per la raccolta di XML Schema, `TestLogin1` non potrà utilizzare tale raccolta.  
   
@@ -187,7 +191,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

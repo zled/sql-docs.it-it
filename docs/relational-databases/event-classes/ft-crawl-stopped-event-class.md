@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento FT:Crawl Stopped | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Crawl Stopped - classe di evento"
+title: Classe di evento FT:Crawl Stopped | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Crawl Stopped event class
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46a5cacd714274edb441a64a92b441e964bb9303
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento FT:Crawl Stopped
+# <a name="ftcrawl-stopped-event-class"></a>Classe di evento FT:Crawl Stopped
   Con la classe di evento **:Crawl Stopped** viene indicato l'arresto di una ricerca per indicizzazione (popolamento) full-text. L'arresto potrebbe essere conseguenza di un errore irreversibile oppure del completamento della ricerca per indicizzazione.  
   
-## Colonne di dati della classe di evento FT:Crawl Stopped  
+## <a name="ftcrawl-stopped-event-class-data-columns"></a>Colonne di dati della classe di evento FT:Crawl Stopped  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 29
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

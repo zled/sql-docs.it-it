@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento Lock:Deadlock Chain | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Deadlock Chain - classe di evento"
+title: Classe di evento Lock:Deadlock Chain | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ffd8a4a79300ac64dd3a3e443f5c8a11b3d2f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Lock:Deadlock Chain
+# <a name="lockdeadlock-chain-event-class"></a>Classe di evento Lock:Deadlock Chain
   La classe di evento Lock:Deadlock Chain viene generata per ogni partecipante a un deadlock.  
   
  Utilizzare la classe di evento Lock:Deadlock Chain per eseguire il monitoraggio delle condizioni di deadlock. In questo modo è possibile determinare se i deadlock stanno riducendo in maniera significativa le prestazioni dell'applicazione e individuare gli oggetti coinvolti. È possibile esaminare il codice dell'applicazione che modifica tali oggetti per verificare se possono essere apportate modifiche tese a ridurre al minimo i deadlock.  
   
-## Colonne di dati della classe di evento Lock:Deadlock Chain  
+## <a name="lockdeadlock-chain-event-class-data-columns"></a>Colonne di dati della classe di evento Lock:Deadlock Chain  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 35
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

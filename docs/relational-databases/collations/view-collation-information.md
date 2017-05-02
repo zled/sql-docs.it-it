@@ -1,24 +1,28 @@
 ---
-title: "Visualizzazione di informazioni sulle regole di confronto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regole di confronto [SQL Server], visualizzazione"
+title: Visualizzazione di informazioni sulle regole di confronto | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collations [SQL Server], view
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eebc43acb7df6cf2d63dbc6d8e0d1c4f25fa9476
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzazione di informazioni sulle regole di confronto
+# <a name="view-collation-information"></a>Visualizzazione di informazioni sulle regole di confronto
     
 ##  <a name="Top"></a> È possibile visualizzare le regole di confronto di un server, di un database o di una colonna in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando le opzioni di menu di Esplora oggetti oppure tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 11
   
  **Per visualizzare un'impostazione delle regole di confronto per un database in Esplora oggetti**  
   
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], quindi espanderla.  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
 2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database e selezionare **Proprietà**.  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 11
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

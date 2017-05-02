@@ -1,28 +1,32 @@
 ---
-title: "CurvePolygon | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CurvePolygon | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: df25fb5e1dd8ddcd426559e1410f32e68575a32b
+ms.lasthandoff: 04/11/2017
+
 ---
-# CurvePolygon
+# <a name="curvepolygon"></a>CurvePolygon
   Un **CurvePolygon** è una superficie topologicamente chiusa definita da un anello di delimitazione esterno e nessuno o più anelli interni  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CurvePolygon**, scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CurvePolygon** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Nei criteri seguenti vengono definiti attributi di un'istanza **CurvePolygon**:  
+ Nei criteri seguenti vengono definiti attributi di un'istanza **CurvePolygon** :  
   
 -   Il limite dell'istanza **CurvePolygon** viene definito dall'anello esterno e da tutti gli anelli interni.  
   
@@ -30,13 +34,13 @@ caps.handback.revision: 18
   
  Un'istanza **CurvePolygon** differisce da un'istanza **Polygon** per il fatto che un'istanza **CurvePolygon** può contenere i segmenti di arco seguenti: **CircularString** e **CompoundCurve**.  
   
-## Istanze CompoundCurve  
+## <a name="compoundcurve-instances"></a>Istanze CompoundCurve  
  L'illustrazione seguente mostra figure **CurvePolygon** valide:  
   
-### Istanze accettate  
+### <a name="accepted-instances"></a>Istanze accettate  
  Per poter essere accettata, un'istanza **CurvePolygon** deve essere vuota o contenere solo anelli di arco circolare accettati. Un anello di arco circolare accettato soddisfa i requisiti seguenti.  
   
-1.  È un'istanza **LineString**, **CircularString** o **CompoundCurve** accettata. Per altre informazioni sulle istanze accettate, vedere [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md) e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
+1.  È un'istanza **LineString**, **CircularString**o **CompoundCurve** accettata. Per altre informazioni sulle istanze accettate, vedere [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
   
 2.  Dispone almeno di quattro punti.  
   
@@ -66,7 +70,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
  `@g1` non viene accettata perché i punti iniziale e finale non hanno lo stesso valore Y. `@g2` non viene accettata perché l'anello non dispone di un numero di punti sufficiente.  
   
-### Istanze valide  
+### <a name="valid-instances"></a>Istanze valide  
  Perché un'istanza **CurvePolygon** sia valida, è necessario che l'anello interno e quello esterno soddisfino i criteri seguenti:  
   
 1.  Possono toccarsi solo in corrispondenza di singoli punti tangenti.  
@@ -77,9 +81,9 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Ogni anello deve essere un tipo di curva accettabile.  
   
- Le istanze **CurvePolygon** devono inoltre soddisfare criteri specifici a seconda del fatto che siano del tipo di dati **geometry** o **geography**.  
+ Le istanze**CurvePolygon** devono inoltre soddisfare criteri specifici a seconda del fatto che siano del tipo di dati **geometry** o **geography** .  
   
-#### Tipo di dati geometry  
+#### <a name="geometry-data-type"></a>Tipo di dati geometry  
  Un'istanza **geometryCurvePolygon** valida deve avere gli attributi seguenti:  
   
 1.  Tutti gli anelli interni devono essere contenuti nell'anello esterno.  
@@ -102,7 +106,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
  Le istanze CurvePolygon dispongono delle stesse regole di validità delle istanze Polygon, ad eccezione del fatto che le istanze CurvePolygon possono accettare i nuovi tipi di segmento di arco circolare. Per altri esempi di istanze valide o non valide, vedere [Polygon](../../relational-databases/spatial/polygon.md).  
   
-#### Tipo di dati geography  
+#### <a name="geography-data-type"></a>Tipo di dati geography  
  Un'istanza **geographyCurvePolygon** valida deve avere gli attributi seguenti:  
   
 1.  L'interno del poligono viene connesso utilizzando il lato sinistro della regola.  
@@ -120,9 +124,9 @@ DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -12
 SELECT @g.STIsValid();  
 ```  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
   
-### A. Creazione di un'istanza Geometry con un'istanza CurvePolygon vuota  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Creazione di un'istanza Geometry con un'istanza CurvePolygon vuota  
  Questo esempio illustra come creare un'istanza **CurvePolygon** vuota:  
   
 ```tsql  
@@ -130,21 +134,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### B. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CurvePolygon nella stessa istruzione  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CurvePolygon nella stessa istruzione  
  Questo frammento di codice illustra come dichiarare e inizializzare un'istanza geometry con un'istanza **CurvePolygon** nella stessa istruzione:  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
-### C. Creazione di un'istanza Geography con un'istanza CurvePolygon  
- Questo frammento di codice illustra come dichiarare e inizializzare un'istanza **geography** con un'istanza **CurvePolygon** nella stessa istruzione:  
+### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Creazione di un'istanza Geography con un'istanza CurvePolygon  
+ Questo frammento di codice illustra come dichiarare e inizializzare un'istanza **geography** con un'istanza **CurvePolygon**nella stessa istruzione:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### D. Archiviazione di un'istanza CurvePolygon con un solo anello di delimitazione esterno  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Archiviazione di un'istanza CurvePolygon con un solo anello di delimitazione esterno  
  Questo esempio illustra come archiviare un cerchio semplice in un'istanza **CurvePolygon** (per definire il cerchio viene utilizzato solo un anello di delimitazione esterno):  
   
 ```tsql  
@@ -153,7 +157,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 SELECT @g.STArea() AS Area;  
 ```  
   
-### E. Archiviazione di un'istanza CurvePolygon contenente anelli interni  
+### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Archiviazione di un'istanza CurvePolygon contenente anelli interni  
  In questo esempio viene creato un anello in un'istanza **CurvePolygon** (per definire l'anello vengono utilizzati sia un anello di delimitazione esterno che un anello interno):  
   
 ```tsql  
@@ -179,14 +183,14 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- Sia per @g1 che per @g2 viene utilizzato lo stesso anello di delimitazione esterno: un cerchio con un raggio di 5 ed entrambi utilizzano un quadrato per un anello interno.  L'istanza @g1 è comunque valida, mentre l'istanza @g2 non lo è.  @g2 è non valida perché l'anello interno divide lo spazio interno delimitato dall'anello esterno in quattro aree separate.  Nel disegno seguente viene illustrata questa condizione:  
+ Sia per @g1 che per @g2 viene usato lo stesso anello di delimitazione esterno: un cerchio con un raggio di 5 ed entrambi usano un quadrato per un anello interno.  Tuttavia, l'istanza @g1 è valida, mentre l'istanza @g2 non lo è.  @g2 è non valida perché l'anello interno divide lo spazio interno delimitato dall'anello esterno in quattro aree separate.  Nel disegno seguente viene illustrata questa condizione:  
   
-## Vedere anche  
- [Poligono](../../relational-databases/spatial/polygon.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [Guida di riferimento ai metodi per il tipo di dati geometry](../Topic/geometry%20Data%20Type%20Method%20Reference.md)   
- [Guida di riferimento ai metodi per il tipo di dati geography](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+ [Guida di riferimento ai metodi per il tipo di dati geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
+ [Guida di riferimento ai metodi per il tipo di dati geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

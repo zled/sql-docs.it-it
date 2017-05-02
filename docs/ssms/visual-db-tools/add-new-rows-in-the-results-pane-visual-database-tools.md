@@ -1,0 +1,63 @@
+---
+title: Aggiungere nuove righe nel riquadro Risultati (Visual Database Tools) | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- View Designer, Results pane
+- inserting rows
+- Query Designer [SQL Server], Results pane
+- Results pane
+- adding rows
+- row additions [SQL Server], Results pane
+ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
+caps.latest.revision: 3
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Aggiunta di nuove righe nel riquadro Risultati (Visual Database Tools)
+Per aggiungere nuovi dati, è possibile digitarli o incollarli da un altro programma, ad esempio il Blocco note o Excel. Per incollare una riga è necessario che presenti esattamente lo stesso numero e tipo di colonne della tabella in cui la si desidera incollare. È possibile incollare nel riquadro Risultati più righe contemporaneamente.  
+  
+Per informazioni su come immettere dati, vedere [Regole per l'aggiornamento dei risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md).  
+  
+### <a name="to-add-a-new-data-row"></a>Per aggiungere una nuova riga di dati  
+  
+1.  Spostarsi nella parte inferiore del riquadro Risultati, dove è disponibile una riga vuota per l'aggiunta di una nuova riga di dati.  
+  
+    I valori iniziali per tutte le colonne saranno di tipo *NULL*.  
+  
+    > [!TIP]  
+    > Per spostarsi direttamente sulla prima riga vuota, utilizzare la barra di navigazione nella parte inferiore del riquadro Risultati.  
+  
+2.  Se si incollano righe dagli Appunti, selezionare la nuova riga facendo clic sul pulsante alla sua sinistra.  
+  
+    > [!NOTE]  
+    > Qualora non sia possibile eseguire il commit nel database di una o più righe incollate, verrà visualizzato un messaggio che indicherà quali sono le righe di cui non è stato eseguito il commit.  
+  
+3.  Immettere i dati per la nuova riga. Se si incollano i dati, scegliere **Incolla** dal menu **Modifica** .  
+  
+4.  Uscire dalla riga in modo che ne venga eseguito il commit nel database.  
+  
+Se si verifica un errore quando si salva la riga, in Progettazione query e Progettazione viste verrà visualizzato un messaggio e l'utente verrà posizionato nuovamente sulla riga che stava modificando. Sarà quindi possibile:  
+  
+-   Risolvere l'errore apportando ulteriori modifiche alla riga.  
+  
+-   Annullare la modifica premendo ESC. Se si preme ESC mentre si è posizionati in una cella cui sono state apportate modifiche, tali modifiche verranno annullate. Se si preme ESC mentre si è posizionati in una cella cui non è stata apportata alcuna modifica, verranno annullate le modifiche apportate all'intera riga.  
+  
+## <a name="see-also"></a>Vedere anche  
+[Usare i dati nel riquadro Risultati &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+  
+

@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento CursorOpen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CursorOpen - classe di evento"
+title: Classe di evento CursorOpen | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d8ca6138796d4ff88dbd3540b734e81526a7b4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento CursorOpen
+# <a name="cursoropen-event-class"></a>CursorOpen - classe di evento
   La classe di evento **CursorOpen** descrive gli eventi di apertura di cursore che si verificano nei cursori API. Gli eventi di apertura di cursore si verificano quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] definisce l'istruzione SQL da associare al cursore e le opzioni di cursore e quindi popola il cursore.  
   
- Includere la classe di evento **CursorOpen** nelle tracce che registrano le prestazioni dei cursori. Quando si include in una traccia la classe di evento **CursorOpen**, l'overhead generato dipende dalla frequenza di utilizzo dei cursori nel database durante l'esecuzione della traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
+ Includere la classe di evento **CursorOpen** nelle tracce che registrano le prestazioni dei cursori. Quando si include in una traccia la classe di evento **CursorOpen** , l'overhead generato dipende dalla frequenza di utilizzo dei cursori nel database durante l'esecuzione della traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   
-## Colonne di dati della classe di evento CursorOpen  
+## <a name="cursoropen-event-class-data-columns"></a>Colonne di dati della classe di evento CursorOpen  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -39,7 +43,7 @@ caps.handback.revision: 32
 |**IntegerData**|**int**|Tipo di cursore. I valori possibili sono:<br /><br /> 1 = Keyset<br /><br /> 2 = Dinamico<br /><br /> 4 = Forward-only<br /><br /> 8 = Statico<br /><br /> 16 = Fast forward|25|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
 |**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Sì|  
-|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals**. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
+|**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|Identificatore della richiesta che ha aperto il cursore.|49|Sì|  
@@ -50,7 +54,7 @@ caps.handback.revision: 32
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**XactSequence**|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Cursori](../../relational-databases/cursors.md)  

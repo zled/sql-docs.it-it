@@ -1,25 +1,29 @@
 ---
-title: "Oggetto Statistiche attesa di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Statistiche attesa - oggetto"
-  - "SQLServer:Statistiche attesa"
+title: Oggetto Wait Statistics di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Wait Statistics object
+- SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetto Statistiche attesa di SQL Server
+# <a name="sql-server-wait-statistics-object"></a>Oggetto Statistiche attesa di SQL Server
   L'oggetto prestazioni **SQLServer:Statistiche attesa** contiene contatori delle prestazioni che forniscono informazioni sullo stato di attesa.  
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto Statistiche attesa.  
@@ -48,7 +52,7 @@ caps.handback.revision: 15
 |**Attese in corso**|Numero di processi attualmente in attesa del tipo seguente.|  
 |**Attese avviate al secondo**|Numero di attese avviate al secondo del tipo di attesa selezionato.|  
   
-## Vedere anche  
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

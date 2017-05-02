@@ -1,34 +1,39 @@
 ---
-title: "Query tra database | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Query tra database | Microsoft Docs
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
+ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Query tra database
+# <a name="cross-database-queries"></a>Query tra database
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] le tabelle con ottimizzazione per la memoria non supportano le transazioni tra database. Non è possibile accedere a un altro database dalla stessa transazione o dalla stessa query che accede anche a una tabella con ottimizzazione per la memoria. Non è possibile copiare facilmente i dati da una tabella in un database a una tabella con ottimizzazione per la memoria in un altro database.  
+  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]le tabelle con ottimizzazione per la memoria non supportano le transazioni tra database. Non è possibile accedere a un altro database dalla stessa transazione o dalla stessa query che accede anche a una tabella con ottimizzazione per la memoria. Non è possibile copiare facilmente i dati da una tabella in un database a una tabella con ottimizzazione per la memoria in un altro database.  
   
  Le variabili di tabella non sono transazionali. Pertanto, le variabili di tabella con ottimizzazione per la memoria possono essere utilizzate nelle query tra database e possono quindi facilitare lo spostamento di dati da un database nelle tabelle con ottimizzazione per la memoria a un altro. È possibile utilizzare due transazioni. Nella prima transazione, inserire i dati della tabella remota nella variabile. Nella seconda transazione, inserire i dati nella tabella con ottimizzazione per la memoria locale dalla variabile.  Per altre informazioni sulle variabili di tabella con ottimizzazione per la memoria, vedere [Tabella temporanea più rapida e variabile di tabella tramite l'ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-## Esempio
+## <a name="example"></a>Esempio
 Questo esempio illustra un metodo per trasferire i dati da un database in una tabella con ottimizzazione per la memoria in un database diverso.
 
 1. Creare oggetti di prova.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
     ```tsql
+
     USE master;
     GO
     
@@ -51,13 +56,12 @@ Questo esempio illustra un metodo per trasferire i dati da un database in una ta
     VALUES (1, N'Bob'),
         (2, N'Susan');
     GO
-    ---------------------------------------------------------------
-
 
     -- Create a database with a MEMORY_OPTIMIZED_DATA filegroup
+
     CREATE DATABASE DestinationDatabase
      ON  PRIMARY 
-    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',   SIZE = 8MB), 
+    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',    SIZE = 8MB), 
      FILEGROUP [DestinationDatabase_mod] CONTAINS MEMORY_OPTIMIZED_DATA  DEFAULT
     ( NAME = N'DestinationDatabase_mod', FILENAME = N'D:\DATA\DestinationDatabase_mod', MAXSIZE = UNLIMITED)
      LOG ON 
@@ -119,7 +123,8 @@ Questo esempio illustra un metodo per trasferire i dati da un database in una ta
     GO 
     ```
    
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

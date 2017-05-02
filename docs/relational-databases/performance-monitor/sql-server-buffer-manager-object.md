@@ -1,25 +1,29 @@
 ---
-title: "Oggetto di Gestione buffer di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gestione buffer - oggetto"
-  - "SQLServer:Buffer Manager"
+title: Oggetto Buffer Manager di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetto di Gestione buffer di SQL Server
+# <a name="sql-server-buffer-manager-object"></a>Oggetto di Gestione buffer di SQL Server
   L'oggetto di **Gestione buffer** fornisce contatori che consentono di monitorare l'utilizzo degli elementi seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Memoria per archiviare pagine di dati.  
@@ -36,7 +40,7 @@ caps.handback.revision: 36
   
 -   La frequenza con cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ricorrere alla lettura dei dati dal disco. Rispetto agli altri tipi di operazioni, ad esempio l'accesso alla memoria, l'I/O fisico richiede una maggiore quantità di tempo. Riducendo al minimo le operazioni di I/O fisico è possibile migliorare le prestazioni delle query.  
   
-## Oggetti prestazioni di Gestione buffer  
+## <a name="buffer-manager-performance-objects"></a>Oggetti prestazioni di Gestione buffer  
  Nella tabella seguente vengono descritti gli oggetti prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gestione buffer** .  
   
 |Contatori di Gestione buffer di SQL Server|Description|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Obiettivo numero di pagine**|Numero ideale di pagine per il pool di buffer.|
 
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Nodo SQLServer:Buffer](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Oggetto Plan Cache di SQL Server](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

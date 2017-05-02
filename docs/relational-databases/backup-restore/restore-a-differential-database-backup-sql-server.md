@@ -1,28 +1,32 @@
 ---
-title: "Ripristino di un backup differenziale di database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup completi differenziali [SQL Server]"
-  - "ripristino di database [SQL Server], backup completi differenziali"
-  - "backup dei database [SQL Server], backup completi differenziali"
-  - "ripristino di database [SQL Server], backup completi differenziali"
-  - "esecuzione del backup dei database [SQL Server], backup completi differenziali"
+title: Ripristinare un backup differenziale di database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- restoring databases [SQL Server], full differential backups
+- database backups [SQL Server], full differential backups
+- database restores [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c0a58f510ec12f0fbf8f635f9700275ce94b24b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino di un backup differenziale di database (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>Ripristino di un backup differenziale di database (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto il ripristino di un backup differenziale del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -57,18 +61,18 @@ caps.handback.revision: 46
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
--   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT il database esiste sempre.  
+ Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per ripristinare un backup differenziale del database  
+#### <a name="to-restore-a-differential-database-backup"></a>Per ripristinare un backup differenziale del database  
   
 1.  Dopo aver stabilito la connessione all'istanza appropriata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 46
   
     -   **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo** Seleziona dispositivi di backup**. Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 46
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per ripristinare un backup differenziale del database  
+#### <a name="to-restore-a-differential-database-backup"></a>Per ripristinare un backup differenziale del database  
   
 1.  Eseguire l'istruzione RESTORE DATABASE, specificando la clausola NORECOVERY, per ripristinare il backup completo del database precedente al backup differenziale del database. Per ulteriori informazioni, vedere [Procedura: Ripristino di un backup completo](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 46
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
   
-#### A. Ripristino di un backup differenziale del database  
+#### <a name="a-restoring-a-differential-database-backup"></a>A. Ripristino di un backup differenziale del database  
  Nell'esempio seguente vengono ripristinati un backup del database e un backup differenziale del database `MyAdvWorks` .  
   
 ```tsql  
@@ -172,7 +176,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### B. Ripristino di un backup del database, di un backup differenziale del database e di un backup del log delle transazioni  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Ripristino di un backup del database, di un backup differenziale del database e di un backup del log delle transazioni  
  In questo esempio vengono ripristinati un backup, un backup differenziale e un backup del log delle transazioni del database `MyAdvWorks` .  
   
 ```tsql  
@@ -208,8 +212,8 @@ GO
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

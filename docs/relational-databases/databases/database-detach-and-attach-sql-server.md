@@ -1,39 +1,43 @@
 ---
-title: "Collegamento e scollegamento di un database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aggiornamento di database"
-  - "database [SQL Server], scollegamento"
-  - "database scollegato [SQL Server]"
-  - "database [SQL Server], collegamento"
-  - "rimozione di database"
-  - "log delle transazioni [SQL Server], scollegamento"
-  - "database [SQL Server], rimozione"
-  - "ripristino [SQL Server], database collegati"
-  - "log delle transazioni [SQL Server], collegamento"
-  - "backup differenziali, dopo lo scollegamento"
-  - "spostamento di database"
-  - "database collegato [SQL Server]"
-  - "scollegamento di database [SQL Server]"
-  - "base differenziale [SQL Server]"
-  - "collegamento di database [SQL Server]"
-  - "database [SQL Server], spostamento"
+title: Collegamento e scollegamento di un database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading databases
+- databases [SQL Server], detaching
+- detach database [SQL Server]
+- databases [SQL Server], attaching
+- removing databases
+- transaction logs [SQL Server], detaching
+- databases [SQL Server], removing
+- restoring [SQL Server], attached databases
+- transaction logs [SQL Server], attaching
+- differential backups, after detaching
+- moving databases
+- attach database [SQL Server]
+- detaching databases [SQL Server]
+- differential base [SQL Server]
+- attaching databases [SQL Server]
+- databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 98
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 97
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f95cd17c64efff4731b77ba42df3b5dc656f2cf9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Collegamento e scollegamento di un database (SQL Server)
+# <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
   È possibile scollegare i file di dati e di log delle transazioni di un database e, successivamente, ricollegarli alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o a un'istanza diversa. Scollegare e collegare un database risulta utile se si desidera assegnare il database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer oppure spostarlo.  
   
   
@@ -55,7 +59,7 @@ caps.handback.revision: 97
   
 -   Uno snapshot del database esiste nel database.  
   
-     Prima di scollegare il database, è necessari eliminare tutti i relativi snapshot. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     Prima di scollegare il database, è necessari eliminare tutti i relativi snapshot. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)o a un'istanza diversa.  
   
     > [!NOTE]  
     >  Non è possibile scollegare o collegare uno snapshot del database.  
@@ -68,10 +72,10 @@ caps.handback.revision: 97
   
 -   Il database è un database di sistema.  
   
-### Backup e ripristino e scollegamento  
+### <a name="backup-and-restore-and-detach"></a>Backup e ripristino e scollegamento  
  Lo scollegamento di un database di sola lettura comporta la perdita di informazioni sulle basi differenziali dei backup differenziali. Per altre informazioni, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
-### Risposta agli errori di scollegamento  
+### <a name="responding-to-detach-errors"></a>Risposta agli errori di scollegamento  
  Gli errori generati durante lo scollegamento di un database possono impedire la chiusura corretta del database e la ricompilazione del log delle transazioni. Se viene visualizzato un messaggio di errore, eseguire gli interventi di correzione seguenti:  
   
 1.  Ricollegare tutti file associati al database, non solo il file primario.  
@@ -81,7 +85,7 @@ caps.handback.revision: 97
 3.  Scollegare di nuovo il database.  
   
 ##  <a name="AttachDb"></a> Collegamento di un database  
- È possibile collegare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiato o scollegato. Quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
+ È possibile collegare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiato o scollegato. Quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
  Durante il collegamento di un database è necessario che siano disponibili tutti i file di dati (file MDF e NDF). Se un file di dati si trova in un percorso diverso rispetto al momento della creazione o dell'ultimo collegamento del database, è necessario specificare il percorso corrente.  
   
@@ -98,20 +102,13 @@ caps.handback.revision: 97
   
 -   Se il file di dati primario in corso di collegamento è di sola lettura, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] si considera il database di sola lettura. Nel caso di database di sola lettura, è necessario che i file di log si trovino nella posizione specificata nel file primario del database. La compilazione di un nuovo file di log non è possibile, perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può aggiornare la posizione del log memorizzata nel file primario.  
   
- **Contenuto della sezione**  
-  
--   [Modifiche ai metadati durante il collegamento di un database](#Metadata)  
-  
--   [Backup e ripristino e collegamento](#BnR)  
-  
--   [Collegamento di un database a un'altra istanza del server](#OtherServerInstance)  
   
 ###  <a name="Metadata"></a> Modifiche ai metadati durante il collegamento di un database  
  Quando si esegue lo scollegamento e il successivo ricollegamento di un database di sola lettura, le informazioni sul backup relative alla base differenziale corrente vanno perdute. La *base differenziale* è il backup completo più recente di tutti i dati nel database o in un subset dei file o dei filegroup del database. Senza le informazioni sul backup di base, il database **master** non risulta più sincronizzato con il database di sola lettura, per cui i backup differenziali eseguiti successivamente possono restituire risultati imprevisti. Di conseguenza, se si utilizzano backup differenziali con un database di sola lettura, è consigliabile definire una nuova base differenziale eseguendo un backup completo dopo aver ricollegato il database. Per informazioni sui backup differenziali, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
  Al momento del collegamento, viene eseguito l'avvio del database. In genere, il collegamento di un database non altera lo stato in cui questo si trovava al momento dello scollegamento o della copia. Tuttavia, le operazioni di collegamento e scollegamento comportano la disabilitazione del concatenamento della proprietà tra database relativo al database in oggetto. Per informazioni su come abilitare il concatenamento, vedere [Opzione di configurazione del server cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Inoltre, quando il database viene collegato, l'opzione TRUSTWORTHY è impostata su OFF. Per informazioni su come impostare TRUSTWORTHY su ON, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-### Backup e ripristino e collegamento  
+### <a name="backup-and-restore-and-attach"></a>Backup e ripristino e collegamento  
  Analogamente a qualsiasi database completamente o parzialmente offline, non è possibile collegare un database con file in fase di ripristino. Se si arresta la sequenza di ripristino, è possibile collegare il database. Sarà quindi possibile riavviare la sequenza di ripristino.  
   
 ###  <a name="OtherServerInstance"></a> Collegamento di un database a un'altra istanza del server  
@@ -119,7 +116,7 @@ caps.handback.revision: 97
 > [!IMPORTANT]  
 >  Un database creato con una versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere collegato con versioni precedenti.  
   
- Quando si collega un database a un'altra istanza del server, per garantire un utilizzo coerente a utenti e applicazioni, potrebbe essere necessario ricreare alcuni o tutti i metadati per il database, ad esempio account di accesso e processi, nell'altra istanza del server. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+ Quando si collega un database a un'altra istanza del server, per garantire un utilizzo coerente a utenti e applicazioni, potrebbe essere necessario ricreare alcuni o tutti i metadati per il database, ad esempio account di accesso e processi, nell'altra istanza del server. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per scollegare un database**  
@@ -150,7 +147,7 @@ caps.handback.revision: 97
   
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Database tempdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelle temporanee [SQL Server], database tempdb"
-  - "database tempdb [SQL Server], informazioni su tempdb"
-  - "stored procedure temporanee [SQL Server]"
-  - "tempdb - database [SQL Server]"
+title: Database tempdb | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- temporary tables [SQL Server], tempdb database
+- tempdb database [SQL Server], about tempdb
+- temporary stored procedures [SQL Server]
+- tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 66
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 66
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database tempdb
+# <a name="tempdb-database"></a>Database tempdb
   Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
   
 -   Oggetti utente temporanei creati in modo esplicito, ad esempio tabelle temporanee globali o locali, stored procedure temporanee, variabili di tabella o cursori.  
@@ -34,7 +38,7 @@ caps.handback.revision: 66
   
  In **tempdb** viene registrato un numero minimo di operazioni Consente il rollback delle transazioni. **tempdb** viene ricreato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, nessuna parte del database **tempdb** viene salvata per le sessioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le operazioni di backup e di ripristino non sono consentite nel database **tempdb**.  
   
-## Proprietà fisiche di tempdb  
+## <a name="physical-properties-of-tempdb"></a>Proprietà fisiche di tempdb  
  Nella tabella seguente sono elencati i valori iniziali di configurazione dei dati e dei file di log di **tempdb** . Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Dimensioni iniziali|Aumento di dimensioni del file|  
@@ -46,14 +50,14 @@ caps.handback.revision: 66
  \* Il numero di file dipende dal numero di core (logici) del computer. Il valore sarà il numero di core o 8, a seconda di quale sia il valore inferiore.   
 Il valore predefinito per il numero di file di dati si basa sulle linee guida generali in [KB 2154845](https://support.microsoft.com/en-us/kb/2154845/).  
   
-## Miglioramenti delle prestazioni in tempdb  
+## <a name="performance-improvements-in-tempdb"></a>Miglioramenti delle prestazioni in tempdb  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le prestazioni di **tempdb** sono state migliorate come segue:  
   
 -   È possibile memorizzare nella cache tabelle temporanee e variabili di tabella. La memorizzazione nella cache consente di eseguire molto rapidamente le operazioni di eliminazione e creazione degli oggetti temporanei e di ridurre i problemi di contesa nell'allocazione delle pagine.  
   
 -   Il protocollo di latch delle pagine di allocazione è stato migliorato. In questo modo è possibile ridurre il numero di latch di aggiornamento (UP) usati.  
   
--   L'overhead di registrazione per il database **tempdb** è stato ridotto. In questo modo si riduce l'utilizzo di banda per operazioni di I/O su disco nel file di log di **tempdb**.  
+-   L'overhead di registrazione per il database **tempdb** è stato ridotto. In questo modo si riduce l'utilizzo di banda per operazioni di I/O su disco nel file di log di **tempdb** .  
   
 -   Durante l'installazione di una nuova istanza vengono aggiunti più file di dati di tempdb. Questa attività può essere eseguita con un nuovo controllo input dell'interfaccia utente nella sezione **Configurazione del motore di database** e con un parametro della riga di comando /SQLTEMPDBFILECOUNT. Per impostazione predefinita, il programma di installazione aggiunge un numero di file tempdb pari al numero di CPU oppure a 8, a seconda di quale sia il valore inferiore.  
   
@@ -63,10 +67,10 @@ Il valore predefinito per il numero di file di dati si basa sulle linee guida ge
   
 -   Per il filegroup primario, la proprietà AUTOGROW_ALL_FILES è attivata e non può essere modificata.  
   
-### Spostamento dei dati e dei file di log di tempdb  
- Per spostare i file di log e i dati **tempdb**, vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
+### <a name="moving-the-tempdb-data-and-log-files"></a>Spostamento dei dati e dei file di log di tempdb  
+ Per spostare i file di log e i dati **tempdb** , vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### Opzioni di database  
+### <a name="database-options"></a>Opzioni di database  
  Nella tabella seguente sono elencati i valori predefiniti delle singole opzioni di database di **tempdb** e viene indicato se l'opzione è modificabile. Per visualizzare le impostazioni correnti di queste opzioni, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opzione di database|Valore predefinito|Modificabile|  
@@ -101,9 +105,9 @@ Il valore predefinito per il numero di file di dati si basa sulle linee guida ge
 |Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
 |TRUSTWORTHY|OFF|No|  
   
- Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## Restrizioni  
+## <a name="restrictions"></a>Restrizioni  
  Di seguito sono riportate le operazioni che non è possibile eseguire sul database **tempdb** :  
   
 -   Aggiunta di filegroup.  
@@ -136,10 +140,10 @@ Il valore predefinito per il numero di file di dati si basa sulle linee guida ge
   
 -   Impostazione del database o del filegroup primario su READ_ONLY.  
   
-## Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono accedere solo ai propri oggetti, a meno che non ottengano ulteriori autorizzazioni. È possibile revocare l'autorizzazione per la connessione a tempdb per impedire a un utente di utilizzarlo, tuttavia questa operazione non è consigliabile poiché in alcune operazioni di routine è richiesto l'utilizzo di tempdb.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Opzione SORT_IN_TEMPDB per gli indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
   
  [Database di sistema.](../../relational-databases/databases/system-databases.md)  
@@ -150,7 +154,8 @@ Il valore predefinito per il numero di file di dati si basa sulle linee guida ge
   
  [Spostare file del database](../../relational-databases/databases/move-database-files.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
+

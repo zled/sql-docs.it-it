@@ -1,26 +1,30 @@
 ---
-title: "Installazione di Master Data Services in un ambiente AlwaysOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-keywords: 
-  - "Master Data Services AlwaysOn"
+title: Installazione di Master Data Services in un ambiente AlwaysOn | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+keywords:
+- Master Data Services AlwaysOn
 ms.assetid: 6d197569-ed27-41cb-8610-4a707d941875
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3fa6bfbd54ce249a79bd916fae1df4fc39550e0a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Installazione di Master Data Services in un ambiente AlwaysOn
+# <a name="installing-master-data-services-in-an-alwayson-environment"></a>Installazione di Master Data Services in un ambiente AlwaysOn
 **Riepilogo:** questo articolo illustra una soluzione per Master Data Service (MDS) ospitata nella configurazione di un gruppo di disponibilità AlwaysOn. L'articolo descrive come installare e configurare SQL 2016 Master Data Services in un gruppo di disponibilità (AG) AlwaysOn di SQL 2016. Lo scopo principale di questa soluzione consiste nel migliorare la disponibilità elevata e il recupero di emergenza dei dati di back-end di MDS ospitati in un database di SQL Server.    
   
 **Autore:** Yantao Song  

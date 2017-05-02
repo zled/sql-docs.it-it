@@ -1,32 +1,36 @@
 ---
-title: "Spostare un gruppo di carico di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties_moveworkloadgroup.f1"
-helpviewer_keywords: 
-  - "gruppi di carico di lavoro [SQL Server], spostamento"
-  - "Resource Governor, spostamento di un gruppo di carico di lavoro"
+title: Spostare un gruppo di carico di lavoro | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties_moveworkloadgroup.f1
+helpviewer_keywords:
+- workload groups [SQL Server], move
+- Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Spostare un gruppo di carico di lavoro
+# <a name="move-a-workload-group"></a>Spostare un gruppo di carico di lavoro
   È possibile spostare un gruppo di carico di lavoro di Resource Governor in un pool di risorse diverso tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per spostare un gruppo di carico di lavoro usando: **  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Non è possibile spostare un gruppo di carico di lavoro se un'operazione di configurazione di Resource Governor è in sospeso.  
@@ -42,7 +46,7 @@ caps.handback.revision: 12
   
 1.  In Esplora oggetti espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**.  
   
-2.  Fare clic con il pulsante destro del mouse su **Resource Governor**, quindi fare clic su **Proprietà**. In questo modo viene aperta la pagina **Proprietà di Resource Governor**.  
+2.  Fare clic con il pulsante destro del mouse su **Resource Governor** , quindi fare clic su **Proprietà**. In questo modo viene aperta la pagina **Proprietà di Resource Governor** .  
   
 3.  Nella finestra **Pool di risorse** fare clic sul pool di risorse contenente il gruppo di carico di lavoro da spostare. Nella finestra **Gruppi del carico di lavoro** sono ora elencati i gruppi di carico di lavoro di tale pool di risorse.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 2.  Eseguire l'istruzione **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Esempio (Transact-SQL)  
+### <a name="example-transact-sql"></a>Esempio (Transact-SQL)  
  Nell'esempio seguente viene spostato un gruppo di carico di lavoro denominato `groupAdhoc` nel pool di risorse predefinito.  
   
 ```  
@@ -72,7 +76,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Abilitare Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Creare un pool di risorse](../../relational-databases/resource-governor/create-a-resource-pool.md)   

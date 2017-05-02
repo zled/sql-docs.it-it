@@ -1,28 +1,32 @@
 ---
-title: "Oggetto Database Mirroring di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Database Mirroring"
-  - "mirroring del database [SQL Server], contatori delle prestazioni"
-  - "contatori delle prestazioni [SQL Server], mirroring del database"
-  - "Database Mirroring - oggetto"
+title: Oggetto Database Mirroring di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Database Mirroring
+- database mirroring [SQL Server], performance counters
+- performance counters [SQL Server], database mirroring
+- Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cc798b19f243d91b9693ca63c70d1de6661d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetto Database Mirroring di SQL Server
-  L'oggetto prestazioni **SQLServer:Database Mirroring** include contatori delle prestazioni con informazioni sul mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
+# <a name="sql-server-database-mirroring-object"></a>Oggetto Database Mirroring di SQL Server
+  L'oggetto prestazioni **SQLServer:Database Mirroring** include contatori delle prestazioni con informazioni sul mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
@@ -51,10 +55,10 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Su ogni partner, alcuni dei contatori mostrano un valore zero in base al ruolo attualmente svolto dal partner.  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  I contatori delle prestazioni consentono di monitorare le prestazioni del mirroring del database. Ad esempio, è possibile esaminare il contatore **Ritardo transazioni** per verificare se il mirroring del database sta influenzando le prestazioni sul server principale. È possibile esaminare i contatori **Coda rollforward** e **Coda invii log** per verificare se il database mirror è in grado di mantenersi aggiornato rispetto al database principale. Il contatore **Byte log inviati/sec** consente di monitorare il numero di eventi di log inviati al secondo.  
   
-## Vedere anche  
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

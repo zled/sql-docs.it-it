@@ -1,33 +1,37 @@
 ---
-title: "Individuare i colli di bottiglia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colli di bottiglia delle risorse [SQL Server]"
-  - "monitoraggio di database [SQL Server], colli di bottiglia"
-  - "prestazioni [SQL Server], colli di bottiglia"
-  - "ottimizzazione dei database [SQL Server], colli di bottiglia"
-  - "monitoraggio delle prestazioni del server [SQL Server], colli di bottiglia"
-  - "monitoraggio delle prestazioni [SQL Server], colli di bottiglia"
-  - "monitoraggio del database [SQL Server], colli di bottiglia"
-  - "prestazioni del server [SQL Server], colli di bottiglia"
-  - "colli di bottiglia [SQL Server]"
-  - "identificazione di colli di bottiglia [SQL Server]"
+title: Individuare i colli di bottiglia | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource bottlenecks [SQL Server]
+- database monitoring [SQL Server], bottlenecks
+- performance [SQL Server], bottlenecks
+- tuning databases [SQL Server], bottlenecks
+- monitoring server performance [SQL Server], bottlenecks
+- monitoring performance [SQL Server], bottlenecks
+- database performance [SQL Server], bottlenecks
+- server performance [SQL Server], bottlenecks
+- bottlenecks [SQL Server]
+- identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20ff22698486f5537fc974a91905b9837792aa5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Individuare i colli di bottiglia
+# <a name="identify-bottlenecks"></a>Individuare i colli di bottiglia
   In seguito all'accesso simultaneo alle risorse condivise si possono verificare colli di bottiglia. I colli di bottiglia in genere sono inevitabili e presenti in qualsiasi sistema software. È tuttavia necessario identificare e ottimizzare le situazioni di eccesso di domanda, in quanto una domanda eccessiva delle risorse condivise comporta un rallentamento dei tempi di risposta.  
   
  Le possibili cause dei colli di bottiglia sono:  
@@ -40,7 +44,7 @@ caps.handback.revision: 18
   
 -   Configurazione non corretta delle risorse.  
   
-## Analisi dei colli di bottiglia  
+## <a name="analyzing-bottlenecks"></a>Analisi dei colli di bottiglia  
  La durata eccessiva di alcuni eventi segnala la presenza di colli di bottiglia che è possibile ottimizzare.  
   
  Esempio:  
@@ -59,7 +63,7 @@ caps.handback.revision: 18
 |Connessioni utente|Se il numero di utenti che accede al server simultaneamente è molto elevato, le prestazioni potrebbe risultare inferiori.|  
 |Blocchi di blocco|L'utilizzo di applicazioni progettate in modo non corretto può causare blocchi e ostacolare la concorrenza, con un conseguente rallentamento dei tempi di risposta e una diminuzione della velocità effettiva.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo della CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [Monitoraggio dell'utilizzo del disco](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [Monitoraggio dell'utilizzo della memoria](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

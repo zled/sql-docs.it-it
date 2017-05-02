@@ -1,25 +1,29 @@
 ---
-title: "Ripristino della chiave master del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiave master del servizio [SQL Server], importazione"
-  - "chiave master del servizio [SQL Server], ripristino"
+title: Ripristinare la chiave master del servizio | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], importing
+- service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 341662ff65d44b63738b869999ab78191f991a6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino della chiave master del servizio
+# <a name="restore-the-service-master-key"></a>Ripristino della chiave master del servizio
   In questo argomento viene descritto come ripristinare una chiave master del servizio in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  
@@ -55,7 +59,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per ripristinare la chiave master del servizio  
+#### <a name="to-restore-the-service-master-key"></a>Per ripristinare la chiave master del servizio  
   
 1.  Recuperare una copia della chiave master del servizio da un supporto di backup fisico o da una directory nel file system locale.  
   

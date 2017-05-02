@@ -1,27 +1,31 @@
 ---
-title: "Scollegamento di un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.detachdatabase.f1"
-helpviewer_keywords: 
-  - "scollegamento di database [SQL Server]"
-  - "scollegamento di database [SQL Server]"
+title: Scollegare un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.detachdatabase.f1
+helpviewer_keywords:
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Scollegamento di un database
+# <a name="detach-a-database"></a>Scollegamento di un database
   In questo argomento viene descritto come scollegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG. È possibile spostare e quindi collegare tali file in un altro server.  
   
  **Contenuto dell'argomento**  
@@ -41,7 +45,7 @@ caps.handback.revision: 36
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
- Per un elenco delle limitazioni e restrizioni, vedere [Collegamento e scollegamento di database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Per un elenco delle limitazioni e restrizioni, vedere [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -50,18 +54,18 @@ caps.handback.revision: 36
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per scollegare un database  
+#### <a name="to-detach-a-database"></a>Per scollegare un database  
   
 1.  In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e quindi espanderla.  
   
 2.  Espandere **Database**e selezionare il nome del database utente che si desidera scollegare.  
   
-3.  Fare clic con il pulsante destro del mouse sul nome di database, scegliere **Attività** e quindi fare clic su **Scollega**. Verrà visualizzata la finestra di dialogo **Scollega database** .  
+3.  Fare clic con il pulsante destro del mouse sul nome di database, scegliere **Attività**e quindi fare clic su **Scollega**. Verrà visualizzata la finestra di dialogo **Scollega database** .  
   
      **Database da scollegare**  
      Consente di visualizzare i database da scollegare.  
   
-     **Nome database**  
+     **Database Name**  
      Consente di visualizzare il nome del database da scollegare.  
   
      **Interrompi connessioni**  
@@ -74,7 +78,7 @@ caps.handback.revision: 36
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali statistiche di ottimizzazione non aggiornate prima di scollegare il database. Per aggiornare le statistiche di ottimizzazione esistenti, fare clic su questa casella di controllo.  
   
      **Mantieni cataloghi full-text**  
-     Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text**. Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Stato**  
      Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
@@ -95,7 +99,7 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per scollegare un database  
+#### <a name="to-detach-a-database"></a>Per scollegare un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 36
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

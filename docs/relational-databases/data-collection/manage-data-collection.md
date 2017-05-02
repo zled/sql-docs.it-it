@@ -1,32 +1,36 @@
 ---
-title: "Gestire raccolta dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Raccolta dati"
-helpviewer_keywords: 
-  - "raccolta dati [SQL Server]"
-  - "agente di raccolta dati [SQL Server], Transact-SQL"
-  - "agente di raccolta dati [SQL Server], SQL Server Management Studio"
+title: Gestire la raccolta di dati | Microsoft Docs
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Raccolta dati
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestire raccolta dati
+# <a name="manage-data-collection"></a>Gestire raccolta dati
  Usare le stored procedure e le funzioni di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per gestire aspetti diversi della raccolta dati, ad esempio l'abilitazione o la disabilitazione della raccolta dati, la modifica della configurazione di un set di raccolta o la visualizzazione di dati nel data warehouse di gestione.  
   
-## Gestire la raccolta di dati mediante SSMS  
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire le seguenti attività legate all'agente di raccolta dati usando Esplora oggetti:  
+## <a name="manage-data-collection-using-ssms"></a>Gestire la raccolta di dati mediante SSMS  
+ In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eseguire le seguenti attività legate all'agente di raccolta dati usando Esplora oggetti:  
   
 -   [Configurazione del data warehouse di gestione &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [Avviare o arrestare un set di raccolta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Utilizzo di SQL Server Profiler per creare un set di raccolta Traccia SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [Utilizzo di SQL Server Profiler per creare un set di raccolta Traccia SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [Visualizzazione dei log dei set di raccolta &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## Gestire la raccolta dati mediante Transact-SQL  
- L'agente di raccolta dati fornisce una vasta raccolta di stored procedure che è possibile utilizzare per eseguire qualsiasi attività relative alla raccolta dati. Ad esempio, con [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile eseguire le attività indicate di seguito:  
+## <a name="manage-data-collection-using-transact-sql"></a>Gestire la raccolta dati mediante Transact-SQL  
+ L'agente di raccolta dati fornisce una vasta raccolta di stored procedure che è possibile utilizzare per eseguire qualsiasi attività relative alla raccolta dati. Ad esempio, con [!INCLUDE[tsql](../../includes/tsql-md.md)]è possibile eseguire le attività indicate di seguito:  
   
 -   [Configurazione dei parametri per la raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [Avviare o arrestare un set di raccolta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Creazione di un set di raccolta personalizzato che utilizza il tipo agente di raccolta Query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [Creazione di un set di raccolta personalizzato che utilizza il tipo agente di raccolta Query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [Aggiunta di un elemento della raccolta a un set di raccolta &#40;Transact-SQL&#41;](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**IMPORTANTE!!** A differenza delle normali stored procedure, le stored procedure dell'agente di raccolta dati utilizzano parametri fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
- Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice forniti. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows mediante l'utilità **sqlcmd**. Per altre informazioni, vedere [Usare l'utilità sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+ Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice forniti. Per altre informazioni, vedere [Esplora oggetti](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows mediante l'utilità **sqlcmd** . Per altre informazioni, vedere [Usare l'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
-### Stored procedure e viste  
+### <a name="stored-procedures-and-views"></a>Stored procedure e viste  
  **Utilizzo dell'agente di raccolta dati**  
   
  Nella tabella seguente vengono descritte le stored procedure che è possibile eseguire per utilizzare l'agente di raccolta dati.  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Eliminare voci relative al set di raccolta dal log di esecuzione.|  
   
-### Funzioni  
+### <a name="functions"></a>Funzioni  
  Nella tabella seguente vengono descritte le funzioni che è possibile utilizzare per ottenere informazioni di esecuzione e di traccia.  
   
 |Nome funzione|Descrizione|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Ottenere statistiche di esecuzione relative a un set di raccolta o un pacchetto. Tali informazioni comprendono gli errori registrati.|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|Ottenere gli eventi registrati quando viene utilizzato il tipo di agente di raccolta Traccia SQL generico per raccogliere dati.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eseguire una stored procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Utilizzo di SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [Utilizzo di SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   
   
+

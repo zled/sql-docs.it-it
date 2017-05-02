@@ -1,29 +1,33 @@
 ---
-title: "Classe di evento SP:Recompile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:Recompile - classe di evento"
+title: Classe di evento SP:Recompile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cab2f6fc0007ea591ab2fc11ce231519fa71bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SP:Recompile
+# <a name="sprecompile-event-class"></a>SP:Recompile - classe di evento
   La classe di evento SP:Recompile indica che una stored procedure, una funzione definita dall'utente o un trigger è stato ricompilato. Le ricompilazioni segnalate da questa classe di evento si verificano a livello di istruzione.  
   
  La strategia ottimale per tracciare ricompilazioni a livello di istruzione consiste nell'usare la classe di evento SQL:StmtRecompile. La classe di evento SP:Recompile è deprecata. Per altre informazioni, vedere [Classe di evento SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  
   
-## Colonne di dati della classe di evento SP:Recompile  
+## <a name="sprecompile-event-class-data-columns"></a>Colonne di dati della classe di evento SP:Recompile  
   
 |Nome colonna di dati|**Tipo di dati**|Descrizione|ID colonna|Filtrabile|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
@@ -57,7 +61,7 @@ caps.handback.revision: 43
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Classe di evento SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
   

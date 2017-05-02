@@ -1,27 +1,31 @@
 ---
-title: "Sessioni degli eventi estesi di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "sessioni"
-  - "eventi estesi [SQL Server]"
+title: Sessioni degli eventi estesi di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sessioni degli eventi estesi di SQL Server
+# <a name="sql-server-extended-events-sessions"></a>Sessioni degli eventi estesi di SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Una sessione di eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene creata nel processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è ospitato il motore degli eventi estesi. Gli aspetti seguenti di una sessione degli eventi estesi forniscono un contesto per la comprensione dell'infrastruttura degli eventi estesi e dell'elaborazione generale che si verifica:  
@@ -30,7 +34,7 @@ caps.handback.revision: 20
   
 -   Contenuto e caratteristiche della sessione. Contenuto di una sessione degli eventi estesi, ad esempio destinazioni ed eventi, e il modo in cui questi oggetti sono correlati in una sessione oggetti o tra sessioni.  
   
-## Stati della sessione  
+## <a name="session-states"></a>Stati della sessione  
  Nella figura seguente sono mostrati i vari stati di una sessione degli eventi estesi.  
   
  ![Stato della sessione degli eventi estesi](../../relational-databases/extended-events/media/xesessionstate.gif "Stato della sessione degli eventi estesi")  
@@ -47,12 +51,12 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Sia ALTER EVENT SESSION che DROP EVENT SESSION possono essere applicati ai metadati o a una sessione attiva e ai metadati.  
   
-## Contenuto e caratteristiche della sessione  
+## <a name="session-content-and-characteristics"></a>Contenuto e caratteristiche della sessione  
  Le sessioni degli eventi estesi dei limiti impliciti in quanto la configurazione di una sessione non modifica la configurazione di un'altra sessione. Tuttavia, questi limiti non impediscono che un evento o una destinazione siano utilizzati in più di una sessione.  
   
  Nella figura seguente viene illustrato il contenuto di una sessione e la relazione tra pacchetti e sessioni.  
   
- ![Coesistenza e condivisione di oggetti nelle sessioni](../../relational-databases/extended-events/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni")  
+ ![Coesistenza e condivisione di oggetti nelle sessioni.](../../relational-databases/extended-events/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
   
  Con riferimento all'illustrazione precedente, si noti che:  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  L'architettura degli eventi estesi fornisce un sistema flessibile che consente a una varietà di oggetti di essere utilizzata insieme per risolvere problemi specifici.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

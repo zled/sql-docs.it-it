@@ -1,25 +1,29 @@
 ---
-title: "Configurare Posta elettronica di SQL Server Agent per l&#39;utilizzo di Posta elettronica database | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Posta elettronica database [SQL Server], Posta elettronica di SQL Server Agent"
-  - "Posta elettronica di SQL Server Agent"
+title: Configurare Posta elettronica di SQL Server Agent per l&quot;uso di Posta elettronica database | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], SQL Server Agent Mail
+- SQL Server Agent Mail
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd14545a30d307845af1ce55be28334d4d8a25cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurare Posta elettronica di SQL Server Agent per l&#39;utilizzo di Posta elettronica database
+# <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurare Posta elettronica di SQL Server Agent per l'utilizzo di Posta elettronica database
   In questo argomento viene illustrato come configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per utilizzare Posta elettronica database per inviare notifiche e avvisi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Per informazioni su come abilitare e configurare la funzionalità Posta elettronica database, vedere [Configurare Posta elettronica database](../../relational-databases/database-mail/configure-database-mail.md).  Per un esempio sull'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md).
   
 -   **Prima di iniziare:**  
@@ -40,7 +44,7 @@ caps.handback.revision: 31
   
 -    [Creare un account di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md) per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare.  
   
--   [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md) per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare e aggiungere l'utente a **DatabaseMailUserRole** nel database **msdb**.  
+-   [Creare un profilo di Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-profile.md) per l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da usare e aggiungere l'utente a **DatabaseMailUserRole** nel database **msdb** .  
   
 -   Impostare il profilo come predefinito per il database **msdb** .  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 31
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per configurare SQL Server Agent Mail per l'utilizzo di Posta elettronica database**  
   
--   In Esplora oggetti espandere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   In Esplora oggetti espandere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Fare clic con il pulsante destro del mouse su **SQL Server Agent**, quindi scegliere **Proprietà**.  
   
@@ -69,12 +73,13 @@ caps.handback.revision: 31
 ##  <a name="Follow_Up"></a> Attività di completamento  
  Le attività seguenti sono necessarie per completare la configurazione dell'agent per inviare avvisi e notifiche.  
   
--   [Avvisi](../../ssms/agent/alerts.md)  
+-   [Avvisi](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
   
      Gli avvisi possono essere configurati per segnalare a un operatore un evento di database o una condizione del sistema operativo.  
   
--   [Operatori](../../ssms/agent/operators.md)  
+-   [Operatori](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
   
      Gli operatori solo alias di persone o gruppi che possono ricevere notifiche elettroniche  
   
   
+

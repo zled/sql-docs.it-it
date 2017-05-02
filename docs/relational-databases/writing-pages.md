@@ -1,24 +1,28 @@
 ---
-title: "Scrittura di pagine | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pagine"
+title: Scrittura di pagine | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f8e6bff396499886a23182787d84a84e6ceaf17
+ms.lasthandoff: 04/11/2017
+
 ---
-# Scrittura di pagine
+# <a name="writing-pages"></a>Scrittura di pagine
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 L'I/O di un'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] include scritture logiche e fisiche. La scrittura logica viene eseguita quando vengono modificati i dati di una pagina nella cache del buffer. La scrittura fisica viene eseguita quando la pagina viene scritta dalla [cache del buffer](../relational-databases/memory-management-architecture-guide.md) nel disco.

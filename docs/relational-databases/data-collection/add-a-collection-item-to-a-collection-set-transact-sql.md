@@ -1,32 +1,36 @@
 ---
-title: "Aggiunta di un elemento della raccolta a un set di raccolta (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementi della raccolta [SQL Server]"
-  - "set di raccolta [SQL Server], aggiunta di elementi"
+title: Aggiungere un elemento della raccolta a un set di raccolta (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection items [SQL Server]
+- collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90261ca03da94b15b003da029f07d8804aaa1805
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiunta di un elemento della raccolta a un set di raccolta (Transact-SQL)
+# <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Aggiunta di un elemento della raccolta a un set di raccolta (Transact-SQL)
   È possibile aggiungere un elemento della raccolta a un set di raccolta esistente utilizzando le stored procedure fornite con l'agente di raccolta dati.  
   
  Eseguire i seguenti passaggi utilizzando l'Editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-### Aggiunta di un elemento della raccolta a un set di raccolte  
+### <a name="add-a-collection-item-to-a-collection-set"></a>Aggiunta di un elemento della raccolta a un set di raccolte  
   
-1.  Arrestare il set di raccolta a cui aggiungere l'elemento eseguendo la stored procedure **sp_syscollector_stop_collection_set**. Ad esempio, per arrestare un set di raccolta denominato "Test Collection Set", eseguire le istruzioni seguenti:  
+1.  Arrestare il set di raccolta a cui aggiungere l'elemento eseguendo la stored procedure **sp_syscollector_stop_collection_set** . Ad esempio, per arrestare un set di raccolta denominato "Test Collection Set", eseguire le istruzioni seguenti:  
   
     ```tsql  
     USE msdb  
@@ -94,10 +98,10 @@ caps.handback.revision: 21
     GO  
     ```  
   
-     I set di raccolta e i rispettivi elementi della raccolta sono visualizzati nella scheda **Risultati**.  
+     I set di raccolta e i rispettivi elementi della raccolta sono visualizzati nella scheda **Risultati** .  
   
-## Vedere anche  
- [Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creare un set di raccolta personalizzato che usa il tipo agente di raccolta Query T-SQL generico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

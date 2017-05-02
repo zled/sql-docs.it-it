@@ -1,31 +1,35 @@
 ---
-title: "Attivit&#224; Pulizia contenuto cronologia (Piano di manutenzione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "Attività Pulizia contenuto cronologia - finestra di dialogo"
+title: "Attività Pulizia contenuto cronologia (Piano di manutenzione) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attivit&#224; Pulizia contenuto cronologia (Piano di manutenzione)
+# <a name="history-cleanup-task-maintenance-plan"></a>Attività Pulizia contenuto cronologia (Piano di manutenzione)
   Utilizzare la finestra di dialogo **Attività Pulizia contenuto cronologia** per eliminare le informazioni cronologiche meno recenti dalle tabelle del database msdb. Questa attività supporta l'eliminazione della cronologia delle operazioni di backup e ripristino, della cronologia processo agente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e della cronologia del piano di manutenzione.  
   
- Questa istruzione usa le istruzioni **sp_purge_jobhistory** e **sp_delete_backuphistory**.  
+ Questa istruzione usa le istruzioni **sp_purge_jobhistory** e **sp_delete_backuphistory** .  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
-## Finestra di dialogo Nuova connessione  
+## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 21
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

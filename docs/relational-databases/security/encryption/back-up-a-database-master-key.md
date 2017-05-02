@@ -1,24 +1,28 @@
 ---
-title: "Backup della chiave master di un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiave master del database [SQL Server], esportazione"
+title: Eseguire il backup della chiave master di un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52f4f75fe2a48302fb7383ce445f47e23366910d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup della chiave master di un database
+# <a name="back-up-a-database-master-key"></a>Backup della chiave master di un database
   In questo argomento viene descritto come eseguire il backup di una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La chiave master viene usata per crittografare altre chiavi e certificati all'interno di un database. Se questa chiave viene eliminata oppure danneggiata, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potrebbe non essere in grado di decrittografare tali chiavi e i dati crittografati con tali chiavi verranno di fatto persi. Per tale motivo, è consigliabile eseguire il backup della chiave master di un database e archiviare la copia di backup in un altro luogo adeguatamente protetto.  
   
  **Contenuto dell'argomento**  
@@ -46,9 +50,9 @@ caps.handback.revision: 20
   
 ##  <a name="Procedure"></a> Utilizzo di SQL Server Management Studio con Transact-SQL  
   
-#### Per eseguire il backup della chiave master di un database  
+#### <a name="to-back-up-the-database-master-key"></a>Per eseguire il backup della chiave master di un database  
   
-1.  In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente la chiave master del database di cui si desidera eseguire il backup.  
+1.  In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente la chiave master del database di cui si desidera eseguire il backup.  
   
 2.  Scegliere una password che verrà usata per crittografare la chiave master del database sul supporto di backup. Questa password è soggetta ai controlli di complessità delle password.  
   

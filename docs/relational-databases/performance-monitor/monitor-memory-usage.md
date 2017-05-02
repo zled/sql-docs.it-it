@@ -1,35 +1,39 @@
 ---
-title: "Monitoraggio dell&#39;utilizzo della memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ottimizzazione di database [SQL Server], memoria"
-  - "monitoraggio delle prestazioni del server [SQL Server], utilizzo della memoria"
-  - "isolamento di memoria [SQL Server]"
-  - "frequenza di paging [SQL Server]"
-  - "memoria [SQL Server], monitoraggio dell'utilizzo"
-  - "monitoraggio [SQL Server], utilizzo della memoria"
-  - "condizioni di memoria insufficiente"
-  - "monitoraggio di database [SQL Server], utilizzo della memoria"
-  - "memoria disponibile [SQL Server]"
-  - "errori di pagina [SQL Server]"
-  - "monitoraggio delle prestazioni [SQL Server], utilizzo della memoria"
-  - "prestazioni server [SQL Server], memoria"
+title: Monitorare l&quot;uso della memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tuning databases [SQL Server], memory
+- monitoring server performance [SQL Server], memory usage
+- isolating memory [SQL Server]
+- paging rate [SQL Server]
+- memory [SQL Server], monitoring usage
+- monitoring [SQL Server], memory usage
+- low-memory conditions
+- database monitoring [SQL Server], memory usage
+- available memory [SQL Server]
+- page faults [SQL Server]
+- monitoring performance [SQL Server], memory usage
+- server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitoraggio dell&#39;utilizzo della memoria
+# <a name="monitor-memory-usage"></a>Monitoraggio dell'utilizzo della memoria
   Monitorare periodicamente un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.  
   
  Per monitorare la quantità di memoria disponibile, usare i seguenti contatori:  
@@ -42,14 +46,14 @@ caps.handback.revision: 26
   
  Valori bassi del contatore **Byte disponibili** possono indicare una quantità di memoria insufficiente nel computer o la presenza di un'applicazione che non rilascia la memoria. Un valore elevato del contatore **Pagine/sec** può indicare un paging eccessivo. Monitorare il contatore **Memoria: Errori di pagina/sec** per assicurarsi che l'attività del disco non sia dovuta al paging.  
   
- Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per altre informazioni su come evitare il paging eccessivo, vedere la documentazione del sistema operativo Windows.  
   
-## Memoria usata da SQL Server  
- Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria vengono modificati in modo dinamico in base alle risorse di sistema disponibili. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessita di una maggior quantità di memoria, richiede al sistema operativo di determinare se è disponibile memoria fisica e utilizza la memoria disponibile. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non utilizza completamente la memoria attualmente allocata, rilascia la memoria al sistema operativo. È tuttavia possibile ignorare l'opzione per l'uso dinamico della memoria specificando le opzioni di configurazione del server **minservermemory** e **maxservermemory**. Per altre informazioni, vedere [Opzioni per la memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+## <a name="isolating-memory-used-by-sql-server"></a>Memoria usata da SQL Server  
+ Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria vengono modificati in modo dinamico in base alle risorse di sistema disponibili. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessita di una maggior quantità di memoria, richiede al sistema operativo di determinare se è disponibile memoria fisica e utilizza la memoria disponibile. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non utilizza completamente la memoria attualmente allocata, rilascia la memoria al sistema operativo. È tuttavia possibile ignorare l'opzione per l'uso dinamico della memoria specificando le opzioni di configurazione del server **minservermemory**e **maxservermemory** . Per altre informazioni, vedere [Opzioni per la memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
- Per monitorare la quantità di memoria usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esaminare i contatori delle prestazioni seguenti:  
+ Per monitorare la quantità di memoria usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esaminare i contatori delle prestazioni seguenti:  
   
 -   **Processo: Working set**  
   
@@ -59,13 +63,13 @@ caps.handback.revision: 26
   
 -   **SQL Server: Gestione memoria: Memoria totale server (KB)**  
   
- Il contatore **Working set** indica la quantità di memoria usata da un processo. Se questo valore è costantemente inferiore alla quantità di memoria impostata dalle opzioni server **min server memory** e **max server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato configurato per usare una quantità eccessiva di memoria.  
+ Il contatore **Working set** indica la quantità di memoria usata da un processo. Se questo valore è costantemente inferiore alla quantità di memoria impostata dalle opzioni server **min server memory** e **max server memory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato configurato per usare una quantità eccessiva di memoria.  
   
  Il contatore **Percentuale riscontri cache del buffer** è specifico per un'applicazione. È tuttavia preferibile un livello pari o superiore a 90%. Aggiungere memoria fino a raggiungere un valore costantemente superiore a 90%. Tale percentuale indica che è stato soddisfatto oltre il 90% di tutte le richieste di dati dalla cache dei dati.  
   
  Se il valore del contatore **Memoria totale server (KB)Memoria** è costantemente elevato rispetto alla quantità di memoria fisica del computer, può essere necessario aggiungere ulteriore memoria.  
   
-## Determinazione dell'allocazione di memoria corrente  
+## <a name="determining-current-memory-allocation"></a>Determinazione dell'allocazione di memoria corrente  
  La query seguente restituisce le informazioni sulla memoria attualmente allocata.  
   
 ```  

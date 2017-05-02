@@ -1,29 +1,33 @@
 ---
-title: "Creazione di viste indicizzate | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste indicizzate [SQL Server], creazione"
-  - "indici cluster, viste"
-  - "CREATE INDEX - istruzione"
-  - "large_value_types_out_of_row - opzione"
-  - "viste indicizzate [SQL Server]"
-  - "viste [SQL Server], viste indicizzate"
+title: Creare viste indicizzate | Microsoft Docs
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di viste indicizzate
+# <a name="create-indexed-views"></a>Creazione di viste indicizzate
   In questo argomento si illustra come creare una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
@@ -69,7 +73,7 @@ caps.handback.revision: 79
 > [!IMPORTANT]  
 >  È consigliabile impostare l'opzione utente ARITHABORT su ON per l'intero server immediatamente dopo la creazione della prima vista indicizzata o del primo indice in una colonna calcolata in qualsiasi database del server.  
   
-### Viste deterministiche  
+### <a name="deterministic-views"></a>Viste deterministiche  
  La definizione di una vista indicizzata deve essere deterministica. Una vista è deterministica se tutte le espressioni nell'elenco di selezione, nonché nelle clausole WHERE e GROUP BY sono deterministiche. Le espressioni deterministiche restituiscono sempre lo stesso risultato ogni volta che vengono valutate con un set specifico di valori di input. Nelle espressioni deterministiche è possibile usare solo funzioni deterministiche. La funzione DATEADD, ad esempio, è deterministica perché restituisce sempre lo stesso risultato per un dato set di valori dei relativi tre parametri. GETDATE non è deterministica perché viene sempre richiamata con lo stesso argomento, ma il valore restituito cambia ogni volta che viene eseguita.  
   
  Per determinare se una colonna della vista è deterministica, usare la proprietà **IsDeterministic** della funzione [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Usare la proprietà **IsPrecise** della funzione COLUMNPROPERTY per determinare se una colonna deterministica di una vista con associazione a schema è precisa. Tramite la funzione COLUMNPROPERTY viene restituito 1 se la proprietà è TRUE, 0 se la proprietà è FALSE e NULL se il valore di input non è valido. Questo significa che la colonna non è deterministica o non è precisa.  
@@ -77,16 +81,16 @@ caps.handback.revision: 79
  Se in un'espressione deterministica sono contenute espressioni float, il risultato esatto può dipendere dall'architettura del processore o dalla versione del microcodice. Per garantire l'integrità dei dati, le espressioni di questo tipo possono essere usate solo come colonne non chiave delle viste indicizzate. Le espressioni deterministiche che non contengono espressioni float sono definite precise. Solo le espressioni deterministiche precise possono essere usate in colonne chiave e clausole WHERE o GROUP BY di viste indicizzate.  
   
 > [!NOTE]  
->  Le viste indicizzate non sono supportate sulle query temporali (query che usano una clausola **FOR SYSTEM_TIME**)  
+>  Le viste indicizzate non sono supportate sulle query temporali (query che usano una clausola **FOR SYSTEM_TIME** )  
   
-### Requisiti aggiuntivi  
+### <a name="additional-requirements"></a>Requisiti aggiuntivi  
  Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni deterministiche, è necessario che vengano soddisfatti i requisiti seguenti:  
   
 -   L'utente che esegue CREATE INDEX deve essere il proprietario della vista.  
   
 -   Quando si crea l'indice, l'opzione IGNORE_DUP_KEY deve essere impostata su OFF (impostazione predefinita).  
   
--   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero *schema***.***nometabella*, nella definizione della vista.  
+-   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero *schema***.***nometabella* , nella definizione della vista.  
   
 -   Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione WITH SCHEMABINDING.  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 79
     |COUNT|Funzioni ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET E OPENXML)|OUTER join (LEFT, RIGHT o FULL)|  
     |Tabella derivata (definita specificando un'istruzione SELECT nella clausola FROM)|Self-join|Specifica delle colonne tramite SELECT \* o SELECT *nome_tabella*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Espressione di tabella comune (CTE)|  
-    |Colonne **float**\*, **text**, **ntext**, **image**, **XML** o **filestream**|Sottoquery|La clausola OVER, che include funzioni di rango o funzioni finestra di aggregazione|  
+    |**float**\*, **text**, **ntext**, **image**, **XML**o **filestream** |Sottoquery|La clausola OVER, che include funzioni di rango o funzioni finestra di aggregazione|  
     |Predicati full-text (CONTAIN, FREETEXT)|Funzione SUM che fa riferimento a un'espressione che ammette i valori Null|ORDER BY|  
     |Funzione di aggregazione CLR definita dall'utente|Torna all'inizio|Operatori CUBE, ROLLUP o GROUPING SETS|  
     |MIN, MAX|Operatori UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
@@ -140,7 +144,7 @@ caps.handback.revision: 79
   
  È possibile creare viste indicizzate per una tabella partizionata, nonché partizionare questo tipo di viste.  
   
- Per impedire l'utilizzo di viste indicizzate nel [!INCLUDE[ssDE](../../includes/ssde-md.md)], includere l'hint OPTION (EXPAND VIEWS) nella query. Inoltre, l'errata impostazione di una qualsiasi delle opzione elencate impedisce l'utilizzo degli indici delle viste in Query Optimizer. Per altre informazioni sull'hint OPTION (EXPAND VIEWS), vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Per impedire l'utilizzo di viste indicizzate nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] , includere l'hint OPTION (EXPAND VIEWS) nella query. Inoltre, l'errata impostazione di una qualsiasi delle opzione elencate impedisce l'utilizzo degli indici delle viste in Query Optimizer. Per altre informazioni sull'hint OPTION (EXPAND VIEWS), vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  Tutti gli indici di una vista vengono eliminati con la rimozione della vista. Tutti gli indici non cluster e tutte le statistiche create automaticamente nella vista vengono eliminati con l'eliminazione dell'indice cluster. Le statistiche create dall'utente nella vista vengono conservate. È possibile eliminare gli indici non cluster singolarmente. L'eliminazione dell'indice cluster nella vista determina la rimozione del set di risultati archiviato e la vista tornerà a essere elaborata come standard da Query Optimizer.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare una vista indicizzata  
+#### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

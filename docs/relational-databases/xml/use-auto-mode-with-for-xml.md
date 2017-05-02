@@ -1,28 +1,32 @@
 ---
-title: "Utilizzo della modalit&#224; AUTO con FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clausola FOR XML, modalità AUTO"
-  - "opzione ELEMENTS"
-  - "modalità FOR XML AUTO"
-  - "modalità AUTO FOR XML"
+title: "Usare la modalità AUTO con FOR XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo della modalit&#224; AUTO con FOR XML
-  Come descritto in [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), la modalità AUTO restituisce i risultati della query come elementi XML annidati. ma non consente di controllare in modo preciso la struttura del valore XML generato. È consigliabile utilizzare query in modalità AUTO solo se si desidera generare gerarchie semplici. Tuttavia, l'[uso della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) e l'[uso della modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) assicurano maggiore controllo e flessibilità nella definizione della forma di elementi XML dal risultato di una query.  
+# <a name="use-auto-mode-with-for-xml"></a>Utilizzo della modalità AUTO con FOR XML
+  Come descritto in [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), la modalità AUTO restituisce i risultati della query come elementi XML annidati. ma non consente di controllare in modo preciso la struttura del valore XML generato. È consigliabile utilizzare query in modalità AUTO solo se si desidera generare gerarchie semplici. Tuttavia, l' [uso della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) e l' [uso della modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) assicurano maggiore controllo e flessibilità nella definizione della forma di elementi XML dal risultato di una query.  
   
  Ogni tabella nella clausola FROM, della quale almeno una colonna viene elencata nella clausola SELECT, viene rappresentata come un elemento XML. Se per la clausola FOR XML è specificata l'opzione facoltativa ELEMENTS, verrà eseguito il mapping delle colonne elencate nella clausola SELECT ad attributi o sottoelementi.  
   
@@ -122,13 +126,13 @@ FOR XML AUTO, ELEMENTS
   
  In questa query, durante la creazione degli elementi \<Cust>, i valori CustomerID di ogni riga vengono confrontati con quelli della riga successiva perché CustomerID è la chiave primaria della tabella. Se CustomerID non viene identificata come chiave primaria della tabella, tutti i valori delle colonne (in questa query, CustomerID e CustomerType) di ogni riga verranno confrontati con quelli della riga successiva. Se i valori sono diversi, al valore XML verrà aggiunto un nuovo elemento \<Cust>.  
   
- Durante il confronto di questi valori di colonna, se una qualsiasi delle colonne da confrontare è di tipo **text**, **ntext**, **image** o **xml**, FOR XML presupporrà che i valori siano diversi e non eseguirà il confronto, anche se potrebbero essere uguali. Questo avviene perché il confronto di oggetti di grandi dimensioni non è supportato. Vengono aggiunti elementi al risultato per ogni riga selezionata. Si noti che le colonne di tipo **(n)varchar(max)** e **varbinary(max)** vengono confrontate.  
+ Durante il confronto di questi valori di colonna, se una qualsiasi delle colonne da confrontare è di tipo **text**, **ntext**, **image**o **xml**, FOR XML presupporrà che i valori siano diversi e non eseguirà il confronto, anche se potrebbero essere uguali. Questo avviene perché il confronto di oggetti di grandi dimensioni non è supportato. Vengono aggiunti elementi al risultato per ogni riga selezionata. Si noti che le colonne di tipo **(n)varchar(max)** e **varbinary(max)** vengono confrontate.  
   
  Quando una colonna nella clausola SELECT non può essere associata a una qualsiasi delle tabelle identificate nella clausola FROM, ad esempio nel caso di una colonna aggregata o calcolata, la colonna viene aggiunta al documento XML al livello di nidificazione più basso quando viene rilevata nell'elenco. Se tale colonna viene elencata per prima nella clausola SELECT, verrà aggiunta come elemento di livello principale.  
   
  Se nella clausola SELECT è specificato il carattere jolly asterisco (*), il livello di nidificazione verrà determinato come descritto in precedenza, ovvero in base all'ordine in cui le righe vengono restituite dal motore query.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  Per ulteriori informazioni sulla modalità AUTO, vedere gli argomenti seguenti:  
   
 -   [Utilizzo dell'opzione BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Esempi di utilizzo della modalità AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

@@ -1,29 +1,33 @@
 ---
-title: "Nuovo profilo agente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.profiles.newperfprofile.f1"
-helpviewer_keywords: 
-  - "Nuovo profilo agente - finestra di dialogo"
+title: Nuovo profilo agente | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.profiles.newperfprofile.f1
+helpviewer_keywords:
+- New Agent Profile dialog box
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6ca56759235723bf052365e9a4187f41c7ce53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Nuovo profilo agente
-  La finestra di dialogo **Nuovo profilo agente** consente di creare un nuovo profilo. I nuovi profili sono sempre basati su profili esistenti, ma possono essere modificati in base ai requisiti delle applicazioni. Dopo aver creato un profilo, è possibile applicarlo a processi agente esistenti e creati in un secondo momento nella finestra di dialogo **Profili agente** . I valori dei parametri dell'agente possono essere modificati nel \<**AgentProfileName > proprietà** la finestra di dialogo.  
+# <a name="new-agent-profile"></a>Nuovo profilo agente
+  La finestra di dialogo **Nuovo profilo agente** consente di creare un nuovo profilo. I nuovi profili sono sempre basati su profili esistenti, ma possono essere modificati in base ai requisiti delle applicazioni. Dopo aver creato un profilo, è possibile applicarlo a processi agente esistenti e creati in un secondo momento nella finestra di dialogo **Profili agente** . I valori dei parametri degli agenti possono essere modificati nella finestra di dialogo \<Proprietà **NomeProfiloAgente>**.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  Consente di immettere un nome per il profilo.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 21
   
 -   [Agente lettura log repliche](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Agente merge repliche](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
@@ -52,8 +56,8 @@ caps.handback.revision: 21
  **Mostra solo i parametri utilizzati in questo profilo**  
  Deselezionare questa casella di controllo per mostrare tutti i parametri validi per un determinato agente.  
   
-## Vedere anche  
- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Panoramica degli agenti di replica](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md)  
   

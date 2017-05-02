@@ -1,37 +1,41 @@
 ---
-title: "Backup e ripristino di database replicati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup [replica di SQL Server]"
-  - "amministrazione della replica, ripristino"
-  - "backup di database replicati"
-  - "backup [replica di SQL Server], informazioni sui backup"
-  - "ripristino di database replicati [replica di SQL Server]"
-  - "recupero [replica di SQL Server], informazioni sul recupero"
-  - "ripristino di database [SQL Server], database replicati"
-  - "backup di database [SQL Server], database replicati"
-  - "ripristino [replica di SQL Server], informazioni sul ripristino"
-  - "recupero [replica di SQL Server]"
-  - "replica [SQL Server], amministrazione"
-  - "database di distribuzione [replica di SQL Server], backup"
-  - "ripristino [replica di SQL Server]"
-  - "amministrazione della replica, backup"
+title: Eseguire il backup e ripristino di database replicati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backups [SQL Server replication]
+- administering replication, restoring
+- backing up replicated databases
+- backups [SQL Server replication], about backups
+- restoring replicated databases [SQL Server replication]
+- recovery [SQL Server replication], about recovery
+- restoring databases [SQL Server], replicated databases
+- backing up databases [SQL Server], replicated databases
+- restoring [SQL Server replication], about restoring
+- recovery [SQL Server replication]
+- replication [SQL Server], administering
+- distribution databases [SQL Server replication], backing up
+- restoring [SQL Server replication]
+- administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71772228e0d4f3e20982ed08e1d60b24fae76eb7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup e ripristino di database replicati
+# <a name="back-up-and-restore-replicated-databases"></a>Backup e ripristino di database replicati
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Il backup e il ripristino dei dati dei database replicati richiedono un'attenzione particolare. In questo argomento sono fornite informazioni introduttive e collegamenti ad informazioni più approfondite sulle strategie di backup e ripristino per ogni tipo di replica.  
@@ -39,7 +43,7 @@ caps.handback.revision: 40
  La replica supporta il ripristino dei database replicati nello stesso server e nello stesso database da cui è stato creato il backup. Se si ripristina un backup di un database replicato in un altro server o database, le impostazioni di replica non potranno essere mantenute. In questo caso sarà necessario ricreare tutte le pubblicazioni e le sottoscrizioni dopo il ripristino dei backup.  
   
 > [!NOTE]  
->  È possibile ripristinare un database replicato in un server di standby se si utilizza il log shipping. Per ulteriori informazioni, vedere [Log Shipping e replica & #40; SQL Server & #41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+>  È possibile ripristinare un database replicato in un server di standby se si utilizza il log shipping. Per altre informazioni, vedere [Log shipping e replica &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
  Il backup dei database replicati e dei relativi sistemi associati deve essere eseguito periodicamente. Eseguire il backup dei database seguenti:  
   
@@ -53,17 +57,17 @@ caps.handback.revision: 40
   
  Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono i backup del log, è necessario eseguire un backup ogni volta che un'impostazione relativa alla replica viene modificata. Per altre informazioni, vedere [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
-## Strategie di backup e ripristino  
+## <a name="backup-and-restore-strategies"></a>Strategie di backup e ripristino  
  Le strategie di backup e ripristino di ogni nodo in una topologia di replica variano in base al tipo di replica utilizzata. Per informazioni sulle strategie di backup e ripristino per ogni tipo di replica, vedere gli argomenti seguenti:  
   
--   [Strategie per il backup e il ripristino della replica snapshot e della replica transazionale](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
+-   [Strategie di backup e ripristino della replica snapshot e della replica transazionale](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
 -   [Strategie di backup e ripristino della replica di tipo merge](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-merge-replication.md)  
   
  Ogni strategia di recupero include la conservazione in un luogo sicuro di uno script corrente delle impostazioni di replica. Se si verifica un errore in un server oppure è necessario configurare un ambiente di prova, è possibile modificare lo script tramite la modifica dei riferimenti ai nomi di server e quindi utilizzarlo per ricreare le impostazioni di replica. Oltre a creare script per le impostazioni di replica correnti, è consigliabile creare script anche per l'attivazione e la disabilitazione della replica. Per informazioni sulla creazione di script per oggetti di replica, vedere [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Procedure consigliate per l'amministrazione della replica](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

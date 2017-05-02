@@ -1,46 +1,50 @@
 ---
-title: "Guide di piano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TEMPLATE - guida di piano"
-  - "guide di piano di tipo SQL"
-  - "hint per la query OPTIMIZE FOR"
-  - "RECOMPILE - hint per la query"
-  - "guida di piano di tipo OBJECT"
-  - "guide di piano [SQL Server], informazioni"
-  - "OPTION - clausola"
-  - "guide di piano [SQL Server]"
-  - "USE PLAN - hint per la query"
+title: Guide di piano | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- SQL plan guides
+- OPTIMIZE FOR query hint
+- RECOMPILE query hint
+- OBJECT plan guide
+- plan guides [SQL Server], about plan guides
+- OPTION clause
+- plan guides [SQL Server]
+- USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guide di piano
+# <a name="plan-guides"></a>Guide di piano
   Le guide di piano consentono di ottimizzare le prestazioni delle query quando non è possibile o non si desidera modificare direttamente il testo della query corrente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint per la query o di un piano di query fisso. Le guide di piano risultano utili quando le prestazioni di un piccolo subset di query eseguite su un database di terze parti sono inferiori a quelle previste. In una guida di piano, viene specificata l'istruzione Transact-SQL da ottimizzare e la clausola OPTION che contiene gli hint per la query da utilizzare o un piano di query specifico da utilizzare per ottimizzare la query. Quando viene eseguita la query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associa l'istruzione Transact-SQL alla guida di piano e, in fase di esecuzione, associa la clausola OPTION alla query oppure utilizza il piano di query specificato.  
   
  Il numero totale di guide di piano che è possibile creare è limitato solo dalle risorse di sistema disponibili. È comunque consigliabile utilizzare le guide di piano per le sole query critiche di cui si desidera migliorare o stabilizzare le prestazioni. Le guide di piano non vanno utilizzate per modificare la maggior parte del carico di query di un'applicazione distribuita.  
   
 > [!NOTE]  
->  Le guide di piano sono supportate solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Le guide di piano sono visibili in qualsiasi edizione. È inoltre possibile collegare un database che contiene guide di piano a qualsiasi edizione. Quando si ripristina o si collega un database a una versione aggiornata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le guide di piano non vengono modificate.  
+>  Le guide di piano sono supportate solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Le guide di piano sono visibili in qualsiasi edizione. È inoltre possibile collegare un database che contiene guide di piano a qualsiasi edizione. Quando si ripristina o si collega un database a una versione aggiornata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le guide di piano non vengono modificate.  
   
-## Tipi di guide di piano  
+## <a name="types-of-plan-guides"></a>Tipi di guide di piano  
  È possibile creare i seguenti tipi di guide di piano:  
   
  guida di piano di tipo OBJECT  
- Una guida di piano di tipo OBJECT corrisponde alle query eseguite nel contesto di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], funzioni scalari definite dall'utente, funzioni con valori di tabella definite dall'utente con istruzioni multiple e trigger DML.  
+ Una guida di piano di tipo OBJECT corrisponde alle query eseguite nel contesto di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , funzioni scalari definite dall'utente, funzioni con valori di tabella definite dall'utente con istruzioni multiple e trigger DML.  
   
- Si supponga che la seguente stored procedure, che accetta il parametro `@Country`_`region`, si trovi in un'applicazione di database distribuita sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+ Si supponga che la seguente stored procedure, che accetta il parametro `@Country`_`region` , si trovi in un'applicazione di database distribuita sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -55,9 +59,9 @@ BEGIN
 END;  
 ```  
   
- Questa stored procedure è stata compilata e ottimizzata per `@Country`_`region = N'AU'` (Australia). Tuttavia, poiché sono presenti relativamente pochi ordini di vendita con origine in Australia, le prestazioni diminuiscono quando viene eseguita la query utilizzando i valori del parametro dei paesi con più ordini di vendita. Poiché il paese da cui proviene la maggior parte degli ordini di vendita sono gli Stati Uniti, un piano di query generato per `@Country`\_`region = N'US'` offrirebbe probabilmente prestazioni migliori per tutti i possibili valori del parametro `@Country`\_`region`.  
+ Questa stored procedure è stata compilata e ottimizzata per `@Country`_`region = N'AU'` (Australia). Tuttavia, poiché sono presenti relativamente pochi ordini di vendita con origine in Australia, le prestazioni diminuiscono quando viene eseguita la query utilizzando i valori del parametro dei paesi con più ordini di vendita. Poiché il paese da cui proviene la maggior parte degli ordini di vendita sono gli Stati Uniti, un piano di query generato per `@Country`\_`region = N'US'` offrirebbe probabilmente prestazioni migliori per tutti i possibili valori del parametro `@Country`\_`region` .  
   
- Per risolvere il problema è possibile modificare la stored procedure aggiungendo alla query l'hint `OPTIMIZE FOR`. Poiché la stored procedure si trova in un'applicazione distribuita, non è possibile modificare direttamente il codice dell'applicazione. È invece possibile creare la guida di piano seguente nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Per risolvere il problema è possibile modificare la stored procedure aggiungendo alla query l'hint `OPTIMIZE FOR` . Poiché la stored procedure si trova in un'applicazione distribuita, non è possibile modificare direttamente il codice dell'applicazione. È invece possibile creare la guida di piano seguente nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 sp_create_plan_guide   
@@ -74,16 +78,16 @@ sp_create_plan_guide
 @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
- Al momento dell'esecuzione della query specificata nell'istruzione `sp_create_plan_guide`, la query viene modificata prima dell'ottimizzazione per includere la clausola `OPTIMIZE FOR (@Country = N''US'')`.  
+ Al momento dell'esecuzione della query specificata nell'istruzione `sp_create_plan_guide` , la query viene modificata prima dell'ottimizzazione per includere la clausola `OPTIMIZE FOR (@Country = N''US'')` .  
   
  Guida di piano di tipo SQL  
- Una guida di piano di tipo SQL corrisponde alle query eseguite nel contesto di batch e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome che non fanno parte di un oggetto di database. Le guide di piano basate su SQL possono inoltre essere utilizzate per query con parametrizzazioni specifiche. Le guide di piano di tipo SQL vengono applicate a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome e batch. Spesso tali istruzioni vengono inoltrate da un'applicazione mediante la stored procedure di sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md). Ad esempio, si consideri il batch autonomo seguente:  
+ Una guida di piano di tipo SQL corrisponde alle query eseguite nel contesto di batch e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome che non fanno parte di un oggetto di database. Le guide di piano basate su SQL possono inoltre essere utilizzate per query con parametrizzazioni specifiche. Le guide di piano di tipo SQL vengono applicate a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome e batch. Spesso tali istruzioni vengono inoltrate da un'applicazione mediante la stored procedure di sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Ad esempio, si consideri il batch autonomo seguente:  
   
 ```  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
- Per impedire la generazione di un piano di esecuzione parallelo su questa query, creare la seguente guida di piano e impostare l'hint per la query `MAXDOP` su `1` nel parametro `@hints`.  
+ Per impedire la generazione di un piano di esecuzione parallelo su questa query, creare la seguente guida di piano e impostare l'hint per la query `MAXDOP` su `1` nel parametro `@hints` .  
   
 ```  
 sp_create_plan_guide   
@@ -109,32 +113,32 @@ sp_create_plan_guide
   
 -   L'opzione di database PARAMETERIZATION è impostata su SIMPLE (impostazione predefinita), ma si desidera che una classe di query venga sottoposta a parametrizzazione forzata.  
   
-## Requisiti di corrispondenza per la guida di piano  
+## <a name="plan-guide-matching-requirements"></a>Requisiti di corrispondenza per la guida di piano  
  Le guide di piano sono definite a livello di ambito del database in cui vengono create. Pertanto, è possibile far corrispondere alla query solo le guide di piano presenti nel database corrente al momento dell'esecuzione della query. Ad esempio, se [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è il database corrente e viene eseguita la query seguente:  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- È possibile far corrispondere alla query solo le guide di piano nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Se tuttavia il database corrente è [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e vengono eseguite le istruzioni seguenti:  
+ È possibile far corrispondere alla query solo le guide di piano nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Se tuttavia il database corrente è [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e vengono eseguite le istruzioni seguenti:  
   
  `USE DB1;`  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- È possibile far corrispondere alla query solo le guide di piano in `DB1`, poiché la query è in esecuzione nel contesto di `DB1`.  
+ È possibile far corrispondere alla query solo le guide di piano in `DB1` , poiché la query è in esecuzione nel contesto di `DB1`.  
   
- Per guide di piano basate su SQL o TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fa corrispondere i valori per gli argomenti @module_or_batch e @params a una query confrontando i due valori carattere per carattere. Per questo motivo è necessario immettere il testo esattamente come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve nel batch.  
+ Per guide di piano basate su SQL o TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue la corrispondenza tra i valori per gli argomenti @module_or_batch e @params e una query, confrontando i due valori carattere per carattere. Per questo motivo è necessario immettere il testo esattamente come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve nel batch.  
   
- Se @type = 'SQL' e @module_or_batch vengono impostate su NULL, il valore di @module_or_batch viene impostato al valore di @stmt. Di conseguenza, il valore per *statement_text* deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna.  
+ Se @type = 'SQL' e @module_or_batch vengono impostate su NULL, il valore di @module_or_batch viene impostato sul valore di @stmt. Di conseguenza, il valore per *statement_text* deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna.  
   
  Quando è possibile applicare sia una guida di piano normale (SQL o OBJECT) sia una guida di piano TEMPLATE a un'istruzione, verrà utilizzata solo la guida di piano normale.  
   
 > [!NOTE]  
->  Il batch contenente l'istruzione sulla quale si desidera creare una guida di piano non può contenere un'istruzione USE *database*.  
+>  Il batch contenente l'istruzione sulla quale si desidera creare una guida di piano non può contenere un'istruzione USE *database* .  
   
-## Effetto delle guide di piano sulla cache dei piani  
+## <a name="plan-guide-effect-on-the-plan-cache"></a>Effetto delle guide di piano sulla cache dei piani  
  La creazione di una guida di piano su un modulo rimuove il piano di query per il dato modulo dalla cache dei piani. La creazione di una guida di piano di tipo OBJECT o SQL su un batch rimuove il piano di query per un batch con lo stesso valore hash. La creazione di una guida di piano di tipo TEMPLATE rimuove tutti i batch a istruzione singola dalla cache dei piani all'interno del database.  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Attività|Argomento|  
 |----------|-----------|  
@@ -144,10 +148,10 @@ sp_create_plan_guide
 |Viene descritto come includere un piano di query fisso in una guida di piano.|[Applicare un piano di query fisso a una guida di piano](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Viene descritto come specificare hint per la query in una guida di piano.|[Associazione degli hint per le query a una guida di piano](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
 |Viene descritto come visualizzare le proprietà di una guida di piano.|[Visualizzare le proprietà delle guide di piano](../../relational-databases/performance/view-plan-guide-properties.md)|  
-|Viene descritto come utilizzare SQL Server Profiler per creare e testare guide di piano.|[Utilizzo di SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
+|Viene descritto come utilizzare SQL Server Profiler per creare e testare guide di piano.|[Usare SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Viene descritto come convalidare una guida di piano.|[Convalidare le guide di piano dopo l'aggiornamento](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
@@ -155,3 +159,4 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
+

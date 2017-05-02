@@ -1,32 +1,36 @@
 ---
-title: "Creare un account di Posta elettronica database. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Posta elettronica database [SQL Server], account"
-  - "account [Posta elettronica database]"
+title: Creare un account di Posta elettronica database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], accounts
+- accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare un account di Posta elettronica database.
+# <a name="create-a-database-mail-account"></a>Creare un account di Posta elettronica database.
   Per creare un account di Posta elettronica database, utilizzare la **Configurazione guidata Posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
+-   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
--   **Per creare un account di Posta elettronica database usando: ** [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To Create a Database Mail Account, using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Passaggi successivi per configurare Posta elettronica database](#FollowUp)  
+-   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   

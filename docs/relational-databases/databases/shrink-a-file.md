@@ -1,31 +1,35 @@
 ---
-title: "Compattare un file | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "compattazione di file"
-  - "diminuzione delle dimensioni di file"
-  - "database [SQL Server], compattazione"
-  - "riduzione delle dimensioni di file"
-  - "dimensioni [SQL Server], file"
-  - "dimensioni di file [SQL Server]"
+title: Compattare un file | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compattare un file
+# <a name="shrink-a-file"></a>Compattare un file
   In questo argomento si illustra come compattare un file di dati o di log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
@@ -59,15 +63,15 @@ caps.handback.revision: 25
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner**.  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per compattare un file di dati o di log  
+#### <a name="to-shrink-a-data-or-log-file"></a>Per compattare un file di dati o di log  
   
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
-2.  Espandere **Database**, quindi fare clic con il pulsante destro del mouse sul database che si desidera compattare.  
+2.  Espandere **Database** , quindi fare clic con il pulsante destro del mouse sul database che si desidera compattare.  
   
 3.  Scegliere **Compatta**dal menu **Attività**, quindi fare clic su **File**.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per compattare un file di dati o di log  
+#### <a name="to-shrink-a-data-or-log-file"></a>Per compattare un file di dati o di log  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Compattare un database](../../relational-databases/databases/shrink-a-database.md)   
  [Eliminare file di dati o file di log da un database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

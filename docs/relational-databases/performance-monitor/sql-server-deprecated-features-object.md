@@ -1,30 +1,34 @@
 ---
-title: "Oggetto SQL Server:Deprecated Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Deprecated Features"
-  - "contatori delle prestazioni [SQL Server], funzionalità deprecate"
-  - "deprecazione [SQL Server], contatori delle prestazioni"
-  - "Deprecated Features - oggetto"
+title: Oggetto Deprecated Features di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetto SQL Server:Deprecated Features
+# <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Il valore di questi contatori è disponibile anche tramite l'istruzione seguente:  
   
@@ -33,18 +37,18 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';  
 ```  
 
-La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQL Server.
+La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQL Server.
 
 |**Contatore SQL Server Deprecated Features**|Description|  
 |-------------|-----------------|  
 |**Utilizzo**|Utilizzo delle funzionalità dall'ultimo avvio di SQL Server.|
   
- Nella tabella seguente vengono descritte le istanze del contatore Caratteristiche deprecate di SQL Server.  
+ Nella tabella seguente vengono descritte le istanze del contatore Caratteristiche deprecate di SQL Server.  
   
-|Istanze del contatore SQL Server Deprecated Features|Descrizione|  
+|Istanze del contatore SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
-|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituirla con `SELECT column_list FROM` *\< nome_funzione>*`()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
+|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituirla con `SELECT column_list FROM` *< nome_funzione>*`()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
 |"@" e nomi che iniziano con "@@" come identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con @ o @@. Non usare @ o @@ o nomi che iniziano con @@ come identificatori. Si verifica una volta per ogni compilazione.|  
 |ADDING TAPE DEVICE|È stata rilevata la caratteristica deprecata sp_addumpdevice'**tape**'. In alternativa, usare sp_addumpdevice'**disk**'. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
@@ -60,7 +64,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |CREATE TRIGGER WITH APPEND|È stata rilevata un'istruzione CREATE TRIGGER con la clausola WITH APPEND. Ricreare l'intero trigger. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
 |CREATE_DROP_DEFAULT|È stata rilevata la sintassi CREATE DEFAULT o DROP DEFAULT. Riscrivere il comando usando l'opzione DEFAULT di CREATE TABLE o ALTER TABLE. Si verifica una volta per ogni compilazione.|  
 |CREATE_DROP_RULE|È stata rilevata la sintassi CREATE RULE. Riscrivere il comando usando vincoli. Si verifica una volta per ogni compilazione.|  
-|Tipi di dati: text, ntext o image|Sono stati rilevati i tipi di dati **text**, **ntext** o **image**. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image**. Si verifica una volta per ogni query.|  
+|Tipi di dati: text, ntext o image|Sono stati rilevati i tipi di dati **text**, **ntext**o **image** . Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
 ||Numero totale di volte in cui il livello di compatibilità di un database è stato modificato in 80. Pianificare l'aggiornamento del database e dell'applicazione prima della versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità 80.|  
 |Livello di compatibilità 100, 110 del database. 120|Numero totale di volte in cui il livello di compatibilità di un database è stato modificato. Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità deprecato.|  
 |DATABASE_MIRRORING|Rilevamento di riferimenti alla funzionalità di mirroring del database. Pianificare l'aggiornamento dei gruppi di disponibilità AlwaysOn oppure, se si esegue un'edizione di SQL Server che non supporta questi gruppi, pianificare la migrazione al log shipping.|  
@@ -76,7 +80,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |Algoritmo hash deprecato|Usare gli algoritmo MD2, MD4, MD5, SHA o SHA1.|  
 |Algoritmo DESX|È stata rilevata una sintassi che usano l'algoritmo di crittografia DESX. Usare un algoritmo diverso per la crittografia. Si verifica una volta per ogni compilazione.|  
 |dm_fts_active_catalogs|Il contatore dm_fts_active_catalogs indica sempre 0 perché alcune colonne della vista sys.dm_fts_active_catalogs non sono deprecate. Per monitorare una colonna deprecata, utilizzare il contatore specifico della colonna, ad esempio dm_fts_active_catalogs.is_paused.|  
-|dm_fts_active_catalogs.is_paused|È stata rilevata la colonna is_paused della vista a gestione dinamica [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md). Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
+|dm_fts_active_catalogs.is_paused|È stata rilevata la colonna is_paused della vista a gestione dinamica [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) . Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |dm_fts_active_catalogs.previous_status|È stata rilevata la colonna previous_status della vista a gestione dinamica sys.dm_fts_active_catalogs. Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |dm_fts_active_catalogs.previous_status_description|È stata rilevata la colonna previous_status_description della vista a gestione dinamica sys.dm_fts_active_catalogs. Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |dm_fts_active_catalogs.row_count_in_thousands|È stata rilevata la colonna row_count_in_thousands della vista a gestione dinamica sys.dm_fts_active_catalogs. Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
@@ -84,7 +88,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |dm_fts_active_catalogs.status_description|È stata rilevata la colonna status_description della vista a gestione dinamica sys.dm_fts_active_catalogs. Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |dm_fts_active_catalogs.worker_count|È stata rilevata la colonna worker_count della vista a gestione dinamica sys.dm_fts_active_catalogs. Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |dm_fts_memory_buffers|Il contatore dm_fts_memory_buffers indica sempre 0 perché la maggior parte delle colonne della vista sys.dm_fts_memory_buffers non è deprecata. Per monitorare la colonna deprecata, utilizzare il contatore specifico della colonna dm_fts_memory_buffers.row_count.|  
-|dm_fts_memory_buffers.row_count|È stata rilevata la colonna row_count della vista a gestione dinamica [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md). Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
+|dm_fts_memory_buffers.row_count|È stata rilevata la colonna row_count della vista a gestione dinamica [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) . Evitare di usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |DROP INDEX con nome in due parti|La sintassi DROP INDEX contiene la sintassi del formato *table_name.index_name* in DROP INDEX. Sostituire con la sintassi *index_name* ON *table_name* nell'istruzione DROP INDEX. Si verifica una volta per ogni compilazione.|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|È stata rilevata l'istruzione CREATE o ALTER ENDPOINT con l'opzione FOR SOAP. I servizi Web XML nativi sono deprecati. Usare Windows Communications Foundation (WCF) o ASP.NET.|  
 |EXT_endpoint_webmethods|È stata rilevata la vista sys.endpoint_webmethods. I servizi Web XML nativi sono deprecati. Usare Windows Communications Foundation (WCF) o ASP.NET.|  
@@ -97,7 +101,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |fn_servershareddrives|È stata compilata la funzione fn_servershareddrives. Utilizzare sys.dm_io_cluster_shared_drives. Si verifica una volta per ogni compilazione.|  
 |fn_virtualservernodes|È stata compilata la funzione fn_virtualservernodes. Utilizzare sys.dm_os_cluster_nodes. Si verifica una volta per ogni compilazione.|  
 |fulltext_catalogs|Il contatore fulltext_catalogs indica sempre 0 perché alcune colonne della vista sys.fulltext_catalogs non sono deprecate. Per monitorare una colonna deprecata, utilizzare il contatore specifico della colonna, ad esempio fulltext_catalogs.data_space_id. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
-|fulltext_catalogs.data_space_id|È stata rilevata la colonna data_space_id della vista del catalogo [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md). Non usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
+|fulltext_catalogs.data_space_id|È stata rilevata la colonna data_space_id della vista del catalogo [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) . Non usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |fulltext_catalogs.file_id|È stata rilevata la colonna file_id della vista del catalogo sys.fulltext_catalogs. Non usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |fulltext_catalogs.path|È stata rilevata la colonna path della vista del catalogo sys.fulltext_catalogs. Non usare questa colonna. Si verifica ogni volta che l'istanza del server rileva un riferimento alla colonna.|  
 |FULLTEXTCATALOGPROPERTY('LogSize')|È stata rilevata la proprietà LogSize della funzione FULLTEXTCATALOGPROPERTY. Evitare di usare questa proprietà.|  
@@ -123,7 +127,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |Nome di colonna in più di due parti|Una query usano un nome in tre o quattro parti nell'elenco di colonne. Modificare la query in modo che utilizzi nomi in due parti conformi allo standard. Si verifica una volta per ogni compilazione.|  
 |Più hint di tabella senza virgola|È stato usato uno spazio come separatore tra hint di tabella. Usare una virgola. Si verifica una volta per ogni compilazione.|  
 |NOLOCK o READUNCOMMITTED in UPDATE o DELETE|È stato rilevato l'hint di tabella NOLOCK o READUNCOMMITTED nella clausola FROM di un'istruzione UPDATE o DELETE. Rimuovere l'hint di tabella NOLOCK o READUNCOMMITTED dalla clausola FROM.|  
-|Operatori non ANSI *= o =\* outer join|È stata rilevata un'istruzione che usa la sintassi join *= o =\*. Riscrivere le istruzioni in modo che utilizzino la sintassi join ANSI. Si verifica una volta per ogni compilazione.|  
+|Operatori non ANSI *= o =\* outer join|È stata rilevata un'istruzione che usa la sintassi join *= o =\* . Riscrivere le istruzioni in modo che utilizzino la sintassi join ANSI. Si verifica una volta per ogni compilazione.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Sono stati rilevati riferimenti alla vista deprecata sys.numbered_procedure_parameters. Non usare. Si verifica una volta per ogni compilazione.|  
 |numbered_procedures|Sono stati rilevati riferimenti alla vista deprecata sys.numbered_procedures. Non usare. Si verifica una volta per ogni compilazione.|  
@@ -131,7 +135,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |OLEDB per connessioni ad hoc|SQLOLEDB non è un provider supportato. Per le connessioni ad hoc, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
 |PERMISSIONS|Sono stati rilevati riferimenti alla funzione intrinseca PERMISSIONS. Eseguire una query su sys.fn_my_permissions. Si verifica una volta per ogni query.|  
 |ProcNums|È stata rilevata la sintassi deprecata ProcNums. Riscrivere le istruzioni per rimuovere i riferimenti. Si verifica una volta per ogni compilazione.|  
-|READTEXT|È stata rilevata la sintassi READTEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**. Si verifica una volta per ogni query.|  
+|READTEXT|È stata rilevata la sintassi READTEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text** . Si verifica una volta per ogni query.|  
 |RESTORE DATABASE o LOG WITH DBO_ONLY|È stata rilevata la sintassi RESTORE … WITH DBO_ONLY. In alternativa, usare RESTORE … RESTRICTED_USER.|  
 |RESTORE DATABASE o LOG WITH MEDIAPASSWORD|È stata rilevata la sintassi RESTORE … WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
 |RESTORE DATABASE o LOG WITH PASSWORD|È stata rilevata la sintassi RESTORE … WITH PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
@@ -176,7 +180,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |sp_configure 'set working set size'|È stata rilevata l'opzione set working set size di sp_configure Le dimensioni del working set non sono più configurabili. Non usare. Si verifica una volta per ogni query.|  
 |sp_control_dbmasterkey_password|La stored procedure sp_control_dbmasterkey_password non controlla se una chiave master è esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password usata nella stored procedure sp_control_dbmasterkey_password deve essere una delle password usate per crittografare la chiave master del database.|  
 |sp_create_removable|È stata rilevata la procedura sp_create_removable. In alternativa, usare CREATE DATABASE. Si verifica una volta per ogni query.|  
-|sp_db_vardecimal_storage_format|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal**. Usare la compressione dei dati.|  
+|sp_db_vardecimal_storage_format|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal** . Usare la compressione dei dati.|  
 |sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. In alternativa, usare ALTER DATABASE … SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
 |sp_dbfixedrolepermission|È stata rilevata la procedura sp_dbfixedrolepermission. Non usare. Si verifica una volta per ogni query.|  
 |sp_dboption|È stata rilevata la procedura sp_dboption. In alternativa, usare ALTER DATABASE e DATABASEPROPERTYEX. Si verifica una volta per ogni compilazione.|  
@@ -194,7 +198,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |sp_droprole|È stata rilevata la procedura sp_droprole. In alternativa, usare DROP ROLE. Si verifica una volta per ogni query.|  
 |sp_droptype|È stata rilevata la procedura sp_droptype. In alternativa, usare DROP TYPE.|  
 |sp_dropuser|È stata rilevata la procedura sp_dropuser. In alternativa, usare DROP USER. Si verifica una volta per ogni query.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal**. Utilizzare la compressione dati e sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal** . Utilizzare la compressione dati e sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|È stata rilevata la procedura sp_fulltext_catalog. In alternativa, usare CREATE/ALTER/DROP FULLTEXT CATALOG. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_column|È stata rilevata la procedura sp_fulltext_column. In alternativa, usare ALTER FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_database|È stata rilevata la procedura sp_fulltext_database. In alternativa, usare ALTER DATABASE. Si verifica una volta per ogni compilazione.|  
@@ -264,26 +268,27 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di S
 |sysusers|Sono stati rilevati riferimenti a sysusers. Utilizzare sys.database_principals. Si verifica una volta per ogni compilazione.|  
 |Hint di tabella senza WITH|È stata rilevata un'istruzione che usano hint di tabella ma non la parola chiave WITH. Modificare le istruzioni in modo che includano la parola WITH. Si verifica una volta per ogni compilazione.|  
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
-|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image**. Si verifica una volta per ogni query.|  
-|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image**. Si verifica una volta per ogni query.|  
-|TIMESTAMP|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato **timestamp** in un'istruzione DDL. In alternativa, usare il tipo di dati **rowversion**.|  
-|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image**. Si verifica una volta per ogni query.|  
+|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
+|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
+|TIMESTAMP|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato **timestamp** in un'istruzione DDL. In alternativa, usare il tipo di dati **rowversion** .|  
+|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  
-|Formato di archiviazione vardecimal|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal**. Usare la compressione dei dati.|  
+|Formato di archiviazione vardecimal|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal** . Usare la compressione dei dati.|  
 |XMLDATA|È stata rilevata la sintassi FOR XML. Usare la generazione XSD per le modalità RAW e AUTO. Non sono disponibili sostituzioni per la modalità esplicita. Si verifica una volta per ogni compilazione.|  
 |XP_API|È stata rilevata un'istruzione di una stored procedure estesa. Non usare.|  
 |xp_grantlogin|È stata rilevata la procedura xp_grantlogin. In alternativa, usare CREATE LOGIN. Si verifica una volta per ogni compilazione.|  
 |xp_loginconfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
 |xp_revokelogin|È stata rilevata la procedura xp_revokelogin. In alternativa, usare ALTER LOGIN DISABLE o DROP LOGIN. Si verifica una volta per ogni compilazione.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità del Motore di database deprecate in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funzionalità deprecate della ricerca full-text in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe di evento Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Classe di evento Deprecation Final Support](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Funzionalità del motore di database non più usate in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Funzionalità della ricerca full-text non più supportate in SQL Server 2016](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [Funzionalità della ricerca full-text non più supportate in SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Utilizzare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

@@ -1,32 +1,36 @@
 ---
-title: "Aggiunta di dipendenze a una risorsa di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dipendenze di risorsa [SQL Server]"
-  - "clustering di failover [SQL Server], dipendenze"
-  - "cluster [SQL Server], dipendenze"
-  - "dipendenze [SQL Server], clustering"
+title: Aggiungere dipendenze a una risorsa di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource dependencies [SQL Server]
+- failover clustering [SQL Server], dependencies
+- clusters [SQL Server], dependencies
+- dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aggiunta di dipendenze a una risorsa di SQL Server
+# <a name="add-dependencies-to-a-sql-server-resource"></a>Aggiunta di dipendenze a una risorsa di SQL Server
   In questo argomento viene descritto come aggiungere dipendenze a una risorsa dell'istanza del cluster di failover AlwaysOn tramite lo snap-in Gestione cluster di failover. Lo snap-in Gestione cluster di failover è l'applicazione di gestione cluster per il servizio Windows Server Failover Clustering (WSFC).  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Prerequisiti](#Prerequisites)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
   
--   **Per aggiungere una dipendenza a una risorsa SQL Server utilizzando:** [Gestore cluster di failover di Windows](#WinClusManager)  
+-   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 33
   
 -   Condivisioni di file e risorse di stampa. Quando si installano risorse di tipo condivisione file o cluster di stampa, è consigliabile non salvarle nelle stesse risorse di disco fisico del computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], perché potrebbero verificarsi cali delle prestazioni e perdita di servizio nel computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Considerazioni relative a MS DTC: dopo l'installazione del sistema operativo e la configurazione dell'istanza del cluster di failover, è necessario configurare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) per il funzionamento in un cluster utilizzando lo snap-in Gestione cluster di failover. Se non si configura MS DTC per il clustering, l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà bloccata, tuttavia una configurazione non corretta di MS DTC può influire sulla funzionalità dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Considerazioni relative a MS DTC: dopo l'installazione del sistema operativo e la configurazione dell'istanza del cluster di failover, è necessario configurare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) per il funzionamento in un cluster utilizzando lo snap-in Gestione cluster di failover. Se non si configura MS DTC per il clustering, l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non verrà bloccata, tuttavia una configurazione non corretta di MS DTC può influire sulla funzionalità dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
      Se si installa MS DTC nel gruppo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono disponibili altre risorse dipendenti da MS DTC, quest'ultimo non sarà disponibile se tale gruppo è offline o si verifica un failover. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di inserire MS DTC nel proprio gruppo con la propria risorsa disco fisica, se possibile.  
   

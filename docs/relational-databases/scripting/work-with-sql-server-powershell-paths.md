@@ -1,27 +1,31 @@
 ---
-title: "Utilizzo di percorsi di SQL Server PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Usare i percorsi di SQL Server PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di percorsi di SQL Server PowerShell
+# <a name="work-with-sql-server-powershell-paths"></a>Utilizzo di percorsi di SQL Server PowerShell
   Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../../includes/ssde-md.md)] , è possibile eseguire operazioni o recuperare informazioni utilizzando i metodi e le proprietà dell'oggetto di gestione di [!INCLUDE[ssDE](../../includes/ssde-md.md)] associato al nodo in questione.  
   
 1.  [Prima di iniziare](#BeforeYouBegin)  
   
-2.  **Per utilizzare un nodo di percorso:**  [Elenco di metodi e proprietà](#ListPropMeth), [Utilizzo di metodi e proprietà](#UsePropMeth)  
+2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../../includes/ssde-md.md)] è possibile eseguire due tipi di azioni:  
@@ -35,9 +39,9 @@ caps.handback.revision: 11
 ##  <a name="ListPropMeth"></a> Elenco di metodi e proprietà  
  **Elenco di metodi e proprietà**  
   
- Per visualizzare i metodi e le proprietà disponibili per specifici oggetti o classi di oggetti, usare il cmdlet **Get-Member**.  
+ Per visualizzare i metodi e le proprietà disponibili per specifici oggetti o classi di oggetti, usare il cmdlet **Get-Member** .  
   
-### Esempi: elencare metodi e proprietà  
+### <a name="examples-listing-methods-and-properties"></a>Esempi: elencare metodi e proprietà  
  In questo esempio viene impostata una variabile di Windows PowerShell sulla classe SMO <xref:Microsoft.SqlServer.Management.Smo.Database> e vengono elencati i metodi e le proprietà:  
   
 ```  
@@ -67,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  Per eseguire operazioni su oggetti di un percorso di provider [!INCLUDE[ssDE](../../includes/ssde-md.md)] è possibile utilizzare metodi e proprietà SMO.  
   
-### Esempi: utilizzo di metodi e proprietà  
+### <a name="examples-using-methods-and-properties"></a>Esempi: utilizzo di metodi e proprietà  
  In questo esempio viene usata la proprietà dello **schema** SMO per ottenere un elenco delle tabelle dallo schema Sales di AdventureWorks2012:  
   
 ```  
@@ -94,7 +98,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Provider PowerShell per SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Spostarsi all'interno dei percorsi di SQL Server PowerShell](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)   
  [Conversione di URN in percorsi di provider di SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

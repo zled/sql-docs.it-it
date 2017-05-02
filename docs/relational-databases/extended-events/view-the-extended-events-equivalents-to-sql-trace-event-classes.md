@@ -1,36 +1,40 @@
 ---
-title: "Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Traccia SQL, equivalenti degli eventi estesi"
-  - "eventi estesi [SQL Server], equivalenti Traccia SQL"
-  - "eventi estesi [SQL Server], eventi configurabili dall'utente"
+title: Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Se si desidera utilizzare gli eventi estesi per raccogliere dati degli eventi equivalenti a colonne e classi di evento di Traccia SQL, è utile comprendere in che modo viene eseguito il mapping degli eventi di Traccia SQL a eventi e azioni degli eventi estesi.  
   
  È possibile utilizzare la procedura seguente per visualizzare gli eventi e le azioni degli eventi estesi equivalenti a ogni evento di Traccia SQL e alle colonne associate.  
   
-## Per visualizzare gli eventi estesi equivalenti agli eventi di Traccia SQL tramite l'editor di query  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Per visualizzare gli eventi estesi equivalenti agli eventi di Traccia SQL tramite l'editor di query  
   
--   Dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire la query seguente:  
+-   Dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eseguire la query seguente:  
   
     ```  
     USE MASTER;  
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   Per le classi di eventi di Traccia SQL configurabili dall'utente (da UserConfigurable:1 a UserConfigurable:9), la funzionalità Eventi estesi usa un singolo evento in sostituzione di tali classi. Il nome dell'evento è user_event. Questo evento viene generato usando sp_trace_generateevent, che è la stessa stored procedure usata da Traccia SQL. L'evento user_event viene restituito indipendentemente dall'ID evento passato alla stored procedure. Viene tuttavia restituito un campo event_id come parte dei dati dell'evento. In questo modo, è possibile compilare un predicato basato sull'ID evento. Se, ad esempio, si usa UserConfigurable:0 (event ID = 82) nel codice, è possibile aggiungere l'evento user_event alla sessione e specificare un predicato di 'event_id = 82'. Non è quindi necessario modificare il codice perché la stored procedure sp_trace_generateevent genera l'evento user_event degli eventi estesi e la classe di evento di Traccia SQL equivalente.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

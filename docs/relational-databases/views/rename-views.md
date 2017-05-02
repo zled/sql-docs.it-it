@@ -1,25 +1,29 @@
 ---
-title: "Rinominare viste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viste [SQL Server], ridenominazione"
-  - "ridenominazione di viste"
+title: Rinominare viste | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Rinominare viste
+# <a name="rename-views"></a>Rinominare viste
   È possibile rinominare una vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!WARNING]  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo la rinomina di una vista](#FollowUp)  
+-   **Follow Up:**  [After renaming a view](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare una vista  
+#### <a name="to-rename-a-view"></a>Per rinominare una vista  
   
 1.  In **Esplora oggetti**espandere il database contenente la vista da rinominare, quindi espandere la cartella **Vista** .  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 17
   
  Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) e [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la rinomina di una vista  
+##  <a name="FollowUp"></a> Completamento: Dopo la rinomina di una vista  
  Assicurarsi che per tutti gli oggetti, script e applicazioni che fanno riferimento al nome obsoleto della vista venga usato il nuovo nome.  
   
   

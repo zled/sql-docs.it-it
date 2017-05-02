@@ -1,42 +1,46 @@
 ---
-title: "Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "posta elettronica [SQL Server], informazioni sullo stato"
-  - "posta [SQL Server], informazioni sullo stato"
-  - "Posta elettronica database [SQL Server], stato del messaggio"
-  - "informazioni sullo stato [Posta elettronica database]"
+title: Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- e-mail [SQL Server], status information
+- mail [SQL Server], status information
+- Database Mail [SQL Server], message status
+- status information [Database Mail]
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 691f6b69f1921d6710eba29d85b9120f39a686c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database
+# <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database
   In questo argomento viene illustrato come controllare lo stato del messaggio di posta elettronica inviato utilizzando Posta elettronica database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Prima di iniziare:**  
   
--   **Per visualizzare lo stato della posta elettronica inviata utilizzando Posta elettronica database, utilizzando:**  [Transact-SQL](#TsqlProcedure)  
+-   **To view the status of the e-mail sent using Database Mail, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
- Posta elettronica database conserva copie dei messaggi di posta elettronica in uscita e le visualizza nelle viste **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems** e **sysmail_faileditems** del database **msdb**. Il programma esterno Posta elettronica database registra l'attività e visualizza il log tramite il registro eventi applicazioni di Windows e la vista **sysmail_event_log** nel database **msdb**. Per controllare lo stato di un messaggio di posta elettronica, è necessario eseguire una query su questa tabella. I messaggi di posta elettronica possono avere uno dei quattro stati seguenti: **inviato**, **non inviato**, **nuovo tentativo in corso** e **non riuscito**.  
+ Posta elettronica database conserva copie dei messaggi di posta elettronica in uscita e le visualizza nelle viste **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**e **sysmail_faileditems** del database **msdb** . Il programma esterno Posta elettronica database registra l'attività e visualizza il log tramite il registro eventi applicazioni di Windows e la vista **sysmail_event_log** nel database **msdb** . Per controllare lo stato di un messaggio di posta elettronica, è necessario eseguire una query su questa tabella. I messaggi di posta elettronica possono avere uno dei quattro stati seguenti: **inviato**, **non inviato**, **nuovo tentativo in corso**e **non riuscito**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per visualizzare lo stato della posta elettronica inviata utilizzando Posta elettronica**  
   
 1.  Selezionare dalla tabella **sysmail_allitems** specificando i messaggi di interesse tramite **mailitem_id** o **sent_status**.  
   
-2.  Per controllare lo stato restituito dal programma esterno per i messaggi di posta elettronica, unire in join **sysmail_allitems** alla vista **sysmail_event_log** nella colonna **mailitem_id**, come illustrato nella sezione seguente.  
+2.  Per controllare lo stato restituito dal programma esterno per i messaggi di posta elettronica, unire in join **sysmail_allitems** alla vista **sysmail_event_log** nella colonna **mailitem_id** , come illustrato nella sezione seguente.  
   
      Per impostazione predefinita, il programma esterno non registra le informazioni relative ai messaggi inviati correttamente. Per registrare tutti i messaggi, impostare il livello di registrazione su dettagliato utilizzando la pagina **Configurazione parametri di sistema** di **Configurazione guidata Posta elettronica database**.  
   
@@ -67,7 +71,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Controlli e registrazione di Posta elettronica database](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   

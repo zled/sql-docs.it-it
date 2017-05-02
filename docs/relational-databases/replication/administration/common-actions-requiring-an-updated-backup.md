@@ -1,29 +1,33 @@
 ---
-title: "Operazioni comuni che richiedono il backup del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recupero [replica di SQL Server], azioni che richiedono un backup"
-  - "ripristino [replica di SQL Server], azioni che richiedono un backup"
-  - "backup [replica di SQL Server], azioni che richiedono un backup"
+title: Operazioni comuni che richiedono il backup del database | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Operazioni comuni che richiedono il backup del database
-  Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono i backup del log, eseguire un backup della pubblicazione, distribuzione, sottoscrizione, **msdb**, e **master** database dopo aver apportato modifiche alla topologia o schema di replica.  
+# <a name="common-actions-requiring-an-updated-backup"></a>Operazioni comuni che richiedono il backup del database
+  Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono backup del log, effettuare un backup dei database di pubblicazione, di distribuzione e di sottoscrizione, nonché dei database **msdb**e **master** dopo avere apportato modifiche alla topologia o allo schema di replica.  
   
-## Database di pubblicazione  
+## <a name="publication-database"></a>Database di pubblicazione  
  È necessario eseguire il backup del database di pubblicazione in seguito al completamento delle operazioni seguenti:  
   
 -   Creazione di nuove pubblicazioni.  
@@ -36,7 +40,7 @@ caps.handback.revision: 32
   
 -   Modifica dello schema in una tabella pubblicata.  
   
--   Esecuzione di esecuzione degli script su richiesta con [sp_addscriptexec & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
+-   Esecuzione di uno script su richiesta con [sp_addscriptexec &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
   
 -   Modifica delle proprietà di un articolo.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
 -   Disabilitazione della replica.  
   
-## Database di distribuzione  
+## <a name="distribution-database"></a>Database di distribuzione  
  È necessario eseguire il backup del database di distribuzione in seguito al completamento delle operazioni seguenti:  
   
 -   Creazione o modifica dei profili agenti di replica.  
@@ -57,7 +61,7 @@ caps.handback.revision: 32
   
 -   Un nuovo intervallo di valori Identity viene assegnato dalla caratteristica di gestione automatica degli intervalli di valori Identity.  
   
-## Database di sottoscrizione  
+## <a name="subscription-database"></a>Database di sottoscrizione  
  È necessario eseguire il backup del database di sottoscrizione in seguito al completamento delle operazioni seguenti:  
   
 -   Modifica delle proprietà di una sottoscrizione.  
@@ -68,8 +72,8 @@ caps.handback.revision: 32
   
 -   Disabilitazione della replica.  
   
-## Database msdb  
- Backup di **msdb** database di sistema nel nodo appropriato dopo:  
+## <a name="msdb-database"></a>Database msdb  
+ È necessario eseguire il backup del database di sistema **msdb** nel nodo appropriato in seguito al completamento delle operazioni seguenti:  
   
 -   Attivazione o disabilitazione della replica.  
   
@@ -89,8 +93,8 @@ caps.handback.revision: 32
   
 -   Aggiunta o eliminazione di una sottoscrizione trasformabile (nel server di distribuzione e nel Sottoscrittore).  
   
-## Database master  
- Backup di **master** database di sistema nel nodo appropriato dopo:  
+## <a name="master-database"></a>Database master  
+ È necessario eseguire il backup del database di sistema **master** nel nodo appropriato in seguito al completamento delle operazioni seguenti:  
   
 -   Attivazione o disabilitazione della replica.  
   
@@ -104,8 +108,8 @@ caps.handback.revision: 32
   
 -   Attivazione o disabilitazione di un server di pubblicazione nel server di pubblicazione di distribuzione (nel server di pubblicazione e nel server di distribuzione).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [Eseguire il backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

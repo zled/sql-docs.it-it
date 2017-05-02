@@ -1,24 +1,29 @@
 ---
-title: "Architettura e gestione del log delle transazioni di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Architettura del log delle transazioni"
+title: Guida sull&quot;architettura e gestione del log delle transazioni di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log architecture guide
+- guide, transaction log architecture
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.lasthandoff: 04/11/2017
+
 ---
-# Architettura e gestione del log delle transazioni di SQL Server
+# <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In ogni database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è incluso un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Il log delle transazioni è un componente fondamentale del database e, in caso di errore di sistema, può essere necessario per ripristinare la coerenza del database. In questa guida vengono fornite informazioni sull'architettura fisica e logica del log delle transazioni. Le informazioni sull'architettura consentono di gestire più efficacemente i log delle transazioni.  
@@ -62,7 +67,7 @@ caps.handback.revision: 3
   
  In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ogni file di log fisico viene diviso internamente in diversi file di log virtuali. I file di log virtuali non hanno dimensioni fisse e non è previsto un numero fisso di file di log virtuali per un file di log fisico. Il [!INCLUDE[ssDE](../includes/ssde-md.md)] definisce dinamicamente le dimensioni dei file di log virtuali durante la creazione o l'estensione. Il [!INCLUDE[ssDE](../includes/ssde-md.md)] tende a mantenere ridotto il numero di file virtuali. Le dimensioni dei file virtuali dopo l'estensione di un file di log corrispondono alla somma delle dimensioni del log esistente e del nuovo incremento del file. Le dimensioni o il numero di file di log virtuali non possono essere configurati o impostati dagli amministratori.  
   
- I file di log virtuali influenzano le prestazioni del sistema solo se i file di log fisici sono definiti da valori bassi di *size* e *growth_increment*. Il valore *size* indica le dimensioni iniziali del file di log mentre il valore *growth_increment* indica la quantità di spazio aggiunta al file ogni volta che è necessario dello spazio nuovo. Se le dimensioni dei file di log aumentano in modo considerevole in seguito a una serie di piccoli incrementi, in essi verrà incluso un numero elevato di file di log virtuali. Questo potrebbe provocare un rallentamento delle operazioni di avvio del database e di backup e ripristino del log. È consigliabile assegnare ai file di log un valore *size* simile a quello delle dimensioni finali necessarie e un valore *growth_increment* relativamente alto. Per altre informazioni su questi parametri, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md).  
+ I file di log virtuali influenzano le prestazioni del sistema solo se i file di log fisici sono definiti da valori bassi di *size* e *growth_increment* . Il valore *size* indica le dimensioni iniziali del file di log mentre il valore *growth_increment* indica la quantità di spazio aggiunta al file ogni volta che è necessario dello spazio nuovo. Se le dimensioni dei file di log aumentano in modo considerevole in seguito a una serie di piccoli incrementi, in essi verrà incluso un numero elevato di file di log virtuali. Questo potrebbe provocare un rallentamento delle operazioni di avvio del database e di backup e ripristino del log. È consigliabile assegnare ai file di log un valore *size* simile a quello delle dimensioni finali necessarie e un valore *growth_increment* relativamente alto. Per altre informazioni su questi parametri, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  Il log delle transazioni è un file circolare. Si consideri, ad esempio, un database con un file di log fisico diviso in quattro file di log virtuali. Quando viene creato il database, il file di log logico comincia all'inizio del file di log fisico. Vengono aggiunti nuovi record di log alla fine del log logico, che si espandono verso la fine del log fisico. Il troncamento del log libera tutti i log virtuali i cui record vengono visualizzati tutti davanti al numero minimo di sequenza del file di log (MinLSN, Minimum Log Sequence Number) per il recupero. *MinLSN* è il numero di sequenza del file di log del record di log meno recente necessario per un corretto rollback a livello di database. Il log delle transazioni del database di esempio sarebbe simile a quello illustrato nella figura seguente.  
   
@@ -74,14 +79,14 @@ caps.handback.revision: 3
   
  Questo ciclo viene ripetuto all'infinito, a condizione che la fine del log logico non raggiunga mai l'inizio del log stesso. Se i vecchi record di log vengono troncati abbastanza frequentemente in modo da lasciare sempre spazio sufficiente per i nuovi record di log creati fino al checkpoint successivo, il log non viene mai riempito completamente. Se, tuttavia, la fine del log logico raggiunge l'inizio del log stesso, può verificarsi uno dei due eventi indicati di seguito:  
   
--   Se è abilitata l'impostazione FILEGROWTH per il log e sul disco vi è spazio disponibile, il file viene esteso in base al valore specificato nel parametro *growth_increment* e i nuovi record di log vengono aggiunti all'estensione. Per altre informazioni sull'impostazione FILEGROWTH, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md).  
+-   Se è abilitata l'impostazione FILEGROWTH per il log e sul disco vi è spazio disponibile, il file viene esteso in base al valore specificato nel parametro *growth_increment* e i nuovi record di log vengono aggiunti all'estensione. Per altre informazioni sull'impostazione FILEGROWTH, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 -   Se l'impostazione FILEGROWTH non è attiva oppure se lo spazio libero sul disco in cui risiede il file di log è inferiore a quello specificato in *growth_increment*, viene generato un errore 9002.  
   
  Se il log include più file di log fisici, il log logico utilizzerà tutti i file di log fisici prima di tornare all'inizio del primo file di log fisico.  
   
-### Troncamento del log  
- Il troncamento del log è essenziale per evitare il riempimento del log. Il troncamento del log comporta l'eliminazione dei file di log virtuali inattivi dal log delle transazioni logico di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], liberando spazio nel log logico per il riutilizzo da parte del log delle transazioni fisico. Se un log delle transazioni non viene mai troncato, è possibile che le sue dimensioni aumentino fino a occupare tutto lo spazio su disco allocato ai file di log fisici. Tuttavia, prima che sia possibile troncare il log, è necessario eseguire un'operazione su checkpoint. Tramite un checkpoint vengono scritte le pagine modificate in memoria correnti, note come pagine dirty, e le informazioni sul log delle transazioni dalla memoria sul disco. Quando viene eseguito il checkpoint, la parte inattiva del log delle transazioni viene contrassegnata come riutilizzabile. Successivamente, tale parte inattiva potrà essere liberata mediante il troncamento del log. Per altre informazioni sui checkpoint, vedere [Checkpoint di database &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+### <a name="log-truncation"></a>Troncamento del log  
+ Il troncamento del log è essenziale per evitare il riempimento del log. Il troncamento del log comporta l'eliminazione dei file di log virtuali inattivi dal log delle transazioni logico di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , liberando spazio nel log logico per il riutilizzo da parte del log delle transazioni fisico. Se un log delle transazioni non viene mai troncato, è possibile che le sue dimensioni aumentino fino a occupare tutto lo spazio su disco allocato ai file di log fisici. Tuttavia, prima che sia possibile troncare il log, è necessario eseguire un'operazione su checkpoint. Tramite un checkpoint vengono scritte le pagine modificate in memoria correnti, note come pagine dirty, e le informazioni sul log delle transazioni dalla memoria sul disco. Quando viene eseguito il checkpoint, la parte inattiva del log delle transazioni viene contrassegnata come riutilizzabile. Successivamente, tale parte inattiva potrà essere liberata mediante il troncamento del log. Per altre informazioni sui checkpoint, vedere [Checkpoint di database &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  Nelle figure seguenti viene illustrato un log delle transazioni prima e dopo il troncamento. Nella prima figura viene illustrato un log delle transazioni che non è mai stato troncato. Attualmente, il log logico utilizza quattro file di log virtuali. Il log logico inizia prima del primo file di log virtuale e termina al log virtuale 4. Il record MinLSN si trova nel log virtuale 3. I log virtuali 1 e 2 contengono solo record di log inattivi. Questi record possono essere troncati. Il log virtuale 5 è ancora inutilizzato e non fa parte del log logico corrente.  
   
@@ -115,22 +120,22 @@ caps.handback.revision: 3
   
  Per limitare il numero di backup dei log che è necessario ripristinare, è fondamentale eseguire regolarmente il backup dei dati. Ad esempio, è possibile pianificare un backup completo del database una volta la settima e backup differenziali del database una volta al giorno.  
   
-### Catena di log  
+### <a name="the-log-chain"></a>Catena di log  
  Una sequenza continua di backup del log è denominata *catena di log*. Una catena di log ha inizio con un backup completo del database. In genere, una nuova catena di log viene creata solo quando si esegue il backup del database per la prima volta oppure dopo il passaggio dal modello di recupero con registrazione minima al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Se si sceglie di non sovrascrivere i set di backup esistenti durante la creazione di un backup completo del database, la catena di log esistente rimane intatta. Con la catena di log intatta, è possibile ripristinare il database da qualsiasi backup completo del database nel set di supporti, seguito da tutti i backup del log successivi tramite il punto di recupero specifico. Il punto di recupero può essere la fine dell'ultimo backup del log o un punto di recupero specifico in uno dei backup del log. Per altre informazioni, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Per ripristinare un database al punto in cui si è verificato l'errore, è necessario che la catena di log sia intatta. In altre parole, è necessario che una sequenza non interrotta di backup del log delle transazioni si estenda fino al punto di errore. Il punto in cui la sequenza del log deve iniziare dipende dal tipo di backup dei dati che si sta ripristinando, ovvero un backup del database, parziale o di file. Nel caso di un backup del database o parziale, la sequenza di backup del log si deve estendere dalla fine di un backup del database o parziale. Nel caso di un set di backup di file, la sequenza di backup del log si deve estendere dall'inizio di un intero set di backup di file. Per altre informazioni, vedere [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Ripristinare i backup di log  
+### <a name="restore-log-backups"></a>Ripristinare i backup di log  
  Il ripristino di un backup del log determina il rollforward delle modifiche registrate nel log delle transazioni in modo da ricreare l'esatto stato del database esistente all'inizio dell'operazione di backup del log. Quando si ripristina un database, è necessario ripristinare i backup del log creati dopo il backup completo del database ripristinato oppure dall'inizio del primo backup di file ripristinato. In genere, dopo il ripristino del backup dei dati o del backup differenziale più recente, è necessario ripristinare una serie di backup del log fino al punto di recupero desiderato. Recuperare quindi il database. Verrà eseguito il rollback di tutte le transazioni incomplete nel momento in cui è iniziato il recupero e verrà attivata la modalità online per il database. Dopo il recupero del database, non è possibile ripristinare altri backup. Per altre informazioni, vedere [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
 
-## Relazione tra i checkpoint e la parte attiva del log  
+## <a name="checkpoints-and-the-active-portion-of-the-log"></a>Relazione tra i checkpoint e la parte attiva del log  
 
 I checkpoint scaricano le pagine di dati dirty dalla cache buffer del database corrente al disco riducendo al minimo la parte attiva del log da elaborare durante un recupero con registrazione completa del database, durante il quale vengono eseguiti i tipi seguenti di azioni:
 
 * Rollforward dei record di log relativi alle modifiche non scaricate su disco prima dell'arresto del sistema.
 * Rollback di tutte le modifiche associate a transazioni incomplete, ad esempio transazioni per cui non esiste un record di log COMMIT o ROLLBACK.
 
-### Funzionamento dei checkpoint
+### <a name="checkpoint-operation"></a>Funzionamento dei checkpoint
 
 Un checkpoint esegue i processi seguenti nel database:
 
@@ -150,7 +155,7 @@ Un checkpoint esegue i processi seguenti nel database:
 * Scrive nel file di log un record che indica la fine del checkpoint.
 * Scrive il numero LSN corrispondente all'inizio della catena nella pagina di avvio del database.
 
-#### Attività che causano un checkpoint
+#### <a name="activities-that-cause-a-checkpoint"></a>Attività che causano un checkpoint
 
 I checkpoint vengono eseguiti nelle situazioni seguenti:
 
@@ -162,11 +167,11 @@ I checkpoint vengono eseguiti nelle situazioni seguenti:
 * Viene eseguito un backup del database.
 * Viene eseguita un'attività che richiede la chiusura di un database. Ad esempio, AUTO_CLOSE è impostata su ON e la connessione al database dell'ultimo utente viene chiusa, oppure viene eseguita una modifica a un'opzione di database che richiede un riavvio del database.
 
-### Checkpoint automatici
+### <a name="automatic-checkpoints"></a>Checkpoint automatici
 
 Il motore di database di SQL Server genera checkpoint automatici. L'intervallo fra i checkpoint automatici dipende dalla quantità di spazio di log utilizzata e dal tempo trascorso dall'ultimo checkpoint. Questo intervallo di tempo è estremamente variabile e se al database vengono apportate poche modifiche può essere molto lungo. I checkpoint automatici possono anche essere eseguiti di frequente, se si modificano grandi quantità di dati.
 
-Usare l'opzione di configurazione del server dell'**intervallo di recupero** per calcolare l'intervallo tra i checkpoint automatici per tutti i database in un'istanza del server. Questa opzione specifica il periodo di tempo massimo che può essere usato dal motore di database per recuperare un database durante un riavvio del sistema. Il motore di database stima il numero di record di log che è possibile elaborare nell'**intervallo di recupero** durante un'operazione di recupero. 
+Usare l'opzione di configurazione del server dell' **intervallo di recupero** per calcolare l'intervallo tra i checkpoint automatici per tutti i database in un'istanza del server. Questa opzione specifica il periodo di tempo massimo che può essere usato dal motore di database per recuperare un database durante un riavvio del sistema. Il motore di database stima il numero di record di log che è possibile elaborare nell' **intervallo di recupero** durante un'operazione di recupero. 
 
 L'intervallo fra i checkpoint automatici dipende anche dal modello di recupero:
 
@@ -186,7 +191,7 @@ I checkpoint automatici troncano la parte non utilizzata del log delle transazio
 L'istruzione CHECKPOINT offre ora l'argomento facoltativo checkpoint_duration che specifica il tempo necessario in secondi per il completamento dei checkpoint. Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../t-sql/language-elements/checkpoint-transact-sql.md).
 
 
-### Log attivo
+### <a name="active-log"></a>log attivo
 
 La parte del file di log compresa tra il numero MinLSN e l'ultimo record di log scritto viene definita parte attiva del log o log attivo. ed è necessaria per eseguire il recupero con registrazione completa del database. Non è possibile troncare nessuna parte del log attivo. Tutti i record del log devono essere troncati dalle parti del log che precedono il numero MinLSN.
 
@@ -196,19 +201,19 @@ Nella figura seguente viene illustrata una versione semplificata della parte fin
 
 LSN 148 è l'ultimo record del log delle transazioni. Quando è stato elaborato il checkpoint registrato in corrispondenza del numero LSN 147, era stato eseguito il commit di Tran 1 e Tran 2 era l'unica transazione attiva. Pertanto, il primo record di log di Tran 2 è il meno recente di una transazione attiva al momento dell'ultimo checkpoint e, di conseguenza, il numero MinLSN corrisponde a LSN 142, ovvero al record di inizio della transazione Tran 2.
 
-### Transazioni con esecuzione prolungata
+### <a name="long-running-transactions"></a>Transazioni con esecuzione prolungata
 
 Il log attivo deve includere tutte le parti di tutte le transazioni di cui non è stato eseguito il commit. Se un'applicazione avvia una transazione e non ne esegue il commit o il rollback, il motore di database non fa aumentare il numero MinLSN. Ciò può causare due tipi di problemi:
 
-* Se il sistema viene arrestato dopo che la transazione ha eseguito numerose modifiche di cui non è stato eseguito il commit, la fase di recupero del riavvio successivo può richiedere tempi notevolmente più lunghi rispetto al valore specificato dall'opzione dell'**intervallo di recupero**.
+* Se il sistema viene arrestato dopo che la transazione ha eseguito numerose modifiche di cui non è stato eseguito il commit, la fase di recupero del riavvio successivo può richiedere tempi notevolmente più lunghi rispetto al valore specificato dall'opzione dell' **intervallo di recupero** .
 * È possibile che il log raggiunga dimensioni considerevoli in quanto non può essere troncato dopo il numero MinLSN. Ciò si verifica anche se il database utilizza il modello di recupero con registrazione minima, in base al quale il log delle transazioni viene in genere troncato in corrispondenza di ogni checkpoint automatico.
 
-### Transazioni di replica
+### <a name="replication-transactions"></a>Transazioni di replica
 
 L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutti i database configurati per la replica transazionale e copia le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione. Il log attivo deve contenere tutte le transazioni contrassegnate per la replica, ma non ancora recapitate al database di distribuzione. Se tali transazioni non vengono replicate tempestivamente, potrebbero impedire il troncamento del log. Per altre informazioni, vedere [Replica transazionale](../relational-databases/replication/transactional/transactional-replication.md).
 
   
-## Ulteriori informazioni  
+## <a name="additional-reading"></a>Ulteriori informazioni  
  Per ulteriori informazioni sul log delle transazioni, vedere gli articoli e i documenti riportati di seguito.  
   
  [Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
@@ -216,3 +221,4 @@ L'agente di lettura log esegue il monitoraggio del log delle transazioni di tutt
  [Gestione del log delle transazioni di SQL Server di Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
+

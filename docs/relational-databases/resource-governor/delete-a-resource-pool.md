@@ -1,32 +1,36 @@
 ---
-title: "Eliminare un pool di risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, eliminare un pool di risorse"
-  - "pool di risorse [SQL Server], eliminare"
+title: Eliminare un pool di risorse | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool delete
+- resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare un pool di risorse
+# <a name="delete-a-resource-pool"></a>Eliminare un pool di risorse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   È possibile eliminare un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Per eliminare un pool di risorse usando: ** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
+-   **To delete a resource pool, using:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Non è possibile eliminare un pool di risorse contenente gruppi di carico di lavoro.  
@@ -56,7 +60,7 @@ caps.handback.revision: 9
   
 2.  Eseguire l'istruzione **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Esempio (Transact-SQL)  
+### <a name="example-transact-sql"></a>Esempio (Transact-SQL)  
  Nell'esempio seguente viene eliminato un gruppo di carico di lavoro denominato `poolAdhoc`.  
   
 ```  
@@ -66,7 +70,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Creare un pool di risorse](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -81,3 +85,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

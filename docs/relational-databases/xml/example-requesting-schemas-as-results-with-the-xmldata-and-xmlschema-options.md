@@ -1,28 +1,32 @@
 ---
-title: "Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modalità RAW, richiesta di esempio di schema"
-  - "modalità RAW, con XMLDATA e XMLSCHEMA"
+title: 'Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, requesting schema example
+- RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA
   La query seguente restituisce lo schema XML-DATA che contiene la descrizione della struttura del documento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 USE AdventureWorks2012;  
@@ -51,7 +55,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1`, cambia a ogni esecuzione della query. L'identificatore è composto da **Schema*n***, dove ***n*** è un numero intero.  
+>  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1` , cambia a ogni esecuzione della query. L'identificatore è composto da **Schema*n*** dove ***n*** è un numero intero.  
   
  Specificando l'opzione `XMLSCHEMA` è possibile richiedere lo schema XSD per il risultato.  
   
@@ -122,7 +126,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

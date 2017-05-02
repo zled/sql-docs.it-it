@@ -1,38 +1,42 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabelle [SQL Server], backup dei dati"
-  - "backup [SQL Server]"
-  - "backup di database [SQL Server]"
-  - "tipi di backup [SQL Server]"
-  - "backup di dati [SQL Server]"
-  - "backup di tabelle [SQL Server]"
-  - "ripristini di database [SQL Server], backup"
-  - "backup [SQL Server], informazioni sul backup"
-  - "ripristino [SQL Server], tipi di backup"
-  - "backup [SQL Server], informazioni"
-  - "backups [SQL Server], table-level backups unsupported"
+title: Panoramica del backup (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
-  In questo argomento viene presentato il componente di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esecuzione dei backup del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è essenziale per la protezione dei dati. In questa discussione vengono analizzati i tipi di backup e le relative restrizioni. In questo argomento vengono inoltre presentati i dispositivi e i supporti di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+  In questo argomento viene presentato il componente di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esecuzione dei backup del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è essenziale per la protezione dei dati. In questa discussione vengono analizzati i tipi di backup e le relative restrizioni. In questo argomento vengono inoltre presentati i dispositivi e i supporti di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-## Termini
+## <a name="terms"></a>Termini
  
  **eseguire il backup**  
  Operazione di copia di dati o record di log da un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dal relativo log delle transazioni in un dispositivo di backup, ad esempio un disco, per creare un backup dei dati o del log.  
@@ -46,10 +50,10 @@ caps.handback.revision: 84
  **[ripristino](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
  Processo multifase che copia tutti i dati e le pagine di log da un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un database specificato ed esegue il rollforward di tutte le transazioni registrate nel backup applicando le modifiche registrate in modo da aggiornare i dati.  
   
- ## Tipi di backup  
+ ## <a name="types-of-backups"></a>Tipi di backup  
   
  **[backup di sola copia](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
- Backup per utilizzo speciale indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Backup per utilizzo speciale indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **backup dei dati**   
  Backup dei dati in un database completo (backup del database), database parziale (backup parziale) o set di file di dati o di filegroup (backup di file).  
@@ -58,7 +62,7 @@ caps.handback.revision: 84
  Backup di un database. I backup completi del database rappresentano l'intero database al momento del completamento del backup. I backup differenziali del database contengono solo le modifiche apportate al database a partire dal backup del database più recente.  
   
  **[backup differenziale](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- Backup dei dati basato sull'ultimo backup completo di un database completo o parziale o di un set di file di dati o filegroup (*base differenziale*) che contiene solo gli extent di dati modificati rispetto alla base differenziale.  
+ Backup dei dati basato sull'ultimo backup completo di un database completo o parziale o di un set di file di dati o filegroup ( *base differenziale*) che contiene solo gli extent di dati modificati rispetto alla base differenziale.  
   
  Un backup parziale differenziale registra solo gli extent di dati che sono stati modificati nei filegroup dopo il backup parziale precedente, denominato base del backup differenziale.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 84
  **[backup parziale](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  Contiene dati provenienti solo da una parte dei filegroup in un database, compresi i dati del filegroup primario, di ogni filegroup con accesso di lettura/scrittura e di eventuali file di sola lettura specificati opzionalmente.  
   
-## Termini e definizioni relativi ai supporti di backup  
+## <a name="backup-media-terms-and-definitions"></a>Termini e definizioni relativi ai supporti di backup  
   
  **[dispositivo di backup](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
  Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Microsoft Azure e viene usato il formato **URL** per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -100,7 +104,7 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  Restrizioni alle operazioni di backup 
  Il backup può verificarsi mentre il database è online e in uso. Si applicano tuttavia le restrizioni seguenti.  
   
-### Non è possibile eseguire il backup dei dati offline  
+### <a name="cannot-back-up-offline-data"></a>Non è possibile eseguire il backup dei dati offline  
  Se si fa riferimento in modo implicito o esplicito a dati offline, l'operazione di backup ha esito negativo. Alcuni esempi comuni sono i seguenti:  
   
 -   Si richiede un backup completo del database, ma un filegroup del database è offline. Poiché tutti i filegroup vengono inclusi implicitamente in un backup completo del database, questa operazione ha esito negativo.  
@@ -113,7 +117,7 @@ caps.handback.revision: 84
   
  In genere, un backup del log riesce anche se uno o più file di dati non sono disponibili. Tuttavia, se uno o più file contengono modifiche con registrazione minima delle operazioni bulk apportate nel modello di recupero con registrazione minima delle operazioni bulk, è necessario che tutti i file siano online perché il backup riesca.  
   
-### Restrizioni di concorrenza   
+### <a name="concurrency-restrictions"></a>Restrizioni di concorrenza   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza un processo di backup online per consentire un backup del database mentre questo è in uso. Durante un backup, è possibile eseguire la maggior parte delle operazioni, ad esempio istruzioni INSERT, UPDATE o DELETE. Tuttavia, se si tenta di avviare un'operazione di backup durante la creazione o l'eliminazione di un file di database, l'operazione verrà rimandata fino al completamento dell'operazione di creazione o di eliminazione, oppure verrà annullata a causa di un timeout.  
   
  Le operazioni che non possono essere eseguite durante un backup del database o del log delle transazioni sono le seguenti:  
@@ -131,34 +135,34 @@ caps.handback.revision: 84
   
 -   [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   [Specificare un disco o un nastro come destinazione di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [Eliminazione di un dispositivo di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
+-   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
--   [Impostazione della data di scadenza di un backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Impostare la data di scadenza di un backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
 -   [Visualizzare i file di dati e i file di log in un set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [Visualizzazione delle proprietà e del contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [Ripristino di un backup da un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Creare un backup**  
   
 > [!NOTE]  
->  Per eseguire backup parziali o di sola copia è necessario usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md)rispettivamente con l'opzione PARTIAL o COPY_ONLY.  
+>  Per eseguire backup parziali o di sola copia è necessario usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) rispettivamente con l'opzione PARTIAL o COPY_ONLY.  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
--   [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   [Creazione di un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [Abilitare o disabilitare il checksum di backup durante il backup o il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [Specifica se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [Specifica se un'operazione di backup o ripristino viene arrestata o prosegue in seguito a un errore &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## e altro ancora. 
+## <a name="and-more"></a>e altro ancora. 
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

@@ -1,26 +1,30 @@
 ---
-title: "Backup database (pagina Opzioni di backup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.options.f1"
-  - "swb.backupdatabase.options.f1"
+title: Backup database (pagina Opzioni di backup) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.options.f1
+- swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 593d725942bb3c049bb71a0a8f1ad8975863c3fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup database (pagina Opzioni di backup)
-  Utilizzare la pagina **Opzioni di backup** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni di backup del database.  
+# <a name="back-up-database-backup-options-page"></a>Backup database (pagina Opzioni di backup)
+  Utilizzare la pagina  **Opzioni di backup** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni di backup del database.  
   
  **Per creare un backup utilizzando SQL Server Management Studio**  
   
@@ -34,9 +38,9 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente facendo clic sul pulsante **Script** e quindi selezionando una destinazione per lo script.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
-### Set di backup  
+### <a name="backup-set"></a>Set di backup  
  Le opzioni del pannello **Set di backup** consentono di specificare informazioni facoltative sul set di backup creato dall'operazione di backup.  
   
  **Nome**  
@@ -44,7 +48,7 @@ caps.handback.revision: 62
   
  Per informazioni sui set di backup, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Descrizione**  
+ **Description**  
  Consente di immettere una descrizione del set di backup.  
   
  **Scadenza set di backup**  
@@ -52,10 +56,10 @@ caps.handback.revision: 62
   
 |||  
 |-|-|  
-|**After**|Consente di specificare il numero di giorni che devono trascorrere prima che il set di backup scada e possa venire sovrascritto. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.<br /><br /> Il valore predefinito per la scadenza del backup corrisponde al valore impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)**. Per accedere a questa opzione fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e selezionare **Proprietà**. Fare quindi clic sulla pagina **Impostazioni database** della finestra di dialogo **Proprietà server**.|  
+|**After**|Consente di specificare il numero di giorni che devono trascorrere prima che il set di backup scada e possa venire sovrascritto. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.<br /><br /> Il valore predefinito per la scadenza del backup corrisponde al valore impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** . Per accedere a questa opzione fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e selezionare **Proprietà**. Fare quindi clic sulla pagina **Impostazioni database** della finestra di dialogo **Proprietà server** .|  
 |**On**|Consente di specificare la data di scadenza del set di backup per la possibile sovrascrittura.|  
   
-### Compressione  
+### <a name="compression"></a>Compressione  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o versioni successive) supporta la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Imposta compressione backup**  
@@ -63,12 +67,12 @@ caps.handback.revision: 62
   
 |||  
 |-|-|  
-|**Utilizza l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server.<br /><br /> Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup**. Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> **\*\* Importante \*\*** Per impostazione predefinita, la compressione aumenta significativamente l'uso della CPU e la CPU aggiuntiva usata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per altre informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Utilizza l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server.<br /><br /> Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup** . Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> **\*\* Importante \*\*** Per impostazione predefinita, la compressione aumenta significativamente l'uso della CPU e la CPU aggiuntiva usata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Non comprimere il backup**|Fare clic su questa opzione per creare un backup non compresso, indipendentemente dall'impostazione predefinita a livello di server.|  
   
-### Crittografia  
- Per creare un backup crittografato, selezionare la casella di controllo **Crittografa backup**. Selezionare un algoritmo di crittografia da utilizzare per il passaggio di crittografia e specificare un certificato o una chiave asimmetrica da un elenco di chiavi asimmetriche o di certificati esistenti. Gli algoritmi di crittografia disponibili sono:  
+### <a name="encryption"></a>Crittografia  
+ Per creare un backup crittografato, selezionare la casella di controllo **Crittografa backup** . Selezionare un algoritmo di crittografia da utilizzare per il passaggio di crittografia e specificare un certificato o una chiave asimmetrica da un elenco di chiavi asimmetriche o di certificati esistenti. Gli algoritmi di crittografia disponibili sono:  
   
 -   AES 128  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 62
 >   
 >  Sono supportate solo le chiavi che si trovano in Extensible Key Management (EKM).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento Broker:Forwarded Message Dropped | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Dropped - classe di evento"
+title: Classe di evento Broker:Forwarded Message Dropped | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d63f05d5f476dcb03398872759b92e21d04c99c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Broker:Forwarded Message Dropped
+# <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Broker:Forwarded Message Dropped quando Service Broker elimina un messaggio di cui è previsto l'inoltro.  
   
-## Colonne di dati della classe di evento Broker:Forwarded Message Dropped  
+## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Forwarded Message Dropped  
   
 |Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -54,12 +58,12 @@ caps.handback.revision: 26
 |Operazione completata|**int**|Intervallo di tempo in cui il messaggio è stato attivo. Quando questo valore è uguale o maggiore a quello della durata (TTL), il messaggio viene eliminato.|23|No|  
 |TargetLoginName|**nvarchar**|Indirizzo di rete a cui doveva essere inoltrato il messaggio.|42|No|  
 |TargetUserName|**nvarchar**|Nome del servizio di origine per il messaggio.|39|No|  
-|TextData|**ntext**|Descrizione del motivo per cui il messaggio è stato eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|1|Sì|  
+|TextData|**ntext**|Descrizione del motivo per cui il messaggio è stato eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
   
  La colonna TextData dell'evento contiene una descrizione del motivo per cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eliminato il messaggio.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

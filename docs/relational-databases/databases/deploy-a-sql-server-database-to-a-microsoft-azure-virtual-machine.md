@@ -1,45 +1,49 @@
 ---
-title: "Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "Distribuire un database"
-  - "Distribuire alla macchina virtuale di Azure"
-  - "Eseguire la migrazione ad Azure"
-  - "Macchina virtuale di Windows Azure"
-  - "Eseguire la migrazione alla macchina virtuale di Azure"
-  - "Eseguire la migrazione al cloud"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "Distribuisci database - procedura guidata"
-  - "Distribuire un database di SQL Server in Azure"
-  - "Macchina virtuale di Azure"
+title: Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure | Microsoft Docs
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
   Usare la procedura guidata **Distribuisci il database in una macchina virtuale di Microsoft Azure** per distribuire un database da un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Windows Azure. La procedura guidata usa un'operazione di backup completo del database, quindi copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
   
  Non è possibile usare la procedura guidata per i backup differenziali perché non sovrascrive un database esistente avente lo stesso nome di database. Per sostituire un database esistente sulla VM, è innanzitutto necessario eliminare il database esistente o modificare il nome del database. Se si verifica un conflitto di denominazione tra il nome del database per un'operazione di distribuzione in transito e un database esistente sulla VM, la procedura guidata suggerirà un nome di database aggiunto per il database in transito per consentire il completamento dell'operazione.  
@@ -90,9 +94,9 @@ caps.handback.revision: 30
   
 -   Se si distribuisce il database a un macchina virtuale esistente, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere configurata per rimanere in attesa su una porta TCP/IP.  
   
--   L'immagine di una macchina virtuale di Microsoft Azure o di una raccolta che si intende usare per la creazione della macchina virtuale deve disporre dell'[adattatore del cloud di SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) configurato e in esecuzione.  
+-   L'immagine di una macchina virtuale di Microsoft Azure o di una raccolta che si intende usare per la creazione della macchina virtuale deve disporre dell' [adattatore del cloud di SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) configurato e in esecuzione.  
   
--   È necessario configurare un endpoint aperto per un [adattatore del cloud di SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) nel gateway di Microsoft Azure con porta privata 11435.  
+-   È necessario configurare un endpoint aperto per un [adattatore del cloud di SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) nel gateway di Microsoft Azure con porta privata 11435.  
   
  Se inoltre si intende distribuire il database in una macchina virtuale di Microsoft Azure esistente, è necessario essere in grado di fornire anche quanto indicato di seguito:  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 30
   
 -   Credenziali dell'amministratore per la macchina virtuale.  
   
--   Credenziali con privilegi dell'operatore di backup nel database che si desidera distribuire, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di origine.  
+-   Credenziali con privilegi dell'operatore di backup nel database che si desidera distribuire, dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine.  
   
  Per altre informazioni sull'esecuzione di SQL Server in macchine virtuali di Microsoft Azure, vedere [Effettuare il provisioning di una macchina virtuale di SQL Server nel portale di Azure](https://msdn.microsoft.com/library/dn133141.aspx) ed [Eseguire la migrazione di un database di SQL Server in una macchina virtuale di Azure](http://msdn.microsoft.com/library/dn133142.aspx).  
   
@@ -115,7 +119,7 @@ Questa funzionalità di distribuzione è destinata solo agli account di archivia
 
  Il limite per le dimensioni del database per questa operazione è di 1 TB.  
   
- Questa funzionalità di distribuzione è disponibile in SQL Server Management Studio per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
+ Questa funzionalità di distribuzione è disponibile in SQL Server Management Studio per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Questa funzionalità di distribuzione è destinata solo ai database utente. La distribuzione dei database di sistema non è supportata.  
   
@@ -220,13 +224,13 @@ Questa funzionalità di distribuzione è destinata solo agli account di archivia
 -   [Risultati](#Results)  
   
 ##  <a name="Introduction"></a> Introduzione 
- Questa pagina descrive la procedura guidata **Distribuisci il database in una macchina virtuale di Microsoft Azure**.  
+ Questa pagina descrive la procedura guidata **Distribuisci il database in una macchina virtuale di Microsoft Azure** .  
   
 -   **Non visualizzare più questa pagina**  
   Selezionare la casella di controllo per evitare che la pagina Introduzione sia visualizzata nuovamente in futuro.  
   
 -   **Avanti**  
-Passa alla pagina **Impostazioni di origine**.  
+Passa alla pagina **Impostazioni di origine** .  
   
 -   **Annulla**  
   Annulla l'operazione e chiude la procedura guidata.  
@@ -274,7 +278,7 @@ Dettagli della connessione per il server.
 Specificare o confermare il nome di un nuovo database. Se il nome del database esiste già nell'istanza di destinazione di SQL Server, specificare un nome di database modificato.  
   
 ##  <a name="Summary"></a> Riepilogo
- Usare questa pagina per esaminare le impostazioni specificate per l'operazione. Per completare l'operazione di distribuzione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di distribuzione e chiudere la procedura guidata, fare clic su **Annulla**.  Facendo clic su **Fine** verrà avviata la pagina **Stato distribuzione**.  È inoltre possibile visualizzare lo stato di avanzamento dal file di log in `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
+ Usare questa pagina per esaminare le impostazioni specificate per l'operazione. Per completare l'operazione di distribuzione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di distribuzione e chiudere la procedura guidata, fare clic su **Annulla**.  Facendo clic su **Fine** verrà avviata la pagina **Stato distribuzione** .  È inoltre possibile visualizzare lo stato di avanzamento dal file di log in `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
   
  Potrebbe essere richiesta l'esecuzione di passaggi manuali per distribuire i dettagli del database al database di SQL Server nella macchina virtuale di Microsoft Azure. Tali passaggi saranno descritti in dettaglio automaticamente.  
   
@@ -283,8 +287,8 @@ Specificare o confermare il nome di un nuovo database. Se il nome del database e
   
  Fare clic su **Fine** per chiudere la procedura guidata.  
   
-## Vedere anche  
- [Adattatore cloud per SQL Server](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [adattatore del cloud di SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Gestione del ciclo di vita del database](../../relational-databases/database-lifecycle-management.md)   
  [Esportazione di un'applicazione livello dati](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importare un file BACPAC per creare un nuovo database utente](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ Specificare o confermare il nome di un nuovo database. Se il nome del database e
  [Preparazione della migrazione a SQL Server in Macchine virtuali di Microsoft Azure](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

@@ -1,32 +1,36 @@
 ---
-title: "Esecuzione di passaggi di Windows PowerShell in SQL Server Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Eseguire passaggi di Windows PowerShell in SQL Server Agent | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae35fb3deecc8b77940ab76d1b0f016f00f39e27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
+# <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
   Utilizzare SQL Server Agent per eseguire script di SQL Server PowerShell a orari pianificati.  
   
-1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **Per eseguire PowerShell da SQL Server Agent, utilizzando:**  [Passaggio processo di PowerShell](#PShellJob), [Passaggio processo del prompt dei comandi](#CmdExecJob)  
+2.  **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   
-## Prima di iniziare  
+## <a name="before-you-begin"></a>Prima di iniziare  
  Sono disponibili molti tipi di passaggi del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ogni tipo è associato a un sottosistema che implementa un ambiente specifico, ad esempio un agente di replica o un ambiente del prompt dei comandi. È possibile codificare gli script di Windows PowerShell, quindi utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per includere gli script nei processi eseguiti in base a orari pianificati o in risposta a eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile eseguire gli script di Windows PowerShell con un passaggio del processo del prompt dei comandi o di PowerShell.  
   
-1.  Usare un passaggio del processo di PowerShell per fare in modo che il sottosistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegua l'utilità **sqlps**, che avvia PowerShell e importa il modulo **sqlps**.  
+1.  Usare un passaggio del processo di PowerShell per fare in modo che il sottosistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegua l'utilità **sqlps** , che avvia PowerShell e importa il modulo **sqlps** .  
   
 2.  Usare un passaggio del processo del prompt dei comandi per eseguire PowerShell.exe e specificare uno script che importa il modulo **sqlps** .  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 10
 ##  <a name="PShellJob"></a> Creare un passaggio del processo di PowerShell  
  **Per creare un passaggio del processo di PowerShell**  
   
-1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](../../ssms/agent/create-jobs.md).  
+1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
   
 2.  Nella finestra di dialogo **Proprietà processo** fare clic sulla pagina **Passaggi** e quindi su **Nuovo**.  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 10
 ##  <a name="CmdExecJob"></a> Creare un passaggio del processo del prompt dei comandi  
  **Per creare un passaggio del processo di CmdExec**  
   
-1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](../../ssms/agent/create-jobs.md).  
+1.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per ulteriori informazioni sulla creazione di un processo, vedere [Creazione di processi](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
   
 2.  Nella finestra di dialogo **Proprietà processo** fare clic sulla pagina **Passaggi** e quindi su **Nuovo**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 10
   
 8.  Fare clic sulla pagina **Avanzate** per impostare le opzioni relative ai passaggi di processo, ad esempio l'operazione da eseguire se il passaggio di processo ha esito positivo o negativo, il numero di tentativi che devono essere eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione del passaggio di processo e il file in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere l'output del passaggio di processo. Solo i membri del ruolo predefinito del server **sysadmin** possono scrivere l'output dei passaggi di processo in un file di sistema operativo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

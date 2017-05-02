@@ -1,32 +1,36 @@
 ---
-title: "Attivit&#224; Pulizia file manutenzione (Piano di manutenzione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.cleanup.f1"
-helpviewer_keywords: 
-  - "Attività Pulizia file manutenzione - finestra di dialogo"
+title: "Attività Pulizia file manutenzione (Piano di manutenzione) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.cleanup.f1
+helpviewer_keywords:
+- Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attivit&#224; Pulizia file manutenzione (Piano di manutenzione)
-  Usare l'**Attività Pulizia file di manutenzione** per rimuovere file obsoleti correlati ai piani di manutenzione, inclusi i report in formato testo creati dai piani di manutenzione e i file di backup del database.  
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>Attività Pulizia file manutenzione (Piano di manutenzione)
+  Usare l' **Attività Pulizia file di manutenzione** per rimuovere file obsoleti correlati ai piani di manutenzione, inclusi i report in formato testo creati dai piani di manutenzione e i file di backup del database.  
   
 > [!NOTE]  
 >  L'attività Pulizia file manutenzione non elimina automaticamente i file nelle sottocartelle della directory specificata. Questa caratteristica riduce la possibilità di un attacco dannoso che utilizzi l'attività Pulizia file manutenzione per eliminare i file. Per eliminare i file nelle sottocartelle di primo livello è necessario selezionare **Includi sottocartelle di primo livello**.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Connessione**  
  Consente di visualizzare la connessione corrente.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 26
  Elimina i report in formato testo relativi a piani di manutenzione eseguiti in precedenza.  
   
  **Elimina file specifico**  
- Consente di eliminare il file specifico indicato nella casella **Nome file**.  
+ Consente di eliminare il file specifico indicato nella casella **Nome file** .  
   
  **Nome file**  
  Percorso e nome del file da eliminare.  
@@ -58,7 +62,7 @@ caps.handback.revision: 26
  Consente di eliminare i file con l'estensione specificata in **Estensione file** dalle sottocartelle di primo livello in **Cartella**.  
   
  **Elimina i file in base alla data del file al momento dell'esecuzione dell'attività**  
- Consente di specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati, indicando un numero e un'unità di tempo nella casella **Elimina i file con data anteriore a**.  
+ Consente di specificare il periodo di memorizzazione minimo trascorso il quale i file verranno eliminati, indicando un numero e un'unità di tempo nella casella **Elimina i file con data anteriore a** .  
   
  **Elimina i file con data anteriore a**  
  Consente di specificare la data minima dei file da eliminare indicando un numero e un'unità di tempo (giorno/i, settimana/e, mese/i o anno/i). I file con data anteriore alla data specificata verranno eliminati.  
@@ -69,7 +73,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
-## Finestra di dialogo Nuova connessione  
+## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 26
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

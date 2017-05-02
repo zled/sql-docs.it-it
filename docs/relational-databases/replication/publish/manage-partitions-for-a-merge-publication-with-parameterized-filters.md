@@ -1,27 +1,31 @@
 ---
-title: "Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partizioni [replica di SQL Server]"
-  - "partizioni della replica di tipo merge [replica di SQL Server], SQL Server Management Studio"
-  - "filtri con parametri [replica di SQL Server], gestione delle partizioni"
+title: Gestire le partizioni di una pubblicazione di tipo merge con filtri con parametri | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [SQL Server replication]
+- merge replication partitions [SQL Server replication], SQL Server Management Studio
+- parameterized filters [SQL Server replication], partition management
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri
-  In questo argomento viene descritto come gestire le partizioni per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). È possibile utilizzare i filtri di riga con parametri per generare partizioni non sovrapposte. È possibile limitare tali partizioni in modo che solo una sottoscrizione riceva una determinata partizione. In questi casi, la presenza di un numero elevato di Sottoscrittori comporta un numero elevato di partizioni, che richiedono anche un numero uguale di snapshot partizionati. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+# <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri
+  In questo argomento viene descritto come gestire le partizioni per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). È possibile utilizzare i filtri di riga con parametri per generare partizioni non sovrapposte. È possibile limitare tali partizioni in modo che solo una sottoscrizione riceva una determinata partizione. In questi casi, la presenza di un numero elevato di Sottoscrittori comporta un numero elevato di partizioni, che richiedono anche un numero uguale di snapshot partizionati. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Contenuto dell'argomento**  
   
@@ -43,44 +47,44 @@ caps.handback.revision: 22
   
 -   Se si crea, come consigliato, uno script per la topologia di replica, gli script di pubblicazione contengono le chiamate di stored procedure necessarie per creare le partizioni di dati. Lo script offre un riferimento per le partizioni create e un modo per ricreare, se necessario, una o più partizioni. Per altre informazioni, vedere [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
--   Se una pubblicazione contiene filtri con parametri che producono sottoscrizioni con partizioni non sovrapposte ed è necessario ricreare un'eventuale sottoscrizione persa, rimuovere la partizione sottoscritta, ricreare la sottoscrizione, quindi ricreare la partizione. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md). La replica genera script di creazione per le partizioni del Sottoscrittore esistenti al momento della generazione di uno script per la creazione della pubblicazione. Per altre informazioni, vedere [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   Se una pubblicazione contiene filtri con parametri che producono sottoscrizioni con partizioni non sovrapposte ed è necessario ricreare un'eventuale sottoscrizione persa, rimuovere la partizione sottoscritta, ricreare la sottoscrizione, quindi ricreare la partizione. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). La replica genera script di creazione per le partizioni del Sottoscrittore esistenti al momento della generazione di uno script per la creazione della pubblicazione. Per altre informazioni, vedere [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Gestire le partizioni nella **partizioni di dati** pagina della **Proprietà pubblicazione - \< pubblicazione>** la finestra di dialogo. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). In questa pagina è possibile creare ed eliminare partizioni, consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot, generare snapshot per una o più partizioni ed eliminare snapshot.  
+ Gestire le partizioni nella pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). In questa pagina è possibile creare ed eliminare partizioni, consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot, generare snapshot per una o più partizioni ed eliminare snapshot.  
   
-#### Per creare una partizione  
+#### <a name="to-create-a-partition"></a>Per creare una partizione  
   
-1.  Nel **partizioni di dati** pagina della **Proprietà pubblicazione - \< pubblicazione>** nella finestra di dialogo fare clic su **Aggiungi**.  
+1.  Nella pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **Aggiungi**.  
   
-2.  Nel **Aggiungi partizione dati** finestra di dialogo immettere un valore per il **HOST_NAME ()** e/o **SUSER_SNAME ()** valore associato alla partizione che si desidera creare.  
+2.  Nella finestra di dialogo **Aggiungi partizione dati** immettere un valore per **HOST_NAME()** e/o un valore **SUSER_SNAME()** associato alla partizione che si desidera creare.  
   
 3.  Facoltativamente, specificare una pianificazione per l'aggiornamento degli snapshot:  
   
-    1.  Selezionare **esecuzione pianificata dell'agente Snapshot per questa partizione per l'esecuzione seguente**  
+    1.  Selezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot per questa partizione**.  
   
     2.  Accettare la pianificazione predefinita per l'aggiornamento degli snapshot oppure fare clic su **Cambia** per specificare una pianificazione diversa.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Per eliminare una partizione  
+#### <a name="to-delete-a-partition"></a>Per eliminare una partizione  
   
 1.  Nella pagina **Partizioni dati** selezionare una partizione della griglia.  
   
 2.  Fare clic su **Elimina**.  
   
-#### Per consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot  
+#### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Per consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot  
   
 1.  Nella pagina **Partizioni dati** selezionare **Definisci automaticamente una partizione e genera uno snapshot, se necessario, quando un nuovo Sottoscrittore cerca di eseguire la sincronizzazione**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Per generare lo snapshot di una partizione  
+#### <a name="to-generate-a-snapshot-for-a-partition"></a>Per generare lo snapshot di una partizione  
   
 1.  Nella pagina **Partizioni dati** selezionare una partizione della griglia.  
   
 2.  Fare clic su **Genera gli snapshot selezionati adesso**.  
   
-#### Per eliminare lo snapshot di una partizione  
+#### <a name="to-clean-up-a-snapshot-for-a-partition"></a>Per eliminare lo snapshot di una partizione  
   
 1.  Nella pagina **Partizioni dati** selezionare una partizione della griglia.  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 22
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Per migliorare la gestione di una pubblicazione con filtri con parametri, è possibile enumerare le partizioni esistenti a livello di programmazione, utilizzando stored procedure di replica. È inoltre possibile creare ed eliminare le partizioni esistenti. È possibile ottenere le informazioni seguenti sulle partizioni esistenti:  
   
--   Come una partizione viene filtrata (utilizzando [SUSER_SNAME & #40; Transact-SQL & #41;](../../../t-sql/functions/suser-sname-transact-sql.md) o [HOST_NAME & #40; Transact-SQL & #41;](../../../t-sql/functions/host-name-transact-sql.md)).  
+-   Modalità in cui una partizione viene filtrata (tramite [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) o [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)).  
   
 -   Nome del processo che genera uno snapshot partizionato.  
   
@@ -97,27 +101,27 @@ caps.handback.revision: 22
   
  Mentre la seconda parte dello snapshot a due parti può essere generata su richiesta quando viene inizializzata una nuova sottoscrizione, le procedure descritte di seguito consentono di controllare il modo in cui tale snapshot viene generato e di effettuare la pregenerazione dello snapshot nel momento più appropriato. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
-#### Per visualizzare informazioni sulle partizioni esistenti  
+#### <a name="to-view-information-on-existing-partitions"></a>Per visualizzare informazioni sulle partizioni esistenti  
   
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_helpmergepartition & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Specificare il nome della pubblicazione per **@publication**. (Facoltativo) Specificare **@suser_sname** o **@host_name** per restituire informazioni solo in base a un solo criterio di filtro.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Specificare il nome della pubblicazione per **@publication**. (Facoltativo) Specificare **@suser_sname** o **@host_name** per ottenere esclusivamente informazioni basate su un solo criterio di filtro.  
   
-#### Per definire una nuova partizione e generare un nuovo snapshot partizionato  
+#### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Per definire una nuova partizione e generare un nuovo snapshot partizionato  
   
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_addmergepartition & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Specificare il nome della pubblicazione per **@publication**e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Specificare il nome della pubblicazione per **@publication**e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
   
-    -   **@suser_sname** : se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME & #40; Transact-SQL & #41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   **@suser_sname**: se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** : se il filtro con parametri è definito dal valore restituito da [HOST_NAME & #40; Transact-SQL & #41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   **@host_name**: se il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
 2.  Creare e inizializzare lo snapshot con parametri per la nuova partizione. Per altre informazioni, vedere [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-#### Per eliminare una partizione  
+#### <a name="to-delete-a-partition"></a>Per eliminare una partizione  
   
-1.  Server di pubblicazione nel database di pubblicazione, eseguire [sp_dropmergepartition & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Specificare il nome della pubblicazione per **@publication** e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Specificare il nome della pubblicazione per **@publication** e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
   
-    -   **@suser_sname** : se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME & #40; Transact-SQL & #41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   **@suser_sname**: se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** : se il filtro con parametri è definito dal valore restituito da [HOST_NAME & #40; Transact-SQL & #41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   **@host_name**: se il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
      Viene inoltre effettuata la rimozione del processo di snapshot e degli eventuali file di snapshot per la partizione.  
   
@@ -130,36 +134,36 @@ caps.handback.revision: 22
   
 -   Ora dell'ultima esecuzione di un processo di snapshot con parametri.  
   
-#### Per visualizzare informazioni sulle partizioni esistenti  
+#### <a name="to-view-information-on-existing-partitions"></a>Per visualizzare informazioni sulle partizioni esistenti  
   
-1.  Creare una connessione al server di pubblicazione utilizzando il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.MergePublication> (classe). Impostare il <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> proprietà per la pubblicazione, quindi impostare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> proprietà per il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creata nel passaggio 1.  
   
-3.  Chiamare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> metodo per ottenere le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Chiamare il <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> metodo e passa il risultato a una matrice di <xref:Microsoft.SqlServer.Replication.MergePartition> oggetti.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> e passare il risultato a una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergePartition>.  
   
-5.  Per ogni <xref:Microsoft.SqlServer.Replication.MergePartition> oggetto nella matrice, ottenere le proprietà di interesse.  
+5.  Per ogni oggetto <xref:Microsoft.SqlServer.Replication.MergePartition> nella matrice, recuperare le proprietà desiderate.  
   
-#### Per eliminare partizioni esistenti  
+#### <a name="to-delete-existing-partitions"></a>Per eliminare partizioni esistenti  
   
-1.  Creare una connessione al server di pubblicazione utilizzando il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Creare un'istanza di <xref:Microsoft.SqlServer.Replication.MergePublication> (classe). Impostare il <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> proprietà per la pubblicazione, quindi impostare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> proprietà per il <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creata nel passaggio 1.  
   
-3.  Chiamare il <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> metodo per ottenere le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Chiamare il <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> metodo e passa il risultato a una matrice di <xref:Microsoft.SqlServer.Replication.MergePartition> oggetti.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> e passare il risultato a una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergePartition>.  
   
-5.  Per ogni <xref:Microsoft.SqlServer.Replication.MergePartition> oggetto nella matrice, determinare se la partizione deve essere eliminata. Questa decisione è in genere in base al valore di <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> proprietà o <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> proprietà.  
+5.  Per ogni oggetto <xref:Microsoft.SqlServer.Replication.MergePartition> nella matrice, determinare se la partizione deve essere eliminata. Questa decisione si basa in genere sul valore della proprietà <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> o <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
   
-6.  Chiamare il <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> metodo il <xref:Microsoft.SqlServer.Replication.MergePublication> oggetto dal passaggio 2. Passare il <xref:Microsoft.SqlServer.Replication.MergePartition> oggetto dal passaggio 5.  
+6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> dell'oggetto <xref:Microsoft.SqlServer.Replication.MergePublication> creato al passaggio 2. Passare l'oggetto <xref:Microsoft.SqlServer.Replication.MergePartition> indicato nel passaggio 5.  
   
 7.  Ripetere il passaggio 6 per ogni partizione eliminata.  
   
-## Vedere anche  
- [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-row-filters.md)   
- [Snapshot per pubblicazioni di tipo merge con filtri con parametri](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

@@ -1,36 +1,40 @@
 ---
-title: "Monitoraggio delle prestazioni di stored procedure compilate in modo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Monitoraggio delle prestazioni di stored procedure compilate in modo nativo | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01302febd187f0b39221a1443284334b8f961ca8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
+# <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
   In questo argomento viene illustrato come è possibile monitorare le prestazioni di stored procedure compilate in modo nativo  
   
-## Utilizzo degli eventi estesi  
+## <a name="using-extended-events"></a>Utilizzo degli eventi estesi  
  Usare l'evento esteso **sp_statement_completed** per tracciare l'esecuzione di una query. Creare una sessione di eventi estesi con questo evento, applicando facoltativamente un filtro a OBJECT_ID per una stored procedure compilata in modo nativo. L'evento esteso viene generato dopo l'esecuzione di ogni query. Il tempo e la durata della CPU segnalati dagli eventi estesi indicano la quantità di CPU utilizzata dalla query e il tempo di esecuzione. Una stored procedure compilata in modo nativo che utilizza un tempo di CPU elevato può presentare problemi di prestazioni.  
   
- È possibile usare **line_number** con **object_id** nell'evento esteso per esaminare la query. È possibile utilizzare la query seguente per recuperare la definizione della routine. Il numero di riga può essere utilizzato per identificare la query all'interno della definizione:  
+ È possibile usare**line_number**con **object_id** nell'evento esteso per esaminare la query. È possibile utilizzare la query seguente per recuperare la definizione della routine. Il numero di riga può essere utilizzato per identificare la query all'interno della definizione:  
   
 ```tsql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Per altre informazioni sull'evento esteso **sp_statement_completed**, vedere l'articolo che spiega [come recuperare l'istruzione che ha causato un evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Per altre informazioni sull'evento esteso **sp_statement_completed** , vedere l'articolo che spiega [come recuperare l'istruzione che ha causato un evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
-## Utilizzo delle viste di gestione dati  
+## <a name="using-data-management-views"></a>Utilizzo delle viste di gestione dati  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la raccolta delle statistiche di esecuzione per le stored procedure compilate in modo nativo, sia a livello di routine sia a livello di query. La raccolta delle statistiche di esecuzione non è abilitata per impostazione predefinita a causa dell'impatto sulle prestazioni.  
   
  Per abilitare e disabilitare la raccolta di statistiche sulle stored procedure compilate in modo nativo, usare [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
@@ -112,7 +116,7 @@ GO
   
  Nel piano di esecuzione stimato per le stored procedure compilate in modo nativo vengono illustrati gli operatori e le espressioni delle query per le query nella routine. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] non supporta tutti gli attributi di SHOWPLAN_XML per le stored procedure compilate in modo nativo. Ad esempio, gli attributi correlati ai costi di Query Optimizer non fanno parte di SHOWPLAN_XML per la routine.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

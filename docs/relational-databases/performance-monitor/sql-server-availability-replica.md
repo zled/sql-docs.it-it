@@ -1,27 +1,31 @@
 ---
-title: "SQL Server, replica di disponibilit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], monitoraggio"
-  - "contatori delle prestazioni [SQL Server], gruppi di disponibilità AlwaysOn"
-  - "SQLServer:Availability Replica"
-  - "gruppi di disponibilità [SQL Server], contatori delle prestazioni"
+title: Oggetto Availability Replica di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- performance counters [SQL Server], AlwaysOn Availability Groups
+- SQLServer:Availability Replica
+- Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 327b70f445a9f794152073a39059165f75fd3cad
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, replica di disponibilit&#224;
+# <a name="sql-server-availability-replica"></a>SQL Server, replica di disponibilità
   L'oggetto prestazione **SQLServer:Availability Replica** contiene contatori delle prestazioni che forniscono informazioni sulle repliche di disponibilità nei gruppi di disponibilità AlwaysOn di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tutti i contatori delle prestazioni delle repliche di disponibilità si applicano sia alla replica primaria che alle repliche secondarie con i contatori di invio/ricezione che riflettono la replica locale. In molti casi, la replica primaria invia la maggior parte dei dati e le repliche secondarie ricevono i dati. Tuttavia, le repliche secondarie inviano gli ACK e altro traffico di background alle repliche primarie. Si noti che in alcuni contatori di una replica di disponibilità viene mostrato un valore zero, a seconda del ruolo corrente della replica locale, ovvero primario o secondario.  
   
 |Nome contatore|Descrizione|  
@@ -36,9 +40,10 @@ caps.handback.revision: 25
 |**Invii alla replica/sec**|Numero di messaggi AlwaysOn inviati alla replica di disponibilità al secondo.|  
 |**Invii al trasporto/sec**|Numero effettivo di messaggi AlwaysOn inviati, tramite la rete, alla replica di disponibilità remota al secondo. Nella replica primaria si tratta del numero di messaggi inviati alla replica secondaria. Nella replica secondaria si tratta del numero di messaggi inviati alla replica primaria.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, replica di database](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
  [Gruppi di disponibilità Always On (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)  
   
   
+

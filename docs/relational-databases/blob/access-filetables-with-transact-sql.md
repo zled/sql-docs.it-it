@@ -1,24 +1,28 @@
 ---
-title: "Accesso a tabelle FileTable tramite Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], accesso ai file con T-SQL"
+title: Accedere a tabelle FileTable tramite Transact-SQL| Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33eb3adc0489d8cb904fee0d47d0586a64b81445
+ms.lasthandoff: 04/11/2017
+
 ---
-# Accesso a tabelle FileTable tramite Transact-SQL
+# <a name="access-filetables-with-transact-sql"></a>Accesso a tabelle FileTable tramite Transact-SQL
   Viene descritto il funzionamento dei comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] DML (Data Manipulation Language) con una tabella FileTable.  
   
 ##  <a name="BasicsInsert"></a> Operazioni INSERT in tabelle FileTable  
@@ -35,7 +39,7 @@ caps.handback.revision: 13
   
 -   Sono consentiti aggiornamenti a tutti i dati definiti dall'utente.  
   
--   Se l'istruzione INSERT imposta **name**, **path_locator**, **parent_path_locator** o gli attributi del file, verranno applicati vincoli definiti dal sistema.  
+-   Se l'istruzione INSERT imposta **name**, **path_locator**, **parent_path_locator**o gli attributi del file, verranno applicati vincoli definiti dal sistema.  
   
 -   Gli aggiornamenti possono essere effettuati sui dati FILESTREAM nella colonna **file_stream** senza influire su alcune delle altre colonne, compresi i timestamp.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 13
   
     -   Viene applicata l'univocità.  
   
-    -   Viene applicata la consistenza dell'albero gerarchico di directory e file, inclusa la coerenza dei valori **path_locator** e **parent_path_locator**.  
+    -   Viene applicata la consistenza dell'albero gerarchico di directory e file, inclusa la coerenza dei valori **path_locator** e **parent_path_locator** .  
   
 -   Non è possibile impostare il valore **is_directory** su true mentre la colonna **file_stream** è impostata su non Null. I dati nella colonna **file_stream** indicano che la riga rappresenta un file e non una directory.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 13
   
 -   Il valore di **last_access_time** non può essere precedente a **last_write_time** e **creation_time**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Caricamento di file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)   
  [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

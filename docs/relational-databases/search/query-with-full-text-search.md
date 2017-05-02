@@ -1,60 +1,45 @@
 ---
-title: "Esecuzione della query con ricerca Full-Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query [ricerca full-text], informazioni sulle query full-text"
-  - "query [ricerca full-text], predicati"
-  - "query full-text [SQL Server], informazioni sulle query full-text"
-  - "ricerca full-text [SQL Server], esecuzione di query su SQL Server"
-  - "query full-text [SQL Server]"
-  - "query [ricerca full-text], funzioni"
+title: Eseguire query con ricerca full-text | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [full-text search], about full-text queries
+- queries [full-text search], predicates
+- full-text queries [SQL Server], about full-text queries
+- full-text search [SQL Server], querying SQL Server
+- full-text queries [SQL Server]
+- queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 80
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 78
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5034ce123455c63718fb41b02450c14ca2f68a0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esecuzione della query con ricerca Full-Text
-  Per definire ricerche full-text, le query full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano i predicati full-text (CONTAINS e FREETEXT) e le funzioni full-text (CONTAINSTABLE e FREETEXTTABLE). Tali predicati e funzioni supportano la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] avanzata che a sua volta supporta vari formati di termini di query. Per scrivere query full-text, è necessario sapere come e quando utilizzare questi predicati e queste funzioni.  
-  
-##  <a name="OV_ft_predicates"></a> Cenni preliminari sui predicati full-text CONTAINS e FREETEXT  
- I predicati CONTAINS e FREETEXT restituiscono un valore TRUE o FALSE. Possono essere utilizzati solo per specificare i criteri di selezione per determinare se una determinata riga corrisponde alla query full-text. Le righe corrispondenti vengono restituite nel set di risultati. CONTAINS e FREETEXT vengono specificati nella clausola WHERE o HAVING di un'istruzione SELECT. Possono essere combinati con qualsiasi altro predicato [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio LIKE e BETWEEN.  
-  
-> [!NOTE]  
->  Per informazioni sulla sintassi e sugli argomenti di questi predicati, vedere [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md).  
-  
- Quando si utilizza CONTAINS o FREETEXT, è possibile specificare una sola colonna, un elenco di colonne o tutte le colonne della tabella in cui eseguire la ricerca. Facoltativamente, è possibile specificare la lingua le cui risorse verranno utilizzate dalla query full-text specificata per il word breaking e lo stemming, le ricerche nel thesaurus e la rimozione di parole non significative.  
-  
- CONTAINS e FREETEXT sono utili per tipi diversi di corrispondenze, come illustrato di seguito:  
-  
--   Utilizzare CONTAINS (o CONTAINSTABLE) per corrispondenze precise o fuzzy (meno precise) a singole parole e frasi, la prossimità di parole entro una certa distanza una dall'altra o corrispondenze ponderate. Quando si utilizza CONTAINS, è necessario specificare almeno una condizione di ricerca che specifichi il testo che si desidera cercare e le condizioni che determinano le corrispondenze.  
-  
-     È possibile utilizzare l'operazione logica tra condizioni di ricerca. Per altre informazioni, vedere [Uso degli operatori booleani AND, OR e NOT in CONTAINS e CONTAINSTABLE](#Using_Boolean_Operators) più avanti in questo argomento.  
-  
--   Usare FREETEXT (o FREETEXTTABLE) per trovare la corrispondenza di significato, ma non l'esatta formulazione, di parole e frasi specificate (stringa *free-text*). Vengono generate corrispondenze se nell'indice full-text di una colonna specificata viene trovato un qualsiasi termine o formato di un qualsiasi termine.  
-  
- È possibile utilizzare un nome in quattro parti nel predicato CONTAINS o FREETEXT per eseguire query di colonne con indicizzazione full-text delle tabelle di destinazione in un server collegato. Per preparare un server remoto alla ricezione di query full-text, creare un indice full-text delle tabelle di destinazione e delle colonne nel server remoto, quindi aggiungere il server remoto come server collegato.  
-  
-> [!NOTE]  
->  I predicati full-text non sono consentiti nella [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) quando il livello di compatibilità del database è impostato su 100.  
-  
- [Contenuto dell'argomento](#top)  
-  
-### Esempi  
-  
-#### A. Utilizzo di CONTAINS con <simple_term>  
+# <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
+
+Per scrivere query full-text, usare i predicati full-text **CONTAINS** e **FREETEXT** e le funzioni valutate a livello dei set di righe **CONTAINSTABLE** e **FREETEXTTABLE** con l'istruzione **SELECT**. In questo argomento vengono presentati alcuni esempi di predicati e funzioni per consente di scegliere quelli più adatti.
+
+-   Usare **CONTAINS** e **CONTAINSTABLE** per trovare i valori corrispondenti a parole e frasi.
+-   Usare **FREETEXT** e **FREETEXTTABLE** per trovare i valori corrispondenti al significato, ma non all'esatta formulazione delle parole.
+
+## <a name="examples_simple"></a>Esempi di ogni predicato e funzione
+
+### <a name="example---contains"></a>Esempio - CONTAINS  
  Nell'esempio seguente vengono trovati tutti i prodotti il cui prezzo è `$80.99` e contenenti la parola `"Mountain"`.  
   
-```  
+```tsql
 USE AdventureWorks2012  
 GO  
   
@@ -65,10 +50,10 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-#### B. Utilizzo di FREETEXT per la ricerca di parole contenenti valori di carattere specificati  
+### <a name="example---freetext"></a>Esempio - FREETEXT 
  Nell'esempio seguente viene eseguita la ricerca di tutti i documenti contenenti le parole associate a "vital", "safety" e "components".  
   
-```  
+```tsql
 USE AdventureWorks2012  
 GO  
   
@@ -76,40 +61,12 @@ SELECT Title
 FROM Production.Document  
 WHERE FREETEXT (Document, 'vital safety components')  
 GO  
-```  
-  
- [Contenuto dell'argomento](#top)  
-  
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> Cenni preliminari sulle funzioni full-text CONTAINSTABLE e FREETEXTTABLE  
- È possibile fare riferimento alle funzioni CONTAINSTABLE e FREETEXTTABLE come un normale nome di tabella nella clausola FROM di un'istruzione SELECT. Restituiscono una tabella di zero, una o più righe corrispondenti alla query full-text. La tabella restituita contiene solo righe della tabella di base che corrispondono ai criteri di selezione specificati nella condizione della ricerca full-text della funzione.  
-  
-> [!NOTE]  
->  Per informazioni sulla sintassi e sugli argomenti di queste funzioni, vedere [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
-  
- Le query che utilizzano una di queste funzioni restituiscono un valore di classificazione per pertinenza (RANK) e una chiave full-text (KEY) per ogni riga, come illustrato di seguito:  
-  
--   Colonna KEY  
-  
-     La colonna KEY restituisce valori univoci delle righe restituite. Può essere utilizzata per specificare i criteri di selezione.  
-  
--   Colonna RANK  
-  
-     La colonna RANK restituisce un *valore di pertinenza* per ogni riga che indica il livello di corrispondenza tra la riga e i criteri di selezione. Maggiore è il valore di pertinenza del testo o del documento in una riga, maggiore sarà la pertinenza della riga per una determinata query full-text. Si noti che è possibile classificare in modo identico righe diverse. È possibile limitare il numero di corrispondenze da restituire specificando il parametro *top_n_by_rank* facoltativo. Per altre informazioni, vedere [Limitare i risultati della ricerca con RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
-  
- Quando si utilizza una di queste funzioni, è necessario specificare la tabella di base in cui eseguire la ricerca full-text. Come con i predicati, è possibile specificare una singola colonna, un elenco di colonne o tutte le colonne della tabella in cui eseguire la ricerca e, facoltativamente, la lingua le cui risorse verranno utilizzate dalla query full-text specificata.  
-  
- CONTAINSTABLE è utile per gli stessi tipi di corrispondenze di CONTAINS, mentre FREETEXTTABLE è utile per gli stessi tipi di corrispondenze di FREETEXT. Per altre informazioni, vedere [Cenni preliminari sui predicati full-text CONTAINS e FREETEXT](#OV_ft_predicates) più indietro in questo argomento. Quando si eseguono query che utilizzano le funzioni CONTAINSTABLE e FREETEXTTABLE, è necessario unire in join in modo esplicito le righe restituite alle righe della tabella di base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- In genere, il risultato di CONTAINSTABLE o FREETEXTTABLE deve essere unito in join alla tabella di base. In questi casi, è necessario conoscere il nome della colonna chiave univoca. Questa colonna, presente in ogni tabella abilitata per la funzionalità full-text, viene usata per applicare righe univoche per la tabella (*colonna chiave* *univoca*). Per altre informazioni, vedere [Gestire indici full-text](../Topic/Manage%20Full-Text%20Indexes.md).  
-  
- [Contenuto dell'argomento](#top)  
-  
-### Esempi  
-  
-#### A. Utilizzo di CONTAINSTABLE  
+```
+
+### <a name="example---containstable"></a>Esempio - CONTAINSTABLE  
  Nell'esempio seguente vengono restituiti l'ID della descrizione e la descrizione di tutti i prodotti per cui la colonna **Description** contiene la parola "aluminum" accanto alla parola "light" o "lightweight". Vengono restituite solo le righe con un valore di pertinenza maggiore o uguale a 2.  
   
-```  
+```tsql
 USE AdventureWorks2012  
 GO  
   
@@ -128,10 +85,10 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-#### B. Utilizzo di FREETEXTTABLE  
- Nell'esempio seguente viene estesa una query FREETEXTTABLE in modo che vengano restituite per prime le righe con valore di pertinenza maggiore e che la classificazione di ogni riga venga aggiunta all'elenco di selezione. Per specificare la query, è necessario sapere che **ProductDescriptionID** è la colonna chiave univoca per la tabella **ProductDescription**.  
+### <a name="example--freetexttable"></a>Esempio - FREETEXTTABLE  
+ Nell'esempio seguente viene estesa una query FREETEXTTABLE in modo che vengano restituite per prime le righe con valore di pertinenza maggiore e che la classificazione di ogni riga venga aggiunta all'elenco di selezione. Per specificare la query, è necessario sapere che **ProductDescriptionID** è la colonna chiave univoca per la tabella **ProductDescription** .  
   
-```  
+```tsql 
 USE AdventureWorks2012  
 GO  
   
@@ -145,9 +102,9 @@ ORDER BY KEY_TBL.RANK DESC
 GO  
 ```  
   
- Di seguito viene riportata un'estensione della stessa query che restituisce solo le righe con valore di pertinenza maggiore o uguale a 10:  
+Di seguito viene riportata un'estensione della stessa query che restituisce solo le righe con valore di pertinenza maggiore o uguale a 10:  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
   
@@ -161,101 +118,51 @@ WHERE KEY_TBL.RANK >= 10
 ORDER BY KEY_TBL.RANK DESC  
 GO  
 ```  
+
+## <a name="pick-the-best-predicate-or-function"></a>Selezionare il predicato o la funzione più adatta
+
+`CONTAINS`/`CONTAINSTABLE` e `FREETEXT`/`FREETEXTTABLE` sono utili per vari tipi di corrispondenza. La tabella seguente consente di scegliere il predicato o la funzione più idonea per la query.
+
+Per alcuni esempi, vedere [Esempi di ogni predicato e funzione](#examples_simple) ed [Esempi di tipi di ricerca specifici](#examples_specific). Vedere anche [Ricerche possibili](#supported).
+
+| |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
+|---|---|---|
+|**Tipo di query**|Trova i valori corrispondenti di parole e frasi singole con un livello di corrispondenza esatto o fuzzy (meno preciso).|Trova i valori corrispondenti al significato, ma non all'esatta formulazione, di parole, frasi o periodi specificati (*stringa free-text*).<br/><br/>Vengono generate corrispondenze se nell'indice full-text di una colonna specificata viene trovato un qualsiasi termine o formato di un qualsiasi termine.|
+|**Altre opzioni query**|È possibile specificare la prossimità delle parole all'interno di una certa distanza una dall'altra.<br/><br/>È possibile definire la restituzione di corrispondenze ponderate.<br/><br/>È possibile usare un'operazione logica per combinare le condizioni di ricerca. Per altre informazioni, vedere [Uso degli operatori booleani (AND, OR e NOT)](#Using_Boolean_Operators) più avanti in questo argomento.|N/a|
+
+## <a name="compare-predicates-and-functions"></a>Confrontare predicati e funzioni
+
+I predicati `CONTAINS`/`FREETEXT` e le funzioni valutate a livello dei set di righe `CONTAINSTABLE`/`FREETEXTTABLE` hanno sintassi e opzioni diverse. La tabella seguente consente di scegliere il predicato o la funzione più idonea per la query.
+
+Per alcuni esempi, vedere [Esempi di ogni predicato e funzione](#examples_simple) ed [Esempi di tipi di ricerca specifici](#examples_specific). Vedere anche [Ricerche possibili](#supported).
+
+| |Predicati<br/>CONTAINS/FREETEXT|Funzioni<br/>CONTAINSTABLE/FREETEXTTABLE|
+|---|---|---|
+|**Utilizzo**|Usare i **predicati** full-text CONTAINS e FREETEXT nella clausola WHERE o HAVING di un'istruzione SELECT.|Usare le **funzioni** full-text CONTAINSTABLE e FREETEXTTABLE come un normale nome di tabella nella clausola FROM di un'istruzione SELECT.|
+|**Altre opzioni query**|È possibile combinare i predicati e le funzioni con altri predicati [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio LIKE e BETWEEN.<br/><br/>È possibile specificare una sola colonna, un elenco di colonne o tutte le colonne della tabella in cui eseguire la ricerca.<br/><br/>Facoltativamente, è possibile specificare la lingua le cui risorse verranno usate dalla query full-text specificata per il word breaking e lo stemming, le ricerche nel thesaurus e la rimozione di parole non significative.|È necessario specificare la tabella di base per la ricerca quando si usa una di queste funzioni. Come con i predicati, è possibile specificare una singola colonna, un elenco di colonne o tutte le colonne della tabella in cui eseguire la ricerca e, facoltativamente, la lingua le cui risorse verranno utilizzate dalla query full-text specificata.<br/><br/>In genere, i risultati del predicato CONTAINSTABLE o FREETEXTTABLE devono essere uniti in join alla tabella di base. A questo scopo, è necessario conoscere il nome della colonna chiave univoca. Questa colonna, presente in ogni tabella abilitata per la funzionalità full-text, viene usata per applicare righe univoche per la tabella (*colonna chiave* *univoca*). Per altre informazioni sulla colonna chiave, vedere [Creare e gestire indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md).|
+|**Risultati**|I predicati CONTAINS e FREETEXT restituiscono un valore TRUE o FALSE che indica se una determinata riga corrisponde alla query full-text. Le righe corrispondenti vengono restituite nel set di risultati.|Queste funzioni restituiscono una tabella di zero, una o più righe corrispondenti alla query full-text. La tabella restituita contiene solo righe della tabella di base che corrispondono ai criteri di selezione specificati nella condizione della ricerca full-text della funzione.<br/><br/>Le query che usano una di queste funzioni restituiscono un valore di classificazione per pertinenza (RANK) e una chiave full-text (KEY) per ogni riga, come illustrato di seguito:<br/><ul><li>Colonna **KEY**. La colonna KEY restituisce valori univoci delle righe restituite. Può essere utilizzata per specificare i criteri di selezione.</li><li>Colonna **RANK**. La colonna RANK restituisce un *valore di pertinenza* per ogni riga che indica il livello di corrispondenza tra la riga e i criteri di selezione. Maggiore è il valore di pertinenza del testo o del documento in una riga, maggiore sarà la pertinenza della riga per una determinata query full-text. Si noti che è possibile classificare in modo identico righe diverse. È possibile limitare il numero di corrispondenze da restituire specificando il parametro *top_n_by_rank* facoltativo. Per altre informazioni, vedere [Limitare i risultati della ricerca con RANK](../../relational-databases/search/limit-search-results-with-rank.md).</li></ul>|
+|**Opzioni aggiuntive**|È possibile utilizzare un nome in quattro parti nel predicato CONTAINS o FREETEXT per eseguire query di colonne con indicizzazione full-text delle tabelle di destinazione in un server collegato. Per preparare un server remoto alla ricezione di query full-text, creare un indice full-text delle tabelle di destinazione e delle colonne nel server remoto, quindi aggiungere il server remoto come server collegato.|N/a|
+|**Altre informazioni**|Per altre informazioni sulla sintassi e sugli argomenti di questi predicati, vedere [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).|Per altre informazioni sulla sintassi e sugli argomenti di queste funzioni, vedere [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).|
+
+##  <a name="supported"></a> Ricerche possibili
+
+Nella tabella seguente vengono descritti i tipi di parole o frasi che è possibile cercare.
   
- [Contenuto dell'argomento](#top)  
-  
-##  <a name="Using_Boolean_Operators"></a> Uso degli operatori booleani AND, OR e NOT in CONTAINS e CONTAINSTABLE  
- Il predicato CONTAINS e la funzione CONTAINSTABLE utilizzano le stesse condizioni di ricerca. Entrambi supportano la combinazione di più termini di ricerca tramite gli operatori booleani AND, OR, AND NOT per eseguire operazioni logiche. È ad esempio possibile utilizzare AND per trovare righe che contengono sia "latte" sia New York-style bagel". È possibile utilizzare AND NOT, ad esempio, per trovare le righe che contengono "bagel", ma non "cream cheese".  
-  
-> [!NOTE]  
->  Al contrario, FREETEXT e FREETEXTTABLE considerano i termini booleani come parole da cercare.  
-  
- Per informazioni sulla combinazione di CONTAINS con altri predicati che usano gli operatori logici AND, OR e NOT, vedere [Condizione di ricerca &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
-  
-### Esempio  
- Nell'esempio seguente viene utilizzata la tabella ProductDescription del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Nella query viene utilizzato il predicato CONTAINS per cercare le descrizioni il cui ID sia diverso da 5 e contenenti le parole "Aluminum" e "spindle". Nella condizione di ricerca viene utilizzato l'operatore booleano AND.  
-  
-```  
-USE AdventureWorks2012  
-GO  
-  
-SELECT Description  
-FROM Production.ProductDescription  
-WHERE ProductDescriptionID <> 5 AND  
-   CONTAINS(Description, 'aluminum AND spindle')  
-GO  
-```  
-  
- [Contenuto dell'argomento](#top)  
-  
-##  <a name="Additional_Considerations"></a> Considerazioni aggiuntive per le query full-text  
- Quando si scrivono query full-text, considerare anche gli elementi seguenti:  
-  
--   Opzione LANGUAGE  
-  
-     Molti termini di query dipendono in larga misura dal comportamento del word breaker. Per assicurarsi di utilizzare il word breaker (e lo stemmer) e il thesaurus corretti, è consigliabile specificare l'opzione LANGUAGE. Per altre informazioni, vedere [Scegliere una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
-  
--   Parole non significative  
-  
-     Quando si definisce una query full-text, il motore di ricerca full-text ignora le parole non significative dai criteri di ricerca. Per parole non significative si intendono parole quali "circa", "con", "devo" e "cui" che possono ricorrere di frequente, ma che non hanno alcuna utilità nella ricerca di testo specifico. Le parole non significative vengono riunite in un elenco. Ogni indice full-text è associato a un elenco di parole non significative specifico per determinare quali di queste parole omettere dalla query o dall'indice durante l'indicizzazione. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
-  
--   Thesaurus  
-  
-     Per impostazione predefinita, le query FREETEXT e FREETEXTTABLE utilizzano il thesaurus. CONTAINS e CONTAINSTABLE supportano un argomento THESAURUS facoltativo.  
-  
--   Distinzione maiuscole/minuscole  
-  
-     Per le query di ricerca full-text non viene fatta distinzione tra maiuscole e minuscole. La lingua giapponese, tuttavia, prevede più forme fonetiche basate sul concetto di normalizzazione ortografica simile alla mancanza di distinzione tra maiuscole e minuscole, ad esempio kana = senza distinzione. Questo tipo di normalizzazione ortografica non è supportato.  
-  
- [Contenuto dell'argomento](#top)  
-  
-##  <a name="varbinary"></a> Esecuzione di query su colonne di tipo varbinary(max) e xml  
- Se una colonna **varbinary(max)**, **varbinary** o **xml** viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite usando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna con indicizzazione full-text.  
-  
-> [!IMPORTANT]  
->  La ricerca full-text può anche essere eseguita con colonne di tipo image. Il tipo di dati **image**, tuttavia, verrà rimosso in una futura versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarlo nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente lo utilizzano. In alternativa, usare il tipo di dati **varbinary(max)**.  
-  
-### dati varbinary(max) o varbinary  
- In una singola colonna **varbinary(max)** o **varbinary** possono essere archiviati molti tipi di documenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta qualsiasi tipo di documento per cui è installato un filtro disponibile nel sistema operativo. Il tipo di ogni documento è identificato dall'estensione file relativa. Per un'estensione file doc, ad esempio, la ricerca full-text utilizza il filtro che supporta i documenti di Microsoft Word. Per un elenco dei tipi di documento disponibili, eseguire una query sulla vista del catalogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
-  
- Si noti che il motore di ricerca full-text può utilizzare i filtri esistenti installati nel sistema operativo. Prima di poter utilizzare i filtri, i word breaker e gli stemmer del sistema operativo, è necessario caricarli nell'istanza del server, come illustrato di seguito:  
-  
-```  
-EXEC sp_fulltext_service @action='load_os_resources', @value=1  
-```  
-  
- Per creare un indice full-text in una colonna **varbinary(max)**, il motore di ricerca full-text deve accedere alle estensioni file dei documenti nella colonna **varbinary(max)**. Queste informazioni devono essere archiviate in una colonna di tabella, denominata colonna del tipo, che deve essere associata alla colonna **varbinary(max)** nell'indice full-text. Quando si esegue l'indicizzazione di un documento, il motore di ricerca full-text utilizza l'estensione del file nella colonna del tipo per identificare il filtro da utilizzare.  
-  
- [Contenuto dell'argomento](#top)  
-  
-### dati xml  
- In una colonna del tipo di dati **xml** vengono archiviati esclusivamente documenti e frammenti XML e per i documenti viene usato solo il filtro XML. Una colonna del tipo non è pertanto necessaria. Nelle colonne **xml**, l'indice full-text indicizza il contenuto degli elementi XML, ma ignora il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag elemento sono utilizzati come limiti del token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue.  
-  
- Per altre informazioni sull'esecuzione di query su una colonna **xml**, vedere [Usare la ricerca full-text con colonne XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
-  
- [Contenuto dell'argomento](#top)  
-  
-##  <a name="supported"></a> Forme supportate di termini della query  
- Questa sezione contiene un riepilogo del supporto fornito per ciascuna forma di query dai predicati full-text e dalle funzioni con valori del set di righe.  
-  
-> [!NOTE]  
->  Per ottenere la sintassi di un determinato termine di query, fare clic sui collegamenti corrispondenti nella colonna **Supportata da** della tabella seguente.  
-  
-|Forma del termine di query|Descrizione|Supportata da|  
+|Forma del termine di query|Description|Supportata da|  
 |----------------------|-----------------|------------------|  
-|Una o più parole o frasi specifiche (*termine semplice*)|Nella ricerca full-text, una parola (o *token*) è una stringa i cui limiti vengono identificati da word breaker appropriati, in base alle regole linguistiche della lingua specificata. Una frase valida è costituita da più parole, separate o non separate da segni di punteggiatura.<br /><br /> Ad esempio, "croissant" è una parola, mentre "caffè macchiato" è una frase. Le parole e le frasi di questo tipo vengono definite termini semplici.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi specifiche (termine semplice)](#Simple_Term) più avanti in questo argomento.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) consentono di cercare una corrispondenza esatta per la frase.<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) consentono di suddividere la frase in parole separate.|  
-|Parola o frase in cui le parole iniziano con il testo specificato (*termine di prefisso*)|Un termine di prefisso fa riferimento a una stringa aggiunta davanti a una parola per produrre una parola derivata o una forma inflessa.<br /><br /> Per un singolo termine di prefisso, qualsiasi parola che inizia con il termine specificato farà parte del set di risultati. Ad esempio, il termine "auto*" corrisponde ad "automatico", "automobile" e così via.<br /><br /> Nel caso di una frase, ogni parola all'interno della frase viene considerata un termine di prefisso. Il termine "tras auto\*", ad esempio, corrisponde a "trasmissione automatica" e a "trasduttore automobile", ma non a "trasmissione motore automatica".<br /><br /> Per altre informazioni, vedere [Esecuzione di ricerche di prefissi (termine di prefisso)](#Prefix_Term) più avanti in questo argomento.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|Forme flessive di una parola specifica (*termine di generazione, flessione*)|Le forme flessive sono costituite dai diversi tempi e coniugazioni di un verbo oppure dalle forme singolare e plurale di un sostantivo. È possibile cercare, ad esempio, la forma flessiva della parola "guida". Se diverse righe della tabella contengono le parole "guida", "guide", "guidò", "guidando" e "guidato", tali parole vengono tutte incluse nel set di risultati, in quanto ognuna può essere generata in modo flessivo da "guida".<br /><br /> Per altre informazioni, vedere [Ricerca di forme flessive di una parola specifica (termine di generazione)](#Inflectional_Generation_Term) più avanti in questo argomento.|Per impostazione predefinita, [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) consentono di cercare le forme flessive di tutte le parole specificate.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) supportano un argomento INFLECTIONAL facoltativo.|  
-|Sinonimi di una parola specifica (termine di generazione, *thesaurus*)|Un thesaurus definisce i sinonimi specificati dall'utente per i termini. Se viene aggiunta, ad esempio, una voce quale "{macchina, automobile, camion, furgone}" a un thesaurus, è possibile cercare la forma del thesaurus della parola "macchina". Il set di risultati includerà tutte le righe della tabella in cui viene eseguita la query che contengono le parole "automobile", "camion", "furgone" o "macchina", in quanto ciascuna di queste parole appartiene al set di espansione dei sinonimi relativo alla parola "macchina".<br /><br /> Per informazioni sulla struttura dei file del thesaurus, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)il thesaurus per impostazione predefinita.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) supportano un argomento THESAURUS facoltativo.|  
-|Una parola o frase vicina a un'altra parola o frase (*termine di prossimità*)|Un termine di prossimità indica parole o frasi vicine le une alle altre. È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine della ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o nell'ordine in cui sono state specificate.<br /><br /> È possibile, ad esempio, trovare le righe in cui la parola "ghiaccio" è vicina alla parola "hockey" o in cui la frase "pattinaggio su ghiaccio" è vicina alla frase "hockey su ghiaccio".<br /><br /> Per altre informazioni, vedere [Cercare parole vicine a un'altra parola con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|Parole o frasi che usano valori ponderati (*termine ponderato*)|Valore ponderato che indica il grado di importanza di ogni parola e frase all'interno di un set di parole e frasi. Il valore 0,0 corrisponde al peso minimo, mentre 1.0 corrisponde al peso massimo.<br /><br /> Ad esempio, in una query in cui vengono cercati più termini, è possibile assegnare a ogni parola un valore ponderato che ne indica l'importanza in relazione alle altre parole della condizione di ricerca. I risultati di questo tipo di query presentano prima le righe più rilevanti, in base al peso relativo assegnato alle parole della ricerca. I set di risultati includono documenti o righe contenenti alcuni dei termini specificati (o contenuto tra di essi). Alcuni risultati, tuttavia, verranno considerati più pertinenti di altri a causa della variazione nei valori ponderati associati a termini cercati diversi.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi tramite valori ponderati (termine ponderato)](#Weighted_Term) più avanti in questo argomento.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-  
- [Contenuto dell'argomento](#top)  
-  
+|Una o più parole o frasi specifiche<br/>(*termine semplice*)|Ad esempio, "croissant" è una parola, mentre "caffè macchiato" è una frase. Le parole e le frasi di questo tipo vengono definite termini semplici.<br /><br /> Nella ricerca full-text una *parola* (o *token*) è una stringa i cui limiti vengono identificati da word breaker appropriati, in base alle regole linguistiche della lingua specificata. Una *frase* valida è costituita da più parole, separate o non separate da segni di punteggiatura.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi specifiche (termine semplice)](#Simple_Term)più avanti in questo argomento.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) consentono di cercare una corrispondenza esatta per la frase.<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) consentono di suddividere la frase in parole separate.|  
+|Parola o frase in cui le parole iniziano con il testo specificato<br/>(*termine di prefisso*)|Per un singolo termine di prefisso, qualsiasi parola che inizia con il termine specificato farà parte del set di risultati. Ad esempio, il termine "auto*" corrisponde ad "automatico", "automobile" e così via.<br /><br /> Nel caso di una frase, ogni parola all'interno della frase viene considerata un termine di prefisso. Il termine "tras auto\*", ad esempio, corrisponde a "trasmissione automatica" e a "trasduttore automobile", ma non a "trasmissione motore automatica".<br /><br /> Un *termine di prefisso* fa riferimento a una stringa aggiunta davanti a una parola per produrre una parola derivata o una forma inflessa.<br /><br /> Per altre informazioni, vedere [Esecuzione di ricerche di prefissi (termine di prefisso)](#Prefix_Term)più avanti in questo argomento.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|Forme flessive di una parola specifica<br/>(*termine di generazione - forma flessiva*)|È possibile cercare, ad esempio, la forma flessiva della parola "guida". Se diverse righe della tabella contengono le parole "guida", "guide", "guidò", "guidando" e "guidato", tali parole vengono tutte incluse nel set di risultati, in quanto ognuna può essere generata in modo flessivo da "guida".<br /><br /> Le *forme flessive* sono costituite dai diversi tempi e coniugazioni di un verbo oppure dalle forme singolare e plurale di un sostantivo. <br /><br /> Per altre informazioni, vedere [Ricerca di forme flessive di una parola specifica (termine di generazione)](#Inflectional_Generation_Term)più avanti in questo argomento.|Per impostazione predefinita,[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) consentono di cercare le forme flessive di tutte le parole specificate.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) supportano un argomento INFLECTIONAL facoltativo.|  
+|Sinonimi di una parola specifica<br/>(*termine di generazione - thesaurus*)|Se viene aggiunta, ad esempio, una voce quale "{macchina, automobile, camion, furgone}" a un thesaurus, è possibile cercare la forma del thesaurus della parola "macchina". Il set di risultati includerà tutte le righe della tabella in cui viene eseguita la query che contengono le parole "automobile", "camion", "furgone" o "macchina", in quanto ciascuna di queste parole appartiene al set di espansione dei sinonimi relativo alla parola "macchina".<br /><br />Un *thesaurus* definisce i sinonimi specificati dall'utente per i termini.<br /><br />  Per informazioni sulla struttura dei file del thesaurus, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) il thesaurus per impostazione predefinita.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) supportano un argomento THESAURUS facoltativo.|  
+|Una parola o frase vicina a un'altra parola o frase<br/>(*termine di prossimità*)|È possibile, ad esempio, trovare le righe in cui la parola "ghiaccio" è vicina alla parola "hockey" o in cui la frase "pattinaggio su ghiaccio" è vicina alla frase "hockey su ghiaccio".<br /><br /> Un *termine di prossimità* indica parole o frasi vicine le une alle altre. È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine della ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o nell'ordine in cui sono state specificate.<br /><br /> Per altre informazioni, vedere [Cercare parole vicine a un'altra parola con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|Parole o frasi che usano valori ponderati<br/>(*termine ponderato*)|Ad esempio, in una query in cui vengono cercati più termini, è possibile assegnare a ogni parola un valore ponderato che ne indica l'importanza in relazione alle altre parole della condizione di ricerca. I risultati di questo tipo di query presentano prima le righe più rilevanti, in base al peso relativo assegnato alle parole della ricerca. I set di risultati includono documenti o righe contenenti alcuni dei termini specificati (o contenuto tra di essi). Alcuni risultati, tuttavia, verranno considerati più pertinenti di altri a causa della variazione nei valori ponderati associati a termini cercati diversi.<br /><br /> Un *valore ponderato* indica il grado di importanza di ogni parola e frase all'interno di un set di parole e frasi. Il valore 0,0 corrisponde al peso minimo, mentre 1.0 corrisponde al peso massimo.<br /><br /> Per altre informazioni, vedere [Ricerca di parole o frasi tramite valori ponderati (termine ponderato)](#Weighted_Term)più avanti in questo argomento.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+
+## <a name="examples_specific"></a> Esempi di tipi di ricerca specifici
+
 ###  <a name="Simple_Term"></a> Ricerca di parole o frasi specifiche (termine semplice)  
- È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare una frase specifica in una tabella. Per eseguire una ricerca nella tabella **ProductReview** del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per trovare tutti i commenti su un prodotto con la frase "learning curve", ad esempio, è possibile usare il predicato CONTAINS nel modo seguente:  
+ È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare una frase specifica in una tabella. Per eseguire una ricerca nella tabella **ProductReview** del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per trovare tutti i commenti su un prodotto con la frase "learning curve", ad esempio, è possibile usare il predicato CONTAINS nel modo seguente:  
   
-```  
+```tsql
 USE AdventureWorks2012  
 GO  
   
@@ -267,12 +174,10 @@ GO
   
  La condizione di ricerca, in questo caso "learning curve", può essere molto complessa ed essere costituita da uno o più termini.  
   
- [Contenuto dell'argomento](#top)  
+###  <a name="Prefix_Term"></a> Ricerca di una parola con un prefisso (termine di prefisso)  
+ È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi con un prefisso specificato. Vengono restituite tutte le voci nella colonna che contengono testo che inizia con il prefisso specificato. È possibile cercare, ad esempio, tutte le righe che contengono il prefisso `top`-, come in `top``ple`, `top``ping`e `top`. La query è la seguente:  
   
-###  <a name="Prefix_Term"></a> Esecuzione di ricerche di prefissi (termine di prefisso)  
- È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi con un prefisso specificato. Vengono restituite tutte le voci nella colonna che contengono testo che inizia con il prefisso specificato. È possibile cercare, ad esempio, tutte le righe che contengono il prefisso `top`-, come in `top``ple`, `top``ping` e `top`. La query è la seguente:  
-  
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
   
@@ -286,14 +191,12 @@ GO
   
  Se il termine di prefisso è una frase, ogni token che la compone viene considerato come un termine di prefisso distinto e vengono restituite tutte le righe contenenti parole che iniziano con tali prefissi. Se viene specificato il termine di prefisso "pennelli gialli*", ad esempio, vengono trovate le righe che contengono il testo "pennelli giallini", "pennellini giallini" o "pennelli gialli", ma non "pennelli sottili gialli".  
   
- [Contenuto dell'argomento](#top)  
-  
 ###  <a name="Inflectional_Generation_Term"></a> Ricerca di forme flessive di una parola specifica (termine di generazione)  
- È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare tutti i diversi tempi e coniugazioni di un verbo o le forme sia singolare sia plurale di un sostantivo (ricerca di forme flessive) oppure i sinonimi di una parola specifica (ricerca thesaurus).  
+È possibile usare [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) per cercare tutti i diversi tempi e coniugazioni di un verbo o le forme sia singolare sia plurale di un sostantivo (ricerca di forme flessive) oppure i sinonimi di una parola specifica (ricerca thesaurus).  
   
- Nell'esempio seguente vengono cercate tutte le forme del termine "piede" ("piede", "piedi" e così via) presenti nella colonna `Comments` della tabella `ProductReview` nel database `AdventureWorks`.  
+Nell'esempio seguente vengono cercate tutte le forme del termine "piede" ("piede", "piedi" e così via) presenti nella colonna `Comments` della tabella `ProductReview` nel database `AdventureWorks` .  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
   
@@ -303,17 +206,14 @@ WHERE CONTAINS (Comments, 'FORMSOF(INFLECTIONAL, "foot")')
 GO  
 ```  
   
-> [!NOTE]  
->  Nella ricerca full-text vengono utilizzati gli stemmer, che consentono di cercare i diversi tempi e coniugazioni di un verbo o le forme sia singolare sia plurale di un sostantivo. Per altre informazioni sui stemmer, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
-  
- [Contenuto dell'argomento](#top)  
-  
+Nella ricerca full-text vengono usati gli *stemmer*, che consentono di cercare i diversi tempi e coniugazioni di un verbo o le forme sia singolare sia plurale di un sostantivo. Per altre informazioni sui stemmer, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+   
 ###  <a name="Weighted_Term"></a> Ricerca di parole o frasi tramite valori ponderati (termine ponderato)  
- È possibile usare [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi e specificare un valore ponderato. Il peso, espresso come numero compreso tra 0,0 e 1,0, indica l'importanza di ogni parola o frase all'interno di un set di parole o frasi. Il valore 0,0 corrisponde al peso minimo, mentre il valore 1,0 corrisponde al peso massimo.  
+È possibile usare [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) per cercare parole o frasi e specificare un valore ponderato. Il peso, espresso come numero compreso tra 0,0 e 1,0, indica l'importanza di ogni parola o frase all'interno di un set di parole o frasi. Il valore 0,0 corrisponde al peso minimo, mentre il valore 1,0 corrisponde al peso massimo.  
   
- Nell'esempio seguente viene illustrata una query per la ricerca di tutti gli indirizzi dei clienti, tramite valori di ponderazione, in cui il testo che inizia con la stringa "Bay" contiene anche la parola "Street" o "View". I risultati assegnano un livello di importanza superiore alle righe che contengono il numero maggiore di parole specificate.  
+Nell'esempio seguente viene illustrata una query per la ricerca di tutti gli indirizzi dei clienti, tramite valori di ponderazione, in cui il testo che inizia con la stringa "Bay" contiene anche la parola "Street" o "View". I risultati assegnano un livello di importanza superiore alle righe che contengono il numero maggiore di parole specificate.  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
   
@@ -329,20 +229,50 @@ GO
 ```  
   
  È possibile utilizzare un termine ponderato insieme a qualsiasi termine semplice, termine di prefisso, termine di generazione o termine di prossimità.  
+
+##  <a name="Using_Boolean_Operators"></a> Uso di operatori booleani (AND, OR e NOT)
+ 
+Il predicato CONTAINS e la funzione CONTAINSTABLE utilizzano le stesse condizioni di ricerca. Entrambi supportano la combinazione di più termini di ricerca tramite gli operatori booleani AND, OR e NOT per eseguire operazioni logiche. È ad esempio possibile usare AND per trovare righe che contengono sia "latte" sia "New York-style bagel". È possibile utilizzare AND NOT, ad esempio, per trovare le righe che contengono "bagel", ma non "cream cheese".  
   
- [Contenuto dell'argomento](#top)  
+Al contrario, FREETEXT e FREETEXTTABLE considerano i termini booleani come parole da cercare.  
   
-##  <a name="tokens"></a> Visualizzazione del risultato della suddivisione in token di una combinazione di word breaker, thesaurus ed elenco di parole non significative  
- Dopo aver applicato una determinata combinazione di word breaker, thesaurus ed elenco di parole non significative all'input di una stringa di query, è possibile visualizzare il risultato della tokenizzazione usando la DMV **sys.dm_fts_parser**. Per altre informazioni, vedere [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
+ Per informazioni sulla combinazione di CONTAINS con altri predicati che usano gli operatori logici AND, OR e NOT, vedere [Condizione di ricerca &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- [Contenuto dell'argomento](#top)  
+### <a name="example"></a>Esempio  
+ L'esempio seguente usa il predicato CONTAINS per cercare le descrizioni il cui ID sia diverso da 5 e contenenti le parole "Aluminum" e "spindle". Nella condizione di ricerca viene utilizzato l'operatore booleano AND. In questo esempio viene usata la tabella ProductDescription del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
-## Vedere anche  
+```tsql  
+USE AdventureWorks2012  
+GO  
+  
+SELECT Description  
+FROM Production.ProductDescription  
+WHERE ProductDescriptionID <> 5 AND  
+   CONTAINS(Description, 'aluminum AND spindle')  
+GO  
+```  
+  
+##  <a name="Additional_Considerations"></a> Altre opzioni query
+
+ Quando si scrivono query full-text, è anche possibile specificare le opzioni seguenti.
+  
+-   **Lingua** con l'opzione **LANGUAGE**. Molti termini di query dipendono in larga misura dal comportamento del word breaker. Per assicurarsi di utilizzare il word breaker (e lo stemmer) e il thesaurus corretti, è consigliabile specificare l'opzione LANGUAGE. Per altre informazioni, vedere [Scelta di una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
+
+-   **Distinzione maiuscole/minuscole**. Per le query di ricerca full-text non viene fatta distinzione tra maiuscole e minuscole. La lingua giapponese, tuttavia, prevede più forme fonetiche basate sul concetto di normalizzazione ortografica simile alla mancanza di distinzione tra maiuscole e minuscole, ad esempio kana = senza distinzione. Questo tipo di normalizzazione ortografica non è supportato.  
+
+-   **Parole non significative**. Quando si definisce una query full-text, il motore di ricerca full-text ignora le parole non significative dai criteri di ricerca. Per parole non significative si intendono parole quali "circa", "con", "devo" e "cui" che possono ricorrere di frequente, ma che non hanno alcuna utilità nella ricerca di testo specifico. Le parole non significative vengono riunite in un elenco. Ogni indice full-text è associato a un elenco di parole non significative specifico per determinare quali di queste parole omettere dalla query o dall'indice durante l'indicizzazione. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+  
+-   **Thesaurus**. Per impostazione predefinita, le query FREETEXT e FREETEXTTABLE utilizzano il thesaurus. CONTAINS e CONTAINSTABLE supportano un argomento THESAURUS facoltativo. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md).
+  
+##  <a name="tokens"></a> Controllo dei risultati di tokenizzazione
+
+Dopo aver applicato una determinata combinazione di word breaker, thesaurus ed elenco di parole non significative a una query, è possibile visualizzare il risultato della tokenizzazione usando la DMV **sys.dm_fts_parser**. Per altre informazioni, vedere [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
+  
+## <a name="see-also"></a>Vedere anche  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
- [Migliorare le prestazioni delle query full-text](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)  
-  
-  
+ [Creare query di ricerca full-text &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Migliorare le prestazioni delle query full-text](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
+ 

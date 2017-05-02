@@ -1,36 +1,40 @@
 ---
-title: "SQL Server Audit (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "SQL Server Audit"
-  - "controlli [SQL Server], controllo SQL Server"
+title: Controllo di SQL Server (motore di database) | Microsoft Docs
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/29/2017
+
 ---
-# SQL Server Audit (Database Engine)
+# <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei registri eventi o nei file di controllo.  
   
- Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sono disponibili numerosi livelli di controllo, a seconda dei requisiti legislativi o standard previsti per la propria installazione. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono disponibili gli strumenti e i processi necessari per abilitare, archiviare e visualizzare controlli in vari oggetti server e di database.  
+ Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sono disponibili numerosi livelli di controllo, a seconda dei requisiti legislativi o standard previsti per la propria installazione. In[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono disponibili gli strumenti e i processi necessari per abilitare, archiviare e visualizzare controlli in vari oggetti server e di database.  
   
  È possibile registrare gruppi di azioni di controllo del server per istanza e gruppi di azioni di controllo del database o azioni di controllo del database per database. L'evento di controllo si verificherà ogni volta che viene rilevata un'azione controllabile.  
   
- Tutte le edizioni dei controlli a livello server di supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le edizioni supportano i controlli a livello del database a partire da [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Nelle versioni precedenti i controlli a livello di database sono limitati alle edizioni Enterprise, Developer ed Evaluation. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Tutte le edizioni dei controlli a livello server di supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tutte le edizioni supportano i controlli a livello del database a partire da [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Nelle versioni precedenti i controlli a livello di database sono limitati alle edizioni Enterprise, Developer ed Evaluation. Per altre informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Questo argomento si applica a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Per [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Introduzione al controllo del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
@@ -38,7 +42,7 @@ caps.handback.revision: 58
 ## <a name="sql-server-audit-components"></a>Componenti di SQL Server Audit  
  Per *controllo* si intende la combinazione di più elementi in un unico pacchetto per un gruppo specifico di azioni server o del database. Tramite la combinazione dei componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit viene generato un output denominato controllo, così come tramite la combinazione della definizione del report con elementi grafici e dati viene generato un report.  
   
- Per creare un controllo, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit vengono usati gli *eventi estesi*. Per ulteriori informazioni sugli eventi estesi, vedere [eventi estesi](../../../relational-databases/extended-events/extended-events.md).  
+ Per creare un controllo, in[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit vengono usati gli *eventi estesi* . Per ulteriori informazioni sugli eventi estesi, vedere [eventi estesi](../../../relational-databases/extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli.  
@@ -123,7 +127,7 @@ caps.handback.revision: 58
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mirroring del database e SQL Server Audit  
  Un database che dispone di una specifica del controllo del database definita e che utilizza il mirroring del database includerà la specifica del controllo del database. Per funzionare correttamente sull'istanza SQL Server con mirroring, è necessario che siano configurati gli elementi seguenti:  
   
--   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Per questa configurazione usare il comando CREATE AUDIT WITH GUID**=***\<GUID del controllo del server di origine*>.  
+-   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Per questa configurazione usare il comando CREATE AUDIT WITH GUID**=***\<<GUID del controllo del server di origine>*.  
   
 -   Per le destinazioni del file binario, l'account di servizio del server mirror deve disporre delle autorizzazioni appropriate per il percorso in cui verrà scritto l'itinerario di controllo.  
   
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [Record di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

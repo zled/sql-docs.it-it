@@ -1,26 +1,30 @@
 ---
-title: "Ottieni informazioni sui trigger DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "metadati [SQL Server], trigger"
-  - "informazioni sullo stato [SQL Server], trigger DLL"
-  - "trigger DLL, metadati"
+title: Recuperare informazioni sui trigger DDL | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- status information [SQL Server], DDL triggers
+- DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ottieni informazioni sui trigger DDL
+# <a name="get-information-about-ddl-triggers"></a>Ottieni informazioni sui trigger DDL
   Le viste del catalogo elencate in questa sezione possono essere utilizzate per ottenere informazioni sui trigger DDL.  
   
  **Per ottenere informazioni sugli eventi o sui gruppi di eventi che possono essere attivati da un trigger DDL.**  
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## Trigger DDL con ambito database  
+## <a name="database-scoped-ddl-triggers"></a>Trigger DDL con ambito database  
  **Per ottenere informazioni sui trigger con ambito database**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
-## Trigger DDL con ambito server  
+## <a name="server-scoped-ddl-triggers"></a>Trigger DDL con ambito server  
  **Per ottenere informazioni sui trigger con ambito server**  
   
 -   [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)  
@@ -69,7 +73,7 @@ caps.handback.revision: 31
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

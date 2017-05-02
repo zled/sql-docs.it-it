@@ -1,24 +1,28 @@
 ---
-title: "Heap (tabelle senza indici cluster) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "heap"
+title: Heap (tabelle senza indici cluster) | Microsoft Docs
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cae45be3e215c24dd437502f81a870f14d453f3d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Heap (tabelle senza indici cluster)
+# <a name="heaps-tables-without-clustered-indexes"></a>Heap (tabelle senza indici cluster)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Un heap è una tabella per cui non è disponibile un indice cluster. Nelle tabelle archiviate come heap è possibile creare uno o più indici non cluster. I dati vengono archiviati nell'heap senza un ordine specificato. In genere i dati vengono inizialmente archiviati nell'ordine in cui le righe vengono inserite nella tabella, tuttavia [!INCLUDE[ssDE](../../includes/ssde-md.md)] può spostare i dati nell'heap in modo da archiviare le righe in modo efficiente, pertanto non è possibile prevedere l'ordine dei dati. Per garantire l'ordine delle righe restituite da un heap, è necessario utilizzare la clausola **ORDER BY** . Per specificare l'ordine di archiviazione delle righe, creare un indice cluster nella tabella, in modo che essa non sia un heap.  
@@ -26,12 +30,12 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  Esistono talvolta motivi per i quali è preferibile lasciare una tabella come heap invece di creare un indice cluster, tuttavia l'utilizzo efficiente degli heap richiede competenze avanzate. Alla maggior parte delle tabelle deve essere associato un indice cluster selezionato con attenzione a meno che non sussista un motivo valido per cui la tabella debba rimanere un heap.  
   
-## Quando utilizzare un heap  
+## <a name="when-to-use-a-heap"></a>Quando utilizzare un heap  
  Se una tabella è un heap e non dispone di indici non cluster, per individuare qualsiasi riga è necessario esaminare l'intera tabella (analisi della tabella). Ciò può risultare accettabile in caso di tabelle di piccole dimensioni, ad esempio un elenco di 12 sedi locali di una società.  
   
  Quando si archivia una tabella come heap, le singole righe sono identificate mediante il riferimento a un identificatore di riga (RID) costituito dal numero del file, dal numero della pagina di dati e dallo slot nella pagina. L'ID della riga è una struttura piccola ed efficiente. Talvolta gli architetti specializzati utilizzano gli heap quando l'accesso ai dati avviene sempre tramite indici non cluster e il RID risulta più piccolo di una chiave di indice cluster.  
   
-## Quando non utilizzare un heap  
+## <a name="when-not-to-use-a-heap"></a>Quando non utilizzare un heap  
  Non utilizzare un heap quando i dati vengono restituiti di frequente con un ordinamento. Un indice cluster nella colonna di ordinamento può evitare l'esecuzione dell'operazione di ordinamento.  
   
  Non utilizzare un heap quando i dati vengono spesso raggruppati insieme. I dati devono essere ordinati prima di essere raggruppati, pertanto un indice cluster nella colonna di ordinamento può evitare l'esecuzione dell'operazione di ordinamento.  
@@ -40,7 +44,7 @@ caps.handback.revision: 8
   
  Non utilizzare un heap quando non sono presenti indici non cluster e la tabella è di grandi dimensioni. Per individuare qualsiasi riga in un heap, è necessario leggerne tutte le righe.  
   
-## Gestione di heap  
+## <a name="managing-heaps"></a>Gestione di heap  
  Per creare un heap, creare una tabella senza un indice cluster. Se la tabella dispone già di un indice cluster, rimuoverlo per restituire la tabella a un heap.  
   
  Per rimuovere un heap, creare un indice cluster nell'heap.  
@@ -50,10 +54,10 @@ caps.handback.revision: 8
 > [!WARNING]  
 >  Per la creazione o la rimozione di indici cluster è richiesta la riscrittura dell'intera tabella. Se la tabella dispone di indici non cluster, è necessario ricrearli tutti ogni volta che l'indice cluster viene modificato. Pertanto, il passaggio da un heap a una struttura di indice cluster o viceversa può richiedere molto tempo e spazio su disco per riordinare i dati in tempdb.  
 
-## Struttura degli heap
+## <a name="heap-structures"></a>Struttura degli heap
 
 
-Un heap è una tabella per cui non è disponibile un indice cluster. Agli heap corrisponde una riga in [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) con `index_id = 0` per ogni partizione usata dall'heap. Per impostazione predefinita, a ogni heap è associata una singola partizione. Se a un heap sono associate più partizioni, ognuna di esse ha una struttura di heap contenente i dati per la partizione specifica. Ad esempio, se a un heap sono associate quattro partizioni, saranno presenti quattro strutture di heap, una per ogni partizione.
+Un heap è una tabella per cui non è disponibile un indice cluster. Agli heap corrisponde una riga in [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)con `index_id = 0` per ogni partizione usata dall'heap. Per impostazione predefinita, a ogni heap è associata una singola partizione. Se a un heap sono associate più partizioni, ognuna di esse ha una struttura di heap contenente i dati per la partizione specifica. Ad esempio, se a un heap sono associate quattro partizioni, saranno presenti quattro strutture di heap, una per ogni partizione.
 
 A seconda dei tipi di dati dell'heap, ogni struttura di heap conterrà una o più unità di allocazione per l'archiviazione e la gestione dei dati di una partizione specifica. Ogni heap conterrà almeno un'unità di allocazione `IN_ROW_DATA` per partizione e un'unità di allocazione `LOB_DATA` per partizione, se l'heap include colonne LOB (Large Object). Conterrà anche un'unità di allocazione `ROW_OVERFLOW_DATA` per partizione, se include colonne a lunghezza variabile che superano il limite della lunghezza di riga di 8.060.
 
@@ -69,7 +73,7 @@ La figura seguente illustra l'uso delle pagine IAM nel motore di database di SQL
 ![iam_heap](../../relational-databases/indexes/media/iam-heap.gif)
 
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
@@ -77,3 +81,4 @@ La figura seguente illustra l'uso delle pagine IAM nel motore di database di SQL
  [Descrizione di indici cluster e non cluster.](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
+

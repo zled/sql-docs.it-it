@@ -1,25 +1,29 @@
 ---
-title: "Replica snapshot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], about snapshot replication"
-  - "replica snapshot [SQL Server]"
+title: Replica snapshot | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replica snapshot
+# <a name="snapshot-replication"></a>Replica snapshot
   La replica snapshot distribuisce i dati così come appaiono in uno determinato momento e non prevede il monitoraggio degli aggiornamenti ai dati. Quando viene eseguita la sincronizzazione, viene generato e inviato ai Sottoscrittori l'intero snapshot.  
   
 > [!NOTE]  
@@ -59,7 +63,7 @@ caps.handback.revision: 34
  ![Componenti e flusso di dati per la replica snapshot](../../relational-databases/replication/media/snapshot.gif "Componenti e flusso di dati per la replica snapshot")  
   
 ##  <a name="SnapshotAgent"></a> agente snapshot  
- Per la replica di tipo merge, viene generato uno snapshot a ogni esecuzione dell'agente snapshot. Per la replica transazionale, la generazione dello snapshot dipende dall'impostazione della proprietà di pubblicazione **immediate_sync**. Se tale proprietà è impostata su TRUE, ovvero il valore predefinito quando si utilizza la Creazione guidata nuova pubblicazione, viene generato uno snapshot ogni volta che viene eseguito l'agente snapshot, che può essere applicato a un Sottoscrittore in qualsiasi momento. Se la proprietà è impostata su FALSE (impostazione predefinita quando si utilizza **sp_addpublication**), lo snapshot viene generato solo se è stato aggiunto un nuovo abbonamento poiché l'agente Snapshot ultima esecuzione. I sottoscrittori devono attendere l'agente Snapshot per il completamento prima di poter eseguire la sincronizzazione.  
+ Per la replica di tipo merge, viene generato uno snapshot a ogni esecuzione dell'agente snapshot. Per la replica transazionale, la generazione dello snapshot dipende dall'impostazione della proprietà di pubblicazione **immediate_sync**. Se tale proprietà è impostata su TRUE, ovvero il valore predefinito quando si utilizza la Creazione guidata nuova pubblicazione, viene generato uno snapshot ogni volta che viene eseguito l'agente snapshot, che può essere applicato a un Sottoscrittore in qualsiasi momento. Se invece è impostata su FALSE, ovvero il valore predefinito quando si utilizza **sp_addpublication**, lo snapshot viene generato solo se è stata aggiunta una nuova sottoscrizione dopo l'ultima esecuzione dell'agente snapshot. Per poter eseguire la sincronizzazione, è necessario che i sottoscrittori attendano il completamento dell'agente snapshot.  
   
  L'agente snapshot esegue la procedura seguente:  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  Copia i dati dalla tabella pubblicata nel server di pubblicazione e scrive i dati nella cartella snapshot. Lo snapshot viene generato come set di file di programma per la copia bulk (BCP).  
   
-4.  Per pubblicazioni snapshot e transazionali, l'agente Snapshot aggiunge righe per il **MSrepl_commands** e **MSrepl_transactions** tabelle nel database di distribuzione. Le voci di **MSrepl_commands** tabella sono comandi che indica il percorso del file con estensione sch e bcp, qualsiasi altro file di snapshot e riferimenti a tutti gli script pre-distribuzione o post-snapshot. Le voci di **MSrepl_transactions** tabella sono comandi rilevanti per la sincronizzazione del sottoscrittore.  
+4.  Per le pubblicazioni snapshot e transazionali, l'agente snapshot aggiunge righe alle tabelle **MSrepl_commands** e **MSrepl_transactions** nel database di distribuzione. Le voci della tabella **MSrepl_commands** sono comandi che indicano la posizione dei file con estensione sch e bcp, di qualsiasi altro file di snapshot e dei riferimenti a qualsiasi script pre-snapshot o post-snapshot. Le voci della tabella **MSrepl_transactions** sono comandi rilevanti per la sincronizzazione del Sottoscrittore.  
   
      Per le pubblicazioni di tipo merge, l'agente snapshot esegue operazioni aggiuntive.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  Stabilisce una connessione con il server di distribuzione.  
   
-2.  Esamina la **MSrepl_commands** e **MSrepl_transactions** tabelle nel database di distribuzione nel server di distribuzione. L'agente legge nella prima tabella la posizione dei file di snapshot e in entrambe le tabelle i comandi di sincronizzazione del Sottoscrittore.  
+2.  Esamina le tabelle **MSrepl_commands** e **MSrepl_transactions** nel database di distribuzione del server di distribuzione. L'agente legge nella prima tabella la posizione dei file di snapshot e in entrambe le tabelle i comandi di sincronizzazione del Sottoscrittore.  
   
 3.  Applica lo schema e i comandi al database di sottoscrizione.  
   

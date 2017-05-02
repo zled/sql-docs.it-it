@@ -1,38 +1,42 @@
 ---
-title: "Utilizzare l&#39;Indicizzazione guidata full-text | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "Indicizzazione guidata full-text"
-  - "ricerca full-text [SQL Server], Indicizzazione guidata full-text"
+title: Usare l&quot;Indicizzazione guidata full-text | Microsoft Docs
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzare l&#39;Indicizzazione guidata full-text
+# <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
   L'Indicizzazione guidata full-text in SQL Server Management Studio illustra la procedura di creazione di un indice full-text.  
   
-## Creare un indice full-text 
+## <a name="create-a--full-text-index"></a>Creare un indice full-text 
 
 1. In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella nella quale si desidera creare un indice full-text, scegliere **Indice full-text**, quindi fare clic su **Definisci indice full-text**. Questa azione avvia la procedura guidata in una finestra separata.
    Scegliere Avanti. 
@@ -44,7 +48,7 @@ caps.handback.revision: 24
 4. **Lingua per il word breaker.** Consente di selezionare una lingua nell'elenco a discesa. La selezione verrà usata per identificare i word breaker corretti per l'indice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa i word breaker per individuare i delimitatori delle parole nei dati con indicizzazione full-text.  
   
 5.  **Colonna tipo.** Consente di selezionare il nome della colonna che contiene il tipo di documento della colonna sottoposta all'indicizzazione full-text.  
-> **NOTA:** l'opzione **Colonna tipo** è abilitata solo se la colonna specificata nella colonna **Colonne disponibili** è di tipo **varbinary(max)** o **image**.  
+> **NOTA:** l'opzione  **Colonna tipo** è abilitata solo se la colonna specificata nella colonna **Colonne disponibili** è di tipo **varbinary(max)** o **image**.  
   
 6. **Semantica statistica.** Consente di selezionare se abilitare l'indicizzazione semantica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -71,13 +75,13 @@ caps.handback.revision: 24
      
      Scegliere Avanti.
   
-## Catalogo, filegroup indice ed elenco di parole non significative   
+## <a name="catalog-index-filegroup-and-stoplist"></a>Catalogo, filegroup indice ed elenco di parole non significative   
   
 9.  **Seleziona catalogo full-text**  
 
      **Selezione catalogo:** consente di selezionare un catalogo full-text dall'elenco. Il catalogo predefinito del database corrisponderà all'elemento selezionato per impostazione predefinita nell'elenco. Se non è disponibile alcun catalogo, l'elenco sarà disabilitato e la casella di controllo **Crea un nuovo catalogo** sarà selezionata e disabilitata.  
   
-  OPPURE
+  o
   
  10. **Crea un nuovo catalogo**
  - Selezionare un catalogo full-text.  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      e. Selezionare un valore:  
     |Valore|Descrizione|  
     |-----------|-----------------|
-      |**\<predefinito>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o la vista è partizionata, viene usato il filegroup primario|
+      |**<default>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o la vista è partizionata, viene usato il filegroup primario|
       |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|
              *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per utilizzare tale filegroup per il nuovo indice full-text.|  
   
@@ -111,8 +115,8 @@ caps.handback.revision: 24
   
    |Valore|Descrizione|  
     |-----------|-----------------|  
-    |**\<sistema>**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
-    |**\<off>**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
+    |**<system>**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
+    |**<off>**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
     |*user-defined-stoplist-name*|Nell'elenco viene visualizzato il nome di ogni elenco di parole non significative definito dall'utente, se presente, creato nel database. Selezionare qualsiasi elenco di parole non significative definito dall'utente da utilizzare per il nuovo indice full-text.|  
   
   Scegliere Avanti.
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      Al termine dell'esecuzione di tutte le operazioni, fare clic su questo pulsante per accedere a un report delle operazioni eseguite. È possibile visualizzare il report, stamparlo su file, copiarlo negli Appunti o inviarlo tramite posta elettronica.  
   
   
+

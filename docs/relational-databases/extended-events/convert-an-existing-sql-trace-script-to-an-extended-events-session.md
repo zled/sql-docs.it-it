@@ -1,26 +1,30 @@
 ---
-title: "Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Traccia SQL, convertire script in eventi estesi"
-  - "eventi estesi [SQL Server], conversione di script di traccia SQL"
+title: Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Se si dispone di uno script di Traccia SQL esistente che si desidera convertire in una sessione Eventi estesi, è possibile utilizzare le procedure descritte in questo argomento per creare una sessione Eventi estesi equivalente. Usando le informazioni contenute nelle tabelle di sistema trace_xe_action_map e trace_xe_event_map, è possibile raccogliere le informazioni necessarie per la conversione.  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  Creare manualmente una sessione Eventi estesi, utilizzando gli eventi, le azioni e i predicati (filtri) equivalenti degli eventi estesi.  
   
-## Per ottenere l'ID della traccia  
+## <a name="to-obtain-the-trace-id"></a>Per ottenere l'ID della traccia  
   
 1.  Aprire lo script di Traccia SQL nell'editor di query e quindi eseguire lo script per creare la sessione di traccia. Si noti che non è necessario che la sessione di traccia sia in esecuzione per completare questa procedura.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  L'ID di traccia 1 indica in genere la traccia predefinita.  
   
-## Per determinare gli equivalenti degli eventi estesi  
+## <a name="to-determine-the-extended-events-equivalents"></a>Per determinare gli equivalenti degli eventi estesi  
   
 1.  Per determinare gli eventi equivalenti degli eventi estesi, eseguire la query seguente, dove *trace_id* è impostato sul valore dell'ID di traccia ottenuto nella procedura descritta in precedenza.  
   
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          Ad esempio, la classe di evento SP:StmtCompleted esegue il mapping all'evento sp_statement_completed degli eventi estesi. Se si specifica sp_statement_completed come nome di evento nella query, nella colonna "event_field" vengono visualizzati i campi inclusi per impostazione predefinita nell'evento. Analizzando i campi, è possibile notare un campo relativo alla durata ("duration"). Per creare il filtro nella sessione Eventi estesi equivalente, è necessario aggiungere un predicato, ad esempio "WHERE duration > 0". Per un esempio, vedere la procedura "Per creare la sessione Eventi estesi", più avanti in questo argomento.  
   
-## Per creare la sessione Eventi estesi  
+## <a name="to-create-the-extended-events-session"></a>Per creare la sessione Eventi estesi  
  Utilizzare l'editor di query per creare la sessione Eventi estesi e scrivere l'output in una destinazione file. Nei passaggi seguenti viene descritta una singola query e viene illustrato come compilarla. Per l'esempio di query completo, vedere la sezione "Esempio" di questo argomento.  
   
-1.  Aggiungere istruzioni per creare la sessione eventi, sostituendo *session_name* con il nome che si desidera utilizzare per la sessione Eventi estesi.  
+1.  Aggiungere istruzioni per creare la sessione eventi, sostituendo*session_name* con il nome che si desidera utilizzare per la sessione Eventi estesi.  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Per visualizzare i risultati  
+## <a name="to-view-the-results"></a>Per visualizzare i risultati  
   
 1.  È possibile usare la funzione sys.fn_xe_file_target_read_file per visualizzare l'output. A tale scopo, eseguire la query seguente, sostituendo i percorsi di file con i percorsi specificati:  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## Vedere anche  
- [Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

@@ -1,30 +1,34 @@
 ---
-title: "Oggetti creati nel server di pubblicazione Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pubblicazione Oracle [replica di SQL Server], oggetti creati"
+title: Oggetti creati nel server di pubblicazione Oracle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oggetti creati nel server di pubblicazione Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la replica consente di installare gli oggetti di database nel server di pubblicazione Oracle per abilitare il rilevamento delle modifiche e l'inoltro ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non installa i file binari nel server di pubblicazione Oracle). Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
+# <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
+  Con la replica[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati oggetti di database nel server di pubblicazione Oracle in modo da abilitare il rilevamento e l'inoltro delle modifiche.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non determina l'installazione di file binari nel server di pubblicazione Oracle. Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
   
 |Nome oggetto|Tipo oggetto|Descrizione|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Tabella|Tabella di rilevamento delle modifiche utilizzata per archiviare informazioni quando vengono apportate modifiche alla tabella pubblicata. Viene creata una tabella di rilevamento delle modifiche per ogni tabella pubblicata.|  
-|HREPL_Changes|Tabella|Tabella utilizzata internamente dal processo Xactset per determinare il numero di modifiche in attesa di assegnazione a un set di transazioni. Per ulteriori informazioni su questo processo, vedere [ottimizzazione delle prestazioni per server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Changes|Tabella|Tabella utilizzata internamente dal processo Xactset per determinare il numero di modifiche in attesa di assegnazione a un set di transazioni. Per altre informazioni su questo processo, vedere [Ottimizzazione delle prestazioni per i server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
 |HREPL_Distributor|Tabella|Tabella dello stato del server di distribuzione utilizzata per gestire le informazioni relative al server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associato al server di pubblicazione Oracle.|  
 |HREPL_Event|Tabella|Tabella di eventi utilizzata per sincronizzare snapshot e richieste di conteggio delle righe.|  
 |HREPL_Mutex|Tabella|Tabella utilizzata per garantire che la procedura di package Oracle PopulatePollTable non venga eseguita simultaneamente dall'agente di lettura log e dal processo del database.|  
@@ -47,9 +51,9 @@ caps.handback.revision: 33
 |HREPL_Article_I_J|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
 |HREPL_Log_I_J_K|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
   
-## Vedere anche  
- [Configurazione di un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossario dei termini per la pubblicazione Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Panoramica della pubblicazione Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "Classe di evento FT:Crawl Aborted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Crawl Aborted - classe di evento"
+title: Classe di evento FT:Crawl Aborted | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Crawl Aborted event class
 ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd6e356958e291ed4795ab923487919b5bb3a911
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento FT:Crawl Aborted
+# <a name="ftcrawl-aborted-event-class"></a>Classe di evento FT:Crawl Aborted
   La classe di evento **FT:Crawl Aborted** indica che si è verificata un'eccezione durante una ricerca per indicizzazione full-text. In genere, l'errore causa l'arresto della ricerca. Per ulteriori informazioni sull'errore, controllare il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows o il log di tipo ricerca per indicizzazione.  
   
-## Colonne di dati della classe di evento FT:Crawl Aborted  
+## <a name="ftcrawl-aborted-event-class-data-columns"></a>Colonne di dati della classe di evento FT:Crawl Aborted  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID del database nel quale viene eseguita la ricerca per indicizzazione full-text. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella tabella **sysmessages**.|31|Sì|  
+|**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella tabella **sysmessages** .|31|Sì|  
 |**EventClass**|**int**|Tipo di evento = 157.|27|No|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
@@ -37,7 +41,7 @@ caps.handback.revision: 28
 |**State**|**int**|Equivalente a un codice di stato dell'errore.|30|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Esempi di utilizzo della modalit&#224; PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PATH FOR XML - modalità, esempi"
+title: "Esempi d&quot;uso della modalità PATH | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempi di utilizzo della modalit&#224; PATH
+# <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
   
-## Specifica di una query semplice in modalità PATH  
+## <a name="specifying-a-simple-path-mode-query"></a>Specifica di una query semplice in modalità PATH  
  La query seguente specifica una modalità FOR XML PATH.  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## Specifica di nomi di colonna in formato XPath  
+## <a name="specifying-xpath-like-column-names"></a>Specifica di nomi di colonna in formato XPath  
  Nella query seguente il nome di colonna `ProductModelID` specificato inizia con "@" e non contiene una barra ("/"). Nel codice XML risultante viene pertanto creato un attributo dell'elemento <`row`> con il valore di colonna corrispondente.  
   
 ```  
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- Oltre all'ID del modello di prodotto e al nome, la query seguente consente di recuperare i percorsi delle relative istruzioni di produzione. Poiché la colonna Instructions è di tipo **xml**, per il recupero del percorso viene specificato il metodo **query()** del tipo di dati **xml**.  
+ Oltre all'ID del modello di prodotto e al nome, la query seguente consente di recuperare i percorsi delle relative istruzioni di produzione. Poiché la colonna Instructions è di tipo **xml** , per il recupero del percorso viene specificato il metodo **query()** del tipo di dati **xml** .  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## Creazione di un elenco di valori mediante la modalità PATH  
+## <a name="generating-a-value-list-using-path-mode"></a>Creazione di un elenco di valori mediante la modalità PATH  
  La query successiva crea un elenco di valori di prodotti ID. Per ogni ID prodotto la query crea inoltre elementi nidificati <`ProductName`>, come illustrato in questo frammento XML:  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -312,7 +316,7 @@ FOR XML PATH('ProductModelData');
   
  Dalla query precedente si noti quanto segue:  
   
--   La prima istruzione `SELECT` nidificata restituisce un elenco di ProductID utilizzando il nome di colonna `data()`. Poiché la query specifica una stringa vuota come nome dell'elemento riga in `FOR XML PATH`, non viene generato alcun elemento. L'elenco di valori viene invece assegnato all'attributo `ProductID`.  
+-   La prima istruzione `SELECT` nidificata restituisce un elenco di ProductID utilizzando il nome di colonna `data()` . Poiché la query specifica una stringa vuota come nome dell'elemento riga in `FOR XML PATH`, non viene generato alcun elemento. L'elenco di valori viene invece assegnato all'attributo `ProductID` .  
   
 -   La seconda istruzione `SELECT` nidificata recupera i nomi dei prodotti per quelli presenti nel modello del prodotto. Genera elementi <`ProductName`> che vengono restituiti inseriti nell'elemento <`ProductNames`>, poiché la query specifica `ProductNames` come nome di colonna.  
   
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## Aggiunta degli spazi dei nomi nel codice XML risultante  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>Aggiunta degli spazi dei nomi nel codice XML risultante  
  Come descritto in [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md), è possibile usare WITH XMLNAMESPACES per includerli nelle query della modalità PATH. Ad esempio, i nomi specificati nella clausola SELECT includono i prefissi degli spazi dei nomi. La seguente query in modalità `PATH` crea codice XML con spazi dei nomi.  
   
 ```  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

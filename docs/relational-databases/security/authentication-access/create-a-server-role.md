@@ -1,28 +1,32 @@
 ---
-title: "Creazione di un ruolo del server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "RUOLO SERVER, creazione"
+title: Creare un ruolo del server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creazione di un ruolo del server
+# <a name="create-a-server-role"></a>Creazione di un ruolo del server
   In questo argomento viene descritto come creare un nuovo ruolo server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -50,7 +54,7 @@ caps.handback.revision: 13
   
 -   È richiesta l'autorizzazione CREATE SERVER ROLE o l'appartenenza al ruolo predefinito del server sysadmin.  
   
--   È anche richiesta l'autorizzazione IMPERSONATE in *server_principal* per gli account di accesso, l'autorizzazione ALTER per i ruoli del server usati come *server_principal* o l'appartenenza a un gruppo di Windows usato come server_principal.  
+-   È anche richiesta l'autorizzazione IMPERSONATE in *server_principal* per gli account di accesso, l'autorizzazione ALTER per i ruoli del server usati come *server_principal*o l'appartenenza a un gruppo di Windows usato come server_principal.  
   
 -   Se si utilizza l'opzione AUTHORIZATION per assegnare la proprietà del ruolo del server, sono necessarie anche le autorizzazioni seguenti:  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare un nuovo ruolo del server  
+#### <a name="to-create-a-new-server-role"></a>Per creare un nuovo ruolo del server  
   
 1.  In Esplora oggetti espandere il server in cui si desidera creare il nuovo ruolo del server.  
   
@@ -68,11 +72,11 @@ caps.handback.revision: 13
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli server** e scegliere **Nuovo ruolo server**.  
   
-4.  Nella pagina **Generale**finestra di dialogo **Nuovo ruolo server - ***nome_ruolo_server* immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo server**.  
+4.  Nella pagina **Generale***finestra di dialogo* Nuovo ruolo server - **nome_ruolo_server** immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo server** .  
   
-5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server**.  
+5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server** .  
   
-6.  In **Entità a protezione diretta** selezionare una o più entità a protezione diretta a livello di server. Quando è selezionata un'entità a protezione diretta, al ruolo del server è possibile concedere o negare autorizzazioni per tale entità.  
+6.  In **Entità a protezione diretta**selezionare una o più entità a protezione diretta a livello di server. Quando è selezionata un'entità a protezione diretta, al ruolo del server è possibile concedere o negare autorizzazioni per tale entità.  
   
 7.  Nella casella **Autorizzazioni: Esplicite** selezionare la casella di controllo per concedere, concedere con concessione o negare autorizzazioni al ruolo del server per le entità a protezione diretta selezionate. Se un'autorizzazione non può essere concessa o negata a tutte le entità a protezione diretta selezionate, l'autorizzazione viene rappresentata come selezione parziale.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 13
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare un nuovo ruolo del server  
+#### <a name="to-create-a-new-server-role"></a>Per creare un nuovo ruolo del server  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

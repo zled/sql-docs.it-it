@@ -1,31 +1,35 @@
 ---
-title: "Spazio su disco per il log delle transazioni per operazioni sugli indici | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "spazio su disco degli indici [SQL Server]"
-  - "spazio [SQL Server], indici"
-  - "log delle transazioni [SQL Server], spazio su disco"
-  - "spazio su discon[SQL Server], log delle transazioni"
-  - "spazio [SQL Server], log delle transazioni"
+title: Spazio su disco per il log delle transazioni per operazioni sugli indici | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- transaction logs [SQL Server], disk space
+- disk space [SQL Server], transaction logs
+- space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Spazio su disco per il log delle transazioni per operazioni sugli indici
+# <a name="transaction-log-disk-space-for-index-operations"></a>Spazio su disco per il log delle transazioni per operazioni sugli indici
   Le operazioni sugli indici su larga scala possono generare carichi di dati di grandi dimensioni che possono causare un rapido riempimento del log delle transazioni. Per garantire la possibilità di esecuzione del rollback dell'operazione sull'indice, non è possibile troncare il log delle transazioni fino al completamento dell'operazione sull'indice. Durante tale operazione è tuttavia possibile eseguire il backup del log. Nel log delle transazioni deve pertanto esserci spazio sufficiente per archiviare sia le transazioni dell'operazione sull'indice che eventuali transazioni utente simultanee per la durata dell'operazione sull'indice. Questo è valido sia per le operazioni sugli indici online che non offline. Poiché durante un'operazione sull'indice offline non è possibile accedere alle tabelle sottostanti, il numero di transazioni utente potrebbe essere basso e il log potrebbe non aumentare in modo eccessivamente rapido. Le operazioni sugli indici online non impediscono attività utente simultanee e pertanto le operazioni sugli indici su larga scala in combinazione con transazioni utente simultanee significative possono causare un aumento continuo del log delle transazioni senza che sia possibile troncarlo.  
   
-## Indicazioni  
+## <a name="recommendations"></a>Indicazioni  
  Quando si eseguono operazioni sugli indici su larga scala, considerare i consigli seguenti:  
   
 1.  Verificare di avere eseguito il backup del log delle transazioni e di averlo troncato prima di eseguire operazioni sugli indici online su larga scala e verificare che nel log vi sia spazio sufficiente per archiviare le transazioni utente e di indice previste.  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
 4.  Non eseguire l'operazione sull'indice online in una transazione esplicita. Il log non verrà troncato fino al termine della transazione esplicita.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Requisiti di spazio su disco per operazioni DLL sugli indici](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Esempio di spazio su disco per gli indici](../../relational-databases/indexes/index-disk-space-example.md)  

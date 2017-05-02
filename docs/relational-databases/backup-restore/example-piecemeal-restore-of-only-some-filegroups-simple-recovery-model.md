@@ -1,26 +1,30 @@
 ---
-title: "Esempio: Ripristino a fasi di filegroup selezionati (modello di recupero con registrazione minima) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristino a fasi [SQL Server], modello di recupero con registrazione minima"
-  - "sequenze di ripristino [SQL Server], ripristino a fasi"
-  - "modello di recupero con registrazione minima [SQL Server], esempi RESTORE"
+title: 'Esempio: Ripristino a fasi di filegroup selezionati (modello di recupero con registrazione minima) | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- piecemeal restores [SQL Server], simple recovery model
+- restore sequences [SQL Server], piecemeal
+- simple recovery model [SQL Server], RESTORE examples
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fdc0ea6d5523f397a2e3b38d021b046260c32d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: Ripristino a fasi di filegroup selezionati (modello di recupero con registrazione minima)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>Esempio: Ripristino a fasi di filegroup selezionati (modello di recupero con registrazione minima)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Le informazioni in questo argomento sono rilevanti per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano il modello di recupero con registrazione minima e che contengono un filegroup di sola lettura.  
@@ -29,9 +33,9 @@ caps.handback.revision: 28
   
  In questo esempio, un database denominato `adb`, che utilizza il modello di recupero con registrazione minima, contiene tre filegroup. Il filegroup `A` è in lettura/scrittura, mentre i filegroup `B` e `C` sono di sola lettura. Inizialmente, tutti i filegroup sono online.  
   
- Il filegroup primario e il filegroup `B` del database `adb` risultano danneggiati. L'amministrazione del database decide pertanto di ripristinarli con una sequenza di ripristino a fasi. Nel modello di recupero con registrazione minima, tutti i filegroup in lettura/scrittura devono essere ripristinati dallo stesso backup parziale. Sebbene sia intatto, il filegroup `A` deve essere ripristinato con il filegroup primario per assicurarne la consistenza. Il database verrà ripristinato fino al punto nel tempo corrispondente alla fine dell'ultimo backup parziale. Il filegroup `C` è intatto, ma è necessario recuperarlo per attivare la modalità online. Nel filegroup `B`, sebbene sia danneggiato, sono inclusi dati meno critici rispetto al filegroup `C`. Il filegroup `B`, pertanto, verrà ripristinato per ultimo.  
+ Il filegroup primario e il filegroup `B` del database `adb` risultano danneggiati. L'amministrazione del database decide pertanto di ripristinarli con una sequenza di ripristino a fasi. Nel modello di recupero con registrazione minima, tutti i filegroup in lettura/scrittura devono essere ripristinati dallo stesso backup parziale. Sebbene sia intatto, il filegroup `A` deve essere ripristinato con il filegroup primario per assicurarne la consistenza. Il database verrà ripristinato fino al punto nel tempo corrispondente alla fine dell'ultimo backup parziale. Il filegroup `C` è intatto, ma è necessario recuperarlo per attivare la modalità online. Nel filegroup `B`, sebbene sia danneggiato, sono inclusi dati meno critici rispetto al filegroup `C`. Il filegroup `B` , pertanto, verrà ripristinato per ultimo.  
   
-## Sequenze di ripristino  
+## <a name="restore-sequences"></a>Sequenze di ripristino  
   
 > [!NOTE]  
 >  La sintassi di una sequenza di ripristino online è la stessa di una sequenza di ripristino offline.  
@@ -66,7 +70,7 @@ caps.handback.revision: 28
   
      In questa fase tutti i filegroup sono online.  
   
-## Esempi aggiuntivi  
+## <a name="additional-examples"></a>Esempi aggiuntivi  
   
 -   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -80,10 +84,10 @@ caps.handback.revision: 28
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristino online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

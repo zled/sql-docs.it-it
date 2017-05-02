@@ -1,25 +1,29 @@
 ---
-title: "Colonne con nome specificato come carattere jolly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nomi [SQL Server], colonne con nomi"
+title: Colonne con nome specificato come carattere jolly | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e03000db7890bd87e22799b6bf525b9a1194c2a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colonne con nome specificato come carattere jolly
-  Se il nome di colonna specificato è un carattere jolly (\*), il contenuto della colonna viene inserito come se non fosse stato specificato alcun nome di colonna. Se la colonna non è di tipo diverso da **xml**, il relativo contenuto viene inserito come nodo di testo, come illustrato nell'esempio seguente:  
+# <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colonne con nome specificato come carattere jolly
+  Se il nome di colonna specificato è un carattere jolly (\*), il contenuto della colonna viene inserito come se non fosse stato specificato alcun nome di colonna. Se la colonna non è di tipo diverso da**xml** , il relativo contenuto viene inserito come nodo di testo, come illustrato nell'esempio seguente:  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,7 +43,7 @@ FOR XML PATH;
   
  `<row EmpID="1">KenJSánchez</row>`  
   
- Se la colonna è di tipo **xml**, viene inserito l'albero XML corrispondente. Ad esempio, la query seguente specifica "*" come nome della colonna che contiene il codice XML restituito dall'espressione XQuery eseguita sulla colonna Instructions.  
+ Se la colonna è di tipo **xml** , viene inserito l'albero XML corrispondente. Ad esempio, la query seguente specifica "*" come nome della colonna che contiene il codice XML restituito dall'espressione XQuery eseguita sulla colonna Instructions.  
   
 ```  
 SELECT   
@@ -70,7 +74,7 @@ GO
   
  `</row>`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare la modalità PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

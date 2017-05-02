@@ -1,30 +1,34 @@
 ---
-title: "Ripristina database (pagina File) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.files.f1"
-  - "sql13.swb.restoredb.files.f1 in the code"
+title: Ripristina database (pagina File) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.files.f1
+- sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 840b9d449ad320dc104960c322590e96082f0cdb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristina database (pagina File)
+# <a name="restore-database-files-page"></a>Ripristina database (pagina File)
   Utilizzare la pagina **File** della finestra di dialogo **Ripristina database** per gestire i file specifici che si è scelto di ripristinare all'interno del database.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
-### Ripristina file di database come  
+### <a name="restore-database-files-as"></a>Ripristina file di database come  
  Consente di assegnare e gestire il nuovo percorso di file per i file ripristinati.  
   
  **Riloca tutti i file nella cartella**  
@@ -47,11 +51,11 @@ caps.handback.revision: 16
  **Ripristina come**  
  Consente di visualizzare un elenco dei nomi di file da utilizzare per i file ripristinati. Immettere o cercare il nome di file appropriato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristina database &#40;pagina Generale&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Ripristina database &#40;pagina Opzioni&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
- [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
+ [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

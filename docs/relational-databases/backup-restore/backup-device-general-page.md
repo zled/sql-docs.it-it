@@ -1,24 +1,28 @@
 ---
-title: "Dispositivo di backup (pagina Generale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.general.f1"
+title: Dispositivo di backup (pagina Generale) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dispositivo di backup (pagina Generale)
+# <a name="backup-device-general-page"></a>Dispositivo di backup (pagina Generale)
   Utilizzare la pagina **Generale** per specificare o visualizzare le proprietà generali di un dispositivo di backup logica.  
   
  **Per utilizzare SQL Server Management Studio per visualizzare il contenuto di un dispositivo di backup**  
@@ -27,12 +31,12 @@ caps.handback.revision: 34
   
 -   [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome dispositivo**  
  Consente di visualizzare il nome di un dispositivo di backup logico esistente o di specificare il nome di un nuovo dispositivo di backup logico.  
   
  **Tape**  
- Consente di visualizzare o selezionare il dispositivo nastro di destinazione nell'elenco **Nastro**. L'opzione è disponibile solo se un'unità nastro è collegata al computer in cui è in esecuzione l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Consente di visualizzare o selezionare il dispositivo nastro di destinazione nell'elenco **Nastro** . L'opzione è disponibile solo se un'unità nastro è collegata al computer in cui è in esecuzione l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  I dispositivi di backup su nastro collegati a computer remoti non rappresentano destinazioni di backup valide.  
@@ -49,9 +53,9 @@ caps.handback.revision: 34
      In alternativa, è possibile modificare il campo **File** manualmente per ignorare il percorso, il nome del file e l'estensione predefiniti. Per specificare un file remoto come destinazione di backup, utilizzare il nome completo in formato UNC (Universal Naming Convention). Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Poiché l'esecuzione del backup dei dati in rete può essere soggetta a errori di rete, è consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+    >  Poiché l'esecuzione del backup dei dati in rete può essere soggetta a errori di rete, è consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti. Un *set di supporti* è una raccolta ordinata di supporti di backup, nastri o file su disco, su cui una o più operazioni di backup hanno eseguito la scrittura utilizzando un tipo e un numero fisso di dispositivi di backup. Per informazioni sui set di supporti, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  Il dispositivo di backup fisico corrisponde a un dispositivo di backup logico che viene inizializzata quando il primo backup nel set di supporti viene scritto sul dispositivo di backup logico. Se il dispositivo di backup fisico è un file non ancora esistente, viene creato in quel momento.  
@@ -76,7 +80,7 @@ caps.handback.revision: 34
   
 -   [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

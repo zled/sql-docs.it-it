@@ -1,29 +1,33 @@
 ---
-title: "Ottieni informazioni sui trigger DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "metadati [SQL Server], trigger"
-  - "visualizzazione di trigger DML"
-  - "trigger DML, metadati"
-  - "visualizzazione di trigger DML"
-  - "informazioni sullo stato [SQL Server], trigger"
-  - "trigger DML, visualizzazione"
+title: Recuperare informazioni sui trigger DML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- viewing DML triggers
+- DML triggers, metadata
+- displaying DML triggers
+- status information [SQL Server], triggers
+- DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ottieni informazioni sui trigger DML
+# <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
   In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
   
  **Contenuto dell'argomento**  
@@ -47,14 +51,14 @@ caps.handback.revision: 31
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- È richiesta l'appartenenza al ruolo **public** . La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin** e **db_securityadmin**.  
+ È richiesta l'appartenenza al ruolo **public** . La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
- Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su **sys.sql_expression_dependencies** per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database **db_owner**. Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
+ Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su **sys.sql_expression_dependencies** per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database **db_owner** . Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per visualizzare la definizione di un trigger DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 3.  Espandere **Trigger**, fare clic con il pulsante destro del mouse sul trigger desiderato, quindi scegliere **Modifica**. La definizione del trigger DML viene visualizzata nella finestra Query.  
   
-#### Per visualizzare le dipendenze di un trigger DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Per visualizzare le dipendenze di un trigger DML  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per visualizzare la definizione di un trigger DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -113,7 +117,7 @@ GO
   
 ```  
   
-#### Per visualizzare le dipendenze di un trigger DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Per visualizzare le dipendenze di un trigger DML  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -139,7 +143,7 @@ GO
   
 ```  
   
-#### Per visualizzare informazioni sui trigger DML nel database  
+#### <a name="to-view-information-about-dml-triggers-in-the-database"></a>Per visualizzare informazioni sui trigger DML nel database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -175,13 +179,13 @@ GO
   
 ```  
   
-#### Per visualizzare informazioni sugli eventi che attivano un trigger DML  
+#### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>Per visualizzare informazioni sugli eventi che attivano un trigger DML  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare uno degli esempi seguenti nella finestra della query, quindi fare clic su **Esegui**. In ogni esempio viene illustrato come visualizzare gli eventi che attivano il trigger `iuPerson`.  
+3.  Copiare e incollare uno degli esempi seguenti nella finestra della query, quindi fare clic su **Esegui**. In ogni esempio viene illustrato come visualizzare gli eventi che attivano il trigger `iuPerson` .  
   
 ```tsql  
 USE AdventureWorks2012;   
@@ -201,7 +205,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

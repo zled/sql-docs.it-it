@@ -1,34 +1,38 @@
 ---
-title: "Ripristino di pagine (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "ripristino di pagine [SQL Server]"
-  - "pagine [SQL Server], ripristino"
-  - "database [SQL Server], danneggiati"
-  - "ripristini di pagine [SQL Server]"
-  - "pagine [SQL Server], danneggiate"
-  - "ripristino [SQL Server], pagine"
+title: Ripristinare pagine (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripristino di pagine (SQL Server)
+# <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) del database **msdb**.  
+  In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) del database **msdb** .  
   
  **Contenuto dell'argomento**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 67
 ###  <a name="WhenUseful"></a> Casi in cui è utile il ripristino della pagina  
  Il ripristino di una pagina è destinato alla correzione di pagine danneggiate isolate. Il ripristino e il recupero di poche pagine singole possono essere eseguiti in modo più rapido rispetto al ripristino di un file, riducendo la quantità di dati offline durante l'operazione di ripristino. Tuttavia, se è necessario ripristinare un certo numero di pagine in un file, in genere è più efficiente ripristinare l'intero file. Se, ad esempio, numerose pagine in un dispositivo indicano la possibilità di un guasto imminente del dispositivo, prendere in considerazione il ripristino del file, se possibile in un percorso diverso, e la riparazione del dispositivo.  
   
- Non tutti gli errori di pagina richiedono inoltre un ripristino. Nei dati della cache, ad esempio in un indice secondario, può verificarsi un problema risolvibile ricalcolando i dati. Se, ad esempio, l'amministratore del database elimina un indice secondario e lo ricompila, i dati danneggiati, sebbene corretti, non sono indicati come tali nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
+ Non tutti gli errori di pagina richiedono inoltre un ripristino. Nei dati della cache, ad esempio in un indice secondario, può verificarsi un problema risolvibile ricalcolando i dati. Se, ad esempio, l'amministratore del database elimina un indice secondario e lo ricompila, i dati danneggiati, sebbene corretti, non sono indicati come tali nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) .  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
@@ -94,36 +98,36 @@ caps.handback.revision: 67
     > [!WARNING]  
     >  Se nelle pagine danneggiate sono archiviati metadati del database di importanza critica, gli aggiornamenti necessari ai metadati potrebbero non riuscire durante un tentativo di ripristino della pagina online. In questo caso è possibile eseguire un ripristino della pagina non in linea, ma è prima necessario creare un [backup della parte finale del log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) eseguendo il backup del log delle transazioni tramite RESTORE WITH NORECOVERY.  
   
--   Il ripristino della pagina sfrutta le funzionalità ottimizzate di segnalazione e rilevamento degli errori a livello di pagina, inclusi i checksum di pagina. Le pagine rilevate come *danneggiate* da un errore di checksum o di scrittura incompleta possono essere ripristinate tramite un'operazione di ripristino della pagina. Vengono ripristinate solo le pagine specificate in modo esplicito. Ogni pagina specificata viene sostituita dalla copia di tale pagina dal backup dei dati specificato.  
+-   Il ripristino della pagina sfrutta le funzionalità ottimizzate di segnalazione e rilevamento degli errori a livello di pagina, inclusi i checksum di pagina. Le pagine rilevate come *danneggiate*da un errore di checksum o di scrittura incompleta possono essere ripristinate tramite un'operazione di ripristino della pagina. Vengono ripristinate solo le pagine specificate in modo esplicito. Ogni pagina specificata viene sostituita dalla copia di tale pagina dal backup dei dati specificato.  
   
      Quando si ripristinano i backup del log successivi, questi vengono applicati solo ai file di database che contengono almeno una pagina recuperata. È inoltre necessario che una catena non interrotta di backup del log venga applicata all'ultimo ripristino completo o differenziale per aggiornare il filegroup che include la pagina rispetto al file di log attuale. Analogamente al ripristino del file, il set di rollforward viene avanzato con un unico passaggio di rollforward del log. Affinché il ripristino delle pagine avvenga correttamente, è necessario che le pagine ripristinate vengano recuperate fino a uno stato consistente con il database.  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT il database esiste sempre.  
+ Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  A partire da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supporta il ripristino della pagina.  
   
-#### Per ripristinare le pagine  
+#### <a name="to-restore-pages"></a>Per ripristinare le pagine  
   
 1.  Stabilire una connessione all'istanza appropriata di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi fare clic sul nome del server in Esplora oggetti per espandere l'albero di server.  
   
 2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Pagina**. Verrà aperta la finestra di dialogo **Ripristina pagina**.  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, **Ripristina**, quindi fare clic su **Pagina**. Verrà aperta la finestra di dialogo **Ripristina pagina** .  
   
-     **Restore**  
+     **Ripristina**  
      Questa sezione ha la stessa funzione di **Ripristina fino a** in [Ripristina database (pagina Generale)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
      **Database**  
      Consente di specificare il database da ripristinare. È possibile immettere un nuovo database oppure selezionarne uno esistente nell'elenco a discesa. Nell'elenco sono inclusi tutti i database disponibili nel server, ad eccezione dei database di sistema **master** e **tempdb**.  
   
     > [!WARNING]  
-    >  Per ripristinare un backup protetto da password, è necessario usare l'istruzione [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+    >  Per ripristinare un backup protetto da password, è necessario usare l'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
      **Backup della parte finale del log**  
      Immettere o selezionare un nome di file in **Dispositivo di backup** per indicare dove verrà archiviato il backup della parte finale del log per il database.  
@@ -134,7 +138,7 @@ caps.handback.revision: 67
     |Intestazione|Valori|  
     |------------|------------|  
     |**Nome**|Nome del set di backup.|  
-    |**Componente**|Componente incluso nel backup, ovvero **Database**, **File** o **\<vuoto>**nel caso dei log delle transazioni.|  
+    |**Componente**|Componente incluso nel backup, ovvero **Database**, **File** o **\<vuoto>** (nel caso dei log delle transazioni).|  
     |**Tipo**|Tipo di backup eseguito: **Completo**, **Differenziale**o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  
@@ -154,11 +158,11 @@ caps.handback.revision: 67
 4.  Per identificare pagine danneggiate, con il database corretto selezionato nella casella **Database** , fare clic su **Controlla pagine di database**. L'operazione può richiedere molto tempo.  
   
     > [!WARNING]  
-    >  Per ripristinare pagine specifiche non danneggiate, fare clic su **Aggiungi** e immettere l'**ID file** e l'**ID pagina** delle pagine da ripristinare.  
+    >  Per ripristinare pagine specifiche non danneggiate, fare clic su **Aggiungi** e immettere l' **ID file** e l' **ID pagina** delle pagine da ripristinare.  
   
-5.  La griglia di pagine viene usata per identificare le pagine da ripristinare. All'inizio questa griglia viene popolata dalla tabella di sistema [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md). Per aggiungere o rimuovere pagine dalla griglia, fare clic su **Aggiungi** o su **Rimuovi**. Per altre informazioni, vedere [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+5.  La griglia di pagine viene usata per identificare le pagine da ripristinare. All'inizio questa griglia viene popolata dalla tabella di sistema [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) . Per aggiungere o rimuovere pagine dalla griglia, fare clic su **Aggiungi** o su **Rimuovi**. Per altre informazioni, vedere [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
-6.  Nella griglia **Set di backup** sono elencati i set di backup inclusi nel piano di ripristino predefinito. Facoltativamente, fare clic su **Verifica** per verificare che i backup siano leggibili e che i set di backup siano completi, senza ripristinarli. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+6.  Nella griglia **Set di backup** sono elencati i set di backup inclusi nel piano di ripristino predefinito. Facoltativamente, fare clic su **Verifica** per verificare che i backup siano leggibili e che i set di backup siano completi, senza ripristinarli. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
      **Pagine**  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- Per altre informazioni sui parametri dell'opzione PAGE, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md). Per altre informazioni sulla sintassi di RESTORE DATABASE, vedere [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Per altre informazioni sui parametri dell'opzione PAGE, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Per altre informazioni sulla sintassi di RESTORE DATABASE, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-#### Per ripristinare le pagine  
+#### <a name="to-restore-pages"></a>Per ripristinare le pagine  
   
 1.  Ottenere gli ID di pagina delle pagine danneggiate da ripristinare. Un errore di checksum o di scrittura incompleta restituisce l'ID della pagina, con le informazioni necessarie per specificare le pagine. Per cercare l'ID di una pagina danneggiata, usare una delle origini seguenti:  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Log degli errori|[Visualizzazione del log degli errori di SQL Server &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Tracce degli eventi|[Monitoraggio e risposta agli eventi](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |Tracce degli eventi|[Monitoraggio e risposta agli eventi](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |Provider WMI|[Concetti relativi al provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -203,7 +207,7 @@ caps.handback.revision: 67
     >  Questa sequenza è analoga a una sequenza di ripristino del file. In effetti, il ripristino della pagina e i ripristini dei file possono essere eseguiti entrambi come parte della stessa sequenza.  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
- Nell'esempio seguente vengono ripristinate quattro pagine danneggiate del file `B` con `NORECOVERY`. Successivamente, vengono applicati due backup del log con `NORECOVERY`, seguiti dal backup della parte finale del log, ripristinato con `RECOVERY`. Nell'esempio seguente viene eseguito un ripristino in linea. Nell'esempio l'ID del file `B` è `1` e gli ID delle pagine danneggiate sono `57`, `202`, `916` e `1016`.  
+ Nell'esempio seguente vengono ripristinate quattro pagine danneggiate del file `B` con `NORECOVERY`. Successivamente, vengono applicati due backup del log con `NORECOVERY`, seguiti dal backup della parte finale del log, ripristinato con `RECOVERY`. Nell'esempio seguente viene eseguito un ripristino in linea. Nell'esempio l'ID del file `B` è `1`e gli ID delle pagine danneggiate sono `57`, `202`, `916`e `1016`.  
   
 ```tsql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## Vedere anche  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

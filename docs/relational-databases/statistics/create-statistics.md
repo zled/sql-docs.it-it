@@ -1,30 +1,34 @@
 ---
-title: "Creare statistiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.stat.properties.f1"
-  - "sql13.swb.statistics.filter.f1"
-  - "sql13.swb.stat.columns.f1"
-  - "sql13.swb.statistics.propertis.f1"
-helpviewer_keywords: 
-  - "creazione di statistiche"
-  - "statistiche [SQL Server], creazione"
+title: Creare statistiche | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.stat.properties.f1
+- sql13.swb.statistics.filter.f1
+- sql13.swb.stat.columns.f1
+- sql13.swb.statistics.propertis.f1
+helpviewer_keywords:
+- creating statistics
+- statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare statistiche
+# <a name="create-statistics"></a>Creare statistiche
   È possibile creare statistiche di ottimizzazione delle query per una o più colonne di una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per la maggior parte delle query, tramite Query Optimizer vengono già generate le statistiche necessarie per un piano di query di alta qualità, ma in alcuni casi è necessario creare statistiche aggiuntive.  
   
  **Contenuto dell'argomento**  
@@ -54,11 +58,11 @@ caps.handback.revision: 9
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin**, ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin**.  
+ L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per creare statistiche  
+#### <a name="to-create-statistics"></a>Per creare statistiche  
   
 1.  In **Esplora oggetti**fare clic sul segno più per espandere il database in cui si desidera creare una nuova statistica.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 9
      **Espressione filtro**  
      Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella***table_name* fare clic su **Aggiungi**.  
+5.  Nella pagina **Generale***della finestra di dialogo* Nuove statistiche per Tabella **table_name** fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
@@ -130,10 +134,10 @@ caps.handback.revision: 9
      **Dimensione**  
      Consente di visualizzare le dimensioni del tipo di dati per ogni colonna.  
   
-     **Identity**  
+     **Identità**  
      Se viene selezionata, questa opzione consente di indicare una colonna di identità.  
   
-     **Consenti valori Null**  
+     **Allow NULLs**  
      Consente di indicare se la colonna accetta valori NULL.  
   
 6.  Nella finestra di dialogo **Seleziona colonne** selezionare le caselle di controllo per tutte le colonne per cui si desidera creare una statistica e quindi fare clic su **OK**.  
@@ -142,7 +146,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare statistiche  
+#### <a name="to-create-statistics"></a>Per creare statistiche  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

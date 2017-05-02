@@ -1,28 +1,32 @@
 ---
-title: "Filtrare una traccia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtri [SQL Server], eventi"
-  - "eventi [SQL Server], filtri"
-  - "filtri [SQL Server]"
-  - "filtri [SQL Server], tracce"
-  - "tracce [SQL Server], filtri"
+title: Filtrare una traccia | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrare una traccia
+# <a name="filter-a-trace"></a>Filtrare una traccia
   I filtri consentono di limitare gli eventi raccolti in una traccia. Se non si imposta un filtro, tutti gli eventi delle classi di evento selezionate vengono restituiti nell'output di traccia. Ad esempio, se si limitano i nomi utente di Windows in una traccia, consentendo solo utenti specifici, i dati dell'output saranno ridotti solo a tali utenti.  
   
  L'impostazione di un filtro per una traccia non è obbligatoria. Un filtro consente, tuttavia, di ridurre l'overhead che si verifica durante una traccia, restituendo dati specifici e quindi semplificando l'analisi delle prestazioni e i controlli.  
@@ -30,11 +34,11 @@ caps.handback.revision: 28
  Per filtrare i dati di evento acquisiti in una traccia, selezionare i criteri per gli eventi di traccia che restituiscono solo i dati rilevanti disponibili nella traccia. Ad esempio, è possibile includere o escludere il monitoraggio dell'attività di un'applicazione specifica dalla traccia.  
   
 > [!NOTE]  
->  Durante la creazione di tracce da parte di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], per impostazione predefinita le attività specifiche del programma stesso vengono escluse tramite filtro.  
+>  Durante la creazione di tracce da parte di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , per impostazione predefinita le attività specifiche del programma stesso vengono escluse tramite filtro.  
   
  Come ulteriore esempio, se si esegue il monitoraggio delle query per determinare quali batch richiedono i tempi di esecuzione più lunghi, impostare i criteri per gli eventi di traccia in modo da monitorare solo i batch la cui esecuzione richiede più di 30 secondi (un valore minimo della CPU di 30.000 millisecondi).  
   
-## Linee guida per la creazione di filtri  
+## <a name="filter-creation-guidelines"></a>Linee guida per la creazione di filtri  
  In generale, per filtrare una traccia, eseguire la procedura seguente.  
   
 1.  Identificare gli eventi da includere nella traccia.  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |Operatore relazionale|Simbolo operatore|Descrizione|  
 |-------------------------|---------------------|-----------------|  
-|Simile a|LIKE|Consente di specificare che i dati dell'evento di traccia devono essere simili al testo specificato. Supporta più valori.|  
-|Non simile a|NOT LIKE|Specifica che i dati dell'evento di traccia devono essere diversi dal testo specificato. Supporta più valori.|  
+|Simile a|Simile a|Consente di specificare che i dati dell'evento di traccia devono essere simili al testo specificato. Supporta più valori.|  
+|Non simile a|Non simile a|Specifica che i dati dell'evento di traccia devono essere diversi dal testo specificato. Supporta più valori.|  
 |Uguale a|=|Specifica che i dati dell'evento di traccia devono essere uguali al valore specificato. Supporta più valori.|  
 |Diverso da|<>|Specifica che i dati dell'evento di traccia devono essere diversi dal valore specificato. Supporta più valori.|  
 |Maggiore di|>|Specifica che i dati dell'evento di traccia devono essere maggiori del valore specificato.|  
@@ -126,7 +130,7 @@ caps.handback.revision: 28
 |**SqlHandle**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**Operazione completata**|=, <>, >=, <=|  
+|**Esito positivo**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per filtrare gli eventi in questa colonna di dati. Per altre informazioni, vedere [Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -136,7 +140,7 @@ caps.handback.revision: 28
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- \* Se si tracciano eventi dall'utilità **osql** o dall'utilità **sqlcmd**, aggiungere sempre **%** ai filtri nella colonna di dati **TextData**.  
+ \* Se si tracciano eventi dall'utilità **osql** o dall'utilità **sqlcmd** , aggiungere sempre **%** ai filtri nella colonna di dati **TextData** .  
   
  A titolo di sicurezza, Traccia SQL omette automaticamente dalla traccia le informazioni sulle stored procedure correlate alla sicurezza che coinvolgono le password. Tale meccanismo di sicurezza non è configurabile ed è sempre attivo. In tale modo viene impedito che le password possano essere acquisite dagli utenti, i quali sono autorizzati a tenere traccia di tutte le attività in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,34 +1,38 @@
 ---
-title: "Pre-elaborazione di uno schema per unire schemi inclusi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "test dello strumento di pre-elaborazione"
-  - "xsd:include"
-  - "raccolte XML Schema [SQL Server], strumento di pre-elaborazione"
-  - "include - elemento"
-  - "XML Schema [SQL Server], pre-elaborazione"
-  - "raccolte di schemi [SQL Server], strumento di pre-elaborazione"
-  - "strumento di pre-elaborazione [XML Schema]"
-  - "XML Schema [SQL Server]"
+title: Eseguire la pre-elaborazione di uno schema per unire schemi inclusi | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pre-elaborazione di uno schema per unire schemi inclusi
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pre-elaborazione di uno schema per unire schemi inclusi
   L'elemento **include** XSD W3C rende disponibile il supporto per la modularità di schema, che consente di partizionare XML Schema in più file fisici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente non supporta questo elemento. Gli XML Schema che includono tale elemento verranno rifiutati dal server.  
   
- Per risolvere questo problema, è possibile eseguire la pre-elaborazione di tutti gli XML Schema che includono la direttiva  \<xsd:include> per copiare e unire il relativo contenuto in un singolo schema da caricare nel server. Per la pre-elaborazione è possibile utilizzare il codice C# seguente. I commenti nella parte iniziale del codice includono informazioni sul relativo utilizzo.  
+ Per risolvere questo problema, è possibile eseguire la pre-elaborazione di tutti gli XML Schema che includono la direttiva \<xsd:include> per copiare e unire il relativo contenuto in un singolo schema da caricare nel server. Per la pre-elaborazione è possibile utilizzare il codice C# seguente. I commenti nella parte iniziale del codice includono informazioni sul relativo utilizzo.  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## Test dello strumento di pre-elaborazione  
+## <a name="testing-the-preprocessor-tool"></a>Test dello strumento di pre-elaborazione  
  Per testare lo strumento di pre-elaborazione, è possibile utilizzare gli schemi XSD seguenti:  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolte di XML Schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

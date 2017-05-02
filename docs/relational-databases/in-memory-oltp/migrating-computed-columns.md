@@ -1,27 +1,31 @@
 ---
-title: "Migrazione di colonne calcolate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Migrazione di colonne calcolate | Microsoft Docs
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4fda63a6cf7dae045a247eb26163d0e041841b8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Migrazione di colonne calcolate
+# <a name="migrating-computed-columns"></a>Migrazione di colonne calcolate
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 Le colonne calcolate non sono supportate nelle tabelle con ottimizzazione per la memoria. Tuttavia, è possibile simulare una colonna calcolata.
 
-**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.
 
 Valutare la necessità di rendere persistenti le colonne calcolate quando si esegue la migrazione delle tabelle basate su disco nelle tabelle con ottimizzazione per la memoria. Le diverse caratteristiche di prestazioni delle tabelle con ottimizzazione per la memoria e delle stored procedure compilate in modo nativo possono annullare la necessità della persistenza.  
@@ -93,3 +97,4 @@ GO
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

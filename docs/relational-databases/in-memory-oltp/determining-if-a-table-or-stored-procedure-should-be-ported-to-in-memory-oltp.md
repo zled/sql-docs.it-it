@@ -1,29 +1,33 @@
 ---
-title: "Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analizzare, eseguire la migrazione e generare report"
-  - "AMR"
+title: Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Il report di analisi delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria è in grado di ottimizzare le prestazioni dell'applicazione di database. Il report indica anche la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo. Per informazioni sulle metodologie di migrazione, vedere la pagina relativa a [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
+  Il report di analisi delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria è in grado di ottimizzare le prestazioni dell'applicazione di database. Il report indica anche la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo. Per informazioni sulle metodologie di migrazione, vedere la pagina relativa a [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
  Il report di analisi delle prestazioni delle transazioni viene eseguito direttamente su un database di produzione o un database di prova con un carico di lavoro attivo simile al carico di lavoro di produzione.  
   
@@ -38,10 +42,10 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  Le prestazioni di un sistema di database dipendono da molti fattori, non tutti osservabili e misurabili tramite l'agente di raccolta delle prestazioni delle transazioni. Pertanto, il report di analisi delle prestazioni delle transazioni non è in grado di garantire che i miglioramenti effettivi delle prestazioni corrisponderanno alle eventuali stime eseguite.  
   
- Il report di analisi delle prestazioni delle transazioni e gli assistenti alla migrazione vengono installati come parte di SQL Server Management Studio (SSMS) quando si seleziona **Strumenti di gestione - Di base** o **Strumenti di gestione - Avanzati** quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oppure quando si sceglie di [Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)..  
+ Il report di analisi delle prestazioni delle transazioni e gli assistenti alla migrazione vengono installati come parte di SQL Server Management Studio (SSMS) quando si seleziona **Strumenti di gestione - Di base** o **Strumenti di gestione - Avanzati** quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]oppure quando si sceglie di [Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## Report di analisi delle prestazioni delle transazioni  
- Per generare report di analisi delle prestazioni delle transazioni in **Esplora oggetti**fare clic con il pulsante destro del mouse sul database, scegliere **Report**, quindi **Report standard** e infine **Panoramica dell'analisi delle prestazioni delle transazioni**. Per generare un report di analisi significativo, è richiesto un carico di lavoro attivo o di recente esecuzione del database.  
+## <a name="transaction-performance-analysis-reports"></a>Report di analisi delle prestazioni delle transazioni  
+ Per generare report di analisi delle prestazioni delle transazioni in **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Report**, quindi **Report standard**e infine **Panoramica dell'analisi delle prestazioni delle transazioni**. Per generare un report di analisi significativo, è richiesto un carico di lavoro attivo o di recente esecuzione del database.  
   
  Il report dettagli per una tabella è costituito da tre sezioni:  
   
@@ -97,16 +101,16 @@ caps.handback.revision: 39
   
  Per visualizzare i dettagli relativi a come convertire una stored procedure in una stored procedure compilata in modo nativo, usare l'Assistente compilazione nativa.  
   
-## Generazione guidata di elenchi di controllo per migrazione OLTP in memoria  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>Generazione guidata di elenchi di controllo per migrazione OLTP in memoria  
  Gli elenchi di controllo per migrazione identificano qualsiasi funzionalità di stored procedure o tabella non supportata con tabelle con ottimizzazione per la memoria o stored procedure compilate in modo nativo. L'ottimizzazione guidata della memoria e l'assistente compilazione nativa possono generare un elenco di controllo per una singola tabella basata su disco o stored procedure T-SQL interpretata. Gli elenchi di controllo per migrazione possono essere creati per più tabelle e stored procedure in un database.  
   
  È possibile generare un elenco di controllo per la migrazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando il comando **Generazione guidata elenchi di controllo per migrazione OLTP in memoria** o tramite PowerShell.  
   
  **Per generare un elenco di controllo per migrazione tramite il comando dell'interfaccia utente**  
   
-1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse su un database diverso dal database di sistema, scegliere **Attività** e quindi fare clic su **Generazione guidata elenchi di controllo per migrazione OLTP in memoria**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse su un database diverso dal database di sistema, scegliere **Attività**e quindi fare clic su **Generazione guidata elenchi di controllo per migrazione OLTP in memoria**.  
   
-2.  Nella finestra di dialogo Generazione guidata elenchi di controllo per migrazione OLTP in memoria fare clic su Avanti per passare alla pagina **Configura opzioni di generazione elenchi di controllo**. In questa pagina eseguire le operazioni seguenti.  
+2.  Nella finestra di dialogo Generazione guidata elenchi di controllo per migrazione OLTP in memoria fare clic su Avanti per passare alla pagina **Configura opzioni di generazione elenchi di controllo** . In questa pagina eseguire le operazioni seguenti.  
   
     1.  Immettere un percorso cartella nella casella di controllo **Salva elenco di controllo in** .  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   Il report dell'elenco di controllo per migrazione per <object_name> è l'unico report nella posizione specificata da folder_path2.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

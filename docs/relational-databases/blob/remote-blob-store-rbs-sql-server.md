@@ -1,28 +1,32 @@
 ---
-title: "Archivio Blob remoto (RBS) (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Archivio Blob remoto (RBS, Remote Blob Store) [SQL Server]"
-  - "RBS (Remote Blob Store, Archivio Blob remoto) [SQL Server]"
+title: Archivio Blob remoto (RBS) (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 11/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Remote Blob Store (RBS) [SQL Server]
+- RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Archivio Blob remoto (RBS) (SQL Server)
+# <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Archivio BLOB remoti (RBS) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un componente aggiuntivo facoltativo che consente agli amministratori di database di archiviare oggetti binari di grandi dimensioni in soluzioni di archiviazione apposite anziché direttamente nel server di database principale.  
+  Archivio BLOB remoti (RBS) di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un componente aggiuntivo facoltativo che consente agli amministratori di database di archiviare oggetti binari di grandi dimensioni in soluzioni di archiviazione apposite anziché direttamente nel server di database principale.  
   
  Tale componente è incluso nei supporti di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ma non viene installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 19
 ### <a name="credential-store-symmetric-key"></a>Chiave simmetrica dell'archivio delle credenziali  
  Se il provider richiede la configurazione e l'uso di un segreto archiviato nell'archivio delle credenziali, RBS usa una chiave simmetrica per crittografare i segreti del provider, utilizzabile da un client per ottenere l'autorizzazione per l'archivio BLOB del provider.  
   
--   RBS 2016 usa una chiave simmetrica **AES_128**. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non consente la creazione di nuove chiavi **TRIPLE_DES**, se non per motivi di compatibilità con le versioni precedenti. Per altre informazioni, vedere [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 usa una chiave simmetrica **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non consente la creazione di nuove chiavi **TRIPLE_DES**, se non per motivi di compatibilità con le versioni precedenti. Per altre informazioni, vedere [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   RBS 2014 e le versioni precedenti usano un archivio di credenziali che contiene i segreti crittografati con l'algoritmo per chiavi simmetriche **TRIPLE_DES**, ora obsoleto. Se si usa ancora **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di migliorare la sicurezza seguendo i passaggi descritti in questo argomento per adottare un metodo di crittografia più sicuro per la chiave.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 19
  Durante l'uso di RBS è consigliabile ruotare periodicamente la chiave simmetrica dell'archivio delle credenziali. Si tratta di una comune procedura consigliata di sicurezza per soddisfare i criteri di sicurezza dell'organizzazione.  Un modo per eseguire la rotazione della chiave simmetrica dell'archivio delle credenziali di RBS consiste nell'usare lo [script riportato di seguito](#Key_rotation) nel database di RBS.  È anche possibile usare questo script per eseguire la migrazione a proprietà per aumentare la sicurezza della crittografia, come l'algoritmo o la lunghezza della chiave. Eseguire il backup del database prima della rotazione della chiave.  Al termine dello script sono previsti alcuni passaggi di verifica.  
 Se i criteri di sicurezza in uso richiedono proprietà diverse per la chiave (ad esempio, algoritmo o lunghezza della chiave) da quelle specificate, lo script può essere usato come modello. È possibile modificare le proprietà della chiave in due posizioni: 1) creazione della chiave temporanea 2) creazione della chiave permanente.  
   
-##  <a name="a-namerbsresourcesa-rbs-resources"></a><a name="rbsresources"></a> Risorse di RBS  
+##  <a name="rbsresources"></a> RBS resources  
   
  **Esempi di RBS**  
  Negli esempi di RBS disponibili in [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) viene illustrato come sviluppare un'applicazione RBS e come sviluppare e installare un provider RBS personalizzato.  
@@ -80,11 +84,11 @@ Se i criteri di sicurezza in uso richiedono proprietà diverse per la chiave (ad
  **Blog di RBS**  
  Nel [blog di RBS](http://go.microsoft.com/fwlink/?LinkId=210315) sono disponibili informazioni aggiuntive sulla distribuzione e gestione di RBS.  
   
-##  <a name="a-namekeyrotationa-key-rotation-script"></a><a name="Key_rotation"></a> Script di rotazione della chiave  
+##  <a name="Key_rotation"></a> Key rotation script  
  In questo esempio viene creata una stored procedure denominata `sp_rotate_rbs_symmetric_credential_key` per sostituire la chiave simmetrica dell'archivio delle credenziali di RBS in uso  
 con una di propria scelta.  Si consiglia di eseguire questa operazione se esiste un criterio di sicurezza che richiede   
 la rotazione periodica della chiave o se sono presenti requisiti specifici per gli algoritmi.  
- In questa stored procedure la chiave corrente verrà sostituita con una chiave simmetrica che usa **AES_256**.  In seguito alla  
+ In questa stored procedure la chiave corrente verrà sostituita con una chiave simmetrica che usa **AES_256** .  In seguito alla  
 sostituzione della chiave simmetrica, sarà necessario crittografare nuovamente i secreti con la nuova chiave.  Questa stored   
 procedure eseguirà anche una nuova crittografia dei segreti.  È consigliabile eseguire un backup del database prima della rotazione della chiave.  
   
@@ -232,3 +236,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
+

@@ -1,22 +1,26 @@
 ---
-title: "Pianificare l&#39;adozione delle funzionalit&#224; OLTP in memoria in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Pianificare l&quot;adozione delle funzionalità OLTP in memoria in SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pianificare l&#39;adozione delle funzionalit&#224; OLTP in memoria in SQL Server
+# <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -24,7 +28,7 @@ In questo articolo vengono descritte i modi in cui l'adozione delle funzionalit�
 
 
 
-## A. Adozione delle funzionalità OLTP in memoria
+## <a name="a-adoption-of-in-memory-oltp-features"></a>A. Adozione delle funzionalità OLTP in memoria
 
 
 Le sottosezioni seguenti illustrano i fattori da tenere in considerazione quando si intende adottare e implementare le funzionalità In-Memory. Molte altre informazioni esplicative sono disponibili in:
@@ -33,7 +37,7 @@ Le sottosezioni seguenti illustrano i fattori da tenere in considerazione quando
 
 
 
-### A.1 Prerequisiti
+### <a name="a1-prerequisites"></a>A.1 Prerequisiti
 
 Uno dei prerequisiti per l'uso di funzionalità In-Memory può implicare l'edizione o il livello di servizio del prodotto SQL. Per questo e altri prerequisiti, vedere:
 
@@ -42,31 +46,31 @@ Uno dei prerequisiti per l'uso di funzionalità In-Memory può implicare l'edizi
     - [Suggerimenti sul livello dei prezzi di database SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
-### A.2 Prevedere la quantità di memoria attiva
+### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 Prevedere la quantità di memoria attiva
 
 Il sistema dispone di sufficiente memoria attiva per supportare una nuova tabella con ottimizzazione per la memoria?
 
-#### Microsoft SQL Server
+#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
 Una tabella con ottimizzazione per la memoria che contiene 200 GB di dati richiede più di 200 GB di memoria attiva dedicata al suo supporto. Prima di implementare una tabella con ottimizzazione per la memoria che contiene una grande quantità di dati, si deve prevedere la quantità di memoria aggiuntiva attiva che è necessario aggiungere al computer server. Per linee guida sulla stima, vedere:
 
 - [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### Database SQL di Azure
+#### <a name="azure-sql-database"></a>Database SQL di Azure
 
 Per un database ospitato nel servizio cloud del database SQL di Azure, il livello di servizio scelto influisce sulla quantità di memoria attiva che il database può usare. È consigliabile monitorare l'utilizzo della memoria del database tramite un avviso. Per informazioni dettagliate, vedere:
 
 - [Monitorare l'archiviazione di OLTP in memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
-#### Variabili di tabella con ottimizzazione per la memoria
+#### <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
 
-È preferibile usare una variabile di tabella dichiarata con ottimizzazione per la memoria piuttosto che una #TempTable tradizionale che risiede nel database **tempdb**. Tali variabili di tabella possono garantire miglioramenti significativi delle prestazioni senza usare grandi quantità di memoria attiva.
+È preferibile usare una variabile di tabella dichiarata con ottimizzazione per la memoria piuttosto che una #TempTable tradizionale che risiede nel database **tempdb** . Tali variabili di tabella possono garantire miglioramenti significativi delle prestazioni senza usare grandi quantità di memoria attiva.
 
-### A.3 La tabella deve essere offline per la conversione in tabella con ottimizzazione per la memoria
+### <a name="a3-table-must-be-offline-to-convert-to-memory-optimized"></a>A.3 La tabella deve essere offline per la conversione in tabella con ottimizzazione per la memoria
 
 Parte della funzionalità di ALTER TABLE è disponibile per le tabelle con ottimizzazione per la memoria. Ma non è possibile eseguire un'istruzione ALTER TABLE per convertire una tabella basata su disco in una tabella con ottimizzazione per la memoria. È invece necessario usare una serie di passaggi più manuali. Di seguito vengono elencati vari modi in cui è possibile convertire la tabella basata su disco in tabella con ottimizzazione per la memoria.
 
-#### Esecuzione manuale di script
+#### <a name="manual-scripting"></a>Esecuzione manuale di script
 
 Un modo per convertire la tabella basata su disco in una tabella con ottimizzazione per la memoria consiste nel codificare manualmente i passaggi necessari di Transact-SQL.
 
@@ -88,7 +92,7 @@ Un modo per convertire la tabella basata su disco in una tabella con ottimizzazi
 8. Riprendere l'attività dell'applicazione.
 
 
-#### Ottimizzazione guidata per la memoria
+#### <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
 
 Lo strumento Ottimizzazione guidata per la memoria può generare uno script per supportare l'implementazione della conversione di una tabella basata su disco in una tabella con ottimizzazione per la memoria. Lo strumento è disponibile nell'installazione di SQL Server Data Tools (SSDT).
 
@@ -96,7 +100,7 @@ Lo strumento Ottimizzazione guidata per la memoria può generare uno script per 
 - [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
 
 
-#### file DACPAC
+#### <a name="dacpac-file"></a>file DACPAC
 
 È possibile aggiornare il database sul posto tramite un file con estensione DACPAC gestito da SSDT. In SSDT è possibile specificare le modifiche allo schema codificato nel file con estensione DACPAC.
 
@@ -106,7 +110,7 @@ Si usano file con estensione DACPAC nel contesto di un progetto di Visual Studio
 
 
 
-### A.4 Linee guida per verificare se le funzionalità di OLTP in memoria sono adatte all'applicazione
+### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 Linee guida per verificare se le funzionalità di OLTP in memoria sono adatte all'applicazione
 
 Per linee guida relative al miglioramento dell'applicazione con le funzionalità In-Memory, vedere:
 
@@ -114,7 +118,7 @@ Per linee guida relative al miglioramento dell'applicazione con le funzionalità
 
 
 
-## B. Funzionalità non supportate
+## <a name="b-unsupported-features"></a>B. Funzionalità non supportate
 
 Le funzionalità non supportate in alcuni scenari In-Memory vengono descritte in:
 
@@ -124,7 +128,7 @@ Le funzionalità non supportate in alcuni scenari In-Memory vengono descritte in
 Le sottosezioni seguenti illustrano alcune delle più importanti funzionalità non supportate.
 
 
-### B.1 SNAPSHOT di un database
+### <a name="b1-snapshot-of-a-database"></a>B.1 SNAPSHOT di un database
 
 Dopo la prima creazione di un modulo o tabella con ottimizzazione per la memoria in un database specifico, non è più possibile eseguire [snapshot](../../relational-databases/databases/database-snapshots-sql-server.md) del database. Il motivo specifico è che:
 
@@ -134,21 +138,21 @@ Dopo la prima creazione di un modulo o tabella con ottimizzazione per la memoria
 In genere uno snapshot può essere utile per le iterazioni di test rapidi.
 
 
-### B.2 Query tra database
+### <a name="b2-cross-database-queries"></a>B.2 Query tra database
 
-Le tabelle con ottimizzazione per la memoria non supportano transazioni [tra database](../../relational-databases/in-memory-oltp/cross-database-queries.md). Non è possibile accedere a un altro database dalla stessa transazione o dalla stessa query che accede anche a una tabella con ottimizzazione per la memoria.
+Le tabelle con ottimizzazione per la memoria non supportano transazioni [tra database](../../relational-databases/in-memory-oltp/cross-database-queries.md) . Non è possibile accedere a un altro database dalla stessa transazione o dalla stessa query che accede anche a una tabella con ottimizzazione per la memoria.
 
 Le variabili di tabella non sono transazionali. Di conseguenza, le [variabili di tabella con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) non possono essere usate nelle query tra database.
 
 
-### B.3 Hint di tabella READPAST
+### <a name="b3-readpast-table-hint"></a>B.3 Hint di tabella READPAST
 
-Nessuna query può applicare l'[hint di tabella](Table%20Hints%20%28Transact-SQL%29.md)READPAST alle tabelle con ottimizzazione per la memoria.
+Nessuna query può applicare l' [hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) READPAST alle tabelle con ottimizzazione per la memoria.
 
 L'hint READPAST è utile in scenari con più sessioni che accedono e modificano lo stesso set di piccole dimensioni di righe, ad esempio nell'elaborazione di una coda.
 
 
-### B.4 RowVersion, Sequenza
+### <a name="b4-rowversion-sequence"></a>B.4 RowVersion, Sequenza
 
 - Nessuna colonna può essere contrassegnata per [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) in una tabella con ottimizzazione per la memoria.
 
@@ -156,25 +160,25 @@ L'hint READPAST è utile in scenari con più sessioni che accedono e modificano 
 - Un oggetto [sequenza](../../t-sql/statements/create-sequence-transact-sql.md) non può essere usato con le tabelle con ottimizzazione per la memoria.
 
 
-## C. Manutenzione amministrativa
+## <a name="c-administrative-maintenance"></a>C. Manutenzione amministrativa
 
 
 In questa sezione vengono descritte le differenze nell'amministrazione di un database in cui vengono usate tabelle con ottimizzazione per la memoria.
 
 
-### C.1 Reimpostazione del valore di inizializzazione Identity, incremento > 1
+### <a name="c1-identity-seed-reset-increment--1"></a>C.1 Reimpostazione del valore di inizializzazione Identity, incremento > 1
 
 Per reinizializzare una colonna IDENTITY, non è possibile usare [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) in una tabella con ottimizzazione per la memoria.
 
 Il valore di incremento è limitato a 1 per una colonna IDENTITY in una tabella con ottimizzazione per la memoria.
 
 
-### C.2 DBCC CHECKDB non può validare tabelle con ottimizzazione per la memoria
+### <a name="c2-dbcc-checkdb-cannot-validate-memory-optimized-tables"></a>C.2 DBCC CHECKDB non può validare tabelle con ottimizzazione per la memoria
 
 Il comando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) non produce alcun risultato quando si esegue in una tabella con ottimizzazione per la memoria. I passaggi seguenti rappresentano una soluzione alternativa:
 
 
-1. [Eseguire un backup del log delle transazioni](Back%20Up%20a%20Transaction%20Log%20%28SQL Server%29.md).
+1. [Eseguire un backup del log delle transazioni](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).
 
 2. Eseguire il backup dei file del filegroup con ottimizzazione per la memoria in un dispositivo NULL. Il processo di backup richiama una convalida mediante checksum.
 
@@ -190,12 +194,12 @@ Il comando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-tra
 
 
 
-## D. restazioni
+## <a name="d-performance"></a>D. restazioni
 
 In questa sezione vengono descritte situazioni in cui le prestazioni delle tabelle con ottimizzazione per la memoria non raggiungono la loro completa potenzialità.
 
 
-### D.1 Considerazioni sugli indici
+### <a name="d1-index-considerations"></a>D.1 Considerazioni sugli indici
 
 Tutti gli indici in una tabella con ottimizzazione per la memoria vengono creati e gestiti dalle istruzioni CREATE TABLE e ALTER TABLE relative alla tabella. Non è possibile usare come destinazione una tabella con ottimizzazione per la memoria tramite un'istruzione CREATE INDEX.
 
@@ -208,7 +212,7 @@ Per una panoramica degli indici in tabelle con ottimizzazione per la memoria, ve
 - [Indici per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 
 
-#### Indici hash
+#### <a name="hash-indexes"></a>Indici hash
 
 Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore '**=**'.
 
@@ -220,12 +224,12 @@ Gli indici hash possono rappresentare il formato più veloce per l'accesso a una
     - [Hash Indexes for Memory-Optimized Tables (Indici hash per tabelle con ottimizzazione per la memoria)](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
-#### Indici columnstore non cluster
+#### <a name="nonclustered-columnstore-indexes"></a>Indici columnstore non cluster
 
-Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)*. Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida ** più semplice, ovvero la creazione di un indice columnstore in una tabella con ottimizzazione per la memoria.
+Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)*. Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella con ottimizzazione per la memoria.
 
 
-- Un [indice columnstore](Columnstore%20Indexes%20Guide.md) può essere compilato in una tabella basata su disco, anche come indice cluster. Ma in una tabella con ottimizzazione per la memoria, un indice columnstore non può essere raggruppato in cluster.
+- Un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) può essere compilato in una tabella basata su disco, anche come indice cluster. Ma in una tabella con ottimizzazione per la memoria, un indice columnstore non può essere raggruppato in cluster.
 
 
 - Le colonne LOB (Large Object, Oggetti di grandi dimensioni) o colonne all'esterno di righe in una tabella con ottimizzazione per la memoria impediscono la creazione di un indice columnstore nella tabella.
@@ -236,7 +240,7 @@ Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effett
 
 
 
-### D.2 Colonne LOB e colonne all'esterno di righe
+### <a name="d2-lob-and-off-row-columns"></a>D.2 Colonne LOB e colonne all'esterno di righe
 
 Le colonne LOB sono di tipi specifici, ad esempio varchar (**max**). Un paio di colonne LOB in una tabella con ottimizzazione per la memoria probabilmente non influenza le prestazioni in maniera significativa. Evitare comunque la presenza di colonne LOB non necessarie. Lo stesso consiglio si applica alle colonne all'esterno di righe. Non definire una colonna come nvarchar(3072) se varchar(512) è sufficiente.
 
@@ -248,7 +252,7 @@ Altre informazioni sulle colonne all'esterno di righe e colonne LOB sono disponi
 
 
 
-## E. Limiti delle procedure native
+## <a name="e-limitations-of-native-procs"></a>E. Limiti delle procedure native
 
 
 Alcuni elementi specifici di Transact-SQL non sono supportati in stored procedure compilate in modo nativo.
@@ -258,23 +262,23 @@ Per considerazioni da tener presente quando si migra uno script Transact-SQL in 
 - [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
 
-### E.1 Espressioni CASE in una procedura nativa
+### <a name="e1-no-case-in-a-native-proc"></a>E.1 Espressioni CASE in una procedura nativa
 
 L'espressione CASE in Transact-SQL non può essere usata all'interno di una procedura nativa. È possibile implementare una soluzione alternativa:
 
 - [Implementazione di un'espressione CASE in una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
 
 
-### E.2 Istruzione MERGE in una procedura nativa
+### <a name="e2-no-merge-in-a-native-proc"></a>E.2 Istruzione MERGE in una procedura nativa
 
 
-L'[istruzione MERGE](../../t-sql/statements/merge-transact-sql.md) di Transact-SQL presenta analogie con ciò che viene spesso definito funzionalità *Upsert* . Una procedura nativa non può usare l'istruzione MERGE. Tuttavia, è possibile ottenere la stessa funzionalità di MERGE usando una combinazione di istruzioni SELECT, UPDATE e INSERT. Un codice di esempio si trova in:
+L' [istruzione MERGE](../../t-sql/statements/merge-transact-sql.md) di Transact-SQL presenta analogie con ciò che viene spesso definito funzionalità *Upsert* . Una procedura nativa non può usare l'istruzione MERGE. Tuttavia, è possibile ottenere la stessa funzionalità di MERGE usando una combinazione di istruzioni SELECT, UPDATE e INSERT. Un codice di esempio si trova in:
 
 - [Implementazione di una funzionalità MERGE in una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
 
 
 
-### E.3 Creazione di join in istruzioni UPDATE o DELETE in una procedura nativa
+### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 Creazione di join in istruzioni UPDATE o DELETE in una procedura nativa
 
 Le istruzioni Transact-SQL in una procedura nativa possono accedere solo a tabelle con ottimizzazione per la memoria. Nelle istruzioni UPDATE e DELETE, è possibile creare un join di tutte le tabelle. I tentativi eseguiti in una procedura nativa danno esisti negativi e visualizzano un messaggio di errore, ad esempio Msg 12319, che indica quanto segue:
 
@@ -290,7 +294,7 @@ Nessun tipo di sottoquery offre una soluzione alternativa. Tuttavia, è possibil
 *Scenario:* la tabella TabProjectEmployee ha una chiave univoca di due colonne: ProjectId ed EmployeeId. Ogni riga indica l'assegnazione di un dipendente a un progetto attivo. Quando un dipendente lascia l'azienda, è necessario eliminarlo dalla tabella TabProjectEmployee.
 
 
-#### DELETE...JOIN di Transact-SQL non valido
+#### <a name="invalid-t-sql-deletejoin"></a>DELETE...JOIN di Transact-SQL non valido
 
 
 Una procedura nativa non può avere un'istruzione DELETE...JOIN come illustrato di seguito.
@@ -309,7 +313,7 @@ DELETE pe
 ```
 
 
-#### Una soluzione alternativa valida consiste nell'eliminare manualmente il join.
+#### <a name="valid-work-around-manual-deletejoin"></a>Una soluzione alternativa valida consiste nell'eliminare manualmente il join.
 
 Di seguito viene illustrato l'esempio di codice alternativo, in due parti:
 
@@ -364,7 +368,7 @@ END;
 ```
 
 
-### E.4 Limiti del piano di query per procedure native
+### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 Limiti del piano di query per procedure native
 
 
 Alcuni tipi di piani di query non sono disponibili per le procedure native. Molti dettagli su questo argomento vengono illustrati in:
@@ -372,18 +376,18 @@ Alcuni tipi di piani di query non sono disponibili per le procedure native. Molt
 - [Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 
-#### Elaborazione parallela in una procedura nativa
+#### <a name="no-parallel-processing-in-a-native-proc"></a>Elaborazione parallela in una procedura nativa
 
 L'elaborazione parallela non può far parte di nessun piano di query per una procedura nativa. Le procedure native sono sempre a thread singolo.
 
 
-#### Tipi di join
+#### <a name="join-types"></a>Tipi di join
 
 
 Hash join e merge join non possono far parte di nessun piano di query per una procedura nativa. Vengono usati join annidati dei cicli.
 
 
-#### Aggregazione di hash
+#### <a name="no-hash-aggregation"></a>Aggregazione di hash
 
 Quando il piano di query per una procedura nativa richiede una fase di aggregazione, è disponibile solo l'aggregazione di flusso. L'aggregazione di hash non è supportata in un piano di query per un procedura nativa.
 
@@ -391,7 +395,7 @@ Quando il piano di query per una procedura nativa richiede una fase di aggregazi
 
 
 
-## F. Progettazione di applicazioni: transazioni e logica ripetizione tentativi
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Progettazione di applicazioni: transazioni e logica ripetizione tentativi
 
 Una transazione che coinvolge una tabella con ottimizzazione per la memoria può diventare dipendente di un'altra transazione che coinvolge la stessa tabella. Se il numero di transazioni dipendenti raggiunge o supera il valore massimo consentito, tutte le transazioni dipendenti avranno esito negativo.
 
@@ -401,14 +405,16 @@ In SQL Server 2016:
 - Il numero del messaggio di errore è 41839. (In SQL Server 2014 il numero del messaggio di errore è 41301).
 
 
-È possibile rendere gli script Transact-SQL più affidabili per evitare possibili errori di transazione aggiungendo la *logica ripetizione tentativi * agli script. La logica ripetizione tentativi è più utile quando le chiamate UPDATE e DELETE sono frequenti oppure se viene fatto riferimento alla tabella con ottimizzazione per la memoria da una chiave esterna in un'altra tabella. Per informazioni dettagliate, vedere:
+È possibile rendere gli script Transact-SQL più affidabili per evitare possibili errori di transazione aggiungendo la *logica ripetizione tentativi* agli script. La logica ripetizione tentativi è più utile quando le chiamate UPDATE e DELETE sono frequenti oppure se viene fatto riferimento alla tabella con ottimizzazione per la memoria da una chiave esterna in un'altra tabella. Per informazioni dettagliate, vedere:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [Limiti di dipendenza delle transazioni nelle tabelle con ottimizzazione per la memoria: errore 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 
-## Collegamenti correlati
+## <a name="related-links"></a>Collegamenti correlati
 
 - [OLTP in memoria (ottimizzazione per la memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
+
 

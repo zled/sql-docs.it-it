@@ -1,26 +1,30 @@
 ---
-title: "Esercitazione: Firma di stored procedure tramite un certificato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "esercitazione sulla firma di stored procedure [SQL Server]"
+title: 'Esercitazione: Firma di stored procedure con un certificato | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esercitazione: Firma di stored procedure tramite un certificato
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Esercitazione: Firma di stored procedure tramite un certificato
 In questa esercitazione viene illustrata la firma di stored procedure tramite un certificato generato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -48,7 +52,7 @@ In questo scenario, verranno innanzitutto creati un certificato del database, un
   
 Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.  
   
-## 1. Configurazione dell'ambiente  
+## <a name="1-configure-the-environment"></a>1. Configurazione dell'ambiente  
 Per impostare il contesto iniziale dell'esempio, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aprire una nuova query ed eseguire il codice seguente per aprire il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Con questo codice, il contesto di database viene modificato in `AdventureWorks2012` e viene creato un nuovo account di accesso al server e utente del database (`TestCreditRatingUser`) con una password.  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 Per altre informazioni sull'istruzione CREATE USER, vedere [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md). Per altre informazioni sull'istruzione CREATE LOGIN, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md).  
   
-## 2. Creazione di un certificato  
+## <a name="2-create-a-certificate"></a>2. Creazione di un certificato  
 È possibile creare certificati nel server utilizzando il database master come contesto, un database utente o entrambi. Per la sicurezza del certificato sono disponibili più opzioni. Per altre informazioni sui certificati, vedere [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../t-sql/statements/create-certificate-transact-sql.md).  
   
 Eseguire questo codice per creare un certificato del database e proteggerlo tramite una password.  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3. Creazione e firma di una stored procedure utilizzando il certificato  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Creazione e firma di una stored procedure utilizzando il certificato  
 Utilizzare il codice seguente per creare una stored procedure che selezioni i dati dalla tabella `Vendor` nello schema di database `Purchasing`, limitando l'accesso alle sole aziende con posizione creditizia 1. Si noti che nella prima sezione della stored procedure viene visualizzato il contesto dell'account utente che esegue la stored procedure, al solo scopo di dimostrare i concetti. Non è necessario per soddisfare i requisiti.  
   
 ```  
@@ -114,7 +118,7 @@ Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;mot
   
 Per altre informazioni sulla firma di stored procedure, vedere [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md).  
   
-## 4. Creazione di un account del certificato utilizzando il certificato  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Creazione di un account del certificato utilizzando il certificato  
 Eseguire questo codice per creare un utente del database (`TestCreditRatingcertificateAccount`) dal certificato. Tale account non dispone di accesso server e controllerà l'accesso alle tabelle sottostanti.  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5. Concessione dei diritti per il database dell'account del certificato  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5. Concessione dei diritti per il database dell'account del certificato  
 Eseguire questo codice per concedere a `TestCreditRatingcertificateAccount` diritti per la tabella di base e la stored procedure.  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 Per altre informazioni sulla concessione di autorizzazioni per gli oggetti, vedere [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md).  
   
-## 6. Visualizzazione del contesto di accesso  
+## <a name="6-display-the-access-context"></a>6. Visualizzazione del contesto di accesso  
 Per visualizzare i diritti associati all'accesso alla stored procedure, eseguire il codice seguente per concedere i diritti per l'esecuzione della stored procedure all'utente `TestCreditRatingUser`.  
   
 ```  
@@ -173,7 +177,7 @@ Ciò illustra il livello di controllo disponibile grazie alla firma della stored
 > [!NOTE]  
 > Usare EXECUTE AS per cambiare contesto all'interno di un database.  
   
-## 7. Reimpostazione dell'ambiente  
+## <a name="7-reset-the-environment"></a>7. Reimpostazione dell'ambiente  
 Nel codice seguente viene utilizzata l'istruzione `REVERT` per ripristinare dbo come contesto dell'account corrente e quindi viene reimpostato l'ambiente.  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

@@ -1,40 +1,44 @@
 ---
-title: "Esportazione di un&#39;applicazione livello dati | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.exportdac.progress.f1"
-  - "sql13.swb.exportdac.summary.f1"
-  - "sql13.swb.exportdac.results.f1"
-  - "sql13.swb. exportdac.results.f1"
-  - "sql13.swb. exportdac.summary.f1"
-  - "sql13.swb. exportdac.settings.f1"
-  - "sql13.swb.exportdac.welcome.f1"
-  - "sql13.swb.exportdac.settings.f1"
-helpviewer_keywords: 
-  - "procedura [applicazione livello dati], esportazione"
-  - "procedura guidata [applicazione livello dati], esportazione"
-  - "esportazione di un'applicazione livello dati"
-  - "applicazione livello dati [SQL Server], esportazione"
+title: Esportare un&quot;applicazione livello dati | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.exportdac.progress.f1
+- sql13.swb.exportdac.summary.f1
+- sql13.swb.exportdac.results.f1
+- sql13.swb. exportdac.results.f1
+- sql13.swb. exportdac.summary.f1
+- sql13.swb. exportdac.settings.f1
+- sql13.swb.exportdac.welcome.f1
+- sql13.swb.exportdac.settings.f1
+helpviewer_keywords:
+- How to [DAC], export
+- wizard [DAC], export
+- export DAC
+- data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esportazione di un&#39;applicazione livello dati
-  L'esportazione di un database o di un'applicazione livello dati distribuita crea un file di esportazione contenente sia le definizioni degli oggetti del database che tutti i dati contenuti nelle tabelle. Il file di esportazione può quindi essere importato in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati tra istanze, per creare un archivio o per creare una copia locale di un database distribuito nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+# <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
+  L'esportazione di un database o di un'applicazione livello dati distribuita crea un file di esportazione contenente sia le definizioni degli oggetti del database che tutti i dati contenuti nelle tabelle. Il file di esportazione può quindi essere importato in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati tra istanze, per creare un archivio o per creare una copia locale di un database distribuito nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Prima di iniziare  
+## <a name="before-you-begin"></a>Prima di iniziare  
  Il processo di esportazione compila un nuovo file di esportazione dell'applicazione livello dati in due fasi.  
   
 1.  L'esportazione compila una definizione dell'applicazione livello dati nel file di esportazione (file BACPAC) nello stesso modo in cui un'operazione di estrazione dell'applicazione livello dati compila una definizione dell'applicazione livello dati in un file del pacchetto di applicazione livello dati. La definizione del pacchetto di applicazione livello dati esportata include tutti gli oggetti del database corrente. Se il processo di esportazione viene eseguito su un database distribuito originariamente da un'applicazione livello dati, e le modifiche sono state apportate direttamente al database dopo la distribuzione, la definizione esportata corrisponderà al set di oggetti del database e non alle definizioni dell'applicazione livello dati originale.  
@@ -43,26 +47,25 @@ caps.handback.revision: 19
   
  Il processo di esportazione imposta la versione dell'applicazione livello dati su 1.0.0.0 e la descrizione dell'applicazione livello dati nel file di esportazione su una stringa vuota. Se il database è stato distribuito da un'applicazione livello dati, la definizione dell'applicazione livello dati nel file di esportazione conterrà il nome assegnato all'applicazione livello dati originale, in caso contrario il nome dell'applicazione livello dati verrà impostato sul nome del database.  
   
- È disponibile un'applicazione di esempio nelle esercitazioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] che è possibile usare per testare l'esportazione e l'importazione di applicazioni livello dati e database. Per istruzioni su come scaricare e usare l'esempio, vedere la pagina relativa all' [importazione e all'esportazione del database per il database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=219404).  
-  
+
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
- Un database o un'applicazione livello dati può essere esportata solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
+ Un database o un'applicazione livello dati può essere esportata solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
   
  Non è possibile esportare un database contenente oggetti non supportati in un'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Autorizzazioni  
- L'esportazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa**.  
+ L'esportazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
 ##  <a name="UsingDeployDACWizard"></a> Utilizzo della procedura guidata Esporta l'applicazione livello dati  
  **Per esportare un'applicazione livello dati tramite una procedura guidata**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], locale o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-2.  In **Esplora oggetti** espandere il nodo per le istanze da cui esportare l'applicazione livello dati.  
+2.  In **Esplora oggetti**espandere il nodo per le istanze da cui esportare l'applicazione livello dati.  
   
 3.  Fare clic con il pulsante destro del mouse sul nome del database.  
   
-4.  Fare clic su **Attività**, quindi selezionare **Esporta l'applicazione livello dati**  
+4.  Fare clic su **Attività** , quindi selezionare **Esporta l'applicazione livello dati**  
   
 5.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -85,18 +88,18 @@ caps.handback.revision: 19
   
  **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
- **Avanti**: consente di passare alla pagina **Selezione pacchetto di applicazione livello dati**.  
+ **Avanti** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati** .  
   
  **Annulla** : annulla l'operazione e chiude la procedura guidata.  
   
 ##  <a name="Export_settings"></a> Pagina Impostazioni di esportazione  
  Utilizzare questa pagina per specificare il percorso in cui creare il file BACPAC.  
   
--   **Salva su disco locale**: crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
+-   **Salva su disco locale** : crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Salva in Windows Azure**: crea un file BACPAC in un contenitore Windows Azure. È necessario connettersi a un contenitore Windows Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
+-   **Salva in Windows Azure** : crea un file BACPAC in un contenitore Windows Azure. È necessario connettersi a un contenitore Windows Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
   
- Per specificare un subset di tabelle da esportare, usare l'opzione **Avanzate**.  
+ Per specificare un subset di tabelle da esportare, usare l'opzione **Avanzate** .  
   
 ##  <a name="Validation"></a> Pagina Convalida  
  Utilizzare la pagina di convalida per esaminare gli eventuali problemi che bloccano l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
@@ -125,7 +128,7 @@ caps.handback.revision: 19
   
 3.  Usare il metodo **Export** del tipo **Microsoft.SqlServer.Management.Dac.DacStore** per esportare l'applicazione livello dati. Specificare il nome dell'applicazione livello dati da esportare e il percorso della cartella in cui salvare il file di esportazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Estrarre un'applicazione livello dati da un database](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

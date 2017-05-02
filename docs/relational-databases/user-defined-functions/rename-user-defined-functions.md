@@ -1,22 +1,26 @@
 ---
-title: "Ridenominare funzioni definite dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rinominare funzioni definite dall&quot;utente | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6af95b4d0b4bc3b8e652fd40fa1427cd156c1514
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ridenominare funzioni definite dall&#39;utente
+# <a name="rename-user-defined-functions"></a>Ridenominare funzioni definite dall'utente
   È possibile rinominare funzioni definite dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -39,7 +43,7 @@ caps.handback.revision: 7
   
 -   I nomi di funzione devono essere conformi alla regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
--   La ridenominazione di una funzione definita dall'utente non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo **sys.sql_modules**. È pertanto consigliabile evitare di rinominare questo tipo di oggetto. In alternativa, eliminare e ricreare la stored procedure con il nuovo nome.  
+-   La ridenominazione di una funzione definita dall'utente non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo **sys.sql_modules** . È pertanto consigliabile evitare di rinominare questo tipo di oggetto. In alternativa, eliminare e ricreare la stored procedure con il nuovo nome.  
   
 -   La modifica del nome o della definizione di una funzione definita dall'utente può provocare errori degli oggetti dipendenti se questi non vengono aggiornati in base alla modifica apportata alla funzione.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare funzioni definite dall'utente  
+#### <a name="to-rename-user-defined-functions"></a>Per rinominare funzioni definite dall'utente  
   
 1.  In **Esplora oggetti**fare clic sul segno più accanto al database che contiene la funzione che si desidera rinominare.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 7
   
  Per altre informazioni, vedere [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) e [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [Visualizzare le funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   

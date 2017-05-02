@@ -1,32 +1,36 @@
 ---
-title: "Pool di risorse di Resource Governor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, pool di risorse"
-  - "pool di risorse [SQL Server], panoramica"
-  - "pool di risorse [SQL Server]"
+title: Pool di risorse di Resource Governor | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pool di risorse di Resource Governor
+# <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un pool di risorse rappresenta un subset delle risorse fisiche di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Resource Governor permette di specificare i limiti sulla quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono utilizzare nel pool di risorse. Ogni pool di risorse può contenere uno o più gruppi di carico di lavoro. Una volta avviata, la sessione viene assegnata a un gruppo di carico di lavoro specifico tramite la funzione di classificazione di Resource Governor e deve essere eseguita utilizzando le risorse assegnate a tale gruppo.  
+  In Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un pool di risorse rappresenta un subset delle risorse fisiche di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Resource Governor permette di specificare i limiti sulla quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono utilizzare nel pool di risorse. Ogni pool di risorse può contenere uno o più gruppi di carico di lavoro. Una volta avviata, la sessione viene assegnata a un gruppo di carico di lavoro specifico tramite la funzione di classificazione di Resource Governor e deve essere eseguita utilizzando le risorse assegnate a tale gruppo.  
   
-## Concetti relativi al pool di risorse  
- Un pool di risorse, o pool, rappresenta le risorse fisiche del server. Il pool può essere paragonato a un'istanza virtuale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un pool è composto da due parti. Una parte non si sovrappone agli altri pool, abilitando così la prenotazione delle risorse minime. L'altra parte è condivisa con gli altri pool e supporta l'utilizzo massimo possibile delle risorse. Le risorse del pool vengono definite specificando una o più delle seguenti impostazioni per ciascuna risorsa (CPU, memoria e I/O fisico):  
+## <a name="resource-pool-concepts"></a>Concetti relativi al pool di risorse  
+ Un pool di risorse, o pool, rappresenta le risorse fisiche del server. Il pool può essere paragonato a un'istanza virtuale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un pool è composto da due parti. Una parte non si sovrappone agli altri pool, abilitando così la prenotazione delle risorse minime. L'altra parte è condivisa con gli altri pool e supporta l'utilizzo massimo possibile delle risorse. Le risorse del pool vengono definite specificando una o più delle seguenti impostazioni per ciascuna risorsa (CPU, memoria e I/O fisico):  
   
 -   **MIN_CPU_PERCENT e MAX_CPU_PERCENT**  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 17
 |predefiniti|0|100|25|25|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50+5) = 25. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
 |Pool 1|20|100|45|25|Il valore MAX effettivo viene calcolato come: min(100,100-55) = 45. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
 |Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-25) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
-|Pool 3|5|100|30|25|Il valore MAX effettivo viene calcolato come: min(100,100-70) = 30. La percentuale condivisa calcolata è il valore effettivo MAX – MIN = 25.|  
+|Pool 3|5|100|30|25|Il valore MAX effettivo viene calcolato come: min(100,100-70) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
   
  La parte condivisa del pool viene utilizzata per indicare la destinazione possibile delle risorse, se disponibili. Tuttavia, quando le risorse vengono utilizzate vengono destinate al pool specificato e non vengono condivise. Ciò può migliorare l'utilizzo delle risorse nei casi in cui non sono presenti richieste in un pool specificato e le risorse configurate per il pool possono essere liberate per gli altri pool.  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 17
   
  **Pool interno**  
   
- Il pool interno rappresenta le risorse utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo pool contiene sempre soltanto il gruppo interno e non può essere modificato in alcun modo. L'utilizzo delle risorse da parte del pool interno non è limitato. I carichi di lavoro nel pool sono considerati critici per la funzione del server e tramite Resource Governor il pool interno richiede memoria agli altri pool anche se questo comporta la violazione dei limiti impostati per gli altri pool.  
+ Il pool interno rappresenta le risorse utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo pool contiene sempre soltanto il gruppo interno e non può essere modificato in alcun modo. L'utilizzo delle risorse da parte del pool interno non è limitato. I carichi di lavoro nel pool sono considerati critici per la funzione del server e tramite Resource Governor il pool interno richiede memoria agli altri pool anche se questo comporta la violazione dei limiti impostati per gli altri pool.  
   
 > [!NOTE]  
 >  L'utilizzo del pool interno e delle risorse del gruppo interno non viene sottratto dall'utilizzo complessivo delle risorse. Le percentuali vengono calcolate dalle risorse complessive disponibili.  
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  I pool di risorse definiti dall'utente sono quelli che si creano per carichi di lavoro specifici in un ambiente. Resource Governor fornisce istruzioni DDL per la creazione, la modifica e l'eliminazione dei pool di risorse.  
   
-## Attività relative ai pool di risorse  
+## <a name="resource-pool-tasks"></a>Attività relative ai pool di risorse  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |Viene descritto come modificare le impostazioni del pool di risorse.|[Modificare le impostazioni del pool di risorse](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Viene descritto come eliminare un pool di risorse.|[Eliminare un pool di risorse](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Gruppo di carico di lavoro di Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Funzione di classificazione di Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [Visualizzare proprietà di Resource Governor](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

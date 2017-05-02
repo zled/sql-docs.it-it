@@ -1,43 +1,47 @@
 ---
-title: "Procedure consigliate per l&#39;archivio query | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Archivio query, procedure consigliate"
+title: Procedure consigliate per l&quot;archivio query | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.lasthandoff: 04/29/2017
+
 ---
-# Procedure consigliate per l&#39;archivio query
+# <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Questo argomento descrive le procedure consigliate per l'uso dell'archivio query con il carico di lavoro.  
   
-##  <a name="a-namessmsa-use-the-latest-sql-server-management-studio"></a><a name="SSMS"></a> Usare la versione più recente di SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione dell'archivio query nonché per l'utilizzo dei dati raccolti relativi al carico di lavoro.  
 Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] da: [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
   
  Per una descrizione rapida dell'uso dell'archivio query in scenari di risoluzione dei problemi, vedere il [post relativo all'archivio query nei blog di @Azure](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
-##  <a name="a-nameinsighta-use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure  
+##  <a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure  
  Se si esegue l'archivio query in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è possibile usare **Informazioni dettagliate prestazioni query** per analizzare il consumo di DTU nel tempo.  
 Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per ottenere il consumo dettagliato delle risorse per tutte le query, in termini di CPU, memoria, I/O e così via, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database.  
 Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Usare l'archivio query con pool di database elastici
 È possibile usare Archivio query in tutti i database, anche in pool molto compressi. Tutti i problemi correlati all'utilizzo eccessivo delle risorse, che possono essersi verificati quando Archivio query era abilitato per un numero elevato di database in pool elastici, sono stati risolti.
-##  <a name="a-nameconfigurea-keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> Adattare l'archivio query al carico di lavoro  
+##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
  Configurare l'archivio query in base al carico di lavoro e ai requisiti di risoluzione dei problemi di prestazioni.   
 I parametri predefiniti offrono un modo rapido per iniziare, ma è opportuno monitorare il comportamento dell'archivio query nel tempo e regolare la configurazione di conseguenza:  
   
@@ -120,7 +124,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  La raccolta di un set di dati che rappresenti in modo accurato il carico di lavoro da parte dell'archivio query può richiedere del tempo. In genere, un giorno è sufficiente anche per carichi di lavoro molto complessi. Tuttavia, dopo aver abilitato la funzionalità è possibile iniziare a esplorare i dati e identificare le query che richiedono attenzione immediata.   
 Passare alla sottocartella dell'archivio query nel nodo database in Esplora oggetti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per aprire le viste di risoluzione dei problemi per scenari specifici.   
-Le viste dell'archivio query di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] possono essere usate con un set di metriche di esecuzione, espresse come una delle funzioni statistiche seguenti:  
+Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] possono essere usate con un set di metriche di esecuzione, espresse come una delle funzioni statistiche seguenti:  
   
 |Metrica di esecuzione|Funzione statistica|  
 |----------------------|------------------------|  
@@ -158,7 +162,7 @@ Le viste dell'archivio query di [!INCLUDE[ssManStudio](../../includes/ssmanstudi
   
 -   Riscrivere le query problematiche. Ad esempio, per sfruttare i vantaggi della parametrizzazione delle query o per implementare la logica ottimale.  
   
-##  <a name="a-nameverifya-verify-query-store-is-collecting-query-data-continuously"></a><a name="Verify"></a> Verificare che l'archivio query raccolga i dati delle query in modo continuativo  
+##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  L'archivio query può cambiare automaticamente la modalità operativa. È necessario monitorare regolarmente lo stato dell'archivio query per assicurarsi che sia in funzione e per prevenire errori dovuti a cause evitabili. Eseguire questa query per determinare la modalità operativa e visualizzare i parametri più importanti:  
   
 ```  
@@ -239,9 +243,9 @@ FROM sys.database_query_store_options;
   
 |Modalità di acquisizione query|Scenario|  
 |------------------------|--------------|  
-|Tutto|Analizzare accuratamente il carico di lavoro in termini di forme di query, frequenza di esecuzione e altre statistiche.<br /><br /> Identificare le nuove query nel carico di lavoro.<br /><br /> Rilevare l'eventuale uso di query ad hoc per identificare le possibilità di parametrizzazione automatica o dell'utente.|  
+|All|Analizzare accuratamente il carico di lavoro in termini di forme di query, frequenza di esecuzione e altre statistiche.<br /><br /> Identificare le nuove query nel carico di lavoro.<br /><br /> Rilevare l'eventuale uso di query ad hoc per identificare le possibilità di parametrizzazione automatica o dell'utente.|  
 |Auto|Concentrare l'attenzione su query rilevanti e da correggere, ovvero le query eseguite regolarmente o che hanno un consumo di risorse elevato.|  
-|Nessuno|Il set di query da monitorare è stato già acquisito in fase di esecuzione e si vuole eliminare qualsiasi distrazione introdotta da altre query.<br /><br /> È adatta ad ambienti di testing e di benchmarking.<br /><br /> È adatta ai fornitori di software che forniscono l'archivio query configurato per il monitoraggio del carico di lavoro della relativa applicazione.<br /><br /> Deve essere usata con cautela perché può precludere la possibilità di rilevare e ottimizzare nuove query importanti. Evitare di usare questa modalità a meno che non sia richiesta da uno scenario specifico.|  
+|None|Il set di query da monitorare è stato già acquisito in fase di esecuzione e si vuole eliminare qualsiasi distrazione introdotta da altre query.<br /><br /> È adatta ad ambienti di testing e di benchmarking.<br /><br /> È adatta ai fornitori di software che forniscono l'archivio query configurato per il monitoraggio del carico di lavoro della relativa applicazione.<br /><br /> Deve essere usata con cautela perché può precludere la possibilità di rilevare e ottimizzare nuove query importanti. Evitare di usare questa modalità a meno che non sia richiesta da uno scenario specifico.|  
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Mantenere i dati più rilevanti nell'archivio query  
  Configurare l'archivio query in modo che contenga solo i dati rilevanti per garantire l'esecuzione ininterrotta e la risoluzione ottimale dei problemi con un impatto minimo sul normale carico di lavoro.  
@@ -253,7 +257,7 @@ La tabella seguente riporta le procedure consigliate:
 |Escludere le query non rilevanti.|Configurare la modalità di acquisizione query su Auto.|  
 |Eliminare le query meno rilevanti quando vengono raggiunte le dimensioni massime.|Attivare criteri di pulizia basati sulle dimensioni.|  
   
-##  <a name="a-nameparameterizea-avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> Evitare di usare query senza parametri  
+##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
  L'uso di query senza parametri quando non è assolutamente necessario, ad esempio nel caso di analisi ad hoc, non è consigliato.  Non è possibile riutilizzare i piani memorizzati nella cache e questo impone a Query Optimizer di compilare query per ogni testo query univoco.  
   L'archivio query può superare rapidamente il limite di dimensioni a causa del numero potenzialmente elevato di testi query diversi e del conseguente numero elevato di piani di esecuzione diversi con forma simile.  
 Questo influisce negativamente sulle prestazioni del carico di lavoro e l'archivio query potrebbe passare alla modalità di sola lettura o potrebbe eliminare dati continuamente nel tentativo di gestire le query in ingresso.  
@@ -274,10 +278,10 @@ Questo influisce negativamente sulle prestazioni del carico di lavoro e l'archiv
   
 -   Impostare la **Modalità di acquisizione query** su Auto per filtrare automaticamente le query ad hoc con un consumo di risorse ridotto.  
   
-##  <a name="a-namedropa-avoid-a-drop-and-create-pattern-when-maintaining-containing-objects-for-the-queries"></a><a name="Drop"></a> Evitare il modello DROP e CREATE per la manutenzione di oggetti contenitore per le query  
+##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  L'archivio query associa ogni voce query a un oggetto contenitore, ad esempio una stored procedure, una funzione o un trigger.  Quando si ricrea un oggetto contenitore, viene generata una nuova voce query per lo stesso testo query. Questo impedisce di monitorare le statistiche sulle prestazioni relative a tale query nel tempo e di ricorrere al meccanismo di uso forzato del piano. Per evitare questo problema, usare il processo `ALTER <object>` per modificare la definizione dell'oggetto contenitore, quando è possibile.  
   
-##  <a name="a-namecheckforceda-check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> Verificare regolarmente lo stato dei piani forzati  
+##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Tuttavia, come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengono modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:  
   
 ```  
@@ -293,7 +297,7 @@ WHERE is_forced_plan = 1;
   
  Per un elenco completo dei motivi, vedere [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). È anche possibile usare l'oggetto XEvent **query_store_plan_forcing_failed** per tenere traccia degli errori di uso forzato del piano di risoluzione dei problemi.  
   
-##  <a name="a-namerenaminga-avoid-renaming-databases-if-you-have-queries-with-forced-plans"></a><a name="Renaming"></a> Evitare di rinominare i database se sono presenti query con piani forzati  
+##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
  I piani di esecuzione fanno riferimento agli oggetti con nomi in tre parti (`database.schema.object`).   
 Se si rinomina un database, l'uso forzato del piano avrà esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.  
   
@@ -304,3 +308,4 @@ Se si rinomina un database, l'uso forzato del piano avrà esito negativo e quest
  [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   
+

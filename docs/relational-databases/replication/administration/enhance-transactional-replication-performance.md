@@ -1,52 +1,56 @@
 ---
-title: "Miglioramento delle prestazioni della replica transazionale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pubblicazioni [replica di SQL Server], progettazione e prestazioni"
-  - "prestazioni [replica di SQL Server], replica transazionale"
-  - "progettazione di database [SQL Server], prestazioni di replica"
-  - "prestazioni [replica di SQL Server], replica snapshot"
-  - "replica snapshot [SQL Server], prestazioni"
-  - "sottoscrizioni [replica di SQL Server], considerazioni sulle prestazioni"
-  - "agenti [replica di SQL Server], prestazioni"
-  - "Agente di distribuzione, prestazioni"
-  - "replica transazionale, prestazioni"
-  - "Agente di lettura log, prestazioni"
+title: Migliorare le prestazioni della replica transazionale | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], design and performance
+- performance [SQL Server replication], transactional replication
+- designing databases [SQL Server], replication performance
+- performance [SQL Server replication], snapshot replication
+- snapshot replication [SQL Server], performance
+- subscriptions [SQL Server replication], performance considerations
+- agents [SQL Server replication], performance
+- Distribution Agent, performance
+- transactional replication, performance
+- Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Miglioramento delle prestazioni della replica transazionale
+# <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
   Dopo aver considerato i suggerimenti sulle prestazioni generali descritti nella sezione [Miglioramento delle prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenere presente le aree aggiuntive specifiche della replica transazionale riportate di seguito.  
   
-## Progettazione di database  
+## <a name="database-design"></a>Progettazione di database  
   
 -   Ridurre al minimo le dimensioni delle transazioni nella progettazione delle applicazioni.  
   
      Per impostazione predefinita, la replica transazionale propaga le modifiche in base ai limiti delle transazioni. Più piccole sono le transazioni, minori saranno le probabilità che l'agente di distribuzione dovrà rinviare una transazione a causa di problemi di rete. Se è necessario che l'agente rinvii una transazione, la quantità di dati inviati sarà inferiore.  
   
-## Configurazione del server di distribuzione  
+## <a name="distributor-configuration"></a>Configurazione del server di distribuzione  
   
 -   Configurare il server di distribuzione in un server dedicato.  
   
-     È possibile ridurre l'overhead di elaborazione sul server di pubblicazione configurando un server di distribuzione remoto. Per ulteriori informazioni, vedere [Configura distribuzione](../../../relational-databases/replication/configure-distribution.md).  
+     È possibile ridurre l'overhead di elaborazione sul server di pubblicazione configurando un server di distribuzione remoto. Per altre informazioni, vedere [Configurazione della distribuzione](../../../relational-databases/replication/configure-distribution.md).  
   
 -   Ridimensionare in modo appropriato il database di distribuzione.  
   
-     Verificare la replica con un carico tipico per il sistema per determinare lo spazio necessario per archiviare i comandi. Verificare che il database sia sufficientemente grande da consentire l'archiviazione dei comandi senza richiedere un aumento automatico delle dimensioni frequente. Per ulteriori informazioni sulla modifica delle dimensioni di un database, vedere [ALTER DATABASE & #40; Transact-SQL & #41;](../../../t-sql/statements/alter-database-transact-sql.md).  
+     Verificare la replica con un carico tipico per il sistema per determinare lo spazio necessario per archiviare i comandi. Verificare che il database sia sufficientemente grande da consentire l'archiviazione dei comandi senza richiedere un aumento automatico delle dimensioni frequente. Per altre informazioni sulla modifica delle dimensioni di un database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Progettazione della pubblicazione  
+## <a name="publication-design"></a>Progettazione della pubblicazione  
   
 -   Replicare l'esecuzione della stored procedure durante gli aggiornamenti batch delle tabelle pubblicate.  
   
@@ -54,9 +58,9 @@ caps.handback.revision: 39
   
 -   Distribuire gli articoli in più pubblicazioni.  
   
-     Se non è possibile utilizzare il **- SubscriptionStreams** parametro (descritta più avanti in questo argomento), è consigliabile creare più pubblicazioni. La distribuzione di articoli tra queste pubblicazioni consente alla replica di applicare le modifiche in parallelo con i Sottoscrittori.  
+     Se non è possibile utilizzare il parametro **-SubscriptionStreams** , descritto più avanti in questo argomento, provare a creare più pubblicazioni. La distribuzione di articoli tra queste pubblicazioni consente alla replica di applicare le modifiche in parallelo con i Sottoscrittori.  
   
-## Considerazioni sulle sottoscrizioni  
+## <a name="subscription-considerations"></a>Considerazioni sulle sottoscrizioni  
   
 -   Utilizzare agenti indipendenti anziché agenti condivisi se si dispone di più pubblicazioni nello stesso server di pubblicazione, in base all'impostazione predefinita di Creazione guidata nuova pubblicazione.  
   
@@ -64,11 +68,11 @@ caps.handback.revision: 39
   
      L'impostazione di un'esecuzione continua degli agenti anziché la creazione di pianificazioni frequenti, ad esempio ogni minuto, consente di migliorare le prestazioni della replica in quanto non richiede l'avvio e l'arresto dell'agente. Quando si imposta l'esecuzione continua dell'agente di distribuzione, le modifiche vengono propagate con una bassa latenza agli altri server connessi nella topologia. Per altre informazioni, vedere:  
   
-    -   [! Includi [ssManStudioFull] (... / Token/ssManStudioFull_md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## Parametri dell'agente di distribuzione e dell'agente di lettura log  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parametri dell'agente di distribuzione e dell'agente di lettura log  
   
--   Per risolvere i colli di bottiglia accidentali, utilizzare il **– MaxCmdsInTran** parametro per l'agente di lettura Log.  
+-   Per risolvere i colli di bottiglia accidentali, usare il parametro **–MaxCmdsInTran** per l'agente di lettura log.  
   
      Il parametro **–MaxCmdsInTran** specifica il numero massimo di istruzioni raggruppate in una transazione mentre l'agente di lettura log scrive i comandi nel database di distribuzione. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando i comandi vengono applicati al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
   
@@ -79,25 +83,25 @@ caps.handback.revision: 39
   
      Il parametro **–SubscriptionStreams** può migliorare notevolmente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
   
-     Un valore per questo parametro dell'agente può essere specificato utilizzando il **@subscriptionstreams** di [sp_addsubscription & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+     È possibile specificare un valore per questo parametro di agente usando **@subscriptionstreams** di [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
   
--   Aumentare il valore di **- ReadBatchSize** parametro per l'agente di lettura Log.  
+-   Aumentare il valore del parametro **-ReadBatchSize** per l'agente di lettura log.  
   
-     L'agente di lettura log e l'agente di distribuzione supportano le dimensioni di batch per operazioni di lettura e commit delle transazioni. Per impostazione predefinita, le dimensioni del batch sono pari a 500 transazioni. L'agente di lettura log legge il numero specifico di transazioni nel log, indipendentemente dal fatto che siano contrassegnate o meno per la replica. Quando viene scritto un numero elevato di transazioni a un database di pubblicazione, ma solo un piccolo subset di quelli contrassegnati per la replica, è necessario utilizzare il **- ReadBatchSize** parametro per aumentare le dimensioni di batch di lettura dell'agente di lettura Log. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
+     L'agente di lettura log e l'agente di distribuzione supportano le dimensioni di batch per operazioni di lettura e commit delle transazioni. Per impostazione predefinita, le dimensioni del batch sono pari a 500 transazioni. L'agente di lettura log legge il numero specifico di transazioni nel log, indipendentemente dal fatto che siano contrassegnate o meno per la replica. Se in un database di pubblicazione viene scritto un numero elevato di transazioni, ma solo un subset ridotto è contrassegnato per la replica, è necessario usare il parametro **-ReadBatchSize** per aumentare la dimensione del batch di lettura dell'agente di lettura log. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
   
--   Aumentare il valore di **- CommitBatchSize** parametro dell'agente di distribuzione.  
+-   Aumentare il valore del parametro **-CommitBatchSize** per l'agente di distribuzione.  
   
      Il commit di un set di transazioni presenta un overhead fisso. Se si esegue il commit di un numero maggiore di transazioni con una frequenza minore, l'overhead viene distribuito in un volume più ampio di dati. Tuttavia, il vantaggio offerto dall'aumento del valore di questo parametro decade in quanto il costo dell'applicazione delle modifiche è controllato da altri fattori, come l'I/O massimo del disco che contiene il log. È inoltre necessario tenere presente che gli errori che determinano l'avvio dell'agente di distribuzione richiedono l'esecuzione del rollback e la nuova applicazione di un numero maggiore di transazioni. Per le reti non affidabili, un valore più basso può generare meno errori nonché il rollback e la riapplicazione di un numero inferiore di transazioni in caso di errore.  
   
--   Ridurre il valore di **- PollingInterval** parametro per l'agente di lettura Log.  
+-   Ridurre il valore del parametro **-PollingInterval** per l'agente di lettura log.  
   
-     Il **- PollingInterval** parametro specifica la frequenza con cui viene eseguita una query del log delle transazioni di un database pubblicato per la replica delle transazioni. Il valore predefinito è 5 secondi. Se si riduce tale valore, il polling del log viene eseguito più spesso con la possibilità di generare una latenza più bassa per il recapito delle transazioni dal database di pubblicazione nel database di distribuzione. È tuttavia consigliabile valutare la necessità di una latenza più bassa rispetto a un carico maggiore sul server determinato dall'esecuzione più frequente del polling.  
+     Il parametro **-PollingInterval** specifica la frequenza con cui viene eseguita la query sulle transazioni da replicare nel log delle transazioni di un database pubblicato. Il valore predefinito è 5 secondi. Se si riduce tale valore, il polling del log viene eseguito più spesso con la possibilità di generare una latenza più bassa per il recapito delle transazioni dal database di pubblicazione nel database di distribuzione. È tuttavia consigliabile valutare la necessità di una latenza più bassa rispetto a un carico maggiore sul server determinato dall'esecuzione più frequente del polling.  
   
  I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
--   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+-   [Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [Visualizzare e modificare i parametri di prompt dei comandi dell'agente di replica & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+-   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   

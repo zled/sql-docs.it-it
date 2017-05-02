@@ -1,31 +1,35 @@
 ---
-title: "Backup completi del file (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "backup completi [SQL Server]"
-  - "backup [SQL Server], file o filegroup"
-  - "backup [SQL Server], file o filegroup"
-  - "modello di recupero con registrazione completa [SQL Server], backup dei file completo"
-  - "backup dei file [SQL Server], completo"
-  - "file [SQL Server], backup"
-  - "filegroup [SQL Server], backup"
-  - "backup di file [SQL Server]"
+title: Backup completi del file (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup completi del file (SQL Server)
+# <a name="full-file-backups-sql-server"></a>Backup completi del file (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che includono più file o filegroup.  
   
  È possibile eseguire il backup e il ripristino dei singoli file contenuti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Inoltre, è possibile specificare un intero filegroup anziché ogni singolo file componente. Tuttavia, se un qualsiasi file di un filegroup è offline, ad esempio perché il file è in fase di ripristino, l'intero filegroup risulterà offline e non sarà possibile eseguirne il backup.  
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Sebbene sia possibile ripristinare singoli file da un backup del database, l'individuazione e il ripristino di un file da un backup del database, anziché da un backup di file, richiedono maggior tempo.  
   
-### Backup di file e modello di recupero con registrazione minima  
+### <a name="file-backups-and-the-simple-recovery-model"></a>Backup di file e modello di recupero con registrazione minima  
  In base al modello di recupero con registrazione minima, è necessario creare una copia di backup contenente tutti i file di lettura/scrittura, al fine di garantire che il database possa essere ripristinato fino a un punto nel tempo consistente. Anziché specificare singolarmente ogni file o filegroup di lettura/scrittura, utilizzare l'opzione READ_WRITE_FILEGROUPS. Questa opzione consente di eseguire il backup di tutti i filegroup di lettura/scrittura del database. Un backup creato con l'opzione READ_WRITE_FILEGROUPS è noto come backup parziale. Per altre informazioni, vedere [Backup parziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-### Backup di file e modello di recupero con registrazione completa  
+### <a name="file-backups-and-the-full-recovery-model"></a>Backup di file e modello di recupero con registrazione completa  
  In base al modello di recupero con registrazione completa, è necessario eseguire il backup del log delle transazioni indipendentemente dalla strategia di backup in uso. Un intero set di backup completi di file corrisponde, insieme a un numero sufficiente di backup del log tale da coprire tutti i backup di file dall'inizio del primo backup di file, a un backup completo del database.  
   
  Il ripristino di un database solo tramite backup di file e del log può essere un'operazione complessa. Se possibile, è quindi consigliabile eseguire un backup completo del database e far iniziare i backup del log prima del primo backup di file. Nella figura seguente viene illustrata una strategia che prevede l'esecuzione di un backup completo del database (punto t1) subito dopo la creazione del database (punto t0). Questo primo backup del database consente di avviare i backup del log delle transazioni, che vengono pianificati in modo da essere eseguiti a intervalli prestabiliti. I backup di file vengono eseguiti in base all'intervallo più appropriato alle esigenze aziendali per il database. In questa figura viene illustrato il backup in successione di ognuno dei quattro filegroup. L'ordine in cui viene eseguito il backup (A, C, B, A) è basato sulle esigenze aziendali per il database.  
@@ -88,14 +92,14 @@ caps.handback.revision: 62
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per creare backup di file o filegroup**  
   
--   [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
 > [!NOTE]  
 >  I backup di file non sono supportati dalla Creazione guidata piano di manutenzione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Backup e ripristino: interoperabilità e coesistenza &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

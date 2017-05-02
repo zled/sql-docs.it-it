@@ -1,30 +1,34 @@
 ---
-title: "Eliminare file di dati o file di log da un database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log [SQL Server], file"
-  - "eliminazione di file"
-  - "rimozione di file"
-  - "rimozione di dati"
-  - "eliminazioni di dati [SQL Server]"
-  - "eliminazione di file [SQL Server]"
-  - "eliminazione di dati"
+title: Eliminare file di dati o file di log da un database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- deleting files
+- removing files
+- removing data
+- data deletions [SQL Server]
+- file deletion [SQL Server]
+- deleting data
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36e392193602317505657a483e9ffa06c3153993
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminare file di dati o file di log da un database
+# <a name="delete-data-or-log-files-from-a-database"></a>Eliminare file di dati o file di log da un database
   In questo argomento si descrive come eliminare file di dati o di log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -54,7 +58,7 @@ caps.handback.revision: 33
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per eliminare file di dati o di log da un database  
+#### <a name="to-delete-data-or-log-files-from-a-database"></a>Per eliminare file di dati o di log da un database  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 33
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per eliminare file di dati o di log da un database  
+#### <a name="to-delete-data-or-log-files-from-a-database"></a>Per eliminare file di dati o di log da un database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -78,9 +82,9 @@ caps.handback.revision: 33
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
   
- Per altri esempi, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ Per altri esempi, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compattare un database](../../relational-databases/databases/shrink-a-database.md)   
  [Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   

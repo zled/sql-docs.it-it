@@ -1,31 +1,35 @@
 ---
-title: "Utilizzo di Resource Governor per limitare l&#39;utilizzo della CPU da parte della compressione dei backup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compressione dei backup [SQL Server], Resource Governor"
-  - "compressione dei backup [SQL Server], utilizzo della CPU"
-  - "compressione [SQL Server], compressione dei backup"
-  - "backup [SQL Server], compressione"
-  - "Resource Governor, compressione dei backup"
+title: Usare Resource Governor per limitare l&quot;utilizzo della CPU da parte della compressione dei backup (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup compression [SQL Server], Resource Governor
+- backup compression [SQL Server], CPU usage
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di Resource Governor per limitare l&#39;utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Per impostazione predefinita, l'esecuzione di backup mediante la compressione aumenta in modo significativo l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. È necessario quindi creare un backup compresso con priorità bassa in una sessione con utilizzo della CPU limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) nel caso in cui si verifichi una contesa di CPU. In questo argomento viene presentato uno scenario che classifica le sessioni di un particolare utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendone mapping a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU in tali casi.  
+  Per impostazione predefinita, l'esecuzione di backup mediante la compressione aumenta in modo significativo l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. È necessario quindi creare un backup compresso con priorità bassa in una sessione con utilizzo della CPU limitato da[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) nel caso in cui si verifichi una contesa di CPU. In questo argomento viene presentato uno scenario che classifica le sessioni di un particolare utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendone mapping a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU in tali casi.  
   
 > [!IMPORTANT]  
 >  In uno scenario di Resource Governor specifico la classificazione della sessione potrebbe essere basata su un nome utente, un nome di applicazione o qualsiasi altro elemento in grado di differenziare una connessione. Per ulteriori informazioni, vedere [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) e [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
@@ -45,7 +49,7 @@ caps.handback.revision: 25
   
  Nella procedura seguente vengono descritte le operazioni necessarie per impostare un account di accesso e un utente a tale scopo. Viene quindi illustrato l'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] "Esempio A. Impostazione di un account di accesso e di un utente (Transact-SQL)".  
   
-### Per impostare un account di accesso e un utente del database per classificare sessioni  
+### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Per impostare un account di accesso e un utente del database per classificare sessioni  
   
 1.  Definire un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la creazione di backup compressi con priorità bassa.  
   
@@ -77,13 +81,13 @@ caps.handback.revision: 25
   
      Per altre informazioni, vedere [GRANT - autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### Esempio A. Impostazione di un accesso e di un utente (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio A. Impostazione di un accesso e di un utente (Transact-SQL)  
  L'esempio seguente è rilevante solo se si sceglie di creare un nuovo account di accesso e un nuovo utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire backup con priorità bassa. In alternativa, è possibile utilizzare un account di accesso e un utente esistenti, se appropriati.  
   
 > [!IMPORTANT]  
 >  L'esempio seguente usa un accesso e un nome utente di esempio, *domain_name*`\MAX_CPU`. Sostituire questi nomi con quelli dell'account di accesso e dell'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si intende utilizzare nella creazione dei backup compressi con priorità bassa.  
   
- Questo esempio crea un accesso per l'account di Windows *domain_name*`\MAX_CPU` e concede l'autorizzazione VIEW SERVER STATE all'accesso. che consente di verificare la classificazione di Resource Governor delle sessioni dell'account di accesso. L'esempio crea quindi un utente per *domain_name*`\MAX_CPU` e lo aggiunge al ruolo predefinito del database db_backupoperator per il database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Tale nome utente verrà utilizzato dalla funzione di classificazione di Resource Governor.  
+ Questo esempio crea un accesso per l'account di Windows *domain_name*`\MAX_CPU` e concede l'autorizzazione VIEW SERVER STATE all'accesso. che consente di verificare la classificazione di Resource Governor delle sessioni dell'account di accesso. L'esempio crea quindi un utente per *domain_name*`\MAX_CPU` e lo aggiunge al ruolo predefinito del database db_backupoperator per il database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Tale nome utente verrà utilizzato dalla funzione di classificazione di Resource Governor.  
   
 ```tsql  
 -- Create a SQL Server login for low-priority operations  
@@ -131,7 +135,7 @@ GO
   
 -   [Creare un gruppo di carico di lavoro](../../relational-databases/resource-governor/create-a-workload-group.md)  
   
-### Per configurare Resource Governor per limitare l'utilizzo della CPU (Transact-SQL)  
+### <a name="to-configure-resource-governor-for-limiting-cpu-usage-transact-sql"></a>Per configurare Resource Governor per limitare l'utilizzo della CPU (Transact-SQL)  
   
 1.  Eseguire un'istruzione [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) per creare un pool di risorse. Nell'esempio relativo a questa procedura viene utilizzata la sintassi seguente:  
   
@@ -184,7 +188,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### Esempio B. Configurazione di Resource Governor (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Esempio B. Configurazione di Resource Governor (Transact-SQL)  
  Nell'esempio seguente vengono effettuati i passaggi seguenti all'interno di un'unica transazione:  
   
 1.  Creazione del pool di risorse `pMAX_CPU_PERCENT_20` .  
@@ -262,7 +266,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Compressione di backup utilizzando una sessione con utilizzo della CPU limitato  
  Per creare un backup compresso in una sessione con un utilizzo massimo della CPU limitato, accedere come l'utente specificato nella funzione di classificazione. Nel comando di backup specificare WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o selezionare **Comprimi backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Per creare un backup compresso del database, vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### Esempio C. Creazione di un backup compresso (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C. Creazione di un backup compresso (Transact-SQL)  
  Nell'esempio seguente [BACKUP](../../t-sql/statements/backup-transact-sql.md) viene creato un backup compresso completo del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] nel nuovo file di backup formattato `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```tsql  
@@ -278,7 +282,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare e testare una funzione di classificazione definita dall'utente](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   

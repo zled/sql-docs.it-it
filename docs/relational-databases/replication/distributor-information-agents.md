@@ -1,34 +1,38 @@
 ---
-title: "Informazioni sul server di distribuzione, Agenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+title: Informazioni sul database di distribuzione, Agenti | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informazioni sul server di distribuzione, Agenti
-  Il **agenti** scheda vengono visualizzate informazioni sugli agenti e i processi di manutenzione che sono associati server di pubblicazione e sottoscrizione.  
+# <a name="distributor-information-agents"></a>Informazioni sul server di distribuzione, Agenti
+  Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione e al Sottoscrittore.  
   
- Gli agenti che sono disponibili nel **agenti** scheda per un server di distribuzione nella vista server di distribuzione includa tutti gli agenti che sono disponibili nel **agenti** scheda per un server di pubblicazione. Tuttavia, il **agenti** scheda per un server di distribuzione nella vista server di distribuzione include inoltre un agente di distribuzione e un agente di Merge.  
+ Tra gli agenti disponibili nella scheda **Agenti** per un server di distribuzione nella vista Server di distribuzione sono inclusi tutti gli agenti disponibili nella scheda **Agenti** per un server di pubblicazione. Tuttavia, in tale scheda **** sono inclusi anche un agente del server di distribuzione e un agente di merge.  
   
- Per ulteriori informazioni su Snapshot, agente di lettura Log e gli agenti di lettura coda e processi di manutenzione, vedere [agenti, le informazioni sull'editore](../../relational-databases/replication/publisher-information-agents.md). Si noti che quando si visualizzano informazioni sull'agente nel **agenti** scheda per un server di distribuzione, le informazioni sull'editore è presente per gli agenti Snapshot e di lettura Log. Tuttavia, nel **agenti** scheda per un server di distribuzione nella vista server di distribuzione, è inoltre possibile selezionare **agente di distribuzione** e **agente di Merge**.  
+ Per ulteriori informazioni sugli agenti snapshot, di lettura log, di lettura coda nonché sui processi di manutenzione, vedere [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md). Si noti che quando si visualizzano le informazioni sugli agenti nella scheda **Agenti** per un server di distribuzione, le informazioni sul server di pubblicazione sono disponibili per gli agenti snapshot e di lettura log. Tuttavia, nella scheda **Agenti** per un server di distribuzione nella vista Server di distribuzione è possibile selezionare anche **Agente del server di distribuzione** e **Agente di merge**.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per l'agente del server di distribuzione e per quello di merge.  
   
-### Agente del server di distribuzione  
+### <a name="distributor-agent"></a>Agente del server di distribuzione  
  **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 13
  Nome della pubblicazione a cui è associato l'agente.  
   
  **Sottoscrizione**  
- Il nome della sottoscrizione, nel formato: [*SubscriberName*]. [*Database*].  
+ Nome della sottoscrizione nel formato [*SubscriberName*].[*Database*].  
   
  **Tipo**  
  Tipo di replica: push, pull o anonima.  
@@ -69,16 +73,16 @@ caps.handback.revision: 13
  **Latenza**  
  Tempo, espresso in secondi, trascorso tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
- **#Trans**  
+ **N. transazioni**  
  Numero di transazioni di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **#Comandi recapitati**  
+ **N. comandi**  
  Numero di comandi di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente. Un comando è equivalente a una modifica dei dati, ad esempio un aggiornamento.  
   
- **Microsec. #Comandi recapitati**  
+ **Media n. comandi**  
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
-### Agente di merge  
+### <a name="merge-agent"></a>Agente di merge  
  **Stato**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
  Nome della pubblicazione a cui è associato l'agente.  
   
  **Sottoscrizione**  
- Il nome della sottoscrizione, nel formato: [*SubscriberName*]. [*Database*].  
+ Nome della sottoscrizione nel formato [*SubscriberName*].[*Database*].  
   
  **Tipo**  
  Tipo di replica: push, pull o anonima.  
@@ -140,10 +144,10 @@ caps.handback.revision: 13
  **Conflitti del Sottoscrittore**  
  Numero di conflitti che si verificano nel Sottoscrittore durante il processo di merge.  
   
-## Vedere anche  
- [Avvio di Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Consente di visualizzare informazioni ed eseguire attività per un server di pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Consente di visualizzare informazioni ed eseguire attività relative agli agenti associati a una pubblicazione & #40; Monitoraggio replica & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

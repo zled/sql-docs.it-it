@@ -1,22 +1,26 @@
 ---
-title: "Introduzione alle tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Introduzione alle tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introduzione alle tabelle con ottimizzazione per la memoria
+# <a name="introduction-to-memory-optimized-tables"></a>Introduzione alle tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le tabelle con ottimizzazione per la memoria sono tabelle create usando [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -37,7 +41,7 @@ A partire da SQL Server 2016 e nel database SQL di Azure, non sono presenti limi
   
  Nella figura seguente viene illustrato il controllo di più versioni. Nella figura è illustrata una tabella con tre righe e ogni riga ha diverse versioni.  
   
-![Controllo di più versioni.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.png "Controllo di più versioni.")  
+![Controllo di più versioni.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "Controllo di più versioni.")  
   
  Nella tabella sono presenti tre righe: r1, r2 e r3. r1 include tre versioni, r2 due versioni e r3 quattro versioni. Si noti che diverse versioni della stessa riga non occupano necessariamente posizioni di memoria consecutive. Le diverse versioni delle righe possono essere presenti in diverse posizioni della struttura dei dati della tabella.  
   
@@ -89,7 +93,7 @@ Nella tabella seguente sono elencati i problemi relativi a prestazioni e scalabi
 |restazioni<br /><br /> Utilizzo elevato delle risorse (CPU, I/O, rete o memoria).|CPU<br /> Le stored procedure compilate in modo nativo possono ridurre in modo significativo l'utilizzo della CPU perché richiedono un numero decisamente inferiore di istruzioni per eseguire un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] rispetto alle stored procedure interpretate.<br /><br /> OLTP in memoria può ridurre l'investimento hardware nei carichi di lavoro con scalabilità orizzontale, in quanto un server può potenzialmente fornire la velocità effettiva di cinque/dieci server.<br /><br /> I/O<br /> Se si verifica un collo di bottiglia a livello di I/O in seguito all'elaborazione di pagine di dati o di indice, in OLTP in memoria il collo di bottiglia potrebbe risultare contenuto. Inoltre, il checkpoint degli oggetti di OLTP in memoria è continuo e non genera aumenti improvvisi nelle operazioni di I/O. Se tuttavia il working set delle tabelle critiche per le prestazioni eccede la memoria disponibile, OLTP in memoria non sarà in grado di migliorare le prestazioni in quanto è necessario che i dati siano residenti in memoria. Se si verifica un collo di bottiglia a livello di I/O durante la registrazione, OLTP in memoria può ridurre il collo di bottiglia perché richiede meno attività di registrazione. Se una o più tabelle con ottimizzazione per la memoria sono configurate come tabelle non durevoli, è possibile eliminare la registrazione dei dati.<br /><br /> Memoria<br /> Con OLTP in memoria non si ottiene alcun vantaggio in termini di prestazioni. È possibile che OLTP in memoria comporti un utilizzo elevato di memoria, in quando gli oggetti devono essere residenti in memoria.<br /><br /> Rete<br /> Con OLTP in memoria non si ottiene alcun vantaggio in termini di prestazioni. I dati devo essere comunicati dal livello dati al livello applicazione.|  
 |Scalabilità<br /><br /> La maggior parte dei problemi di scalabilità nelle applicazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è causata da problemi di concorrenza, ad esempio la contesa in blocchi, latch e spinlock.|Contesa di latch<br /> Uno scenario tipico riguarda la contesa nell'ultima pagina di un indice quando vengono inserite contemporaneamente righe nell'ordine delle chiavi. Poiché in OLTP in memoria non vengono utilizzati latch per l'accesso ai dati, i problemi di scalabilità correlati alle contese di latch vengono completamente rimossi.<br /><br /> Contesa di spinlock<br /> Poiché in OLTP in memoria non vengono utilizzati latch per l'accesso ai dati, i problemi di scalabilità correlati alle contese di spinlock vengono completamente rimossi.<br /><br /> Contesa correlata al blocco<br /> Se nell'applicazione di database vengono rilevati problemi di blocco tra operazioni di lettura e scrittura, con OLTP in memoria vengono rimossi i problemi che impediscono di proseguire perché è previsto l'utilizzo di una nuova forma di controllo della concorrenza ottimistica per implementare tutti i livelli di isolamento delle transazioni. In OLTP in memoria, TempDB non viene utilizzato per l'archiviazione delle versioni di riga.<br /><br /> Se il problema di scalabilità è determinato dal conflitto tra due operazioni di scrittura, ad esempio due transazioni simultanee che tentano di aggiornare la stessa riga, OLTP in memoria consente il completamento di una transazione e genera un errore per l'altra. La transazione non riuscita deve essere inviata di nuovo in modo esplicito o implicito, ripetendone l'esecuzione. In entrambi i casi è necessario apportare modifiche all'applicazione.<br /><br /> Se nell'applicazione si verificano frequenti conflitti tra due operazioni di scrittura, il valore del blocco ottimistico viene ridotto. L'applicazione non è appropriata per OLTP in memoria. La maggior parte delle applicazioni OLTP non presenta conflitti di scrittura, a meno che il conflitto non venga attivato da escalation blocchi.|  
   
-##  <a name="a-namerlsa-row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria  
+##  <a name="rls"></a> Row-Level Security in Memory-Optimized Tables  
 
 La[Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) è supportata per le tabelle con ottimizzazione per la memoria. L'applicazione dei criteri di sicurezza a livello di riga alle tabelle con ottimizzazione per la memoria corrisponde essenzialmente alle tabelle basate su disco, ad eccezione del fatto che le funzioni con valori di tabella inline usate come predicati di sicurezza devono essere compilate in modo nativo, ovvero create con l'opzione WITH NATIVE_COMPILATION. Per informazioni dettagliate, vedere la sezione [Compatibilità tra funzionalità](../../relational-databases/security/row-level-security.md#Limitations) e l'argomento [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) .  
   
@@ -107,3 +111,4 @@ Per una breve descrizione degli scenari in cui [!INCLUDE[hek_1](../../includes/h
 [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

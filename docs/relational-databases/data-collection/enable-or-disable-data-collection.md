@@ -1,25 +1,29 @@
 ---
-title: "Abilitazione o disabilitazione della raccolta dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agente di raccolta dati [SQL Server], disabilitazione"
-  - "agente di raccolta dati [SQL Server], abilitazione"
+title: Abilitare o disabilitare la raccolta dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], disabling
+- data collector [SQL Server], enabling
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a69e9cee1b62ec953b3be3c984cc712a3f0e55d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Abilitazione o disabilitazione della raccolta dati
+# <a name="enable-or-disable-data-collection"></a>Abilitazione o disabilitazione della raccolta dati
   In questo argomento viene descritto come abilitare o disabilitare una raccolta dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -43,13 +47,13 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per abilitare l'agente di raccolta dati  
+#### <a name="to-enable-the-data-collector"></a>Per abilitare l'agente di raccolta dati  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** .  
   
 2.  Fare clic con il pulsante destro del mouse su **Raccolta dati**, quindi scegliere **Abilita raccolta dati**.  
   
-#### Per disabilitare l'agente di raccolta dati  
+#### <a name="to-disable-the-data-collector"></a>Per disabilitare l'agente di raccolta dati  
   
 1.  In Esplora oggetti espandere il nodo **Gestione** .  
   
@@ -57,13 +61,13 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per abilitare l'agente di raccolta dati  
+#### <a name="to-enable-the-data-collector"></a>Per abilitare l'agente di raccolta dati  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio usa[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) per abilitare l'agente di raccolta dati.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio usa [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) per abilitare l'agente di raccolta dati.  
   
 ```tsql  
 USE msdb;  
@@ -71,7 +75,7 @@ GO
 EXEC dbo.sp_syscollector_enable_collector ;  
 ```  
   
-#### Per disabilitare l'agente di raccolta dati  
+#### <a name="to-disable-the-data-collector"></a>Per disabilitare l'agente di raccolta dati  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,7 +89,7 @@ GO
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

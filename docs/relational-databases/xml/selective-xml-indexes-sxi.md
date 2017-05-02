@@ -1,22 +1,26 @@
 ---
-title: "Indici XML selettivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Indici XML selettivi (SXI) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Indici XML selettivi
+# <a name="selective-xml-indexes-sxi"></a>Indici XML selettivi
   Gli indici XML selettivi rappresentano un altro tipo di indice XML disponibile oltre agli indici XML comuni. Di seguito sono indicati gli obiettivi della funzionalità degli indici XML selettivi.  
   
 -   Migliorare le prestazioni delle query sui dati XML archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  Nessuna necessità di aggiornare le applicazioni per ricavare vantaggi dagli indici XML selettivi.  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="compare"></a> Indici XML selettivi e indici XML primari  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   Vengono supportate le query per elementi sconosciuti o in una posizione sconosciuta nella struttura del documento.  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="example"></a> Semplice esempio di un indice XML selettivo  
  Considerare il frammento XML indicato di seguito come un documento XML in una tabella di circa 500.000 righe:  
@@ -98,9 +100,8 @@ FOR
   
  Per ulteriori informazioni su questi elementi, vedere [Attività correlate](#reltasks).  
   
- [Contenuto dell'argomento](#top)  
   
-## Funzionalità supportate, prerequisiti e limitazioni  
+## <a name="supported-features-prerequisites-and-limitations"></a>Funzionalità supportate, prerequisiti e limitazioni  
   
 ###  <a name="features"></a> Funzionalità XML supportate  
  Gli indici XML selettivi supportano l'espressione XQuery, a sua volta supportata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei metodi exist(), value() e nodes().  
@@ -113,7 +114,6 @@ FOR
   
 -   Per il metodo modify(), gli indici XML selettivi non vengono utilizzati per aggiornare i documenti XML.  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="unsupported"></a> Funzionalità XML non supportate  
  Gli indici XML selettivi non supportano le seguenti funzionalità supportate nell'implementazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di XML:  
@@ -130,7 +130,6 @@ FOR
   
 -   Specifica e recupero dell'identificatore di un nodo mediante la funzione id().  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="prereq"></a> Prerequisiti  
  Sono necessari i prerequisiti indicati di seguito per poter creare un indice XML selettivo per una colonna XML in una tabella utente:  
@@ -141,7 +140,6 @@ FOR
   
 -   La chiave di clustering della tabella utente è limitata a 15 colonne quando viene utilizzata con gli indici XML selettivi.  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="limits"></a> Limitazioni  
  **Requisiti e limitazioni generali**  
@@ -194,7 +192,6 @@ FOR
   
 -   Gli indici XML selettivi e gli indici XML selettivi secondari non sono supportati nell'ottimizzazione guidata motore di database.  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="reltasks"></a> Attività correlate  
   
@@ -205,6 +202,5 @@ FOR
 |Creare, modificare o eliminare un indice XML selettivo.|[Creare, modificare o eliminare indici XML selettivi](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Creare, modificare o eliminare un indice XML selettivo secondario.|[Creare, modificare o eliminare indici XML selettivi secondari](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [Contenuto dell'argomento](#top)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Classe di evento SP:Starting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:Starting - classe di evento"
+title: Classe di evento SP:Starting | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:Starting event class
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c5aed4070cc1d0c3477f2ce31a55add8ca89e0f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento SP:Starting
+# <a name="spstarting-event-class"></a>SP:Starting - classe di evento
   La classe di evento SP:Starting indica l'avvio dell'esecuzione di una stored procedure.  
   
-## Colonne di dati della classe di evento SP:Starting  
+## <a name="spstarting-event-class-data-columns"></a>Colonne di dati della classe di evento SP:Starting  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -53,7 +57,7 @@ caps.handback.revision: 33
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

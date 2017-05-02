@@ -1,26 +1,30 @@
 ---
-title: "Recupero di informazioni sulle notifiche degli eventi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notifiche degli eventi [SQL Server], metadati"
-  - "informazioni sullo stato [SQL Server], notifiche degli eventi"
-  - "metadati [SQL Server], notifiche degli eventi"
+title: Recuperare informazioni sulle notifiche degli eventi | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], metadata
+- status information [SQL Server], event notifications
+- metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e41d81ae5f32fd8d78e1515f17a9229129348df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recupero di informazioni sulle notifiche degli eventi
+# <a name="get-information-about-event-notifications"></a>Recupero di informazioni sulle notifiche degli eventi
   Le viste del catalogo seguenti sono disponibili per eseguire query sui metadati relative alle notifiche degli eventi.  
   
  **Per ottenere informazioni relative alle notifiche degli eventi non a livello di server**  
@@ -44,7 +48,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Questa vista del catalogo non restituisce gruppi di eventi.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Notifiche degli eventi](../../relational-databases/service-broker/event-notifications.md)  
   
   

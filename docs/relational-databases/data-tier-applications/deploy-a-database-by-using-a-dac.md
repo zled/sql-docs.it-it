@@ -1,31 +1,35 @@
 ---
-title: "Distribuire un database tramite un&#39;applicazione livello dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbdeployment.settings.f1"
-  - "sql13.swb.dbdeployment.progress.f1"
-  - "sql13.swb.dbdeployment.summary.f1"
-  - "sql13.swb.dbdeployment.results.f1"
-  - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
-  - "Distribuisci database - procedura guidata"
-  - "distribuzione di database [SQL Server]"
+title: Distribuire un database tramite un&quot;applicazione livello dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbdeployment.settings.f1
+- sql13.swb.dbdeployment.progress.f1
+- sql13.swb.dbdeployment.summary.f1
+- sql13.swb.dbdeployment.results.f1
+- sql13.swb.dbdeployment.welcome.f1
+helpviewer_keywords:
+- deploy database wizard
+- database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.lasthandoff: 04/11/2017
+
 ---
-# Distribuire un database tramite un&#39;applicazione livello dati
+# <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
   Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Prima di iniziare  
@@ -43,7 +47,7 @@ caps.handback.revision: 11
   
 -   Da [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+-   Tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
  La procedura guidata non supporta la distribuzione di database tra due istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -52,15 +56,15 @@ caps.handback.revision: 11
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file BACPAC dell'applicazione livello dati senza password. Quando il file BACPAC viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-#### Autorizzazioni  
- Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa**.  
+#### <a name="permissions"></a>Autorizzazioni  
+ Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
- Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa**. L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
+ Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
   
 ##  <a name="UsingDeployDACWizard"></a> Utilizzo della procedura guidata Distribuisci database  
  **Per eseguire la migrazione di un database utilizzando la procedura guidata Distribuisci database**  
   
-1.  Connettersi alla posizione del database che si desidera distribuire. È possibile specificare un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+1.  Connettersi alla posizione del database che si desidera distribuire. È possibile specificare un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
 2.  In **Esplora oggetti**espandere il nodo dell'istanza in cui è contenuto il database.  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 11
   
     -   [Impostazioni di distribuzione](#Deployment_settings)  
   
-    -   [Convalida](#Validation)  
-  
     -   [Pagina Riepilogo](#Summary)  
   
+    -   [Stato](#Progress)  
+    
     -   [Risultati](#Results)  
   
 ##  <a name="Introduction"></a> Pagina Introduzione  
@@ -87,7 +91,7 @@ caps.handback.revision: 11
   
 -   **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti**: consente di passare alla pagina **Impostazioni di distribuzione**.  
+-   **Avanti** : consente di passare alla pagina **Impostazioni di distribuzione** .  
   
 -   **Annulla** : annulla l'operazione e chiude la procedura guidata.  
   
@@ -102,9 +106,9 @@ caps.handback.revision: 11
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   Edizione di **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] **: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa.  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  – Select the  of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa.  
   
--   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
+-   **Dimensioni massime database** : selezionare le dimensioni massime del database dal menu a discesa.  
   
  **Altre impostazioni:**  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 11
   
  Fare clic su **Fine** per chiudere la procedura guidata.  
   
-## Utilizzo di un'applicazione .NET Framework  
+## <a name="using-a-net-framework-application"></a>Utilizzo di un'applicazione .NET Framework  
  **Per distribuire un database usando i metodi DacStoreExport() e Import() in un'applicazione .NET Framework.**  
   
  Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
@@ -138,7 +142,7 @@ caps.handback.revision: 11
   
 6.  Usare il metodo **Import** del tipo **Microsoft.SqlServer.Management.Dac.DacStore** per importare il file BACPAC. Specificare il file BACPAC creato dall'esportazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Esportazione di un'applicazione livello dati](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importare un file BACPAC per creare un nuovo database utente](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

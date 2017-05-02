@@ -1,38 +1,42 @@
 ---
-title: "Set di supporti di backup con mirroring (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripristino [SQL Server], backup con mirroring"
-  - "set di supporti con mirroring [SQL Server]"
-  - "mirror di backup [SQL Server]"
-  - "copie di backup duplicate"
-  - "copie di backup intercambiabili [SQL Server]"
-  - "set di supporti [SQL Server], set di supporti con backup con mirroring"
-  - "supporti di backup [SQL Server], supporti con mirroring"
+title: Set di supporti di backup con mirroring (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Set di supporti di backup con mirroring (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>Set di supporti di backup con mirroring (SQL Server)
     
 > [!NOTE]  
->  I set di supporti di backup con mirroring sono supportati solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.  
+>  I set di supporti di backup con mirroring sono supportati solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise Edition.  
   
  L'esecuzione del mirroring di un set di supporti consente di incrementare l'affidabilità del backup, riducendo l'impatto di problemi relativi al dispositivo di backup. Tali problemi possono risultare estremamente gravi, poiché i backup rappresentano l'ultima difesa contro la perdita dei dati. Con l'aumento delle dimensioni dei database, cresce il rischio che un errore di un dispositivo o di un supporto di backup impedisca il ripristino di un backup. Il mirroring dei supporti di backup consente di incrementare l'affidabilità dei backup tramite la ridondanza.  
   
 > [!NOTE]  
->  Per informazioni sui set di supporti in genere, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Per informazioni sui set di supporti in genere, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)Enterprise Edition.  
   
  **Contenuto dell'argomento**  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [Backup in un set di supporti con mirroring &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

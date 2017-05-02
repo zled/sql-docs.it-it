@@ -1,29 +1,33 @@
 ---
-title: "Utilizzo di query FOR XML nidificate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML - clausola, query FOR XML nidificate"
-  - "query [XML in SQL Server], FOR XML nidificate"
-  - "query FOR XML nidificate"
+title: Usare query FOR XML annidate | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], nested FOR XML
+- nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilizzo di query FOR XML nidificate
-  Il tipo di dati **xml** e la [direttiva TYPE nelle query FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md)l'elaborazione dell'XML restituito dalle query FOR XML sia sul server che sul client.  
+# <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
+  Il tipo di dati **xml** e la [direttiva TYPE nelle query FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) l'elaborazione dell'XML restituito dalle query FOR XML sia sul server che sul client.  
   
-## Elaborazione con variabili di tipo XML  
+## <a name="processing-with-xml-type-variables"></a>Elaborazione con variabili di tipo XML  
  È possibile assegnare il risultato di una query FOR XML a una variabile di tipo **xml** oppure usare XQuery per eseguire query sul risultato e quindi assegnare tale risultato a una variabile di tipo **xml** per un'ulteriore elaborazione.  
   
 ```  
@@ -38,7 +42,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Il valore XML restituito nella variabile `@x` può essere ulteriormente elaborato usando uno dei metodi con tipo di dati **xml**. Ad esempio, è possibile recuperare il valore dell'attributo `ProductModelID` usando il [metodo value()](../../t-sql/xml/value-method-xml-data-type.md).  
+ Il valore XML restituito nella variabile `@x`può essere ulteriormente elaborato usando uno dei metodi con tipo di dati **xml** . Ad esempio, è possibile recuperare il valore dell'attributo `ProductModelID` usando il [metodo value()](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 DECLARE @i int;  
@@ -46,7 +50,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- Nell'esempio seguente, il risultato della query `FOR XML` viene restituito come tipo **xml** a causa della direttiva `TYPE` specificata nella clausola `FOR XML`.  
+ Nell'esempio seguente, il risultato della query `FOR XML` viene restituito come tipo **xml** a causa della direttiva `TYPE` specificata nella clausola `FOR XML` .  
   
 ```  
 SELECT ProductModelID, Name  
@@ -81,8 +85,8 @@ SELECT  (SELECT ProductModelID, Name
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
-## Restituzione di risultati della query FOR XML interna a query esterne come istanze di tipo XML  
- È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati **xml**. Esempio:  
+## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Restituzione di risultati della query FOR XML interna a query esterne come istanze di tipo XML  
+ È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati **xml** . Esempio:  
   
 ```  
 SELECT Col1,   
@@ -99,11 +103,11 @@ FOR XML AUTO, TYPE;
   
  Dalla query precedente si noti quanto segue:  
   
--   Il valore XML generato dalla query `FOR XML` interna viene aggiunto al valore XML generato dalla query `FOR XML` esterna.  
+-   Il valore XML generato dalla query `FOR XML` interna viene aggiunto al valore XML generato dalla query `FOR XML`esterna.  
   
--   Nella query interna viene specificata la direttiva `TYPE`. I dati restituiti dalla query interna sono quindi di tipo **xml**. Se non si specifica la direttiva TYPE, il risultato della query `FOR XML` interna viene restituito come **nvarchar(max)** e i dati XML vengono sostituiti con entità.  
+-   Nella query interna viene specificata la direttiva `TYPE` . I dati restituiti dalla query interna sono quindi di tipo **xml** . Se non si specifica la direttiva TYPE, il risultato della query `FOR XML` interna viene restituito come **nvarchar(max)** e i dati XML vengono sostituiti con entità.  
   
-## Controllo della forma dei dati XML risultanti  
+## <a name="controlling-the-shape-of-resulting-xml-data"></a>Controllo della forma dei dati XML risultanti  
  Le query FOR XML nidificate consentono di avere un maggior controllo nella definizione della forma dei dati XML risultanti. È possibile utilizzare query FOR XML nidificate per costruire valori XML che siano parzialmente incentrati sugli attributi e parzialmente sugli elementi.  
   
  Per altre informazioni su come specificare valori XML incentrati sia sugli attributi sia sugli elementi con query FOR XML nidificate, vedere [Query FOR XML e query nidificata FOR XML a confronto](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md) e [Determinare la struttura dei valori XML tramite query nidificate FOR XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md).  
@@ -112,7 +116,7 @@ FOR XML AUTO, TYPE;
   
  Indipendentemente dalla modalità utilizzata, le query FOR XML nidificate consentono un maggior controllo nella definizione della forma dei valori XML risultanti e possono essere utilizzate in sostituzione delle query in modalità EXPLICIT.  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  Negli argomenti seguenti vengono forniti esempi di query FOR XML nidificate.  
   
  [Query FOR XML e query nidificata FOR XML a confronto](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
@@ -124,7 +128,7 @@ FOR XML AUTO, TYPE;
  [Utilizzo di query FOR XML nidificate in ASP.NET](../../relational-databases/xml/use-nested-for-xml-queries-in-asp-net.md)  
  Dimostrazione del modo in cui un'applicazione ASPX può utilizzare FOR XML per restituire XML da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Determinazione della struttura dei valori XML tramite query nidificate FOR XML.](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
+ [Determinare la struttura dei valori XML tramite query nidificate FOR XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
  Utilizzo di query FOR XML nidificate per controllare la struttura di un documento XML creato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

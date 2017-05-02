@@ -1,26 +1,30 @@
 ---
-title: "Ripubblicazione dei dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripubblicazione di dati"
-  - "pubblicazione [replica di SQL Server], Sottoscrittori"
-  - "Sottoscrittori [replica di SQL Server], ripubblicazione dei dati"
+title: Ripubblicare i dati | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- republishing data
+- publishing [SQL Server replication], Subscribers
+- Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c3b9fb2eb0eb1b8051e37a46c4dcedcfbb8479d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ripubblicazione dei dati
+# <a name="republish-data"></a>Ripubblicazione dei dati
   In un modello di ripubblicazione il server di pubblicazione invia i dati a un Sottoscrittore, il quale ripubblica i dati in un numero qualsiasi di altri Sottoscrittori. Si tratta di un comportamento utile quando un server di pubblicazione deve inviare dati ai Sottoscrittori tramite un collegamento di comunicazione lento o costoso. Se all'altro capo del collegamento sono presenti più Sottoscrittori, l'utilizzo di un server di ripubblicazione consente di trasferirvi il carico dell'attività di distribuzione.  
   
  La ripubblicazione dei dati comprende i passaggi seguenti:  
@@ -38,11 +42,11 @@ caps.handback.revision: 34
 6.  Inizializzare le sottoscrizioni.  
   
 > [!NOTE]  
->  Se si utilizza la replica di tipo merge in una topologia di ripubblicazione, tutti i Sottoscrittori di ripubblicazione devono utilizzare sottoscrizioni server. Per ulteriori informazioni sui tipi di sottoscrizione, vedere [sottoscrivere pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md).  
+>  Se si utilizza la replica di tipo merge in una topologia di ripubblicazione, tutti i Sottoscrittori di ripubblicazione devono utilizzare sottoscrizioni server. Per altre informazioni sui tipi di sottoscrizioni, vedere [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md).  
   
  Nell'illustrazione seguente il server di pubblicazione e il server di ripubblicazione operano entrambi come server di distribuzione locali. Se sono stati configurati per l'utilizzo di un server di distribuzione remoto, ogni server di distribuzione deve trovarsi allo stesso capo di un collegamento di comunicazione lento o costoso e operare come server di pubblicazione proprio. È necessario che i server di pubblicazione siano connessi ai server di distribuzione remoti tramite collegamenti di comunicazioni affidabili e ad alta velocità.  
   
- ![Ripubblicazione dei dati](../../relational-databases/replication/media/repl-06a.gif "Ripubblicazione dei dati")  
+ ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
   
  Ogni server può operare sia come server di pubblicazione che come Sottoscrittore. Si consideri ad esempio la figura seguente, in cui la pubblicazione di una tabella ubicata a Londra deve essere distribuita in quattro diverse città degli Stati Uniti: Chicago, New York, San Diego e Seattle. Per la sottoscrizione della tabella pubblicata creata a Londra viene scelto il server di New York, in quanto risponde ai requisiti seguenti:  
   
@@ -63,13 +67,13 @@ caps.handback.revision: 34
 |Pubblicazione di tipo merge|Sottoscrizione di tipo merge/pubblicazione di tipo merge|Sottoscrizione di tipo merge|  
 |Pubblicazione di tipo merge|Sottoscrizione di tipo merge/pubblicazione transazionale|Sottoscrizione transazionale|  
   
- \*È necessario impostare il **@published_in_tran_pub** proprietà per la pubblicazione di tipo merge. Per impostazione predefinita, la replica transazionale prevede che le tabelle nel Sottoscrittore vengano considerate di sola lettura. Se durante la replica di tipo merge vengono apportate modifiche a una tabella in una sottoscrizione transazionale, si potrà verificare una mancata convergenza dei dati. Per evitare questo rischio, si suggerisce di specificare queste tabelle come di solo download nella pubblicazione di tipo merge. In tal modo si impedisce al Sottoscrittore di tipo merge di caricare le modifiche ai dati nella tabella. Per ulteriori informazioni, vedere [Ottimizza prestazioni della replica di tipo Merge con gli articoli Download-Only](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ \*È consigliabile impostare la proprietà **@published_in_tran_pub** sulla pubblicazione di tipo merge. Per impostazione predefinita, la replica transazionale prevede che le tabelle nel Sottoscrittore vengano considerate di sola lettura. Se durante la replica di tipo merge vengono apportate modifiche a una tabella in una sottoscrizione transazionale, si potrà verificare una mancata convergenza dei dati. Per evitare questo rischio, si suggerisce di specificare queste tabelle come di solo download nella pubblicazione di tipo merge. In tal modo si impedisce al Sottoscrittore di tipo merge di caricare le modifiche ai dati nella tabella. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
-## Vedere anche  
- [Configurazione della distribuzione](../../relational-databases/replication/configure-distribution.md)   
- [Pubblicazione di dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
- [Inizializzazione di una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)   
+ [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)   
  [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)  
   
   

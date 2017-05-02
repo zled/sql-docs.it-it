@@ -1,38 +1,42 @@
 ---
-title: "Provider PowerShell per SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], provider"
-  - "PowerShell [SQL Server], provider PowerShell per SQL Server"
-  - "Provider [PowerShell]"
-  - "SMO [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], SMO"
-  - "SQL Server Management Objects, PowerShell"
+title: Provider PowerShell per SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], provider
+- PowerShell [SQL Server], SQL Server PowerShell Provider
+- Providers [PowerShell]
+- SMO [SQL Server], PowerShell
+- PowerShell [SQL Server], SMO
+- SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40b88611b6d25c2908a679b84f73ccad5b12cfbe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Provider PowerShell per SQL Server
-  Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows PowerShell espone la gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in percorsi simili ai percorsi del file system. È possibile usare i percorsi per trovare un oggetto e, successivamente, usare i metodi dei modelli SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) per eseguire azioni sugli oggetti.  
+# <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
+  Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows PowerShell espone la gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in percorsi simili ai percorsi del file system. È possibile usare i percorsi per trovare un oggetto e, successivamente, usare i metodi dei modelli SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) per eseguire azioni sugli oggetti.  
   
-## Vantaggi del provider PowerShell per SQL Server  
+## <a name="benefits-of-the-sql-server-powershell-provider"></a>Vantaggi del provider PowerShell per SQL Server  
  Attraverso i percorsi implementati dal provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile verificare facilmente e in modo interattivo tutti gli oggetti in un'istanza di SQL Server. È possibile spostarsi tra i percorsi utilizzando alias di Windows PowerShell simili ai comandi normalmente utilizzati per spostarsi tra i percorsi del file system.  
   
-## Gerarchia di SQL Server PowerShell  
+## <a name="the-sql-server-powershell-hierarchy"></a>Gerarchia di SQL Server PowerShell  
  Nei prodotti in cui i dati o i modelli a oggetti possono essere rappresentati in una gerarchia, per esporre le gerarchie vengono utilizzati i provider Windows PowerShell. La gerarchia viene esposta utilizzando una struttura di unità e percorsi simile a quelle utilizzate dal file system di Windows.  
   
- Ciascun provider Windows PowerShell implementa una o più unità. Ciascuna unità è il nodo radice di una gerarchia di oggetti correlati. Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa un'unità SQLSERVER:. Nel provider viene inoltre definito un set di cartelle primarie per l'unità SQLSERVER:. Ogni cartella e le relative sottocartelle rappresentano il set di oggetti a cui è possibile accedere usando un modello SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Quando si seleziona una sottocartella in un percorso che inizia con una di queste cartelle principali, è possibile utilizzare i metodi del modello a oggetti associato per eseguire azioni sull'oggetto rappresentato dal nodo. Le cartelle Windows PowerShell implementate dal provider [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono elencate nella tabella seguente:  
+ Ciascun provider Windows PowerShell implementa una o più unità. Ciascuna unità è il nodo radice di una gerarchia di oggetti correlati. Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa un'unità SQLSERVER:. Nel provider viene inoltre definito un set di cartelle primarie per l'unità SQLSERVER:. Ogni cartella e le relative sottocartelle rappresentano il set di oggetti a cui è possibile accedere usando un modello SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Quando si seleziona una sottocartella in un percorso che inizia con una di queste cartelle principali, è possibile utilizzare i metodi del modello a oggetti associato per eseguire azioni sull'oggetto rappresentato dal nodo. Le cartelle Windows PowerShell implementate dal provider [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono elencate nella tabella seguente:  
   
 |Cartella|Spazio dei nomi del modello a oggetti di SQL Server|Oggetti|  
 |------------|---------------------------------------|-------------|  
@@ -62,16 +66,16 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
-## Attività del provider di SQL Server  
+## <a name="sql-server-provider-tasks"></a>Attività del provider di SQL Server  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto come utilizzare i cmdlet di Windows PowerShell per spostarsi tra i nodi all'interno di un percorso e, a ogni nodo, ottenere un elenco degli oggetti in corrispondenza di quel nodo.|[Spostarsi all'interno dei percorsi di SQL Server PowerShell](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)|  
 |Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Utilizzo di percorsi di SQL Server PowerShell](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)|  
 |Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Conversione di URN in percorsi di provider di SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)|  
-|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione in motore di database PowerShell](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  
+|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione in motore di database PowerShell](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

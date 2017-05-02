@@ -1,40 +1,44 @@
 ---
-title: "Backup e ripristino di indici e cataloghi full-text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indici full-text [SQL Server], backup"
-  - "ricerca full-text [SQL Server], backup e ripristino"
-  - "recupero [ricerca full-text]"
-  - "backup [SQL Server], indici full-text"
-  - "indici full-text [SQL Server], ripristino"
-  - "operazioni di ripristino [ricerca full-text]"
+title: Backup e ripristino di indici e cataloghi full-text | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], backing up
+- full-text search [SQL Server], back up and restore
+- recovery [full-text search]
+- backups [SQL Server], full-text indexes
+- full-text indexes [SQL Server], restoring
+- restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup e ripristino di indici e cataloghi full-text
+# <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Backup e ripristino di indici e cataloghi full-text
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  In questo argomento viene illustrato come eseguire il backup e il ripristino di indici full-text creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il catalogo full-text è un concetto logico e non è contenuto in un filegroup. Pertanto, per eseguire il backup di un catalogo full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario identificare ogni filegroup che contiene un indice full-text appartenente al catalogo, quindi eseguirne il backup uno alla volta.  
+  In questo argomento viene illustrato come eseguire il backup e il ripristino di indici full-text creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il catalogo full-text è un concetto logico e non è contenuto in un filegroup. Pertanto, per eseguire il backup di un catalogo full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario identificare ogni filegroup che contiene un indice full-text appartenente al catalogo, quindi eseguirne il backup uno alla volta.  
   
 > [!IMPORTANT]  
->  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkID=121052) nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  È possibile importare cataloghi full-text quando si aggiorna un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Ogni catalogo full-text importato è un file di database nel proprio filegroup. Per eseguire il backup di un catalogo importato, eseguire il backup del relativo filegroup. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkID=121052)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backingup"></a> Backup degli indici full-text di un catalogo full-text  
   
 ###  <a name="Find_FTIs_of_a_Catalog"></a> Individuazione degli indici full-text di un catalogo full-text  
- È possibile recuperare le proprietà degli indici full-text usando l'istruzione [SELECT](../../t-sql/queries/select-transact-sql.md) seguente che consente di selezionare le colonne dalle viste del catalogo [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) e [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md).  
+ È possibile recuperare le proprietà degli indici full-text usando l'istruzione [SELECT](../../t-sql/queries/select-transact-sql.md) seguente che consente di selezionare le colonne dalle viste del catalogo [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) e [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,7 +52,6 @@ SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,
 GO  
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="Find_FG_of_FTI"></a> Individuazione del filegroup o del file che contiene un indice full-text  
  Quando viene creato, l'indice full-text viene inserito in una delle posizioni seguenti:  
@@ -72,7 +75,6 @@ GO
   
 ```  
   
- [Contenuto dell'argomento](#top)  
   
 ###  <a name="Back_up_FTIs_of_FTC"></a> Backup dei filegroup che contengono gli indici full-text  
  Dopo avere trovato i filegroup che contengono gli indici di un catalogo full-text, è necessario eseguire il backup di ognuno. Durante il processo di backup non è consentito eliminare o aggiungere cataloghi full-text.  
@@ -85,7 +87,6 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
- [Contenuto dell'argomento](#top)  
   
 ##  <a name="Restore_FTI"></a> Ripristino di un indice full-text  
  Il ripristino del backup di un filegroup include il ripristino dei file di indice full-text e degli altri file nel filegroup. Per impostazione predefinita, il filegroup viene ripristinato nel percorso del disco in cui è stato eseguito il backup.  
@@ -100,11 +101,10 @@ GO
   
 -   [Ripristinare i file in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- [Contenuto dell'argomento](#top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
   

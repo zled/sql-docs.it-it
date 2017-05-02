@@ -1,24 +1,28 @@
 ---
-title: "Classe di evento Hash Warning | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hash Warning - classe di evento"
+title: Classe di evento Hash Warning | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 322018e04193b8cabd7354719b85f230b11b2d26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe di evento Hash Warning
+# <a name="hash-warning-event-class"></a>Hash Warning - classe di evento
   È possibile utilizzare la classe di evento Hash Warning per monitorare il momento in cui si verifica una ricorsione di hash o l'interruzione dell'hashing (hash bailout) durante un'operazione di hashing.  
   
  La ricorsione di hash si verifica quando la memoria disponibile non è sufficiente per l'input di compilazione, che viene quindi suddiviso in più partizioni elaborate separatamente. Se la memoria disponibile non è sufficiente per una delle partizioni, la partizione viene suddivisa ulteriormente in sottopartizioni che vengono elaborate separatamente. Il processo di suddivisione continua fino a quando non vengono inserite nella memoria disponibile tutte le partizioni o non viene raggiunto il livello massimo di ricorsione (visualizzato nella colonna di dati IntegerData).  
@@ -38,18 +42,18 @@ caps.handback.revision: 39
  La creazione o l'aggiornamento delle statistiche per le colonne interessate dall'operazione di join è la procedura più efficace per ridurre il numero di ricorsioni di hash e hash bailout.  
   
 > [!NOTE]  
->  Per descrivere l'hash bailout vengono usati anche i termini *grace hash join* e *hash join ricorsivo*.  
+>  Per descrivere l'hash bailout vengono usati anche i termini *grace hash join* e *hash join ricorsivo* .  
   
 > [!IMPORTANT]  
->  Per determinare la posizione in cui si verifica l'evento Hash Warning quando Query Optimizer genera un piano di esecuzione, è inoltre consigliabile acquisire una classe di evento Showplan nella traccia. È possibile scegliere qualsiasi classe di evento Showplan ad eccezione delle classi Showplan Text e Showplan Text (Unencoded) che non restituiscono alcun ID nodo. Nelle classi Showplan gli ID nodo identificano ogni operazione eseguita da Query Optimizer quando genera un piano di esecuzione della query. Queste operazioni sono denominate *operatori* e a ogni operatore presente in una classe Showplan è associato un ID nodo. La colonna ObjectID relativa agli eventi Hash Warning corrisponde così all'ID nodo nelle classi Showplan, in modo che sia possibile determinare l'operatore o l'operazione che sta provocando l'errore.  
+>  Per determinare la posizione in cui si verifica l'evento Hash Warning quando Query Optimizer genera un piano di esecuzione, è inoltre consigliabile acquisire una classe di evento Showplan nella traccia. È possibile scegliere qualsiasi classe di evento Showplan ad eccezione delle classi Showplan Text e Showplan Text (Unencoded) che non restituiscono alcun ID nodo. Nelle classi Showplan gli ID nodo identificano ogni operazione eseguita da Query Optimizer quando genera un piano di esecuzione della query. Queste operazioni sono denominate *operatori*e a ogni operatore presente in una classe Showplan è associato un ID nodo. La colonna ObjectID relativa agli eventi Hash Warning corrisponde così all'ID nodo nelle classi Showplan, in modo che sia possibile determinare l'operatore o l'operazione che sta provocando l'errore.  
   
-## Colonne di dati della classe di evento Hash Warning  
+## <a name="hash-warning-event-class-data-columns"></a>Colonne di dati della classe di evento Hash Warning  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se il client fornisce l'ID del processo client.|9|Sì|  
-|DatabaseID|**Int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
+|DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 55.|27|No|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -58,7 +62,7 @@ caps.handback.revision: 39
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IntegerData|**int**|Livello di ricorsione (solo ricorsione di hash).|25|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|LoginName|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di Windows nel formato *\<DOMINIO>\\<nomeutente\>*).|11|Sì|  
+|LoginName|**nvarchar**|Nome dell'account di accesso dell'utente (account di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di Windows nel formato *\<DOMINIO>\\<nomeutente\>*).|11|Sì|  
 |LoginSid|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
@@ -71,7 +75,7 @@ caps.handback.revision: 39
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

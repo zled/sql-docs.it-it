@@ -1,26 +1,30 @@
 ---
-title: "Pubblicazione dell&#39;esecuzione delle stored procedure nella replica transazionale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pubblicazione [replica di SQL Server], esecuzione di stored procedure"
-  - "articoli [replica di SQL Server], stored procedure"
-  - "replica transazionale, pubblicazione dell'esecuzione di stored procedure"
+title: Pubblicazione dell&quot;esecuzione delle stored procedure nella replica transazionale | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing [SQL Server replication], stored procedure execution
+- articles [SQL Server replication], stored procedures and
+- transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pubblicazione dell&#39;esecuzione delle stored procedure nella replica transazionale
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale
   Se una o più stored procedure vengono eseguite nel server di pubblicazione e influiscono su tabelle pubblicate, è possibile includerle nella pubblicazione sotto forma di articoli di esecuzione delle stored procedure. La definizione della procedura, ovvero l'istruzione CREATE PROCEDURE, viene replicata nel Sottoscrittore durante l'inizializzazione della sottoscrizione. Quando la procedura viene eseguita nel server di pubblicazione, la replica esegue la procedura corrispondente nel Sottoscrittore. Ciò può migliorare sensibilmente le prestazioni, ad esempio nel caso di operazioni batch di grandi dimensioni, poiché viene replicata solo l'esecuzione della procedura senza necessità di replicare le singole modifiche di ogni riga. Si supponga, ad esempio, di creare la stored procedure seguente nel database di pubblicazione:  
   
 ```  
@@ -49,17 +53,17 @@ EXEC give_raise
   
  **Per pubblicare l'esecuzione di una stored procedure**  
   
--   SQL Server Management Studio: [pubblicazione dell'esecuzione di una Stored Procedure in una pubblicazione transazionale & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   SQL Server Management Studio: [Pubblicare l'esecuzione di una stored procedure in una pubblicazione transazionale &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programmazione Transact-SQL della replica: eseguire [sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e specificare un valore 'serializable proc exec' (scelta consigliata) o 'proc exec' per il parametro **@type**. Per ulteriori informazioni sulla definizione degli articoli, vedere [definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programmazione Transact-SQL della replica: eseguire [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e specificare un valore 'serializable proc exec' (consigliato) o 'proc exec' per il parametro **@type**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## Modifica della procedura nel Sottoscrittore  
- Per impostazione predefinita, la definizione della stored procedure nel server di pubblicazione viene distribuita in ogni Sottoscrittore. È comunque possibile modificare la stored procedure anche nel Sottoscrittore. Ciò risulta utile se nel Sottoscrittore si desidera eseguire logica diversa da quella eseguita nel server di pubblicazione. Si consideri ad esempio **sp_big_delete**, una stored procedure nel server di pubblicazione che ha due funzioni: elimini 1.000.000 di righe dalla tabella replicata **big_table1** e aggiorna la tabella non replicata **big_table2**. Per ridurre la domanda di risorse di rete, è necessario distribuire l'eliminazione di 1 milione di righe come stored procedure pubblicando **sp_big_delete**. Nel server di sottoscrizione, è possibile modificare **sp_big_delete** per eliminare solo le righe 1 milione e non eseguire l'aggiornamento successivo di **big_table2**.  
+## <a name="modifying-the-procedure-at-the-subscriber"></a>Modifica della procedura nel Sottoscrittore  
+ Per impostazione predefinita, la definizione della stored procedure nel server di pubblicazione viene distribuita in ogni Sottoscrittore. È comunque possibile modificare la stored procedure anche nel Sottoscrittore. Ciò risulta utile se nel Sottoscrittore si desidera eseguire logica diversa da quella eseguita nel server di pubblicazione. Si supponga, ad esempio, che la stored procedure **sp_big_delete**nel server di pubblicazione svolga due funzioni, ovvero elimini 1.000.000 di righe dalla tabella replicata **big_table1** e aggiorni la tabella non replicata **big_table2**. In questo caso, per ridurre la quantità di risorse di rete utilizzate, è necessario distribuire l'eliminazione del milione di righe come stored procedure pubblicando **sp_big_delete**. Nel Sottoscrittore è possibile modificare **sp_big_delete** in modo che esegua l'eliminazione delle righe, ma non l'aggiornamento successivo di **big_table2**.  
   
 > [!NOTE]  
->  Per impostazione predefinita tutte le modifiche apportate nel server di pubblicazione utilizzando ALTER PROCEDURE vengono distribuite nel Sottoscrittore. Per impedire questa operazione, disabilitare la distribuzione delle modifiche dello schema prima di eseguire ALTER PROCEDURE. Per informazioni sulle modifiche dello schema, vedere [apportare le modifiche dello Schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+>  Per impostazione predefinita tutte le modifiche apportate nel server di pubblicazione utilizzando ALTER PROCEDURE vengono distribuite nel Sottoscrittore. Per impedire questa operazione, disabilitare la distribuzione delle modifiche dello schema prima di eseguire ALTER PROCEDURE. Per informazioni sulle modifiche dello schema, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## Tipi di articoli di esecuzione delle stored procedure  
+## <a name="types-of-stored-procedure-execution-articles"></a>Tipi di articoli di esecuzione delle stored procedure  
  L'esecuzione di una stored procedure può essere pubblicata in due modi diversi, ovvero sotto forma di articolo di esecuzione delle procedure serializzabili e sotto forma di articolo di esecuzione delle procedure.  
   
 -   È consigliabile utilizzare l'opzione serializzabile poiché esegue la replica dell'esecuzione della procedura solo se la procedura viene eseguita nel contesto di una transazione serializzabile. Se viene eseguita in un contesto diverso, le modifiche ai dati delle tabelle pubblicate vengono replicate come una serie di istruzioni DML. In questo modo i dati nel Sottoscrittore risultano sempre consistenti con i dati nel server di pubblicazione. Questo risulta particolarmente utile per le operazioni batch, ad esempio operazioni di pulizia dei riferimenti molto estese.  
@@ -87,12 +91,12 @@ COMMIT TRANSACTION T2
   
  I blocchi verranno mantenuti più a lungo se si esegue la procedura in una transazione serializzabile e possono comportare una riduzione della concorrenza.  
   
-## Impostazione XACT_ABORT  
- Durante la replica dell'esecuzione della stored procedure, l'impostazione XACT_ABORT della sessione nella quale avviene l'esecuzione della stored procedure deve essere impostata su ON. Se XACT_ABORT è impostata su OFF, durante l'esecuzione della procedura nel server di pubblicazione viene generato un errore, che si ripeterà anche nel Sottoscrittore, interrompendo l'attività dell'agente di distribuzione. Se si imposta XACT_ABORT su ON, per tutti gli errori rilevati durante l'esecuzione nel server di pubblicazione viene eseguito il rollback dell'intera esecuzione, il che impedisce che si verifichino errori nell'agente di distribuzione. Per ulteriori informazioni sull'impostazione XACT_ABORT, vedere [SET XACT_ABORT & #40; Transact-SQL & #41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
+## <a name="the-xactabort-setting"></a>Impostazione XACT_ABORT  
+ Durante la replica dell'esecuzione della stored procedure, l'impostazione XACT_ABORT della sessione nella quale avviene l'esecuzione della stored procedure deve essere impostata su ON. Se XACT_ABORT è impostata su OFF, durante l'esecuzione della procedura nel server di pubblicazione viene generato un errore, che si ripeterà anche nel Sottoscrittore, interrompendo l'attività dell'agente di distribuzione. Se si imposta XACT_ABORT su ON, per tutti gli errori rilevati durante l'esecuzione nel server di pubblicazione viene eseguito il rollback dell'intera esecuzione, il che impedisce che si verifichino errori nell'agente di distribuzione. Per altre informazioni sull'impostazione XACT_ABORT, vedere [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Se è necessario impostare XACT_ABORT su OFF, specificare il **- SkipErrors** parametro dell'agente di distribuzione. Ciò consente all'agente di continuare ad applicare eventuali modifiche nel Sottoscrittore anche in caso di errore.  
+ Se è necessario impostare XACT_ABORT su OFF, specificare il parametro **-SkipErrors** per l'agente di distribuzione. Ciò consente all'agente di continuare ad applicare eventuali modifiche nel Sottoscrittore anche in caso di errore.  
   
-## Vedere anche  
- [Opzioni degli articoli per la replica transazionale](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

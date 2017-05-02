@@ -1,24 +1,28 @@
 ---
-title: "Creare uno snapshot del database (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot del database [SQL Server], creazione"
+title: Creare uno snapshot del database (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare uno snapshot del database (Transact-SQL)
+# <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
   L'unico modo per creare uno snapshot del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non supporta la creazione di snapshot del database.  
   
   
@@ -27,11 +31,11 @@ caps.handback.revision: 56
 ###  <a name="Prerequisites"></a> Prerequisiti  
  Il database di origine, in cui può essere utilizzato qualsiasi modello di recupero, deve soddisfare i prerequisiti seguenti:  
   
--   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta gli snapshot del database. Per informazioni sul supporto degli snapshot del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta gli snapshot del database. Per informazioni sul supporto degli snapshot del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Il database di origine deve essere online, a meno che non si tratti di un database mirror nell'ambito di una sessione di mirroring del database.  
   
--   Per creare uno snapshot del database in un database mirror, è necessario che il database si trovi nello [stato di mirroring](../../database-engine/database-mirroring/mirroring-states-sql-server.md) sincronizzato.  
+-   Per creare uno snapshot del database in un database mirror, è necessario che il database si trovi nello [stato di mirroring](../../database-engine/database-mirroring/mirroring-states-sql-server.md)sincronizzato.  
   
 -   Non è possibile configurare il database di origine come un database condiviso scalabile.  
 
@@ -58,7 +62,7 @@ caps.handback.revision: 56
   
 -   Data e ora di creazione dello snapshot, un numero di sequenza o altre informazioni utili a distinguere gli snapshot sequenziali su un determinato database.  
   
- Si consideri ad esempio una serie di snapshot del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Ogni giorno fra le 6 e le 18 vengono creati tre snapshot, a intervalli di 6 ore, su un ciclo di 24 ore. Ogni snapshot viene mantenuto per 24 ore prima di essere eliminato e sostituito da un nuovo snapshot con lo stesso nome. Si noti che il nome di ogni snapshot indica l'ora, ma non il giorno:  
+ Si consideri ad esempio una serie di snapshot del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Ogni giorno fra le 6 e le 18 vengono creati tre snapshot, a intervalli di 6 ore, su un ciclo di 24 ore. Ogni snapshot viene mantenuto per 24 ore prima di essere eliminato e sostituito da un nuovo snapshot con lo stesso nome. Si noti che il nome di ogni snapshot indica l'ora, ma non il giorno:  
   
 ```  
 AdventureWorks_snapshot_0600  
@@ -91,7 +95,7 @@ AdventureWorks_snapshot_evening
 ##  <a name="TsqlProcedure"></a> Come creare uno snapshot del database utilizzando Transact-SQL  
  **Per creare uno snapshot del database**  
   
->  Per un esempio di questa procedura, vedere[Esempi (Transact-SQL)](#TsqlExample) più avanti in questa sezione.  
+>  Per un esempio di questa procedura, vedere [Esempi (Transact-SQL)](#TsqlExample)più avanti in questa sezione.  
   
 1.  In base alla dimensione attuale del database di origine, assicurarsi che lo spazio su disco sia sufficiente per lo snapshot del database. La dimensione massima di uno snapshot del database corrisponde alla dimensione del database di origine al momento della creazione dello snapshot. Per altre informazioni, vedere [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
@@ -113,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Dove *source_**database_name* è il database di origine, *logical_file_name* è il nome logico usato in SQL Server quando si fa riferimento al file, *os_file_name* rappresenta il nome e il percorso usati dal sistema operativo quando si crea il file e *database_snapshot_name* è il nome dello snapshot in base a cui si vuole ripristinare il database. Per una descrizione completa di questa sintassi, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Dove *source_**database_name* è il database di origine, *logical_file_name*è il nome logico usato in SQL Server quando si fa riferimento al file, *os_file_name* rappresenta il nome e il percorso usati dal sistema operativo quando si crea il file e *database_snapshot_name* è il nome dello snapshot in base a cui si vuole ripristinare il database. Per una descrizione completa di questa sintassi, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  Quando si crea uno snapshot del database, i file di log, i file offline, i file in fase di ripristino e i file inattivi non sono consentiti nell'istruzione CREATE DATABASE.  
@@ -130,7 +134,7 @@ AdventureWorks_snapshot_evening
 -   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Creazione di uno snapshot del database AdventureWorks  
- In questo esempio viene creato uno snapshot del database `AdventureWorks`. Il nome dello snapshot, `AdventureWorks_dbss_1800`, e il nome del file sparse corrispondente, `AdventureWorks_data_1800.ss`, indicano l'ora di creazione, ovvero le 18.00 (1800).  
+ In questo esempio viene creato uno snapshot del database `AdventureWorks` . Il nome dello snapshot, `AdventureWorks_dbss_1800`, e il nome del file sparse corrispondente, `AdventureWorks_data_1800.ss`, indicano l'ora di creazione, ovvero le 18.00 (1800).  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -141,7 +145,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Creazione di uno snapshot del database Sales  
- In questo esempio viene creato uno snapshot, `sales_snapshot1200`, del database `Sales`. Questo database è stato creato nell'esempio "Creazione di un database con filegroup" in [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ In questo esempio viene creato uno snapshot, `sales_snapshot1200`, del database `Sales` . Questo database è stato creato nell'esempio "Creazione di un database con filegroup" in [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -171,8 +175,10 @@ GO
   
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+
+

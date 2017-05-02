@@ -1,37 +1,41 @@
 ---
-title: "Stima delle dimensioni di una tabella | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pagine [SQL Server], spazio"
-  - "spazio [SQL Server], tabelle"
-  - "dimensioni di riga [SQL Server]"
-  - "dimensioni [SQL Server], tabelle"
-  - "dimensioni di colonna [SQL Server]"
-  - "stima delle dimensioni di tabella [SQL Server]"
-  - "dimensioni di tabella [SQL Server]"
-  - "stima delle dimensioni di tabella"
-  - "indici cluster, dimensioni tabella"
-  - "spazio su disco [SQL Server], tabelle"
-  - "allocazione spazio [SQL Server], dimensioni tabella"
-  - "progettazione di database [SQL Server], stima delle dimensioni"
-  - "righe libere riservate per pagina [SQL Server]"
-  - "calcolo delle dimensioni di tabella"
+title: Stimare le dimensioni di un tabella | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages [SQL Server], space
+- space [SQL Server], tables
+- row size [SQL Server]
+- size [SQL Server], tables
+- column size [SQL Server]
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- disk space [SQL Server], tables
+- space allocation [SQL Server], table size
+- designing databases [SQL Server], estimating size
+- reserved free rows per page [SQL Server]
+- calculating table size
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 740800db335b524298c39a3ab9f225e18d785c54
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stima delle dimensioni di una tabella
+# <a name="estimate-the-size-of-a-table"></a>Stima delle dimensioni di una tabella
   Per stimare la quantità di spazio necessario per archiviare dati in una tabella, è possibile utilizzare la procedura seguente:  
   
 1.  Calcolare lo spazio necessario per l'heap o indice cluster seguendo le istruzioni in [Stima delle dimensioni di un heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md) o [Stima delle dimensioni di un indice cluster](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md).  
@@ -40,7 +44,7 @@ caps.handback.revision: 30
   
 3.  Sommare i valori calcolati nei passaggi 1 e 2.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)   
  [Stima delle dimensioni di un heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
  [Stima delle dimensioni di un indice cluster](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   

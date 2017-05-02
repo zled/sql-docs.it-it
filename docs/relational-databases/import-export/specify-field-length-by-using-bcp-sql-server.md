@@ -1,31 +1,35 @@
 ---
-title: "Definizione della lunghezza di campo tramite bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formato nativo di dati [SQL Server]"
-  - "lunghezze di campo predefinite"
-  - "lunghezza di campo [SQL Server]"
-  - "formati di dati [SQL Server], lunghezza del campo"
-  - "utilità bcp [SQL Server], lunghezza del campo"
+title: Specificare la lunghezza del campo tramite bcp (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- default field lengths
+- field length [SQL Server]
+- data formats [SQL Server], field length
+- bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definizione della lunghezza di campo tramite bcp (SQL Server)
-  La lunghezza del campo indica il numero massimo di caratteri necessari per rappresentare i dati in formato carattere. Se i dati sono archiviati in formato nativo, la lunghezza di campo è già nota. Ad esempio, il tipo di dati **int** accetta 4 byte. Se si è indicato 0 come lunghezza del prefisso, il comando **bcp** chiede di specificare la lunghezza del campo, le lunghezze di campo predefinite e l'impatto della lunghezza del campo sull'archiviazione dei dati in file di dati contenenti dati **char**.  
+# <a name="specify-field-length-by-using-bcp-sql-server"></a>Definizione della lunghezza di campo tramite bcp (SQL Server)
+  La lunghezza del campo indica il numero massimo di caratteri necessari per rappresentare i dati in formato carattere. Se i dati sono archiviati in formato nativo, la lunghezza di campo è già nota. Ad esempio, il tipo di dati **int** accetta 4 byte. Se si è indicato 0 come lunghezza del prefisso, il comando **bcp** chiede di specificare la lunghezza del campo, le lunghezze di campo predefinite e l'impatto della lunghezza del campo sull'archiviazione dei dati in file di dati contenenti dati **char** .  
   
-## Richiesta di lunghezza di campo da parte di bcp  
+## <a name="the-bcp-prompt-for-field-length"></a>Richiesta di lunghezza di campo da parte di bcp  
  Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato(**-f**) o al formato dei dati (**-n**, **-c**, **-w**, or **-N**), viene chiesta la lunghezza del campo di ogni campo di dati, come illustrato di seguito:  
   
  `Enter length of field <field_name> [<default>]:`  
@@ -43,15 +47,15 @@ caps.handback.revision: 27
   
 -   Se il tipo di file di archiviazione è non carattere, il comando **bcp** non richiede l'immissione della lunghezza del campo. I dati vengono archiviati usando il tipo di rappresentazione nativo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (formato nativo).  
   
-## Utilizzo delle lunghezze di campo predefinite  
+## <a name="using-default-field-lengths"></a>Utilizzo delle lunghezze di campo predefinite  
  In genere, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di accettare i valori predefiniti per la lunghezza del campo proposti da **bcp**. Quando si crea un file in modalità carattere, l'utilizzo della lunghezza di campo predefinita consente di assicurare che i dati non verranno troncati e che non si verificheranno errori di overflow numerico  
   
  Se si specifica una lunghezza di campo non valida, è possibile che si verifichino errori. Ad esempio, se si copiano dati numerici e si specifica una lunghezza di campo insufficiente per i dati, l'utilità **bcp** visualizza un messaggio di overflow e i dati non vengono copiati. Se inoltre si esportano dati **datetime** e si specifica una lunghezza di campo inferiore a 26 byte per la stringa di caratteri, l'utilità **bcp** tronca i dati, senza visualizzare alcun messaggio di errore.  
   
 > [!IMPORTANT]  
->  Se si utilizza l'opzione predefinita per la dimensione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede di leggere una stringa intera. In alcuni casi, l'utilizzo di una lunghezza di campo predefinita può provocare un errore di tipo "Fine del file imprevista". In genere, questo errore si verifica con i tipi di dati **money** e **datetime**, quando solo parte del campo previsto è disponibile nel file di dati, ad esempio quando si specifica un valore **datetime** pari a *mm*/*dd*/*yy* senza specificare il componente relativo all'ora e tale valore risulta quindi inferiore rispetto alla lunghezza prevista di 24 caratteri per un valore **datetime**nel formato**char**. Per evitare tale tipo di errore, utilizzare caratteri di terminazione del campo o campi dati di lunghezza fissa oppure modificare la lunghezza di campo predefinita, specificando un valore diverso.  
+>  Se si utilizza l'opzione predefinita per la dimensione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede di leggere una stringa intera. In alcuni casi, l'utilizzo di una lunghezza di campo predefinita può provocare un errore di tipo "Fine del file imprevista". In genere, questo errore si verifica con i tipi di dati **money** e **datetime** , quando solo parte del campo previsto è disponibile nel file di dati, ad esempio quando si specifica un valore **datetime** pari a *mm*/*dd*/*yy* senza specificare il componente relativo all'ora e tale valore risulta quindi inferiore rispetto alla lunghezza prevista di 24 caratteri per un valore **datetime** nel formato **char** . Per evitare tale tipo di errore, utilizzare caratteri di terminazione del campo o campi dati di lunghezza fissa oppure modificare la lunghezza di campo predefinita, specificando un valore diverso.  
   
-### Lunghezze di campo predefinite per l'archiviazione di file di caratteri  
+### <a name="default-field-lengths-for-character-file-storage"></a>Lunghezze di campo predefinite per l'archiviazione di file di caratteri  
  Nella tabella seguente vengono elencate le lunghezze di campo predefinite per i dati da archiviare come tipo di archiviazione file di caratteri. La lunghezza dei dati che ammettono valori Null è uguale alla lunghezza dei dati che non ammettono valori Null.  
   
 |Tipo di dati|Lunghezza predefinita (caratteri)|  
@@ -91,7 +95,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  Una colonna di tipo **tinyint** può contenere valori compresi tra 0 e 255. Il numero massimo di caratteri necessari per rappresentare un numero compreso nell'intervallo è tre (sono necessari tre caratteri per rappresentare i valori da 100 a 255).  
   
-### Lunghezze di campo predefinite per l'archiviazione di file nativi  
+### <a name="default-field-lengths-for-native-file-storage"></a>Lunghezze di campo predefinite per l'archiviazione di file nativi  
  Nella tabella seguente vengono elencate le lunghezze di campo predefinite per i dati da archiviare come tipo di archiviazione file nativi. La lunghezza dei dati che ammettono valori Null è uguale alla lunghezza dei dati che non ammettono valori Null e i dati di tipo carattere vengono sempre archiviati nel formato carattere.  
   
 |Tipo di dati|Lunghezza predefinita (caratteri)|  
@@ -119,7 +123,7 @@ caps.handback.revision: 27
   
  In tutti i casi illustrati in precedenza, per creare un file di dati per un successivo ricaricamento in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ridurre al minimo lo spazio utilizzato per l'archiviazione, utilizzare un prefisso di lunghezza con il tipo di archiviazione nel file e la lunghezza di campo predefiniti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

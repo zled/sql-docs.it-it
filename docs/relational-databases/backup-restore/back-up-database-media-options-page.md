@@ -1,26 +1,30 @@
 ---
-title: "Backup database (pagina Opzioni multimediali) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.backupdatabase.mediaoptions.f1"
-  - "sql13.swb.backupdatabase.mediaoptions.f1"
+title: Backup database (pagina Opzioni supporti) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.backupdatabase.mediaoptions.f1
+- sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup database (pagina Opzioni multimediali)
-  Usare la pagina **Opzioni multimediali** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni multimediali del database.  
+# <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
+  Usare la pagina  **Opzioni multimediali** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni multimediali del database.  
   
  **Per creare un backup utilizzando SQL Server Management Studio**  
   
@@ -34,10 +38,10 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente facendo clic sul pulsante **Script** e quindi selezionando una destinazione per lo script.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
-### Sovrascrivi supporti  
- Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (archiviazione di Windows Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup usando **BACKUP TO URL.. WITH FORMAT** (istruzione Transact-SQL). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+### <a name="overwrite-media"></a>Sovrascrivi supporti  
+ Le opzioni del pannello **Sovrascrivi supporti** controllano la modalità di scrittura del backup nei supporti. Se è stato selezionato un URL (archiviazione di Windows Azure) come destinazione di backup nella pagina Generale della finestra di dialogo Backup database, le opzioni nella sezione Sovrascrivi supporti sono disabilitate. È possibile sovrascrivere un backup usando **BACKUP TO URL. WITH FORMAT** (istruzione Transact-SQL). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
  Solo l'opzione **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti** è supportata con le opzioni di crittografia. Se si selezionano le opzioni nella sezione **Esegui backup nel set di supporti esistente**, le opzioni di crittografia nella pagina **Opzioni di backup** saranno disabilitate.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 7
  **Descrizione nuovo set di supporti**  
  Facoltativa. Consente di immettere una descrizione significativa del nuovo set di supporti. La descrizione deve essere sufficientemente specifica da indicare il contenuto in modo accurato.  
   
-### Affidabilità  
+### <a name="reliability"></a>Affidabilità  
  Le opzioni del pannello **Log delle transazioni** controllano la gestione degli errori da parte dell'operazione di backup.  
   
  **Verifica backup al termine**  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
  **Continua in caso di errori**  
  L'operazione di backup deve continuare anche se si verificano errori.  
   
-### Log delle transazioni  
+### <a name="transaction-log"></a>Log delle transazioni  
  Le opzioni del pannello **Log delle transazioni** controllano il comportamento del backup del log delle transazioni. Tali opzioni sono rilevanti solo nel modello di recupero con registrazione completa o nel modello di recupero con registrazione minima delle operazioni bulk. Sono attivate solo se l'opzione **Log delle transazioni** è stata selezionata nel campo **Tipo backup** disponibile nella pagina [Generale](../../relational-databases/backup-restore/back-up-database-general-page.md) della finestra di dialogo **Backup database**.  
   
 > [!NOTE]  
@@ -98,7 +102,7 @@ caps.handback.revision: 7
   
  La selezione di questa opzione equivale a specificare l'opzione WITH NO_TRUNCATE, NORECOVERY in un'istruzione [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-### Unità nastro  
+### <a name="tape-drive"></a>Unità nastro  
  Le opzioni del pannello **Unità nastro** controllano la gestione dei nastri durante l'operazione di backup. Queste opzioni sono attivate solo se l'opzione **Nastro** è stata selezionata nel campo **Destinazione** disponibile nella pagina [Generale](../../relational-databases/backup-restore/back-up-database-general-page.md) della finestra di dialogo **Backup database**.  
   
 > [!NOTE]  
@@ -108,9 +112,9 @@ caps.handback.revision: 7
  Consente di scaricare il nastro al termine del backup.  
   
  **Riavvolgi il nastro prima di scaricarlo**  
- Consente di rilasciare e riavvolgere il nastro prima di scaricarlo. Questa opzione è abilitata solo se è selezionata l'opzione **Scarica nastro al termine del backup**.  
+ Consente di rilasciare e riavvolgere il nastro prima di scaricarlo. Questa opzione è abilitata solo se è selezionata l'opzione **Scarica nastro al termine del backup** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

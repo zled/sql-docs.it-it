@@ -1,22 +1,26 @@
 ---
-title: "Creare ed eseguire tracce utilizzando stored procedure Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare ed eseguire tracce usando stored procedure Transact-SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0af5c400a4973f711b2b3162f6fa05ca0371adeb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creare ed eseguire tracce utilizzando stored procedure Transact-SQL
+# <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Creare ed eseguire tracce utilizzando stored procedure Transact-SQL
   Il processo di traccia eseguito tramite Traccia SQL varia a seconda che la traccia venga creata ed eseguita utilizzando Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o le stored procedure di sistema.  
   
  In alternativa a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile utilizzare le stored procedure di sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare ed eseguire le tracce. Il processo di traccia eseguito tramite le stored procedure di sistema include i passaggi seguenti:  
@@ -34,18 +38,18 @@ caps.handback.revision: 8
 6.  Chiudere la traccia con **sp_trace_setstatus**.  
   
     > [!NOTE]  
-    >  Mediante le stored procedure di sistema di [!INCLUDE[tsql](../../includes/tsql-md.md)] viene creata una traccia sul lato server, evitando in tal modo la perdita di eventi a condizione che lo spazio su disco sia sufficiente e non si verifichino errori di scrittura. Se il disco si riempie o si verifica un errore, l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua ma la traccia viene arrestata. Se l'opzione **c2 audit mode** è impostata e si verifica un errore di scrittura, la traccia viene arrestata e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiusa. Per altre informazioni sull'impostazione **c2 audit mode**, vedere [Opzione di configurazione del server c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
+    >  Mediante le stored procedure di sistema di [!INCLUDE[tsql](../../includes/tsql-md.md)] viene creata una traccia sul lato server, evitando in tal modo la perdita di eventi a condizione che lo spazio su disco sia sufficiente e non si verifichino errori di scrittura. Se il disco si riempie o si verifica un errore, l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua ma la traccia viene arrestata. Se l'opzione **c2 audit mode** è impostata e si verifica un errore di scrittura, la traccia viene arrestata e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiusa. Per altre informazioni sull'impostazione **c2 audit mode** , vedere [Opzione di configurazione del server c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Ottimizzare l'utilizzo di Traccia SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|Contiene informazioni sulle strategie per ridurre gli effetti della traccia sulle prestazioni del sistema.|  
 |[Filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md)|Contiene informazioni sull'utilizzo di filtri per la traccia.|  
-|[Limitare le dimensioni di file di traccia e tabelle](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contiene informazioni sulla procedura per limitare le dimensioni di file e tabelle in cui sono registrati i dati di traccia. Si noti che è possibile registrare informazioni di traccia nelle tabelle solo tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Limitare le dimensioni di file di traccia e tabelle](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contiene informazioni sulla procedura per limitare le dimensioni di file e tabelle in cui sono registrati i dati di traccia. Si noti che è possibile registrare informazioni di traccia nelle tabelle solo tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .|  
 |[Pianificare tracce](../../relational-databases/sql-trace/schedule-traces.md)|Contiene informazioni sull'impostazione dell'ora di inizio e di fine della traccia.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

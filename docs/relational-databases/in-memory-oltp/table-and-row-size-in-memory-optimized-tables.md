@@ -1,22 +1,26 @@
 ---
-title: "Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Una tabella con ottimizzazione per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. In una tabella con ottimizzazione per la memoria i dati all'interno di righe non possono essere più lunghi di 8.060 byte. Tuttavia, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile creare una tabella con più colonne di grandi dimensioni, ad esempio, più colonne varbinary(8000), e colonne LOB, ad esempio, varbinary(max), varchar(max) e nvarchar(max). Le colonne che superano le dimensioni massime per i dati all'interno di righe vengono inserite all'esterno delle righe, in speciali tabelle interne. Per informazioni dettagliate su queste tabelle interne, vedere [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
@@ -37,7 +41,7 @@ Le colonne che superano le dimensioni massime delle righe di 8060 byte vengono i
   
  Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
   
- ![Tabella con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabella con ottimizzazione per la memoria.")  
+ ![Tabella con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 Tabella con ottimizzazione per la memoria, costituita da indici e righe.  
   
  Le dimensioni in memoria di una tabella, in byte, vengono calcolate come segue:  
@@ -96,9 +100,9 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
   
  Nella figura seguente viene illustrata la struttura di righe per una tabella con due indici:  
   
- ![Struttura di riga per una tabella con due indici.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Struttura di riga per una tabella con due indici.")  
+ ![Struttura di righe per una tabella con due indici.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Struttura di righe per una tabella con due indici.")  
   
- I timestamp di inizio e fine indicano il periodo in cui è valida una versione di riga specifica. Le transazioni che iniziano in questo intervallo possono rilevare questa versione di riga. Per altri dettagli, vedere [Transactions in Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) (Transazioni con tabelle con ottimizzazione per la memoria).  
+ I timestamp di inizio e fine indicano il periodo in cui è valida una versione di riga specifica. Le transazioni che iniziano in questo intervallo possono rilevare questa versione di riga. Per altri dettagli, vedere [Transactions in Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)(Transazioni con tabelle con ottimizzazione per la memoria).  
   
  I puntatori dell'indice puntano alla riga successiva della catena che appartiene al bucket di hash. Nella figura seguente viene illustrata la struttura di una tabella con due colonne (nome, città) e con due indici, uno per il nome della colonna e uno per la città.  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

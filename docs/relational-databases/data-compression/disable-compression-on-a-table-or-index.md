@@ -1,24 +1,28 @@
 ---
-title: "Disabilitare la compressione in una tabella o un indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compressione dati [SQL Server], disabilitazione"
+title: Disabilitare la compressione in una tabella o un indice | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 342baf08233852778ca7caaf5a528d0362490de6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Disabilitare la compressione in una tabella o un indice
+# <a name="disable-compression-on-a-table-or-index"></a>Disabilitare la compressione in una tabella o un indice
   In questo argomento viene descritto come disabilitare la compressione in una tabella o un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -41,7 +45,7 @@ caps.handback.revision: 8
   
 -   Se la tabella è un heap, l'operazione di ricompilazione per la modalità ONLINE sarà a thread singolo. Utilizzare la modalità OFFLINE per un'operazione di ricompilazione di heap multithread. Per altre informazioni sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
--   Per valutare il modo in cui la modifica dello stato di compressione influirà su una tabella, un indice o una partizione, usare la stored procedure [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+-   Per valutare il modo in cui la modifica dello stato di compressione influirà su una tabella, un indice o una partizione, usare la stored procedure [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
 -   Non è possibile modificare l'impostazione di compressione di una singola partizione se la tabella include indici non allineati.  
   
@@ -52,11 +56,11 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per disabilitare la compressione in una tabella  
+#### <a name="to-disable-compression-on-a-table"></a>Per disabilitare la compressione in una tabella  
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera disabilitare la compressione, quindi espandere la cartella **Tabelle** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice in cui si desidera disabilitare la compressione, scegliere **Archiviazione**, quindi selezionare **Gestione partizione**.  
+2.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice in cui si desidera disabilitare la compressione, scegliere **Archiviazione** , quindi selezionare **Gestione partizione**.  
   
 3.  Per disabilitare la compressione in un indice, espandere la tabella contenente l'indice che si desidera comprimere, quindi espandere la cartella **Indici** .  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 8
   
      Le opzioni seguenti sono disponibili nella pagina **Seleziona tipo di compressione** :  
   
-     Casella di controllo **Usa lo stesso tipo di compressione per tutte le partizioni**  
+     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**   
      Selezionare questa opzione per configurare la stessa impostazione di compressione per tutte le partizioni. La casella di selezione viene abilitata e la colonna **Tipo di compressione** nella griglia viene disabilitata. Se viene selezionata, le opzioni nell'elenco adiacente sono **Nessuno**, **Riga**e **Pagina**.  
   
      **Numero partizioni**  
@@ -85,10 +89,10 @@ caps.handback.revision: 8
      Visualizza lo spazio corrente occupato dalla partizione, espresso in megabyte (MB). Questa colonna è di sola lettura.  
   
      **Spazio compresso richiesto**  
-     Quando si fa clic su **Calcola**, in questa colonna vengono visualizzate le dimensioni stimate di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione**. Questa colonna è di sola lettura.  
+     Quando si fa clic su **Calcola**, in questa colonna vengono visualizzate le dimensioni stimate di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione** . Questa colonna è di sola lettura.  
   
      **Calcola**  
-     Fare clic per effettuare la stima delle dimensioni di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione**.  
+     Fare clic per effettuare la stima delle dimensioni di ciascuna partizione dopo la compressione eseguita mediante l'uso dell'impostazione specificata nella colonna **Tipo di compressione** .  
   
 6.  Nella pagina **Seleziona un'opzione di output** specificare il modo in cui si desidera completare l'attività. Selezionare **Crea script** per creare uno script SQL in base alle pagine precedenti della procedura guidata. Selezionare **Esegui immediatamente** per creare la nuova tabella partizionata dopo aver completato tutte le pagine rimanenti della procedura guidata. Selezionare **Pianifica** per creare la nuova tabella partizionata in un momento predeterminato nel futuro.  
   
@@ -131,19 +135,19 @@ caps.handback.revision: 8
   
                 -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo venga eseguita il giorno 15 del mese e a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
             -   Se si seleziona **Una sola volta alle**, immettere l'ora specifica del giorno in cui deve essere eseguita la pianificazione del processo nella casella **Una sola volta alle** . Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-            -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si desidera che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella, quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
+            -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella, quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
   
                  Nella casella **A partire dalle** immettere l'ora in cui dovrebbe iniziare l'esecuzione della pianificazione del processo. Nella casella **Fino alle** immettere l'ora in cui dovrebbe terminare la ripetizione della pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
         3.  In **Durata**di **Data inizio**immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine**immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
   
-    5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza** nella casella **Data** immettere la data in cui verrà eseguita la pianificazione del processo. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
+    5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza**, nella casella **Data** immettere la data in cui verrà eseguita la pianificazione del processo. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
     6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 8
      Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report di testo dello stato della Creazione guidata partizione.  
   
      **Salva report su file**  
-     Apre la finestra di dialogo **Salva report con nome**.  
+     Apre la finestra di dialogo **Salva report con nome** .  
   
      **Copia report negli Appunti**  
      Copia i risultati del report dello stato della procedura guidata negli Appunti.  
@@ -188,7 +192,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per disabilitare la compressione in una tabella  
+#### <a name="to-disable-compression-on-a-table"></a>Per disabilitare la compressione in una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 8
     GO  
     ```  
   
-#### Per disabilitare la compressione in un indice  
+#### <a name="to-disable-compression-on-an-index"></a>Per disabilitare la compressione in un indice  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

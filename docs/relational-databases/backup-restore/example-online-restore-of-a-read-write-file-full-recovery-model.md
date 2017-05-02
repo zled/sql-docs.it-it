@@ -1,26 +1,30 @@
 ---
-title: "Esempio: Ripristino online di un file di lettura/scrittura (modello di recupero con registrazione completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modello di recupero con registrazione completa [SQL Server], esempio RESTORE"
-  - "ripristino online [SQL Server], modello di recupero con registrazione completa"
-  - "sequenze di ripristino [SQL Server], online"
+title: 'Esempio: Ripristino online di un file di lettura/scrittura (modello di recupero con registrazione completa) | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- online restores [SQL Server], full recovery model
+- restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4be86c808d1af35a04b10c88d5cecdd919416137
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esempio: Ripristino online di un file di lettura/scrittura (modello di recupero con registrazione completa)
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>Esempio: Ripristino online di un file di lettura/scrittura (modello di recupero con registrazione completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Le informazioni contenute in questo argomento interessano i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basati sul modello di recupero con registrazione completa che includono più file o filegroup.  
@@ -32,7 +36,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  Il modello di recupero con registrazione minima non consente il ripristino online di dati di lettura/scrittura.  
   
-## Sequenze di ripristino  
+## <a name="restore-sequences"></a>Sequenze di ripristino  
   
 > [!NOTE]  
 >  La sintassi di una sequenza di ripristino online è la stessa di una sequenza di ripristino offline.  
@@ -65,11 +69,11 @@ caps.handback.revision: 33
   
      Il file `a1` è ora online.  
   
-## Esempi aggiuntivi  
+## <a name="additional-examples"></a>Esempi aggiuntivi  
   
 -   [Esempio: Ripristino a fasi di un database &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Esempio: Ripristino a fasi di filegroup selezionati &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Esempio: Ripristino a fasi di alcuni filegroup &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
@@ -79,12 +83,12 @@ caps.handback.revision: 33
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Vedere anche  
- [Ripristino online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

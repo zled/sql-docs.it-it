@@ -1,22 +1,26 @@
 ---
-title: "Costrutti Transact-SQL non supportati da OLTP in memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Costrutti Transact-SQL non supportati da OLTP in memoria | Microsoft Docs
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Costrutti Transact-SQL non supportati da OLTP in memoria
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le tabelle con ottimizzazione per la memoria, le stored procedure compilate in modo nativo e le funzioni definite dall'utente non supportano la superficie di attacco totale di [!INCLUDE[tsql](../../includes/tsql-md.md)] supportata dalle tabelle basate su disco, dalle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate e dalle funzioni definite dall'utente. Quando si tenta di usare una delle funzionalità non supportate, il server restituisce un errore.  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione **CREATE TABLE** .<br /><br /> Tutte le tabelle con ottimizzazione per la memoria vengono mappate al filegroup con ottimizzazione per la memoria.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle con ottimizzazione per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.|  
+|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle con ottimizzazione per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Replica|La replica non è supportata con le tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle con ottimizzazione per la memoria. Rimuovere la parola chiave **FILESTREAM** dalla definizione della colonna.|  
 |Funzionalità|SPARSE|Le colonne delle tabelle con ottimizzazione per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave **SPARSE** dalla definizione della colonna.|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |Operatore|OFFSET|Questo operatore non è supportato. Rimuovere **OFFSET** dalla stored procedure compilata in modo nativo.|  
 |Operatore|INTERSECT|Questo operatore non è supportato. Rimuovere **INTERSECT** dalla stored procedure compilata in modo nativo. In alcuni casi è possibile usare INNER JOIN per ottenere lo stesso risultato.|  
 |Operatore|EXCEPT|Questo operatore non è supportato. Rimuovere **EXCEPT** dalla stored procedure compilata in modo nativo.|  
-|Operatore|APPLY|Questo operatore non è supportato. Rimuovere **APPLY** dalla stored procedure compilata in modo nativo.<br/><br/>**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato in moduli compilati in modo nativo.|  
+|Operatore|APPLY|Questo operatore non è supportato. Rimuovere **APPLY** dalla stored procedure compilata in modo nativo.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato in moduli compilati in modo nativo.|  
 |Operatore|PIVOT|Questo operatore non è supportato. Rimuovere **PIVOT** dalla stored procedure compilata in modo nativo.|  
 |Operatore|UNPIVOT|Questo operatore non è supportato. Rimuovere **UNPIVOT** dalla stored procedure compilata in modo nativo.|  
 |Operatore|CONTAINS|Questo operatore non è supportato. Rimuovere **CONTAINS** dalla stored procedure compilata in modo nativo.|  
@@ -152,20 +156,20 @@ caps.handback.revision: 51
 |Opzione|FOR XML|Questa opzione non è supportata. Rimuovere **FOR XML** dalla stored procedure compilata in modo nativo.|  
 |Opzione|FOR BROWSE|Questa opzione non è supportata. Rimuovere **FOR BROWSE** dalla stored procedure compilata in modo nativo.|  
 |Hint per il join|HASH, MERGE|Nelle stored procedure compilate in modo nativo sono supportati solo i join a cicli annidati. I join merge e hash non sono supportati. Rimuovere l'hint per il join.|  
-|Hint per la query|*Hint per la query*|Questo hint per la query non è all'interno di stored procedure compilate in modo nativo. Per gli hint per la query supportati, vedere [Hint per la query &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).|  
+|Hint per la query|*Hint per la query*|Questo hint per la query non è all'interno di stored procedure compilate in modo nativo. Per gli hint per la query supportati, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Opzione|PERCENT|Questa opzione non è supportata con le clausole **TOP** . Rimuovere **PERCENT** dalla query nella stored procedure compilata in modo nativo.|  
 |Opzione|WITH TIES|Questa opzione non è supportata con le clausole **TOP** . Rimuovere **WITH TIES** dalla query nella stored procedure compilata in modo nativo.|  
 |Funzione di aggregazione|*Funzione di aggregazione*|Questa clausola non è supportata. Per altre informazioni sulle funzioni di aggregazione delle stored procedure compilate in modo nativo, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Funzione di rango|*Funzione di rango*|Le funzioni di rango non sono supportate nelle stored procedure compilate in modo nativo. Rimuoverle dalla definizione della procedura.|  
 |Funzione|*Funzione*|Questa funzione non è supportata. Rimuoverla dalla stored procedure compilata in modo nativo.|  
-|Istruzione|*Istruzione*|Questa istruzione non è supportata. Rimuoverla dalla stored procedure compilata in modo nativo.|  
+|.|*Istruzione*|Questa istruzione non è supportata. Rimuoverla dalla stored procedure compilata in modo nativo.|  
 |Funzionalità|MIN e MAX utilizzati con stringhe binarie e di caratteri|Le funzioni di aggregazione **MIN** e **MAX** non possono essere utilizzate per i valori delle stringhe binarie e di caratteri all'interno di stored procedure compilate in modo nativo.|  
 |Funzionalità|GROUP BY ALL|ALL non può essere utilizzato con le clausole GROUP BY nelle stored procedure compilate in modo nativo. Rimuovere ALL dalla clausola GROUP BY.|  
 |Funzionalità|GROUP BY ()|il raggruppamento da un elenco vuoto non è supportato. Rimuovere la clausola GROUP BY o includere colonne nell'elenco di raggruppamento.|  
 |Funzionalità|ROLLUP|**ROLLUP** non può essere utilizzato con le clausole **GROUP BY** nelle stored procedure compilate in modo nativo. Rimuovere **ROLLUP** dalla definizione della procedura.|  
 |Funzionalità|CUBE|**CUBE** non può essere utilizzato con le clausole **GROUP BY** nelle stored procedure compilate in modo nativo. Rimuovere **CUBE** dalla definizione della procedura.|  
 |Funzionalità|GROUPING SETS|**GROUPING SETS** non può essere utilizzato con le clausole **GROUP BY** nelle stored procedure compilate in modo nativo. Rimuovere **GROUPING SETS** dalla definizione della procedura.|  
-|Funzionalità|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Utilizzare i blocchi ATOMIC per controllare le transazioni e la gestione degli errori. Per altre informazioni, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/blocchi-atomici-nelle-procedure-native.md).|  
+|Funzionalità|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Utilizzare i blocchi ATOMIC per controllare le transazioni e la gestione degli errori. Per altre informazioni, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella con ottimizzazione per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella con ottimizzazione per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
 |Funzionalità|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
@@ -187,3 +191,4 @@ caps.handback.revision: 51
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

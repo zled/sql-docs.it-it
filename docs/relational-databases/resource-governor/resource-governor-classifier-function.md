@@ -1,30 +1,34 @@
 ---
-title: "Funzione di classificazione di Resource Governor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, funzione di classificazione"
-  - "funzioni definite dall'utente [SQL Server], funzione di classificazione"
-  - "funzione di classificazione [SQL Server]"
-  - "funzione di classificazione [SQL Server], panoramica"
+title: Funzione di classificazione di Resource Governor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funzione di classificazione di Resource Governor
+# <a name="resource-governor-classifier-function"></a>Funzione di classificazione di Resource Governor
   Il processo di classificazione di Resource Governor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di assegnare sessioni in ingresso a un gruppo di carico di lavoro in base alle caratteristiche della sessione. È possibile personalizzare la logica di classificazione scrivendo una funzione definita dall'utente, chiamata funzione di classificazione.  
   
-## Classificazione  
+## <a name="classification"></a>Classificazione  
  Resource Governor supporta la classificazione delle sessioni in ingresso. La classificazione è basata su un set di criteri definiti dall'utente contenuti in una funzione. I risultati della logica della funzione consentono a Resource Governor di classificare sessioni in gruppi del carico di lavoro esistenti.  
   
 > [!NOTE]  
@@ -64,7 +68,7 @@ caps.handback.revision: 7
 > [!IMPORTANT]  
 >  Si consiglia di abilitare la connessione amministrativa dedicata nel server. Tale connessione non è soggetta alla classificazione di Resource Governor e può essere utilizzata per monitorare e risolvere i problemi relativi a una funzione di classificazione. Per altre informazioni, vedere [Connessione di diagnostica per gli amministratori di database](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Se per la risoluzione dei problemi non è disponibile alcuna connessione DAC, è possibile riavviare il sistema in modalità utente singolo. Sebbene tale modalità non sia soggetta alla classificazione, non consente di eseguire la diagnosi della classificazione di Resource Governor mentre quest'ultimo è in esecuzione.  
   
-### Processo di classificazione  
+### <a name="classification-process"></a>Processo di classificazione  
  Nel contesto di Resource Governor il processo di accesso per una sessione è costituito dai passaggi seguenti:  
   
 1.  Autenticazione dell'account di accesso  
@@ -78,13 +82,13 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Informazioni sull'esecuzione della funzione di classificazione e sui trigger LOGON sono disponibili in [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) e [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-## Attività della funzione di classificazione  
+## <a name="classification-function-tasks"></a>Attività della funzione di classificazione  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto come creare e verificare una funzione di classificazione definita dall'utente.|[Creare e testare una funzione di classificazione definita dall'utente](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Abilitare Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
