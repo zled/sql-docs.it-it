@@ -1,35 +1,40 @@
 ---
-title: "Creazione di un utente di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "utenti di database, creazione"
-  - "creazione di utenti con Management Studio"
-  - "mapping utenti"
-  - "utenti [SQL Server], creazione"
-  - "aggiunta di utenti a database [SQL Server]"
-  - "utenti di database, mapping\"
-  - "CREATE USER [Management Studio]"
-  - "utenti [SQL Server], aggiunta"
-  - "mapping di utenti del database"
+title: Creazione di un utente di database | Microsoft Docs
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# Creazione di un utente di database
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Questo argomento descrive come creare i tipi più comuni di utenti di database. Esistono undici tipi di utenti. L'elenco completo è disponibile nell'argomento [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Tutte le varianti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportano gli utenti di database, ma non necessariamente tutti i tipi di utenti.  
@@ -41,7 +46,7 @@ caps.handback.revision: 31
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
-### Selezione del tipo di utente  
+### <a name="selecting-the-type-of-user"></a>Selezione del tipo di utente  
  **Account di accesso o utente non mappato a un account di accesso**  
   
  Per coloro che non hanno familiarità con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere difficile determinare il tipo di utente che si vuole creare. Per prima cosa, chiedersi se la persona o il gruppo con l'esigenza di accedere al database ha un account di accesso. Gli account di accesso nel database master sono comuni per le persone che gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per quelle che devono accedere a molti o a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per questa situazione, creare un **utente SQL con account di accesso**. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [Creare un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md).  
@@ -81,9 +86,9 @@ caps.handback.revision: 31
   
     -   **Utente SQL senza account di accesso**  
   
-    -   **Utente con mapping eseguito a un certificato**  
+    -   **Utente mappato a un certificato**  
   
-    -   **Utente con mapping eseguito a una chiave asimmetrica**  
+    -   **Utente mappato a una chiave asimmetrica**  
   
     -   **Utente di Windows**  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opzioni aggiuntive  
+### <a name="additional-options"></a>Opzioni aggiuntive  
  La finestra di dialogo **Utente di Database - Nuovo** offre inoltre opzioni in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta**e **Proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
@@ -133,9 +138,9 @@ caps.handback.revision: 31
      Consente di visualizzare o specificare le proprietà estese relative all'oggetto. Ogni proprietà estesa è composta da una coppia nome/valore di metadati associati all'oggetto.  
   
      **Puntini di sospensione (...)**  
-     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa**. Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Delete**  
+     **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  
   
 ##  <a name="TsqlProcedure"></a> Creare un utente mediante T-SQL  
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) che contiene molti altri esempi per [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## Vedere anche  
- [Entità &#40;Motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Creazione di un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Entità &#40;motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Creare un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+
