@@ -13,9 +13,10 @@ caps.latest.revision: 49
 author: byham
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 47cba5e99626a7b378c29a9dde4923963fae09da
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -121,7 +122,7 @@ Nei dettagli interni dell'errore sarà presente un messaggio simile al seguente:
   
 -   "Il valore 'SharePoint Principal' non è supportato per la proprietà della stringa di connessione 'User Identity'".  
   
-**Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266).  
+**Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266).  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 I fogli di Power View in una cartella di lavoro di PowerPivot vengono eliminati dopo un aggiornamento dati pianificato  
 **Problema**: nel componente aggiuntivo PowerPivot per SharePoint l'uso di **Scheduled Data Refresh** in una cartella di lavoro con Power View comporterà l'eliminazione di tutti i fogli di Power View.  

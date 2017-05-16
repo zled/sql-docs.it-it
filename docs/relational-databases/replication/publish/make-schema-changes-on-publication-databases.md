@@ -21,9 +21,10 @@ caps.latest.revision: 73
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
 -   ALTER TRIGGER  
   
-     È possibile utilizzare ALTER TRIGGER solo per trigger [DML] (Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] (Data Definition Language).  
+     È possibile utilizzare ALTER TRIGGER solo per trigger [DML] \(Data Manipulation Language), in quanto non è possibile replicare trigger [DDL] \(Data Definition Language).  
   
 > [!IMPORTANT]  
 >  È necessario apportare le modifiche dello schema nelle tabelle tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO). Quando si apportano modifiche dello schema in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] tenta di eliminare e ricreare la tabella. Poiché non è possibile eliminare gli oggetti pubblicati, la modifica dello schema ha esito negativo.  
