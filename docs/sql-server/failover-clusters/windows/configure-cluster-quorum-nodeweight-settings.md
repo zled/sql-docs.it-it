@@ -17,18 +17,19 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2c43965a7e6b0021bb4bcf2d6fdca14e66cafa18
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Configurare le impostazioni NodeWeight per il quorum del cluster
   In questo argomento viene illustrato come configurare le impostazioni NodeWeight per un nodo membro di un cluster WSFC (Windows Server Failover Clustering). Le impostazioni NodeWeight vengono utilizzate durante la votazione quorum per supportare scenari di ripristino di emergenza e multi-subnet per istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Prima di iniziare:**  [Prerequisiti](#Prerequisites), [Sicurezza](#Security)  
   
--   **To view quorum NodeWeight settings using:** [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
+-   **Per visualizzare le impostazioni NodeWeight del quorum utilizzando:** [Utilizzo di Powershell](#PowerShellProcedure), [Utilizzo di Cluster.exe](#CommandPromptProcedure)  
   
 -   [Contenuto correlato](#RelatedContent)  
   
