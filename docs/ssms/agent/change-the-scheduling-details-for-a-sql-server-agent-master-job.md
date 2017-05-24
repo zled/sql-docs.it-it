@@ -21,7 +21,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Modificare i dettagli della pianificazione per un processo master di SQL Server Agent
 In questo argomento verrà descritto come modificare i dettagli della pianificazione per la definizione di un processo in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 **Contenuto dell'argomento**  

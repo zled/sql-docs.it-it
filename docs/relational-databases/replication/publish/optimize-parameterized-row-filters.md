@@ -19,9 +19,10 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 891399921dc50cc1a5463f9735462c94ce442df4
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Quando si utilizzano filtri con parametri, è possibile controllare in che modo i filtri vengono elaborati dalla replica di tipo merge specificando l'opzione **use partition groups** o **keep partition changes** durante la creazione di una pubblicazione. Queste opzioni consentono di migliorare le prestazioni di sincronizzazione delle pubblicazioni con gli articoli filtrati tramite l'archiviazione di metadati aggiuntivi nel database di pubblicazione. È possibile controllare la modalità di condivisione dei dati tra i Sottoscrittori impostando l'opzione **partition options** durante la creazione di un articolo. Per altre informazioni su tali requisiti, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Quando si utilizzano filtri con parametri, è possibile controllare in che modo i filtri vengono elaborati dalla replica di tipo merge specificando l'opzione **use partition groups** o **keep partition changes** durante la creazione di una pubblicazione. Queste opzioni consentono di migliorare le prestazioni di sincronizzazione delle pubblicazioni con gli articoli filtrati tramite l'archiviazione di metadati aggiuntivi nel database di pubblicazione. È possibile controllare la modalità di condivisione dei dati tra i Sottoscrittori impostando l'opzione **partition options** durante la creazione di un articolo. Per altre informazioni su tali requisiti, vedere [i filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Con i Sottoscrittori [!INCLUDE[ssEW](../../../includes/ssew-md.md)], keep_partition_changes deve essere impostato su true per assicurarsi che le eliminazioni vengano propagate correttamente. Se impostato su false, nel Sottoscrittore potrebbero essere presenti più righe rispetto al previsto.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **Aggiungi** e quindi su **Aggiungi filtro**.  
   
-2.  Creare un filtro con parametri. Per altre informazioni, vedere [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+2.  Creare un filtro con parametri. Per altre informazioni, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 3.  Selezionare l'opzione corrispondente alla modalità desiderata di condivisione dei dati tra i Sottoscrittori:  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **Una riga di questa tabella verrà inviata a una sola sottoscrizione**  
   
-     Selezionando **Una riga di questa tabella verrà inviata a una sola sottoscrizione**è possibile ottimizzare le prestazioni della replica di tipo merge archiviando ed elaborando una minore quantità di metadati. È tuttavia necessario garantire che i dati vengano partizionati in modo da non consentire la replica di una riga in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Selezionando **Una riga di questa tabella verrà inviata a una sola sottoscrizione**è possibile ottimizzare le prestazioni della replica di tipo merge archiviando ed elaborando una minore quantità di metadati. È tuttavia necessario garantire che i dati vengano partizionati in modo da non consentire la replica di una riga in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [i filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **Non sovrapposte, condivise dalle sottoscrizioni**  
   
-     Per ulteriori informazioni su queste opzioni e sulla loro relazione con le opzioni disponibili nelle finestre di dialogo **Aggiungi filtro** e **Modifica filtro** , vedere la sezione relativa all'impostazione delle opzioni partizioni nell'argomento [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+     Per ulteriori informazioni su queste opzioni e sulla loro relazione con le opzioni disponibili nelle finestre di dialogo **Aggiungi filtro** e **Modifica filtro** , vedere la sezione relativa all'impostazione delle opzioni partizioni nell'argomento [i filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

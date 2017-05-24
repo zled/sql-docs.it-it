@@ -25,7 +25,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Impostazione dell'account di avvio del servizio SQL Server Agent (Gestione configurazione SQL Server)
 L'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent definisce l'account di Windows con cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent e le relative autorizzazioni di rete. In questo argomento viene descritto come impostare l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent con Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 **Contenuto dell'argomento**  
