@@ -25,9 +25,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ Editor SQL contiene numerose caratteristica per la modifica di testo SQL, compre
 > [!NOTE]  
 > Editor SQL non prevede la funzionalità di richiesta IntelliSense.  
   
-Quando si modificano le istruzioni SQL, alcune istruzioni Transact-SQL vengono inserite in una casella contornata da una riga sottile. In tal modo risulta più semplice separare visivamente il codice SQL in sezioni di comandi e identificare blocchi di istruzioni SQL che possono essere progettati graficamente in Progettazione query. Per altre informazioni sull'uso di Progettazione query, vedere [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
+Quando si modificano le istruzioni SQL, alcune istruzioni Transact-SQL vengono inserite in una casella contornata da una riga sottile. In tal modo risulta più semplice separare visivamente il codice SQL in sezioni di comandi e identificare blocchi di istruzioni SQL che possono essere progettati graficamente in Progettazione query. Per altre informazioni sull'uso di Progettazione query, vedere [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedure per la progettazione di query e viste &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
