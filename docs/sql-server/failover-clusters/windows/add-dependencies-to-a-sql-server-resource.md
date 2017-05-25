@@ -19,18 +19,19 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Aggiunta di dipendenze a una risorsa di SQL Server
   In questo argomento viene descritto come aggiungere dipendenze a una risorsa dell'istanza del cluster di failover AlwaysOn tramite lo snap-in Gestione cluster di failover. Lo snap-in Gestione cluster di failover è l'applicazione di gestione cluster per il servizio Windows Server Failover Clustering (WSFC).  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Prerequisiti](#Prerequisites)  
   
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
+-   **Per aggiungere una dipendenza a una risorsa SQL Server utilizzando:** [Gestore cluster di failover di Windows](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
