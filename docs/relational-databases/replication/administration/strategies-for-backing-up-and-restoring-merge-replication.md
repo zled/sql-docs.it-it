@@ -19,9 +19,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,16 +65,16 @@ ms.lasthandoff: 04/11/2017
   
  Se si esegue la sincronizzazione con un Sottoscrittore in cui è in esecuzione una versione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la sottoscrizione non potrà essere anonima, ma dovrà trattarsi di una sottoscrizione client o server. Tali sottoscrizioni nelle versioni precedenti sono definite sottoscrizione locale e sottoscrizione globale.  
   
- Per sincronizzare una sottoscrizione, vedere [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Per sincronizzare una sottoscrizione, vedere [Sincronizzazione di una sottoscrizione push](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Sincronizzazione di una sottoscrizione pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Reinizializzazione di tutte le sottoscrizioni  
  La reinizializzazione di tutte le sottoscrizioni garantisce che tutti i Sottoscrittori siano in uno stato consistente con il database di pubblicazione ripristinato. È necessario utilizzare questo approccio se si desidera ripristinare lo stato precedente di un'intera topologia, rappresentato dal backup di un determinato database di pubblicazione. È ad esempio possibile reinizializzare tutte le sottoscrizioni se si ripristina lo stato precedente di un database di pubblicazione al fine di correggere un'operazione batch eseguita in modo errato.  
   
  Se si sceglie questa opzione, generare un nuovo snapshot per il recapito ai Sottoscrittori reinizializzati subito dopo aver ripristinato il database di pubblicazione.  
   
- Per reinizializzare una sottoscrizione, vedere [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Per reinizializzare una sottoscrizione, vedere [Reinizializzare una sottoscrizione](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Per creare e applicare uno snapshot, vedere [Create e Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Per creare e applicare uno snapshot, vedere [Creazione e applicazione dello snapshot iniziale](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) e [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Backup e ripristino del database di distribuzione  
  Con la replica di tipo merge, è necessario eseguire backup periodici del database di distribuzione, che può essere ripristinato senza particolari attenzioni a condizione che il backup utilizzato non sia precedente al periodo di memorizzazione più breve di tutte le pubblicazioni in cui viene utilizzato il server di distribuzione. Se, ad esempio, vi sono tre pubblicazioni il cui periodo di memorizzazione è pari a 10, 20 e 30 giorni rispettivamente, la copia di backup utilizzata per il ripristino del database non deve avere più di 10 giorni. Il database di distribuzione svolge un ruolo limitato nella replica di tipo merge: non viene utilizzato per archiviare dati utilizzati nel rilevamento delle modifiche e non consente l'archiviazione temporanea delle modifiche della replica di tipo merge per il successivo inoltro ai database di sottoscrizione, come invece avviene nella replica transazionale.  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
  Per impostare il periodo di memorizzazione della pubblicazione, vedere [Impostare il periodo di scadenza per le sottoscrizioni](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
- Per sincronizzare una sottoscrizione, vedere [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Per sincronizzare una sottoscrizione, vedere [Sincronizzazione di una sottoscrizione push](../../../relational-databases/replication/synchronize-a-push-subscription.md) e [Sincronizzazione di una sottoscrizione pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Backup e ripristino di un database di ripubblicazione  
  Un database che sottoscrive i dati di un server di pubblicazione e a sua volta li pubblica in altri database di sottoscrizione viene definito database di ripubblicazione. Per ripristinare un database di ripubblicazione, seguire le indicazioni disponibili nelle sezioni "Backup e ripristino del database di pubblicazione" e "Backup e ripristino di un database di sottoscrizione" in questo argomento.  
