@@ -21,14 +21,15 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aa7ebae3445240303352026f7cdb99a06b2d61ca
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Debugger Transact-SQL - Finestra Elenco errori
-  La finestra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Error List** displays the syntax and semantic errors that are generated from the IntelliSense code in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  
+  La finestra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Elenco errori** di consente di visualizzare gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Caratteristiche della finestra Elenco errori  
  In **Elenco errori** sono disponibili le funzionalità seguenti:  

@@ -23,9 +23,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  Per altre informazioni, vedere [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [specifica del livello di risoluzione e rilevamento dei conflitti per articoli di Merge](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-resolution"></a>Risoluzione dei conflitti  
  Dopo il rilevamento di un conflitto, l'agente di merge avvia il sistema di risoluzione dei conflitti selezionato e lo utilizza per determinare il valore in conflitto che prevale. La riga che prevale viene applicata al server di pubblicazione e al Sottoscrittore, mentre i dati della riga non confermata vengono inseriti in una tabella dei conflitti. I conflitti vengono risolti immediatamente dopo l'esecuzione del sistema di risoluzione, a meno che non si scelga di risolvere i conflitti in modo interattivo.  
