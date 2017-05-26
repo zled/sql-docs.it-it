@@ -16,9 +16,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
  Per impostazione predefinita, la replica transazionale propaga le modifiche ai Sottoscrittori utilizzando un set di stored procedure installate in ogni Sottoscrittore. Quando in una tabella del server di pubblicazione ha luogo un inserimento, un aggiornamento o un'eliminazione, l'operazione viene convertita in una chiamata a una stored procedure nel Sottoscrittore. La stored procedure accetta parametri che eseguono il mapping alle colonne della tabella, consentendo a tali colonne di essere modificate nel Sottoscrittore.  
   
- Per impostare il metodo di propagazione per la modifica dei dati negli articoli transazionali, vedere [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Per impostare il metodo di propagazione per la modifica dei dati negli articoli transazionali, vedere [Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Stored procedure predefinite e personalizzate  
  Le tre procedure che la replica crea per impostazione predefinita per ogni articolo di tabella sono:  
