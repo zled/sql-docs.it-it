@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
  **Risoluzione 1**: usare l'opzione **/qb** anziché l'opzione **/qn** . Se si usa l'opzione **/qb** , per ogni passaggio verrà visualizzata l'interfaccia utente di base, inclusi i messaggi di errore.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server non è in grado di accedere alla rete dopo la migrazione in un altro nodo  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **Problema 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono in grado di contattare un controller di dominio.  
   
  **Risoluzione 1**: controllare la presenza di problemi di rete, quali errori della scheda o problemi DNS, nei log eventi. Verificare che sia possibile effettuare il ping del controller di dominio.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono identiche in tutti i nodi del cluster oppure il nodo non è in grado di riavviare un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui è stata eseguita la migrazione da un nodo bloccato.  
   
  **Risoluzione 2:** modificare le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In caso contrario, se si modificano le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un nodo, sarà necessario modificare le password anche in tutti gli altri nodi. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -126,7 +127,7 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
  **Risoluzione 2:** utilizzare NBTSTAT per individuare il nome duplicato e risolvere il problema.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **Problema 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non esegue la connessione tramite named pipe.  
   
  **Risoluzione 3:** per la connessione tramite named pipe, creare un alias utilizzando Gestione configurazione SQL Server per connettersi al computer appropriato. Se, ad esempio, si usa un cluster con due nodi (**Nodo A** e **Nodo B**) e un'istanza del cluster di failover (**Virtsql**) con un'istanza predefinita, è possibile seguire la procedura seguente per connettersi al server la cui risorsa Nome di rete è offline:  
   
