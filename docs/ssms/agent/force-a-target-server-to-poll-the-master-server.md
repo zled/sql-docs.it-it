@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57fe0392adfb1e290491815acd216fd356e20f3e
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -43,7 +44,7 @@ Un processo è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion
 Il server di destinazione deve essere registrato nel server master. È necessario eseguire le istruzioni fornite in questo argomento dal server master.  
   
 ### <a name="Security"></a>Sicurezza  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) e [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) e [Scegliere l'account di servizio SQL Server Agent adatto ad ambienti multiserver](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
 **Per forzare un server di destinazione a eseguire il polling del server master**  
