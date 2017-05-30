@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifica di righe nel riquadro Risultati (Visual Database Tools)
-In molti casi è possibile modificare i dati nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Per altre informazioni sulla modifica dei dati, vedere [Rules for Updating Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) e [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+In molti casi è possibile modificare i dati nel [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Per altre informazioni sulla modifica dei dati, vedere [Regole per l'aggiornamento dei risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) e [Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>Per modificare dati nel riquadro Risultati  
   
