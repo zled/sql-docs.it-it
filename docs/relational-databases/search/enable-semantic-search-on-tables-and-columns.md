@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="BasicEnabling"></a> Creare un indice semantico  
   
-###  <a name="reqenable"></a> Requirements and restrictions for creating a semantic index  
+###  <a name="reqenable"></a> Requisiti e restrizioni per la creazione di un indice semantico  
   
 -   È possibile creare un indice in qualsiasi oggetto di database supportato per l'indicizzazione full-text, incluse tabelle e viste indicizzate.  
   
@@ -150,7 +151,7 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>Modificare un indice semantico
   
-###  <a name="addreq"></a> Requirements and restrictions for altering an existing index  
+###  <a name="addreq"></a> Requisiti e restrizioni per la modifica di un indice esistente  
   
 -   Non è possibile modificare un indice esistente mentre è in corso il popolamento dell'indice. Per altre informazioni sul monitoraggio dello stato di popolamento dell'indice, vedere [Gestire e monitorare la ricerca semantica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
@@ -187,7 +188,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Eliminare un indice semantico tramite SQL Server Management Studio  
  È possibile modificare le colonne abilitate per l'indicizzazione semantica e full-text nella pagina **Colonne indice full-text** della finestra di dialogo **Proprietà indice full-text** . Per altre informazioni, vedere [Gestire indici full-text](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="dropreq"></a> Requisiti e restrizioni per l'eliminazione di un indice semantico  
   
 -   Non è possibile eliminare indicizzazione full-text da una colonna mantenendo l'indicizzazione semantica. L'indicizzazione semantica dipende dall'indicizzazione full-text per i risultati di somiglianza del documento.  
   
@@ -276,7 +277,7 @@ GO
   
  Se il tipo di documento che si desidera indicizzare non è nell'elenco di tipi supportati, può essere necessario individuare, scaricare e installare filtri aggiuntivi. Per altre informazioni, vedere [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a> Procedura consigliata: considerare la creazione di un filegroup distinto per gli indici full-text e semantici  
  Valutare se creare un filegroup distinto per gli indici full-text e semantici se l'allocazione di spazio su disco costituisce un problema. Gli indici semantici vengono creati nello stesso filegroup dell'indice full-text. Un indice semantico completamente popolato può contenere una notevole quantità di dati.  
  
 ##  <a name="IssueNoResults"></a> Problema: la ricerca in specifiche colonne non restituisce alcun risultato  
