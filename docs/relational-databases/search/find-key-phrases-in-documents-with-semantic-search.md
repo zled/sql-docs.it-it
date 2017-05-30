@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c005c3de0b3cd1e8e5562c038321a53e04da38a
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
+###  <a name="HowToTopPhrases"></a> Esempio 1: trovare le principali frasi chiave in un documento specifico  
  L'esempio seguente recupera le prime 10 frasi chiave dal documento specificato tramite la variabile @DocumentId nella colonna Document della tabella Production.Document del database di esempio AdventureWorks. La variabile @DocumentId rappresenta un valore della colonna chiave dell'indice full-text.  
   
 ```tsql  
@@ -55,7 +56,7 @@ GO
   
  La funzione **SEMANTICKEYPHRASETABLE** recupera in modo efficiente questi risultati tramite una ricerca nell'indice anziché un'analisi della tabella.  
   
-###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="HowToTopDocuments"></a> Esempio 2: trovare i documenti principali che contengono una frase chiave specifica  
  Nell'esempio seguente vengono recuperati i primi 25 documenti che contengono la frase chiave "supporto" dalla colonna Documento della tabella Production.Document del database di esempio AdventureWorks.  
   
 ```tsql  
