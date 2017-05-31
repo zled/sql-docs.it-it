@@ -19,9 +19,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  Fare clic con il pulsante destro del mouse su una tabella e quindi scegliere **Visualizza dipendenze**.  
   
-3.  Nella finestra di dialogo **Dipendenze oggetto***\<nome oggetto>* selezionare **Oggetti che dipendono da** *\<nome oggetto>* oppure **Oggetti da cui dipende***\<nome oggetto>***.**.  
+3.  Nella finestra di dialogo **Dipendenze oggetto***\<nome oggetto>* selezionare **Oggetti che dipendono da** *\<nome oggetto>* oppure **Oggetti da cui dipende***\<nome oggetto>*.****  
   
 4.  Selezionare un oggetto nella griglia **Dipendenze** . Il tipo di oggetto, ad esempio "Trigger" o "Stored procedure", viene visualizzato nella casella **Tipo** .  
   

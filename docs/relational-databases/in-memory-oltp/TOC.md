@@ -23,7 +23,7 @@
 ## [Indici hash per tabelle con ottimizzazione per la memoria](hash-indexes-for-memory-optimized-tables.md)  
 # [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
 ## [Creazione di stored procedure compilate in modo nativo](creating-natively-compiled-stored-procedures.md)  
-## [Altering Natively Compiled T-SQL Modules](altering-natively-compiled-t-sql-modules.md) (Modifica dei moduli T-SQL compilati in modo nativo)  
+## [Modifica dei moduli T-SQL compilati in modo nativo](altering-natively-compiled-t-sql-modules.md)  
 ## [Blocchi atomici](atomic-blocks-in-native-procedures.md)  
 ## [Stored procedure compilate in modo nativo e opzioni SET di esecuzione](natively-compiled-stored-procedures-and-execution-set-options.md)  
 ## [Procedure consigliate per chiamare stored procedure compilate in modo nativo](best-practices-for-calling-natively-compiled-stored-procedures.md)  

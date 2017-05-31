@@ -22,16 +22,17 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Insieme credenziali chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure consente alla crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di usare il servizio dell'insieme di credenziali delle chiavi di Azure come provider di [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) per proteggere le chiavi di crittografia.  
+  Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Insieme credenziali chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure consente alla crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di usare il servizio dell'insieme di credenziali delle chiavi di Azure come provider di [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) per proteggere le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiavi di crittografia.  
   
  Questo argomento descrive il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Altre informazioni sono disponibili in [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)e [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   

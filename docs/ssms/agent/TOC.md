@@ -91,7 +91,7 @@
 # [Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)
 # [Ottimizzare l'amministrazione automatizzata in un'organizzazione](tune-automated-administration-across-an-enterprise.md)
 # [Organizzare processi](organize-jobs.md)
-# [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md) (Escludere più server di destinazione da un server master)
+# [Escludere più server di destinazione da un server master](defect-multiple-target-servers-from-a-master-server.md)
 # [Proprietà account proxy - Nuovo account proxy (pagina Generale)](proxy-account-properties-new-proxy-account-general-page.md)
 # [Visualizzare l'attività dei processi](view-job-activity.md)
 # [Nuova pianificazione processo - Proprietà pianificazione processo](new-job-schedule-job-schedule-properties.md)

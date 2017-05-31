@@ -14,9 +14,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,7 +28,7 @@ Per gestire oggetti tramite Esplora oggetti, è necessario connettere Esplora og
 Per utilizzare Esplora oggetti, è necessario connettersi innanzitutto a un server. Fare clic su **Connetti** sulla barra degli strumenti Esplora oggetti e selezionare il tipo di server desiderato dall'elenco a discesa. Verrà visualizzata la finestra di dialogo **Connetti al server** . Per eseguire la connessione è necessario specificare almeno il nome del server e le informazioni di autenticazione corrette.  
   
 ## <a name="optional-object-explorer-connection-settings"></a>Impostazioni di connessione facoltative di Esplora oggetti  
-Quando ci si collega a un server è possibile specificare altre informazioni nella finestra di dialogo **Connetti al server**. In questa finestra verranno mantenute le ultime impostazioni, che saranno usate per le nuove connessioni, ad esempio per le nuove finestre dell'editor del codice.  
+Quando ci si collega a un server è possibile specificare altre informazioni nella finestra di dialogo **Connetti al server**. In **Connetti al server**questa finestra verranno mantenute le ultime impostazioni, che saranno utilizzate per le nuove connessioni, ad esempio per le nuove finestre dell'editor del codice.  
   
 Per specificare impostazioni di connessione facoltative, eseguire la procedura seguente:  
   
