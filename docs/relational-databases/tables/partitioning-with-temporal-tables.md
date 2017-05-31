@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **Tabella corrente:**  
   
-    -   **SWITCH IN** to the current table can be used to facilitate data loading and querying while **SYSTEM_VERSIONING** is **ON**  
+    -   L'operazione **SWITCH IN** nella tabella corrente può essere usata per facilitare il caricamento di dati e l'esecuzione di query quando **SYSTEM_VERSIONING** è **ON**  
   
     -   **SWITCH OUT** is not permitted while **SYSTEM_VERSIONING** is **ON**  
   
