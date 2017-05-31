@@ -17,9 +17,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.contentlocale: it-it
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -147,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   La query precedente viene aggiunta nella clausola `FROM` . Il risultato della query viene restituito sotto forma di tabella. Viene aggiunto l'alias `XmlCol` .  
   
--   La clausola `SELECT` specifica una query XQuery sul valore `XmlCol` restituito nella clausola `FROM` . Per specificare l'espressione XQuery viene usato il metodo **query()** del tipo di dati **xml**. Per altre informazioni, vedere [Metodo query&#40;&#41; con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md).  
+-   La clausola `SELECT` specifica una query XQuery sul valore `XmlCol` restituito nella clausola `FROM` . Per specificare l'espressione XQuery viene usato il metodo **query()** del tipo di dati **xml**. Per altre informazioni, vedere [Metodo query&#40;&#41; con &#40;tipo di dati XML&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
