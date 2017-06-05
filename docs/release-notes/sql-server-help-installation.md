@@ -117,8 +117,8 @@ Selezionare Installa contenuto da disco  |Passare al file del contenuto della Gu
   
    ![HelpLibraryManager_MainPage_ChooseOnlineORLocal.png](../release-notes/media/helplibrarymanager-mainpage-chooseonlineorlocal.png.png)  
 3. Eseguire una delle operazioni seguenti, fare clic su **OK** e quindi su **Esci**.  
-   * Fare clic sull'opzione per l'uso della Guida online** **.  
-   * Fare clic sull'opzione per l'uso della Guida locale** **.  
+   * Fare clic sull'opzione per l'uso della Guida online**** .  
+   * Fare clic sull'opzione per l'uso della Guida locale**** .  
   
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)  
   
