@@ -29,7 +29,7 @@ SQL Server e il database SQL di Azure consentono di usare il testo formattato co
 ## <a name="store-json-in-memory-optimized-tables"></a>Archiviare dati JSON in tabelle con ottimizzazione per la memoria
 Nell'esempio seguente è illustrata una tabella `Product` con ottimizzazione per la memoria contenente due colonne JSON, `Tags` e `Data`.
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ Le nuove funzionalità disponibili in SQL Server e nel database SQL di Azure con
 ## <a name="validate-json-columns"></a>Convalidare le colonne JSON
 SQL Server e il database SQL di Azure consentono di aggiungere vincoli CHECK compilati in modo nativo per la convalida del contenuto dei documenti JSON archiviati in una colonna di tipo stringa, come illustrato nell'esempio seguente.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 È possibile aggiungere il vincolo CHECK compilato in modo nativo nelle tabelle esistenti che contengono colonne JSON:
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ Nell'esempio seguente viene illustrato come esporre i due valori seguenti dalla 
 -   paese di produzione del prodotto;
 -   costo di produzione del prodotto.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ Le colonne calcolate `MadeIn` e `Cost` vengono aggiornate a ogni modifica del do
 ## <a name="index-values-in-json-columns"></a>Indicizzare i valori nelle colonne JSON
 SQL Server e il database SQL di Azure consentono di indicizzare i valori nelle colonne JSON tramite indici con ottimizzazione per la memoria. I valori JSON indicizzati devono essere esposti e fortemente tipizzati tramite le colonne calcolate, come illustrato nell'esempio seguente.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ I valori nelle colonne JSON possono essere indicizzati usando sia gli indici NON
 ## <a name="native-compilation-of-json-queries"></a>Compilazione nativa di query JSON
 La compilazione nativa di procedure, funzioni e trigger Transact-SQL contenenti query con funzioni JSON aumenta infine le prestazioni delle query e riduce i cicli di CPU richiesti per eseguire le procedure. Nell'esempio seguente viene illustrata una procedura compilata in modo nativo che usa numerose funzioni JSON, ovvero JSON_VALUE, OPENJSON e JSON_MODIFY.
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

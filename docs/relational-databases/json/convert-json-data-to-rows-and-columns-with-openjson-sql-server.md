@@ -48,7 +48,7 @@ Ogni proprietà dell'oggetto JSON o ogni elemento della matrice viene restituito
 Questo semplice esempio usa la funzione **OPENJSON** con lo schema predefinito e restituisce una riga per ogni proprietà dell'oggetto JSON.  
  
 **Esempio**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ Ecco un rapido esempio che usa **OPENJSON** con uno schema per i risultati speci
   
 **Esempio**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---return-each-property-of-an-object"></a>Esempio: restituire ogni proprietà di un oggetto  
  **Query**  
   
-```tsql  
+```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
@@ -50,7 +50,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
 ## <a name="example---return-each-element-of-an-array"></a>Esempio: restituire ogni elemento di una matrice  
  **Query**  
   
-```tsql  
+```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
@@ -68,7 +68,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 ## <a name="example---convert-json-to-a-temporary-table"></a>Esempio: convertire JSON in una tabella temporanea  
  La query seguente restituisce tutte le proprietà dell'oggetto **info** .  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json=N'{  
@@ -99,7 +99,7 @@ FROM OPENJSON(@json,N'lax $.info')
 ## <a name="example---combine-relational-data-and-json-data"></a>Esempio: combinare dati relazionali e dati JSON  
  Nell'esempio seguente, la tabella SalesOrderHeader include una colonna di testo SalesReason che contiene una matrice di SalesOrderReasons in formato JSON. Gli oggetti SalesOrderReasons contengono proprietà come "Produttore" e "Qualità". Nell'esempio viene creato un report che unisce ogni riga dell'ordine di vendita ai motivi di vendita correlati espandendo la matrice JSON dei motivi di vendita come se questi fossero archiviati in una tabella figlio separata.  
   
-```tsql  
+```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
 FROM Sales.SalesOrderHeader
 CROSS APPLY OPENJSON(SalesReasons)

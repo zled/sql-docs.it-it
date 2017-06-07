@@ -44,7 +44,7 @@ Con l'opzione **AUTO** , il formato dell'output JSON viene determinato automatic
   
 I risultati della clausola FOR JSON AUTO sono simili a quelli di FOR JSON PATH quando si usa una sola tabella nella query. In questo caso, FOR JSON AUTO non crea oggetti annidati. L'unica differenza è che FOR JSON AUTO genera come output alias separati da punti (come `Info.MiddleName` nell'esempio seguente) come chiavi con punti e non come oggetti annidati.  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -88,7 +88,7 @@ SELECT TOP 5
   
  Quando si uniscono più tabelle, le colonne della prima tabella vengono generate come proprietà dell'oggetto radice. Le colonne della seconda tabella vengono generate come proprietà di un oggetto annidato. Il nome della tabella o l'alias della seconda tabella (ad esempio `D` nell'esempio seguente) viene usato come nome della matrice annidata.  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber,  
         OrderDate,  
         UnitPrice,  
@@ -123,7 +123,7 @@ FOR JSON AUTO
  **Query 3**  
  Invece di usare FOR JSON AUTO è possibile annidare una sottoquery FOR JSON PATH nell'istruzione SELECT, come illustrato nell'esempio seguente. Questo esempio genera lo stesso risultato dell'esempio precedente.  
   
-```tsql  
+```sql  
 SELECT TOP 2  
     SalesOrderNumber,  
     OrderDate,  

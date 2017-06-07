@@ -63,7 +63,7 @@ SET @jsonInfo=N'{
   
  Nell'esempio seguente viene restituito il testo JSON se la colonna include contenuto JSON valido.  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -76,7 +76,7 @@ WHERE ISJSON(json_col)>0
   
  Nell'esempio seguente viene estratto il valore di una proprietà JSON in una variabile locale.  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -87,7 +87,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  Nell'esempio seguente viene illustrato come restituire un frammento JSON nei risultati della query.  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -126,7 +126,7 @@ ORDER BY LastName
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>Esempio 1: restituire colonne standard e dati JSON  
  La query seguente restituisce colonne relazionali standard e valori da una colonna JSON.  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -141,7 +141,7 @@ WHERE ISJSON(Info)>0
 ### <a name="example-2--aggregate-and-filter-json-values"></a>Esempio 2: aggregare e filtrare valori JSON  
  La query seguente aggrega i subtotali in base al nome del cliente (archiviato in JSON) e in base allo stato (archiviato in una colonna normale), quindi filtra i risultati in base alla città (archiviata in JSON) e in base al valore OrderDate (archiviato in una colonna normale).  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -163,7 +163,7 @@ HAVING SUM(SubTotal)>1000
   
  L'esempio seguente aggiorna il valore di una proprietà in una variabile che include contenuto JSON.  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   
