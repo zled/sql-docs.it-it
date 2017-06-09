@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eac6520e46f252855d84dced89d9b79f5f8aed2b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Posizioni alternative della cartella snapshot
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/11/2017
   
  **Per specificare posizioni alternative della cartella snapshot**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify an Alternate Snapshot Folder Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specificare un percorso alternativo per la cartella snapshot &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
   
 -   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Configurare le proprietà dello snapshot &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

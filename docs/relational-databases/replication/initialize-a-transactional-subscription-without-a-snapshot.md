@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inizializzazione di una sottoscrizione transazionale senza uno snapshot
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
  Per inizializzare una sottoscrizione con un backup, è innanzitutto necessario abilitare l'opzione al momento della creazione di una pubblicazione, quindi specificare i valori per diverse opzioni al momento della creazione di una sottoscrizione. Le pubblicazioni possono essere abilitate mediante la Creazione guidata nuova pubblicazione o a livello di programmazione. I valori richiesti per le opzioni di sottoscrizione, tuttavia, possono essere specificati solo a livello di programmazione.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Abilitare l'inizializzazione con un backup per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Programmazione Transact-SQL della replica: [Inizializzare una sottoscrizione transazionale da un backup &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   

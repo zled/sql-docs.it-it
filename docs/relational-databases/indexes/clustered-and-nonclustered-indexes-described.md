@@ -18,14 +18,17 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01dfceee2f0d4fb1e0c475333be49e6dacec1c3f
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Descrizione di indici cluster e non cluster](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
+
 
   Un indice è una struttura su disco associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Tali chiavi vengono archiviate in una struttura (albero B) che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
   

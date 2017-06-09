@@ -1,7 +1,7 @@
 ---
 title: Riorganizzare e ricompilare gli indici | Microsoft Docs
 ms.custom: 
-ms.date: 04/29/2016
+ms.date: 05/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -35,40 +35,21 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 8f0efc0281809b6547a86d708e4596666f10e0c0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Riorganizzare e ricompilare gli indici](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+
   In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la manutenzione degli indici viene automaticamente eseguita dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione.  
   
  È possibile porre rimedio alla frammentazione eseguendo la riorganizzazione o la ricompilazione dell'indice. Per gli indici partizionati compilati in base a uno schema di partizione è possibile procedere in uno dei metodi seguenti sull'intero indice o su una singola partizione. La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. Questa operazione consente di rimuovere la frammentazione, rendere disponibile spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave ALL, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. La riorganizzazione di un indice richiede una quantità minima di risorse di sistema. Questa operazione deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico, da sinistra verso destra, dei nodi foglia. La riorganizzazione consente inoltre di compattare le pagine di indice in base al valore del fattore di riempimento esistente.  
   
- **Contenuto dell'argomento**  
-  
--   **Prima di iniziare:**  
-  
-     [Rilevamento della frammentazione](#Fragmentation)  
-  
-     [Limitazioni e restrizioni](#Restrictions)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per controllare la frammentazione di un indice usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedureFrag)  
-  
-     [Transact-SQL](#TsqlProcedureFrag)  
-  
--   **Per riorganizzare o ricompilare un indice usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedureReorg)  
-  
-     [Transact-SQL](#TsqlProcedureReorg)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -188,8 +169,10 @@ ms.lasthandoff: 04/11/2017
     -- Find the average fragmentation percentage of all indexes  
     -- in the HumanResources.Employee table.   
     SELECT a.index_id, name, avg_fragmentation_in_percent  
-    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
-        JOIN sys.indexes AS b ON a.object_id = b.object_id AND a.index_id = b.index_id;   
+    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), 
+          OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
+        JOIN sys.indexes AS b 
+          ON a.object_id = b.object_id AND a.index_id = b.index_id;   
     GO  
     ```  
   
@@ -256,7 +239,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  Espandere la cartella **Indici** .  
   
-5.  Fare clic con il pulsante destro del mouse sull'indice che si vuole riorganizzare e scegliere **Riorganizza**.  
+5.  Fare clic con il pulsante destro del mouse sull'indice che si vuole riorganizzare e scegliere **Ricompila**.  
   
 6.  Nella finestra di dialogo **Ricompila indici** verificare che nella griglia **Indici da ricompilare** sia presente l'indice corretto, quindi scegliere **OK**.  
   
@@ -277,9 +260,11 @@ ms.lasthandoff: 04/11/2017
     ```  
     USE AdventureWorks2012;   
     GO  
-    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode index on the HumanResources.Employee table.   
+    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
+    -- index on the HumanResources.Employee table.   
   
-    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode ON HumanResources.Employee  
+    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode 
+      ON HumanResources.Employee  
     REORGANIZE ;   
     GO  
     ```  
@@ -324,7 +309,6 @@ ms.lasthandoff: 04/11/2017
  Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure consigliate relative alla deframmentazione degli indici in Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
-  
+  [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
   
 

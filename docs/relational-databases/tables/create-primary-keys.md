@@ -17,14 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f799919f1b0cd1006c144eeb9afbc1d69322423b
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 182d85111f05cf2162084fade0a5a86078efbad5
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-primary-keys"></a>Creazione di chiavi primarie
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di chiavi primarie](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
 
   È possibile definire una chiave primaria in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con la creazione di una chiave primaria è possibile creare automaticamente un indice univoco corrispondente, cluster o non cluster.  
   

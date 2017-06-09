@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Sottoscrizioni aggiornabili - Risoluzione dei conflitti per l'aggiornamento in coda
@@ -58,13 +58,13 @@ ms.lasthandoff: 04/11/2017
   
  **Per impostare i criteri di risoluzione dei conflitti per l'aggiornamento in coda**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
 -   Programmazione Transact-SQL della replica: [Abilitazione delle sottoscrizioni aggiornabili per le pubblicazioni transazionali](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Per visualizzare i conflitti di dati**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Visualizzare i conflitti di dati per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>Prevale il server di pubblicazione  
  Quando il criterio di risoluzione dei conflitti è impostato su Prevale il server di pubblicazione, la consistenza transazionale viene mantenuta in base ai dati del server di pubblicazione. Viene eseguito il rollback della transazione in conflitto nel Sottoscrittore in cui è stata inizializzata.  
@@ -82,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  Il rilevamento dei conflitti in base ai criteri Prevale il Sottoscrittore implica che l'ultima transazione del Sottoscrittore che aggiorna il server di pubblicazione risulta prioritaria. In questo caso, quando viene rilevato un conflitto, viene comunque utilizzata la transazione inviata dal Sottoscrittore e il server di pubblicazione viene aggiornato. Questi criteri sono adatti alle applicazioni in cui tali modifiche non compromettono l'integrità dei dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrizioni aggiornabili per la replica transazionale](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

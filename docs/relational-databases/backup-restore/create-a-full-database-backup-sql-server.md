@@ -20,13 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f18989ee04ccb28ab9b37a5912328de60cbde885
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
+
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di un backup completo del database (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+
   In questo argomento viene descritto come creare un backup completo del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
 >  Per informazioni sul backup di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  

@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>Eseguire una stored procedure
+
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Eseguire una stored procedure](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+
   In questo argomento viene illustrato come eseguire una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Sono disponibili due modi diversi per eseguire una stored procedure. Il primo e più comune approccio consiste nella chiamata della stored procedure da parte di un'applicazione o un utente. Il secondo approccio consiste nell'impostare la stored procedure per l'esecuzione automatica all'avvio di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando una stored procedure viene chiamata da un'applicazione o da un utente, la parola chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE o EXEC viene dichiarata in modo esplicito nella chiamata. In alternativa, è possibile chiamare ed eseguire la stored procedure senza la parola chiave se la stored procedure è la prima istruzione nel batch [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

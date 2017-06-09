@@ -23,13 +23,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
+
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di server collegati (Motore di database di SQL Server)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
   
 ##  <a name="Background"></a> Background  

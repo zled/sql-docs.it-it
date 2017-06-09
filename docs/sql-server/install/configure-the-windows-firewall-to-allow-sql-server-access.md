@@ -1,7 +1,7 @@
 ---
 title: Configurare Windows Firewall per consentire l&quot;accesso a SQL Server |Microsoft Docs
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Se un firewall viene abilitato ma non configurato correttamente, i tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere bloccati.  
+ > Per informazioni relative alle versioni precedenti di SQL Server, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+
+I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Se un firewall viene abilitato ma non configurato correttamente, i tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere bloccati.  
   
- Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per consentire l'accesso. Il firewall è un componente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. È possibile anche installare un firewall di un altro produttore. In questo argomento viene illustrato come configurare Windows Firewall, ma i principi di base si applicano anche ad altri tipi di firewall.  
+Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il firewall è un componente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. È possibile anche installare un firewall di un altro produttore. In questo argomento viene illustrato come configurare Windows Firewall, ma i principi di base si applicano anche ad altri tipi di firewall.  
   
 > [!NOTE]  
 >  In questo argomento viene fornita una panoramica della configurazione del firewall e vengono riepilogate le informazioni utili a un amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sul firewall, vedere la documentazione di riferimento, ad esempio [Windows Firewall with Advanced Security and IPSec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>Contenuto dell'argomento  
- Questo argomento contiene le sezioni seguenti:  
-  
- [Informazioni di base sul firewall](#BKMK_basic)  
-  
- [Impostazioni del firewall predefinite](#BKMK_default)  
-  
- [Programmi di configurazione del firewall](#BKMK_programs)  
-  
- [Porte utilizzate dal Motore di database](#BKMK_ssde)  
-  
- [Porte utilizzate da Analysis Services](#BKMK_ssas)  
-  
- [Porte utilizzate da Reporting Services](#BKMK_ssrs)  
-  
- [Porte utilizzate da Integration Services](#BKMK_ssis)  
-  
- [Porte e servizi aggiuntivi](#BKMK_additional_ports)  
-  
- [Interazione con altre regole del firewall](#BKMK_other_rules)  
-  
- [Panoramica sui profili del firewall](#BKMK_profiles)  
-  
- [Impostazioni aggiuntive del firewall mediante l'elemento Windows Firewall del Pannello di controllo](#BKMK_additional_settings)  
-  
- [Utilizzo dello snap-in Windows Firewall con sicurezza avanzata](#BKMK_WF_msc)  
-  
- [Risoluzione dei problemi relativi alle impostazioni del firewall](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> Informazioni di base sul firewall  
  Il meccanismo alla base del funzionamento dei firewall è il controllo dei pacchetti in ingresso seguito dal confronto rispetto a un set di regole. Se le regole consentono il pacchetto, esso viene passato al protocollo TCP/IP per un'elaborazione ulteriore. Se non lo consentono, il pacchetto viene ignorato e, se la registrazione è abilitata, viene creata una voce nel file di registrazione del firewall.  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  L'attivazione del firewall influisce su altri programmi a cui è consentito l'accesso al computer, ad esempio la condivisione di file e stampanti e le connessioni desktop remoto. Prima di modificare le impostazioni del firewall, gli amministratori devono tener conto di tutte le applicazioni in esecuzione nel computer.  
   
 ##  <a name="BKMK_programs"></a> Programmi di configurazione del firewall  
- Sono disponibili tre metodi per configurare le impostazioni di Windows Firewall.  
-  
--   **Elemento Windows Firewall nel Pannello di controllo**  
-  
-     L'elemento **Windows Firewall** può essere aperto dal Pannello di controllo.  
-  
-    > [!IMPORTANT]  
-    >  Le modifiche apportate all'elemento **Windows Firewall** nel Pannello di controllo influiscono solo sul profilo corrente. È preferibile non usare l'elemento **Windows Firewall** del Pannello di controllo nei dispositivi mobili, ad esempio i laptop, in quanto il profilo potrebbe subire delle modifiche quando è connesso in una configurazione diversa. Se ciò accade, il profilo configurato in precedenza non sarà più attivo. Per ulteriori informazioni sui profili, vedere [Guida introduttiva a Windows Firewall con sicurezza avanzata](http://go.microsoft.com/fwlink/?LinkId=116080).  
-  
-     L'elemento **Windows Firewall** nel Pannello di controllo consente di configurare le opzioni di base, tra cui:  
-  
-    -   Abilitazione e disabilitazione dell'elemento **Windows Firewall** nel Pannello di controllo.  
-  
-    -   Abilitazione e disabilitazione delle regole  
-  
-    -   Concessione di eccezioni relative a porte e programmi  
-  
-    -   Impostazione di alcune restrizioni dell'ambito  
-  
-     L'elemento **Windows Firewall** del Pannello di controllo risulta particolarmente adatto agli utenti che hanno scarsa familiarità con la configurazione del firewall e che effettuano la configurazione delle opzioni di base del firewall per computer non portatili. L'apertura di **Windows Firewall** nel Pannello di controllo può essere eseguita anche dal comando **run** tramite la procedura riportata di seguito:  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>Per aprire l'elemento Windows Firewall  
-  
-    1.  Fare clic sul pulsante **Start** , scegliere **Esegui**, quindi immettere `firewall.cpl`.  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **Microsoft Management Console (MMC)**  
+Configurare le impostazioni di Windows Firewall con **Microsoft Management Console** o **netsh**.  
+
+-  **Microsoft Management Console (MMC)**  
   
      Lo snap-in MMC Windows Firewall con sicurezza avanzata consente di configurare impostazioni del firewall più avanzate. Questo snap-in presenta la maggior parte delle opzioni di firewall in una modalità di facile utilizzo e presenta tutti i profili firewall. Per altre informazioni, vedere [Utilizzo dello snap-in Windows Firewall con sicurezza avanzata](#BKMK_WF_msc) più avanti in questo argomento.  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  Un'alternativa alla configurazione di un'istanza denominata in modo che si metta in attesa su una porta fissa consiste nel creare un'eccezione nel firewall per un programma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio **sqlservr.exe** per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Anche se può risultare utile, il numero di porta non verrà visualizzato nella colonna **Porta locale** della pagina **Regole in entrata** quando si usa lo snap-in MMC Windows Firewall con sicurezza avanzata. Questa operazione può rendere più difficile il controllo delle porte aperte. Tenere anche presente che un Service Pack o un aggiornamento cumulativo può modificare il percorso del file eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo non valida la regola del firewall.  
   
-> [!NOTE]  
->  La procedura riportata di seguito utilizza l'elemento **Windows Firewall** del Pannello di controllo. Lo snap-in MMC Windows Firewall con sicurezza avanzata consente di configurare una regola più complessa, inclusa la configurazione di un'eccezione del servizio che può risultare utile per offrire una difesa più avanzata. Vedere [Utilizzo dello snap-in Windows Firewall con sicurezza avanzata](#BKMK_WF_msc) più avanti.  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Per aggiungere un'eccezione del programma al firewall usando Windows Firewall con protezione avanzata
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>Per aggiungere un'eccezione del programma al firewall utilizzando l'elemento Windows Firewall nel Pannello di controllo  
-  
-1.  Nella scheda **Eccezioni** dell'elemento **Windows Firewall** nel Pannello di controllo fare clic su **Aggiungi programma**.  
-  
-2.  Passare al percorso dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si vuole consentire nel firewall, ad esempio **C:\Programmi\Microsoft SQL Server\MSSQL13.<nome_istanza>\MSSQL\Binn**, selezionare **sqlservr.exe** e quindi fare clic su **Apri**.  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- Per altre informazioni sugli endpoint, vedere [Configurazione del Motore di database per l'attesa su più porte TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+1. Dal menu Start digitare *wf.msc*. Fare clic su **Windows Firewall con sicurezza avanzata**.
+
+1. Nel riquadro sinistro fare clic su **Regole connessioni in entrata**.
+
+1. Nel riquadro destro, in **Azioni** fare clic su **Nuova regola**. Verrà aperta la **Creazione guidata nuova regola connessioni in entrata**.
+
+1. In **Tipo di regola** fare clic su **Programma**. Scegliere **Avanti**.
+
+1. In **Programma** fare clic su **Percorso programma**. Fare clic su **Sfoglia** per individuare l'istanza di SQL Server. Il programma è chiamato sqlservr.exe e in genere si trova in:
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   Scegliere **Avanti**.
+
+1. In **Operazione** fare clic su **Consenti la connessione**.  
+
+1. In Profilo includere tutti e tre i profili. Scegliere **Avanti**.
+
+1. In **Nome** digitare un nome per la regola. Fare clic su **Fine**.
+
+Per altre informazioni sugli endpoint, vedere [Configurazione del Motore di database per l'attesa su più porte TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
 ###  <a name="BKMK_ssas"></a> Porte utilizzate da Analysis Services  
  Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ###  <a name="BKMK_ssrs"></a> Porte utilizzate da Reporting Services  
- Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Funzionalità|Porta|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servizi Web|Porta TCP 80|Utilizzata per una connessione HTTP a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tramite un URL. È consigliabile non usare la regola preconfigurata **Servizi Web (HTTP)**. Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per l'utilizzo tramite HTTPS|Porta TCP 443|Utilizzata per una connessione HTTPS tramite un URL. HTTPS è una connessione HTTP che utilizza il protocollo SSL (Secure Sockets Layer). È consigliabile non usare la regola preconfigurata **Servizi Web protetti (HTTP)**. Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
   
- Quando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si connette a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario aprire anche le porte adatte per quei servizi. Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
+Quando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si connette a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario aprire anche le porte adatte per quei servizi. Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ###  <a name="BKMK_ssis"></a> Porte utilizzate da Integration Services  
  Nella tabella seguente sono indicate le porte utilizzate dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Remote Procedure Call (MS RPC)<br /><br /> Utilizzate dal runtime di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Porta TCP 135<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizza il protocollo DCOM sulla porta 135. Gestione controllo servizi utilizza la porta 135 per eseguire operazioni come l'avvio e l'arresto del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e la trasmissione di richieste di controllo al servizio in esecuzione. Il numero di porta non può essere modificato.<br /><br /> Questa porta deve essere aperta solo se si sta effettuando la connessione a un'istanza remota del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o da un'applicazione personalizzata.|  
   
- Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Servizio Integration Services - Servizio SSIS).  
+Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Servizio Integration Services - Servizio SSIS).  
   
 ###  <a name="BKMK_additional_ports"></a> Porte e servizi aggiuntivi  
- Nella tabella riportata di seguito sono elencati i servizi e le porte da cui potrebbe dipendere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Nella tabella riportata di seguito sono elencati i servizi e le porte da cui potrebbe dipendere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Scenario|Porta|Commenti|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  L'uso dell'elemento **Windows Firewall** del Pannello di controllo configura solo il profilo del firewall corrente.  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Per modificare l'ambito dell'eccezione di un firewall mediante l'elemento Windows Firewall del Pannello di controllo  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Per modificare l'ambito dell'eccezione di un firewall mediante l'elemento Windows Firewall del Pannello di controllo  
   
 1.  Nell'elemento **Windows Firewall** del Pannello di controllo selezionare un programma o una porta nella scheda **Eccezioni** , quindi fare clic su **Proprietà** o **Modifica**.  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Richiesta di IPsec per le connessioni in ingresso  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Per creare una nuova regola del firewall utilizzando la Creazione guidata nuova regola connessioni in entrata  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Per creare una nuova regola del firewall utilizzando la Creazione guidata nuova regola connessioni in entrata  
   
 1.  Nel menu Start, scegliere **Esegui**, digitare **WF.msc**e quindi fare clic su **OK**.  
   

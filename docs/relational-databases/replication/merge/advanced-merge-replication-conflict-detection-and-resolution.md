@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replica di tipo merge avanzata - Rilevamento e risoluzione dei conflitti
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
  Per specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti, vedere  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
 -   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica e programmazione di Replication Management Objects (RMO): [creare una sottoscrizione Pull](../../../relational-databases/replication/create-a-pull-subscription.md) e [creare una sottoscrizione Push](../../../relational-databases/replication/create-a-push-subscription.md)  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 04/11/2017
   
  **Per visualizzare i conflitti**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
