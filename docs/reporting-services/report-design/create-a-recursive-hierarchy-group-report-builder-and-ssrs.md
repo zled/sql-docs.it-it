@@ -1,31 +1,36 @@
 ---
-title: "Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare un gruppo di gerarchie ricorsive (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
-Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un gruppo di gerarchie ricorsive organizza i dati da un unico set di dati di un report in cui sono inclusi più livelli gerarchici, ad esempio il report per definire la struttura di relazioni tra dipendenti e manager in una gerarchia organizzativa.  
+# <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
+Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un gruppo di gerarchie ricorsive organizza i dati da un unico set di dati di un report in cui sono inclusi più livelli gerarchici, ad esempio il report per definire la struttura di relazioni tra dipendenti e manager in una gerarchia organizzativa.  
   
  Prima che sia possibile organizzare i dati in una tabella come un gruppo di gerarchie ricorsive, è necessario disporre di un unico set di dati che contiene tutti i dati gerarchici. È necessario disporre di campi separati per gli elementi da raggruppare e per l'elemento in base al quale eseguire il raggruppamento. Un set di dati, ad esempio, in cui si desidera raggruppare i dipendenti in modo ricorsivo sotto il loro superiore, potrebbe contenere un nome, un nome di dipendente, un ID dipendente e un ID responsabile.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Per creare un gruppo di gerarchie ricorsive  
+## <a name="to-create-a-recursive-hierarchy-group"></a>Per creare un gruppo di gerarchie ricorsive  
   
 1.  Nella visualizzazione della struttura aggiungere una tabella e trascinare i campi del set di dati da visualizzare. In genere, il campo che si desidera mostrare come una gerarchia si trova nella prima colonna.  
   
@@ -43,29 +48,29 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
      Eseguire il report. Nel report viene visualizzato il gruppo di gerarchie ricorsive, anche se non è presente alcun rientro per indicare la gerarchia.  
   
-## Per formattare un gruppo di gerarchie ricorsive con livelli di rientro  
+## <a name="to-format-a-recursive-hierarchy-group-with-indent-levels"></a>Per formattare un gruppo di gerarchie ricorsive con livelli di rientro  
   
 1.  Fare clic sulla casella di testo che contiene il campo cui si desidera aggiungere livelli di rientro per visualizzare un formato di gerarchia. Le proprietà per la casella di testo verranno visualizzate nel riquadro Proprietà.  
   
     > [!NOTE]  
-    >  Se il riquadro Proprietà non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza**.  
+    >  Se il riquadro Proprietà non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza** .  
   
-2.  Nel riquadro Proprietà espandere il nodo **Riempimento**, fare clic su **A sinistra**, quindi selezionare **\<Espressione…>** dall'elenco a discesa.  
+2.  Nel riquadro Proprietà espandere il **Padding** nodo, fare clic su **sinistra**e nell'elenco a discesa, selezionare  **\<Expression... >**.  
   
 3.  Nel riquadro Espressione digitare l'espressione seguente:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Per tutte le proprietà relative a Riempimento è necessario usare una stringa con il formato *nnyy*, dove *nn* è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza la funzione **Level** per aumentare le dimensioni del riempimento in base al livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sulla funzione **Level** , vedere [Livello](../../reporting-services/report-design/level-function-report-builder-and-ssrs.md).  
+     Le proprietà di riempimento tutti richiedono una stringa nel formato *nnyy*, dove  *nn*  è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza la funzione **Level** per aumentare le dimensioni del riempimento in base al livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sulla funzione **Level** , vedere [Livello](../../reporting-services/report-design/report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Eseguire il report. Nel report viene visualizzata una vista gerarchica dei dati raggruppati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)   
+ [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

@@ -1,0 +1,7 @@
+# [Creazione di un componente in fase di progettazione dell'elemento del Report personalizzato](creating-a-custom-report-item-design-time-component.md)
+# [Creazione di un componente di Run-Time di elemento di Report personalizzato](creating-a-custom-report-item-run-time-component.md)
+# [Architettura di un elemento del Report personalizzato](custom-report-item-architecture.md)
+# [Librerie di classi di elemento di Report personalizzato](custom-report-item-class-libraries.md)
+# [Requisiti di implementazione di elemento di Report personalizzato](custom-report-item-implementation-requirements.md)
+# [Elementi dei report personalizzati](custom-report-items.md)
+# [Procedura: distribuire un elemento del Report personalizzato](how-to-deploy-a-custom-report-item.md)

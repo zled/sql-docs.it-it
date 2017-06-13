@@ -1,30 +1,37 @@
 ---
-title: "Generazione di feed di dati dai report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: La generazione di dati feed dai report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Generazione di feed di dati dai report (Generatore report e SSRS)
-  L'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di generare un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report impaginato e i feed di dati delle aree dati di un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio è possibile usare l'estensione per il rendering Atom per generare feed di dati che, in seguito, possono essere usati nel client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+
+# <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
+
+  L'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di generare un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report impaginato e i feed di dati delle aree dati di un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio, è possibile utilizzare l'estensione per il rendering Atom per generare feed di dati che è quindi possibile usare in Power Pivot o Power BI.  
   
  Il documento di servizio Atom elenca almeno un feed di dati per ogni area dati in un report. A seconda del tipo di area dati e dei dati in essa visualizzati, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe generare più feed di dati da un'area dati. Ad esempio una matrice o un grafico può fornire più feed di dati. Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per ogni feed di dati che può essere usato nell'URL per accedere al contenuto del feed di dati.  
   
  Il modo in cui l'estensione per il rendering Atom genera i dati per un relativo feed è simile al modo in cui l'estensione per il rendering CSV (Comma-Separated Value, file delimitato da virgole) esegue il rendering dei dati in un file CSV. Come per quest'ultimo tipo di file, un feed di dati è una rappresentazione bidimensionale dei dati del report. Ad esempio una tabella con un gruppo di righe che somma le vendite all'interno di un gruppo, ripete la somma in ogni riga di dati e non vi è alcuna riga separata che contiene solo la somma.  
   
- È possibile generare documenti di servizio Atom e feed di dati usando il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Server di report o un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ È possibile generare documenti di servizio Atom e feed di dati usando il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , Server di report o un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Atom può essere applicato ad alcuni standard correlati. Il documento di servizio Atom è conforme alla specifica del protocollo di pubblicazione Atom RFC 5023 mentre i feed di dati sono conformi alla specifica del protocollo del formato di diffusione Atom RFC 4287.  
   
@@ -39,7 +46,6 @@ caps.handback.revision: 11
   
  Per altre informazioni, vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="AtomServiceDocument"></a> Documento di servizio Atom (file con estensione atomsvc)  
  Un documento di servizio Atom specifica una connessione a uno o più feed di dati. La connessione è almeno un semplice URL del servizio dati che produce il feed.  
@@ -60,14 +66,13 @@ caps.handback.revision: 11
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DataFeeds"></a> Feed di dati  
  Il feed di dati è un file XML che dispone di un formato tabulare coerente che non cambia nel tempo e di dati variabili che possono essere diversi ogni volta che viene eseguito il report. Il formato dei feed di dati generati da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è uguale a quello dei dati generati da ADO.NET Data Services.  
   
  Un feed di dati contiene due sezioni: intestazione e dati. La specifica Atom definisce gli elementi di ogni sezione. L'intestazione include informazioni quali lo schema di codifica dei caratteri da usare con i feed di dati.  
   
-### Sezione di intestazione  
+### <a name="header-section"></a>Sezione di intestazione  
  Nel seguente codice XML viene mostrata la sezione di intestazione di un feed di dati.  
   
  `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
@@ -78,14 +83,14 @@ caps.handback.revision: 11
   
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
-### Sezione di dati  
- La sezione di dati dei feed di dati contiene un elemento \<**voce**> per ogni riga nel set di righe bidimensionale generato dall'estensione per il rendering Atom.  
+### <a name="data-section"></a>Sezione di dati  
+ La sezione di dati dei feed di dati contiene uno \< **voce**> elemento per ogni riga nel set di righe bidimensionale generato dall'estensione per il rendering Atom.  
   
  Nel diagramma seguente viene mostrato un report che usa gruppi e totali.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Il seguente codice XML mostra un elemento \<**voce**> del report specifico di un feed di dati. Si noti che l'elemento \<**voce**> include i totali delle vendite e degli ordini per il gruppo, nonché i totali delle vendite e degli ordini per tutti i gruppi. L'elemento \<**voce**> include tutti i valori sul report.  
+ Il codice XML seguente viene illustrato un \< **voce**> dell'elemento del report specifico di un feed di dati. Si noti che il \< **voce**> elemento include i totali delle vendite e gli ordini per il gruppo e i totali delle vendite e degli ordini per tutti i gruppi. Il \< **voce**> elemento include tutti i valori nel report.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -107,24 +112,23 @@ caps.handback.revision: 11
   
  `</entry>`  
   
-### Utilizzo dei feed di dati  
+### <a name="working-with-data-feeds"></a>Utilizzo dei feed di dati  
  Tutti i feed di dati generati dal report includono gli elementi del report che si trovano nell'ambito dell'elemento padre dell'area dati che genera i feed di dati. . Immaginare un report che dispone di diverse tabelle e di un grafico. Le caselle di testo nel corpo del report forniscono il testo descrittivo di ogni area dati. Ogni voce di ciascun feed di dati generato dal report include il valore della casella di testo. Ad esempio se il testo è "Il grafico visualizza le medie delle vendite mensili per area di vendita", tutti e tre i feed di dati includono questo testo in ogni riga.  
   
  Se il layout del report include le relazioni di dati gerarchiche, ad esempio le aree dati nidificate, tali relazioni sono incluse nel set di righe bidimensionale dei dati del report.  
   
  Le righe di dati per le aree dati nidificate sono generalmente ampie, specialmente se le tabelle e le matrici nidificate includono gruppi e totali. Potrebbe essere utile esportare il report in un feed di dati e visualizzare quest'ultimo per verificare che i dati generati siano quelli previsti.  
   
- Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per il feed di dati che può essere usato nell'URL per visualizzare il contenuto del feed di dati. Il documento di servizio Atom di esempio, mostrato in precedenza, include l'URL http://ServerName/ReportServer?%2fRiepilogo+Vendite+Prodotto&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1". L'URL identifica il report (Product Sales Summary), il formato di rendering Atom (ATOM) e il nome del feed di dati (xAx0x1).  
+ Quando l'estensione per il rendering Atom crea il documento di servizio Atom, viene generato un identificatore univoco per il feed di dati che può essere usato nell'URL per visualizzare il contenuto del feed di dati. Il documento di servizio Atom di esempio, illustrato in precedenza, include l'URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. L'URL identifica il report (Product Sales Summary), il formato di rendering Atom (ATOM) e il nome del feed di dati (xAx0x1).  
   
  I nomi degli elementi del report vengono impostati in modo predefinito sui nomi degli elementi del linguaggio RDL degli elementi del report e, spesso, non sono intuitivi o facili da ricordare. Ad esempio, il nome predefinito della prima matrice presente in un report è Tablix 1. I feed di dati usano questi nomi.  
   
- Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si fornisce un valore per DataElementName, il sottoelemento del feed di dati \<**d**> lo userà al posto del nome dell'area dati predefinito. Ad esempio se il nome predefinito di un area dati è Tablix1 e per DataElementName viene impostato su SalesByTerritoryYear, il sottoelemento \<**d**> nel feed di dati userà SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
+ Per rendere più semplice l'uso del feed di dati, è possibile sfruttare la proprietà DataElementName dell'area dati per fornire nomi descrittivi. Se si specifica un valore per DataElementName sottoelemento del feed di dati \< **d**> verrà utilizzato, anziché il nome predefinito dell'area dati. Ad esempio, se il nome predefinito di un area dati è Tablix1 e DataElementName impostato SalesByTerritoryYear il \< **d**> nei dati feed utilizza SalesByTerritoryYear. Se le aree dati dispongono di due feed di dati come il report matrice descritto in precedenza, i nomi usati nei feed di dati sono SalesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
  Se si confrontano i dati mostrati sul report e i dati del feed di dati, è possibile notare alcune differenze. I report spesso mostrano dati numerici formattati e relativi all'ora/data, mentre il feed di dati contiene dati non formattati.  
   
  Un feed di dati viene salvato con l'estensione di file atom. Per visualizzare la struttura e il contenuto del file, è possibile usare un editor di testo o XML, ad esempio il Blocco note o l'editor XML.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="FlatteningReportData"></a> Rendere bidimensionali i dati del report  
  Il renderer Atom fornisce dati del report come i set di righe bidimensionali in un formato XML. Le regole per rendere bidimensionali le tabelle di dati sono uguali a quelle del renderer CSV con alcune eccezioni:  
@@ -147,7 +151,6 @@ caps.handback.revision: 11
   
  Per altre informazioni, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="AtomRendering"></a> Regole di rendering Atom  
  L'estensione per il rendering Atom ignora le informazioni seguenti quando si esegue il rendering di un feed di dati:  
@@ -185,15 +188,13 @@ caps.handback.revision: 11
 |Indicatore|Viene eseguito il rendering come un singolo record con il nome di stato attivo, gli stati disponibili e il valore dei dati.|  
 |Mappa|Viene generato un feed di dati per ogni area dati mappa. Se più livelli mappa usano la stessa area dati, vengono inclusi tutti nel feed di dati. Nel feed di dati è incluso un record con le etichette e i valori per ogni membro della mappa del livello mappa.|  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer, incluso lo schema di codifica da usare. Per altre informazioni, vedere [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
-## Vedere anche  
- [Esportazione in un file CSV &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Esportazione in un File CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[Esportare report](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

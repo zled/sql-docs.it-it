@@ -1,27 +1,32 @@
 ---
-title: "Riferimento ai parametri di accesso con URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "report [Reporting Services], opzioni di visualizzazione"
-  - "accesso con URL [Reporting Services], parametri di visualizzazione report"
+title: Riferimento ai parametri URL accesso | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Riferimento ai parametri di accesso con URL
+# <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
   È possibile usare i seguenti parametri come parte di un URL per configurare l'aspetto dei [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]report. I parametri più comuni sono elencati in questa sezione: I parametri rilevano la distinzione tra maiuscole e minuscole e iniziano con i prefissi di parametro *rs:* se indirizzati al server di report e *rc:* se indirizzati a un visualizzatore HTML. È inoltre possibile specificare parametri specifici per dispositivi o estensioni per il rendering. Per altre informazioni sui parametri specifici per il dispositivo, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
@@ -40,7 +45,7 @@ caps.handback.revision: 48
 ##  <a name="bkmk_htmlviewer"></a> Comandi del visualizzatore HTML (rc:)  
  I comandi del visualizzatore HTML vengono usati per individuare il visualizzatore HTML (ad esempio da Gestione report) e hanno il prefisso *rc:*:  
   
--   *Toolbar*:  
+-   *Toolbar* :  
                   Visualizza o nasconde la barra degli strumenti. Se il valore di questo parametro è **false**, tutte le opzioni rimanenti vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano. Il valore predefinito di questo parametro è **true**.  
   
     > [!IMPORTANT]  
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : imposta il valore di zoom del report come percentuale con valore intero o come costante stringa. I valori stringa standard comprendono **Page Width** e **Whole Page**. Questo parametro viene ignorato dalle versioni di Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non [!INCLUDE[msCoName](../includes/msconame-md.md)]. Il valore predefinito di questo parametro è **100**.  
+-   *Zoom* : imposta il valore di zoom del report come percentuale con valore intero o come costante stringa. I valori stringa standard comprendono **Page Width** e **Whole Page**. Questo parametro viene ignorato dalle versioni di Internet Explorer precedenti a Internet Explorer 5.0 e da tutti i browser non[!INCLUDE[msCoName](../includes/msconame-md.md)] . Il valore predefinito di questo parametro è **100**.  
   
      Per un esempio in modalità **Native** :  
   
@@ -120,7 +125,7 @@ caps.handback.revision: 48
   
 -   *Stylesheet*: consente di specificare un foglio di stile da applicare al visualizzatore HTML.  
   
--   Impostazione relativa alle informazioni sul dispositivo: specifica un'impostazione relativa alle informazioni sul dispositivo nel formato `rc:tag=value`, dove *tag* è il nome di un'impostazione relativa alle informazioni sul dispositivo specifica dell'estensione per il rendering usata attualmente (vedere la descrizione del parametro *Format*). Ad esempio, è possibile usare l'impostazione relativa alle informazioni sul dispositivo *OutputFormat* in modo tale che l'estensione per il rendering IMAGE esegua il rendering del report a un'immagine JPEG usando i parametri seguenti nella stringa di accesso con URL: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo specifiche per l'estensione, vedere [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Impostazione relativa alle informazioni sul dispositivo: specifica un'impostazione relativa alle informazioni sul dispositivo nel formato `rc:tag=value`, dove *tag* è il nome di un'impostazione relativa alle informazioni sul dispositivo specifica dell'estensione per il rendering usata attualmente (vedere la descrizione del parametro *Format* ). Ad esempio, è possibile usare l'impostazione relativa alle informazioni sul dispositivo *OutputFormat* in modo tale che l'estensione per il rendering IMAGE esegua il rendering del report a un'immagine JPEG usando i parametri seguenti nella stringa di accesso con URL: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo specifiche per l'estensione, vedere [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Comandi del server di report (rs:)  
  I comandi del server di report hanno il prefisso *rs:* e vengono usati sul server di report:  
@@ -200,7 +205,7 @@ caps.handback.revision: 48
   
     -   **GetComponentDefinition** Consente di visualizzare la definizione XML associata a un elemento del report pubblicato. Per utilizzare questo valore, è necessario disporre dell'autorizzazione per la **lettura del contenuto** per un elemento del report pubblicato.  
   
--   *Format*:  
+-   *Format* :  
                   Specifica il formato da usare per il rendering e la visualizzazione di un report. Valori comuni:  
   
     -   **HTML5**  
@@ -227,7 +232,7 @@ caps.handback.revision: 48
   
      Il valore predefinito è **HTML5**. Per altre informazioni, vedere [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
   
-     Per l'elenco completo, vedere la sezione relativa all'estensione **\<Render>** del file rsreportserver.config del server di report.  Per informazioni su dove trovare il file, vedere [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Per un elenco completo, vedere il  **\<rendering >** sezione di estensione del file RSReportServer. config del server di report.  Per informazioni su dove trovare il file, vedere [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Ad esempio, per ottenere una copia PDF di un report direttamente da un server di report in modalità **Native** :  
   
@@ -242,9 +247,9 @@ caps.handback.revision: 48
     ```  
   
 -   *ParameterLanguage*:  
-                  Fornisce una lingua indipendente dalla lingua del browser per i parametri passati in un URL. Il valore predefinito è la lingua del browser. Il valore può essere un valore di impostazioni cultura, ad esempio **it-IT** o **en-US**.  
+                  Fornisce una lingua indipendente dalla lingua del browser per i parametri passati in un URL. Il valore predefinito è la lingua del browser. Il valoe può essere un valoe di impostazioni cultura, ad esempio **it-IT** o **en-US**.  
   
-     Ad esempio, in modalità **Native**, per ignorare la lingua del browser e specificare il valore di impostazioni cultura de-DE:  
+     Ad esempio, in modalità **Native** , per ignorare la lingua del browser e specificare il valore di impostazioni cultura de-DE:  
   
     ```  
     http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
@@ -252,7 +257,7 @@ caps.handback.revision: 48
   
 -   *Snapshot* : esegue il rendering di un report in base a uno snapshot della cronologia del report. Per altre informazioni, vedere [Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
   
-     Ad esempio in modalità **Native**, per recuperare uno snapshot della cronologia del report datato 2003-04-07 con un timestamp 13.40.02:  
+     Ad esempio in modalità **Native** , per recuperare uno snapshot della cronologia del report datato 2003-04-07 con un timestamp 13.40.02:  
   
     ```  
     http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
@@ -262,7 +267,7 @@ caps.handback.revision: 48
                   Esegue il rendering di un report in un solo flusso persistente. Questo parametro viene utilizzato dal renderer di immagini per trasmettere il report visualizzabile un blocco alla volta. Dopo avere utilizzato il parametro in una stringa di accesso URL, utilizzare la stessa stringa di accesso con URL, sostituendo il parametro *GetNextStream* con il parametro *PersistStreams* per ottenere il blocco successivo nel flusso persistente. È possibile che questo comando dell'URL restituisca un flusso di 0 byte per indicare la fine del flusso persistente. Il valore predefinito è **false**.  
   
 -   *GetNextStream*:  
-                  Ottiene il blocco di dati successivo in un flusso persistente al quale è possibile accedere tramite il parametro *PersistStreams*. Per ulteriori informazioni, vedere la descrizione relativa a *PersistStreams*. Il valore predefinito è **false**.  
+                  Ottiene il blocco di dati successivo in un flusso persistente al quale è possibile accedere tramite il parametro *PersistStreams* . Per ulteriori informazioni, vedere la descrizione relativa a *PersistStreams*. Il valore predefinito è **false**.  
   
 -   *SessionID*:  
                   Specifica una sessione di report attiva stabilita tra l'applicazione client e il server di report. Il valore di questo parametro viene impostato sull'identificatore della sessione.  
@@ -303,7 +308,7 @@ caps.handback.revision: 48
   
     -   **None**: per non visualizzare l'intestazione.  
   
-     Ad esempio in modalità **SharePoint**, per visualizzare solo il percorso di navigazione nell'intestazione.  
+     Ad esempio in modalità **SharePoint** , per visualizzare solo il percorso di navigazione nell'intestazione.  
   
     ```  
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
@@ -343,7 +348,7 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: determina quali elementi della barra degli strumenti vengono visualizzati. Si tratta di un valore di enumerazione bit per bit. Per includere un elemento della barra degli strumenti, aggiungere il valore dell'elemento al valore totale. Ad esempio: per nessun menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=63 (o 0x3F) vale a dire 1+2+4+8+16+32; per solo voci del menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=960 (o 0x3C0). Il valore predefinito è **-1** che include tutti gli elementi della barra degli strumenti. I valori validi sono:  
+-   *ToolBarItemsDisplayMode*: determina quali elementi della barra degli strumenti vengono visualizzati. Si tratta di un valore di enumerazione bit per bit. Per includere un elemento della barra degli strumenti, aggiungere il valore dell'elemento al valore totale. Ad esempio: per nessun menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=63 (o 0x3F) vale a dire 1+2+4+8+16+32; per solo voci del menu Azioni, utilizzare rv:ToolBarItemsDisplayMode=960 (o 0x3C0). Il valore predefinito è **-1**che include tutti gli elementi della barra degli strumenti. I valori validi sono:  
   
     -   1 (0x1): pulsante **Indietro**  
   
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Esportare un report tramite l'accesso con URL](../reporting-services/export-a-report-using-url-access.md)  
+ [Esportare un Report con accesso tramite URL](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

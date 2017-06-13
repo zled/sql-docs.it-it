@@ -1,30 +1,35 @@
 ---
-title: "Accedere al provider WMI per Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "Reporting Services WMI Provider"
-apilocation: 
-  - "reportingservices.mof"
-helpviewer_keywords: 
-  - "provider WMI [Reporting Services]"
-  - "programmazione [Reporting Services]"
+title: Provider WMI di Reporting di Access Services | Documenti Microsoft
+ms.custom: 
+ms.date: 11/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- Reporting Services WMI Provider
+apilocation:
+- reportingservices.mof
+helpviewer_keywords:
+- WMI provider [Reporting Services]
+- programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 caps.latest.revision: 57
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 57
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Accedere al provider WMI per Reporting Services
+# <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
   Nel provider WMI per Reporting Services sono esposte due classi WMI per l'amministrazione di istanze del server di report in modalità nativa tramite scripting:  
   
 > [!IMPORTANT]  
@@ -32,12 +37,12 @@ caps.handback.revision: 57
   
 |Classe|Spazio dei nomi|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
   
  Per ogni istanza del server di report viene creata un'istanza di ognuna delle classi sopra indicate. È possibile utilizzare qualsiasi strumento Microsoft o di terze parti per accedere agli oggetti WMI esposti dal server di report, incluse le interfacce di programmazione WMI esposte da .NET Framework stesso. Questo argomento descrive come accedere e usare le istanze della classe WMI con il comando PowerShell [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx).  
   
-## Determinare il nome dell'istanza nella stringa dello spazio dei nomi  
+## <a name="determine-the-instance-name-in-the-namespace-string"></a>Determinare il nome dell'istanza nella stringa dello spazio dei nomi  
  Il nome dell'istanza nel percorso dello spazio dei nomi per le classi WMI per Reporting Services è una codifica dei nomi di istanze che vengono specificati durante l'installazione delle istanze denominate di Reporting Services; ovvero, vengono codificati i caratteri speciali nei nomi delle istanze. Ad esempio, un carattere di sottolineatura (_) è codificato come "_5f", pertanto un nome di istanza "My_Instance" è codificato come "My_5fInstance" nel percorso dello spazio dei nomi WMI.  
   
  Per elencare i nomi codificati delle istanze del server di report nel percorso dello spazio dei nomi WMI, utilizzare il comando PowerShell seguente:  
@@ -46,7 +51,7 @@ caps.handback.revision: 57
 PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
 ```  
   
-## Accedere alle classi WMI utilizzando PowerShell  
+## <a name="access-the-wmi-classes-using-powershell"></a>Accedere alle classi WMI utilizzando PowerShell  
  Per accedere alle classi WMI, eseguire il comando riportato di seguito:  
   
 ```  
@@ -67,14 +72,14 @@ PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\Rep
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  
 ```  
   
-## Eseguire una query sui metodi e sulle proprietà disponibili  
+## <a name="query-the-available-methods-and-properties"></a>Eseguire una query sui metodi e sulle proprietà disponibili  
  Per visualizzare i metodi e le proprietà disponibili in una delle classi WMI per Reporting Services, inviare i risultati da Get-WmiObject al comando Get-Member. Esempio:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
 ```  
   
-## Utilizzare un metodo o una proprietà WMI  
+## <a name="use-a-wmi-method-or-property"></a>Utilizzare un metodo o una proprietà WMI  
  Una volta che si dispone degli oggetti WMI nelle classi di Reporting Services e che si conoscono i metodi e le proprietà disponibili, è possibile utilizzare questi ultimi. Ad esempio, se si dispone di un'istanza del server di report denominata in modalità integrata SharePoint chiamata SHAREPOINT, utilizzare la sequenza dei comandi riportata di seguito per recuperare l'URL per il sito Amministrazione centrale SharePoint:  
   
 ```  
@@ -83,8 +88,9 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento della libreria del provider WMI Reporting Services &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
+

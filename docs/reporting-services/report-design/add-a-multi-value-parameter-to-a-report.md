@@ -1,30 +1,35 @@
 ---
-title: "Aggiunta di un parametro multivalore a un report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere un parametro multivalore a un Report | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiunta di un parametro multivalore a un report
+# <a name="add-a-multi-value-parameter-to-a-report"></a>Aggiunta di un parametro multivalore a un report
   È possibile aggiungere un parametro a un report che consente all'utente di selezionare più valori per il parametro.  
   
  È possibile passare più valori di parametro al report nell'URL del report. Per un esempio di URL in cui è incluso un parametro multivalore, vedere [Passare un parametro del report in un URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
  Per informazioni su come passare più valori di parametro a una stored procedure, vedere [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) (Utilizzo di parametri a selezione multipla per report SSRS) nel sito Web mssqltips.com.  
   
-## Per aggiungere un parametro multivalore  
+## <a name="to-add-a-multi-value-parameter"></a>Per aggiungere un parametro multivalore  
   
 1.  In Generatore report aprire il report a cui si desidera aggiungere il parametro multivalore.  
   
@@ -39,12 +44,12 @@ caps.handback.revision: 7
   
     > [!IMPORTANT]  
     > *  Il testo della query non deve includere l'istruzione DECLARE per la variabile di query.  
-    > *  Il testo per la variabile di query deve includere l'operatore **IN**, come mostrato nell'esempio precedente.  
+    > *  Il testo per la variabile di query deve includere l'operatore **IN** , come mostrato nell'esempio precedente.  
     > *  Assicurarsi di racchiudere la variabile tra parentesi, come mostrato sopra. In caso contrario, il rendering del report non viene eseguito e viene visualizzato il messaggio di errore "Dichiarare la variabile scalare".  
   
     Un parametro del set di dati per un set di dati incorporato o un set di dati condiviso viene creato automaticamente per la variabile di query. Un parametro del report viene creato automaticamente per il parametro del set di dati.  
   
-4.  Nel riquadro **Dati report** espandere il nodo **Parametri**, fare clic con il pulsante destro del mouse sul parametro del report che è stato creato automaticamente per il parametro del set di dati e quindi scegliere **Proprietà parametri**.  
+4.  Nel riquadro **Dati report** espandere il nodo **Parametri** , fare clic con il pulsante destro del mouse sul parametro del report che è stato creato automaticamente per il parametro del set di dati e quindi scegliere **Proprietà parametri**.  
   
 5.  Nella scheda **Generale** selezionare **Consenti più valori** per consentire a un utente di selezionare più valori per il parametro.  
   
@@ -52,9 +57,9 @@ caps.handback.revision: 7
   
      Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro. Per più valori, la funzionalità **Seleziona tutto** è disponibile all'inizio dell'elenco, in modo che l'utente possa selezionare o deselezionare tutti i valori con un solo clic. Se si sceglie di ottenere i valori disponibili per il parametro del report da una query del set di dati, assicurarsi di selezionare un set di dati che non contenga la variabile di query associata allo stesso parametro del report.  
   
-     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md).  
+     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## Per aggiungere un parametro multivalore  
+## <a name="to-add-a-multi-value-parameter"></a>Per aggiungere un parametro multivalore  
   
 1.  In Generatore report aprire il report a cui si desidera aggiungere il parametro multivalore.  
   
@@ -69,12 +74,12 @@ caps.handback.revision: 7
   
     > [!IMPORTANT]  
     > *  Il testo della query non deve includere l'istruzione DECLARE per la variabile di query.  
-    > *  Il testo per la variabile di query deve includere l'operatore **IN**, come mostrato nell'esempio precedente.  
+    > *  Il testo per la variabile di query deve includere l'operatore **IN** , come mostrato nell'esempio precedente.  
     > *  Assicurarsi di racchiudere la variabile tra parentesi, come mostrato sopra. In caso contrario, il rendering del report non viene eseguito e viene visualizzato il messaggio di errore "Dichiarare la variabile scalare".  
       
     Un parametro del set di dati per un set di dati incorporato o un set di dati condiviso viene creato automaticamente per la variabile di query. Un parametro del report viene creato automaticamente per il parametro del set di dati.  
   
-4.  Nel riquadro **Dati report** espandere il nodo **Parametri**, fare clic con il pulsante destro del mouse sul parametro del report che è stato creato automaticamente per il parametro del set di dati e quindi scegliere **Proprietà parametri**.  
+4.  Nel riquadro **Dati report** espandere il nodo **Parametri** , fare clic con il pulsante destro del mouse sul parametro del report che è stato creato automaticamente per il parametro del set di dati e quindi scegliere **Proprietà parametri**.  
   
 5.  Nella scheda **Generale** selezionare **Consenti più valori** per consentire a un utente di selezionare più valori per il parametro.  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 7
   
      Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro. Per più valori, la funzionalità **Seleziona tutto** è disponibile all'inizio dell'elenco, in modo che l'utente possa selezionare o deselezionare tutti i valori con un solo clic. Se si sceglie di ottenere i valori disponibili per il parametro del report da una query del set di dati, assicurarsi di selezionare un set di dati che non contenga la variabile di query associata allo stesso parametro del report.  
   
-     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md).  
+     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

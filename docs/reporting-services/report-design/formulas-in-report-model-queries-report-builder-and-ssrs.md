@@ -1,25 +1,30 @@
 ---
-title: "Formule nelle query del modello di report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10151"
+title: Le formule in Report modello query (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formule nelle query del modello di report (Generatore report e SSRS)
+# <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formule nelle query del modello di report (Generatore report e SSRS)
   Le formule sono calcoli eseguiti su valori in un report che utilizzano un modello di report come origine dati. Le formule vengono definite nella finestra di dialogo **Definisci formula** in Progettazione query modelli di report quando si definisce una query per un'origine dati dei modelli di report. Una formula può includere funzioni, operatori, costanti e riferimenti a campi oppure entità. Le formule consentono di combinare, aggregare, filtrare e restituire dati sia numerici sia di testo. È possibile creare formule e salvarle come nuovi campi oppure modificare quelle esistenti.  
   
  Le formule non sono espressioni RDL e non iniziano con un segno di uguale (=). Per altre informazioni sulle espressioni RDL, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Riferimenti  
+## <a name="references"></a>Riferimenti  
  Si tratta del nome di un campo. Il riferimento può corrispondere al nome di un campo esistente all'interno dell'entità oppure al nome di un campo calcolato creato e aggiunto all'elenco Campi. In Generatore report il riferimento indica la posizione in cui cercare i valori o i dati che si desidera utilizzare nella formula. In una formula è possibile fare riferimento a campi nell'entità di contesto e a campi di altre entità oppure è possibile utilizzare il valore corrispondente a un determinato campo in più formule.  
   
  Quando si utilizzano i riferimenti, l'elaboratore di report esegue la formula su ogni valore incluso nel campo. Ad esempio, si supponga che un campo contenga il totale delle vendite su base annua relativamente agli ultimi cinque anni. Nel campo sono quindi presenti cinque valori, ognuno corrispondente al totale delle vendite di un anno specifico. Se la formula contiene un riferimento a tale campo, ai fini del calcolo del nuovo valore viene utilizzato ogni singolo valore.  
   
-## Operatori  
+## <a name="operators"></a>Operatori  
  Gli operatori consentono di specificare il tipo di calcolo che si desidera eseguire sui valori di una formula. Vi sono tre tipi diversi di operatori di calcolo, ovvero aritmetici, di confronto e di testo. Gli operatori vengono indicati tramite simboli, ad esempio il segno di addizione (+).  
   
  **Operatori aritmetici.** Gli operatori aritmetici consentono di eseguire operazioni matematiche semplici, ad esempio l'addizione, la sottrazione o la moltiplicazione, nonché di combinare e restituire valori numerici.  
@@ -50,14 +55,14 @@ caps.handback.revision: 9
  **Operatore di concatenazione del testo.** Utilizzare la e commerciale (&) per unire, o concatenare, una o più stringhe di testo al fine di restituire un'unica stringa.  
   
 ##  <a name="Constants"></a> Costanti  
- Si tratta di valori che non vengono calcolati e che pertanto non cambiano. In Generatore report vengono usate le costanti seguenti: **True**, **False** ed **Empty**. Tali costanti vengono utilizzate per valutare i campi booleani. Ad esempio, si supponga di disporre di un campo denominato IsDiscontinued. Gli unici valori validi per questo campo sono True, False o Empty (" ").  
+ Si tratta di valori che non vengono calcolati e che pertanto non cambiano. In Generatore report vengono usate le costanti seguenti: **True**, **False**ed **Empty**. Tali costanti vengono utilizzate per valutare i campi booleani. Ad esempio, si supponga di disporre di un campo denominato IsDiscontinued. Gli unici valori validi per questo campo sono True, False o Empty (" ").  
   
 ##  <a name="Functions"></a> Funzioni  
  Si tratta di formule predefinite che consentono di eseguire calcoli usando valori specifici, denominati *argomenti*, in un ordine stabilito. Gli argomenti possono essere valori letterali o campi oppure combinazioni dei due. Quando si utilizzano i campi nelle formule, il nome rappresenta ogni istanza del campo. Se l'argomento è un valore letterale, potrebbe essere necessario indicare i caratteri che vengono utilizzati.  
   
  Le funzioni possono essere utilizzate per eseguire calcoli semplici o complessi. La struttura di una funzione inizia con il nome della funzione, seguito da una parentesi di apertura, dagli argomenti per la funzione separati da virgole e da una parentesi di chiusura.  
   
- ![Esempio di funzione](../../reporting-services/report-design/media/functionexample.gif "Esempio di funzione")  
+ ![Un esempio di una funzione. ] (../../reporting-services/report-design/media/functionexample.gif "Un esempio di una funzione.")  
   
  Gli argomenti possono essere riferimenti a campi, numeri, testo e valori logici come **TRUE** o **FALSE**. Gli argomenti possono inoltre essere costanti, formule oppure altre funzioni. Gli argomenti immessi devono generare un valore valido per l'argomento. Ad esempio, se la formula consiste nella moltiplicazione di due numeri interi, il risultato non può essere una stringa di testo.  
   

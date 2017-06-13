@@ -1,37 +1,44 @@
 ---
-title: "Reporting Services in SQL Server Data Tools (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, Reporting Services"
+title: Reporting Services in SQL Server Data Tools (SSDT) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services in SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] per la creazione di soluzioni di Business Intelligence. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], origini dati condivise, set di dati condivisi e parti di report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , origini dati condivise, set di dati condivisi e parti di report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è incluso in SQL Server. Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
  Questo argomento descrive le soluzioni, i progetti, i modelli di progetto e le configurazioni di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usati per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], nonché le visualizzazioni, le barre degli strumenti e i collegamenti che è possibile usare in Progettazione report.  
   
- Per un'introduzione alla progettazione di report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md).  
+ Per un'introduzione alla progettazione di report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Soluzioni e progetti  
  Un progetto report costituisce il contenitore per le definizioni e le risorse del report. Tutti i file inclusi nel progetto report vengono pubblicati nel server di report al momento della distribuzione del progetto. Quando si crea un progetto per la prima volta, viene creata anche una soluzione come contenitore per il progetto. A una singola soluzione è possibile aggiungere più progetti.  
   
   
 ##  <a name="bkmk_Configurations"></a> Configurazioni  
- Per creare più set di proprietà di progetto per distribuzioni diversificate, ad esempio server di report aziendali di test e produzione, utilizzare Gestione configurazione. Per altre informazioni, vedere [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Per creare più set di proprietà di progetto per distribuzioni diversificate, ad esempio server di report aziendali di test e produzione, utilizzare Gestione configurazione. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ##  <a name="bkmk_ReportServerProjects"></a> Progetti server di report  
  Dopo l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sono disponibili i modelli di progetto seguenti:  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   
- ![Nuovi modelli di progetto in SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
+ ![Nuovi modelli di progetto in SSDT](../../analysis-services/media/ssdt-biprojects.png "modelli di progetto in SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **Set di dati** Ogni set di dati include una query che consente di specificare i dati da recuperare dall'origine dati. Espandere il set di dati per visualizzare la raccolta di campi specificati dalla query del set di dati.  
   
-     In alcune finestre Progettazione query per i set di dati multidimensionali, è possibile specificare i filtri nel riquadro Filtri e indicare se creare i parametri del report. Se si specifica l'opzione relativa ai parametri del report, viene automaticamente creato un set di dati speciale per popolare l'elenco dei valori validi del parametro.  Per impostazione predefinita, questo set di dati non viene visualizzato nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md).  
+     In alcune finestre Progettazione query per i set di dati multidimensionali, è possibile specificare i filtri nel riquadro Filtri e indicare se creare i parametri del report. Se si specifica l'opzione relativa ai parametri del report, viene automaticamente creato un set di dati speciale per popolare l'elenco dei valori validi del parametro.  Per impostazione predefinita, questo set di dati non viene visualizzato nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Parametri report** L'elenco dei parametri del report. Se una query del set di dati include parametri di query, è possibile creare i parametri manualmente o automaticamente.  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  Utilizzare il riquadro Proprietà per:  
   
--   Impostare le proprietà per l'elemento attualmente selezionato nell'area di progettazione. Per alcune proprietà è disponibile un elenco a discesa di valori. È inoltre possibile digitare il valore direttamente nella cella. Alcune proprietà contengono una raccolta di valori, indicata dal valore **(Raccolta)**. La maggior parte delle proprietà può accettare un'espressione. Le espressioni complesse sono indicate dal valore **<Espressione>\>**. Fare clic su **<Espressione>\>** per aprire la finestra di dialogo **Espressione**. Per altre informazioni, vedere [Finestra di dialogo Espressione](../Topic/Expression%20Dialog%20Box.md).  
+-   Impostare le proprietà per l'elemento attualmente selezionato nell'area di progettazione. Per alcune proprietà è disponibile un elenco a discesa di valori. È inoltre possibile digitare il valore direttamente nella cella. Alcune proprietà contengono una raccolta di valori, indicata dal valore **(Raccolta)**. La maggior parte delle proprietà può accettare un'espressione. le espressioni complesse sono indicate dal valore  **\<espressione >**. Fare clic su  **\<espressione >** per aprire la **espressione** la finestra di dialogo. Per altre informazioni, vedere [Finestra di dialogo Espressione](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Utilizzare i pulsanti della barra degli strumenti del riquadro Proprietà per modificare la modalità di visualizzazione della griglia passando dalla visualizzazione per categorie alla visualizzazione in ordine alfabetico. In visualizzazione categorie può essere necessario espandere una categoria per visualizzare tutte le proprietà sottostanti. Per aprire la finestra di dialogo Proprietà di un elemento, fare clic sul pulsante delle **pagine delle proprietà** sulla barra degli strumenti oppure fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà**.  
   
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Supporto della riga di comando per SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è basato su [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]si basa sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
   
 -   Proprietà del progetto per OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder e TargetServerURL.  
   
@@ -304,11 +311,12 @@ caps.handback.revision: 75
     |In una casella di testo, seleziona il testo dalla posizione corrente del cursore alla fine dell'espressione|CTRL+MAIUSC+FINE|  
     |Consente di aprire il menu di scelta rapida dell'elemento del report selezionato|MAIUSC+F10+tasto della proprietà nelle tastiere più recenti|
   
-## Vedere anche  
+## <a name="next-steps"></a>Passaggi successivi
+
 [Scaricare SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [Esplora soluzioni](../../ssms/solution/solution-explorer.md)   
- [Report di Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[Esplora soluzioni](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Report di Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

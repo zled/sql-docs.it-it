@@ -1,26 +1,31 @@
 ---
-title: "Creare e gestire sottoscrizioni per server di report in modalit&#224; nativa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "standard subscriptions [Reporting Services]"
-  - "sottoscrizioni [Reporting Services], standard"
+title: "Creare e gestire sottoscrizioni per server di Report in modalità nativa | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- standard subscriptions [Reporting Services]
+- subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 52
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare e gestire sottoscrizioni per server di report in modalit&#224; nativa
+# <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità nativa
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. In questo argomento vengono fornite informazioni sulle sottoscrizioni standard che vengono create e gestite dai singoli utenti. Le sottoscrizioni guidate dai dati prevedono procedure e requisiti diversi e sono illustrate in un altro argomento. Per altre informazioni, vedere [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
   
  **Contenuto dell'argomento:**  
@@ -42,7 +47,7 @@ caps.handback.revision: 52
   
 -   Per utilizzare il recapito tramite posta elettronica, è necessario che il server di report sia configurato per una connessione tramite un server SMTP o gateway prima di creare la sottoscrizione.  
   
--   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/it-it/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 52
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> Per creare una sottoscrizione con recapito tramite condivisione file  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Passare al report che si vuole sottoscrivere. Fare clic sul menu del report e fare clic su **Sottoscrivi**.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![menu report](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu report")  
   
 3.  **Descrizione**: digitare una descrizione per il report composta da un massimo di 512 caratteri.  
   
@@ -66,13 +71,13 @@ caps.handback.revision: 52
   
 7.  **Aggiungi estensione file alla creazione del file**: questa opzione consente di aggiungere un'estensione di tre caratteri al nome del file. L'estensione del file dipende dal formato di output del report selezionato.  
   
-8.  **Percorso**: digitare il percorso UNC (Universal Naming Convention) di una cartella esistente a cui si desidera che vengano recapitati i report, ad esempio \\\\<servername\>\\<myreports\>. Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
+8.  **Percorso**: digitare un percorso UNC Universal Naming Convention () a una cartella esistente in cui si desidera recapitare il report (ad esempio, \\ \\< nomeserver\>\\< myreports\>). Includere due barre rovesciate all'inizio del percorso e non specificare una barra rovesciata finale.  
   
-     ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+     ![sottoscrizione di condivisione di file](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "sottoscrizione di condivisione di file")  
   
 9. **Formato di rendering**: selezionare un formato di output del report per il recapito del file. Selezionare un formato corrispondente all'applicazione desktop che verrà utilizzata per aprire il report. Evitare formati che non eseguono il rendering del report in un singolo flusso o che introducono elementi di interattività non supportati in un file statico, ad esempio il formato HTML 4.0.  
   
-10. **Credenziali**: selezionare questa opzione per usare l'account di condivisione file o le credenziali di un utente di Windows specifico. L'opzione **Usa l'account di condivisione file** è disabilitata se l'amministratore dei report non ha configurato un account di condivisione file. Per altre informazioni, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nelle caselle di testo **Nome utente** e **Password** specificare le credenziali richieste per accedere alla condivisione file usando il formato *\<dominio>*\\*\<nome utente>* per il nome utente.  
+10. **Credenziali**: selezionare questa opzione per usare l'account di condivisione file o le credenziali di un utente di Windows specifico. L'opzione **Usa l'account di condivisione file** è disabilitata se l'amministratore dei report non ha configurato un account di condivisione file. Per altre informazioni, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nel **nome utente** e **Password** caselle di testo, specificare le credenziali necessarie per accedere alla condivisione file, utilizzando il formato  *\<dominio >*\\*\<nome utente >* per il nome utente.  
   
 11. **Opzioni sovrascrittura**:  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 52
   
     -   Per selezionare una pianificazione condivisa per cui sono già stabilite la data, l'ora e le informazioni sull'occorrenza da utilizzare, fare clic su **In base a una pianificazione condivisa**, quindi selezionare la pianificazione da utilizzare.  
   
-    -   Per recapitare il report quando lo snapshot di un report viene aggiornato con una versione più recente, fare clic su **Quando il contenuto del report viene aggiornato**. Se si sottoscrive un report che recupera dati a intervalli programmati, la pianificazione utilizzata per aggiornare i dati determina il momento dell'elaborazione della sottoscrizione.  
+    -   Per recapitare il report quando lo snapshot di un report viene aggiornato con una versione più recente, fare clic su**Quando il contenuto del report viene aggiornato**. Se si sottoscrive un report che recupera dati a intervalli programmati, la pianificazione utilizzata per aggiornare i dati determina il momento dell'elaborazione della sottoscrizione.  
   
         > [!NOTE]  
         >  Questa opzione è disponibile solo per gli snapshot già associati a una pianificazione di aggiornamento.  
@@ -97,24 +102,24 @@ caps.handback.revision: 52
   
 ###  <a name="bkmk_create_email_subscription"></a> Per creare una sottoscrizione con recapito tramite posta elettronica  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Passare al report che si vuole sottoscrivere. Fare clic sul menu del report e fare clic su **Sottoscrivi**.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![menu report](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu report")  
   
 3.  **Descrizione**: digitare una descrizione per il report composta da un massimo di 512 caratteri.  
   
 4.  **Proprietario**: il campo del proprietario viene impostato sull'utente corrente per impostazione predefinita e non può essere modificato quando si crea la sottoscrizione. Dopo aver salvato la sottoscrizione, tuttavia, è possibile modificare le proprietà di sottoscrizione, tra cui il proprietario e la descrizione.  
   
-5.  **Recapito**: selezionare **Messaggio di posta elettronica**. Se l'opzione **Messaggio di posta elettronica** non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica. Vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/it-it/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Recapito**: selezionare **Messaggio di posta elettronica**. Se l'opzione **Messaggio di posta elettronica** non è disponibile, il server di report non è stato configurato per le sottoscrizioni tramite posta elettronica. Vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **A**: il nome del destinatario nel campo A viene compilato automaticamente con l'account utente di dominio. Verificare che il formato sia [nome utente]@[dominio.com]. Le impostazioni di configurazione del server di report determinano se il campo **A**: viene compilato con l'account utente corrente. Per altre informazioni sulla modifica delle impostazioni di configurazione di indirizzi di posta elettronica, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/it-it/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **A**: il nome del destinatario nel campo A viene compilato automaticamente con l'account utente di dominio. Verificare che il formato sia [nome utente]@[dominio.com]. Le impostazioni di configurazione del server di report determinano se il campo **A** : viene compilato con l'account utente corrente. Per altre informazioni sulla modifica delle impostazioni di configurazione di indirizzi di posta elettronica, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
-    >  A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn** e **Risposta**. A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
+    >  A seconda delle autorizzazioni, può essere possibile digitare l'indirizzo di posta elettronica cui si desidera recapitare il report. Per specificare più indirizzi di posta elettronica, separarli con un punto e virgola (;). È anche possibile digitare indirizzi di posta elettronica supplementari nelle caselle di testo **Cc**, **Ccn**e **Risposta** . A questo fine è necessario disporre dell'autorizzazione per la gestione di tutte le sottoscrizioni.  
   
-7.  **Oggetto**: il valore predefinito è "@ReportName eseguito alle ore @ExecutionTime". È possibile modificare l'oggetto ma si noti che @ReportName ed @ExecutionTime sono le uniche variabili globali supportate nel campo **Oggetto**.  
+7.  **Oggetto**: valore predefinito è "@ReportName è stato eseguito in @ExecutionTime". È possibile modificare l'oggetto ma si noti che il @ReportName e @ExecutionTime sono le uniche variabili globali supportate nel **soggetto** campo.  
   
 8.  Selezionare le opzioni di recapito come segue:  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 52
   
     -   Per selezionare una pianificazione condivisa per cui sono già stabilite la data, l'ora e le informazioni sull'occorrenza da utilizzare, fare clic su **In base a una pianificazione condivisa**, quindi selezionare la pianificazione da utilizzare.  
   
-    -   Per recapitare il report quando lo snapshot di un report viene aggiornato con una versione più recente, fare clic su **Quando il contenuto del report viene aggiornato**. Se si sottoscrive un report che recupera dati a intervalli programmati, la pianificazione utilizzata per aggiornare i dati determina il momento dell'elaborazione della sottoscrizione.  
+    -   Per recapitare il report quando lo snapshot di un report viene aggiornato con una versione più recente, fare clic su**Quando il contenuto del report viene aggiornato**. Se si sottoscrive un report che recupera dati a intervalli programmati, la pianificazione utilizzata per aggiornare i dati determina il momento dell'elaborazione della sottoscrizione.  
   
     > [!NOTE]  
     >  Questa opzione è disponibile solo per gli snapshot già associati a una pianificazione di aggiornamento.  
@@ -151,7 +156,7 @@ caps.handback.revision: 52
   
  L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla. È possibile modificare il proprietario del report dalla pagina delle proprietà di sottoscrizione oppure è possibile modificare la proprietà a livello di codice. Per ulteriori informazioni, vedere quanto segue:  
   
--   [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
@@ -165,13 +170,13 @@ caps.handback.revision: 52
 ##  <a name="bkmk_delete_subscription"></a> Per eliminare una sottoscrizione  
  Per eliminare una sottoscrizione  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report fare clic su **Sottoscrizioni personali** sulla barra degli strumenti e passare alla sottoscrizione da modificare o eliminare.  
   
 3.  Aprire il menu del report e fare clic su **Elimina**.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![menu report](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu report")  
   
  Per annullare una sottoscrizione in corso di elaborazione nel server di report, vedere [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -179,12 +184,12 @@ caps.handback.revision: 52
   
  Una sottoscrizione viene eliminata automaticamente quando viene eliminato il report a cui è associata. Se la sottoscrizione viene eliminata durante l'elaborazione, viene arrestata se l'operazione di eliminazione viene eseguita prima che l'estensione per il recapito riceva i dati della sottoscrizione. In caso contrario, l'elaborazione verrà portata a termine.  
   
-## Vedere anche  
- [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Usare Sottoscrizioni personali &#40;server di report in modalità nativa&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

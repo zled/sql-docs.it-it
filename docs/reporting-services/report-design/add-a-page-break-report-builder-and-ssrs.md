@@ -1,29 +1,34 @@
 ---
-title: "Aggiungere un&#39;interruzione di pagina (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere un&quot;interruzione di pagina (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81f305fdb34231a14c53d376ed9c4535ce6b9f53
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere un&#39;interruzione di pagina (Generatore report e SSRS)
+# <a name="add-a-page-break-report-builder-and-ssrs"></a>Aggiungere un'interruzione di pagina (Generatore report e SSRS)
   È possibile aggiungere un'interruzione di pagina a rettangoli, aree dati o gruppi all'interno di aree dati per controllare la quantità di informazioni in ogni pagina. Con l'aggiunta di interruzioni di pagina è possibile migliorare le prestazioni dei report pubblicati, perché quando si visualizza il report è necessario elaborare solo gli elementi presenti in ogni pagina. Quando l'intero report è costituito da un'unica pagina, prima che sia possibile visualizzare il report è necessario che tutti gli elementi vengano elaborati.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per aggiungere un'interruzione di pagina a un'area dati  
+### <a name="to-add-a-page-break-to-a-data-region"></a>Per aggiungere un'interruzione di pagina a un'area dati  
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse sull'handle d'angolo dell'area dati, quindi scegliere **Proprietà Tablix**.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
     -   **Riduci tabella a una sola pagina se possibile**. Selezionare questa opzione se si desidera adattare i dati in un'unica pagina.  
   
-### Per aggiungere un'interruzione di pagina a un rettangolo  
+### <a name="to-add-a-page-break-to-a-rectangle"></a>Per aggiungere un'interruzione di pagina a un rettangolo  
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse sul rettangolo in cui si desidera aggiungere un'interruzione di pagina, quindi scegliere **Proprietà rettangolo**.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
     -   **Mantieni contenuto in una singola pagina, se possibile**. Selezionare questa opzione se si desidera che il contenuto del rettangolo occupi una sola pagina.  
   
-### Per aggiungere un'interruzione di pagina a un gruppo di righe in una tabella, in una matrice o in un elenco  
+### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>Per aggiungere un'interruzione di pagina a un gruppo di righe in una tabella, in una matrice o in un elenco  
   
 1.  Nel riquadro Raggruppamento fare clic con il pulsante destro del mouse sul gruppo di righe, quindi scegliere **Proprietà gruppo**.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 3.  Facoltativamente, selezionare **Anche all'inizio di un gruppo** o **Anche alla fine di un gruppo** per specificare che un'interruzione di pagina deve essere aggiunta all'inizio o alla fine di un gruppo nella tabella.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

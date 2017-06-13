@@ -1,34 +1,39 @@
 ---
-title: "Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
-  - "10542"
-  - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
+title: Creazione guidata mappa e creazione guidata livello mappa (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rtp.rptdesigner.mapandlayerwizard.f1
+- "10542"
+- MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
- Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
+# <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
+ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
   
  Prima di aggiungere una mappa a un report o un livello mappa a una mappa, è necessario disporre delle informazioni seguenti:  
   
 -   **Origine dati spaziali.** Percorso o connessione a un'origine che fornisce dati spaziali, ad esempio il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di un database in cui sono contenuti dati spaziali o il nome di un file di forma Environmental Systems Research Institute, Inc. (ESRI).  
   
--   **.** Dall'origine dati spaziali, un campo che contiene set di coordinate che specificano le posizioni.  
+-   **Spatial data.** Dall'origine dati spaziali, un campo che contiene set di coordinate che specificano le posizioni.  
   
 -   **Dati analitici.** Dati analitici da usare per variare la visualizzazione della mappa, ad esempio le vendite annuali dei negozi.  
   
@@ -112,16 +117,16 @@ caps.handback.revision: 11
   
  Per ulteriori informazioni, vedere la documentazione relativa al tipo di dati spaziali utilizzato.  
   
-###  <a name="MapGallery"></a> Informazioni sulla raccolta mappe  
+###  <a name="MapGallery"></a>Che cos'è la raccolta mappe?  
  La raccolta mappe contiene le mappe dei report presenti nella cartella della raccolta mappe per l'ambiente di creazione del report. Le mappe della raccolta rappresentano un modo rapido per aggiungere una mappa al report. Le mappe predefinite della raccolta vengono fornite da un provider di mappe.  
   
 > [!NOTE]  
->  In questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usati i dati dei file di forma TIGER/Line forniti gentilmente dall'ufficio statunitense per i censimenti (Census Bureau, [http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
+>  In questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usati i dati dei file di forma TIGER/Line forniti gentilmente dall'ufficio statunitense per i censimenti dall'ufficio statunitense per i censimenti (Census Bureau, [http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
   
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> Informazioni su un file di forma ESRI  
- Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<filename>*.shp che contiene i dati spaziali e un file di supporto *\<filename>*.dbf.  
+###  <a name="Shapefile"></a>Che cos'è un file di forma ESRI?  
+ Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il  *\<filename >*file con estensione SHP che contiene i dati spaziali e un file di supporto * \<filename >*con estensione dbf.  
   
  Quando si specifica come origine dati spaziali un file di forma posizionato nel computer locale, i dati spaziali vengono incorporati automaticamente nel report. Per utilizzare in modo dinamico i dati spaziali di un file ESRI, è necessario eseguire le operazioni seguenti:  
   
@@ -130,13 +135,13 @@ caps.handback.revision: 11
  In Progettazione report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aggiungere sia il file con estensione shp sia il file con estensione dbf al progetto report, quindi specificare il nome del file con estensione shp come origine dati spaziali.  
   
 ###  <a name="GetShapefiles"></a> Dove è possibile ottenere i file di forma ESRI  
- I file di forma ESRI sono disponibili sul Web. Per altre informazioni, vedere [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814) (Ricerca di file di forma ESRI per una mappa).  
+ I file di forma ESRI sono disponibili sul Web. Per altre informazioni, vedere [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)(Ricerca di file di forma ESRI per una mappa).  
   
 ###  <a name="SqlServerSpatial"></a> Informazioni su una query spaziale di SQL Server  
  Una query spaziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è una query del set di dati che specifica dati che possono essere di tipo SQLGeometry o SQLGeography di un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Se nella procedura guidata si definisce un'origine dati, nella pagina Progetta query verranno visualizzate diverse finestre Progettazione query, a seconda del tipo di origine dati a cui si è connessi. Per altre informazioni, vedere [Finestre di progettazione query &#40;Generatore report&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+>  Se nella procedura guidata si definisce un'origine dati, nella pagina Progetta query verranno visualizzate diverse finestre Progettazione query, a seconda del tipo di origine dati a cui si è connessi. Per altre informazioni, vedere [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Quando si esegue la query in Progettazione query, nel set di risultati viene visualizzata una colonna con i dati spaziali sotto forma di testo. Ad esempio una riga potrebbe contenere dati spaziali che rappresentano un singolo punto e la riga successiva dati spaziali che definiscono un set di punti. Ogni riga diventa un elemento della mappa. È possibile variare la visualizzazione di ogni elemento della mappa come un'unità indivisibile.  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 11
   
 -   **Ibrido.** Visualizza la combinazione delle viste **Strada** e **Aereo** .  
   
- Per altre informazioni sulle sezioni, vedere [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Per altre informazioni sulle sezioni, vedere [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Pianificare un report mappa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -247,9 +252,9 @@ caps.handback.revision: 11
   
 -   **Punti.** È possibile specificare regole colore, dimensioni e tipo di marcatore.  
   
- L'elaboratore di report applica le regole impostate e determina in modo automatico l'elenco di elementi da visualizzare in una legenda. Per impostazione predefinita, i risultati di tutte le regole dei livelli vengono visualizzati nella prima legenda. È possibile apportare delle modifiche dopo aver completato la procedura guidata. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ L'elaboratore di report applica le regole impostate e determina in modo automatico l'elenco di elementi da visualizzare in una legenda. Per impostazione predefinita, i risultati di tutte le regole dei livelli vengono visualizzati nella prima legenda. È possibile apportare delle modifiche dopo aver completato la procedura guidata. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

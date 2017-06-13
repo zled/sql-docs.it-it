@@ -1,23 +1,28 @@
 ---
-title: "Aggiungere un filtro (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere un filtro (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere un filtro (Generatore report e SSRS)
+# <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati, un'area dati o un gruppo per includere o escludere valori specifici nei calcoli o nella visualizzazione. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente.  
   
  Per aggiungere un filtro è necessario specificare una o più equazioni di filtro. Un'equazione di filtro è costituita da un'espressione che identifica i dati da filtrare, da un operatore e dal valore con il quale eseguire il confronto. I dati filtrati e il valore devono essere dello stesso tipo di dati. L'applicazione di filtri ai valori aggregati di un set di dati o un'area dati non è supportata.  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per impostare un filtro su un'area dati  
+### <a name="to-set-a-filter-on-a-data-region"></a>Per impostare un filtro su un'area dati  
   
-1.  Aprire un report in visualizzazione **Progettazione**.  
+1.  Aprire un report in visualizzazione **Progettazione** .  
   
-2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su *\<area dati>***Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Verrà visualizzata la finestra di dialogo *\<area dati>***Proprietà**.  
+2.  Selezionare l'area dati nell'area di progettazione e quindi fare doppio clic su  *\<area dati >***proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Il  *\<area dati >***proprietà** verrà visualizzata la finestra di dialogo.  
   
     > [!NOTE]  
     >  In un'area dati Tablix fare clic con il pulsante destro del mouse sulla cella d'angolo oppure sull'handle di una riga o colonna e quindi scegliere **Proprietà Tablix**.  
@@ -54,9 +59,9 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per impostare un filtro su un gruppo di righe o di colonne Tablix  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>Per impostare un filtro su un gruppo di righe o di colonne Tablix  
   
-1.  Aprire un report in visualizzazione **Progettazione**.  
+1.  Aprire un report in visualizzazione **Progettazione** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla tabella, sulla matrice o sull'area dati dell'elenco nell'area di progettazione per selezionarla. Nel riquadro di raggruppamento vengono visualizzati i gruppi per l'elemento selezionato.  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per impostare un filtro su un gruppo di categorie Grafico  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>Per impostare un filtro su un gruppo di categorie Grafico  
   
-1.  Aprire un report in visualizzazione **Progettazione**.  
+1.  Aprire un report in visualizzazione **Progettazione** .  
   
 2.  Nell'area di progettazione fare due volte clic sul grafico per visualizzare le aree di rilascio dei campi dati, serie e categoria.  
   
@@ -102,9 +107,9 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per impostare un filtro su un gruppo di serie Grafico  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>Per impostare un filtro su un gruppo di serie Grafico  
   
-1.  Aprire un report in visualizzazione **Progettazione**.  
+1.  Aprire un report in visualizzazione **Progettazione** .  
   
 2.  Nell'area di progettazione fare due volte clic sul grafico per visualizzare le aree di rilascio dei campi dati, serie e categoria.  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vedere anche  
- [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

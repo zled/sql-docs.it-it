@@ -1,38 +1,43 @@
 ---
-title: "Aggiungere un&#39;immagine di sfondo (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere un&quot;immagine di sfondo (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35b41f21f12487ef0ff32daa999ce4e4075c4180
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere un&#39;immagine di sfondo (Generatore report e SSRS)
+# <a name="add-a-background-image-report-builder-and-ssrs"></a>Aggiungere un'immagine di sfondo (Generatore report e SSRS)
   È possibile aggiungere un'immagine di sfondo a un elemento del report, ad esempio un rettangolo, una casella di testo, un elenco, una matrice, una tabella e ad alcune parti di un grafico, o a una sezione del report, ad esempio un'intestazione di pagina, un piè di pagina o il corpo del report. È possibile definire un'immagine di sfondo per qualsiasi elemento selezionato nell'area di progettazione per il quale la proprietà **BackgroundImage** sia visualizzata nel riquadro Proprietà. Analogamente ad altre immagini, quella di sfondo può essere l'URL di un'immagine nel server di report, un'immagine da un campo del set di dati o un'immagine incorporata nella definizione del report. Per utilizzare un'immagine incorporata nel report, è necessario innanzitutto aggiungere l'immagine alla definizione del report prima di poterla aggiungere all'area di progettazione.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per incorporare un'immagine nella definizione del report  
+### <a name="to-embed-an-image-in-the-report-definition"></a>Per incorporare un'immagine nella definizione del report  
   
-1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse sul nodo **Immagini**, quindi scegliere **Aggiungi immagine**.  
+1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse sul nodo **Immagini** , quindi scegliere **Aggiungi immagine**.  
   
     > [!NOTE]  
     >  Se il riquadro dei dati del report non è visualizzato, scegliere **Dati report** dal menu **Visualizza**.  
   
 2.  Passare all'immagine da incorporare nella definizione del report, quindi fare clic su **OK**.  
   
-### Per aggiungere un'immagine di sfondo  
+### <a name="to-add-a-background-image"></a>Per aggiungere un'immagine di sfondo  
   
 1.  Nella visualizzazione di progettazione report selezionare l'elemento del report a cui si desidera aggiungere un'immagine di sfondo.  
   
@@ -61,14 +66,14 @@ caps.handback.revision: 10
          Per **MIMEType** o un formato di file, selezionare il tipo MIME appropriato per l'immagine, ad esempio bmp.  
   
         > [!NOTE]  
-        >  Il valore MIMEType viene applicato solo se la proprietà **Source** è impostata su **Database**. Se la proprietà **Source** è impostata su**External** o **Embedded**, il valore di **MIMEType** verrà ignorato.  
+        >  Il valore MIMEType viene applicato solo se la proprietà **Source** è impostata su **Database**. Se la proprietà **Source** è impostata su **External** o **Embedded**, il valore di **MIMEType** verrà ignorato.  
   
-    -   Per **BackgroundRepeat**, selezionare un'espressione, **Default**, **Repeat**, **RepeatX**, **RepeatY** o **Clip**.  
+    -   Per **BackgroundRepeat**, selezionare un'espressione, **Default**, **Repeat**, **RepeatX**, **RepeatY**o **Clip**.  
   
-         Per immagini di sfondo in un grafico **BackgroundRepeat** può essere impostato su **Default**, **Repeat**, **Fit** e **Clip**, ma non su **RepeatX** o **RepeatY**.  
+         Per immagini di sfondo in un grafico **BackgroundRepeat** può essere impostato su **Default**, **Repeat**, **Fit**e **Clip**, ma non su **RepeatX** o **RepeatY**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Esercitazione: Introduzione alle espressioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Introduzione alle espressioni | Documenti Microsoft'
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Introduzione alle espressioni
+# <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
 
 Vengono usate espressioni con le quali concatenare valori di nomi, ricercare valori in un set di dati separato, visualizzare colori diversi in base ai valori dei campi e così via.  
@@ -31,7 +36,7 @@ Nell'immagine seguente viene illustrato un report simile a quello che verrà cre
   
 Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Setup"></a>1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
@@ -40,7 +45,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 > [!NOTE]  
 > In questa esercitazione la query contiene i valori dei dati e non richiede un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
   
-### Per creare un report tabella  
+### <a name="to-create-a-table-report"></a>Per creare un report tabella  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
@@ -98,7 +103,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 11. Scegliere **Avanti**.  
   
-12. Nella pagina **Disponi campi** trascinare i campi seguenti nell'ordine specificato, dall'elenco **Campi disponibili** all'elenco **Valori**.  
+12. Nella pagina **Disponi campi** trascinare i campi seguenti nell'ordine specificato, dall'elenco **Campi disponibili** all'elenco **Valori** .  
   
     -   StateProvince   
     -   CountryRegionID  
@@ -107,11 +112,11 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
     Poiché in ID Paese/Regione e Acquisti da inizio anno sono inclusi dati numerici, per impostazione predefinita viene applicata l'aggregazione SUM a tali campi, anche se non si vuole sommarli.  
    
-13. Nell'elenco **Valori** fare clic con il pulsante destro del mouse su **IDPaeseRegione** e disattivare la casella di controllo **Somma**.  
+13. Nell'elenco **Valori** fare clic con il pulsante destro del mouse su **IDPaeseRegione** e disattivare la casella di controllo **Somma** .  
   
     Al campo CountryRegionID non viene più applicata la somma.  
   
-14. Nell'elenco **Valori** fare clic con il pulsante destro del mouse su **YTDPurchase** e sull'opzione **Somma**.  
+14. Nell'elenco **Valori** fare clic con il pulsante destro del mouse su **YTDPurchase** e sull'opzione **Somma** .  
   
     Al campo YTDPurchase non viene più applicata la somma.  
     
@@ -119,7 +124,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 15. Scegliere **Avanti**.  
   
-16. Nella pagina **Scegliere il layout**, mantenere tutte le impostazioni predefinite e fare clic su **Avanti**.  
+16. Nella pagina **Scegliere il layout** , mantenere tutte le impostazioni predefinite e fare clic su **Avanti**.  
 
     ![Generatore-report-espressione-esercitazione-scegliere-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
@@ -127,9 +132,9 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 ## <a name="UpdateNames"></a>2. Aggiornare i nomi predefiniti dell'origine dati e del set di dati  
   
-### Per aggiornare il nome predefinito dell'origine dati  
+### <a name="to-update-the-default-name-of-the-data-source"></a>Per aggiornare il nome predefinito dell'origine dati  
   
-1.  Nel riquadro Dati report espandere la cartella **Origini dati**.  
+1.  Nel riquadro Dati report espandere la cartella **Origini dati** .  
   
 2.  Fare clic con il pulsante destro del mouse su **DataSource1** e scegliere **Proprietà origine dati.**  
   
@@ -137,9 +142,9 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Per aggiornare il nome predefinito del set di dati  
+### <a name="to-update-the-default-name-of-the-dataset"></a>Per aggiornare il nome predefinito del set di dati  
   
-1.  Nel riquadro Dati report espandere la cartella **Set di dati**.  
+1.  Nel riquadro Dati report espandere la cartella **Set di dati** .  
   
 2.  Fare clic con il pulsante destro del mouse su **DataSet1** e scegliere **Proprietà set di dati.**  
 
@@ -150,11 +155,11 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
-In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione**(**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione**.   
+In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione**(**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
   
-1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince**, scegliere **Inserisci colonna** e fare clic su **A sinistra**.  
+1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince** , scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
   
-    Una nuova colonna verrà aggiunta a sinistra della colonna **StateProvince**. 
+    Una nuova colonna verrà aggiunta a sinistra della colonna **StateProvince** . 
     
     ![Generatore-report-espressione- esercitazione-inserire-colonna](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
@@ -164,7 +169,7 @@ In questa sezione, viene usata la funzione **Left** e l'operatore di **concatena
 
     ![Generatore- report- espressione-esercitazione-inserire-espressione](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Text**.  
+4.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni**e fare clic su **Text**.  
   
 5.  Nell'elenco **Elemento** fare doppio clic su **Left**.  
   
@@ -197,7 +202,7 @@ In questa sezione, viene usata la funzione **Left** e l'operatore di **concatena
 ## <a name="DateFormat"></a>(facoltativo) Formattare le colonne Data e Valuta e la riga di intestazione  
 In questa sezione viene formattata la colonna **Ultimo acquisto** che contiene date, e la colonna Acquisti da inizio anno, che contiene la valuta. Viene anche formattata la riga di intestazione.  
   
-### Per formattare la colonna della data  
+### <a name="to-format-the-date-column"></a>Per formattare la colonna della data  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -205,17 +210,17 @@ In questa sezione viene formattata la colonna **Ultimo acquisto** che contiene d
 
     ![Generatore- report- espressione-esercitazione-data-formato](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
-3.  Anche nella sezione **Numero**, fare clic sulla freccia accanto a **Stili segnaposto** e selezionare **Valori di esempio**. 
+3.  Anche nella sezione **Numero** , fare clic sulla freccia accanto a **Stili segnaposto** e selezionare **Valori di esempio**. 
 
     ![Generatore- report- espressione-esercitazione-esempio-valori](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     È ora possibile vedere un esempio di formattazione selezionata. 
   
-### Per formattare la colonna della valuta
+### <a name="to-format-the-currency-column"></a>Per formattare la colonna della valuta
 
 - Selezionare la cella di dati nella colonna **Acquisti da inizio anno** e selezionare **Simbolo valuta** nella sezione **Numero**.
  
-### Per formattare le intestazioni di colonna
+### <a name="to-format-the-column-headers"></a>Per formattare le intestazioni di colonna
 
 1. Selezionare la riga delle intestazioni di colonna.
 
@@ -236,17 +241,17 @@ In questa sezione vengono aggiunti colori per visualizzare il sesso di una perso
 Per conservare il colore che è stato applicato alla cella della tabella durante la creazione di un report a righe alternate evidenziate, aggiungere un rettangolo e applicare un colore di sfondo al rettangolo.  
     
  
-### Per aggiungere una colonna di M/F  
+### <a name="to-add-an-mf-column"></a>Per aggiungere una colonna di M/F  
   
-1.  Fare clic con il pulsante destro del mouse sulla colonna **Nome**, scegliere **Inserisci colonna** e fare clic su **A sinistra**.  
+1.  Fare clic con il pulsante destro del mouse sulla colonna **Nome** , scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
   
-    Verrà aggiunta una nuova colonna a sinistra della colonna **Nome**.  
+    Verrà aggiunta una nuova colonna a sinistra della colonna **Nome** .  
   
 2.  Fare clic sull'intestazione della nuova colonna e digitare **M/F**.  
   
-### Per aggiungere un rettangolo  
+### <a name="to-add-a-rectangle"></a>Per aggiungere un rettangolo  
   
-1.   Nella scheda **Inserisci** fare clic su **Rettangolo** e fare clic nella cella di dati della colonna **M/F**.  
+1.   Nella scheda **Inserisci** fare clic su **Rettangolo** e fare clic nella cella di dati della colonna **M/F** .  
   
      Verrà aggiunto un rettangolo alla cella.  
      
@@ -256,7 +261,7 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
 
     ![Generatore- report- espressione-esercitazione-stretta-colonna](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
-### Per indicare il sesso con il colore  
+### <a name="to-use-color-to-show-gender"></a>Per indicare il sesso con il colore  
   
 1.  Fare clic con il pulsante destro del mouse sul rettangolo nella cella di dati nella colonna **M/F** e scegliere **Proprietà rettangolo**.  
   
@@ -272,17 +277,17 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
   
 7.  Digitare **="Maschio",** (inclusa la virgola).
 
-8. Nell'elenco **Categoria** fare clic su **Costanti** e nella casella**Valori** fare clic su **Blu fiordaliso**.
+8. Nell'elenco **Categoria** fare clic su **Costanti**e nella casella **Valori** fare clic su **Blu fiordaliso**.
 
     ![Generatore- report- espressione-esercitazione-colore espressione-blu-fiordaliso](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. Aggiungere una virgola. 
   
-5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **Sesso** di nuovo.  
+5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **Sesso** di nuovo.  
   
 7.  Digitare **="Femmina",** (inclusa la virgola). 
 
-8. Nell'elenco **Categoria** fare clic su **Costanti** e nella casella**Valori** fare clic su **Cremisi**.
+8. Nell'elenco **Categoria** fare clic su **Costanti**e nella casella **Valori** fare clic su **Cremisi**.
 
 13. Aggiungere una parentesi di chiusura **)** dopo di esso. 
   
@@ -290,17 +295,17 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
     
     ![Generatore- report- espressione-esercitazione-colore espressione-completo](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. Fare clic su **OK** e di nuovo su **OK** per chiudere la finestra di dialogo **Proprietà rettangolo**.  
+12. Fare clic su **OK**e di nuovo su **OK** per chiudere la finestra di dialogo **Proprietà rettangolo** .  
   
 14. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
     ![Generatore- report- espressione-esercitazione-anteprima-m-f-colonna](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
-### Per formattare i bordi dei rettangoli
+### <a name="to-format-the-color-rectangles"></a>Per formattare i bordi dei rettangoli
 
 1. Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
 
-16. Selezionare il rettangolo nella colonna **M/F**. Nella sezione Bordo del riquadro Proprietà impostare queste proprietà:
+16. Selezionare il rettangolo nella colonna **M/F** . Nella sezione Bordo del riquadro Proprietà impostare queste proprietà:
 
     - BorderColor = White
     - BorderStyle = Solid
@@ -315,15 +320,15 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
 ## <a name="Lookup"></a>5. Cercare il nome CountryRegion  
 In questa sezione viene creato un set di dati PaeseRegione e viene usata la funzione **Lookup** per visualizzare il nome di un paese o di una regione anziché il relativo identificatore.  
   
-### Per creare un set di dati CountryRegion  
+### <a name="to-create-the-countryregion-dataset"></a>Per creare un set di dati CountryRegion  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
 2.  Nel riquadro Dati report fare clic su **Nuovo** e selezionare **Set di dati**.  
   
-3.  Fare clic su **Usare un set di dati incorporato nel report** nella finestra di dialogo **Proprietà set di dati.  
+3.  In * * proprietà set di dati, fare clic su **utilizzare un set di dati incorporato nel report**.  
   
-4.  Selezionare ExpressionsDataSource nell'elenco **Origine dati**.  
+4.  Selezionare ExpressionsDataSource nell'elenco **Origine dati** .  
   
 5.  Nella casella **Nome** digitare **CountryRegion**  
   
@@ -354,13 +359,13 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-11. Scegliere di nuovo **OK** per chiudere la finestra di dialogo **Proprietà set di dati**.  
+11. Scegliere di nuovo **OK** per chiudere la finestra di dialogo **Proprietà set di dati** .  
 
-     È ora disponibile un secondo set di dati nella colonna **Dati report**.
+     È ora disponibile un secondo set di dati nella colonna **Dati report** .
   
-### Per cercare valori nel set di dati CountryRegion  
+### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sull'intestazione della colonna **ID Paese/Regione** ed eliminare il testo : **ID** in modo che si legga **Paese/Regione**.  
+1.  Fare clic sull'intestazione della colonna **ID Paese/Regione** ed eliminare il testo : **ID**in modo che si legga **Paese/Regione**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   
@@ -368,11 +373,11 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
     L'espressione rimanente è: `=`  
   
-4.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Vari** e nell'elenco **Elemento** fare doppio clic su **Ricerca**.  
+4.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Vari**e nell'elenco **Elemento** fare doppio clic su **Ricerca**.  
   
-6.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **IDPaeseRegione**.  
+6.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **IDPaeseRegione**.  
   
-8.  Collocare il cursore immediatamente dopo `CountryRegionID.Value` e digitare **,Fields!ID.value, Fields!PaeseRegione.value, "PaeseRegione")**  
+8.  Collocare il cursore immediatamente dopo `CountryRegionID.Value`e digitare **,Fields!ID.value, Fields!PaeseRegione.value, "PaeseRegione")**  
   
     L'espressione completa è: `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -385,13 +390,13 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
 ## <a name="Count"></a>6. Contare i giorni dall'ultimo acquisto  
 In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o la variabile globale incorporata `ExecutionTime` per calcolare il numero di giorni dagli ultimi acquisti di un cliente.  
   
-### Per aggiungere la colonna Days Ago  
+### <a name="to-add-the-days-ago-column"></a>Per aggiungere la colonna Days Ago  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Fare clic con il pulsante destro del mouse sulla colonna **Last Purchase**, scegliere **Inserisci colonna** e fare clic su **A destra**.  
+2.  Fare clic con il pulsante destro del mouse sulla colonna **Last Purchase** , scegliere **Inserisci colonna**e fare clic su **A destra**.  
   
-    Una nuova colonna verrà aggiunta a destra della colonna **Last Purchase**.  
+    Una nuova colonna verrà aggiunta a destra della colonna **Last Purchase** .  
   
 3.  Nell'intestazione di colonna digitare **Days Ago**  
   
@@ -403,16 +408,16 @@ In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o
   
 7.  Immediatamente dopo `DateDiff(`, digitare **"d",** (incluso virgolette "" e virgola). 
   
-9. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **UltimoAcquisto**.  
+9. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **UltimoAcquisto**.  
   
 11. Immediatamente dopo `Fields!LastPurchase.Value`, digitare **,** (una virgola). 
   
 13. Nell'elenco **Categoria** fare clic di nuovo su **Data/Ora** e nell'elenco **Elemento** fare clic su **Now**.  
   
     > [!WARNING]  
-    > Nei report di produzione non è consigliabile usare la funzione **Now** in espressioni valutate più volte quando si esegue il rendering del report, ad esempio nelle righe di dettaglio di un report. Il valore di **Now** cambia da riga a riga e i valori diversi influiscono sui risultati della valutazione delle espressioni, generando risultati leggermente incoerenti. Usare invece la variabile globale `ExecutionTime` di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+    > Nei report di produzione non è consigliabile usare la funzione **Now** in espressioni valutate più volte quando si esegue il rendering del report, ad esempio nelle righe di dettaglio di un report. Il valore di **Now** cambia da riga a riga e i valori diversi influiscono sui risultati della valutazione delle espressioni, generando risultati leggermente incoerenti. Usare invece la variabile globale `ExecutionTime` di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-15. Eliminare la parentesi aperta dopo `Now(` e digitare una parentesi chiusa **)**  
+15. Eliminare la parentesi aperta dopo `Now(`e digitare una parentesi chiusa **)**  
   
     L'espressione completa è: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
@@ -425,21 +430,21 @@ In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o
 ## <a name="Indicator"></a>7. Utilizzare un indicatore per mostrare il confronto vendite  
 In questa sezione viene aggiunta una nuova colonna e viene usato un indicatore per indicare se gli acquisti da inizio anno da parte di una persona sono al di sopra o al di sotto della relativa media. La funzione **Round** consente di rimuovere i decimali dai valori.  
   
-La configurazione dell'indicatore e dei relativi stati richiede numerosi passaggi. Se si vuole, è possibile passare direttamente alla procedura "Per configurare l'indicatore" e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **Espressione**.  
+La configurazione dell'indicatore e dei relativi stati richiede numerosi passaggi. Se si vuole, è possibile passare direttamente alla procedura "Per configurare l'indicatore" e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **Espressione** .  
   
-### Per aggiungere la colonna + or - AVG Sales  
+### <a name="to-add-the--or---avg-sales-column"></a>Per aggiungere la colonna + or - AVG Sales  
   
-1.  Fare clic con il pulsante destro del mouse sulla colonna **YTD Purchase**, scegliere **Inserisci colonna** e fare clic su **A destra**.  
+1.  Fare clic con il pulsante destro del mouse sulla colonna **YTD Purchase** , scegliere **Inserisci colonna**e fare clic su **A destra**.  
   
-    Una nuova colonna verrà aggiunta a destra della colonna **YTD Purchase**.  
+    Una nuova colonna verrà aggiunta a destra della colonna **YTD Purchase** .  
   
-2.  Fare clic sull'intestazione della nuova colonna e digitare **Media vendite + o - **  
+2.  Fare clic sull'intestazione della nuova colonna e digitare **Media vendite + o -**  
   
-### Per aggiungere un indicatore  
+### <a name="to-add-an-indicator"></a>Per aggiungere un indicatore  
   
-1.  Nella scheda **Inserisci** selezionare **Indicatore** e fare clic nella cella di dati della colonna **Media vendite + o - **.  
+1.  Nella scheda **Inserisci** selezionare **Indicatore**e fare clic nella cella di dati della colonna **Media vendite + o -** .  
   
-    Verrà visualizzata la finestra di dialogo **Seleziona tipo indicatore**.  
+    Verrà visualizzata la finestra di dialogo **Seleziona tipo indicatore** .  
   
 2.  Nel gruppo **Direzionale** di set di icone selezionare il set di tre frecce grigie.  
 
@@ -447,23 +452,23 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Per configurare l'indicatore  
+### <a name="to-configure-the-indicator"></a>Per configurare l'indicatore  
   
-1.  Fare clic con il pulsante destro del mouse sull'indicatore, selezionare **Proprietà indicatore** e scegliere **Valore e stati**.  
+1.  Fare clic con il pulsante destro del mouse sull'indicatore, selezionare **Proprietà indicatore**e scegliere **Valore e stati**.  
   
-2.  Fare clic sul pulsante dell'espressione **fx** accanto alla casella di testo **Valore**.  
+2.  Fare clic sul pulsante dell'espressione **fx** accanto alla casella di testo **Valore** .  
   
-3.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Math**.  
+3.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni**e fare clic su **Math**.  
   
 4.  Nell'elenco **Elemento** fare doppio clic su **Round**.  
   
-5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+5.  Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
-7.  Immediatamente dopo `Fields!YTDPurchase.Value`, digitare **-** (segno di sottrazione). 
+7.  Immediatamente dopo `Fields!YTDPurchase.Value`, digitare  **-** (segno di sottrazione). 
   
-9. Espandere di nuovo **Funzioni comuni**, fare clic su **Aggregazione** e nell'elenco **Elemento** fare doppio clic su **AVG**.  
+9. Espandere di nuovo **Funzioni comuni** , fare clic su **Aggregazione**e nell'elenco **Elemento** fare doppio clic su **AVG**.  
   
-11. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+11. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
 13. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare **, "Espressioni"))**  
   
@@ -473,19 +478,19 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
   
 16. Nella casella **Unità di misura stati** selezionare **Numerico**.  
   
-17. Nella riga con la freccia rivolta verso il basso fare clic sul pulsante **fx** a destra della casella di testo per il valore **Iniziale**.  
+17. Nella riga con la freccia rivolta verso il basso fare clic sul pulsante **fx** a destra della casella di testo per il valore **Iniziale** .  
 
     ![Generatore- report- espressione-esercitazione-indicatore-avvio](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Math**.  
+18. Nella finestra di dialogo **Espressione** espandere **Funzioni comuni**e fare clic su **Math**.  
   
 19. Nell'elenco **Elemento** fare doppio clic su **Round**.  
   
-20. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+20. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
-22. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare **-** (segno di sottrazione). 
+22. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare  **-** (segno di sottrazione). 
   
-24. Espandere di nuovo **Funzioni comuni**, fare clic su **Aggregazione** e nell'elenco **Elemento** fare doppio clic su **Avg**.  
+24. Espandere di nuovo **Funzioni comuni** , fare clic su **Aggregazione**e nell'elenco **Elemento** fare doppio clic su **Avg**.  
   
 26. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
@@ -505,13 +510,13 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
   
 33. Nella riga con la freccia rivolta verso l'alto, nella casella **Inizio** digitare **0**  
   
-34. Fare clic sul pulsante **fx** a destra della casella di testo per il valore **Finale**.  
+34. Fare clic sul pulsante **fx** a destra della casella di testo per il valore **Finale** .  
   
 35. Nella finestra di dialogo **Espressione** eliminare **100** e creare l'espressione: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-37. Scegliere di nuovo **OK** per chiudere la finestra di dialogo **Proprietà indicatore**.  
+37. Scegliere di nuovo **OK** per chiudere la finestra di dialogo **Proprietà indicatore** .  
   
 38. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
 
@@ -520,7 +525,7 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
 ## <a name="GreenBar"></a>8. Creare un report a righe alternate evidenziate  
 Creare un parametro in modo che gli utenti del report possano specificare il colore da applicare alle righe alternate.  
   
-### Per aggiungere un parametro  
+### <a name="to-add-a-parameter"></a>Per aggiungere un parametro  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -530,9 +535,9 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
   
     Verrà visualizzata la finestra di dialogo **Proprietà parametri report** .  
   
-3.  In **Messaggio di richiesta** digitare **Choose color**  
+3.  In **Messaggio di richiesta**digitare **Choose color**  
   
-4.  Nella casella **Nome** digitare **RowColor**  
+4.  Nella casella **Nome**digitare **RowColor**  
   
 5.  Nella scheda **Valori disponibili** fare clic su **Imposta valori**.  
   
@@ -564,27 +569,27 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Per applicare colori alternati alle righe di dettaglio  
+### <a name="to-apply-alternating-colors-to-detail-rows"></a>Per applicare colori alternati alle righe di dettaglio  
   
-1.   Selezionare tutte le celle nella riga di dati tranne la cella della colonna **M/F**, che ha già un colore di sfondo.  
+1.   Selezionare tutte le celle nella riga di dati tranne la cella della colonna **M/F** , che ha già un colore di sfondo.  
 
      ![Generatore-report-espressione-esercitazione-selezionare-a righe alternate](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
 4.  Nel riquadro Proprietà fare clic su **BackgroundColor**. 
 
-     Se il riquadro Proprietà non è visualizzato, selezionare la casella di controllo **Proprietà** nella scheda **Vista**.  
+     Se il riquadro Proprietà non è visualizzato, selezionare la casella di controllo **Proprietà** nella scheda **Vista** .  
   
-    Se le proprietà sono elencate per categoria nel riquadro Proprietà, **BackgroundColor** si trova nella categoria **Altre**.  
+    Se le proprietà sono elencate per categoria nel riquadro Proprietà, **BackgroundColor** si trova nella categoria **Altre** .  
   
 5.  Fare clic sulla freccia a discesa e scegliere **Espressione**.  
 
     ![Generatore-report-espressione-esercitazione-a righe alternate-colore-proprietà](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
-6.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni** e fare clic su **Program Flow**.  
+6.  Nella finestra di dialogo **Espressione** espandere **Funzioni comuni**e fare clic su **Program Flow**.  
   
 7.  Nell'elenco **Elemento** fare doppio clic su **IIf**.  
   
-8.  In **Funzioni comuni** fare clic su **Altre** e nell'elenco **Elemento** fare doppio clic su **RowNumber**.  
+8.  In **Funzioni comuni**fare clic su **Altre**e nell'elenco **Elemento** fare doppio clic su **RowNumber**.  
 
 9. Immediatamente dopo **RowNumber (** digitare **Nothing) MOD 2,**
   
@@ -598,7 +603,7 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Eseguire il report  
+### <a name="run-the-report"></a>Eseguire il report  
   
 1.  Nella scheda **Home** fare clic su **Esegui**.  
 
@@ -617,11 +622,11 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
 ## <a name="Title"></a>(facoltativo) Aggiungere un titolo al report  
 Aggiungere un titolo al report.  
   
-### Per aggiungere il titolo di un report  
+### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione selezionare **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Riepilogo vendite comparativo** e selezionare il testo.  
+2.  Digitare **Riepilogo vendite comparativo**e selezionare il testo.  
   
 3.  Nella casella **Carattere** della scheda **Home** impostare:
 
@@ -638,7 +643,7 @@ Aggiungere un titolo al report.
   
 In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
   
-### Per salvare il report in un server di report  
+### <a name="to-save-the-report-to-a-report-server"></a>Per salvare il report in un server di report  
   
 1.  Scegliere **Salva con nome** dal menu **File**.  
   
@@ -657,7 +662,7 @@ A questo punto i lettori del report possono visualizzare il report nel [!INCLUDE
 ![Generatore- report- espressione-esercitazione-finale-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Espressioni &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [Indicatori &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
@@ -667,3 +672,5 @@ A questo punto i lettori del report possono visualizzare il report nel [!INCLUDE
   
   
   
+
+

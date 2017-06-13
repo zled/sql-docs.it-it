@@ -15,3 +15,4 @@
 # [Installare le funzionalità di Business Intelligence di SQL Server 2016](install-sql-server-business-intelligence-features.md)
 # [Configurare Windows Firewall per consentire l'accesso a SQL Server](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [Configurare un computer multihomed per l'accesso a SQL Server](configure-a-multi-homed-computer-for-sql-server-access.md)  
+# [Guida dell'installazione guidata](instance-configuration.md)

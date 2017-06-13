@@ -1,32 +1,37 @@
 ---
-title: "Formattazione di numeri e date (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: Formattazione di numeri e date (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formattazione di numeri e date (Generatore report e SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formattazione di numeri e date (Generatore report e SSRS)
   È possibile formattare numeri e date nelle aree dati selezionando un formato nella pagina **Numero** della finestra di dialogo **Proprietà** dell'area dati corrispondente.  
   
  Per specificare stringhe di formato all'interno di un elemento del report casella di testo, è necessario selezionare l'elemento da formattare, fare clic con il pulsante destro del mouse, selezionare **Proprietà casella di testo**, quindi fare clic su **Numero**. È possibile formattare singole celle in un'area dati matrice o tabella secondo le stesse modalità perché le celle di una tabella o matrice sono singole caselle di testo.  
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Considerazioni sulla formattazione di numeri e date  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>Considerazioni sulla formattazione di numeri e date  
  Prima di formattare numeri e date nel report, considerare quanto segue:  
   
 -   Per impostazione predefinita, i numeri vengono formattati in modo da riflettere le impostazioni relative alla lingua sul computer client. Usare le stringhe di formattazione per specificare la modalità di visualizzazione dei numeri in modo che la formattazione sia coerente indipendentemente dalla località in cui si trova l'utente che visualizza il report.  
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
 -   Se si seleziona **Valuta** in **Categoria** e si seleziona **Mostra valori in**, è possibile selezionare **Migliaia**, **Milioni**o **Miliardi** per visualizzare numeri usando formati finanziari. Se, ad esempio, il valore del campo è 1.789.905.394, si seleziona **Miliardi** e si specificano 2 cifre decimali, il valore visualizzato nel report è 1,78.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formattazione di linee, colori e immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

@@ -1,44 +1,49 @@
 ---
-title: "Esempi di espressioni (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "interruzioni di pagina [Reporting Services], espressioni"
-  - "report con sfondo a righe bianche e verdi [Reporting Services]"
-  - "Visual Basic [Reporting Services]"
-  - "funzioni [Reporting Services], esempi"
-  - "codice personalizzato [Reporting Services]"
-  - "aspetto dei report"
-  - "formattazione di report [Reporting Services], espressioni"
-  - "mostrare/nascondere [Reporting Services]"
-  - "parametri [Reporting Services], espressioni"
-  - "visibilità [Reporting Services], espressioni"
-  - "intestazioni di pagina [Reporting Services]"
-  - "piè di pagina [Reporting Services]"
-  - "date [Reporting Services], espressioni"
-  - "espressioni [Reporting Services], esempi"
+title: Esempi di espressioni (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 04/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- page breaks [Reporting Services], expressions
+- green-bar reports [Reporting Services]
+- Visual Basic [Reporting Services]
+- functions [Reporting Services], examples
+- custom code [Reporting Services]
+- appearance of reports
+- formatting reports [Reporting Services], expressions
+- show/hide [Reporting Services]
+- parameters [Reporting Services], expressions
+- visibility [Reporting Services], expressions
+- page headers [Reporting Services]
+- page footers [Reporting Services]
+- dates [Reporting Services], expressions
+- expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 101
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 101
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esempi di espressioni (Generatore report e SSRS)
-Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+# <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
+Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Quando RDL Sandboxing è abilitato, al momento della pubblicazione del report nel testo dell'espressione è possibile utilizzare solo determinati tipi e membri. Per altre informazioni, vedere [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
- In questo argomento vengono forniti alcuni esempi di espressioni che è possibile utilizzare per attività comuni in un report.  
+In questo argomento vengono forniti alcuni esempi di espressioni che è possibile utilizzare per attività comuni in un report.  
   
 -   [Funzioni di Visual Basic](#VisualBasicFunctions) Esempi di funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] di tipo data, stringa, conversione e condizionale.  
   
@@ -52,7 +57,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
 -   [Codice personalizzato](#CustomCode) Esempi di codice personalizzato incorporato.  
   
- Per esempi di espressioni per utilizzi specifici, vedere gli argomenti seguenti:  
+Per esempi di espressioni per utilizzi specifici, vedere gli argomenti seguenti:  
   
 -   [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
@@ -60,26 +65,22 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
 -   [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)  
+-   [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- Per altre informazioni sulle espressioni semplici e complesse, per sapere dove è possibile usare le espressioni e quali tipi di riferimenti è possibile includere in un'espressione, vedere gli argomenti contenuti in [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Per altre informazioni sul contesto in cui le espressioni vengono valutate per calcolare le aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+Per altre informazioni sulle espressioni semplici e complesse, per sapere dove è possibile usare le espressioni e quali tipi di riferimenti è possibile includere in un'espressione, vedere gli argomenti contenuti in [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Per altre informazioni sul contesto in cui le espressioni vengono valutate per calcolare le aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzati molti operatori e funzioni che si utilizzano anche per esempi di espressione in questo argomento, ma nel contesto di scrittura di un report, vedere [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzati molti operatori e funzioni che si utilizzano anche per esempi di espressione in questo argomento, ma nel contesto di scrittura di un report, vedere [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+
   
- Se si utilizza Progettazione query modelli di report durante la progettazione di una query per un set di dati in cui viene utilizzato un modello di report come origine dati, è possibile utilizzare le formule anziché le espressioni. Le formule in questione consentono di specificare i dati dei report utilizzando calcoli personalizzati che vengono integrati nella query in cui sono indicati i dati che devono essere restituiti dall'origine dati del modello di report. Per altre informazioni, vedere [Formule nelle query del modello di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
+## <a name="functions"></a>Funzioni  
+ Molte espressioni incluse in un report contengono funzioni. Con queste funzioni è possibile formattare dati, applicare logica e accedere ai metadati del report. È possibile scrivere espressioni che utilizzano le funzioni dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] libreria run-time e dal <xref:System.Convert> e <xref:System.Math> gli spazi dei nomi. È possibile aggiungere riferimenti a funzioni da altri assembly o da codice personalizzato. È inoltre possibile utilizzare le classi dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tra cui <xref:System.Text.RegularExpressions>.  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-## Funzioni  
- Molte espressioni incluse in un report contengono funzioni. Con queste funzioni è possibile formattare dati, applicare logica e accedere ai metadati del report. È possibile scrivere espressioni che usano funzioni della libreria run-time di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e degli spazi dei nomi <xref:System.Convert> e <xref:System.Math>. È possibile aggiungere riferimenti a funzioni da altri assembly o da codice personalizzato. È anche possibile usare classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], tra cui <xref:System.Text.RegularExpressions>.  
-  
-###  <a name="VisualBasicFunctions"></a> Funzioni di Visual Basic  
+##  <a name="VisualBasicFunctions"></a> Funzioni di Visual Basic  
  È possibile utilizzare le funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per modificare i dati visualizzati nelle caselle di testo o utilizzati per parametri, proprietà o altre aree del report. In questa sezione vengono forniti esempi che illustrano alcune di queste funzioni. Per altre informazioni, vedere la pagina relativa ai [membri delle librerie di runtime di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) in MSDN.  
   
  In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono disponibili molte opzioni di formato personalizzato, ad esempio per formati di data specifici. Per ulteriori informazioni, vedere [Formattazione dei tipi di dati](http://go.microsoft.com/fwlink/?LinkId=112024) in MSDN.  
   
-#### Funzioni matematiche  
+### <a name="math-functions"></a>Funzioni matematiche  
   
 -   La funzione **Round** risulta utile per l'arrotondamento dei numeri al numero intero più vicino. L'espressione seguente comporta un arrotondamento del valore 1.3 a 1:  
   
@@ -93,12 +94,31 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     = Round(1.3*5)/5  
     ```  
   
-####  <a name="DateFunctions"></a> Funzioni di data  
+###  <a name="DateFunctions"></a> Funzioni di data  
   
 -   La funzione **Today** fornisce la data corrente. Questa espressione può essere utilizzata in una casella di testo per visualizzare la data nel report oppure in un parametro per filtrare i dati in base alla data corrente.  
   
     ```  
     =Today()  
+    ```  
+  
+-   Utilizzare il **DateInterval** funzione per estrarre una parte di una data specifica. Ecco alcuni validi **DateInterval** parametri:
+
+    -   DateInterval. Second
+    -   DateInterval. Minute
+    -   DateInterval. Hour
+    -   DateInterval
+    -   DateInterval.Day
+    -   DateInterval
+    -   DateInterval
+    -   DateInterval. Month
+    -   DateInterval
+    -   DateInterval. Year
+
+    Ad esempio, questa espressione mostrerà il numero della settimana dell'anno corrente per la data corrente:
+  
+    ```  
+    =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
 -   La funzione **DateAdd** è utile per fornire un intervallo di date in base a un solo parametro. L'espressione seguente restituisce una data successiva di sei mesi alla data di un parametro denominato *StartDate*.  
@@ -149,7 +169,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   L'espressione seguente genera gli anni di intervallo tra SellStartDate e LastReceiptDate. Questi campi si trovano in due set di dati diversi, DataSet1 e DataSet2. La funzione di aggregazione [First &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/first-function-report-builder-and-ssrs.md) restituisce il primo valore di SellStartDate in DataSet1 e il primo valore di LastReceiptDate in DataSet2.  
+-   L'espressione seguente genera gli anni di intervallo tra SellStartDate e LastReceiptDate. Questi campi si trovano in due set di dati diversi, DataSet1 e DataSet2. La funzione di aggregazione [First &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) restituisce il primo valore di SellStartDate in DataSet1 e il primo valore di LastReceiptDate in DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -179,7 +199,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
 |Un anno fa|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Due anni fa|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-####  <a name="StringFunctions"></a> Funzioni per i valori stringa  
+###  <a name="StringFunctions"></a> Funzioni per i valori stringa  
   
 -   È possibile combinare più campi utilizzando operatori di concatenazione e costanti di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . L'espressione seguente restituisce due campi, ognuno su una riga distinta nella stessa casella di testo:  
   
@@ -195,13 +215,13 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
      Se la casella di testo contiene solo una data o un numero, per applicare la formattazione è consigliabile usare la proprietà di formattazione della casella di testo, anziché la funzione **Format** all'interno della casella di testo.  
   
--   Le funzioni **Right**, **Len** e **InStr** sono utili per ottenere sottostringhe, ad esempio per ottenere il solo nome utente dalla stringa *DOMAIN*\\*username*. L'espressione seguente restituisce la parte della stringa a destra del carattere barra rovesciata (\\) da un parametro denominato *User*:  
+-   Le funzioni **Right**, **Len**e **InStr** sono utili per ottenere sottostringhe, ad esempio per ottenere il solo nome utente dalla stringa *DOMAIN*\\*username* . L'espressione seguente restituisce la parte della stringa a destra del carattere barra rovesciata (\\) da un parametro denominato *User*:  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     L'espressione seguente restituisce lo stesso valore dell'espressione precedente, ma usando membri della classe <xref:System.String> di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] anziché funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]:  
+     L'espressione seguente restituisce lo stesso valore di quella precedente, utilizzando i membri del [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> classe anziché [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] funzioni:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -220,7 +240,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
     ```  
   
--   Le funzioni **Regex** della classe <xref:System.Text.RegularExpressions> di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono utili per modificare il formato di stringhe esistenti, ad esempio per formattare un numero di telefono. L'espressione seguente usa la funzione **Replace** per modificare il formato di un numero telefonico di dieci cifre in un campo da "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
+-   Il **Regex** funzioni di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sono utili per modificare il formato delle stringhe esistenti, ad esempio, la formattazione di un numero di telefono. The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -229,7 +249,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     > [!NOTE]  
     >  Verificare che nel valore di Fields!Phone.Value non siano contenuti spazi aggiuntivi e che sia di tipo <xref:System.String>.  
   
-#### Ricerca  
+### <a name="lookup"></a>Ricerca  
   
 -   Specificando un campo chiave è possibile usare la funzione **Lookup** per recuperare un valore da un set di dati per una relazione uno-a-uno, ad esempio una coppia chiave-valore. Nell'espressione seguente viene visualizzato il nome prodotto da un set di dati ("Product"), in base all'identificatore del prodotto con cui eseguire la corrispondenza:  
   
@@ -237,7 +257,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
     ```  
   
-#### LookupSet  
+### <a name="lookupset"></a>LookupSet  
   
 -   Specificando un campo chiave è possibile usare la funzione **LookupSet** per recuperare un set di valori da un set di dati per una relazione uno-a-molti. Ad esempio una persona può disporre di più numeri di telefono. Nell'esempio seguente, si supponga che nel set di dati PhoneList sia contenuto un identificatore della persona e un numero di telefono in ogni riga. Tramite**LookupSet** viene restituita una matrice di valori. L'espressione seguente combina i valori restituiti in un'unica stringa e visualizza l'elenco di numeri di telefono per la persona specificata da ContactID:  
   
@@ -245,7 +265,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-####  <a name="ConversionFunctions"></a> Funzioni di conversione  
+###  <a name="ConversionFunctions"></a> Funzioni di conversione  
  È possibile utilizzare le funzioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per convertire un campo da un tipo di dati a un altro. Le funzioni di conversione possono essere utilizzate per convertire il tipo di dati predefinito di un campo nel tipo di dati necessario per i calcoli oppure per combinare testo.  
   
 -   L'espressione seguente converte la costante 500 nel tipo Decimal, in modo da confrontarla con un tipo di dati money di [!INCLUDE[tsql](../../includes/tsql-md.md)] nel campo Valore per un'espressione di filtro.  
@@ -260,7 +280,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-####  <a name="DecisionFunctions"></a> Funzioni condizionali  
+###  <a name="DecisionFunctions"></a> Funzioni condizionali  
   
 -   La funzione **Iif** restituisce uno di due valori a seconda che l'espressione sia True o False. Nell'espressione seguente viene usata la funzione **Iif** per restituire un valore booleano **True** se il valore `LineTotal` è maggiore di 100. In caso contrario, viene restituito **False**:  
   
@@ -268,7 +288,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   È possibile usare più funzioni **IIF**, note anche come funzioni IIF nidificate, per restituire uno di tre valori possibili a seconda del valore di `PctComplete`. L'espressione seguente può essere inserita nel colore di riempimento di una casella di testo per modificare il colore di sfondo in base al valore della casella di testo.  
+-   È possibile usare più funzioni **IIF** , note anche come funzioni IIF nidificate, per restituire uno di tre valori possibili a seconda del valore di `PctComplete`. L'espressione seguente può essere inserita nel colore di riempimento di una casella di testo per modificare il colore di sfondo in base al valore della casella di testo.  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -279,7 +299,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
 -   Per ottenere la stessa funzionalità, è anche possibile utilizzare la funzione **Switch** . La funzione **Switch** risulta utile quando è necessario testare tre o più condizioni. La funzione **Switch** restituisce il valore associato alla prima espressione in una serie che restituisce True:  
   
     ```  
-    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
+    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red")  
     ```  
   
      I valori maggiori o uguali a 10 vengono visualizzati con uno sfondo verde, quelli compresi tra 1 e 9 con uno sfondo blu, quelli uguali a 1 con uno sfondo giallo e quelli minori o uguali a 0 con uno sfondo rosso.  
@@ -315,10 +335,10 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
     ```  
   
-###  <a name="ReportFunctions"></a> Funzioni di report  
- In un'espressione è possibile aggiungere un riferimento a funzioni per i report aggiuntive tramite le quali vengono modificati i dati di un report. In questa sezione vengono forniti esempi di due funzioni per i report. Per altre informazioni sulle funzioni di report ed esempi, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md).  
+##  <a name="ReportFunctions"></a> Funzioni di report  
+ In un'espressione è possibile aggiungere un riferimento a funzioni per i report aggiuntive tramite le quali vengono modificati i dati di un report. In questa sezione vengono forniti esempi di due funzioni per i report. Per altre informazioni sulle funzioni di report ed esempi, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-#####  <a name="Sum"></a> Sum  
+###  <a name="Sum"></a> Sum  
   
 -   La funzione **Sum** consente di calcolare il totale dei valori di un gruppo o di un'area dati. Può risultare utile nell'intestazione o nel piè di pagina di un gruppo. L'espressione seguente visualizza la somma dei dati del gruppo o dell'area dati Order:  
   
@@ -332,7 +352,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-#####  <a name="RowNumber"></a> RowNumber  
+###  <a name="RowNumber"></a> RowNumber  
   
 -   La funzione **RowNumber** , se utilizzata in una casella di testo in un'area dati, visualizza il numero di riga di ogni istanza della casella di testo in cui compare l'espressione. Questa funzione può essere utile per numerare le righe di una tabella, ma anche per attività più complesse, ad esempio per l'inserimento di interruzioni di pagina in base al numero di righe. Per ulteriori informazioni, vedere [Interruzioni di pagina](#PageBreaks) di seguito in questo argomento.  
   
@@ -407,7 +427,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
 ###  <a name="Formatting"></a> Formattazione  
   
--   L'espressione seguente, se usata nella proprietà Color di una casella di testo, cambia il colore del testo a seconda del valore del campo `Profit`:  
+-   L'espressione seguente, se usata nella proprietà Color di una casella di testo, cambia il colore del testo a seconda del valore del campo `Profit` :  
   
     ```  
     =Iif(Fields!Profit.Value < 0, "Red", "Black")  
@@ -430,9 +450,9 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
     ```  
   
 > [!NOTE]  
->  I colori disponibili provengono dall'enumerazione KnownColor di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+>  I colori disponibili provengono dall'enumerazione KnownColor di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-### Colori del grafico  
+### <a name="chart-colors"></a>Colori del grafico  
  Per specificare i colori per un grafico con forme, è possibile utilizzare codice personalizzato per controllare l'ordine in base al quale viene eseguito il mapping dei colori ai valori dei punti dati. In questo modo è possibile utilizzare colori coerenti per più grafici con gli stessi gruppi di categorie. Per altre informazioni, vedere [Specifica di colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
 ###  <a name="Visibility"></a> Visibilità  
@@ -500,13 +520,13 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
 ##  <a name="CustomCode"></a> Codice personalizzato  
  È possibile utilizzare codice personalizzato in un report. Il codice personalizzato può essere incorporato in un report o archiviato in un assembly personalizzato utilizzato nel report. Per altre informazioni sul codice personalizzato, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
-### Utilizzo delle variabili di gruppo per l'aggregazione personalizzata  
+### <a name="using-group-variables-for-custom-aggregation"></a>Utilizzo delle variabili di gruppo per l'aggregazione personalizzata  
  È possibile inizializzare il valore di una variabile di gruppo locale all'interno di un particolare ambito del gruppo e quindi includere un riferimento a tale variabile nelle espressioni. Una delle modalità di utilizzo di una variabile di gruppo con codice personalizzato consiste nell'implementare un'aggregazione personalizzata. Per ulteriori informazioni, vedere [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714).  
   
- Per altre informazioni sulle variabili, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+ Per altre informazioni sulle variabili, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
-## Eliminazione di valori Null o zero in fase di esecuzione  
- Alcuni valori di un'espressione possono restituire un valore Null o non definito in fase di elaborazione del report. In questo modo possono verificarsi errori di run-time che generano la visualizzazione di **#Errore** nella casella di testo anziché dell'espressione valutata. Questo comportamento influisce in modo particolare sulla funzione **IIF** in quanto, a differenza di un'istruzione If-Then-Else, ogni parte dell'istruzione **IIF** (incluse le chiamate di funzione) viene valutata prima di essere passata alla routine che verifica se il risultato è **true** o **false**. L'istruzione `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` genera **#Errore`Fields!Sales.Value` nel report visualizzabile se ** è NOTHING.  
+## <a name="suppressing-null-or-zero-values-at-run-time"></a>Eliminazione di valori Null o zero in fase di esecuzione  
+ Alcuni valori di un'espressione possono restituire un valore Null o non definito in fase di elaborazione del report. In questo modo possono verificarsi errori di run-time che generano la visualizzazione di **#Errore** nella casella di testo anziché dell'espressione valutata. Questo comportamento influisce in modo particolare sulla funzione **IIF** in quanto, a differenza di un'istruzione If-Then-Else, ogni parte dell'istruzione **IIF** (incluse le chiamate di funzione) viene valutata prima di essere passata alla routine che verifica se il risultato è **true** o **false**. L'istruzione `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` genera **#Errore`Fields!Sales.Value` nel report visualizzabile se**  è NOTHING.  
   
  Per evitare questa condizione, utilizzare una delle strategie seguenti:  
   
@@ -538,7 +558,7 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
   
      In questo modo si evitano eccezioni in fase di esecuzione ed è ora possibile usare un'espressione come `=IIF(Me.Value < 0, "red", "black")` nella proprietà **Color** della casella di testo a seconda se i valori sono maggiori o minori di 0.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
@@ -546,3 +566,4 @@ Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssR
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
+

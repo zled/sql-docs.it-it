@@ -1,23 +1,28 @@
 ---
-title: "Importazione di codice HTML a un report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Importazione di HTML in un Report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Importazione di codice HTML a un report (Generatore report e SSRS)
+# <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importazione di codice HTML a un report (Generatore report e SSRS)
   È possibile utilizzare una casella di testo per inserire in un report del testo in formato HTML recuperato da un campo nel set di dati. Il testo può provenire da qualsiasi espressione semplice o complessa che restituisce testo HTML correttamente formattato. Il testo formattato può essere visualizzato in tutti i formati di output supportati, incluso il formato PDF.  
   
  ![rs_HTMLFormatting](../../reporting-services/report-design/media/rs-htmlformatting.gif "rs_HTMLFormatting")  
@@ -32,18 +37,18 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Tag HTML supportati  
+## <a name="supported-html-tags"></a>Tag HTML supportati  
  Di seguito viene mostrato un elenco completo dei tag che vengono visualizzati come testo HTML se definiti come testo segnaposto:  
   
--   Collegamenti ipertestuali: \<A HREF>  
+-   Collegamenti ipertestuali: \<HREF >  
   
--   Tipi di carattere: \<FONT>  
+-   Tipi di carattere: \<FONT >  
   
--   Elementi di intestazione, stile e blocco: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
+-   Gli elementi di intestazione, stile e blocco: \<H {n} >, \<DIV >, \<SPAN >,\<P >, \<DIV >, \<LI >, \<HN >  
   
--   Formato del testo: \<B>, \<I>, \<U>, \<S>  
+-   Formato di testo: \<B >, \<I >, \<U >, \<S >  
   
--   Gestione degli elenchi: \<OL>, \<UL>, \<LI>  
+-   Gestione degli elenchi: \<OL >, \<UL >, \<LI >  
   
  Qualsiasi altro tag del markup HTML verrà ignorato durante l'elaborazione del report. Se il codice HTML rappresentato dall'espressione nel testo segnaposto non è formattato in maniera corretta, il segnaposto viene visualizzato come testo normale. Per tutti i tag HTML non viene rilevata la distinzione tra maiuscole e minuscole.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 10
   
  Per altre informazioni, vedere [Aggiungere il codice HTML a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
-## Limitazioni degli attributi dei fogli di stile CSS  
+## <a name="limitations-of-cascading-style-sheet-attributes"></a>Limitazioni degli attributi dei fogli di stile CSS  
  Quando si utilizzano gli attributi dei fogli di stile CSS, viene definito un solo set di tag di base. Di seguito viene presentato un elenco degli attributi supportati:  
   
 -   text-align, text-indent  
@@ -78,11 +83,11 @@ caps.handback.revision: 10
   
 -   Come accade per il codice HTML non formattato correttamente, i valori CSS in formato non valido vengono ignorati.  
   
--   Quando nello stesso tag sono presenti sia l'attributo sia gli attributi dello stile CSS, la proprietà CSS ha la precedenza. Se ad esempio il testo è **\<p style="text-align: right" align="left">**, verrà applicato solo l'attributo text-align e il testo verrà allineato a destra.  
+-   Quando nello stesso tag sono presenti sia l'attributo sia gli attributi dello stile CSS, la proprietà CSS ha la precedenza. Ad esempio, se il testo è  **\<stile p = "text-align: destra" align = "left" >**, verrà applicato solo l'attributo Text-Align e il testo verrà allineato a destra.  
   
--   Per gli attributi e gli stili CSS, se una proprietà viene specificata più di una volta, viene applicata solo l'ultima istanza della proprietà. Se ad esempio il testo è **\<p align="left" align="right">**, il testo verrà allineato a destra.  
+-   Per gli attributi e gli stili CSS, se una proprietà viene specificata più di una volta, viene applicata solo l'ultima istanza della proprietà. Ad esempio, se il testo è  **\<p align = "left" align = "right" >**, il testo verrà allineato a destra.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

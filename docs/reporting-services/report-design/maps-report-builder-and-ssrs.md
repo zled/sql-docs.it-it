@@ -1,31 +1,36 @@
 ---
-title: "Mappe (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10508"
-  - "MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME"
-  - "sql13.rtp.rptdesigner.mapproperties.general.f1"
-  - "MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE"
-  - "10500"
-  - "sql13.rtp.rptdesigner.maptitleproperties.general.f1"
+title: Mappe (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10508"
+- MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
+- sql13.rtp.rptdesigner.mapproperties.general.f1
+- MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
+- "10500"
+- sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 30
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 29
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mappe (Generatore report e SSRS)
-  Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
+# <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
+  Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
   
  Una mappa contiene un titolo, un viewport che specifica il punto centrale e la scala, uno sfondo a tessere mappa di Bing facoltativo per il viewport, uno o più livelli che visualizzano i dati spaziali e diverse legende che consentono agli utenti di interpretare le visualizzazioni dei dati. Nella figura seguente vengono illustrate le parti fondamentali di una mappa.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 29
   
  Per visualizzare i dati su una mappa, i dati analitici e spaziali devono essere in relazione. Se i dati spaziali e i dati analitici hanno la stessa origine, la relazione è nota. Diversamente, se provengono da origini differenti, è necessario specificare i campi delle corrispondenze per correlarli.  
   
-### Dati spaziali  
+### <a name="spatial-data"></a>Dati spaziali  
  I dati spaziali sono costituiti da set di coordinate. I dati spaziali di un'origine dati possono essere un singolo punto, più punti, una singola linea, più linee o un set di poligoni. Ogni set di coordinate definisce un *elemento della mappa*, ad esempio un poligono che rappresenta i confini di una regione, una linea che indica una strada o un punto che identifica la posizione di una città.  
   
  I dati spaziali sono basati su uno dei seguenti sistemi di coordinate:  
@@ -69,23 +74,23 @@ caps.handback.revision: 29
   
  Ogni livello mappa visualizza un tipo di dati spaziali: poligoni, linee o punti. Per visualizzare più tipi di dati spaziali, aggiungere più livelli alla mappa. È possibile aggiungere anche un livello di tessere mappa di Microsoft Bing. Il livello sezione non dipende dai dati spaziali; esso consente di visualizzare le sezioni dell'immagine che corrispondono alle coordinate del viewport mappa.  
   
-#### Origini dei dati spaziali  
+#### <a name="sources-of-spatial-data"></a>Origini dei dati spaziali  
  Sono supportate le seguenti origini dei dati spaziali:  
   
--   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<unità>*:\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
+-   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata  *\<unità >*: \Programmi\Microsoft SQL server\generatore report \MapGallery.  
   
     > [!NOTE]  
     >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente dall'ufficio statunitense per i censimenti (Census Bureau, [http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
   
 -   **File di forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](http://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Dati spaziali di SQL Server archiviati in un database.** È possibile usare una query che specifichi i tipi di dati **SQLGeometry** o **SQLGeography** da un database relazionare di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Dati spaziali di SQL Server archiviati in un database.** È possibile usare una query che specifichi i tipi di dati **SQLGeometry** o **SQLGeography** da un database relazionare di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](http://go.microsoft.com/fwlink/?linkid=98335).  
   
      Nel set di risultati visualizzato in Progettazione query ogni riga di dati spaziali viene trattata come un'unità e archiviata in un solo elemento della mappa. Ad esempio se ci sono più punti definiti in una riga nel set di risultati, le proprietà di visualizzazione si applicano a tutti i punti di quell'elemento della mappa.  
   
 -   **Posizioni personalizzate create.** È possibile aggiungere manualmente posizioni, ad esempio punti incorporati, a un livello punto incorporato. Per altre informazioni, vedere [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
-#### Dati spaziali in visualizzazione della struttura  
+#### <a name="spatial-data-in-design-view"></a>Dati spaziali in visualizzazione della struttura  
  In visualizzazione della struttura, l'elaboratore di report visualizza dati spaziali di esempio per consentire la progettazione del livello mappa. I dati visualizzati dipendono dalla disponibilità dei dati spaziali:  
   
 -   **Dati incorporati.** I dati di esempio vengono recuperati dagli elementi della mappa incorporati nei livelli mappa del report.  
@@ -94,17 +99,17 @@ caps.handback.revision: 29
   
 -   **Dati spaziali di SQL Server.** Se l'origine dati è disponibile e le credenziali sono valide, i dati di esempio vengono caricati dai dati spaziali del database. In caso contrario, l'elaboratore di report genera i dati di esempio e visualizza il messaggio **Nessun dato spaziale disponibile**.  
   
-#### Incorporamento dei dati spaziali nella definizione del report  
+#### <a name="embedding-spatial-data-in-the-report-definition"></a>Incorporamento dei dati spaziali nella definizione del report  
  A differenza dei dati analitici, è possibile incorporare i dati spaziali per un livello mappa nella definizione del report. Quando si incorporano i dati spaziali, si incorporano gli elementi della mappa usati nel relativo livello.  
   
  Gli elementi incorporati aumentano le dimensioni della definizione del report, ma assicurano che i dati spaziali siano sempre disponibili, in anteprima o sul server di report, quando il report è in esecuzione. Più dati indicano più archiviazioni e di conseguenza tempi di elaborazione più lunghi. Pertanto, è consigliabile limitare i dati spaziali, oltre agli altri dati del report, alle sole informazioni necessarie per il report.  
   
-#### Controllo della risoluzione mappa in fase di esecuzione  
+#### <a name="controlling-map-resolution-at-run-time"></a>Controllo della risoluzione mappa in fase di esecuzione  
  Quando si modifica la risoluzione per i dati spaziali, si specifica il livello di dettaglio delle linee disegnate su una mappa. Ad esempio per le aree, è necessaria una granularità fino a cento metri di superficie sulla terra oppure sono sufficienti i dettagli di una distanza di 1,5 km?  
   
  Se i dati spaziali sono incorporati nel report, la risoluzione usata influisce sul numero di elementi della mappa nella definizione del report. Una risoluzione superiore aumenta il numero di elementi richiesto per disegnare i bordi con quella risoluzione. Se i dati spaziali non sono incorporati nel report, il server di report calcola le linee richieste per disegnare i bordi con quella risoluzione ogni volta che si visualizza il report. Per progettare un report che bilanci la risoluzione di visualizzazione con un tempo di rendering del report accettabile, semplificare la risoluzione mappa al livello di dettaglio necessario nel report per visualizzare i dati analitici.  
   
-### Dati analitici  
+### <a name="analytical-data"></a>Dati analitici  
  I dati analitici sono i dati che si desidera visualizzare sulla mappa, ad esempio la popolazione di una città o il totale delle vendite di un negozio. I dati analitici possono provenire da una delle seguenti origini:  
   
 -   **Campo del set di dati.** Campo del set di dati del riquadro dei dati del report.  
@@ -113,9 +118,9 @@ caps.handback.revision: 29
   
 -   **Dati incorporati per un elemento della mappa.** Dopo avere incorporato poligoni, linee o punti in un report, è possibile eseguire l'override dei campi di dati dei singoli elementi della mappa e impostare valori personalizzati.  
   
- Quando si specificano le regole per un livello e si seleziona il campo di dati analitici, se il tipo di dati è numerico, l'elaboratore di report usa automaticamente la funzione predefinita Sum per calcolare i valori di aggregazione per l'elemento della mappa. Se il campo non è numerico, non viene specificata alcuna funzione di aggregazione, ma viene usata la funzione di aggregazione First implicita. Per modificare l'espressione predefinita, cambiare le opzioni per le regole del livello. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Quando si specificano le regole per un livello e si seleziona il campo di dati analitici, se il tipo di dati è numerico, l'elaboratore di report usa automaticamente la funzione predefinita Sum per calcolare i valori di aggregazione per l'elemento della mappa. Se il campo non è numerico, non viene specificata alcuna funzione di aggregazione, ma viene usata la funzione di aggregazione First implicita. Per modificare l'espressione predefinita, cambiare le opzioni per le regole del livello. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-### Campi delle corrispondenze  
+### <a name="match-fields"></a>Campi delle corrispondenze  
  Per correlare i dati analitici agli elementi della mappa su un livello, è necessario specificare i *campi delle corrispondenze*. Questi ultimi sono usati per compilare una relazione tra gli elementi della mappa e i dati analitici. È possibile usare uno o più campi per corrispondenze finché specifichino un valore analitico univoco per ogni posizione spaziale.  
   
  Ad esempio per una mappa in cui le dimensioni delle bolle variano in base alla popolazione della città, sono necessari i dati seguenti:  
@@ -162,7 +167,7 @@ caps.handback.revision: 29
   
  Per istruzioni dettagliate, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="MapLayers"></a> Informazioni sugli elementi e sui livelli mappa  
  Una mappa può disporre di più livelli, tre sono quelli disponibili. Ogni livello visualizza un tipo di dati spaziali:  
@@ -185,7 +190,7 @@ caps.handback.revision: 29
   
  Per altre informazioni sui livelli mappa, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-### Variazione delle proprietà di visualizzazione per punti, linee e poligoni  
+### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Variazione delle proprietà di visualizzazione per punti, linee e poligoni  
  Le opzioni di visualizzazione per gli elementi di una mappa possono essere impostate in base al livello, usando le regole per il livello, oppure su singoli elementi. Ad esempio è possibile impostare le proprietà di visualizzazione per tutti i punti su un livello, impostare le regole che controllano le proprietà di visualizzazione per tutti i punti su un livello indipendentemente dal loro incorporamento oppure eseguire l'override delle impostazioni delle proprietà di visualizzazione per punti incorporati specifici.  
   
  Quando si visualizza un report, i valori di visualizzazione mostrati vengono controllati da questa gerarchia e sono elencati in ordine crescente. I numeri maggiori hanno la precedenza:  
@@ -198,7 +203,7 @@ caps.handback.revision: 29
   
 4.  **Override per le proprietà poligono, linea o punto incorporati**. Per gli elementi incorporati della mappa, è possibile selezionare l'opzione di override e modificare qualsiasi proprietà o valore dei dati. Qualsiasi modifica apportata per eseguire l'override delle regole per i singoli elementi è irreversibile. Ad esempio è possibile evidenziare un negozio specifico tramite un marcatore a puntina da disegno.  
   
- Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
  Oltre a variare l'aspetto degli elementi della mappa, è possibile aggiungere interattività ai punti, alle linee, ai poligoni o ai livelli, nei modi seguenti:  
   
@@ -244,7 +249,7 @@ caps.handback.revision: 29
   
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+ [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
  [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   

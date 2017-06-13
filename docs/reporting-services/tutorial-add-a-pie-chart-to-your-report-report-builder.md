@@ -1,24 +1,29 @@
 ---
-title: "Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Aggiungere un grafico a torta al Report (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
 In questa esercitazione viene creato il grafico a torta in un report impaginato di Reporting Services. Vengono aggiunte le percentuali e le sezioni piccole vengono unite in un'unica sezione.
 
 Nei grafici a torta e in quelli ad anello i dati vengono visualizzati come percentuali rispetto a un valore intero. Non hanno assi. Quando si aggiunge un campo numerico in un grafico a torta, il grafico calcola la percentuale di ogni valore rispetto al totale.  
@@ -28,30 +33,13 @@ Nell'illustrazione seguente viene mostrato il grafico a torta che verrà creato.
 ![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Se sono presenti troppi punti dati su un grafico a torta, le etichette dei punti dati potrebbero essere difficili da leggere. In tal caso, prendere in considerazione la possibilità di unire le sezioni piccole in un'unica sezione più grande. I grafici a torta risultano più leggibili dopo avere aggregato i dati in pochi punti dati.  
-  
-## <a name="BackToTop"></a>Lezioni dell'esercitazione  
-Questa esercitazione illustra le procedure per:  
-  
-1.  [Creare un grafico a torta da Creazione guidata grafico](#Chart)  
-  
-2.  [Scegliere il tipo di grafico](#ChartType)  
-  
-3.  [Visualizzare percentuali in ogni sezione](#Percentages)  
-  
-4.  [Combinare le piccole sezioni in una sezione](#CombineSlices)  
-  
-5.  [Iniziare la visualizzazione dei valori del grafico a torta dalla parte superiore](#DrawingEffect)  
-  
-6.  [Aggiungere un titolo al report](#Title)  
-  
-7.  [Salvare il report](#Save)  
-  
+ 
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in due procedure. Per istruzioni dettagliate su come selezionare un server di report, aggiungere un'origine dati e un set di dati vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Il tempo stimato per il completare l'esercitazione è di 10 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Creare un grafico a torta da Creazione guidata grafico  
@@ -60,15 +48,15 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Viene visualizzata la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
 3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** e fare clic su **Avanti**.  
+4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**e fare clic su **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -101,11 +89,11 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
 È possibile scegliere tra diversi tipi di grafico predefiniti.  
 
   
-1.  Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**. Viene visualizzata la pagina **Disponi campi del grafico**.  
+1.  Nella pagina **Scegliere un tipo di grafico** fare clic su **Torta**, quindi scegliere **Avanti**. Viene visualizzata la pagina **Disponi campi del grafico** .  
   
-    Nella pagina **Disponi campi del grafico** trascinare il campo Product nel riquadro **Categorie**. Le categorie consentono di definire il numero di sezioni nel grafico a torta. In questo esempio, saranno presenti otto sezioni, una per ogni prodotto.  
+    Nella pagina **Disponi campi del grafico** trascinare il campo Product nel riquadro **Categorie** . Le categorie consentono di definire il numero di sezioni nel grafico a torta. In questo esempio, saranno presenti otto sezioni, una per ogni prodotto.  
   
-2.  Trascinare il campo Sales nel riquadro **Valori**. Sales rappresenta l'importo delle vendite per la sottocategoria. Nel riquadro **Valori** viene visualizzato `[Sum(Sales)]` perché nel grafico viene mostrata l'aggregazione per ogni prodotto.  
+2.  Trascinare il campo Sales nel riquadro **Valori** . Sales rappresenta l'importo delle vendite per la sottocategoria. Nel riquadro **Valori** viene visualizzato `[Sum(Sales)]` perché nel grafico viene mostrata l'aggregazione per ogni prodotto.  
   
 3.  Fare clic su **Avanti** per visualizzare un'anteprima.  
   
@@ -135,12 +123,12 @@ Su ogni sezione della torta, è possibile visualizzare una percentuale per quest
   
 4.  Nella casella **Dati etichetta** selezionare **#PERCENT**.  
     
-5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, nella casella **Dati etichetta** dopo **#PERCENT** digitare **{Pn}** dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare cifre decimali, digitare **#PERCENT{P0}**.  
+5.  (Facoltativo) Per specificare il numero di cifre decimali l'etichetta seguente, nel **etichetta dati** casella dopo **#PERCENT**, tipo **{Pn}** in  *n*  è il numero di posizioni decimali da visualizzare. Ad esempio per non visualizzare cifre decimali, digitare **#PERCENT{P0}**.  
 
 6.  Per visualizzare i valori come percentuali, la proprietà UseValueAsLabel deve essere impostata su false. Se viene richiesto di impostare questo valore nella finestra di dialogo **Conferma azione** fare clic su **Sì**.  
   
     > [!NOTE]  
-    > L'impostazione di **Formato numeri** nella finestra di dialogo **Proprietà etichetta serie** non produrrà alcun effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
+    > L'impostazione di**Formato numeri** nella finestra di dialogo **Proprietà etichetta serie** non produrrà alcun effetto quando si formattano le percentuali. Tale opzione consente solo di formattare le etichette come percentuali, senza tuttavia calcolare la percentuale del grafico a torta rappresentata da ciascuna sezione.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -159,7 +147,7 @@ Tre delle sezioni della torta sono piuttosto sottili. È possibile unire più se
   
 3.  Nell'area di progettazione fare clic su una sezione del grafico a torta. Le proprietà della serie verranno visualizzate nel riquadro Proprietà.  
   
-4.  Nella sezione **Generale** espandere il nodo **CustomAttributes**.  
+4.  Nella sezione **Generale** espandere il nodo **CustomAttributes** .  
   
 5.  Impostare la proprietà **CollectedStyle** su **SingleSlice**.  
 
@@ -185,7 +173,7 @@ In questa sezione si farà in modo che il primo valore venga visualizzato nella 
 
 2. Selezionare il grafico a torta.
 
-3. In **Attributi personalizzati** nel riquadro Proprietà modificare PieStartAngle da **0** a **270**.
+3. In **Attributi personalizzati**nel riquadro Proprietà modificare PieStartAngle da **0** a **270**.
 
 4. Fare clic su **Esegui** per visualizzare l'anteprima del report.
 
@@ -219,22 +207,24 @@ Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non
   
 ## <a name="Save"></a>7. Salvare il report  
   
-### Per salvare il report  
+### <a name="to-save-the-report"></a>Per salvare il report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
 2.  Nel menu **File** scegliere **Salva**.  
   
-3.  In **Nome** digitare **Grafico a torta - Vendite**.  
+3.  In **Nome**digitare **Grafico a torta - Vendite**.  
   
 4.  Fare clic su **Salva**.  
   
 Il report verrà salvato sul server di report.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a torta al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

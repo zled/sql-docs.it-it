@@ -1,26 +1,31 @@
 ---
-title: "Formattazione di scale su un misuratore (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Formattazione di Scale su un misuratore (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formattazione di scale su un misuratore (Generatore report e SSRS)
-  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], la scala misuratore è l'intervallo di numeri, limitati da un valore minimo e da un valore massimo, mostrato su un misuratore. Una scala di misuratore contiene generalmente segni di graduazione ed etichette che consentono una lettura accurata di quello che viene mostrato dall'indicatore di misura del misuratore ed è generalmente associata a una o più indicatori di misura del misuratore. Sullo stesso misuratore può essere presente più di una scala.  
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di scale su un misuratore (Generatore report e SSRS)
+  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la scala misuratore è l'intervallo di numeri, limitati da un valore minimo e da un valore massimo, mostrato su un misuratore. Una scala di misuratore contiene generalmente segni di graduazione ed etichette che consentono una lettura accurata di quello che viene mostrato dall'indicatore di misura del misuratore ed è generalmente associata a una o più indicatori di misura del misuratore. Sullo stesso misuratore può essere presente più di una scala.  
   
- ![Panoramica degli elementi in una scala del misuratore](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Panoramica degli elementi in una scala del misuratore")  
+ ![Panoramica degli elementi in una scala del misuratore](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "panoramica degli elementi in una scala del misuratore")  
   
  A differenza del grafico in cui sono definiti più gruppi, il misuratore mostra un solo valore. È necessario definire i valori minimo e massimo della scala. I numeri dell'intervallo vengono calcolati automaticamente in base ai valori specificati per l'impostazione minima e massima.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
  Il raggio della scala è rappresentato dalla distanza dal centro del misuratore al centro della barra della scala. Il valore del raggio della scala viene misurato come percentuale del diametro del misuratore. È consigliabile impostare il raggio della scala su un valore non più alto di 35. Se si specifica un valore maggiore di 35, la scala verrà probabilmente disegnata esternamente ai contorni del misuratore. L'illustrazione seguente mostra come viene misurato il raggio della scala rispetto al diametro del misuratore nella barra della scala.  
   
- ![Raggio della scala rispetto al diametro del misuratore](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Raggio della scala rispetto al diametro del misuratore")  
+ ![Raggio della scala rispetto al diametro misuratore](../../reporting-services/report-design/media/scaleradiusdiagram.gif "raggio della scala rispetto al diametro misuratore")  
   
  L'angolo iniziale è l'angolo di rotazione, compreso tra 0 e 360, in corrispondenza del quale inizierà la scala. La posizione zero (0) si trova nella parte inferiore del misuratore e l'angolo iniziale ruota in senso orario. Con un angolo iniziale di 90 gradi, ad esempio, la scala inizierà in corrispondenza della posizione delle ore 9.00.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 -   1% del valore più basso dell'altezza o della larghezza del misuratore su un misuratore lineare.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41; (Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

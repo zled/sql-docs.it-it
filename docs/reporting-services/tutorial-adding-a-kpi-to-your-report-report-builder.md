@@ -1,63 +1,49 @@
 ---
-title: "Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Aggiunta di un indicatore KPI al Report (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
-In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] viene aggiunto un indicatore KPI a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
+In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] viene aggiunto un indicatore KPI a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Gli indicatori KPI sono valori misurabili con significato aziendale. In questo scenario l'indicatore KPI è il riepilogo delle vendite in base alle sottocategorie del prodotto. Lo stato corrente dell'indicatore KPI viene indicato da colori, misuratori e indicatori.
   
 L'immagine seguente illustra un report simile quello che verrà creato.  
   
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
-  
-## <a name="BackToTop"></a>Lezioni dell'esercitazione  
-In questa esercitazione verrà illustrato come aggiungere un indicatore KPI impostando il colore di sfondo delle celle della tabella in base al valore della cella e come aggiungere e configurare un misuratore e un indicatore. Verrà inoltre illustrato come scrivere l'espressione che consente di impostare il colore di sfondo delle celle della tabella.  
-  
-In questa esercitazione sono disponibili le procedure seguenti:  
-  
-1.  [Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice](#Table)  
-  
-2.  [Organizzare i dati e scegliere il layout dalla Creazione guidata tabella o matrice](#CompleteWizard)  
-  
-3.  [Utilizzare i colori di sfondo per visualizzare un indicatore KPI](#BackgroundColors)  
-  
-4.  [Visualizzare un indicatore KPI tramite un misuratore](#Gauge)  
-  
-5.  [Visualizzare un indicatore KPI tramite un indicatore](#Indicator)  
-  
-6.  [Aggiungere un titolo al report](#Title)  
-  
-7.  [Salvare il report](#Save)  
-  
+    
 > [!NOTE]  
 > In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Table"></a>1. Creare un report tabella e un set di dati dalla Creazione guidata tabella o matrice  
 Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di dati incorporato e visualizzare i dati in una tabella.  
  
-### Per creare una tabella con un set di dati incorporato  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>Per creare una tabella con un set di dati incorporato  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
@@ -124,7 +110,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
 ## <a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
 La Creazione guidata tabella o matrice offre una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
   
-### Per organizzare i dati in gruppi e scegliere un layout 
+### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Per organizzare i dati in gruppi e scegliere un layout 
   
 1.  Nella pagina Disponi campi trascinare Product in **Valori**.  
   
@@ -168,7 +154,7 @@ Per ogni prodotto venduto in una data specifica, nella tabella vengono visualizz
 
 ![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
     
-### Formattare date e valuta
+### <a name="format-dates-and-currency"></a>Formattare date e valuta
 Allargare le colonne e impostare il formato per date e valuta.
 
 1. Fare clic su **Progettazione** per tornare alla visualizzazione della struttura.
@@ -177,9 +163,9 @@ Allargare le colonne e impostare il formato per date e valuta.
 
 3. Premere CTRL e selezionare le quattro celle contenenti [Sum(Sales)].
 
-4. Nella scheda **Home** > **Numero** > **Valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.
+4. On the **Home** tab > **Number** > **Currency**. Nelle celle i numeri vengono visualizzati nel formato di valuta.
 
-   Se la lingua delle impostazioni locali è inglese (Stati Uniti), il testo di esempio predefinito sarà [$12,345.00]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** > **Valori di esempio** nel gruppo **Numeri**.
+   Se la lingua delle impostazioni locali è inglese (Stati Uniti), il testo di esempio predefinito sarà [$12,345.00]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
 
@@ -198,7 +184,7 @@ Allargare le colonne e impostare il formato per date e valuta.
 ## <a name="BackgroundColors"></a>3. Utilizzare i colori di sfondo per visualizzare un indicatore KPI  
 I colori di sfondo possono essere impostati su un'espressione valutata quando si esegue il report.  
   
-### Per visualizzare lo stato attuale di un indicatore KPI utilizzando i colori di sfondo  
+### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando i colori di sfondo  
   
 1.  Nella tabella fare clic con il pulsante destro del mouse sulla cella `[Sum(Sales)]` (riga del subtotale in cui vengono visualizzate le vendite per una sottocategoria) e scegliere **Proprietà casella di testo**. 
 
@@ -206,7 +192,7 @@ I colori di sfondo possono essere impostati su un'espressione valutata quando si
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Nella scheda **Riempimento** fare clic sul pulsante **fx** accanto all'opzione **Colore riempimento** e immettere l'espressione seguente nel campo **Imposta espressione per: BackgroundColor**:  
+2.  Nella scheda **Riempimento** fare clic sul pulsante **fx** accanto all'opzione **Colore riempimento** e immettere l'espressione seguente nel campo **Imposta espressione per: BackgroundColor** :  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -223,7 +209,7 @@ Nella riga del subtotale in cui sono visualizzate le vendite per una sottocatego
 ## <a name="Gauge"></a>4. Visualizzare un indicatore KPI tramite un misuratore  
 Un misuratore raffigura un singolo valore di un set di dati. In questa esercitazione viene usato un misuratore lineare orizzontale poiché la relativa forma e semplicità ne rende facile la lettura anche quando è di piccole dimensioni e viene usato all'interno di una cella della tabella. Per altre informazioni, vedere [Misuratori &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-### Per visualizzare lo stato attuale di un indicatore KPI utilizzando un misuratore  
+### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando un misuratore  
   
 1.  Passare alla visualizzazione della struttura.  
   
@@ -241,7 +227,7 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
   
     Nell'area di progettazione verrà aggiunto un misuratore.  
   
-7.  Dal riquadro Dati report trascinare il campo `Sales` nel misuratore. Viene visualizzato il riquadro **Dati del misuratore**.  
+7.  Dal riquadro Dati report trascinare il campo `Sales` nel misuratore. Viene visualizzato il riquadro **Dati del misuratore** .  
   
     Quando si rilascia il campo `Sales` nel misuratore, il campo viene aggiunto all'elenco **Valori** e viene aggregando usando la funzione SUM predefinita.  
    
@@ -264,7 +250,7 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
 
 15. Scegliere **OK**.
   
-14. Trascinare il misuratore all'interno della tabella, nella seconda cella vuota della colonna Linear KPI, nella riga che visualizza le vendite del subtotale per il campo `Subcategory`, accanto al campo in cui è stata aggiunta la formula per il colore dello sfondo.  
+14. Trascinare il misuratore all'interno della tabella, nella seconda cella vuota della colonna Linear KPI, nella riga che visualizza le vendite del subtotale per il campo `Subcategory` , accanto al campo in cui è stata aggiunta la formula per il colore dello sfondo.  
   
     > [!NOTE]  
     > Potrebbe essere necessario ridimensionare la colonna in modo che il misuratore lineare orizzontale rientri nella cella. Per ridimensionare la colonna, selezionare la tabella e trascinare i quadratini della colonna. L'area di progettazione del report viene adattata per accogliere la tabella.  
@@ -278,11 +264,11 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
 ## <a name="Indicator"></a>5. Visualizzare un indicatore KPI tramite un indicatore  
 Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare i valori dei dati in modo immediato. Grazie alle loro dimensioni e alla semplicità, gli indicatori vengono spesso utilizzati nelle tabelle e nelle matrici. Per altre informazioni, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Per visualizzare lo stato attuale di un indicatore KPI utilizzando un indicatore  
+### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando un indicatore  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nella tabella fare clic con il pulsante destro del mouse sul quadratino della colonna Linear KPI aggiunta nell'ultima procedura > **Inserisci colonna ** > **A destra**. Alla tabella verrà aggiunta una nuova colonna.  
+2.  Nella tabella fare clic con il pulsante destro del mouse sul quadratino della colonna Linear KPI aggiunta nell'ultima procedura > **Inserisci colonna**  > **A destra**. Alla tabella verrà aggiunta una nuova colonna.  
   
 3.  Digitare **Stoplight KPI** nell'intestazione di colonna.  
   
@@ -300,7 +286,7 @@ Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare
   
 9. Nella scheda **Valore e stati** nella casella **Valore** selezionare **[SUM (Sales)]**. Non modificare le opzioni.  
   
-    Per impostazione predefinita, si verifica la sincronizzazione dei dati nell'area dati e il valore **Tablix1**, ovvero il nome dell'area dati della tabella nel report, viene visualizzato nella casella **Ambito sincronizzazione**.  
+    Per impostazione predefinita, si verifica la sincronizzazione dei dati nell'area dati e il valore **Tablix1**, ovvero il nome dell'area dati della tabella nel report, viene visualizzato nella casella **Ambito sincronizzazione** .  
   
     In questo report, è possibile anche modificare l'ambito di un indicatore posizionato nella cella del subtotale della sottocategoria per eseguire la sincronizzazione nel campo SalesDate.  
   
@@ -315,20 +301,20 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Per aggiungere il titolo di un report  
+### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione selezionare **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Product Sales KPIs** e fare clic all'esterno della casella di testo.  
+2.  Digitare **Product Sales KPIs**e fare clic all'esterno della casella di testo.  
   
 3.  Facoltativamente, fare clic con il pulsante destro del mouse sulla casella di testo contenente **Product Sales KPI**, fare clic su **Proprietà casella di testo**. Nella scheda Carattere scegliere i diversi stili di carattere, dimensioni e colori.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
 ## <a name="Save"></a>7. Salvare il report  
-Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ad esempio le parti del report e i sottoreport.  
+Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
-### Per salvare il report in un server di report  
+### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
@@ -338,31 +324,33 @@ Salvare il report in un server di report o nel computer. Se il report non viene 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome** sostituire il nome predefinito con **Product Sales KPI**.  
+4.  In **Nome**sostituire il nome predefinito con **Product Sales KPI**.  
   
 5.  Fare clic su **Salva**.  
   
 Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
-### Per salvare il report nel computer  
+### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti** o **Risorse del computer** e selezionare la cartella in cui si vuole salvare il report.  
+2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
   
 > [!NOTE]  
-> Se non si ha accesso a un server di report, fare clic su **Desktop**, **Documenti** o **Risorse del computer** e salvare il report nel computer.  
+> Se non si ha accesso a un server di report, fare clic su **Desktop**, **Documenti**o **Risorse del computer** e salvare il report nel computer.  
   
-1.  In **Nome** sostituire il nome predefinito con **Product Sales KPI**.  
+1.  In **Nome**sostituire il nome predefinito con **Product Sales KPI**.  
   
 2.  Fare clic su **Salva**.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un indicatore KPI al report. Per altre informazioni, vedere:
 *  [Misuratori](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicatori](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 * [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)
 * [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

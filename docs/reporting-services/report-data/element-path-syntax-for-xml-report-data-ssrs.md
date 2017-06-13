@@ -1,26 +1,31 @@
 ---
-title: "Sintassi del percorso di elemento per i dati del report XML (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sintassi di ElementPath"
-  - "XML [Reporting Services], recupero dati"
+title: Sintassi del percorso di elemento di dati del Report XML (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ElementPath syntax
+- XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Sintassi del percorso di elemento per i dati del report XML (SSRS)
+# <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
   In Progettazione report è possibile specificare i dati da utilizzare per un report da un'origine dati XML definendo un percorso di elemento con distinzione tra maiuscole e minuscole. Un percorso di elemento indica come attraversare i nodi gerarchici XML e i relativi attributi nell'origine dei dati XML. Per usare il percorso di elemento predefinito, lasciare vuota la query del set di dati o l'elemento **ElementPath** XML dell'elemento **Query** XML. Quando vengono recuperati i dati dall'origine dei dati XML, i nodi elemento con valori di testo e gli attributi dei nodi elemento diventano colonne del set di risultati. Quando si esegue la query, i valori dei nodi e degli attributi diventano i dati delle righe. Le colonne sono visualizzate come raccolta di campi di set di dati nel riquadro Dati report. In questo argomento viene descritta la sintassi del percorso di elemento.  
   
 > [!NOTE]  
@@ -32,11 +37,11 @@ caps.handback.revision: 43
 |----------------|--------------|  
 |**grassetto**|Il testo deve essere digitato esattamente come illustrato.|  
 |&#124; (barra verticale)|Separa gli elementi della sintassi. Indica che è possibile scegliere un solo elemento.|  
-|[ ] (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
+|`[ ]`(parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |**{ }** (parentesi graffe)|Delimitano i parametri degli elementi della sintassi.|  
-|[**,**...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[**,**...*n*]|L'elemento precedente può essere ripetuto  *n*  numero di volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -66,7 +71,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono riepilogati i termini del percorso di elemento. Gli esempi della tabella si riferiscono al documento XML di esempio Customers.xml, incluso nella sezione relativa agli esempi di questo argomento.  
   
 > [!NOTE]  
@@ -75,18 +80,18 @@ XMLLocalName :: =
 |Nome|Definizione|  
 |----------|----------------|  
 |Element path|Definisce la sequenza di nodi da attraversare nel documento XML per recuperare i dati del campo di un set di dati con un'origine dei dati XML.|  
-|**ElementNode**|Nodo XML nel documento XML. I nodi sono designati da tag e sono correlati agli altri nodi in base a una relazione gerarchica. \<Customers>, ad esempio, è il nodo elemento radice. \<Customer> è un sottoelemento di \<Customers>.|  
+|**ElementNode**|Nodo XML nel documento XML. I nodi sono designati da tag e sono correlati agli altri nodi in base a una relazione gerarchica. Ad esempio, \<clienti > è il nodo di elemento radice. \<Cliente > è un sottoelemento di \<clienti >.|  
 |**XMLName**|Nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. **XMLName** può essere preceduto da un identificatore dello spazio dei nomi, per assegnare a ogni nodo un nome univoco.|  
 |**Codifica**|Indica che il **valore** dell'elemento è un valore XML con codifica e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
 |**FieldList**|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto (**{}**), non verrà usato alcun campo di questo nodo.<br /><br /> L'oggetto **FieldList** non può contenere un **valore** e un **elemento** oppure un nodo **ElementNode**.|  
 |**Campo**|Specifica i dati recuperati come campo del set di dati.|  
-|**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo elemento \<Customer ID="1">, ad esempio, **ID** è un attributo e **@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
-|**Valore**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, \<Return> è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  
-|**Elemento**|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
+|**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Ad esempio, nel nodo elemento \<Customer ID = "1" >, **ID** è un attributo e  **@ID(intero)** restituisce "1" come tipo integer nel campo dati corrispondente **ID**.|  
+|**Valore**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Ad esempio, poiché \<restituire > è un nodo foglia, se si include alla fine di un percorso di elemento, il valore di **restituito {@}** è **sedia**.|  
+|**elemento**|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
 |**Tipo**|Tipo di dati facoltativo da utilizzare per il campo creato da questo elemento.|  
-|**NamespacePrefix**|**NamespacePrefix** è definito nell'elemento Query XML. Se non è presente alcun elemento Query XML, gli spazi dei nomi dell'elemento **ElementPath** XML vengono ignorati. Se è presente un elemento Query XML, l'elemento **ElementPath** XML include un attributo **IgnoreNamespaces** facoltativo. Se IgnoreNamespaces è **True**, gli spazi dei nomi dell'elemento **ElementPath** XML e del documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di query XML per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
+|**NamespacePrefix**|**NamespacePrefix** è definito nell'elemento Query XML. Se non è presente alcun elemento Query XML, gli spazi dei nomi dell'elemento **ElementPath** XML vengono ignorati. Se è presente un elemento Query XML, l'elemento **ElementPath** XML include un attributo **IgnoreNamespaces**facoltativo. Se IgnoreNamespaces è **True**, gli spazi dei nomi dell'elemento **ElementPath** XML e del documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di query XML per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
   
-## Esempio - Nessuno spazio dei nomi  
+## <a name="example---no-namespaces"></a>Esempio - Nessuno spazio dei nomi  
  Negli esempi seguenti viene utilizzato il documento XML Customers.xml. In questa tabella sono illustrati esempi di sintassi del percorso di elemento e i risultati dell'utilizzo del percorso di elemento in una query per la definizione di un set di dati, basata sul documento XML come origine dati.  
   
 > [!NOTE]  
@@ -135,7 +140,7 @@ XMLLocalName :: =
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  
   
-#### Documento XML: Customers.xml  
+#### <a name="xml-document-customersxml"></a>Documento XML: Customers.xml  
  Per provare gli esempi di percorso di elemento nella sezione precedente, copiare questo codice XML e salvarlo in un URL accessibile da Progettazione report e quindi usare il documento XML come origine dati XML, ad esempio `http://localhost/Customers.xml`.  
   
 ```  
@@ -173,7 +178,7 @@ XMLLocalName :: =
   
  In alternativa, è possibile creare un'origine dati XML senza una stringa di connessione e incorporare Customers.XML nella query, attenendosi alla procedura seguente:  
   
-###### Per incorporare Customers.XML in una query  
+###### <a name="to-embed-customersxml-in-a-query"></a>Per incorporare Customers.XML in una query  
   
 1.  Creare un'origine dati XML con una stringa di connessione vuota.  
   
@@ -203,9 +208,10 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
+

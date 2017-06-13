@@ -1,26 +1,31 @@
 ---
-title: "Aggiungere un sottoreport e di parametri (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10093"
-  - "sql13.rtp.rptdesigner.subreportproperties.general.f1"
+title: Aggiungere un sottoreport e i parametri (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10093"
+- sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere un sottoreport e di parametri (Generatore report e SSRS)
+# <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Aggiungere un sottoreport e di parametri (Generatore report e SSRS)
   Aggiungere sottoreport a un report quando si desidera creare un report principale in cui è possibile includere più report correlati. Un sottoreport rappresenta un riferimento a un altro report. Per correlare i report tramite valori dei dati, ad esempio per fare in modo che in più report vengano visualizzati i dati relativi allo stesso cliente, è necessario progettare come sottoreport un report con parametri, ovvero un report in cui sono visualizzati i dettagli relativi a un cliente specifico. Quando al report principale si aggiunge un sottoreport, è possibile specificare parametri da passare a quest'ultimo.  
   
  È inoltre possibile aggiungere sottoreport a righe o colonne dinamiche in una tabella oppure in una matrice. Quando il report principale viene elaborato, il sottoreport viene elaborato per ogni riga. In questo caso, è necessario valutare se sia possibile ottenere l'effetto desiderato utilizzando aree dati o aree dati annidate.  
@@ -30,7 +35,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per aggiungere un sottoreport  
+### <a name="to-add-a-subreport"></a>Per aggiungere un sottoreport  
   
 1.  Fare clic su **Sottoreport** nella scheda **Inserisci**.  
   
@@ -40,13 +45,13 @@ caps.handback.revision: 9
   
 4.  Nella finestra di dialogo **Proprietà sottoreport** digitare un nome nella casella di testo **Nome** o accettare il nome predefinito. Il nome deve essere univoco nel report. Per impostazione predefinita, viene assegnato un nome generale, ad esempio Subreport1 o Subreport2.  
   
-5.  Nella casella **Utilizzare il report come sottoreport** fare clic su **Sfoglia** oppure digitare il nome del report. È preferibile fare clic su **Sfoglia** perché il percorso del sottoreport verrà specificato automaticamente. È possibile specificare il report in diversi modi. Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+5.  Nella casella **Utilizzare il report come sottoreport** fare clic su **Sfoglia**oppure digitare il nome del report. È preferibile fare clic su **Sfoglia** perché il percorso del sottoreport verrà specificato automaticamente. È possibile specificare il report in diversi modi. Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
 6.  (Facoltativo) Fare clic su **Sì** per **Ometti bordo sull'interruzione di pagina** per impedire che venga visualizzato un bordo a metà del sottoreport se si estende su più di una pagina.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per specificare i parametri da passare a un sottoreport  
+### <a name="to-specify-parameters-to-pass-to-a-subreport"></a>Per specificare i parametri da passare a un sottoreport  
   
 1.  Nella visualizzazione della struttura fare clic con il pulsante destro del mouse sul sottoreport e quindi scegliere **Proprietà sottoreport**.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 9
     > [!NOTE]  
     >  In Generatore report, se un parametro non è presente nell'elenco **Parametri** e il sottoreport dispone di un valore predefinito, il sottoreport sarà elaborato correttamente.  
     >   
-    >  In Progettazione report, tutti i parametri necessari per il sottoreport devono essere inclusi nell'elenco **Parametri**. Se non viene specificato un parametro obbligatorio, il sottoreport non verrà visualizzato correttamente nel report principale.  
+    >  In Progettazione report, tutti i parametri necessari per il sottoreport devono essere inclusi nell'elenco **Parametri** . Se non viene specificato un parametro obbligatorio, il sottoreport non verrà visualizzato correttamente nel report principale.  
   
 6.  Ripetere i passaggi 3-5 per specificare un nome e un valore per ogni parametro del sottoreport.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 9
   
      La modifica dell'ordine di un parametro di sottoreport non comporta effetti sull'elaborazione del sottoreport.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sottoreport &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

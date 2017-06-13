@@ -1,42 +1,51 @@
 ---
-title: "Uso di sottoscrizioni (portale Web) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzo di sottoscrizioni (portale web) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72e0abad76008b445fe32a9fed3cb4522ab64af2
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Uso di sottoscrizioni (portale Web)
+# <a name="working-with-subscriptions-web-portal"></a>Uso di sottoscrizioni (portale Web)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 L'uso della pagina Sottoscrizioni consente di visualizzare un elenco di tutte le sottoscrizioni del report corrente. Se sono disponibili autorizzazioni sufficienti (quelle assegnate dall'attività Gestione di tutte le sottoscrizioni) è possibile visualizzare le sottoscrizioni di tutti gli utenti. In caso contrario, in questa pagina vengono visualizzate solo le sottoscrizioni personali.  
   
 Prima di creare una nuova sottoscrizione, è necessario verificare che l'origine dati del report utilizzi credenziali archiviate. Per archiviare le credenziali, utilizzare la pagina delle proprietà Origini dati.  
   
-> [!NOTE] È necessario avviare il servizio SQL Server Agent.   
+> [!NOTE]
+> È necessario avviare il servizio SQL Server Agent.   
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Per passare alla pagina Sottoscrizioni, selezionare i **puntini di sospensione (...)** di un report, quindi **Gestisci** e infine **Sottoscrizioni**.  
+È possibile ottenere la pagina Sottoscrizioni selezionando il **i puntini di sospensione (...)**  di un report, selezionando **Gestisci** e selezionando **sottoscrizioni**.  
   
 Nella pagina sottoscrizioni è possibile creare nuove sottoscrizioni selezionando **+ Nuova sottoscrizione**. È possibile modificare le sottoscrizioni esistenti o eliminare quelle selezionate.  
   
-Questa pagina include anche lo stato dei risultati delle esecuzioni della sottoscrizione nella colonna **Risultato**. Se si è verificato un errore per una sottoscrizione, è consigliabile controllare prima la colonna dei risultati per visualizzare il contenuto del messaggio.  
+Questa pagina include anche lo stato dei risultati delle esecuzioni della sottoscrizione nella colonna **Risultato** . Se si è verificato un errore per una sottoscrizione, è consigliabile controllare prima la colonna dei risultati per visualizzare il contenuto del messaggio.  
   
-## Creazione o modifica di una sottoscrizione  
+## <a name="creating-or-editing-a-subscription"></a>Creazione o modifica di una sottoscrizione  
 La pagina Nuova sottoscrizione o Modifica sottoscrizione consente di creare una nuova sottoscrizione o modificare una sottoscrizione esistente per un report. Le opzioni disponibili in questa pagina variano a seconda dell'assegnazione di ruolo associata all'utente. Gli utenti con autorizzazioni avanzate avranno a disposizione un maggior numero di opzioni.  
   
 Le sottoscrizioni sono supportate per i report che possono essere eseguiti in modo automatico. È fondamentale che il report utilizzi credenziali archiviate o non utilizzi credenziali. Per i report con parametri è necessario specificare un valore predefinito. È possibile che le sottoscrizioni vengano disattivate se si modificano le impostazioni di esecuzione del report o si rimuovono i valori predefiniti per i parametri. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa].  
   
-### Tipo di sottoscrizione  
+### <a name="type-of-subscription"></a>Tipo di sottoscrizione  
 È possibile selezionare una **sottoscrizione standard** o una **sottoscrizione guidata dai dati**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -47,7 +56,7 @@ Per creare una sottoscrizione guidata dai dati è necessario sapere come scriver
   
 Questa opzione è disponibile per gli utenti con autorizzazioni avanzate. Se si utilizzano le impostazioni di sicurezza predefinite, le sottoscrizioni guidate dai dati non possono essere utilizzate per i report inclusi nelle cartelle Report personali.  
   
-### Destinazione  
+### <a name="destination"></a>Destinazione  
 Consente di selezionare l'estensione per il recapito da utilizzare per la distribuzione del report.   
   
 Un'estensione per il recapito è disponibile se è installata e configurata nel server di report. Messaggio di posta elettronica da Server report è l'estensione per il recapito predefinita. Per poterla utilizzare, è tuttavia necessario configurarla. Il recapito alla condivisione file non richiede alcuna configurazione. Per poterlo utilizzare, è tuttavia è necessario definire una cartella condivisa.  
@@ -60,12 +69,12 @@ In base all'estensione per il recapito selezionata, verranno visualizzate le imp
   
 -   Le sottoscrizioni con recapito tramite condivisione file includono campi che consentono di specificare un percorso di destinazione. È possibile recapitare qualsiasi report in una condivisione file. Tuttavia, per i report che supportano funzionalità interattive (inclusi i report matrice che supportano il drill-down in righe e colonne) viene eseguito il rendering come file statici. Non è possibile visualizzare righe e colonne di drill-down in un file statico. Il nome della condivisione file deve essere specificato in formato UNC (Uniform Naming Convention), ad esempio \mycomputer\public\myreportfiles. Non includere una barra rovesciata finale nel nome del percorso. Il report verrà recapitato in un formato di file basato sul formato di rendering. Ad esempio, se si seleziona Excel, il report viene recapitato come file con estensione xlsx.  
   
-### Set di dati della sottoscrizione guidata dai dati  
+### <a name="data-driven-subscription-dataset"></a>Set di dati della sottoscrizione guidata dai dati  
 Per una sottoscrizione guidata dai dati, è necessario definire il set di dati usato per la sottoscrizione. Selezionare **Modifica set di dati** per specificare tali informazioni.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
   
-È necessario innanzitutto specificare un'**origine dati** da usare per la query. Può essere un'origine dati condivisa oppure è possibile specificare un'origine dati personalizzata.  
+È necessario innanzitutto specificare un' **origine dati** da usare per la query. Può essere un'origine dati condivisa oppure è possibile specificare un'origine dati personalizzata.  
   
 Sarà quindi necessario fornire una **query** in cui verranno elencate le diverse opzioni necessarie per l'esecuzione della sottoscrizione. Nella schermata verranno visualizzati i campi che devono essere restituiti. Questi campi possono variare a seconda del metodo di recapito e dei parametri del report.  
   
@@ -79,7 +88,10 @@ Per ottenere risultati migliori, eseguire la query in SQL Server Management Stud
   
 È quindi possibile convalidare la query. È inoltre possibile definire un **timeout per la query**.  
   
-Al termine della creazione della query, è possibile assegnare valori ai campi obbligatori. È possibile immettere i dati manualmente o selezionare un campo dal set di dati creato.  
-  
-  
-  
+Al termine della creazione della query, è possibile assegnare valori ai campi obbligatori. È possibile immettere i dati manualmente o selezionare un campo dal set di dati creato.
+
+[Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Utilizzo dei report impaginati](working-with-paginated-reports-web-portal.md)  
+[Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

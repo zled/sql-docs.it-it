@@ -1,35 +1,40 @@
 ---
-title: "Aggiunta di parametri di propagazione a un report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere parametri di propagazione a un Report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
+# <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
   I parametri di propagazione consentono di gestire quantità elevate di dati del report. È possibile definire un set di parametri correlati in modo che l'elenco dei valori di un parametro dipenda dal valore scelto per un altro parametro. Il primo parametro può essere ad esempio indipendente e presentare un elenco di categorie di prodotti. Quando l'utente seleziona una categoria, il secondo parametro dipende dal valore del primo parametro. I relativi valori vengono aggiornati con un elenco di sottocategorie all'interno della categoria scelta. Quando l'utente visualizza il report, per filtrarne i dati vengono utilizzati sia i valori dei parametri di categoria che di sottocategoria.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Per creare parametri di propagazione, è innanzitutto necessario definire la query del set di dati e includere un parametro di query per ogni parametro di propagazione necessario. È inoltre necessario creare un set di dati distinto per ogni parametro di propagazione allo scopo di fornire i valori disponibili. Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md).  
+ Per creare parametri di propagazione, è innanzitutto necessario definire la query del set di dati e includere un parametro di query per ogni parametro di propagazione necessario. È inoltre necessario creare un set di dati distinto per ogni parametro di propagazione allo scopo di fornire i valori disponibili. Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  Per i parametri di propagazione l'ordine è importante in quanto la query del set di dati relativa a un parametro riportato più avanti nell'elenco include un riferimento a ciascun parametro riportato in precedenza. In fase di esecuzione l'ordine dei parametri nel riquadro dei dati del report determina l'ordine in cui le query del parametro vengono visualizzate nel report e quindi l'ordine in cui un utente sceglie ogni valore del parametro successivo.  
   
- Per informazioni sulla creazione di parametri a cascata con più valori includendo la caratteristica Seleziona tutto, vedere [How to have a Select All Multi-Value Cascading Parameter](http://go.microsoft.com/fwlink/?LinkId=184757) (Come creare un parametro a cascata multivalore Seleziona tutto).  
+ Per informazioni sulla creazione di parametri a cascata con più valori includendo la caratteristica Seleziona tutto, vedere [How to have a Select All Multi-Value Cascading Parameter](http://go.microsoft.com/fwlink/?LinkId=184757)(Come creare un parametro a cascata multivalore Seleziona tutto).  
   
-## Per creare il set di dati principale con una query che include più parametri correlati  
+## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Per creare il set di dati principale con una query che include più parametri correlati  
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse su un'origine dati e quindi scegliere **Aggiungi set di dati**.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 11
   
  Procedere quindi alla creazione di un set di dati che specifichi i valori del parametro indipendente.  
   
-## Per creare un set di dati in modo da specificare i valori di un parametro indipendente  
+## <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>Per creare un set di dati in modo da specificare i valori di un parametro indipendente  
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse su un'origine dati e quindi scegliere **Aggiungi set di dati**.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 11
   
  Impostare quindi le proprietà del primo parametro in modo da utilizzare questo set di dati per popolarne i valori disponibili in fase di esecuzione.  
   
-## Per impostare i valori disponibili per un parametro di report  
+## <a name="to-set-available-values-for-a-report-parameter"></a>Per impostare i valori disponibili per un parametro di report  
   
 1.  Nella cartella Parametri del riquadro dei dati del report fare clic con il pulsante destro del mouse sul primo parametro e quindi scegliere **Proprietà parametri**.  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 11
   
 4.  Fare clic su **Ottieni valori da una query**. Verranno visualizzati tre campi.  
   
-5.  Nell'elenco a discesa di **Set di dati** fare clic sul nome del set di dati creato nella procedura precedente.  
+5.  Nell'elenco a discesa di **Set di dati**fare clic sul nome del set di dati creato nella procedura precedente.  
   
 6.  Nel campo **Valore** fare clic sul nome del campo contenente il valore del parametro.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 11
   
  Procedere quindi alla creazione di un set di dati che specifichi i valori di un parametro dipendente.  
   
-## Per creare un set di dati in modo da specificare i valori di un parametro dipendente  
+## <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>Per creare un set di dati in modo da specificare i valori di un parametro dipendente  
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse su un'origine dati e quindi scegliere **Aggiungi set di dati**.  
   
@@ -115,13 +120,13 @@ caps.handback.revision: 11
     WHERE (Category = @Category)  
     ```  
   
-     Nella clausola WHERE Category è il nome di un campo \<table> e @Category è un parametro di query. Questa istruzione produce un elenco di sottocategorie per la categoria specificata in @Category. In fase di esecuzione tale valore verrà compilato con il valore selezionato dall'utente per il parametro del report con nome identico.  
+     Nella clausola WHERE Category è il nome di un campo da \<tabella > e @Category è un parametro di query. Questa istruzione produce un elenco di sottocategorie per la categoria specificata in @Category. In fase di esecuzione tale valore verrà compilato con il valore selezionato dall'utente per il parametro del report con nome identico.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  Impostare quindi le proprietà del secondo parametro in modo da utilizzare questo set di dati per popolarne i valori disponibili in fase di esecuzione.  
   
-## Per impostare i valori disponibili per un parametro di report  
+## <a name="to-set-available-values-for-a-report-parameter"></a>Per impostare i valori disponibili per un parametro di report  
   
 1.  Nella cartella Parametri del riquadro dei dati del report fare clic con il pulsante destro del mouse sul primo parametro e quindi scegliere **Proprietà parametri**.  
   
@@ -131,7 +136,7 @@ caps.handback.revision: 11
   
 4.  Fare clic su **Ottieni valori da una query**.  
   
-5.  Nell'elenco a discesa di **Set di dati** fare clic sul nome del set di dati creato nella procedura precedente.  
+5.  Nell'elenco a discesa di **Set di dati**fare clic sul nome del set di dati creato nella procedura precedente.  
   
 6.  Nel campo **Valore** fare clic sul nome del campo contenente il valore del parametro.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 11
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Per verificare i parametri di propagazione  
+## <a name="to-test-the-cascading-parameters"></a>Per verificare i parametri di propagazione  
   
 1.  Fare clic su **Esegui**.  
   
@@ -153,12 +158,12 @@ caps.handback.revision: 11
   
 4.  Fare clic su **Visualizza report**. La visualizzazione del report verrà aggiornata in base ai parametri scelti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
- [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

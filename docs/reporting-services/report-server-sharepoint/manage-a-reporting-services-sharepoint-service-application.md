@@ -1,23 +1,28 @@
 ---
-title: "Gestire un&#39;applicazione di servizio SharePoint di Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestire un&quot;applicazione di servizio SharePoint di Reporting Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gestire un&#39;applicazione di servizio SharePoint di Reporting Services
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
   
  In questo argomento vengono illustrate le informazioni seguenti:  
@@ -36,7 +41,7 @@ caps.handback.revision: 18
   
 -   [Avvisi e sottoscrizioni provisioning](#bkmk_provisionsubscriptions)  
   
-## Per aprire la pagina delle proprietà delle applicazioni di servizio  
+## <a name="to-open-service-application-properties-page"></a>Per aprire la pagina delle proprietà delle applicazioni di servizio  
  Per aprire la pagina delle proprietà di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
   
 1.  Nel gruppo Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
@@ -109,7 +114,7 @@ caps.handback.revision: 18
 |Impostazione|Commenti|  
 |-------------|--------------|  
 |Abilita download Generatore report|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se i client sono in grado di visualizzare il pulsante per il download dell'applicazione Generatore report.|  
-|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore report 3.0 come applicazione ClickOnce, immettere il valore seguente: http://\<nomecomputer>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore Report 3.0 come un clic-applicazione ClickOnce, immettere il seguente valore: http://\<computername > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Abilita stampa client|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se gli utenti possono scaricare il controllo lato client, che fornisce opzioni di stampa.|  
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|  
 |Modifica limite cache di sessione|Il valore predefinito è 5.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 18
 ##  <a name="bkmk_managejobs"></a> Gestione processi  
  È possibile visualizzare ed eliminare i processi in esecuzione, ad esempio i processi creati dalle sottoscrizioni del report e da quelle guidate dai dati. La pagina non viene utilizzata per gestire le sottoscrizioni, bensì i processi attivati da una sottoscrizione. Ad esempio, tramite una sottoscrizione pianificata per essere eseguita una volta ogni ora verrà generato un processo una volta ogni ora che verrà visualizzato nella pagina **Gestione processi** .  
   
- ![gestione dei processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gestione dei processi in esecuzione")  
+ ![gestire i processi in esecuzione](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gestire processi in esecuzione")  
   
 ##  <a name="bkmk_keymgt"></a> Gestione chiavi  
  Nella tabella seguente sono riepilogate le pagine Gestione chiavi  
@@ -127,7 +132,7 @@ caps.handback.revision: 18
   
 |Pagina|Description|  
 |----------|-----------------|  
-|Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password**, quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. Valutare l'opportunità di archiviare il file della chiave in un computer distinto da quello che esegue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
+|Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. Valutare l'opportunità di archiviare il file della chiave in un computer distinto da quello che esegue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
 |Ripristina chiave di crittografia|1) Digitare o individuare il file della chiave nella casella **Percorso file**<br /><br /> 2) Nella casella **Password** digitare la password usata per eseguire il backup del file di crittografia.<br /><br /> 3) Fare clic su **OK**|  
 |Cambia chiave di crittografia|Questa operazione comporta la creazione di una chiave nuova e l'esecuzione di una nuova operazione di crittografia del contenuto crittografato. Se si dispone di grandi quantità di contenuto, questa operazione può richiedere diverse ore.<br /><br /> Al termine dell'operazione di modifica della chiave di crittografia, è consigliabile eseguire un backup della nuova chiave.|  
 |Elimina contenuto crittografato|Il contenuto eliminato non può essere recuperato.<br /><br /> **\*\* Importante \*\*** L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata. e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.|  
@@ -145,7 +150,7 @@ caps.handback.revision: 18
   
  È possibile utilizzare qualsiasi account utente di Windows. Per ottenere risultati ottimali, scegliere un account che disponga delle autorizzazioni di lettera e di accesso alla rete per supportare le connessioni ad altri computer. Deve disporre di autorizzazioni di lettura per qualsiasi immagine o file di dati esterno da utilizzare in un report. Non specificare un account locale se tutte le origini dati e tutte le immagini esterne per i report non sono archiviate sul computer del server di report. Utilizzare l'account solo per l'elaborazione automatica dei report.  
   
- ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Contenuto correlato di PowerShell")  
+ ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell")  
   
  Di seguito è riportato un esempio del comando PowerShell per restituire l'elenco delle applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la proprietà UEAccount:  
   
@@ -153,14 +158,14 @@ caps.handback.revision: 18
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) (Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).  
+ Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)(Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Specifica account di esecuzione**  
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Usare questo formato: *\<dominio>\\<account utente\>*.  
+ Immettere un account utente di dominio di Windows. Utilizzare questo formato:  *\<dominio >\\< account utente\>*.  
   
  **Password**  
  Digitare la password.  
@@ -171,7 +176,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> Impostazioni posta elettronica  
  Utilizzare questa pagina per specificare le impostazioni SMTP (Simple Mail Transport Protocol) che consentono il recapito tramite posta elettronica dal server di report. È possibile utilizzare l'estensione per il recapito tramite posta elettronica del server di report per distribuire report o notifiche di elaborazione dei report utilizzando sottoscrizioni tramite posta elettronica. L'estensione per il recapito tramite posta elettronica del server di report richiede un server SMTP e un indirizzo di posta elettronica da utilizzare nel campo Da.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Utilizza Server SMTP**  
  Consente di specificare che il reindirizzamento della posta elettronica del server di report viene eseguito tramite un server SMTP.  
   
@@ -184,7 +189,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_provisionsubscriptions"></a> Avvisi e sottoscrizioni provisioning  
  Utilizzare questa pagina per verificare se SQL Server Agent è in esecuzione ed effettuare il provisioning dell'accesso per consentire l'utilizzo di SQL Server Agent da parte di Reporting Services. SQL Server Agent è necessario per gli avvisi dati, le pianificazioni e le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-## Associazione del proxy  
+## <a name="proxy-association"></a>Associazione del proxy  
  Al momento della creazione dell'applicazione di servizio Reporting Services, è stata selezionata l'applicazione Web da associare e per la quale effettuare il provisioning delle autorizzazioni per l'accesso da parte dell'applicazione di servizio Reporting Services. Se è stato scelto di non eseguire l'associazione o si desidera modificare l'associazione, attenersi alla procedura seguente.  
   
 1.  In Gestione applicazioni di Amministrazione centrale SharePoint fare clic su **Configura associazioni applicazione di servizio**.  

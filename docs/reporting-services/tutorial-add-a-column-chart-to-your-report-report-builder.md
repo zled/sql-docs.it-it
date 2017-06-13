@@ -1,24 +1,29 @@
 ---
-title: "Esercitazione: Aggiungere un istogramma al report (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Aggiungere un istogramma al Report (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Aggiungere un istogramma al report (Generatore report)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
 In questa esercitazione si creerà un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria. 
 
 Gli istogrammi sono utili per:  
@@ -35,7 +40,7 @@ Nell'illustrazione seguente è mostrato l'istogramma che verrà creato con una m
   
 Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Creare un report grafico da Creazione guidata grafico  
@@ -44,11 +49,11 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
 > [!NOTE]  
 > La query di questa esercitazione contiene i valori dei dati, pertanto non è necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
   
-### Per creare un report grafico  
+### <a name="to-create-a-chart-report"></a>Per creare un report grafico  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Viene visualizzata la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -56,7 +61,7 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
   
 3.  Nel riquadro a destra fare clic su **Creazione guidata grafico**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**, quindi scegliere **Avanti**.  
+4.  Nella pagina **Scegliere un set di dati**fare clic su **Crea un set di dati**, quindi scegliere **Avanti**.  
   
 5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o trovare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
@@ -93,9 +98,9 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
 ## <a name="ChartType"></a>2. Scegliere il tipo di grafico  
 È possibile scegliere tra diversi tipi predefiniti di grafico, quindi modificare il grafico dopo aver completato la procedura guidata.  
   
-### Per aggiungere un istogramma  
+### <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
   
-1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico**. Scegliere **Avanti**.  
+1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** . Scegliere **Avanti**.  
   
 2.  Nella pagina **Disponi campi del grafico** trascinare il campo SalesDate in **Categorie**. Le categorie vengono visualizzate sull'asse orizzontale.  
   
@@ -124,7 +129,7 @@ Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori 
   
 2.  Fare clic con il pulsante destro del mouse sull'asse orizzontale > **Proprietà asse orizzontale**.  
   
-3.  Nella scheda **Numero**, in **Categoria ** selezionare **Data**.  
+3.  Nella scheda **Numero**, in **Categoria**  selezionare **Data**.  
   
 5.  Nella casella **Tipo** selezionare **31 gennaio 2000**.  
   
@@ -138,7 +143,7 @@ La data viene visualizzata nel formato selezionato. Il grafico continua a non as
   
 È possibile personalizzare la visualizzazione delle etichette ruotandole e specificando l'intervallo.  
   
-## 4. Ruotare le etichette asse sull'asse orizzontale  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Ruotare le etichette asse sull'asse orizzontale  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
@@ -148,7 +153,7 @@ La data viene visualizzata nel formato selezionato. Il grafico continua a non as
   
 5.  Nella scheda **Etichette**, in **Modifica opzioni adattamento etichetta asse** selezionare **Disabilita adattamento**.  
   
-7.  In **Angolo di rotazione etichetta** selezionare **-90**.  
+7.  In **Angolo di rotazione etichetta**selezionare **-90**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -171,7 +176,7 @@ La legenda viene creata automaticamente dai dati di categoria e serie. È possib
   
 3.  In **Layout e posizione** selezionare una posizione diversa. Ad esempio, selezionare l'opzione centrale inferiore.  
   
-    Quando la legenda viene posizionata alla fine o all'inizio di un grafico, il relativo layout viene modificato da verticale in orizzontale. È possibile selezionare un altro layout nella casella **Layout**.  
+    Quando la legenda viene posizionata alla fine o all'inizio di un grafico, il relativo layout viene modificato da verticale in orizzontale. È possibile selezionare un altro layout nella casella **Layout** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -218,7 +223,7 @@ Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8. Visualizzare tutte le etichette sull'asse orizzontale (x)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Visualizzare tutte le etichette sull'asse orizzontale (x)
 
 Si noti che sull'asse x sono visualizzate solo alcune etichette. In questa sezione si imposterà una proprietà nel riquadro Proprietà per visualizzare tutte le etichette.
 
@@ -244,23 +249,23 @@ Una media mobile è una media dei dati della serie calcolata nel tempo. La media
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare doppio clic nel grafico per visualizzare il riquadro **Dati grafico**.  
+2.  Fare doppio clic nel grafico per visualizzare il riquadro **Dati grafico** .  
   
-3.  Fare clic con il pulsante destro del mouse sul campo **[Sum(Sales)]** disponibile nell'area **Valori**, quindi scegliere **Aggiungi serie calcolata**.  
+3.  Fare clic con il pulsante destro del mouse sul campo **[Sum(Sales)]** disponibile nell'area **Valori** , quindi scegliere **Aggiungi serie calcolata**.  
 
      ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  In **Formula** verificare che sia selezionata l'opzione **Media mobile**.  
+4.  In **Formula**verificare che sia selezionata l'opzione **Media mobile** .  
   
-5.  In **Imposta parametri formula**, per l'opzione **Periodo** selezionare **4**.  
+5.  In **Imposta parametri formula**, per l'opzione **Periodo**selezionare **4**.  
   
-6.  Nella scheda **Bordo**, in **Spessore linea** selezionare **3pt**.  
+6.  Nella scheda **Bordo** , in **Spessore linea**selezionare **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-Nel grafico viene visualizzata una riga in cui è riportata la media mobile delle vendite totali per data, calcolata in base a un intervallo di quattro date. Ulteriori informazioni sull'[aggiunta di una media mobile a un grafico](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
+Nel grafico viene visualizzata una riga in cui è riportata la media mobile delle vendite totali per data, calcolata in base a un intervallo di quattro date. Ulteriori informazioni sull' [aggiunta di una media mobile a un grafico](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
@@ -270,9 +275,9 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 2.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
   
-3.  Digitare **Grafico a barre - Vendite**, premere INVIO, quindi digitare **Gennaio - dicembre 2015** in modo da ottenere un risultato simile al seguente:  
+3.  Digitare **Grafico a barre - Vendite**, premere INVIO, quindi digitare **Gennaio - dicembre 2015**in modo da ottenere un risultato simile al seguente:  
   
-    **Grafico - Vendite**  
+    **Grafico a barre - Vendite**  
   
     **Gennaio - dicembre 2015**  
   
@@ -288,7 +293,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 ## <a name="Save"></a>11. Salvare il report  
   
-### Per salvare il report  
+### <a name="to-save-the-report"></a>Per salvare il report  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
@@ -296,14 +301,16 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
 
     È possibile salvarlo nel computer o nel server di report.
   
-3.  In **Nome** digitare **Istogramma ordini vendita**.  
+3.  In **Nome**digitare **Istogramma ordini vendita**.  
   
 4.  Fare clic su **Salva**.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 -    [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 -    [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+
