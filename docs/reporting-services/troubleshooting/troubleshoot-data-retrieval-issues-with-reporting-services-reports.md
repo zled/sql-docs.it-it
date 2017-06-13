@@ -1,34 +1,39 @@
 ---
-title: "Risolvere i problemi di recupero dei dati con i report di Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Risolvere i problemi di recupero dei dati con report di Reporting Services | Documenti Microsoft
+ms.custom: 
+ms.date: 02/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 caps.latest.revision: 4
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 4
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Risolvere i problemi di recupero dei dati con i report di Reporting Services
+# <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Risolvere i problemi di recupero dei dati con i report di Reporting Services
 Il primo passaggio dell'elaborazione del report consiste nel recuperare i dati del report per ogni set di dati tramite la query del set di dati. Quando si visualizza in anteprima un report in locale, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel computer. Quando si esegue un report nel server di report, è necessario che le connessioni all'origine dati e le credenziali dispongano delle autorizzazioni sufficienti per recuperare i dati nel server di report. Utilizzare questo argomento per risolvere i problemi relativi al recupero dei dati del report.   
   
-## Non è possibile creare una connessione a un'origine dati  
+## <a name="i-cannot-create-a-connection-to-a-data-source"></a>Non è possibile creare una connessione a un'origine dati  
 Quando si crea un'origine dati, si esegue una query del set di dati o si visualizza in anteprima un report, è possibile che venga visualizzato il messaggio seguente: Impossibile creare una connessione all'origine dati `<data source name>`.   
     
-### L'origine dati non è disponibile.  
+### <a name="data-source-is-not-available"></a>L'origine dati non è disponibile.  
 L'origine dati è offline o non è disponibile per altri motivi.   
   
 Verificare di poter accedere all'origine dati e che questa sia disponibile. Ad esempio, utilizzare SQL Server Management Studio per connettersi all'origine dati. Per i database relazionali e multidimensionali, usare il pulsante **Test** nella finestra di dialogo **Proprietà connessione** per verificare la connessione e le autorizzazioni per l'origine dati.   
   
-### Le credenziali dell'origine dati non sono valide.  
+### <a name="data-source-credentials-are-not-valid"></a>Le credenziali dell'origine dati non sono valide.  
 Le autorizzazioni delle credenziali che si utilizzano per connettersi all'origine dati non sono sufficienti per recuperare i dati specificati nella query.  
   
 Verificare che le credenziali utilizzate siano corrette. Ad esempio, è possibile disporre delle autorizzazioni per recuperare i dati da una tabella o una vista, ma non da una colonna specifica oppure potrebbero non essere disponibili autorizzazioni sufficienti per eseguire una stored procedure che popola una vista.   
@@ -36,34 +41,38 @@ Verificare che le credenziali utilizzate siano corrette. Ad esempio, è possibil
 > [!NOTE]  
 > Le autorizzazioni che si utilizzano per recuperare i dati per la visualizzazione in anteprima di un report potrebbero essere diverse dalle autorizzazioni necessarie per recuperare i dati dopo che un report viene pubblicato in un server di report.   
   
-### La password non è valida  
+### <a name="not-a-valid-password"></a>La password non è valida  
 Per le origini dati con le credenziali richieste oppure specificate nella stringa di connessione, i caratteri della password vengono passati ai driver dell'origine dati sottostante. Se la password o la stringa contiene caratteri speciali, ad esempio i segni di punteggiatura, tali caratteri non vengono convalidati dai driver dell'origine dati.   
   
 Verificare che la password non includa caratteri speciali. Se la modifica della password costituisce un'operazione complessa, rivolgersi all'amministratore del database per fare in modo che le credenziali appropriate vengano archiviate in locale e sul server come parte del nome di un'origine dei dati (DSN) ODBC del sistema. Per altre informazioni, vedere "OdbcConnection.ConnectionString" nella documentazione di .NET Framework SDK in MSDN.   
   
 > [!NOTE]  
->È consigliabile non aggiungere le informazioni di accesso, ad esempio la password, alla stringa di connessione. Progettazione report fornisce una pagina **Credenziali** nella finestra di dialogo [Proprietà origine dati](Data%20Source%20Properties%20Dialog%20Box,%20General%20(Report%20Builder).xml) o [Proprietà origine dati condivisa](Shared%20Data%20Source%20Properties%20Dialog%20Box,%20Credentials.xml) che può essere usata per immettere le credenziali. Tali credenziali vengono archiviate in modo protetto nel computer utilizzato per creare il report.  
+>È consigliabile non aggiungere le informazioni di accesso, ad esempio la password, alla stringa di connessione. Progettazione report fornisce una pagina **Credenziali** nella finestra di dialogo [Proprietà origine dati](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) o [Proprietà origine dati condivisa](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) che può essere usata per immettere le credenziali. Tali credenziali vengono archiviate in modo protetto nel computer utilizzato per creare il report.  
   
-## Perché non vengono visualizzati i dati quando si esegue la query nella finestra Progettazione query?  
+## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>Perché non vengono visualizzati i dati quando si esegue la query nella finestra Progettazione query?  
 Quando si crea un set di dati, la raccolta dei campi del set di dati viene visualizzata nel riquadro Dati report. Qualche volta la raccolta dei campi del set di dati non viene visualizzata come previsto.   
   
-### L'importazione della query non include i campi calcolati  
+### <a name="import-query-does-not-import-calculated-fields"></a>L'importazione della query non include i campi calcolati  
   
 Sebbene vengano salvati in una definizione del report, i campi calcolati non vengono inclusi quando si importa una query del set di dati da un altro report. Solo i campi specificati dalla query del set di dati vengono visualizzati nel riquadro Dati report dopo aver creato un set di dati importando una query da un altro report.   
   
 Per visualizzare i campi calcolati nel riquadro Dati report, è necessario definirli per ogni report nel quale vengono utilizzati.   
   
-### Alcuni provider di dati non supportano il popolamento automatico della raccolta dei campi del set di dati  
+### <a name="some-data-providers-do-not-support-automatic-population-of-the-dataset-field-collection"></a>Alcuni provider di dati non supportano il popolamento automatico della raccolta dei campi del set di dati  
 Quando si definisce una query nella finestra di dialogo Proprietà set di dati e quindi si chiude la finestra di dialogo, la raccolta dei campi del set di dati viene di solito visualizzata nel riquadro Dati report. Per alcune origini dati, la raccolta dei campi del set di dati non viene popolata automaticamente.   
   
 Per popolare la raccolta dei campi del set di dati, effettuare le operazioni seguenti:  
 * Verificare di disporre delle autorizzazioni necessarie per recuperare le informazioni dei campi dal database. Per alcune origini dati, è possibile che si disponga delle autorizzazioni necessarie per accedere all'origine dati, ma non alla tabella o alla colonna. È possibile disporre delle autorizzazioni per accedere a una vista ma non per eseguire le stored procedure che creano la vista. Per convalidare l'accesso a tabelle o colonne specifiche in un database, verificare i risultati della query in un'applicazione distinta, ad esempio SQL Server Management Studio, usando le stesse autorizzazioni del report. Se non è possibile visualizzare i risultati desiderati per la query, richiedere il supporto dell'amministratore di sistema per modificare le autorizzazioni per i dati.   
-* Eseguire la query nel riquadro Query della finestra di dialogo **Proprietà set di dati**. Per altre informazioni, vedere [Set di dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
+* Eseguire la query nel riquadro Query della finestra di dialogo **Proprietà set di dati** . Per altre informazioni, vedere [Set di dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Aggiungere manualmente i campi. Per altre informazioni, vedere [Procedura: Aggiungere, modificare e aggiornare i campi nel riquadro dei dati del report (Generatore report 3.0 e SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+
+
+
+

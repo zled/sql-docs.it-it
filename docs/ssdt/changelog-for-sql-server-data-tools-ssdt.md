@@ -15,18 +15,150 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8798c5319cdce7b68f71868722aacfbf4cb34d9f
+ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
+ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/20/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
-Questo log delle modifiche è per [SQL Server Data Tools (SSDT) per Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx), reso disponibile insieme a [SQL Server 2016](https://msdn.microsoft.com/library/ms130214.aspx).  
+È il registro delle modifiche per [SQL Server Data Tools (SSDT) per Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-Per alcuni post dettagliati sulle novità e le modifiche, visitare il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).  
+I messaggi dettagliati sulle caratteristiche nuove e modificate, visitare [blog del Team di SSDT](https://blogs.msdn.microsoft.com/ssdt/)
 
-## <a name="ssdt-165-for-sql-server-2016"></a>SSDT 16.5 (per SQL Server 2016)
+## <a name="ssdt-171"></a>SSDT 17,1
+Numero di build: 14.0.61705.170
+
+### <a name="whats-new"></a>Novità
+**Progetti AS:**
+- Gli utenti possono impostare la codifica di hint per le colonne nell'interfaccia utente nei modelli 1400
+- IntelliSense non correlati al modello è ora disponibile in modalità offline
+- Esplora modelli tabulari ora contiene un nodo per rappresentare denominate espressioni M disponibili nel modello (modelli tabulari a livello di compatibilità di 1400)
+- Azure Active Directory selezione utenti simile a una pagina IAM del portale di Microsoft Azure disponibili quando si imposta i membri del ruolo nei modelli tabulari
+
+**Progetti di database:**
+- Aggiornamento di DacFx 17,1
+
+### <a name="bug-fixes"></a>Correzioni di bug
+- Risolto un problema in cui il nome del gruppo di finestre di progettazione di Business Intelligence è stato visualizzato in modo non corretto in Opzioni di Visual Studio in VS2017
+- Risolto un problema in cui può verificarsi un arresto anomalo la generazione di una mappa del codice per una soluzione con un progetto di Report o come progetto
+- Un numero fisso di problemi con l'integrazione di PowerQuery per i modelli tabulari di Analysis Services 1400 a livello di compatibilità
+- Risolto un problema nel nuovo editor DAX finestra degli strumenti in cui l'operatore di assegnazione non è stato in una riga distinta quando si definisce una misura
+- Risolto un problema che impedisce la visualizzazione tabulare misura dall'aggiornamento durante la ridenominazione delle misure nella prospettiva
+- Aggiornato motore integrato dell'area di lavoro di Analysis Services e modello a oggetti tabulare che corregge un test di regressione che ha causato contenente traduzioni avrà esito negativo nei progetti tabulari 1200 distribuire nel server SQL Server 2016 Analysis Services
+- Correzione di un problema di prestazioni che ha effettuato creation\deletion di nuove origini di dati tabulare 1400 molto lente
+- Risolto un problema in cui il diagramma vista origine dati nei modelli multidimensionali Impossibile arresta rendering se la modifica di visualizzazione rapidamente tra diverse viste origine dati
+
+## <a name="dacfx-171"></a>17.1 DacFx
+- Risolto un problema durante la crittografia di una colonna con le tabelle con ottimizzazione per la memoria con altre colonne di identità
+- Supporto per l'opzione CATALOG_COLLATION per creare DATABASE SQLDOM
+
+## <a name="dacfx-1701"></a>DacFx 17.0.1 
+- Risolvere per problema con i database con una chiave asimmetrica da un modulo HSM, con un provider EKM [voce Connect](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17,0 (supporta fino a 2017 di SQL Server)
+Numero di build: 14.0.61704.140
+
+### <a name="whats-new"></a>Novità
+**Progetti di database:**
+- Che modifica un indice cluster in una vista non è più bloccherà la distribuzione
+- Le stringhe di confronto dello schema correlate alla crittografia delle colonne useranno il nome appropriato invece del nome dell'istanza.   
+- È stata aggiunta una nuova opzione della riga di comando a SqlPackage: ModelFilePath.  Ciò consente agli utenti esperti specificare un file esterno model.xml per l'importazione, la pubblicazione e operazioni di scripting   
+- L'API DacFx è stato esteso per supportare l'autenticazione di Azure AD universale e multi-factor authentication (MFA)
+
+**Progetti IS:**
+- L'origine OData SSIS e Gestione connessione OData supportano ora la connessione ai feed OData di Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online.
+- Progetto SSIS supporta ora la versione di server di destinazione di "SQL Server 2017" 
+- Supporto per le attività di controllo CDC, barra di divisione CDC e l'origine CDC quando la destinazione SQL Server 2017. 
+
+**Progetti AS:**
+- Integrazione di Analysis Services PowerQuery (modelli tabulari a livello di compatibilità di 1400):
+    - DirectQuery è disponibile per SQL Oracle, Teradata e se l'utente ha installato il driver di terze parti 3rd
+    - Aggiungere colonne dall'esempio in PowerQuery
+    - Dati di accedere alle opzioni nei modelli 1400 (proprietà a livello di modello utilizzato dal motore M)
+        - Abilitare la combinazione rapida (valore predefinito è false, se impostata su true, il mashup ignorerà livelli di privacy di origine dati quando si combinano dati)
+        - Abilitare Legacy reindirizza (valore predefinito è false, quando è impostato su true, il motore mashup seguirà reindirizzamenti HTTP potenzialmente non sicuri.  Ad esempio, un reindirizzamento da HTTPS a un URI HTTP)  
+        - Restituire i valori di errore come Null (valore predefinito è false, quando è impostata su true, errore a livello di cella verrà restituito come null. Se è false, verrà generata un'eccezione è una cella contiene un errore)  
+    - Origini dati aggiuntive (origini dati di file) utilizzando PowerQuery
+        - Excel 
+        - Testo/CSV 
+        - Xml 
+        - JSON 
+        - Cartella 
+        - Database di Access 
+        - Archiviazione BLOB Azure 
+    - Interfaccia utente localizzata PowerQuery
+- Finestra degli strumenti Editor di DAX
+    - DAX una migliore esperienza per le misure, colonne calcolate e le espressioni di righe di dettaglio, disponibile tramite la vista, dal menu di altre finestre SSDT di modifica
+    - Miglioramenti per parser\Intellisense DAX
+
+
+**Progetti RS:**
+- È ora disponibile il controllo RVC incorporabile con supporto di SSRS 2016.
+
+### <a name="bug-fixes"></a>Correzioni di bug
+**Progetti AS:**
+- È stato risolto il problema della priorità dei modelli per i progetti BI in modo che non vengano visualizzati nella parte più alta delle categorie dei nuovi progetti in Visual Studio
+- È stato risolto il problema di arresto anomalo di Visual Studio che si verifica in rare circostanze all'apertura di una soluzione SSIS, SSAS o SSRS
+- Progetti tabulari: vari miglioramenti e correzioni delle prestazioni per l'analisi DAX e la barra della formula.
+- Progetti tabulari: Esplora modelli tabulari non sarà più visibile se non ci sono progetti tabulari di SSAS aperti.
+- Progetti multidimensionali: risolto un problema a causa del quale la finestra di dialogo di elaborazione era inutilizzabile in computer con valori DPI alti.
+- Progetti tabulari: risolto un problema a causa del quale si verifica un errore in SSDT all'apertura di qualsiasi progetto BI quando SSMS è già aperto. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Progetti tabulari: risolto un problema a causa del quale le gerarchie non venivano salvate correttamente nel file bim in un modello 1103. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Progetti tabulari: risolto un problema a causa del quale la modalità area di lavoro integrata era consentita nei computer a 32 bit anche se non è supportata.
+- Progetti tabulari: risolto un problema a causa del quale il clic su qualsiasi elemento in modalità di semiselezione (ad esempio, digitazione di un'espressione DAX ma clic su una misura) potrebbe causare arresti anomali del sistema.
+- Progetti tabulari: risolto un problema a causa del quale la distribuzione guidata reimposta la proprietà .Name del modello su "Model". [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Progetti tabulari: risolto un problema a causa del quale la selezione di una gerarchia in Esplora modelli tabulari comporta la visualizzazione delle proprietà anche se non è selezionata la Vista diagramma.
+- Progetti tabulari: risolto un problema a causa del quale quando si incolla contenuto nella barra della formula DAX vengono incollati immagini o altri contenuti invece del testo, quando si esegue l'operazione Incolla da particolari applicazioni.
+- Progetti tabulari: risolto un problema a causa del quale alcuni vecchi modelli nel livello 1103 non potevano essere aperti a causa della presenza di misure con una definizione specifica.
+- Progetti tabulari: risolto un problema a causa del quale non era possibile eliminare sessioni XEvent.
+- È stato risolto un problema a causa del quale ogni tentativo di compilare file "smproj" di AS con devenv.com aveva esito negativo
+- È stato risolto un problema a causa del quale le modifiche di testo venivano finalizzate con una frequenza eccessiva quando si usava l'IME coreano nei titoli delle schede dei fogli nei modelli tabulari AS
+- È stato risolto un problema per cui la funzionalità Intellisense per DAX Related() impediva la corretta visualizzazione delle colonne provenienti da altre tabelle
+- È stato migliorato il processo di importazione di un progetto tabulare AS dalla finestra di dialogo del database ordinando l'elenco dei database AS
+- È stato risolto un problema a causa del quale, durante la creazione di tabelle calcolate in un modello tabulare AS, le tabelle non venivano elencate come oggetti suggeriti nell'espressione
+- È stato risolto un problema che si verificava quando si provava ad aprire modelli AS 1400 usando il server dell'area di lavoro integrata dopo la visualizzazione del codice
+- È stato risolto un problema che impediva il corretto funzionamento di alcune origini dati (con nessun supporto per il catalogo iniziale) in determinate circostanze 
+- La Distribuzione guidata deve applicare le modifiche alle partizioni di tabelle calcolate anche se è stata abilitata l'opzione per mantenere le partizioni
+- È stato risolto un problema a causa del quale la finestra di dialogo Proprietà avanzate in una connessione AS esistente non visualizzava l'elenco completo a meno che non venisse riselezionata
+- Alcuni problemi sono stati risolti con le stringhe dell'interfaccia utente incomplete visualizzate in alcune versioni localizzate
+- Un numero fisso di problemi con l'integrazione di PowerQuery a livello di compatibilità 1400 come modelli tabulari
+- Risolto un problema con i modelli di stile Creazione guidata Report non venga visualizzato correttamente
+- Risolto un problema con la creazione guidata Report che possono portare a impostazioni origine dati non corretti quando si passa da SQL a AS
+- Risolto un problema che causa un errore di compilazione progetto di Analysis Services (tabulare) dalla riga di comando (devenv.com\exe)
+- Risolto un problema con il parser misura DAX per visualizzare il colore del testo evidenziato e corretto quando si avvia con lettere prima: =
+- Risolto un problema di attivazione di un ObjectRefException se i percorsi sono troppo lunghi il tentativo di visualizzare tutti i file di progetto tabulare in modalità integrata dell'area di lavoro
+- Risolto un problema con la finestra di progettazione origine dati per Provider di dati a Client Compact 4.0 in cui sono state visualizzate non disponibile
+- Risolto un problema che ha causato un errore durante il tentativo di esplorare il modello di data mining in VS2017
+- Risolto un problema in un modello multidimensionale in VS2017 in cui si arresta il rendering dopo la modifica di viste diagramma vista origine dati e quindi raggiunge un'eccezione
+- Risolto un problema di visualizzazione in anteprima i report con una connessione AS non è riuscita a VS2017
+ 
+
+**Progetti RS:**
+- È stato risolto un problema per cui, durante la progettazione di report in SSDT, la visualizzazione ad albero di parametri, origini dati e set di dati si comprimeva quando veniva apportata la maggior parte delle modifiche 
+- Risolto un problema a causa del quale con Salva viene salvata la versione di RDL e non la versione più recente.
+- Risolto un problema a causa del quale SSDT RS esegue il backup dei file quando il backup è disattivato e vari altri problemi.
+- Risolto un problema in Generatore Report a causa del quale viene visualizzato un errore quando si fa clic "Dividi celle". [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Risolto un problema a causa del quale la memorizzazione nella cache potrebbe causare dati errati in un report. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+
+**Progetti IS:**
+- Risolto un problema a causa del quale l'impostazione run64bitruntime non viene mantenuta.
+- Risolto un problema a causa del quale DataViewer non salva le colonne visualizzate.
+- Risolto un problema a causa del quale Parti del pacchetto nasconde le annotazioni. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- Risolto un problema a causa del quale Parti del pacchetto ignora layout e annotazioni in flussi di dati. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- Risolto un problema a causa del quale si verifica un arresto anomalo di SSDT quando si importa un progetto da SQL Server.
+- Risolto un problema con TimeoutInMinutes di attività Hadoop File System predefinito su 10, dopo aver salvato il pacchetto SSIS di apertura e in fase di esecuzione.
+
+**Progetti di database:**
+- È stata ripristinata l'impostazione per IgnoreColumnOrder nella distribuzione DACPAC di SSDT [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
+- Non è possibile compilare SSDT se viene usato STRING_SPLIT [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- È stato risolto un problema per cui DeploymentContributors hanno accesso al modello pubblico ma lo schema sottostante non è stato inizializzato [Problema Github](https://github.com/Microsoft/DACExtensions/issues/8)
+- È stata introdotta una correzione temporanea di DacFx per il posizionamento di FILEGROUP
+- È stato risolto l'errore "Riferimento non risolto" per sinonimi esterni 
+- Always Encrypted: la crittografia online non disabilita il rilevamento di modifiche al momento dell'annullamento e non funziona correttamente se il rilevamento di modifiche non è stato azzerato prima dell'avvio della crittografia
+
+
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16,5 (supporta fino a SQL Server 2016)
 Data di rilascio: 20 ottobre 2016
 
 Numero di build: 14.0.61021.0

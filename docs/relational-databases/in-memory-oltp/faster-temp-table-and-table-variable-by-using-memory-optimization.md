@@ -1,7 +1,7 @@
 ---
 title: "Tabella temporanea e variabile di tabella più rapide con l&quot;ottimizzazione per la memoria | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2017
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria
@@ -430,40 +430,4 @@ Se l'accesso alla variabile di tabella con ottimizzazione per la memoria avviene
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Definizione di durabilità per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-  
-  
-  
-\<!--  
-CAPS Title: "Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria"  
-  
-https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
-  
-  
-[Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
-  
-[Filegroup con ottimizzazione per la memoria](http://msdn.microsoft.com/library/dn639109.aspx)  
-  
-[Pool di risorse di Resource Governor](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Ottimizzazione guidata per la memoria](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria: esempio di calcolo](http://msdn.microsoft.com/library/dn205318.aspx)  
-  
-  
-[Durabilità per tabelle con ottimizzazione per la memoria](http://msdn.microsoft.com/library/dn553125.aspx)  
-  
-[Definizione di durabilità per gli oggetti con ottimizzazione per la memoria](http://msdn.microsoft.com/library/dn553122.aspx)  
-  
-[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
-  
-  
-GeneMi , 2016-05-02  Monday  18:40pm  
--->  
-  
-  
-  
-
 

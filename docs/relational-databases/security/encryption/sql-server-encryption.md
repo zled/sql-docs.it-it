@@ -2,7 +2,7 @@
 title: Crittografia di SQL Server | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>Crittografia di SQL Server
   La crittografia è il processo che consiste nell'offuscare i dati tramite l'utilizzo di una chiave o di una password. È in grado di rendere i dati inutilizzabili se non si dispone della chiave di decrittografia o password corrispondente. La crittografia non risolve i problemi relativi al controllo di accesso, ma migliora la sicurezza limitando la perdita di dati anche se il controllo di accesso viene eluso. Se, ad esempio, il computer host del database è configurato scorrettamente e un pirata informatico ottiene dati riservati, le informazioni sottratte potrebbero essere inutilizzabili se crittografate.  
   
- È possibile utilizzare la crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connessioni, dati e stored procedure. Nella tabella seguente sono disponibili ulteriori informazioni sulla crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
+
 > [!IMPORTANT]  
 >  Sebbene la crittografia sia un strumento prezioso per garantire la sicurezza, se ne sconsiglia l'utilizzo per tutti i dati o le connessioni. Per decidere se implementare la crittografia oppure no, considerare le modalità di accesso ai dati utilizzate dagli utenti. Se per accedere gli utenti utilizzano una rete pubblica, la crittografia dei dati potrebbe essere necessaria per aumentare il livello di sicurezza. Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. L'utilizzo della crittografia comporta anche l'adozione di una strategia di manutenzione per password, chiavi e certificati.  
   
 > [!NOTE]  
 >  Le informazioni più recenti sulla sicurezza a livello di trasporto (TSL1.2) sono disponibili nell'articolo [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
-  
-## <a name="in-this-section"></a>Argomenti della sezione  
+
+È possibile utilizzare la crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connessioni, dati e stored procedure. Gli argomenti seguenti contengono ulteriori informazioni sulla crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+
  [Gerarchia di crittografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informazioni sulla gerarchia di crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  Informazioni sull'utilizzo di un certificato per la crittografia dei dati.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- [Microsoft TechNet: SQL Server TechCenter: Sicurezza e protezione di SQL Server 2005](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet: SQL Server TechCenter: sicurezza di SQL Server 2012 e protezione](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  

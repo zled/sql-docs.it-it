@@ -53,8 +53,8 @@
 ### [Abilitare l'inizializzazione con un backup per le pubblicazioni transazionali (SQL Server Management Studio)](enable-initialization-with-backup-for-transactional-publications.md)  
 ### [Inizializzare una sottoscrizione transazionale da un backup (programmazione Transact-SQL della replica)](initialize-a-transactional-subscription-from-a-backup.md)  
 ### [Inizializzare manualmente una sottoscrizione](initialize-a-subscription-manually.md)  
-### [Sincronizzare una sottoscrizione pull](synchronize-a-pull-subscription.md)  
-### [Sincronizzare una sottoscrizione push](synchronize-a-push-subscription.md)  
+### [Sincronizzazione di una sottoscrizione pull](synchronize-a-pull-subscription.md)  
+### [Sincronizzazione di una sottoscrizione push](synchronize-a-push-subscription.md)  
 ### [Reinizializzare una sottoscrizione](reinitialize-a-subscription.md)  
 ### [Eseguire script prima e dopo l'applicazione di uno snapshot (SQL Server Management Studio)](execute-scripts-before-and-after-a-snapshot-is-applied.md)  
 ### [Eseguire script durante la sincronizzazione (programmazione Transact-SQL della replica)](execute-scripts-during-synchronization-replication-transact-sql-programming.md)  
@@ -73,7 +73,7 @@
 ### [Convalidare i dati nel Sottoscrittore](validate-data-at-the-subscriber.md)  
 ## [Creazione di script di replica](scripting-replication.md)  
 
-# [Concetti per sviluppatori](concepts/index.md)
+# [Concetti per sviluppatori](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Riferimento tecnico](technical-reference-replication.md)  
 ## [Riferimento alle proprietà](properties-reference-replication.md)  
@@ -94,7 +94,7 @@
 #### [Proprietà pubblicazione, Snapshot](publication-properties-snapshot.md)  
 #### [Proprietà pubblicazione, Snapshot FTP e Internet](publication-properties-ftp-snapshot-and-internet.md)  
 #### [Proprietà pubblicazione, Opzioni sottoscrizione](publication-properties-subscription-options.md)  
-#### [Proprietà pubblicazione, Elenco di accesso alla pubblicazione](publication-properties-publication-access-list.md)  
+#### [Proprietà pubblicazione, Elenco accesso pubblicazione](publication-properties-publication-access-list.md)  
 #### [Proprietà pubblicazione, Sicurezza agente](publication-properties-agent-security.md)  
 #### [Proprietà pubblicazione, Partizioni dati](publication-properties-data-partitions.md)  
 ### [Proprietà articolo - <Article>](article-properties-article.md)  

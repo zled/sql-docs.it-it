@@ -1,26 +1,31 @@
 ---
-title: "Precaricare la cache (Gestione report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cache [Reporting Services]"
-  - "precaricamento della cache"
+title: Precaricamento della Cache (gestione Report) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Precaricare la cache (Gestione report)
+# <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
   Per precaricare la cache per un set di dati condiviso, è possibile creare un piano di aggiornamento della cache per il set di dati stesso.  
   
  Di seguito vengono indicate le due modalità di precaricamento della cache.  
@@ -37,15 +42,15 @@ caps.handback.revision: 35
   
 -   È necessario che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia in esecuzione.  
   
-### Per precaricare la cache creando un piano di aggiornamento della cache  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Per precaricare la cache creando un piano di aggiornamento della cache  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report passare alla pagina **Contenuto** e quindi passare all'elemento che si vuole memorizzare nella cache.  
   
 3.  Posizionarsi sull'elemento e quindi fare clic sull'elenco a discesa e selezionare **Gestisci**.  
   
-4.  Fare clic sulla scheda **Opzioni di aggiornamento cache**.  
+4.  Fare clic sulla scheda **Opzioni di aggiornamento cache** .  
   
 5.  Sulla barra degli strumenti fare clic su **Nuovo piano di aggiornamento della cache**.  
   
@@ -56,17 +61,17 @@ caps.handback.revision: 35
   
 6.  Se si desidera, digitare una descrizione per il piano di aggiornamento.  
   
-7.  Per una pianificazione condivisa, fare clic su **Pianificazione condivisa** e quindi selezionare il nome della pianificazione da usare.  
+7.  Per una pianificazione condivisa, fare clic su **Pianificazione condivisa**e quindi selezionare il nome della pianificazione da usare.  
   
-     Per una pianificazione personalizzata, fare clic su **Pianificazione specifica dell'elemento** e quindi fare clic su **Configura**.  
+     Per una pianificazione personalizzata, fare clic su **Pianificazione specifica dell'elemento**e quindi fare clic su **Configura**.  
   
 8.  Configurare la pianificazione  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per precaricare la cache con un report specifico dell'utente tramite una sottoscrizione guidata dai dati  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Per precaricare la cache con un report specifico dell'utente tramite una sottoscrizione guidata dai dati  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report passare alla pagina **Contenuto** e quindi al report per il quale si vuole creare una sottoscrizione.  
   
@@ -76,9 +81,9 @@ caps.handback.revision: 35
   
 5.  Selezionare **Provider recapito Null** dall'elenco **Specificare la modalità di notifica ai destinatari**.  
   
-6.  Per configurare un'origine dati, specificare un tipo di origine dati e quindi fare clic su **Avanti**.  
+6.  Per configurare un'origine dati, specificare un tipo di origine dati e quindi fare clic su **Avanti** .  
   
-7.  Specificare il tipo di connessione, la stringa di connessione e le credenziali per l'accesso all'origine dei dati che contiene i dati relativi ai sottoscrittori. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database Subscribers di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+7.  Specificare il tipo di connessione, la stringa di connessione e le credenziali per l'accesso all'origine dei dati che contiene i dati relativi ai sottoscrittori. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database Subscribers di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     ```  
     data source=<servername>; initial catalog=Subscribers  
@@ -92,7 +97,7 @@ caps.handback.revision: 35
     Select * from UserInfo  
     ```  
   
-10. Fare clic su **Convalida**. È necessario convalidare la query prima di proseguire. Quando viene visualizzato il messaggio **Query convalidata**, fare clic su **Avanti**.  
+10. Fare clic su **Convalida**. È necessario convalidare la query prima di proseguire. Quando viene visualizzato il messaggio **Query convalidata** , fare clic su **Avanti**.  
   
 11. Poiché non è possibile configurare le impostazioni dell'estensione per il recapito per il provider recapito Null, fare clic su **Avanti**.  
   
@@ -103,11 +108,11 @@ caps.handback.revision: 35
      In alternativa, per creare una pianificazione personalizzata fare clic su **In base a una pianificazione creata per questa sottoscrizione** e quindi su **Avanti**. Configurare la pianificazione e quindi fare clic su **Fine**.  
   
     > [!NOTE]  
-    >  Perché i sottoscrittori possano ricevere il report più recente, è necessario che la pianificazione configurata dall'utente sia coerente con la pianificazione di recapito del report che è stata definita per i sottoscrittori. Per altre informazioni, vedere [Portale Web &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+    >  Perché i sottoscrittori possano ricevere il report più recente, è necessario che la pianificazione configurata dall'utente sia coerente con la pianificazione di recapito del report che è stata definita per i sottoscrittori. Per altre informazioni, vedere [Portale Web &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-14. Configurare le opzioni di esecuzione del report come segue. Nella pagina del report fare clic sulla scheda **Proprietà**.  
+14. Configurare le opzioni di esecuzione del report come segue. Nella pagina del report fare clic sulla scheda **Proprietà** .  
   
-15. Nel riquadro a sinistra fare clic sulla scheda **Esecuzione**.  
+15. Nel riquadro a sinistra fare clic sulla scheda **Esecuzione** .  
   
 16. Nella pagina scegliere **Esegui il rendering del report con i dati più recenti**.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. Fare clic su **Applica**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

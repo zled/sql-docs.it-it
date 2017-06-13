@@ -1,7 +1,7 @@
 ---
 title: Linee guida per le operazioni sugli indici online | Microsoft Docs
 ms.custom: 
-ms.date: 04/09/2017
+ms.date: 04/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
@@ -38,6 +38,7 @@ ms.lasthandoff: 04/11/2017
 -   È possibile creare indici non cluster non univoci online quando la tabella contiene tipi di dati LOB ma nessuna di queste colonne è utilizzata nella definizione di indice come colonna chiave o non chiave (inclusa).  
   
 -   Non è possibile creare, ricompilare o eliminare online indici su tabelle temporanee locali. Questa limitazione non è valida per gli indici su tabelle temporanee globali.
+- Gli indici possono essere ripresi dal punto di interruzione dopo un errore imprevisto, il failover del database, o un **pausa** comando. Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Questa funzionalità è in anteprima pubblica per SQL Server 2017.
 
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -89,6 +90,30 @@ Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations
 ## <a name="transaction-log-considerations"></a>Considerazioni sul log delle transazioni  
  Operazioni sugli indici su larga scala, eseguite online oppure offline, possono generare volumi di dati elevati i quali possono esaurire rapidamente lo spazio disponibile nel log delle transazioni. Per garantire la possibilità di eseguire il rollback dell'operazione sugli indici, non è possibile troncare il log delle transazioni fino al completamento dell'operazione. È tuttavia possibile eseguire il backup del log durante l'operazione sugli indici. È pertanto necessario che il log delle transazioni abbia spazio sufficiente per archiviare sia le transazioni dell'operazione sugli indici sia tutte le transazioni utente simultanee per l'intera durata dell'operazione sugli indici. Per altre informazioni, vedere [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
+## <a name="resumable-index-rebuild-considerations"></a>Considerazioni sulla ricompilazione di indice può essere ripristinato
+
+> [!NOTE]
+> Vedere [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Questa funzionalità è in anteprima pubblica per SQL Server 2017.
+>
+
+Quando si esegue una ricompilazione dell'indice online può essere ripristinato si applicano le linee guida seguenti:
+-    La gestione, la pianificazione e l'estensione dell'indice finestre di manutenzione. È possibile sospendere e riavviare un'operazione di ricompilazione dell'indice più volte per adattare le finestre di manutenzione.
+- Recupero da errori di ricompilazione indice (ad esempio failover del database o di esaurire lo spazio su disco).
+- Quando un'operazione di indice è sospesa, sia l'indice originale e quello appena creato richiede spazio su disco e devono essere aggiornati durante le operazioni DML.
+
+- Abilitare il troncamento del log di troncamento durante un'operazione di ricompilazione indice (Impossibile eseguire questa operazione per un'operazione di indice online normale).
+- L'opzione SORT_IN_TEMPDB = ON opzione non è supportata
+
+> [!IMPORTANT]
+> La ricompilazione può essere ripristinata non occorre tenere aperto un troncamento con esecuzione prolungata, consentendo il troncamento del log durante l'operazione e una migliore gestione dello spazio di log. Con la nuova progettazione, siamo riusciti a mantenere i dati necessari in un database insieme a tutti i riferimenti necessari per riavviare l'operazione può essere ripristinato.
+>
+
+In genere, non vi è alcuna differenza nelle prestazioni tra la ricostruzione dell'indice online può essere ripristinato e non ripristinabili. Quando si aggiorna un indice può essere ripristinato durante l'operazione di ricompilazione di un indice viene sospesa:
+- Prevalentemente di sola lettura carichi di lavoro, l'impatto sulle prestazioni è trascurabile. 
+- Per carichi di lavoro con intensa attività di aggiornamento, è possibile che si verifichi un peggioramento di velocità effettiva (la riduzione di Mostra minore di 10% test).
+
+In genere, è indifferente tra ricostruzione dell'indice online può essere ripristinato e non ripristinabili in qualità di deframmentazione in linea.
+ 
 ## <a name="related-content"></a>Contenuto correlato  
  [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md)  
   

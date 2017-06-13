@@ -1,30 +1,35 @@
 ---
-title: "Pubblicare e ripubblicare parti del report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Pubblicazione e ripubblicazione di parti del Report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03b06d981e4ff824fbdca3f598271fce666237af
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
+# <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
   Le parti di report sono elementi impaginati pubblicati separatamente in un server di report e che possono essere riusati in altri report impaginati. È possibile pubblicare una parte del report con le impostazioni predefinite in un percorso predefinito o modificare i metadati della parte del report, ad esempio il nome e la descrizione, e salvarla altrove in un server di report. Il salvataggio può avvenire anche in un sito di SharePoint integrato con un server di report, se si dispone delle opportune autorizzazioni.  
   
  È possibile pubblicare solo la parte di report, con il set di dati da cui dipende incorporato, oppure pubblicare separatamente il set di dati. In quest'ultimo caso diventa un set di dati condiviso, al quale la parte di report viene collegata. Per altre informazioni, vedere [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
  L'utente può ripubblicare una parte di report esistente. Se si dispone delle autorizzazioni, è possibile salvarla sovrascrivendo l'istanza originale della parte di report nel server, anche se non è stata creata dall'utente. È possibile inoltre pubblicarla come nuova parte di report e salvarla nello stesso percorso o in uno diverso.  
   
-## Per pubblicare una parte di report  
+## <a name="to-publish-a-report-part"></a>Per pubblicare una parte di report  
   
 1.  Nel menu Generatore report selezionare **Pubblica parti del report**.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 9
     > [!NOTE]  
     >  È opportuno attribuire alla parte di report un nome e una descrizione in modo da facilitarne l'identificazione da parte degli utenti durante la ricerca. La lunghezza massima per il nome di una parte di report è 260 caratteri per il percorso intero, inclusi i nomi delle cartelle nel server, seguito dal nome effettivo della parte di report.  
   
-4.  Per salvare la parte del report in una cartella diversa da quelle specificata nelle impostazioni predefinite, fare clic sul pulsante **Sfoglia**.  
+4.  Per salvare la parte del report in una cartella diversa da quelle specificata nelle impostazioni predefinite, fare clic sul pulsante **Sfoglia** .  
   
 5.  Dopo avere impostato le opzioni per tutte le parti del report, fare clic su **Pubblica**.  
   
@@ -47,20 +52,20 @@ caps.handback.revision: 9
   
 6.  Scegliere **Chiudi**.  
   
-## Per ripubblicare una parte di report  
+## <a name="to-republish-a-report-part"></a>Per ripubblicare una parte di report  
   
 1.  Seguire la procedura precedente per la pubblicazione di una parte di report.  
   
-2.  Nella finestra di dialogo **Pubblica parti di report**, se si sceglie **Pubblica come nuova copia della parte del report**, Generatore report non sovrascriverà la parte del report esistente sul server, ma creerà un'altra parte del report.  
+2.  Nella finestra di dialogo **Pubblica parti di report** , se si sceglie **Pubblica come nuova copia della parte del report**, Generatore report non sovrascriverà la parte del report esistente sul server, ma creerà un'altra parte del report.  
   
 > [!NOTE]  
 >  Se pubblicata come nuova parte di report, presenterà un nuovo ID univoco. Non riceverà più gli aggiornamenti quando la parte di report originale viene modificata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/it-it/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/it-it/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+ [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

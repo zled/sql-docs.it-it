@@ -1,24 +1,29 @@
 ---
-title: "Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare un set di dati condiviso o un set di dati incorporato (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
-È possibile usare i set di dati incorporati in un singolo report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. I set di dati condivisi in un server di report possono essere ustati da più report, sia per dispositivi mobili che impaginati. Per creare un set di dati, è necessaria un'origine dati incorporata o condivisa.  
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
+È possibile usare i set di dati incorporati in un singolo report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . I set di dati condivisi in un server di report possono essere ustati da più report, sia per dispositivi mobili che impaginati. Per creare un set di dati, è necessaria un'origine dati incorporata o condivisa.  
   
  Usare **Generatore report** per eseguire le operazioni seguenti:  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Per aprire Generatore report e creare un set di dati condiviso  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Per aprire Generatore report e creare un set di dati condiviso  
   
 1.  Aprire Generatore report. Viene visualizzato il riquadro **Nuovo report o set di dati** , come illustrato nella figura seguente:  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 9
   
 7.  Per uscire da Generatore report fare clic su **Generatore report**, quindi su **Esci da Generatore report**. Per usare report, fare clic su **Generatore report**, quindi su **Nuovo** o **Apri**.  
   
-## Per impostare opzioni del parametro query  
+## <a name="to-set-query-parameter-options"></a>Per impostare opzioni del parametro query  
   
 1.  Aprire Generatore report.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 9
   
 3.  Selezionare il server di report e scegliere la cartella per l'origine dati condivisa.  
   
-4.  In **Elementi di tipo** fare clic su Set di dati (*.rsd) nell'elenco a discesa.  
+4.  In **Elementi di tipo**fare clic su Set di dati (*.rsd) nell'elenco a discesa.  
   
 5.  Selezionare il set di dati condiviso, quindi fare clic su **Apri**. Viene visualizzata la finestra Progettazione query associata.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 9
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## Per creare un set di dati da un database relazionale di SQL Server  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>Per creare un set di dati da un database relazionale di SQL Server  
   
 1.  Nel riquadro dei dati del report fare clic con il pulsante destro del mouse sul nome dell'origine dati, quindi scegliere **Aggiungi set di dati**. Viene visualizzata la pagina **Query** della finestra di dialogo **Proprietà set di dati** .  
   
@@ -110,11 +115,12 @@ caps.handback.revision: 9
   
      Il set di dati e la relativa raccolta di campi verranno visualizzati nel riquadro dei dati del report sotto il nodo dell'origine dati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

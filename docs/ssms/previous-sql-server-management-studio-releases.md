@@ -15,19 +15,57 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0773be32343e4707503b4acb616e5a1c807fe32f
+ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
+ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Versioni precedenti di SQL Server Management Studio
   
 Sono disponibili le seguenti versioni precedenti di SQL Server Management Studio.
-
-
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![scaricare](../ssdt/media/download.png) [versione di SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**Informazioni sulla versione**  
+  
+*Questa versione di SSMS usa Visual Studio 2015 Isolated Shell.*  
+Numero di versione: 16.5.3  
+Numero di build per questa versione: 13.0.16106.4
+
+## <a name="changelog"></a>Log delle modifiche  
+
+16.5.3
+
+In questa versione sono stati risolti i problemi seguenti:
+
+* Risolto un problema introdotto in SSMS 16.5.2 che causava l'espansione del nodo 'Tabella' quando la tabella aveva più di una colonna di tipo sparse.
+
+* Gli utenti possono distribuire pacchetti SSIS contenenti Gestione connessione OData per connettere una risorsa Microsoft Dynamics AX/CRM Online al catalogo SSIS. Per altre informazioni, vedere [Gestione connessione OData](https://msdn.microsoft.com/library/dn584133.aspx).
+
+* La configurazione di Always Encrypted per una tabella esistente ha esito negativo con errori per gli oggetti correlati. [ID Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+
+* La configurazione di Always Encrypted per un database esistente con più schemi non funziona. [ID Connect 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+
+* La procedura guidata Always Encrypted, Colonna crittografata ha esito negativo a causa del database che contiene viste che fanno riferimento a viste di sistema. [ID Connect 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+
+* Durante la crittografia con Always Encrypted, gli errori derivanti dall'aggiornamento dei moduli dopo la crittografia non vengono gestiti in modo corretto.
+
+* Il menu *Apri recenti* non mostra i file salvati di recente. [ID Connect 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+
+* SSMS è lento quando si fa clic con il pulsante destro del mouse su un indice per una tabella (tramite una connessione Internet remota). [ID Connect 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+ 
+* Risolto un problema con la barra di scorrimento di SQL Designer. [ID Connect 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+
+* Il menu di scelta rapida per le tabelle si blocca momentaneamente 
+ 
+* SSMS in alcuni casi genera eccezioni in Monitoraggio attività e subisce un arresto anomalo. [ID Connect 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+
+* Si verifica un arresto anomalo di SSMS 2016 con l'errore "Il processo è stato terminato a causa di un errore interno del runtime .NET in IP 71AF8579 (71AE0000) con codice di uscita 80131506"
+
+
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
 
 **Informazioni sulla versione**  
   
@@ -67,7 +105,7 @@ Numero di build per questa versione: 13.0.16000.28
 
 
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.4.1 (settembre 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.4.1 (settembre 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
 
 **Informazioni sulla versione**  
   
@@ -179,7 +217,7 @@ Le versioni di SSMS non localizzate in lingua inglese e installate in Windows 8,
 
 
 
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.3 (agosto 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.3 (agosto 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
  15 agosto 2016 | Numero di versione: 13.0.15700.28
 
 **Funzionalità**  
@@ -245,7 +283,7 @@ Le versioni di SSMS non localizzate in lingua inglese e installate in Windows 8,
 [Altre informazioni sulle correzioni disponibili nel log delle modifiche di SSMS.](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio - Aggiornamento hotfix luglio 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio - Aggiornamento hotfix luglio 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 13 luglio 2016 | Numero di versione: 13.0.15600.2
 
@@ -299,7 +337,7 @@ Come soluzione alternativa di questo problema, è possibile connettersi all'ista
 [Altre informazioni e correzioni di bug disponibili nel log delle modifiche di SSMS.](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio di giugno 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio di giugno 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 01 giugno 2016 |Numero di versione: 13.0.15000.23
 
@@ -331,7 +369,7 @@ Come soluzione alternativa di questo problema, è possibile connettersi all'ista
 6. Correzioni di bug in Always Encrypted. Bug corretto dove l'opzione di menu Crittografia sempre attiva non risultava abilitata correttamente per l'estensione database. Bug corretto anche nella procedura guidata Crittografia sempre attiva dove non veniva eseguita correttamente tramite il provider HSM SafeNet (Luna SA).
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 14 maggio 2015 | Numero di versione: 12.0.4100.1
 
@@ -352,7 +390,7 @@ N/D
 7. È possibile che SSMS si arresti in modo anomalo quando si tenta di aggiornare l'icona della finestra di SSMS sulla barra delle applicazioni ([articolo n.799430 di Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)).
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 21 novembre 2015 | Numero di versione: 11.0.6020.0
 
@@ -368,7 +406,7 @@ N/D
 2. Errore "Impossibile creare il piano di ripristino a causa di un'interruzione nella catena LSN" quando si ripristina un backup differenziale in SSMS
 
 ---
-### <a name="additional-downloads"></a>Download aggiuntivi  
+## <a name="additional-downloads"></a>Download aggiuntivi  
 Per un elenco di tutti i download di SQL Server Management Studio, vedere [Area download Microsoft](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
 Per la versione più recente di SQL Server Management Studio, vedere [Scaricare SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  

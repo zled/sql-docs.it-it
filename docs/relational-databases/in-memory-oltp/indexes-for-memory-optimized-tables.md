@@ -3,7 +3,7 @@ title: Indici per tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Indici per tabelle con ottimizzazione per la memoria
@@ -225,34 +225,10 @@ Nella tabella seguente sono elencate tutte le operazioni supportate dai vari tip
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Index Scan, recupera tutte le righe della tabella. | Sì | Sì | Sì |  
 | Index Seek su predicati di uguaglianza (=). | Sì <br/> (chiave completa necessaria) | Sì  | Sì |  
-| Index Seek su predicati di disuguaglianza e di intervallo <br/> (>, <, \<=, >=, BETWEEN). | No <br/> (risultati in un'analisi di indice) | Sì | Sì |  
+| Index Seek su predicati di disuguaglianza e di intervallo <br/> (>, <, <=, >=, BETWEEN). | No <br/> (risultati in un'analisi di indice) | Sì | Sì |  
 | Recupero di righe con un ordinamento corrispondente alla definizione dell'indice. | No | Sì | Sì |  
 | Recupero di righe con un ordinamento inverso rispetto alla definizione dell'indice. | No | No | Sì |  
   
   
 Nella tabella, Sì significa che l'indice può soddisfare la richiesta in modo appropriato e No significa che non può.  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-Replaces dn511012.aspx , which is....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
--->  
-  
-  
-  
-
-
 

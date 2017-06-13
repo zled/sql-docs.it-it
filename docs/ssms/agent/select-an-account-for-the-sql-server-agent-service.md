@@ -1,7 +1,7 @@
 ---
 title: Selezionare un account per il servizio SQL Server Agent | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b8ea899dbbf5b94205ba7cfa0afee4aad262d79a
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
@@ -60,7 +60,7 @@ Per migliorare la sicurezza, selezionare l'opzione **Account seguente**che conse
   
     -   Autorizzazione a modificare le quote di memoria per un processo (SeIncreaseQuotaPrivilege)  
   
-    -   Autorizzazione ad accedere tramite il tipo di accesso batch (SeBatchLogonRight)  
+    -   Autorizzazione per l'accesso al computer dalla rete (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > Se l'account non dispone delle autorizzazioni necessarie per supportare i proxy, solo i membri del ruolo predefinito del server **sysadmin** possono creare i processi.  

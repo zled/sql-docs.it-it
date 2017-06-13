@@ -1,26 +1,31 @@
 ---
-title: "Tasti di scelta rapida (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasti di scelta rapida"
-  - "scelte rapide"
+title: Tasti di scelta rapida (Generatore Report) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tasti di scelta rapida (Generatore report)
+# <a name="keyboard-shortcuts-report-builder"></a>Tasti di scelta rapida (Generatore report)
   Quando si crea e modifica un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Generatore report è possibile usare tutti i tasti di scelta rapida per la navigazione disponibili nell'ambiente Windows, nonché scegliere tra diversi schemi di mappatura della tastiera standard.  
   
  È possibile navigare nella finestra Generatore report oppure selezionare e modificare le opzioni delle finestre di dialogo senza utilizzare il mouse.  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Per i tasti di scelta rapida possono essere utilizzati i tasti MAIUSC, ALT e/o CTRL in combinazione con determinate lettere oppure i tasti funzione. Il tasto F1, ad esempio, consente di aprire il file della Guida di Generatore report.  
   
-## Tasti di scelta rapida in Generatore report  
+## <a name="keyboard-shortcuts-in-report-builder"></a>Tasti di scelta rapida in Generatore report  
   
 |Description|Combinazione di tasti|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |Eseguire lo zoom indietro nell'area di visualizzazione della mappa quando è selezionato un viewport mappa.|CTRL+SEGNO DI SOTTRAZIONE (-)|  
 |Modalità del tasto di scelta rapida per panoramica e zoom in un'area di visualizzazione della mappa quando è selezionato un viewport mappa.|CTRL+clic con il pulsante sinistro|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossario &#40;Generatore report&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

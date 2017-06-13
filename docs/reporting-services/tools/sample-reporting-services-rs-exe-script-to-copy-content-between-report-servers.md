@@ -1,30 +1,34 @@
 ---
-title: "Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Lo Script rs.exe per copiare il contenuto tra server di Report di esempio Reporting Services | Documenti Microsoft
+ms.custom: 
+ms.date: 07/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b46f26baae77ec3c18e0a4291e5c5cbfa8e672e1
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
-  Questo argomento presenta e descrive uno script RSS di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di esempio tramite cui vengono copiati elementi di contenuto e impostazioni da un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un altro server di report, tramite l'utilità **RS.exe**. RS.exe viene installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], sia in modalità nativa che in modalità SharePoint. Lo script copia gli elementi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio report e sottoscrizioni, da un server a un altro. Lo script supporta server di report in modalità nativa e in modalità SharePoint.  
+# <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
+  Questo argomento presenta e descrive uno script RSS di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di esempio tramite cui vengono copiati elementi di contenuto e impostazioni da un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un altro server di report, tramite l'utilità **RS.exe** . RS.exe viene installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], sia in modalità nativa che in modalità SharePoint. Lo script copia gli elementi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio report e sottoscrizioni, da un server a un altro. Lo script supporta server di report in modalità nativa e in modalità SharePoint.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
-## Contenuto dell'argomento  
+> **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
+  
+## <a name="in-this-topic"></a>Contenuto dell'argomento  
   
 -   [Per scaricare lo script ssrs_migration.rss](#bkmk_download_script)  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
- Lo script può essere utilizzato per copiare il contenuto tra server di report nella stessa modalità o in modalità diverse. È possibile, ad esempio, eseguire lo script per copiare il contenuto da un server di report in modalità nativa [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a un server di report in modalità SharePoint [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]. È possibile eseguire lo script da qualsiasi server in cui è installato RS.exe. Nella distribuzione seguente, ad esempio, è possibile:  
+ Lo script può essere utilizzato per copiare il contenuto tra server di report nella stessa modalità o in modalità diverse. È possibile, ad esempio, eseguire lo script per copiare il contenuto da un server di report in modalità nativa [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a un server di report in modalità SharePoint [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] . È possibile eseguire lo script da qualsiasi server in cui è installato RS.exe. Nella distribuzione seguente, ad esempio, è possibile:  
   
 -   Eseguire RS.exe e lo script **SUL** Server A.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 15
 |Cronologia|**No**|**No**||  
 |Impostazioni di cronologia|Sì|Sì|Viene eseguita la migrazione delle impostazioni di cronologia, ma NON dei dettagli della cronologia.|  
 |Pianificazioni|Sì|Sì|Per eseguire la migrazione delle pianificazioni, è necessario che SQL Server Agent sia in esecuzione nel server di destinazione. Se SQL Server Agent non è in esecuzione nel server di destinazione, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|Ruoli e criteri di sistema|Sì|Sì|Per impostazione predefinita lo script non copia lo schema di autorizzazioni personalizzate da un server a un altro. In base al comportamento predefinito gli elementi vengono copiati nel server di destinazione con il flag "inherit parent permissions" impostato su TRUE. Se si desidera che le autorizzazioni per singoli elementi vengano copiate dallo script, utilizzare l'opzione SECURITY.<br /><br /> Se i server di origine e destinazione **non sono nella stessa modalità del server di report**, ad esempio dalla modalità nativa alla modalità SharePoint, e si usa l'opzione SECURITY, lo script tenterà di eseguire il mapping dei ruoli e dei gruppi predefiniti in base al confronto riportato nell'argomento [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md) che segue. I ruoli e i gruppi personalizzati non vengono copiati nel server di destinazione.<br /><br /> Quando lo script copia tra server **nella stessa modalità** e si usa l'opzione SECURITY, lo script crea nuovi ruoli (modalità nativa) o gruppi (modalità SharePoint) nel server di destinazione.<br /><br /> Se esiste già un ruolo nel server di destinazione, lo script genera un messaggio di errore simile al seguente e continua la migrazione degli altri elementi. Al completamento dello script, verificare che i ruoli nel server di destinazione siano configurati per soddisfare le esigenze specifiche. Ruoli di cui si esegue la migrazione: 8 elementi trovati.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **Nota:** se un utente esistente nel server di origine non esiste nel server di destinazione, lo script non può applicare le assegnazioni dei ruoli nel server di destinazione; lo script non può applicare le assegnazioni dei ruoli anche se si usa l'opzione SECURITY.|  
+|Ruoli e criteri di sistema|Sì|Sì|Per impostazione predefinita lo script non copia lo schema di autorizzazioni personalizzate da un server a un altro. In base al comportamento predefinito gli elementi vengono copiati nel server di destinazione con il flag "inherit parent permissions" impostato su TRUE. Se si desidera che le autorizzazioni per singoli elementi vengano copiate dallo script, utilizzare l'opzione SECURITY.<br /><br /> Se i server di origine e destinazione **non sono nella stessa modalità del server di report**, ad esempio dalla modalità nativa alla modalità SharePoint, e si usa l'opzione SECURITY, lo script tenterà di eseguire il mapping dei ruoli e dei gruppi predefiniti in base al confronto riportato nell'argomento [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)che segue. I ruoli e i gruppi personalizzati non vengono copiati nel server di destinazione.<br /><br /> Quando lo script copia tra server **nella stessa modalità**e si usa l'opzione SECURITY, lo script crea nuovi ruoli (modalità nativa) o gruppi (modalità SharePoint) nel server di destinazione.<br /><br /> Se esiste già un ruolo nel server di destinazione, lo script genera un messaggio di errore simile al seguente e continua la migrazione degli altri elementi. Al completamento dello script, verificare che i ruoli nel server di destinazione siano configurati per soddisfare le esigenze specifiche. Ruoli di cui si esegue la migrazione: 8 elementi trovati.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **Nota:** se un utente esistente nel server di origine non esiste nel server di destinazione, lo script non può applicare le assegnazioni dei ruoli nel server di destinazione; lo script non può applicare le assegnazioni dei ruoli anche se si usa l'opzione SECURITY.|  
 |Origine dati condivisa|Sì|Sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Le credenziali **NON** sono copiate come parte dell'origine dati. Dopo la migrazione degli elementi di contenuto, aggiornare le informazioni sulle credenziali nel server di destinazione.|  
 |Set di dati condiviso|Sì|Sì||  
 |Cartella|Sì|Sì|Lo script non sovrascrive gli elementi esistenti nel server di destinazione. Se nel server di destinazione esiste già un elemento con lo stesso nome, viene visualizzato un messaggio di errore simile al seguente:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -145,7 +149,7 @@ caps.handback.revision: 15
   
  **Esempio di base, da server di report in modalità nativa a server di report in modalità nativa:**  
   
- Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver** in modalità nativa.  
+ Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver**in modalità nativa.  
   
  `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
@@ -257,7 +261,7 @@ caps.handback.revision: 15
 ##  <a name="bkmk_more_examples"></a> Altri esempi  
   
 ###  <a name="bkmk_native_2_native"></a> Da server di report in modalità nativa a server di report in modalità nativa  
- Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver** in modalità nativa.  
+ Nell'esempio seguente viene eseguita la migrazione del contenuto da **Sourceserver** in modalità nativa a **Targetserver**in modalità nativa.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
@@ -270,7 +274,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Da modalità nativa a modalità SharePoint - sito radice  
- Nell'esempio seguente viene eseguita la migrazione da un server **SourceServer** in modalità nativa al "sito radice" di un server **TargetServer** in modalità SharePoint. Viene eseguita la migrazione delle cartelle "Reports" e "Data Sources" del server in modalità nativa come nuove raccolte nella distribuzione di SharePoint.  
+ Nell'esempio seguente viene eseguita la migrazione da un server **SourceServer** in modalità nativa al "sito radice" di un server **TargetServer**in modalità SharePoint. Viene eseguita la migrazione delle cartelle "Reports" e "Data Sources" del server in modalità nativa come nuove raccolte nella distribuzione di SharePoint.  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -299,9 +303,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
 ###  <a name="bkmk_native_to_native_Azure_vm"></a> Da modalità nativa a modalità nativa - Macchina virtuale Windows Azure  
  Nell'esempio seguente viene eseguita la migrazione del contenuto:  
   
--   Da un server di report **SourceServer** in modalità nativa.  
+-   Da un server di report **SourceServer**in modalità nativa.  
   
--   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Windows Azure. **TargetServer** non viene unito al dominio di **SourceServer** e **User2** è un amministratore di **TargetServer** nella macchina virtuale Windows Azure.  
+-   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Windows Azure. **TargetServer** non viene unito al dominio di **SourceServer** e **User2** è un amministratore di **TargetServer**nella macchina virtuale Windows Azure.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
@@ -315,7 +319,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   Da un server di report **SourceServer** in modalità SharePoint contenente una raccolta siti "sites/bi" e una raccolta di documenti condivisi.  
   
--   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Windows Azure. **TargetServer** non viene unito al dominio di **SourceServer** e **User2** è un amministratore di **TargetServer** nella macchina virtuale Windows Azure.  
+-   A un server di report **TargetServer** in modalità nativa in cui viene eseguita una macchina virtuale Windows Azure. **TargetServer** non viene unito al dominio di **SourceServer** e **User2** è un amministratore di **TargetServer**nella macchina virtuale Windows Azure.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
@@ -324,7 +328,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_verification"></a> Verifica  
  Nella sezione sono riepilogati alcuni passaggi da eseguire nel server di destinazione per verificare la corretta migrazione di contenuto e criteri.  
   
-### Pianificazioni  
+### <a name="schedules"></a>Pianificazioni  
  Per verificare le pianificazioni nel server di destinazione:  
   
  **Modalità nativa**  
@@ -333,7 +337,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 2.  Fare clic su **Impostazioni sito** nel menu principale.  
   
-3.  Nel riquadro sinistro fare clic su **Pianificazioni**.  
+3.  Nel riquadro sinistro fare clic su **Pianificazioni** .  
   
  **Modalità SharePoint:**  
   
@@ -341,7 +345,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 2.  Nel gruppo **Reporting Services** fare clic su **Gestisci pianificazioni condivise**.  
   
-### Ruoli e gruppi  
+### <a name="roles-and-groups"></a>Ruoli e gruppi  
  **Modalità nativa**  
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi a un server di report in modalità nativa.  
@@ -353,14 +357,15 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> Risoluzione dei problemi  
  Usare il flag di traccia **–t** per ricevere altre informazioni. Ad esempio, se si esegue lo script e viene visualizzato un messaggio simile al seguente  
   
--   Impossibile connettersi al server: http://\<nomeserver>/ReportServer/ReportService2010.asmx  
+-   Impossibile connettersi al server: http://\<nomeserver > /ReportServer/ReportService2010.asmx  
   
  Eseguire nuovamente lo script con il flag **–t** per visualizzare un messaggio simile al seguente:  
   
--   System.Exception: Impossibile connettersi al server: http://\<nomeserver>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Richiesta non riuscita con stato HTTP 401: Non autorizzato**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- Fine della traccia dello stack dell'eccezione interna ---  
+-   System. Exception: Impossibile connettersi al server: http://\<nomeserver > /ReportServer/ReportService2010.asmx---> System.NET. WebException: **richiesta non riuscita con stato HTTP 401: non autorizzato**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- Fine della traccia dello stack dell'eccezione interna ---  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   
+

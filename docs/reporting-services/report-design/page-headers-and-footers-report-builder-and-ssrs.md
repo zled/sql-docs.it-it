@@ -1,36 +1,41 @@
 ---
-title: "Intestazioni di pagina e pi&#232; di pagina (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10125"
-  - "sql13.rtp.rptdesigner.pagefooter.border.f1"
-  - "10121"
-  - "10120"
-  - "10122"
-  - "sql13.rtp.rptdesigner.pageheader.general.f1"
-  - "10123"
-  - "sql13.rtp.rptdesigner.pageheader.fill.f1"
-  - "sql13.rtp.rptdesigner.pageheader.border.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.fill.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.general.f1"
-  - "10124"
+title: "Intestazioni di pagina e piè di pagina (Generatore Report e SSRS) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10125"
+- sql13.rtp.rptdesigner.pagefooter.border.f1
+- "10121"
+- "10120"
+- "10122"
+- sql13.rtp.rptdesigner.pageheader.general.f1
+- "10123"
+- sql13.rtp.rptdesigner.pageheader.fill.f1
+- sql13.rtp.rptdesigner.pageheader.border.f1
+- sql13.rtp.rptdesigner.pagefooter.fill.f1
+- sql13.rtp.rptdesigner.pagefooter.general.f1
+- "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Intestazioni di pagina e pi&#232; di pagina (Generatore report e SSRS)
+# <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
   Un report può contenere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo, immagini di sfondo ed espressioni. Le espressioni includono riferimenti ai campi del set di dati per i report contenenti un solo set di dati e chiamate di funzioni di aggregazione che includono il set di dati come ambito.  
   
 > [!NOTE]  
@@ -45,10 +50,10 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Intestazioni e piè di pagina del report  
+## <a name="report-headers-and-footers"></a>Intestazioni e piè di pagina del report  
  Le intestazioni e i piè di pagina delle pagine e dei report sono differenti. I report non dispongono di un'area speciale per le intestazioni o i piè di pagina. L'intestazione di un report è costituita dagli elementi del report posizionati all'inizio del corpo del report nella relativa area di progettazione. Tali elementi vengono visualizzati una sola volta come primo contenuto del report. Il piè di pagina di un report è costituito dagli elementi del report posizionati nella parte inferiore del corpo del report. Tali elementi vengono visualizzati una sola volta come ultimo contenuto del report.  
   
-## Visualizzazione di dati variabili in un'intestazione o in un piè di pagina  
+## <a name="displaying-variable-data-in-a-page-header-or-footer"></a>Visualizzazione di dati variabili in un'intestazione o in un piè di pagina  
  Le intestazioni e i piè di pagina possono includere contenuto statico, ma vengono più frequentemente utilizzati per visualizzare contenuto variabile, ad esempio numeri di pagina o informazioni sul contenuto di una pagina. Per visualizzare dati variabili diversi per ogni pagina, è necessario specificare un'espressione.  
   
  Se nel report è definito un solo set di dati, è possibile aggiungere espressioni semplici come `[FieldName]` a un'intestazione o a un piè di pagina. Trascinare il campo dalla raccolta di campi del set di dati del riquadro dei dati del report o dalla raccolta Campi predefiniti nell'intestazione o nel piè di pagina. Verrà automaticamente aggiunta una casella di testo con l'espressione appropriata.  
@@ -66,7 +71,7 @@ caps.handback.revision: 6
   
  Nelle sezioni seguenti di questo argomento vengono illustrate alcune espressioni già esistenti per il recupero dei dati variabili comunemente utilizzati nelle intestazioni e nei piè di pagina. In una sezione viene inoltre indicato il modo in cui l'estensione per il rendering Excel elabora le intestazioni e i piè di pagina. Per altre informazioni sulle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-### Aggiunta dei totali di pagina calcolati a un'intestazione o un piè di pagina  
+### <a name="adding-calculated-page-totals-to-a-header-or-footer"></a>Aggiunta dei totali di pagina calcolati a un'intestazione o un piè di pagina  
  Per alcuni report è utile includere nell'intestazione o nel piè di pagina di ogni report un valore calcolato, ad esempio il totale della somma per pagina se la pagina include valori numerici. Poiché non è possibile fare riferimento ai campi direttamente, l'espressione che si inserisce nell'intestazione o nel piè di pagina deve fare riferimento al nome dell'elemento del report, ad esempio una casella di testo, piuttosto che al campo dati:  
   
  `=Sum(ReportItems!Textbox1.Value)`  
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
  Quando si esegue il calcolo dei totali della pagina, si potrebbero notare differenze nei totali quando si utilizzano estensioni per il rendering diverse per visualizzare il report. L'output impaginato viene calcolato in maniera diversa per ogni estensione per il rendering. La stessa pagina visualizzata in formato HTML potrebbe indicare totali diversi quando viene visualizzata in formato PDF, se il totale dei dati nella pagina PDF è diverso. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-### Per i report con più set di dati  
+### <a name="for-reports-with-multiple-datasets"></a>Per i report con più set di dati  
  Per i report con più set di dati, non è possibile aggiungere direttamente campi o immagini con associazione a dati a un'intestazione o un piè di pagina. È tuttavia possibile scrivere un'espressione che faccia indirettamente riferimento a un campo o un'immagine con associazione a dati che si desidera utilizzare in un'intestazione o in un piè di pagina.  
   
  Per inserire dati variabili in un'intestazione o in un piè di pagina, eseguire la procedura seguente:  
@@ -90,7 +95,7 @@ caps.handback.revision: 6
   
  Non è possibile utilizzare funzioni di aggregazione per i campi presenti nell'intestazione o nel piè di pagina. È consentita solo la specifica di una funzione di aggregazione sugli elementi del report contenuti nel corpo del report. Per le espressioni comuni nelle intestazioni e nei piè di pagina, vedere [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
-#### Aggiunta di un'immagine con associazione a dati a un'intestazione o un piè di pagina  
+#### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>Aggiunta di un'immagine con associazione a dati a un'intestazione o un piè di pagina  
  In un'intestazione o in un piè di pagina è possibile utilizzare i dati delle immagini archiviati in un database. Non è tuttavia possibile fare riferimento ai campi di un database direttamente da un elemento del report Immagine. È invece necessario aggiungere una casella di testo al corpo del report e quindi impostare tale casella sul campo dati che contiene l'immagine. Si noti che il valore deve avere la codifica Base64. È possibile nascondere la casella di testo nel corpo del report per evitare di visualizzare l'immagine con codifica Base64. È quindi possibile fare riferimento al valore della casella di testo nascosta tramite l'elemento del report Immagine nell'intestazione o nel piè di pagina.  
   
  Si supponga ad esempio che un report sia costituito da pagine di informazioni sul prodotto e che si desideri visualizzare una fotografia del prodotto nell'intestazione di ogni pagina. Per stampare un'immagine archiviata nell'intestazione del report, definire una casella di testo nascosta denominata `TXT_Photo` nel corpo del report che recupera l'immagine dal database e usa un'espressione per attribuirle un valore:  
@@ -101,17 +106,17 @@ caps.handback.revision: 6
   
  `=Convert.FromBase64String(ReportItems!TXT_Photo.Value)`  
   
-## Utilizzo di intestazioni e piè di pagina per posizionare il testo  
+## <a name="using-headers-and-footers-to-position-text"></a>Utilizzo di intestazioni e piè di pagina per posizionare il testo  
  È possibile utilizzare le intestazioni e i piè di pagina per posizionare il testo in una pagina. Si supponga ad esempio di voler creare un report da inviare ai clienti. È possibile utilizzare l'intestazione o il piè di pagina per posizionare l'indirizzo del cliente in modo che sia visibile dalla finestra una volta inserito nella busta.  
   
  Se si utilizza la casella di testo solo per popolare un'intestazione o un piè di pagina, è possibile nasconderla nel corpo del report. La posizione della casella di testo nel corpo del report può determinare se il valore viene visualizzato nell'intestazione o nel piè di pagina della prima o dell'ultima pagina di un report. Se ad esempio vi sono tabelle, matrici o elenchi che determinano l'estensione del report su più pagine, il valore della casella di testo nascosta viene visualizzato nell'ultima pagina. Se si desidera visualizzare tale valore nella prima pagina, posizionare la casella di testo nascosta nella parte superiore del corpo del report.  
   
-## Progettazione di report con intestazioni e piè di pagina per renderer specifici  
+## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>Progettazione di report con intestazioni e piè di pagina per renderer specifici  
  Durante l'elaborazione di un report, le informazioni sui relativi dati ed elementi di layout vengono combinate. Quando si visualizza un report, le informazioni combinate vengono passate a un renderer che determina la quantità di dati che è possibile inserire in ogni pagina del report.  
   
  Se si visualizza un report sul server di report utilizzando un browser, il renderer HTML controlla il contenuto nelle pagine del report visualizzate. Se si intende recapitare i report in un formato diverso da quello utilizzato per la visualizzazione o si intende stampare i report in un formato specifico, potrebbe essere necessario ottimizzare il layout del report per il renderer che verrà utilizzato per il formato del report finale. Per altre informazioni sulla paginazione dei report, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-### Utilizzo delle intestazioni e dei piè di pagina in Excel  
+### <a name="working-with-page-headers-and-footers-in-excel"></a>Utilizzo delle intestazioni e dei piè di pagina in Excel  
  Per ottenere risultati migliori quando si definiscono le intestazioni e i piè di pagina per i report che utilizzano l'estensione per il rendering Excel, attenersi alle linee guida seguenti:  
   
 -   Utilizzare i piè di pagina per visualizzare i numeri di pagina.  
@@ -126,7 +131,7 @@ caps.handback.revision: 6
   
  Per altre informazioni, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

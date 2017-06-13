@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
@@ -44,7 +44,8 @@ Perché usarle?
   
      È possibile esprimere in una funzione un'operazione che filtra i dati sulla base di un vincolo complesso che non è possibile esprimere in una singola espressione scalare. È quindi possibile richiamare la funzione nella clausola WHERE per ridurre il numero delle righe inviate al client.  
   
-> **NOTA:** le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente nelle query possono essere eseguite su un singolo thread (piano di esecuzione seriale).  
+> [!NOTE]
+> Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente nelle query possono essere eseguite solo su un solo thread (piano di esecuzione seriale).  
   
 ##  <a name="FunctionTypes"></a> Tipi di funzioni  
 **Funzioni scalari**  
@@ -62,12 +63,13 @@ In  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili m
   
  Le istruzioni in un blocco BEGIN...END non possono avere effetti collaterali. Gli effetti collaterali di una funzione sono le modifiche permanenti allo stato di una risorsa il cui ambito è al di fuori della funzione, ad esempio la modifica di una tabella di database. Le uniche modifiche che possono essere apportate dalle istruzioni nella funzione sono le modifiche agli oggetti locali rispetto alla funzione, ad esempio variabili o cursori locali. Modifiche a tabelle di database, operazioni su cursori che non sono locali rispetto alla funzione, invio di messaggi di posta elettronica, tentativi di modifica del catalogo e generazione di un set di risultati da restituire all'utente sono esempi di azioni che non possono essere eseguite in una funzione.  
   
-> **NOTA:** se un'istruzione CREATE FUNCTION produce effetti collaterali su risorse che non esistono quando viene eseguita l'istruzione CREATE FUNCTION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'istruzione. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la funzione quando viene richiamata.  
+> [!NOTE]
+> Se un'istruzione CREATE FUNCTION produce effetti collaterali su risorse che non esistono quando l'istruzione CREATE FUNCTION viene eseguita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'istruzione. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la funzione quando viene richiamata.  
   
  Il numero di volte in cui viene effettivamente eseguita una funzione specificata in una query varia in base ai piani di esecuzione compilati da Query Optimizer. Si consideri ad esempio una funzione richiamata da una sottoquery in una clausola WHERE. Il numero di volte in cui la sottoquery e la relativa funzione vengono eseguite varia in base ai diversi percorsi di accesso scelti da Query Optimizer.  
   
 ##  <a name="ValidStatements"></a> Istruzioni valide in una funzione  
- I tipi di istruzioni valide in una funzione sono i seguenti:  
+I tipi di istruzioni valide in una funzione sono i seguenti:  
   
 -   Istruzioni DECLARE che definiscono variabili di dati e cursori locali rispetto alla funzione.  
   
@@ -110,7 +112,7 @@ In  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili m
 ##  <a name="SchemaBound"></a> Funzioni associate a schema  
  L'istruzione CREATE FUNCTION supporta la clausola SCHEMABINDING che associa la funzione allo schema degli oggetti a cui fa riferimento, ad esempio tabelle, viste e altre funzioni definite dall'utente. I tentativi di modifica o eliminazione degli oggetti a cui fa riferimento una funzione associata a schema hanno esito negativo.  
   
- Per includere la clausola SCHEMABINDING in un'istruzione [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) devono essere soddisfatte le condizioni seguenti:  
+ Per includere la clausola SCHEMABINDING in un'istruzione [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) devono essere soddisfatte le condizioni seguenti:  
   
 -   Tutte le viste e le funzioni definite dall'utente a cui la funzione fa riferimento devono essere associate a uno schema.  
   
@@ -138,7 +140,4 @@ In  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili m
 |Viene descritto come visualizzare la definizione di una funzione definita dall'utente.|[Visualizzare funzioni definite dall'utente](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

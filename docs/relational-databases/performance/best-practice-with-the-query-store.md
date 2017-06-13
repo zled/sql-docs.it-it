@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
@@ -56,7 +56,7 @@ I parametri predefiniti offrono un modo rapido per iniziare, ma è opportuno mon
   
  Il valore predefinito (100 MB) potrebbe non essere sufficiente se il carico di lavoro genera un numero elevato di query e piani diversi o se si vuole conservare la cronologia delle query per un periodo di tempo più lungo. Tenere traccia dell'utilizzo dello spazio e aumentare le Dimensioni massime (MB) per impedire che l'archivio query passi alla modalità di sola lettura.  Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o eseguire lo script seguente per ottenere informazioni aggiornate sulle dimensioni dell'archivio query:  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  Lo script seguente imposta un nuovo valore di Dimensioni massime (MB):  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Intervallo di raccolta statistiche:** definisce il livello di granularità delle statistiche di runtime raccolte. Il valore predefinito è 1 ora. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi, ma questo influisce direttamente sulle dimensioni dei dati dell'archivio query. Usare SSMS o Transact-SQL per impostare un valore diverso per Intervallo di raccolta statistiche:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ Per impostazione predefinita, l'archivio query è configurato in modo da conserv
   
  Evitare di conservare i dati cronologici che non si intende usare. In questo modo è possibile ridurre il ricorso allo stato di sola lettura. Le dimensioni dei dati dell'archivio query e il tempo necessario per rilevare e limitare il problema saranno più prevedibili. Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oppure lo script seguente per configurare i criteri di pulizia basati sul tempo:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  È consigliabile attivare la pulizia basata sulle dimensioni per assicurarsi che l'archivio query venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Lo script seguente imposta la modalità di acquisizione query su Auto:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Abilitare l'archivio query usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] come descritto nella sezione precedente o eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,19 +140,30 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 |Vista di SSMS|Scenario|  
 |---------------|--------------|  
 |Query regredite|Trovare le query per cui le metriche di esecuzione sono recentemente peggiorate. <br />Usare questa vista per correlare i problemi di prestazioni osservati nell'applicazione con le query effettive da correggere o migliorare.|  
-|Prime query per consumo risorse|Scegliere una metrica di esecuzione di interesse e trovare le query con i valori più estremi in un intervallo di tempo specificato. <br />Usare questa vista per concentrare l'attenzione sulle query più rilevanti che hanno l'impatto maggiore sul consumo delle risorse di database.|  
-|Query rilevate|Tenere traccia dell'esecuzione delle query più importanti in tempo reale. In genere, questa vista viene usata in presenza di query con piani forzati per garantire la stabilità delle prestazioni delle query.|  
 |Consumo complessivo risorse|Analizzare il consumo totale delle risorse per il database per una delle metriche di esecuzione.<br />Usare questa vista per identificare gli schemi di consumo delle risorse, ad esempio nei carichi di lavoro diurni e notturni, e ottimizzare il consumo complessivo per il database.|  
+|Prime query per consumo risorse|Scegliere una metrica di esecuzione di interesse e trovare le query con i valori più estremi in un intervallo di tempo specificato. <br />Usare questa vista per concentrare l'attenzione sulle query più rilevanti che hanno l'impatto maggiore sul consumo delle risorse di database.|  
+|Query con piani forzati|Vengono elencate in precedenza forzato piani in archivio Query. <br />Utilizzare questa visualizzazione per accedere rapidamente a tutti i piani attualmente forzati.|  
+|Query con variante elevata|Analizzare query con variante esecuzione elevata in relazione a una delle dimensioni disponibili, ad esempio utilizzo di durata, tempo di CPU, i/o e memoria nell'intervallo di tempo desiderato.<br />Utilizzare questa vista per identificare le query con prestazioni ampiamente variant che possono influire negativamente sull'esperienza utente tra le applicazioni.|  
+|Query rilevate|Tenere traccia dell'esecuzione delle query più importanti in tempo reale. In genere, questa vista viene usata in presenza di query con piani forzati per garantire la stabilità delle prestazioni delle query.|
   
 > [!TIP]  
 >  Per informazioni dettagliate sull'uso di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per identificare le prime query per consumo risorse e correggere le query regredite a causa della modifica di una scelta del piano, vedere i [post relativi all'archivio query nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- Quando si rileva una query con prestazioni non ottimali, l'azione correttiva dipende dalla natura del problema.  
+ Quando si rileva una query con prestazioni non ottimali, l'azione dipende dalla natura del problema.  
   
 -   Se la query è stata eseguita con più piani e l'ultimo piano è notevolmente peggiore rispetto al piano precedente, è possibile ricorrere al meccanismo di uso forzato del piano per fare in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usi sempre il piano ottimale per le esecuzioni future.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> Nella figura sopra riportata caratterizzati da forme diverse per i piani di query specifica, con i significati seguenti per ogni stato possibili:<br />  
+> |Con forme|Significato|  
+> |-------------------|-------------|
+> |Circle|Eseguire una query completata (esecuzione completata normale)|
+> |Square|Annullata (inizializzate sul lato Client interrotto l'esecuzione)|
+> |Triangle|Non riuscito (esecuzione interrotta eccezione)|
+> Inoltre, la dimensione della forma riflette conteggio esecuzioni di query nell'intervallo di tempo specificato, aumentando le dimensioni con un elevato numero di esecuzioni.  
+
 -   Si può concludere che la query sia priva di un indice per l'esecuzione ottimale. Queste informazioni vengono rese disponibili all'interno del piano di esecuzione query. Creare l'indice mancante e verificare le prestazioni della query usando l'archivio query.  
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
@@ -166,7 +177,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  L'archivio query può cambiare automaticamente la modalità operativa. È necessario monitorare regolarmente lo stato dell'archivio query per assicurarsi che sia in funzione e per prevenire errori dovuti a cause evitabili. Eseguire questa query per determinare la modalità operativa e visualizzare i parametri più importanti:  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   Eseguire la pulizia dei dati dell'archivio query usando l'istruzione seguente:  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  È possibile applicare uno o entrambi questi passaggi eseguendo questa istruzione, che ripristina in modo esplicito la modalità lettura/scrittura:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Stato di errore  
  Per recuperare l'archivio query, provare a impostare in modo esplicito la modalità lettura/scrittura e ricontrollare lo stato effettivo.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Se il problema persiste, il danneggiamento dei dati dell'archivio query è persistente su disco. Prima di richiedere la modalità lettura/scrittura è necessario cancellare l'archivio query.  
+ Se il problema persiste, il danneggiamento dell'archivio di Query di dati sono persistente su disco.
+ 
+ Archivio query può essere recuperato tramite l'esecuzione di **sp_query_store_consistency_check** stored procedure nel database interessato.
+ 
+ Se che non sono utili, è possibile provare a cancellare l'archivio Query prima di richiedere la modalità di lettura / scrittura.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ Questo influisce negativamente sulle prestazioni del carico di lavoro e l'archiv
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Tuttavia, come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengono modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ Se si rinomina un database, l'uso forzato del piano avrà esito negativo e quest
  [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Uso di Archivio query con OLTP in-memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

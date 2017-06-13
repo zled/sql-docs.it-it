@@ -1,25 +1,30 @@
 ---
-title: "Set di dati condivisi e incorporati del report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10420"
+title: Set di dati (Generatore Report e SSRS) condivisi e incorporati del report | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Set di dati condivisi e incorporati del report (Generatore report e SSRS)
+# <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati del report (Generatore report e SSRS)
   Un set di dati consente di specificare i dati che si desidera utilizzare da una connessione dati. È basato su una connessione dati salvata nel report come origine dati incorporata o come riferimento a un'origine dati condivisa su un server di report. Nel set di dati è inclusa una query che specifica un set di campi. Quando si trascinano questi campi nell'area di progettazione, è possibile creare espressioni che restituiscono i dati effettivi quando si esegue il report.  
   
  Esistono due tipi di set di dati:  
@@ -58,10 +63,10 @@ caps.handback.revision: 16
   
  Dopo avere aggiunto set di dati al report in uso, i campi dalle raccolte di campi del riquadro dei dati del report vengono trascinati nelle tabelle, nei grafici e in altri elementi del report utilizzati per progettare il layout del report. Per altre informazioni sull'utilizzo dei campi, vedere [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
-### Informazioni sui dati da un set di dati del report  
+### <a name="understanding-data-from-a-report-dataset"></a>Informazioni sui dati da un set di dati del report  
  A seconda dell'estensione per i dati, un set di dati del report può essere costituito dai tipi di dati seguenti:  
   
--   Un set di risultati di un database relazionale restituito in seguito all'esecuzione di comandi di database, stored procedure o funzioni definite dall'utente. Se vengono recuperati più set di risultati tramite una singola query, solo il primo set di risultati viene elaborato e tutti gli altri vengono ignorati. Quando, ad esempio, si esegue la query riportata di seguito in Progettazione query basata su testo, nel riquadro dei risultati viene visualizzato solo il set di risultati per `Production.Product`:  
+-   Un set di risultati di un database relazionale restituito in seguito all'esecuzione di comandi di database, stored procedure o funzioni definite dall'utente. Se vengono recuperati più set di risultati tramite una singola query, solo il primo set di risultati viene elaborato e tutti gli altri vengono ignorati. Quando, ad esempio, si esegue la query riportata di seguito in Progettazione query basata su testo, nel riquadro dei risultati viene visualizzato solo il set di risultati per `Production.Product` :  
   
     ```  
     SELECT ProductID FROM Production.Product  
@@ -77,11 +82,11 @@ caps.handback.revision: 16
   
 -   Dati da un modello di report progettato per una specifica origine dati, con entità, relazioni di entità e campi predefiniti. Per altre informazioni, vedere "Utilizzo di modelli di report come origini dati" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
- Quando il report viene elaborato in fase di esecuzione, il set di risultati effettivi restituito per una query può includere zero o più righe. È anche possibile che le colonne definite nella query non siano presenti nell'origine dati. Per i valori Null restituiti dall'origine dati viene eseguito il mapping al valore **System.DBNull.Value** di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Quando il report viene elaborato in fase di esecuzione, il set di risultati effettivi restituito per una query può includere zero o più righe. È anche possibile che le colonne definite nella query non siano presenti nell'origine dati. Per i valori Null restituiti dall'origine dati viene eseguito il mapping al valore [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] System.DBNull.Value **di**.  
   
  Per altre informazioni sui campi del set di dati, vedere [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
-### Query del set di dati  
+### <a name="dataset-query"></a>Query del set di dati  
  In fase di progettazione quando si esegue una query del set di dati in Progettazione query, viene visualizzato un set di righe dell'origine dati in cui sono riportati dati di esempio. In fase di esecuzione, quando un utente visualizza il report, la query del set di dati potrebbe produrre valori differenti in quanto i dati dell'origine dati sono stati modificati. Ogni volta che il report viene elaborato, potrebbero essere visualizzati nuovi dati.  
   
  Quando si definisce ciascun set di dati, in Generatore report si apre la Progettazione query che corrisponde al tipo di origine dati per consentire di progettare query. Per definire ad esempio una query per dati provenienti da un database relazionale di SQL Server, nelle procedure guidate relative a tabella, matrice, grafico e mappa viene visualizzata un'interfaccia grafica semplice che consente di compilare la query; infatti, si dovranno solo scegliere i campi desiderati nel set di dati.  
@@ -108,7 +113,7 @@ caps.handback.revision: 16
   
  Per altre informazioni, vedere [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
-### Importazione delle query esistenti per un set di dati  
+### <a name="importing-existing-queries-for-a-dataset"></a>Importazione delle query esistenti per un set di dati  
  Quando si crea un set di dati, è possibile creare una nuova query o importarne una esistente da un file o da un altro report. Quando si importa una query da un altro report, è possibile scegliere la query da importare dall'elenco di set di dati nel report.  
   
  Sono supportati solo i tipi di file con estensione sql e rdl. Le query MDX (Multidimensional Expression), DMX (Data Mining Prediction) e le query modelli (SMQL) possono essere generate solo dalla Progettazione query associata.  
@@ -124,13 +129,13 @@ caps.handback.revision: 16
   
  La differenza tra le origini dati incorporate e quelle condivise dipende dalle diverse modalità di creazione, archiviazione e gestione. Nella tabella seguente vengono riepilogate le differenze fra le origini dati incorporate e quelle condivise:  
   
-|Description|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> Data Source|  
+|Description|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
 |-----------------|------------------------------|----------------------------|  
-|La connessione dati è incorporata nella definizione del report.|![Disponibile](../../reporting-services/report-data/media/greencheck.png "Disponibile")||  
-|Il puntatore alla connessione dati nel server di report è incorporato nella definizione del report.||![Disponibile](../../reporting-services/report-data/media/greencheck.png "Disponibile")|  
-|Gestita nel server di report|![Disponibile](../../reporting-services/report-data/media/greencheck.png "Disponibile")|![Disponibile](../../reporting-services/report-data/media/greencheck.png "Disponibile")|  
-|Richiesta per i set di dati condivisi||![Disponibile](../../reporting-services/report-data/media/greencheck.png "Disponibile")|  
-|Richiesta per i componenti||![Disponibile](../../reporting-services/report-data/media/greencheck.png "Disponibile")|  
+|La connessione dati è incorporata nella definizione del report.|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")||  
+|Il puntatore alla connessione dati nel server di report è incorporato nella definizione del report.||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|  
+|Gestita nel server di report|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|  
+|Richiesta per i set di dati condivisi||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|  
+|Richiesta per i componenti||![Disponibile](../../reporting-services/report-data/media/greencheck.gif "disponibili")|  
   
  In Progettazione report è possibile creare set di dati condivisi come parte di un progetto report e controllare se distribuirli a un server di report. Non è possibile accedere a un server di report e selezionare un set di dati condiviso da aggiungere al report in uso.  
   
@@ -147,7 +152,7 @@ caps.handback.revision: 16
 |Testo della query|Configurare la query, anche definendola come espressione.|Impossibile modificare la query.|  
 |Parametri della query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
 |Filtri|Definisci filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
-|Origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
+|origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
 |Campi|Campi dal comando di query<br /><br /> I campi calcolati non fanno parte della definizione del set di dati|Visualizzare campi, ma non modificarli<br /><br /> La raccolta di campi è statica basata sulla query al momento dell'aggiunta del set di dati condiviso al report. Per aggiornare, fare clic su **Aggiorna campi** nella finestra di dialogo **Proprietà set di dati** . La raccolta di campi effettivi è qualsiasi risultato restituito dalla query corrente nella definizione.<br /><br /> Aggiungere campi calcolati|  
 |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
   
@@ -158,25 +163,25 @@ caps.handback.revision: 16
   
  Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
-### Filtro dei dati in un set di dati  
+### <a name="filtering-data-in-a-dataset"></a>Filtro dei dati in un set di dati  
  I filtri del set di dati fanno parte della definizione del set di dati in un report. Utilizzare i filtri del set di dati per specificare quali dati di un set di dati includere in un report. Quando si specificano i filtri su un set di dati, in tutte le aree dati basate sul set di dati vengono visualizzati solo i dati che passano i filtri del set di dati.  
   
  I filtri fanno parte della definizione di un set di dati condiviso. I filtri del set di dati condiviso influiscono su tutti i report che includono il set di dati condiviso. Dopo avere aggiunto un set di dati condiviso al report o dopo avere aggiunto un componente con un set di dati condiviso dipendente, è possibile creare filtri del set di dati aggiuntivi. I filtri creati vengono utilizzati solo nel report in uso, non sono parte della definizione del set di dati condiviso sul server di report.  
   
  È possibile impostare filtri aggiuntivi su un'area dati o un gruppo di aree dati. Inoltre è possibile utilizzare una combinazione di parametri e filtri per consentire agli utenti di scegliere i dati che desiderano visualizzare nel report. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-### Ordinamento dei dati in un set di dati  
+### <a name="sorting-data-in-a-dataset"></a>Ordinamento dei dati in un set di dati  
  In un set di dati, l'ordinamento dei dati rappresenta l'ordine in base al quale i dati vengono recuperati dall'origine dati esterna. Si tratta dello stesso ordine che viene visualizzato quando si esegue la query in Progettazione query. Se la sintassi del comando di query supporta l'ordinamento, è possibile modificare la query per ordinare i dati nell'origine, prima che venga restituita come dati del report. Per una query [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, l'istruzione ORDER BY consente di controllare il tipo di ordinamento.  
   
  Per ordinare i dati dopo la restituzione al report, definire le espressioni di ordinamento su aree dati e gruppi di aree dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di area dati, ad esempio, [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
  Inoltre è possibile utilizzare una combinazione di parametri ed espressioni di ordinamento per consentire agli utenti di scegliere il tipo di ordinamento dei dati in un report. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-### Raggruppamento di dati in un set di dati  
- Non è possibile raggruppare dati in un set di dati. Per l'aggregazione di dati in un set di dati, è possibile modificare il comando di query per calcolare le aggregazioni prima del recupero dei dati per un report. Tali valori sono noti come *aggregazioni server*. Nelle espressioni, per identificare questi valori come aggregazioni precalcolate, utilizzare la funzione Aggregate. Per altre informazioni, vedere [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/aggregate-function-report-builder-and-ssrs.md).  
+### <a name="grouping-data-in-a-dataset"></a>Raggruppamento di dati in un set di dati  
+ Non è possibile raggruppare dati in un set di dati. Per l'aggregazione di dati in un set di dati, è possibile modificare il comando di query per calcolare le aggregazioni prima del recupero dei dati per un report. Tali valori sono noti come *aggregazioni server*. Nelle espressioni, per identificare questi valori come aggregazioni precalcolate, utilizzare la funzione Aggregate. Per altre informazioni, vedere [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Utilizzo di parametri e di set di dati  
- Per una query del set di dati incorporato contenente variabili di query, i parametri di query e i parametri del report corrispondenti vengono creati automaticamente. Durante l'esecuzione del report, il valore del parametro del report è collegato al parametro di query del set di dati. In questo modo, il comando di query che viene eseguito sull'origine dati esterna consente di includere i valori specificati per i parametri del report. I parametri del report consentono a un utente di scegliere i dati da visualizzare nel report. È possibile visualizzare in che modo i parametri di query e di report sono collegati nella pagina [Finestra di dialogo Proprietà set di dati, Parametri &#40;Generatore report&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md).  
+ Per una query del set di dati incorporato contenente variabili di query, i parametri di query e i parametri del report corrispondenti vengono creati automaticamente. Durante l'esecuzione del report, il valore del parametro del report è collegato al parametro di query del set di dati. In questo modo, il comando di query che viene eseguito sull'origine dati esterna consente di includere i valori specificati per i parametri del report. I parametri del report consentono a un utente di scegliere i dati da visualizzare nel report. È possibile visualizzare in che modo i parametri di query e di report sono collegati nella pagina [Finestra di dialogo Proprietà set di dati, Parametri &#40;Generatore report&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda).  
   
  Per un set di dati condiviso, i parametri di query sono parte della definizione del set di dati condiviso che può essere gestita sul server di report indipendentemente da un report. Nell'elenco seguente viene descritto il supporto per i valori dei parametri di query:  
   
@@ -188,14 +193,14 @@ caps.handback.revision: 16
   
 -   Non può includere riferimenti alla raccolta predefinita Parameters che rappresenta i parametri del report.  
   
- Per configurare i valori dei parametri di query per un set di dati condiviso, in modalità progettazione del set di dati, individuare e aprire un set di dati condiviso dal server di report e impostare le opzioni nella pagina [Finestra di dialogo Proprietà set di dati, Parametri &#40;Generatore report&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md). Per altre informazioni, vedere [Creazione di un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ Per configurare i valori dei parametri di query per un set di dati condiviso, in modalità progettazione del set di dati, individuare e aprire un set di dati condiviso dal server di report e impostare le opzioni nella pagina [Finestra di dialogo Proprietà set di dati, Parametri &#40;Generatore report&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda). Per altre informazioni, vedere [Creazione di un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Per alcune origini dati multidimensionali, ad esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la finestra Progettazione query con interfaccia grafica consente di specificare filtri query e di selezionare un'opzione per creare un parametro query corrispondente. Quando si seleziona l'opzione di parametro, l'estensione per i dati consente di creare automaticamente un set di dati del report separato per fornire valori disponibili per un elenco a discesa per quel parametro. Per impostazione predefinita, questi set di dati nascosti non vengono visualizzati nel riquadro dei dati del report.  
   
  I parametri del report collegati ai parametri di query consentono di filtrare i dati prima che questi vengano restituiti dall'origine dati esterna. È inoltre possibile filtrare i dati nel report creando filtri che sono parte della definizione del report. Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
-### Visualizzazione dei set di dati nascosti  
- Quando si crea una query con parametri per alcune origini dati multidimensionali, i set di dati che forniscono valori validi per il parametro vengono creati automaticamente. In alcune finestre Progettazione query, questa operazione viene eseguita specificando filtri e selezionando l'opzione per creare parametri. Per impostazione predefinita, tali set di dati, pur essendo visualizzabili, non vengono mostrati nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md).  
+### <a name="displaying-hidden-datasets"></a>Visualizzazione dei set di dati nascosti  
+ Quando si crea una query con parametri per alcune origini dati multidimensionali, i set di dati che forniscono valori validi per il parametro vengono creati automaticamente. In alcune finestre Progettazione query, questa operazione viene eseguita specificando filtri e selezionando l'opzione per creare parametri. Per impostazione predefinita, tali set di dati, pur essendo visualizzabili, non vengono mostrati nel riquadro dei dati del report. Per altre informazioni, vedere [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 ##  <a name="Maps"></a> Utilizzo di mappe e di set di dati  
  Se si include una mappa nel report in uso, è necessario fornire dati spaziali. Questo tipo di dati può provenire da un set di dati del report, da una mappa nella raccolta mappe o dai file di forma ESRI. I dati spaziali provenienti da un report o da un file di forma ESRI non sono visualizzati come set di dati nel riquadro dei dati del report. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
@@ -209,9 +214,9 @@ caps.handback.revision: 16
   
 -   È possibile utilizzare i set di dati per fornire un elenco a discesa di valori o di valori predefiniti disponibili per un parametro del report. Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
--   È possibile collegare dati correlati di più set di dati utilizzando parametri con report drill-through o sottoreport. Un report delle vendite può ad esempio mostrare dati riepilogativi per tutti i punti vendita e un collegamento drill-through può specificare l'identificatore del punto vendita come parametro di report con una query del set di dati che recupera le singole vendite per il punto vendita specificato. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md) e [Sottoreport &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+-   È possibile collegare dati correlati di più set di dati utilizzando parametri con report drill-through o sottoreport. Un report delle vendite può ad esempio mostrare dati riepilogativi per tutti i punti vendita e un collegamento drill-through può specificare l'identificatore del punto vendita come parametro di report con una query del set di dati che recupera le singole vendite per il punto vendita specificato. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) e [Sottoreport &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
--   Non è possibile visualizzare dati dettaglio di più set di dati in una singola area dati. È tuttavia, possibile visualizzare valori di funzioni predefinite o di aggregazione per più set di dati all'interno di un'area dati. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md). Se è necessario combinare dati dettaglio di più set di dati in un'area dati, è necessario riscrivere la query in modo da recuperare i dati come singolo set di dati.  
+-   Non è possibile visualizzare dati dettaglio di più set di dati in una singola area dati. È tuttavia, possibile visualizzare valori di funzioni predefinite o di aggregazione per più set di dati all'interno di un'area dati. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). Se è necessario combinare dati dettaglio di più set di dati in un'area dati, è necessario riscrivere la query in modo da recuperare i dati come singolo set di dati.  
   
 ##  <a name="NoRows"></a> Visualizzazione di un messaggio quando non sono disponibili righe di dati  
  Durante l'elaborazione del report, quando è in esecuzione la query di un set di dati, il set di risultati potrebbe non contenere righe. Nel report sottoposto a rendering un'area dati collegata a un set di dati vuoto viene visualizzata come area dati vuota. Al posto di tale area è possibile specificare il testo da visualizzare nel report sottoposto a rendering. È inoltre possibile specificare un messaggio per i sottoreport quando le query per tutti i set di dati non producono dati in fase di esecuzione. Per altre informazioni, vedere [Impostazione di una proprietà NoDataMessage per un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
@@ -219,9 +224,9 @@ caps.handback.revision: 16
 ##  <a name="Options"></a> Impostazione delle opzioni del set di dati  
  Per le origini dati che supportano dati internazionali, potrebbe essere necessario impostare le proprietà di un set di dati che influiscono sull'ordinamento, le proprietà relative ai caratteri internazionali e la distinzione maiuscole/minuscole. Tali proprietà includono la distinzione tra maiuscole e minuscole, la larghezza, la distinzione dei caratteri accentati e le regole di confronto. Per altre informazioni, vedere "Considerazioni sul supporto internazionale per database e applicazioni di Motore di database" e "Utilizzo delle regole di confronto" nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Per altre informazioni su come impostare queste proprietà, vedere [Finestra di dialogo Proprietà set di dati, Opzioni &#40;Generatore report&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

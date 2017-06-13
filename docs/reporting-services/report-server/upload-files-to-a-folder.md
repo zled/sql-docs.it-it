@@ -1,31 +1,36 @@
 ---
-title: "Caricare file in una cartella | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pubblicazione di report [Reporting Services], caricamento di file"
-  - "report [Reporting Services], pubblicazione"
-  - "caricamento di report [Reporting Services]"
-  - "caricamento di file [Reporting Services]"
-  - "file [Reporting Services], caricamento"
-  - "file [Reporting Services]"
-  - "cartelle [Reporting Services], caricamento di file"
+title: Caricare file in una cartella | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Caricare file in una cartella
+# <a name="upload-files-to-a-folder"></a>Caricare file in una cartella
   È possibile caricare file dal file system e archiviarli come elementi gestiti in un database del server di report. La funzionalità di un file caricato dipende dal tipo di file.  
   
 -   Il caricamento di un file con estensione rdl equivale alla pubblicazione di un report.  
@@ -39,13 +44,13 @@ caps.handback.revision: 42
   
  I file caricati in un database del server di report sono visualizzati nella gerarchia di cartelle con le icone seguenti.  
   
- ![Icona di report](../../reporting-services/report-server/media/hlp-16doc.png "Icona di report")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 Icona di report  
   
- ![Icona di modello](../../reporting-services/report-server/media/model-icon.png "Icona di modello")  
+ ![Icona di modello](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 Icona di modello di report  
   
- ![Icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.png "Icona di risorsa generica")  
+ ![Icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 Icona di risorsa generica  
   
  I file caricati vengono inseriti automaticamente nella cartella selezionata. È pertanto possibile passare alla cartella desiderata prima di caricare il file oppure spostare il file nella cartella desiderata dopo averlo caricato.  
@@ -58,8 +63,8 @@ Icona di risorsa generica
 |Caricamento di qualsiasi file come oggetto binario|Gestione di risorse|  
 |Visualizzazione del contenuto di una cartella|Visualizzazione di risorse, Visualizzazione di report|  
   
-## Vedere anche  
- [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
  [Caricare un file o un report &#40;Gestione report&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

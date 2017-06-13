@@ -1,32 +1,37 @@
 ---
-title: "Memorizzare nella cache un set di dati condiviso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Memorizzare nella cache un set di dati condiviso | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b80d9627570c00b68fd0728377053f4bba6b2031
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Memorizzare nella cache un set di dati condiviso
+# <a name="cache-a-shared-dataset"></a>Memorizzare nella cache un set di dati condiviso
   Per ottimizzare le prestazioni, è possibile configurare le proprietà relative alla memorizzazione nella cache per un set di dati condiviso. Quando un set di dati condiviso viene memorizzato nella cache, una copia dei risultati di query viene salvata per un determinato periodo di tempo. Il primo utente che richiede un report che utilizza il set di dati condiviso deve attendere il completamento dei risultati di query e di tutte le elaborazioni prima di visualizzare il report. Gli utenti successivi che richiedono il report all'interno del periodo di memorizzazione nella cache otterranno prestazioni migliori perché la query e l'elaborazione sono già state eseguite. È inoltre possibile specificare un piano di aggiornamento della cache per eseguire la query e memorizzare nella cache i risultati fino alla scadenza della cache specificata.  
   
  Gli utenti che eseguono report in base a un set di dati condiviso o a piani di aggiornamento della cache creano la cache delle query e in entrambi i casi, la disponibilità della cache dipende dalle opzioni di scadenza della stessa.  
   
  Sono presenti restrizioni sui tipi di set di dati condivisi che è possibile memorizzare nella cache. I risultati di query, ad esempio, non possono essere memorizzati nella cache quando i dati variano in base all'identità utente o vengono recuperati utilizzando il token di sicurezza dell'utente che richiede il report. Per altre informazioni, vedere [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md) e [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
-### Per pianificare la scadenza di un report memorizzato nella cache  
+### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Per pianificare la scadenza di un report memorizzato nella cache  
   
-1.  Avviare [Gestione Report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Avviare [Gestione Report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Gestione report passare al set di dati condiviso per cui si desidera impostare le proprietà relative alla memorizzazione nella cache, posizionare il puntatore del mouse sull'elemento, quindi fare clic sulla freccia a discesa.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 7
   
 7.  Fare clic su **Applica**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

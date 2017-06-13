@@ -1,30 +1,35 @@
 ---
-title: "Impostare le opzioni predefinite per Generatore Report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10427"
+title: Impostare le opzioni predefinite per Generatore Report | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Impostare le opzioni predefinite per Generatore Report
+# <a name="set-default-options-for-report-builder"></a>Impostare le opzioni predefinite per Generatore Report
   In Generatore Report è possibile impostare alcuni valori predefiniti utili per semplificare e accelerare la creazione di report.  Ad esempio, se è si può impostare o modificare il server di report predefinito, Generatore Report salva i report nello stesso server di report automaticamente, se non diversamente specificato.  
   
 -   In Generatore report fare clic su **File** > **Opzioni**.  
   
-## Elenco degli elementi di interfaccia  
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Usa questo server di report o sito di SharePoint per impostazione predefinita**  
  È possibile che l'amministratore abbia configurato questa opzione. Il valore può essere un URL ben formato che inizia con http:// o https://. Questa impostazione determina le connessioni all'origine dati che verranno visualizzate per impostazione predefinita nelle procedure guidate Nuova tabella o matrice e Nuovo grafico. I report verranno inoltre elaborati su questo server e sarà possibile fare riferimento alle risorse dal server.  
   
@@ -36,10 +41,10 @@ caps.handback.revision: 15
  Non è necessario riavviare Generatore report affinché questa impostazione venga applicata.  
   
  **Mostra questo numero di siti e server recenti**  
- Specificare il numero di siti e connessioni recenti da visualizzare nelle finestre di dialogo **Apri report** e **Salva come report**.  
+ Specificare il numero di siti e connessioni recenti da visualizzare nelle finestre di dialogo **Apri report** e **Salva come report** .  
   
  **Mostra questo numero di connessioni alle origini dei dati condivise**  
- Specificare il numero di connessioni a origini dati e set di dati condivisi di recente da visualizzare nella finestra di dialogo**Proprietà set di dati** e nella pagina **Scegliere una connessione a un'origine dei dati** della procedura guidata Aree dati.  
+ Specificare il numero di connessioni a origini dati e set di dati condivisi di recente da visualizzare nella finestra di dialogo **Proprietà set di dati** e nella pagina **Scegliere una connessione a un'origine dei dati** della procedura guidata Aree dati.  
   
  **Mostra questo numero di documenti recenti**  
  Specificare il numero di documenti recenti da visualizzare quando si fa clic sul pulsante Generatore report.  
@@ -47,7 +52,7 @@ caps.handback.revision: 15
  **Cancella tutti gli elenchi di elementi recenti**  
  Cancellare tutti gli elenchi correnti di siti e server, connessioni ai set di dati condivisi e alle origini dati nonché documenti recenti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Formattare un file script di Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "script [Reporting Services], formati"
-  - "formati [Reporting Services], file di script"
+title: Formattare un File di Script di Reporting Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [Reporting Services], formats
+- formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formattare un file script di Reporting Services
+# <a name="format-a-reporting-services-script-file"></a>Formattare un file script di Reporting Services
   Uno script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un file di codice [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, specificato su un proxy compilato in WSDL (Web Service Description Language), che definisce l'API SOAP di Reporting Services. Un file script viene archiviato come file di testo Unicode o UTF-8 con estensione .rss.  
   
  Il file script funge da modulo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e può contenere procedure definite dall'utente e variabili a livello del modulo. Per una corretta esecuzione, il file script deve contenere una routine Main. La routine Main è la prima routine alla quale viene eseguito l'accesso quando si esegue il file script. Nella routine Main è possibile aggiungere le operazioni del servizio Web ed eseguire le sottoroutine definite dall'utente. Nel codice seguente viene creata una routine Main:  
@@ -52,7 +57,7 @@ End Sub
   
  Per esempi di script, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizio Web ReportServer](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Guida di riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  

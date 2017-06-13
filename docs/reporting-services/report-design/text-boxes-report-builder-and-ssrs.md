@@ -1,28 +1,33 @@
 ---
-title: "Caselle di testo (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10134"
-  - "10120"
-  - "sql13.rtp.rptdesigner.textproperties.general.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.general.f1"
+title: Caselle di testo (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10134"
+- "10120"
+- sql13.rtp.rptdesigner.textproperties.general.f1
+- sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Caselle di testo (Generatore report e SSRS)
+# <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   Quando si pensa a una casella di testo, di solito si immagina una casella autonoma contenente testo in un'area, ad esempio, di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] alcune caselle di testo sono esattamente questo e possono visualizzare testo statico per titoli, descrizioni ed etichette oppure testo dinamico basato su espressioni. Tuttavia, anche ogni cella in una tabella o matrice (o in un'area dati Tablix) contiene una casella di testo, che può essere formattata esattamente allo stesso modo delle caselle di testo autonome di un report.  
   
 > [!NOTE]  
@@ -42,7 +47,7 @@ caps.handback.revision: 8
 ##  <a name="GrowShrinkTextBox"></a> Espansione e riduzione di una casella di testo  
  Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile ridurre o espandere verticalmente una casella di testo in base al contenuto. Per altre informazioni, vedere [Espansione o riduzione di una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
-## Rotazione di una casella di testo  
+## <a name="rotating-a-text-box"></a>Rotazione di una casella di testo  
  Ruotando le caselle di testo è possibile migliorare la leggibilità dei report, supportare un orientamento di testo specifico delle impostazioni locali, adattare più colonne in un report stampato con dimensioni di pagina fisse e creare report più interessanti dal punto di vista grafico. Una casella di testo può essere ruotata in diverse direzioni: orizzontale, verticale (rotazione di 90 gradi) o di 270 gradi. L'opzione verticale è più usata per le lingue dell'Asia orientale, che si scrivono dall'alto verso il basso. Nella maggior parte dei renderer l'opzione verticale permette di gestire correttamente la rotazione del glifo in modo che il testo venga scritto dall'alto verso il basso, senza che i caratteri appaiano ai lati. Per le altre lingue, le opzioni verticale e di 270 gradi determinano che il testo venga scritto lateralmente.  
   
  È possibile ruotare caselle di testo che contengono testo statico, campi di un set di dati di un report o dati calcolati. La casella di testo può essere autonoma nel corpo del report, in una tabella o una matrice oppure nell'intestazione e nel piè di pagina di un report.  
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  [Espansione o riduzione di una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

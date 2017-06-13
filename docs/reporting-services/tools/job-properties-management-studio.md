@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; processo (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: "Proprietà (Management Studio) processo | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propriet&#224; processo (Management Studio)
+# <a name="job-properties-management-studio"></a>Proprietà processo (Management Studio)
   Usare la pagina **Proprietà processo** per visualizzare le informazioni su una sottoscrizione o su un report in corso prima di annullarlo.  
   
  Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report e aprire la cartella **Processi** . Fare clic con il pulsante destro del mouse su un processo in esecuzione, quindi scegliere **Proprietà**.  
@@ -27,7 +32,7 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  Questa caratteristica non è supportata in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. Questa pagina non viene visualizzata quando è in esecuzione [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
-## Attività  
+## <a name="tasks"></a>Attività  
  Per visualizzare le informazioni su un processo, è prima necessario aggiornare la pagina per recuperare le informazioni sui processi attualmente in esecuzione nel server di report:  
   
 1.  Aprire la cartella del server di report.  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 3.  Se un processo è presente nell'elenco, fare clic con il pulsante destro del mouse su di esso, quindi scegliere **Proprietà**.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **ID processo**  
  GUID assegnato a un processo durante l'elaborazione. Il valore viene generato casualmente ogni volta che viene eseguito un report o una sottoscrizione.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **Nome utente**  
  Per i processi avviati da un utente, in questa colonna viene indicato il nome dell'utente. Per i processi di sistema, si tratta del nome del server di report.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)  

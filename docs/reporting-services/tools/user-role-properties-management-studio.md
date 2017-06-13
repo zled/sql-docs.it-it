@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; ruolo utente (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.userroleproperties.f1"
+title: "Proprietà ruolo utente (Management Studio) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 caps.latest.revision: 27
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 27
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propriet&#224; ruolo utente (Management Studio)
+# <a name="user-role-properties-management-studio"></a>Proprietà ruolo utente (Management Studio)
   Questa pagina consente di visualizzare le attività incluse in una definizione di ruolo a livello di elemento. La pagina consente inoltre di modificare l'elenco di attività o una descrizione di ruolo.  
   
  Una definizione di ruolo a livello di elemento è una raccolta denominata di attività che possono essere eseguite dagli utenti in relazione a un elemento specifico, ovvero una cartella, un report, una risorsa o un'origine dati condivisa. Le definizioni di ruolo vengono assegnate a un utente o a un gruppo per creare un'assegnazione di ruolo in Gestione report. Le attività incluse nella definizione di ruolo indicano le operazioni consentite per un utente o un gruppo.  
@@ -29,7 +34,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  Le assegnazioni di ruolo a livello di utente vengono utilizzate solo in un server di report in esecuzione in modalità nativa. Se il server di report è configurato per l'integrazione con SharePoint, in questa pagina vengono visualizzate informazioni di sola lettura sui ruoli e sui livelli di autorizzazione definiti nel sito di SharePoint.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  Consente di specificare il nome della definizione di ruolo.  
   
@@ -42,11 +47,11 @@ caps.handback.revision: 27
  **Descrizione dell'attività**  
  Offre informazioni su ogni attività. Non è possibile modificare le descrizioni delle attività.  
   
-## Vedere anche  
- [Attività a livello di elemento](../../reporting-services/security/item-level-tasks.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attività a livello di elemento](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)   
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
- [Predefined Roles](../../reporting-services/security/predefined-roles.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

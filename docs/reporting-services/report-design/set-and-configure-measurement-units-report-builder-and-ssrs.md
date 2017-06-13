@@ -1,23 +1,28 @@
 ---
-title: "Impostare e configurare le unit&#224; di misura (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Impostare e configurare le unità di misura (Generatore Report e SSRS) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Impostare e configurare le unit&#224; di misura (Generatore report e SSRS)
+# <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Impostare e configurare le unità di misura (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] gli indicatori usano una di due unità di misure, ovvero percentuale o numerica.   
     
   Per impostazione predefinita, gli indicatori vengono configurati in modo da utilizzare le percentuali come unità di misura. Pertanto i valori dell'indicatore assegnati a ogni icona nel set di indicatori sono determinati da un intervallo di percentuale. Gli intervalli di percentuale sono divisi uniformemente tra le icone nel set di indicatori. Ogni icona rappresenta uno stato dell'indicatore. È possibile modificare le percentuali per ogni icona nel set di indicatori specificando percentuali di inizio e di fine differenti. Gli indicatori rilevano automaticamente anche i valori minimo e massimo nei dati.  
@@ -26,7 +31,7 @@ caps.handback.revision: 8
   
  Opzioni come le unità di misura possono essere impostate tramite espressioni. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-## Per utilizzare l'unità di misura di stato numerica  
+## <a name="to-use-the-numeric-state-measurement-unit"></a>Per utilizzare l'unità di misura di stato numerica  
   
 1.  Fare clic con il pulsante destro del mouse sull'indicatore da modificare e scegliere **Proprietà indicatore**.  
   
@@ -36,16 +41,16 @@ caps.handback.revision: 8
   
      Facoltativamente, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare il valore per l'opzione.  
   
-4.  Per ogni icona nel set di indicatori, aggiornare i valori nelle caselle di testo **Iniziale** e **Finale**.  
+4.  Per ogni icona nel set di indicatori, aggiornare i valori nelle caselle di testo **Iniziale** e **Finale** .  
   
-     Facoltativamente, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare i valori delle opzioni **Iniziale** e **Finale**.  
+     Facoltativamente, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare i valori delle opzioni **Iniziale** e **Finale** .  
   
     > [!NOTE]  
     >  I valori nelle caselle di testo **Iniziale** e **Finale** devono essere numerici.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Per utilizzare l'unità di misura espressa in percentuale  
+## <a name="to-use-the-percentage-measurement-unit"></a>Per utilizzare l'unità di misura espressa in percentuale  
   
 1.  Fare clic con il pulsante destro del mouse sull'indicatore da modificare e scegliere **Proprietà indicatore**.  
   
@@ -62,16 +67,16 @@ caps.handback.revision: 8
   
      Facoltativamente, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare i valori per l'opzione.  
   
-5.  Per ogni icona nel set di indicatori, aggiornare i valori nelle caselle di testo **Iniziale** e **Finale**.  
+5.  Per ogni icona nel set di indicatori, aggiornare i valori nelle caselle di testo **Iniziale** e **Finale** .  
   
-     Facoltativamente, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare i valori delle opzioni **Iniziale** e **Finale**.  
+     Facoltativamente, fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che consente di impostare i valori delle opzioni **Iniziale** e **Finale** .  
   
     > [!NOTE]  
     >  I valori nelle caselle di testo **Iniziale** e **Finale** devono essere numerici.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

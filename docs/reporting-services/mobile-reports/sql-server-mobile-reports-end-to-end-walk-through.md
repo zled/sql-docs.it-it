@@ -1,39 +1,44 @@
 ---
-title: "Report di SQL Server mobile: procedura dettagliata End-to-end | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Report per dispositivi mobili di SQL Server: procedura dettagliata End-to-end | Documenti Microsoft'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Report di SQL Server mobile: procedura dettagliata End-to-end
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata End-to-end
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
 
 Consente di creare report per dispositivi mobili in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili. È possibile connettersi a un'ampia gamma di origini dati locali, caricare cartelle di lavoro di Excel oppure creare report per dispositivi mobili, quindi salvarli in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e visualizzarli in un browser o nelle app Power BI per dispositivi mobili.  
   
 Questo argomento illustra le operazioni seguenti:   
   
-- La creazione di un'origine dati condivisa e di un set di dati nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)], usando il database AdventureWorks come origine dati di esempio.  
+- La creazione di un'origine dati condivisa e di un set di dati nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , usando il database AdventureWorks come origine dati di esempio.  
 - La creazione di un report per dispositivi mobili di Reporting Services in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
-- La pubblicazione di un report per dispositivi mobili nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].  
+- La pubblicazione di un report per dispositivi mobili nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
 - La visualizzazione di report per dispositivi mobili nell'app Power BI per dispositivi mobili.  
   
 ## <a name="before-we-start"></a>Prima di iniziare  
 Per proseguire, sono necessari questi prodotti:  
   
 * Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a un [server di report di [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] in modalità nativa](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Per [creare set di dati condivisi](#shared-dataset), è necessario [installare Generatore report](http://www.microsoft.com/download/details.aspx?id=50016).  
+* Per [creare set di dati condivisi](#shared-dataset), è necessario [installare Generatore report](https://msdn.microsoft.com/library/ff519551.aspx).  
 * Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Script e database di esempio di AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
 *  OPPURE: database di esempio World Wide Importers disponibile alla pagina [Microsoft SQL Server Samples](https://msdn.microsoft.com/library/mt748083.aspx) (Esempi di Microsoft SQL Server).
@@ -44,7 +49,7 @@ Per proseguire, sono necessari questi prodotti:
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
   
-È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l'[elenco delle origini dati supportate](https://msdn.microsoft.com/library/ms159219.aspx).  
+È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l' [elenco delle origini dati supportate](https://msdn.microsoft.com/library/ms159219.aspx).  
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Origine dati**.  
   
@@ -57,15 +62,15 @@ Per proseguire, sono necessari questi prodotti:
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
-6. L'origine dati verrà ora visualizzata nel portale di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].  
+6. L'origine dati verrà ora visualizzata nel portale di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
 Altre informazioni sulle [origini dati condivise in Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
    
-## <a name="a-nameshareddatasetcreate-a-shared-dataseta"></a><a name="shared-dataset">Creare un set di dati condiviso</a>  
+## <a name="shared-dataset">Creare un set di dati condiviso</a>  
   
-Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](http://www.microsoft.com/download/details.aspx?id=50016) oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.   
+Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](https://msdn.microsoft.com/library/ff519551.aspx)oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.   
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Report impaginato** per avviare [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -81,20 +86,20 @@ Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRO
    Nome: http://*localhost*/ReportServer  
    Elementi di tipo: origini dati (file con estensione rsds)  
    
-5. Fare clic su **Apri** e passare all'origine dati creata sul server.  
+5. Fare clic su **Apri**e passare all'origine dati creata sul server.  
    
-6. Selezionare l'origine dati e fare clic nuovamente su **Apri**.    
+6. Selezionare l'origine dati e fare clic nuovamente su **Apri** .    
   
 7. Progettare il set di dati in [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
    ![PBI_SSMRP_RB_QueryDesignr600](../../reporting-services/mobile-reports/media/pbi-ssmrp-rb-querydesignr600.png)  
    
-8. Al termine, salvare il set di dati nel server di report di [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)].    
+8. Al termine, salvare il set di dati nel server di report di [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)] .    
    
 A questo punto è possibile usare il set di dati come base per i report per dispositivi mobili e per gli indicatori KPI.  È possibile creare più set di dati nella stessa origine dati. È anche possibile creare più indicatori KPI e report per dispositivi mobili in questi set di dati condivisi.   
   
-## <a name="a-namecreatekpicreate-a-kpia"></a><a name="create-KPI">Creare un indicatore KPI</a>  
-Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].    
+## <a name="create-KPI">Creare un indicatore KPI</a>  
+Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
 1. Nell'angolo superiore destro del portale Web fare clic su **Nuovo** > **Nuovo indicatore KPI**.   
   
@@ -129,13 +134,13 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
   
 8. Assegnare un nome all'indicatore KPI e selezionare un tipo di visualizzazione, quindi fare clic su **Crea**.   
   
-   L'indicatore KPI viene visualizzato nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].  
+   L'indicatore KPI viene visualizzato nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="a-namecreatemobilereportcreate-a-reporting-services-mobile-reporta"></a><a name="create-mobile-report">Creare un report per dispositivi mobili di Reporting Services</a>  
+## <a name="create-mobile-report">Creare un report per dispositivi mobili di Reporting Services</a>  
    
-Per creare un report per dispositivi mobili di Reporting Services, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766) o avviarlo dal portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. 
+Per creare un report per dispositivi mobili di Reporting Services, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766)o avviarlo dal portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], verrà visualizzata un'area di disegno vuota in cui è possibile creare il report per dispositivi mobili. È possibile creare prima oggetti visivi oppure iniziare con i propri dati. Se si creano prima oggetti visivi, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera automaticamente dati simulati correlati al report e cambia in modo dinamico man mano che si modificano le selezioni degli oggetti visivi. È possibile provare questa funzionalità.   
   
@@ -161,11 +166,11 @@ Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobi
   
 4. Con l'oggetto visivo mappa ad albero selezionato, selezionare la scheda **Dati** nell'angolo superiore sinistro.   
   
-   A questo punto verranno visualizzati i campi e i valori simulati generati da [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], nonché ciò che rappresentano le dimensioni e il colore nella mappa ad albero.  
+   A questo punto verranno visualizzati i campi e i valori simulati generati da [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] , nonché ciò che rappresentano le dimensioni e il colore nella mappa ad albero.  
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Fare clic sulla scheda **Layout**.  
+6. Fare clic sulla scheda **Layout** .  
   
 7. Fare clic sulla ruota dentata Opzioni ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) nell'angolo superiore destro della mappa ad albero per visualizzare il menu in essa contenuto.   
   
@@ -175,17 +180,17 @@ Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobi
   
 ## <a name="add-your-own-data"></a>Aggiungere i propri dati  
   
-1. Passare alla scheda **Dati**.    
+1. Passare alla scheda **Dati** .    
    
 2. Per aggiungere i propri dati, fare clic su **Aggiungi dati** nell'angolo superiore destro e passare ai propri dati.    
   
-3. È possibile usare dati da una cartella di lavoro di Excel locale, ma in questo caso i dati provengono dal set di dati condiviso nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]. Viene visualizzato il messaggio "Server aggiunto".  
+3. È possibile usare dati da una cartella di lavoro di Excel locale, ma in questo caso i dati provengono dal set di dati condiviso nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] . Viene visualizzato il messaggio "Server aggiunto".  
   
 4. Selezionare il server e quindi il set di dati creato.  
    
-3. Nella scheda **Dati** nel riquadro **Proprietà dati** modificare **Le dimensioni rappresentano**, **Il colore rappresenta** e altre proprietà con i campi presenti nei propri dati. 
+3. Nella scheda **Dati** nel riquadro **Proprietà dati** modificare **Le dimensioni rappresentano**, **Il colore rappresenta**e altre proprietà con i campi presenti nei propri dati. 
    
-   *  I campi **Le dimensioni rappresentano**, **Il colore rappresenta** e **Valore centrale personalizzato** devono contenere valori numerici. 
+   *  I campi**Le dimensioni rappresentano**, **Il colore rappresenta**e **Valore centrale personalizzato** devono contenere valori numerici. 
    *  **Raggruppa per** è una categoria, pertanto è un campo di testo.
    
    ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
@@ -200,7 +205,7 @@ Verrà aggiunto un misuratore per visualizzare il confronto tra le vendite da in
 
 2. Anche in questo caso inizialmente verranno usati dati simulati. 
 
-   Si noti che in **Proprietà visive** per impostazione predefinita **I valori più alti sono preferibili** ed **Etichetta delta** è impostata su **Percentuale della destinazione**. I valori predefiniti di **Interruzioni intervallo** possono essere modificati, ma per il momento sono corretti.
+   Si noti che in **Proprietà visive**per impostazione predefinita **I valori più alti sono preferibili**ed **Etichetta delta** è impostata su **Percentuale della destinazione**. I valori predefiniti di **Interruzioni intervallo** possono essere modificati, ma per il momento sono corretti.
 
    ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
@@ -222,7 +227,7 @@ Gli elenchi di selezione funzionano come filtri dei dati in Power BI ed Excel. �
 
    ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Nella scheda **Dati**, **Proprietà dati**, impostare **Chiavi** ed **Etichette** su un campo nei propri dati in base al quale si vuole filtrare i risultati.
+2. Nella scheda **Dati** , **Proprietà dati**, impostare **Chiavi** ed **Etichette** su un campo nei propri dati in base al quale si vuole filtrare i risultati.
 
    ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
@@ -238,7 +243,7 @@ Ora che sono stati creati gli oggetti visivi nel layout master, è possibile cre
   
 
 ## <a name="save-your-mobile-report"></a>Salvare il report per dispositivi mobili  
-È possibile salvare il report localmente o in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]. In locale [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] salva il report con i dati memorizzati nella cache, pertanto è possibile aprirlo e continuare a lavorarci. Non è tuttavia possibile visualizzarlo in un dispositivo mobile.   
+È possibile salvare il report localmente o in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] . In locale [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] salva il report con i dati memorizzati nella cache, pertanto è possibile aprirlo e continuare a lavorarci. Non è tuttavia possibile visualizzarlo in un dispositivo mobile.   
   
 1. Fare clic sull'icona Salva nell'angolo superiore sinistro.   
    
@@ -259,9 +264,9 @@ Ora che sono stati creati gli oggetti visivi nel layout master, è possibile cre
   
 ## <a name="view-your-report-on-a-mobile-device"></a>Visualizzare il report in un dispositivo mobile   
   
-Per visualizzare il report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], è necessario innanzitutto:
+Per visualizzare il report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è necessario innanzitutto:
 
-*  Se non si ha ancora un account, [iscriversi al servizio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879).
+*  Se non si ha ancora un account,[iscriversi al servizio Power BI](http://go.microsoft.com/fwlink/?LinkID=513879).
 *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) nel proprio dispositivo mobile.  
 
 ### <a name="view-your-mobile-report"></a>Visualizzare il report per dispositivi mobili
@@ -287,7 +292,7 @@ Per visualizzare il report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnov
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Visualizzare gli indicatori KPI e i report per dispositivi mobili nell'app Power BI  
   
-Toccare la scheda **Indicatori KPI** o **Report per dispositivi mobili**.   
+Toccare la scheda **Indicatori KPI** o **Report per dispositivi mobili** .   
   
 ![PBI_iPad_SSMRP_Portal](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-portal.png)  
   
@@ -307,3 +312,5 @@ Gli indicatori KPI e i report per dispositivi mobili vengono visualizzati nelle 
 -  Vedere [Report nell'app Power BI per dispositivi mobili per Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
+
+

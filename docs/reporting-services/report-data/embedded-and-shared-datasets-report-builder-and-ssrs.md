@@ -1,23 +1,28 @@
 ---
-title: "Set di dati condivisi e incorporati (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Incorporate e condivise set di dati (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Set di dati condivisi e incorporati (Generatore report e SSRS)
+# <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati (Generatore report e SSRS)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Il set di dati dipende dalla connessione dati contenente le informazioni sull'origine dati esterna. I dati stessi non sono inclusi nella definizione del report. Nel set di dati sono contenuti un comando di query, una raccolta campi, parametri, filtri e opzioni dei dati in cui sono incluse la distinzione tra maiuscole e minuscole e le regole di confronto. Esistono due tipi di set di dati:  
   
 -   **Set di dati condivisi.** Un set di dati condiviso viene pubblicato in un server di report e può essere utilizzato da più report. Un set di dati condiviso deve essere basato su un'origine dati condivisa. Può essere memorizzato nella cache ed essere pianificato creando un piano di aggiornamento della cache.  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Set di dati condivisi  
+## <a name="shared-datasets"></a>Set di dati condivisi  
  Usare un set di dati condiviso per fornire una query che può essere usata da più report. I set di dati condivisi vengono archiviati nel server di report e possono essere gestiti separatamente dai report o dalle origini dati condivise. Ad esempio, un amministratore del server di report potrebbe aggiornare la query per sfruttare l'indicizzazione avanzata o un'altra ottimizzazione delle prestazioni di esecuzione delle query.  
   
  Si consiglia di utilizzare sempre i set di dati condivisi quando possibile. È possibile ottimizzare una query o memorizzare nella cache i risultati della query per sfruttare le prestazioni del report. I set di dati condivisi rendono l'accesso ai dati più facile da gestire e offrono una maggiore protezione dei report e dei set di dati a cui hanno accesso, garantendo così migliori prestazioni.  
@@ -38,7 +43,7 @@ caps.handback.revision: 7
   
  In Generatore report è possibile eseguire le operazioni seguenti:  
   
-1.  Per creare un set di dati condiviso, usare visualizzazione di progettazione del set di dati condiviso. È possibile salvarlo in un server di report o in un sito di SharePoint per condividere con altri report. È inoltre possibile accedere al server di report e modificare il set di dati condiviso esistente. In questa visualizzazione è possibile compilare una query e impostare tutte le opzioni del set di dati. Per altre informazioni, vedere [Visualizzazione di progettazione del set di dati condivisi &#40;Generatore report&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  Per creare un set di dati condiviso, utilizzare visualizzazione di progettazione del set di dati condiviso. È possibile salvarlo in un server di report o in un sito di SharePoint per condividere con altri report. È inoltre possibile accedere al server di report e modificare il set di dati condiviso esistente. In questa visualizzazione è possibile compilare una query e impostare tutte le opzioni del set di dati. Per altre informazioni, vedere [Visualizzazione di progettazione del set di dati condivisi &#40;Generatore report&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  Per aggiungere un set di dati condiviso al report, aprire Generatore report in visualizzazione di progettazione report. Nella procedura guidata o nel riquadro dei dati del report individuare il server di report e selezionare il set di dati condiviso da aggiungere al report. In questa visualizzazione non è possibile modificare la query eccetto per aggiungere campi. È possibile eseguire l'override di altre opzioni dei dati e aggiungere filtri. Non è possibile rimuovere filtri.  
   
@@ -49,21 +54,21 @@ caps.handback.revision: 7
     |Testo della query|Configurare la query, anche definendola come espressione.|Impossibile modificare la query.|  
     |Parametri della query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
     |Filtri|Definisci filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
-    |Origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
+    |origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
     |Campi|Campi dal comando di query<br /><br /> I campi calcolati non fanno parte della definizione del set di dati|Visualizzare campi, ma non modificarli<br /><br /> La raccolta di campi è statica basata sulla query al momento dell'aggiunta del set di dati condiviso al report. Per aggiornare, fare clic su **Aggiorna campi** nella finestra di dialogo **Proprietà set di dati** . La raccolta di campi effettivi è qualsiasi risultato restituito dalla query corrente nella definizione.<br /><br /> Aggiungere campi calcolati|  
     |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
   
-## Set di dati incorporati  
+## <a name="embedded-datasets"></a>Set di dati incorporati  
  Usare un set di dati incorporato quando si desidera ottenere dati da un'origine dati esterna da usare solo in un unico report. I set di dati incorporati risultano utili quando si desidera creare una query senza altre dipendenze che non sia necessario usare per più report.  
   
  Per creare o modificare un set di dati incorporato, utilizzare il riquadro dei dati del report. Dopo aver creato un set di dati, è possibile configurare le proprietà nella finestra di dialogo **Proprietà set di dati** .  
   
-## Vedere anche  
- [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

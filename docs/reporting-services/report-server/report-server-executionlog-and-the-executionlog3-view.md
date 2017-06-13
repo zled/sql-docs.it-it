@@ -1,34 +1,39 @@
 ---
-title: "Vista ExecutionLog ed ExecutionLog3 del server di report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log [Reporting Services], esecuzione"
-  - "log di esecuzione [Reporting Services]"
+title: Report ExecutionLog Server e la vista ExecutionLog3 | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Reporting Services], execution
+- execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Vista ExecutionLog ed ExecutionLog3 del server di report
-  Il log di esecuzione del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
+# <a name="report-server-executionlog-and-the-executionlog3-view"></a>Vista ExecutionLog ed ExecutionLog3 del server di report
+  Il log di esecuzione del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]include informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
   
  Nei server di report configurati per la modalità SharePoint possono essere usati anche i log ULS di SharePoint. Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> Visualizzazione delle informazioni sul log di esecuzione  
  Nel server di report vengono registrati i dati sull'esecuzione dei report in una tabella interna del database. Le informazioni della tabella sono disponibili dalle viste SQL Server.  
   
- Il log di esecuzione del report viene archiviato nel database del server di report denominato **ReportServer** per impostazione predefinita. Nelle viste SQL sono incluse le informazioni sul log di esecuzione. Le viste "2" e "3" sono state aggiunte nelle versioni più recenti e in esse sono contenuti nuovi campi o campi con nomi più descrittivi rispetto alle versioni precedenti. Le viste precedenti rimangono nel prodotto, così non vengono influenzate le applicazioni personalizzate basata su di esse. Se non si dispone di una dipendenza da una vista precedente, ad esempio ExecutionLog, si consiglia di usare la vista più recente, ExecutionLog**3**.  
+ Il log di esecuzione del report viene archiviato nel database del server di report denominato **ReportServer**per impostazione predefinita. Nelle viste SQL sono incluse le informazioni sul log di esecuzione. Le viste "2" e "3" sono state aggiunte nelle versioni più recenti e in esse sono contenuti nuovi campi o campi con nomi più descrittivi rispetto alle versioni precedenti. Le viste precedenti rimangono nel prodotto, così non vengono influenzate le applicazioni personalizzate basata su di esse. Se non si dispone di una dipendenza da una vista precedente, ad esempio ExecutionLog, si consiglia di usare la vista più recente, ExecutionLog**3**.  
   
  Contenuto dell'argomento:  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 41
 -   [Campi del log (ExecutionLog)](#bkmk_executionlog)  
   
 ##  <a name="bkmk_sharepoint"></a> Impostazioni di configurazione per un server di report in modalità SharePoint  
- È possibile abilitare o disabilitare la registrazione per l'esecuzione del report dalle impostazioni di sistema di un'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ È possibile abilitare o disabilitare la registrazione per l'esecuzione del report dalle impostazioni di sistema di un'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Per impostazione predefinita, le voci di log vengono mantenute per 60 giorni. Ogni giorno, alle 14.00, vengono rimosse le voci antecedenti . In un'installazione datata saranno disponibili solo 60 giorni di informazioni in qualsiasi momento.  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 41
   
  **Per abilitare la registrazione per l'esecuzione:**  
   
-1.  Nel gruppo **Gestione applicazioni** di Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio**.  
+1.  Nel gruppo **Gestione applicazioni** di Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio** .  
   
 2.  Fare clic sul nome dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da configurare.  
   
 3.  Fare clic su **Impostazioni sistema**.  
   
-4.  Selezionare **Abilita registrazione di esecuzione** nella sezione **Registrazione**.  
+4.  Selezionare **Abilita registrazione di esecuzione** nella sezione **Registrazione** .  
   
 5.  Scegliere **OK**.  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 41
   
  La registrazione deve essere abilitata come descritto nei passaggi precedenti e successivamente completare le operazioni seguenti:  
   
-1.  Nella pagina **Impostazioni sistema** dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] trovare la sezione **Definito dall'utente**.  
+1.  Nella pagina **Impostazioni sistema** dell'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] trovare la sezione **Definito dall'utente** .  
   
-2.  Impostare**ExecutionLogLevel** su **verbose** (dettagliato). Si tratta di un campo di immissione testo e i due valori possibili sono **verbose** (dettagliato) e **normal** (normale).  
+2.  Impostare **ExecutionLogLevel** su **verbose**(dettagliato). Si tratta di un campo di immissione testo e i due valori possibili sono **verbose** (dettagliato) e **normal**(normale).  
   
 ##  <a name="bkmk_native"></a> Impostazioni di configurazione per un server di report in modalità nativa  
  È possibile abilitare o disabilitare la registrazione per l'esecuzione del report dalla pagina Proprietà server in SQL Server Management Studio. **EnableExecutionLogging** è la proprietà avanzata.  
@@ -86,7 +91,7 @@ caps.handback.revision: 41
   
 3.  Fare clic con il pulsante destro del mouse sul nome del server e scegliere **Proprietà**. Se l'opzione Proprietà è disabilitata, verificare che SQL Server Management Studio venga eseguito con i privilegi amministrativi.  
   
-4.  Fare clic sulla pagina **Registrazione**.  
+4.  Fare clic sulla pagina **Registrazione** .  
   
 5.  Selezionare **Abilita la registrazione per l'esecuzione di report**.  
   
@@ -94,9 +99,9 @@ caps.handback.revision: 41
   
  La registrazione deve essere abilitata come descritto nei passaggi precedenti e successivamente completare le operazioni seguenti:  
   
-1.  Scegliere **Avanzate** nella finestra di dialogo **Proprietà server**.  
+1.  Scegliere **Avanzate** nella finestra di dialogo **Proprietà server** .  
   
-2.  Nella sezione **Definito dall'utente** impostare **ExecutionLogLevel** su **verbose** (dettagliato). Si tratta di un campo di immissione testo e i due valori possibili sono **verbose** (dettagliato) e **normal** (normale).  
+2.  Nella sezione **Definito dall'utente** impostare **ExecutionLogLevel** su **verbose**(dettagliato). Si tratta di un campo di immissione testo e i due valori possibili sono **verbose** (dettagliato) e **normal**(normale).  
   
 ##  <a name="bkmk_executionlog3"></a> Campi del log (ExecutionLog3)  
  In questa vista è stato aggiunto un nodo di diagnostica delle prestazioni all'interno della colonna **AdditionalInfo** basata su XML. La colonna AdditionalInfo contiene una struttura XML di campi aggiuntivi di informazioni in una relazione uno-a-molti. Di seguito è riportato un esempio di istruzione Transact SQL per recuperare righe dalla vista ExecutionLog3. Nell'esempio si presuppone che il database del server di report sia denominato **ReportServer**:  
@@ -373,7 +378,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  
 |RowCount|Numero di righe restituite dalle query.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

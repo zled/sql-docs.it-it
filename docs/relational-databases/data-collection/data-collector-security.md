@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### <a name="dcproxy-role"></a>Ruolo dc_proxy  
  I membri del ruolo **dc_proxy** hanno accesso in lettura ai set di raccolta dell'agente di raccolta dati e alle proprietà a livello di agente di raccolta. I membri di questo ruolo possono inoltre eseguire processi di cui sono proprietari e creare passaggi di processo eseguibili come un account proxy esistente.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>Autorizzazioni per la configurazione e l'utilizzo del data warehouse di gestione  
  A seconda dell'attività, gli utenti devono essere membri di uno o più ruoli predefiniti del database forniti per accedere al data warehouse di gestione. I ruoli sono i seguenti, elencati a partire dall'accesso con privilegi di livello più alto fino a quello con privilegi minimi:  

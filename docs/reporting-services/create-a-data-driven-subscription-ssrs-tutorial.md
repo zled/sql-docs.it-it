@@ -1,28 +1,33 @@
 ---
-title: "Creare una sottoscrizione guidata dai dati (esercitazione su SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "sottoscrizioni [Reporting Services], esercitazioni"
-  - "procedure dettagliate [Reporting Services]"
-  - "sottoscrizioni guidate dai dati"
+title: Creare una sottoscrizione guidata dai dati (esercitazione su SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- subscriptions [Reporting Services], tutorials
+- walkthroughs [Reporting Services]
+- data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
+# <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
 Questa esercitazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] illustra i concetti di sottoscrizioni guidate dai dati attraverso un semplice esempio che crea una sottoscrizione guidata dai dati per generare e salvare l'output di un report filtrato in una condivisione di file. 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Le sottoscrizioni guidate dai dati consentono di personalizzare e automatizzare la distribuzione di un report basato su dati dinamici del Sottoscrittore. Le sottoscrizioni guidate dai dati sono progettate per i tipi di scenari seguenti:  
   
@@ -31,7 +36,7 @@ Questa esercitazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md
 -   Per la distribuzione di report a un gruppo specifico di destinatari in base a criteri predefiniti. Ad esempio, inviare un report sulle prestazioni delle vendite a tutti i responsabili delle vendite in un'organizzazione.
 + Automatizzare la generazione di report in un'ampia gamma di formati, ad esempio file xlsx e PDF.  
   
-## Lezioni dell'esercitazione  
+## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  L'esercitazione è suddivisa in tre lezioni:  
  Lezione | Commenti
  ------- | --------------
@@ -52,7 +57,7 @@ Passaggio  |Description
  
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Le sottoscrizioni guidate dai dati vengono in genere create e gestite da amministratori di server di report. I passaggi per creare le sottoscrizioni guidate dai dati richiedono la creazione di query, conoscenza delle origini dati che contengono i dati del Sottoscrittore e autorizzazioni elevate in un server di report.  
   
 L'esercitazione usa il report *SalesOrder* creato nell'esercitazione [Creare un report di tabelle semplice &#40;Esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) e i dati dal database di esempio **AdventureWorks2014**.  
@@ -75,7 +80,9 @@ Per utilizzare l'esercitazione è necessario che nel computer sia installato qua
   
 **Tempo previsto per il completamento dell'esercitazione:** 30 minuti. Ulteriori 30 minuti qualora l'esercitazione sul report di base non venga completata.  
   
-## Vedere anche  
-[Sottoscrizioni guidate dai dati](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+## <a name="see-also"></a>Vedere anche  
+[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Creare un report di tabelle semplice &#40;Esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
+
+

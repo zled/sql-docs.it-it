@@ -1,28 +1,33 @@
 ---
-title: "Guida sensibile al contesto del server di report in Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Esplora oggetti, Guida"
+title: Server in Management Studio F1 Guida report | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 37
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Guida sensibile al contesto del server di report in Management Studio
+# <a name="report-server-in-management-studio-f1-help"></a>Guida sensibile al contesto del server di report in Management Studio
   In questa sezione sono inclusi gli argomenti relativi alle finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che è possibile utilizzare per gestire i server di report.  
   
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Annulla processi server di report](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
@@ -40,13 +45,13 @@ caps.handback.revision: 37
   
 -   [Proprietà pianificazione (pagina Report)](../../reporting-services/tools/schedule-properties-reports-page.md)  
   
--   [Proprietà server (pagina Generale)](../../reporting-services/tools/server-properties-general-page.md)  
+-   [Proprietà server (pagina Generale)](../../reporting-services/tools/report-server-properties-general-page.md)  
   
 -   [Proprietà server (pagina Esecuzione)](../../reporting-services/tools/server-properties-execution-page.md)  
   
 -   [Proprietà server (pagina Cronologia)](../../reporting-services/tools/server-properties-history-page.md)  
   
--   [Proprietà  server (pagina Registrazione)](../../reporting-services/tools/server-properties-logging-page.md)  
+-   [Proprietà  server (pagina Registrazione)](../../reporting-services/tools/server-properties-logging-page.md)  
   
 -   [Proprietà server (pagina sicurezza)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
@@ -56,8 +61,9 @@ caps.handback.revision: 37
   
 -   [Proprietà ruolo utente](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
-## Vedere anche  
- [Guida di riferimento alle funzionalità (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)   
- [Introduzione a SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Guida di riferimento alle funzionalità (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
+ [Utilizzo di SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md) 
+
   
-  
+

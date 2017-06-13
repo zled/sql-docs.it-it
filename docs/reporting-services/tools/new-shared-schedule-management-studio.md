@@ -1,41 +1,46 @@
 ---
-title: "Nuova pianificazione condivisa (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.newschedule.f1"
+title: Nuova pianificazione condivisa (Management Studio) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 32
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7d6032fde5bdfba4ba74330d162e25da8e5d8f75
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Nuova pianificazione condivisa (Management Studio)
+# <a name="new-shared-schedule-management-studio"></a>Nuova pianificazione condivisa (Management Studio)
   Questa pagina consente di creare una pianificazione condivisa per l'esecuzione di sottoscrizioni e report pubblicati. È possibile utilizzare le pianificazioni condivise al posto di di pianificazioni specifiche di report o sottoscrizioni. Le informazioni centralizzate sulla pianificazione e la possibilità di sospendere e riprendere le operazioni pianificate costituiscono due funzionalità fondamentali che distinguono le pianificazioni condivise da quelle specifiche degli elementi.  
   
  Non è possibile supportare tutte le combinazioni di frequenze in una singola pianificazione. Ad esempio, se si desidera eseguire un report alle 12.00 e alle 16.00 ogni venerdì è necessario creare due pianificazioni giornaliere, una con giorno di esecuzione venerdì e inizio alle ore 12.00 e l'altra con inizio alle ore 16.00  
   
  L'elaborazione delle pianificazioni si basa sull'orario locale del server di report che ospita ed elabora la pianificazione.  
   
- Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, fare clic con il pulsante destro del mouse su **Pianificazione condivisa** quindi scegliere **Nuova pianificazione**. Per salvare la pianificazione, è necessario che il servizio SQL Server Agent sia in esecuzione.  
+ Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, fare clic con il pulsante destro del mouse su **Pianificazione condivisa**quindi scegliere **Nuova pianificazione**. Per salvare la pianificazione, è necessario che il servizio SQL Server Agent sia in esecuzione.  
   
 > [!NOTE]  
 >  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  Consente di digitare un nome per la pianificazione condivisa. Questo nome viene visualizzato negli elenchi a discesa quando gli utenti selezionano una pianificazione condivisa per report e sottoscrizioni. Assicurarsi di fornire un nome descrittivo che possa essere inserito facilmente in un elenco e che consenta di distinguere in modo immediato le pianificazioni condivise. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : @ & = + , $ / * \< >  
+ ; ? : @ & = + , $ / * < >  
   
  " /  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 32
  **Una volta**  
  Selezionare questa opzione per creare una pianificazione che viene eseguita una sola volta nella data e all'ora specificate.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
@@ -71,3 +76,4 @@ caps.handback.revision: 32
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
+

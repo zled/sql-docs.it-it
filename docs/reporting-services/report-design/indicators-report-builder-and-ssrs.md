@@ -1,30 +1,35 @@
 ---
-title: "Indicatori (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10545"
-  - "10547"
-  - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
-  - "10546"
-  - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
-  - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
+title: Indicatori (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10545"
+- "10547"
+- sql13.rtp.rptdesigner.indicatorproperties.action.f1
+- "10546"
+- sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
+- sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Indicatori (Generatore report e SSRS)
+# <a name="indicators-report-builder-and-ssrs"></a>Indicatori (Generatore report e SSRS)
   Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Le icone che rappresentano gli indicatori e i relativi stati sono semplici e visivamente valide anche quando vengono utilizzate in dimensioni ridotte.  
   
  Gli indicatori di stato possono essere utilizzati nei report per mostrare gli elementi seguenti:  
@@ -64,10 +69,10 @@ caps.handback.revision: 11
   
 |Set di indicatori|Tipo di indicatore|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.png "Rs_DirectionalIcons")|Direzionale: vengono indicate le tendenze tramite le frecce in su, in giù, in piano (nessun cambiamento), tendenti verso l'alto o verso il basso.|  
-|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.png "Rs_SymbolIcons")|Simboli: vengono indicati gli stati tramite simboli comunemente riconosciuti quali segni di spunta e punti esclamativi.|  
-|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.png "Rs_ShapeIcons")|Forma: vengono indicate le condizioni tramite forme comunemente riconosciute quali semafori e segni a forma di rombo.|  
-|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.png "rs_RatingIcons")|Classificazioni: vengono indicate le classificazioni tramite forme e simboli comunemente riconosciuti che consentono di visualizzare i valori dello stato di avanzamento, ad esempio il numero di quadranti in un quadrato.|  
+|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Direzionale: vengono indicate le tendenze tramite le frecce in su, in giù, in piano (nessun cambiamento), tendenti verso l'alto o verso il basso.|  
+|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|Simboli: vengono indicati gli stati tramite simboli comunemente riconosciuti quali segni di spunta e punti esclamativi.|  
+|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Forma: vengono indicate le condizioni tramite forme comunemente riconosciute quali semafori e segni a forma di rombo.|  
+|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Classificazioni: vengono indicate le classificazioni tramite forme e simboli comunemente riconosciuti che consentono di visualizzare i valori dello stato di avanzamento, ad esempio il numero di quadranti in un quadrato.|  
   
  Dopo aver scelto un set di indicatori, è possibile personalizzare l'aspetto di ogni icona dell'indicatore del set impostando le proprietà nelle finestre di dialogo per gli indicatori o nel riquadro delle proprietà. Per configurare gli indicatori è possibile utilizzare i colori, le icone, nonché le dimensioni o le espressioni predefiniti.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 11
   
  Gli indicatori consentono di visualizzare i valori di dati eseguendo la sincronizzazione tra i valori di dati dell'indicatore all'interno di un ambito specifico. Per impostazione predefinita, l'ambito è il contenitore padre dell'indicatore, ad esempio la tabella o la matrice in cui è contenuto l'indicatore. È possibile modificare la sincronizzazione dell'indicatore scegliendo un ambito diverso, a seconda del layout del report. Nell'indicatore può essere omessa la sincronizzazione. Per altre informazioni, vedere [Impostare l'ambito di sincronizzazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
- Per informazioni generali sull'impostazione dell'ambito all'interno dei report, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+ Per informazioni generali sull'impostazione dell'ambito all'interno dei report, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Negli indicatori viene utilizzato un solo valore. Se è necessario visualizzare più valori di dati, utilizzare un grafico sparkline o una barra dei dati anziché un indicatore. Pur consentendo di rappresentare più valori di dati, sono semplici, facili da capire in formati di piccole dimensioni e funzionano bene in tabelle e matrici. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 11
   
  Nel diagramma seguente viene mostrato un indicatore affiancato e all'interno di un misuratore.  
   
- ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.png "rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
  Per altre informazioni, vedere [Includere indicatori e misuratori in un pannello del misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
@@ -189,7 +194,7 @@ caps.handback.revision: 11
   
 -   [Includere indicatori e misuratori in un pannello del misuratore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

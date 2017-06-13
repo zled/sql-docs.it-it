@@ -1,7 +1,7 @@
 ---
 title: Eliminare le colonne da una tabella | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminare le colonne da una tabella
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella da cui si vogliono eliminare colonne, quindi scegliere **Elimina**.  
+2.  In **Esplora oggetti**, individuare la tabella da cui si desidera eliminare colonne e si espande per esporre i nomi di colonna. 
+
+3.  Fare clic sulla colonna che si desidera eliminare e scegliere **eliminare**.  
   
 3.  Nella finestra di dialogo **Elimina oggetto** fare clic su **OK**.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  Per altri esempi, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  
+

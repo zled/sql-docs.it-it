@@ -1,28 +1,33 @@
 ---
-title: "Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "query-based subscriptions [Reporting Services]"
-  - "query [Reporting Services], sottoscrizioni guidate dai dati"
-  - "sottoscrizioni [Reporting Services], guidate dai dati"
-  - "sottoscrizioni guidate dai dati"
+title: Creare, modificare ed eliminare le sottoscrizioni guidate dai dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- query-based subscriptions [Reporting Services]
+- queries [Reporting Services], data-driven subscriptions
+- subscriptions [Reporting Services], data-driven
+- data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati
+# <a name="create-modify-and-delete-data-driven-subscriptions"></a>Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati è una sottoscrizione basata su query che recupera i valori dei dati utilizzati per l'elaborazione della sottoscrizione in fase di esecuzione. Quando la sottoscrizione viene attivata, viene elaborata una query per recuperare informazioni aggiornate su destinatari, opzioni di recapito di report, formati di rendering e impostazioni dei parametri. I risultati della query vengono combinati con la definizione della sottoscrizione per creare una sottoscrizione dinamica che utilizza i dati già gestiti dall'utente in un database dei dipendenti, un database dei clienti o altri database contenenti informazioni che possono essere utilizzate come dati del sottoscrittore.  
   
  Per creare una nuova sottoscrizione guidata dai dati o modificarne una esistente, utilizzare le pagine relative in Gestione report. Queste pagine consentono di eseguire in modo semplice i vari passaggi per la creazione o la modifica di una sottoscrizione. Per accedere a una sottoscrizione dopo averla creata, utilizzare la pagina Sottoscrizioni personali e l'elenco delle sottoscrizioni di un report. Per informazioni su come creare una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
@@ -38,7 +43,7 @@ caps.handback.revision: 51
 -   [Esecuzione della sottoscrizione](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gestione ed eliminazione di una sottoscrizione guidata dai dati  
- Una sottoscrizione guidata dai dati in corso non può essere arrestata o eliminata tramite la pagina Gestisci processi di Gestione report. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/it-it/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Una sottoscrizione guidata dai dati in corso non può essere arrestata o eliminata tramite la pagina Gestisci processi di Gestione report. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  Per eliminare una sottoscrizione guidata dai dati, selezionarla nella pagina Sottoscrizioni personali o nella pagina Sottoscrizioni di un report e quindi fare clic su **Elimina**.  
   
@@ -47,29 +52,29 @@ caps.handback.revision: 51
 ##  <a name="bkmk_create_and_modify"></a> Creazione e modifica di una sottoscrizione guidata dai dati  
  Per creare una sottoscrizione guidata dai dati, selezionare un report che utilizza credenziali archiviate o nessuna credenziale. Quando si crea la sottoscrizione guidata dai dati, considerare di utilizzare una convenzione di denominazione per il campo di descrizione in modo da poter facilmente differenziare le sottoscrizioni standard dalle sottoscrizioni guidate dai dati.  
   
-#### Per creare una sottoscrizione guidata dai dati (modalità nativa)  
+#### <a name="to-create-a-data-driven-subscription-native-mode"></a>Per creare una sottoscrizione guidata dai dati (modalità nativa)  
   
 1.  In Gestione report, passare alla cartella contenente il report, posizionare il puntatore del mouse sul report, aprire il menu delle opzioni e fare clic su **Gestisci**.  
   
 2.  Fare clic sulla scheda **Sottoscrizioni** .  
   
-3.  Fare clic sul pulsante **Nuova sottoscrizione guidata dai dati**.  
+3.  Fare clic sul pulsante **Nuova sottoscrizione guidata dai dati** .  
   
-#### Per creare una sottoscrizione guidata dai dati (modalità SharePoint)  
+#### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>Per creare una sottoscrizione guidata dai dati (modalità SharePoint)  
   
 1.  Nella raccolta documenti di SharePoint, posizionare il puntatore del mouse sul report, aprire il menu delle opzioni e fare clic su **Gestisci sottoscrizioni**.  
   
 2.  Fare clic su **Aggiungi sottoscrizione guidata dai dati**.  
   
-#### Per modificare una sottoscrizione guidata dai dati esistente (modalità nativa)  
+#### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>Per modificare una sottoscrizione guidata dai dati esistente (modalità nativa)  
   
 1.  In Gestione report, passare alla cartella contenente il report, posizionare il puntatore del mouse sul report, aprire il menu delle opzioni e fare clic su **Gestisci**.  
   
 2.  Fare clic sulla scheda **Sottoscrizioni** . In alternativa, fare clic sul collegamento **Sottoscrizioni personali** nella parte superiore di Gestione report.  
   
-3.  Selezionare la sottoscrizione che si desidera modificare. L'icona seguente indica una sottoscrizione guidata dai dati: ![Icona della sottoscrizione guidata dai dati](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.png "Icona della sottoscrizione guidata dai dati")  
+3.  Selezionare la sottoscrizione che si desidera modificare. L'icona seguente indica una sottoscrizione guidata dai dati: ![icona sottoscrizione guidata dai dati](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "icona sottoscrizione guidata dai dati")  
   
-#### Per modificare una sottoscrizione guidata dai dati esistente (modalità SharePoint)  
+#### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Per modificare una sottoscrizione guidata dai dati esistente (modalità SharePoint)  
   
 1.  Nella raccolta documenti di SharePoint, posizionare il puntatore del mouse sul report, aprire il menu delle opzioni e fare clic su **Gestisci sottoscrizioni**.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 51
   
      Non è possibile sottoscrivere un report di Generatore report che utilizza come origine dei dati un modello contenente impostazioni di sicurezza degli elementi del modello. La restrizione riguarda solo i report che utilizzano la sicurezza degli elementi del modello.  
   
-     Non è possibile creare una sottoscrizione guidata dai dati in un report che contiene l'espressione `User!UserID`.  
+     Non è possibile creare una sottoscrizione guidata dai dati in un report che contiene l'espressione `User!UserID` .  
   
 -   **Requisiti per i dati**. È necessario disporre di un'origine dei dati esterna accessibile che contenga i dati del sottoscrittore.  
   
@@ -100,12 +105,12 @@ caps.handback.revision: 51
 ##  <a name="bkmk_run_subscription"></a> Esecuzione della sottoscrizione  
  È necessario specificare le condizioni per l'elaborazione della sottoscrizione. È possibile specificare una pianificazione oppure fare in modo che la sottoscrizione venga attivata in corrispondenza degli aggiornamenti a uno snapshot dell'esecuzione del report. Le modalità di elaborazione delle sottoscrizioni guidate dai dati sono uguali a quelle delle sottoscrizioni standard.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/it-it/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Pagina Sottoscrizioni &#40;Gestione report&#41;](../Topic/Subscriptions%20Page%20\(Report%20Manager\).md)   
- [Pagina Sottoscrizioni personali &#40;Gestione report&#41;](../Topic/My%20Subscriptions%20Page%20\(Report%20Manager\).md)  
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Pagina Sottoscrizioni &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Pagina Sottoscrizioni personali &#40;Gestione report&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

@@ -1,45 +1,44 @@
 ---
-title: "Abilitare e disabilitare la stampa sul lato client per Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "visualizzatore"
-  - "reportviewer"
-  - "barra degli strumenti"
+title: Abilitare e disabilitare la stampa sul lato Client per Reporting Services | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Abilitare e disabilitare la stampa sul lato client per Reporting Services
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Abilitare e disabilitare la stampa sul lato client per Reporting Services
+
   Il pulsante di stampa nella barra degli strumenti del visualizzatore di report usa il formato PDF (Portable Document Format) per la stampa sul lato client dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] visualizzati in un browser. La nuova esperienza di stampa remota usa l'estensione per il rendering PDF inclusa in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]per il rendering dei report in formato PDF. È possibile scaricare un modulo PDF del report oppure, se è installata un'applicazione per la visualizzazione dei file PDF, il pulsante di stampa visualizza una finestra di dialogo con gli elementi di configurazione della pagina comuni, ad esempio le dimensioni e l'orientamento della pagina e l'anteprima del file PDF. Sebbene la funzionalità di stampa sul alto client sia abilitata per impostazione predefinita, è possibile disabilitarla per evitare che venga utilizzata.  
   
- Le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usano un controllo ActiveX per il quale è necessario il download nel computer client dal server di report. Se si aggiorna il server di report a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il controllo di stampa non viene rimosso dal server di report né dai computer client.  
-  
-##  <a name="bkmk_top"></a> Contenuto dell'argomento  
-  
--   [L'esperienza di stampa](#bkmk_clientside_printexpereince)  
-  
--   [Risoluzione dei problemi della stampa sul lato client](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [Abilitare e disabilitare la stampa sul lato client](#bkmk_enable)  
-  
+ Le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usano un controllo ActiveX per il quale è necessario il download nel computer client dal server di report. Se si aggiorna il server di report a SQL Server 2016 il controllo di stampa non viene rimosso dal computer client o server di report.  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> L'esperienza di stampa  
- Quando si fa clic sul pulsante di stampa ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") nella barra degli strumenti del visualizzatore di report, l'esperienza varia in base alle applicazioni di visualizzazione dei file PDF installate nel computer client e al browser in uso.   È possibile scaricare il file PDF o configurare le opzioni di stampa da una finestra di dialogo, o eseguire entrambe le operazioni, a seconda del computer client.  
+ Quando si sceglie la stampa ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") sulla barra degli strumenti del Visualizzatore di report, l'esperienza varia a seconda di ciò. Applicazioni di visualizzazione di file PDF installate nel computer client e browser in uso.   È possibile scaricare il file PDF o configurare le opzioni di stampa da una finestra di dialogo, o eseguire entrambe le operazioni, a seconda del computer client.  
   
- ![Barra degli strumenti dei report](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "Barra degli strumenti dei report")  
+ ![Barra degli strumenti report](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra degli strumenti Report")  
   
 |||  
 |-|-|  
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  Nello script di esempio riportato di seguito viene illustrato un approccio per la disabilitazione della stampa sul alto client. Compilare e quindi eseguire il codice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] seguente per impostare la proprietà **EnableClientPrinting** su **False**. Al termine dell'esecuzione del codice, riavviare IIS.  
   
-### Script di esempio  
+### <a name="sample-script"></a>Script di esempio  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

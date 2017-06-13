@@ -1,25 +1,32 @@
 ---
-title: "Parti del report in Progettazione report (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: In Progettazione Report (SSRS) parti del report | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Parti del report in Progettazione report (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>Parti del report in Progettazione report (SSRS)
+
   In Progettazione report, dopo aver creato tabelle, grafici e altri elementi impaginati del report in un progetto, è possibile pubblicarli come *parti di report* in un server di report o in un sito di SharePoint integrato con un server di report in modo da permetterne il riutilizzo in altri report.  
   
  In termini generali il funzionamento delle parti di report in Progettazione report e in Generatore report è identico. Per altre informazioni sulle funzionalità di base, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -27,7 +34,7 @@ caps.handback.revision: 11
  Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente di eseguire la creazione in collaborazione, vale a dire la creazione e la pubblicazione da parte di un utente di una parte di report che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione report la pubblicazione è unidirezionale, cioè un utente può pubblicare una parte di report da Progettazione report e un altro può riutilizzarla. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo di vita della pubblicazione di una parte del report  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  In Progettazione report un utente A crea un progetto contenente un report con un grafico che dipende da un set di dati incorporato.  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  Un utente B crea un report vuoto in Generatore report e vi aggiunge il grafico. A questo punto il grafico è parte del report dell'utente B, insieme al set di dati incorporato. L'utente B può modificare le istanze del grafico e del set di dati contenuti nel report. Questa operazione non avrà effetto sulle istanze del grafico e del set di dati sul server di report, né interromperà la relazione tra le istanze nel report e sul server di report.  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  In Progettazione report l'utente A modifica il grafico nel report originale.  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  Distribuire il report.  
   
- Quando si distribuisce il report, la parte di report viene pubblicata in un sito di SharePoint o in un server di report e altri utenti possono riutilizzarla. Per pubblicare una parte di report, è necessario avere effettuato la connessione a un server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e disporre di autorizzazioni sufficienti per la distribuzione del report.  
+ Quando si distribuisce il report, la parte di report viene pubblicata in un sito di SharePoint o in un server di report e altri utenti possono riutilizzarla. Per pubblicare una parte di report, è necessario disporre delle autorizzazioni sufficienti e una connessione a su un server di report quando si distribuisce il report.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> Riutilizzo di parti di report  
  Diversamente da Generatore report, non è possibile cercare e riutilizzare una parte di report in un progetto diverso da quello in cui è stato creato.  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  È possibile modificare e poi ripubblicare la parte di report nel sito o nel server. In Generatore report gli autori del report che hanno aggiunto la parte a un report vengono informati della modifica alla successiva apertura del report e possono accettare o meno le modifiche.  
   
  È inoltre possibile scegliere di pubblicare come nuovo un report già pubblicato. Nella finestra di dialogo Pubblica parti del report, fare clic su Pubblica come nuova parte del report. In questa nuova parte del report è disponibile un nuovo ID univoco e non presenta alcuna relazione con la parte vecchia del report.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
-## Vedere anche  
- [Gestione di parti di report](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Gestione di parti di report](../../reporting-services/report-design/managing-report-parts.md)  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,29 +1,34 @@
 ---
-title: "Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 3: Definizione di un set di dati per il Report di tabella (Reporting Services) | Documenti Microsoft'
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 53
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 53
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
-Dopo aver definito l'origine dati, è necessario definire un set di dati. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i dati utilizzati nei report sono contenuti in un *set di dati*. Un set di dati contiene un puntatore a un'origine dati e la query utilizzata dal report, nonché le variabili e i campi calcolati.  
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
+Dopo aver definito l'origine dati, è necessario definire un set di dati. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]i dati utilizzati nei report sono contenuti in un *set di dati*. Un set di dati contiene un puntatore a un'origine dati e la query utilizzata dal report, nonché le variabili e i campi calcolati.  
   
-Per progettare il set di dati usare la finestra Progettazione query in Progettazione report. In questa esercitazione verrà creata una query per il recupero delle informazioni sugli ordini di vendita dal database [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].  
+Per progettare il set di dati usare la finestra Progettazione query in Progettazione report. In questa esercitazione verrà creata una query per il recupero delle informazioni sugli ordini di vendita dal database [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  
   
-### Per definire una query Transact-SQL per i dati del report  
+### <a name="to-define-a-transact-sql-query-for-report-data"></a>Per definire una query Transact-SQL per i dati del report  
   
 1.  Nel riquadro **Dati report** fare clic su **Nuovo**, quindi su **Set di dati...** Verrà visualizzata la finestra di dialogo **Proprietà set di dati** .  
   
@@ -34,7 +39,7 @@ Per progettare il set di dati usare la finestra Progettazione query in Progettaz
 4.  Selezionare l'origine dati creata nella lezione precedente [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Selezionare **Testo** per **Tipo di query**.  
   
-6.  Digitare oppure copiare e incollare la query Transact-SQL seguente nella casella **Query**.  
+6.  Digitare oppure copiare e incollare la query Transact-SQL seguente nella casella **Query** .  
   
     ```  
     SELECT   
@@ -59,24 +64,26 @@ Per progettare il set di dati usare la finestra Progettazione query in Progettaz
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-7.  (Facoltativo) Fare clic sul pulsante **Progettazione query**. La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Per visualizzare i risultati della query, fare clic sul pulsante di esecuzione ![ssrs_querydesigner_run](../reporting-services/media/ssrs-querydesigner-run.png) sulla barra degli strumenti Progettazione query.  
+7.  (Facoltativo) Fare clic sul pulsante **Progettazione query** . La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Per visualizzare i risultati della query, fare clic sul pulsante di esecuzione ![ssrs_querydesigner_run](../reporting-services/media/ssrs-querydesigner-run.png)  sulla barra degli strumenti Progettazione query.  
   
-    Verranno visualizzati i dati contenuti in sei campi di quattro tabelle differenti del database [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]. Nella query vengono utilizzate funzionalità di Transact-SQL come gli alias. Ad esempio, la tabella SalesOrderHeader è denominata *soh*.  
+    Verranno visualizzati i dati contenuti in sei campi di quattro tabelle differenti del database [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Nella query vengono utilizzate funzionalità di Transact-SQL come gli alias. Ad esempio, la tabella SalesOrderHeader è denominata *soh*.  
   
 8.  Fare clic su **OK** per chiudere la finestra Progettazione query.  
   
-9.  Fare clic su **OK** per chiudere la finestra di dialogo **Proprietà set di dati**.  
+9.  Fare clic su **OK** per chiudere la finestra di dialogo **Proprietà set di dati** .  
   
     I campi e il set di dati di **AdventureWorksDataset** vengono visualizzati nel riquadro Dati report.  
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
-## Attività successiva  
+## <a name="next-task"></a>Attività successiva  
 In questo modo si è specificata una query che recupera i dati per il report. Il passaggio successivo consiste nella creazione del layout del report. Vedere [Lezione 4: Aggiunta di una tabella al report &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Strumenti di progettazione query &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  
 [Tipo di connessione SQL Server &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)  
 [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   
   
+
+

@@ -2,7 +2,7 @@
 title: Always Encrypted (motore di database) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
@@ -126,33 +126,32 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
 
 -   Dopo aver modificato la definizione di un oggetto codificato, eseguire [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) per aggiornare i metadati di Always Encrypted per l'oggetto.
   
- Always Encrypted non è supportata per le colonne con le caratteristiche seguenti (ad esempio, la clausola *Encrypted WITH* non può essere usata nell'istruzione **CREATE TABLE/ALTER TABLE** per una colonna, se alla colonna si applica una qualsiasi delle seguenti condizioni):  
+Always Encrypted non è supportata per le colonne con le caratteristiche seguenti (ad esempio, la clausola *Encrypted WITH* non può essere usata nell'istruzione **CREATE TABLE/ALTER TABLE** per una colonna, se alla colonna si applica una qualsiasi delle seguenti condizioni):  
   
 -   Colonne che usano uno dei seguenti tipi di dati: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, tipi definiti dall'utente.  
-  
 - Colonne FILESTREAM  
-  
-- Colonne con proprietà ROWGUIDCOL
-- Colonne stringa (varchar, char e così via) con regole di confronto non BIN2
-- Colonne che sono chiavi per gli indici non cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate)
-- Colonne che sono chiavi per gli indici cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate)
-- Colonne che sono chiavi per gli indici full-text contenenti colonne con crittografia casuale e deterministica
-- Colonne a cui fanno riferimento colonne calcolate (quando l'espressione esegue operazioni non supportate per Crittografia sempre attiva)
-- Set di colonne di tipo sparse
-- Colonne a cui fanno riferimento statistiche
-- Colonne che usano il tipo di alias
-- Colonne di partizionamento
-- Colonne con vincoli predefiniti
-- Colonne a cui fanno riferimento vincoli univoci quando si usa la crittografia casuale (la crittografia deterministica è supportata)
-- Colonne di chiavi primarie quando si usa la crittografia casuale (la crittografia deterministica è supportata)
-- Colonne di riferimento in vincoli di chiave esterna quando si usa la crittografia casuale o la crittografia deterministica, se le colonne a cui si fa riferimento e di riferimento usano chiavi o algoritmi diversi
-- Colonne a cui fanno riferimento vincoli CHECK
-- Colonne in tabelle che usano l'acquisizione dei dati delle modifiche
-- Colonne chiave primaria in tabelle contenenti il rilevamento delle modifiche
-- Colonne che vengono mascherate (con la maschera dati dinamica)
-- Colonne in tabelle di estensione database. (le tabelle con colonne crittografate con Crittografia sempre attiva possono essere abilitate per l'estensione).
-- Colonne in tabelle esterne (PolyBase) (nota: l'uso di tabelle esterne e di tabelle con colonne crittografate nella stessa query è supportato)
-- I parametri con valori di tabella per le colonne crittografate non sono supportati.
+- Colonne con la proprietà IDENTITY  
+- Colonne con proprietà ROWGUIDCOL  
+- Colonne stringa (varchar, char e così via) con regole di confronto non BIN2  
+- Colonne che sono chiavi per gli indici non cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate)  
+- Colonne che sono chiavi per gli indici cluster che usano una colonna con crittografia casuale come colonna chiave (le colonne con crittografia deterministica sono supportate)  
+- Colonne che sono chiavi per gli indici full-text contenenti colonne con crittografia casuale e deterministica  
+- Colonne a cui fanno riferimento colonne calcolate (quando l'espressione esegue operazioni non supportate per Crittografia sempre attiva)  
+- Set di colonne di tipo sparse  
+- Colonne a cui fanno riferimento statistiche  
+- Colonne che usano il tipo di alias  
+- Colonne di partizionamento  
+- Colonne con vincoli predefiniti  
+- Colonne a cui fanno riferimento vincoli univoci quando si usa la crittografia casuale (la crittografia deterministica è supportata)  
+- Colonne di chiavi primarie quando si usa la crittografia casuale (la crittografia deterministica è supportata)  
+- Colonne di riferimento in vincoli di chiave esterna quando si usa la crittografia casuale o la crittografia deterministica, se le colonne a cui si fa riferimento e di riferimento usano chiavi o algoritmi diversi  
+- Colonne a cui fanno riferimento vincoli CHECK  
+- Colonne in tabelle che usano l'acquisizione dei dati delle modifiche  
+- Colonne chiave primaria in tabelle contenenti il rilevamento delle modifiche  
+- Colonne che vengono mascherate (con la maschera dati dinamica)  
+- Colonne in tabelle di estensione database. (le tabelle con colonne crittografate con Crittografia sempre attiva possono essere abilitate per l'estensione).  
+- Colonne in tabelle esterne (PolyBase) (nota: l'uso di tabelle esterne e di tabelle con colonne crittografate nella stessa query è supportato)  
+- I parametri con valori di tabella per le colonne crittografate non sono supportati.  
 
 Le clausole seguenti non possono essere usate per le colonne crittografate:
 

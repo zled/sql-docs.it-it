@@ -1,37 +1,42 @@
 ---
-title: "Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servizio Shared di Reporting Services"
-  - "Modalità SharePoint [Reporting Services]"
-  - "Modalità SharePoint"
-  - "Applicazione di servizio Reporting Services"
-  - "Applicazione di servizio SSRS"
+title: Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS | Documenti Microsoft
+ms.custom: 
+ms.date: 06/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Shared Service
+- SharePoint Mode [Reporting Services]
+- SharePoint Mode
+- Reporting Services Service Application
+- SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le sottoscrizioni e gli avvisi dati richiedono SQL Server Agent e la configurazione di autorizzazioni per SQL Server Agent. Se vengono visualizzati messaggi di errore indicanti che si richiede SQL Server Agent sebbene sia in esecuzione, aggiornare o verificare le autorizzazioni. L'ambito di questo argomento è [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e vengono descritti tre modi per aggiornare le autorizzazioni di SQL Server Agent con sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le credenziali utilizzata nei passaggi di questo argomento devono disporre delle autorizzazioni sufficienti per concedere autorizzazioni di esecuzione a RSExecRole per gli oggetti nell'applicazione di servizio, il database msdb e database master.  
+# <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le sottoscrizioni e gli avvisi dati richiedono SQL Server Agent e la configurazione di autorizzazioni per SQL Server Agent. Se vengono visualizzati messaggi di errore indicanti che si richiede SQL Server Agent sebbene sia in esecuzione, aggiornare o verificare le autorizzazioni. L'ambito di questo argomento è [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e vengono descritti tre modi per aggiornare le autorizzazioni di SQL Server Agent con sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le credenziali utilizzata nei passaggi di questo argomento devono disporre delle autorizzazioni sufficienti per concedere autorizzazioni di esecuzione a RSExecRole per gli oggetti nell'applicazione di servizio, il database msdb e database master.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
- ![SQL Agent permissions to Service Application DBs](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![Le autorizzazioni di SQL Agent per database dell'applicazione di servizio](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "delle autorizzazioni di SQL Agent per database dell'applicazione di servizio")  
   
-||Descrizione|  
+||Description|  
 |------|-----------------|  
 |**1**|Istanza del motore di database di SQL Server che ospita i database dell'applicazione di servizio Reporting Services.|  
 |**2**|Istanza di SQL Server Agent per l'istanza del motore di database SQL.|  
@@ -46,7 +51,7 @@ caps.handback.revision: 20
   
 3.  Eseguire un cmdlet di PowerShell per compilare uno script Transact-SQL che può essere utilizzato per configurare le autorizzazioni.  
   
-### Per aggiornare le autorizzazioni utilizzando la pagina di provisioning  
+### <a name="to-update-permissions-using-the-provision-page"></a>Per aggiornare le autorizzazioni utilizzando la pagina di provisioning  
   
 1.  Nel gruppo **Gestione applicazioni** di Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio**.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 20
   
 4.  Digitare le credenziali dell'amministratore di SharePoint se sufficienti per accedere al database master e ai database dell'applicazione di servizio.  
   
-5.  Fare clic sul pulsante **OK**.  
+5.  Fare clic sul pulsante **OK** .  
   
 ##  <a name="bkmk_download"></a> Per scaricare lo script Transact-SQL  
   
@@ -66,11 +71,11 @@ caps.handback.revision: 20
   
 3.  Fare clic su **Avvisi e sottoscrizioni provisioning** nella pagina **Gestione applicazione di Reporting Services**.  
   
-4.  Verificare che SQL Server Agent sia in esecuzione nell'area **Visualizzazione stato**.  
+4.  Verificare che SQL Server Agent sia in esecuzione nell'area **Visualizzazione stato** .  
   
 5.  Fare clic su **Download script** per scaricare uno script Transact-SQL che può essere eseguito in SQL Server Management Studio per concedere le autorizzazioni. Il nome del file script creato contiene il nome dell'applicazione di servizio di Reporting Services, ad esempio **[nome dell'applicazione di servizio]-GrantRights.sql**.  
   
-### Per generare l'istruzione Transact-SQL con PowerShell  
+### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>Per generare l'istruzione Transact-SQL con PowerShell  
   
 1.  È possibile utilizzare un cmdlet di Windows PowerShell nella shell di gestione di SharePoint 2016 o SharePoint 2013 anche per creare uno script Transact-SQL.  
   
@@ -84,10 +89,10 @@ caps.handback.revision: 20
   
      **Cmdlet di esempio:** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
-## Utilizzo dello script Transact-SQL  
+## <a name="using-the-transact-sql-script"></a>Utilizzo dello script Transact-SQL  
  Le seguenti procedure possono essere utilizzate con gli script scaricati dalla pagina di provisioning o creati tramite PowerShell.  
   
-#### Per caricare lo script Transact-SQL in SQL Server Management Studio  
+#### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>Per caricare lo script Transact-SQL in SQL Server Management Studio  
   
 1.  Per aprire SQL Server Management Studio, nel menu **Start** scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 20
   
     -   Nell'elenco **Tipo server** selezionare **Motore di database**.  
   
-    -   Nella casella **Nome server** digitare il nome dell'istanza di SQL Server in cui si desidera configurare SQL Server Agent.  
+    -   Nella casella **Nome server**digitare il nome dell'istanza di SQL Server in cui si desidera configurare SQL Server Agent.  
   
     -   Selezionare una modalità di autenticazione.  
   
@@ -103,11 +108,11 @@ caps.handback.revision: 20
   
 3.  Fare clic su **Connetti**.  
   
-#### Per eseguire l'istruzione Transact-SQL  
+#### <a name="to-run-the-transact-sql-statement"></a>Per eseguire l'istruzione Transact-SQL  
   
-1.  Fare clic su **Nuova query** nella barra degli strumenti di SQL Server Management Studio.  
+1.  Fare clic su **Nuova query**nella barra degli strumenti di SQL Server Management Studio.  
   
-2.  Scegliere **Apri** dal menu **File** e quindi fare clic su **File**.  
+2.  Scegliere **Apri** dal menu **File**e quindi fare clic su **File**.  
   
 3.  Passare alla cartella in cui è stata salvata l'istruzione Transact-SQL generata nella shell di gestione di SharePoint 2016 o SharePoint 2013.  
   
@@ -118,3 +123,4 @@ caps.handback.revision: 20
 5.  Fare clic su **Esegui**.  
   
   
+

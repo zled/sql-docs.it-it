@@ -1,28 +1,36 @@
 ---
-title: "Esercitazioni di Generatore report | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: Esercitazioni di Generatore report | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazioni di Generatore report
-Usare le esercitazioni seguenti di Generatore report per apprendere come creare report impaginati di base di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="report-builder-tutorials"></a>Esercitazioni di Generatore report
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+Usare le esercitazioni seguenti di Generatore report per apprendere come creare report impaginati di base di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
   
 [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-Per usare queste esercitazioni, è necessario avere accesso in sola lettura a un database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le autorizzazioni per accedere a un server di report di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+Per utilizzare queste esercitazioni, è necessario avere accesso in sola lettura a un database di SQL Server e le autorizzazioni per accedere a un [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] server di report.  
   
 Per ottenere assistenza rispetto a questi prerequisiti, rivolgersi all'amministratore del server di report.  
   
@@ -67,11 +75,11 @@ Eseguire la procedura descritta in questa esercitazione per imparare come creare
   
 [Esercitazione: Introduzione alle espressioni](../reporting-services/tutorial-introducing-expressions.md)  
 Seguire i passaggi descritti in questa esercitazione per usare espressioni che consentono di concatenare, calcolare e ricercare valori di campi nonché per mostrarli in un report. Verrà anche descritto come visualizzare in modo condizionale stati indicatore e immagini differenti tramite espressioni.  
-  
-## Vedere anche  
-[Visualizzazione di progettazione report &#40;Generatore report&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Visualizzazione di progettazione report](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[Esercitazione: Creare un Report grafico rapido Offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

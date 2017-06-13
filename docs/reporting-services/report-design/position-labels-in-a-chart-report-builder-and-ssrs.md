@@ -1,23 +1,28 @@
 ---
-title: "Posizionamento di etichette in un grafico (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Posizionamento di etichette in un grafico (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53f0d4b0c6aed30746af82de7d5f1caf5e42721c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Posizionamento di etichette in un grafico (Generatore report e SSRS)
+# <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Posizionamento di etichette in un grafico (Generatore report e SSRS)
   Poiché ogni tipo di grafico in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è caratterizzato da una forma diversa, le etichette dei punti dati vengono collocate in una posizione ottimale in modo da non interferire con il grafico. La posizione predefinita delle etichette varia a seconda del tipo di grafico:  
   
 -   Sui grafici in pila le etichette possono essere posizionate solo all'interno della serie.  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Per modificare la posizione delle etichette dei punti dati in un grafico a torta  
+## <a name="to-change-the-position-of-point-labels-in-a-pie-chart"></a>Per modificare la posizione delle etichette dei punti dati in un grafico a torta  
   
 1.  Creare un grafico a torta.  
   
@@ -43,11 +48,11 @@ caps.handback.revision: 8
   
 4.  Nell'area di progettazione fare clic sul grafico. Le proprietà del grafico verranno visualizzate nel riquadro Proprietà.  
   
-5.  Nella sezione **Generale** espandere il nodo **CustomAttributes**. Verrà visualizzato un elenco di attributi per il grafico a torta.  
+5.  Nella sezione **Generale** espandere il nodo **CustomAttributes** . Verrà visualizzato un elenco di attributi per il grafico a torta.  
   
 6.  Selezionare un valore per la proprietà PieLabelStyle.  
   
-## Per modificare la posizione delle etichette dei punti in un grafico a imbuto o a piramide  
+## <a name="to-change-the-position-of-point-labels-in-a-funnel-or-pyramid-chart"></a>Per modificare la posizione delle etichette dei punti in un grafico a imbuto o a piramide  
   
 1.  Creare un grafico a imbuto o a piramide.  
   
@@ -57,14 +62,14 @@ caps.handback.revision: 8
   
 4.  Nell'area di progettazione fare clic sul grafico. Le proprietà del grafico verranno visualizzate nel riquadro Proprietà.  
   
-5.  Nella sezione **Generale** espandere il nodo **CustomAttributes**. Verrà visualizzato un elenco di attributi per il grafico a imbuto.  
+5.  Nella sezione **Generale** espandere il nodo **CustomAttributes** . Verrà visualizzato un elenco di attributi per il grafico a imbuto.  
   
 6.  Per un grafico a imbuto, selezionare un valore per la proprietà FunnelLabelStyle. Per un grafico a piramide, selezionare un valore per la proprietà PyramidLabelStyle.  
   
     > [!NOTE]  
     >  Quando questa proprietà viene impostata sul valore **OutsideInColumn**, le etichette vengono disegnate in una colonna verticale. La posizione della colonna non può essere modificata in alcun modo.  
   
-## Per modificare la posizione delle etichette dei punti dati in un grafico a barre  
+## <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>Per modificare la posizione delle etichette dei punti dati in un grafico a barre  
   
 1.  Creare un grafico a barre.  
   
@@ -74,13 +79,13 @@ caps.handback.revision: 8
   
 4.  Nell'area di progettazione fare clic sul grafico. Le proprietà del grafico verranno visualizzate nel riquadro Proprietà.  
   
-5.  Nella sezione **Generale** espandere il nodo **CustomAttributes**. Verrà visualizzato un elenco di attributi per il grafico a barre.  
+5.  Nella sezione **Generale** espandere il nodo **CustomAttributes** . Verrà visualizzato un elenco di attributi per il grafico a barre.  
   
 6.  Selezionare un valore per la proprietà BarLabelStyle.  
   
  Quando lo stile delle etichette del grafico a barre è impostato su **Esterno**, le etichette vengono posizionate all'esterno della barra, purché quest'ultima rientri nell'area del grafico. Se l'etichetta non può essere posizionata all'esterno della barra ma all'interno dell'area del grafico, verrà inserita nella posizione più vicina all'estremità della barra.  
   
-## Per modificare la posizione delle etichette dei punti dati in un grafico ad area, a linee, a dispersione o in un istogramma  
+## <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Per modificare la posizione delle etichette dei punti dati in un grafico ad area, a linee, a dispersione o in un istogramma  
   
 1.  Creare un grafico ad area, a linee, a dispersione o un istogramma.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 8
   
 6.  Selezionare un valore per la proprietà Position.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
  [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

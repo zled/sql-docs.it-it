@@ -1,23 +1,28 @@
 ---
-title: "Memorizzare nella cache set di dati condivisi (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cache condivisi (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Memorizzare nella cache set di dati condivisi (SSRS)
+# <a name="cache-shared-datasets-ssrs"></a>Memorizzare nella cache set di dati condivisi (SSRS)
   I risultati della query per un set di dati condiviso possono essere copiati in una cache per fornire dati coerenti per più report e migliorare il tempo di risposta per la query del set di dati. In modo analogo ai report, è possibile configurare un set di dati condiviso da memorizzare nella cache al momento del primo utilizzo o specificando una pianificazione.  
   
  Un set di dati condiviso può essere incluso in più report o come parte di definizioni del componente. Memorizzando nella cache il set di dati condiviso, viene fornito un set di dati coerente per tutti i report che lo utilizzano e viene inoltre ridotto il numero di esecuzioni della query del set di dati sull'origine dati esterna.  
@@ -48,14 +53,14 @@ caps.handback.revision: 6
   
  Se un utente sceglie valori dei parametri del report diversi dai valori predefiniti specificati per il set di risultati memorizzati nella cache, la query del set di dati viene eseguita in modo attivo e i risultati memorizzati nella cache non vengono utilizzati per tale query.  
   
-## Memorizzazione nella cache di set di dati condivisi  
+## <a name="caching-shared-datasets"></a>Memorizzazione nella cache di set di dati condivisi  
  Per abilitare la memorizzazione nella cache per un set di dati condiviso, è necessario selezionare l'opzione relativa nel set stesso. Dopo che la memorizzazione nella cache è stata abilitata, i risultati della query per un set di dati condiviso vengono copiati nella cache al momento del primo utilizzo. Se al set di dati condiviso sono associati parametri, ogni combinazione di parametri crea una nuova voce nella cache.  
   
  Durante la permanenza nella cache dei risultati della query per una combinazione di parametri specifica, ogni report avviato per l'elaborazione che include un riferimento al set di dati condiviso con tali valori dei parametri utilizzerà i dati memorizzati nella cache.  
   
- È possibile specificare la quantità di tempo in cui mantenere i dati nella la cache prima che scadano. Per altre informazioni, vedere [Pagina Memorizzazione nella cache, set di dati condivisi &40 #;Gestione report&#41;](../Topic/Caching%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md).  
+ È possibile specificare la quantità di tempo in cui mantenere i dati nella la cache prima che scadano. Per altre informazioni, vedere [Pagina Memorizzazione nella cache, set di dati condivisi &&#40;Gestione report&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
   
-## Precaricamento della cache  
+## <a name="preloading-the-cache"></a>Precaricamento della cache  
  È possibile precaricare la cache creando un piano di aggiornamento che consente di specificare la frequenza di aggiornamento della cache tramite una pianificazione condivisa o specifica per l'elemento. Per evitare che per uno stesso elemento siano presenti più voci nella cache, è necessario specificare una pianificazione in base alla quale il tempo per l'elaborazione della query sull'origine dati esterna sia sufficiente. Se ad esempio il tempo necessario per l'esecuzione della query è di 20 minuti, l'aggiornamento deve essere pianificato con frequenza maggiore di 20 minuti. Per altre informazioni, vedere [Schedules](../../reporting-services/subscriptions/schedules.md).  
   
  Per creare un piano di aggiornamento della cache per un set di dati condiviso, è necessario che siano rispettate le condizioni seguenti.  
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 -   È necessario disporre delle autorizzazioni ReadPolicy e UpdatePolicy sul set di dati condiviso.  
   
- I piani di aggiornamento della cache si applicano sia ai set di dati condivisi che ai report. Per altre informazioni, vedere [Opzioni di aggiornamento cache &#40;Gestione report&#41;](../Topic/Cache%20Refresh%20Options%20\(Report%20Manager\).md).  
+ I piani di aggiornamento della cache si applicano sia ai set di dati condivisi che ai report. Per altre informazioni, vedere [Opzioni di aggiornamento cache &#40;Gestione report&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
-## Condizioni che determinano la scadenza della cache  
+## <a name="conditions-that-cause-cache-expiration"></a>Condizioni che determinano la scadenza della cache  
  Le condizioni seguenti possono provocare l'invalidità di una cache di un set di dati condiviso.  
   
 -   Scadenza di una condizione della pianificazione per timeout o scadenza della cache.  
@@ -95,7 +100,7 @@ caps.handback.revision: 6
   
  Gli aggiornamenti dei piani di aggiornamento della cache per i set di dati condivisi non influiscono sui report già in elaborazione, ma influiscono solo su avvii futuri di report che fanno riferimento al set di dati condiviso.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

@@ -2,7 +2,7 @@
 title: Considerazioni e limitazioni delle tabelle temporali | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   La modifica diretta dei dati in una tabella di cronologia non è consentita.  
   
--   **ON DELETE CASCADE** e **ON UPDATE CASCADE** non sono consentiti nella tabella corrente. In altre parole, quando la tabella temporale fa riferimento alla tabella nella relazione di chiave esterna (corrispondente a *parent_object_id* in sys.foreign_keys) non sono consentite le opzioni CASCADE. Per risolvere questa limitazione, usare la logica dell'applicazione oppure i trigger AFTER per mantenere la coerenza su eliminazione nella tabella di chiave primaria (corrispondente a  *referenced_object_id* in sys.foreign_keys). Se la tabella di chiave primaria è temporale e la tabella di riferimento non lo è, questa limitazione non sussiste.  
+-   **ON DELETE CASCADE** e **ON UPDATE CASCADE** non sono consentiti nella tabella corrente. In altre parole, quando la tabella temporale fa riferimento alla tabella nella relazione di chiave esterna (corrispondente a *parent_object_id* in sys.foreign_keys) non sono consentite le opzioni CASCADE. Per risolvere questa limitazione, usare la logica dell'applicazione oppure i trigger AFTER per mantenere la coerenza su eliminazione nella tabella di chiave primaria (corrispondente a  *referenced_object_id* in sys.foreign_keys). Se la tabella di chiave primaria è temporale e la tabella di riferimento non lo è, questa limitazione non sussiste. 
+
+    **Nota:** questa limitazione si applica solo a SQL Server 2016. Le opzioni CASCADE sono supportate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e 2017 di SQL Server a partire dalla versione CTP 2.0.  
   
 -   Per non invalidare la logica DML, i trigger**INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger**AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.  
   

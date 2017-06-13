@@ -1,29 +1,34 @@
 ---
-title: "Rendering degli elementi del report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Il rendering degli elementi di Report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Rendering degli elementi del report (Generatore report e SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering degli elementi del report (Generatore report e SSRS)
   Il numero, le dimensioni e la posizione degli elementi del report influiscono sulla modalità di paginazione del corpo del report da parte dei renderer. Di seguito è riportata una descrizione della modalità di rendering dei vari elementi del report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Elementi del report sovrapposti  
+## <a name="overlapping-report-items"></a>Elementi del report sovrapposti  
  Gli elementi del report sovrapposti non sono supportati in HTML, MHTML, Word, Excel, in Anteprima o nel Visualizzatore report. Se esistono, tali elementi vengono spostati. Per gli elementi del report sovrapposti si applicano le regole seguenti:  
   
 -   Se la sovrapposizione verticale degli elementi del report è maggiore, uno degli elementi sovrapposti viene spostato a destra. L'elemento all'estrema sinistra rimane dove è posizionato.  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  Gli elementi del report sovrapposti sono supportati nei formati con interruzioni di pagina manuali, inclusa la stampa.  
   
-## Visibilità ed elementi del report  
+## <a name="visibility-and-report-items"></a>Visibilità ed elementi del report  
  Gli elementi del report possono essere nascosti oppure visualizzati per impostazione predefinita o in base a determinate condizioni tramite espressioni. Facoltativamente, la visibilità può essere disattivata facendo clic su un altro elemento del report.  
   
  Per il rendering degli elementi del report si applicano le regole di visibilità seguenti:  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   Se la visibilità di un elemento del report e del relativo contenuto può essere disattivata facendo clic su un altro elemento, la paginazione cambia in base all'elemento del report e al relativo contenuto solo quando questo viene inizialmente visualizzato.  
   
-## Elementi del report mantenuti assieme in un'unica pagina  
+## <a name="keeping-report-items-together-on-a-single-page"></a>Elementi del report mantenuti assieme in un'unica pagina  
  È possibile mantenere assieme molti elementi di un report in una singola pagina in modo implicito o esplicito impostando le proprietà Keep With Group o Keep Together. Il rendering degli elementi del report viene sempre eseguito nella stessa pagina se tali elementi non includono interruzioni di pagina logiche e sono di dimensioni minori rispetto all'area della pagina utilizzabile. Se un elemento del report non rientra completamente nella pagina da cui dovrebbe iniziare, prima di tale elemento viene inserita un'interruzione di pagina manuale per forzarlo alla pagina successiva. Per i renderer di interruzioni di pagine software, le dimensioni della pagina aumentano in base all'elemento del report.  
   
  Quando l'elemento del report è sempre nascosto, le regole per mantenere assieme gli elementi vengono ignorate.  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   Elementi del report la cui visualizzazione può essere attivata o disattivata in un'area dati Tablix.  
   
-### Ordine di priorità  
+### <a name="priority-order"></a>Ordine di priorità  
  A causa delle limitazioni delle dimensioni della pagina, possono verificarsi conflitti tra le regole per mantenere insieme gli elementi del report. In questo caso, viene utilizzato il seguente ordine di priorità per mantenere assieme gli elementi durante il rendering:  
   
 -   Linee, grafici e immagini.  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   Aree dati Tablix con la proprietà KeepTogether esplicita impostata su **true**.  
   
-### Sottoreport  
+### <a name="subreports"></a>Sottoreport  
  Un sottoreport viene visualizzato come un rettangolo che contiene un altro report definito in un file rdl di report separato. Il file del sottoreport deve essere pubblicato in un server di report prima che il report padre possa accedervi.  
   
  Per il rendering dei sottoreport si applicano le regole seguenti:  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  Per altre informazioni sui sottoreport, vedere [Sottoreport &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

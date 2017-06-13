@@ -1,23 +1,28 @@
 ---
-title: "Modificare l&#39;altezza di riga o la larghezza di colonna (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modificare l&quot;altezza o larghezza di colonna (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modificare l&#39;altezza di riga o la larghezza di colonna (Generatore report e SSRS)
+# <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS)
   Quando si imposta un'altezza di riga, si specifica l'altezza massima della riga nel report visualizzabile. Per impostazione predefinita, tuttavia, le caselle di testo nella riga sono impostate in modo da ingrandirsi verticalmente per poter contenere i dati immessi in fase di esecuzione. Per questo motivo, può verificarsi che una riga si espanda oltre l'altezza specificata dall'utente. Per impostare un'altezza di riga fissa è necessario modificare le proprietà della casella di testo in modo che non venga espansa automaticamente.  
   
  Quando si imposta una larghezza di colonna, si specifica la larghezza massima della colonna nel report visualizzabile. Le colonne non si espandono automaticamente in senso orizzontale in base al testo.  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per modificare l'altezza delle righe spostando gli handle di riga  
+### <a name="to-change-row-height-by-moving-row-handles"></a>Per modificare l'altezza delle righe spostando gli handle di riga  
   
 1.  In visualizzazione della struttura fare clic in un punto qualsiasi dell'area dati Tablix per selezionarla. Lungo il bordo esterno dell'area dati Tablix vengono visualizzati alcuni handle di riga grigi.  
   
@@ -35,17 +40,17 @@ caps.handback.revision: 9
   
 3.  Fare clic per selezionare il bordo della riga e spostarlo più in alto o più in basso per regolare l'altezza della riga.  
   
-### Per modificare l'altezza delle righe impostando le proprietà delle celle  
+### <a name="to-change-row-height-by-setting-cell-properties"></a>Per modificare l'altezza delle righe impostando le proprietà delle celle  
   
 1.  In visualizzazione Progettazione fare clic su una cella nella riga di tabella.  
   
-     ![Cella selezionata in una tabella](../../reporting-services/report-design/media/table-selectcell.png "Cella selezionata in una tabella")  
+     ![Selezionare una cella in una tabella](../../reporting-services/report-design/media/table-selectcell.png "selezionata una cella in una tabella")  
   
-2.  Nel riquadro **Proprietà** visualizzato modificare la proprietà **Altezza**, quindi fare clic in un punto qualsiasi all'esterno del riquadro **Proprietà**.  
+2.  Nel riquadro **Proprietà** visualizzato modificare la proprietà **Altezza** , quindi fare clic in un punto qualsiasi all'esterno del riquadro **Proprietà** .  
   
-     ![Riquadro Proprietà della cella di tabella selezionata](../../reporting-services/report-design/media/cell-propertiespane.png "Riquadro Proprietà della cella di tabella selezionata")  
+     ![Riquadro delle proprietà di cella di tabella selezionato](../../reporting-services/report-design/media/cell-propertiespane.png "riquadro delle proprietà di cella di tabella selezionata")  
   
-### Per impedire che una riga si espanda automaticamente in senso verticale  
+### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>Per impedire che una riga si espanda automaticamente in senso verticale  
   
 1.  In visualizzazione della struttura fare clic in un punto qualsiasi dell'area dati Tablix per selezionarla. Lungo il bordo esterno dell'area dati Tablix vengono visualizzati alcuni handle di riga grigi.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 9
     > [!NOTE]  
     >  Se non viene visualizzato il riquadro Proprietà, scegliere **Proprietà** dal menu **Visualizza**.  
   
-### Per modificare la larghezza delle colonne  
+### <a name="to-change-column-width"></a>Per modificare la larghezza delle colonne  
   
 1.  In visualizzazione della struttura fare clic in un punto qualsiasi dell'area dati Tablix per selezionarla. Lungo il bordo esterno dell'area dati Tablix vengono visualizzati alcuni handle di colonna grigi.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 9
   
 3.  Fare clic per selezionare il bordo della colonna e spostarlo verso sinistra o verso destra per regolare la larghezza della colonna.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Area dati Tablix (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
  [Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
  [Tabelle (Generatore report e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

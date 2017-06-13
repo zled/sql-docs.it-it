@@ -1,58 +1,61 @@
 ---
-title: "Guida di riferimento tecnico (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, riferimento tecnico"
-  - "riferimento tecnico [Reporting Services]"
-  - "lingue [Reporting Services]"
-  - "tools [Reporting Services]"
-  - "guida di riferimento all'interfaccia utente [Reporting Services]"
+title: Riferimento tecnico (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, technical reference
+- technical reference [Reporting Services]
+- languages [Reporting Services]
+- tools [Reporting Services]
+- user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d0e65c6d190976934fa9c5177585cc88a34df8fa
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Guida di riferimento tecnico (SSRS)
-  Individuare gli strumenti e la documentazione di riferimento di PowerShell per l'uso o l'amministrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+# <a name="technical-reference-ssrs"></a>Guida di riferimento tecnico (SSRS)
+
+  Trovare gli strumenti e documentazione di riferimento di PowerShell per l'utilizzo o di amministrazione di SQL Server Reporting Services.  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Errori ed eventi**  
+ ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Errori ed eventi**  
  [Causa e risoluzione degli errori di Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Guida di riferimento alle funzionalità**  
+ ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Guida di riferimento alle funzionalità**  
  [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Guida sensibile al contesto di Gestione report](../Topic/Report%20Manager%20F1%20Help.md)  
+ [Guida sensibile al contesto di Gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Guida della Creazione guidata report](../Topic/Report%20Wizard%20Help.md)  
+ [Guida della Creazione guidata report](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [Visualizzatore HTML e barra degli strumenti dei report](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
  [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Utilità della riga di comando del server di report**  
+ ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **utilità della riga di comando Server di Report**  
  [Utilità RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [utilità rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [Utilità rskeymgmt &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Libreria di classi del provider WMI per Reporting Services**  
+ ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting libreria di classi Provider WMI di servizi**  
  [Riferimento della libreria del provider WMI Reporting Services &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
-  
-## Vedere anche  
- [Articoli wiki di TechNet sulla risoluzione dei problemi di Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [Articoli wiki di TechNet sulla risoluzione dei problemi di Reporting Services in modalità SharePoint](http://go.microsoft.com/fwlink/?LinkID=209158)  
-  
-  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

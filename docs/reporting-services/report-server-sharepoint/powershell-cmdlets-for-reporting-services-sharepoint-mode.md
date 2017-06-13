@@ -1,61 +1,39 @@
 ---
-title: "Cmdlet di PowerShell per la modalit&#224; SharePoint di Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cmdlet di PowerShell per Reporting Services SharePoint Mode | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cmdlet di PowerShell per la modalit&#224; SharePoint di Reporting Services
-  Quando si installa la modalità SharePoint di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i cmdlet di PowerShell sono installati per supportare i server di report in modalità SharePoint. I cmdlets riguardano tre categorie di funzionalità.  
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
+
+Quando si installa SQL Server 2016 Reporting Services in modalità SharePoint, i cmdlet di PowerShell sono installati per supportare i server di report in modalità SharePoint. I cmdlets riguardano tre categorie di funzionalità.  
   
 -   Installazione del proxy e del servizio SharePoint Shared di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Provisioning e gestione delle applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e dei proxy associati.  
   
 -   Gestione delle funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio estensioni e chiavi di crittografia.  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint|  
-  
- **In questo argomento sono contenute le sezioni seguenti:**  
-  
--   [Riepilogo dei cmdlet](#bkmk_cmdlet_sum)  
-  
--   [Cmdlet del servizio condiviso e del proxy](#bkmk_sharedservice_cmdlets)  
-  
--   [Cmdlet dell'applicazione di servizio e del proxy](#bkmk_serviceapp_cmdlets)  
-  
--   [Cmdlet correlati alle funzionalità personalizzate di Reporting Services](#bkmk_ssrsfeatures_cmdlets)  
-  
--   [Esempi di base di PowerShell per Reporting Services](#bkmk_basic_samples)  
-  
--   [Esempi dettagliati di PowerShell per Reporting Services](#bkmk_detailedsamples)  
-  
-    -   [Creare un proxy e un'applicazione di servizio Reporting Services](#bkmk_example_create_service_application)  
-  
-    -   [Esaminare e aggiornare un'estensione per il recapito di Reporting Services](#bkmk_example_delivery_extension)  
-  
-    -   [Ottenere e impostare le proprietà del database dell'applicazione Reporting Service](#bkmk_example_db_properties)  
-  
-    -   [Elencare le estensioni dei dati di Reporting Services](#bkmk_example_list_data_extensions)  
-  
-    -   [Modificare ed elencare i proprietari delle sottoscrizioni di Reporting Services](#bkmk_change_subscription_owner)  
-  
+
 ##  <a name="bkmk_cmdlet_sum"></a> Riepilogo dei cmdlet  
- Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet seguenti, i riferimenti ai database delle applicazioni di servizio indicano tutti i database creati e utilizzati da un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+ Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per ulteriori informazioni, vedere [avvio di Windows PowerShell in Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet seguenti, i riferimenti ai database delle applicazioni di servizio indicano tutti i database creati e utilizzati da un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Sono inclusi i database di configurazione, di avvisi e temporaneo.  
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -72,9 +50,9 @@ caps.handback.revision: 31
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Per altre informazioni, vedere [Utilizzare Windows PowerShell per amministrare SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx).  
+ Per ulteriori informazioni vedere [utilizzare Windows PowerShell per amministrare SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
-#### Per aprire la shell di gestione di SharePoint ed eseguire i cmdlet  
+#### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Per aprire la shell di gestione di SharePoint ed eseguire i cmdlet  
   
 1.  Fare clic sul menu **Start** .  
   
@@ -93,13 +71,13 @@ caps.handback.revision: 31
 |------------|-----------------|  
 |Install-SPRSService|Installa e registra, o disinstalla, il servizio SharePoint Shared di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Queste operazioni possono essere eseguite solo nel computer in cui è installato SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint. Per l'installazione, vengono eseguite due operazioni:<br /><br /> - Il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato nella farm.<br /><br /> - L'istanza del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installata nel computer corrente.<br /><br /> Per la disinstallazione, vengono eseguite due operazioni:<br /><br /> - Il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene disinstallato dal computer corrente.<br /><br /> - Il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene disinstallato dalla farm.<br /><br /> <br /><br /> NOTA: se nella farm sono presenti altri computer in cui è installato il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure se nella farm sono ancora in esecuzione applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , viene visualizzato un messaggio di avviso.|  
 |Install-SPRSServiceProxy|Installa e registra, o disinstalla, il proxy del servizio Reporting Services nella farm di SharePoint.|  
-|Get-SPRSProxyUrl|Ottiene gli URL per l'accesso al servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|Get-SPRSProxyUrl|Ottiene gli URL per l'accesso al servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |Get-SPRSServiceApplicationServers|Ottiene tutti i server nella farm di SharePoint locale contenenti un'installazione del servizio SharePoint Shared di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Questo cmdlet è utile per gli aggiornamenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , per determinare i server in cui viene eseguito il servizio condiviso e pertanto devono essere aggiornati.|  
   
 ###  <a name="bkmk_serviceapp_cmdlets"></a> Cmdlet dell'applicazione di servizio e del proxy  
  Nella tabella seguente sono elencati i cmdlet di PowerShell per le applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e i proxy associati.  
   
-|cmdlet|Description|  
+|Cmdlet|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Ottiene uno o più oggetti dell'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |New-SPRSServiceApplication|Crea una nuova applicazione di servizio Reporting Services e i database associati.<br /><br /> Parametro LogonType: consente di specificare se nel server di report viene utilizzato un account del pool di applicazioni SSRS o un account di accesso di SQL Server per accedere al database del server di report. I valori validi sono:<br /><br /> 0 Autenticazione di Windows<br /><br /> 1 SQL Server<br /><br /> 2 Account pool applicazioni (impostazione predefinita)|  
@@ -176,7 +154,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Aggiungere il proxy al gruppo di proxy predefiniti.  
   
-3.  Concedere all'applicazione di servizio l'accesso al database del contenuto dell'applicazione Web sulla porta 80. Per lo script si presuppone che il sito "http://sitename" esista già.  
+3.  Concedere all'applicazione di servizio l'accesso al database del contenuto dell'applicazione Web sulla porta 80. Questo script presuppone che sito `http://sitename` esiste già.  
   
 ```  
 # Create service application and service application proxy  
@@ -297,13 +275,13 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
      `SHAREPOINTLIST          Data`  
   
 ###  <a name="bkmk_change_subscription_owner"></a> Modificare ed elencare i proprietari delle sottoscrizioni di Reporting Services  
- Vedere [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md).  
+ Vedere [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-## Vedere anche  
- [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)   
- [Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
- [Visualizzazione della Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
- [Script di PowerShell di gestione di SharePoint nel sito CodePlex](http://sharepointpsscripts.codeplex.com/)   
- [Come amministrare SSRS con PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
-  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+[Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[Elenco di controllo: Utilizzare PowerShell per verificare PowerPivot per SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Visualizzazione della Guida SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Script di PowerShell di gestione SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)   
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

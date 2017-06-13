@@ -15,10 +15,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
@@ -99,8 +99,8 @@ ms.lasthandoff: 04/11/2017
   
 -   Quando si esegue il ripristino da un backup compresso, è possibile che venga visualizzato l'errore seguente:  
   
-    -   **Si è verificata un'eccezione SqlException 3284. Gravità: 16, Stato: 5**  
-        **Il contrassegno di file del messaggio nel dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backup: '65536' potrebbe essere un possibile valore.**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
+        **Contrassegno di file di messaggio nel dispositivo `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backup: '65536' potrebbe essere un possibile valore.**  
   
          Per risolvere il problema, eseguire nuovamente l'istruzione **BACKUP** con il valore **BLOCKSIZE = 65536** specificato.  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Impossibile scrivere su "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak": Il backup su URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio di eccezione: Impossibile leggere dati dalla connessione del trasporto. La connessione è stata chiusa.  
   
--   Errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak": Impossibile recuperare l'errore dall'endpoint remoto.  
+-   Si è verificato un errore dei / o irreversibile nel file "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" non è stato possibile recuperare l'errore dall'Endpoint remoto.  
   
      Messaggio 3013, livello 16, stato 1, riga 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
  **Impostazioni proxy predefinite non rilevate:**  
   
- Talvolta le impostazioni predefinite non vengono rilevate, causando errori di autenticazione del proxy come quello indicato di seguito:*Errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak": Impossibile recuperare l'errore dall'endpoint remoto. Messaggio di eccezione: Errore del server remoto: (407)* **Richiesta autenticazione proxy**.  
+ Talvolta le impostazioni predefinite non vengono rilevate causando errori di autenticazione, ad esempio quello riportato di seguito proxy:*si è verificato un errore dei / o irreversibile nel file "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" Backup su URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio di eccezione: Errore del server remoto: (407)* **Richiesta autenticazione proxy**.  
   
  Per risolvere il problema, creare un file di configurazione che consenta al processo di backup su URL di utilizzare le impostazioni predefinite del proxy effettuando i passaggi indicati di seguito.  
   

@@ -1,29 +1,34 @@
 ---
-title: "Modify a Reporting Services Configuration File (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modificare un File di configurazione di Reporting Services (RSReportServer. config) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modify a Reporting Services Configuration File (RSreportserver.config)
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificare un file di configurazione di Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le impostazioni dell'applicazione vengono archiviate in un set di file di configurazione. Durante l'installazione vengono creati i file di configurazione per ogni istanza del server di report installata. All'interno di ogni file, i valori vengono impostati in questa fase o nel momento in cui si utilizzano strumenti e applicazioni per configurare un server per l'esecuzione di operazioni. In alcuni casi, è necessario modificare direttamente un file per aggiungere o configurare impostazioni avanzate. Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente.  
   
  Alcune impostazioni di configurazione possono essere impostate solo tramite uno strumento specifico. Impostazioni che contengono valori crittografati devono essere modificate ad esempio tramite lo strumento di configurazione di Reporting Services, il programma di installazione o l'utilità della riga di comando **rsconfig** . Per eseguire questi strumenti, è necessario essere membro del gruppo Administrators locale.  
   
 > [!IMPORTANT]  
->  Prestare attenzione in caso di modifiche al file di configurazione. Se si modifica un'impostazione riservata per l'uso interno, l'installazione potrebbe essere disabilitata. Non è in genere consigliabile modificare le impostazioni di configurazione, a meno che non sia necessario risolvere un problema specifico. Per altre informazioni sulle impostazioni sicure da modificare, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) o [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Per altre informazioni sui file di configurazione, vedere la documentazione del prodotto [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+>  Prestare attenzione in caso di modifiche al file di configurazione. Se si modifica un'impostazione riservata per l'uso interno, l'installazione potrebbe essere disabilitata. Non è in genere consigliabile modificare le impostazioni di configurazione, a meno che non sia necessario risolvere un problema specifico. Per altre informazioni sulle impostazioni sicure da modificare, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) o [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Per altre informazioni sui file di configurazione, vedere la documentazione del prodotto [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Contenuto dell'argomento:  
   
@@ -59,13 +64,24 @@ caps.handback.revision: 7
     -   **RSReportServer.config** si trova nella cartella seguente:  
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
         ```  
+        
+        ||  
+        |-|  
+        |**[!INCLUDE[applies](../../includes/applies-md.md)]**  Technical Preview di gennaio 2017 dei report di Power BI in SQL Server Reporting Services|
+        
+        ```  
+        C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+        ```
   
     -   **RSReportServerServices.exe.config** si trova nella cartella seguente:  
+    
+        > [!NOTE] 
+        > Non è disponibile con gennaio January 2017 anteprima tecnica di Power BI i report in SQL Server Reporting Services.
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer\bin  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
         ```  
   
     -   **RSReportDesigner.config** si trova nella cartella seguente:  
@@ -82,7 +98,7 @@ caps.handback.revision: 7
   
     -   [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)  
+    -   [Configurare il portale Web per passare i cookie di autenticazione personalizzati](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -90,14 +106,14 @@ caps.handback.revision: 7
   
 6.  Esaminare i file di log di traccia per controllare che non si siano verificati errori. Se sono presenti condizioni di errore, un'impostazione o il relativo valore è stato specificato in modo non corretto. Rivedere il [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) per i valori validi per qualsiasi impostazione che provoca un errore. Per altre informazioni su come visualizzare i log di traccia, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File di configurazione ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Distribuzione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Distribuzione di un'estensione per il recapito](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Distribuzione di un'estensione per il rendering](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Procedura: Distribuzione di un elemento del report personalizzato](../Topic/How%20to:%20Deploy%20a%20Custom%20Report%20Item.md)   
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
+

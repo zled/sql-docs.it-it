@@ -1,27 +1,32 @@
 ---
-title: "Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 4: Definire una connessione dati e tabella di dati per il Report figlio | Documenti Microsoft'
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio
 Dopo aver progettato il report padre, il passaggio successivo consiste nel creare una connessione dati e una tabella di dati per il report figlio. In questa esercitazione la connessione dati è al database AdventureWorks2014.  
   
-### Per definire una connessione dati e l'oggetto DataTable aggiungendo un oggetto DataSet (per il report figlio)  
+### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Per definire una connessione dati e l'oggetto DataTable aggiungendo un oggetto DataSet (per il report figlio)  
   
 1.  Selezionare **Aggiungi nuovo elemento** dal menu **Sito Web**.  
   
@@ -29,13 +34,13 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
   
     Verrà aggiunto un nuovo file XSD **DataSet2.xsd** al progetto e verrà aperto Progettazione DataSet.  
   
-3.  Dalla finestra della casella degli strumenti trascinare un controllo **TableAdapter** nell'area di progettazione. Verrà avviata la configurazione guidata **TableAdapter**.  
+3.  Dalla finestra della casella degli strumenti trascinare un controllo **TableAdapter** nell'area di progettazione. Verrà avviata la configurazione guidata **TableAdapter** .  
   
 4.  Nella pagina **Seleziona connessione dati** è possibile selezionare la connessione creata nella lezione 2. Se è già selezionata, selezionate **Avanti** e andare al passaggio 8. In caso contrario, selezionare **Nuova connessione**.  
   
 5.  Nella finestra di dialogo **Aggiungi connessione** effettuare i passaggi seguenti:  
   
-    1.  Nella casella **Nome server** immettere il server in cui si trova il database **AdventureWorks2014**.  
+    1.  Nella casella **Nome server** immettere il server in cui si trova il database **AdventureWorks2014** .  
   
         L'istanza predefinita di SQL Server Express è **(local)\sqlexpress**.  
   
@@ -43,13 +48,13 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
   
     3.  Nell'elenco a discesa **Selezionare o immettere un nome di database** selezionare **AdventureWorks2014**.  
   
-    4.  Selezionare **OK** e quindi selezionare **Avanti**.  
+    4.  Selezionare **OK**e quindi selezionare **Avanti**.  
   
 6.  Se è stato selezionato **Usa autenticazione di SQL Server** nel passaggio 5 (b), selezionare l'opzione per includere i dati sensibili nella stringa o per impostare le informazioni nel codice dell'applicazione.  
   
 7.  Nella pagina **Salva stringa di connessione nel file di configurazione dell'applicazione** digitare il nome per la stringa di connessione o accettare l'impostazione predefinita **AdventureWorks2014ConnectionString**. Fare clic su **Avanti**.  
   
-8.  Nella pagina **Seleziona un tipo di comando** selezionare **Usa istruzioni SQL** e quindi fare clic su **Avanti**.  
+8.  Nella pagina **Seleziona un tipo di comando** selezionare **Usa istruzioni SQL**e quindi fare clic su **Avanti**.  
   
 9. Nella pagina **Immettere un'istruzione SQL** immettere la seguente query Transact-SQL per recuperare i dati dal database **AdventureWorks2014** e quindi fare clic su **Avanti**.  
   
@@ -57,7 +62,7 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    È anche possibile creare la query facendo clic su **Generatore di query** e, successivamente, verificare la query facendo clic su **Esegui query**. Se non vengono restituiti i dati previsti dalla query, è possibile che si stia utilizzando una versione precedente di AdventureWorks. Per altre informazioni su come ottenere il database di esempio **AdventureWorks2014**, vedere la [pagina degli esempi di prodotti database Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
+    È anche possibile creare la query facendo clic su **Generatore di query**e, successivamente, verificare la query facendo clic su **Esegui query** . Se non vengono restituiti i dati previsti dalla query, è possibile che si stia utilizzando una versione precedente di AdventureWorks. Per altre informazioni su come ottenere il database di esempio **AdventureWorks2014** , vedere la [pagina degli esempi di prodotti database Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
   
 10. Nella pagina **Scegliere i metodi per generare** deselezionare **Crea metodi per inviare aggiornamenti direttamente al database (GenerateDBDirectMethods)**, quindi fare clic su **Fine**.  
   
@@ -68,8 +73,10 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
   
 11. Salvare il file.  
   
-12. Per visualizzare un'anteprima dei dati, scegliere **Anteprima dati** dal menu **Dati** e quindi selezionare **Anteprima**.  
+12. Per visualizzare un'anteprima dei dati, scegliere **Anteprima dati** dal menu **Dati** e quindi fare clic su **Anteprima**.  
   
-## Attività successiva  
+## <a name="next-task"></a>Attività successiva  
 È stata creata correttamente una connessione dati e una tabella di dati per il report figlio. Successivamente, verrà progettato il report figlio utilizzando la Creazione guidata report. Vedere [Lezione 5: Progettare il report figlio tramite la Creazione guidata report](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
+
+

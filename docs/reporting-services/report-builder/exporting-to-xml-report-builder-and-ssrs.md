@@ -1,23 +1,28 @@
 ---
-title: "Esportazione in XML (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esportazione in XML (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esportazione in XML (Generatore report e SSRS)
+# <a name="exporting-to-xml-report-builder-and-ssrs"></a>Esportazione in XML (Generatore report e SSRS)
   L'estensione per il rendering XML restituisce un report impaginato in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, utilizzato come messaggio di dati XML o inviato a un'applicazione personalizzata.  
   
 > [!NOTE]  
@@ -51,9 +56,8 @@ caps.handback.revision: 8
   
 -   Il rendering degli elementi nascosti che non possono essere resi visibili tramite attivazione della visualizzazione non viene eseguito. Viene eseguito il rendering degli elementi inizialmente visibili e degli elementi nascosti che possono essere visibili mediante un elemento Toggle.  
   
--   **Immagini, linee ed elementi personalizzati del report ** vengono ignorati.  
+-   **Immagini, linee ed elementi personalizzati del report** vengono ignorati.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DataTypes"></a> Tipi di dati  
  All'attributo o all'elemento casella di testo viene assegnato un tipo di dati XSD in base ai valori visualizzati nella casella di testo.  
@@ -70,17 +74,16 @@ caps.handback.revision: 8
 |**String**, **Char**|**xsd:string**|  
 |Altro|**xsd:string**|  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> Regole di rendering specifiche di XML  
  Nelle sezioni seguenti viene descritta l'interpretazione degli elementi di un report da parte delle estensioni per il rendering XML.  
   
-### Corpo del report  
+### <a name="report-body"></a>Corpo del report  
  Un report viene visualizzato come elemento radice del documento XML. Il nome dell'elemento deriva dalla proprietà DataElementName impostata nel riquadro Proprietà.  
   
  L'elemento del report include anche le definizioni di spazi dei nomi XML e gli attributi di riferimento allo schema. Le variabili sono indicate in grassetto:  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**Report** xmlns = "**SchemaName**" xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;3aSchema % rc = true" nome = "ReportName" >  
   
  I valori delle variabili sono i seguenti:  
   
@@ -91,48 +94,47 @@ caps.handback.revision: 8
 |SchemaName|Report.SchemaName. Se Null, si utilizza Report.Name. Se si utilizza Report.Name, questo viene prima codificato con XmlConvert.EncodeLocalName.|  
 |ReportName|Nome del report.|  
   
-### Caselle di testo  
+### <a name="text-boxes"></a>Caselle di testo  
  Le caselle di testo vengono visualizzate come elementi o attributi in base alla proprietà RDL DataElementStyle. Il nome dell'elemento o dell'attributo deriva dalla proprietà RDL TextBox.DataElementName.  
   
-### Grafici, barre dei dati e grafici sparkline  
+### <a name="charts-data-bars-and-sparklines"></a>Grafici, barre dei dati e grafici sparkline  
  Il rendering dei grafici, delle barre dei dati e dei grafici sparkline viene eseguito in XML. I dati sono strutturati.  
   
-### Misuratori e indicatori  
+### <a name="gauges-and-indicators"></a>Misuratori e indicatori  
  Il rendering dei misuratori e degli indicatori viene eseguito in XML. I dati sono strutturati.  
   
-### Sottoreport  
+### <a name="subreports"></a>Sottoreport  
  Un sottoreport viene visualizzato come elemento. Il nome dell'elemento deriva dalla proprietà RDL DataElementName. L'impostazione della proprietà TextBoxesAsElements del report sostituisce quella del sottoreport. Gli attributi XSLT e degli spazi dei nomi non vengono aggiunti all'elemento del sottoreport.  
   
-### Rettangoli  
+### <a name="rectangles"></a>Rettangoli  
  Un rettangolo viene visualizzato come elemento. Il nome dell'elemento deriva dalla proprietà RDL DataElementName.  
   
-### Elementi dei report personalizzati  
+### <a name="custom-report-items"></a>Elementi dei report personalizzati  
  Gli elementi di report personalizzati non sono visibili all'estensione per il rendering. Se nel report è presente un elemento personalizzato del report, l'estensione ne esegue il rendering come elemento del report convenzionale.  
   
-### Immagini  
+### <a name="images"></a>Immagini  
  Il rendering delle immagini non viene eseguito.  
   
-### Linee  
+### <a name="lines"></a>Linee  
  Il rendering delle linee non viene eseguito.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-### Tabelle, matrici ed elenchi  
+### <a name="tables-matrices-and-lists"></a>Tabelle, matrici ed elenchi  
  Tabelle, matrici ed elenchi vengono visualizzati come elemento. Il nome dell'elemento deriva dalla proprietà RDL DataElementName della Tablix.  
   
-#### Righe e colonne  
+#### <a name="rows-and-columns"></a>Righe e colonne  
  Il rendering delle colonne viene eseguito all'interno delle righe.  
   
-#### Angolo Tablix  
+#### <a name="tablix-corner"></a>Angolo Tablix  
  Il rendering dell'angolo non viene eseguito. Viene eseguito il rendering solo del contenuto dell'angolo.  
   
-#### Celle Tablix  
+#### <a name="tablix-cells"></a>Celle Tablix  
  Le celle Tablix vengono visualizzate come elementi. Il nome dell'elemento deriva dalla proprietà RDL DataElementName della cella.  
   
-#### Subtotali automatici  
+#### <a name="automatic-subtotals"></a>Subtotali automatici  
  Il rendering dei subtotali automatici Tablix non viene eseguito.  
   
-#### Elementi di colonne e righe che non si ripetono con un gruppo  
+#### <a name="row-and-column-items-that-do-not-repeat-with-a-group"></a>Elementi di colonne e righe che non si ripetono con un gruppo  
  Gli elementi che non si ripetono con un gruppo, ad esempio etichette, subtotali e totali, vengono visualizzati come elementi. Il nome dell'elemento deriva dalla proprietà RDL TablixMember.DataElementName.  
   
  La proprietà RDL TablixMember.DataElementOutput controlla se il rendering di un elemento non ripetuto viene eseguito o meno.  
@@ -147,33 +149,29 @@ caps.handback.revision: 8
   
  Il rendering di un membro non ripetuto senza celle Tablix corrispondenti non viene eseguito. Questa situazione può verificarsi nel caso di una cella Tablix che si estende in più di una colonna.  
   
-#### Righe e colonne che si ripetono con un gruppo  
+#### <a name="rows-and-columns-that-repeat-with-a-group"></a>Righe e colonne che si ripetono con un gruppo  
  Il rendering di righe e colonne che si ripetono in un gruppo viene eseguito in base alle regole Tablix.DataElementOutput. Il nome dell'elemento deriva dalla proprietà DataElementName.  
   
  Ogni valore univoco all'interno di un gruppo viene visualizzato come elemento figlio del gruppo. Il nome dell'elemento deriva dalla proprietà Group.DataElementName.  
   
  Se il valore della proprietà DataElementOutput è uguale a Output, l'intestazione di un elemento ripetuto viene visualizzata come elemento figlio dell'elemento dettaglio.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="CustomFormatsXSLTransformations"></a> Formati personalizzati e trasformazioni XSL  
  I file XML generati dall'estensione per il rendering XML possono essere trasformati in quasi tutti i formati utilizzando trasformazioni XSL (XSLT). Questa funzionalità consente di produrre dati in formati non supportati dalle estensioni per il rendering esistenti. È consigliabile provare a utilizzare l'estensione per il rendering XML e le trasformazioni XSL prima di creare estensioni per il rendering personalizzate.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DuplicateName"></a> Nomi duplicati  
  Se sono presenti nomi di elementi dati duplicati all'interno dello stesso ambito, verrà visualizzato un messaggio di errore del renderer.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Trasformazioni XSLT  
  Il renderer XML può applicare una trasformazione XSLT lato server ai dati XML originali. Quando viene applicata una trasformazione XSLT, il renderer restituisce il contenuto trasformato anziché i dati XML originali. La trasformazione si verifica nel server, non nel client.  
   
- La trasformazione XSLT da applicare all'output viene definita nel file di definizione del report con la proprietà DataTransform del report o con il parametro XSLT *DeviceInfo*. Se viene impostato uno di questi valori, la trasformazione si verifica ogni volta che viene utilizzato il renderer XML. Quando si usano le sottoscrizioni, la trasformazione XSLT deve essere definita nella proprietà RDL DataTransform.  
+ La trasformazione XSLT da applicare all'output viene definita nel file di definizione del report con la proprietà DataTransform del report o con il parametro XSLT *DeviceInfo* . Se viene impostato uno di questi valori, la trasformazione si verifica ogni volta che viene utilizzato il renderer XML. Quando si usano le sottoscrizioni, la trasformazione XSLT deve essere definita nella proprietà RDL DataTransform.  
   
  Se si specifica un file XSLT, tramite la proprietà di definizione DataTransform e l'impostazione delle informazioni sul dispositivo, la trasformazione XSLT specificata in DataTransform si verifica per prima, seguita dalla trasformazione XSLT specificata tramite le impostazioni delle informazioni sul dispositivo.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo, incluse le seguenti:  
@@ -194,12 +192,11 @@ caps.handback.revision: 8
   
  Per altre informazioni, vedere [Impostazioni relative alle informazioni sul dispositivo XML](../../reporting-services/xml-device-information-settings.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

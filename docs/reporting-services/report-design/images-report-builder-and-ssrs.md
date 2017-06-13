@@ -1,23 +1,28 @@
 ---
-title: "Immagini (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Immagini (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Immagini (Generatore report e SSRS)
+# <a name="images-report-builder-and-ssrs"></a>Immagini (Generatore report e SSRS)
   Un'immagine è un elemento del report in cui è incluso un riferimento a un'immagine incorporata nel report o archiviata in un database, nel server di report o in un'altra posizione nel Web. Un'immagine può essere rappresentata da un'immagine ripetuta con le righe di dati. Inoltre è possibile utilizzare un'immagine come sfondo per determinati elementi del report.  
   
  È opportuno archiviare i loghi in un server dal momento che è possibile utilizzare lo stesso logo in più report.  
@@ -34,19 +39,16 @@ caps.handback.revision: 9
   
  ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="ImagesReportParts"></a> Immagini come parti del report  
  È possibile salvare immagini separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="EmbedImages"></a> Incorporamento di immagini  
  È possibile incorporare immagini in un report in modo che tutti i dati delle immagini vengano archiviati all'interno della definizione del report. Quando si incorpora un'immagine, all'immagine viene applicata la codifica MIME e viene archiviata come testo nella definizione del report. L'utilizzo di un'immagine incorporata assicura che l'immagine sia sempre disponibile per il report, ma comporta anche un aumento delle dimensioni della definizione del report.  
   
  Per altre informazioni sull'incorporamento di un'immagine, vedere [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="ExternalImages"></a> Immagini esterne  
  È possibile includere in un report immagini archiviate specificando l'URL dell'immagine. Quando si usa un'immagine esterna, l'origine di tale immagine viene impostata su **External** e il valore corrisponde all'indirizzo URL o al percorso all'immagine stessa.  
@@ -57,7 +59,6 @@ caps.handback.revision: 9
   
  Per altre informazioni sull'aggiunta di un'immagine esterna a un report, vedere [Aggiungere un'immagine esterna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="BackgroundImages"></a> Immagini di sfondo  
  È possibile utilizzare un'immagine come sfondo nel corpo del report o in un rettangolo, casella di testo, elenco, matrice o tabella. Le proprietà per un'immagine di sfondo sono simili a quelle di un'immagine. È inoltre possibile specificare come deve essere ripetuta l'immagine per riempire lo sfondo dell'elemento.  
@@ -67,12 +68,10 @@ caps.handback.revision: 9
   
  Per altre informazioni sull'aggiunta di un'immagine di sfondo, vedere [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DataboundImages"></a> Immagini associate a dati  
- È possibile aggiungere a un report immagini archiviate in un database. L'elemento immagine del report utilizzato è identico a quello utilizzato per le immagini statiche, ma dispone di un set di proprietà che indica che l'immagine è archiviata in un database. Per visualizzare istruzioni sull'utilizzo di immagini con associazione a dati, vedere [Aggiungere un'immagine con associazione a dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
+ È possibile aggiungere a un report immagini archiviate in un database. L'elemento immagine del report utilizzato è identico a quello utilizzato per le immagini statiche, ma dispone di un set di proprietà che indica che l'immagine è archiviata in un database. Per visualizzare istruzioni sull'utilizzo di immagini con associazione a dati, vedere [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Procedure  
  [Aggiungere un'immagine esterna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)  
@@ -83,9 +82,8 @@ caps.handback.revision: 9
   
  [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

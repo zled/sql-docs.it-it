@@ -1,31 +1,36 @@
 ---
-title: "Customize the Parameters Pane in a Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Personalizzare il riquadro dei parametri in un Report (Generatore Report) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Customize the Parameters Pane in a Report (Report Builder)
+# <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   Quando si creano report impaginati con parametri in Generatore report, è possibile personalizzare il riquadro Parametri. Nella visualizzazione di progettazione report è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro.  
   
  Quando si trascina un parametro in una nuova colonna e riga del riquadro, l'ordine del parametro nel riquadro **Dati report** viene modificato. Quando si modifica l'ordine del parametro nel riquadro **Dati report**, viene modificata la posizione del parametro stesso nel riquadro. Per informazioni sul motivo per cui l'ordine dei parametri è importante, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
-## Per personalizzare il riquadro dei parametri  
+## <a name="to-customize-the-parameters-pane"></a>Per personalizzare il riquadro dei parametri  
   
 1.  Nella scheda **Vista** selezionare la casella di controllo **Parametri** per visualizzare il riquadro dei parametri.  
   
-     ![Access parameters pane from View tab](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Access parameters pane from View tab")  
+     ![Riquadro parametri di accesso dalla scheda](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "riquadro parametri di accesso dalla scheda")  
   
      Il riquadro viene visualizzato nella parte superiore dell'area di progettazione.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 8
   
     -   Fare clic con il pulsante destro del mouse su una cella vuota nel riquadro dei parametri e quindi scegliere **Aggiungi parametro**.  
   
-         ![Add new parameter from parameters pane](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Add new parameter from parameters pane")  
+         ![Aggiungere un nuovo parametro dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "aggiungere nuovo parametro dal riquadro dei parametri")  
   
     -   Fare clic con il pulsante destro del mouse su **Parametri** nel riquadro **Dati report** e quindi scegliere **Aggiungi parametro**.  
   
@@ -45,13 +50,13 @@ caps.handback.revision: 8
   
     -   Fare clic con il pulsante destro del mouse sul riquadro dei parametri, quindi scegliere **Proprietà parametri**.  
   
-         ![Access parameter properties from the parameters pane](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Access parameter properties from the parameters pane")  
+         ![Accedere alle proprietà di parametro dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "accedere alle proprietà di parametro dal riquadro dei parametri")  
   
     -   Fare clic con il pulsante destro del mouse sul riquadro **Dati report** e quindi scegliere **Proprietà parametri**.  
   
 5.  Per aggiungere nuove colonne e righe al riquadro o eliminare le colonne e le righe esistenti, fare clic con il pulsante destro del mouse in un punto qualsiasi del riquadro dei parametri e quindi selezionare un comando nel menu visualizzato.  
   
-     ![Add columns and rows to the parameters pane](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Add columns and rows to the parameters pane")  
+     ![Aggiungere colonne e righe al riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "aggiungere colonne e righe al riquadro dei parametri")  
   
     > [!IMPORTANT]  
     >  Quando si elimina una colonna o una riga contenente parametri, questi vengono eliminati dal report.  
@@ -60,11 +65,11 @@ caps.handback.revision: 8
   
     -   Fare clic con il pulsante destro del mouse sul riquadro dei parametri, quindi scegliere  **Elimina**.  
   
-         ![Delete parameters from the parameters pane](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Delete parameters from the parameters pane")  
+         ![Eliminare i parametri dal riquadro dei parametri](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "eliminare parametri dal riquadro dei parametri")  
   
     -   Fare clic con il pulsante destro del mouse sul riquadro **Dati report** e quindi scegliere **Elimina**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

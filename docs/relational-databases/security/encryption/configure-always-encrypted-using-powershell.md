@@ -1,7 +1,7 @@
 ---
 title: Configurare Always Encrypted tramite PowerShell | Microsoft Docs
 ms.custom: 
-ms.date: 09/29/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7e3971933bb32cc47f761d18ba8c0dd57b139636
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configurare Always Encrypted tramite PowerShell
@@ -26,18 +26,16 @@ ms.lasthandoff: 04/11/2017
 
 Il modulo PowerShell SqlServer include i cmdlet per la configurazione di [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) nel database SQL di Azure e in SQL Server 2016.
 
-Poiché la maggior parte dei cmdlet per Always Encrypted nel modulo SqlServer vengono usati con chiavi Always Encrypted o dati sensibili archiviati in colonne crittografate è importante eseguire i cmdlet in un computer protetto. Durante la gestione di Always Encrypted eseguire i cmdlet da un computer diverso dal computer che ospita l'istanza di SQL Server. 
+Sempre crittografato cmdlet nel modulo SqlServer funzionano con le chiavi o i dati sensibili, pertanto è importante eseguire i cmdlet in un computer protetto. Quando si gestiscono Always Encrypted, eseguire i cmdlet da un computer diverso da quello che ospita l'istanza di SQL Server.
 
-Poiché l'obiettivo principale di Always Encrypted è garantire la sicurezza dei dati sensibili crittografati anche se il sistema di database viene compromesso, eseguire uno script di PowerShell che elabora le chiavi o i dati sensibili nel computer SQL Server può ridurre o annullare i vantaggi della funzionalità. Per altre indicazioni relative alla sicurezza, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Poiché l'obiettivo principale di Always Encrypted è garantire dati sensibili crittografati sono sicuri, anche se il sistema di database viene compromesso, eseguire uno script di PowerShell che elabora i tasti o dati sensibili nel computer SQL Server possono ridurre o annullare i vantaggi della funzionalità. Per altre indicazioni relative alla sicurezza, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
 I collegamenti ai singoli articoli dei cmdlet sono presenti alla [fine di questa pagina](#aecmdletreference).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Installare il [modulo SqlServer](https://msdn.microsoft.com/library/mt740629.aspx) in un computer protetto che NON sia il computer che ospita l'istanza di SQL Server. 
+Installare il [modulo SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) in un computer protetto che NON sia il computer che ospita l'istanza di SQL Server. È possibile installare il modulo direttamente da PowerShell gallery.  Vedere il [scaricare](../../../ssms/download-sql-server-ps-module.md) le istruzioni per altri dettagli.
 
-Installare il modulo SqlServer installando la versione più recente di [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).
-Si noti che il modulo *SqlServer* è diverso dal modulo *sqlps* che non supporta Always Encrypted. Per informazioni dettagliate, vedere il post del blog [SQL PowerShell - July 2016 Update](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) (SQL PowerShell - Aggiornamento luglio 2016) del team.
 
 ## <a name="importsqlservermodule"></a> Importazione del modulo SqlServer 
 
@@ -63,7 +61,7 @@ Alcuni dei cmdlet Always Encrypted possono essere usati con dati o metadati del 
 
 Questo metodo si applica solo a SQL Server e non è supportato nel database SQL di Azure.
 
-Con SQL Server PowerShell è possibile spostarsi tra i percorsi usando alias di Windows PowerShell simili ai comandi normalmente usati per spostarsi tra i percorsi del file system. Dopo essere passati all'istanza di destinazione e al database, i cmdlet successivi verranno eseguiti nel database come illustrato nell'esempio seguente:
+Con SQL Server PowerShell è possibile spostarsi tra i percorsi usando alias di Windows PowerShell simili ai comandi normalmente usati per spostarsi tra i percorsi del file system. Quando ci si sposta nell'istanza di destinazione e il database, i cmdlet successivi destinazione tale database, come illustrato nell'esempio seguente:
 
 ```
 # Import the SqlServer module.
@@ -130,24 +128,24 @@ Per Always Encrypted sono disponibili i cmdlet di PowerShell seguenti:
 
 |CMDLET    |Descrizione
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**    |Esegue l'autenticazione in Azure e acquisisce un token di autenticazione.
-|**[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)**    |Aggiunge un nuovo valore crittografato per un oggetto chiave di crittografia della colonna esistente nel database.
-|**[Complete-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759791.aspx)**    |Completa la rotazione di una chiave master della colonna.
-|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)**    |Restituisce tutti gli oggetti chiave di crittografia della colonna definiti nel database oppure un solo oggetto chiave di crittografia della colonna con il nome specificato.
-|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)**    |Restituisce tutti gli oggetti chiave master della colonna definiti nel database oppure un solo oggetto chiave master della colonna con il nome specificato.
-|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**    |Avvia la rotazione di una chiave master della colonna.
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata nell'insieme di credenziali delle chiavi di Azure.
-|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi che supporta l'API CNG (Cryptography Next Generation).
-|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)**    |Crea un nuovo oggetto chiave di crittografia della colonna nel database.
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**    |Produce un valore crittografato di una chiave di crittografia della colonna.
-|**[New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx)**    |Crea un nuovo oggetto SqlColumnEncryptionSettings che incapsula le informazioni sulla crittografia di una singola colonna, inclusi CEK e tipo di crittografia.
-|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)**    |Crea un nuovo oggetto chiave master della colonna nel database.
-|**New-SqlColumnMasterKeySettings**|Crea un oggetto SqlColumnMasterKeySettings per una chiave master della colonna con il provider specificato e il percorso della chiave.
-|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi con un CSP (Cryptography Service Provider) che supporta l'API Cryptography (CAPI).
-|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**    |Rimuove l'oggetto chiave di crittografia della colonna dal database.
-|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)**    |Rimuove un valore crittografato da un oggetto chiave di crittografia della colonna esistente nel database.
-|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**    |Rimuove l'oggetto chiave master della colonna dal database.
-|**[Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)**    |Crittografa, decrittografa o ricrittografa le colonne specificate nel database.
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |Esegue l'autenticazione in Azure e acquisisce un token di autenticazione.
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |Aggiunge un nuovo valore crittografato per un oggetto chiave di crittografia della colonna esistente nel database.
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |Completa la rotazione di una chiave master della colonna.
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |Restituisce tutti gli oggetti chiave di crittografia della colonna definiti nel database oppure un solo oggetto chiave di crittografia della colonna con il nome specificato.
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |Restituisce tutti gli oggetti chiave master della colonna definiti nel database oppure un solo oggetto chiave master della colonna con il nome specificato.
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |Avvia la rotazione di una chiave master della colonna.
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata nell'insieme di credenziali delle chiavi di Azure.
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi che supporta l'API CNG (Cryptography Next Generation).
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |Crea un oggetto chiave di crittografia di colonna nel database.
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |Produce un valore crittografato di una chiave di crittografia della colonna.
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |Crea un oggetto SqlColumnEncryptionSettings che incapsula le informazioni sulla crittografia di una singola colonna, inclusi CEK e la crittografia di tipo.
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |Crea un oggetto chiave master della colonna nel database.
+|**[Nuovo SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|Crea un oggetto SqlColumnMasterKeySettings per una chiave master della colonna con il provider specificato e il percorso della chiave.
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |Crea un oggetto SqlColumnMasterKeySettings che descrive una chiave asimmetrica archiviata in un archivio chiavi con un CSP (Cryptography Service Provider) che supporta l'API Cryptography (CAPI).
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |Rimuove l'oggetto chiave di crittografia della colonna dal database.
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |Rimuove un valore crittografato da un oggetto chiave di crittografia della colonna esistente nel database.
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |Rimuove l'oggetto chiave master della colonna dal database.
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |Crittografa, decrittografa o ricrittografa le colonne specificate nel database.
 
 
 

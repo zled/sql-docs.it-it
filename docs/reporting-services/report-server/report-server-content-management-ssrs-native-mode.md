@@ -1,30 +1,35 @@
 ---
-title: "Gestione contenuto del server di report (modalit&#224; nativa SSRS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "amministrazione di Reporting Services"
-  - "report pubblicati [Reporting Services], gestione"
-  - "server di report [Reporting Services], gestione del contenuto"
-  - "gestione del contenuto [Reporting Services]"
+title: "Report Gestione contenuto del Server (modalità nativa SSRS) | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gestione contenuto del server di report (modalit&#224; nativa SSRS)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, è disponibile il portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo articolo verranno esaminati Gestione report e la nuova esperienza del portale Web.  
+# <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, è disponibile il portale Web  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . In questo articolo verranno esaminati Gestione report e la nuova esperienza del portale Web.  
   
 > [!NOTE]  
 >  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per altre informazioni sulla gestione dell'ambiente in cui viene eseguito un server di report, vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -61,11 +66,11 @@ caps.handback.revision: 50
   
 |Icona|Elemento spostabile|  
 |----------|-------------------|  
-|![Icona di report](../../reporting-services/report-server/media/hlp-16doc.png "Icona di report")|Report|  
-|![Icona di report collegato](../../reporting-services/report-server/media/hlp-16linked.png "Icona di report collegato")|Report collegato|  
-|![Icona di cartella](../../reporting-services/report-server/media/hlp-16folder.png "Icona di cartella")|Cartella|  
-|![Icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.png "Icona di risorsa generica")|Risorsa generica|  
-|![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
+|![Icona report](../../reporting-services/report-server/media/hlp-16doc.gif "sull'icona Report")|Report|  
+|![Icona di report collegato](../../reporting-services/report-server/media/hlp-16linked.gif "sull'icona report collegato")|Report collegato|  
+|![Icona della cartella](../../reporting-services/report-server/media/hlp-16folder.gif "icona della cartella")|Cartella|  
+|![icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "icona di risorsa generica")|Risorsa generica|  
+|![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "icona di origine dati condivisa")|Origine dati condivisa|  
 ||Set di dati condiviso|  
   
  Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione modelli", "Gestione di cartelle" e "Gestione di origini dei dati".  
@@ -97,7 +102,7 @@ caps.handback.revision: 50
   
 -   Altre cartelle  
   
-### Cartelle riservate  
+### <a name="reserved-folders"></a>Cartelle riservate  
  Le cartelle predefinite sono riservate per l'utilizzo in Reporting Services e non possono essere spostate, rinominate o eliminate. Sono cartelle definite dall'utente tutte le cartelle create dagli utenti o dagli amministratori del server di report che dispongono dell'autorizzazione per l'aggiunta di elementi a una cartella.  
   
  Nella tabella seguente vengono descritte le cartelle predefinite che definiscono la gerarchia di cartelle e rappresentano il framework per diverse funzionalità.  
@@ -108,15 +113,15 @@ caps.handback.revision: 50
 |Utenti|Questa cartella viene visualizzata quando si abilita la funzionalità Report personali. Contiene sottocartelle per tutti gli utenti della caratteristica Report personali ed è accessibile solo agli amministratori del server di report. A ogni sottocartella viene assegnato il nome dell'utente.|  
 |Report personali|Include un'area di lavoro personale per ogni utente.|  
   
-### Creazione di cartelle  
+### <a name="creating-folders"></a>Creazione di cartelle  
  È possibile creare una cartella in qualsiasi cartella disponibile nella gerarchia.  
   
  Se si creano cartelle con lo scopo di limitare l'accesso a report e modelli specifici, è necessario specificare assegnazioni di ruolo che consentano agli utenti di esplorare, ma non visualizzare, il contenuto di cartelle padre presenti nel percorso della cartella.  
   
-### Modifica delle proprietà delle cartelle  
+### <a name="modifying-folder-properties"></a>Modifica delle proprietà delle cartelle  
  Dopo aver creato una cartella, è possibile modificarne le proprietà, ovvero rinominarla, aggiungerne o modificarne la descrizione oppure spostarla in un percorso diverso. Queste proprietà sono disponibili nella pagina delle proprietà Generale di ogni cartella. Per altre informazioni sull'impostazione di proprietà che concedono l'accesso a una cartella, vedere [Proteggere le cartelle](../../reporting-services/security/secure-folders.md).  
   
-### Eliminazione di cartelle e del relativo contenuto  
+### <a name="deleting-folders-and-folder-contents"></a>Eliminazione di cartelle e del relativo contenuto  
  Quando si elimina una cartella, vengono eliminati tutti gli elementi che contiene. Prima di procedere all'eliminazione, è pertanto consigliabile verificare il contenuto della cartella per determinare se sono presenti elementi ai quali altri elementi potrebbero fare riferimento o che potrebbero essere utilizzati da altri elementi in una parte diversa della gerarchia di cartelle. Tra gli elementi a cui viene fatto riferimento da altri elementi sono comprese definizioni dei report che supportano report collegati, origini dei dati condivise e risorse.  
   
  Se si elimina un report al quale fanno riferimento uno o più report collegati, i report collegati non saranno più validi dopo l'eliminazione del report. Non è possibile determinare in anticipo quali saranno i report interessati dall'operazione di eliminazione, in quanto in un report non vengono mantenute informazioni sui report collegati basati su di esso. È tuttavia possibile esaminare le proprietà di un report collegato per verificare su quale report si basa. In un'origine dei dati condivisa vengono invece elencati tutti i report che la utilizzano e quindi è possibile determinare facilmente se sono in uso informazioni di connessione. Per altre informazioni, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Le risorse utilizzate dai report, infine, non consentono di identificare tali report.  
@@ -128,7 +133,7 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> Risorse  
  Una risorsa è un elemento gestito che viene archiviato, ma non elaborato, in un server di report. In genere, una risorsa fornisce contenuto esterno per gli utenti dei report. Esempi di risorsa sono un'immagine in un file con estensione jpg, un file di forma ESRI contenente dati spaziali o un file HTML che descrive le regole business utilizzate in un report. Il file in formato JPG, SHP o HTML viene archiviato nel server di report, che tuttavia lo invia direttamente browser anziché elaborarlo. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) e la sezione "Aggiunta di dati a una mappa" in [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-### Aggiunta e visualizzazione di una risorsa  
+### <a name="adding-and-viewing-a-resource"></a>Aggiunta e visualizzazione di una risorsa  
  Per aggiungere una risorsa a un server di report, caricare o pubblicare un file:  
   
 |Operazione|Tipo di file|  
@@ -140,10 +145,10 @@ caps.handback.revision: 50
   
  Il fatto che una risorsa risulti visibile agli utenti di un report dipende dalle funzionalità del browser in uso. Poiché le risorse non vengono elaborate dal server di report, il browser deve fornire la funzionalità di visualizzazione per eseguire il rendering di un tipo MIME specifico. Se il browser non è in grado di eseguire il rendering del contenuto, gli utenti che visualizzeranno la risorsa ne vedranno esclusivamente le proprietà generali.  
   
-### Sicurezza e gestione di una risorsa  
+### <a name="securing-and-managing-a-resource"></a>Sicurezza e gestione di una risorsa  
  Le risorse sono presenti come elementi denominati nella gerarchia delle cartelle del server di report insieme ai report, alle origini dati condivise, alle pianificazioni condivise e alle cartelle. È possibile ricercare, visualizzare, proteggere impostare proprietà relative alle risorse analogamente a qualsiasi altro elemento presente in un server di report. Per visualizzare o gestire una risorsa, è necessario disporre delle attività Visualizzazione di risorse o Gestione di risorse nella propria assegnazione di ruolo.  
   
-### Riferimento a una risorsa immagine da un report  
+### <a name="referencing-an-image-resource-from-a-report"></a>Riferimento a una risorsa immagine da un report  
  Le risorse possono contenere un'immagine cui si fa riferimento in un report. Se i requisiti del report includono l'utilizzo di immagini esterne, considerare i vantaggi seguenti relativi all'archiviazione di un'immagine come risorsa:  
   
 -   Archiviazione centralizzata nel database del server di report. Se il database del server di report e il relativo contenuto vengono spostati in un altro computer, l'immagine esterna rimane con il report. Non è necessario tenere traccia di file di immagine archiviato su disco in computer diversi.  
@@ -177,7 +182,7 @@ caps.handback.revision: 50
   
  La funzionalità Report personali è facoltativa. Quando si installa un server di report, la funzionalità Report personali è disabilitata per impostazione predefinita. Per altre informazioni sull'abilitazione di questa funzionalità, vedere [Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md). Per altre informazioni, vedere [Proteggere i report personali](../../reporting-services/security/secure-my-reports.md).  
   
-## Attività  
+## <a name="tasks"></a>Attività  
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [Creare, eliminare o modificare una cartella &#40;Gestione report&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Report di Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

@@ -1,30 +1,35 @@
 ---
-title: "Passare un parametro del report in un URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "accesso con URL [Reporting Services], passaggio di parametri"
-  - "passaggio di parametri [Reporting Services]"
+title: Passare un parametro di Report all&quot;interno di un URL | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Passare un parametro del report in un URL
+# <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
   È possibile passare parametri del report a un report includendoli in un URL del report. Questi parametri URL non hanno il prefisso in quanto vengono passati direttamente al motore di elaborazione dei report.  
   
 > [!IMPORTANT]  
->  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
+>  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
 >   
 >  Se non si include la sintassi del proxy, è necessario anteporre al parametro il prefisso *rp:*.  
   
@@ -75,7 +80,7 @@ parameter
 SalesOrderNumber:isnull=true  
 ```  
   
- Per passare un valore **Boolean**, usare 0 per false e 1 per true. Per passare un valore **Float**, includere il separatore decimale corrispondente alle impostazioni locali del server  
+ Per passare un valore **Boolean** , usare 0 per false e 1 per true. Per passare un valore **Float** , includere il separatore decimale corrispondente alle impostazioni locali del server  
   
 > [!NOTE]  
 >  Se il report contiene un parametro del report con un valore predefinito e il valore della proprietà **Prompt** è **false** (ovvero la proprietà Richiesta all'utente non è selezionata in Gestione report), non è possibile passare un valore per tale parametro in un URL. In questo modo, gli amministratori possono impedire agli utenti finali di aggiungere o modificare i valori di determinati parametri dei report.  
@@ -105,7 +110,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
   

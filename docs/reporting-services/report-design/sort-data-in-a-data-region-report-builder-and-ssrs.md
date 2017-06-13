@@ -1,23 +1,28 @@
 ---
-title: "Ordinamento dei dati in un&#39;area dati (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ordinare i dati in un&quot;area dati (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ordinamento dei dati in un&#39;area dati (Generatore report e SSRS)
+# <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
   Per modificare l'ordinamento dei dati in un'area dati quando si esegue un report per la prima volta, è necessario impostare l'espressione di ordinamento nel gruppo o nell'area dati. Per impostazione predefinita, l'espressione di ordinamento per un gruppo viene impostata automaticamente su un valore identico a quello dell'espressione di raggruppamento.  
   
 -   In un'area dati Tablix impostare l'espressione di ordinamento per l'area dati o per ogni gruppo, incluso il gruppo di dettagli. Se in un'area dati Tablix è disponibile un solo gruppo di dettagli, è possibile definire un'espressione di ordinamento nella query, nell'area dati o nel gruppo di dettagli e ottenere lo stesso risultato.  
@@ -33,7 +38,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per ordinare i dati in un'area dati Tablix  
+### <a name="to-sort-data-in-a-tablix-data-region"></a>Per ordinare i dati in un'area dati Tablix  
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse sull'handle di riga, quindi scegliere **Proprietà Tablix**.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 7
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
-    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione **A-Z** consente di disporre l'espressione in ordine crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine decrescente.  
+    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine crescente. L'opzione**Z-A** consente di disporre l'espressione in ordine decrescente.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per ordinare i valori di un gruppo, incluso il gruppo di dettagli, per una Tablix  
+### <a name="to-sort-values-in-a-group-including-the-details-group-for-a-tablix"></a>Per ordinare i valori di un gruppo, incluso il gruppo di dettagli, per una Tablix  
   
 1.  Nell'area di progettazione fare clic nell'area dati Tablix per selezionarla. Nel riquadro di raggruppamento vengono visualizzati i gruppi di righe e di colonne per l'area dati Tablix.  
   
@@ -63,11 +68,11 @@ caps.handback.revision: 7
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
-    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione **A-Z** consente di disporre l'espressione in ordine crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine decrescente.  
+    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine crescente. L'opzione**Z-A** consente di disporre l'espressione in ordine decrescente.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per ordinare le etichette dell'asse X in ordine alfabetico su un grafico  
+### <a name="to-sort-x-axis-labels-in-alphabetical-order-on-a-chart"></a>Per ordinare le etichette dell'asse X in ordine alfabetico su un grafico  
   
 1.  Fare clic con il pulsante destro del mouse su un campo nell'area di rilascio dei campi categoria e scegliere **Proprietà gruppo categorie**.  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 7
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
-    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione **A-Z** consente di disporre l'espressione in ordine alfabetico crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine alfabetico decrescente.  
+    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine alfabetico crescente. L'opzione**Z-A** consente di disporre l'espressione in ordine alfabetico decrescente.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per disporre i punti dati in ordine crescente o decrescente su un grafico  
+### <a name="to-sort-the-data-points-in-ascending-or-descending-order-on-a-chart"></a>Per disporre i punti dati in ordine crescente o decrescente su un grafico  
   
 1.  Fare clic con il pulsante destro del mouse su un campo nell'area di rilascio dei campi categoria e scegliere **Proprietà gruppo categorie**.  
   
@@ -95,19 +100,19 @@ caps.handback.revision: 7
   
     2.  Selezionare l'espressione che corrisponde al campo dati. Nella maggior parte dei casi si tratta di un valore aggregato, ad esempio `=Sum(Fields!Quantity.Value)`.  
   
-    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione **A-Z** consente di disporre l'espressione in ordine crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine decrescente.  
+    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine crescente. L'opzione**Z-A** consente di disporre l'espressione in ordine decrescente.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per disporre i dati in ordine crescente o decrescente per la visualizzazione su un misuratore  
+### <a name="to-sort-data-in-ascending-or-descending-order-for-display-on-a-gauge"></a>Per disporre i dati in ordine crescente o decrescente per la visualizzazione su un misuratore  
   
 1.  Fare clic con il pulsante destro del mouse sul misuratore e scegliere **Aggiungi gruppo di dati**.  
   
-2.  Nella finestra di dialogo **Proprietà gruppo di pannelli del misuratore** fare clic su **Generale**, se necessario.  
+2.  Nella finestra di dialogo **Proprietà gruppo di pannelli del misuratore** fare clic su **Generale** , se necessario.  
   
 3.  In **Espressioni di raggruppamento**fare clic su **Aggiungi**.  
   
-4.  Da **Raggruppa in base a** digitare o selezionare un'espressione in base alla quale raggruppare i dati.  
+4.  Da **Raggruppa in base a**digitare o selezionare un'espressione in base alla quale raggruppare i dati.  
   
 5.  Ripetere i passaggi da 3 a 4 finché non saranno state aggiunte tutte le espressioni di raggruppamento desiderate.  
   
@@ -119,14 +124,14 @@ caps.handback.revision: 7
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
-    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione **A-Z** consente di disporre l'espressione in ordine crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine decrescente.  
+    3.  Nell'elenco a discesa della colonna **Ordine** scegliere la direzione di ordinamento per ogni espressione. L'opzione**A-Z** consente di disporre l'espressione in ordine crescente. L'opzione **Z-A** consente di disporre l'espressione in ordine decrescente.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  Per altre informazioni sul raggruppamenti dei dati in un misuratore, vedere [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-## Vedere anche  
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](http://msdn.microsoft.com/it-it/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+## <a name="see-also"></a>Vedere anche  
+ [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Specificare i colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

@@ -1,85 +1,66 @@
 ---
-title: "Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Creazione di un Report tabella semplice (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Creazione di un report tabella semplice (Generatore report)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
 In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
-## <a name="BackToTop"></a>Lezioni dell'esercitazione  
-In questa esercitazione verranno illustrate le operazioni seguenti:  
-  
-1.  [Creare un report usando una procedura guidata](#CreateTable)  
-  
-    1.  [Specificare una connessione dati in Creazione guidata tabella](#DataConnection)  
-  
-    2.  [Creare una query in Creazione guidata tabella](#Query)  
-  
-    3.  [Organizzare dati in gruppi in Creazione guidata tabella](#Groups)  
-  
-    4.  [Aggiungere le righe Subtotale e Totale in Creazione guidata tabella](#Subtotals)  
-  
-2.  [Formattare i dati come valuta](#FormatCurrency)  
-  
-3.  [Formattare i dati come data](#FormatDate)  
-  
-4.  [Modificare la larghezza delle colonne](#Width)  
-  
-5.  [Aggiungere un titolo al report](#Title)  
-  
-6.  [Salvare il report](#Save)  
-  
-7.  [Esportare il report](#Export)  
-  
+
 Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Creare un report usando una procedura guidata  
 Creare un report di tabella con la Creazione guidata tabella o matrice. Sono disponibili due modalità: progettazione report e progettazione del set di dati condivisa. Nella modalità progettazione report si specificano i dati nel riquadro dei dati del report e il layout del report nell'area di progettazione. Nella modalità progettazione del set di dati condivisa, si creano query del set di dati da condividere con altri. In questa esercitazione si utilizzerà modalità progettazione report.  
   
-### Per creare un report  
+### <a name="to-create-a-report"></a>Per creare un report  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Viene visualizzata la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
 3.  Nel riquadro di destra selezionare **Creazione guidata tabella o matrice**.  
   
 ## <a name="DataConnection"></a>1a. Specificare una connessione dati in Creazione guidata tabella  
-Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In genere, le informazioni di connessione e il tipo di credenziali da utilizzare vengono fornite dal proprietario dell'origine dati. Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report.  
+Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In genere, le informazioni di connessione e il tipo di credenziali da utilizzare vengono fornite dal proprietario dell'origine dati. Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report.  
   
 In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-### Per creare un'origine dati incorporata  
+### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
-1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati**.  
+1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
-3.  In **Nome** digitare **Vendite prodotto** come nome per l'origine dati.  
+3.  In **Nome**digitare **Vendite prodotto** come nome per l'origine dati.  
   
 4.  In **Seleziona il tipo di connessione** verificare che sia selezionato **Microsoft SQL Server**.  
   
@@ -109,7 +90,7 @@ In un report, è possibile usare un set di dati condiviso che dispone di una que
 > [!NOTE]  
 > Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
   
-### Per creare una query  
+### <a name="to-create-a-query"></a>Per creare una query  
   
 1.  Nella pagina **Progetta query** viene aperta la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
   
@@ -162,7 +143,7 @@ In un report, è possibile usare un set di dati condiviso che dispone di una que
 ## <a name="Groups"></a>1c. Organizzare dati in gruppi in Creazione guidata tabella  
 Quando si selezionano dei campi da raggruppare, si progetta una tabella con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
   
-### Per organizzare i dati in gruppi  
+### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
   
 1.  Nella pagina **Disponi campi** trascinare Product in **Valori**.  
   
@@ -189,9 +170,9 @@ Quando si selezionano dei campi da raggruppare, si progetta una tabella con righ
 ## <a name="Subtotals"></a>1d. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
 Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare valori di aggregazione per i campi. È possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
-### Per aggiungere subtotali e totali  
+### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
   
-1.  Nella pagina **Scegliere il layout**, sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
 2.  Verificare che l'opzione **Bloccato, subtotale sotto** sia selezionata.  
   
@@ -216,13 +197,13 @@ La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 col
 ## <a name="FormatCurrency"></a>2. Formattare i dati come valuta  
 Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta.   
   
-### Per formattare un campo di tipo valuta  
+### <a name="to-format-a-currency-field"></a>Per formattare un campo di tipo valuta  
   
 1.  Per visualizzare le caselle di testo formattato e testo segnaposto come valori di esempio in Visualizzazione progettazione, nel gruppo **Numero** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
   
 2.   Fare clic sulla cella nella seconda riga (sotto la riga delle intestazioni di colonna) della colonna Sales e trascinare verso il basso per selezionare tutte le celle che contengono `[Sum(Sales)]`.  
   
-3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
+3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
     Se la lingua delle impostazioni locali è Inglese - Stati Uniti, il testo di esempio predefinito corrisponderà a [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
   
@@ -233,7 +214,7 @@ I valori di riepilogo per Sales vengono visualizzati come valuta.
 ## <a name="FormatDate"></a>3. Formattare i dati come data  
 Per impostazione predefinita, nel campo SalesDate vengono visualizzate sia la data che l'ora. È possibile formattare tale campo in modo da visualizzare solo la data.  
   
-### Per formattare un campo relativo alla data utilizzando il formato predefinito  
+### <a name="to-format-a-date-field-as-the-default-format"></a>Per formattare un campo relativo alla data utilizzando il formato predefinito  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -247,7 +228,7 @@ Per impostazione predefinita, nel campo SalesDate vengono visualizzate sia la da
   
 I valori SalesDate vengono visualizzati nel formato di data predefinito.  
   
-### Per modificare il formato della data in un formato personalizzato  
+### <a name="to-change-the-date-format-to-a-custom-format"></a>Per modificare il formato della data in un formato personalizzato  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -255,9 +236,9 @@ I valori SalesDate vengono visualizzati nel formato di data predefinito.
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sulla freccia nell'angolo inferiore destro per aprire la finestra di dialogo.  
   
-    Viene aperta la finestra di dialogo **Proprietà casella di testo**.  
+    Viene aperta la finestra di dialogo **Proprietà casella di testo** .  
   
-4.  Nel riquadro Categoria verificare che sia selezionata l'opzione **Data**.  
+4.  Nel riquadro Categoria verificare che sia selezionata l'opzione **Data** .  
   
 5.  Nel riquadro **Tipo** selezionare **31 gennaio 2000**.  
   
@@ -274,7 +255,7 @@ Per impostazione predefinita, in ogni cella della tabella è contenuta una casel
   
 Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larghezza della colonna per adattare su un'unica riga il contenuto previsto delle caselle di testo nella colonna.  
   
-### Per modificare la larghezza delle colonne della tabella  
+### <a name="to-change-the-width-of-table-columns"></a>Per modificare la larghezza delle colonne della tabella  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -291,13 +272,13 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Per aggiungere il titolo di un report  
+### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
   
 2.  Digitare **Vendite prodotto**, quindi fare clic all'esterno della casella di testo.  
   
-3.  Fare clic con il pulsante destro del mouse sulla casella di testo che contiene **Vendite prodotto**, quindi fare clic su **Proprietà casella di testo**.  
+3.  Fare clic con il pulsante destro del mouse sulla casella di testo che contiene **Vendite prodotto** , quindi fare clic su **Proprietà casella di testo**.  
   
 4.  Nella finestra di dialogo **Proprietà casella di testo** fare clic su **Carattere**.  
   
@@ -310,9 +291,9 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>6. Salvare il report  
-Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ad esempio le parti del report e i sottoreport.  
+Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
-### Per salvare il report in un server di report  
+### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
 1.  Fare clic su **File** > **Salva con nome**.  
   
@@ -322,19 +303,19 @@ Salvare il report in un server di report o nel computer. Se il report non viene 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome** sostituire **Senza titolo** con **Vendite prodotto**.  
+4.  In **Nome**sostituire **Senza titolo** con **Vendite prodotto**.  
   
 5.  Fare clic su **Salva**.  
   
 Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
-### Per salvare il report nel computer  
+### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
 1.  Fare clic su **File** > **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti** o **Risorse del computer** e selezionare la cartella in cui si vuole salvare il report.  
+2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
   
-3.  In **Nome** sostituire **Senza titolo** con **Vendite prodotto**.  
+3.  In **Nome**sostituire **Senza titolo** con **Vendite prodotto**.  
   
 4.  Fare clic su **Salva**.  
   
@@ -343,7 +324,7 @@ I report possono essere esportati in formati differenti, ad esempio come file Mi
   
 In questa esercitazione, si esporterà il report in Excel e si imposterà una proprietà nel report per fornire un nome personalizzato per la scheda della cartella di lavoro.  
   
-### Per specificare il nome della scheda della cartella di lavoro  
+### <a name="to-specify-the-workbook-tab-name"></a>Per specificare il nome della scheda della cartella di lavoro  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -355,7 +336,7 @@ In questa esercitazione, si esporterà il report in Excel e si imposterà una pr
     > Se il riquadro Proprietà non è visualizzato, selezionare **Proprietà** nella scheda **Visualizza**.  
     > Se una proprietà non appare nel riquadro Proprietà, provare a selezionare il pulsante **Alfabetico** nella parte superiore del riquadro per ordinare alfabeticamente tutte le proprietà.   
   
-### Per esportare un report in Excel  
+### <a name="to-export-a-report-to-excel"></a>Per esportare un report in Excel  
   
 1.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -371,16 +352,18 @@ In questa esercitazione, si esporterà il report in Excel e si imposterà una pr
   
 6.  Fare clic su **Salva**.  
   
-### Per visualizzare il report in Excel  
+### <a name="to-view-the-report-in-excel"></a>Per visualizzare il report in Excel  
   
 1.  Aprire la cartella in cui si salva la cartella di lavoro e fare doppio clic su **Product_Sales_Excel.xlsx**.  
   
 2.  Verificare che il nome della scheda della cartella di lavoro sia **Vendite prodotto Excel**.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 La procedura dettagliata per la creazione di un report tabella semplice è terminata. Per altre informazioni sulle tabelle, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

@@ -1,23 +1,28 @@
 ---
-title: "Tipi di rendering (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tipi di rendering (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tipi di rendering (Generatore report e SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>Tipi di rendering (Generatore report e SSRS)
   A seconda del renderer selezionato, vengono applicate regole specifiche al corpo del report e al relativo contenuto durante il rendering di un report. La disposizione degli elementi del report in una pagina dipende dalla combinazione dei seguenti fattori:  
   
 -   Regole di rendering.  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Comportamenti generali per HTML, MHTML, Word e Excel (renderer di interruzioni di pagina automatiche)  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>Comportamenti generali per HTML, MHTML, Word e Excel (renderer di interruzioni di pagina automatiche)  
  I report esportati utilizzando i formati HTML e MHTML sono ottimizzati per la visualizzazione sullo schermo di un computer di pagine di lunghezze diverse. Le interruzioni di pagina vengono inserite verticalmente solo in punti approssimativi all'interno del corpo del report. Tali punti approssimativi dipendono dall'impostazione relativa all'altezza interattiva nel riquadro Proprietà. Si supponga ad esempio che l'altezza interattiva sia impostata su 12 centimetri. Quando si esegue il rendering del report, l'altezza della pagina corrisponderà a 12 centimetri. In Word ed Excel l'impaginazione è basata su interruzioni di pagina logiche, pertanto l'impostazione relativa all'altezza interattiva viene ignorata.  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   I margini di pagina non vengono applicati.  
   
-## Comportamenti generali per i formati PDF, immagine e stampa (renderer di interruzioni di pagina manuali)  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>Comportamenti generali per i formati PDF, immagine e stampa (renderer di interruzioni di pagina manuali)  
  I report esportati utilizzando i formati PDF e immagine sono ottimizzati per la stampa o la visualizzazione di documenti formattati come libri in cui le dimensioni delle pagine sono uniformi. Le interruzioni di pagina vengono inserite verticalmente e orizzontalmente in punti specifici all'interno del corpo del report. Tali punti specifici dipendono dalle impostazioni relative alla larghezza e all'altezza della pagina.  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  L'impostazione relativa alla larghezza interattiva non viene utilizzata nei renderer di interruzioni di pagina manuali.  
   
-## Spaziatura minima tra gli elementi del report  
+## <a name="minimum-spacing-between-report-items"></a>Spaziatura minima tra gli elementi del report  
  Gli elementi del report si espandono all'interno del corpo del report per consentire l'inserimento del relativo contenuto. Durante il rendering del report un'area dati della matrice, ad esempio, si espande in genere in larghezza e in lunghezza nella pagina e l'altezza di una casella di testo viene regolata in base ai dati restituiti da un'espressione.  
   
  I renderer mantengono lo spazio minimo tra gli elementi del report definiti nel layout del report. Quando si posiziona un elemento del report accanto a un altro nel layout del report, la distanza tra gli elementi diventa la distanza minima da mantenere quando le dimensioni del report aumentano in orizzontale o in verticale. Se ad esempio si aggiunge un'area dati della matrice a un report e quindi si aggiunge un rettangolo da 0,06 centimetri a destra della matrice, tale spazio verrà mantenuto anche in caso di aumento delle dimensioni della matrice. Ogni elemento si sposta verso destra in modo da mantenere la distanza minima dagli elementi che terminano alla sua sinistra.  
   
-## Intestazioni di pagina e piè di pagina  
+## <a name="page-headers-and-footers"></a>Intestazioni di pagina e piè di pagina  
  Le intestazioni e i piè di pagina appaiono nella parte superiore e inferiore di ogni pagina di cui viene eseguito il rendering. È possibile formattare l'intestazione e il piè di pagina in modo da includere un colore, uno stile e una larghezza per il bordo. È inoltre possibile aggiungere un colore o un'immagine di sfondo. A seconda del formato scelto, viene eseguito il rendering di tutte queste opzioni di formattazione.  
   
  Alle intestazioni e ai piè di pagina di cui viene eseguito il rendering in formato HTML o MHTML si applicano le seguenti regole:  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   Il rendering di intestazioni e piè di pagina definiti nel file RDL originale non viene eseguito quando il rendering del report viene eseguito come sottoreport.  
   
-## Interruzioni di pagina logiche  
+## <a name="logical-page-breaks"></a>Interruzioni di pagina logiche  
  Le interruzioni di pagina logiche sono interruzioni di pagina inserite prima o dopo elementi del report o gruppi. Consentono di adattare i contenuti alle pagine dei report in modo da ottenere una visualizzazione ottimale quando si esegue l'esportazione o il rendering del report.  
   
  Per il rendering delle interruzioni di pagina logiche si applicano le seguenti regole:  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   Le interruzioni di pagina logiche definite su elementi contenuti in celle di tabella o matrice non vengono mantenute. Questo comportamento non viene applicato agli elementi negli elenchi.  
   
-## Vedere anche  
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

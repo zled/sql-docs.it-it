@@ -1,30 +1,35 @@
 ---
-title: "Impostare le autorizzazioni per le operazioni del server di report in un&#39;applicazione Web di SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazioni [Reporting Services], modalità integrata SharePoint"
-  - "integrazione SharePoint [Reporting Services], autorizzazioni"
-  - "integrazione SharePoint [Generatore report]"
-  - "sicurezza [Reporting Services], modalità integrata SharePoint"
-  - "Report Builder 1.0, integrazione con SharePoint"
-  - "sicurezza di un elemento del modello [Reporting Services]"
+title: Impostare le autorizzazioni per operazioni del Server di Report in un&quot;applicazione Web di SharePoint | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Impostare le autorizzazioni per le operazioni del server di report in un&#39;applicazione Web di SharePoint
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
   Per un server di report eseguito in modalità integrata SharePoint, le impostazioni di sicurezza definite nel sito di SharePoint determinano le modalità di visualizzazione e gestione di report, modelli di report e origini dei dati condivise. Se si usano le assegnazioni di autorizzazioni, i livelli di autorizzazione e i gruppi di SharePoint predefiniti, sarà possibile usare i report e gli altri documenti tramite le impostazioni di sicurezza correnti.  
   
  Se le impostazioni di sicurezza predefinite non garantiscono il livello di accesso desiderato, sarà possibile usare le informazioni fornite nelle sezioni seguenti per identificare le autorizzazioni necessarie per operazioni specifiche.  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  Se si usano i livelli di autorizzazione predefiniti, non è necessario alcun intervento perché le autorizzazioni indicate in precedenza sono già incluse nei ruoli Controllo completo, Progettazione, Collaborazione, Lettura e Accesso limitato. Tuttavia, queste autorizzazioni devono essere aggiunte manualmente se si usano livelli di autorizzazione personalizzati o si modificano le autorizzazioni assegnate a un particolare utente o gruppo.  
   
- L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Nel caso delle operazioni di visualizzazione, l'errore è il seguente: "Server report: errore di SharePoint. ---> System.UnauthorizedAccessException: Accesso negato." Per le operazioni di pubblicazione, l'errore è: "Le autorizzazioni concesse all'utente '\<utente>\\<di dominio\>' non sono sufficienti per eseguire questa operazione".  
+ L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Nel caso delle operazioni di visualizzazione, l'errore è il seguente: "Server report: errore di SharePoint. ---> System.UnauthorizedAccessException: Accesso negato." Per le operazioni di pubblicazione, l'errore è: "le autorizzazioni concesse all'utente '\<dominio >\\< utente\>' non sono sufficienti per eseguire questa operazione."  
   
 ##  <a name="permissionReports"></a> Autorizzazioni per la visualizzazione e la gestione dei report  
  Le autorizzazioni relative alle definizioni dei report sono specificate tramite le autorizzazioni Elenco per la raccolta che contiene il report ma, se si desidera limitare l'accesso, è possibile impostare autorizzazioni per i singoli report. Nella tabella seguente è riportato un elenco di attività, indicando per ognuna le autorizzazioni che la supportano.  
@@ -84,9 +89,9 @@ caps.handback.revision: 17
 |Avvio di Generatore report.|Non esistono autorizzazioni che consentono di controllare esplicitamente l'accesso per l'utilizzo di Generatore report. Generatore report è disponibile se è configurata l'integrazione del server di report e si dispone delle autorizzazioni necessarie per aggiungere elementi a una raccolta. Per avviare Generatore report dal menu **Nuovo** della raccolta, è necessario registrare il tipo di contenuto di Generatore report. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Caricamento di un modello o di un'origine dati condivisa.|Autorizzazione**Aggiunta elementi** per la raccolta a cui si desidera aggiungere i file.|  
 |Visualizzazione di un modello o di un'origine dati condivisa.|Autorizzazione**Visualizzazione elementi** per la raccolta che contiene i file.<br /><br /> Se il modello contiene impostazioni di sicurezza degli elementi del modello, l'utente deve inoltre disporre dell'autorizzazione **Enumerazione autorizzazioni** per il modello di report.|  
-|Generazione di un modello da un'origine dati condivisa.|Autorizzazione **Aggiunta elementi** per la raccolta che contiene il file dell'origine dati condivisa (con estensione rsds) da cui si desidera generare il modello.|  
-|Impostazione di autorizzazioni nell'ambito di un modello per specifici elementi del modello.|Autorizzazione **Gestione autorizzazioni** per il sito che contiene la raccolta e il file del modello di report (con estensione smdl).|  
-|Caricamento di un modello in Generatore report.|Autorizzazione **Modifica elementi** per il file del modello di report (con estensione smdl).|  
+|Generazione di un modello da un'origine dati condivisa.|Autorizzazione**Aggiunta elementi** per la raccolta che contiene il file dell'origine dati condivisa (con estensione rsds) da cui si desidera generare il modello.|  
+|Impostazione di autorizzazioni nell'ambito di un modello per specifici elementi del modello.|Autorizzazione**Gestione autorizzazioni** per il sito che contiene la raccolta e il file del modello di report (con estensione smdl).|  
+|Caricamento di un modello in Generatore report.|Autorizzazione**Modifica elementi** per il file del modello di report (con estensione smdl).|  
 |Creazione di una definizione di report in Generatore report e salvataggio di un report in una raccolta.|Autorizzazione**Aggiunta elementi** per il salvataggio del file in una raccolta.|  
 |Modifica di un report in Generatore report.|Autorizzazione**Modifica elementi** per il file della definizione del report.|  
   
@@ -126,12 +131,12 @@ caps.handback.revision: 17
 |Utilizzo di un'origine dati condivisa (file con estensione rsds) con un report.|Autorizzazione**Modifica elementi** per il report o per la raccolta che contiene il report. La selezione di un'origine dati condivisa fa parte dell'impostazione delle proprietà di un'origine dati per un report.|  
 |Generazione di un modello di report da un'origine dati condivisa.|Autorizzazione**Aggiunta elementi** per la raccolta che contiene il modello di report.|  
 |Eliminazione di un modello di report.|Autorizzazione**Eliminazione elementi** per la raccolta che contiene il modello di report o per il modello di report stesso.|  
-|Impostazione di autorizzazioni nell'ambito di un modello per specifici elementi del modello.|Autorizzazione **Gestione autorizzazioni** per il sito che contiene la raccolta e il file del modello di report (con estensione smdl).|  
+|Impostazione di autorizzazioni nell'ambito di un modello per specifici elementi del modello.|Autorizzazione**Gestione autorizzazioni** per il sito che contiene la raccolta e il file del modello di report (con estensione smdl).|  
   
 > [!NOTE]  
 >  Non sono disponibili autorizzazioni per la modifica dei modelli di report. Sebbene sia possibile generare o eliminare modelli di report, non è possibile modificarli da un sito di SharePoint. Per modificare modelli di report è necessario Progettazione modelli, uno strumento client di creazione indipendente dalle autorizzazioni impostate in SharePoint.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

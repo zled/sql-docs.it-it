@@ -15,13 +15,200 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2144751277bb10897e0ed39ee24dbad8a32b4ce
+ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
+ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+
+## <a name="ssms-171-release"></a>Versione di SQL Server Management Studio 17,1
+In genere disponibili | Numero di build: 14.0.17119.0
+
+### <a name="enhancements"></a>Miglioramenti
+
+- Profiler: Guida > informazioni su Visualizza ora il numero di versione di rilascio (ad esempio, 17.1)
+- Gli utenti del servizio è possono aggiornare le credenziali per le origini dati per 1200 Analysis modelli TM e versioni successive dal menu di scelta rapida nell'origine dati
+- SSIS incorporata report ora Mostra log dall'esecuzione di scalabilità orizzontale SSIS CTP 2.1
+- Applicazione di gestione di scalabilità orizzontale di SSIS
+  - Consente di visualizzare le informazioni di base master di scalabilità orizzontale.
+  - Consente di aggiungere facilmente un thread di lavoro per la distribuzione con scalabilità orizzontale.
+  - Visualizzare tutti i processi di lavoro di scalabilità orizzontale e informazioni di base e può anche abilitarle o disabilitarle facilmente.
+
+### <a name="bug-fixes"></a>Correzioni di bug
+- Always On:
+  - Risolto un problema in cui le proprietà di una Replica di disponibilità è stata sempre visualizzato come "failover automatico" per estensivi WSFC.
+  - Risolto un problema in cui è stato sovrascritto l'elenco di routing di sola lettura quando si aggiorna il gruppo di disponibilità
+- Always Encrypted: risolto un problema di file di log generato mancante in cui le informazioni generate da DacFx.
+- ShowPlan: correzione problema in cui l'interfaccia utente è stata sempre con l'attributo di tipo di join effettivo per gli operatori di join non adattivo.
+- Programma di installazione:
+  - Risolto un problema in SSMS 17,0 stato interruzione SSDT Visual Studio 2013 [connettersi elemento 3133479]
+  - Risolto un problema in cui facendo clic su "Riavvia" alla fine del programma di installazione è stata non riavviare il computer
+- Script: temporaneamente impediscono SSMS eliminazione accidentale di oggetti di database di Azure durante il tentativo di script per l'eliminazione disabilitando tale opzione.  Correzione corretto sarà in una versione futura di SQL Server Management Studio.
+- Esplora oggetti: risolto un problema in cui il nodo "Database" non è stata espansa quando si è connessi a un database di Azure creato tramite "Copia AS"
+
+## <a name="ssms-170-release"></a>Versione di SQL Server Management Studio 17,0
+In genere disponibili | Numero di build: 14.0.17099.0
+
+### <a name="enhancements"></a>Miglioramenti 
+
+- Pacchetto di aggiornamento e di Windows Software Update Services (WSUS) 
+    - Nelle versioni future 17.X includono un pacchetto di aggiornamento cumulativo più piccolo 
+  - Anche il pacchetto di aggiornamento verrà pubblicato nel catalogo WSUS  
+- Aggiornamenti delle icone
+    - Le icone sono state aggiornate per essere compatibili con le icone di VS Shell fornito e supportare risoluzioni valori DPI alti
+    - Nuove icone di SSMS e del programma Profiler per distinguere le versioni 16.X e 17.X
+- Modulo SQL PowerShell
+  - Modulo PowerShell per SQL Server rimossi da SQL Server Management Studio ed è ora inclusa tramite la raccolta di PowerShell (PowerShell 5.0 ora richiesto per supportare il controllo delle versioni modulo)
+  - Vari miglioramenti alla "presentazione" (formattazione) di alcuni oggetti SMO (database di esempio mostrano ora le dimensioni e lo spazio disponibile e tabelle Mostra riga conteggio e utilizzo dello spazio)
+  - Colorazione aggiuntiva quando il prompt dei comandi di PowerShell viene richiamato dal menu "Avvia PowerShell" in OE
+  - Sono stati aggiunti i parametri -ClusterType e -RequiredCopiesToCommit ai cmdlet di Gruppi di disponibilità (cmdlet New-SqlAvailabilityGroup, Join-SqlAvailabilityGroup e Set-SqlAvailabilityGroup)
+  - Sono stati aggiunti i parametri -ActiveDirectoryAuthority e -AzureKeyVaultResourceId al cmdlet Add-SqlAzureAuthenticationContext
+  - Revoke-SqlAvailabilityGroupCreateAnyDatabase aggiunto, Grant SqlAvailabilityGroupCreateAnyDatabase e il cmdlet Set-SqlAvailabilityReplicaRoleToSecondary
+  - Parametro - SeedingMode aggiunto ai cmdlet Set-SqlAvailabilityReplica e New-SqlAvailabilityReplica
+  - Parametro - ConnectionString aggiunto a Get-SqlDatabase
+- SQL Server in Linux
+    - Miglioramenti generali e correzioni per il log shipping
+  - Aggiunta del supporto per i percorsi di Linux native collega, Backup e ripristino del database
+  - Aggiunta del supporto per i percorsi di Linux nativi per la cartella di destinazione di log di controllo
+- Analysis Services
+  - Finestra di Query DAX:
+    - Parentesi corrispondenti nell'editor
+    - Supportano la sintassi di definire misure e definire VAR
+    - Diversi miglioramenti di Intellisense
+  - Autenticazione universale
+    - Consente agli utenti di specificare che un nome utente e nessuna password e la finestra di dialogo account di accesso di Azure gestirà la connessione
+  - Integrazione di SQL Server Management Studio PQ: 
+    - Creazione di script del funzionamento di origini dati strutturati 
+    - Visualizzazione e modifica di origini dati strutturati nell'interfaccia utente PQ
+- Nuovo modello "Aggiungi vincolo univoco"
+- Showplan
+    - Viene visualizzato il valore massimo anziché la somma per i thread nella finestra delle proprietà per il tempo trascorso
+    - Vengono esposte nuove proprietà per gli operatori che richiedono la concessione di memoria
+    - È stato abilitato il pulsante "Modifica query" in Statistiche query dinamiche
+    - È stato incluso il supporto per l'esecuzione interleaved
+  - Nuova opzione "Analisi di piano di esecuzione effettivo"
+  - Miglioramenti generali per il confronto di showplan
+  - Sono state introdotte funzionalità nella funzionalità di confronto dello Showplan per trovare differenze significative la stima della cardinalità tra i nodi corrispondenti dei due piani di query ed eseguire analisi di base delle possibili cause principali
+- È stato rimosso Configuration Manager dalla finestra di esplorazione dei server registrati
+- È stata abilitata la lettura dei log di controllo dal BLOB del servizio di archiviazione di Azure
+- È stata aggiunta la parametrizzazione per Always Encrypted. Per altre informazioni, vedere [questa pagina](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) 
+- La connessione con autenticazione universale di AAD al database SQL di Azure supporta un ID tenant personalizzato 
+- Quando si generano script per il database SQL di Azure, negli script vengono ora inclusi full-text, regole e database
+- Correzioni della personalizzazione nelle schermate iniziali per SSMS e Profiler
+- Rimozione dell'interfaccia utente per il punto di controllo dell'utilità da SSMS
+- SQL Server Management Studio ora è possibile creare i database di SQL Azure edition "PremiumRS"
+- Gruppi di disponibilità AlwaysOn
+  - Aggiungere il supporto per i nuovi tipi di cluster: esterno e nessuno
+    - Aggiungere il supporto per SQL Server in Linux
+    - Aggiungere il seeding automatico come un'opzione per la sincronizzazione dati iniziale
+    - Fissa alcuni difetti, ad esempio, URL dell'endpoint di gestione, aggiornamento di database e il layout dell'interfaccia utente
+    - Replica di Azure rimosso funzionalità correlate
+  - IntelliSense migliorato per diverse parole chiave di gruppo di disponibilità
+- Monitoraggio attività
+  - Aggiunta nuovo riquadro "Monitoraggio delle attività" nella finestra di Output di SQL Server Management Studio
+  - Messaggio di errore di timeout di connessione da registrare informazioni di output finestra invece di un messaggio popup modificato
+  - Rimosso vuoto del grafico (grafico a 5) nella sezione Panoramica
+  - Aggiunto "(in pausa)" al titolo Panoramica se la raccolta di dati di Monitoraggio attività è in pausa
+  - Estensioni Graph alle tabelle di SQL Server - nuove icone per le tabelle di nodo e bordo grafico - grafico nodo e bordo verranno visualizzate nella cartella tabelle grafico: grafico dei modelli per creare le tabelle di nodo e bordo disponibili
+- Modalità presentazione
+    - Tre nuove attività disponibili tramite Avvio veloce (CTRL-Q)
+    - PresentOn: attiva la modalità presentazione
+    - PresentEdit: modifica la dimensione del tipo di carattere per la modalità presentazione.  "Tipo di carattere Editor di testo" per Editor di query.  "Tipo di carattere ambiente" per altri componenti.
+    - RestoreDefaultFonts: ripristina le impostazioni predefinite.
+    - *Nota: non è attualmente disponibile un comando PresentOff.  Per disattivare la modalità presentazione è possibile usare l'opzione RestoreDefaultFonts*
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+- Risolto un problema in SQL Server Management Studio arrestata in modo anomalo quando lo scorrimento showplan tramite touchpad surfacebook
+- Risolto un problema in SQL Server Management Studio si blocca per un valore long volte durante il recupero delle proprietà di un database viene ripristinato o non in linea 
+- Risolto un problema in cui "Visualizzatore della Guida" non è possibile aprire le compilazioni RC
+- Risolto un problema in cui gli elementi "Manutenzione prevede le attività della casella degli strumenti" potrebbero essere mancanti in SQL Server Management Studio.
+- Risolto un problema in SQL Server Management Studio in cui l'utente non è riuscito compattare un database quando il nome del database contenuti parentesi graffe. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
+- Risolto un problema in SQL Server Management Studio tentava di script per l'eliminazione di un Azure database effettivamente causa l'eliminazione del database stesso. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- È stato risolto un problema a causa del quale i valori predefiniti non venivano inseriti negli script per i tipi di tabella definiti dagli utenti. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
+- È stata introdotta un'altra serie di miglioramenti delle prestazioni nel menu di scelta rapida degli indici. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
+- È stato risolto un problema che provocava un eccessivo sfarfallio durante il passaggio del mouse su un indice mancante nel piano di esecuzione. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
+- È stato risolto un problema per cui SSMS impostava il database offline durante lo scripting [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
+- Sono state apportate varie correzioni all'interfaccia utente delle versioni localizzate (non in lingua inglese) di SSMS.
+- È stato risolto un problema a causa del quale mancava il nodo "Chiavi Always Encrypted" quando la destinazione era SQL 2016 SP1 Standard Edition.
+- Always Encrypted
+    - Il menu "Always Encrypted" veniva erroneamente abilitato quando la destinazione era SQL 2016 RTM Standard Edition o un server SQL 2014 (o versioni precedenti)
+    - È stato risolto un problema per cui IntelliSense segnalava un errore quando veniva usata la sintassi CREATE o ALTER
+    - È stato risolto un problema a causa del quale la crittografia non riusciva quando CMK/CEK conteneva caratteri che avrebbero dovuto essere usati con caratteri di escape, ad esempio racchiusi tra parentesi
+    - Quando viene generata un'eccezione di memoria insufficiente in SSMS, viene visualizzato un errore che suggerisce all'utente di usare PowerShell nativo (64 bit).
+    - È stato risolto un problema a causa del quale la procedura guidata di Always Encrypted aveva esito negativo se venivano usate sottoscrizioni di Resource Group Manager anziché sottoscrizioni di Azure classico
+    - È stato risolto un problema a causa del quale la procedura guidata di Always Encrypted visualizzava un errore non corretto se l'utente non aveva autorizzazioni o Azure Key Vault in nessuna sottoscrizione.
+    - È stato risolto un problema nella procedura guidata di Always Encrypted per cui la pagina di accesso ad Azure Key Vault non visualizzava le sottoscrizioni di Azure in presenza di più AAD
+    - È stato risolto un problema nella procedura guidata di Always Encrypted per cui la pagina di accesso ad Azure Key Vault non visualizzava le sottoscrizioni di Azure per le quali l'utente disponeva dell'autorizzazione di lettura
+  - Risolto un problema in cui i file di risorse non possono essere caricati correttamente, la conseguenza che nei messaggi di errore non accurati
+- È stato migliorato il contrasto dei collegamenti ipertestuali nella pagina di installazione di SSMS
+- È stato risolto un problema a causa del quale i nodi Polybase non venivano visualizzati se connessi a SQL Server Express (2016 SP1)
+- Risolto un problema in cui è in grado di modificare il livello di compatibilità di un database di Azure per v140 SQL Server Management Studio
+- Sono state migliorate le prestazioni di Esplora oggetti durante l'espansione dell'elenco dei database di Azure [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
+- È stato risolto un problema a causa del quale la voce del menu di scelta rapida "Visualizza log di SQL Server" non veniva visualizzata correttamente per i tipi di server non relazionali (AS\RS\IS) 
+- È stato risolto un problema a causa del quale il controllo della sintassi di una query di partizione di Analysis Services con autenticazione SQL poteva restituire un messaggio di accesso non riuscito
+- È stato risolto un problema per cui la ridenominazione di un modello tabulare AS di anteprima con livello di compatibilità 1400 non poteva essere eseguita in SSMS
+- È stato risolto un problema di tipo "operazione non riuscita nel modello" che può verificarsi in rare circostanze dopo che si è provato a eseguire un'operazione non valida nel server AS, ripristinando le modifiche locali dopo un salvataggio non riuscito nel modello
+- È stato risolto un errore di digitazione nella finestra di dialogo popup di sincronizzazione del database in Analysis Services
+- Le finestre di dialogo del contenitore di backup/ripristino vengono visualizzate fuori schermo in più configurazioni di monitor. 
+- La creazione di criteri di sicurezza ha esito negativo se l'oggetto di destinazione include ] nel nome.
+- Il menu "Apri recenti" di SSMS 2016 non mostra i file salvati di recente. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+- Rimossa la reimpostazione delle impostazioni utente quando viene aggiornata la shell di Visual Studio.
+- Risolto un problema che impediva l'utente la possibilità di modificare il livello di compatibilità di un database in SQL Server 2017.
+- Le finestre di query che usano l'autenticazione universale di AAD non possono aggiornare la query dopo un'ora.
+- Rimozione dell'interfaccia utente per il punto di controllo dell'utilità da SSMS.
+- Le connessioni con autenticazione universale di AD non consentono di eseguire query sui dati dopo la scadenza del token iniziale.
+- Non è possibile creare script per le regole dal database di SQL Azure al database di SQL Azure.
+- Risolto un problema a causa del quale SQL PowerShell non consentiva la connessione a istanze SQL legacy (2014 e precedenti). [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- Risolto un problema che causava l'arresto anomalo di SSMS in caso di errori durante l'importazione dei server registrati.
+- Risolto un problema che causava l'arresto anomalo di SSMS in presenza di un utente con particolari autorizzazioni per un database. 
+- Le tabelle di SSMS scompaiono dall'area di progettazione durante la revisione delle viste. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- La barra di scorrimento della tabella non consente all'utente di scorrere il contenuto della tabella ed è possibile usare solo le frecce su/giù a questo scopo. È anche possibile scorrere il contenuto della tabella dopo il tentativo di scorrerla con la barra di scorrimento, e questo è un bug. [Argomento Connect](
+http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+- Le icone dei server registrati non vengono visualizzate dopo l'aggiornamento del nodo radice.
+- Il pulsante Script per Crea database nei server v12 di Azure esegue lo script e quindi visualizza il messaggio "Nessuna azione per cui generare uno script".
+- La finestra di dialogo Connetti al server di SSMS non cancella la scheda "Proprietà aggiuntive" per ogni nuova connessione.
+- Lo script per generare attività non genera script CREATE DATABASE per un database SQL di Azure.
+- La barra di scorrimento in Progettazione viste è disabilitata.
+- I percorsi delle chiavi AVK di Always Encrypted non includono gli ID di versione.
+- È stato ridotto il numero di query dell'edizione del motore nella finestra di query. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
+- Gli errori di Always Encrypted derivanti dall'aggiornamento dei moduli dopo la crittografia non vengono gestiti in modo corretto.
+- Modificato il timeout di connessione predefinito per OLTP e OLAP da 15 a 30 secondi per risolvere una serie di errori di connessione ignorati. 
+- Risolto un arresto anomalo in SSMS all'avvio di un report personalizzato. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
+- Risolto un problema a causa del quale "Genera script..." ha esito negativo per i database SQL di Azure.
+- Correzione di "Script come" e della procedura guidata "Genera script" per evitare l'aggiunta di nuove righe superflue durante la creazione di script per oggetti, come le stored procedure. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
+- Provider PowerShell SQLAS: aggiunta della proprietà LastProcessed alle cartelle Dimension e MeasureGroup. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
+- Statistiche query dinamiche: risolto un problema a causa del quale veniva visualizzata solo la prima query in un batch. [Elemento connettersi] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Showplan: visualizzazione del massimo invece della somma per i thread nella finestra delle proprietà.
+- Archivio query: aggiunta di un nuovo report per le query con variazioni di esecuzione notevoli.
+- Problemi di prestazioni di Esplora oggetti: [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
+    - Il menu di scelta rapida per le tabelle si blocca momentaneamente
+    - SSMS è lento quando si fa clic con il pulsante destro del mouse su un indice per una tabella (tramite una connessione Internet remota). 
+    - Evitare di eseguire query di tabella che eseguono ordinamenti nel server
+- Rimozione della distribuzione guidata in Azure (Distribuisci database in una macchina virtuale Azure) da SSMS
+- Risolto un problema a causa del quale gli indici mancanti non venivano visualizzati nei piani di esecuzione in SSMS [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
+- Risolto un problema comune di arresto anomalo in fase di chiusura in SSMS
+- Risolto un problema in Esplora oggetti a causa del quale si verificava un errore in seguito alla visualizzazione del menu di scelta rapida nei nodi Polybase|Gruppo con scalabilità orizzontale [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- Risolto un problema a causa del quale può verificarsi un arresto anomalo di SSMS durante il tentativo di visualizzare le autorizzazioni per un database
+- Archivio query: miglioramenti generali nelle voci del menu di scelta rapida per le griglie dei risultati del report dell'archivio query
+- La configurazione di Always Encrypted per una tabella esistente ha esito negativo con errori per gli oggetti correlati. [Argomento Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
+- La configurazione di Always Encrypted per un database esistente con più schemi non funziona. [Elemento connettersi] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- La procedura guidata Always Encrypted, Colonna crittografata ha esito negativo a causa del database che contiene viste che fanno riferimento a viste di sistema. [Elemento connettersi] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- Durante la crittografia con Always Encrypted, gli errori derivanti dall'aggiornamento dei moduli dopo la crittografia non vengono gestiti in modo corretto.
+- Risolto un problema di troncamento dell'interfaccia utente nella finestra di dialogo "Nuova registrazione server"
+- Risolto un problema dell'interfaccia utente delle condizioni DMF a causa del quale le espressioni che contengono valori costanti stringa con virgolette vengono aggiornate in modo non corretto
+- Risolto un problema che potrebbe causare l'arresto anomalo di SSMS durante l'esecuzione di report personalizzati
+- Aggiunta della voce di menu per l'esecuzione con scalabilità orizzontale al nodo della cartella
+- Risolto un problema con funzionalità di indirizzi IP whitelist firewall di database SQL di Azure
+- Fissa un problema di SQL Server Management Studio che ha causato un riferimento all'oggetto non impostato eccezione quando si modifica l'origine della partizione multidimensionale
+- Fissa un problema di SQL Server Management Studio che ha causato un riferimento all'oggetto non impostato eccezione durante l'eliminazione di un assembly di clienti da multidimensionali AS server
+- Risolto un problema in cui la ridenominazione di un database 1400 tabulari AS non è riuscita
+- Risolto un problema con gli script di un livello di compatibilità 1400 come origine dati tabulare dalla finestra di dialogo Proprietà connessione
+- Rimuovere presupposto che tabelle nel modello a livello di compatibilità 1400 hanno almeno una partizione
+- CTRL-R ora attiva o disattiva il riquadro dei risultati nell'editor di query DAX SSMS
+
 
 ## <a name="ssms-1653-release"></a>SSMS versione 16.5.3
 Disponibile a livello generale | Numero di build: 13.0.16106.4
@@ -568,12 +755,4 @@ Numero di versione: 13.0.300.44
  * **Supporto dell'Importazione/Esportazione guidata per nuovi livelli di servizi del database SQL di Azure (Basic, Standard, Premium).**  
    
  * **Numerose correzioni di bug: scenari di scripting, abilitazione del rilevamento delle modifiche per i database SQL e altro ancora.**   
-     
-  
-  
-  
-  
-  
-  
-    
 

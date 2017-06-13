@@ -1,125 +1,81 @@
 ---
-title: "Esercitazione: Creazione di report drill-through e report principali (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Creazione di drill-through e report principali (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Creazione di report drill-through e report principali (Generatore report)
-In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
+In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 
 
 L'illustrazione visualizza l'aspetto del report finale e come viene visualizzato il valore del campo Games and Toys dei report principali nel titolo del report drill-through. I dati nel report drill-through riguardano la categoria di prodotto Games and Toys.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
-  
-## Lezioni dell'esercitazione  
-**Nel report drill-through verranno illustrate le procedure per:**  
-  
-1.  [Creare un report matrice drill-through e un set di dati da Creazione guidata tabella o matrice](#DMatrixAndDataset)  
-  
-    1.  [Specificare una connessione dati](#DConnection)  
-  
-    2.  [Creare una query MDX](#DMDXQuery)  
-  
-    3.  [Organizzare dati in gruppi](#DLayout)  
-  
-    4.  [Aggiungere subtotali e totali](#DTotals)  
-  
-2.  [Formattare i dati come valuta](#DFormat)  
-  
-3.  [Aggiungere colonne per presentare i valori vendite in grafici sparkline](#DSparkline)  
-  
-4.  [Aggiungere un titolo report con nome Product Category](#DReportTitle)  
-  
-5.  [Aggiornare le proprietà dei parametri](#DParameter)  
-  
-6.  [Salvare il report in una raccolta di SharePoint](#DSave)  
-  
-**Nel report principale verranno illustrate le procedure per:**  
-  
-1.  [Creare il report di matrice principale e il set di dati da Creazione guidata tabella o matrice](#MMatrixAndDataset)  
-  
-    1.  [Specificare una connessione dati](#MConnection)  
-  
-    2.  [Creare una query MDX](#MMDXQuery)  
-  
-    3.  [Organizzare i dati in gruppi](#MLayout)  
-  
-    4.  [Aggiungere subtotali e totali](#MTotals)  
-  
-2.  [Rimuovere la riga Totale complessivo](#MGrandTotal)  
-  
-3.  [Configurare la Casella di testo Azione per il drill-through](#MDrillthrough)  
-  
-4.  [Sostituire i valori numerici con gli indicatori](#MIndicators)  
-  
-5.  [Aggiornare le proprietà dei parametri](#MParameter)  
-  
-6.  [Aggiungere un titolo al report](#MTitle)  
-  
-7.  [Salvare il report in una raccolta di SharePoint](#MSave)  
-  
-8.  [Eseguire i report principali e drill-through](#MRunReports)  
-  
+   
 Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
-## Requisiti  
-Questa esercitazione richiede accesso al cubo Contoso Sales per i report principali e drill-through. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP, Online Analytical Processing) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
+## <a name="requirements"></a>Requisiti  
+Questa esercitazione richiede accesso al cubo Contoso Sales per i report principali e drill-through. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP, Online Analytical Processing) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
   
-    The other file, ContosoBIdemoBAK.exe, is for the ContosoDW data warehouse, which is not used in this tutorial.  
+L'altro file, ContosoBIdemoBAK.exe, è relativo al data warehouse ContosoDW, che non viene utilizzato in questa esercitazione.  
   
-    The Web site includes instructions extracting and restoring the ContosoRetail.abf backup file to the Contoso_Retail OLAP database.  
-  
-    You must have access to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which to install the OLAP database.  
+Il sito Web include istruzioni relative all'estrazione e al ripristino del file di backup ContosoRetail.abf nel database OLAP di Contoso_Retail.  
+
+È necessario avere accesso a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sulla quale installare il database OLAP.  
     
 Per altre informazioni sui requisiti generali, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="DMatrixAndDataset"></a>1. Creare un report drill-through da Creazione guidata tabella o matrice  
 Nella finestra di dialogo Attività iniziali, creare un report matrice tramite **Creazione guidata tabella o matrice**. Nella procedura guidata sono disponibili due modalità: progettazione report e progettazione del set di dati condivisi. In questa esercitazione si utilizzerà modalità progettazione report.  
   
-#### Per creare un nuovo report  
+#### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Viene visualizzata la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
-3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice**.  
+3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice** .  
   
 ## <a name="DConnection"></a>1a. Specificare una connessione dati  
-Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-#### Per creare un'origine dati incorporata  
+#### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
-1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati**.  
+1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
-3.  In **Nome** digitare **Online and Reseller Sales Detail** come nome per l'origine dati.  
+3.  In **Nome**digitare **Online and Reseller Sales Detail** come nome per l'origine dati.  
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati** verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
 6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di Analysis Services.  
   
-7.  In **Selezionare o immettere un nome di database** specificare il cubo Contoso.  
+7.  In **Selezionare o immettere un nome di database**specificare il cubo Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -142,7 +98,7 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
   
 12. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
   
-    Verrà visualizzato il messaggio **Creazione connessione completata**.  
+    Verrà visualizzato il messaggio **Creazione connessione completata** .  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -151,14 +107,14 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
 ## <a name="DMDXQuery"></a>1b. Creare una query MDX  
 In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
   
-#### Per creare filtri query  
+#### <a name="to-create-query-filters"></a>Per creare filtri query  
   
-1.  Nella pagina **Progetta query** fare clic sul pulsante **(…)** nel riquadro dei metadati.  
+1.  Nella pagina **Progetta query** fare clic sul pulsante **(…)**nel riquadro dei metadati.  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Passaggio alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.png "Passaggio alla modalità progettazione"), impostare Progettazione query in modalità query, incollare l'MDX completato a Progettazione query, quindi procedere al passaggio 6 in [Per creare il set di dati](#DSkip).  
+    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 6 in [per creare il dataset](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -166,42 +122,42 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 3.  Nel riquadro Gruppo di misure, espandere Canale, quindi trascinare Nome canale nella colonna **Gerarchia** del riquadro filtro.  
   
-    Il nome della dimensione Canale viene aggiunto automaticamente alla colonna **Dimensione**. Non modificare le colonne **Dimensione** o **Operatore**.  
+    Il nome della dimensione Canale viene aggiunto automaticamente alla colonna **Dimensione** . Non modificare le colonne **Dimensione** o **Operatore** .  
   
-4.  Per aprire l'elenco **Espressione filtro**, fare clic sulla freccia in giù nella colonna **Espressione filtro**.  
+4.  Per aprire l'elenco **Espressione filtro** , fare clic sulla freccia in giù nella colonna **Espressione filtro** .  
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online**, fare clic su **Rivenditore**, quindi fare clic su **OK**.  
   
     Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
   
-6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia**, sotto **Nome canale**.  
+6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
-7.  Aprire l'elenco **Espressione filtro**, espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
+7.  Aprire l'elenco **Espressione filtro** , espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
   
     La query dispone ora di un filtro per includere solo le vendite in Nord America.  
   
 8.  Nel riquadro Gruppo di misure espandere Data, quindi trascinare Anno di calendario nella colonna **Gerarchia** del riquadro filtro.  
   
-    Il nome della dimensione Data viene aggiunto automaticamente alla colonna **Dimensione**. Non modificare le colonne **Dimensione** o **Operatore**.  
+    Il nome della dimensione Data viene aggiunto automaticamente alla colonna **Dimensione** . Non modificare le colonne **Dimensione** o **Operatore** .  
   
-9. Per aprire l'elenco **Espressione filtro**, fare clic sulla freccia in giù nella colonna **Espressione filtro**.  
+9. Per aprire l'elenco **Espressione filtro** , fare clic sulla freccia in giù nella colonna **Espressione filtro** .  
   
 10. Nell'elenco dell'espressione filtro, espandere **Tutte le date**, fare clic su **Anno 2009**, quindi fare clic su **OK**.  
   
     La query include ora un filtro per includere solo l'anno solare 2009.  
   
-#### Per creare il parametro.  
+#### <a name="to-create-the-parameter"></a>Per creare il parametro.  
   
 1.  Espandere la dimensione Prodotto, quindi trascinare il membro Product Category Name nella colonna **Gerarchia** sotto **Anno di calendario**.  
   
-2.  Aprire l 'elenco **Espressione filtro**, fare clic su **Tutti i prodotti**, quindi fare clic su **OK**.  
+2.  Aprire l 'elenco **Espressione filtro** , fare clic su **Tutti i prodotti**, quindi fare clic su **OK**.  
   
-3.  Fare clic sulla casella di controllo **Parametro**. La query ora include il parametro ProductProductCategoryName.  
+3.  Fare clic sulla casella di controllo **Parametro** . La query ora include il parametro ProductProductCategoryName.  
   
     > [!NOTE]  
     > Il parametro contiene i nomi di categorie di prodotto. Per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
-### <a name="DSkip"></a>Per creare un set di dati  
+### <a name="DSkip"></a>Per creare il set di dati  
   
 1.  Trascinare Nome canale dalla dimensione Canale al riquadro dei dati.  
   
@@ -220,9 +176,9 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
 ## <a name="DLayout"></a>1c. Organizzare i dati in gruppi  
 Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
   
-#### Per organizzare i dati in gruppi  
+#### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
 2.  Nella pagina **Disponi campi** trascinare Product_Subcategory_Name in **Gruppi di righe**.  
   
@@ -246,7 +202,7 @@ Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matri
 ## <a name="DTotals"></a>1d. Aggiungere subtotali e totali  
 Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
-#### Per aggiungere subtotali e totali  
+#### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
   
 1.  Nella pagina **Scegliere il layout** in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
@@ -258,14 +214,14 @@ Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nel
   
     La tabella viene aggiunta all'area di progettazione.  
   
-3.  Fare clic su **Esegui (!)** per visualizzare un'anteprima del report.  
+3.  Fare clic su **Esegui (!)**per visualizzare un'anteprima del report.  
   
 ## <a name="DFormat"></a>2. Formattare i dati come valuta  
 Applicare la formattazione della valuta ai campi dell'importo vendite nel report drill-through.  
   
-#### Per formattare i dati come valuta  
+#### <a name="to-format-data-as-currency"></a>Per formattare i dati come valuta  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
 2.  Per selezionare e formattare contemporaneamente più celle, premere CTRL, quindi selezionare le celle che contengono i dati di vendita numerici.  
   
@@ -274,25 +230,25 @@ Applicare la formattazione della valuta ai campi dell'importo vendite nel report
 ## <a name="DSparkline"></a>3. Aggiungere colonne per presentare i valori vendite in grafici sparkline  
 Anziché mostrare vendite e margini di profitto come valori in valuta, il report mostra i valori in un grafico sparkline.  
   
-#### Per aggiungere grafici sparkline alle colonne  
+#### <a name="to-add-sparklines-to-columns"></a>Per aggiungere grafici sparkline alle colonne  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
-2.  Nel gruppo Totale della matrice fare clic con il pulsante destro del mouse sulla colonna **Importo vendite**, scegliere **Inserisci colonna** e fare clic su **A destra**.  
+2.  Nel gruppo Totale della matrice fare clic con il pulsante destro del mouse sulla colonna **Importo vendite** , scegliere **Inserisci colonna**e fare clic su **A destra**.  
   
     Una colonna vuota viene aggiunta a destra di **Importo vendite**.  
   
-3.  Sulla barra multifunzione fare clic su **Rettangolo**, quindi fare clic sulla cella vuota a destra della cella `[Sum(Sales_Amount)]`, nel gruppo di righe [Product_Subcategory].  
+3.  Sulla barra multifunzione fare clic su **Rettangolo**, quindi fare clic sulla cella vuota a destra della cella `[Sum(Sales_Amount)]` , nel gruppo di righe [Product_Subcategory].  
   
 4.  Sulla barra multifunzione, fare clic sull'icona **Grafico sparkline** e fare clic sulla cella dove è stato aggiunto il rettangolo.  
   
-5.  Nella finestra di dialogo **Seleziona tipo di grafico sparkline**, verificare che sia selezionato il tipo **Colonna**.  
+5.  Nella finestra di dialogo **Seleziona tipo di grafico sparkline** , verificare che sia selezionato il tipo **Colonna** .  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Fare clic con il pulsante destro del mouse sul grafico sparkline.  
   
-8.  Nel riquadro Dati grafico fare clic sull'icona **Aggiungi campo**, quindi fare clic su Sales_Amount.  
+8.  Nel riquadro Dati grafico fare clic sull'icona **Aggiungi campo** , quindi fare clic su Sales_Amount.  
   
 9. Fare clic con il pulsante destro del mouse sulla colonna `Sales_Return_Amount` e quindi aggiungere una colonna alla destra.  
   
@@ -300,16 +256,16 @@ Anziché mostrare vendite e margini di profitto come valori in valuta, il report
   
 11. Fare clic con il pulsante destro del mouse sul grafico sparkline.  
   
-12. Nel riquadro Dati grafico fare clic sull'icona **Aggiungi campo**, quindi fare clic su Sales_Return_Amount.  
+12. Nel riquadro Dati grafico fare clic sull'icona **Aggiungi campo** , quindi fare clic su Sales_Return_Amount.  
   
-13. Fare clic su **Esegui** per visualizzare un'anteprima del report.  
+13. Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
 ## <a name="DReportTitle"></a>4. Aggiungere un titolo report con nome Product Category  
 Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se il report ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
-#### Per aggiungere il titolo di un report  
+#### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
 2.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
   
@@ -317,7 +273,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 4.  Fare clic con il pulsante destro del mouse, quindi fare clic su **Crea segnaposto**.  
   
-5.  Fare clic sul pulsante **(fx)** a destra dell'elenco **Valore**.  
+5.  Fare clic sul pulsante **(fx)** a destra dell'elenco **Valore** .  
   
 6.  Nel riquadro Categoria della finestra di dialogo **Espressione** fare clic su **Set di dati**, quindi nell'elenco **Valori** fare doppio clic su `First(Product_Category_Name)`.  
   
@@ -327,25 +283,25 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
     =First(Fields!Product_Category_Name.Value, "DataSet1")  
     ```  
   
-7.  Fare clic su **Esegui** per visualizzare un'anteprima del report.  
+7.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
 Il titolo del report include il nome della prima categoria di prodotto. In un secondo momento, dopo avere eseguito questo report come report drill-through, il nome della categoria di prodotto si modificherà dinamicamente per riflettere il nome della categoria di prodotto selezionata nel report principale.  
   
 ## <a name="DParameter"></a>5. Aggiornare le proprietà dei parametri  
 Per impostazione predefinita i parametri sono visibili; questa impostazione non è adatta per questo report. È possibile aggiornare le proprietà dei parametri per il report drill-through.  
   
-#### Per nascondere un parametro:  
+#### <a name="to-hide-a-parameter"></a>Per nascondere un parametro:  
   
 1.  Nel riquadro Dati report espandere **Parametri**.  
   
-2.  Fare clic con il pulsante destro del mouse su @ProductProductCategoryName, quindi scegliere **Proprietà parametri**.  
+2.  Fare clic con il pulsante destro del mouse su @ProductProductCategoryName, quindi fare clic su **Proprietà parametri**.  
   
     > [!NOTE]  
     > Il @ carattere accanto al nome indica che questo è un parametro.  
   
 3.  Nella scheda **Generale** fare clic su **Nascondi**.  
   
-4.  Nella casella **Messaggio di richiesta**, digitare **Categoria prodotto**.  
+4.  Nella casella **Messaggio di richiesta** , digitare **Categoria prodotto**.  
   
     > [!NOTE]  
     > Poiché il parametro è nascosto, questo prompt non viene mai utilizzato.  
@@ -355,11 +311,11 @@ Per impostazione predefinita i parametri sono visibili; questa impostazione non 
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="DSave"></a>6. Salvare il report in una raccolta di SharePoint  
-È possibile salvare il report in una raccolta di SharePoint, in un server di report o nel computer locale. Se il report viene salvato nel computer locale, non saranno disponibili alcune caratteristiche di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ad esempio le parti del report e i sottoreport. In questa esercitazione verranno illustrate le procedure per il salvataggio del report nella raccolta di SharePoint.  
+È possibile salvare il report in una raccolta di SharePoint, in un server di report o nel computer locale. Se il report viene salvato nel computer locale, non saranno disponibili alcune caratteristiche di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport. In questa esercitazione verranno illustrate le procedure per il salvataggio del report nella raccolta di SharePoint.  
   
-#### Per salvare il report  
+#### <a name="to-save-the-report"></a>Per salvare il report  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Verrà visualizzata la finestra di dialogo **Salva come report**.  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Verrà visualizzata la finestra di dialogo **Salva come report** .  
   
     > [!NOTE]  
     > Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Usare l'opzione **Salva con nome** per modificare il percorso.  
@@ -390,11 +346,11 @@ Per impostazione predefinita i parametri sono visibili; questa impostazione non 
 ## <a name="MMatrixAndDataset"></a>1. Creare il report principale con Creazione guidata tabella o matrice  
 Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramite **Creazione guidata tabella o matrice**.  
   
-#### Per creare il report principale  
+#### <a name="to-create-the-main-report"></a>Per creare il report principale  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Viene visualizzata la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
  
@@ -403,21 +359,21 @@ Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramit
 ## <a name="MConnection"></a>1a. Specificare una connessione dati  
 Verrà aggiunta un'origine dati incorporata al report principale.  
   
-#### Per creare un'origine dati incorporata  
+#### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
 1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**.  
   
 2.  Fare clic su **Nuovo**.  
   
-3.  In **Nome** digitare **Online and Reseller Sales Main** come nome per l'origine dati.  
+3.  In **Nome**digitare **Online and Reseller Sales Main** come nome per l'origine dati.  
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati** verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-7.  In **Selezionare o immettere un nome di database** specificare il cubo Contoso.  
+7.  In **Selezionare o immettere un nome di database**specificare il cubo Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -442,14 +398,14 @@ Verrà aggiunta un'origine dati incorporata al report principale.
 ## <a name="MMDXQuery"></a>1b. Creare una query MDX  
 Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettazione query per creare filtri, parametri, membri calcolati e il set di dati stesso.  
   
-#### Per creare filtri query  
+#### <a name="to-create-query-filters"></a>Per creare filtri query  
   
 1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(…)**.  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    > Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Passaggio alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.png "Passaggio alla modalità progettazione"), impostare Progettazione query in modalità query, incollare l'MDX completato in Progettazione query, quindi procedere al passaggio 5 in [Per creare il set di dati](#MSkip).  
+    > Se non si desidera compilare manualmente la query MDX, fare clic su di ![passare alla modalità progettazione](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icona, attivare o disattivare la finestra Progettazione query in modalità Query, incollare il MDX completato a Progettazione query e quindi procedere al passaggio 5 in [per creare il dataset](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -457,45 +413,45 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 3.  Nel riquadro Gruppo di misure, espandere Canale, quindi trascinare Nome canale nella colonna **Gerarchia** del riquadro filtro.  
   
-    Il nome della dimensione Canale viene aggiunto automaticamente alla colonna **Dimensione**. Non modificare le colonne **Dimensione** o **Operatore**.  
+    Il nome della dimensione Canale viene aggiunto automaticamente alla colonna **Dimensione** . Non modificare le colonne **Dimensione** o **Operatore** .  
   
-4.  Per aprire l'elenco **Espressione filtro**, fare clic sulla freccia in giù nella colonna **Espressione filtro**.  
+4.  Per aprire l'elenco **Espressione filtro** , fare clic sulla freccia in giù nella colonna **Espressione filtro** .  
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online** e **Rivenditore**, quindi fare clic su **OK**.  
   
     Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
   
-6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia**, sotto **Nome canale**.  
+6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
-7.  Aprire l'elenco **Espressione filtro**, espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
+7.  Aprire l'elenco **Espressione filtro** , espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
   
     La query dispone ora di un filtro per includere solo le vendite in Nord America.  
   
 8.  Nel riquadro Gruppo di misure espandere Data, quindi trascinare Anno di calendario nella colonna **Gerarchia** del riquadro filtro.  
   
-    Il nome della dimensione Data viene aggiunto automaticamente alla colonna **Dimensione**. Non modificare le colonne **Dimensione** o **Operatore**.  
+    Il nome della dimensione Data viene aggiunto automaticamente alla colonna **Dimensione** . Non modificare le colonne **Dimensione** o **Operatore** .  
   
-9. Per aprire l'elenco **Espressione filtro**, fare clic sulla freccia in giù nella colonna **Espressione filtro**.  
+9. Per aprire l'elenco **Espressione filtro** , fare clic sulla freccia in giù nella colonna **Espressione filtro** .  
   
 10. Nell'elenco dell'espressione filtro, espandere **Tutte le date**, fare clic su **Anno 2009**, quindi fare clic su **OK**.  
   
     La query include ora un filtro per includere solo l'anno solare 2009.  
   
-#### Per creare il parametro.  
+#### <a name="to-create-the-parameter"></a>Per creare il parametro.  
   
 1.  Espandere la dimensione Prodotto, quindi trascinare il membro Product Category Name nella colonna **Gerarchia** sotto **Gruppo territorio di vendita**.  
   
-2.  Aprire l 'elenco **Espressione filtro**, fare clic su **Tutti i prodotti**, quindi fare clic su **OK**.  
+2.  Aprire l 'elenco **Espressione filtro** , fare clic su **Tutti i prodotti**, quindi fare clic su **OK**.  
   
-3.  Fare clic sulla casella di controllo **Parametro**. La query ora include il parametro ProductProductCategoryName.  
+3.  Fare clic sulla casella di controllo **Parametro** . La query ora include il parametro ProductProductCategoryName.  
   
-#### Per creare membri calcolati  
+#### <a name="to-create-calculated-members"></a>Per creare membri calcolati  
   
 1.  Posizionare il cursore nel riquadro Membri calcolati, fare clic con il pulsante destro del mouse su **Nuovo membro calcolato**.  
   
-2.  Nel riquadro Metadati espandere **Misure**, quindi espandere Vendite.  
+2.  Nel riquadro Metadati espandere **Misure** , quindi espandere Vendite.  
   
-3.  Trascinare la misura Quantità vendite nella casella **Espressione**, digitare il carattere di sottrazione (-), quindi trascinare la misura Quantità margine vendite nella casella **Espressione** dopo il carattere di sottrazione.  
+3.  Trascinare la misura Quantità vendite nella casella **Espressione** , digitare il carattere di sottrazione (-), quindi trascinare la misura Quantità margine vendite nella casella **Espressione** dopo il carattere di sottrazione.  
   
     Nell'esempio di codice seguente viene illustrata l'espressione:  
   
@@ -505,13 +461,13 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 4.  Nella casella Nome digitare **Net QTY**, quindi fare clic su **OK**.  
   
-    Il riquadro Membri calcolati elenca il membro calcolato **Net QTY**.  
+    Il riquadro Membri calcolati elenca il membro calcolato **Net QTY** .  
   
 5.  Fare clic con il pulsante destro del mouse su **Membri calcolati**, quindi fare clic su **Nuovo membro calcolato**.  
   
 6.  Nel riquadro Metadati espandere **Misure**, quindi espandere Vendite.  
   
-7.  Trascinare la misura Importo vendite nella casella **Espressione**, digitare il carattere di sottrazione (-), quindi trascinare la misura Importo margine vendite nella casella **Espressione** dopo il carattere di sottrazione.  
+7.  Trascinare la misura Importo vendite nella casella **Espressione** , digitare il carattere di sottrazione (-), quindi trascinare la misura Importo margine vendite nella casella **Espressione** dopo il carattere di sottrazione.  
   
     Nell'esempio di codice seguente viene illustrata l'espressione:  
   
@@ -519,15 +475,15 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  Nella casella **Nome** digitare **Fatturato netto**, quindi fare clic su **OK**. Nel riquadro Membri calcolati è elencato il membro calcolato di **Fatturato netto**.  
+8.  Nella casella **Nome** digitare  **Fatturato netto**, quindi fare clic su **OK**. Nel riquadro Membri calcolati è elencato il membro calcolato di **Fatturato netto** .  
   
-### <a name="MSkip"></a>Per creare un set di dati  
+### <a name="MSkip"></a>Per creare il set di dati  
   
 1.  Trascinare Nome canale dalla dimensione Canale al riquadro dei dati.  
   
 2.  Trascinare Product Category Name dalla dimensione Prodotto al riquadro dei dati, quindi posizionarlo a destra di Nome canale.  
   
-3.  Trascinare `Net QTY` da **Membri calcolati** al riquadro dati e posizionarlo alla destra di Product Category Name.  
+3.  Trascinare **da**Membri calcolati `Net QTY` al riquadro dati e posizionarlo alla destra di Product Category Name.  
   
 4.  Trascinare Fatturato netto da Membri calcolati al riquadro dati e posizionarlo a destra di `Net QTY`.  
   
@@ -540,7 +496,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
 ## <a name="MLayout"></a>1c. Organizzare i dati in gruppi  
 Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizza dati dettagliati e dati aggregati.  
   
-#### Per organizzare i dati in gruppi  
+#### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
   
 1.  Nella pagina **Disponi campi** trascinare Product_Category_Name in **Gruppi di righe**.  
   
@@ -559,39 +515,39 @@ Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matri
 ## <a name="MTotals"></a>1d. Aggiungere subtotali e totali  
 Nei report è possibile mostrare subtotali e totali complessivi. I dati nei report principali sono visualizzati come un indicatore; il totale complessivo verrà rimosso dopo avere completato la procedura guidata.  
   
-#### Per aggiungere subtotali e totali complessivi  
+#### <a name="to-add-subtotals-and-grand-totals"></a>Per aggiungere subtotali e totali complessivi  
   
 1.  Nella pagina **Scegliere il layout** in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
-    Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]` e la quarta riga contiene i totali.  
+    Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`e la quarta riga contiene i totali.  
   
 2.  Scegliere **Avanti**.  
   
 3.  Fare clic su **Fine**.  
   
-3.  Fare clic su **Esegui** per visualizzare un'anteprima del report.  
+3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
 ## <a name="MGrandTotal"></a>2. Rimuovere la riga Totale complessivo  
 I valori dei dati vengono mostrati come stati dell'indicatore, includendo i totali del gruppo di colonne. Rimuovere la riga che visualizza il totale complessivo.  
   
-#### Per rimuovere la riga Totale complessivo  
+#### <a name="to-remove-the-grand-total-row"></a>Per rimuovere la riga Totale complessivo  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
 2.  Fare clic sulla riga Totale (l'ultima riga della matrice), fare clic con il pulsante destro del mouse, quindi fare clic su **Elimina righe**.  
   
-3.  Fare clic su **Esegui** per visualizzare un'anteprima del report.  
+3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
 ## <a name="MDrillthrough"></a>3. Configurare la Casella di testo Azione per il drill-through  
 Per abilitare il drill-through, specificare un'azione nella casella di testo del report principale.  
   
-#### Per abilitare un'azione  
+#### <a name="to-enable-an-action"></a>Per abilitare un'azione  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella contenente Product_Category_Name, quindi fare clic su **Proprietà casella di testo**.  
   
-3.  Fare clic sulla scheda **Azione**.  
+3.  Fare clic sulla scheda **Azione** .  
   
 4.  Selezionare **Vai al report**.  
   
@@ -601,7 +557,7 @@ Per abilitare il drill-through, specificare un'azione nella casella di testo del
   
 7.  Nell'elenco **Nome** selezionare ProductProductCategoryName.  
   
-8.  In **Valore** digitare `[Product_Category_Name.UniqueName]`.  
+8.  In **Valore**digitare `[Product_Category_Name.UniqueName]`.  
   
     Product_Category_Name è un campo nel set di dati.  
   
@@ -610,15 +566,15 @@ Per abilitare il drill-through, specificare un'azione nella casella di testo del
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-#### Per formattare il campo drill-through  
+#### <a name="to-format-the-drillthrough-field"></a>Per formattare il campo drill-through  
   
-1.  Fare clic con il pulsante destro del mouse sulla cella che contiene `Product_Category_Name` e scegliere **Proprietà casella di testo**.  
+1.  Fare clic con il pulsante destro del mouse sulla cella che contiene `Product_Category_Name`e scegliere **Proprietà casella di testo**.  
   
 2.  Fare clic sulla scheda **Tipo di carattere** .  
   
 3.  Selezionare **Sottolineato** nell'elenco **Effetti**.  
   
-4.  Selezionare **Blu** nell'elenco **Colore** .  
+4.  Selezionare **Blu** nell'elenco **Colore**.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -629,27 +585,27 @@ I nomi della categoria di prodotto sono nel comune formato di collegamento (blu 
 ## <a name="MIndicators"></a>4. Sostituire i valori numerici con gli indicatori  
 Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali Online e Rivenditore.  
   
-#### Per aggiungere un indicatore per i valori Net QTY  
+#### <a name="to-add-an-indicator-for-net-qty-values"></a>Per aggiungere un indicatore per i valori Net QTY  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
-2.  Sulla barra multifunzione, fare clic sull'icona **Rettangolo**, quindi fare clic sulla cella `[Sum(Net QTY)]` del gruppo di righe `[Product_Category_Name]` nel gruppo di colonne `Channel_Name`.  
+2.  Sulla barra multifunzione, fare clic sull'icona **Rettangolo** , quindi fare clic sulla cella `[Sum(Net QTY)]` del gruppo di righe `[Product_Category_Name]` nel gruppo di colonne `Channel_Name` .  
   
-3.  Sulla barra multifunzione, fare clic sull'icona **Indicatore**, quindi fare clic all'interno del rettangolo. Viene visualizzata la finestra di dialogo **Seleziona tipo indicatore** con l'indicatore **Direzionale** selezionato.  
+3.  Sulla barra multifunzione, fare clic sull'icona **Indicatore** , quindi fare clic all'interno del rettangolo. Viene visualizzata la finestra di dialogo **Seleziona tipo indicatore** con l'indicatore **Direzionale** selezionato.  
   
-4.  Fare clic sul tipo **3 segnali**, quindi fare clic su **OK**.  
+4.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
 5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_QTY`.  
   
 6.  Ripetere i passaggi da 2 a 5 per la cella `[Sum(Net QTY)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
-#### Per aggiungere un indicatore per i valori Fatturato Netto  
+#### <a name="to-add-an-indicator-for-net-sales-values"></a>Per aggiungere un indicatore per i valori Fatturato Netto  
   
-1.  Sulla barra multifunzione, fare clic sull'icona **Rettangolo**, quindi fare clic all'interno della cella `[Sum(Net_Sales)]` del gruppo di righe `[Product_Category_Name]` nel gruppo di colonne `Channel_Name`.  
+1.  Sulla barra multifunzione, fare clic sull'icona **Rettangolo** , quindi fare clic all'interno della cella `[Sum(Net_Sales)]` del gruppo di righe `[Product_Category_Name]` nel gruppo di colonne `Channel_Name` .  
   
-2.  Sulla barra multifunzione, fare clic sull'icona **Indicatore**, quindi fare clic all'interno del rettangolo.  
+2.  Sulla barra multifunzione, fare clic sull'icona **Indicatore** , quindi fare clic all'interno del rettangolo.  
   
-3.  Fare clic sul tipo **3 segnali**, quindi fare clic su **OK**.  
+3.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
 4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_Sales`.  
   
@@ -660,11 +616,11 @@ Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali 
 ## <a name="MParameter"></a>5. Aggiornare le proprietà dei parametri  
 Per impostazione predefinita, i parametri sono visibili; questa impostazione non è adatta per questo report. È possibile aggiornare le proprietà dei parametri per rendere il parametro interno.  
   
-#### Per rendere interno il parametro  
+#### <a name="to-make-the-parameter-internal"></a>Per rendere interno il parametro  
   
 1.  Nel riquadro Dati report espandere **Parametri**.  
   
-2.  Fare clic con il pulsante destro del mouse su `@ProductProductCategoryName,`, quindi scegliere **Proprietà parametri**.  
+2.  Fare clic con il pulsante destro del mouse su `@ProductProductCategoryName,` , quindi scegliere **Proprietà parametri**.  
   
 3.  Nella scheda **Generale** fare clic su **Interno**.  
   
@@ -675,7 +631,7 @@ Per impostazione predefinita, i parametri sono visibili; questa impostazione non
 ## <a name="MTitle"></a>6. Aggiungere un titolo al report  
 Aggiungere un titolo a un report principale  
   
-#### Per aggiungere il titolo di un report  
+#### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
   
@@ -683,20 +639,20 @@ Aggiungere un titolo a un report principale
   
 3.  Selezionare il testo digitato.  
   
-4.  Nel gruppo Carattere della scheda **Home** sulla barra multifunzione, selezionare il tipo di carattere **Times New Roman**, la dimensione **16pt** e gli stili **Grassetto** e **Corsivo**.  
+4.  Nel gruppo Carattere della scheda **Home** sulla barra multifunzione, selezionare il tipo di carattere **Times New Roman** , la dimensione **16pt** e gli stili **Grassetto** e **Corsivo** .  
   
 5.  Per visualizzare l'anteprima del report, fare clic su **Esegui**.  
   
 ## <a name="MSave"></a>7. Salvare il report principale in una raccolta di SharePoint  
 Salvare il report principale in una raccolta di SharePoint  
   
-#### Per salvare il report  
+#### <a name="to-save-the-report"></a>Per salvare il report  
   
-1.  Fare clic su **Progettazione** per passare alla visualizzazione della struttura.  
+1.  Fare clic su **Progettazione**per passare alla visualizzazione della struttura.  
   
 2.  Dal pulsante Generatore report fare clic su **Salva**.  
   
-3.  Facoltativamente, fare clic su **Siti e server recenti** per visualizzare un elenco di server di report e di siti di SharePoint usati di recente.  
+3.  Facoltativamente, fare clic su **Siti e server recenti**per visualizzare un elenco di server di report e di siti di SharePoint usati di recente.  
   
 4.  Selezionare o digitare il nome del sito di SharePoint per il quale si dispone delle autorizzazioni di salvataggio dei report. La sintassi dell'URL della raccolta di SharePoint è la seguente:  
   
@@ -706,7 +662,7 @@ Salvare il report principale in una raccolta di SharePoint
   
 5.  Passare alla raccolta dove si salverà il report.  
   
-6.  In **Nome** sostituire il nome predefinito con **ResellerVSOnlineMain**.  
+6.  In **Nome**sostituire il nome predefinito con **ResellerVSOnlineMain**.  
   
     > [!IMPORTANT]  
     > Salvare il report principale nello stesso percorso dove era stato salvato il report drill-through. Per salvare il report principale e il report drill-through in librerie o siti diversi, accertarsi che l'azione **Vai al report** nel report principale indichi il percorso corretto del report drill-through.  
@@ -716,7 +672,7 @@ Salvare il report principale in una raccolta di SharePoint
 ## <a name="MRunReports"></a>8. Eseguire i report principali e drill-through  
 Eseguire il report principale, quindi fare clic su valori nella colonna della categoria di prodotto per eseguire il report drill-through.  
   
-#### Per eseguire i report  
+#### <a name="to-run-the-reports"></a>Per eseguire i report  
   
 1.  Aprire la raccolta di SharePoint dove sono salvati i report.  
   
@@ -732,6 +688,7 @@ Eseguire il report principale, quindi fare clic su valori nella colonna della ca
   
 5.  Facoltativamente, esplorare le altre categorie di prodotto facendo clic sui nomi.  
   
-## Vedere anche  
-[Esercitazioni sul Generatore report](../reporting-services/report-builder-tutorials.md)  
+## <a name="see-also"></a>Vedere anche  
+[Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Visualizzazione Anteprima | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.previewview.f1"
-helpviewer_keywords: 
-  - "Visualizzazione Anteprima [Reporting Services]"
+title: Visualizzazione Anteprima | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords:
+- Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Visualizzazione Anteprima
+# <a name="preview-view"></a>Visualizzazione Anteprima
 In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usare la visualizzazione **Anteprima** per visualizzare il report di cui è stato eseguito il rendering. Quando si visualizza l'anteprima di un report, Progettazione report esegue il report localmente e lo visualizza nella visualizzazione Anteprima. Nella modalità di anteprima, il report viene completamente elaborato. Se la query del report è complessa o il report contiene una grande quantità di dati, la visualizzazione dell'anteprima potrebbe impiegare alcuni minuti la prima volta. Per le modifiche successive che riguardano solo il formato del report, l'anteprima utilizza i dati nella cache.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## Opzioni  
+## <a name="options"></a>Opzioni  
  Utilizzare la barra degli strumenti per gestire le funzionalità di anteprima.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -84,8 +89,9 @@ In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
  **(18) Trova successivo**  
  Selezionare questa opzione per cercare l'occorrenza successiva del testo desiderato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 + [Anteprima dei report](../../reporting-services/reports/previewing-reports.md)
 + [Guida sensibile al contesto di Progettazione report](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
+

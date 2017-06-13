@@ -1,27 +1,32 @@
 ---
-title: "Abilita errori remoti (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "origine dati remota [Reporting Services]"
-  - "EnableRemoteError, proprietà del server"
+title: Abilitare errori remoti (Reporting Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote data source [Reporting Services]
+- EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Abilita errori remoti (Reporting Services)
-  È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../Topic/Report%20Server%20System%20Properties.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
+  È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Contenuto dell'argomento:  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_sharepoint"></a> Abilitare errori remoti per la modalità SharePoint  
  Sono disponibili due procedure diverse per l'abilitazione di errori remoti per la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La procedura è diversa per le due differenti architetture del server di report. Nell'architettura più recente basata sul servizio SharePoint introdotta nella versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] viene utilizzata un'impostazione che può essere configurata per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Nell'architettura precedente viene utilizzata una sola impostazione del livello di sito.  
   
-#### Abilitare errori remoti per un'applicazione di servizio Reporting Services  
+#### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Abilitare errori remoti per un'applicazione di servizio Reporting Services  
   
 1.  Per un server di report in modalità SharePoint installato con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o una versione più recente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], abilitare l'impostazione dell'applicazione di servizio **Abilita errori remoti**. Questa impostazione può essere configurata per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 12
   
 6.  Scegliere **OK**.  
   
-#### Abilitare errori remoti per un sito SharePoint  
+#### <a name="enable-remote-errors-for-a-sharepoint-site"></a>Abilitare errori remoti per un sito SharePoint  
   
 1.  Per un server di report in modalità SharePoint installato con una versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precedente a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], abilitare l'impostazione del sito **Abilita i messaggi di errore in modalità locale**.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 12
   
 ##  <a name="bkmk_mgtStudio"></a> Abilitare errori remoti tramite SQL Server Management Studio (modalità nativa)  
   
-1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Fare clic con il pulsante destro del mouse sul nodo del server di report, quindi scegliere **Proprietà**.  
   

@@ -1,30 +1,37 @@
 ---
-title: "Individuare la versione dello schema di definizione del report (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML Schema [Reporting Services]"
-  - "Report Definition Language, XML Schema"
-  - "schemi [Reporting Services]"
+title: Individuare la versione di Schema di definizione di Report (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schemas [Reporting Services]
+- Report Definition Language, XML schema
+- schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Individuare la versione dello schema di definizione del report (SSRS)
-  Un file di definizione del report specifica lo spazio dei nomi RDL per la versione dello schema di definizione del report utilizzata per convalidare il file rdl. Quando si apre un file con estensione rdl in un ambiente di creazione di report, ad esempio Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o Generatore report, se il report è creato per uno spazio dei nomi precedente, viene automaticamente creato un file di backup e il report viene aggiornato allo spazio dei nomi corrente. Salvando la definizione del report aggiornata, si salva il file con estensione rdl convertito. Questo è l'unico modo per aggiornare una definizione del report. La definizione del report non viene aggiornata su un server di report. Il report compilato viene aggiornato su un server di report. Per altre informazioni, vedere [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+
+# <a name="find-the-report-definition-schema-version-ssrs"></a>Individuare la versione dello schema di definizione del report (SSRS)
+
+Un file di definizione del report specifica lo spazio dei nomi RDL per la versione dello schema di definizione del report utilizzata per convalidare il file rdl. Quando si apre un file con estensione rdl in un ambiente di creazione di report, ad esempio Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o Generatore report, se il report è creato per uno spazio dei nomi precedente, viene automaticamente creato un file di backup e il report viene aggiornato allo spazio dei nomi corrente. Salvando la definizione del report aggiornata, si salva il file con estensione rdl convertito. Questo è l'unico modo per aggiornare una definizione del report. La definizione del report non viene aggiornata su un server di report. Il report compilato viene aggiornato su un server di report. Per altre informazioni, vedere [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### Procedura: Identificazione della versione di schema RDL di un report  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Procedura: Identificazione della versione di schema RDL di un report  
   
 1.  Aprire il file del report con estensione rdl in un'applicazione, ad esempio Blocco note o XML Blocco note 2007, nella quale è possibile visualizzare file in formato xml.  
   
@@ -37,15 +44,15 @@ caps.handback.revision: 15
   
      Lo spazio dei nomi della definizione del report viene specificato dall'URL seguente: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### Procedura: Identificazione della versione di schema RDL di Progettazione report  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procedura: Identificazione della versione di schema RDL di Progettazione report  
   
-1.  Apre un nuovo progetto. La versione del progetto che si sceglie determina la versione dello schema RDL. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportate più versioni dello schema. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Apre un nuovo progetto. La versione del progetto che si sceglie determina la versione dello schema RDL. In SQL Server, è più di una versione dello schema. Per ulteriori informazioni, vedere [distribuzione e supporto della versione in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
-2.  Dal menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
+2.  Dal menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento** .  
   
 3.  Nel riquadro **Modelli** fare clic su **Report**.  
   
-4.  In **Nome** digitare un nome di report o accettare il nome predefinito.  
+4.  In **Nome**digitare un nome di report o accettare il nome predefinito.  
   
 5.  Scegliere **Aggiungi**. Progettazione report apre un nuovo report vuoto nella visualizzazione della struttura.  
   
@@ -60,7 +67,7 @@ caps.handback.revision: 15
   
      Lo spazio dei nomi della definizione del report viene specificato dall'URL seguente: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### Procedura: Identificazione della versione di schema RDL nel server di report  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procedura: Identificazione della versione di schema RDL nel server di report  
   
 -   In Gestione report digitare l'URL per il server di report. Ad esempio, nel seguente URL viene specificato un server di report sul computer locale:  
   
@@ -79,9 +86,10 @@ caps.handback.revision: 15
     ```  
   
      Lo spazio dei nomi della definizione del report viene specificato dall'URL seguente: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
-  
-## Vedere anche  
- [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md)   
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

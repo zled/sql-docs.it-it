@@ -1,23 +1,28 @@
 ---
-title: "Ricerca, visualizzazione e gestione dei report (Generatore report SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ricerca, visualizzazione e gestione dei report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
+# <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
   In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per individuare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  
   
  In Progettazione report è possibile esplorare anche il computer per trovare report locali. Dopo aver distribuito report in un server di report o in un sito di SharePoint, è possibile esplorare il server di report tramite Gestione report o eseguire ricerche nel sito di SharePoint per trovare report. I report e gli elementi correlati rimangono disponibili in locale dopo la distribuzione.  
@@ -73,25 +78,25 @@ caps.handback.revision: 11
   
  Tramite Gestione report, i report vengono visualizzati nel Visualizzatore HTML di Reporting Services. Il Visualizzatore HTML fornisce un framework per la visualizzazione di report in HTML e include una barra degli strumenti dei report, una sezione relativa ai parametri, una relativa alle credenziali e una mappa documento. Nella barra degli strumenti dei report sono disponibili funzionalità di navigazione, zoom, aggiornamento, ricerca, esportazione, stampa e feed di dati per la pagina. La barra degli strumenti dei report viene inoltre visualizzata in una finestra del browser nella parte superiore dei report quando si accede ad essi tramite un URL. La funzionalità di stampa è facoltativa e deve essere attivata dall'amministratore. Se disponibile, sulla barre degli strumenti dei report viene visualizzata l'icona di una stampante. Nelle illustrazioni seguenti la barra degli strumenti dei report in una finestra Gestione report e le relative funzionalità vengono mostrate in primo piano.  
   
- ![Barra degli strumenti dei report in Gestione report](../../reporting-services/report-builder/media/hs-reportserver-blowout.png "Barra degli strumenti dei report in Gestione report")  
+ ![Barra degli strumenti di report in Gestione Report](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
 Finestra Gestione report  
   
- ![Barra degli strumenti dei report](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "Barra degli strumenti dei report")  
+ ![Barra degli strumenti dei report](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
 Barra degli strumenti dei report  
   
- Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. Inoltre è possibile esportare il report utilizzando un'estensione per il rendering dei dati, ad esempio valori delimitati da virgole (CSV, Comma-Separated Value), e utilizzare quindi il file di dati CSV come input per un'altra applicazione. Per altre informazioni sull'esportazione dei report, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) ed [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](../Topic/Export%20a%20Report%20as%20Another%20File%20Type%20\(Report%20Builder%20and%20SSRS\).md).  
+ Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. Inoltre è possibile esportare il report utilizzando un'estensione per il rendering dei dati, ad esempio valori delimitati da virgole (CSV, Comma-Separated Value), e utilizzare quindi il file di dati CSV come input per un'altra applicazione. Per altre informazioni sull'esportazione dei report, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) ed [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
  Il modo più semplice per selezionare ed eseguire un report consiste nell'aprire Gestione report e, successivamente, nel cercare o selezionare il report desiderato. Per istruzioni dettagliate su come aprire un report, vedere [Aprire e chiudere un report &#40;Gestione report&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Dopo aver eseguito un report, è possibile aggiornarlo per visualizzare i nuovi dati.  
   
-### Aggiornamento di report  
+### <a name="refreshing-reports"></a>Aggiornamento di report  
  I dati dei report vengono modificati frequentemente ed è necessario aggiornare il report per visualizzare quelli più recenti. È possibile aggiornare un report in tre modi diversi.  
   
 |Opzione|Risultato|  
 |------------|------------|  
 |Pulsante**Aggiorna** nella finestra del browser|Visualizza il report archiviato nella cache della sessione. Un cache della sessione viene creata quando un utente apre un report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usate le sessioni del browser per garantire una visualizzazione coerente quando un report è aperto.|  
-|![Pulsante di aggiornamento del browser sulla barra degli strumenti dei report](../../reporting-services/media/htmlviewer-refresh.png "Pulsante di aggiornamento del browser sulla barra degli strumenti dei report")|Quando si fa clic sul pulsante **Aggiorna** sulla barra degli strumenti dei report, il server di report consente di ripetere la query e di aggiornare i dati del report se quest'ultimo viene eseguito su richiesta. Se il report è memorizzato nella cache oppure è uno snapshot, il pulsante **Aggiorna** consente di visualizzare il report archiviato nel database del server di report.|  
+|![Pulsante Aggiorna del browser sulla barra degli strumenti report](../../reporting-services/media/htmlviewer-refresh.GIF "pulsante Aggiorna del Browser sulla barra degli strumenti report")|Quando si fa clic sul pulsante **Aggiorna** sulla barra degli strumenti dei report, il server di report consente di ripetere la query e di aggiornare i dati del report se quest'ultimo viene eseguito su richiesta. Se il report è memorizzato nella cache oppure è uno snapshot, il pulsante **Aggiorna** consente di visualizzare il report archiviato nel database del server di report.|  
 |Combinazione di tasti CTRL+F5|Produce lo stesso risultato che si ottiene facendo clic sul pulsante **Aggiorna** sulla barra degli strumenti dei report.|  
   
   
@@ -102,26 +107,26 @@ Barra degli strumenti dei report
   
  Per accedere alle pagine dell'applicazione, selezionare azioni specifiche dell'elemento da un menu a discesa in un report o in un altro elemento del server di report in precedenza aggiunto a una raccolta di SharePoint. A seconda dell'elemento selezionato e delle autorizzazioni di cui dispone, l'utente ha la possibilità di creare report in Generatore report, generare modelli e configurare la sicurezza degli elementi dei modelli.  
   
- Per altre informazioni su Reporting Services e la tecnologia SharePoint, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel sito msdn.microsoft.com.  
+ Per altre informazioni su Reporting Services e la tecnologia SharePoint, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel sito msdn.microsoft.com.  
   
-### Ricerca di elementi di un server di report in un sito di SharePoint  
+### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Ricerca di elementi di un server di report in un sito di SharePoint  
  Per impostare le proprietà, è prima necessario individuare l'elemento desiderato. Gli elementi dei server di report sono sempre archiviati in raccolte o in una cartella all'interno di una raccolta.  
   
  Quando si accede al sito di SharePoint, viene visualizzata la pagina Sfoglia e la scheda Strumenti raccolta. Nella pagina Sfoglia sono elencate le raccolte e il contenuto della raccolta selezionata. È possibile visualizzare il report, i modelli di report e altri elementi nella raccolta, esplorare cartelle ed eseguire ricerche nel sito per individuare elementi.  
   
  Per distinguere gli elementi del server di report dagli altri elementi di un sito di SharePoint, è possibile usare l'icona per identificare visivamente un elemento oppure lasciare per qualche istante il puntatore del mouse sull'elemento e leggere l'estensione del file. Nella figura seguente vengono illustrati cartelle, un modello di report e una definizione di report nella raccolta **Documenti** :  
   
- ![Raccolta di SharePoint con elementi del server di report](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Raccolta di SharePoint con elementi del server di report")  
+ ![Raccolta di SharePoint con elementi del server di report](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "raccolta di Sharepoint con elementi del server di report")  
   
-### Visualizzazione di report  
+### <a name="viewing-reports"></a>Visualizzazione dei report  
  Le definizioni di report (file con estensione rdl) caricate in una raccolta di SharePoint vengono visualizzate tramite una web part Visualizzatore report installata dal componente aggiuntivo di Reporting Services. L'associazione per i file con estensione rdl viene definita automaticamente al momento dell'installazione del componente aggiuntivo. Quando si seleziona un report, questo viene aperto automaticamente nella web part. Dopo l'apertura di un report è possibile usare la barra degli strumenti per report inclusa nella web part per navigare tra le pagine, effettuare ricerche, usare lo zoom, nonché stampare il report. Nella barra degli strumenti è inclusa l'opzione Esporta in feed di dati che consente di esportare il report sotto forma di feed di dati Atom e un menu **Azioni** contenente le opzioni per stampare, sottoscrivere ed esportare il report in formati diversi quali PDF, Word ed Excel. Dal menu **Azioni** è inoltre possibile aprire il report in Generatore report. Nell'immagine seguente vengono illustrati un report e le opzioni di esportazione contenute nel menu **Azione** .  
   
  ![rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
-### Gestione di elementi tramite azioni  
+### <a name="managing-items-through-actions"></a>Gestione di elementi tramite azioni  
  Le attività di gestione vengono supportate tramite azioni disponibili in un menu a discesa associato a ogni elemento. A seconda delle autorizzazioni concesse all'utente, per ogni elemento sono disponibili azioni comuni quali**Visualizza proprietà** e **Modifica proprietà** , che sono standard per tutti gli elementi archiviati in una raccolta di SharePoint, oltre ad azioni personalizzate, che forniscono funzionalità di gestione specifiche dell'elemento. Nella figura seguente vengono illustrate le azioni disponibili per una definizione di report. Per una definizione di report sono disponibili azioni personalizzate quali **Gestisci sottoscrizioni** e **Gestisci opzioni elaborazione**.  
   
- ![Comandi di menu per gli elementi del server di report](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Comandi di menu per gli elementi del server di report")  
+ ![I comandi di menu per elementi del server di report](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "i comandi di Menu per elementi del server di report")  
   
   
 ##  <a name="DeskTop"></a> Visualizzazione di report in un'applicazione desktop  
@@ -153,9 +158,9 @@ Barra degli strumenti dei report
  [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Viene descritto come visualizzare report in anteprima mentre vengono creati o aggiornati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Installare e disinstallare Generatore report](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)  
+ [Installare e disinstallare Generatore report](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

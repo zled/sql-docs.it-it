@@ -1,26 +1,31 @@
 ---
-title: "Sottoscrizioni guidate dai dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sottoscrizioni [Reporting Services], basate sui dati"
-  - "sottoscrizioni guidate dai dati"
+title: Le sottoscrizioni guidate dai dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], data-driven
+- data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Sottoscrizioni guidate dai dati
+# <a name="data-driven-subscriptions"></a>sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati consente di utilizzare i dati di sottoscrizione dinamici recuperati da un'origine dei dati esterna in fase di esecuzione. In una sottoscrizione guidata dai dati è inoltre possibile utilizzare testo statico e valori predefiniti specificati al momento della definizione della sottoscrizione. È possibile utilizzare le sottoscrizioni guidate dai dati per eseguire le operazioni seguenti:  
   
 -   Distribuire un report a un elenco dinamico di Sottoscrittori. È possibile, ad esempio, utilizzare sottoscrizioni guidate dai dati per distribuire un report in una grande organizzazione nella quale i sottoscrittori cambiano da un mese all'altro oppure utilizzare altri criteri per determinare l'appartenenza a un gruppo da un gruppo di utenti esistente.  
@@ -41,14 +46,14 @@ caps.handback.revision: 56
   
  I valori dinamici utilizzati in una sottoscrizione guidata dai dati vengono ottenuti quando la sottoscrizione viene elaborata. Esempi di dati variabili che è possibile utilizzare in una sottoscrizione includono il nome del Sottoscrittore, l'indirizzo di posta elettronica, il formato di output desiderato o qualsiasi valore valido per un parametro di report. Per utilizzare valori dinamici in una sottoscrizione guidata dai dati, è necessario definire un mapping tra campi restituiti nella query e opzioni di recapito e parametri di report specifici. I dati variabili vengono recuperati da un'origine dei dati del Sottoscrittore ogni volta che la sottoscrizione viene elaborata.  
   
-## Requisiti per l'utilizzo delle sottoscrizioni guidate dai dati  
+## <a name="requirements-for-using-data-driven-subscriptions"></a>Requisiti per l'utilizzo delle sottoscrizioni guidate dai dati  
  La funzionalità relativa alle sottoscrizioni guidate dai dati non è disponibile in tutte le edizioni. Vi sono inoltre limiti al tipo di origini dati che è possibile utilizzare per recuperare i dati di sottoscrizione in fase di esecuzione. Nell'elenco seguente vengono fornite ulteriori informazioni sui requisiti:  
   
 -   Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la funzionalità di sottoscrizione guidata dai dati, vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Per i dati di sottoscrizione, scegliere un'origine dei dati che offra informazioni sullo schema al server di report. I tipi di origini dati supportate possono essere dati relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle, database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dati del pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , origini dati ODBC e OLE DB. Per altre informazioni sui requisiti dell'origine dati del sottoscrittore, vedere [Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
-## Utilizzo di sottoscrizioni guidate dai dati  
+## <a name="working-with-data-driven-subscriptions"></a>Utilizzo di sottoscrizioni guidate dai dati  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sulle sottoscrizioni guidate dai dati.  
   
 |Argomento|Description|  
@@ -58,9 +63,9 @@ caps.handback.revision: 56
 |[Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|Include istruzioni dettagliate per la creazione di una sottoscrizione guidata dai dati.|  
 |[Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)|Descrive come utilizzare Provider recapito Null con una sottoscrizione guidata dai dati per precaricare la cache.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Pagine Creazione di una sottoscrizione guidata dai dati &#40;Gestione report&#41;](../Topic/Create%20Data-driven%20Subscription%20Page%20\(Report%20Manager\).md)   
+ [Pagine Creazione di una sottoscrizione guidata dai dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Precaricare la cache &#40;Gestione report&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Esportazione in un file PDF (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esportazione in un File PDF (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esportazione in un file PDF (Generatore report e SSRS)
+# <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
   L'estensione per il rendering PDF consente di eseguire il rendering di un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 11.0 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. Per visualizzare o stampare i report in formato PDF è tuttavia necessario disporre di visualizzatori PDF, ad esempio Adobe Acrobat.  
   
  L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per altre informazioni sulle limitazioni, vedere [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
@@ -43,14 +48,13 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  Sebbene le condizioni vengano soddisfatte, esiste una circostanza in cui i caratteri non sono incorporati nel file PDF. Se i tipi di carattere usati sono quelli nella specifica PDF noti in genere come caratteri standard di tipo 1 o caratteri di base quattordici, i caratteri non sono incorporati per il contenuto ANSI.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-### Tipi di carattere nel computer client  
+### <a name="fonts-on-the-client-computer"></a>Tipi di carattere nel computer client  
  Quando un tipo di carattere viene incorporato nel file PDF, non è necessario che sia installato nel computer usato per visualizzare il report, ovvero il computer client, per garantire una corretta visualizzazione del report.  
   
  Quando un tipo di carattere non viene incorporato nel file PDF, è necessario che nel computer client sia installato il tipo di carattere appropriato per garantire una corretta visualizzazione del report. Se il tipo di carattere non è installato nel computer client, nel file PDF viene visualizzato un punto interrogativo (?) in corrispondenza dei caratteri non supportati.  
   
-### Verifica dei tipi di carattere in un file PDF  
+### <a name="verifying-fonts-in-a-pdf-file"></a>Verifica dei tipi di carattere in un file PDF  
  Le differenze nell'output PDF si verificano più spesso quando si utilizza un tipo di carattere che non supporta caratteri non latini in un report nel quale vengono successivamente aggiunti caratteri non latini. Per assicurarsi che il rendering del report venga eseguito correttamente, è consigliabile verificare l'output del rendering in formato PDF sia nel server di report che nei computer client.  
   
  A tale scopo, la visualizzazione dell'anteprima del report o l'esportazione in HTML non risultano affidabili poiché il report verrà visualizzato in modo corretto grazie alla sostituzione automatica dei tipi di caratteri eseguita rispettivamente dall'interfaccia di progettazione grafica o da Microsoft Internet Explorer. Se nel server non sono disponibili glifi Unicode, è possibile che i caratteri vengano sostituiti da un punto interrogativo (?). Se nel client non è disponibile un tipo di carattere, è possibile che i caratteri vengano sostituiti da riquadri (□).  
@@ -69,29 +73,27 @@ caps.handback.revision: 12
 |**Producer**|Nome e versione dell'estensione per il rendering.|  
 |**CreationDate**|Data e ora di esecuzione del report nel formato PDF **datetime** .|  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="Interactivity"></a> Interattività  
  In PDF sono supportati alcuni elementi interattivi. Di seguito è riportata una descrizione di comportamenti specifici.  
   
-### Elementi visualizzati e nascosti  
+### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
  Gli elementi con attivazione e disattivazione dinamica della visualizzazione non sono supportati in PDF. Il rendering del documento PDF viene eseguito in base allo stato corrente degli elementi del report. Ad esempio, se l'elemento è visualizzato la prima volta che il report viene eseguito, il rendering di tale elemento verrà eseguito. Il rendering delle immagini che è possibile visualizzare e nascondere non viene eseguito, se tali immagini sono nascoste quando il report viene esportato.  
   
-### Mappa documento  
+### <a name="document-map"></a>Mappa documento  
  Se il report contiene etichette della mappa documento, al file PDF viene aggiunta una struttura del documento. Ogni etichetta della mappa documento viene visualizzata come voce nella struttura del documento nell'ordine in cui appare nel report. In Acrobat viene aggiunto un segnalibro di destinazione alla struttura del documento solo se viene eseguito il rendering della pagina in cui è presente.  
   
  Se viene eseguito il rendering di una singola pagina, non viene aggiunta alcuna struttura del documento. La mappa documento viene disposta gerarchicamente per riflettere il livello di nidificazione del report. La struttura del documento è accessibile in Acrobat nella scheda Segnalibri. Se si fa clic su una voce all'interno della struttura del documento, nel documento si passa alla posizione contrassegnata con il segnalibro.  
   
-### Segnalibri  
+### <a name="bookmarks"></a>Segnalibri  
  I segnalibri non sono supportati nel rendering in PDF.  
   
-### Collegamenti drill-through  
+### <a name="drillthrough-links"></a>Collegamenti drill-through  
  I collegamenti drill-through non sono supportati nel rendering in PDF. Il rendering dei collegamenti drill-through non viene eseguito come collegamenti su cui è possibile fare clic e non è possibile connettere i report drill-through alla destinazione del drill-through.  
   
-### Collegamenti ipertestuali  
+### <a name="hyperlinks"></a>Collegamenti ipertestuali  
  Il rendering dei collegamenti ipertestuali dei report viene eseguito come collegamenti su cui è possibile fare clic nel file PDF. Quando si fa clic, da Acrobat verrà aperto il browser client predefinito in corrispondenza dell'URL del collegamento ipertestuale.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="Compression"></a> Compressione  
  La compressione dell'immagine è basata sul tipo di file originale dell'immagine. L'estensione per il rendering in PDF comprime i file PDF per impostazione predefinita.  
@@ -101,18 +103,17 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  I file PDF non supportano l'incorporazione delle immagini PNG.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per altre informazioni, vedere [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

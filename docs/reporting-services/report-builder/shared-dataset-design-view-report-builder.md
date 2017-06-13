@@ -1,23 +1,28 @@
 ---
-title: "Visualizzazione di progettazione set di dati condivisi (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Visualizzazione di progettazione set di dati (Generatore Report) condiviso | Documenti Microsoft
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Visualizzazione di progettazione set di dati condivisi (Generatore report)
+# <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Un set di dati condiviso viene pubblicato in un server di report e può essere usato da più report. È possibile creare set di dati da condividere con altri utenti. Nella finestra di progettazione di set di dati condivisi è possibile selezionare un'origine dati condivisa, specificare proprietà per il set di dati condiviso e creare una query in Progettazione query.  
   
  ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
@@ -27,15 +32,15 @@ caps.handback.revision: 9
 ##  <a name="Ribbon"></a> Barra multifunzione  
  La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei seguenti gruppi logici: Connessione, Set di dati e Progettazione query.  
   
-### Connessione  
+### <a name="connection"></a>Connessione  
  Usare il pulsante **Seleziona** nel gruppo Connessione per selezionare un'origine dati condivisa o individuare e selezionare l'origine dati condivisa nel server di report.  
   
 > [!NOTE]  
 >  Un set di dati condiviso deve essere basato su un'origine dati condivisa. Se l'origine dati richiesta non è disponibile, è necessario crearne una nel server di report. Per altre informazioni, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Per altre informazioni, vedere [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Per altre informazioni, vedere [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
-### Set di dati  
+### <a name="dataset"></a>Set di dati  
  Usare il pulsante **Opzioni SET** per impostare le proprietà del set di dati condiviso, tra cui:  
   
 -   Campi. È possibile aggiungere o modificare un campo nella raccolta di campi.  
@@ -54,12 +59,11 @@ caps.handback.revision: 9
   
  Per altre informazioni sui piani di aggiornamento della cache, vedere [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
-### Progettazione query  
+### <a name="query-designer"></a>Progettazione query  
  Utilizzare la barra degli strumenti di Progettazione query per compilare una query che specifichi quali dati recuperare dalla connessione dati. La barra degli strumenti visualizzata dipende dalla finestra Progettazione query associata al tipo di origine dati della connessione dati.  
   
  Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DesignSurface"></a> Area di progettazione query  
  La finestra Progettazione query consente di compilare una query utilizzando la sintassi richiesta dall'origine dati esterna.  
@@ -70,7 +74,6 @@ caps.handback.revision: 9
   
  A ogni tipo di origine dati sono associati requisiti specifici per la query che funzioneranno con l'origine dati esterna. Per altre informazioni, vedere l'argomento corrispondente al tipo di origine dati in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="Results"></a> Visualizzazione dei risultati di query  
  Nella visualizzazione di progettazione del set di dati condiviso viene compilata una query che recupererà dati dalla connessione dati al momento dell'elaborazione del report.  
@@ -81,21 +84,19 @@ caps.handback.revision: 9
   
  Le credenziali utilizzate per eseguire una query sono diverse dalle credenziali utilizzate per visualizzare in anteprima un report o eseguire un report dal server di report. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
-### Esecuzione di un report con parametri  
+### <a name="running-a-report-with-parameters"></a>Esecuzione di un report con parametri  
  Quando la query include variabili, i parametri del set di dati vengono creati automaticamente. Quando si completa la compilazione della query del set di dati, vengono creati automaticamente i parametri del report impostati sui parametri del set di dati.  
   
- Se un report contiene parametri, prima che il report possa essere eseguito automaticamente, è necessario che per tutti i parametri siano presenti valori predefiniti. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda **Esegui**.  
+ Se un report contiene parametri, prima che il report possa essere eseguito automaticamente, è necessario che per tutti i parametri siano presenti valori predefiniti. Se un parametro non ha un valore predefinito, quando si esegue il report è necessario scegliere un valore per il parametro e quindi fare clic su **Visualizza report** nella scheda **Esegui** .  
   
  Per altre informazioni, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="Save"></a> Salvataggio del set di dati condiviso  
  Per salvare la query generata, sul pulsante **Generatore report** fare clic su **Salva** o su **Salva con nome**. Passare alla cartella appropriata sul server di report e salvare la definizione del set di dati condiviso. Il set di dati condiviso non sarà disponibile ad altri utenti finché non verrà salvato nel server di report.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

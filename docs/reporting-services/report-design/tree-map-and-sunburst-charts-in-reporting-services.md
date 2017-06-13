@@ -1,23 +1,28 @@
 ---
-title: "Mappa ad albero e grafici radiali in Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mappa ad albero e grafici radiali in Reporting Services | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mappa ad albero e grafici radiali in Reporting Services
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Mappa ad albero e grafici radiali in Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   La mappa ad albero e le visualizzazioni radiali di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono ideali per la rappresentazione visiva dei dati gerarchici.   Questo argomento offre una panoramica su come aggiungere una mappa ad albero e un grafico radiale a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'argomento include anche una query Adventureworks di esempio come supporto nella fase iniziale.  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### Per inserire un grafico della mappa ad albero e configurare i dati Adventureworks di esempio  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Per inserire un grafico della mappa ad albero e configurare i dati Adventureworks di esempio  
  **Nota:** prima di aggiungere un grafico al report, creare un'origine dati e un set di dati.  Per i dati e una query di esempio, vedere la sezione [Dati Adventureworks di esempio](#bkmk_sample_data) in questo argomento.  
   
-1.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci**, quindi selezionare **Grafico**.  
+1.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci**, quindi selezionare **Grafico** .  
   
-     Selezionare la mappa ad albero ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Selezionare una mappa ad albero ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 16
   
 4.  Per ottimizzare le dimensioni della pagina per la forma generale di una mappa ad albero, impostare la posizione della legenda nella parte inferiore.  
   
-5.  Per aggiungere descrizioni di comando che consentono di visualizzare la sottocategoria e il totale della riga, fare clic con il pulsante destro del mouse su **LineTotal**, quindi selezionare **Proprietà serie**.  
+5.  Per aggiungere descrizioni di comando che consentono di visualizzare la sottocategoria e il totale della riga, fare clic con il pulsante destro del mouse su **LineTotal** , quindi selezionare **Proprietà serie**.  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
@@ -66,7 +71,6 @@ caps.handback.revision: 16
   
 7.  Il numero di valori di etichetta visualizzati dipende dalle dimensioni del carattere, dalle dimensioni dell'area totale del grafico e dalle dimensioni dei rettangoli specifici.  Per visualizzare più etichette, impostare la proprietà del carattere Etichetta di LineTotal su 10 pt invece del valore predefinito di 8 pt.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Contenuto dell'argomento](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> Grafico radiale  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,10 +79,10 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### Per inserire un grafico radiale e configurare i dati Adventureworks di esempio  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Per inserire un grafico radiale e configurare i dati Adventureworks di esempio  
  **Nota:** prima di aggiungere un grafico al report, creare un'origine dati e un set di dati.  Per i dati e una query di esempio, vedere la sezione [Dati Adventureworks di esempio](#bkmk_sample_data) in questo argomento.  
   
-1.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci**, quindi selezionare **Grafico**.  
+1.  Fare clic con il pulsante destro del mouse nell'area di progettazione, scegliere **Inserisci**, quindi selezionare **Grafico** .  
   
      Selezionare il grafico radiale ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
@@ -104,7 +108,6 @@ caps.handback.revision: 16
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Contenuto dell'argomento](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> Dati Adventureworks di esempio  
  Questa sezione include una query di esempio e la procedura di base per la creazione di un'origine e di un set di dati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Se il report contiene già un'origine e un set di dati, ignorare questa sezione.  
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      Per altre informazioni sulla creazione di un set di dati, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Contenuto dell'argomento](#bkmk_top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione set di dati condivisi &#40;Generatore report&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [Visualizzazione di descrizioni comandi in una serie &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [Esercitazione: Mappe ad albero in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

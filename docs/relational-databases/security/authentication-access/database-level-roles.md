@@ -2,7 +2,7 @@
 title: Ruoli a livello di database | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
@@ -71,7 +71,7 @@ Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del m
 
 ## <a name="fixed-database-roles"></a>ruoli predefiniti del database
   
- La tabella seguente contiene i ruoli predefiniti del database e le rispettive caratteristiche. Questi ruoli esistono in tutti i database. Non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del database.   
+ La tabella seguente contiene i ruoli predefiniti del database e le rispettive caratteristiche. Questi ruoli esistono in tutti i database. Fatta eccezione per il **pubblica** ruolo del database, le autorizzazioni assegnate ai ruoli del database predefinito non può essere modificato.   
   
 |Nome del ruolo predefinito del database|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del m
 
 Non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del database. La figura seguente mostra le autorizzazioni assegnate ai ruoli predefiniti del database:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Ruoli speciali per [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -106,7 +106,7 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
   
 |Nome del ruolo in msdb|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|I membri di tali ruoli del database possono amministrare e utilizzare [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiornate da una versione precedente potrebbero contenere una versione precedente del ruolo che era stata denominata usando Data Transformation Services (DTS) anziché [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|I membri di tali ruoli del database possono amministrare e utilizzare [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiornate da una versione precedente potrebbero contenere una versione precedente del ruolo che era stata denominata usando Data Transformation Services (DTS) anziché [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|I membri di tali ruoli del database possono amministrare e utilizzare l'agente di raccolta dati. Per altre informazioni, vedere [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|I membri del ruolo del database **db_ PolicyAdministratorRole** possono eseguire tutte le attività di configurazione e manutenzione su criteri e condizioni della gestione basata su criteri. Per altre informazioni, vedere [Amministrare server usando la gestione basata su criteri](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|I membri di questi ruoli del database possono amministrare e utilizzare gruppi di server registrati.|  

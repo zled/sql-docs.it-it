@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ Per aumentare il livello di sicurezza, il messaggio di errore restituito al clie
 |11|L'account di accesso è valido, ma l'accesso al server ha avuto esito negativo. Una possibile causa di questo errore è quando l'utente di Windows dispone dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come un membro del gruppo Administrators locale, ma Windows non fornisce le credenziali di amministratore. Per connettersi, avviare il programma di connessione usando l'opzione **Esegui come amministratore** e quindi aggiungere l'utente di Windows a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come accesso specifico.|  
 |12|L'account di accesso è valido, ma l'accesso al server ha avuto esito negativo.|  
 |18|È necessario modificare la password.|  
+|38, 46|Impossibile trovare il database richiesto dall'utente.|
+|102 - 111|Errore AAD.|
+|122 - 124|Errore a causa di password o nome utente vuoto.|
+|126|Il database richiesto dall'utente non esiste.|
+|132 - 133|Errore AAD.|
   
 Esistono altri stati di errore che indicano un errore di elaborazione interno non previsto.  
   

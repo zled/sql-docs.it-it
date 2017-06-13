@@ -1,28 +1,33 @@
 ---
-title: "Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere grafici sparkline e barre dei dati (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f084fc55a0f3011a40c6f2d8a2cfcdf61dc9f2
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS)
+# <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici di riserva di piccole dimensioni contenenti numerose informazioni poco dettagliate. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
  Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] i grafici sparkline e le barre dei dati vengono posizionati generalmente nelle celle di una tabella o di una matrice. In ogni grafico sparkline di solito viene visualizzata una sola serie. Le barre dei dati possono includere più punti dati. L'influenza dei grafici sparkline e delle barre dei dati deriva dal ripetersi delle informazioni relative alla serie per ogni riga della tabella o matrice.  
   
-## Per aggiungere grafici sparkline o barre dei dati a una tabella o a una matrice  
+## <a name="to-add-a-sparkline-or-data-bar-to-a-table-or-matrix"></a>Per aggiungere grafici sparkline o barre dei dati a una tabella o a una matrice  
   
 1.  Se questa operazione non è già stata eseguita, creare una [tabella](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) o una [matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) con i dati che si vuole visualizzare.  
   
@@ -39,13 +44,13 @@ caps.handback.revision: 8
   
      Viene visualizzato il riquadro **Dati grafico** .  
   
-6.  Nell'area **Valori** fare clic sul segno più (**+**) di **Aggiungi campi** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
+6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi**+**e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
   
-7.  Nell'area **Gruppi di categorie** fare clic sul segno più (**+**) di **Aggiungi campi** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
+7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi**+**e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
   
      In genere per i grafici sparkline e per le barre dei dati, non viene aggiunto un campo all'area **Gruppo serie** in quanto si desidera una sola serie per ogni riga.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Allineare i dati in un grafico di una tabella o matrice &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   

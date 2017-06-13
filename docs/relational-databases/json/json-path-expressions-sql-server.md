@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 829f7d57569e55eed5bc50634c5a9baad6f7d8ee
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Espressioni di percorso JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Usare i percorsi JSON per fare riferimento alle proprietà degli oggetti JSON. I percorsi JSON usano una sintassi simile a Javascript.  
+ Utilizzare le espressioni di percorso JSON per fare riferimento alle proprietà degli oggetti JSON.  
   
  È necessario specificare un'espressione di percorso quando si chiamano le funzioni seguenti.  
   
@@ -43,16 +43,25 @@ ms.lasthandoff: 04/11/2017
 ## <a name="parts-of-a-path-expression"></a>Parti di un'espressione di percorso
  Un'espressione di percorso include due componenti.  
   
-1.  La [modalità percorso](#PATHMODE) facoltativa,**lax** o **strict**.  
+1.  Facoltativo [modalità path](#PATHMODE), con un valore di **lax** o **strict**.  
   
 2.  Il [percorso](#PATH) stesso.  
-  
+
 ##  <a name="PATHMODE"></a> Path mode  
  All'inizio dell'espressione di percorso, è possibile dichiarare la modalità percorso specificando la parola chiave **lax** o **strict**. Il valore predefinito è **lax**.  
   
--   Nella modalità **lax** le funzioni restituiscono valori vuoti se l'espressione di percorso contiene un errore. Se ad esempio si richiede il valore **$.name**e il testo JSON non contiene una chiave **name** , la funzione restituisce null.  
+-   In **lax** modalità, la funzione restituisce i valori vuoti se l'espressione di percorso contiene un errore. Ad esempio, se si richiede il valore **. Name $**, e il testo JSON non contiene un **nome** chiave, la funzione restituisce null, ma non viene generato un errore.  
   
--   Nella modalità **strict** le funzioni generano errori se l'espressione di percorso contiene un errore.  
+-   In **strict** modalità, la funzione genera un errore se l'espressione di percorso contiene un errore.  
+
+La query seguente specifica in modo esplicito `lax` modalità nell'espressione di percorso.
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json=N'{ ... }'
+
+SELECT * FROM OPENJSON(@json, N'lax $.info')
+```  
   
 ##  <a name="PATH"></a> Path  
  Dopo la dichiarazione facoltativa della modalità percorso, specificare il percorso stesso.  
@@ -65,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
     -   Elementi matrice. Ad esempio, `$.product[3]`. Le matrici sono in base zero.  
   
-    -   L'operatore punto (`.`) indica un membro di un oggetto.  
+    -   L'operatore punto (`.`) indica un membro di un oggetto. Ad esempio, in `$.people[1].surname`, `surname` è un figlio di `people`.
   
 ## <a name="examples"></a>Esempi  
  Gli esempi inclusi in questa sezione fanno riferimento al testo JSON seguente.  
@@ -93,15 +102,18 @@ ms.lasthandoff: 04/11/2017
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Modalità di gestione dei percorsi duplicati da parte delle funzioni predefinite  
- Se il testo JSON contiene proprietà duplicate, ad esempio due chiavi con lo stesso nome nello stesso livello, le funzioni JSON_VALUE e JSON_QUERY restituiscono il primo valore corrispondente al percorso. Per analizzare un oggetto JSON contenente chiavi duplicate, usare OPENJSON, come illustrato nell'esempio seguente.  
+ Se il testo JSON contiene proprietà duplicate, ad esempio, due chiavi con lo stesso nome nello stesso livello - il **JSON_VALUE** e **JSON_QUERY** funzioni restituiscono il primo valore che corrisponde al percorso. Per analizzare un oggetto JSON contenente chiavi duplicate e restituire tutti i valori, utilizzare **OPENJSON**, come illustrato nell'esempio seguente.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
 
 SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Acquisire familiarità con il supporto JSON integrato in SQL Server  
+Per un numero elevato di soluzioni specifiche, casi di utilizzo e indicazioni, vedere il [post di blog sul supporto JSON predefinito](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e Database SQL di Azure per Microsoft Program Manager Jovan Popovic.
   
 ## <a name="see-also"></a>Vedere anche  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

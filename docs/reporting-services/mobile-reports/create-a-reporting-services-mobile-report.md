@@ -1,31 +1,36 @@
 ---
-title: "Creare un report per dispositivi mobili di Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare un report di Reporting Services per dispositivi mobili | Documenti Microsoft
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare un report per dispositivi mobili di Reporting Services
-Con [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], è possibile creare rapidamente report per dispositivi mobili di [!INCLUDE[PRODUCT_NAME](../../includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] adattabili a tutte le dimensioni dello schermo, in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili.  
+# <a name="create-a-reporting-services-mobile-report"></a>Creare un report per dispositivi mobili di Reporting Services
+Con SQL Server Mobile Report Publisher, è possibile creare rapidamente report per dispositivi mobili di SQL Server 2016 Reporting Services che si adattano a qualsiasi dimensione dello schermo, in un'area di progettazione con righe della griglia regolabili e colonne e gli elementi di report per dispositivi mobili flessibile.  
   
-La prima volta che si crea un report per dispositivi mobili, è possibile installare [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)] nel computer locale dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)]. In alternativa, è possibile installarlo dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Successivamente, è possibile avviarlo dal portale Web o in locale.   
+La prima volta che si crea un report per dispositivi mobili, è possibile installare SQL Server Mobile Report Publisher nel computer locale dal portale web di Reporting Services. In alternativa, è possibile installarlo dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Successivamente, è possibile avviarlo dal portale Web o in locale.   
     
-1. Nella barra superiore del portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] selezionare **Nuovo** > **Report per dispositivi mobili**.  
+1. Nella barra superiore del portale web di Reporting Services, selezionare **New** > **Report per dispositivi mobili**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. Nella scheda **Layout** di [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)] selezionare uno strumento di navigazione, un misuratore, un grafico, una mappa o una griglia dati e trascinarlo nella griglia di progettazione.  
+2. Nel **Layout** in Mobile Report Publisher, selezionare un navigatore, misuratore, grafico, mappa o datagrid e trascinarla nella griglia di progettazione.  
   
 3. Fare clic sull'angolo inferiore destro dell'elemento e trascinarlo fino a ottenere le dimensioni desiderate.  
   
@@ -51,11 +56,11 @@ La prima volta che si crea un report per dispositivi mobili, è possibile instal
     
      ![SSMRP_AddExcelData](../../reporting-services/mobile-reports/media/ssmrp-addexceldata.png)  
   
-8. Sempre nella scheda **Dati**, nella casella **Proprietà dati** selezionare la tabella e i campi da includere nel grafico.  
+8. Sempre nella scheda **Dati** , nella casella **Proprietà dati** selezionare la tabella e i campi da includere nel grafico.  
   
    ![SSMRP_DataProps](../../reporting-services/mobile-reports/media/ssmrp-dataprops.png)  
   
-9. Tornare alla scheda **Layout**. Nella casella **Proprietà visive** è possibile impostare proprietà quali **Titolo**, **Unità di tempo** e **Formato numeri**.  
+9. Tornare alla scheda **Layout** . Nella casella **Proprietà visive** è possibile impostare proprietà quali **Titolo**, **Unità di tempo**e **Formato numeri**.  
   
    ![SSMRP_ChartVizProps](../../reporting-services/mobile-reports/media/ssmrp-chartvizprops.png)  
     
@@ -63,9 +68,9 @@ La prima volta che si crea un report per dispositivi mobili, è possibile instal
   
 11. A questo punto è necessario salvare il report. Selezionare l'icona Salva nell'angolo in alto a sinistra e quindi **Salva in locale** o **Salva nel server**.  
   
-   Per il salvataggio in un server, è necessario l'accesso a un serve di report [!INCLUDE[PRODUCT_NAME](../../includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)].  
+   Per il salvataggio in un server, è necessario accedere a un server di report di SQL Server 2016 Reporting Services.  
      
-   ### Vedere anche  
+   ### <a name="see-also"></a>Vedere anche  
      
 -   [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [Layout di un report Reporting Services per dispositivi mobili per telefono o tablet](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

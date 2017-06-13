@@ -1,30 +1,35 @@
 ---
-title: "Accesso con URL (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "accesso con URL [Reporting Services]"
-  - "collegamenti [Reporting Services], accesso con URL"
-  - "accesso con URL [Reporting Services], informazioni sull’accesso con URL"
-  - "parametri [Reporting Services], accesso con URL"
-  - "server di report [Reporting Services], accesso con URL"
-  - "collegamenti ipertestuali [Reporting Services]"
+title: Accesso con URL (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services]
+- links [Reporting Services], URL access
+- URL access [Reporting Services], about URL access
+- parameters [Reporting Services], URL access
+- report servers [Reporting Services], URL access
+- hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Accesso con URL (SSRS)
+# <a name="url-access-ssrs"></a>Accesso con URL (SSRS)
   L'accesso tramite URL al server di report in SQL Server Reporting Services (SSRS) consente di inviare comandi a un server di report tramite una richiesta URL. Ad esempio, è possibile personalizzare il rendering di un report in un server di report in modalità nativa o in una raccolta di SharePoint. È possibile che il report sia stato visualizzato utilizzando un set specifico di valori dei parametri del report o che sia stata visualizzata una particolare pagina di interesse nel report. È possibile incapsulare queste informazioni nell'URL utilizzando i parametri di accesso tramite URL predefiniti. È possibile personalizzare ulteriormente il modo in cui il server di report elabora il report incorporando parametri relativi ai formati di rendering o all'aspetto del visualizzatore di report. Si può, quindi, incollare direttamente questo URL in un messaggio di posta elettronica o in una pagina Web per permettere ad altri di accedere al report con le stesse modalità tramite il browser.  
   
  Le altre azioni che si possono eseguire attraverso l'accesso tramite URL sono:  
@@ -41,10 +46,10 @@ caps.handback.revision: 43
   
  Per l'elenco completo dei comandi e delle impostazioni disponibili attraverso l'accesso tramite URL, vedere [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md).  
   
-## Concetti di base relativi all'accesso tramite URL  
+## <a name="url-access-concepts"></a>Concetti di base relativi all'accesso tramite URL  
  Le richieste URL al server di report contengono parametri elaborati dal server di report. Il modo in cui le richieste URL vengono gestite dal server di report dipende dai parametri, dai prefissi di parametro e dai tipi di elementi inclusi nell'URL. Gli URL del server di report sono conformi alle linee guida per la formattazione degli URL proposte dalla bozza di standard congiunta del World Wide Web Consortium W3C/IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] La funzionalità URL è compatibile con la maggior parte dei browser Internet o delle applicazioni che supportano il reindirizzamento URL standard.  
   
-### Sintassi per l'accesso con URL  
+### <a name="url-access-syntax"></a>Sintassi per l'accesso con URL  
  Le richieste URL possono contenere più parametri elencati in qualsiasi ordine. I parametri sono separati da una e commerciale (&), mentre le coppie nome/valore sono separate da un segno di uguale (=).  
   
 ```  
@@ -56,7 +61,7 @@ reportpath
   
 ```  
   
-### Descrizione della sintassi  
+### <a name="syntax-description"></a>Descrizione della sintassi  
  *rswebserviceurl*  
  URL del servizio Web del server di report. Per la modalità nativa, è l'URL del servizio Web dell'istanza del server di report configurata nella Gestione configurazione Reporting Services (vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Esempio:  
   
@@ -72,7 +77,7 @@ http://myspsite/subsite/_vti_bin/reportserver
 ```  
   
 > [!TIP]  
->  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
+>  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
   
  *pathinfo*  
  Il nome di percorso relativo dell'elemento nel database del server di report in modalità nativa o l'URL completo dell'elemento in un catalogo di SharePoint.  
@@ -106,7 +111,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
  **Nota:** per un elenco dei parametri di accesso tramite URL disponibili, vedere [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md). Per esempi di passaggi di parametri di report nell'URL, vedere [Passare un parametro del report in un URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizioni delle attività|Collegamenti|  
 |-----------------------|-----------|  
@@ -118,7 +123,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Aprire un report e passare rapidamente alla posizione di una stringa.|[Cercare un report tramite l'accesso con URL](../reporting-services/search-a-report-using-url-access.md)|  
 |Eseguire il rendering di uno snapshot della cronologia di un report specifico.|[Eseguire il rendering degli snapshot della cronologia dei report tramite l'accesso con URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Passare un parametro del report in un URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)   
  [Integrazione di Reporting Services tramite l'accesso con URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   

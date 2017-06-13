@@ -1,29 +1,34 @@
 ---
-title: "Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalit&#224; nativa | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Risoluzione dei problemi di pubblicazione o visualizzazione di un Report in un Server di Report in modalità nativa | Documenti Microsoft"
+ms.custom: 
+ms.date: 02/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalit&#224; nativa
+# <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa
   
   
   
 Quando si pubblica o si carica un report in un server di report configurato in modalità nativa, è possibile che si verifichino problemi specifici alla visualizzazione dei report nel server di report. Usare le informazioni presenti in questo argomento per risolvere questi problemi.   
   
-## Vengono richieste le credenziali quando si pubblica un report  
+## <a name="why-am-i-being-prompted-for-credentials-when-i-publish-a-report"></a>Vengono richieste le credenziali quando si pubblica un report  
 Per distribuire un report in un server di report, è necessario specificare l'indirizzo del server. È possibile che venga visualizzata la finestra di dialogo di accesso di Reporting Services con la richiesta delle credenziali.   
   
 Il nome del server di report non è specificato correttamente  
@@ -33,25 +38,25 @@ Quando si distribuisce il report in un server di report in modalità nativa, un 
   
 Verificare che l'URL del server di report sia l'indirizzo del server di report, ad esempio `http://localhost/reportserver`, e non l'indirizzo della directory virtuale di Gestione report, ad esempio, `http://localhost/reports`. Se per il server di report è stato specificato un numero di porta diverso da quello predefinito, ovvero 80, è necessario specificarlo nell'indirizzo del server di report, ad esempio `http://localhost:81/reportserver`.   
   
- ## Non si verifica nulla quando si attivano o disattivano gli elementi nel report pubblicato.  
+ ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Non si verifica nulla quando si attivano o disattivano gli elementi nel report pubblicato.  
   Quando si visualizza un report nell'anteprima locale, è possibile attivare o disattivare e mostrare o nascondere gli elementi nel report. Quando si visualizza lo stesso report dopo averlo pubblicato nel server di report, gli elementi Toggle non funzionano più.   
   
-\<nome server di report> include un carattere di sottolineatura (_)  
+\<nome del server di report > include un carattere di sottolineatura (_)  
   
 Se un report viene eseguito senza errori, ma gli elementi Toggle non funzionano, ad esempio si fa clic sull'icona di espansione (+) e non accade nulla, controllare il nome del computer che ospita il server di report. Se il nome del computer include un carattere di sottolineatura, gli elementi Toggle non funzionano. Questo è un problema noto Non esistono soluzioni alternative.   
   
 Per eseguire i report con gli elementi Toggle, è necessario utilizzare un computer che non includa caratteri di sottolineatura nel proprio nome.  
   
-## Le immagini e i grafici non vengono caricati quando si utilizza Esegui come e un browser per eseguire il report.  
+## <a name="images-and-charts-do-not-load-when-i-use-run-as-and-a-browser-to-run-my-report"></a>Le immagini e i grafici non vengono caricati quando si utilizza Esegui come e un browser per eseguire il report.  
 Quando si esegue Gestione report in un contesto di sicurezza diverso, gli elementi potrebbero non essere tutti visualizzati in un report.   
   
-### Autorizzazioni insufficienti per le cartelle dei file temporanei di Internet  
+### <a name="insufficient-permissions-on-internet-temporary-file-folders"></a>Autorizzazioni insufficienti per le cartelle dei file temporanei di Internet  
   
 In alcuni casi, quando si utilizza Gestione report per visualizzare i report pubblicati contenenti grafici o immagini, è possibile che non vengano visualizzati. Ad esempio, quando si usa il comando **Esegui come** di Microsoft Windows per visualizzare un report con un contesto di sicurezza diverso, potrebbero non essere disponibili le autorizzazioni per la cartella in cui il server di report memorizza nella cache grafici e immagini come file di Internet temporanei.   
   
 Verificare di disporre dell'autorizzazione per accedere alle cartelle contenenti i file memorizzati nella cache.   
     
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Errori ed eventi (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Risolvere i problemi di recupero dei dati con i report di Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
@@ -60,3 +65,5 @@ Verificare di disporre dell'autorizzazione per accedere alle cartelle contenenti
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+
+

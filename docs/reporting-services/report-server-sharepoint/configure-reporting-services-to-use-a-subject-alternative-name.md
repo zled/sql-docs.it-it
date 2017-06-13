@@ -1,28 +1,33 @@
 ---
-title: "Configurare Reporting Services per usare un nome alternativo del soggetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurare Reporting Services per utilizzare un nome alternativo del soggetto | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurare Reporting Services per usare un nome alternativo del soggetto
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
   Questo argomento descrive come configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) in modo da usare un nome alternativo del soggetto (SAN) modificando il file rsreportserver.config e usando lo strumento Netsh.exe.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] |  
   
  Le istruzioni si applicano all'URL Reporting Service nonché all'URL servizio Web.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 6
   
  Per altre informazioni sulle impostazioni di SSL per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-### Configurare SSRS per usare un nome alternativo del soggetto per l'URL servizio Web  
+### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurare SSRS per usare un nome alternativo del soggetto per l'URL servizio Web  
   
 1.  Avviare Gestione configurazione Reporting Services.  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 6
   
 10. Nella pagina **Stato server di report** di Gestione configurazione Reporting Services fare clic su **Arresta** e quindi su **Avvia** per riavviare il server di report.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

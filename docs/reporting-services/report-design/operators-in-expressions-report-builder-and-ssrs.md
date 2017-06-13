@@ -1,29 +1,34 @@
 ---
-title: "Operatori nelle espressioni (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gli operatori nelle espressioni (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35e702d0d1944cd5e7f2b7120da07e272f30cf70
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Operatori nelle espressioni (Generatore report e SSRS)
+# <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatori nelle espressioni (Generatore report e SSRS)
   Un operatore è un simbolo che rappresenta le azioni applicate a uno o più termini di un'espressione. In un'espressione sono supportate le categorie di operatori seguenti: aritmetico, di confronto, di concatenazione, logico o bit per bit e di scorrimento bit.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Aritmetico  
+### <a name="arithmetic"></a>Aritmetico  
  Gli operatori aritmetici eseguono operazioni matematiche su due termini numerici in un'espressione.  
   
 |Operatore|Description|  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
 |+|Somma due numeri.|  
 |-|Restituisce la differenza tra due numeri o indica il valore negativo di un termine numerico.|  
   
-### Confronto  
+### <a name="comparison"></a>Confronto  
  Gli operatori di confronto consentono di confrontare due espressioni.  
   
 |Operatore|Description|  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
 |Simile a|Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=.<br /><br /> Nella tabella seguente sono elencati i caratteri che è possibile utilizzare come caratteri jolly:<br /><br /> %: qualsiasi stringa composta da zero o più caratteri.<br /><br /> _: qualsiasi carattere singolo.<br /><br /> [ ]: qualsiasi carattere singolo compreso nell'intervallo ([a-f]) o nel set ([aeiou]) specificato.<br /><br /> [^]: qualsiasi carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^aeiou]) specificato|  
 |Is|Confronta due riferimenti a oggetti.|  
   
-### Concatenazione di stringhe  
+### <a name="string-concatenation"></a>Concatenazione di stringhe  
  La concatenazione di stringhe aggiunge la seconda stringa alla prima in un'espressione. Per le altre operazioni con stringhe, utilizzare le funzioni predefinite.  
   
 |Operatore|Description|  
@@ -58,7 +63,7 @@ caps.handback.revision: 8
 |&|Concatena due stringhe|  
 |+|Concatena due stringhe|  
   
-### Logico e bit per bit  
+### <a name="logical-and-bitwise"></a>Logico e bit per bit  
  Gli operatori logici e bit per bit eseguono modifiche logiche tra due termini interi in un'espressione.  
   
 |Operatore|Description|  
@@ -70,7 +75,7 @@ caps.handback.revision: 8
 |AndAlso|Esegue una congiunzione logica di due espressioni.|  
 |OrElse|Esegue una disgiunzione logica di due espressioni.|  
   
-### Scorrimento di bit  
+### <a name="bit-shift"></a>Scorrimento di bit  
  Gli operatori bit per bit eseguono modifiche di bit tra due termini interi in un'espressione.  
   
 |Operatore|Description|  
@@ -78,11 +83,11 @@ caps.handback.revision: 8
 |<\<|Esegue uno scorrimento a sinistra aritmetico a sinistra in un modello di bit.|  
 |>>|Esegue uno scorrimento a destra aritmetico in un modello di bit.|  
   
-## Vedere anche  
- [Finestra di dialogo Espressione](../Topic/Expression%20Dialog%20Box.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Finestra di dialogo Espressione](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Finestra di dialogo Espressione &#40;Generatore report&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)  
+ [Finestra di dialogo Espressione &#40;Generatore report&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

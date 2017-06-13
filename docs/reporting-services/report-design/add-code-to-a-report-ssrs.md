@@ -1,36 +1,41 @@
 ---
-title: "Aggiungere codice a un report (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "codice [Reporting Services]"
-  - "codice personalizzato [Reporting Services]"
-  - "espressioni [Reporting Services], codice"
-  - "aggiunta di codice"
-  - "report [Reporting Services], codice"
+title: Aggiungere codice a un Report (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code [Reporting Services]
+- custom code [Reporting Services]
+- expressions [Reporting Services], code
+- adding code
+- reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 41
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae58ddb9260037fafa37263050e55681944738eb
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere codice a un report (SSRS)
+# <a name="add-code-to-a-report-ssrs"></a>Aggiungere codice a un report (SSRS)
   In qualsiasi espressione, è possibile chiamare un codice personalizzato. Il codice può essere fornito nei due modi seguenti:  
   
--   Codice scritto in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] direttamente incorporato nel report. Se il codice si riferisce a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che non è <xref:System.Math> o <xref:System.Convert>, è necessario aggiungere il riferimento al report. Per altre informazioni, vedere [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md). Per altre informazioni sugli altri riferimenti che è possibile creare a partire dal codice, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+-   Codice scritto in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] direttamente incorporato nel report. Se il codice fa riferimento a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non <xref:System.Math> o <xref:System.Convert>, è necessario aggiungere il riferimento al report. Per altre informazioni, vedere [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md). Per altre informazioni sugli altri riferimenti che è possibile creare a partire dal codice, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 -   Fornire un assembly di codice personalizzato mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. L'eventuale assembly personalizzato dovrà essere installato sia nel computer in cui viene creato il report sia nel server di report in cui viene visualizzato il report. Per altre informazioni, vedere [Utilizzo di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md).  
   
-### Per aggiungere codice incorporato a un report  
+### <a name="to-add-embedded-code-to-a-report"></a>Per aggiungere codice incorporato a un report  
   
 1.  Nella visualizzazione **Progettazione** fare clic con il pulsante destro del mouse nell'area di progettazione all'esterno del bordo del report e scegliere **Proprietà report**.  
   
@@ -57,9 +62,9 @@ caps.handback.revision: 41
   
      Se si aggiunge questa espressione a una cella della tabella in cui sono visualizzati i valori della categoria, ogni qualvolta la parola "Bike" è nel campo del set di dati per la riga, nella cella della tabella viene visualizzata invece la parola "Bicycle".  
   
-## Vedere anche  
- [Finestra di dialogo Proprietà report, Codice](../Topic/Report%20Properties%20Dialog%20Box,%20Code.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Finestra di dialogo Proprietà report, Codice](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/parameters-collection-references-report-builder-and-ssrs.md)  
+ [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

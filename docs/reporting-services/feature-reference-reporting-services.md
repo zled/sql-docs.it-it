@@ -1,40 +1,45 @@
 ---
-title: "Guida di riferimento alle funzionalit&#224; (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Guida di Generatore report 2.0"
-  - "Reporting Services, richiesta di assistenza"
-  - "tools [Reporting Services]"
-  - "guida sensibile al contesto [Reporting Services]"
+title: "Funzionalità di riferimento (Reporting Services) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Report Builder 2.0, F1 help
+- Reporting Services, getting assistance
+- tools [Reporting Services]
+- F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 28
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 28
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e9a913cf74cb021d59ed5099483b2b1b04af554e
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Guida di riferimento alle funzionalit&#224; (Reporting Services)
+# <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  
   
  Per accedere a un argomento relativo all'interfaccia utente mentre lo strumento o l'applicazione è in esecuzione, premere F1 oppure fare clic su **?** nella finestra di dialogo, nella pagina Web o nella procedura guidata aperta. Per altre informazioni sull'avvio degli strumenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Esercitazione: Individuazione e avvio degli strumenti di Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
  Guida per Progettazione report e le finestre di dialogo correlate, per Creazione guidata report e per Creazione guidata immagine.  
   
- [Guida sensibile al contesto di Gestione report](../Topic/Report%20Manager%20F1%20Help.md)  
+ [Guida sensibile al contesto di Gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
  Guida per Gestione report, applicazione Web utilizzata per gestire un'istanza del server di report singola.  
   
- [Argomenti della Guida relativi a Gestione configurazione Reporting Services](../Topic/Reporting%20Services%20Configuration%20Manager%20Help%20Topics.md)  
+ [Argomenti della Guida relativi a Gestione configurazione Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Guida per lo strumento di configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usato per la distribuzione e la gestione delle istanze del server di report.  
   
  [Guida sensibile al contesto del server di report in Management Studio](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -43,7 +48,7 @@ caps.handback.revision: 28
  [Visualizzatore HTML e barra degli strumenti dei report](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Guida per il componente Visualizzatore HTML utilizzato per la visualizzazione dei report in un browser Web.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Report di Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   

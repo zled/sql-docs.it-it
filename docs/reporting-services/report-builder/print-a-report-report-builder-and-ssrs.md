@@ -1,28 +1,33 @@
 ---
-title: "Stampare un report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Stampare un Report (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Stampare un report (Generatore report e SSRS)
-  Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo da un browser, da Gestione report o da qualsiasi applicazione utilizzata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  
+# <a name="print-a-report-report-builder-and-ssrs"></a>Stampare un report (Generatore report e SSRS)
+  Dopo aver salvato un report in un server di report, è possibile visualizzare e stampare il report da un browser, il portale web di Reporting Services o da qualsiasi applicazione che consente di visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  
   
  Quando si stampa un report, è possibile specificare le dimensioni della pagina da utilizzare. Le dimensioni del foglio determinano il numero di pagine del report e la quantità di dati contenuta in ogni pagina. Il formato della carta influisce solo sui report visualizzati con i renderer di interruzioni di pagina manuali: PDF, immagine e stampa. L'impostazione del formato della carta non influisce su altri renderer. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
- È possibile esportare un report in un renderer di interruzione di pagina manuale oppure fare clic sul pulsante Stampa per stampare una copia del report dalla barra degli strumenti del visualizzatore di report in Gestione report o in un'anteprima in Generatore report. Potrebbe essere necessario impostare il formato della carta o altre proprietà di impostazione pagina. Usare la finestra di dialogo **Proprietà report** per modificare le proprietà di impostazione della pagina, tra cui il formato della carta.  
+ Barra degli strumenti di Visualizzatore di report nel portale web di Reporting Services o in un'anteprima in Generatore Report, è possibile esportare un report in un renderer di interruzioni di pagina o fare clic sul pulsante Stampa per stampare una copia del report. Potrebbe essere necessario impostare il formato della carta o altre proprietà di impostazione pagina. Usare la finestra di dialogo **Proprietà report** per modificare le proprietà di impostazione della pagina, tra cui il formato della carta.  
   
  È possibile specificare i margini della pagina di stampa in due modi diversi, ovvero in modalità di progettazione e in modalità di esecuzione.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per stampare un report in Generatore report  
+### <a name="to-print-a-report-in-report-builder"></a>Per stampare un report in Generatore report  
   
 1.  Aprire un report.  
   
@@ -55,50 +60,48 @@ caps.handback.revision: 7
   
 6.  Nella finestra di dialogo **Stampa** selezionare una stampante e specificare altre opzioni di stampa.  
   
-### Per stampare un report da un'applicazione browser  
+### <a name="to-print-a-report-from-a-web-browser-application"></a>Per stampare un report da un'applicazione browser  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Nel portale web di Reporting Services, passare al report che si desidera stampare. quindi aprirlo.  
   
-2.  In Gestione report passare al report che si desidera stampare, quindi aprirlo.  
-  
-3.  Fare clic su **Stampa** sulla barra degli strumenti nella parte superiore del report.  
+3.  Fare clic su **Stampa**sulla barra degli strumenti nella parte superiore del report.  
   
     > [!NOTE]  
     >  Quando si stampa per la prima volta un report in formato HTML, per il server di report viene richiesta l'installazione di un controllo ActiveX utilizzato per la stampa. È necessario installare e configurare il controllo per poter stampare.  
   
 4.  Nella finestra di dialogo **Stampa** selezionare una stampante e fare clic su **Stampa**.  
   
-### Per stampare un report da altre applicazioni  
+### <a name="to-print-a-report-from-other-applications"></a>Per stampare un report da altre applicazioni  
   
-1.  In Gestione report passare al report che si desidera stampare, quindi aprirlo.  
+1.  Nel portale web di Reporting Services, passare al report che si desidera stampare. quindi aprirlo.  
   
 2.  Selezionare un formato di rendering sulla barra degli strumenti nella parte superiore del report, quindi fare clic su **Esporta**. Il report verrà aperto nell'applicazione di visualizzazione corrispondente al formato di rendering selezionato.  
   
      Ad esempio, se si seleziona il formato PDF, il report verrà aperto in Adobe Acrobat Reader.  
   
-3.  Scegliere **Stampa** dal menu **File** del programma in uso.  
+3.  Scegliere **Stampa** dal menu **File**del programma in uso.  
   
-### Per modificare il formato della carta  
+### <a name="to-change-paper-size"></a>Per modificare il formato della carta  
   
 1.  Fare clic con il pulsante destro del mouse al di fuori del corpo del report e scegliere **Proprietà report**.  
   
-2.  Selezionare un valore dall'elenco **Formato carta** in **Imposta pagina**. Verranno popolate le proprietà **Larghezza** e **Altezza**. È anche possibile specificare un formato personalizzato digitando valori numerici nelle caselle **Larghezza** e **Altezza**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Selezionare un valore dall'elenco **Formato carta**in **Imposta pagina** . Verranno popolate le proprietà **Larghezza** e **Altezza** . È anche possibile specificare un formato personalizzato digitando valori numerici nelle caselle **Larghezza** e **Altezza** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  I valori relativi alle dimensioni sono calcolati in base all'unità di misura predefinita specificata dall'utente nelle impostazioni locali. Per specificare un'unità di misura diversa, digitare un identificatore di unità fisica, ad esempio cm, mm, pt o pc, dopo il valore numerico.  
   
-### Per impostare i margini della pagina in modalità di progettazione  
+### <a name="to-set-page-margins-in-design-mode"></a>Per impostare i margini della pagina in modalità di progettazione  
   
--   Fare clic con il pulsante destro del mouse sull'area blu intorno all'area di progettazione, scegliere **Proprietà report**, quindi fare clic sulla pagina **Imposta pagina**.  
+-   Fare clic con il pulsante destro del mouse sull'area blu intorno all'area di progettazione, scegliere **Proprietà report**, quindi fare clic sulla pagina **Imposta pagina** .  
   
-### Per impostare i margini della pagina in modalità di esecuzione  
+### <a name="to-set-page-margins-in-run-mode"></a>Per impostare i margini della pagina in modalità di esecuzione  
   
--   Fare clic su **Imposta pagina** nella scheda **Esegui**.  
+-   Fare clic su **Imposta pagina** nella scheda **Esegui** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà report, Imposta pagina &#40;Generatore report&#41;](../Topic/Report%20Properties%20Dialog%20Box,%20Page%20Setup%20\(Report%20Builder\).md)   
+ [Finestra di dialogo Proprietà report, Imposta pagina &#40;Generatore report&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; ruolo a livello di sistema (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.systemroleproperties.f1"
+title: "Proprietà ruolo del sistema (Management Studio) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 30
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68038228fd6fb7b2af8dd6f1bb5ae50b7f63daac
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propriet&#224; ruolo a livello di sistema (Management Studio)
+# <a name="system-role-properties-management-studio"></a>Proprietà ruolo a livello di sistema (Management Studio)
   La pagina Ruoli a livello di sistema consente di visualizzare le definizioni di ruolo a livello di sistema attualmente definite per il server di report. Una definizione di ruolo a livello di sistema contiene una raccolta denominata di attività eseguite in relazione all'intero sito, anziché a un singolo elemento. Le definizioni di ruolo vengono assegnate a un utente o a gruppi per creare un'assegnazione di ruolo. Le attività indicate nella definizione di ruolo specificano le operazioni consentite per un utente o un gruppo.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili due definizioni di ruolo a livello di sistema predefinite, ovvero **Amministratore sistema** e **Utente sistema**. Tali definizioni di ruolo possono essere personalizzate modificando l'elenco di attività oppure è possibile creare nuovi ruoli a livello di sistema per supportare combinazioni di attività diverse. Le modifiche apportate a una definizione di ruolo vengono propagate a tutte le assegnazioni di ruolo che includono tale definizione.  
@@ -27,7 +32,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Le assegnazioni di ruolo a livello di sistema vengono utilizzate solo in un server di report in esecuzione in modalità nativa. Se il server di report è configurato per l'integrazione con SharePoint, questa pagina non è disponibile.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome**  
  Consente di specificare il nome della definizione di ruolo a livello di sistema.  
   
@@ -40,10 +45,10 @@ caps.handback.revision: 30
  **Description**  
  Offre informazioni su ogni attività. Non è possibile modificare le descrizioni delle attività.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Attività a livello di sistema](../../reporting-services/security/system-level-tasks.md)   
+ [Attività a livello di sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
- [Predefined Roles](../../reporting-services/security/predefined-roles.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

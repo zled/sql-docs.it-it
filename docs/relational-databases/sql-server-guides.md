@@ -1,7 +1,7 @@
 ---
 title: Guide di SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 11/07/2016
+ms.date: 5/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,22 +18,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 49e575243d653264dc404fb372feb947251ce0da
+ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
+ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/06/2017
 
 ---
 # <a name="sql-server-guides"></a>Guide di SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Sono disponibili le guide seguenti. Le guide descrivono i concetti generali e si applicano a tutte le versioni di SQL Server.
+Sono disponibili le guide seguenti. Vengono trattati i concetti generali e si applicano a tutte le versioni di SQL Server, salvo diversa indicazione nella rispettiva Guida. 
 
-[Architettura e gestione del log delle transazioni di SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
-[Guida sull'architettura di pagina ed extent](../relational-databases/pages-and-extents-architecture-guide.md)   
-[Guida sull'architettura di gestione della memoria](../relational-databases/memory-management-architecture-guide.md)   
-[Guida sull'architettura dei thread e delle attività](../relational-databases/thread-and-task-architecture-guide.md)  
+[Guida alla risoluzione dei problemi e monitoraggio di gruppi di disponibilità AlwaysOn](http://msdn.microsoft.com/library/dn135328)  
+[Guida alla progettazione degli indici](../relational-databases/sql-server-index-design-guide.md)  
+[Guida all'architettura di gestione della memoria](../relational-databases/memory-management-architecture-guide.md)  
+[Guida sull'architettura di pagina ed extent](../relational-databases/pages-and-extents-architecture-guide.md)  
+[Guida di ottimizzazione e convalida post-migrazione](post-migration-validation-and-optimization-guide.md)  
 [Guida sull'architettura di elaborazione delle query](../relational-databases/query-processing-architecture-guide.md)  
 [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](https://msdn.microsoft.com/library/jj856598)  
-[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://msdn.microsoft.com/library/dn135328)
+[Architettura e gestione del log delle transazioni di SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
+[Guida sull'architettura dei thread e delle attività](../relational-databases/thread-and-task-architecture-guide.md)
 

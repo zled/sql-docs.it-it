@@ -1,23 +1,28 @@
 ---
-title: "Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Formattare le etichette degli assi come date o valute (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b8f82c7824a44d46a282eca8d617fb12ac9ade5
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS)
+# <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS)
 Quando i valori DateTime sono formattati correttamente su un asse, vengono visualizzati automaticamente in un grafico impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] come giorni. Per specificare un intervallo di data o ora per l'asse X, ad esempio un intervallo di mesi o di ore, è necessario formattare le etichette dell'asse e impostare il tipo di intervallo dell'asse su un intervallo di data o ora valido.  
   
 > [!NOTE]  
@@ -30,7 +35,7 @@ Quando i valori DateTime sono formattati correttamente su un asse, vengono visua
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Per formattare le etichette dell'asse X come intervalli mensili  
+## <a name="to-format-x-axis-labels-as-monthly-intervals"></a>Per formattare le etichette dell'asse X come intervalli mensili  
   
 1.  Fare clic con il pulsante destro del mouse sull'asse orizzontale o asse X, del grafico e scegliere **Proprietà asse orizzontale**.  
   
@@ -40,14 +45,14 @@ Quando i valori DateTime sono formattati correttamente su un asse, vengono visua
   
 4.  Selezionare **Opzioni asse**.  
   
-5.  In **Intervallo** digitare **1**. Nella proprietà **Tipo intervallo** selezionare **Mesi**.  
+5.  In **Intervallo**digitare **1**. Nella proprietà **Tipo intervallo** selezionare **Mesi**.  
   
     > [!NOTE]  
     >  Se non si specifica un tipo di intervallo, il grafico calcolerà gli intervalli in termini di giorni.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Per formattare le etichette dell'asse Y utilizzando un formato di valuta  
+## <a name="to-format-y-axis-labels-using-a-currency-format"></a>Per formattare le etichette dell'asse Y utilizzando un formato di valuta  
   
 1.  Fare clic con il pulsante destro del mouse sull'asse verticale o asse Y, del grafico e scegliere **Proprietà asse verticale**.  
   
@@ -57,7 +62,7 @@ Quando i valori DateTime sono formattati correttamente su un asse, vengono visua
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

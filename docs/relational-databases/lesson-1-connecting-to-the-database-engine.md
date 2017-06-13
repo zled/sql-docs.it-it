@@ -15,14 +15,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efa0929341a017bb82136a84427a32118167c504
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al Motore di database
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+ > Per contenuti relativi a versioni precedenti di SQL Server, vedere [lezione 1: connessione al motore di Database](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Gli strumenti che vengono installati con [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dipendono dall'edizione in uso e dalle opzioni di installazione selezionate. In questa lezione vengono illustrati gli strumenti principali e vengono descritte le procedure per la connessione e l'esecuzione di una funzione di base, ovvero la concessione di autorizzazione ad altri utenti.  
   

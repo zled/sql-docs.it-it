@@ -15,70 +15,35 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2da0c759864e746414f8bf17388463c9a4bfdf88
+ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
+ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase Versioned Feature Summary (Riepilogo delle funzionalità con controllo delle versioni di PolyBase)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Riepilogo delle funzionalità PolyBase disponibili per i prodotti e servizi di SQL Server.  
+Riepilogo delle funzionalità PolyBase disponibili per i servizi e prodotti SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Riepilogo delle funzionalità per le versioni dei prodotti  
  Questa tabella riepiloga le funzionalità principali per PolyBase e i prodotti in cui sono disponibili.  
   
-### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- Queste funzionalità si applicano a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] in esecuzione in locale o in una macchina virtuale di Azure.  PolyBase non è disponibile in SQL Server 2014 e versioni precedenti.  
-  
-|||  
-|-|-|  
-|**Funzionalità**|**Disponibilità**|  
-|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|  
-|Eseguire query sull'archivio BLOB di Azure con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|  
-|Importare dati da Hadoop|sì|  
-|Importare dati dall'archivio BLOB di Azure|Sì| 
-|Importare dati da Azure Data Lake Store|no|   
-|Esportare dati in Hadoop|sì|  
-|Esportare dati nell'archivio BLOB di Azure|Sì|  
-|Esportare dati da Azure Data Lake Store|no|
-|Eseguire query PolyBase da strumenti di Business Intelligence di Microsoft|sì|  
-|Eseguire il push down dei calcoli delle query in Hadoop|sì|  
-  
-### [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
- Queste funzionalità si applicano a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Funzionalità**|**Disponibilità**|  
-|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|no|  
-|Eseguire query sull'archivio BLOB di Azure con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|  
-|Importare dati da Hadoop|no|  
-|Importare dati dall'archivio BLOB di Azure|Sì|
-|Importare dati da Azure Data Lake Store|Sì|     
-|Esportare dati in Hadoop|no|  
-|Esportare dati nell'archivio BLOB di Azure|Sì|  
-|Esportare dati in Azure Data Lake Store|Sì|
-|Eseguire query PolyBase da strumenti di Business Intelligence di Microsoft|sì|  
-|Eseguire il push down dei calcoli delle query in Hadoop|no|  
-  
-### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Queste funzionalità si applicano a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Funzionalità**|**Disponibilità**|  
-|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|  
-|Eseguire query sull'archivio BLOB di Azure con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|  
-|Importare dati da Hadoop|sì|  
-|Importare dati dall'archivio BLOB di Azure|Sì|  
-|Importare dati da Azure Data Lake Store|no|   
-|Esportare dati in Hadoop|sì|  
-|Esportare dati nell'archivio BLOB di Azure|Sì|  
-|Esportare dati in Azure Data Lake Store|no|
-|Eseguire query PolyBase da strumenti di Business Intelligence di Microsoft|sì|  
-|Eseguire il push down dei calcoli delle query in Hadoop|sì|  
+||||||
+|-|-|-|-|-|   
+|**Funzionalità**|**SQL Server 2016**|**Database SQL di Azure**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|no|Sì|
+|Importare dati da Hadoop|Sì|no|no|Sì|
+|Esportare dati in Hadoop  |Sì|no|no| Sì|
+|Eseguire il push down dei calcoli delle query in Hadoop|Sì|no|no|Sì|  
+|Importare dati dall'archivio BLOB di Azure|sì|no|sì|Sì| 
+|Esportare dati nell'archivio BLOB di Azure|sì|no|sì|Sì|  
+|Importare dati da Azure Data Lake Store|no|no|sì|no|    
+|Esportare dati da Azure Data Lake Store|no|no|sì|no|
+|Eseguire query PolyBase da strumenti di Business Intelligence di Microsoft|Sì|no|sì|Sì|   
+
+
+
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida a PolyBase](../../relational-databases/polybase/polybase-guide.md)  

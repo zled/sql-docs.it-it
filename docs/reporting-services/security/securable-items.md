@@ -1,28 +1,33 @@
 ---
-title: "Elementi a sicurezza diretta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementi a sicurezza diretta [Reporting Services]"
-  - "ruoli [Reporting Services], elementi a protezione diretta"
-  - "sicurezza [Reporting Services], elementi a protezione diretta elencati"
-  - "sicurezza basata su ruoli [Reporting Services], elementi a protezione diretta"
+title: Elementi a protezione diretta | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- securable items [Reporting Services]
+- roles [Reporting Services], securable items
+- security [Reporting Services], securable items listed
+- role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Elementi a sicurezza diretta
+# <a name="securable-items"></a>Elementi a sicurezza diretta
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la sicurezza basata sui ruoli per controllare l'accesso agli elementi archiviati in un server di report. Quando si concede a un utente l'accesso a un server di report, in genere si creano due assegnazioni di ruolo:  
   
 -   Al livello di sito  
@@ -47,7 +52,7 @@ caps.handback.revision: 45
   
  Altri costrutti, ad esempio pianificazioni e sottoscrizioni, non sono protetti in modo esplicito. Le pianificazioni e le sottoscrizioni operano nel contesto di sicurezza di un report.  
   
-## Descrizioni degli elementi  
+## <a name="item-descriptions"></a>Descrizioni degli elementi  
  Nella tabella seguente vengono indicati gli elementi a sicurezza diretta e le relative caratteristiche.  
   
 |Elemento|Caratteristiche|  
@@ -59,10 +64,10 @@ caps.handback.revision: 45
 |Origini dati condivise|È possibile proteggere le origini dati condivise per limitare l'accesso all'elemento e alle relative pagine delle proprietà. Per altre informazioni, vedere [Proteggere le origini dei dati condivise](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Set di dati condivisi|È possibile proteggere i set di dati condivisi per controllare il tipo di azioni eseguibili da un utente, ad esempio la visualizzazione o la modifica della definizione o la modifica delle proprietà di un set di dati condiviso specifico.<br /><br /> Per ulteriori informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+ [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)  
+ [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

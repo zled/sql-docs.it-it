@@ -1,40 +1,45 @@
 ---
-title: "Manage a Running Process | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "report processing [Reporting Services], status information"
-  - "jobs [Reporting Services]"
-  - "visualizzazione di processi"
-  - "canceling jobs"
-  - "user jobs [Reporting Services]"
-  - "system jobs [Reporting Services]"
-  - "report processing [Reporting Services], managing running processes"
-  - "processes [Reporting Services]"
-  - "scanning processes [Reporting Services]"
-  - "status information [Reporting Services]"
-  - "report processing [Reporting Services]"
-  - "canceling subscriptions"
-  - "report servers [Reporting Services], jobs"
-  - "data-driven subscriptions"
-  - "visualizzazione di processi"
-  - "sottoscrizioni [Reporting Services], processi in esecuzione"
+title: Gestire un processo in esecuzione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], status information
+- jobs [Reporting Services]
+- viewing jobs
+- canceling jobs
+- user jobs [Reporting Services]
+- system jobs [Reporting Services]
+- report processing [Reporting Services], managing running processes
+- processes [Reporting Services]
+- scanning processes [Reporting Services]
+- status information [Reporting Services]
+- report processing [Reporting Services]
+- canceling subscriptions
+- report servers [Reporting Services], jobs
+- data-driven subscriptions
+- displaying jobs
+- subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Manage a Running Process
+# <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
   
  È possibile gestire sia i *processi utente* sia i *processi di sistema*.  
@@ -73,7 +78,7 @@ caps.handback.revision: 53
   
  Non è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per elencare o annullare la generazione o l'elaborazione di modelli o sottoscrizioni guidate dai dati. In Reporting Services non è possibile annullare la generazione o l'elaborazione di modelli. Per annullare sottoscrizioni guidate dai dati, è possibile tuttavia utilizzare le istruzioni fornite in questo argomento.  
   
-### Annullamento di un'elaborazione del report o di una sottoscrizione  
+### <a name="how-to-cancel-report-processing-or-subscription"></a>Annullamento di un'elaborazione del report o di una sottoscrizione  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]connettersi al server di report. Per istruzioni, vedere [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 53
   
 3.  Fare clic con il pulsante destro del mouse sul report, quindi scegliere **Annulla processi**.  
   
-### Annullamento di una sottoscrizione guidata dai dati  
+### <a name="how-to-cancel-a-data-driven-subscription"></a>Annullamento di una sottoscrizione guidata dai dati  
   
 1.  Aprire il file RSReportServer.config in un editor di testo.  
   
@@ -97,13 +102,13 @@ caps.handback.revision: 53
   
 7.  Salvare il file.  
   
-### Configurazione delle impostazioni di frequenza per il recupero dello stato di un processo  
+### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configurazione delle impostazioni di frequenza per il recupero dello stato di un processo  
  Un processo in esecuzione viene archiviato nel database temporaneo del server di report. Per controllare la frequenza con la quale il server di report esegue l'analisi dei processi in corso e l'intervallo trascorso il quale lo stato di un processo cambia da nuovo a in esecuzione, è possibile modificare le impostazioni di configurazione nel file RSReportServer.config. L'impostazione **RunningRequestsDbCycle** specifica la frequenza con cui il server di report esegue l'analisi dei processi in esecuzione. Per impostazione predefinita, le informazioni sullo stato vengono registrate ogni 60 secondi. L'impostazione **RunningRequestsAge** specifica l'intervallo dopo il quale un processo passa da nuovo a in esecuzione.  
   
 ##  <a name="bkmk_sharepoint"></a> Visualizzare e annullare i processi (modalità SharePoint)  
  La gestione di processi in una distribuzione della modalità SharePoint viene completata utilizzando Amministrazione centrale SharePoint, per ogni applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-#### Per gestire i processi in modalità SharePoint  
+#### <a name="to-manage-jobs-in-sharepoint-mode"></a>Per gestire i processi in modalità SharePoint  
   
 1.  In Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio**.  
   
@@ -116,14 +121,14 @@ caps.handback.revision: 53
 5.  In alternativa, fare clic sulla casella per il processo e scegliere **Elimina** per annullare il processo. L'eliminazione del processo non comporta l'eliminazione della sottoscrizione.  
   
 ##  <a name="bkmk_programmatically"></a> Gestione di processi a livello di programmazione  
- I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A> e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per ulteriori informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A> e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Annulla processi server di report &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Proprietà processo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Monitoraggio delle prestazioni del server di report](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

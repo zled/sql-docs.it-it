@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
@@ -51,7 +51,6 @@ Lo scambio del contesto dei thread non determina un overhead molto elevato. Per 
 Le prestazioni di questi sistemi potrebbero migliorare impostando il valore dell'opzione lightweight pooling su 1.
 
 Si consiglia di non utilizzare la modalità fiber per la pianificazione dell'operazione di routine. Questo perché può ridurre le prestazione bloccando i vantaggi normali dello scambio del contesto e perché alcuni componenti di SQL Server non possono funzionare correttamente in modalità fiber. Per altre informazioni, vedere lightweight pooling.
-
 
 ## <a name="thread-and-fiber-execution"></a>Thread ed esecuzione in modalità fiber
 
@@ -94,15 +93,14 @@ Non utilizzare l'aumento automatico per aumentare le dimensioni del file del log
 
 Le prestazioni delle operazioni sugli indici, quali la creazione o la ricompilazione degli indici, possono essere ottimizzate nei computer dotati di molte CPU impostando temporaneamente il modello di recupero del database sul modello con registrazione minima delle operazioni bulk o sul modello con registrazione minima. Queste operazioni sugli indici possono generare attività del log significative e le contese relative al log possono influire sul grado di parallelismo selezionato in SQL Server.
 
-Modificare inoltre l'impostazione del grado massimo di parallelismo (MAXDOP) per queste operazioni. Le linee guida seguenti sono basate su test interni e costituiscono consigli generali. È consigliabile provare diverse impostazioni MAXDOP per determinare quella ottimale per l'ambiente.
+Inoltre, provare a regolare il **massimo grado di parallelismo (MAXDOP)** opzione di configurazione del server per queste operazioni. Le linee guida seguenti sono basate su test interni e costituiscono consigli generali. È consigliabile provare diverse impostazioni MAXDOP per determinare quella ottimale per l'ambiente.
 
 * Per il modello di recupero con registrazione completa, limitare l'opzione Massimo grado di parallelismo a un valore minore o uguale a 8.   
 * Per il modello di recupero con registrazione minima delle operazioni bulk o per il modello di recupero con registrazione minima, è consigliabile impostare l'opzione Massimo grado di parallelismo su un valore maggiore di 8.   
 * Nei server con configurazione NUMA, il grado massimo di parallelismo non deve superare il numero di CPU assegnate a ogni nodo NUMA. Ciò è dovuto al fatto che la query utilizzerà con maggiore probabilità memoria locale da un nodo NUMA, migliorando i tempi di accesso alla memoria.  
-* Nei server con tecnologia Hyper-Threading abilitata e prodotti nel 2009 o in anni precedenti, il valore MAXDOP non deve superare il numero di processori fisici.  
+* Per i server con hyper-threading abilitata e prodotti nel 2009 sono versioni precedenti (prima che la funzionalità hyper-threading è stata migliorata), il valore MAXDOP non deve superare il numero di processori fisici, invece di processori logici.
 
-
-Per altre informazioni sul massimo grado di parallelismo, vedere [Impostazione dell'opzione relativa al massimo grado di parallelismo per ottenere prestazioni ottimali](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
+Per ulteriori informazioni sull'opzione max degree of parallelism, vedere [il max degree of parallelism opzione di configurazione Server Configurare](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Impostazione del numero massimo di thread di lavoro
 
@@ -120,17 +118,17 @@ In genere, il numero di file di file tempdb deve corrispondere al numero di CPU.
 
 Nella tabella seguente sono elencati i componenti di SQL Server e viene indicato se possano o meno usare più di 64 CPU.
 
-|Nome del processo    |Programma eseguibile    |Utilizza più di 64 CPU |  
+|Nome del processo   |Programma eseguibile |Utilizza più di 64 CPU |  
 |----------|----------|----------|  
-|Motore di database di SQL Server    |Sqlserver.exe    |Sì |  
-|Reporting Services    |Rs.exe    |No |  
-|Analysis Services    |As.exe    |No |  
-|Integration Services    |Is.exe    |No |  
-|Service Broker    |Sb.exe    |No |  
-|Ricerca full-text    |Fts.exe    |No |  
-|SQL Server Agent    |Sqlagent.exe    |No |  
-|SQL Server Management Studio    |Ssms.exe    |No |  
-|Installazione di SQL Server    |Setup.exe    |No |  
+|Motore di database di SQL Server |Sqlserver.exe  |Sì |  
+|Reporting Services |Rs.exe |No |  
+|Analysis Services  |As.exe |No |  
+|Integration Services   |Is.exe |No |  
+|Service Broker |Sb.exe |No |  
+|Ricerca full-text   |Fts.exe    |No |  
+|SQL Server Agent   |Sqlagent.exe   |No |  
+|SQL Server Management Studio   |Ssms.exe   |No |  
+|Installazione di SQL Server   |Setup.exe  |No |  
 
 
 

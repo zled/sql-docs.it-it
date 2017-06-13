@@ -1,32 +1,37 @@
 ---
-title: "Estensioni (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Estensioni (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Estensioni (SSRS)
-  Il server di report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa le estensioni per modulare i tipi di input o output accettati per l'autenticazione, l'elaborazione dati, il rendering e il recapito dei report. Questo semplifica l'utilizzo di nuovi standard di software del settore da parte delle installazioni esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], quale un nuovo schema di autenticazione o un tipo di origine dati personalizzato. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Un server di report richiede almeno un'estensione di autenticazione, un'estensione per l'elaborazione dati e un'estensione per il rendering. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati.  
+# <a name="extensions-ssrs"></a>Estensioni (SSRS)
+  Il server di report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa le estensioni per modulare i tipi di input o output accettati per l'autenticazione, l'elaborazione dati, il rendering e il recapito dei report. Questo semplifica l'utilizzo di nuovi standard di software del settore da parte delle installazioni esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quale un nuovo schema di autenticazione o un tipo di origine dati personalizzato. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Un server di report richiede almeno un'estensione di autenticazione, un'estensione per l'elaborazione dati e un'estensione per il rendering. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati.  
   
  In questo argomento vengono descritte le estensioni immediatamente disponibili in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-## Estensioni di sicurezza  
+## <a name="security-extensions"></a>Estensioni di sicurezza  
  Le estensioni di sicurezza sono utilizzate per autenticare e autorizzare utenti e gruppi presso un server di report. L'estensione predefinita di sicurezza si basa sull'autenticazione di Windows. Nel caso in cui il modello di distribuzione richieda un approccio di autenticazione diverso, ad esempio se è richiesta l'autenticazione basata su form per la distribuzione in Internet o in reti Extranet, è inoltre possibile creare un'estensione personalizzata di sicurezza in sostituzione di quella predefinita. In una singola installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è possibile usare una sola estensione di sicurezza. È possibile sostituire l'estensione predefinita di sicurezza dell'autenticazione di Windows, ma non è possibile utilizzarla insieme a un'estensione personalizzata di sicurezza.  
   
-## Estensioni per l'elaborazione dati  
- Le estensioni per l'elaborazione dati vengono utilizzate per eseguire una query su un'origine dati e restituire un set di righe bidimensionale. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa estensioni diverse per interagire con tipi di origini dati diversi. È possibile usare le estensioni incluse in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oppure svilupparne di personalizzate. Vengono fornite estensioni per l'elaborazione dati per origini dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)], Hyperion Essbase, Teradata, OLE DB e ODBC. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può anche usare qualsiasi provider di dati di [!INCLUDE[vstecado](../includes/vstecado-md.md)]. Le estensioni per l'elaborazione dati gestiscono l'elaborazione delle richieste di query provenienti dal componente Elaborazione report tramite l'esecuzione delle attività seguenti:  
+## <a name="data-processing-extensions"></a>Estensioni per l'elaborazione dati  
+ Le estensioni per l'elaborazione dati vengono utilizzate per eseguire una query su un'origine dati e restituire un set di righe bidimensionale. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa estensioni diverse per interagire con tipi di origini dati diversi. È possibile usare le estensioni incluse in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]oppure svilupparne di personalizzate. Vengono fornite estensioni per l'elaborazione dati per origini dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)], Hyperion Essbase, Teradata, OLE DB e ODBC. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può anche usare qualsiasi provider di dati di [!INCLUDE[vstecado](../includes/vstecado-md.md)] . Le estensioni per l'elaborazione dati gestiscono l'elaborazione delle richieste di query provenienti dal componente Elaborazione report tramite l'esecuzione delle attività seguenti:  
   
 -   Aprire una connessione a un'origine dati.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 7
   
 -   Esecuzione di un'iterazione delle righe e recupero dei metadati ausiliari.  
   
-## Estensioni per il rendering  
+## <a name="rendering-extensions"></a>Estensioni per il rendering  
  Le estensioni per il rendering consentono di trasformare i dati e le informazioni sul layout generate dall'elaboratore di report in un formato specifico del dispositivo. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include sette estensioni per il rendering: HTML, Excel, CSV, XML, Image, PDF e [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
 -   **Estensioni per il rendering HTML** Quando si richiede un report da un server di report tramite un Web browser, il server di report usa l'estensione per il rendering HTML per eseguire il rendering del report. L'estensione per il rendering HTML genera tutto il codice HTML con la codifica UTF-8. Per altre informazioni, vedere [Rendering in formato HTML &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) e [Supporto browser per Reporting Services e Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
@@ -69,10 +74,10 @@ caps.handback.revision: 7
   
 -   **Estensione per il rendering Word** L'estensione per il rendering [!INCLUDE[msCoName](../includes/msconame-md.md)] Word esegue il rendering di un report come documento di Word compatibile con [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 o versioni successive. Per altre informazioni, vedere [Esportazione in Microsoft Word &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
   
-## Estensioni per l'elaborazione del report  
+## <a name="report-processing-extensions"></a>Estensioni per l'elaborazione del report  
  È possibile aggiungere estensioni per l'elaborazione del report per consentire l'elaborazione personalizzata degli elementi del report non inclusi in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, un server di report è in grado di elaborare tabelle, grafici, matrici, elenchi, caselle di testo, immagini e tutti gli altri elementi del report. Per aggiungere funzionalità speciali a un report che richiedono l'elaborazione personalizzata durante l'esecuzione del report, ad esempio per incorporare una mappa di [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint, è possibile creare un'estensione per l'elaborazione del report.  
   
-## Estensioni per il recapito  
+## <a name="delivery-extensions"></a>Estensioni per il recapito  
  L'applicazione di elaborazione in background utilizza estensioni per il recapito per recapitare i report in varie destinazioni. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include due estensioni, una per il recapito tramite posta elettronica e una per il recapito tramite condivisione file. L'estensione per il recapito tramite posta elettronica consente di inviare un messaggio di posta elettronica tramite SMTP (Simple Mail Transport Protocol) che include il report stesso oppure l'URL per accedere al report. È inoltre possibile inviare brevi messaggi a cercapersone, telefoni o altri dispositivi, senza includere l'URL o il report. L'estensione per il recapito tramite condivisione file consente di salvare i report in una cartella condivisa nella rete. Per il file creato è possibile specificare il percorso, il formato di rendering, il nome file e opzioni di sovrascrittura. È possibile utilizzare il metodo di recapito tramite condivisione file per archiviare i report per i quali è stato eseguito il rendering e nell'ambito della strategia per l'utilizzo di report di dimensioni molto grandi. Le estensioni per il recapito interagiscono con le sottoscrizioni. Al momento della creazione di una sottoscrizione, gli utenti hanno la possibilità di scegliere una delle estensioni per il recapito disponibili per impostare il metodo di recapito del report preferito.  
   
   

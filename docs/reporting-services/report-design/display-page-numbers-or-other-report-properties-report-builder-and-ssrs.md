@@ -1,23 +1,28 @@
 ---
-title: "Visualizzare i numeri di pagina o altre propriet&#224; del report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visualizzazione dei numeri di pagina o altre proprietà del Report (Generatore Report e SSRS) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Visualizzare i numeri di pagina o altre propriet&#224; del report (Generatore report e SSRS)
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS)
   Aggiungere numeri di pagina, un titolo di report, un nome file e altre proprietà alle intestazioni o ai piè di pagina del report è un'operazione semplice. Queste proprietà sono archiviate come campi nella cartella Campi predefiniti nel riquadro dei dati del report:  
   
 -   Ora di esecuzione  
@@ -44,12 +49,12 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per aggiungere il numero di pagina o altre proprietà  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>Per aggiungere il numero di pagina o altre proprietà  
   
 1.  Espandere la cartella Campi predefiniti nel riquadro dei dati del report.  
   
     > [!NOTE]  
-    >  Se il riquadro dei dati del report non viene visualizzato, fare clic su **Dati report** nella scheda Visualizza.  
+    >  Se il riquadro dei dati del report non viene visualizzato, fare clic su **Dati report**nella scheda Visualizza.  
   
 2.  Trascinare il campo **Numero pagina** dal riquadro dei dati del report nell'intestazione o nel piè di pagina del report.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  Verrà aggiunta una casella di testo contenente l'espressione semplice [&PageNumber].  
   
-### Per aggiungere la parola "Pagina" prima del numero di pagina  
+### <a name="to-add-the-word-page-before-the-page-number"></a>Per aggiungere la parola "Pagina" prima del numero di pagina  
   
 1.  Fare clic con il pulsante destro del mouse sulla casella di testo che contiene [&PageNumber], quindi scegliere **Espressioni**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Per aggiungere il numero complessivo di pagine dopo il numero di pagina  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>Per aggiungere il numero complessivo di pagine dopo il numero di pagina  
   
 1.  Fare clic con il pulsante destro del mouse sulla casella di testo con l'espressione, quindi scegliere **Espressioni**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

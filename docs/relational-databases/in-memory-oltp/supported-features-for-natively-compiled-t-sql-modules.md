@@ -1,7 +1,7 @@
 ---
 title: "Funzionalità supportate per i moduli T-SQL compilati in modo nativo | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 Sono supportati i costrutti delle query indicati di seguito:  
 
+Espressione CASE: CASE può essere utilizzato in qualsiasi istruzione o clausola che consenta un'espressione valida.
+   - **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le istruzioni CASE sono ora supportate per i moduli di T-SQL compilati in modo nativo.
+
 Clausola SELECT:  
 
 -   Alias di nomi e colonne (usando la sintassi AS o =).  
 
--   Sottoquery scalari  
+-   Sottoquery scalari
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], sottoquery scalari sono ora supportate nei moduli compilati in modo nativo.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l'operatore DISTINCT è supportato nei moduli compilati in modo nativo.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION e UNION ALL
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori UNION e UNION ALL sono ora supportati nei moduli compilati in modo nativo.
 
 -   Assegnazioni di variabili  
 
@@ -73,15 +83,22 @@ Clausola FROM:
 
 -   FROM \<funzione con valori di tabella inline compilata in modo nativo>  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], join sono ora supportati nei moduli compilati in modo nativo.
 
--   Sottoquery `[AS] table_alias`. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+-   Sottoquery `[AS] table_alias`. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery sono ora supportate nei moduli compilati in modo nativo.
 
 Clausola WHERE:  
 
 -   Predicato del filtro IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN  
+-   E TRA  
+-   OR, NON ESISTE,
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori OR/NOT/IN/EXISTS sono ora supportati nei moduli compilati in modo nativo.
 
 
 Clausola[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :

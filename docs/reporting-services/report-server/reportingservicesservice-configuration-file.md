@@ -1,47 +1,56 @@
 ---
-title: "File di configurazione ReportingServicesService | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traces [Reporting Services]"
-  - "servizio Windows ReportServer, ReportingServicesService"
-  - "ReportingServicesService - file di configurazione"
+title: File di configurazione ReportingServicesService | Documenti Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [Reporting Services]
+- Report Server Windows service, ReportingServicesService configuration file
+- ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 40
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# File di configurazione ReportingServicesService
-  Il file ReportingServicesService.exe.config contiene impostazioni di configurazione della funzionalità di traccia.  
+# <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
+ ||  
+|-|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016|
   
-## Percorso del file  
+Il file ReportingServicesService.exe.config contiene impostazioni di configurazione della funzionalità di traccia.  
+  
+## <a name="file-location"></a>Percorso del file  
  Il file si trova nella cartella \Reporting Services\Report Server\Bin.  
   
-## Linee guida per la modifica  
+## <a name="editing-guidelines"></a>Linee guida per la modifica  
  È possibile modificare questo file per rinominare il file di log oppure per aumentare o ridurre i livelli di traccia. Non modificare altre impostazioni. Per le istruzioni vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Per altre informazioni sui log di analisi, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## Configurazione di esempio  
+## <a name="example-configuration"></a>Configurazione di esempio  
  Nell'esempio seguente vengono illustrati i valori predefiniti e le impostazioni contenuti nel file ReportingServicesService.exe.config.  
   
 ```  
 <configSections>  
       <section name="RStrace" type="Microsoft.ReportingServices.Diagnostics.RSTraceSectionHandler,Microsoft.ReportingServices.Diagnostics" />  
 </configSections>  
-<system.diagnostics>  
+\<system.diagnostics>  
       <switches>  
           <add name="DefaultTraceSwitch" value="3" />  
       </switches>  
-</system.diagnostics>  
+\</system.diagnostics>  
 <RStrace>  
       <add name="FileName" value="ReportServerService_" />  
       <add name="FileSizeLimitMb" value="32" />  
@@ -68,7 +77,7 @@ caps.handback.revision: 40
 </runtime>  
 ```  
   
-## Impostazioni di configurazione  
+## <a name="configuration-settings"></a>Impostazioni di configurazione  
  Nella tabella seguente sono incluse informazioni su impostazioni specifiche. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione.  
   
 |Impostazione|Description|  
@@ -78,14 +87,15 @@ caps.handback.revision: 40
 |**FileName**|Specifica la prima parte del nome file di log. Il resto del nome viene completato con il valore specificato da **Prefix** . Per impostazione predefinita, il nome è ReportServerService_.|  
 |**FileSizeLimitMb**|Specifica il limite massimo per le dimensioni del log di traccia. Il file è misurato in megabyte. I valori validi sono compresi tra 0 e il valore integer massimo. Il valore predefinito è (32).|  
 |**KeepFilesForDays**|Specifica dopo quanti giorni un file di log di traccia viene eliminato. I valori validi sono compresi tra 0 e il valore integer massimo. Il valore predefinito è 14.|  
-|**Prefisso**|Specifica un valore generato che distingue ogni istanza del log dalle altre. Per impostazione predefinita, ai nomi file dei log di traccia vengono aggiunti valori timestamp. Questo valore è impostato su "tid, time". Non modificare questa impostazione.|  
+|**Prefix**|Specifica un valore generato che distingue ogni istanza del log dalle altre. Per impostazione predefinita, ai nomi file dei log di traccia vengono aggiunti valori timestamp. Questo valore è impostato su "tid, time". Non modificare questa impostazione.|  
 |**TraceListeners**|Specifica una destinazione per l'output del contenuto del log di traccia. È possibile specificare più destinazioni, separandole con una virgola. I valori validi includono:<br /><br /> DebugWindow (valore predefinito)<br /><br /> File (valore predefinito)<br /><br /> StdOut|  
 |**TraceFileMode**|Specifica se i log di traccia devono contenere dati per un periodo di 24 ore. È consigliabile utilizzare un solo log di traccia al giorno per ogni componente. Questo valore è impostato su "Unique" (valore predefinito). Non modificare questo valore.|  
 |**Components**|Specifica per quali componenti devono essere creati log di traccia. Il valore predefinito è **all**. Anche i nomi dei componenti interni sono valori validi per questa impostazione. Non modificare questo valore.|  
-|**Runtime**|Specifica le impostazioni di configurazione che supportano la compatibilità con la versione precedente. Le impostazioni di run-time vengono utilizzate per reindirizzare le richieste relative alla versione precedente di Microsoft.ReportingServices.Interfaces alla nuova versione.<br /><br /> Tutte le impostazioni di configurazione di questa sezione vengono descritte nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per ulteriori informazioni, ricercare la voce "Runtime Schema Settings" nel sito Web MSDN o nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].|  
+|**Runtime**|Specifica le impostazioni di configurazione che supportano la compatibilità con la versione precedente. Le impostazioni di run-time vengono utilizzate per reindirizzare le richieste relative alla versione precedente di Microsoft.ReportingServices.Interfaces alla nuova versione.<br /><br /> Tutte le impostazioni di configurazione di questa sezione vengono descritte nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per ulteriori informazioni, ricercare la voce "Runtime Schema Settings" nel sito Web MSDN o nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
+

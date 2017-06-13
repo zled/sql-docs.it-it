@@ -1,23 +1,28 @@
 ---
-title: "Esportazione in un file CSV (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esportazione in un File CSV (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esportazione in un file CSV (Generatore report e SSRS)
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report impaginati come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
   
  Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene usato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , oppure usato come formato di importazione per altri programmi. Il report esportato viene salvato come file con estensione csv e restituisce il tipo MIME **text/csv**.  
@@ -37,7 +42,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  È possibile impostare il delimitatore del campo su qualsiasi carattere desiderato, incluso TAB, modificando le impostazioni relative alle informazioni sui dispositivi. Per altre informazioni, vedere [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
--   La stringa di delimitazione dei record è una sequenza di ritorno a capo e avanzamento riga (\<cr>\<lf>).  
+-   La stringa di delimitazione dei record è il ritorno a capo e avanzamento riga (\<cr >\<lf >).  
   
 -   Il carattere qualificatore di testo è la virgoletta doppia (").  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
 |Indicatore|Viene eseguito il rendering come un singolo record con il nome di stato attivo, gli stati disponibili e il valore dei dati.|  
 |Mappa|Viene eseguito il rendering di una riga con le etichette e i valori per ogni membro della mappa di un livello mappa.<br /><br /> Se la mappa ha più livelli, i valori nelle righe variano a seconda se i livelli mappa usano le stesse aree dati della mappa o aree diverse. Se più livelli mappa usano la stessa area dati, le righe contengono i dati di tutti i livelli.|  
   
-### Dati gerarchici e raggruppati  
+### <a name="hierarchical-and-grouped-data"></a>Dati gerarchici e raggruppati  
  Per poter essere rappresentati nel formato CSV, i dati gerarchici e raggruppati devono essere bidimensionali.  
   
  L'estensione per il rendering rende bidimensionale il report in una struttura ad albero che rappresenta i gruppi nidificati all'interno dell'area dati. Per rendere bidimensionale il report:  
@@ -96,12 +101,11 @@ caps.handback.revision: 8
   
  Per altre informazioni, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> Modalità del renderer  
  L'estensione per il rendering CSV può operare in due modalità: una è ottimizzata per Excel, mentre l'altra è ottimizzata per applicazioni di terze parti che richiedono una rigida conformità alla specifica CSV del documento RFC 4180. Le aree dati di pari livello vengono gestite in modo diverso a seconda della modalità usata.  
   
-### Modalità predefinita  
+### <a name="default-mode"></a>Modalità predefinita  
  La modalità predefinita è ottimizzata per Excel. Nella modalità predefinita il rendering del report viene eseguito come file CSV contenente più sezioni di dati di cui è stato eseguito il rendering in formato CSV. Ogni area dati peer è delimitata da una riga vuota. Il rendering di aree dati di pari livello all'interno del corpo del report viene eseguito come blocchi distinti di dati all'interno del file CSV. Il risultato è un file CSV in cui:  
   
 -   Il rendering delle singole caselle di testo all'interno del corpo del report viene eseguito una sola volta come primo blocco di dati all'interno del file CSV.  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   Il rendering delle aree dati nidificate viene eseguito in senso diagonale nello stesso blocco di dati.  
   
-#### Formattazione  
+#### <a name="formatting"></a>Formattazione  
  Il rendering dei valori numerici viene eseguito nel relativo stato formattato. Excel è in grado di riconoscere valori numerici formattati, ad esempio valuta, percentuale e data, nonché di formattare le celle in modo appropriato durante l'importazione del file CSV.  
   
-### Modalità conforme  
+### <a name="compliant-mode"></a>Modalità conforme  
  La modalità conforme è ottimizzata per applicazioni di terze parti.  
   
-#### Aree dati  
+#### <a name="data-regions"></a>Aree dati  
  Solo la prima riga del file contiene le intestazioni di colonna e ogni riga dispone dello stesso numero di colonne.  
   
-#### Formattazione  
+#### <a name="formatting"></a>Formattazione  
  I valori non vengono formattati.  
   
 ##  <a name="Interactivity"></a> Interattività  
@@ -139,17 +143,15 @@ caps.handback.revision: 8
   
 -   Segnalibri  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile cambiare alcune impostazioni predefinite per questo renderer, tra cui la modalità in cui eseguire il rendering, i caratteri da usare come delimitatori e i caratteri da usare come stringa predefinita del qualificatore di testo, modificando le impostazioni relative alle informazioni sui dispositivi. Per altre informazioni, vedere [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.png "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

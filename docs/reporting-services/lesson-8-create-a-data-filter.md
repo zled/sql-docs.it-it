@@ -1,38 +1,43 @@
 ---
-title: "Lezione 8: Creare un filtro di dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 8: Creare un filtro di dati | Documenti Microsoft'
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lezione 8: Creare un filtro di dati
+# <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro di dati
 Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio successivo consiste nel creare un filtro di dati per la tabella di dati definita per il report figlio.  
   
 È possibile creare un filtro basato su tabella **o** un filtro query per il report drill-through. In questa lezione vengono fornite le istruzioni per entrambe le opzioni.  
   
-## Filtro basato su tabella  
+## <a name="table-based-filter"></a>Filtro basato su tabella  
 È necessario completare le attività seguenti per implementare un filtro basato su tabella.  
   
 -   Aggiungere un'espressione di filtro alla Tablix nel report figlio.  
   
--   Creare una funzione con la quale vengono selezionati i dati non filtrati dalla tabella **PurchaseOrderDetail**.  
+-   Creare una funzione con la quale vengono selezionati i dati non filtrati dalla tabella **PurchaseOrderDetail** .  
   
 -   Aggiungere un gestore eventi con il quale viene associato l'oggetto DataTable di **PurchaseOrderDetail** al report figlio.  
   
-### Per aggiungere un'espressione di filtro alla Tablix nel report figlio  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>Per aggiungere un'espressione di filtro alla Tablix nel report figlio  
   
 1.  Aprire il report figlio.  
   
@@ -42,19 +47,19 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
 4.  Nel campo **Espressione** fare clic su **ProductID** nell'elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
   
-5.  Fare clic sull'operatore di uguaglianza (**=**) nell'elenco a discesa **Operatore**.  
+5.  Fare clic sull'operatore di uguaglianza (**=**) nell'elenco a discesa **Operatore** .  
   
-6.  Fare clic sul pulsante dell'espressione accanto al campo **Valore**, selezionare **Parametri** nell'area **Categoria** e fare doppio clic su **productid** nell'area **Valori**. Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
+6.  Fare clic sul pulsante dell'espressione accanto al campo **Valore** , selezionare **Parametri** nell'area **Categoria** e fare doppio clic su **productid** nell'area **Valori** . Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
   
-7.  Fare clic su **OK** e di nuovo su **OK** nella finestra di dialogo **Proprietà Tablix**.  
+7.  Fare clic su **OK** e di nuovo su **OK** nella finestra di dialogo **Proprietà Tablix** .  
   
 8.  Salvare il file con estensione rdlc.  
   
-### Per creare una funzione mediante la quale vengono selezionati i dati non filtrati dalla tabella PurchaseOrderDetail  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>Per creare una funzione mediante la quale vengono selezionati i dati non filtrati dalla tabella PurchaseOrderDetail  
   
 1.  In Esplora soluzioni espandere Default.aspx, quindi fare doppio clic su Default.aspx.cs.  
   
-2.  Creare una funzione nuova che accetta un **productid** di tipo Integer, che restituisce un oggetto **datatable** e che consente di eseguire le operazioni riportate di seguito.  
+2.  Creare una funzione nuova che accetta un **productid**di tipo Integer, che restituisce un oggetto **datatable** e che consente di eseguire le operazioni riportate di seguito.  
   
     1.  Crea un'istanza del set di dati **DataSet2**, che è stato creato nel passaggio 2 della [Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
@@ -64,7 +69,7 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
     4.  Inserire i dati non filtrati nell'istanza di DataSet eseguendo la query.  
   
-    5.  Restituire l'oggetto DataTable di **PurchaseOrderDetail**.  
+    5.  Restituire l'oggetto DataTable di **PurchaseOrderDetail** .  
   
         La funzione sarà simile alla seguente e dovrà essere utilizzata solo come riferimento. È infatti possibile utilizzare qualsiasi modello desiderato per recuperare i dati necessari per il report figlio.  
   
@@ -102,15 +107,15 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
             }  
         ```  
   
-### Per aggiungere un gestore eventi mediante il quale viene associato l'oggetto DataTable di PurchaseOrderDetail al report figlio  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>Per aggiungere un gestore eventi mediante il quale viene associato l'oggetto DataTable di PurchaseOrderDetail al report figlio  
   
 1.  Aprire Default. aspx nella visualizzazione della finestra di progettazione.  
   
 2.  Fare clic con il pulsante destro del mouse sul controllo ReportViewer e scegliere **Proprietà**.  
   
-3.  Nella pagina **Proprietà** fare clic sull'icona **Eventi**.  
+3.  Nella pagina **Proprietà** fare clic sull'icona **Eventi** .  
   
-4.  Fare doppio clic sull'evento **Drill-through**.  
+4.  Fare doppio clic sull'evento **Drill-through** .  
   
     Verrà aggiunta una sezione del gestore eventi nel codice, che sarà simile al blocco riportato di seguito.  
   
@@ -122,7 +127,7 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
 5.  Completare il gestore eventi nel quale dovrebbe essere inclusa la funzionalità riportata di seguito.  
   
-    1.  Recuperare il riferimento all'oggetto del report figlio dal parametro *DrillthroughEventArgs*.  
+    1.  Recuperare il riferimento all'oggetto del report figlio dal parametro *DrillthroughEventArgs* .  
   
     2.  Chiamare la funzione **GetPurchaseOrderDetail**  
   
@@ -153,28 +158,28 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
 6.  Salvare il file.  
   
-## Filtro query  
+## <a name="query-filter"></a>Filtro query  
 È necessario completare le attività seguenti per implementare un filtro query.  
   
--   Creare una funzione con la quale sono stati selezionati i dati filtrati dalla tabella **PurchaseOrderDetail**.  
+-   Creare una funzione con la quale sono stati selezionati i dati filtrati dalla tabella **PurchaseOrderDetail** .  
   
 -   Aggiungere un gestore eventi con il quale vengono recuperati i valori dei parametri e viene associato l'oggetto DataTable di **PurchaseOrderDetail** al report figlio.  
   
-### Per creare una funzione mediante la quale vengono selezionati i dati filtrati dalla tabella PurchaseOrderDetail  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>Per creare una funzione mediante la quale vengono selezionati i dati filtrati dalla tabella PurchaseOrderDetail  
   
 1.  In Esplora soluzioni espandere Default.aspx, quindi fare doppio clic su Default.aspx.cs.  
   
-2.  Creare una funzione nuova che accetta un **productid** di tipo Integer, che restituisce un oggetto **datatable** e che consente di eseguire le operazioni riportate di seguito.  
+2.  Creare una funzione nuova che accetta un **productid**di tipo Integer, che restituisce un oggetto **datatable** e che consente di eseguire le operazioni riportate di seguito.  
   
     1.  Crea un'istanza del set di dati **DataSet2**, che è stato creato nel passaggio 2 della [Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Creare una connessione al database di SQL Server per eseguire la query definita in **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
   
-    3.  Nella query sarà incluso un parametro **productid** per garantire che i dati restituiti vengano filtrati in base al valore di **ProductID** selezionato nel report padre.  
+    3.  Nella query sarà incluso un parametro **productid**per garantire che i dati restituiti vengano filtrati in base al valore di **ProductID** selezionato nel report padre.  
   
     4.  Inserire i dati filtrati nell'istanza di DataSet eseguendo la query.  
   
-    5.  Restituire l'oggetto DataTable di **PurchaseOrderDetail**.  
+    5.  Restituire l'oggetto DataTable di **PurchaseOrderDetail** .  
   
         La funzione sarà simile alla seguente e dovrà essere utilizzata solo come riferimento. È infatti possibile utilizzare qualsiasi modello desiderato per recuperare i dati necessari per il report figlio.  
   
@@ -218,15 +223,15 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
             }  
         ```  
   
-### Per aggiungere un gestore eventi mediante il quale vengono recuperati i valori dei parametri e viene associato l'oggetto DataTable di PurchaseOrderDetail al report figlio  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>Per aggiungere un gestore eventi mediante il quale vengono recuperati i valori dei parametri e viene associato l'oggetto DataTable di PurchaseOrderDetail al report figlio  
   
 1.  Aprire Default. aspx nella visualizzazione della finestra di progettazione.  
   
 2.  Fare clic con il pulsante destro del mouse sul controllo ReportViewer e scegliere **Proprietà**.  
   
-3.  Nel riquadro **Proprietà** fare clic sull'icona **Eventi**.  
+3.  Nel riquadro **Proprietà** fare clic sull'icona **Eventi** .  
   
-4.  Fare doppio clic sull'evento **Drill-through**.  
+4.  Fare doppio clic sull'evento **Drill-through** .  
   
     Verrà aggiunta una sezione del gestore eventi nel codice, che sarà simile a quanto riportato di seguito.  
   
@@ -238,13 +243,13 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
 5.  Completare il gestore eventi nel quale dovrebbe essere inclusa la funzionalità riportata di seguito.  
   
-    1.  Recuperare il riferimento all'oggetto del report figlio dal parametro *DrillthroughEventArgs*.  
+    1.  Recuperare il riferimento all'oggetto del report figlio dal parametro *DrillthroughEventArgs* .  
   
     2.  Ottenere l'elenco dei parametri del report figlio dall'oggetto del report figlio recuperato.  
   
     3.  Scorrere la raccolta dei parametri e recuperare il valore per il parametro **ProductID**, passato dal report padre.  
   
-    4.  Chiamare la funzione **GetPurchaseOrderDetail** e passare il valore per il parametro **ProductID**.  
+    4.  Chiamare la funzione **GetPurchaseOrderDetail**e passare il valore per il parametro **ProductID**.  
   
     5.  Associare l'oggetto DataTable di **PurchaseOrderDetail** all'origine dati corrispondente del report.  
   
@@ -289,8 +294,10 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
 6.  Salvare il file.  
   
-## Attività successiva  
+## <a name="next-task"></a>Attività successiva  
 È stato creato correttamente un filtro di dati per la tabella di dati definita per il report figlio. Successivamente, verrà compilata ed eseguita l'applicazione del sito Web. Vedere [Lezione 9: Compilare ed eseguire l'applicazione](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   
+
+

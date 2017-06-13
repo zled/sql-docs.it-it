@@ -1,51 +1,56 @@
 ---
-title: "Gestione di parti di report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestione di parti di Report | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gestione di parti di report
+# <a name="managing-report-parts"></a>Gestione di parti di report
   Le parti del report possono essere inoltre riusate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  
   
-## Gestione di parti di report  
+## <a name="managing-report-parts"></a>Gestione di parti di report  
  Per gestire le parti del report, è possibile usare il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per un server di report in modalità nativa o le pagine dell'applicazione per un server di report in modalità integrata SharePoint.  
   
-### Interazione e ricerca sul lato server  
- Le parti del report possono essere pubblicate in un server di report in modalità nativa o in modalità integrata SharePoint. Gli utenti possono trovare e aggiungere parti del report ai report in uso tramite la funzionalità di raccolta delle parti del report in un'applicazione di creazione di report, ad esempio Generatore report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un utente cerca una parte del report, la ricerca viene effettuata nel catalogo del server di report indipendentemente dalla modalità di installazione del server.  
+### <a name="server-side-interaction-and-search"></a>Interazione e ricerca sul lato server  
+ Le parti del report possono essere pubblicate in un server di report in modalità nativa o in modalità integrata SharePoint. Gli utenti possono trovare e aggiungere parti del report ai report in uso tramite la funzionalità di raccolta delle parti del report in un'applicazione di creazione di report, ad esempio Generatore report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando un utente cerca una parte del report, la ricerca viene effettuata nel catalogo del server di report indipendentemente dalla modalità di installazione del server.  
   
  Quando le parti del report vengono pubblicate da un'applicazione di creazione di report come Generatore report in un server di report in modalità integrata SharePoint, viene aggiornato anche il catalogo del server di report e vengono eseguite ricerche nella raccolta per riflettere in maniera accurata la parte del report nuova o aggiornata.  
   
-#### Caricamento diretto di parti del report in una cartella di SharePoint  
+#### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Caricamento diretto di parti del report in una cartella di SharePoint  
  Se una parte del report viene caricata direttamente in una cartella di documenti di SharePoint anziché essere pubblicata da un'applicazione di creazione di report, il catalogo del server di report non viene aggiornato. La parte del report caricata non verrà pertanto trovata mediante le ricerche eseguite nella raccolta di parti del report. Per garantire la sincronizzazione delle cartelle di SharePoint e del catalogo del server di report, è possibile attivare la caratteristica di sincronizzazione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel server SharePoint. Per altre informazioni, vedere [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  È inoltre possibile sincronizzare i file mediante la chiamata di alcune API di gestione di Reporting Services, ad esempio GetProperties e SetProperties.  
   
-### Organizzazione e spostamento di parti del report  
+### <a name="organizing-and-moving-report-parts"></a>Organizzazione e spostamento di parti del report  
  È opportuno considerare e pianificare in anticipo la modalità di utilizzo e organizzazione da parte del team di parti del report, origini dati e set di dati condivisi. Sebbene sia possibile spostare successivamente tali elementi, tale operazione potrebbe creare problemi.  
   
-#### Server di report in modalità nativa  
+#### <a name="native-mode-report-server"></a>Server di report in modalità nativa  
  Lo spostamento di una parte del report presente in un server di report in modalità nativa in un'altra cartella nello stesso server non influisce sulla possibilità delle applicazioni di creazione di report di eseguire ricerche o scaricare aggiornamenti della parte del report, poiché il server si basa sull'elemento univoco ComponentID. Se tuttavia la parte del report viene spostata in una cartella per la quale un utente non dispone di autorizzazioni, non sarà possibile trovarla mediante le ricerche e ai report relativi non verranno notificati gli aggiornamenti apportati alla parte del report stessa.  
   
-#### Server di report in modalità integrata SharePoint  
+#### <a name="report-server-in-sharepoint-integrated-mode"></a>Server di report in modalità integrata SharePoint  
  Lo spostamento di parti del report in una raccolta documenti o in una cartella diversa equivale al caricamento diretto in un server SharePoint. Il catalogo del server di report non sarà sincronizzato. Per evitare questa situazione, attivare la caratteristica Sincronizzazione file server di report nel server SharePoint.  
   
  Le sottocartelle costituiscono un'eccezione, poiché la ricerca viene sempre eseguita all'interno di queste ultime e di conseguenza, se la si sposta manualmente in una sottocartella, una parte di report verrà comunque trovata durante una ricerca in una raccolta di parti di report .  
   
-### Proprietà del catalogo del server di report  
- Nella tabella seguente vengono illustrate le correlazioni dei campi del catalogo del server di report esistenti a una parte del report e ai nuovi campi aggiunti al catalogo per le parti del report. Questi sono esposti nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], nelle raccolte di SharePoint e nelle applicazioni di creazione di report, ad esempio Generatore report.  
+### <a name="report-server-catalog-properties"></a>Proprietà del catalogo del server di report  
+ Nella tabella seguente vengono illustrate le correlazioni dei campi del catalogo del server di report esistenti a una parte del report e ai nuovi campi aggiunti al catalogo per le parti del report. Questi sono esposti nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , nelle raccolte di SharePoint e nelle applicazioni di creazione di report, ad esempio Generatore report.  
   
  (*) indica un elemento introdotto in questa versione.  
   
@@ -60,10 +65,10 @@ caps.handback.revision: 8
 |SubType (*)|SubType è una stringa che indica il tipo di parte del report da cercare, ad esempio "Tablix" o "Grafico".|Sì|  
 |ComponentID (*)|ComponentID è un identificatore univoco della parte del report. Si tratta di uno dei nuovi campi aggiunti al catalogo ed è visibile sia sul lato server sia nelle applicazioni di creazione di report, ad esempio Generatore report.<br /><br /> Questo campo viene utilizzato dalle applicazioni client durante la verifica degli aggiornamenti di una parte del report nel server. L'applicazione client esegue la ricerca nel server degli elementi ComponentID presenti nel report corrente sul lato client. Quando viene rilevata una corrispondenza, il valore del campo ModifiedDate viene confrontato con il valore del campo SyncDate dell'elemento del report sul lato client.|N0|  
   
-## Controllo dell'accesso alle parti del report  
+## <a name="controlling-access-to-report-parts"></a>Controllo dell'accesso alle parti del report  
  Nelle tabelle seguenti vengono descritte le assegnazioni di ruolo predefinite e il modo in cui consentono di eseguire diverse operazioni. I nomi delle assegnazione di ruolo sono diversi a seconda del tipo di server di report utilizzato.  
   
-### Server in modalità nativa  
+### <a name="server-in-native-mode"></a>Server in modalità nativa  
   
 |Azioni|Ruoli|  
 |-------------|-----------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 8
 |Aggiunta, eliminazione e download di parti del report|Server di pubblicazione|  
 |Esecuzione di ricerche e riutilizzo|Browser<br /><br /> Generatore report|  
   
-### Server in modalità integrata SharePoint  
+### <a name="server-in-sharepoint-integrated-mode"></a>Server in modalità integrata SharePoint  
   
 |Azioni|Ruolo|  
 |-------------|----------|  
@@ -79,7 +84,7 @@ caps.handback.revision: 8
 |Aggiunta, eliminazione, modifica delle proprietà dell'elemento e download di parti del report|Progettazione<br /><br /> Collaborazione|  
 |Esecuzione di ricerche e riutilizzo|Lettura<br /><br /> Solo visualizzazione|  
   
-### Considerazioni sulla sicurezza  
+### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
   
 -   Quando vengono riutilizzate in un report, le definizioni delle parti del report vengono copiate completamente nella definizione del report insieme all'elemento ComponentID di identificazione. Se una parte del report viene aggiornata nel server, gli utenti possono scegliere di scaricare la parte del report aggiornata nel report in uso. Gli aggiornamenti sono inoltre copie complete della parte del report, poiché sostituiscono la versione esistente della parte del report presente nel report in uso.  
   
@@ -88,10 +93,10 @@ caps.handback.revision: 8
   
 -   Le parti di report utilizzano gli stessi criteri di autorizzazione del tipo di elemento risorsa esistente. Dal punto di vista dell'ereditarietà della sicurezza, all'interno di una cartella non esiste alcuna differenza tra gli elementi risorsa tradizionali e le parti di report. La parte del report eredita gli stessi criteri di autorizzazione delle immagini presenti nella stessa cartella. Quando occorre fare distinzione, è possibile configurare la sicurezza a livello di elemento per le parti del report desiderate. In alternativa, le parti del report devono essere posizionate in cartelle separate con le autorizzazioni desiderate configurate.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/it-it/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazioni [Reporting Services], modalità integrata SharePoint"
-  - "integrazione SharePoint [Reporting Services], autorizzazioni"
-  - "sicurezza [Reporting Services], modalità integrata SharePoint"
+title: Utilizzare la sicurezza predefinita di Windows SharePoint Services per elementi del Server di Report | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: becc8fac740023906166f8a9545139300c233a51
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report
+# <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report
   In SharePoint sono disponibili funzionalità di sicurezza predefinite che è possibile utilizzare per accedere agli elementi del server di report da siti e raccolte di SharePoint. Se sono già state assegnate autorizzazioni per siti ed elenchi agli utenti, questi ultimi potranno accedere alle operazioni e agli elementi del server di report subito dopo la configurazione delle impostazioni per l'integrazione tra SharePoint e un server di report.  
   
-## Elementi a sicurezza diretta  
+## <a name="securable-items"></a>Elementi a sicurezza diretta  
  Le autorizzazioni definite per un sito o una raccolta possono essere utilizzate per concedere l'accesso agli elementi del server di report. Se tuttavia si desidera proteggere singoli elementi, sarà possibile impostare autorizzazioni per i tipi di contenuto seguenti:  
   
 |Tipo di file|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 14
   
  Per proteggere singoli elementi, selezionare l'elemento desiderato nella raccolta, fare clic sulla freccia verso il basso e selezionare **Gestisci autorizzazioni**. Scegliere **Modifica autorizzazioni** dal menu **Azioni**.  
   
-## Utilizzo dei livelli di autorizzazione e dei gruppi incorporati per l'accesso agli elementi di un server di report  
+## <a name="using-built-in-groups-and-permission-levels-to-access-report-server-items"></a>Utilizzo dei livelli di autorizzazione e dei gruppi incorporati per l'accesso agli elementi di un server di report  
  Se si utilizza l'ereditarietà delle autorizzazioni e i gruppi SharePoint standard, sarà possibile accedere alla maggior parte delle operazioni del server di report subito dopo la configurazione delle impostazioni di integrazione nel server di report e nelle istanze di SharePoint.  
   
  In SharePoint sono disponibili gruppi standard di cui viene eseguito il mapping a livelli di autorizzazione predefiniti che determinano la modalità di accesso a documenti e pagine di un sito di SharePoint. Se si usano i gruppi standard e i livelli di autorizzazione predefiniti, e i siti usati sono configurati per l'ereditarietà delle autorizzazioni, sarà possibile usare le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] come specificato di seguito:  
@@ -52,7 +57,7 @@ caps.handback.revision: 14
   
  Se non si utilizzano i livelli di autorizzazione e i gruppi incorporati, per accedere alle funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sarà necessario includere autorizzazioni specifiche. Per altre informazioni, vedere [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   

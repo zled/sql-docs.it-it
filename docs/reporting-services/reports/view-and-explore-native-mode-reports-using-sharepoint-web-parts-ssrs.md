@@ -1,26 +1,32 @@
 ---
-title: "View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visualizzare ed esplorare i report in modalità nativa con Web part di SharePoint (SSRS) | Documenti Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
-    
+
+# <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta l'utilizzo di web part in modalità nativa (RSWebParts. cab) per accedere al contenuto del server di report in un sito di SharePoint da un server di report in modalità nativa. Usare invece [Web part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md).  
+>  SQL Server Reporting Services non supporta l'utilizzo in modalità nativa (RSWebParts.cab) web part al contenuto del server di report di access in un sito di SharePoint da un server di report in modalità nativa. Usare invece [Web part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include diverse web part che funzionano con versioni specifiche di un server di report e in determinate modalità di distribuzione.  
   
@@ -31,7 +37,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  La web part Visualizzatore report per la modalità nativa (SPViewer.dwp) è diversa da quella (ReportViewer.dwp) installata dal componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. Nelle web part sono inclusi schemi e implementazioni diversi, tuttavia possono essere installate entrambe nella stessa farm SharePoint. È possibile distinguere le web part visivamente grazie alle caratteristiche seguenti: nella web part Visualizzatore report, installata tramite il componente aggiuntivo, è disponibile un menu **Azioni** sulla barra degli strumenti.  
   
- Per altre informazioni sulle modalità del server di report, vedere [Server di report di Reporting Services](../../reporting-services/report-server-sharepoint/server-di-report-di-reporting-services.md).  
+ Per altre informazioni sulle modalità del server di report, vedere [Server di report di Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).  
   
  Contenuto dell'argomento:  
   
@@ -50,18 +56,18 @@ caps.handback.revision: 9
   
  Si noti che non sono supportate funzionalità di personalizzazione delle web part. Le web part sono concepite per essere utilizzate come sono e non devono essere estese o modificate.  
   
--   Con **Esplora report** (SPExplorer.dwp) è possibile connettersi a Gestione report nel computer del server di report. È possibile esplorare i report disponibili in un server di report e sottoscrivere singoli report. Se Generatore report è abilitato e si dispone di autorizzazioni sufficienti, è possibile avviare Generatore report dalla web part Report Explorer.  
+-   Con**Esplora report** (SPExplorer.dwp) è possibile connettersi a Gestione report nel computer del server di report. È possibile esplorare i report disponibili in un server di report e sottoscrivere singoli report. Se Generatore report è abilitato e si dispone di autorizzazioni sufficienti, è possibile avviare Generatore report dalla web part Report Explorer.  
   
      Report Explorer consente di visualizzare i contenuti di una cartella utilizzando una pagina di Gestione report. L'accesso a singoli elementi e cartelle nella gerarchia di cartelle del server di report viene controllato mediante l'assegnazione di ruoli nel server di report. Quando si seleziona un report, quest'ultimo viene aperto in una nuova finestra del browser. Il report viene visualizzato nel Visualizzatore HTML del server di report, il quale include la barra degli strumenti per report, non nella web part Visualizzatore report. Se si desidera personalizzare le impostazioni della barra degli strumenti, accertarsi di specificare i parametri di accesso all'URL nel server di report. Per istruzioni, vedere [Riferimento ai parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md).  
   
--   Con **Visualizzatore report** (SPViewer.dwp) è possibile visualizzare un report e viene fornita una barra degli strumenti utilizzabile per navigare tra le pagine, eseguire ricerche nel contenuto o esportare il report. È possibile aggiungere la web part Visualizzatore report a una pagina web part in modo che in quest'ultima venga sempre visualizzato un determinato report oppure **è possibile connettersi a Esplora report** per visualizzare i report aperti tramite questa web part.  
+-   Con**Visualizzatore report** (SPViewer.dwp) è possibile visualizzare un report e viene fornita una barra degli strumenti utilizzabile per navigare tra le pagine, eseguire ricerche nel contenuto o esportare il report. È possibile aggiungere la web part Visualizzatore report a una pagina web part in modo che in quest'ultima venga sempre visualizzato un determinato report oppure **è possibile connettersi a Esplora report** per visualizzare i report aperti tramite questa web part.  
   
 ##  <a name="bkmk_requirements"></a> Requisiti per l'utilizzo delle web part  
  I requisiti per l'utilizzo delle web part Visualizzatore report e Report Explorer includono quanto segue:  
   
 -   Le versioni supportate di prodotti e tecnologie SharePoint sono:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -76,9 +82,9 @@ caps.handback.revision: 9
 ##  <a name="bkmk_installingwebparts"></a> Installazione di web part  
  Le web part vengono recapitate a un server SharePoint come file CAB. Per installare le web part, eseguire lo strumento Stsadm.exe di SharePoint incluso nel file con estensione cab dalla riga di comando. Per ulteriori informazioni sullo strumento e la distribuzione delle web part, vedere la documentazione di SharePoint.  
   
-#### Installare web part tramite PowerShell  
+#### <a name="install-web-parts-using-powershell"></a>Installare web part tramite PowerShell  
   
-1.  Copiare il file **RSWebParts.cab** in una cartella nel server SharePoint. È possibile copiare il file in qualsiasi cartella nel server di SharePoint e quindi eliminarlo dopo aver installato le web part. Per impostazione predefinita, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installa il file RSWebParts.cab nella cartella seguente:  
+1.  Copiare il file **RSWebParts.cab** in una cartella nel server SharePoint. È possibile copiare il file in qualsiasi cartella nel server di SharePoint e quindi eliminarlo dopo aver installato le web part. Per impostazione predefinita, SQL Server 2014 Reporting Services e versioni precedenti il file RSWebParts.cab viene installato nella cartella seguente:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -102,7 +108,7 @@ caps.handback.revision: 9
   
      Per altre informazioni sull'utilizzo di PowerShell, vedere [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
   
-#### Installare web part tramite STSADM.exe  
+#### <a name="install-web-parts-using-stsadmexe"></a>Installare web part tramite STSADM.exe  
   
 1.  Copiare il file **RSWebParts.cab** nello stesso percorso del server SharePoint come descritto nella sezione relativa a PowerShell presente in questo documento.  
   
@@ -118,14 +124,14 @@ caps.handback.revision: 9
   
 4.  Si dovrebbe visualizzare un messaggio relativo al corretto completamento dell'operazione.  
   
-     Se si specifica `-globalinstall`, le web part verranno aggiunte alla Global Assembly Cache (GAC). Questo passaggio è necessario se si desidera connettersi alle web part.  
+     Se si specifica `-globalinstall` , le web part verranno aggiunte alla Global Assembly Cache (GAC). Questo passaggio è necessario se si desidera connettersi alle web part.  
   
 ##  <a name="bkmk_configurewebparts"></a> Aggiungere e configurare web part  
  Dopo aver installato le web part, è possibile aggiungerle a una o più pagine web in un sito di SharePoint. È necessario disporre dell'autorizzazione per creare siti Web e aggiungere contenuto.  
   
  Con la procedura riportata di seguito sarà possibile aggiungere entrambe le web part a una pagina e, successivamente, collegare Esplora report e Visualizzatore report in modo che quando si fa clic su un report in Esplora report, questo sarà visualizzato in Visualizzatore report.  
   
-#### Aggiungere Visualizzatore report  
+#### <a name="add-report-viewer"></a>Aggiungere Visualizzatore report  
   
 1.  In Azioni sito fare clic su **Modifica pagina**.  
   
@@ -136,19 +142,19 @@ caps.handback.revision: 9
 4.  Selezionare **Visualizzatore report**.  
   
     > [!WARNING]  
-    >  Non selezionare **Visualizzatore report di SQL Server Reporting Services**. Questa web part viene registrata quando si installa il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint e viene usata per l'esecuzione di un server di report in modalità SharePoint. Non è possibile utilizzarla per visualizzare i report in un server di report eseguito in modalità nativa.  
+    >  Non selezionare **Visualizzatore report di SQL Server Reporting Services** . Questa web part viene registrata quando si installa il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint e viene usata per l'esecuzione di un server di report in modalità SharePoint. Non è possibile utilizzarla per visualizzare i report in un server di report eseguito in modalità nativa.  
   
 5.  Scegliere **Aggiungi**.  
   
 6.  In modalità di modifica della pagina fare clic su **Modifica web part** nella web part Visualizzatore report.  
   
-7.  In **Report Manager URL**digitare l'URL di un'istanza di Gestione report associata al server di report in modalità nativa a cui si desidera accedere. Per impostazione predefinita, la sintassi dell'URL di Gestione report è la seguente: **http://\<nomeserver>/reports**.  
+7.  In **Report Manager URL**digitare l'URL di un'istanza di Gestione report associata al server di report in modalità nativa a cui si desidera accedere. Per impostazione predefinita, un URL di gestione di Report presenta la seguente sintassi: **http://\<nomeserver > / reports**.  
   
 8.  In **Percorso report**specificare una barra seguita dal percorso della cartella e dal nome del report. **Non** includere il nome del server o la directory virtuale di Gestione report. Ad esempio, per aprire il report "Company Sales" nella cartella Adventure Works, specificare **/Adventure Works/Company Sales**. Di seguito è riportato un altro esempio in cui il report "Products" si trova nella cartella radice del server di report **/Products**.  
   
 9. Scegliere **OK**.  
   
-#### Aggiungere Esplora report ed effettuare il collegamento a Visualizzatore report  
+#### <a name="add-report-explorer-and-connect-to-report-viewer"></a>Aggiungere Esplora report ed effettuare il collegamento a Visualizzatore report  
   
 1.  In un'altra area della pagina fare clic su **Aggiungi web part** e nella cartella Varie selezionare **Esplora report** , quindi **Aggiungi**.  
   
@@ -167,10 +173,5 @@ caps.handback.revision: 9
     2.  Fare clic su **Visualizza report in**.  
   
     3.  Fare clic su **Visualizzatore report**.  
-  
-## Vedere anche  
- [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Server di report di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

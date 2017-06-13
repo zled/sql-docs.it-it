@@ -1,24 +1,29 @@
 ---
-title: "Aggiungere o eliminare un indicatore (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere o eliminare un indicatore (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere o eliminare un indicatore (Generatore report e SSRS)
-  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Per altre informazioni in merito, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+# <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Aggiungere o eliminare un indicatore (Generatore report e SSRS)
+  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Per altre informazioni in merito, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Gli indicatori sono posizionati comunemente nelle celle di una tabella o di una matrice, ma possono essere utilizzati anche separatamente, affiancati ai misuratori o incorporati nei misuratori.  
   
@@ -32,14 +37,14 @@ caps.handback.revision: 8
   
 -   [Impostare l'ambito di sincronizzazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
- Poiché un indicatore viene posizionato nel pannello del misuratore, è necessario selezionare l'indicatore anziché il pannello quando si vuole configurare l'indicatore tramite la finestra di dialogo **Proprietà indicatori** o il riquadro **Proprietà**. Nell'immagine seguente viene mostrato un indicatore selezionato nel relativo pannello del misuratore.  
+ Poiché un indicatore viene posizionato nel pannello del misuratore, è necessario selezionare l'indicatore anziché il pannello quando si vuole configurare l'indicatore tramite la finestra di dialogo **Proprietà indicatori** o il riquadro **Proprietà** . Nell'immagine seguente viene mostrato un indicatore selezionato nel relativo pannello del misuratore.  
   
  ![rs_GaugePanelWithIndicator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
 > [!NOTE]  
 >  A seconda della larghezza della colonna e della lunghezza dei valori di dati, il testo nella tabella o nelle celle della matrice potrebbe essere sottoposto a wrapping ed essere quindi visualizzato su più righe. In tal caso, l'icona dell'indicatore potrebbe essere adattata e assumere una forma diversa rendendola così meno leggibile. Posizionare l'indicatore in un rettangolo per assicurarsi che l'icona non sia mai adattata.  
   
-## Per aggiungere un indicatore a una tabella o a una matrice  
+## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>Per aggiungere un indicatore a una tabella o a una matrice  
   
 1.  Aprire un report esistente o crearne uno nuovo contenente una tabella e una matrice con i dati che si desidera visualizzare. Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) o [Matrici](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
 3.  Facoltativamente, nella scheda **Inserisci** fare clic su **Rettangolo** e quindi fare clic su una cella nella nuova colonna.  
   
-4.  Nella scheda **Inserisci** fare clic su **Indicatore** e quindi fare clic su una cella nella nuova colonna.  
+4.  Nella scheda **Inserisci** fare clic su **Indicatore**e quindi fare clic su una cella nella nuova colonna.  
   
      Se è stato aggiunto un rettangolo a una cella, fare clic su quella cella.  
   
@@ -55,13 +60,13 @@ caps.handback.revision: 8
   
 6.  Scegliere **OK**.  
   
-7.  Fare clic sull'indicatore. Viene visualizzato il riquadro **Dati misuratore**.  
+7.  Fare clic sull'indicatore. Viene visualizzato il riquadro **Dati misuratore** .  
   
-8.  Nell'area **Valori**, nell'elenco a discesa **(valore non specificato)**, fare clic sul campo di cui si vuole visualizzare i valori come un indicatore.  
+8.  Nell'area **Valori** , nell'elenco a discesa **(valore non specificato)** , fare clic sul campo di cui si vuole visualizzare i valori come un indicatore.  
   
      L'indicatore è configurato per utilizzare valori predefiniti. Per impostazione predefinita, gli indicatori vengono configurati per utilizzare le percentuali come unità di misura e gli intervalli di percentuale sono distribuiti uniformemente tra i membri dell'indicatore; il valore mostrato dall'indicatore utilizza l'ambito del gruppo più vicino.  
   
-## Per eliminare un indicatore in una tabella o in una matrice  
+## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>Per eliminare un indicatore in una tabella o in una matrice  
   
 1.  Fare clic con il pulsante destro del mouse sull'indicatore da eliminare e scegliere **Elimina**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 2.  Fare clic su **Elimina**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

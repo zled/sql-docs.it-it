@@ -1,23 +1,28 @@
 ---
-title: "Esportazione in Microsoft Excel (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esportazione in Microsoft Excel (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 28
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 27
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esportazione in Microsoft Excel (Generatore report e SSRS)
+# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginato nel formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx). Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
   
  Il formato è Office Open XML. Il tipo di contenuto dei file generati da questo renderer è **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** e l'estensione dei file è xlsx.  
@@ -36,9 +41,11 @@ caps.handback.revision: 27
   
 -   La larghezza massima delle colonne è limitata a 255 caratteri o 1726,5 punti. Nel renderer non viene verificato se la larghezza della colonna sia inferiore a tale limite.  
   
--   L'altezza massima della riga è pari a 409 punti. Se l'altezza della riga risulta superiore a 409 punti, il contenuto viene troncato.  
-  
 -   Il numero massimo di caratteri in una cella è limitato a 32.767. Se tale limite viene superato, nel renderer viene visualizzato un messaggio di errore.  
+  
+-   L'altezza massima della riga è pari a 409 punti. Se il contenuto della riga provocano l'altezza della riga risulta superiore a 409 punti, nella cella di Excel viene visualizzato una quantità parziale di testo fino a 409 punti. Il resto del contenuto della cella è ancora all'interno della cella (fino a massimo numero Excel di caratteri di 32.767).
+
+-  Poiché l'altezza massima della riga è pari a 409 punti, se l'altezza della cella nel report definito è superiore a 409 punti, Excel suddivide il contenuto della cella in più righe.
   
 -   Sebbene in Excel non sia definito un numero massimo di fogli di lavoro, alcuni fattori esterni, quali la memoria e lo spazio su disco, possono comportare l'applicazione di limitazioni.  
   
@@ -48,17 +55,17 @@ caps.handback.revision: 27
   
  Per altre informazioni sulle limitazioni di Excel, vedere [Specifiche e limiti di Excel](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F).  
   
-### Dimensioni dei file di Excel 2003 (con estensione xls)  
+### <a name="sizes-of-excel-2003-xls-files"></a>Dimensioni dei file di Excel 2003 (con estensione xls)  
   
 > [!IMPORTANT]  
->  L'estensione per il rendering di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  L'estensione per il rendering di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Quando i report vengono prima esportati e poi salvati in Excel 2003, non si ottengono i vantaggi derivanti dall'ottimizzazione dei file applicata automaticamente da Excel ai file delle cartelle di lavoro *.xls. Dimensioni dei file maggiori possono provocare problemi alle sottoscrizioni tramite posta elettronica e agli allegati di posta elettronica. Per ridurre le dimensioni dei file \*.xls per i report esportati, aprire i file \*.xls e salvare di nuovo le cartelle di lavoro. L'ulteriore salvataggio delle cartelle di lavoro determina in genere una riduzione del 40-50 percento delle dimensioni dei relativi file.  
   
 > [!NOTE]  
 >  In Excel 2003 vengono visualizzati circa 1000 caratteri in una cella del foglio di lavoro. Nella barra della formula è tuttavia possibile modificare tale valore fino a raggiungere il numero massimo di caratteri. Questa limitazione non si applica ai file Excel (con estensione xlsx) correnti.  
   
-### Caselle di testo e testo  
+### <a name="text-boxes-and-text"></a>Caselle di testo e testo  
  Alle caselle di testo e al testo si applicano le limitazioni seguenti:  
   
 -   I valori della casella di testo costituiti da espressioni non vengono convertiti in formule di Excel. Il valore di ogni casella di testo viene valutato durante l'elaborazione del report. L'espressione valutata viene esportata come contenuto di ogni cella di Excel.  
@@ -72,19 +79,19 @@ caps.handback.revision: 27
     > [!NOTE]  
     >  Per risolvere questo problema, aumentare la larghezza della casella di testo nel report.  
   
-### Immagini  
+### <a name="images"></a>Immagini  
  Alle immagini si applicano le limitazioni seguenti:  
   
 -   Le immagini di sfondo per gli elementi del report vengono ignorate, poiché in Excel non sono supportate immagini di sfondo per le singole celle.  
   
 -   L'estensione per il rendering Excel supporta solo l'immagine di sfondo del corpo del report. Se nel report viene visualizzata un'immagine di sfondo del corpo di report, il rendering dell'immagine verrà eseguito come immagine di sfondo del foglio di lavoro.  
   
-### Rettangoli  
+### <a name="rectangles"></a>Rettangoli  
  Ai rettangoli si applicano le limitazioni seguenti:  
   
 -   I rettangoli nei piè di pagina del report non vengono esportati in Excel. Il rendering dei rettangoli nel corpo del report, delle celle della Tablix e così via viene tuttavia eseguito come intervallo di celle di Excel.  
   
-### Intestazioni e piè di pagina del report  
+### <a name="report-headers-and-footers"></a>Intestazioni e piè di pagina del report  
  Alle intestazioni e ai piè di pagina del report si applicano le limitazioni seguenti:  
   
 -   Nelle intestazioni e nei piè di pagina di Excel sono supportati al massimo 256 caratteri, incluso il markup. L'estensione per il rendering tronca la stringa a 256 caratteri.  
@@ -93,7 +100,7 @@ caps.handback.revision: 27
   
 -   Quando vengono esportate in Excel, le caselle di testo in un'intestazione o in un piè di pagina mantengono la relativa formattazione, ma non l'allineamento corrispondente. Questa situazione si verifica in quanto gli spazi iniziali e finali vengono rimossi durante il rendering del report.  
   
-### Unione di celle  
+### <a name="merging-cells"></a>Unione di celle  
  All'unione di celle si applica la limitazione seguente:  
   
 -   Se le celle sono unite, il ritorno a capo automatico non verrà eseguito correttamente. Se sono presenti celle unite in una riga in cui il rendering di una casella di testo viene eseguito con la proprietà AutoSize, il ridimensionamento automatico non funzionerà.  
@@ -106,32 +113,32 @@ caps.handback.revision: 27
   
 -   Anche dopo aver allineato con precisione tutti gli elementi, è possibile che alcune colonne vengano comunque unite. Questo problema potrebbe essere causato dalla conversione delle unità interne e dal conseguente arrotondamento durante il rendering del foglio di lavoro di Excel. Nel linguaggio RDL (Report Definition Language) è possibile specificare posizione e dimensione in unità di misura diverse, ad esempio pollici, pixel, centimetri e punti. Excel usa internamente l'unità di misura in punti. Per ridurre al minimo i possibili errori di conversione e arrotondamento durante la conversione di pollici e centimetri in punti e ottenere i risultati più precisi, specificare tutte le misure in punti. Un pollice corrisponde a 72 punti.  
   
-### Gruppi di righe e di colonne del report  
+### <a name="report-row-groups-and-column-groups"></a>Gruppi di righe e di colonne del report  
  I report che includono gruppi di righe o di colonne contengono celle vuote quando vengono esportati in Excel. Si immagini un report che raggruppa righe in distanza dal lavoro. Ogni distanza dal lavoro può contenere più di un cliente. Nell'immagine seguente viene illustrato il report.  
   
- ![Report in the Reporting Services web portal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report in the Reporting Services web portal")  
+ ![Report nel portale web di Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report nel portale web di Reporting Services")  
   
  Quando il report viene esportato in Excel,la distanza dal lavoro viene visualizzata solo in una cella della colonna Distanza dal lavoro. A seconda dell'allineamento del testo nel report (in alto, al centro o in basso), il valore si trova nella prima cella, in quella centrale o nell'ultima. Le altre celle sono vuote. La colonna Nome, contenente i nomi dei clienti, non presenta celle vuote. Nell'immagine seguente viene mostrato il report dopo la relativa esportazione in Excel. I bordi rossi della cella sono stati aggiunti per metterla in risalto. Le caselle di colore grigio sono le celle vuote. Le righe rosse e le caselle di colore grigio non fanno parte del report esportato.  
   
- ![Report exported to Excel, with lines](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
+ ![Report esportato in Excel, con linee](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report esportati in Excel, con linee")  
   
  Pertanto i report con gruppi di righe o di colonne devono essere modificati dopo la relativa esportazione in Excel e prima di poter visualizzare i dati esportati in una tabella pivot. Il valore del gruppo deve essere aggiunto alle celle in cui non è disponibile per rendere il foglio di lavoro una tabella bidimensionale con valori in tutte le celle. L'immagine seguente illustra il foglio di lavoro di aggiornamento.  
   
- ![Report exported to Excel, flattened](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, flattened")  
+ ![Report esportato in Excel, bidimensionali](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report esportati in Excel, bidimensionale")  
   
  Se quindi viene creato un report con lo scopo specifico di esportalo in Excel per un'ulteriore analisi dei dati, è necessario considerare di non includervi gruppi di righe o di colonne.  
   
-## Renderer di Excel  
+## <a name="excel-renderer"></a>Renderer di Excel  
   
-### Renderer del file Excel (con estensione xlsx) corrente  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il renderer di Excel predefinito è la versione compatibile con i file [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx) corrente. Si tratta dell'opzione **Excel** elencata nei menu **Esportazione in corso** nel portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nell'elenco di SharePoint.  
+### <a name="current-xlsx-excel-file-renderer"></a>Renderer del file Excel (con estensione xlsx) corrente  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]il renderer di Excel predefinito è la versione compatibile con i file [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx) corrente. Si tratta dell'opzione **Excel** elencata nei menu **Esportazione in corso** nel portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nell'elenco di SharePoint.  
   
  Quando si usa il renderer di Excel predefinito, anziché il renderer precedente di Excel 2003 (con estensione xls), è possibile installare Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint per consentire alle versioni precedenti di Excel di aprire i file esportati.  
   
-### Renderer di Excel 2003 (con estensione xls)  
+### <a name="excel-2003-xls-renderer"></a>Renderer di Excel 2003 (con estensione xls)  
   
 > [!IMPORTANT]  
->  L'estensione per il rendering di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  L'estensione per il rendering di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  La versione precedente del renderer di Excel, compatibile con Excel 2003, è ora denominata Excel 2003 ed è elencata nei menu con tale nome. Il tipo di contenuto dei file generati da questo renderer è **application/vnd.ms-excel** e l'estensione dei file è xls.  
   
@@ -141,7 +148,7 @@ caps.handback.revision: 27
   
 -   Generatore report in modalità senza connessione e anteprima di un report in Generatore report. Poiché il file di configurazione RSReportServer si trova nel server di report, gli strumenti o prodotti da cui si esportano i report devono essere connessi a un server di report per la lettura del file di configurazione.  
   
--   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Report in modalità locale nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md)  
+-   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Report in modalità locale e Report in modalità locale nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se il renderer dell'opzione di menu **Excel 2003** è configurato per essere visibile, sia le opzioni di Excel sia di Excel 2003 sono disponibili negli scenari seguenti:  
   
@@ -163,7 +170,7 @@ caps.handback.revision: 27
   
  L'estensione EXCELOPENXML consente di definire il renderer di Excel per i file Excel (con estensione xlsx) correnti. L'estensione EXCEL consente di definire la versione Excel 2003. `Visible = “false”` indica che il renderer di Excel 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
-### Differenze tra i renderer di Excel (con estensione xlsx) correnti ed Excel 2003  
+### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Differenze tra i renderer di Excel (con estensione xlsx) correnti ed Excel 2003  
  I report, di cui è stato eseguito il rendering tramite i renderer di Excel (con estensione xlsx) correnti o Excel 2003, sono in genere identici e solo in rare circostanze si noteranno differenze tra i due formati. Nella tabella seguente vengono confrontati i renderer di Excel ed Excel 2003.  
   
 |Proprietà|Excel 2003|Excel corrente|  
@@ -187,7 +194,7 @@ caps.handback.revision: 27
   
  Se si desidera usare i dati di grafici, grafici sparkline, barre dei dati, mappe, misuratori e indicatori esportare il report in un file con estensione csv o generare feed di dati conformi ad Atom dal report. Per altre informazioni, vedere [Esportazione in un file CSV &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
-## Ridimensionamento della pagina  
+## <a name="page-sizing"></a>Ridimensionamento della pagina  
  Nell'estensione per il rendering di Excel vengono usate le impostazioni relative all'altezza e alla larghezza della pagina per determinare l'impostazione del foglio da definire nel foglio di lavoro di Excel. Excel tenta di abbinare le impostazioni delle proprietà PageHeight e PageWidth a uno dei formati carta più comuni.  
   
  Se non viene trovata alcuna corrispondenza, vengono usate le dimensioni di pagina predefinite per la stampante. Se la larghezza della pagina è inferiore all'altezza, l'orientamento verrà impostato su Verticale. In caso contrario, verrà impostato su Orizzontale.  
@@ -199,7 +206,7 @@ caps.handback.revision: 27
   
  Se per il report non viene specificato né un nome di pagina iniziale, né nomi di pagina correlati alle interruzioni di pagina, le schede del foglio di lavoro avranno i nomi predefiniti **Foglio1**, **Foglio2**e così via.  
   
- Reporting Services fornisce proprietà per impostare report, aree dati, gruppi e rettangoli per facilitare la creazione di report esportabili in Excel in una modalità desiderata. Per altre informazioni, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Reporting Services fornisce proprietà per impostare report, aree dati, gruppi e rettangoli per facilitare la creazione di report esportabili in Excel in una modalità desiderata. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ##  <a name="DocumentProperties"></a> Proprietà del documento  
  Il renderer di Excel scrive i metadati seguenti nel file di Excel.  
@@ -218,7 +225,7 @@ caps.handback.revision: 27
   
  Nelle sezioni di intestazione e piè di pagina di Excel sono supportati al massimo 256 caratteri, incluso il markup. Se questo limite viene superato, il renderer di Excel rimuove i caratteri di markup a partire dalla fine della stringa dell'intestazione e/o del piè di pagina per ridurre il numero di caratteri totali. Se la lunghezza supera il limite massimo anche dopo l'eliminazione di tutti i caratteri di markup, la stringa verrà troncata a partire da destra.  
   
-### Impostazioni SimplePageHeader  
+### <a name="simplepageheader-settings"></a>Impostazioni SimplePageHeader  
  Per impostazione predefinita, il valore dell'impostazione SimplePageHeaders delle informazioni sul dispositivo è **False**. Il rendering delle intestazioni di pagina viene pertanto eseguito come righe del report sulla superficie del foglio di lavoro di Excel. Le righe del foglio di lavoro che contengono le intestazioni vengono bloccate. È possibile bloccare o sbloccare il riquadro in Excel. Se l'opzione **Stampa titoli** è selezionata, le intestazioni vengono automaticamente impostate per la stampa su ogni pagina del foglio di lavoro.  
   
  Se l'opzione **Stampa titoli** è selezionata nella scheda Layout di pagina di Excel, l'intestazione di pagina viene ripetuta all'inizio di ogni foglio di lavoro della cartella di lavoro, ad eccezione della copertina della mappa documento. Se l'opzione **Stampa sulla prima pagina** o **Stampa sull'ultima pagina** non è selezionata nelle finestre di dialogo Proprietà intestazione report o Proprietà piè di pagina report, l'intestazione non verrà aggiunta alla prima o all'ultima pagina rispettivamente.  
@@ -230,7 +237,7 @@ caps.handback.revision: 27
 ##  <a name="Interactivity"></a> Interattività  
  Alcuni elementi interattivi sono supportati in Excel. Di seguito è riportata una descrizione di comportamenti specifici.  
   
-### Elementi visualizzati e nascosti  
+### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] sono previste limitazioni in relazione alla modalità di gestione degli elementi del report visualizzati e nascosti in seguito all'esportazione. Il rendering di gruppi, righe e colonne contenenti elementi del report attivabili e disattivabili viene eseguito come strutture di Excel. In Excel vengono create strutture per espandere e comprimere righe e colonne nell'intera riga o colonna. È pertanto possibile che vengano compressi anche elementi del report che non devono esserlo. Si possono inoltre verificare problemi con i simboli di struttura di Excel che possono determinare la sovrapposizione di strutture. Per risolvere questi problemi, quando si usa l'estensione per il rendering Excel vengono applicate le seguenti regole per la creazione di strutture:  
   
 -   L'elemento di report presente nell'angolo superiore sinistro che può essere attivato/disattivato continuerà a essere attivabile/disattivabile in Excel. Gli elementi del report che possono essere attivati/disattivati e che condividono spazio verticale o orizzontale con l'elemento di report attivabile/disattivabile nell'angolo superiore sinistro non possono essere attivati/disattivati in Excel.  
@@ -241,35 +248,36 @@ caps.handback.revision: 27
   
 -   A causa di una limitazione di Excel, le strutture possono presentare solo fino a sette livelli di nidificazione.  
   
-### Mappa documento  
+### <a name="document-map"></a>Mappa documento  
  Se nel report sono presenti eventuali etichette della mappa documento, viene eseguito il rendering di una mappa documento. Il rendering della mappa documento viene eseguito come foglio di lavoro di copertina di Excel inserito come prima scheda della cartella di lavoro. Al foglio di lavoro viene assegnato il nome **Mappa documento**.  
   
  Il testo visualizzato nella mappa documento viene determinato dalla proprietà DocumentMapLabel dell'elemento del report o del gruppo. Le etichette della mappa documento sono elencate nell'ordine in cui sono inserite nel report, a partire dalla prima riga della prima colonna. In ogni cella dell'etichetta della mappa documento sono presenti rientri il cui numero corrisponde a quello dei livelli di profondità con cui viene visualizzata nel report. Ogni livello di rientro viene rappresentato posizionando l'etichetta in una colonna successiva. Excel supporta fino a 256 livelli di nidificazione della struttura.  
   
  Il rendering della struttura della mappa documento viene eseguito come struttura di Excel comprimibile. Tale struttura corrisponde alla struttura annidata della mappa documento. Lo stato di espansione o compressione della struttura inizia a partire dal secondo livello.  
   
- Il nodo radice della mappa corrisponde al nome del report, ovvero \<*nomereport*>.rdl, e non è interattivo. Il tipo di carattere dei collegamenti alla mappa documento è Arial, 10pt.  
+ Il nodo radice della mappa è il nome del report, il \< *reportname*>, con estensione rdl e non è interattivo. Il tipo di carattere dei collegamenti alla mappa documento è Arial, 10pt.  
   
-### Collegamenti drill-through  
+### <a name="drillthrough-links"></a>Collegamenti drill-through  
  Il rendering dei collegamenti drill-through visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti drill-through per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un collegamento drill-through, viene aperto il browser predefinito del client e si passa alla visualizzazione HTML della destinazione.  
   
-### Collegamenti ipertestuali  
+### <a name="hyperlinks"></a>Collegamenti ipertestuali  
  Il rendering dei collegamenti ipertestuali visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti ipertestuali per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un collegamento ipertestuale, viene aperto il browser predefinito del client e si passa all'URL di destinazione.  
   
-### Ordinamento interattivo  
+### <a name="interactive-sorting"></a>Ordinamento interattivo  
  L'ordinamento interattivo non è supportato in Excel.  
   
-### Segnalibri  
+### <a name="bookmarks"></a>Segnalibri  
  Il rendering dei collegamenti a segnalibro visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti a segnalibro per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un segnalibro, si passa alla cella di Excel in cui viene eseguito il rendering dell'elemento di report con segnalibro.  
   
 ##  <a name="ConditionalFormat"></a> Modifica dei report in fase di esecuzione  
- Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md).  
+ Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

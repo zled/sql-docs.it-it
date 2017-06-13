@@ -1,24 +1,29 @@
 ---
-title: "Salvataggio di report (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Salvataggio di report (Generatore Report) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Salvataggio di report (Generatore report)
-  In Generatore report è possibile salvare un report impaginato in un server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], in una raccolta di SharePoint, in una condivisione file per la quale si dispone di autorizzazioni di scrittura o nel computer in uso. 
+# <a name="saving-reports-report-builder"></a>Salvataggio di report (Generatore report)
+  In Generatore report è possibile salvare un report impaginato in un server di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in una raccolta di SharePoint, in una condivisione file per la quale si dispone di autorizzazioni di scrittura o nel computer in uso. 
   
 Durante il salvataggio di un report, l'elemento che viene effettivamente salvato è la definizione del report che ne descrive il layout. Non vengono salvati i dati. Ogni volta che si esegue il report, i dati del report vengono aggiornati ed è probabile che siano diversi rispetto all'esecuzione precedente del report.  
   
@@ -37,7 +42,7 @@ Durante il salvataggio di un report, l'elemento che viene effettivamente salvato
   
 -   I report vengono resi disponibili per altri utenti che dispongano delle autorizzazioni di accesso alla cartella nella quale è stato salvato il report.  
   
--   I report possono essere gestiti e visualizzati nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   I report possono essere gestiti e visualizzati nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Le risorse dei report quali le origini dati, le immagini e i sottoreport vengono archiviate in un'unica posizione per un accesso più semplice.  
   
@@ -48,7 +53,7 @@ Durante il salvataggio di un report, l'elemento che viene effettivamente salvato
 -   Le esecuzioni dei report possono essere registrate e fornire informazioni sulle prestazioni e sui controlli.  
   
 ##  <a name="ExportingAndSavingReports"></a> Esportazione e salvataggio di report  
- Se il numero di report da archiviare è limitato, è consigliabile esportare un report e salvarlo come file. Dopo aver esportato un report in un'applicazione, ad esempio in formato PDF o Excel, è possibile salvarlo come file e copiarlo in una directory condivisa protetta in rete. In alternativa, è possibile caricare un file PDF o Excel salvato come risorsa se si desidera mantenere tutte le copie del report, indipendentemente dal formato, nel database del server di report. Per altre informazioni sull'esportazione dei report, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) e [Caricare un file o un report](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
+ Se il numero di report da archiviare è limitato, è consigliabile esportare un report e salvarlo come file. Dopo aver esportato un report in un'applicazione, ad esempio in formato PDF o Excel, è possibile salvarlo come file e copiarlo in una directory condivisa protetta in rete. In alternativa, è possibile caricare un file PDF o Excel salvato come risorsa se si desidera mantenere tutte le copie del report, indipendentemente dal formato, nel database del server di report. Per altre informazioni sull'esportazione dei report, vedere [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) e [Caricare un file o un report](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
 ##  <a name="UsingFileShareDelivery"></a> Utilizzo del recapito tramite condivisione file  
  Se i report da archiviare sono numerosi, è possibile creare una sottoscrizione che recapiti il report direttamente al file system. Per questo approccio è necessario creare una sottoscrizione per ogni report, scegliere una cartella condivisa per archiviare i report e definire una pianificazione che determini quando il file deve essere creato. Quando un utente definisce una sottoscrizione, il server di report è in grado di eseguire automaticamente il report e di aggiungere i file del report all'archivio in base alla pianificazione specificata dall'utente. È inoltre possibile creare pianificazioni a utilizzo singolo per archiviare report occasionalmente. Per altre informazioni sulle sottoscrizioni e sul recapito tramite condivisione file, vedere [Recapito tramite condivisione file in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
@@ -62,9 +67,9 @@ Durante il salvataggio di un report, l'elemento che viene effettivamente salvato
   
 -   [Salvare un report in una raccolta di SharePoint &#40;Generatore report&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installare e disinstallare Generatore report](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Installare e disinstallare Generatore report](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Stampare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

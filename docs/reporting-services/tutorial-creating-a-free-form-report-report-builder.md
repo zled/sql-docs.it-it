@@ -1,24 +1,29 @@
 ---
-title: "Esercitazione: Creazione di un report in formato libero (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Creazione di un Report in formato libero (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Creazione di un report in formato libero (Generatore report)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
 In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di un notiziario. Ogni pagina visualizza testo statico, elementi visivi di riepilogo e dati di vendita di esempio dettagliati.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -27,7 +32,7 @@ Nel report le informazioni vengono raggruppate per territorio e vengono visualiz
   
 Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="BlankReport"></a>1. Creare un report vuoto, un'origine dati e un set di dati  
@@ -35,7 +40,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
 > [!NOTE]  
 > Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
   
-### Per creare un report vuoto  
+### <a name="to-create-a-blank-report"></a>Per creare un report vuoto  
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
@@ -47,7 +52,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
  
 3.  Nel riquadro destro fare clic su **Report vuoto**.  
   
-### Per creare una nuova origine dati  
+### <a name="to-create-a-new-data-source"></a>Per creare una nuova origine dati  
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Origine dati**.  
   
@@ -63,7 +68,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 6.  Scegliere **OK**.  
   
-### Per creare un nuovo set di dati  
+### <a name="to-create-a-new-dataset"></a>Per creare un nuovo set di dati  
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Set di dati**.  
   
@@ -123,11 +128,11 @@ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] l'area dati elenco
   
 Verrà usato un elenco per visualizzare le informazioni sulle vendite relative ai territori di vendita in un report simile a un notiziario. Le informazioni vengono raggruppate per territorio. Si aggiungerà un nuovo gruppo di righe per il raggruppamento dei dati per territorio e si eliminerà quindi il gruppo di righe Dettagli incorporato.  
   
-### Per aggiungere un elenco  
+### <a name="to-add-a-list"></a>Per aggiungere un elenco  
   
 1.  Nella scheda **Inserisci** fare clic su **Aree dati** > **Elenco**. 
 
-2. Fare clic nel corpo del report, tra le aree del titolo e del piè di pagina, e trascinare per creare la casella di riepilogo. Assegnare alla casella di riepilogo un'altezza di 18 cm e una larghezza di 16 cm. Per ottenere la dimensione esatta, nel riquadro **Proprietà** digitare in **Posizione** i valori per **larghezza** e **altezza**.
+2. Fare clic nel corpo del report, tra le aree del titolo e del piè di pagina, e trascinare per creare la casella di riepilogo. Assegnare alla casella di riepilogo un'altezza di 18 cm e una larghezza di 16 cm. Per ottenere la dimensione esatta, nel riquadro **Proprietà** digitare in **Posizione**i valori per **larghezza** e **altezza** .
   
     > [!NOTE]  
     > Questo report utilizza il formato carta Letter (21,7 X 27,9 cm) e margini di 2,54 cm. Una casella di riepilogo più alta di 23 cm o più larga di 16,5 cm potrebbe causare la generazione di pagine vuote.  
@@ -142,11 +147,11 @@ Verrà usato un elenco per visualizzare le informazioni sulle vendite relative a
   
 5.  Fare clic con il pulsante destro del mouse nell'elenco, quindi scegliere **Proprietà rettangolo**.  
   
-6.  Nella scheda **Generale** selezionare la casella di controllo **Aggiungi un'interruzione di pagina dopo**.  
+6.  Nella scheda **Generale** selezionare la casella di controllo **Aggiungi un'interruzione di pagina dopo** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Per aggiungere un nuovo gruppo di righe ed eliminare il gruppo Dettagli  
+### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>Per aggiungere un nuovo gruppo di righe ed eliminare il gruppo Dettagli  
   
 1.  Nel riquadro Gruppi di righe fare clic con il pulsante destro del mouse sul gruppo Dettagli, scegliere **Aggiungi gruppo**, quindi fare clic su **Gruppo padre**.  
   
@@ -173,7 +178,7 @@ Verrà usato un elenco per visualizzare le informazioni sulle vendite relative a
 ## <a name="Graphics"></a>3. Aggiungere elementi grafici  
 Uno dei vantaggi offerti da un'area dati elenco consiste nella possibilità di aggiungere elementi del report, quali rettangoli e caselle di testo, in qualsiasi posizione, anziché essere limitati a un layout tabulare. L'aggiunta di un elemento grafico, ad esempio un rettangolo colorato, conferirà al report un aspetto più gradevole.  
   
-### Per aggiungere elementi grafici al report  
+### <a name="to-add-graphic-elements-to-the-report"></a>Per aggiungere elementi grafici al report  
   
 1.  Selezionare **Rettangolo** nella scheda **Inserisci**. 
 
@@ -183,7 +188,7 @@ Uno dei vantaggi offerti da un'area dati elenco consiste nella possibilità di a
   
 3.  Fare clic sulla scheda **Riempimento** .  
   
-4.  In **Colore riempimento** selezionare **Grigio chiaro**.  
+4.  In **Colore riempimento**selezionare **Grigio chiaro**.  
    
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -196,15 +201,15 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
 ## <a name="Text"></a>4. Aggiungere testo in formato libero  
 È possibile aggiungere caselle di testo per visualizzare il testo statico ripetuto in ogni pagina del report, nonché campi dati.  
   
-### Per aggiungere testo al report  
+### <a name="to-add-text-to-the-report"></a>Per aggiungere testo al report  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
 2.  Fare clic su **Casella testo** nella scheda **Inserisci**. Fare clic nell'angolo superiore sinistro dell'elenco, all'interno del rettangolo aggiunto in precedenza, e trascinare per fare in modo che la casella di testo sia larga 8,7 cm e alta 12,7 cm circa.  
   
-3.  Con il cursore nella casella di testo, digitare: **Notiziario per**. Includere uno spazio dopo la parola "per", per separare il testo del campo che verrà aggiunto nel passaggio successivo.   
+3.  Con il cursore nella casella di testo, digitare: **Notiziario per** . Includere uno spazio dopo la parola "per", per separare il testo del campo che verrà aggiunto nel passaggio successivo.   
   
-    ![Aggiungi testo di intestazione newsletter](../reporting-services/media/tutorial-newsletterfor.png "Aggiungi testo di intestazione newsletter")  
+    ![Aggiungere il testo dell'intestazione newsletter](../reporting-services/media/tutorial-newsletterfor.png "aggiungere testo di intestazione newsletter")  
   
 4.  Trascinare il campo `[Territory]` da ListDataSet nel riquadro dei dati del report nella casella di testo e posizionarlo dopo "Notiziario per".  
   
@@ -288,7 +293,7 @@ Nel report viene visualizzato il testo statico e in ogni pagina del report sono 
 ## <a name="Table"></a>5. Aggiungere una tabella per la visualizzazione dei dettagli delle vendite  
 Utilizzare la procedura guidata Nuova tabella o matrice per aggiungere una tabella al report in formato libero. Dopo avere completato la procedura guidata, si aggiungerà manualmente una riga per i totali.  
   
-### Per aggiungere una tabella  
+### <a name="to-add-a-table"></a>Per aggiungere una tabella  
   
 1.  Nella scheda **Inserisci** > area **Aree dati** > **Tabella** > **Creazione guidata Tabella**.  
   
@@ -336,7 +341,7 @@ Nel report verrà visualizzata una tabella con i dettagli e i totali delle vendi
   
 In questa esercitazione il report verrà salvato in un server di report. Se non si dispone dell'accesso a un server di report, sarà possibile salvare il report nel computer locale.  
   
-### Per salvare il report in un server di report  
+### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
@@ -352,7 +357,7 @@ In questa esercitazione il report verrà salvato in un server di report. Se non 
   
 Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
-### Per salvare il report nel computer  
+### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
@@ -365,32 +370,32 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 ## <a name="Line"></a>7. (Facoltativo) Aggiungere una linea per separare le aree del report  
 Aggiungere una linea per separare l'area editoriale da quella dei dettagli del report.  
   
-### Per aggiungere una linea  
+### <a name="to-add-a-line"></a>Per aggiungere una linea  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Nella scheda **Inserisci** > **Elementi del report** > **Linea.**  
+2.  Nel **inserire** scheda > **gli elementi del Report** > **riga.**  
   
 3.  Disegnare una linea sotto la casella di testo aggiunta nella lezione 4.  
   
 4.  Fare clic sulla linea e nella scheda **Home** > **Bordo** selezionare:
      * **Larghezza**: selezionare **3** pt.
-     * **Colore**: selezionare **Cremisi**.  
+     * **Colore** : selezionare **Cremisi**.  
   
 ## <a name="Visualization"></a>8. (Facoltativo) Aggiungere visualizzazioni dei dati di riepilogo  
 I rettangoli consentono di controllare la modalità di rendering del report. Posizionare un grafico a torta e un istogramma all'interno di un rettangolo per essere certi che il rendering del report venga eseguito nel modo desiderato.  
   
-### Per aggiungere un rettangolo  
+### <a name="to-add-a-rectangle"></a>Per aggiungere un rettangolo  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
-2.  Nella scheda **Inserisci** > **Elementi del report** >  **Rettangolo**. Trascinare il rettangolo all'interno della casella di riepilogo a destra della tabella per creare un rettangolo largo 5,7 cm e alto 20 cm circa.  
+2.  Nel **inserire** scheda > **gli elementi del Report** >  **rettangolo**. Trascinare il rettangolo all'interno della casella di riepilogo a destra della tabella per creare un rettangolo largo 5,7 cm e alto 20 cm circa.  
   
-3.  Con il nuovo rettangolo selezionato, nel riquadro Proprietà impostare **colore del bordo su grigio chiaro**, **stile del bordo su linea continua** e **larghezza del bordo su 2 pt**. 
+3.  Con il nuovo rettangolo selezionato, nel riquadro Proprietà impostare **colore del bordo su grigio chiaro**, **stile del bordo su linea continua**e **larghezza del bordo su 2 pt**. 
 
 4. Allineare le parti superiori del rettangolo e della tabella.  
   
-## Per aggiungere un grafico a torta  
+## <a name="to-add-a-pie-chart"></a>Per aggiungere un grafico a torta  
   
 1.  Nella scheda **Inserisci** scegliere **Visualizzazioni dati** > **Grafico** > **Creazione guidata grafico**.  
   
@@ -412,7 +417,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
 12. Nella scheda **Home** > **Carattere** impostare per il titolo:
     * **Carattere** **Segoe UI Semibold**.
-    * **Dimensione** **12 pt**.
+    * **Size** **12 pt**.
     * **Colore** **Nero**.  
 
 13. Fare clic con il pulsante destro del mouse sulla legenda > **Proprietà legenda**.
@@ -425,7 +430,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
 
      ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
   
-## Per aggiungere un istogramma  
+## <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
   
 1.  Nella scheda **Inserisci** scegliere **Visualizzazioni dati** > **Grafico** > **Creazione guidata grafico**.  
   
@@ -435,7 +440,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
 4.  Nella pagina **Disponi campi del grafico** trascinare il campo Product in **Categorie**.  
   
-5.  Trascinare Sales in **Valori**, quindi fare clic su **Avanti**.  
+5.  Trascinare Sales in **Valori** , quindi fare clic su **Avanti**.  
   
     I valori vengono visualizzati sull'asse verticale.  
   
@@ -451,8 +456,8 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
 12. Nella scheda **Home** > **Carattere** impostare per il titolo:
     * **Carattere** **Segoe UI Semibold**.
-    * **Dimensione** **12 pt**.
-    * **Colore** **Nero**.  
+    * **Size** **12 pt**.
+    * **Color** **Black**.  
   
 15. Fare clic con il pulsante destro del mouse sulla legenda, quindi scegliere **Elimina legenda**.  
   
@@ -461,10 +466,10 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Selezionare l'asse del grafico e nella scheda *Home** > **Numero** > **Valuta**.
+12. Selezionare l'asse del grafico e scegliere il *Home** scheda > **numero** > **valuta**.
 
 13. Selezionare **Diminuisci decimali** due volte, in modo che il numero indichi solo i dollari e non i centesimi.      
-### Per verificare che i grafici siano all'interno del rettangolo  
+### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Per verificare che i grafici siano all'interno del rettangolo  
 
 È possibile usare i rettangoli come contenitori per altri elementi di una pagina del report. Sono disponibili altre informazioni sull'uso dei [rettangoli come contenitori](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).
   
@@ -485,7 +490,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
     > [!NOTE]  
     > Se non si trovano all'interno del rettangolo, i grafici non verranno visualizzati insieme nel report visualizzabile.  
   
-### Per assegnare ai grafici le stesse dimensioni  
+### <a name="to-make-the-charts-the-same-size"></a>Per assegnare ai grafici le stesse dimensioni  
   
 1.  Selezionare il grafico a torta, premere CTRL, quindi selezionare l'istogramma.  
   
@@ -500,7 +505,7 @@ Nel report verranno visualizzati i dati di vendita riepilogativi in diagrammi a 
   
 
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 L'esercitazione sulla creazione di un report in formato libero è terminata.  
   
 Per altre informazioni sugli elenchi, vedere: 
@@ -508,8 +513,10 @@ Per altre informazioni sugli elenchi, vedere:
 * [Creare fatture e moduli con elenchi](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](../Topic/Query%20Designers%20(Report%20Builder).md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
   
+
+

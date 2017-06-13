@@ -1,23 +1,28 @@
 ---
-title: "Aggiungere o rimuovere un&#39;intestazione o un pi&#232; di pagina (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aggiungere o rimuovere un&quot;intestazione o piè di pagina (Generatore Report e SSRS) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiungere o rimuovere un&#39;intestazione o un pi&#232; di pagina (Generatore report e SSRS)
+# <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report e SSRS)
   È possibile aggiungere testo statico, immagini, linee, rettangoli e bordi a intestazioni di pagina o piè di pagina. È possibile posizionare espressioni e immagini con associazioni a dati in una casella di testo se si desiderano dati variabili o calcolati in un'intestazione o in un piè di pagina.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Per aggiungere un'intestazione di pagina o un piè di pagina  
+### <a name="to-add-a-page-header-or-footer"></a>Per aggiungere un'intestazione di pagina o un piè di pagina  
   
 1.  Aprire un report.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  Le opzioni **Intestazione** e **Piè di pagina** vengono visualizzate solo quando un report non include già un'intestazione o un piè di pagina.  
   
-### Per configurare un'intestazione o un piè di pagina  
+### <a name="to-configure-a-page-header-or-footer"></a>Per configurare un'intestazione o un piè di pagina  
   
 1.  Nell'area di progettazione fare clic con il pulsante destro del mouse sull'intestazione o sul piè di pagina.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 6
   
 4.  Fare clic con il pulsante destro del mouse sul piè di pagina, quindi scegliere **Proprietà piè di pagina** per aggiungere bordi, immagini di sfondo o colori oppure per regolare la larghezza del piè di pagina. Fare clic su **OK**.  
   
-### Per rimuovere un'intestazione di pagina o un piè di pagina  
+### <a name="to-remove-a-page-header-or-footer"></a>Per rimuovere un'intestazione di pagina o un piè di pagina  
   
 1.  Aprire un report.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  Quando si rimuove un'intestazione o un piè di pagina, l'elemento viene eliminato dal report. Gli elementi aggiunti in precedenza non verranno visualizzati di nuovo se in seguito si decide di reinserire l'intestazione o il piè di pagina.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

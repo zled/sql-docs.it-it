@@ -1,33 +1,39 @@
 ---
-title: "Migrazione dalla modalit&#224; nativa alla modalit&#224; SharePoint (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modalità nativa alla migrazione di SharePoint (SSRS) | Documenti Microsoft"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c7fa3b57de4a8b5854951c266168e22ae57ab928
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Migrazione dalla modalit&#224; nativa alla modalit&#224; SharePoint (SSRS)
+# <a name="native-to-sharepoint-migration-ssrs"></a>Migrazione dalla modalità nativa alla modalità SharePoint (SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   Non è possibile eseguire l'aggiornamento o la conversione da una modalità server all'altra di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Non è possibile copiare i database del server di report tra modalità poiché in essi vengono utilizzati schemi del database diversi. È possibile eseguire la migrazione del contenuto da un server di report a un altro. Gli strumenti utilizzati dipendono dal tipo di modalità del server di report configurata per il server di origine e di destinazione.  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ##  <a name="bkmk_native_to_sharepoint"></a> Strumento di migrazione di Reporting Services  
  Lo strumento supporta la migrazione del contenuto da una distribuzione in modalità nativa a una distribuzione in modalità SharePoint. Lo strumento non supporta la migrazione dalla modalità SharePoint alla modalità SharePoint o dalla modalità SharePoint alla modalità nativa.  
   
  Per altre informazioni, vedere [Strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
-## Utilizzare lo script per eseguire la migrazione di contenuto  
+## <a name="use-script-to-migrate-content"></a>Utilizzare lo script per eseguire la migrazione di contenuto  
  Se lo strumento di migrazione non soddisfa le proprie esigenze, è possibile eseguire manualmente la migrazione dei dati del server di report. Di seguito è riportato un riepilogo dei passaggi necessari per eseguire la migrazione degli elementi del report da una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un'altra. L'approccio supporta la modalità nativa o la modalità SharePoint come server di origine o di destinazione.  
   
 1.  Eseguire il backup e il ripristino delle chiavi di crittografia. Si tratta della chiave utilizzata per crittografare i dati. La chiave di crittografia viene utilizzata anche per crittografare le password, ad esempio le password archiviate per le connessioni alle origini dati. Tuttavia, non è possibile eseguire la migrazione delle password e sarà necessario immetterle nuovamente nell'ambiente di destinazione.  
@@ -50,7 +56,7 @@ caps.handback.revision: 8
 |Set di dati|Sì||  
 |Parti del report||Al termine della migrazione verificare o aggiornare il percorso alle parti del report.|  
 |Pianificazioni|Sì|Vedere il metodo ListSchedules in [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Sottoscrizioni|sì|Vedere il metodo ListSubscriptions in [Metodi di sottoscrizione e recapito](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) e il metodo <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.|  
-|Snapshot|||  
-  
-  
+|Sottoscrizioni|Sì|Vedere il metodo Listsubscriptions [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) e <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> metodo.|  
+|Snapshot|||
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

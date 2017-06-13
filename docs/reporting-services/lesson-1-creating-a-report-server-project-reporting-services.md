@@ -1,22 +1,30 @@
 ---
-title: "Lezione 1: Creazione di un progetto server report (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: 'Lezione 1: Creazione di un progetto Server di Report (Reporting Services) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 55
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lezione 1: Creazione di un progetto server report (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server report (Reporting Services)
+
+ > Per contenuti relativi a versioni precedenti di SQL Server, vedere [lezione 1: creazione di un progetto Server di Report (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+
 In questa lezione si creerà un *progetto server report* e un file di *definizione del report (con estensione rdl)* in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] all'interno di Visual Studio. 
 
 Per creare un report con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], è innanzitutto necessario creare un progetto server di report in cui è possibile salvare il file della definizione del report (con estensione rdl) e altri file di risorse necessari per il report. 
@@ -33,15 +41,15 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  In **Installato** > **Modelli** > **Business Intelligence** fare clic su **Reporting Services**.
+3.  In **Installato** > **Modelli** > **Business Intelligence**fare clic su **Reporting Services**.
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
 5. Fare clic su **Progetto server di report** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Note**: se non vengono visualizzate le opzioni **Progetto server di report** o **Business Intelligence**, è necessario aggiornare SSDT con i modelli di Business Intelligence. Vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+   >**Nota**: se non viene visualizzato il **Business Intelligence** o **progetto Server Report** opzioni, è necessario aggiornare SSDT con i modelli di Business Intelligence. Vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
   
-5.  In **Nome** digitare **Esercitazione**.  
+5.  In **Nome**digitare **Esercitazione**.  
 
     Per impostazione predefinita, viene creato nella cartella Visual Studio 2015\Projects in una nuova directory.
     
@@ -55,7 +63,7 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
   
 1.  Nel riquadro **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Report** > **Aggiungi** > **Nuovo elemento**. 
 
-    >**Suggerimento**: se non viene visualizzato il riquadro **Esplora soluzioni**, scegliere **Esplora soluzioni** dal menu **Visualizza**. 
+    >**Suggerimento**: se non viene visualizzato il riquadro **Esplora soluzioni** , scegliere **Esplora soluzioni** dal menu **Visualizza**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -77,3 +85,5 @@ In questo modo è stato creato un progetto di report denominato Esercitazione, c
 ## <a name="see-also"></a>Vedere anche  
 [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+
+

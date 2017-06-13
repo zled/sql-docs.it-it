@@ -1,24 +1,29 @@
 ---
-title: "Rettangoli e linee (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rettangoli e linee (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Rettangoli e linee (Generatore report e SSRS)
-  È possibile usare rettangoli e linee per creare effetti visivi all'interno di un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Le proprietà di visualizzazione per questi elementi del report si impostano dalla sezione Bordo della scheda Home mentre per le altre proprietà si usa il riquadro Proprietà. A un rettangolo è possibile aggiungere caratteristiche come un colore di sfondo o un'immagine, una descrizione comando o un segnalibro.  
+# <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rettangoli e linee (Generatore report e SSRS)
+  È possibile usare rettangoli e linee per creare effetti visivi all'interno di un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Le proprietà di visualizzazione per questi elementi del report si impostano dalla sezione Bordo della scheda Home mentre per le altre proprietà si usa il riquadro Proprietà. A un rettangolo è possibile aggiungere caratteristiche come un colore di sfondo o un'immagine, una descrizione comando o un segnalibro.  
   
 ##  <a name="RectanglesLinesReportParts"></a> Rettangoli e linee come parti del report  
  È possibile pubblicare rettangoli con gli elementi in essi contenuti separatamente dal report come parti del report. Le parti del report sono elementi autonomi del report archiviati sul server di report e possono essere incluse in altri report.  
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
  [Aggiungere e modificare una linea &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiungere un rettangolo o un contenitore &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

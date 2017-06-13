@@ -1,30 +1,35 @@
 ---
-title: "Propriet&#224; server (pagina Avanzate) - Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.advanced.f1"
+title: "Proprietà server (pagina avanzate) - Reporting Services | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propriet&#224; server (pagina Avanzate) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
   Questa pagina consente di impostare le proprietà di sistema nel server di report. Le proprietà di sistema possono essere impostate in diversi modi. Questo strumento fornisce un'interfaccia utente grafica che consente di impostare le proprietà senza dovere scrivere codice.  
   
  Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un'istanza del server di report, fare clic con il pulsante destro del mouse sul nome del server di report e scegliere **Proprietà**. Fare clic su **Avanzate** per aprire la pagina.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **EnableMyReports**  
  Indica se la caratteristica Report personali è abilitata. Un valore **true** indica che la caratteristica è abilitata.  
   
@@ -39,6 +44,9 @@ caps.handback.revision: 16
   
  **ExecutionLogDaysKept**  
  Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è **60**.  
+ 
+> [!NOTE] 
+> Se si imposta un valore **0** verrà *eliminare* tutte le voci dal log di esecuzione. Il valore **-1** manterrà le voci del log di esecuzione e non verrà eliminato.
   
  **SessionTimeout**  
  Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è **600**.  
@@ -71,7 +79,7 @@ caps.handback.revision: 16
  **All** = gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.  
   
  **SystemReportTimeout**  
- Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.  
+ Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.  
   
  **SystemSnapshotLimit**  
  Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, non vi sono limiti per gli snapshot.  
@@ -91,7 +99,7 @@ caps.handback.revision: 16
  La disattivazione di questa opzione consente di attenuare i rischi di attacchi Denial of Service condotti da utenti malintenzionati tramite overload del server di report con richieste LoadReportDefinition.  
   
  **EnableRemoteErrors**  
- Include informazioni esterne sugli errori, ad esempio, informazioni sull'errore relative alle origini dati del report, nei messaggi di errore restituiti agli utenti che richiedono i report dai computer remoti. I valori validi sono**true** e **false**. Il valore predefinito è **false**. Per altre informazioni, vedere [Abilita errori remoti &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
+ Include informazioni esterne sugli errori, ad esempio, informazioni sull'errore relative alle origini dati del report, nei messaggi di errore restituiti agli utenti che richiedono i report dai computer remoti. I valori validi sono **true** e **false**. Il valore predefinito è **false**. Per altre informazioni, vedere [Abilita errori remoti &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
   
  **EnableReportDesignClientDownload**  
  Specifica se il pacchetto di installazione di Generatore report può essere scaricato dal server di report. Se si deseleziona questa impostazione, l'URL di Generatore report non funziona. Per altre informazioni, vedere [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md).  
@@ -105,13 +113,14 @@ caps.handback.revision: 16
  **EnableTestConnectionDetailedErrors**  
  Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Proprietà di Reporting Services](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Proprietà di sistema del server di report](../Topic/Report%20Server%20System%20Properties.md)   
+ [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
   
   
+

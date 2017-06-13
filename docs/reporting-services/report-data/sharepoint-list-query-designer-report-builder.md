@@ -1,31 +1,36 @@
 ---
-title: "Progettazione query di elenco di SharePoint (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: Progettazione Query di elenco SharePoint (Generatore Report) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Progettazione query di elenco di SharePoint (Generatore report)
+# <a name="sharepoint-list-query-designer-report-builder"></a>Progettazione query di elenco di SharePoint (Generatore report)
   Generatore report e Progettazione report forniscono una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo per la creazione di query in cui vengono specificati i dati da recuperare da un sito di SharePoint per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati dell'elenco SharePoint, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica, modificare una query o digitare i comandi della query. È inoltre possibile importare una query esistente da un file o un report.  
   
 > [!IMPORTANT]  
 >  Gli utenti accedono alle origini dati quando creano ed eseguono query. È necessario concedere autorizzazioni minime per le origini dati, ad esempio autorizzazioni di sola lettura.  
   
-## Finestra Progettazione query con interfaccia grafica  
+## <a name="graphical-query-designer"></a>Finestra Progettazione query con interfaccia grafica  
  Nella finestra Progettazione query con interfaccia grafica è possibile esploratore il sito di SharePoint, compilare in modo interattivo il comando che recupera dati dell'elenco SharePoint per un set di dati. È possibile scegliere i campi da includere nel set di dati e, facoltativamente, specificare filtri che limitano i dati nel set di dati. È possibile specificare che i filtri vengono utilizzati come parametri e forniscono il valore del filtro in fase di esecuzione.  
   
  Gli elenchi SharePoint includono numerosi campi specifici di SharePoint che potrebbero non essere utili nei report. La finestra Progettazione query fornisce un'opzione che consente di nascondere questi campi e rendere più semplice e veloce l'individuazione di quelli da utilizzare.  
@@ -65,7 +70,7 @@ caps.handback.revision: 7
  Per aggiungere o rimuovere campi in questo riquadro, selezionare o deselezionare le caselle di controllo relative ai campi della tabella o della vista nel riquadro Elenchi SharePoint.  
   
 ###  <a name="AppliedFilters"></a> Riquadro Filtri applicati  
- Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro sono usati per generare una clausola WHERE di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
+ Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro sono usati per generare una clausola WHERE di [!INCLUDE[tsql](../../includes/tsql-md.md)] . Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
   
  Vengono visualizzate le colonne seguenti:  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  L'ordinamento nel set dei risultati è determinato dall'ordine in base al quale i dati vengono recuperati dall'origine dati. L'ordinamento può essere cambiato tramite la modifica della query oppure dopo il recupero dei dati per il report.  
   
-### Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
+### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  Nella barra degli strumenti di Progettazione query relazionale sono disponibili i pulsanti seguenti, che consentono di specificare o visualizzare i risultati di una query.  
   
 |Pulsante|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**Esegui query**|Consente di eseguire la query. Il set di risultati viene visualizzato nel riquadro Risultati query.|  
 |**Mostra campi nascosti**|Consente di mostrare o nascondere i campi che sono stati generati automaticamente da SharePoint, quali ProgId e Level per gli elementi collegamento di SharePoint, ma che in genere non sono utilizzati nei report. Nascondendo questi campi, l'elenco dei campi diventa più breve e più facile da utilizzare.|  
   
-## Vedere anche  
- [Finestre di progettazione query &#40;Generatore report&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>Vedere anche  
+ [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -22,13 +22,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 548949bad71213430b987383fd221a91bddcfdff
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (programma di installazione)
+
+ > Per contenuti relativi a versioni precedenti di SQL Server, vedere [disinstallare un'istanza esistente di SQL Server (programma di installazione)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
+
   In questo articolo viene descritto come disinstallare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi inclusi in questo argomento consentono inoltre di preparare il sistema per poter reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >**IMPORTANTE** Per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario essere un amministratore locale che dispone dell'autorizzazione necessaria per accedere come servizio.  

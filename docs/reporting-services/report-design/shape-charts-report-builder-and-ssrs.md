@@ -1,39 +1,44 @@
 ---
-title: "Grafici con forme (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Forma di grafici (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Grafici con forme (Generatore report e SSRS)
+# <a name="shape-charts-report-builder-and-ssrs"></a>Grafici con forme (Generatore report e SSRS)
   In un grafico con forme i dati relativi ai valori vengono visualizzati come percentuali di un intero. I grafici con forme vengono solitamente utilizzati per indicare confronti proporzionali tra valori diversi in un set. Le categorie sono rappresentate da singoli segmenti della forma. Le dimensioni del segmento sono determinate dal valore. L'utilizzo dei grafici con forme è simile a quello dei grafici a torta, ad eccezione del fatto che le categorie vengono ordinate dal valore più alto a quello più basso.  
   
  In un grafico a imbuto i valori vengono visualizzati come proporzioni in decremento progressivo. Le dimensioni dell'area sono determinate dal valore delle serie espresso come percentuale del totale di tutti i valori. Ad esempio, è possibile utilizzare un grafico a imbuto per visualizzare le tendenze dei visitatori di un sito Web. Nel grafico a imbuto verrà visualizzata un'area ampia nella parte superiore, a indicare gli accessi dei visitatori alla home page, e altre aree più piccole in proporzione. Per altre informazioni sull'aggiunta di dati a un grafico a imbuto, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Nella figura seguente è illustrato un esempio di grafico a imbuto.  
   
- ![Grafico a imbuto](../../reporting-services/report-design/media/rs-funnelchart.png "Grafico a imbuto")  
+ ![Grafico a imbuto](../../reporting-services/report-design/media/rs-funnelchart.gif "grafico a imbuto")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variazioni  
+## <a name="variations"></a>Variazioni  
   
 -   **Piramide**. In un grafico a piramide vengono visualizzati dati proporzionali in modo simile a una piramide.  
   
-## Considerazioni sui dati per i grafici con forme  
+## <a name="data-considerations-for-shape-charts"></a>Considerazioni sui dati per i grafici con forme  
   
 -   I grafici con forme vengono utilizzati di frequente nei report grazie al loro impatto visivo. Si tratta, tuttavia, di un tipo di grafico estremamente semplificato che potrebbe non rappresentare i dati nel modo più efficace possibile. Utilizzare un grafico con forme solo dopo che i dati sono stati aggregati a un massimo di sette punti dati. In generale, utilizzare questo tipo di grafico per visualizzare una sola categoria per ogni area dati.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 8
   
 -   È possibile applicare stili di disegno aggiuntivi ai grafici a torta e ad anello per un maggiore impatto visivo. Vedere [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) per altre informazioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

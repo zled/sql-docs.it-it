@@ -1,55 +1,40 @@
 ---
-title: "Esercitazione: Aggiungere un grafico sparkline al report (Generatore report) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Esercitazione: Aggiungere un grafico Sparkline al Report (Generatore Report) | Documenti Microsoft'
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
-In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] viene creata una tabella semplice con un grafico sparkline in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
+
+In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]viene creata una tabella semplice con un grafico sparkline in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
-I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in tabelle e matrici in report di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. L'immagine seguente illustra un report simile a quello che verrà creato.  
+I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in tabelle e matrici in report di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . L'immagine seguente illustra un report simile a quello che verrà creato.  
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>Lezioni dell'esercitazione  
-In questa esercitazione verranno illustrate le operazioni seguenti:  
-  
-1. [Creare un report con una tabella](#CreateTable)  
-  
-2. [Creare un layout query e tabella in Creazione guidata tabella o matrice](#Query)
- 
-    2a. (Facoltativo) [Formattare i dati come valuta](#FormatCurrency)  
-  
-    2b. (Facoltativo) [Formattare i dati come date](#FormatDates)  
-  
-3. [Aggiungere un grafico sparkline alla tabella](#Sparkline)  
-  
-4. [Allineare i grafici sparkline verticalmente e orizzontalmente](#AlignSparklines)  
-  
-### Altri passaggi facoltativi  
-7. [Modificare la larghezza delle colonne](#Width)  
-  
-8. [Aggiungere un titolo al report](#Title)  
-  
-9. [Salvare il report](#Save)  
-  
+     
 Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Creare un report con una tabella  
@@ -64,18 +49,18 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 3.  Nel riquadro destro fare clic su **Creazione guidata tabella o matrice**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** > **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati**.  
+4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** > **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
   
     > [!NOTE]  
-    > Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Se in **Connessioni a origini dati** è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > In questa esercitazione non sono necessari dati specifici; è sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
-6.  In **Nome** digitare **Vendite prodotto** come nome per l'origine dati.  
+6.  In **Nome**digitare **Vendite prodotto**come nome per l'origine dati.  
   
-7.  In **Select a connection type** (Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server**.  
+7.  In **Select a connection type**(Seleziona un tipo di connessione), verificare che sia selezionato **Microsoft SQL Server** .  
   
-8.  In **Stringa di connessione** digitare il testo seguente:  
+8.  In **Stringa di connessione**digitare il testo seguente:  
   
     `Data Source\=<servername>`  
   
@@ -85,9 +70,9 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Verrà visualizzata di nuovo la pagina **Scegliere una connessione a un'origine dei dati**.  
+    Verrà visualizzata di nuovo la pagina **Scegliere una connessione a un'origine dei dati** .  
   
-11. Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
+11. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
   
     Verrà visualizzato il messaggio "Creazione connessione completata".  
   
@@ -101,13 +86,13 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
 > [!NOTE]  
 > Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
   
-### Per creare un layout query e tabella in Creazione guidata tabella 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>Per creare un layout query e tabella in Creazione guidata tabella 
   
 1.  Nella pagina **Progetta query** si apre la finestra Progettazione query relazionale. Per questa esercitazione si utilizzerà la finestra Progettazione query basata su testo.  
   
 2.  Fare clic su **Modifica come testo**. Nella finestra Progettazione query basata su testo viene visualizzato il riquadro della query e il riquadro dei risultati.  
   
-3.  Nella casella **Query** incollare la query [!INCLUDE[tsql](../includes/tsql-md.md)] seguente.  
+3.  Nella casella [!INCLUDE[tsql](../includes/tsql-md.md)] Query **incollare la query** seguente.  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -144,13 +129,13 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 4.  Sulla barra degli strumenti di Progettazione query fare clic su Esegui (**!**).  
   
-    La query viene eseguita e viene visualizzato il set di risultati per il campi **SalesDate**, **Subcategory**, **Product**, **Sales** e **Quantity**.  
+    La query viene eseguita e viene visualizzato il set di risultati per il campi **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
 5.  Scegliere **Avanti**.  
   
 6.  Nella pagina **Disponi campi** trascinare **Sales** in **Valori**.  
   
-    Il campo **Sales** viene aggregato mediante la funzione Sum. Il valore è [Sum(Sales)].  
+    Il campo**Sales** viene aggregato mediante la funzione Sum. Il valore è [Sum(Sales)].  
   
 7.  Trascinare **Product** in **Gruppi di righe**.  
   
@@ -160,7 +145,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 9. Scegliere **Avanti**.  
   
-10. Nella pagina **Scegliere il layout**, sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+10. Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
     Nel riquadro di anteprima della creazione guidata verrà visualizzata una tabella con tre righe. Quando si esegue il report, ogni riga viene visualizzata nel seguente modo:  
   
@@ -189,7 +174,7 @@ Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riporta
   
 1.  Fare clic su **Progettazione** per passare alla visualizzazione Struttura.  
   
-2.  Fare clic sulla cella nella seconda riga (sotto la riga delle intestazioni di colonna) della colonna **SalesDate**. Tenere premuto CTRL e selezionare tutte le celle che contengono `[Sum(Sales)]`. 
+2.  Fare clic sulla cella nella seconda riga (sotto la riga delle intestazioni di colonna) della colonna **SalesDate** . Tenere premuto CTRL e selezionare tutte le celle che contengono `[Sum(Sales)]`. 
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
@@ -197,7 +182,7 @@ Per impostazione predefinita, i dati di riepilogo per il campo **Sales** riporta
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** > **Valori di esempio** nel gruppo **Numeri**.  
+    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -220,7 +205,7 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
   
 2.  Selezionare la colonna Total nella tabella.  
   
-3.  Fare clic con il pulsante destro del mouse, scegliere **Inserisci colonna** e fare clic su **A sinistra**.  
+3.  Fare clic con il pulsante destro del mouse, scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
@@ -255,7 +240,7 @@ I grafici sparkline risultano di difficile lettura quando in essi non vengono us
   
 2.  Fare clic con il pulsante destro del mouse sul grafico sparkline e scegliere **Proprietà asse verticale**.  
   
-3.  Selezionare la casella di controllo **Allinea assi in**. Tablix1 è l'unica opzione nell'elenco.  
+3.  Selezionare la casella di controllo **Allinea assi in** . Tablix1 è l'unica opzione nell'elenco.  
   
      e consente di impostare l'altezza delle barre in ogni grafico sparkline rispetto alle altre. 
   
@@ -263,7 +248,7 @@ I grafici sparkline risultano di difficile lettura quando in essi non vengono us
   
 5.  Fare clic con il pulsante destro del mouse sul grafico sparkline e scegliere **Proprietà asse orizzontatale**.  
   
-6.  Selezionare la casella di controllo **Allinea assi in**. Tablix1 è l'unica opzione nell'elenco. 
+6.  Selezionare la casella di controllo **Allinea assi in** . Tablix1 è l'unica opzione nell'elenco. 
   
     e consente di impostare la larghezza delle barre in ogni grafico sparkline rispetto alle altre. Se sono presenti grafici sparkline con un numero inferiore di barre, in tali grafici saranno contenuti spazi vuoti per i dati mancanti.  
   
@@ -280,7 +265,7 @@ Per impostazione predefinita, in ogni cella della tabella è contenuta una casel
   
 Per ridurre la quantità di spazio verticale di ciascuna riga, espandere la larghezza della colonna per adattare su un'unica riga il contenuto previsto delle caselle di testo nella colonna.  
   
-### Per modificare la larghezza delle colonne  
+### <a name="to-change-the-width-of-columns"></a>Per modificare la larghezza delle colonne  
   
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -295,11 +280,11 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Per aggiungere il titolo di un report  
+### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione selezionare **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Sales by Date** e fare clic all'esterno della casella di testo.  
+2.  Digitare **Sales by Date**e fare clic all'esterno della casella di testo.  
   
 3.  Selezionare la casella di testo contenente **Product Sales**.  
   
@@ -310,9 +295,9 @@ Il testo può essere ulteriormente migliorato applicando stili di carattere, dim
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>9. Salvare il report  
-Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ad esempio le parti del report e i sottoreport.  
+Salvare il report in un server di report o nel computer. Se il report non viene salvato nel server di report, non saranno disponibili alcune funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport.  
   
-### Per salvare il report in un server di report  
+### <a name="to-save-the-report-on-a-report-server"></a>Per salvare il report in un server di report  
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
@@ -322,26 +307,27 @@ Salvare il report in un server di report o nel computer. Se il report non viene 
   
     Verrà visualizzato il messaggio "Connessione al server di report". Al termine della connessione, verrà visualizzato il contenuto della cartella di report specificata dall'amministratore del server di report come posizione predefinita per i report.  
   
-4.  In **Nome** sostituire il nome predefinito con **Product Sales**.  
+4.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
   
 5.  Fare clic su **Salva**.  
   
 Il report verrà salvato sul server di report. Il nome del server di report al quale si è connessi verrà visualizzato sulla barra di stato nella parte inferiore della finestra.  
   
-### Per salvare il report nel computer  
+### <a name="to-save-the-report-on-your-computer"></a>Per salvare il report nel computer  
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
-2.  Fare clic su **Desktop**, **Documenti** o **Risorse del computer** e selezionare la cartella in cui si vuole salvare il report.  
+2.  Fare clic su **Desktop**, **Documenti**o **Risorse del computer**e selezionare la cartella in cui si vuole salvare il report.  
   
-3.  In **Nome** sostituire il nome predefinito con **Product Sales**.  
+3.  In **Nome**sostituire il nome predefinito con **Product Sales**.  
   
 4.  Fare clic su **Salva**.  
   
-## Passaggi successivi  
-L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+## <a name="next-steps"></a>Passaggi successivi  
+
+L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per ulteriori informazioni sui grafici sparkline, vedere [grafici sparkline e barre dei dati](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

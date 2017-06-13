@@ -1,26 +1,31 @@
 ---
-title: "Impostare le opzioni di elaborazione (Reporting Services in modalit&#224; integrata SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint integration [Reporting Services], content management"
-  - "snapshot [Reporting Services], creazione"
+title: "Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Impostare le opzioni di elaborazione (Reporting Services in modalit&#224; integrata SharePoint)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
   È possibile impostare le opzioni di elaborazione di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per determinare il momento in cui deve avvenire l'elaborazione dei dati. È inoltre possibile impostare un valore di timeout per l'elaborazione del report e opzioni che determinano se attivare o meno la cronologia del report per il report corrente.  
   
 -   È possibile eseguire un report come snapshot per evitare che venga eseguito in momenti indesiderati, ad esempio durante un backup pianificato. Uno snapshot di report viene in genere creato e in seguito aggiornato in base a una pianificazione, consentendo all'utente di determinare esattamente quando verrà eseguita l'elaborazione del report e dei dati. Se un report si basa su query la cui esecuzione richiede molto tempo oppure su query che utilizzano dati di un'origine dati che non si desidera venga utilizzata in determinati orari, è consigliabile eseguire il report come snapshot.  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **Contenuto dell'argomento:**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 15
   
 2.  Fare clic sulla freccia in giù e selezionare **Gestisci opzioni elaborazione**.  
   
-3.  Se si desidera usare il valore specificato a livello del server di report, selezionare **Usa impostazione predefinita sito** in **Timeout elaborazione**. Se invece si desidera sostituire il valore in questione e non impostare alcun timeout o un valore di timeout diverso, selezionare **Nessun timeout per l'elaborazione del report** o **Limite elaborazione report (in secondi)**.  
+3.  Se si desidera usare il valore specificato a livello del server di report, selezionare **Usa impostazione predefinita sito**in **Timeout elaborazione** . Se invece si desidera sostituire il valore in questione e non impostare alcun timeout o un valore di timeout diverso, selezionare **Nessun timeout per l'elaborazione del report** o **Limite elaborazione report (in secondi)** .  
   
 ##  <a name="bkmk_set_report_history"></a> Per impostare limiti e opzioni relativi alla cronologia del report  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  Usare Windows PowerShell per impostare il timeout del database di un server di report di SharePoint. Per altre informazioni, vedere la sezione "Ottenere e impostare le proprietà del database dell'applicazione Reporting Service" dell'argomento [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

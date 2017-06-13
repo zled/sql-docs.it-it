@@ -1,23 +1,28 @@
 ---
-title: "Specificare i colori coerenti in pi&#249; grafici con forme (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Specificare colori coerenti in più forma grafici-Generatore Report-SSRS | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Specificare i colori coerenti in pi&#249; grafici con forme (Generatore report e SSRS)
+# <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Specificare i colori coerenti in più grafici con forme (Generatore report e SSRS)
   Nei grafici senza forme in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] seleziona un nuovo colore dalla tavolozza in base all'indice di serie del grafico. Verrà eseguito il mapping delle prime serie sul grafico al primo colore della tavolozza. Questo comportamento non si verifica nei grafici con forme, nei quali di ogni colore nella tavolozza viene eseguito il mapping a un punto dati nel set di dati. Ad esempio viene eseguito il mapping del punto dati 1 al primo colore nella tavolozza e del punto dati 2 alla seconda tavolozza di colori e così via.  
   
  Un punto dati che non presenta valori non viene visualizzato in un grafico con forme. Ciò significa che il punto dati non viene colorato. Se ad esempio il valore del punto 2 è zero, verrà eseguito il mapping del punto 1 al primo colore della tavolozza e verrà eseguito il mapping del punto 3 al secondo colore della tavolozza. Questo metodo risulta utile nel caso di punti vuoti nel set di dati di un grafico a torta in quanto impedisce che venga utilizzato inutilmente un colore della tavolozza se non è necessario disegnare il punto vuoto.  
@@ -29,7 +34,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Per specificare colori coerenti in più grafici con forme di tipo sparkline in una tabella o in una matrice  
+## <a name="to-specify-consistent-colors-across-multiple-sparkline-shape-charts-in-a-table-or-matrix"></a>Per specificare colori coerenti in più grafici con forme di tipo sparkline in una tabella o in una matrice  
   
 1.  Fare clic nel grafico per visualizzare il riquadro Dati grafico.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
   
 3.  Nella casella **Sincronizza gruppi in** della scheda Generale fare clic sul nome della categoria per la quale si desidera sincronizzare i colori, quindi scegliere **OK**.  
   
-## Per specificare colori coerenti in più grafici con forme  
+## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>Per specificare colori coerenti in più grafici con forme  
   
 1.  Fare clic con il pulsante destro del mouse al di fuori del corpo del report, quindi selezionare **Proprietà report**.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
 4.  Fare clic con il pulsante destro del mouse sul grafico con forme e scegliere **Proprietà serie**.  
   
-5.  In **Riempimento** fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione per la proprietà **Colore**.  
+5.  In **Riempimento**fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione per la proprietà **Colore** .  
   
 6.  Digitare l'espressione seguente, in cui "MyCategoryField" è il campo visualizzato nell'area **Gruppi di categorie** :  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 8
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Aggiunta di punti vuoti a un grafico &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [Grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

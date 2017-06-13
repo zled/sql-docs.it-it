@@ -1,24 +1,29 @@
 ---
-title: "Suggerimenti relativi alla progettazione di report (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Report suggerimenti sulla progettazione (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
-  Usare i suggerimenti seguenti per progettare report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
+  Usare i suggerimenti seguenti per progettare report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
         2.  **Area dati come feed di dati.** Con le autorizzazioni appropriate, un lettore di report può creare un feed di dati ATOM da un'area dati.  
   
--   Utilizzare i caratteri di sottolineatura anziché gli spazi nei nomi dei report. Se si scarica un report da un portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], gli spazi vengono sostituiti da caratteri di sottolineatura. Se si usa la funzionalità di download per salvare i report in modalità locale, includendoli quindi in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilizzo dei caratteri di sottolineatura consente di preservare le dipendenze del report per i sottoreport e i collegamenti drill-through.  
+-   Utilizzare i caratteri di sottolineatura anziché gli spazi nei nomi dei report. Se si scarica un report da un portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , gli spazi vengono sostituiti da caratteri di sottolineatura. Se si usa la funzionalità di download per salvare i report in modalità locale, includendoli quindi in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilizzo dei caratteri di sottolineatura consente di preservare le dipendenze del report per i sottoreport e i collegamenti drill-through.  
   
 ##  <a name="Data"></a> Utilizzo dei dati  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  La combinazione di questo comportamento, ovvero le proprietà relative alla larghezza e all'altezza degli elementi del report, le dimensioni del corpo del report, la definizione dell'altezza e della larghezza di pagina, le impostazioni dei margini del report padre e il supporto specifico del renderer per paging, consente di determinare quali elementi del report disporre in una pagina di cui è stato eseguito il rendering. Per altre informazioni, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)  

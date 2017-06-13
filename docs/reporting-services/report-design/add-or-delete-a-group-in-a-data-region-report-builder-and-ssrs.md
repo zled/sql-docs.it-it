@@ -1,23 +1,28 @@
 ---
-title: "Aggiunta o eliminazione di un gruppo in un&#39;area dati (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiungere o eliminare un gruppo in un&quot;area dati (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aggiunta o eliminazione di un gruppo in un&#39;area dati (Generatore report e SSRS)
+# <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Aggiunta o eliminazione di un gruppo in un'area dati (Generatore report e SSRS)
 Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile aggiungere un gruppo a un'area dati quando si desidera organizzare i dati in base a un valore o a un set di espressioni specifico per la visualizzazione e i calcoli. A un gruppo sono associati un nome e un'espressione che consentono di identificare quali dati di un set di dati appartengono al gruppo. Per altre informazioni sui gruppi, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  In un'area dati Tablix fare clic nella tabella, nella matrice o nell'elenco per visualizzare il riquadro di raggruppamento. Trascinare i campi del set di dati nel riquadro Gruppo di righe e Gruppo di colonne per creare gruppi padre o gruppi figlio. Fare clic con il pulsante destro del mouse su un gruppo esistente per aggiungere un gruppo adiacente. Per definizione, il gruppo di dettagli è il gruppo più interno e può essere aggiunto solo come gruppo figlio. Fare clic con il pulsante destro del mouse su un gruppo esistente per eliminarlo. Verranno aggiunte automaticamente righe e colonne nelle quali è possibile visualizzare valori di gruppo. Per altre informazioni, vedere [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
@@ -29,32 +34,32 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Per aggiungere un gruppo di righe o di colonne padre o figlio a un'area dati Tablix  
+## <a name="to-add-a-parent-or-child-row-or-column-group-to-a-tablix-data-region"></a>Per aggiungere un gruppo di righe o di colonne padre o figlio a un'area dati Tablix  
   
-1.  Trascinare un campo dal riquadro **Dati report** nel riquadro **Gruppi di righe** o nel riquadro **Gruppi di colonne**.  
+1.  Trascinare un campo dal riquadro **Dati report** nel riquadro **Gruppi di righe** o nel riquadro **Gruppi di colonne** .  
   
     > [!NOTE]  
-    >  Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dalla scheda Visualizza.  
+    >  Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento**dalla scheda Visualizza.  
   
 2.  Rilasciare il campo al di sopra o al di sotto della gerarchia di gruppi utilizzando la barra della guida per posizionare il gruppo come gruppo padre o gruppo figlio di un gruppo esistente.  
   
      Il gruppo verrà aggiunto con un nome, un'espressione di raggruppamento e un'espressione di ordinamento predefiniti che si basano sul nome del campo.  
   
-## Per aggiungere un gruppo di righe o di colonne adiacenti a un'area dati Tablix  
+## <a name="to-add-an-adjacent-row-or-column-group-to-a-tablix-data-region"></a>Per aggiungere un gruppo di righe o di colonne adiacenti a un'area dati Tablix  
   
 1.  Nel riquadro di raggruppamento fare clic con il pulsante destro del mouse su un gruppo di livello pari a quello che si desidera aggiungere. Fare clic su **Aggiungi gruppo**, quindi su **Adiacente prima** o su **Adiacente dopo** per specificare dove aggiungere il gruppo. Verrà visualizzata la finestra di dialogo **Gruppo Tablix** .  
   
-2.  Nella casella **Nome** digitare un nome per il gruppo.  
+2.  Nella casella **Nome**digitare un nome per il gruppo.  
   
-3.  In **Espressione di raggruppamento** digitare un'espressione o fare clic sul pulsante espressione (**fx**) per creare un'espressione.  
+3.  In **Espressione di raggruppamento**digitare un'espressione o fare clic sul pulsante espressione (**fx**) per creare un'espressione.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Vengono aggiunti un nuovo gruppo al riquadro di raggruppamento e una riga o una colonna nelle quali visualizzare valori di gruppo all'area dati Tablix nell'area di progettazione.  
   
-## Per aggiungere un gruppo dettagli a un'area dati Tablix  
+## <a name="to-add-a-details-group-to-a-tablix-data-region"></a>Per aggiungere un gruppo dettagli a un'area dati Tablix  
   
-1.  Nel riquadro di raggruppamento fare clic con il pulsante destro del mouse sul gruppo figlio più interno, escluso il gruppo **Dettagli**. Scegliere **Aggiungi gruppo**, quindi fare clic su **Gruppo figlio**. Verrà visualizzata la finestra di dialogo **Gruppo Tablix** .  
+1.  Nel riquadro di raggruppamento fare clic con il pulsante destro del mouse sul gruppo figlio più interno, escluso il gruppo **Dettagli** . Scegliere **Aggiungi gruppo**, quindi fare clic su **Gruppo figlio**. Verrà visualizzata la finestra di dialogo **Gruppo Tablix** .  
   
 2.  In **Espressione di raggruppamento**lasciare vuota l'espressione. In un gruppo dettagli non è presente alcuna espressione.  
   
@@ -64,15 +69,15 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
      Un nuovo gruppo dettagli verrà aggiunto come gruppo figlio nel riquadro di raggruppamento e nell'handle di riga per il gruppo selezionato al passaggio 1 verrà visualizzata l'icona del gruppo dettagli. Per altre informazioni sugli handle, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## Per modificare un gruppo di righe o di colonne in un'area dati Tablix  
+## <a name="to-edit-a-row-or-column-group-in-a-tablix-data-region"></a>Per modificare un gruppo di righe o di colonne in un'area dati Tablix  
   
 1.  Nell'area di progettazione del report fare clic in un punto qualsiasi dell'area dati Tablix per selezionarla. Nel riquadro di raggruppamento verranno visualizzati i gruppi di righe e di colonne.  
   
 2.  Fare clic con il pulsante destro del mouse sul gruppo e scegliere **Proprietà gruppo**.  
   
-3.  Nella casella **Nome** digitare il nome del gruppo.  
+3.  Nella casella **Nome**digitare il nome del gruppo.  
   
-4.  In **Espressioni di raggruppamento** digitare o selezionare un'espressione semplice o fare clic sul pulsante Espressione (**fx**) per creare un'espressione di raggruppamento.  
+4.  In **Espressioni di raggruppamento**digitare o selezionare un'espressione semplice o fare clic sul pulsante Espressione (**fx**) per creare un'espressione di raggruppamento.  
   
 5.  Fare clic su **Aggiungi** per creare altre espressioni. Tutte le espressioni specificate vengono combinate mediante un operatore logico AND in modo da specificare i dati per questo gruppo.  
   
@@ -88,7 +93,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Per eliminare un gruppo da un'area dati Tablix  
+## <a name="to-delete-a-group-from-a-tablix-data-region"></a>Per eliminare un gruppo da un'area dati Tablix  
   
 1.  Nel riquadro Raggruppamento fare clic con il pulsante destro del mouse sul gruppo e scegliere **Elimina gruppo**.  
   
@@ -100,7 +105,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Per eliminare un gruppo dettagli da un'area dati Tablix  
+## <a name="to-delete-a-details-group-from-a-tablix-data-region"></a>Per eliminare un gruppo dettagli da un'area dati Tablix  
   
 1.  Nel riquadro Raggruppamento fare clic con il pulsante destro del mouse sul gruppo dettagli e scegliere **Elimina gruppo**.  
   
@@ -117,8 +122,8 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
     > [!NOTE]  
     >  Verificare che dopo avere rimosso una riga di dettaglio l'espressione in ogni cella specifichi un'espressione di aggregazione laddove appropriato. Se necessario, modificare l'espressione in modo da specificare funzioni di aggregazione in base alle necessità.  
   
-## Vedere anche  
- [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

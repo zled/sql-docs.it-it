@@ -1,24 +1,31 @@
 ---
-title: "Creare una mappa documento (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare una mappa documento (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare una mappa documento (Generatore report e SSRS)
-  Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  
+
+# <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
+
+Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  
   
  Per aggiungere collegamenti alla mappa documento, impostare la proprietà **DocumentMapLabel** dell'elemento del report sul testo creato o su un'espressione che restituisca il testo da visualizzare nella mappa documento. A quest'ultima è possibile inoltre aggiungere i valori univoci per una tabella o un gruppo di matrici. Per un gruppo basato su un colore, ad esempio, ogni colore univoco rappresenta un collegamento alla pagina del report in cui viene visualizzata l'istanza del gruppo per il colore specifico.  
   
@@ -38,10 +45,10 @@ caps.handback.revision: 13
   
 -   In Atom, TIFF, XML e CSV le mappe documento vengono ignorate.  
   
- Per altre informazioni, vedere [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md).  
+ Per altre informazioni, vedere [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
 ##  <a name="AddRptItemToMap"></a>   
-#### Per aggiungere un elemento del report a una mappa documento  
+#### <a name="to-add-a-report-item-to-a-document-map"></a>Per aggiungere un elemento del report a una mappa documento  
   
 1.  In visualizzazione Progettazione fare clic sull'elemento del report, ad esempio una tabella, una matrice o un misuratore, che si desidera aggiungere alla mappa documento. Le proprietà dell'elemento di report verranno visualizzate nel riquadro Proprietà.  
   
@@ -59,7 +66,7 @@ caps.handback.revision: 13
 
   
 ##  <a name="AddUniqueValuesToMap"></a>   
-#### Per aggiungere valori di gruppo univoci a una mappa documento  
+#### <a name="to-add-unique-group-values-to-a-document-map"></a>Per aggiungere valori di gruppo univoci a una mappa documento  
   
 1.  In visualizzazione Progettazione selezionare la tabella, la matrice o l'elenco che contiene il gruppo che si desidera visualizzare nella mappa documento. Nel riquadro di raggruppamento verranno visualizzati i gruppi di righe e di colonne.  
   
@@ -76,7 +83,7 @@ caps.handback.revision: 13
 7.  Fare clic su **Esegui**. Verrà avviata l'esecuzione del report e nella mappa documento verranno visualizzati i valori dei gruppi. Fare clic su un collegamento qualsiasi per passare alla pagina del report in cui è presente l'elemento specifico.  
   
 ##  <a name="HideMapWhenViewRpt"></a>   
-#### Per nascondere la mappa documento quando si visualizza un report  
+#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Per nascondere la mappa documento quando si visualizza un report  
   
 1.  In Gestione report selezionare il report in cui è presente la mappa documento.  
   
@@ -109,10 +116,9 @@ caps.handback.revision: 13
 4.  Incollare l'URL in Gestione report, quindi premere INVIO. Verrà avviata l'esecuzione del report e la mappa documento verrà nascosta.  
   
 > [!NOTE]  
->  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](http://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  Per ulteriori informazioni sul download di report di esempio, vedere [report di Generatore Report e progettazione Report di esempio](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Per altre informazioni, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
-  
 
-  
-  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

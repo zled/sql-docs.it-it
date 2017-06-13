@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services Report Server (Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administering Reporting Services"
-  - "administering [Reporting Services]"
-  - "Reporting Services, amministrazione"
+title: "Server Reporting Services Report (modalità nativa) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services Report Server (Native Mode)
+# <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Un server di report configurato per la modalità nativa viene eseguito come server applicazioni che fornisce tutte le funzionalità di elaborazione e gestione esclusivamente tramite i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Per gestire report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile usare sia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] sia Gestione report. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
+ Per gestire report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia Gestione report. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
   
  Se il server di report è configurato per la modalità SharePoint, è necessario utilizzare le pagine di gestione contenuto nel sito di SharePoint per gestire report, origini dati condivise e altri elementi del server di report.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 24
  Le operazioni di gestione del contenuto in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]includono la gestione dei report, dei modelli, delle cartelle, delle risorse e delle origini dati condivise. È possibile gestire questi elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto.  
   
 > [!NOTE]  
->  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per altre informazioni su come gestire l'ambiente in cui viene eseguito un server di report, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md).  
+>  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per altre informazioni su come gestire l'ambiente in cui viene eseguito un server di report, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  Nella gestione del contenuto sono incluse le attività seguenti:  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  Per utilizzare una risorsa immagine in un report, aggiungere il file di immagine al progetto e pubblicarlo insieme al report. Dopo la pubblicazione, è possibile aggiornare il riferimento all'immagine nel report in modo che punti alla risorsa nel server di report e successivamente ripubblicare il report per salvare le modifiche. È possibile a questo punto aggiornare l'immagine in modo indipendente dal report ripubblicando la risorsa. Nel report viene utilizzata la versione più recente dell'immagine disponibile nel server di report.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Risoluzione dei problemi di installazione di Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

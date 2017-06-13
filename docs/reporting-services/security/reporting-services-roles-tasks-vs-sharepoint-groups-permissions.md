@@ -1,31 +1,36 @@
 ---
-title: "Confrontare ruoli e attivit&#224; di Reporting Services con autorizzazioni e gruppi di SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazioni [Reporting Services], modalità integrata SharePoint"
-  - "sicurezza [Reporting Services], attività"
-  - "ruoli [Reporting Services], predefiniti"
-  - "integrazione SharePoint [Reporting Services], autorizzazioni"
-  - "autorizzazioni [Reporting Services], modalità nativa"
-  - "sicurezza [Reporting Services], ruoli predefiniti"
-  - "sicurezza [Reporting Services], modalità integrata SharePoint"
+title: "Visual Studio servizi ruoli-attività di Reporting. Le autorizzazioni di gruppi di SharePoint | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- security [Reporting Services], tasks
+- roles [Reporting Services], predefined
+- SharePoint integration [Reporting Services], permissions
+- permissions [Reporting Services], native mode
+- security [Reporting Services], predefined roles
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Confrontare ruoli e attivit&#224; di Reporting Services con autorizzazioni e gruppi di SharePoint
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Visual Studio servizi ruoli-attività di Reporting. Autorizzazioni di gruppi di SharePoint
   In questo argomento vengono confrontate le funzionalità di autorizzazione basata su ruoli e attività nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con le funzionalità di sicurezza dei prodotti SharePoint. In questo argomento vengono confrontate la terminologia e le caratteristiche di ruoli, attività, gruppi di SharePoint, livelli di autorizzazione e autorizzazioni.  
   
 ||  
@@ -41,9 +46,9 @@ caps.handback.revision: 19
 -   [Confrontare attività in modalità nativa e autorizzazioni di SharePoint](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Confrontare strumenti di autorizzazione e terminologia  
- **Modalità nativa**: gli oggetti di autorizzazione (ruoli e attività) in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono creati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurati per i singoli utenti in Gestione report.  
+ **Modalità nativa** : gli oggetti di autorizzazione (ruoli e attività) in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono creati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurati per i singoli utenti in Gestione report.  
   
- **Modalità SharePoint**: nella modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usate le funzionalità di autorizzazione di SharePoint. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
+ **SharePoint mode:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode utilizes the SharePoint permission features. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
   
  Nella tabella seguente vengono confrontati gli oggetti e i concetti correlati all'autorizzazione tra la modalità SharePoint e nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 19
 |**Gestione contenuto**<br /><br /> Autorizzazioni complete per tutti gli elementi e le operazioni a livello di elemento, incluse le autorizzazioni per l'impostazione della sicurezza.|Utilizzare il gruppo **Proprietari** per concedere controllo completo sulla gestione degli elementi del server di report in un sito di SharePoint. Il gruppo **Proprietari** dispone di autorizzazioni di controllo completo che consentono di apportare modifiche al contenuto, alle pagine o alle funzionalità del sito. È consigliabile che l'accesso con controllo completo sia limitato agli amministratori del sito.|  
 |**Report personali**|Nessun gruppo equivalente. **Report personali** non è supportato nei server di report eseguiti in modalità SharePoint. Se si desidera utilizzare funzionalità equivalenti, è possibile utilizzare quelle di Sito personale in [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] .|  
 |**Server di pubblicazione**<br /><br /> Consente di aggiungere, aggiornare, visualizzare ed eliminare report, modelli di report, origini dei dati condivise e risorse.|Utilizzare il gruppo **Membri** per concedere le autorizzazioni necessarie per aggiungere e modificare elementi e aggiornare i riferimenti a elementi dipendenti in un sito di SharePoint. Il gruppo **Membri** dispone delle autorizzazioni di livello Collaborazione, che consentono ai membri del gruppo di visualizzare le pagine, aggiungere e aggiornare elementi, nonché inviare richieste di approvazione delle modifiche.|  
-|**Generatore report**<br /><br /> Consente di visualizzare report, gestire in autonomia sottoscrizioni individuali e aprire report in Generatore report.|Non sono disponibili livelli di autorizzazione o gruppi di SharePoint predefiniti già predisposti equivalenti alla definizione di report di Generatore report. Per impostazione predefinita, gli utenti che appartengono al gruppo **Membri** o al gruppo **Proprietari** dispongono dell'autorizzazione per utilizzare Generatore report. Se si desidera rendere Generatore report disponibile a più utenti, è necessario creare impostazioni di sicurezza personalizzate in grado di offrire un livello di autorizzazione analogo a quello del ruolo Generatore report. Per altre informazioni, vedere [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set permissions for report server items on a sharepoint site.md).|  
+|**Generatore report**<br /><br /> Consente di visualizzare report, gestire in autonomia sottoscrizioni individuali e aprire report in Generatore report.|Non sono disponibili livelli di autorizzazione o gruppi di SharePoint predefiniti già predisposti equivalenti alla definizione di report di Generatore report. Per impostazione predefinita, gli utenti che appartengono al gruppo **Membri** o al gruppo **Proprietari** dispongono dell'autorizzazione per utilizzare Generatore report. Se si desidera rendere Generatore report disponibile a più utenti, è necessario creare impostazioni di sicurezza personalizzate in grado di offrire un livello di autorizzazione analogo a quello del ruolo Generatore report. Per altre informazioni, vedere [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
 |-|Utilizzare il gruppo **Visualizzatori** per concedere le autorizzazioni necessarie per visualizzare i report visualizzabili. Tramite il gruppo **Visualizzatori** non è possibile scaricare né visualizzare il contenuto degli elementi del report.<br /><br /> **Nota:** a partire da SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il gruppo **Visualizzatori** non dispone di autorizzazioni per la creazione di sottoscrizioni.|  
 |**Utente sistema** e **Amministratore sistema**|Questi ruoli non sono necessari per un server di report eseguito in modalità SharePoint. **Utente sistema** e **Amministratore sistema** corrispondono a autorizzazioni a livello di applicazione Web o farm di SharePoint. Il server di report non include alcuna funzionalità per la quale siano necessarie autorizzazioni a tale livello.|  
   
@@ -102,11 +107,11 @@ caps.handback.revision: 19
 |Visualizzazione delle proprietà del server di report|Di sistema|Nessuna (non applicabile). Il server di report non controlla se un utente dispone di autorizzazioni per la visualizzazione delle impostazioni di integrazione in Amministrazione centrale.|  
 |Visualizzazione di pianificazioni condivise|Di sistema|Apertura elementi.|  
   
-## Vedere anche  
- [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../../reporting-services/security/predefined-roles.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

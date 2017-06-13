@@ -1,7 +1,7 @@
 ---
 title: "Pianificare l&quot;adozione delle funzionalità OLTP in memoria in SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/05/2016
+ms.date: 05/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
+ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/09/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
@@ -61,6 +61,7 @@ Una tabella con ottimizzazione per la memoria che contiene 200 GB di dati richie
 
 Per un database ospitato nel servizio cloud del database SQL di Azure, il livello di servizio scelto influisce sulla quantità di memoria attiva che il database può usare. È consigliabile monitorare l'utilizzo della memoria del database tramite un avviso. Per informazioni dettagliate, vedere:
 
+- Esaminare i limiti di archiviazione di OLTP In memoria per il [tariffario](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [Monitorare l'archiviazione di OLTP in memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
@@ -113,7 +114,7 @@ Si usano file con estensione DACPAC nel contesto di un progetto di Visual Studio
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 Linee guida per verificare se le funzionalità di OLTP in memoria sono adatte all'applicazione
 
-Per linee guida relative al miglioramento dell'applicazione con le funzionalità In-Memory, vedere:
+Per indicazioni su come se la funzionalità OLTP In memoria può migliorare le prestazioni di una particolare applicazione, vedere:
 
 - [OLTP in memoria (ottimizzazione per la memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -121,7 +122,7 @@ Per linee guida relative al miglioramento dell'applicazione con le funzionalità
 
 ## <a name="b-unsupported-features"></a>B. Funzionalità non supportate
 
-Le funzionalità non supportate in alcuni scenari In-Memory vengono descritte in:
+Funzionalità che non sono supportate in determinati scenari di OLTP In memoria sono descritte in:
 
 - [Funzionalità di SQL Server non supportate per OLTP in memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -158,7 +159,7 @@ L'hint READPAST è utile in scenari con più sessioni che accedono e modificano 
 - Nessuna colonna può essere contrassegnata per [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) in una tabella con ottimizzazione per la memoria.
 
 
-- Un oggetto [sequenza](../../t-sql/statements/create-sequence-transact-sql.md) non può essere usato con le tabelle con ottimizzazione per la memoria.
+- Oggetto [sequenza](../../t-sql/statements/create-sequence-transact-sql.md) non può essere utilizzato con un vincolo in una tabella con ottimizzazione per la memoria. Ad esempio, è possibile creare un vincolo predefinito con una clausola NEXT VALUE FOR. Le sequenze è utilizzabile con le istruzioni INSERT e UPDATE.
 
 
 ## <a name="c-administrative-maintenance"></a>C. Manutenzione amministrativa

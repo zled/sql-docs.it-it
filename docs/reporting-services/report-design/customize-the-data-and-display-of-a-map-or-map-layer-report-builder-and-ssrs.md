@@ -1,36 +1,41 @@
 ---
-title: "Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: Personalizzare i dati e la visualizzazione di una mappa o un livello mappa (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  
   
 -   Per facilitare l'interpretazione dei dati visualizzati su una mappa da parte degli utenti, è possibile aggiungere legende e una scala dei colori, nonché etichette e descrizioni comandi.  
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 -   Conferire un effetto ottico di profondità specificando un'ombreggiatura.  
   
- Per modificare queste opzioni fare clic con il pulsante destro del mouse sulla mappa, scegliere **Mappa** e apportare quindi le modifiche.  
+ Per modificare queste opzioni fare clic con il pulsante destro del mouse sulla mappa, scegliere **Mappa**e apportare quindi le modifiche.  
   
 ##  <a name="Viewport"></a> Modificare le opzioni per il viewport  
  Utilizzare le opzioni del viewport per modificare la vista della mappa visualizzata nel report.  
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   Risoluzione e semplificazione. Stabilire un equilibrio tra il tempo necessario per il disegno e le strutture dettagliate di linee e poligoni.  
   
- Per modificare queste opzioni, fare clic con il pulsante destro del mouse su viewport mappa, usare la [finestra di dialogo Proprietà viewport mappa, la pagina Generale](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) e le pagine correlate.  
+ Per modificare queste opzioni, fare clic con il pulsante destro del mouse su viewport mappa, usare la [finestra di dialogo Proprietà viewport mappa, la pagina Generale](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e le pagine correlate.  
   
 ##  <a name="Legends"></a> Modificare le opzioni per le legende  
  Le legende consentono agli utenti di interpretare i dati di una mappa.  
@@ -99,7 +104,7 @@ caps.handback.revision: 13
   
 -   Per cambiare il contenuto o il relativo formato per una legenda, modificare le opzioni della legenda per le regole corrispondenti per un livello.  
   
- Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Layer"></a> Modificare le opzioni per il livello  
  Per visualizzare i livelli per una mappa, fare clic sulla mappa per selezionarla. Viene visualizzato il riquadro della mappa. Per modificare le opzioni per un livello, fare clic con il pulsante destro del mouse sul livello e utilizzare il menu di scelta rapida.  
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   Opzioni di sostituzione per singoli punti, linee o poligoni incorporati su un livello. Le modifiche che si apportano sono permanenti. Per ripristinare queste modifiche, è necessario ricaricare i dati per il livello.  
   
- Per altre informazioni, vedere [variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Per altre informazioni, vedere [variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

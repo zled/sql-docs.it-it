@@ -1,33 +1,38 @@
 ---
-title: "Anteprima di report in Generatore report | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anteprima di report in Generatore Report | Documenti Microsoft
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Anteprima di report in Generatore report
-  Durante la creazione di un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è utile visualizzarne spesso l'anteprima per verificare che il contenuto visualizzato corrisponda a quanto desiderato. Per visualizzare l'anteprima del report, fare clic su **Esegui**. Il report viene visualizzato nella modalità di anteprima.  
+# <a name="previewing-reports-in-report-builder"></a>Anteprima di report in Generatore report
+  Durante la creazione di un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è utile visualizzarne spesso l'anteprima per verificare che il contenuto visualizzato corrisponda a quanto desiderato. Per visualizzare l'anteprima del report, fare clic su **Esegui**. Il report viene visualizzato nella modalità di anteprima.  
   
  Generatore report consente di migliorare l'anteprima tramite sessioni di modifica se connesso a un server di report. La sessione di modifica crea una cache di dati e rende disponibili i set di dati della cache per anteprime ripetute del report. Una sessione di modifica non è una caratteristica con cui si interagisce direttamente, tuttavia sapendo il momento in cui il set di dati memorizzato nella cache viene aggiornato sarà possibile migliorare le prestazioni quando si visualizza in anteprima un report e capire il motivo per cui il report viene visualizzato più rapidamente o più lentamente.  
   
  Un altro vantaggio delle sessioni di modifica è la possibilità di modificare report che utilizzano origini dati incorporate o elementi di riferimento, ad esempio immagini o sottoreport archiviati nel server di report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> Esistono alcune differenze tra la visualizzazione in anteprima in Generatore Report e la visualizzazione in un browser. Ad esempio, un controllo di calendario, che viene aggiunto a un report quando si specifica un parametro di tipo Data/ora, è differente in Generatore Report e in un browser. 
   
-## Miglioramento delle prestazioni di anteprima  
+## <a name="improving-preview-performance"></a>Miglioramento delle prestazioni di anteprima  
  La modalità di creazione e aggiornamento dei report influisce sulla velocità di visualizzazione dell'anteprima dei report. Alla prima visualizzazione dell'anteprima di un report che si basa su un riferimento al server, viene creata una sessione di modifica e i dati utilizzati durante l'esecuzione del report vengono aggiunti a una cache di dati archiviata sul server di report. Quando si apportano modifiche al report che non influisce sui dati, la copia memorizzata nella cache dei dati viene utilizzata dal report. In questo modo non saranno mostrate le modifiche apportate ai dati ogni volta che si visualizza in anteprima il report. Se si desiderano nuovi dati, fare clic sul pulsante **Aggiorna** sulla barra multifunzione.  
   
  Le azioni seguenti comportano l'aggiornamento della cache e rallentano la successiva visualizzazione in anteprima del report:  
@@ -67,15 +72,15 @@ caps.handback.revision: 7
   
  Per impostazione predefinita, la cache di dati può contenere fino a cinque set di dati. Se si utilizzano molte combinazioni diverse di valori del parametro, il report potrebbe aver bisogno di più dati. Questa condizione richiede che la cache venga aggiornata e il report sia visualizzato più lentamente alla successiva anteprima. Il numero di voci nella cache può essere configurato dall'amministratore del server di report.  
   
-## Concorrenza di aggiornamenti del report  
+## <a name="concurrency-of-report-updates"></a>Concorrenza di aggiornamenti del report  
  Di solito, la visualizzazione in anteprima di un report rappresenta un passaggio dell'aggiornamento e del conseguente salvataggio di un report in un relativo server. Quando si aggiorna un report, è possibile che un altro utente lo stia aggiornando e salvando nello stesso momento. Il report salvato per ultimo è la versione di report che è disponibile per la visualizzazione e l'aggiornamento futuri. Questo significa che la versione del report visualizzata in anteprima potrebbe non essere la versione che si riapre. È possibile salvare il report con un nome nuovo tramite l'opzione **Salva con nome** presente nel menu Generatore report.  
   
-## Elementi del report esterni  
+## <a name="external-report-items"></a>Elementi del report esterni  
  Il report potrebbe includere elementi quali origini dati condivise, immagini esterne e sottoreport archiviati separatamente dal report. Poiché gli elementi vengono archiviati separatamente, è possibile che possano essere spostati in una posizione diversa sul server di report o possano essere eliminati. In tal caso, potrebbe essere impossibile visualizzare in anteprima il report. È possibile aggiornare il report per indicare la posizione aggiornata dell'elemento oppure se l'elemento è stato eliminato, sostituirlo con un elemento esistente o rimuovere il riferimento all'elemento dal report.  
   
  Se un sottoreport utilizzato dal report viene modificato dopo la creazione della sessione di modifica, non sarà possibile visualizzare in anteprima il report. Per visualizzare correttamente in anteprima il report, è necessario salvare il report o fare clic su **Aggiorna** per ottenere dati aggiornati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
@@ -84,3 +89,4 @@ caps.handback.revision: 7
  [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
+

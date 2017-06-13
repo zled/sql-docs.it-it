@@ -1,7 +1,7 @@
 ---
 title: Ruoli a livello di server | Microsoft Docs
 ms.custom: 
-ms.date: 12/29/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,20 +27,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8850c5e74e5e77ecad1b847f6176713c0af9b537
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
   
  I ruoli predefiniti del server vengono forniti per motivi di praticità e compatibilità con le versioni precedenti. Laddove possibile, assegnare autorizzazioni più specifiche.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce nove ruoli predefiniti del server. Le autorizzazioni concesse ai ruoli predefiniti del server non possono essere modificate. A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile creare ruoli del server definiti dall'utente e aggiungere autorizzazioni a livello di server a tali ruoli.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce nove ruoli predefiniti del server. Le autorizzazioni concesse ai ruoli predefiniti del server (ad eccezione di **pubblica**) non può essere modificato. A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile creare ruoli del server definiti dall'utente e aggiungere autorizzazioni a livello di server a tali ruoli.  
   
  È possibile aggiungere entità a livello di server, ad esempio account di accesso di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , account di Windows e gruppi di Windows, nei ruoli a livello di server. Tutti i membri di un ruolo predefinito del server possono aggiungere altri account di accesso allo stesso ruolo. I membri dei ruoli del server definiti dall'utente non possono aggiungere altre entità del server al ruolo.  
 >  [!NOTE]
@@ -49,21 +49,21 @@ ms.lasthandoff: 04/11/2017
 ## <a name="fixed-server-level-roles"></a>Ruoli predefiniti a livello di server  
  Nella tabella seguente vengono illustrati i ruoli predefiniti a livello di server e le relative funzionalità.  
   
-|Ruolo predefinito a livello di server|Descrizione|  
+|Ruolo predefinito a livello di server|Description|  
 |------------------------------|-----------------|  
-|sysadmin|I membri del ruolo predefinito del server sysadmin possono eseguire qualsiasi attività nel server.|  
-|serveradmin|I membri del ruolo predefinito del server serveradmin sono autorizzati a modificare le opzioni di configurazione a livello di server e ad arrestare il server.|  
-|securityadmin|I membri del ruolo predefinito del server securityadmin gestiscono gli account di accesso e le relative proprietà. Possono concedere, negare e revocare le autorizzazioni a livello di server e a livello di database se hanno accesso a un database. Questi membri sono inoltre autorizzati a reimpostare le password per gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **\*\* Nota sulla sicurezza \*\*** La possibilità di concedere l'accesso al [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e di configurare le autorizzazioni utente consente all'amministratore responsabile della sicurezza di assegnare la maggior parte delle autorizzazioni server. Il ruolo **securityadmin** deve essere considerato equivalente al ruolo **sysadmin** .|  
-|processadmin|I membri del ruolo predefinito del server processadmin sono autorizzati a terminare processi in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|setupadmin|I membri del ruolo predefinito del server setupadmin sono autorizzati ad aggiungere e rimuovere server collegati usando istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . L'appartenenza a sysadmin è necessaria per l'uso di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].|  
-|bulkadmin|I membri del ruolo predefinito del server bulkadmin sono autorizzati a eseguire l'istruzione BULK INSERT.|  
-|diskadmin|Il ruolo predefinito del server diskadmin consente di gestire i file su disco.|  
-|dbcreator|I membri del ruolo predefinito del server dbcreator sono autorizzati a creare, modificare, eliminare e ripristinare qualsiasi database.|  
-|pubblico|Ogni accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartiene al ruolo del server public. Quando a un'entità del server non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a public su tale oggetto. Assegnare le autorizzazioni public per un oggetto solo quando si desidera che l'oggetto sia disponibile a tutti gli utenti. Non è possibile modificare l'appartenenza a public.<br /><br /> Nota: public viene implementato in modo diverso rispetto agli altri ruoli. È possibile, tuttavia, concedere, negare o revocare autorizzazioni da public.|  
+|**sysadmin**|I membri del **sysadmin** ruolo predefinito del server possono eseguire qualsiasi attività nel server.|  
+|**serveradmin**|I membri del ruolo predefinito del server **serveradmin** sono autorizzati a modificare le opzioni di configurazione a livello di server e ad arrestare il server.|  
+|**securityadmin**|I membri del ruolo predefinito del server **securityadmin** gestiscono gli account di accesso e le relative proprietà. Possono essere utilizzate `GRANT`, `DENY`, e `REVOKE` le autorizzazioni a livello di server. È anche possibile `GRANT`, `DENY`, e `REVOKE` a livello di database le autorizzazioni se hanno accesso a un database. Questi membri sono inoltre autorizzati a reimpostare le password per gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **Importante:** la possibilità di concedere l'accesso per il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e di configurare le autorizzazioni utente consente all'amministratore di sicurezza di assegnare autorizzazioni per la maggior parte dei server. Il ruolo **securityadmin** deve essere considerato equivalente al ruolo **sysadmin** .|  
+|**processadmin**|I membri del **processadmin** ruolo predefinito del server autorizzati a terminare processi in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**setupadmin**|I membri del **setupadmin** ruolo predefinito del server è possibile aggiungere e rimuovere server collegati utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni. (**sysadmin** appartenenza è necessaria quando si utilizza [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
+|**bulkadmin**|I membri del **bulkadmin** ruolo predefinito del server è possibile eseguire il `BULK INSERT` istruzione.|  
+|**diskadmin**|Il **diskadmin** ruolo predefinito del server viene utilizzato per la gestione dei file su disco.|  
+|**dbcreator**|I membri del ruolo predefinito del server **dbcreator** sono autorizzati a creare, modificare, eliminare e ripristinare qualsiasi database.|  
+|**pubblica**|Ogni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accesso appartiene il **pubblica** ruolo del server. Quando a un'entità del server non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a public su tale oggetto. Assegnare le autorizzazioni public per un oggetto solo quando si desidera che l'oggetto sia disponibile a tutti gli utenti. Non è possibile modificare l'appartenenza a public.<br /><br /> **Nota:** **pubblica** viene implementato in modo diverso rispetto agli altri ruoli, e le autorizzazioni possono essere concesse, negate o revocate dai ruoli predefiniti del server public.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorizzazioni dei ruoli predefiniti del server  
  A ogni ruolo predefinito del server vengono assegnate autorizzazioni specifiche. La figura seguente mostra le autorizzazioni assegnate ai ruoli del server.   
-![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-server-role-permissions.png)   
+![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
 >  L'autorizzazione **CONTROL SERVER** è simile ma non identica al ruolo predefinito del server **sysadmin** . Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, **CONTROL SERVER** non implica o l'appartenenza al ruolo predefinito del server **sysadmin**. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi **DBCC** e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server **sysadmin**. Per un elenco delle 171 stored procedure di sistema che richiedono l'appartenenza a **sysadmin** , vedere il post di blog di Andreas Wolter sulle [avvertenze relative ad autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema ed escalation dei privilegi di CONTROL SERVER e sysadmin/sa](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="server-level-permissions"></a>Autorizzazioni a livello di server  
  Ai ruoli del server definiti dall'utente è possibile aggiungere solo autorizzazioni a livello di server. Per elencare le autorizzazioni a livello di server, eseguire la seguente istruzione. Di seguito sono elencate le autorizzazioni a livello di server:  
   
-```tsql  
+```  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

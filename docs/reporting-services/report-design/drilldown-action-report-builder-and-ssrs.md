@@ -1,54 +1,59 @@
 ---
-title: "Azione di drill-down (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10249"
-  - "10186"
-  - "10092"
-  - "10167"
-  - "10174"
-  - "sql13.rtp.rptdesigner.charttitleproperties.visibility.f1"
-  - "10155"
-  - "sql13.rtp.rptdesigner.chartproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.pictureproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1"
-  - "10123"
-  - "10425"
-  - "sql13.rtp.rptdesigner.axisproperties.visibility.f1"
-  - "10217"
-  - "10161"
-  - "10215"
-  - "sql13.rtp.rptdesigner.legendproperties.visibility.f1"
-  - "10258"
-  - "10144"
-  - "sql13.rtp.rptdesigner.subreportproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.visibility.f1"
-  - "10062"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.rectangleproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.chartareaproperties.visibility.f1"
-  - "10053"
-  - "sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.visibility.f1"
+title: Azione di drill-down (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10249"
+- "10186"
+- "10092"
+- "10167"
+- "10174"
+- sql13.rtp.rptdesigner.charttitleproperties.visibility.f1
+- "10155"
+- sql13.rtp.rptdesigner.chartproperties.visibility.f1
+- sql13.rtp.rptdesigner.pictureproperties.visibility.f1
+- sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1
+- "10123"
+- "10425"
+- sql13.rtp.rptdesigner.axisproperties.visibility.f1
+- "10217"
+- "10161"
+- "10215"
+- sql13.rtp.rptdesigner.legendproperties.visibility.f1
+- "10258"
+- "10144"
+- sql13.rtp.rptdesigner.subreportproperties.visibility.f1
+- sql13.rtp.rptdesigner.textboxproperties.visibility.f1
+- "10062"
+- sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1
+- sql13.rtp.rptdesigner.rectangleproperties.visibility.f1
+- sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1
+- sql13.rtp.rptdesigner.chartareaproperties.visibility.f1
+- "10053"
+- sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
+- sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Azione di drill-down (Generatore report e SSRS)
-  Fornendo più o meno icone in una casella di testo, è possibile consentire agli utenti di nascondere e visualizzare gli elementi in modo interattivo. Questa azione viene chiamata *drill-down*. Per una tabella o una matrice, è possibile visualizzare o nascondere le righe e le colonne statiche o le righe e le colonne associate ai gruppi.  
+# <a name="drilldown-action-report-builder-and-ssrs"></a>Azione di drill-down (Generatore report e SSRS)
+  Fornendo più o meno icone in una casella di testo, è possibile consentire agli utenti di nascondere e visualizzare gli elementi in modo interattivo. Questa azione viene chiamata *drill-down* . Per una tabella o una matrice, è possibile visualizzare o nascondere le righe e le colonne statiche o le righe e le colonne associate ai gruppi.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -70,10 +75,10 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Confronto tra report drill-down e drill-through  
- In un report drill-down un utente fa clic su un pulsante più o meno per espandere o comprimere una sezione di un report per mostrare dati dettaglio. I un report drill-through l'utente fa clic su un collegamento relativo a un valore di riepilogo, aprendo in questo modo un report separato, correlato contenente dati dettaglio. I dati dettaglio vengono recuperati solo quando il report dettagli è in esecuzione. I report drill-through richiedono in genere un numero di risorse minore rispetto ai report drill-down. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+## <a name="comparing-drilldown-and-drillthrough-reports"></a>Confronto tra report drill-down e drill-through  
+ In un report drill-down un utente fa clic su un pulsante più o meno per espandere o comprimere una sezione di un report per mostrare dati dettaglio. I un report drill-through l'utente fa clic su un collegamento relativo a un valore di riepilogo, aprendo in questo modo un report separato, correlato contenente dati dettaglio. I dati dettaglio vengono recuperati solo quando il report dettagli è in esecuzione. I report drill-through richiedono in genere un numero di risorse minore rispetto ai report drill-down. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
-## Supporto delle estensioni per il rendering per elementi del report nascosti  
+## <a name="rendering-extension-support-for-hidden-report-items"></a>Supporto delle estensioni per il rendering per elementi del report nascosti  
  L'elemento Toggle per visualizzare e nascondere gli elementi del report è supportato solo dalle estensioni per il rendering che supportano funzioni di interattività con gli utenti, ad esempio l'estensione per il rendering HTML utilizzata durante l'esecuzione di un report in Generatore report e in Gestione report. Le altre estensioni per il rendering consentono di visualizzare gli elementi nascosti. Nell'elenco seguente viene descritto il supporto per gli elementi del report con visibilità condizionale:  
   
 -   In HTML, se gli elementi sono nascosti, non sono visibili nell'origine HTML.  
@@ -84,8 +89,8 @@ caps.handback.revision: 9
   
  Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

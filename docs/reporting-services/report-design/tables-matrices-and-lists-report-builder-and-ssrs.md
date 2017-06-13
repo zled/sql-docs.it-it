@@ -1,51 +1,56 @@
 ---
-title: "Tabelle, matrici ed elenchi (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.tablixgroup.f1"
-  - "10045"
-  - "sql13.rtp.rptdesigner.tablix.visibility.f1"
-  - "10039"
-  - "sql13.rtp.rptdesigner.groupproperties.visibility.f1"
-  - "10104"
-  - "10047"
-  - "sql13.rtp.rptdesigner.groupproperties.advanced.f1"
-  - "10044"
-  - "sql13.rtp.rptdesigner.groupproperties.filters.f1"
-  - "sql13.rtp.rptdesigner.tablix.sort.f1"
-  - "sql13.rtp.rptdesigner.tablix.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.variables.f1"
-  - "10046"
-  - "10101"
-  - "sql13.rtp.rptdesigner.tablix.filter.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.sort.f1"
-  - "10042"
-  - "10041"
-  - "10102"
-  - "10103"
-  - "10043"
-  - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
+title: Tabelle, matrici ed elenchi (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.tablixgroup.f1
+- "10045"
+- sql13.rtp.rptdesigner.tablix.visibility.f1
+- "10039"
+- sql13.rtp.rptdesigner.groupproperties.visibility.f1
+- "10104"
+- "10047"
+- sql13.rtp.rptdesigner.groupproperties.advanced.f1
+- "10044"
+- sql13.rtp.rptdesigner.groupproperties.filters.f1
+- sql13.rtp.rptdesigner.tablix.sort.f1
+- sql13.rtp.rptdesigner.tablix.general.f1
+- sql13.rtp.rptdesigner.groupproperties.general.f1
+- sql13.rtp.rptdesigner.groupproperties.variables.f1
+- "10046"
+- "10101"
+- sql13.rtp.rptdesigner.tablix.filter.f1
+- sql13.rtp.rptdesigner.groupproperties.sort.f1
+- "10042"
+- "10041"
+- "10102"
+- "10103"
+- "10043"
+- sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tabelle, matrici ed elenchi (Generatore report e SSRS)
- In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelle, matrici ed elenchi sono *aree dati* in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. Nelle celle sono contenuti in genere dati di testo, ad esempio testo, date e numeri ma possono essere contenuti anche misuratori, grafici o elementi del report come le immagini. Di frequente, tabelle, matrici ed elenchi sono definiti collettivamente aree dati *Tablix*.  
+# <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
+ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelle, matrici ed elenchi sono *aree dati* in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. Nelle celle sono contenuti in genere dati di testo, ad esempio testo, date e numeri ma possono essere contenuti anche misuratori, grafici o elementi del report come le immagini. Di frequente, tabelle, matrici ed elenchi sono definiti collettivamente aree dati *Tablix* .  
   
- I modelli di tabelle, matrici ed elenchi vengono compilati nell'area dati Tablix che è una griglia flessibile in cui è possibile visualizzare i dati in celle. Nei modelli di tabella e matrice, le celle sono organizzate in righe e colonne. Poiché i modelli sono varianti dell'area dati Tablix generica sottostante, è possibile visualizzare i dati combinando i formati di modelli e modificando la tabella, la matrice o l'elenco per includere le caratteristiche di un'altra area dati quando si sviluppa il report. Ad esempio, se si aggiunge una tabella e si scopre che non serve, è possibile aggiungere gruppi di colonne per rendere la tabella una matrice.  
+ I modelli di tabelle, matrici ed elenchi vengono compilati nell'area dati Tablix che è una griglia flessibile in cui è possibile visualizzare i dati in celle. Nei modelli di tabella e matrice, le celle sono organizzate in righe e colonne. Poiché i modelli sono varianti dell'area dati tablix generica sottostante, è possibile visualizzare i dati in una combinazione di formati di modello e modificando la tabella, matrice o elenco per includere le caratteristiche di un'altra area dati quando si sviluppa il report. Ad esempio, se si aggiunge una tabella e si scopre che non serve, è possibile aggiungere gruppi di colonne per rendere la tabella una matrice.  
   
  Le aree dati della tabella e della matrice consentono di visualizzare le relazioni dei dati complesse includendo tabelle, matrici, elenchi, grafici e misuratori nidificati. Le tabelle e le matrici dispongono di un layout tabulare e i relativi dati provengono da un solo set di dati, creato in base a una singola origine dati. La differenza principale tra le tabelle e le matrici è che le tabelle possono includere solo gruppi di righe, mentre le matrici dispongono di gruppi di righe e di gruppi di colonne.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
 ##  <a name="Table"></a> Tabella  
  Usare una tabella per visualizzare i dati dettaglio, organizzare i dati in gruppi di righe o per eseguire entrambe le operazioni. Il modello Tabella contiene tre colonne con una riga di intestazione di tabella e una riga di dettaglio per i dati. Nella figura seguente viene illustrato il modello di tabella iniziale selezionato nell'area di progettazione:  
   
- ![Modello di tabella selezionato nell'area di progettazione](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modello di tabella selezionato nell'area di progettazione")  
+ ![Nell'area di progettazione, il modello di tabella selezionato](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "nell'area di progettazione, il modello di tabella selezionato")  
   
  È possibile raggruppare i dati per un solo campo, per più campi o scrivendo un'espressione personalizzata. Si possono creare gruppi nidificati o gruppi indipendenti, adiacenti e visualizzare valori aggregati per i dati raggruppati o aggiungere totali ai gruppi. Ad esempio, se la tabella dispone di un gruppo di righe chiamato [Category], è possibile aggiungere un subtotale per ogni gruppo nonché un totale complessivo per il report. Per migliorare l'aspetto della tabella ed evidenziare i dati desiderati, è possibile unire celle e applicare la formattazione ai dati e alle intestazioni di tabella.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 10
 ##  <a name="Matrix"></a> Matrice  
  Usare una matrice per visualizzare i riepiloghi dei dati aggregati raggruppati in righe e colonne, analogamente a una tabella pivot o a un report a campi incrociati. Il numero di righe e colonne per i gruppi è determinato dal numero di valori univoci per ogni gruppo di righe e colonne. Nella figura seguente viene illustrato il modello di matrice iniziale selezionato nell'area di progettazione:  
   
- ![Nuova matrice aggiunta dalla casella degli strumenti e selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti e selezionata")  
+ ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nuova matrice aggiunta dalla casella degli strumenti selezionata")  
   
  È possibile raggruppare i dati per più campi o espressioni in gruppi di righe e di colonne. In fase di esecuzione, quando si combinano i dati del report e le aree dati, le dimensioni di una matrice aumentano orizzontalmente e verticalmente nella pagina quando si aggiungono colonne per i gruppi di colonne e righe per i gruppi di righe. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella. Ad esempio, se la matrice dispone di un gruppo di righe (Category) e di due gruppi di colonne (Territory e Year) che consentono di visualizzare la somma di vendite, nel report vengono visualizzate due celle con somme di vendite per ogni valore nel gruppo Category. L'ambito delle celle sono le due intersezioni: Category e Territory e Category e Year. La matrice può includere gruppi nidificati e adiacenti. I gruppi nidificati presentano una relazione padre-figlio mentre i gruppi adiacenti una relazione di tipo peer. È possibile aggiungere subtotali per alcuni o tutti i livelli di gruppi di righe e colonne nidificati all'interno della matrice.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 10
 ##  <a name="List"></a> Elenco  
  Utilizzare un elenco per creare un layout in formato libero. Non è obbligatorio usare un layout griglia ma è possibile posizionare liberamente i campi all'interno dell'elenco. È possibile usare un elenco per progettare un form per la visualizzazione di molti campi di set di dati o come contenitore per la visualizzazione di più aree dati affiancate per i dati raggruppati. Si può ad esempio definire un gruppo per un elenco, aggiungere una tabella, un grafico e un'immagine, nonché visualizzare i valori in formato tabella e grafico per ogni valore di gruppo, come si farebbe per un record di un dipendente o di un paziente.  
   
- ![Nuovo elenco aggiunto dalla casella degli strumenti e selezionato](../../reporting-services/report-design/media/rs-listtemplatenewselected.png "Nuovo elenco aggiunto dalla casella degli strumenti e selezionato")  
+ ![Nuovo elenco aggiunto dalla casella degli strumenti selezionata](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "nuovo elenco aggiunto dalla casella degli strumenti selezionata")  
   
  Per altre informazioni, vedere [Creare fatture e moduli con elenchi].  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 10
   
  È possibile continuare a sviluppare una tabella, una matrice o un elenco aggiungendo le caratteristiche Tablix desiderate. Nelle caratteristiche Tablix è inclusa la visualizzazione dei dati dettaglio o di aggregazioni per i dati raggruppati in righe e colonne. È inoltre possibile creare gruppi nidificati, gruppi indipendenti o adiacenti o gruppi ricorsivi. I dati raggruppati possono essere filtrati e ordinati e si possono inoltre combinare con semplici operazioni i gruppi includendo più espressioni di raggruppamento in una definizione di gruppo.  
   
- È possibile aggiungere i totali per un gruppo o i totali complessivi per l'area dati. Si possono nascondere le righe o le colonne per semplificare un report e consentire all'utente di attivare la visualizzazione dei dati nascosti, come in un report drill-down. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md).  
+ È possibile aggiungere i totali per un gruppo o i totali complessivi per l'area dati. Si possono nascondere le righe o le colonne per semplificare un report e consentire all'utente di attivare la visualizzazione dei dati nascosti, come in un report drill-down. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene illustrato dettagliatamente come usare tabelle, matrici ed elenchi nei report; come visualizzare i dati in righe e colonne, aggiungere ed eliminare colonne, unire celle e includere subtotali per i gruppi di righe e di colonne.  
@@ -148,7 +153,7 @@ caps.handback.revision: 10
  [Aggiunta di dati a un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Vengono fornite informazioni dettagliate sull'aggiunta dei dati di dettaglio e raggruppati, dei subtotali e totali e delle etichette a un'area dati Tablix.  
   
- [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)  
+ [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Vengono descritte le proprietà di un'area dati Tablix che è possibile modificare per cambiarne l'aspetto quando viene visualizzata in un report.  
   
  [Controllo delle intestazioni di riga e di colonna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md)  
@@ -160,8 +165,8 @@ caps.handback.revision: 10
  [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Vengono illustrati i gruppi e quando vengono usati; vengono inoltre descritti i gruppi disponibili per le differenti aree dati Tablix.  
   
-## Vedere anche  
- [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

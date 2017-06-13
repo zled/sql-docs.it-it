@@ -1,30 +1,35 @@
 ---
-title: "Report di Reporting Services (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "Reporting Services, creazione di report"
+title: Reporting Services report (SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 54
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 54
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Report di Reporting Services (SSRS)
+# <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] I report impaginati sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report impaginato diventa un elemento di report archiviato nel server di report o nel sito di SharePoint. I report impaginati sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È anche possibile [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
   
  Se non si ha familiarità con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], assicurarsi di consultare le informazioni in [Concetti relativi a Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
-## Vantaggi dei report impaginati di Reporting Services  
+## <a name="benefits-of-reporting-services-paginated-reports"></a>Vantaggi dei report impaginati di Reporting Services  
  È possibile utilizzare la soluzione di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per:  
   
 -   Utilizzare un set di origini dati che fornisce una sola versione degli eventi. Basare i report su tali origini dati per offrire una vista unificata dei dati che aiuti a prendere decisioni aziendali.  
@@ -45,7 +50,7 @@ caps.handback.revision: 54
   
 -   Definire espressioni che offrono la possibilità di personalizzare il modo in cui i dati del report vengono filtrati, raggruppati e ordinati.  
   
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
 ##  <a name="bkmk_StagesSummary"></a> Fasi dell'elaborazione del report  
  Quando si crea un report, si definisce un file di definizione del report (con estensione rdl) in formato XML. Questo file contiene tutte le informazioni necessarie per permettere all'elaboratore di report di combinare i dati e il layout del report. Quando si visualizza un report, il processo percorre le fasi seguenti:  
@@ -60,14 +65,14 @@ caps.handback.revision: 54
   
  Per altre informazioni, vedere [Fasi dello sviluppo di report](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) in [Concetti relativi a Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
-## Creare report impaginati  
+## <a name="create-paginated-reports"></a>Creare report impaginati  
  Per creare un report impaginato:  
   
 -   **Determinare lo scopo del report.** Identificare lo scopo del report in base al gruppo di destinatari che lo utilizza. Un report ben progettato fornisce ai lettori le informazioni necessarie per analisi e azione. Le decisioni relative alla progettazione effettuate durante questo passaggio influiscono sulla scelta dei parametri, la progettazione del layout e la modalità di visualizzazione del report. Per altre informazioni, vedere [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md) e [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md).  
   
 -   **Scegliere il tipo di query.** Determinare se usare una query del set di dati generalizzata e condivisa o una query del set di dati specifica del proprio set di report. Un set di dati condiviso con una query generalizzata è facile da gestire per l'utilizzo in più report, ma ogni persona che progetta il report deve filtrare i dati per il set specifico di report in base alle necessità. Per altre informazioni, vedere [Dati del report&#40;SSRS&#41;](../../reporting-services/report-data/report-data-ssrs.md).  
   
--   **Pianificare viste di dati correlati.** Pianificare la modalità di visualizzazione dei lettori del report. L'uso di report di riepilogo con la possibilità di eseguire il drill-down all'interno dei dati dettagliati rappresenta un approccio utile per la gestione di grandi quantità di dati. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+-   **Pianificare viste di dati correlati.** Pianificare la modalità di visualizzazione dei lettori del report. L'uso di report di riepilogo con la possibilità di eseguire il drill-down all'interno dei dati dettagliati rappresenta un approccio utile per la gestione di grandi quantità di dati. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 -   **Configurare i permessi.** Pianificare la strategia per concedere il corretto livello di autorizzazioni. Una strategia comune consiste nel creare una struttura di cartelle nel server di report e concedere l'accesso ai report e agli elementi correlati sulla base dei ruoli e la sicurezza della cartella. Per altre informazioni, vedere [Proteggere i report](#bkmk_SecureReportsSummary).  
   
@@ -115,16 +120,16 @@ caps.handback.revision: 54
   
 -   **Considerare quali componenti possono essere utilizzati nuovamente.**  Determinare se un'origine dati o una query del set di dati può essere condivisa e utilizzata nuovamente. In questo caso, creare origini dati e set di dati condivisi nel server di report o nel sito di SharePoint. Determinare se le aree dati sono adatte per essere utilizzate nuovamente come parti del report. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-## Anteprima dei report  
- Ogni strumento per la creazione di report supporta la visualizzazione in anteprima dei report. Per altre informazioni, vedere la sezione [Anteprima](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md#bkmk_Preview) di [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md) e [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+## <a name="preview-reports"></a>Anteprima dei report  
+ Ogni strumento per la creazione di report supporta la visualizzazione in anteprima dei report. Per altre informazioni, vedere la sezione [Anteprima](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) di [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) e [Anteprima di report in Generatore report](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
-## Salvare o pubblicare report  
- Ogni strumento di creazione supporta il salvataggio locale o la pubblicazione dei report in un server di report o un sito di SharePoint. Per altre informazioni, vedere la sezione [Salvare e distribuire](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) di [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md) e [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
+## <a name="save-or-publish-reports"></a>Salvare o pubblicare report  
+ Ogni strumento di creazione supporta il salvataggio locale o la pubblicazione dei report in un server di report o un sito di SharePoint. Per altre informazioni, vedere la sezione [Salvare e distribuire](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) di [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) e [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
-## Visualizzare i report  
+## <a name="view-reports"></a>Visualizzare i report  
  Oltre alla visualizzazione in anteprima di un report salvato in locale o pubblicato in un server di report, è possibile fornire ai lettori del report un'ampia gamma di opzioni di visualizzazione. Per visualizzare un report:  
   
--   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per altre informazioni, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestione report &#40;modalità nativa SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md), e [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Browser.**  Utilizzare il servizio Web ReportServer o il sito di SharePoint per visualizzare report pubblicati. Su un sito di SharePoint, è possibile anche configurare un Web part per la visualizzazione dei report pubblicati. Per altre informazioni, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896), e [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
 -   **Recapito.**  Configurare una sottoscrizione per recapitare i report ai lettori tramite posta elettronica o in una cartella di file condivisa.  Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -134,7 +139,7 @@ caps.handback.revision: 54
   
 -   **Applicazione Web o Windows Form.**  Utilizzare Visual Studio per sviluppare un'applicazione AJAX ASP.NET o un applicazione di Windows Form che ospiti il controllo del Visualizzatore report. Il controllo può puntare ai report pubblicati su un server di report. Per altre informazioni, vedere [Rapporti Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
   
-## Gestire i report  
+## <a name="manage-reports"></a>Gestire i report  
  Per gestire un report pubblicato:  
   
 -   **Origini dati.** Le origini dati condivise e quelle incorporate vengono gestite in modo indipendente dalla definizione del report.  
@@ -156,28 +161,29 @@ caps.handback.revision: 54
 ##  <a name="bkmk_SecureReportsSummary"></a> Proteggere i report  
  Per proteggere un report:  
   
--   Dall'amministratore del server di report, identificare l'autorizzazione e il sistema di autenticazione utilizzati per l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si usano autenticazione di Windows, sicurezza integrata e assegnazione di ruolo per consentire di controllare l'accesso ai report pubblicati. Per altre informazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) e [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
+-   Dall'amministratore del server di report, identificare l'autorizzazione e il sistema di autenticazione utilizzati per l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per impostazione predefinita, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si usano autenticazione di Windows, sicurezza integrata e assegnazione di ruolo per consentire di controllare l'accesso ai report pubblicati. Per altre informazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) e [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
   
-## Creare notifiche basate su dati dei report  
+## <a name="create-notifications-based-on-report-data"></a>Creare notifiche basate su dati dei report  
  È possibile creare avvisi relativi ai dati dei report pubblicati in un sito di SharePoint. Gli avvisi relativi ai dati sono basati su feed di dati dalle aree dati nel report. Per impostazione predefinita, le aree dati vengono denominate automaticamente. Gli autori del report possono agevolare la creazione di avvisi relativi ai dati nei loro report denominando le aree dati in base agli scopi aziendali. Quando si crea un avviso relativo ai dati, si riceve una notifica mediante posta elettronica nel momento in cui i dati soddisfano le condizioni specificate. Per altre informazioni, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Creare un avviso dati nella finestra di progettazione Avviso dati](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) e [Avvisi dati di Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## Aggiornare i report  
+## <a name="upgrade-reports"></a>Aggiornare i report  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta varie versioni di definizioni dei report, server di report e siti di SharePoint. Per aggiornare un report:  
   
 -   Aggiornare un'installazione del server di report I report compilati archiviati nel server di report vengono aggiornati automaticamente al primo utilizzo. La definizione del report (.rdl) non viene modificata. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 -   Aprire un report in un ambiente di creazione di report. La definizione del report viene aggiornata nella maggior parte delle circostanze. Per altre informazioni, vedere [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md) e [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) (Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;).  
   
-## Risolvere problemi relativi ai report  
+## <a name="troubleshoot-reports"></a>Risolvere problemi relativi ai report  
  Per risolvere problemi relativi a un report:  
   
 -   **Determinare dove si sta verificando il problema.** Rivedere le informazioni fornite in [Fasi di un report](#bkmk_StagesSummary).  
   
 -   **Determinare dove è possibile trovare ulteriori informazioni.** Ad esempio, nel caso di strutture di report che includono espressioni, lo strumento Progettazione report fornisce maggiori informazioni sui problemi di valutazione delle espressioni rispetto allo strumento Generatore report. Per gli errori dell'elaborazione di report, i file di log contengono informazioni dettagliate.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Estensioni &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Server di report di Reporting Services](../../reporting-services/report-server-sharepoint/server-di-report-di-reporting-services.md)  
+ [Server di report di Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   
+

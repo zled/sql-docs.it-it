@@ -1,23 +1,28 @@
 ---
-title: "Aree dell&#39;area dati Tablix (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aree dell&quot;area dati Tablix (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aree dell&#39;area dati Tablix (Generatore report e SSRS)
+# <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] un'area dati Tablix può includere quattro aree contenenti celle Tablix:   
 * L'angolo  
 * L'area del gruppo di righe  
@@ -28,7 +33,7 @@ Le celle di ogni area presentano una funzione distinta. L'aggiunta di celle all'
   
 Nell'area di progettazione le linee tratteggiate indicano le quattro aree di un'area dati Tablix selezionata. Nella figura seguente sono mostrate le aree di una Tablix con gruppi di righe nidificati in base a categoria e sottocategoria, gruppi di colonne nidificati in base a geografia e paese/regione e un gruppo di colonne adiacenti basato sull'anno.  
   
- ![Aree dell'area dati Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Aree dell'area dati Tablix")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  Nell'elenco seguente vengono descritte le diverse aree.  
   
@@ -44,11 +49,11 @@ Nell'area di progettazione le linee tratteggiate indicano le quattro aree di un'
   
  Nella figura seguente viene mostrata l'area dati Tablix nel riquadro Anteprima.  
   
- ![Anteprima, angolo Tablix, gruppi di righe di colonne, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Anteprima, angolo Tablix, gruppi di righe di colonne, corpo")  
+ ![Gruppi di anteprima, angolo Tablix, riga e colonna, corpo](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "gruppi di anteprima, angolo Tablix, riga e colonna, corpo")  
   
  Nell'area del gruppo di righe vengono visualizzate due istanze del gruppo di categorie relative a Clothing e Components. Il gruppo di colonne contiene un'istanza del gruppo geografia relativa al Nord America, con due istanze del gruppo paese/regione nidificate per Canada (CA) e Stati Uniti (US). Inoltre, nella colonna adiacente sono visualizzate due istanze del gruppo anno relative a 2003 e 2004. La riga della colonna Total contiene i totali delle righe. Nella riga dei totali che si ripete con il gruppo di categorie sono mostrati i totali delle sottocategorie mentre nella riga del totale complessivo sono visualizzati i totali delle categorie una volta per ogni area dati.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

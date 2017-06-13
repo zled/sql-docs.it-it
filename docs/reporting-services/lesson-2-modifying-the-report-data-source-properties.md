@@ -1,24 +1,29 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lezione 2: Modificare i dati del Report delle proprietà dell&quot;origine | Documenti Microsoft"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verrà usato il portale Web per selezionare un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
   
 Inoltre, verrà modificato il set di dati e il report per utilizzare un parametro al fine di filtrare il report in `[Order]` in modo che tramite la sottoscrizione sia possibile restituire istanze differenti del report per formati di rendering e ordini specifici.  
@@ -33,7 +38,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
  **Nota:** l'URL del *portale* Web è "Reports", non l'URL del *server* di report di "Reportserver".  
 3.  Selezionare la cartella contenente il report **Ordini vendita** e nel menu di scelta rapida del report fare clic su **Gestisci**.  
  
- ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.gif)
+ ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
 3.  Fare clic su **origini dati** nel riquadro a sinistra.  
   
@@ -47,8 +52,8 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 6.  Fare clic su **Usa le credenziali seguenti**.  
   
-7. In **Tipo di credenziali** selezionare **Nome utente di Windows e password**
-8. Digitare il nome utente nel formato *dominio\utente* e la password. Se non si è autorizzati ad accedere al database AdventureWorks2014, specificare un account di accesso autorizzato.  
+7. In **Tipo di credenziali**selezionare **Nome utente di Windows e password**
+8. Digitare il nome utente nel formato *dominio\utente*e la password. Se non si è autorizzati ad accedere al database AdventureWorks2014, specificare un account di accesso autorizzato.  
     
 9. Fare clic su **Test connessione** per verificare che sia possibile connettersi all'origine dati.  
   
@@ -86,8 +91,8 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
  Nei passaggi seguenti si aggiungerà un parametro al report.  Il parametro del report determina il parametro del set di dati. 
 ## <a name="bkmk_add_reportparameter"></a>Per aggiungere un parametro del report e ripubblicare il report  
   
-1.  Nel riquadro **Dati report** espandere la cartella dei parametri e fare doppio clic sul parametro **Ordernumber**.  Il parametro è stato creato automaticamente nei passaggi precedenti quando è stato aggiunto al set di dati. Fare clic su **Nuovo** e quindi su **Parametro**  
- ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.gif) 
+1.  Nel riquadro **Dati report** espandere la cartella dei parametri e fare doppio clic sul parametro **Ordernumber** .  Il parametro è stato creato automaticamente nei passaggi precedenti quando è stato aggiunto al set di dati. Fare clic su **Nuovo** e quindi su **Parametro**  
+ ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  Verificare che **Nome** sia `OrderNumber`.  
   
 3.  Verificare che **Prompt** sia `OrderNumber`.  
@@ -103,7 +108,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
     -   Fare clic su Visualizza report per visualizzare il report completo senza l'utilizzo di parametri.  
   
     -   Deselezionare l'opzione **Null** e digitare un numero di ordine, ad esempio *so71949*, quindi fare clic su **Visualizza report** per visualizzare solo quell'ordine nel report.  
-    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif) 
+    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
 ## <a name="bkmk_redeploy"></a>Ridistribuire il report  
@@ -112,11 +117,11 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 2.  Sulla barra degli strumenti fare clic su **Compila** , quindi scegliere **Distribuisci Tutorial**.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
 + In questo modo il report è stato configurato per l'acquisizione di dati usando credenziali archiviate e i dati possono essere filtrati con un parametro. 
 + Nella lezione successiva la sottoscrizione verrà configurata usando le pagine della sottoscrizione guidata dai dati del portale Web. Vedere [Lezione 3: Definizione di una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Gestire origini dati dei report](../reporting-services/report-data/manage-report-data-sources.md)  
 [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
@@ -124,3 +129,5 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
   
   
+
+

@@ -1,31 +1,36 @@
 ---
-title: "Personalizzare i parametri di estensione per il rendering in RSReportServer.config. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opzioni di configurazione [Reporting Services]"
-  - "impostazioni di DeviceInfo"
-  - "estensioni per il rendering [Reporting Services], override dei comportamenti"
-  - "parametri [Reporting Services], rendering dei report"
-  - "override del comportamento di rendering dei report"
-  - "estensioni [Reporting Services], rendering"
+title: Personalizzare i parametri di estensione nel file RSReportServer. config per il Rendering | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration options [Reporting Services]
+- DeviceInfo settings
+- rendering extensions [Reporting Services], overriding behaviors
+- parameters [Reporting Services], report rendering
+- overriding report rendering behavior
+- extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
-  È possibile specificare i parametri di estensione per il rendering nel file di configurazione RSReportServer per sostituire il comportamento di rendering predefinito per i report in esecuzione in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. È possibile modificare i parametri di estensione per il rendering per ottenere gli obiettivi seguenti:  
+# <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
+  È possibile specificare i parametri di estensione per il rendering nel file di configurazione RSReportServer per sostituire il comportamento di rendering predefinito per i report in esecuzione in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È possibile modificare i parametri di estensione per il rendering per ottenere gli obiettivi seguenti:  
   
 -   Modificare il nome dell'estensione per il rendering nell'elenco Esporta sulla barra degli strumenti del report, cambiando, ad esempio, "Archivio Web" in "MHTML" oppure localizzare il nome in una lingua diversa.  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 31
   
  La modifica dei parametri di estensione per il rendering influisce solo sulle operazioni di rendering nel server di report. Non è possibile sostituire le impostazioni dell'estensione per il rendering in un'anteprima del report in Progettazione report.  
   
- La definizione dei parametri di estensione per il rendering nei file di configurazione influisce globalmente sulle estensioni per il rendering. Le impostazioni nei file di configurazione sono utilizzate al posto dei valori predefiniti ogni volta che viene utilizzata un'estensione per il rendering specifica. Se si vuole impostare i parametri di estensione per il rendering per un'operazione di rendering o per un report specifico, è necessario specificare le informazioni sul dispositivo a livello di programmazione tramite il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> o nell'URL di un report. Per altre informazioni sulla definizione delle impostazioni relative alle informazioni sul dispositivo per un'operazione di rendering e per visualizzare l'elenco completo di tali impostazioni, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ La definizione dei parametri di estensione per il rendering nei file di configurazione influisce globalmente sulle estensioni per il rendering. Le impostazioni nei file di configurazione sono utilizzate al posto dei valori predefiniti ogni volta che viene utilizzata un'estensione per il rendering specifica. Se si desidera impostare i parametri di estensione per il rendering per un'operazione di rendering o per un report specifico, è necessario specificare le informazioni sul dispositivo a livello di programmazione tramite il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> o nell'URL di un report. Per altre informazioni sulla definizione delle impostazioni relative alle informazioni sul dispositivo per un'operazione di rendering e per visualizzare l'elenco completo di tali impostazioni, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
-## Individuazione e modifica del file RSReportServer.config  
+## <a name="finding-and-modifying-rsreportserverconfig"></a>Individuazione e modifica del file RSReportServer.config  
  Le impostazioni di configurazione per i formati di output del report vengono specificate come parametri di estensione per il rendering nel file RSReportServer.config. Per specificare i parametri di estensione per il rendering nei file di configurazione, è necessario saper definire le strutture XML per l'impostazione dei parametri di rendering. È possibile modificare due strutture XML:  
   
 -   L'elemento **OverrideNames** definisce il nome visualizzato e la lingua dell'estensione per il rendering.  
@@ -46,10 +51,10 @@ caps.handback.revision: 31
   
  Per modificare il file, è possibile utilizzare un editor di testo. Il file RSReportServer.config si trova nella cartella \Reporting Services\Report Server\Bin. Per altre informazioni sulla modifica dei file di configurazione, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-## Modifica del nome visualizzato  
+## <a name="changing-the-display-name"></a>Modifica del nome visualizzato  
  Il nome di un'estensione per il rendering viene visualizzato nell'elenco Esporta sulla barra degli strumenti del report. Tra i nomi visualizzati predefiniti vi sono Archivio Web, File TIFF e File Acrobat (PDF). È possibile sostituire il nome visualizzato predefinito con un valore personalizzato specificando l'elemento **OverrideNames** nei file di configurazione. Se si stanno definendo due istanze di un'unica estensione per il rendering, è anche possibile usare l'elemento **OverrideNames** per distinguere ogni istanza nell'elenco Esporta.  
   
- Poiché i nomi visualizzati sono localizzati, se si sta sostituendo il nome visualizzato predefinito con un valore personalizzato, è necessario impostare l'attributo **Language**. In caso contrario, eventuali nomi specificati verranno ignorati. La lingua impostata deve essere valida per il computer del server di report. Se, ad esempio, il server di report è in esecuzione in un sistema operativo francese, è necessario specificare "fr-FR" come valore dell'attributo.  
+ Poiché i nomi visualizzati sono localizzati, se si sta sostituendo il nome visualizzato predefinito con un valore personalizzato, è necessario impostare l'attributo **Language** . In caso contrario, eventuali nomi specificati verranno ignorati. La lingua impostata deve essere valida per il computer del server di report. Se, ad esempio, il server di report è in esecuzione in un sistema operativo francese, è necessario specificare "fr-FR" come valore dell'attributo.  
   
  Nell'esempio seguente viene illustrato come definire un nome personalizzato in un server di report inglese:  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 31
 </Extension>  
 ```  
   
-## Modifica delle impostazioni relative alle informazioni sul dispositivo  
+## <a name="changing-device-information-settings"></a>Modifica delle impostazioni relative alle informazioni sul dispositivo  
  Per modificare le impostazioni predefinite relative alle informazioni sul dispositivo usare da un'estensione per il rendering già distribuita nel server di report, digitare la struttura XML **DeviceInfo** nei file di configurazione. Ogni estensione per il rendering supporta impostazioni relative alle informazioni sui dispositivi specifici per quella estensione. Per l'elenco completo delle impostazioni relative alle informazioni sul dispositivo, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  Nell'esempio seguente vengono illustrate la struttura XML e la sintassi per la modifica delle impostazioni predefinite dell'estensione per il rendering delle immagini:  
@@ -84,7 +89,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## Configurazione di più voci per un'estensione per il rendering  
+## <a name="configuring-multiple-entries-for-a-rendering-extension"></a>Configurazione di più voci per un'estensione per il rendering  
  È possibile creare più istanze della stessa estensione per il rendering, per supportare diverse opzioni di presentazione del report. Per ogni istanza definita è possibile specificare una diversa combinazione di valori dei parametri. Quando si definiscono nuove istanze di un'estensione per il rendering esistente, accertarsi di eseguire le operazioni seguenti:  
   
 -   Specificare un nome univoco per l'estensione.  
@@ -128,7 +133,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File di configurazione RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Impostazioni relative alle informazioni sul dispositivo CSV](../reporting-services/csv-device-information-settings.md)   

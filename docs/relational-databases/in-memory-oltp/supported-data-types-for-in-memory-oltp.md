@@ -1,7 +1,7 @@
 ---
 title: Tipi di dati supportati per OLTP in memoria | Microsoft Docs
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 06/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
+ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipi di dati supportati per OLTP In memoria
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Tabelle con ottimizzazione per la memoria  
   
--   Stored procedure compilate in modo nativo  
+-   Moduli di T-SQL compilati in modo nativo  
   
 ## <a name="unsupported-data-types"></a>Tipi di dati non supportati  
  I tipi di dati indicati di seguito non sono supportati:  
@@ -57,7 +57,7 @@ Per i precedenti tipi di dati string e binary, a partire da SQL Server 2016:
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificare le colonne LOB e altre colonne che si trovano all'esterno di righe
 
-L'istruzione Transact-SQL SELECT seguente restituisce tutte le colonne che si trovano all'esterno di righe, per tabelle con ottimizzazione per la memoria. Tenere presente quanto segue:
+A partire da SQL Server 2016, le tabelle con ottimizzazione per la memoria supportano colonne all'esterno di righe, che consentono una riga nella tabella di dimensioni maggiori di 8060 byte. L'istruzione Transact-SQL SELECT seguente restituisce tutte le colonne che si trovano all'esterno di righe, per tabelle con ottimizzazione per la memoria. Tenere presente quanto segue:
 
 - Tutte le colonne chiave di indice vengono archiviate all'interno di righe.
   - Le chiavi di indice non univoche possono ora includere colonne che ammettono valori Null in tabelle con ottimizzazione per la memoria.
@@ -81,24 +81,15 @@ SELECT
 ```
 
 
-#### <a name="natively-compiled-modules-support-for-lobs"></a>Supporto dei moduli compilati in modalità per le colonne LOB
-
-
-Quando si usa una funzione per i valori stringa predefinita in moduli compilati in modalità nativa, ad esempio un processo nativo, la funzione può accettare un tipo di stringa LOB. In un processo nativo, ad esempio, la funzione LTrim può inserire un parametro di tipo nvarchar(max) o varbinary(max).
-
-Queste colonne LOB possono essere il tipo restituito da una funzione definita dall'utente scalare compilata in modalità nativa.
-
-
 ### <a name="other-data-types"></a>Altri tipi di dati
 
 
 |Altri tipi|Per ulteriori informazioni|  
 |-----------------|--------------------------|  
-|tipi di tabella|[Variabili di tabella con ottimizzazione per la memoria](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|tipi di tabella|[Variabili di tabella con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto di Transact-SQL per OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [Implementazione di SQL_VARIANT in una tabella con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "Grafici a linee (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Riga grafici (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b309753291bfae573be58b124c033d021adb254c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Grafici a linee (Generatore report e SSRS)
+# <a name="line-charts-report-builder-and-ssrs"></a>Grafici a linee (Generatore report e SSRS)
   In un grafico a linee le serie vengono visualizzate come set di punti collegati da una singola linea. I grafici a linee vengono utilizzati per rappresentare grandi quantità di dati che si verificano nell'arco di un periodo di tempo continuo. Per altre informazioni sull'aggiunta di dati a un grafico a linee, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Nella figura seguente è illustrato un grafico a linee contenente tre serie.  
   
- ![Grafico a linee](../../reporting-services/report-design/media/rs-linechart.gif "Grafico a linee")  
+ ![Grafico a linee](../../reporting-services/report-design/media/rs-linechart.gif "grafico a linee")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variazioni  
+## <a name="variations"></a>Variazioni  
   
 -   **Linee smussate**. Grafico a linee in cui viene utilizzata una linea curva anziché regolare.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   **Grafici sparkline**. Le variazioni del grafico a linee in cui viene visualizzata solo la serie di linee nella cella di una tabella o matrice. Per altre informazioni, vedere [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Considerazioni sui dati per i grafici a linee  
+## <a name="data-considerations-for-line-charts"></a>Considerazioni sui dati per i grafici a linee  
   
 -   Per migliorare l'impatto visivo del grafico a linee predefinito, impostare lo spessore del bordo della serie su 3 e aggiungere un offset dell'ombreggiatura pari a 1. In questo modo verrà creato un grafico a linee più spesse. Se si sceglie un altro tipo di grafico, sarà necessario ripristinare i valori originali di queste proprietà.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
   
 -   Una serie disegnata come linea non occupa molto spazio all'interno di un'area del grafico.  Per questo motivo, i grafici a linee vengono spesso combinati con altri tipi di grafico, ad esempio istogrammi. Tuttavia, non è possibile combinare un grafico a linee con i tipo di grafico a barre, polare, a torta o con forme.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

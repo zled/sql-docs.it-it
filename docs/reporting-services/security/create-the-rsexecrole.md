@@ -1,26 +1,33 @@
 ---
-title: "Creare RSExecRole | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RSExecRole"
+title: Creare RSExecRole | Documenti Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creare RSExecRole
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzato un ruolo del database predefinito denominato **RSExecRole** che consente di concedere autorizzazioni del server di report al database relativo. Il ruolo **RSExecRole** viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] nuovo o diverso, è necessario tuttavia creare nuovamente il ruolo nei database di sistema master e MSDB.  
+
+# <a name="create-the-rsexecrole"></a>Creare RSExecRole
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzato un ruolo del database predefinito denominato **RSExecRole** che consente di concedere autorizzazioni del server di report al database relativo. Il ruolo **RSExecRole** viene creato automaticamente con il database del server di report. Si consiglia di non modificare mai né di assegnare utenti a tale ruolo. Quando si sposta un database del server di report in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
   
  Utilizzando le istruzioni indicate di seguito, verranno effettuate le operazioni seguenti:  
   
@@ -31,11 +38,11 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Le istruzioni contenute in questo argomento sono destinate agli utenti che non desiderano eseguire uno script o scrivere codice WMI per effettuare il provisioning del database del server di report. Se si gestisce una distribuzione di dimensioni elevate e i database verranno spostati regolarmente, è consigliabile scrivere uno script per automatizzare questi passaggi. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## Prima di iniziare  
+## <a name="before-you-start"></a>Prima di iniziare  
   
--   Eseguire il backup delle chiavi di crittografia in modo che sia possibile ripristinarle dopo che il database è stato spostato. Questo passaggio non influisce direttamente sulla possibilità di creare e di effettuare il provisioning di **RSExecRole**, ma è necessario disporre di una copia di backup delle chiavi per verificare il proprio lavoro. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md).  
+-   Eseguire il backup delle chiavi di crittografia in modo che sia possibile ripristinarle dopo che il database è stato spostato. Questo passaggio non influisce direttamente sulla possibilità di creare e di effettuare il provisioning di **RSExecRole**, ma è necessario disporre di una copia di backup delle chiavi per verificare il proprio lavoro. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Verificare di avere eseguito l'accesso con un account utente che dispone delle autorizzazioni **sysadmin** sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Verificare di avere eseguito l'accesso con un account utente che dispone delle autorizzazioni **sysadmin** sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Verificare che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia installato e che sia in esecuzione nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che si intende utilizzare.  
   
@@ -43,10 +50,10 @@ caps.handback.revision: 23
   
  Le istruzioni per la creazione manuale di **RSExecRole** devono essere utilizzate nel contesto dell'esecuzione della migrazione di un'installazione del server di report. Attività importanti come l'esecuzione del backup e lo spostamento del database del server di report non vengono descritte in questo argomento, ma nella documentazione del Motore di database.  
   
-## Creazione di RSExecRole nel database master  
+## <a name="create-rsexecrole-in-master"></a>Creazione di RSExecRole nel database master  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporti operazioni pianificate, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzate stored procedure estese. I passaggi seguenti illustrano come concedere autorizzazioni di esecuzione per le procedure al ruolo **RSExecRole** .  
   
-#### Per creare RSExecRole nel database di sistema master mediante Management Studio  
+#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Per creare RSExecRole nel database di sistema master mediante Management Studio  
   
 1.  Avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , quindi connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è ospitato il database del server di report.  
   
@@ -94,12 +101,12 @@ caps.handback.revision: 23
   
 20. Ripetere il passaggio per ognuna delle stored procedure rimanenti. A**RSExecRole** devono essere concesse le autorizzazioni di esecuzione per tutte le tre stored procedure.  
   
- ![Pagina Proprietà ruolo database](../../reporting-services/security/media/rsexecroledbproperties.gif "Pagina Proprietà ruolo database")  
+ ![Pagina Proprietà ruolo database](../../reporting-services/security/media/rsexecroledbproperties.gif "pagina Proprietà ruolo Database")  
   
-## Creazione di RSExecRole nel database MSDB  
+## <a name="create-rsexecrole-in-msdb"></a>Creazione di RSExecRole nel database MSDB  
  Per supportare operazioni pianificate, in Reporting Services vengono utilizzate le stored procedure per il servizio SQL Server Agent e le informazioni sul processo vengono recuperate dalle tabelle di sistema. I passaggi seguenti illustrano come concedere autorizzazioni di esecuzione per le procedure e autorizzazioni di selezione sulle tabelle a RSExecRole.  
   
-#### Per creare RSExecRole nel database di sistema MSDB  
+#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>Per creare RSExecRole nel database di sistema MSDB  
   
 1.  Ripetere passaggi analoghi per concedere le autorizzazioni alle stored procedure e alle tabelle nel database MSDB. Per semplificare i passaggi, il provisioning delle stored procedure e delle tabelle verrà effettuato separatamente.  
   
@@ -185,17 +192,17 @@ caps.handback.revision: 23
   
 30. Ripetere il passaggio per la tabella sysjobs. A RSExecRole devono essere concesse le autorizzazioni di selezione per entrambe le tabelle.  
   
-## Spostamento del database del server di report  
- Dopo avere creato i ruoli, è possibile spostare il database del server di report in una nuova istanza di SQL Server. Per altre informazioni, vedere [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+## <a name="move-the-report-server-database"></a>Spostamento del database del server di report  
+ Dopo avere creato i ruoli, è possibile spostare il database del server di report in una nuova istanza di SQL Server. Per ulteriori informazioni, vedere [lo spostamento di database Server di Report in un altro Computer](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- L'aggiornamento del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]può essere eseguito prima o dopo lo spostamento del database.  
+ Se si sta aggiornando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] a SQL Server 2016, è possibile aggiornarla prima o dopo lo spostamento del database.  
   
- Il database del server di report verrà aggiornato automaticamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando il server di report si connette al database stesso. Non sono necessari passaggi specifici per aggiornare il database.  
+ Il database del server di report verrà aggiornato automaticamente quando il server di report si connette a esso. Non sono necessari passaggi specifici per aggiornare il database.  
   
-## Ripristino delle chiavi di crittografia e verifica del lavoro  
+## <a name="restore-encryption-keys-and-verify-your-work"></a>Ripristino delle chiavi di crittografia e verifica del lavoro  
  Se i database del server di report sono stati collegati, è possibile completare i passaggi seguenti per verificare il lavoro.  
   
-#### Per verificare il funzionamento del server di report dopo uno spostamento del database  
+#### <a name="to-verify-report-server-operability-after-a-database-move"></a>Per verificare il funzionamento del server di report dopo uno spostamento del database  
   
 1.  Avviare lo strumento di configurazione di Reporting Services e connettersi al server di report.  
   
@@ -205,7 +212,7 @@ caps.handback.revision: 23
   
 4.  Fare clic su **Scegli un database del server di report esistente**.  
   
-5.  Immettere il nome del server del Motore di database. Se i database del server di report sono stati collegati a un'istanza denominata, è necessario digitare il nome dell'istanza nel formato <nomeserver>\>\\<nomeistanza\>.  
+5.  Immettere il nome del server del Motore di database. Se i database del server di report è collegato a un'istanza denominata, è necessario digitare il nome dell'istanza nel formato: \<nomeserver >\\< NomeIstanza\>.  
   
 6.  Fare clic su **Test connessione**.  
   
@@ -226,11 +233,12 @@ caps.handback.revision: 23
 14. Fare clic su **URL Gestione report**.  
   
 15. Fare clic sul collegamento per aprire Gestione report. Gli elementi del server di report dovrebbero essere visualizzati dal database del server di report.  
-  
-## Vedere anche  
- [Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
-  
-  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Spostamento di database del server di report in un altro computer &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+[Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Creare un database del Server di Report in modalità nativa &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

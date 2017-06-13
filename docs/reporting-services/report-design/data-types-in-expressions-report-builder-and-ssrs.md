@@ -1,23 +1,28 @@
 ---
-title: "Tipi di dati nelle espressioni (Generatore report e SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tipi di dati nelle espressioni (Generatore Report e SSRS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
+ms.contentlocale: it-it
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tipi di dati nelle espressioni (Generatore report e SSRS)
+# <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
   
  Per altre informazioni sui formati di visualizzazione, vedere [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md).  
@@ -25,7 +30,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Tipi di dati RDL (Report Definition Language) e tipi di dati CLR (Common Language Runtime)  
+## <a name="report-definition-language-rdl-data-types-and-common-language-runtime-clr-data-types"></a>Tipi di dati RDL (Report Definition Language) e tipi di dati CLR (Common Language Runtime)  
  I valori specificati in un file RDL devono essere un tipo di dati RDL. Quando il report viene compilato ed elaborato, i tipi di dati RDL vengono convertiti in tipi di dati CLR. Nella tabella seguente viene visualizzata la conversione, contrassegnata come valore predefinito:  
   
 |Tipo RDL|Tipi CLR|  
@@ -40,7 +45,7 @@ caps.handback.revision: 9
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  
   
-## Informazioni sui tipi di dati e scrittura di espressioni  
+## <a name="understanding-data-types-and-writing-expressions"></a>Informazioni sui tipi di dati e scrittura di espressioni  
  È importante comprendere i tipi di dati quando si scrivono espressioni per confrontare o combinare valori, ad esempio quando si definiscono espressioni di raggruppamento o di filtro o quando si calcolano le aggregazioni. Confronti e calcoli sono validi solo tra elementi dello stesso tipo di dati. Se i tipi di dati non corrispondono, è necessario convertire esplicitamente il tipo di dati nell'elemento del report utilizzando un'espressione.  
   
  Nell'elenco seguente sono descritti i casi in cui potrebbe essere necessario convertire i dati in un altro tipo di dati:  
@@ -55,10 +60,10 @@ caps.handback.revision: 9
   
 -   Conversione da un tipo di dati a un altro tipo di dati di un valore recuperato dall'origine dati.  
   
-## Determinazione del tipo di dati del report  
- Per determinare il tipo di dati di un elemento del report è possibile scrivere un'espressione. Ad esempio, per visualizzare il tipo di dati del campo `MyField`, aggiungere l'espressione `=Fields!MyField.Value.GetType().ToString()` a una cella della tabella. Il risultato indica il tipo di dati CLR usato per rappresentare `MyField`, ad esempio **System.String** o **System.DateTime**.  
+## <a name="determining-the-data-type-of-report-data"></a>Determinazione del tipo di dati del report  
+ Per determinare il tipo di dati di un elemento del report è possibile scrivere un'espressione. Ad esempio, per visualizzare il tipo di dati del campo `MyField`, aggiungere l'espressione `=Fields!MyField.Value.GetType().ToString()`a una cella della tabella. Il risultato indica il tipo di dati CLR usato per rappresentare `MyField`, ad esempio **System.String** o **System.DateTime**.  
   
-## Conversione dei campi del set di dati in un altro tipo di dati  
+## <a name="converting-dataset-fields-to-a-different-data-type"></a>Conversione dei campi del set di dati in un altro tipo di dati  
  È inoltre possibile convertire i campi del set di dati prima di utilizzarli in un report. Nell'elenco seguente vengono descritte le modalità di conversione di un campo del set di dati esistente:  
   
 -   Modificare la query del set di dati in modo da aggiungere un nuovo campo di query con i dati convertiti. Per le origini dati relazionali o multidimensionali, per eseguire la conversione vengono utilizzate le risorse dell'origine dati.  
@@ -67,13 +72,13 @@ caps.handback.revision: 9
   
 -   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include ad esempio una proprietà estesa FORMATTED_VALUE per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
-## Informazioni sui tipi di dati dei parametri  
- I parametri del report devono essere di uno dei cinque tipi di dati seguenti: Boolean, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report**.  
+## <a name="understanding-parameter-data-types"></a>Informazioni sui tipi di dati dei parametri  
+ I parametri del report devono essere di uno dei cinque tipi di dati seguenti: Boolean, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
   
 > [!NOTE]  
 >  I parametri di report di tipo DateTime non supportano i millisecondi. Sebbene sia possibile creare un parametro basato su valori che includono millisecondi, non è possibile selezionare un valore da un elenco a discesa di valori disponibili contenente valori di tipo Date o Time che includono millisecondi.  
   
-## Scrittura di espressioni che convertono tipi di dati o estraggono parti di dati  
+## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>Scrittura di espressioni che convertono tipi di dati o estraggono parti di dati  
  Quando si combinano testo e campi del set di dati utilizzando l'operatore di concatenazione (&), Common Language Runtime (CLR) fornisce in genere formati predefiniti. Per convertire in modo esplicito un parametro o un campo del set di dati in un tipo di dati specifico, è necessario utilizzare un metodo CLR o una funzione della libreria di runtime di Visual Basic.  
   
  Nella tabella seguente sono riportati alcuni esempi di conversione dei tipi di dati.  
@@ -91,15 +96,15 @@ caps.handback.revision: 9
   
  È inoltre possibile utilizzare la funzione Format per controllare il formato di visualizzazione del valore. Per altre informazioni, vedere [Funzioni (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483).  
   
-## Esempi avanzati  
+## <a name="advanced-examples"></a>Esempi avanzati  
  Quando ci si connette a un'origine dati con un provider di dati che non fornisce il supporto di conversione per tutti i tipi di dati dell'origine dati, il tipo di dati predefinito per i tipi di origine dati non supportati corrisponde a String. Negli esempi seguenti sono fornite le soluzioni per i tipi di dati specifici restituiti come stringa.  
   
-### Concatenazione di una stringa e di un tipo di dati DateTimeOffset CLR  
+### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Concatenazione di una stringa e di un tipo di dati DateTimeOffset CLR  
  Per la maggior parte dei tipi di dati, CLR fornisce conversioni predefinite in modo da consentire la concatenazione di valori con tipi di dati diversi in una stringa mediante l'operatore &. Nell'espressione seguente, ad esempio, viene concatenato il testo "The date and time are: " con il campo del set di dati StartDate, che rappresenta un valore <xref:System.DateTime>: `="The date and time are: " & Fields!StartDate.Value`.  
   
- Per alcuni tipi di dati, potrebbe essere necessario includere la funzione ToString. Nell'espressione seguente, ad esempio, è riportato lo stesso esempio con il tipo di dati CLR <xref:System.DateTimeOffset> che include la data, l'ora e una differenza di fuso orario rispetto al fuso orario UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Per alcuni tipi di dati, potrebbe essere necessario includere la funzione ToString. Ad esempio, l'espressione seguente viene illustrato lo stesso esempio con il tipo di dati CLR <xref:System.DateTimeOffset>, che includono la data e l'ora di un fuso orario offset rispetto al fuso orario UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
-### Conversione del tipo di dati String in un tipo di dati DateTime CLR  
+### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Conversione del tipo di dati String in un tipo di dati DateTime CLR  
  Se un'estensione per l'elaborazione dati non supporta tutti i tipi di dati definiti in un'origine dati, i dati possono essere recuperati come testo. Un valore del tipo di dati **datetimeoffset(7)** può essere, ad esempio, recuperato come dati di tipo String. A Perth, in Australia, il valore stringa per il 1 luglio 2008, alle 6:05:07.9999999 AM è simile al seguente:  
   
  `2008-07-01 06:05:07.9999999 +08:00`  
@@ -118,7 +123,7 @@ caps.handback.revision: 9
   
          Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il valore **DateTime** seguente: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 16.07).  
   
- Per altre informazioni sulla conversione di stringhe in tipi di dati **DateTime**, vedere [Analisi delle stringhe di data e ora](http://go.microsoft.com/fwlink/?LinkId=89703), [Formattazione di data e ora per impostazioni cultura specifiche](http://go.microsoft.com/fwlink/?LinkId=89704) e [Scelta tra DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) in MSDN.  
+ Per altre informazioni sulla conversione di stringhe in tipi di dati **DateTime** , vedere [Analisi delle stringhe di data e ora](http://go.microsoft.com/fwlink/?LinkId=89703), [Formattazione di data e ora per impostazioni cultura specifiche](http://go.microsoft.com/fwlink/?LinkId=89704)e [Scelta tra DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) in MSDN.  
   
 -   Aggiungere un nuovo campo calcolato al set di dati del report che utilizza un'espressione per estrarre parti della stringa. Per altre informazioni, vedere [Aggiungere, modificare e aggiornare i campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 9
   
  Per altre informazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Tipi di dati in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   
