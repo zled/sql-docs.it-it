@@ -1,5 +1,5 @@
 ---
-title: Mantenere i valori Null o usare i valori predefiniti durante un&quot;importazione bulk (SQL Server) | Microsoft Docs
+title: Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 280e52e4ffbb86b02007493c4d000d3be0decece
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)

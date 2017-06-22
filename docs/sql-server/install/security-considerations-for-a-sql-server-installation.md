@@ -1,5 +1,5 @@
 ---
-title: Considerazioni sulla sicurezza per un&quot;installazione di SQL Server | Microsoft Docs
+title: Considerazioni sulla sicurezza per un'installazione di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af11eb46f2c213e85f0b1bbff80e98e5eeb436c0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerazioni sulla sicurezza per un'installazione di SQL Server

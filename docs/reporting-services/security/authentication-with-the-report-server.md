@@ -1,5 +1,5 @@
 ---
-title: L&quot;autenticazione con il Server di Report | Documenti Microsoft
+title: L'autenticazione con il Server di Report | Documenti Microsoft
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 

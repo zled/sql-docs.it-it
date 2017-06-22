@@ -1,5 +1,5 @@
 ---
-title: Implementazione di una classe di comando per un&quot;estensione per l&quot;elaborazione dati | Documenti Microsoft
+title: Implementazione di una classe di comando per un'estensione per l'elaborazione dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9e6858a7f5c67508ff30396bb6ec668b908d671f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implementazione di una classe Command per un'estensione per l'elaborazione dati

@@ -1,5 +1,5 @@
 ---
-title: Impostazione di Namespace dell&quot;elemento per il metodo GetProperties | Documenti Microsoft
+title: Impostazione di Namespace dell'elemento per il metodo GetProperties | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ee3fb56b2b5f631e2959f96ada2be74a7584e4f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Impostazione dello spazio dei nomi degli elementi per il metodo GetProperties

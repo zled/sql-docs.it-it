@@ -1,5 +1,5 @@
 ---
-title: Rinominare funzioni definite dall&quot;utente | Microsoft Docs
+title: Rinominare funzioni definite dall'utente | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6af95b4d0b4bc3b8e652fd40fa1427cd156c1514
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rename-user-defined-functions"></a>Ridenominare funzioni definite dall'utente

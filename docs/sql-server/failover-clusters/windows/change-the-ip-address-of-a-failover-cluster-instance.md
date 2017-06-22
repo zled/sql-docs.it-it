@@ -1,5 +1,5 @@
 ---
-title: Modificare l&quot;indirizzo IP di un&quot;istanza del cluster di failover | Microsoft Docs
+title: Modificare l'indirizzo IP di un'istanza del cluster di failover | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d30ca9ae2885d25bd0b62a17501ae7dfe94f26e9
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Modifica dell'indirizzo IP di un'istanza del cluster di failover

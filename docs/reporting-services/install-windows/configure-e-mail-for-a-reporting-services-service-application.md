@@ -1,5 +1,5 @@
 ---
-title: Configurare la posta elettronica per l&quot;applicazione di servizio di Reporting Services | Documenti Microsoft
+title: Configurare la posta elettronica per l'applicazione di servizio di Reporting Services | Documenti Microsoft
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23cf66b01385b3c0f3e9ddc6ff24ea578cf5eec3
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services

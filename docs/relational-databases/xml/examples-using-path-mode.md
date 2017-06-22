@@ -1,5 +1,5 @@
 ---
-title: "Esempi d&quot;uso della modalità PATH | Microsoft Docs"
+title: "Esempi d'uso della modalità PATH | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH

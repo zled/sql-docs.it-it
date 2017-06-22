@@ -1,5 +1,5 @@
 ---
-title: Uso dell&quot;archivio query con OLTP in memoria | Microsoft Docs
+title: Uso dell'archivio query con OLTP in memoria | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/29/2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso di Archivio query con OLTP in-memoria

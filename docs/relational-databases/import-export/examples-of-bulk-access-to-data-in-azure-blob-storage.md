@@ -1,5 +1,5 @@
 ---
-title: Esempi di accesso bulk ai dati nell&quot;archiviazione BLOB di Azure | Microsoft Docs
+title: Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017
 ms.prod: sql-server-2017

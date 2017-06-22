@@ -1,5 +1,5 @@
 ---
-title: "L&quot;impostazione della proprietà Url del servizio Web | Documenti Microsoft"
+title: "L'impostazione della proprietà Url del servizio Web | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

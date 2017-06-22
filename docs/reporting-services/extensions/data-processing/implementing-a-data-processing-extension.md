@@ -1,5 +1,5 @@
 ---
-title: Implementazione di un&quot;estensione di elaborazione dei dati | Documenti Microsoft
+title: Implementazione di un'estensione di elaborazione dei dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 372d21a412efec6306912950e7f9f5a6f577ee3f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementazione di un'estensione per l'elaborazione dati

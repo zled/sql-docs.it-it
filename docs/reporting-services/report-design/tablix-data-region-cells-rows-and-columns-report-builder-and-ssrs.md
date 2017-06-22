@@ -1,5 +1,5 @@
 ---
-title: Celle dell&quot;area dati Tablix, righe e colonne (Generatore Report) e SSRS | Documenti Microsoft
+title: Celle dell'area dati Tablix, righe e colonne (Generatore Report) e SSRS | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)

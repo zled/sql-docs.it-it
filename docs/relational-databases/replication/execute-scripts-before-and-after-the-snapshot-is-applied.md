@@ -1,5 +1,5 @@
 ---
-title: Eseguire gli script prima e dopo l&quot;applicazione dello snapshot | Microsoft Docs
+title: Eseguire gli script prima e dopo l'applicazione dello snapshot | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c9bc1f84cf007de680f8f2da80668aebe62f7d8e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="execute-scripts-before-and-after-the-snapshot-is-applied"></a>Eseguire gli script prima e dopo l'applicazione dello snapshot

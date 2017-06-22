@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dell&quot;API SOAP in un&quot;applicazione Windows | Documenti Microsoft
+title: Utilizzo dell'API SOAP in un'applicazione Windows | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cc64fae44bd97b4696df1162ab2f0de73aa0eb2d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrazione di Reporting Services tramite SOAP - applicazione di Windows

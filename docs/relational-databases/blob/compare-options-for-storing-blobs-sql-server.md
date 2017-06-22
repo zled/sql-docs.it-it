@@ -1,5 +1,5 @@
 ---
-title: Confrontare opzioni per l&quot;archiviazione di BLOB (SQL Server) | Microsoft Docs
+title: Confrontare opzioni per l'archiviazione di BLOB (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 98538bd77f81cd6a1f16857b70a866ee3f6d171a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)

@@ -1,5 +1,5 @@
 ---
-title: Supporto di FOR XML per i tipi di dati definiti dall&quot;utente (UDT) | Microsoft Docs
+title: Supporto di FOR XML per i tipi di dati definiti dall'utente (UDT) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1d47d9e39b1b797a3c7022c722e61fbbfb932710
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>Supporto di FOR XML per i tipi di dati definiti dall'utente (UDT)

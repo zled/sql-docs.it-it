@@ -1,5 +1,5 @@
 ---
-title: Rilevare i problemi relativi all&quot;adattatore host SCSI | Microsoft Docs
+title: Rilevare i problemi relativi all'adattatore host SCSI | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a96ea91aa958685c47ed1d0af773d16d1d395adc
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>Rilevamento dei problemi relativi all'adattatore host SCSI

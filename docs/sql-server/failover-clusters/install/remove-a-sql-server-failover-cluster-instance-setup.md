@@ -1,5 +1,5 @@
 ---
-title: Rimuovere un&quot;istanza del cluster di failover di SQL Server (programma di installazione) | Microsoft Docs
+title: Rimuovere un'istanza del cluster di failover di SQL Server (programma di installazione) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4e3b14ec10f8fcc252363ac061a16469c9f8284c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="remove-a-sql-server-failover-cluster-instance-setup"></a>Rimuovere un'istanza del cluster di failover di SQL Server (programma di installazione)

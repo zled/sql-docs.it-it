@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 7: Aggiungere l&quot;azione drill-through nel Report padre | Documenti Microsoft'
+title: 'Lezione 7: Aggiungere l''azione drill-through nel Report padre | Documenti Microsoft'
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a9790c4afc44e66c521005a3556f8082527d260
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lezione 7: Aggiungere un'azione drill-through in un report padre

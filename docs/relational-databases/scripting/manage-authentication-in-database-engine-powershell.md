@@ -1,5 +1,5 @@
 ---
-title: Gestire l&quot;autenticazione nel motore di database PowerShell | Microsoft Docs
+title: Gestire l'autenticazione nel motore di database PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 135580dd67315ad9eb07361dcff7b1334398a0aa
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gestire l'autenticazione in motore di database PowerShell

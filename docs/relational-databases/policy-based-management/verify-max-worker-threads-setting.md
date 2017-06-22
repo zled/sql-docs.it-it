@@ -1,5 +1,5 @@
 ---
-title: Verificare l&quot;impostazione relativa al numero massimo di thread di lavoro | Microsoft Docs
+title: Verificare l'impostazione relativa al numero massimo di thread di lavoro | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b571ab8bebfd49bb252e9f250307d984036265b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="verify-max-worker-threads-setting"></a>Verifica dell'impostazione relativa al numero massimo di thread di lavoro

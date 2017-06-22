@@ -1,5 +1,5 @@
 ---
-title: "Nascondere l&quot;intestazione di pagina o piè di pagina nella prima o nell&quot;ultima pagina Report Builder-SSRS | Documenti Microsoft"
+title: "Nascondere l'intestazione di pagina o piè di pagina nella prima o nell'ultima pagina Report Builder-SSRS | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 17c9a8c854fad691b864ff1b0aba4e91b5d7b64d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina (Generatore report e SSRS)

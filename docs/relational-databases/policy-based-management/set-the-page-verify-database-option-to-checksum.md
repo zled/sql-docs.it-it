@@ -1,5 +1,5 @@
 ---
-title: Impostare l&quot;opzione di database PAGE_VERIFY su CHECKSUM | Microsoft Docs
+title: Impostare l'opzione di database PAGE_VERIFY su CHECKSUM | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3bd575c72ea39e3f0b0050bfa508913a652d8023
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-the-pageverify-database-option-to-checksum"></a>Impostazione dell'opzione di database PAGE_VERIFY su CHECKSUM

@@ -1,5 +1,5 @@
 ---
-title: Segnalare l&quot;endpoint del servizio Web ReportServer | Documenti Microsoft
+title: Segnalare l'endpoint del servizio Web ReportServer | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016

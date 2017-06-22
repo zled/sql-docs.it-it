@@ -1,5 +1,5 @@
 ---
-title: Disabilitare l&quot;opzione lightweight pooling | Microsoft Docs
+title: Disabilitare l'opzione lightweight pooling | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 373b219ff44652e584961ee950e1e3a5ca923ef7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="disable-lightweight-pooling"></a>Disabilitazione di lightweight pooling

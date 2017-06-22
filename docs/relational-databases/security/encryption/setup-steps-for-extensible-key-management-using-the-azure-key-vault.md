@@ -1,5 +1,5 @@
 ---
-title: Procedura di installazione di Extensible Key Management con l&quot;insieme di credenziali delle chiavi di Azure | Microsoft Docs
+title: Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure

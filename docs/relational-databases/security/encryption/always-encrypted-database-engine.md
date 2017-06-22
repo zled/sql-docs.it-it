@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: it-it
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
@@ -103,15 +103,15 @@ Per iniziare a usare rapidamente questa funzionalità, eseguire la [procedura gu
 > [!NOTE]  
 >  Per altre informazioni sull'uso della procedura guidata, vedere il video in [Getting Started with Always Encrypted with SSMS (Introduzione a Always Encrypted con SSMS)](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
-1.    Connettersi a un database esistente che contiene tabelle con colonne che si vuole crittografare usando **Esplora oggetti** di Management Studio oppure creare un nuovo database, creare una o più tabelle con colonne da crittografare e connettersi ad esso.
-2.    Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Crittografa colonne** per aprire la **Procedura guidata Always Encrypted**.
-3.    Leggere la pagina **Introduzione** , quindi fare clic su **Avanti**.
-4.    Nella pagina **Selezione colonne** espandere le tabelle e selezionare le colonne da crittografare.
-5.    Per ogni colonna selezionata da crittografare, impostare **Tipo di crittografia** su *Deterministico* o *Casuale*.
-6.    Per ogni colonna selezionata per la crittografia, selezionare una **Chiave di crittografia**. Se in precedenza non è stata creata una chiave di crittografia per il database, selezionare l'opzione predefinita di una nuova chiave generata automaticamente e quindi fare clic su **Avanti**.
-7.    Nella pagina **Configurazione chiave master** , selezionare un percorso per archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**.
-8.    Nella pagina **Convalida** scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
-9.    Nella pagina **Riepilogo** esaminare le opzioni selezionate e quindi fare clic su **Fine**. Al termine, chiudere la procedura guidata.
+1.  Connettersi a un database esistente che contiene tabelle con colonne che si vuole crittografare usando **Esplora oggetti** di Management Studio oppure creare un nuovo database, creare una o più tabelle con colonne da crittografare e connettersi ad esso.
+2.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Crittografa colonne** per aprire la **Procedura guidata Always Encrypted**.
+3.  Leggere la pagina **Introduzione** , quindi fare clic su **Avanti**.
+4.  Nella pagina **Selezione colonne** espandere le tabelle e selezionare le colonne da crittografare.
+5.  Per ogni colonna selezionata da crittografare, impostare **Tipo di crittografia** su *Deterministico* o *Casuale*.
+6.  Per ogni colonna selezionata per la crittografia, selezionare una **Chiave di crittografia**. Se in precedenza non è stata creata una chiave di crittografia per il database, selezionare l'opzione predefinita di una nuova chiave generata automaticamente e quindi fare clic su **Avanti**.
+7.  Nella pagina **Configurazione chiave master** , selezionare un percorso per archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**.
+8.  Nella pagina **Convalida** scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
+9.  Nella pagina **Riepilogo** esaminare le opzioni selezionate e quindi fare clic su **Fine**. Al termine, chiudere la procedura guidata.
 
   
 ## <a name="feature-details"></a>Informazioni sulle funzionalità  

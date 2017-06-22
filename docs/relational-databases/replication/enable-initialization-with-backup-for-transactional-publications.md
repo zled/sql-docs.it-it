@@ -1,5 +1,5 @@
 ---
-title: Abilitare l&quot;inizializzazione con un backup per le pubblicazioni transazionali | Microsoft Docs
+title: Abilitare l'inizializzazione con un backup per le pubblicazioni transazionali | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 954362e3ef6728df6f497bcb337aa234718cdee8
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enable-initialization-with-backup-for-transactional-publications"></a>Abilitare l'inizializzazione con un backup per le pubblicazioni transazionali

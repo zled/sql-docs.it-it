@@ -1,5 +1,5 @@
 ---
-title: Riferimento dell&quot;espressione (Generatore Report e SSRS) | Documenti Microsoft
+title: Riferimento dell'espressione (Generatore Report e SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Riferimento dell'espressione (Generatore report e SSRS)

@@ -1,5 +1,5 @@
 ---
-title: Creazione guidata nuova sottoscrizione (Guida di riferimento all&quot;interfaccia utente) | Microsoft Docs
+title: Creazione guidata nuova sottoscrizione (Guida di riferimento all'interfaccia utente) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1d33bcc230d395b405ce3a2daf72bac286c4bbb1
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Creazione guidata nuova sottoscrizione (Guida di riferimento all'interfaccia utente)

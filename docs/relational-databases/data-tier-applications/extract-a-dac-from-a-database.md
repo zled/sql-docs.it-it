@@ -1,5 +1,5 @@
 ---
-title: Estrarre un&quot;applicazione livello dati da un database | Microsoft Docs
+title: Estrarre un'applicazione livello dati da un database | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-server-2016
@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: faeab1963609f5563f31e13b2ee965fdac8a43b8
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database

@@ -1,5 +1,5 @@
 ---
-title: "Rimuovere un&quot;istanza di SQL Server da Utilità SQL Server | Microsoft Docs"
+title: "Rimuovere un'istanza di SQL Server da Utilità SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0deccd96e577ceb352ba108e5799cc3e849f08c7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Rimuovere un'istanza di SQL Server da Utilità SQL Server

@@ -1,5 +1,5 @@
 ---
-title: Impostare le autorizzazioni per operazioni del Server di Report in un&quot;applicazione Web di SharePoint | Documenti Microsoft
+title: Impostare le autorizzazioni per operazioni del Server di Report in un'applicazione Web di SharePoint | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint

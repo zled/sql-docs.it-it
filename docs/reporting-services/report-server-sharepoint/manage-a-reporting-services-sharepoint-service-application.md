@@ -1,5 +1,5 @@
 ---
-title: Gestire un&quot;applicazione di servizio SharePoint di Reporting Services | Documenti Microsoft
+title: Gestire un'applicazione di servizio SharePoint di Reporting Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services

@@ -1,5 +1,5 @@
 ---
-title: L&quot;accesso all&quot;API SOAP | Documenti Microsoft
+title: L'accesso all'API SOAP | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo della classe RenderedOutputFile per un&quot;estensione di recapito | Documenti Microsoft
+title: Utilizzo della classe RenderedOutputFile per un'estensione di recapito | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ebd5ea1a5a96727a77ea78aa1ee9cbc74e6dd81
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>Utilizzo della classe RenderedOutputFile per un'estensione per il recapito

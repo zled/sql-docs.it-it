@@ -1,5 +1,5 @@
 ---
-title: Eseguire il backup di database abilitati per l&quot;estensione (Estensione database) | Microsoft Docs
+title: Eseguire il backup di database abilitati per l'estensione (Estensione database) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/14/2016

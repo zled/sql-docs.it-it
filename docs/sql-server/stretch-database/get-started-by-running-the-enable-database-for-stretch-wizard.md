@@ -1,5 +1,5 @@
 ---
-title: Avviare la procedura guidata Abilitare il database per l&quot;estensione | Microsoft Docs
+title: Avviare la procedura guidata Abilitare il database per l'estensione | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/05/2016

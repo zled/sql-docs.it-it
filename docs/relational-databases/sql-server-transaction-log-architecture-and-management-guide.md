@@ -1,5 +1,5 @@
 ---
-title: Guida sull&quot;architettura e gestione del log delle transazioni di SQL Server | Microsoft Docs
+title: Guida sull'architettura e gestione del log delle transazioni di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server

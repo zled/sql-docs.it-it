@@ -1,5 +1,5 @@
 ---
-title: Ottimizzare l&quot;elaborazione JSON con OLTP in memoria | Microsoft Docs
+title: Ottimizzare l'elaborazione JSON con OLTP in memoria | Microsoft Docs
 ms.custom: 
 ms.date: 02/03/2017
 ms.prod: sql-server-2017
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
 ms.contentlocale: it-it
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Ottimizzare l'elaborazione JSON con OLTP in memoria

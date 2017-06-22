@@ -1,5 +1,5 @@
 ---
-title: Implementazione dell&quot;interfaccia IDeliveryExtension per un&quot;estensione di recapito | Documenti Microsoft
+title: Implementazione dell'interfaccia IDeliveryExtension per un'estensione di recapito | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementazione dell'interfaccia IDeliveryExtension per un'estensione per il recapito

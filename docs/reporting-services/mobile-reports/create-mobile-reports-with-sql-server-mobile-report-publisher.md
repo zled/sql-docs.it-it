@@ -1,6 +1,6 @@
 ---
 title: Creare report per dispositivi mobili con SQL Server Mobile Report Publisher | Documenti Microsoft
-description: Informazioni su Reporting Services report per dispositivi mobili per dispositivi mobili, connessi ai dati in locale, con un&quot;ampia gamma di visualizzazioni dei dati.
+description: Informazioni su Reporting Services report per dispositivi mobili per dispositivi mobili, connessi ai dati in locale, con un'ampia gamma di visualizzazioni dei dati.
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/30/2017
@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creare report per dispositivi mobili con SQL Server Mobile Report Publisher

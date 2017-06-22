@@ -1,5 +1,5 @@
 ---
-title: Verificare l&quot;installazione di Reporting Services | Documenti Microsoft
+title: Verificare l'installazione di Reporting Services | Documenti Microsoft
 ms.custom: 
 ms.date: 06/03/2016
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificare un'installazione di Reporting Services

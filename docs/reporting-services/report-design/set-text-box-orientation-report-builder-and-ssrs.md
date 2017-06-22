@@ -1,5 +1,5 @@
 ---
-title: Impostare l&quot;orientamento della casella di testo (Generatore Report e SSRS) | Documenti Microsoft
+title: Impostare l'orientamento della casella di testo (Generatore Report e SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cc52b4687f9a2c944ea3a93c15b637d894c7a96
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Impostare l'orientamento della casella di testo (Generatore report e SSRS)

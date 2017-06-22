@@ -1,5 +1,5 @@
 ---
-title: Scelta degli strumenti di Microsoft Business Intelligence (BI) per l&quot;analisi e creazione di report | Documenti Microsoft
+title: Scelta degli strumenti di Microsoft Business Intelligence (BI) per l'analisi e creazione di report | Documenti Microsoft
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Scelta degli strumenti di Microsoft Business Intelligence (BI) per l'analisi e creazione di report

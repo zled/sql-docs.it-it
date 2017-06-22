@@ -1,5 +1,5 @@
 ---
-title: Creare query mediante l&quot;uso di altre origini oltre a una tabella | Microsoft Docs
+title: Creare query mediante l'uso di altre origini oltre a una tabella | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81736e0887c58abe30013ef052c7eb699c6a2c37
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Creazione di query mediante l'utilizzo di altre origini oltre a una tabella (Visual Database Tools)

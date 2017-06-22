@@ -1,5 +1,5 @@
 ---
-title: Elementi generali dell&quot;interfaccia utente | Microsoft Docs
+title: Elementi generali dell'interfaccia utente | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="general-user-interface-elements"></a>Elementi generali dell'interfaccia utente

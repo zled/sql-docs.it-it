@@ -1,5 +1,5 @@
 ---
-title: Eliminare un&quot;applicazione livello dati | Microsoft Docs
+title: Eliminare un'applicazione livello dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a6c69a8bbd4fa63a427658ddc7b8fdbd79b0af3b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati

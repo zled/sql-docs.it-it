@@ -1,5 +1,5 @@
 ---
-title: Configurare l&quot;autenticazione di base nel Server di Report | Documenti Microsoft
+title: Configurare l'autenticazione di base nel Server di Report | Documenti Microsoft
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurare l'autenticazione di base nel server di report

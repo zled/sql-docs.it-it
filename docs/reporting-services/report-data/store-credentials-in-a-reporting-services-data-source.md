@@ -1,5 +1,5 @@
 ---
-title: Archiviare le credenziali in un&quot;origine di dati Reporting Services | Documenti Microsoft
+title: Archiviare le credenziali in un'origine di dati Reporting Services | Documenti Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/23/2015
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source

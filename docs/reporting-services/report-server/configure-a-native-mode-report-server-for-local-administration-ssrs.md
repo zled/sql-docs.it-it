@@ -1,5 +1,5 @@
 ---
-title: "Configurare un Server di Report in modalità nativa per l&quot;amministrazione locale (SSRS) | Documenti Microsoft"
+title: "Configurare un Server di Report in modalità nativa per l'amministrazione locale (SSRS) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)

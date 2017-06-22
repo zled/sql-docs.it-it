@@ -1,5 +1,5 @@
 ---
-title: Informazioni sulla cronologia e sull&quot;intestazione del backup (SQL Server) | Microsoft Docs
+title: Informazioni sulla cronologia e sull'intestazione del backup (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -41,7 +41,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)

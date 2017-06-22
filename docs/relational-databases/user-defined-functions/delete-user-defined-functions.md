@@ -1,5 +1,5 @@
 ---
-title: Eliminare funzioni definite dall&quot;utente | Microsoft Docs
+title: Eliminare funzioni definite dall'utente | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-user-defined-functions"></a>Eliminare funzioni definite dall'utente

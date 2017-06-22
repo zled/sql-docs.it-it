@@ -1,5 +1,5 @@
 ---
-title: Introduzione a columnstore per l&quot;analisi operativa in tempo reale | Microsoft Docs
+title: Introduzione a columnstore per l'analisi operativa in tempo reale | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/08/2016
@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale

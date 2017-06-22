@@ -1,5 +1,5 @@
 ---
-title: Disable or Pause Report and l&quot;elaborazione della sottoscrizione | Documenti Microsoft
+title: Disable or Pause Report and l'elaborazione della sottoscrizione | Documenti Microsoft
 ms.custom: 
 ms.date: 09/29/2015
 ms.prod: sql-server-2016
@@ -30,7 +30,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Disabilitare o sospendere l'elaborazione di report e sottoscrizioni

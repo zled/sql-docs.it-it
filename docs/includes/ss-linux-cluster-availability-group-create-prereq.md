@@ -70,7 +70,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##    <a name="enable-alwaysonhealth-event-session"></a>Abilitare la sessione di eventi AlwaysOn_health 
+##  <a name="enable-alwaysonhealth-event-session"></a>Abilitare la sessione di eventi AlwaysOn_health 
 
 È possibile abilitare optionaly gruppi di disponibilità AlwaysOn specifici eventi estesi per facilitare la diagnosi della causa principale durante la risoluzione di un gruppo di disponibilità.
 

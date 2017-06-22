@@ -1,5 +1,5 @@
 ---
-title: Preparazione all&quot;implementazione di un&quot;estensione per l&quot;elaborazione dati | Documenti Microsoft
+title: Preparazione all'implementazione di un'estensione per l'elaborazione dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee37721958f30f9fdae8573f205b59ae996f4df6
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparazione all'implementazione di un'estensione per l'elaborazione dati

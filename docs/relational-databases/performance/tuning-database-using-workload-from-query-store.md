@@ -1,5 +1,5 @@
 ---
-title: Ottimizzazione del database tramite un carico di lavoro dell&quot;archivio query | Microsoft Docs
+title: Ottimizzazione del database tramite un carico di lavoro dell'archivio query | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ottimizzazione del database tramite un carico di lavoro dell'archivio query

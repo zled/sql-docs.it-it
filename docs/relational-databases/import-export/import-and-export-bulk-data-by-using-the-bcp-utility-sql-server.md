@@ -1,5 +1,5 @@
 ---
-title: "Importare ed esportare dati per operazioni bulk usando l&quot;utilità bcp (SQL Server) | Microsoft Docs"
+title: "Importare ed esportare dati per operazioni bulk usando l'utilità bcp (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/28/2016
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 789069f32f8ff5acd7e57ba742768b0ea7e5c3ea
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importazione ed esportazione di dati per operazioni bulk tramite l'utilità bcp (SQL Server)

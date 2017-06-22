@@ -1,5 +1,5 @@
 ---
-title: "Proprietà dell&quot;oggetto con valori di tabella (colonna) (Visual Database Tools) | Microsoft Docs"
+title: "Proprietà dell'oggetto con valori di tabella (colonna) (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ddaf4ebdf84b6e269e488457ef5f1d01ec87f848
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Proprietà colonna dell'oggetto valutato a livello di tabella (Visual Database Tools)

@@ -1,5 +1,5 @@
 ---
-title: Creazione di un componente in fase di progettazione dell&quot;elemento del Report personalizzato | Documenti Microsoft
+title: Creazione di un componente in fase di progettazione dell'elemento del Report personalizzato | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2cb994a0cb4dde6b6ea5f671238272e574e7721b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione

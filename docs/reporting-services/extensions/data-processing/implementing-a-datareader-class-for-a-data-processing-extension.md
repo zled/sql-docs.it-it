@@ -1,5 +1,5 @@
 ---
-title: Implementazione di una classe DataReader per un&quot;estensione per l&quot;elaborazione dati | Documenti Microsoft
+title: Implementazione di una classe DataReader per un'estensione per l'elaborazione dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fb0f4c2f3ea3137f2e614e688aa5e3823a043e50
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>Implementazione di una classe DataReader per un'estensione per l'elaborazione dati

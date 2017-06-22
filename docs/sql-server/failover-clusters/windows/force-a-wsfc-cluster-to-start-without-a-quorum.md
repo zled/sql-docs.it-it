@@ -1,5 +1,5 @@
 ---
-title: Forzare l&quot;avvio di un cluster WSFC senza un quorum | Microsoft Docs
+title: Forzare l'avvio di un cluster WSFC senza un quorum | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7cef5f82996bc541f55bc8ec6560edce2e0d9acf
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum

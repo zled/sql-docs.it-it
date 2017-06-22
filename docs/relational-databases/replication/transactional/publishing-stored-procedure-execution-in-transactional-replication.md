@@ -1,5 +1,5 @@
 ---
-title: Pubblicazione dell&quot;esecuzione delle stored procedure nella replica transazionale | Microsoft Docs
+title: Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale

@@ -1,5 +1,5 @@
 ---
-title: Monitorare l&quot;utilizzo delle risorse (Monitor di sistema) | Microsoft Docs
+title: Monitorare l'utilizzo delle risorse (Monitor di sistema) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)

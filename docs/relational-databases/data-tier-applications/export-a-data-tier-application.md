@@ -1,5 +1,5 @@
 ---
-title: Esportare un&quot;applicazione livello dati | Microsoft Docs
+title: Esportare un'applicazione livello dati | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati

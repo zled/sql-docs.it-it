@@ -1,5 +1,5 @@
 ---
-title: Regole per l&quot;immissione di valori di ricerca (Visual Database Tools) | Microsoft Docs
+title: Regole per l'immissione di valori di ricerca (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96cd179445fcab211321ccf4e89f6fbce5792230
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regole per l'immissione di valori di ricerca (Visual Database Tools)

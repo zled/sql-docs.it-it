@@ -1,5 +1,5 @@
 ---
-title: Rilevamento e risoluzione dei conflitti per l&quot;aggiornamento in coda | Microsoft Docs
+title: Rilevamento e risoluzione dei conflitti per l'aggiornamento in coda | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Sottoscrizioni aggiornabili - Risoluzione dei conflitti per l'aggiornamento in coda

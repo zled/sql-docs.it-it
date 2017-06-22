@@ -1,5 +1,5 @@
 ---
-title: Funzioni definite dall&quot;utente | Microsoft Docs
+title: Funzioni definite dall'utente | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: it-it
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente

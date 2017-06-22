@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: distribuire un&quot;estensione per l&quot;elaborazione dati in Progettazione Report | Documenti Microsoft'
+title: 'Procedura: distribuire un''estensione per l''elaborazione dati in Progettazione Report | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42974101d21082568442d73d063de1d1b937c428
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Distribuzione di un'estensione di elaborazione dei dati per progettazione Report

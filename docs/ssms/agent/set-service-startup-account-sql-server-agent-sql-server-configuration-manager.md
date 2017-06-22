@@ -1,5 +1,5 @@
 ---
-title: Impostare l&quot;account di avvio del servizio SQL Server Agent | Microsoft Docs
+title: Impostare l'account di avvio del servizio SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca20cf42839419f5d40826ef992087623dbc3059
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Impostazione dell'account di avvio del servizio SQL Server Agent (Gestione configurazione SQL Server)

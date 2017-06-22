@@ -1,5 +1,5 @@
 ---
-title: Configurare un computer multihomed per l&quot;accesso a SQL Server | Microsoft Docs
+title: Configurare un computer multihomed per l'accesso a SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server

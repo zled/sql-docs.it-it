@@ -1,5 +1,5 @@
 ---
-title: "Lezione 2: Modificare i dati del Report delle proprietà dell&quot;origine | Documenti Microsoft"
+title: "Lezione 2: Modificare i dati del Report delle proprietà dell'origine | Documenti Microsoft"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties

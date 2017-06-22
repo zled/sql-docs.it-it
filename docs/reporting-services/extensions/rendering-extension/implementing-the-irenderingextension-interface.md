@@ -1,5 +1,5 @@
 ---
-title: Implementazione dell&quot;interfaccia IRenderingExtension | Documenti Microsoft
+title: Implementazione dell'interfaccia IRenderingExtension | Documenti Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3b5772901cfaabedab1b42db39dcd85c49119509
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementazione dell'interfaccia IRenderingExtension

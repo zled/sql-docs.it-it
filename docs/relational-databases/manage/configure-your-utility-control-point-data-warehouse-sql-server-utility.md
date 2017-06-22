@@ -1,5 +1,5 @@
 ---
-title: "Configurare il data warehouse del punto di controllo dell&quot;utilità (Utilità SQL Server) | Microsoft Docs"
+title: "Configurare il data warehouse del punto di controllo dell'utilità (Utilità SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 05a436bf21810e3c05c2f745d6f0c067f61d0d35
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Configurazione del data warehouse del punto di controllo dell'utilità (Utilità SQL Server)

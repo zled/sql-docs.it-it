@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Aggiungere un controllo ReportViewer all&quot;applicazione | Documenti Microsoft'
+title: 'Lezione 6: Aggiungere un controllo ReportViewer all''applicazione | Documenti Microsoft'
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 914d8abf2ad7b72b5ce1035da2867c47b67dfa14
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lezione 6: Aggiungere un controllo ReportViewer all'applicazione

@@ -1,5 +1,5 @@
 ---
-title: Configurare un Server di Report per l&quot;amministrazione remota | Documenti Microsoft
+title: Configurare un Server di Report per l'amministrazione remota | Documenti Microsoft
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Controllo locale per la raccolta di dati relativi all'utilizzo di SSMS
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) include funzionalità abilitate per Internet
 ## <a name="audit-feature-usage-data"></a>Controllare i dati relativi all'utilizzo delle funzionalità
 
 Per vedere i dati relativi all'utilizzo delle funzionalità raccolti da SSMS, eseguire questa procedura:
-1.    Avviare SSMS.
-2.    Fare clic su **Visualizza** e quindi su **Output** nel menu principale per visualizzare la finestra **Output**. 
-3.    Quando la finestra **Output** è visualizzata, scegliere **Telemetria** dal menu **Mostra output di**.
+1.  Avviare SSMS.
+2.  Fare clic su **Visualizza** e quindi su **Output** nel menu principale per visualizzare la finestra **Output**. 
+3.  Quando la finestra **Output** è visualizzata, scegliere **Telemetria** dal menu **Mostra output di**.
 
 Quando si usa SSMS per interagire con i database, la finestra **Output** mostra i dati raccolti.
 

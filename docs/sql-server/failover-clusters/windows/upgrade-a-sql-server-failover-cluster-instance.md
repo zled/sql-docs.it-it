@@ -1,5 +1,5 @@
 ---
-title: Eseguire l&quot;aggiornamento di un&quot;istanza del cluster di failover di SQL Server | Microsoft Docs
+title: Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 02/01/2016
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 060f7bbbcd12d1b41f4c527fb1c1dff34b666134
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Aggiornare un'istanza del cluster di failover di SQL Server

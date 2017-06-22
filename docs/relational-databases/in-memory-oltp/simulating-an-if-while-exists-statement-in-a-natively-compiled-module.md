@@ -1,5 +1,5 @@
 ---
-title: Simulazione di un&quot;istruzione IF-WHILE EXISTS in un modulo compilato in modo nativo | Microsoft Docs
+title: Simulazione di un'istruzione IF-WHILE EXISTS in un modulo compilato in modo nativo | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d509d0d749591a134a0b87aa457bb53d28901a99
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="simulating-an-if-while-exists-statement-in-a-natively-compiled-module"></a>Simulazione di un'istruzione IF-WHILE EXISTS in un modulo compilato in modo nativo

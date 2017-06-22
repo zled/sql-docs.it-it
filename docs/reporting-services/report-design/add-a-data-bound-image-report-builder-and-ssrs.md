@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un&quot;immagine con associazione a dati (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un'immagine con associazione a dati (Generatore Report e SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 253d3abfffae056d6300e2203623e7af023a2476
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Aggiungere un'immagine con associazione a dati (Generatore report e SSRS)

@@ -1,5 +1,5 @@
 ---
-title: Usare i risultati di query FOR XML nel codice di un&quot;applicazione | Microsoft Docs
+title: Usare i risultati di query FOR XML nel codice di un'applicazione | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione

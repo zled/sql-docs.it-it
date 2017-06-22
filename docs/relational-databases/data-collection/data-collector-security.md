@@ -1,5 +1,5 @@
 ---
-title: Sicurezza dell&quot;agente di raccolta dati | Microsoft Docs
+title: Sicurezza dell'agente di raccolta dati | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati

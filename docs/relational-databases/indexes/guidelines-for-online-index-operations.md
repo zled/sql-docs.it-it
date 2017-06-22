@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
@@ -97,7 +97,7 @@ Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations
 >
 
 Quando si esegue una ricompilazione dell'indice online può essere ripristinato si applicano le linee guida seguenti:
--    La gestione, la pianificazione e l'estensione dell'indice finestre di manutenzione. È possibile sospendere e riavviare un'operazione di ricompilazione dell'indice più volte per adattare le finestre di manutenzione.
+-   La gestione, la pianificazione e l'estensione dell'indice finestre di manutenzione. È possibile sospendere e riavviare un'operazione di ricompilazione dell'indice più volte per adattare le finestre di manutenzione.
 - Recupero da errori di ricompilazione indice (ad esempio failover del database o di esaurire lo spazio su disco).
 - Quando un'operazione di indice è sospesa, sia l'indice originale e quello appena creato richiede spazio su disco e devono essere aggiornati durante le operazioni DML.
 

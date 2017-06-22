@@ -1,5 +1,5 @@
 ---
-title: "Segnalare l&quot;utilità della riga di comando Server (SSRS) | Documenti Microsoft"
+title: "Segnalare l'utilità della riga di comando Server (SSRS) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb04937fc5c68bf2efb82ece9914c56409b7f325
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilità della riga di comando del server di report (SSRS)

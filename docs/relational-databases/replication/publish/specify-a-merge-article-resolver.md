@@ -1,5 +1,5 @@
 ---
-title: Specificare un sistema di risoluzione dei conflitti dell&quot;articolo di merge | Microsoft Docs
+title: Specificare un sistema di risoluzione dei conflitti dell'articolo di merge | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2934cf0580b44b6a496f9dae4d5cd297cd8717d7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge

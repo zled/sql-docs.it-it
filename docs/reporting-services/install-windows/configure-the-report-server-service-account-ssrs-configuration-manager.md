@@ -1,5 +1,5 @@
 ---
-title: Configurare l&quot;Account di servizio Server di Report (Gestione configurazione SSRS) | Documenti Microsoft
+title: Configurare l'Account di servizio Server di Report (Gestione configurazione SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)

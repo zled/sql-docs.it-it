@@ -1,5 +1,5 @@
 ---
-title: Visualizzare e leggere il log di diagnostica dell&quot;istanza del cluster di failover| Microsoft Docs
+title: Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover| Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover

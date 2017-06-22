@@ -1,5 +1,5 @@
 ---
-title: "Formattare l&quot;output JSON annidato con la modalità PATH (SQL Server) | Microsoft Docs"
+title: "Formattare l'output JSON annidato con la modalità PATH (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/02/2016
@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 3a11cee5097ed686d20d3bb8fcc7894138700841
 ms.contentlocale: it-it
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formattare l'output JSON annidato con la modalità PATH (SQL Server)

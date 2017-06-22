@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un nodo radice all&quot;output JSON con l&quot;opzione ROOT (SQL Server) | Microsoft Docs
+title: Aggiungere un nodo radice all'output JSON con l'opzione ROOT (SQL Server) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/02/2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: e7b316ab5b6f809b348fa882a42a89431590c40b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>Aggiungere un nodo radice all'output JSON con l'opzione ROOT (SQL Server)

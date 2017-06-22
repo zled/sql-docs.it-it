@@ -1,5 +1,5 @@
 ---
-title: Configurazione dell&quot;archiviazione per le tabelle con ottimizzazione per la memoria | Microsoft Docs
+title: Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria

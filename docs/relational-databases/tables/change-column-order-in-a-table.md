@@ -1,5 +1,5 @@
 ---
-title: Modificare l&quot;ordine delle colonne in una tabella | Microsoft Docs
+title: Modificare l'ordine delle colonne in una tabella | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-column-order-in-a-table"></a>Modificare l'ordine delle colonne in una tabella

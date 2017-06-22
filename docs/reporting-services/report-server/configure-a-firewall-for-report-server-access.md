@@ -1,5 +1,5 @@
 ---
-title: Configurare un Firewall per l&quot;accesso al Server di Report | Documenti Microsoft
+title: Configurare un Firewall per l'accesso al Server di Report | Documenti Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/14/2015
@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4ea69363565456fda2c1adc7d48d60c6a0bef8f7
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report

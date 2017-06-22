@@ -1,5 +1,5 @@
 ---
-title: Visualizzare funzioni definite dall&quot;utente | Microsoft Docs
+title: Visualizzare funzioni definite dall'utente | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente

@@ -1,5 +1,5 @@
 ---
-title: "Pianificare l&quot;adozione delle funzionalità OLTP in memoria in SQL Server | Microsoft Docs"
+title: "Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
 ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server

@@ -1,5 +1,5 @@
 ---
-title: Extensible Key Management tramite l&quot;insieme di credenziali delle chiavi di Azure (SQL Server) | Microsoft Docs
+title: Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/22/2016
@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)

@@ -1,5 +1,5 @@
 ---
-title: "Registrare un nome dell&quot;entità servizio (SPN) per un Server di Report | Documenti Microsoft"
+title: "Registrare un nome dell'entità servizio (SPN) per un Server di Report | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9518d1bd3ee166a0f21292ca08130214afc841be
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrare un nome dell'entità servizio (SPN) per un server di report

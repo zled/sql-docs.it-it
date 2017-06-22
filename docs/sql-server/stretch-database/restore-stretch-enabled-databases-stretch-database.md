@@ -1,5 +1,5 @@
 ---
-title: Ripristinare database abilitati per l&quot;estensione (Estensione database) | Microsoft Docs
+title: Ripristinare database abilitati per l'estensione (Estensione database) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2016
 ms.prod: sql-server-2016

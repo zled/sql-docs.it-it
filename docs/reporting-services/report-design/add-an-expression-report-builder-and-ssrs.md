@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un&quot;espressione (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un'espressione (Generatore Report e SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 57cdb0a373d713741216b1cebc8d3d44ff7fceb3
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>Aggiungere un'espressione (Generatore report e SSRS)

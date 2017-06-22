@@ -1,5 +1,5 @@
 ---
-title: Mantenere il valore predefinito per l&quot;opzione di configurazione dei blocchi | Microsoft Docs
+title: Mantenere il valore predefinito per l'opzione di configurazione dei blocchi | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d39cb969d127d29a82a21411d6e1bdb8891d199e
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>Impostazione dell'opzione di configurazione dei blocchi sul valore predefinito

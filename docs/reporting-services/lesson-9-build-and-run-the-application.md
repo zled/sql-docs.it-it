@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 9: Compilare ed eseguire l&quot;applicazione | Documenti Microsoft'
+title: 'Lezione 9: Compilare ed eseguire l''applicazione | Documenti Microsoft'
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application

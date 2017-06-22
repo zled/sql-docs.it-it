@@ -1,5 +1,5 @@
 ---
-title: "Concedere un&quot;autorizzazione a un&quot;entità| Microsoft Docs"
+title: "Concedere un'autorizzazione a un'entità| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Concedere un'autorizzazione a un'entità

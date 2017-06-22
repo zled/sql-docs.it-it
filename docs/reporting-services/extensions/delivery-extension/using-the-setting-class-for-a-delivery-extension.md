@@ -1,5 +1,5 @@
 ---
-title: Utilizzo della classe Setting per un&quot;estensione di recapito | Documenti Microsoft
+title: Utilizzo della classe Setting per un'estensione di recapito | Documenti Microsoft
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c3f077388f6dc568e238b2e6346663ba1bb9807c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>Utilizzo della classe Setting per un'estensione per il recapito

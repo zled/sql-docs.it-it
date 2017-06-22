@@ -1,5 +1,5 @@
 ---
-title: Monitorare l&quot;uso della memoria | Microsoft Docs
+title: Monitorare l'uso della memoria | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="monitor-memory-usage"></a>Monitoraggio dell'utilizzo della memoria

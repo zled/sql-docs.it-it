@@ -1,5 +1,5 @@
 ---
-title: Specificare un intervallo dell&quot;asse (Generatore Report e SSRS) | Documenti Microsoft
+title: Specificare un intervallo dell'asse (Generatore Report e SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)

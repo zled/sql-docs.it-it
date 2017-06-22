@@ -1,5 +1,5 @@
 ---
-title: Passare un parametro di Report all&quot;interno di un URL | Documenti Microsoft
+title: Passare un parametro di Report all'interno di un URL | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL

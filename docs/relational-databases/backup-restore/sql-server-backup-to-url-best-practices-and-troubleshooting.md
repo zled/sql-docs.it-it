@@ -1,5 +1,5 @@
 ---
-title: Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell&quot;URL | Microsoft Docs
+title: Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/15/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL

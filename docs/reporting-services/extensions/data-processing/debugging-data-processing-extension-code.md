@@ -1,5 +1,5 @@
 ---
-title: Debug del codice di estensione per l&quot;elaborazione dati | Documenti Microsoft
+title: Debug del codice di estensione per l'elaborazione dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7af6b33039d19029d1595ac08f5d5345cdaa1c58
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="debugging-data-processing-extension-code"></a>Debug del codice di un'estensione per l'elaborazione dati

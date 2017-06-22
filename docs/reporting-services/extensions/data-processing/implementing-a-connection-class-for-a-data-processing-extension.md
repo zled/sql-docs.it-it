@@ -1,5 +1,5 @@
 ---
-title: Implementazione di una classe di connessione per un&quot;estensione per l&quot;elaborazione dati | Documenti Microsoft
+title: Implementazione di una classe di connessione per un'estensione per l'elaborazione dati | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1108be24704c38f0891e623fda02803e5f8c21e5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementazione di una classe Connection per un'estensione per l'elaborazione dati

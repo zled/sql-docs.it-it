@@ -1,5 +1,5 @@
 ---
-title: "Eseguire la migrazione di un&quot;installazione di Reporting Services (modalità SharePoint) | Documenti Microsoft"
+title: "Eseguire la migrazione di un'installazione di Reporting Services (modalità SharePoint) | Documenti Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 

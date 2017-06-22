@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Sviluppare con Always Encrypted e il provider di dati .NET Framework
@@ -262,7 +262,7 @@ Per ottenere un valore di testo non crittografato nella chiave di crittografia d
 
 Il processo per ottenere la chiave di crittografia di una colonna consiste nelle fasi seguenti:
 
-1.    Se Always Encrypted è abilitato per una query, il provider di dati .NET Framework per SQL Server chiama **sys.sp_describe_parameter_encryption** in modo trasparente per recuperare i metadati di crittografia per i parametri destinati alle colonne crittografate, se la query include parametri. Per i dati crittografati contenuti nei risultati di una query, SQL Server associa automaticamente i metadati di crittografia. Le informazioni sulla chiave master della colonna includono:
+1.  Se Always Encrypted è abilitato per una query, il provider di dati .NET Framework per SQL Server chiama **sys.sp_describe_parameter_encryption** in modo trasparente per recuperare i metadati di crittografia per i parametri destinati alle colonne crittografate, se la query include parametri. Per i dati crittografati contenuti nei risultati di una query, SQL Server associa automaticamente i metadati di crittografia. Le informazioni sulla chiave master della colonna includono:
     - Il nome di un provider di archivio delle chiavi che incapsula un archivio contenente la chiave master della colonna. 
     - Il percorso che specifica la posizione della chiave master della colonna nell'archivio delle chiavi.
     
@@ -270,8 +270,8 @@ Il processo per ottenere la chiave di crittografia di una colonna consiste nelle
 
     - Il valore crittografato della chiave di crittografia della colonna.
     - Il nome dell'algoritmo usato per crittografare la chiave di crittografia della colonna.
-2.    Il provider di dati .NET Framework per SQL Server usa il nome del provider di archivio delle chiavi master delle colonne per cercare l'oggetto provider (un'istanza di una classe derivata dalla classe SqlColumnEncryptionKeyStoreProvider) in una struttura di dati interna.
-3.    Per decrittografare la chiave di crittografia della colonna, il provider di dati .NET Framework per SQL Server chiama il metodo SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey, passando il percorso della chiave master della colonna, il valore crittografato della chiave di crittografia della colonna e il nome dell'algoritmo di crittografia, usato per generare la chiave di crittografia della colonna crittografata.
+2.  Il provider di dati .NET Framework per SQL Server usa il nome del provider di archivio delle chiavi master delle colonne per cercare l'oggetto provider (un'istanza di una classe derivata dalla classe SqlColumnEncryptionKeyStoreProvider) in una struttura di dati interna.
+3.  Per decrittografare la chiave di crittografia della colonna, il provider di dati .NET Framework per SQL Server chiama il metodo SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey, passando il percorso della chiave master della colonna, il valore crittografato della chiave di crittografia della colonna e il nome dell'algoritmo di crittografia, usato per generare la chiave di crittografia della colonna crittografata.
 
 
 

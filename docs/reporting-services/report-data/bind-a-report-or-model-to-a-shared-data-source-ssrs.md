@@ -1,5 +1,5 @@
 ---
-title: Associare un Report o un modello a un&quot;origine dati condivisa (SSRS) | Documenti Microsoft
+title: Associare un Report o un modello a un'origine dati condivisa (SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 50893ee7140f33086d432fdc00f660f6371fe282
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associare un report o un modello a un'origine dati condivisa (SSRS)

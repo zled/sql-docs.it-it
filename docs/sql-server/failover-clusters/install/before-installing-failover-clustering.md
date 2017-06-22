@@ -1,5 +1,5 @@
 ---
-title: Operazioni preliminari all&quot;installazione del clustering di failover | Microsoft Docs
+title: Operazioni preliminari all'installazione del clustering di failover | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover

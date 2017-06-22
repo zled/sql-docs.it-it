@@ -1,5 +1,5 @@
 ---
-title: Accesso tramite URL in un&quot;applicazione Windows | Documenti Microsoft
+title: Accesso tramite URL in un'applicazione Windows | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6174bfd45317faf9b6c8c7131dd1c5026d3a4d51
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integrazione di Reporting Services con accesso tramite URL - applicazione di Windows

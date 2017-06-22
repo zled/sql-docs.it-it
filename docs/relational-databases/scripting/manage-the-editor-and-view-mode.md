@@ -1,5 +1,5 @@
 ---
-title: "Gestire l&quot;editor e la modalità di visualizzazione | Microsoft Docs"
+title: "Gestire l'editor e la modalità di visualizzazione | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 364c8e7db9d336df91b984d62aaf62cff19da4ac
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gestione dell'editor e della modalità di visualizzazione

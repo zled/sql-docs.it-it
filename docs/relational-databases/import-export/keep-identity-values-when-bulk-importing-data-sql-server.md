@@ -1,5 +1,5 @@
 ---
-title: Mantenere i valori Identity durante l&quot;importazione bulk dei dati (SQL Server) | Microsoft Docs
+title: Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/21/2016
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)

@@ -1,5 +1,5 @@
 ---
-title: "Tabella temporanea e variabile di tabella più rapide con l&quot;ottimizzazione per la memoria | Microsoft Docs"
+title: "Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria

@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f9c97287220cddf8d77b65375f308b784d508742
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Aggiunta di annotazioni testo a diagrammi (Visual Database Tools)

@@ -1,5 +1,5 @@
 ---
-title: Modificare o eliminare un&quot;assegnazione di ruolo (gestione Report) | Documenti Microsoft
+title: Modificare o eliminare un'assegnazione di ruolo (gestione Report) | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>Le assegnazioni di ruolo, modificare o eliminare

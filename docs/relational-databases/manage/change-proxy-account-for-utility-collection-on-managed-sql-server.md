@@ -1,5 +1,5 @@
 ---
-title: "Modificare l&quot;account proxy per il set di raccolta utilità in un&quot;istanza gestita di SQL Server | Microsoft Docs"
+title: "Modificare l'account proxy per il set di raccolta utilità in un'istanza gestita di SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5345501c146c5d48d8d7f8cd5fd06f4fc9dfc749
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-proxy-account-for-utility-collection-on--managed-sql-server"></a>Modificare l'account proxy per il set di raccolta utilità in un'istanza gestita di SQL Server

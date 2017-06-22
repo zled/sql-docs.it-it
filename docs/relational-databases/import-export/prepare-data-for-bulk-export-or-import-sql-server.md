@@ -1,5 +1,5 @@
 ---
-title: Preparare i dati per l&quot;importazione o l&quot;esportazione bulk (SQL Server) | Microsoft Docs
+title: Preparare i dati per l'importazione o l'esportazione bulk (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbcca0ce4e711ba22215e9e6ff09389b02d6e80b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparazione dei dati per l'importazione o l'esportazione bulk (SQL Server)

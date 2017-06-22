@@ -1,5 +1,5 @@
 ---
-title: Protezione estesa per l&quot;autenticazione con Reporting Services | Documenti Microsoft
+title: Protezione estesa per l'autenticazione con Reporting Services | Documenti Microsoft
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 

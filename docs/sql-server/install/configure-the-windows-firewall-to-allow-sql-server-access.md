@@ -1,5 +1,5 @@
 ---
-title: Configurare Windows Firewall per consentire l&quot;accesso a SQL Server |Microsoft Docs
+title: Configurare Windows Firewall per consentire l'accesso a SQL Server |Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
 ms.prod: sql-server-2016
@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: it-it
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access

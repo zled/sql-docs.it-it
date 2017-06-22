@@ -1,5 +1,5 @@
 ---
-title: Controllo della visualizzazione dell&quot;area dati Tablix in una pagina del Report | Documenti Microsoft
+title: Controllo della visualizzazione dell'area dati Tablix in una pagina del Report | Documenti Microsoft
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report

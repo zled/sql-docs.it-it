@@ -1,5 +1,5 @@
 ---
-title: Verifica dell&quot;esecuzione di un Report | Documenti Microsoft
+title: Verifica dell'esecuzione di un Report | Documenti Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="verifying-a-report-run"></a>Verifica dell'esecuzione di un report

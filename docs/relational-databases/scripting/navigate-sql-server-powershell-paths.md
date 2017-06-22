@@ -1,5 +1,5 @@
 ---
-title: Spostarsi all&quot;interno dei percorsi di SQL Server PowerShell | Microsoft Docs
+title: Spostarsi all'interno dei percorsi di SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dfdebbe0e80cbe5b1b852a86254f577f52d304a4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell

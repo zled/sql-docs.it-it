@@ -1,5 +1,5 @@
 ---
-title: Impostazioni dell&quot;estensione di recapito di Reporting Services | Documenti Microsoft
+title: Impostazioni dell'estensione di recapito di Reporting Services | Documenti Microsoft
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016

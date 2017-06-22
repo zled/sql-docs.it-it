@@ -1,5 +1,5 @@
 ---
-title: "Le proprietà dell&quot;elemento Server di report | Documenti Microsoft"
+title: "Le proprietà dell'elemento Server di report | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016

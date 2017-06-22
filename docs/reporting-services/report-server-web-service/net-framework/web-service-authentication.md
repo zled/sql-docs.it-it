@@ -1,5 +1,5 @@
 ---
-title: L&quot;autenticazione del servizio Web | Documenti Microsoft
+title: L'autenticazione del servizio Web | Documenti Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

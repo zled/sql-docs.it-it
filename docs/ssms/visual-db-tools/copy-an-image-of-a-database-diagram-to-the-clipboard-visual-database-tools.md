@@ -1,5 +1,5 @@
 ---
-title: Copia negli Appunti di un&quot;immagine di un diagramma di database | Microsoft Docs
+title: Copia negli Appunti di un'immagine di un diagramma di database | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copia negli Appunti di un'immagine di un diagramma di database (Visual Database Tools)

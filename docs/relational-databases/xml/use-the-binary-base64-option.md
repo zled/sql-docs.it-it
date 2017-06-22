@@ -1,5 +1,5 @@
 ---
-title: Usare l&quot;opzione BINARY BASE64 | Microsoft Docs
+title: Usare l'opzione BINARY BASE64 | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0cfc14849df2f82429b00e8d912ceba6c74200e
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-the-binary-base64-option"></a>Utilizzo dell'opzione BINARY BASE64
