@@ -1,7 +1,7 @@
 ---
 title: Esercitazioni di SQL Server | Documenti Microsoft
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: it-it
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Esercitazioni su Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Esercitazioni sulla replica](../relational-databases/replication/replication-tutorials.md)|Viene illustrato come installare ed eseguire le topologie di replica tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
-|[Esercitazioni di SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Informazioni su come lavorare con i dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando il linguaggio R ed eseguire gli script R da [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Esercitazioni di SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Informazioni su come lavorare con i dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando il linguaggio R ed eseguire gli script R da [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Esercitazioni pubblicate in precedenza:  
   

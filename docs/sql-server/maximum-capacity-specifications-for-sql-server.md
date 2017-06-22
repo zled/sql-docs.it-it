@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: it-it
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Oggetto replica||Dimensioni/numeri massimi per SQL Server (64 bit)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Articoli (pubblicazione di tipo merge)||256|  
+|Articoli (pubblicazione di tipo merge)||2048|  
 |Articoli (pubblicazione snapshot o transazionale)||32.767|  
 |Colonne in una tabella* (pubblicazione di tipo merge)||246|  
 |Colonne in una tabella** (pubblicazione snapshot o transazionale di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1.000|  
 |Colonne in una tabella** (pubblicazione snapshot o transazionale di Oracle)||995|  
 |Byte per una colonna utilizzata in un filtro di riga (pubblicazione di tipo merge)||1.024|  
 |Byte per una colonna utilizzata in un filtro di riga (pubblicazione snapshot o transazionale)||8.000|  
-  
+
  *Se si usa il rilevamento a livello di riga per il rilevamento dei conflitti (impostazione predefinita), la tabella di base può includere fino a 1.024 colonne, che devono tuttavia essere filtrate dall'articolo in modo da pubblicare un massimo di 246 colonne. Se viene utilizzato il rilevamento a livello di colonna, nella tabella di base possono essere incluse al massimo 246 colonne.  
   
  **La tabella di base può includere il numero massimo di colonne consentito nel database di pubblicazione (1.024 per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), ma le colonne devono essere filtrate dall'articolo se superano il numero specificato per il tipo di pubblicazione.  

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -35,24 +35,6 @@ I livelli di isolamento delle transazioni in SQL Server si applicano in modo div
 Per le condizioni di errore specifiche per le transazioni nelle tabelle con ottimizzazione per la memoria, passare alla sezione [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#confdetretry34ni).
   
 Per informazioni generali, vedere [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>Sezioni dell'articolo:  
-  
-- [Approccio pessimistico e approccio ottimistico](#pessvoptim22ni)  
-- [Modalità di avvio della transazione](#txninitmodes24ni)  
-  - [Esempio di codice con modalità esplicita](#codeexamexpmode25ni)  
-- [Controllo delle versioni delle righe](#rowver28ni)  
-- [Livelli di isolamento delle transazioni](#confdegreeiso30ni)  
-- [Fasi e durata delle transazioni](#txnphaslife32ni)  
-- [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#confdetretry34ni)  
-  - [Esempio di codice di ripetizione T-SQL](#retrytsqlcodeexam35ni)  
-- [Transazione tra contenitori](#crossconttxn38ni)  
-- [Limitazioni](#limitations40ni)  
-- [Stored procedure compilate in modo nativo](#natcompstorprocs42ni)  
-- [Altri collegamenti relativi alle transazioni](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  
