@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Rimuovere le parentesi quadre dall'output JSON con l'opzione WITHOUT_ARRAY_WRAPPER
@@ -41,7 +41,7 @@ SELECT 2015 as year, 12 as month, 15 as day
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
 
- **Risultato ** con l'opzione **WITHOUT_ARRAY_WRAPPER**  
+ **Risultato**  con l'opzione **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 {
@@ -73,7 +73,7 @@ ORDER BY ModifiedDate
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
   
- **Risultato ** con l'opzione **WITHOUT_ARRAY_WRAPPER**  
+ **Risultato**  con l'opzione **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 {

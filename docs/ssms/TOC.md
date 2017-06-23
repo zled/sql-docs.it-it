@@ -7,6 +7,8 @@
 # [Esplora soluzioni +](../ssms/solution/solution-explorer.md)
 # [Modelli +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [Registrazione di server +](../ssms/register-servers/register-servers.md)
+# [Esercitazioni +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [Che cos'è SSMS?](sql-server-management-studio-ssms.md)
 # [Log delle modifiche di SSMS](sql-server-management-studio-changelog-ssms.md)
@@ -42,3 +44,7 @@
 # [Aggiungere uno strumento esterno al menu Strumenti (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Configurare il controllo accessi (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [Usare la casella degli strumenti](use-the-toolbox.md)
+
+# [Utilità Ssms](ssms-utility.md)  
+# [Tasti di scelta rapida di SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
+

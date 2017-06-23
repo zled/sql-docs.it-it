@@ -1,3 +1,4 @@
+# [Elaborazione di Query adattivo](adaptive-query-processing.md)
 # [L'ottimizzazione automatica](../automatic-tuning/automatic-tuning.md)
 # [Stima della cardinalità](cardinality-estimation-sql-server.md)  
 
