@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Note sulla versione | Microsoft Docs
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>Note sulla versione di SQL Server Management Studio
@@ -57,6 +57,9 @@ Di seguito è possibile trovare un elenco di problemi e limitazioni relativi a q
     
 5. **Le installazioni di SSMS non in lingua inglese potrebbero richiedere l'installazione di un pacchetto di protezione aggiuntivo.**  
 Le versioni di SSMS non localizzate in lingua inglese e installate in Windows 8, Windows 7, Windows Server 2012 e Windows Server 2008 R2 richiedono il [pacchetto di aggiornamento della sicurezza KB 2862966](https://support.microsoft.com/en-us/kb/2862966) .
+
+5. **Facendo clic su ? o premendo F1 la Guida non viene aperta**  
+In alcuni ambienti quando si fa clic su ? o si preme F1 un messaggio indica che **è necessaria una nuova app per aprire ms-xhelp**. Questo errore è un problema noto e verrà risolto in una versione futura.
   
 ## <a name="feedback"></a>Commenti e suggerimenti  
   

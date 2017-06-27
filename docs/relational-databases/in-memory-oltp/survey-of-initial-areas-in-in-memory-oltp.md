@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82d13af37ad323a642ae84fab6973429a0a084c2
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
@@ -503,8 +503,10 @@ Di seguito sono forniti i collegamenti ad altri articoli che presentano alcune c
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>Guida alla documentazione per le procedure native  
-  
-  
+
+Il seguente articolo e gli articoli correlati indicati nel sommario spiegano in dettaglio le stored procedure compilate in modo nativo.
+
+- [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)
   
 <a name="related-links-43f"></a>  
   

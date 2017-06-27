@@ -1,7 +1,7 @@
 ---
 title: Creare un backup completo del database (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: it-it
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
 
- > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Creazione di un backup completo del database (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Per SQL Server 2014, vedere [Creazione di un backup completo del database (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   In questo argomento viene descritto come creare un backup completo del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
->  Per informazioni sul backup di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+>  Per informazioni sul backup di SQL Server con il servizio di archiviazione BLOB di Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Poiché le dimensioni del database aumentano, i backup completi del database richiedono più tempo e più spazio di archiviazione. Per un database di grandi dimensioni può pertanto essere utile integrare un backup completo del database con una serie di *backup di database differenziali*. Per altre informazioni, vedere [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   Con l'aumento delle dimensioni del database, i backup completi del database richiedono più tempo e più spazio di archiviazione. Per un database di grandi dimensioni, provare ad aggiungere a un backup completo del database una serie di [backup differenziali del database] ((... /.. / relational-databases/backup-restore/differential-backups-sql-server.md). Per altre informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Stimare la dimensione di un backup del database completo tramite la stored procedure di sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -198,7 +198,7 @@ In questo esempio verrà eseguito il backup con crittografia del database `Sales
 
 7.  Scegliere **OK**.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Eseguire il backup nel servizio di archiviazione BLOB di Microsoft Azure**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Backup nel servizio di archiviazione BLOB di Azure**
 #### <a name="common-steps"></a>**Passaggi comuni**  
 Nei tre esempi seguenti viene eseguito un backup completo del database di `Sales` nel servizio di archiviazione BLOB di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`.  Il contenitore è denominato `myfirstcontainer`.  Per brevità, i primi quattro passaggi sono elencati di seguito una volta sola e tutti gli esempi verranno avviati con il **passaggio 5**.
 1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di SQL Server e, successivamente, espanderla.
@@ -212,7 +212,7 @@ Nei tre esempi seguenti viene eseguito un backup completo del database di `Sales
     **D1.  Il backup con striping nell'URL e una credenziale di SQL Server esistono già**  
 Sono stati creati i criteri di accesso archiviati con diritti di lettura, scrittura ed elenco.  Le credenziali di SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, sono stati creati usando una firma di accesso condiviso associata a criteri di accesso archiviati.  
 *
-    5.    Selezionare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dalla casella di testo **Contenitore di Archiviazione di Azure:**
+    5.  Selezionare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dalla casella di testo **Contenitore di Archiviazione di Azure:**
 
     6.  Nella casella di testo **File di Backup:** digitare `Sales_stripe1of2_20160601.bak`.
 
@@ -247,7 +247,7 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>Per creare un backup completo del database  
+### <a name="create-a-full-database-backup"></a>Creare un backup completo del database  
   
 1.  Per creare backup completo del database, eseguire l'istruzione BACKUP DATABASE specificando:  
   
@@ -299,7 +299,7 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A. Esecuzione del backup su un dispositivo disco**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A. Backup su un dispositivo disco**  
  Nell'esempio riportato di seguito viene eseguito il backup su disco del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] completo, utilizzando `FORMAT` per creare un nuovo set di supporti.  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B. Esecuzione del backup su un dispositivo nastro**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B. Backup su un dispositivo nastro**  
  Nell'esempio seguente viene eseguito il backup completo su nastro del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , accodandolo ai backup precedenti.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. Esecuzione del backup su un dispositivo nastro logico**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Backup su un dispositivo nastro logico**  
  Nell'esempio seguente viene creato in un dispositivo di backup logico per un'unità nastro. Nell'esempio viene quindi eseguito il backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] su quel dispositivo.  
   
 ```tsql  

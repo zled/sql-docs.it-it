@@ -1,5 +1,5 @@
 ---
-title: Procedure consigliate per l&quot;archivio query | Microsoft Docs
+title: Procedure consigliate per l'archivio query | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 11/24/2016
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
-ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: it-it
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
@@ -29,9 +29,9 @@ ms.lasthandoff: 05/30/2017
 
   Questo argomento descrive le procedure consigliate per l'uso dell'archivio query con il carico di lavoro.  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Usare la versione più recente di SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha un set di interfacce utente progettate per la configurazione dell'archivio query nonché per l'utilizzo dei dati raccolti relativi al carico di lavoro.  
-Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] da: [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+Scaricare la versione più recente di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [qui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
  Per una descrizione rapida dell'uso dell'archivio query in scenari di risoluzione dei problemi, vedere il [post relativo all'archivio query nei blog di @Azure](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -42,7 +42,8 @@ Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate p
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Usare l'archivio query con pool di database elastici
 È possibile usare Archivio query in tutti i database, anche in pool molto compressi. Tutti i problemi correlati all'utilizzo eccessivo delle risorse, che possono essersi verificati quando Archivio query era abilitato per un numero elevato di database in pool elastici, sono stati risolti.
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a> Adattare Query Store al proprio carico di lavoro  
  Configurare l'archivio query in base al carico di lavoro e ai requisiti di risoluzione dei problemi di prestazioni.   
 I parametri predefiniti offrono un modo rapido per iniziare, ma è opportuno monitorare il comportamento dell'archivio query nel tempo e regolare la configurazione di conseguenza:  
   
@@ -143,7 +144,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 |Consumo complessivo risorse|Analizzare il consumo totale delle risorse per il database per una delle metriche di esecuzione.<br />Usare questa vista per identificare gli schemi di consumo delle risorse, ad esempio nei carichi di lavoro diurni e notturni, e ottimizzare il consumo complessivo per il database.|  
 |Prime query per consumo risorse|Scegliere una metrica di esecuzione di interesse e trovare le query con i valori più estremi in un intervallo di tempo specificato. <br />Usare questa vista per concentrare l'attenzione sulle query più rilevanti che hanno l'impatto maggiore sul consumo delle risorse di database.|  
 |Query con piani forzati|Vengono elencate in precedenza forzato piani in archivio Query. <br />Utilizzare questa visualizzazione per accedere rapidamente a tutti i piani attualmente forzati.|  
-|Query con variante elevata|Analizzare query con variante esecuzione elevata in relazione a una delle dimensioni disponibili, ad esempio utilizzo di durata, tempo di CPU, i/o e memoria nell'intervallo di tempo desiderato.<br />Utilizzare questa vista per identificare le query con prestazioni ampiamente variant che possono influire negativamente sull'esperienza utente tra le applicazioni.|  
+|Query con variante elevata|Analizzare query con variante esecuzione elevata in relazione a una delle dimensioni disponibili, ad esempio utilizzo di durata, tempo di CPU, i/o e memoria nell'intervallo di tempo desiderato.<br />Usare questa vista per identificare le query con prestazioni molto variabili che possono influire negativamente sull'esperienza utente in tutte le applicazioni.|  
 |Query rilevate|Tenere traccia dell'esecuzione delle query più importanti in tempo reale. In genere, questa vista viene usata in presenza di query con piani forzati per garantire la stabilità delle prestazioni delle query.|
   
 > [!TIP]  
@@ -273,32 +274,33 @@ La tabella seguente riporta le procedure consigliate:
 |Escludere le query non rilevanti.|Configurare la modalità di acquisizione query su Auto.|  
 |Eliminare le query meno rilevanti quando vengono raggiunte le dimensioni massime.|Attivare criteri di pulizia basati sulle dimensioni.|  
   
-##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
- L'uso di query senza parametri quando non è assolutamente necessario, ad esempio nel caso di analisi ad hoc, non è consigliato.  Non è possibile riutilizzare i piani memorizzati nella cache e questo impone a Query Optimizer di compilare query per ogni testo query univoco.  
+##  <a name="Parameterize"></a> Evitare l'uso di query senza parametri  
+ L'uso di query senza parametri quando non è assolutamente necessario, ad esempio nel caso di analisi ad hoc, non è consigliato.  Non è possibile riutilizzare i piani memorizzati nella cache e questo impone a Query Optimizer di compilare query per ogni testo query univoco. Per altre informazioni su questo argomento, vedere le [linee guida per l'utilizzo della parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
   L'archivio query può superare rapidamente il limite di dimensioni a causa del numero potenzialmente elevato di testi query diversi e del conseguente numero elevato di piani di esecuzione diversi con forma simile.  
 Questo influisce negativamente sulle prestazioni del carico di lavoro e l'archivio query potrebbe passare alla modalità di sola lettura o potrebbe eliminare dati continuamente nel tentativo di gestire le query in ingresso.  
   
  Valutare le opzioni seguenti:  
+
+  -   Parametrizzare le query, se applicabile. Ad esempio, eseguire il wrapping delle query all'interno di una stored procedure o sp_executesql. Per altre informazioni su questo argomento, vedere [Parametri e riutilizzo del piano di esecuzione](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
--   Parametrizzare le query, se applicabile. Ad esempio, eseguire il wrapping delle query all'interno di una stored procedure.  
-  
--   Usare l'opzione **Ottimizza per carichi di lavoro ad hoc** se il carico di lavoro contiene molti batch ad hoc monouso con piani di query diversi.  
+-   Usare l'opzione [**Ottimizza per carichi di lavoro ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) se il carico di lavoro contiene molti batch ad hoc monouso con piani di query diversi.  
   
     -   Confrontare il numero di valori query_hash distinti con il numero totale di voci in sys.query_store_query. Se il rapporto è vicino a 1, il carico di lavoro ad hoc genera query diverse.  
   
--   Applicare la parametrizzazione forzata per il database o per un subset di query, se il numero di piani di query diversi non è elevato.  
+-   Applicare la [**parametrizzazione forzata**](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) per il database o per un subset di query, se il numero di piani di query diversi non è elevato.  
   
-    -   Usare la guida di piano per forzare la parametrizzazione solo per la query selezionata.  
+    -   Usare la [guida di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) per forzare la parametrizzazione solo per la query selezionata.  
   
-    -   Configurare la parametrizzazione forzata per il database, se nel carico di lavoro è presente un numero ridotto di piani di query diversi e se il rapporto tra il numero di valori query_hash distinti e il numero totale di voci in sys.query_store_query è molto inferiore a 1.  
+    -   Configurare la parametrizzazione forzata in modo che venga usata l'[opzione di database Parameterization](../../relational-databases/databases/database-properties-options-page.md#miscellaneous), se il carico di lavoro contiene un numero ridotto di piani di query diversi: quando il rapporto tra il conteggio di valori query_hash distinti e il numero totale di voci in sys.query_store_query è molto inferiore a 1.  
   
 -   Impostare la **Modalità di acquisizione query** su Auto per filtrare automaticamente le query ad hoc con un consumo di risorse ridotto.  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
+##  <a name="Drop"></a> Evitare il modello DROP e CREATE nella gestione degli oggetti contenitore per le query  
  L'archivio query associa ogni voce query a un oggetto contenitore, ad esempio una stored procedure, una funzione o un trigger.  Quando si ricrea un oggetto contenitore, viene generata una nuova voce query per lo stesso testo query. Questo impedisce di monitorare le statistiche sulle prestazioni relative a tale query nel tempo e di ricorrere al meccanismo di uso forzato del piano. Per evitare questo problema, usare il processo `ALTER <object>` per modificare la definizione dell'oggetto contenitore, quando è possibile.  
   
-##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Tuttavia, come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengono modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:  
+##  <a name="CheckForced"></a> Verificare regolarmente lo stato dei piani forzati  
+
+ L'uso forzato del piano è un meccanismo efficace per risolvere i problemi di prestazioni delle query critiche e renderle più prevedibili. Tuttavia, come accade con gli hint di piano e le guide di piano, forzare un piano non garantisce che poi venga usato nelle esecuzioni successive. In genere, quando lo schema del database viene modificato in modo che gli oggetti a cui fa riferimento il piano di esecuzione vengono modificati o eliminati, l'uso forzato del piano ha esito negativo. In questo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opta per la ricompilazione delle query, mentre il motivo effettivo dell'errore viene esposto in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La query seguente restituisce informazioni sui piani forzati:  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -311,16 +313,19 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Per un elenco completo dei motivi, vedere [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). È anche possibile usare l'oggetto XEvent **query_store_plan_forcing_failed** per tenere traccia degli errori di uso forzato del piano di risoluzione dei problemi.  
+ Per un elenco completo dei motivi, vedere [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). È anche possibile usare l'oggetto XEvent **query_store_plan_forcing_failed** per tenere traccia degli errori di uso forzato del piano di risoluzione dei problemi.  
   
-##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
- I piani di esecuzione fanno riferimento agli oggetti con nomi in tre parti (`database.schema.object`).   
+##  <a name="Renaming"></a> Evitare di rinominare i database se sono presenti query con piani forzati  
+
+ I piani di esecuzione fanno riferimento agli oggetti con nomi in tre parti `database.schema.object`.   
+
 Se si rinomina un database, l'uso forzato del piano avrà esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Uso di Archivio query con OLTP in-memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)  
   
 

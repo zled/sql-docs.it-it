@@ -1,7 +1,7 @@
 ---
 title: Tipi di dati supportati per OLTP in memoria | Microsoft Docs
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipi di dati supportati per OLTP In memoria
@@ -57,7 +57,7 @@ Per i precedenti tipi di dati string e binary, a partire da SQL Server 2016:
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificare le colonne LOB e altre colonne che si trovano all'esterno di righe
 
-A partire da SQL Server 2016, le tabelle con ottimizzazione per la memoria supportano colonne all'esterno di righe, che consentono una riga nella tabella di dimensioni maggiori di 8060 byte. L'istruzione Transact-SQL SELECT seguente restituisce tutte le colonne che si trovano all'esterno di righe, per tabelle con ottimizzazione per la memoria. Tenere presente quanto segue:
+A partire da SQL Server 2016, le tabelle con ottimizzazione per la memoria [supportano colonne all'esterno di righe](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), che consentono a una singola riga di tabella di superare la dimensione di 8060 byte. L'istruzione Transact-SQL SELECT seguente restituisce tutte le colonne che si trovano all'esterno di righe, per tabelle con ottimizzazione per la memoria. Tenere presente quanto segue:
 
 - Tutte le colonne chiave di indice vengono archiviate all'interno di righe.
   - Le chiavi di indice non univoche possono ora includere colonne che ammettono valori Null in tabelle con ottimizzazione per la memoria.
@@ -91,6 +91,7 @@ SELECT
 ## <a name="see-also"></a>Vedere anche  
  [Supporto di Transact-SQL per OLTP in memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implementazione di SQL_VARIANT in una tabella con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

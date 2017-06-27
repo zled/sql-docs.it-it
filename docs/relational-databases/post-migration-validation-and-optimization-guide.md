@@ -18,10 +18,10 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: d81eabfa1bdb5736bbf6f53ed34c2e1ac157e782
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: it-it
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
@@ -30,9 +30,27 @@ ms.lasthandoff: 05/25/2017
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]post-migrazione passaggio è molto importante per la riconciliazione di qualsiasi accuratezza dei dati e la completezza, nonché rilevare problemi di prestazioni con il carico di lavoro.
 
 # <a name="common-performance-scenarios"></a>Scenari comuni di prestazioni 
-Di seguito sono riportati alcuni degli scenari comuni di prestazioni rilevati dopo la migrazione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] piattaforma e come risolverli. Sono inclusi gli scenari sono specifdic a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazione (versioni precedenti a versioni più recenti), nonché la piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazione.
+Di seguito sono riportati alcuni degli scenari comuni di prestazioni rilevati dopo la migrazione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] piattaforma e come risolverli. Sono inclusi gli scenari specifici della migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versioni precedenti a versioni più recenti), nonché la migrazione dalla piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-## <a name="Parameter Sniffing"></a>Sensibilità allo sniffing dei parametri
+## <a name="CEUpgrade"></a> Regressioni delle query dovute a modifiche della versione CE
+
+**Si applica a:** migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+
+Quando si esegue la migrazione da versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o successiva e si aggiorna il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni.
+
+Ciò avviene perché a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] tutte le modifiche di Query Optimizer sono legate al [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) più recente, quindi i piani non vengono modificati esattamente nel punto di aggiornamento, ma quando un utente passa dall'opzione di database `COMPATIBILITY_LEVEL` a una versione più recente. Questa funzionalità, in combinazione con Archivio query, offre un alto livello di controllo sulle prestazioni delle query nel processo di aggiornamento. 
+
+Per altre informazioni sulle modifiche di Query Optimizer introdotte in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], vedere la sezione relativa all'[ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx).
+
+### <a name="steps-to-resolve"></a>Procedura di risoluzione
+
+Modificare il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) in base alla versione di origine e seguire il flusso di lavoro consigliato per l'aggiornamento, come illustrato nell'immagine seguente:
+
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+
+Per altre informazioni su questo argomento, vedere [Mantenere la stabilità delle prestazioni durante l'aggiornamento a SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
+
+## <a name="ParameterSniffing"></a>Sensibilità allo sniffing dei parametri
 
 **Si applica a:** piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazione.
 
@@ -40,20 +58,20 @@ Di seguito sono riportati alcuni degli scenari comuni di prestazioni rilevati do
 > Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazioni, se il problema era presente nell'origine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come-sarà non specifico per questo scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compila i piani di query nelle stored procedure utilizzando lo sniffing dei parametri di input che la distribuzione dei dati di input in fase di compilazione prima, la generazione di un piano con parametri e riutilizzabile, ottimizzato per. Anche se non le stored procedure, la maggior parte delle istruzioni che generano piani semplici verranno parametri. Dopo che viene prima memorizzato nella cache un piano, un'esecuzione futura esegue il mapping a un piano precedentemente memorizzata nella cache.
-Un potenziale problema si verifica quando la prima compilazione potrebbe non avere utilizzato i set di parametri più comuni per il carico di lavoro normale. Per i diversi parametri, lo stesso piano di esecuzione diventa inefficiente.
+Un potenziale problema si verifica quando la prima compilazione potrebbe non avere utilizzato i set di parametri più comuni per il carico di lavoro normale. Per i diversi parametri, lo stesso piano di esecuzione diventa inefficiente. Per altre informazioni su questo argomento, vedere il blog sull'[analisi dei parametri](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="steps-to-resolve"></a>Procedura di risoluzione
 
-1.    Utilizzare il `RECOMPILE` hint. Un piano viene calcolato ogni volta che adattata a ogni valore del parametro.
-2.    Riscrivere la stored procedure per utilizzare l'opzione `(OPTIMIZE FOR(<input parameter> = <value>))`. Decidere quale valore utilizzare che soddisfano la maggior parte del carico di lavoro pertinenti, creazione e gestione di un piano che diventa efficiente per il valore con parametri.
-3.    Riscrivere la stored procedure utilizzando la variabile locale all'interno della routine. Ora di query optimizer utilizza il vettore di densità per le stime, risultante nello stesso piano indipendentemente dal valore del parametro.
-4.    Riscrivere la stored procedure per utilizzare l'opzione `(OPTIMIZE FOR UNKNOWN)`. Stesso effetto utilizzando la tecnica di variabile locale.
-5.    Riscrivere la query per utilizzare l'hint `DISABLE_PARAMETER_SNIFFING`. Lo stesso effetto delle utilizzando la tecnica di variabile locale per disabilitare completamente lo sniffing dei parametri, a meno che non `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>` viene utilizzato.
+1.  Utilizzare il `RECOMPILE` hint. Un piano viene calcolato ogni volta che adattata a ogni valore del parametro.
+2.  Riscrivere la stored procedure per utilizzare l'opzione `(OPTIMIZE FOR(<input parameter> = <value>))`. Decidere quale valore utilizzare che soddisfano la maggior parte del carico di lavoro pertinenti, creazione e gestione di un piano che diventa efficiente per il valore con parametri.
+3.  Riscrivere la stored procedure utilizzando la variabile locale all'interno della routine. Ora di query optimizer utilizza il vettore di densità per le stime, risultante nello stesso piano indipendentemente dal valore del parametro.
+4.  Riscrivere la stored procedure per utilizzare l'opzione `(OPTIMIZE FOR UNKNOWN)`. Stesso effetto utilizzando la tecnica di variabile locale.
+5.  Riscrivere la query per utilizzare l'hint `DISABLE_PARAMETER_SNIFFING`. Lo stesso effetto delle utilizzando la tecnica di variabile locale per disabilitare completamente lo sniffing dei parametri, a meno che non `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>` viene utilizzato.
 
 > [!TIP] 
 > Usare il [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] funzionalità di pianificazione di analisi per identificare rapidamente se si tratta di un problema. Sono disponibili altre informazioni [qui](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
-## <a name="Missing indexes"></a>Indici mancanti
+## <a name="MissingIndexes"></a>Indici mancanti
 
 **Si applica a:** piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazione.
 
@@ -63,15 +81,15 @@ Gli indici non corretto o mancanti determina i/o aggiuntivo che fa riferimento a
 
 ### <a name="steps-to-resolve"></a>Procedura di risoluzione
 
-1.    Utilizzare il piano di esecuzione grafico per i riferimenti a indice mancante.
-2.    L'indicizzazione di suggerimenti generati da [Ottimizzazione guidata motore di Database](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.    Utilizzo di [DMV di indici mancanti](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) o tramite il [Dashboard delle prestazioni di SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
-4.    Utilizzare gli script di pre-esistenti che possono utilizzare le DMV esistente per consentono di comprendere tutti gli indici mancanti, duplicati, ridondanti, raramente utilizzati e inutilizzati completamente, ma anche se qualsiasi riferimento di indice è suggerisce/hard-coded in procedure esistenti e funzioni nel database. 
+1.  Utilizzare il piano di esecuzione grafico per i riferimenti a indice mancante.
+2.  L'indicizzazione di suggerimenti generati da [Ottimizzazione guidata motore di Database](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+3.  Utilizzo di [DMV di indici mancanti](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) o tramite il [Dashboard delle prestazioni di SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+4.  Utilizzare gli script di pre-esistenti che possono utilizzare le DMV esistente per consentono di comprendere tutti gli indici mancanti, duplicati, ridondanti, raramente utilizzati e inutilizzati completamente, ma anche se qualsiasi riferimento di indice è suggerisce/hard-coded in procedure esistenti e funzioni nel database. 
 
 > [!TIP] 
 > Esempi di tali script pre-esistente [la creazione dell'indice](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) e [informazioni sugli indici](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## <a name="Inability to use predicates"></a>Impossibilità di utilizzare predicati per filtrare i dati
+## <a name="InabilityPredicates"></a>Impossibilità di utilizzare predicati per filtrare i dati
 
 **Si applica a:** piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazione.
 
@@ -97,9 +115,9 @@ Alcuni esempi di predicati non SARGable:
   -   Le espressioni complesse in base a colonne dati: valutare la necessità di creare colonne calcolate persistenti, che possono essere indicizzate;
 
 > [!NOTE] 
-> Tutti gli elementi possono essere eseguiti programmaticaly.
+> Tutte le operazioni indicate sopra possono essere eseguite a livello di codice.
 
-## <a name="Table Valued Functions"></a>Utilizzo delle funzioni con valori di tabella (rispetto a istruzioni multiple Inline)
+## <a name="TableValuedFunctions"></a>Utilizzo delle funzioni con valori di tabella (rispetto a istruzioni multiple Inline)
 
 **Si applica a:** piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrazione.
 
@@ -112,7 +130,7 @@ Le funzioni a valori di tabella restituisce un tipo di dati di tabella che può 
 > Poiché la tabella di output di un MSTVF (funzione con valori di più istruzioni tabella) non è stata creata in fase di compilazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer si basa sull'euristica e le statistiche non effettive, per determinare le stime di riga. Anche se gli indici vengono aggiunti per le tabelle di base, questa Guida non sarà. Per MSTVFs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza una stima predefinita di 1 per il numero di righe previsto che venga restituito da un MSTVF (a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] corretti stima è 100 righe).
 
 ### <a name="steps-to-resolve"></a>Procedura di risoluzione
-1.    Se il TVF multi-istruzione singola istruzione, convertire TVF Inline.
+1.  Se il TVF multi-istruzione singola istruzione, convertire TVF Inline.
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -142,7 +160,7 @@ Le funzioni a valori di tabella restituisce un tipo di dati di tabella che può 
     )
     ```
 
-2.    Se più complesse, utilizzare i risultati intermedi archiviati in tabelle con ottimizzazione per la memoria o tabelle temporanee.
+2.  Se più complesse, utilizzare i risultati intermedi archiviati in tabelle con ottimizzazione per la memoria o tabelle temporanee.
 
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni  
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
