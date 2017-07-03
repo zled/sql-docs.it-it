@@ -1,3 +1,7 @@
+
+# [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [Elaborazione di Query adattivo](adaptive-query-processing.md)
 # [L'ottimizzazione automatica](../automatic-tuning/automatic-tuning.md)
 # [Stima della cardinalità](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [Convalidare le guide di piano dopo l'aggiornamento](validate-plan-guides-after-upgrade.md)  
 ## [Eliminare una guida di piano](delete-a-plan-guide.md)  
 ## [Abilitare o disabilitare una guida di piano](enable-or-disable-a-plan-guide.md)  
-
-# [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

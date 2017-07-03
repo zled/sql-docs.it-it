@@ -1,4 +1,6 @@
 # [Esercitazioni: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+
+# Lezioni
 ## [Lezione 1: Navigazione di base in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [Lezione 1-1 - Avviare SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
 ### [Lezione 1-2 - Connettersi con server registrati ed Esplora oggetti](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  

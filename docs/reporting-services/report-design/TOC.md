@@ -1,5 +1,5 @@
 # [Pianificazione di un Report](planning-a-report-report-builder.md)  
-## [Suggerimenti sulla progettazione di report](report-design-tips-report-builder-and-ssrs.md)  
+# [Suggerimenti sulla progettazione di report](report-design-tips-report-builder-and-ssrs.md)  
 # [Concetti relativi alla creazione di report](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [I report, parti del Report e definizioni dei Report](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [Aree dati e mappe](data-regions-and-maps-report-builder-and-ssrs.md)  

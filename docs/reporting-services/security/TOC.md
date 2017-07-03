@@ -2,7 +2,7 @@
 # [Protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
 # [Autenticazione con il Server di Report](authentication-with-the-report-server.md)  
 ## [Configurare l'autenticazione di Windows nel Server di Report](configure-windows-authentication-on-the-report-server.md)  
-## [Configurare l'autenticazione di base nel Server di Report](configure-basic-authentication-on-the-report-server.md)  
+## [Configurare l'autenticazione di base nel server di report](configure-basic-authentication-on-the-report-server.md)  
 ## [Configurazione personalizzata o autenticazione basata su form nel Server di Report](configure-custom-or-forms-authentication-on-the-report-server.md)  
 ## [Configurare il portale Web per passare i cookie di autenticazione personalizzati](configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
 # [Ruoli e autorizzazioni](roles-and-permissions-reporting-services.md)  

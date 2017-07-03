@@ -1,6 +1,6 @@
-# [Guida per gli sviluppatori: Procedure (replica)](developer-s-guide-how-to-topics-replication.md)
-# [Concetti di base relativi ai file eseguibili dell'agente di replica](replication-agent-executables-concepts.md)
 # [Documentazione per gli sviluppatori di replica](replication-developer-documentation.md)
+# [Guida per gli sviluppatori: Procedure (replica)](developer-s-guide-how-to-topics-replication.md)
+# [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)
 # [Concetti di base relativi a RMO (Replication Management Objects)](replication-management-objects-concepts.md)
 # [Concetti di base relativi alla programmazione della replica](replication-programming-concepts.md)
 # [Concetti di base relativi alle stored procedure del sistema di replica](replication-system-stored-procedures-concepts.md)

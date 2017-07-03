@@ -1,4 +1,6 @@
 # [Installazione del cluster di failover di SQL Server](install/sql-server-failover-cluster-installation.md)  
+
+# Progettazione
 ## [Operazioni preliminari all'installazione del clustering di failover](install/before-installing-failover-clustering.md)  
 ## [Creare un nuovo cluster di failover di SQL Server (programma di installazione)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server (programma di installazione)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
