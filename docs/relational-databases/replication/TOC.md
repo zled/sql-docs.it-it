@@ -3,9 +3,22 @@
 # [Compatibilità con le versioni precedenti della replica](replication-backward-compatibility.md)  
 ## [Funzionalità deprecate nella replica di SQL Server](deprecated-features-in-sql-server-replication.md)  
 ## [Modifiche di rilievo alla replica di SQL Server](breaking-changes-in-sql-server-replication.md)  
+
+# Aree di replica
+## [Amministrazione della replica](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [Concetti per sviluppatori](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [Monitoraggio della replica](./monitor/monitoring-replication.md)
+## [Replica di database eterogenei non SQL](./non-sql/heterogeneous-database-replication.md)
+## [Pubblicare dati e oggetti di database](./publish/publish-data-and-database-objects.md)
+## [Sicurezza per la replica](./security/security-overview-replication.md)
+
 # [Caratteristiche e attività di replica](replication-features-and-tasks.md)  
 ## [Tipi di replica](types-of-replication.md)  
 ### [Replica snapshot](snapshot-replication.md)  
+### [Replica di tipo merge](./merge/merge-replication.md)
+### [Replica transazionale](./transactional/transactional-replication.md) 
+
 ## [Replica in Sottoscrittori di tabelle con ottimizzazione per la memoria](replication-to-memory-optimized-table-subscribers.md)  
 ## [Replica nel database SQL](replication-to-sql-database.md)  
 ## [Ripubblicare i dati](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [Convalidare le informazioni sulle partizioni per un Sottoscrittore di tipo merge](validate-partition-information-for-a-merge-subscriber.md)  
 ### [Convalidare i dati nel Sottoscrittore](validate-data-at-the-subscriber.md)  
 ## [Creazione di script di replica](scripting-replication.md)  
-
-# [Concetti per sviluppatori](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Riferimento tecnico](technical-reference-replication.md)  
 ## [Riferimento alle proprietà](properties-reference-replication.md)  

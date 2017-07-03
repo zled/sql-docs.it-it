@@ -1,4 +1,6 @@
-# [Amministrare server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  
+# [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  
+
+# Gestione basata su criteri
 ## [Archiviazione della gestione basata su criteri](policy-based-management-storage.md)  
 ## [Configurare le proprietà generali della gestione basata su criteri](configure-the-general-properties-of-policy-based-management.md)  
 ## [Configurare avvisi per notificare agli amministratori eventuali errori dei criteri](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -71,6 +73,8 @@
 ### [Finestra di dialogo Seleziona origine](select-source-dialog-box.md)  
 ### [Finestra di dialogo Esporta come criteri](export-as-policy-dialog-box.md)  
 ### [Finestra di dialogo Importa criteri](import-policies-dialog-box.md)  
+
+
 # [Esercitazione: Amministrazione di server tramite la gestione basata su criteri](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [Lezione 1: Creare e applicare criteri Disattivata per impostazione predefinita](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [Lezione 1-1: Creare criteri Disattivata per impostazione predefinita](lesson-1-1-create-the-off-by-default-policy.md)  
