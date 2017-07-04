@@ -1,11 +1,10 @@
 # [Caratteristiche del database](database-features.md)
+# [Articoli nuovi e aggiornati di recente](new-updated-relational-databases.md)
 
 # Panoramica
 ## [Caratteristiche del motore di database tra istanze](database-engine-cross-instance-features.md)
 ## [Riferimento tecnico](technical-reference-database-engine.md)  
 ## [Guida di riferimento alle funzionalità](feature-reference-database-engine.md)   
-
-# [Articoli su database relazionali aggiornato di recente](relational-databases-new-updated-sql-docs-pr.md)
 
 # [Guide di SQL Server](sql-server-guides.md)
 ## Guida alla risoluzione dei problemi e monitoraggio di gruppi di disponibilità AlwaysOn
