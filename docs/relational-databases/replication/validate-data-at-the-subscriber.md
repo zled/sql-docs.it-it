@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcd9d7f9e729a1d2ebb7cc876ce3807aa839f079
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="validate-data-at-the-subscriber"></a>Convalida dei dati nel Sottoscrittore
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
  La convalida dei dati è un processo suddiviso in tre parti:  
   
-1.  Una sottoscrizione o tutte le sottoscrizioni di una pubblicazione vengono *contrassegnate* per la convalida. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È inoltre possibile contrassegnare le sottoscrizioni nella scheda **Tutte le sottoscrizioni** , nella scheda **Elenco verifica sottoscrizioni** e nel nodo delle pubblicazioni in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+1.  Una sottoscrizione o tutte le sottoscrizioni di una pubblicazione vengono *contrassegnate* per la convalida. \Contrassegnare le sottoscrizioni per la convalida nelle finestre di dialogo **Convalida sottoscrizione**, **Convalida sottoscrizioni**e **Convalida tutte le sottoscrizioni** , disponibili dalle cartelle **Pubblicazioni locali** e **Sottoscrizioni locali** in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È inoltre possibile contrassegnare le sottoscrizioni nella scheda **Tutte le sottoscrizioni** , nella scheda **Elenco verifica sottoscrizioni** e nel nodo delle pubblicazioni in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 2.  La sottoscrizione viene convalidata alla successiva sincronizzazione eseguita dall'agente di distribuzione, nel caso della replica transazionale, o dall'agente di merge nella replica di tipo merge. L'agente di distribuzione in genere viene eseguito in modo continuativo, pertanto la convalida viene eseguita immediatamente, mentre l'agente di merge in genere viene eseguito su richiesta, pertanto la convalida viene eseguita solo dopo l'esecuzione dell'agente.  
   
@@ -312,13 +312,13 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Per convalidare i dati per tutti gli articoli in una pubblicazione transazionale  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Passare quanto segue:  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Passare quanto segue:  
   
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
   
@@ -332,25 +332,25 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Per convalidare i dati in tutte le sottoscrizioni di una pubblicazione di tipo merge  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Passare l'oggetto <xref:Microsoft.SqlServer.Replication.ValidationOption> desiderato.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Passare l'oggetto <xref:Microsoft.SqlServer.Replication.ValidationOption>desiderato.  
   
 5.  Eseguire l'agente di merge per avviare la convalida in ciascuna sottoscrizione oppure attendere la successiva esecuzione pianificata dell'agente. Per ulteriori informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Il risultato dell'operazione di convalida viene scritto nella cronologia dell'agente, visualizzabile tramite Monitoraggio replica. Per altre informazioni, vedere [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Per convalidare i dati in una singola sottoscrizione di una pubblicazione di tipo merge  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Passare il nome del Sottoscrittore e il database di sottoscrizione da convalidare e l'oggetto <xref:Microsoft.SqlServer.Replication.ValidationOption> desiderato.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Passare il nome del Sottoscrittore e il database di sottoscrizione da convalidare e l'oggetto <xref:Microsoft.SqlServer.Replication.ValidationOption>desiderato.  
   
 5.  Eseguire l'agente di merge per avviare la convalida nella sottoscrizione oppure attendere la successiva esecuzione pianificata dell'agente. Per ulteriori informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) e [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Il risultato dell'operazione di convalida viene scritto nella cronologia dell'agente, visualizzabile tramite Monitoraggio replica. Per altre informazioni, vedere [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   

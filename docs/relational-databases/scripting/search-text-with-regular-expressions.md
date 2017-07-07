@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/11/2017
 |Campanello|\g|Carattere Unicode U+0007.|  
 |Backspace|\h|Carattere Unicode U+0008.|  
 |Scheda|\t|Consente di ricercare un carattere di tabulazione, Unicode U+0009.|  
-|carattere Unicode|\x#### o \u####|Consente di ricercare un carattere corrispondente a un valore Unicode, dove #### è una cifra esadecimale. È possibile specificare un carattere non incluso nel Basic Multilingual Plane, ovvero un surrogato, tramite il punto di codice ISO 10646 o due punti di codice Unicode che forniscono i valori della coppia surrogato.|  
+|carattere Unicode|\x#### oppure \u####|Consente di ricercare un carattere corrispondente a un valore Unicode, dove #### è una cifra esadecimale. È possibile specificare un carattere non incluso nel Basic Multilingual Plane, ovvero un surrogato, tramite il punto di codice ISO 10646 o due punti di codice Unicode che forniscono i valori della coppia surrogato.|  
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   

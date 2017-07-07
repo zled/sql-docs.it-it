@@ -1,5 +1,5 @@
 ---
-title: Backup di SQL Server nell&quot;URL | Microsoft Docs
+title: Backup di SQL Server nell'URL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
@@ -143,7 +143,7 @@ ms.lasthandoff: 04/11/2017
 |DESCRIPTION|√|||  
 |NAME|√|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, usare l'argomento **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT**) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
+|NOINIT &#124; INIT|−||L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, usare l'argomento **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
 |NOSKIP &#124; SKIP|−|||  
 |NOFORMAT &#124; FORMAT|√||Un backup eseguito in un BLOB esistente non viene completato a meno che non venga specificato **WITH FORMAT** . Il BLOB esistente viene sovrascritto quando viene specificato **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento FORMAT non è consentito per evitare di lasciare snapshot di file orfani creati con il backup con snapshot di file originale. Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
 |MEDIADESCRIPTION|√|||  
@@ -255,7 +255,7 @@ L'attività Ripristina database include **URL** come dispositivo da cui eseguire
       
     3.  **Aggiungi:**  usato per registrare un contenitore esistente per il quale non si ha una firma di accesso condiviso.  Vedere [Connettersi a una sottoscrizione di Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
       
-    4.  **OK:**    SQL Server si connette al servizio di archiviazione Microsoft Azure tramite le credenziali SQL specificate e apre la finestra di dialogo **Trova file di backup in Microsoft Azure** . In questa pagina vengono visualizzati i file di backup che si trovano nel contenitore di archiviazione. Selezionare il file che si desidera ripristinare, quindi fare clic su **OK**. Viene visualizzata di nuovo la finestra di dialogo **Seleziona dispositivi di backup** . Se si fa clic su **OK** in questa finestra di dialogo, viene visualizzata di nuovo la finestra di dialogo principale **Ripristina** in cui sarà possibile completare il ripristino. 
+    4.  **OK:** SQL Server si connette al servizio di archiviazione Microsoft Azure tramite le credenziali SQL specificate e apre la finestra di dialogo **Trova file di backup in Microsoft Azure**. In questa pagina vengono visualizzati i file di backup che si trovano nel contenitore di archiviazione. Selezionare il file che si desidera ripristinare, quindi fare clic su **OK**. Viene visualizzata di nuovo la finestra di dialogo **Seleziona dispositivi di backup** . Se si fa clic su **OK** in questa finestra di dialogo, viene visualizzata di nuovo la finestra di dialogo principale **Ripristina** in cui sarà possibile completare il ripristino. 
   
      [Ripristina database &#40;pagina Generale&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
