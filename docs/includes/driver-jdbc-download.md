@@ -1,1 +1,1 @@
-![Download](/Image/download.png)[Scaricare il driver JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)
+![Download](/Image/download.png)[Scaricare il driver JDBC](https://go.microsoft.com/fwlink/?linkid=852460)
