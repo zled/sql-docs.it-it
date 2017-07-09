@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
@@ -75,7 +75,7 @@ Per importare correttamente i dati in formato nativo, verificare quanto segue:
     > [!IMPORTANT]
     >  Per impostazione predefinita, quando si usa la modalità nativa, l'utilità [bcp](../../tools/bcp-utility.md) converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. L' [utilità bcp](../../tools/bcp-utility.md) converte i caratteri di un file di dati in caratteri ANSI prima dell'importazione bulk in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.
   
--   Dati[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)  
+-   Dati[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)   
   
      Se i dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) vengono archiviati come SQLVARIANT in un file di dati in formato nativo, verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengono usati per creare di nuovo il valore con lo stesso tipo di dati in una colonna di destinazione [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) .  
   
@@ -150,7 +150,7 @@ Notepad D:\BCP\myNative.fmt
 Gli esempi seguenti usano il database e i file di formato creati in precedenza.
 
 ### **Uso di bcp e del formato nativo per l'esportazione di dati**<a name="bcp_native_export"></a>
-Opzione**-n** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere i comandi seguenti:
+**-n** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere i comandi seguenti:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -159,7 +159,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Uso di bcp e del formato nativo per l'importazione di dati senza un file di formato**<a name="bcp_native_import"></a>
-Opzione**-n** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
+**-n** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -172,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Uso di bcp e del formato nativo per l'importazione di dati con un file di formato non XML**<a name="bcp_native_import_fmt"></a>
-Opzioni**-n** e **-f** switches e **IN** comme.  Al prompt dei comandi immettere i comandi seguenti:
+**-n** e **-f** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
