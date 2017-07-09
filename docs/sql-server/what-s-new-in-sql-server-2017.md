@@ -32,7 +32,7 @@ In questo argomento è riportato un riepilogo delle novità nella versione Commu
 
 
 **Per provarlo:**    
-   -   [![Download da Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[scaricare SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![Download da Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[scaricare SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>Novità di SQL Server 2017 CTP 2.1 (maggio 2017)
 ### <a name="sql-server-database-engine"></a>Motore di database di SQL Server  
