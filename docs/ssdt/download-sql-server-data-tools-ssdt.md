@@ -1,7 +1,7 @@
 ---
 title: Scaricare SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 03/10/2017
+ms.date: 05/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,7 +23,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="download-sql-server-data-tools-ssdt"></a>Scaricare SQL Server Data Tools (SSDT)
+<a id="download-sql-server-data-tools-ssdt" class="xliff"></a>
+
+# Scaricare SQL Server Data Tools (SSDT)
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** è un moderno strumento di sviluppo scaricabile gratuitamente per compilare database relazionali SQL Server, database Azure SQL, pacchetti di Integration Services, modelli di dati di Analysis Services e report di Reporting Services. Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio. Questa versione supporta SQL Server 2017 tramite SQL Server 2005 e fornisce l'ambiente di progettazione per l'aggiunta delle funzionalità introdotte in SQL Server 2016.  
     
@@ -32,7 +34,9 @@ ms.lasthandoff: 06/22/2017
 
 ![download](../ssdt/media/download.png) [Scaricare Data-Tier Application Framework (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
 
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
+<a id="sql-server-data-tools" class="xliff"></a>
+
+## SQL Server Data Tools   
 **Informazioni sulla versione**  
   
 Numero di versione: 17.1  
@@ -84,17 +88,23 @@ Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per insta
 [Russo]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
 [Spagnolo]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
 
-## <a name="download-visual-studio"></a>Scaricare Visual Studio
+<a id="download-visual-studio" class="xliff"></a>
+
+## Scaricare Visual Studio
 
 * [**Scaricare Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
-## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Installazione di SSDT senza Visual Studio preinstallato
+<a id="installing-ssdt-without-visual-studio-pre-installed" class="xliff"></a>
+
+## Installazione di SSDT senza Visual Studio preinstallato
 
 Se Visual Studio non è installato nel computer, l'installazione di SSDT per Visual Studio 2015 includerà anche l'installazione di una versione minima "shell integrata" di Visual Studio 2015. Questa versione di Visual Studio può essere installata e usata liberamente in qualsiasi numero di computer. Include tutti i tipi di progetto di SQL Server, oltre a Esplora oggetti di SQL Server e altre esperienze di strumenti SQL.
 
 Se nel computer in uso è installato [Visual Studio 2015 Community Edition (o versioni successive)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx), l'installazione di SSDT consentirà di aggiungere il set completo di strumenti di SQL Server nell'installazione di Visual Studio esistente. Visual Studio include molte funzionalità utili, come l'integrazione del controllo del codice sorgente e il supporto di linguaggi diversi da SQL. Per un'esperienza di sviluppo ottimale con T-SQL, è consigliabile usare Visual Studio Community 2015 o versione successiva.
 
-## <a name="supported-sql-versions"></a>Versioni di SQL supportate
+<a id="supported-sql-versions" class="xliff"></a>
+
+## Versioni di SQL supportate
   
 |Modelli di progetto|Piattaforme SQL supportate|  
 |-------------------|--------------------|  
@@ -102,7 +112,9 @@ Database relazionali|  SQL Server 2005* - SQL Server 2017 <br /><br />Database S
   |Modelli di Analysis Services<br /><br />Report di Reporting Services | SQL Server 2008 - SQL Server 2017|
   |pacchetti di Integration Services| SQL Server 2012 - SQL Server 2017    |
   
-## <a name="next-steps"></a>Passaggi successivi  
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi  
 Dopo l'installazione di SSDT, consultare queste esercitazioni per imparare a creare database, pacchetti, modelli di dati e report mediante SSDT:  
   
 -   [Sviluppo di database offline orientato ai progetti](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
@@ -113,7 +125,9 @@ Dopo l'installazione di SSDT, consultare queste esercitazioni per imparare a cre
   
 -   [Creare un report tabella semplice (esercitazione su SSRS)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-## <a name="use-ssdt-in-visual-studio-2017"></a>Usare SSDT in Visual Studio 2017 
+<a id="use-ssdt-in-visual-studio-2017" class="xliff"></a>
+
+## Usare SSDT in Visual Studio 2017 
 
 * [**Scaricare Visual Studio 2017**](https://www.visualstudio.com/) ([confrontare le funzionalità di Visual Studio 2017 nelle varie edizioni](https://www.visualstudio.com/vs/compare/))
 
@@ -127,7 +141,9 @@ Se si usa SSDT con Visual Studio 2017, installare i componenti AS e RS:
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
-## <a name="see-also"></a>Vedere anche  
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche  
 [SQL Server Data Tools in Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [Forum MSDN di SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Blog del Team di SSDT](http://blogs.msdn.com/b/ssdt/)  
