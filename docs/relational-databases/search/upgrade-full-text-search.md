@@ -24,10 +24,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
+<a id="upgrade-full-text-search" class="xliff"></a>
+
+# Aggiornamento della ricerca full-text
   L'aggiornamento della ricerca full-text a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene effettuato in fase di installazione e durante il collegamento, il ripristino o la copia dei file di database e dei cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la Copia guidata database.  
   
   
@@ -83,7 +85,9 @@ ms.lasthandoff: 04/11/2017
   
      L'importazione o la ricompilazione durante l'aggiornamento richiede l'utilizzo di molte risorse della CPU ritardando in questo modo l'aggiornamento del resto dell'istanza del server e la disponibilità online dell'istanza stessa. Se la disponibilità online dell'istanza del server è essenziale e si desidera eseguire un popolamento manuale dopo l'aggiornamento, è consigliabile utilizzare l'opzione **Reimposta** .  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>Garanzia di coerenza dei risultati delle query dopo l'importazione di un indice full-text  
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
+
+## Garanzia di coerenza dei risultati delle query dopo l'importazione di un indice full-text  
  Se un catalogo full-text viene importato durante l'aggiornamento di un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], potrebbero verificarsi mancate corrispondenze tra la query e il contenuto dell'indice full-text a causa di differenze nel comportamento dei vecchi e dei nuovi word breaker. In tal caso, per garantire una totale corrispondenza tra le query e il contenuto dell'indice full-text, utilizzare una delle opzioni seguenti:  
   
 -   Ricompilare il catalogo full-text che contiene l'indice full-text ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*nome_catalogo* REBUILD)  
@@ -92,7 +96,9 @@ ms.lasthandoff: 04/11/2017
   
  Per altre informazioni sui word breaker, vedere [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>Aggiornamento di file di parole non significative agli elenchi corrispondenti  
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
+
+## Aggiornamento di file di parole non significative agli elenchi corrispondenti  
 Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i file delle parole non significative non vengono più utilizzati. Tali file vengono tuttavia archiviati nella cartella FTDATA\FTNoiseThesaurusBak e possono essere utilizzati in seguito durante l'aggiornamento o la compilazione degli elenchi di parole non significative corrispondenti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Dopo l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -112,7 +118,9 @@ Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurr
   
      La clausola STOPLIST OFF rimuove l'applicazione di filtri alle parole non significative e attiva la popolazione della tabella senza filtrare le parole considerate non significative.  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>Backup e cataloghi full-text importati  
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
+
+## Backup e cataloghi full-text importati  
  Per i cataloghi full-text ricompilati o reimpostati durante l'aggiornamento e per i nuovi cataloghi full-text, il catalogo full-text è un concetto logico e non risiede in un filegroup. Per eseguire il backup di un catalogo full-text in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è pertanto necessario identificare ogni filegroup contenente un indice full-text del catalogo ed eseguirne il backup uno alla volta. Per altre informazioni, vedere [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
  I cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]rappresentano ancora file di database nel proprio filegroup. Il processo di backup di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] continua a essere applicato per i cataloghi full-text ad eccezione del fatto che il servizio MSFTESQL non esiste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sul processo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkId=209154) nella documentazione online di SQL Server 2005.  
@@ -124,7 +132,7 @@ Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurr
   
  **Per modificare il comportamento dell'aggiornamento full-text in un'istanza del server**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare l'azione \_Opzione di aggiornamento** ** di full-text di [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare l'opzione di **aggiornamento full-text** della finestra di dialogo **Proprietà server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -155,7 +163,9 @@ Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurr
   
 -   [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>Esempio  
+<a id="example" class="xliff"></a>
+
+### Esempio  
  Nell'esempio seguente viene utilizzata la clausola MOVE nell'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) per ripristinare un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] denominato `ftdb1`. I file di database, di log e di catalogo di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vengono spostati nei nuovi percorsi nell'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , come segue:  
   
 -   Il file di database, `ftdb1.mdf`, viene spostato in `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
@@ -180,7 +190,9 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Per altre informazioni sul collegamento e scollegamento di un database, vedere [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) e [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-## <a name="see-also"></a>Vedere anche  
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche  
  [Introduzione alla ricerca full-text](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
