@@ -1,0 +1,1 @@
+![sì](media/yes.png)Server di report di Power BI

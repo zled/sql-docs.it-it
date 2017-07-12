@@ -1,7 +1,7 @@
 ---
 title: Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,19 +14,23 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.translationtype: HT
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+
+# Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Una tabella con ottimizzazione per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. In una tabella con ottimizzazione per la memoria i dati all'interno di righe non possono essere più lunghi di 8.060 byte. Tuttavia, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile creare una tabella con più colonne di grandi dimensioni, ad esempio, più colonne varbinary(8000), e colonne LOB, ad esempio, varbinary(max), varchar(max) e nvarchar(max). Le colonne che superano le dimensioni massime per i dati all'interno di righe vengono inserite all'esterno delle righe, in speciali tabelle interne. Per informazioni dettagliate su queste tabelle interne, vedere [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+  Prima di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] le dimensioni dei dati all'interno delle righe di un tabella ottimizzata per la memoria non potevano essere superiori a [8.060 byte](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel database SQL di Azure è invece possibile creare una tabella ottimizzata per la memoria con più colonne di grandi dimensioni, ad esempio più colonne varbinary (8000), e colonne LOB, ad esempio colonne varbinary (max), varchar (max) e nvarchar (max). È anche possibile eseguire operazioni sulle colonne usando moduli T-SQL compilati in modo nativo e tipi di tabella. 
   
- Esistono due motivi per calcolare le dimensioni di righe e tabelle:  
+  Le colonne che superano le dimensioni massime delle righe di 8060 byte vengono inserite all'esterno delle righe, in una tabella interna separata. Ogni colonna all'esterno delle righe ha una corrispondente tabella interna, che a sua volta ha un indice non cluster. Per informazioni dettagliate su queste tabelle interne usate per colonne all'esterno di righe, vedere[ sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
+ 
+  Esistono alcuni scenari in cui è utile calcolare le dimensioni della riga e della tabella:
   
 -   Quanta memoria viene utilizzata da una tabella?  
   
@@ -38,13 +42,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Quali sono le dimensioni dei dati di una riga? Tali dimensioni rientrano nel limite di 8.060 byte? Per rispondere a queste domande, utilizzare il calcolo di [row body size] descritto di seguito.  
 
-Le colonne che superano le dimensioni massime delle righe di 8060 byte vengono inserite all'esterno delle righe, in una tabella interna separata. Ogni colonna all'esterno delle righe ha una corrispondente tabella interna, che a sua volta ha un indice non cluster. Per informazioni dettagliate sulle tabelle interne usate per le colonne all'esterno delle righe, vedere [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
-  
- Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
+  Una tabella con ottimizzazione per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
   
  ![Tabella con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 Tabella con ottimizzazione per la memoria, costituita da indici e righe.  
-  
+
+##  <a name="bkmk_TableSize"></a> Calcolo delle dimensioni di una tabella
  Le dimensioni in memoria di una tabella, in byte, vengono calcolate come segue:  
   
 ```  
@@ -65,34 +68,10 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indices]  
 ```  
-  
- **Dimensioni del corpo delle righe**  
-  
- Il calcolo di [row body size] viene descritto nella tabella seguente.  
-  
- Le dimensioni del corpo delle righe possono essere considerate da due punti di vista diversi, le dimensioni calcolate e le dimensioni effettive, come illustrato di seguito.  
-  
--   Le dimensioni calcolate, indicate con [computed row body size], vengono utilizzate per determinare se il limite di dimensione di 8.060 byte viene superato.  
-  
--   Le dimensioni effettive, indicate con [actual row body size], rappresentano le dimensioni di archiviazione effettive del corpo delle righe in memoria e nei file del checkpoint.  
-  
- Entrambi i valori di [computed row body size] e [actual row body size] vengono calcolati in modo analogo. L'unica differenza è il calcolo delle dimensioni delle colonne (n)varchar(i) e varbinary(i), come evidenziato nella parte inferiore della tabella seguente. Per le dimensioni calcolate del corpo delle righe viene usata la dimensione dichiarata *i* come dimensione della colonna, mentre per le dimensioni effettive del corpo delle righe viene usata la dimensione effettiva dei dati.  
-  
- Nella tabella seguente viene descritto il calcolo delle dimensioni del corpo delle righe, fornito come [actual row body size] = SUM ([size of shallow types) + 2 + 2 * [number of deep type columns].  
-  
-|Sezione|Dimensione|Commenti|  
-|-------------|----------|--------------|  
-|Colonne di tipo superficiale|SUM([size of shallow types]). Le dimensioni in byte dei singoli tipi sono le seguenti:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precisione <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(precisione >18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Riempimento delle colonne superficiali|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni totali dei dati delle colonne superficiali sono un numero dispari.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Matrice di offset delle colonne di tipo approfondito|I valori possibili sono:<br /><br /> 0 se non sono disponibili colonne di tipo approfondito<br /><br /> 2 + 2 * [number of deep type columns] in caso contrario|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Matrice NULL|[number of nullable columns] / 8, arrotondato per eccesso ai byte completi.|La matrice dispone di un bit per ogni colonna che ammette i valori Null. Il valore viene arrotondato per eccesso ai byte completi.|  
-|Riempimento della matrice NULL|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni della matrice NULL sono un numero dispari di byte.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Spaziatura interna|0 se non sono disponibili colonne di tipo approfondito<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
-|Colonne di tipo approfondito a lunghezza fissa|SUM([size of fixed length deep type columns])<br /><br /> Le dimensioni di ogni colonna sono le seguenti:<br /><br /> i per char(i) e binary(i).<br /><br /> 2 * i per nchar(i)|Le colonne di tipo approfondito a lunghezza fissa sono le colonne di tipo char(i), nchar(i) o binary(i).|  
-|Colonne di tipo approfondito a lunghezza variabile [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Le dimensioni calcolate di ogni colonna sono le seguenti:<br /><br /> i per varchar(i) e varbinary(i)<br /><br /> 2 * i per nvarchar(i)|Questa riga si riferiva solo a [computed row body size].<br /><br /> Le colonne di tipo approfondito a lunghezza variabile sono le colonne di tipo varchar(i), nvarchar(i) o varbinary(i). Le dimensioni calcolate sono determinate dalla lunghezza massima (i) della colonna.|  
-|Colonne di tipo approfondito a lunghezza variabile [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Le dimensioni effettive di ogni colonna sono le seguenti:<br /><br /> n, dove n è il numero di caratteri archiviato nella colonna, per varchar(i).<br /><br /> 2 * n, dove n è il numero di caratteri archiviato nella colonna, per nvarchar(i).<br /><br /> n, dove n è il numero di byte archiviato nella colonna, per varbinary(i).|Questa riga si riferiva solo a [actual row body size].<br /><br /> Le dimensioni effettive sono determinate dai dati archiviati nelle colonne della riga.|  
-  
-##  <a name="bkmk_RowStructure"></a> Struttura di righe  
+##  <a name="bkmk_RowBodySize"></a> Calcolo delle dimensioni del corpo di una riga
+
+**Struttura delle righe**
+    
  Le righe di una tabella con ottimizzazione per la memoria includono i componenti seguenti:  
   
 -   L'intestazione di riga contiene il timestamp necessario per implementare il controllo delle versioni delle righe. L'intestazione di riga contiene inoltre il puntatore dell'indice per implementare il concatenamento di righe nei bucket di hash (descritti in precedenza).  
@@ -139,6 +118,32 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
 |John|Parigi|  
 |Jane|Praga|  
 |Susan|Bogotà|  
+  
+ 
+  
+ Il calcolo di [row body size] viene descritto nella tabella seguente.  
+  
+ Le dimensioni del corpo delle righe possono essere considerate da due punti di vista diversi, le dimensioni calcolate e le dimensioni effettive, come illustrato di seguito.  
+  
+-   Le dimensioni calcolate, indicate con [computed row body size], vengono utilizzate per determinare se il limite di dimensione di 8.060 byte viene superato.  
+  
+-   Le dimensioni effettive, indicate con [actual row body size], rappresentano le dimensioni di archiviazione effettive del corpo delle righe in memoria e nei file del checkpoint.  
+  
+ Entrambi i valori di [computed row body size] e [actual row body size] vengono calcolati in modo analogo. L'unica differenza è il calcolo delle dimensioni delle colonne (n)varchar(i) e varbinary(i), come evidenziato nella parte inferiore della tabella seguente. Per le dimensioni calcolate del corpo delle righe viene usata la dimensione dichiarata *i* come dimensione della colonna, mentre per le dimensioni effettive del corpo delle righe viene usata la dimensione effettiva dei dati.  
+  
+ Nella tabella seguente viene descritto il calcolo delle dimensioni del corpo delle righe, fornito come [actual row body size] = SUM ([size of shallow types) + 2 + 2 * [number of deep type columns].  
+  
+|Sezione|Dimensione|Commenti|  
+|-------------|----------|--------------|  
+|Colonne di tipo superficiale|SUM([size of shallow types]). Le dimensioni in byte dei singoli tipi sono le seguenti:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precisione <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(precisione >18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|Riempimento delle colonne superficiali|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni totali dei dati delle colonne superficiali sono un numero dispari.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Matrice di offset delle colonne di tipo approfondito|I valori possibili sono:<br /><br /> 0 se non sono disponibili colonne di tipo approfondito<br /><br /> 2 + 2 * [number of deep type columns] in caso contrario|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Matrice NULL|[number of nullable columns] / 8, arrotondato per eccesso ai byte completi.|La matrice dispone di un bit per ogni colonna che ammette i valori Null. Il valore viene arrotondato per eccesso ai byte completi.|  
+|Riempimento della matrice NULL|I valori possibili sono:<br /><br /> 1 se esistono colonne di tipo approfondito e le dimensioni della matrice NULL sono un numero dispari di byte.<br /><br /> In caso contrario, 0|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Spaziatura interna|0 se non sono disponibili colonne di tipo approfondito<br /><br /> Se sono disponibili colonne di tipo approfondito, vengono aggiunti 0-7 byte di riempimento, in base al maggiore allineamento richiesto da una colonna superficiale. Ogni colonna superficiale richiede un allineamento uguale alle sue dimensioni, come descritto in precedenza, ad eccezione delle colonne GUID che richiedono l'allineamento di 1 byte (non 16) e delle colonne numeriche che richiedono sempre l'allineamento di 8 byte (mai 16). Viene utilizzato il requisito di maggiore allineamento tra tutte le colonne superficiali e vengono aggiunti 0-7 byte di riempimento in modo tale che le dimensioni totali fino a questo punto (senza le colonne di tipo approfondito) siano un multiplo dell'allineamento richiesto.|I tipi approfonditi sono i tipi (var)binary e (n)(var)char.|  
+|Colonne di tipo approfondito a lunghezza fissa|SUM([size of fixed length deep type columns])<br /><br /> Le dimensioni di ogni colonna sono le seguenti:<br /><br /> i per char(i) e binary(i).<br /><br /> 2 * i per nchar(i)|Le colonne di tipo approfondito a lunghezza fissa sono le colonne di tipo char(i), nchar(i) o binary(i).|  
+|Colonne di tipo approfondito a lunghezza variabile [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> Le dimensioni calcolate di ogni colonna sono le seguenti:<br /><br /> i per varchar(i) e varbinary(i)<br /><br /> 2 * i per nvarchar(i)|Questa riga si riferiva solo a [computed row body size].<br /><br /> Le colonne di tipo approfondito a lunghezza variabile sono le colonne di tipo varchar(i), nvarchar(i) o varbinary(i). Le dimensioni calcolate sono determinate dalla lunghezza massima (i) della colonna.|  
+|Colonne di tipo approfondito a lunghezza variabile [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> Le dimensioni effettive di ogni colonna sono le seguenti:<br /><br /> n, dove n è il numero di caratteri archiviato nella colonna, per varchar(i).<br /><br /> 2 * n, dove n è il numero di caratteri archiviato nella colonna, per nvarchar(i).<br /><br /> n, dove n è il numero di byte archiviato nella colonna, per varbinary(i).|Questa riga si riferiva solo a [actual row body size].<br /><br /> Le dimensioni effettive sono determinate dai dati archiviati nelle colonne della riga.|   
   
 ##  <a name="bkmk_ExampleComputation"></a> Esempio: calcolo delle dimensioni della tabella e delle righe  
  Per gli indici hash il numero effettivo di bucket viene arrotondato alla più vicina potenza di 2. Ad esempio, se il valore di bucket_count specificato è 100.000, il numero effettivo di bucket per l'indice è 131.072.  
@@ -231,8 +236,22 @@ GO
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
+
+##  <a name="bkmk_OffRowLimitations"></a> Limitazioni relative alle colonne all'esterno di righe
+  Di seguito sono elencate alcune limitazioni e avvertenze relative all'uso di colonne all'esterno di righe in una tabella ottimizzata per la memoria:
   
-## <a name="see-also"></a>Vedere anche  
+-   Se per la tabella ottimizzata per la memoria esiste un indice columnstore, tutte le colonne devono essere contenute all'interno delle righe. 
+-   Tutte le colonne chiave di indice devono essere archiviate all'interno delle righe. Se una colonna chiave di indice non può essere contenuta all'interno delle righe, non è possibile aggiungere l'indice. 
+-   Avvertenze relative alla [modifica di una tabella ottimizzata per la memoria con colonne all'esterno di righe](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).
+-   Per le colonne LOB, la limitazione prevista per le dimensioni è la stessa valida per le tabelle basate su disco (limite di 2 GB per colonne LOB). 
+-   Per prestazioni ottimali, è consigliabile usare per lo più colonne con dimensioni non superiori a 8.060 byte. 
+
+Il post di blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (Novità di OLTP in memoria in SQL Server 2016 a partire da CTP3) spiega nel dettaglio alcuni di questi aspetti complessi.   
+ 
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche  
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+
