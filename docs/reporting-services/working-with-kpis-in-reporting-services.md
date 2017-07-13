@@ -1,6 +1,6 @@
 ---
 title: Usare gli indicatori KPI in Reporting Services | Documenti Microsoft
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Usare gli indicatori KPI in Reporting Services
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Un indicatore di prestazioni chiave (KPI, Key Performance Indicator) è un'indicazione visiva che comunica il progresso compiuto verso un obiettivo.  Gli indicatori KPI consentono a team, manager e aziende di valutare con rapidità l'avanzamento compiuto verso risultati misurabili.   
   
@@ -34,16 +36,19 @@ Grazie agli indicatori KPI, SQL Server 2016 Reporting Services consente di rispo
   
 -   Quale obiettivo minimo ho raggiunto?  
   
-## <a name="creating-a-dataset"></a>Creazione di un set di dati  
+## Creazione di un set di dati
+<a id="creating-a-dataset" class="xliff"></a>  
 Un indicatore KPI usa solo la prima riga di dati di un set di dati condiviso. Verificare che i dati da usare si trovino nella prima riga. Per creare un set di dati condiviso, è possibile usare Generatore report o SQL Server Data Tools.  
   
 > **Nota**: non è necessario che il set di dati si trovi nella stessa cartella dell'indicatore KPI.  
   
-## <a name="placement-of-kpis"></a>Posizionamento di indicatori KPI  
+## Posizionamento di indicatori KPI
+<a id="placement-of-kpis" class="xliff"></a>  
   
 È possibile creare gli indicatori KPI in qualsiasi cartella nel server di report.  Prima di creare un indicatore KPI, è bene considerare quale sia il percorso corretto in cui inserirlo. È consigliabile, ad esempio, collocarlo in una cartella visibile agli utenti e al contempo pertinente anche per altri report e indicatori KPI.  
   
-## <a name="adding-a-kpi"></a>Aggiunta di un indicatore KPI  
+## Aggiunta di un indicatore KPI
+<a id="adding-a-kpi" class="xliff"></a>  
   
 Dopo aver stabilito la posizione dell'indicatore KPI, passare alla cartella e nel menu principale selezionare **Nuovo** > **KPI** .  
   
@@ -91,7 +96,8 @@ Per usare i dati di un nuovo set di dati condiviso, eseguire le operazioni segue
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>Rimozione di un indicatore KPI  
+## Rimozione di un indicatore KPI
+<a id="removing-a-kpi" class="xliff"></a>  
   
 Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.  
   
@@ -103,11 +109,13 @@ Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>Aggiornamento di un indicatore KPI  
+## Aggiornamento di un indicatore KPI
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 Per aggiornare l'indicatore KPI, è necessario configurare una cache per il set di dati condiviso. Per ulteriori informazioni sulla cache di piani di aggiornamento, vedere [funziona con set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## <a name="next-steps"></a>Passaggi successivi
+## Passaggi successivi
+<a id="next-steps" class="xliff"></a>
   
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)

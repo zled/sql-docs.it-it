@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di set di dati condivisi (portale web) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Utilizzare i set di dati condivisi - portale web
+# Utilizzare i set di dati condivisi - portale web
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Un set di dati condiviso consente di gestire le impostazioni per un set di dati separatamente dai report e dagli altri elementi del catalogo che lo usano. I set di dati condivisi possono essere usati con i report impaginati e per dispositivi mobili, oltre che con gli indicatori KPI.
 
 È possibile visualizzare e gestire le proprietà di un set di dati condivisi all'interno del portale Web. Dal portale Web è possibile avviare Generatore report per creare o modificare i set di dati condivisi.
 
-## <a name="create-a-shared-dataset"></a>Creare un set di dati condiviso
+## Creare un set di dati condiviso
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.  
   
@@ -47,7 +49,8 @@ Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.
   
 6.  Creare il set di dati e quindi selezionare l'icona **Salva** in alto a sinistra per salvare di nuovo il set di dati nel server d report.  
   
-## <a name="manage-an-existing-shared-dataset"></a>Gestire un set di dati condiviso esistente
+## Gestire un set di dati condiviso esistente
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 Per gestire un set di dati condiviso esistente, è possibile eseguire le operazioni seguenti.  
   
@@ -62,13 +65,15 @@ Per gestire un set di dati condiviso esistente, è possibile eseguire le operazi
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>Proprietà
+## Proprietà
+<a id="properties" class="xliff"></a>
   
 Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il set di dati. È anche possibile scegliere **Elimina**, **Sposta**, **Modifica in Generatore report**, **Scarica** o **Sostituisci**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>Memorizzazione nella cache
+## Memorizzazione nella cache
+<a id="caching" class="xliff"></a>
   
 Per la memorizzazione nella cache dei dati per un set di dati sono disponibili varie opzioni. Per iniziare, è necessario effettuare una semplice selezione.  
   
@@ -82,7 +87,8 @@ Con la selezione di **Memorizzare nella cache copie di questo report e usarle qu
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>Scadenza della cache  
+### Scadenza della cache
+<a id="cache-expiration" class="xliff"></a>  
   
 È possibile stabilire se si vuole che la cache scada, per il set di dati condiviso, dopo un determinato periodo di tempo oppure se si preferisce impostare una pianificazione. È possibile usare una pianificazione condivisa  
   
@@ -91,7 +97,8 @@ Con la selezione di **Memorizzare nella cache copie di questo report e usarle qu
 > [!NOTE]
 > L'impostazione di scadenza non comporta l'aggiornamento della cache. Senza un piano di aggiornamento della cache, i dati verranno aggiornati durante l'esecuzione successiva del set di dati.  
   
-### <a name="cache-refresh-plans"></a>Piani di aggiornamento della cache  
+### Piani di aggiornamento della cache
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 È possibile usare piani di aggiornamento della cache per creare pianificazioni per precaricare nella cache copie temporanee di dati per un set di dati condiviso. Un piano di aggiornamento include una pianificazione e l'opzione per specificare o eseguire l'override di valori per i parametri. Non è possibile eseguire l'override di valori per i parametri contrassegnati come di sola lettura. È possibile creare e usare più piani di aggiornamento.   
   

@@ -15,16 +15,15 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="web-portal-ssrs-native-mode" class="xliff"></a>
-
 # Portale Web (modalità nativa SSRS)
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -32,9 +31,8 @@ Il portale web di Reporting Services è un'esperienza basata su web che consente
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-<a id="what-is-the-web-portal" class="xliff"></a>
-
 ## Che cos'è il portale web
+<a id="what-is-the-web-portal" class="xliff"></a>
 
 È possibile utilizzare il portale web per eseguire le attività seguenti:
 
@@ -72,17 +70,15 @@ In una nuova installazione solo gli amministratori locali dispongono di autorizz
 > [!NOTE]
 > Se si sta esplorando il portale Web nel computer locale su cui è in esecuzione il server, è possibile visualizzare un messaggio che indica che non è consentito visualizzare questa cartella. Ciò è dovuto a Controllo dell'account utente e al fatto che non si esegue il browser come amministratore. Non è possibile eseguire Edge come amministratore. È necessario usare Internet Explorer. È possibile esplorare il server in modalità remota oppure avviare Internet Explorer come amministratore e usarlo per esplorare il portale Web. Per usare il portale Web in modalità remota, sarà necessario concedere all'account i diritti di gestione contenuto per la cartella.  
 
-<a id="start-and-use-the-web-portal" class="xliff"></a>
-
 ## Avviare e usare il portale Web
+<a id="start-and-use-the-web-portal" class="xliff"></a>
 
 Il portale web è un'applicazione web che si apre digitando il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL nella barra degli indirizzi della finestra del browser. Quando si avvia il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], le pagine, le opzioni e i collegamenti visualizzati variano in base alle autorizzazioni disponibili per il server di report. Per eseguire un'attività, è necessario essere assegnato a un ruolo che include l'attività.  Gli utenti assegnati a un ruolo con autorizzazioni complete hanno accesso a tutti i menu e le pagine disponibili per la gestione di un server di report. Un utente assegnato a un ruolo autorizzato a visualizzare ed eseguire i report, invece, potrà visualizzare solo le pagine e i menu correlati a queste attività specifiche. Per ogni utente è possibile impostare assegnazioni di ruolo diverse per server di report diversi o anche per le varie cartelle e i vari report archiviati in un singolo server di report.
 
 Per altre informazioni sui ruoli, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
-<a id="start-the-web-portal" class="xliff"></a>
-
 ### Avviare il portale web
+<a id="start-the-web-portal" class="xliff"></a>
 
 Per avviare il portale web da un browser, eseguire le operazioni seguenti:
 
@@ -94,9 +90,8 @@ Per avviare il portale web da un browser, eseguire le operazioni seguenti:
 
     Il server di report potrebbe essere configurato per l'utilizzo di una porta specifica. Ad esempio, *http://[NomeComputer]:80/reports* o *http://[NomeComputer]:8080/reports*.
 
-<a id="grouping-by-categories" class="xliff"></a>
-
 ## Raggruppamento per categorie
+<a id="grouping-by-categories" class="xliff"></a>
 
 Il portale web Raggruppa gli elementi in categorie diverse. Le categorie disponibili sono le seguenti.
 
@@ -115,9 +110,8 @@ Il portale web Raggruppa gli elementi in categorie diverse. Le categorie disponi
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
-
 ### Report di Power BI Desktop e cartelle di lavoro di Excel
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
 
 È possibile caricare, organizzare e gestire le autorizzazioni per i report di Power BI Desktop e le cartelle di lavoro di Excel. Verranno raggruppati all'interno del portale Web.
 
@@ -125,17 +119,15 @@ Il portale web Raggruppa gli elementi in categorie diverse. Le categorie disponi
 
 I file vengono archiviati in Reporting Services, in modo analogo ad altri file di risorse. È possibile selezionare uno di questi elementi per scaricarlo in locale nel desktop. Le modifiche apportate possono essere salvate caricandole di nuovo nel server di report.
 
-<a id="search-for-items" class="xliff"></a>
-
 ## Cercare elementi
+<a id="search-for-items" class="xliff"></a>
 
 È possibile immettere un termine di ricerca per visualizzare tutto gli elementi accessibili. I risultati sono suddivise in categorie, ovvero indicatori KPI, report, set di dati e altri elementi. È quindi possibile interagire con i risultati e aggiungerli ai preferiti.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-<a id="web-portal-tasks" class="xliff"></a>
-
 ## Attività del portale Web
+<a id="web-portal-tasks" class="xliff"></a>
 
 [Personalizzazione del portale Web](../reporting-services/branding-the-web-portal.md)
 
@@ -143,9 +135,8 @@ I file vengono archiviati in Reporting Services, in modo analogo ad altri file d
 
 [Utilizzo dei set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-<a id="see-also" class="xliff"></a>
-
 ## Vedere anche
+<a id="see-also" class="xliff"></a>
 
 [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Configurare un URL (Gestione configurazione SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

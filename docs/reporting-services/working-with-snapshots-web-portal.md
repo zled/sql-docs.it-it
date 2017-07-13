@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di snapshot (portale web) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-snapshots-web-portal"></a>Uso degli snapshot (portale Web)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Uso degli snapshot (portale Web)
+<a id="working-with-snapshots-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 È possibile controllare se gli snapshot vengono creati per un report, selezionando il **i puntini di sospensione (...)**  di un report, selezionando **Gestisci** e selezionando **la memorizzazione nella cache** o **gli snapshot della cronologia**.  
   
@@ -32,7 +34,8 @@ ms.lasthandoff: 06/22/2017
    
 È possibile creare uno snapshot della cache per consentire un caricamento più rapido delle proprietà di esecuzione specifiche. È anche possibile usare gli snapshot della cronologia per acquisire temporizzazioni.  
   
-## <a name="creating-a-cache-snapshot"></a>Creazione di uno snapshot della cache  
+## Creazione di uno snapshot della cache
+<a id="creating-a-cache-snapshot" class="xliff"></a>  
   
 È possibile creare uno snapshot effettuando le operazioni seguenti.  
   
@@ -44,7 +47,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  Se si vuole creare immediatamente uno snapshot della cache, selezionare **Creare uno snapshot della cache quando si seleziona Applica in questa pagina** . Se si seleziona solo questa opzione, lo snapshot non verrà aggiornato.  
   
-## <a name="create-modify-and-delete-history-snapshots"></a>Creare, modificare ed eliminare snapshot della cronologia  
+## Creare, modificare ed eliminare snapshot della cronologia
+<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
   
 Per usare gli snapshot della cronologia, gestire un report e selezionare **Snapshot della cronologia**.  
   
@@ -62,7 +66,8 @@ Per generare uno snapshot della cronologia, è necessario che il report possa es
   
 3.  Selezionare uno snapshot della cronologia per visualizzarlo. L'unico elemento distintivo degli snapshot visualizzati nella cronologia del report è rappresentato dalla data e ora di creazione. Non sono disponibili indicatori visivi per distinguere gli snapshot generati tramite una pianificazione o un'operazione manuale.  
   
-### <a name="schedule-and-settings"></a>Pianificazione e impostazioni  
+### Pianificazione e impostazioni
+<a id="schedule-and-settings" class="xliff"></a>  
   
 Se si seleziona **Pianificazione e le impostazioni** , saranno disponibili opzioni aggiuntive per pianificare e controllare la conservazione degli snapshot creati.  
   
@@ -76,7 +81,8 @@ Se si seleziona **Pianificazione e le impostazioni** , saranno disponibili opzio
   
 Se si seleziona questa casella di controllo, gli snapshot del report generati in base alle proprietà di esecuzione del report verranno copiati nella cronologia. È possibile impostare le proprietà di esecuzione del report in modo da eseguire un report da uno snapshot generato. L'impostazione di questa proprietà della cronologia consente di mantenere una registrazione di tutti gli snapshot del report generati nel tempo tramite l'inserimento di copie degli snapshot nella cronologia del report.
 
-## <a name="next-steps"></a>Passaggi successivi
+## Passaggi successivi
+<a id="next-steps" class="xliff"></a>
 
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utilizzo dei report impaginati](working-with-paginated-reports-web-portal.md)  

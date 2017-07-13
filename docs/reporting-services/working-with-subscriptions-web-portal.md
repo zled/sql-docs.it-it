@@ -1,7 +1,7 @@
 ---
 title: Utilizzo di sottoscrizioni (portale web) | Documenti Microsoft
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72e0abad76008b445fe32a9fed3cb4522ab64af2
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-subscriptions-web-portal"></a>Uso di sottoscrizioni (portale Web)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Uso di sottoscrizioni (portale Web)
+<a id="working-with-subscriptions-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 L'uso della pagina Sottoscrizioni consente di visualizzare un elenco di tutte le sottoscrizioni del report corrente. Se sono disponibili autorizzazioni sufficienti (quelle assegnate dall'attività Gestione di tutte le sottoscrizioni) è possibile visualizzare le sottoscrizioni di tutti gli utenti. In caso contrario, in questa pagina vengono visualizzate solo le sottoscrizioni personali.  
   
@@ -40,12 +42,14 @@ Nella pagina sottoscrizioni è possibile creare nuove sottoscrizioni selezionand
   
 Questa pagina include anche lo stato dei risultati delle esecuzioni della sottoscrizione nella colonna **Risultato** . Se si è verificato un errore per una sottoscrizione, è consigliabile controllare prima la colonna dei risultati per visualizzare il contenuto del messaggio.  
   
-## <a name="creating-or-editing-a-subscription"></a>Creazione o modifica di una sottoscrizione  
+## Creazione o modifica di una sottoscrizione
+<a id="creating-or-editing-a-subscription" class="xliff"></a>  
 La pagina Nuova sottoscrizione o Modifica sottoscrizione consente di creare una nuova sottoscrizione o modificare una sottoscrizione esistente per un report. Le opzioni disponibili in questa pagina variano a seconda dell'assegnazione di ruolo associata all'utente. Gli utenti con autorizzazioni avanzate avranno a disposizione un maggior numero di opzioni.  
   
 Le sottoscrizioni sono supportate per i report che possono essere eseguiti in modo automatico. È fondamentale che il report utilizzi credenziali archiviate o non utilizzi credenziali. Per i report con parametri è necessario specificare un valore predefinito. È possibile che le sottoscrizioni vengano disattivate se si modificano le impostazioni di esecuzione del report o si rimuovono i valori predefiniti per i parametri. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa].  
   
-### <a name="type-of-subscription"></a>Tipo di sottoscrizione  
+### Tipo di sottoscrizione
+<a id="type-of-subscription" class="xliff"></a>  
 È possibile selezionare una **sottoscrizione standard** o una **sottoscrizione guidata dai dati**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -56,7 +60,8 @@ Per creare una sottoscrizione guidata dai dati è necessario sapere come scriver
   
 Questa opzione è disponibile per gli utenti con autorizzazioni avanzate. Se si utilizzano le impostazioni di sicurezza predefinite, le sottoscrizioni guidate dai dati non possono essere utilizzate per i report inclusi nelle cartelle Report personali.  
   
-### <a name="destination"></a>Destinazione  
+### Destinazione
+<a id="destination" class="xliff"></a>  
 Consente di selezionare l'estensione per il recapito da utilizzare per la distribuzione del report.   
   
 Un'estensione per il recapito è disponibile se è installata e configurata nel server di report. Messaggio di posta elettronica da Server report è l'estensione per il recapito predefinita. Per poterla utilizzare, è tuttavia necessario configurarla. Il recapito alla condivisione file non richiede alcuna configurazione. Per poterlo utilizzare, è tuttavia è necessario definire una cartella condivisa.  
@@ -69,7 +74,8 @@ In base all'estensione per il recapito selezionata, verranno visualizzate le imp
   
 -   Le sottoscrizioni con recapito tramite condivisione file includono campi che consentono di specificare un percorso di destinazione. È possibile recapitare qualsiasi report in una condivisione file. Tuttavia, per i report che supportano funzionalità interattive (inclusi i report matrice che supportano il drill-down in righe e colonne) viene eseguito il rendering come file statici. Non è possibile visualizzare righe e colonne di drill-down in un file statico. Il nome della condivisione file deve essere specificato in formato UNC (Uniform Naming Convention), ad esempio \mycomputer\public\myreportfiles. Non includere una barra rovesciata finale nel nome del percorso. Il report verrà recapitato in un formato di file basato sul formato di rendering. Ad esempio, se si seleziona Excel, il report viene recapitato come file con estensione xlsx.  
   
-### <a name="data-driven-subscription-dataset"></a>Set di dati della sottoscrizione guidata dai dati  
+### Set di dati della sottoscrizione guidata dai dati
+<a id="data-driven-subscription-dataset" class="xliff"></a>  
 Per una sottoscrizione guidata dai dati, è necessario definire il set di dati usato per la sottoscrizione. Selezionare **Modifica set di dati** per specificare tali informazioni.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  

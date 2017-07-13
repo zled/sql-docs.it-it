@@ -1,7 +1,7 @@
 ---
 title: Messaggi di avviso dati | Documenti Microsoft
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,17 +16,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1182111ce441c5a02417532cf4344ceb4ce7e44e
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-messages"></a>Messaggi di avviso dati
+# Messaggi di avviso dati
+<a id="data-alert-messages" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gli avvisi dati di Reporting Services consentono di recapitare due tipi di messaggi di avviso dati tramite posta elettronica: messaggi con risultati degli avvisi dati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+Gli avvisi dati di SQL Server Reporting Services recapitare due tipi di messaggi di avviso dati tramite posta elettronica: messaggi con i dati di avviso risultati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.
 
 Il proprietario della definizione di avviso dati può inoltre visualizzare le informazioni sull'istanza di avviso dati in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per utenti di SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
@@ -66,13 +69,14 @@ Il proprietario della definizione di avviso dati può inoltre visualizzare le in
 ##  <a name="HowTo"></a> Attività correlate  
  In questa sezione vengono elencate le procedure in cui viene illustrato come creare e modificare le definizioni di avviso dati che forniscono molte delle informazioni incluse nei messaggi di avviso dati.  
   
--   [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Crea un avviso dati nella finestra di progettazione avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Modificare un avviso dati nella finestra di progettazione di avvisi](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificare un avviso nella finestra di progettazione avviso dati](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>Vedere anche
+## Vedere anche
+<a id="see-also" class="xliff"></a>
 
-[Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md)   
+[Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
