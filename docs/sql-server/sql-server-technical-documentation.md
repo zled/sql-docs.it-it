@@ -1,6 +1,6 @@
 ---
 title: Documentazione tecnica di SQL Server | Documenti Microsoft
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>Documentazione tecnica di SQL Server
+# Documentazione tecnica di SQL Server
+<a id="sql-server-technical-documentation" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > Per contenuti relativi a versioni precedenti di SQL Server, vedere [installazione per SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Documentazione per installare, configurare e usare SQL Server. Il contenuto include esempi end-to-end, esempi di codice e video. Per gli argomenti relativi al linguaggio di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] , vedere [Guida di riferimento al linguaggio](../t-sql/language-reference.md).
+
+È anche possibile usare Help Viewer per visualizzare la documentazione di SQL Server offline. Per altre informazioni, vedere [Help Viewer e contenuto offline per SQL Server](../release-notes/sql-server-help-installation.md).
 
 **SQL Server 2017**
 
@@ -46,12 +49,13 @@ ms.lasthandoff: 06/22/2017
 - [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 - [Novità di SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
- **Prova SQL Server&2016;**    
+ **Prova SQL Server&amp;2016;**    
  - [**Scaricare SQL Server 2016 da Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
- - **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** (Accedere a una macchina virtuale con SQL Server 2016 già installato)    
+ - **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[Scaricare SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>Tecnologie di SQL Server    
+## Tecnologie di SQL Server
+<a id="sql-server-technologies" class="xliff"></a>    
     
 |||    
 |-|-|    
@@ -65,7 +69,8 @@ ms.lasthandoff: 06/22/2017
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services offre funzionalità Web aziendali per la gestione e la creazione di report usando come contenuto una serie di origini dati diverse, la pubblicazione dei report in vari formati e la gestione centralizzata della sicurezza e delle sottoscrizioni.|    
 
     
-## <a name="earlier-sql-server-versions"></a>Versioni precedenti di SQL Server
+## Versioni precedenti di SQL Server
+<a id="earlier-sql-server-versions" class="xliff"></a>
 - [Documentazione Online per la documentazione Online di SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Installare SQL Server 2014 Express e altre versioni di SQL Server precedenti](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Grazie a [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti ai pacchetti del programma di installazione in un unico posto**)  
 - [Documentazione tecnica di SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +83,8 @@ ms.lasthandoff: 06/22/2017
 - [Database di esempio AdventureWorks e script per SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [Esempi di SQL Server in GitHub](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>Ulteriori informazioni   
+ ## Ulteriori informazioni
+<a id="more-information" class="xliff"></a>   
 + [Gestione configurazione SQL Server](../relational-databases/sql-server-configuration-manager.md)
 + [Pagina relativa al centro aggiornamenti di SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) con collegamenti e informazioni per tutte le versioni supportate 
 + [Installare il motore di database di SQL Server](../database-engine/install-windows/install-sql-server-database-engine.md) 
