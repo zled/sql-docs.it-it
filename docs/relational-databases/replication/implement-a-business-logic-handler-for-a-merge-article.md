@@ -26,10 +26,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
+# Implementazione di un gestore della logica di business per un articolo di merge
+<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
   In questo argomento viene descritto come implementare un gestore della logica di business per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite la programmazione della replica o RMO (Replication Management Objects).  
   
  Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi che si verificano durante il processo di sincronizzazione della replica di tipo merge. I metodi del gestore della logica di business possono essere richiamati dal processo di replica per ogni riga modificata che viene replicata durante la sincronizzazione.  
@@ -56,7 +57,8 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="ReplProg"></a> Utilizzo della programmazione della replica  
   
-#### <a name="to-create-and-deploy-a-business-logic-handler"></a>Per creare e distribuire un gestore della logica di business  
+#### Per creare e distribuire un gestore della logica di business
+<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>  
   
 1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio creare un nuovo progetto per l'assembly .NET contenente il codice che implementa il gestore della logica di business.  
   
@@ -68,29 +70,29 @@ ms.lasthandoff: 04/11/2017
     |<xref:System.Data>|GAC (componente di .NET Framework)|  
     |<xref:System.Data.Common>|GAC (componente di .NET Framework)|  
   
-3.  Aggiungere una classe che esegue l'override della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+3.  Aggiungere una classe che esegue l'override della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 4.  Implementare la proprietà <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.HandledChangeStates%2A> per indicare i tipi di modifiche gestite.  
   
-5.  Eseguire l'override di uno o più dei seguenti metodi della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>:  
+5.  Eseguire l'override di uno o più dei seguenti metodi della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> :  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A>: richiamato quando viene eseguito il commit di una modifica dei dati durante la sincronizzazione.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> : viene richiamato quando si esegue il commit di una modifica ai dati durante la sincronizzazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A>: richiamato quando si verifica un errore durante il caricamento o il download di un'istruzione DELETE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> : viene richiamato se si verifica un errore durante il caricamento o il download di un'istruzione DELETE.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A>: richiamato durante il caricamento o il download di istruzioni DELETE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> : viene richiamato durante il caricamento o il download delle istruzioni DELETE.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A>: richiamato quando si verifica un errore durante il caricamento o il download di un'istruzione INSERT.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> : viene richiamato se si verifica un errore durante il caricamento o il download di un'istruzione INSERT.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A>: richiamato durante il caricamento o il download di istruzioni INSERT.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> : viene richiamato durante il caricamento o il download delle istruzioni INSERT.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A>: richiamato in presenza di istruzioni UPDATE in conflitto nel server di pubblicazione e nel Sottoscrittore.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> : viene richiamato quando si verificano conflitti di istruzioni UPDATE nel server di pubblicazione e nel Sottoscrittore.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A>: richiamato in presenza di istruzioni UPDATE in conflitto con istruzioni DELETE nel server di pubblicazione e nel Sottoscrittore.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> : viene richiamato quando si verificano conflitti tra istruzioni UPDATE e istruzioni DELETE nel server di pubblicazione e nel Sottoscrittore.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A>: richiamato quando si verifica un errore durante il caricamento o il download di un'istruzione UPDATE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> : viene richiamato se si verifica un errore durante il caricamento o il download di un'istruzione UPDATE.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A>: richiamato durante il caricamento o il download di istruzioni UPDATE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> : viene richiamato durante il caricamento o il download delle istruzioni UPDATE.  
   
 6.  Compilare il progetto per creare l'assembly del gestore della logica di business.  
   
@@ -99,20 +101,23 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  È necessario distribuire un gestore della logica di business su ogni server in cui viene eseguito l'agente di merge, incluso il server IIS che ospita il file replisapi.dll quando si utilizza la sincronizzazione tramite il Web.  
   
-#### <a name="to-register-a-business-logic-handler"></a>Per registrare un gestore della logica di business  
+#### Per registrare un gestore della logica di business
+<a id="to-register-a-business-logic-handler" class="xliff"></a>  
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
-2.  Nel server di distribuzione eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), specificando un nome descrittivo per il gestore della logica di business per **@article_resolver**, il valore **true** per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name** e il nome completo della classe che esegue l'override di <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name**.  
+2.  Nel database di distribuzione eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), specificando un nome descrittivo per il gestore della logica di business per **@article_resolver**, un valore **true** per **@is_dotnet_assembly**, il nome dell'assembly per **@dotnet_assembly_name** e il nome completo della classe che esegue l'override di <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  Se l'assembly non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name**. Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
   
-#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Per utilizzare un gestore della logica di business con un nuovo articolo di tabella  
+#### Per utilizzare un gestore della logica di business con un nuovo articolo di tabella
+<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>  
   
 1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire l'articolo, specificando il nome descrittivo del gestore della logica di business per **@article_resolver**. Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Per utilizzare un gestore della logica di business con un articolo di tabella esistente  
+#### Per utilizzare un gestore della logica di business con un articolo di tabella esistente
+<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>  
   
 1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication**, **@article**, il valore **article_resolver** per **@property** e il nome descrittivo del gestore della logica di business per **@value**.  
   
@@ -129,7 +134,8 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
   
-#### <a name="to-create-a-business-logic-handler"></a>Per creare un gestore della logica di business  
+#### Per creare un gestore della logica di business
+<a id="to-create-a-business-logic-handler" class="xliff"></a>  
   
 1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio creare un nuovo progetto per l'assembly .NET contenente il codice che implementa il gestore della logica di business.  
   
@@ -141,62 +147,65 @@ ms.lasthandoff: 04/11/2017
     |<xref:System.Data>|GAC (componente di .NET Framework)|  
     |<xref:System.Data.Common>|GAC (componente di .NET Framework)|  
   
-3.  Aggiungere una classe che esegue l'override della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+3.  Aggiungere una classe che esegue l'override della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 4.  Implementare la proprietà <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.HandledChangeStates%2A> per indicare i tipi di modifiche gestite.  
   
-5.  Eseguire l'override di uno o più dei seguenti metodi della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>:  
+5.  Eseguire l'override di uno o più dei seguenti metodi della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> :  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A>: richiamato quando viene eseguito il commit di una modifica dei dati durante la sincronizzazione.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.CommitHandler%2A> : viene richiamato quando si esegue il commit di una modifica ai dati durante la sincronizzazione.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A>: richiamato se si verifica un errore durante il caricamento o il download di un'istruzione DELETE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteErrorHandler%2A> : viene richiamato se si verifica un errore durante il caricamento o il download di un'istruzione DELETE.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A>: richiamato durante il caricamento o il download di istruzioni DELETE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.DeleteHandler%2A> : viene richiamato durante il caricamento o il download delle istruzioni DELETE.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A>: richiamato se si verifica un errore durante il caricamento o il download di un'istruzione INSERT.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertErrorHandler%2A> : viene richiamato se si verifica un errore durante il caricamento o il download di un'istruzione INSERT.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A>: richiamato durante il caricamento o il download di istruzioni INSERT.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.InsertHandler%2A> : viene richiamato durante il caricamento o il download delle istruzioni INSERT.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A>: richiamato in presenza di istruzioni UPDATE in conflitto nel server di pubblicazione e nel Sottoscrittore.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateConflictsHandler%2A> : viene richiamato quando si verificano conflitti di istruzioni UPDATE nel server di pubblicazione e nel Sottoscrittore.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A>: richiamato in presenza di istruzioni UPDATE in conflitto con istruzioni DELETE nel server di pubblicazione e nel Sottoscrittore.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateDeleteConflictHandler%2A> : viene richiamato quando si verificano conflitti tra istruzioni UPDATE e istruzioni DELETE nel server di pubblicazione e nel Sottoscrittore.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A>: richiamato se si verifica un errore durante il caricamento o il download di un'istruzione UPDATE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateErrorHandler%2A> : viene richiamato se si verifica un errore durante il caricamento o il download di un'istruzione UPDATE.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A>: richiamato durante il caricamento o il download di istruzioni UPDATE.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.UpdateHandler%2A> : viene richiamato durante il caricamento o il download delle istruzioni UPDATE.  
   
     > [!NOTE]  
     >  I conflitti di articoli non gestiti in modo esplicito dalla logica di business personalizzata vengono gestiti dal sistema di risoluzione predefinito per l'articolo.  
   
 6.  Compilare il progetto per creare l'assembly del gestore della logica di business.  
   
-#### <a name="to-register-a-business-logic-handler"></a>Per registrare un gestore della logica di business  
+#### Per registrare un gestore della logica di business
+<a id="to-register-a-business-logic-handler" class="xliff"></a>  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare <xref:Microsoft.SqlServer.Management.Common.ServerConnection> dal passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare il valore di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.  
   
-3.  Chiamare <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> e controllare l'oggetto restituito <xref:System.Collections.ArrayList> per assicurarsi che l'assembly non sia già stato registrato come gestore della logica di business.  
+3.  Chiamare <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> e controllare l'oggetto <xref:System.Collections.ArrayList> restituito per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
-4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Specificare le proprietà seguenti:  
+4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Specificare le proprietà seguenti:  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A>: nome dell'assembly .NET. Se l'assembly non viene distribuito nella stessa directory del file eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella GAC (Global Assembly Cache), è necessario includere il percorso completo con il nome dell'assembly. È necessario includere il percorso completo con il nome dell'assembly quando si utilizza un gestore della logica di business con la sincronizzazione tramite il Web.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> : nome dell'assembly .NET. Se l'assembly non viene distribuito nella stessa directory del file eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella GAC (Global Assembly Cache), è necessario includere il percorso completo con il nome dell'assembly. È necessario includere il percorso completo con il nome dell'assembly quando si utilizza un gestore della logica di business con la sincronizzazione tramite il Web.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A>: nome completo della classe che esegue l'override di <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> e implementa il gestore della logica di business.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> : nome completo della classe che esegue l'override di <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> e implementa il gestore della logica di business.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>: nome descrittivo usato per l'accesso al gestore della logica di business.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> : nome descrittivo utilizzato per l'accesso al gestore della logica di business.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A>: valore **true**.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> : valore **true**.  
   
-#### <a name="to-deploy-a-business-logic-handler"></a>Per distribuire un gestore della logica di business  
+#### Per distribuire un gestore della logica di business
+<a id="to-deploy-a-business-logic-handler" class="xliff"></a>  
   
 1.  Distribuire l'assembly nel server in cui viene eseguito l'agente merge, nel percorso file specificato durante la registrazione del gestore della logica di business nel server di distribuzione. Per una sottoscrizione pull, l'agente viene eseguito nel Sottoscrittore, mentre per una sottoscrizione push nel server di distribuzione. Quando si utilizza la sincronizzazione tramite il Web, l'agente viene eseguito nel server Web. Se con il nome dell'assembly non è stato incluso il percorso completo durante la registrazione del gestore della logica di business, distribuire l'assembly nella stessa directory del file eseguibile dell'agente di merge o nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge. È possibile installare l'assembly nella GAC se più applicazioni utilizzano lo stesso assembly.  
   
-#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Per utilizzare un gestore della logica di business con un nuovo articolo di tabella  
+#### Per utilizzare un gestore della logica di business con un nuovo articolo di tabella
+<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle>. Impostare le proprietà seguenti:  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle> . Impostare le proprietà seguenti:  
   
     -   Nome dell'articolo per <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -206,17 +215,18 @@ ms.lasthandoff: 04/11/2017
   
     -   Nome descrittivo del gestore della logica di business (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) per <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Article.Create%2A>. Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Per utilizzare un gestore della logica di business con un articolo di tabella esistente  
+#### Per utilizzare un gestore della logica di business con un articolo di tabella esistente
+<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
   
-3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> e <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A>.  
+3.  Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>e <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
-4.  Impostare la connessione del passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+4.  Impostare la connessione del passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce **false**, le proprietà dell'articolo sono state definite in modo non corretto nel passaggio 3 oppure l'articolo non esiste. Per altre informazioni, vedere [View and Modify Article Properties](../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
@@ -241,7 +251,8 @@ ms.lasthandoff: 04/11/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Eseguire il debug di un gestore della logica di business &#40;programmazione della replica&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)   

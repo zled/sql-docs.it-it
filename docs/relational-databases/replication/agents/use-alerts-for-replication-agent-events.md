@@ -29,11 +29,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="use-alerts-for-replication-agent-events"></a>Utilizzare gli avvisi per gli eventi degli agenti di replica
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. Utilizzando[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è possibile monitorare il registro applicazioni di Windows per rilevare gli eventi associati ad avvisi. Se si verifica un evento di questo tipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent risponde automaticamente eseguendo un'attività definita dall'utente e/o inviando un messaggio di posta elettronica o tramite cercapersone a un operatore specificato. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un set di avvisi predefiniti per gli agenti di replica che è possibile configurare per l'esecuzione di un'attività e/o la notifica di un operatore. Per ulteriori informazioni sulla definizione di un'attività da eseguire, vedere la sezione "Risposte automatiche a un avviso" in questo argomento.  
+# Utilizzare gli avvisi per gli eventi degli agenti di replica
+<a id="use-alerts-for-replication-agent-events" class="xliff"></a>
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent consentono di monitorare gli eventi, ad esempio quelli dell'agente di replica, mediante gli avvisi. Utilizzando[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è possibile monitorare il registro applicazioni di Windows per rilevare gli eventi associati ad avvisi. Se si verifica un evento di questo tipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent risponde automaticamente eseguendo un'attività definita dall'utente e/o inviando un messaggio di posta elettronica o tramite cercapersone a un operatore specificato. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un set di avvisi predefiniti per gli agenti di replica che è possibile configurare per l'esecuzione di un'attività e/o la notifica di un operatore. Per ulteriori informazioni sulla definizione di un'attività da eseguire, vedere la sezione "Risposte automatiche a un avviso" in questo argomento.  
   
  Quando un computer viene configurato come server di distribuzione, vengono installati gli avvisi seguenti:  
   
@@ -53,15 +54,18 @@ ms.lasthandoff: 04/11/2017
   
  **Per configurare gli avvisi predefiniti della replica**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## <a name="viewing-the-application-log-directly"></a>Visualizzazione diretta del registro applicazioni  
+## Visualizzazione diretta del registro applicazioni
+<a id="viewing-the-application-log-directly" class="xliff"></a>  
  Per visualizzare il registro applicazioni di Windows, utilizzare il Visualizzatore eventi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Il registro applicazioni contiene messaggi di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nonché messaggi per molte altre attività eseguite nel computer. Diversamente dal log degli errori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a ogni avvio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non viene creato un nuovo registro applicazioni (durante ogni sessione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono scritti nuovi eventi in un registro applicazioni esistente). È tuttavia possibile specificare il periodo di memorizzazione degli eventi registrati. Quando si visualizza il registro applicazioni di Windows, è possibile filtrarlo per eventi specifici. Per ulteriori informazioni, vedere la documentazione di Windows.  
   
-## <a name="automating-a-response-to-an-alert"></a>Risposte automatiche a un avviso  
+## Risposte automatiche a un avviso
+<a id="automating-a-response-to-an-alert" class="xliff"></a>  
  La replica include un processo di risposta per le sottoscrizioni con errore di convalida dei dati nonché una struttura per la creazione di ulteriori risposte automatiche agli avvisi. Il processo di risposta si chiama **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati** ed è memorizzato nella cartella [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Processi **di** Agent in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'abilitazione di questo processo di risposta, vedere [Configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md). Se la convalida degli articoli di una pubblicazione transazionale non riesce, il processo di risposta reinizializza solo gli articoli con errore. Se la convalida degli articoli di una pubblicazione di tipo merge non riesce, il processo di risposta reinizializza tutti gli articoli della pubblicazione.  
   
-### <a name="framework-for-automating-responses"></a>Struttura per le risposte automatiche  
+### Struttura per le risposte automatiche
+<a id="framework-for-automating-responses" class="xliff"></a>  
  Quando viene generato un avviso, le informazioni necessarie per comprenderne le causa e determinare l'intervento appropriato in genere sono contenute nel messaggio di avviso stesso. L'analisi di queste informazioni può essere soggetta a errori e richiedere tempi lunghi. La replica semplifica l'automatizzazione delle risposte grazie alla specifica di informazioni aggiuntive sull'avviso nella tabella di sistema **sysreplicationalerts** . Le informazioni fornite sono già analizzate in un formato facilmente utilizzabile in programmi personalizzati.  
   
  Se, ad esempio, i dati della tabella **Sales.SalesOrderHeader** nel Sottoscrittore A non vengono convalidati, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene attivato il messaggio di avviso 20574 per avvisare l'utente dell'errore. Il messaggio visualizzato sarà il seguente: "La sottoscrizione del Sottoscrittore 'A' dell'articolo 'SalesOrderHeader' della pubblicazione 'MyPublication' non ha superato la convalida dei dati".  
@@ -90,7 +94,8 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Amministrazione dell'agente di replica](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Monitoraggio &#40;replica&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: Introduzione al motore di database | Microsoft Docs'
 ms.custom: 
-ms.date: 06/02/2016
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,18 +21,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8f7d33994fbc2aabc50732a5aeba7f707d153e5
+ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
+ms.openlocfilehash: 736763496d78fff7ed70dee9a0518c428502024a
 ms.contentlocale: it-it
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al Motore di database
+# Esercitazione: Introduzione al Motore di database
+<a id="tutorial-getting-started-with-the-database-engine" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Benvenuto a questa esercitazione introduttiva su [!INCLUDE[ssDE](../includes/ssde-md.md)] . Questa esercitazione è destinata agli utenti che non hanno familiarità con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e hanno installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. In questa breve esercitazione verranno fornite informazioni per iniziare a utilizzare [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
+## Lezioni dell'esercitazione
+<a id="what-you-will-learn" class="xliff"></a>  
 In questa esercitazione vengono descritte le procedure per connettersi al [!INCLUDE[ssDE](../includes/ssde-md.md)] tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] nel computer locale e in un altro computer.  
   
 L'esercitazione è suddivisa in due lezioni:  
@@ -43,15 +45,17 @@ In questa lezione verranno descritte le procedure per connettersi a [!INCLUDE[ss
 [Lezione 2: Connessione da un altro computer](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 In questa lezione verranno descritte le procedure per connettersi a [!INCLUDE[ssDE](../includes/ssde-md.md)] da un secondo computer, incluse le impostazioni per l'abilitazione di protocolli, la configurazione di porte e la configurazione del firewall.  
   
-## <a name="requirements"></a>Requisiti  
+## Requisiti
+<a id="requirements" class="xliff"></a>  
 Per questa esercitazione non sono richieste nozioni specifiche.  
   
 Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere installato eseguendo il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o scaricandolo e installandolo dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per installare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], vedere [Scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Vedere anche  
-[Esercitazione su SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
+[Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   
