@@ -18,25 +18,23 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/17/2017
 
 ---
-<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
-
 # Inizializzazione di una sottoscrizione transazionale senza uno snapshot
+<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
   Per impostazione predefinita, una sottoscrizione di una pubblicazione transazionale viene inizializzata con uno snapshot generato dall'agente snapshot e applicato dall'agente di distribuzione. In alcuni scenari, ad esempio quelli che comportano l'utilizzo di set di dati iniziali di grandi dimensioni, è preferibile inizializzare una sottoscrizione utilizzando un altro metodo. Altri metodi di inizializzazione di un Sottoscrittore includono:  
   
 -   Specifica di un backup. Ripristinare il backup sul Sottoscrittore in modo che l'agente di distribuzione possa quindi copiare le procedure di sistema e i metadati di replica richiesti. L'inizializzazione con un backup rappresenta la procedura più rapida per il recapito dei dati al Sottoscrittore ed è conveniente in quanto è possibile utilizzare qualsiasi backup recente purché sia stato eseguito in seguito all'abilitazione della pubblicazione per l'inizializzazione con un backup.  
   
 -   Copia di un set di dati iniziali nel Sottoscrittore mediante un altro meccanismo, quale l'associazione di un database. È necessario accertarsi che nel Sottoscrittore siano presenti lo schema e i dati corretti. Successivamente, l'agente di distribuzione copierà le procedure di sistema e i metadati richiesti.  
   
-<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>
-
-## Inizializzazione di una sottoscrizione con un backup  
+## Inizializzazione di una sottoscrizione con un backup
+<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>  
  Un backup contiene un intero database. Ogni database di sottoscrizione conterrà pertanto una copia completa del database di pubblicazione dopo l'inizializzazione:  
   
 -   Il backup include tabelle non specificate come articoli per la pubblicazione.  
@@ -59,9 +57,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Se una sottoscrizione viene inizializzata senza utilizzare uno snapshot, l'account con il quale viene eseguito il servizio SQL Server nel server di pubblicazione dovrà disporre delle autorizzazioni di scrittura sulla cartella snapshot del server di distribuzione. Per ulteriori informazioni sulle autorizzazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>
-
-### Verifica dell'idoneità di un backup  
+### Verifica dell'idoneità di un backup
+<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>  
  Un backup è idoneo per l'inizializzazione di un Sottoscrittore se tutte le transazioni che hanno luogo dopo la relativa esecuzione vengono archiviate nel server di distribuzione. Se il backup non è idoneo, durante la replica verrà visualizzato un messaggio di errore.  
   
  Per accertarsi che un backup sia idoneo per l'utilizzo, attenersi alle seguenti indicazioni:  
@@ -76,18 +73,16 @@ ms.lasthandoff: 06/22/2017
   
 -   Le colonne di tipo timestamp sottoscritte nel database ripristinato devono essere convertite in colonne **binary(8)** . A tale scopo, copiare il contenuto delle tabelle contenenti colonne di tipo timestamp nelle nuove tabelle con schemi corrispondenti, ad eccezione delle colonne **binary(8)** che sostituiscono le colonne di tipo timestamp, eliminare le tabelle originali e rinominare le nuove tabelle con gli stessi nomi delle tabelle originali.  
   
-<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>
-
-## Inizializzazione di una sottoscrizione con un metodo alternativo  
+## Inizializzazione di una sottoscrizione con un metodo alternativo
+<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>  
  È possibile inizializzare una sottoscrizione utilizzando qualsiasi metodo che consenta di copiare nel Sottoscrittore i dati e lo schema del database di pubblicazione, come [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Quando si utilizza un metodo alternativo per inizializzare il Sottoscrittore, gli oggetti di supporto della replica vengono copiati nel Sottoscrittore.  
   
  Diversamente dall'inizializzazione con un backup, è necessario assicurarsi personalmente o mediante l'applicazione che i dati e lo schema vengano sincronizzati correttamente al momento dell'aggiunta della sottoscrizione. Ad esempio, in presenza di attività nel server di pubblicazione tra il momento in cui i dati e lo schema vengono copiati nel Sottoscrittore e il momento in cui viene aggiunta la sottoscrizione, le modifiche risultanti da questa attività potrebbero non essere replicate nel Sottoscrittore.  
   
  Per inizializzare una sottoscrizione con un metodo alternativo, vedere [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
