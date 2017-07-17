@@ -1,5 +1,5 @@
 ---
-title: "Modalità di raccolta dei dati dell&quot;archivio query | Microsoft Docs"
+title: "Modalità di raccolta dei dati dell'archivio query | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/13/2016
@@ -17,22 +17,24 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
-# <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
+# Come Archivio query raccoglie i dati
+<a id="how-query-store-collects-data" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Archivio query funziona come un' **utilità di traccia eventi** che raccoglie costantemente informazioni di compilazione e runtime correlate alle query e ai piani. I dati relativi alle query sono resi persistenti nelle tabelle interne e presentati agli utenti mediante una serie di viste.  
   
-## <a name="views"></a>Viste  
+## Viste
+<a id="views" class="xliff"></a>  
  Il diagramma seguente mostra le viste di Archivio query e le loro relazioni logiche, con le informazioni della fase di compilazione presentate come entità blu:  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **Descrizioni delle viste**  
   
@@ -47,7 +49,8 @@ ms.lasthandoff: 04/11/2017
   
  Per ulteriori informazioni sulle viste di Archivio query, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni tramite Archivio query](https://msdn.microsoft.com/library/dn817826.aspx).  
   
-## <a name="query-processing"></a>Elaborazione delle query  
+## Elaborazione delle query
+<a id="query-processing" class="xliff"></a>  
  Archivio query interagisce con la pipeline di elaborazione delle query nei seguenti punti chiave:  
   
 1.  Quando la query viene compilata per la prima volta, il testo della query e il piano iniziale vengono inviati ad Archivio query  
@@ -68,12 +71,14 @@ ms.lasthandoff: 04/11/2017
   
  In caso di arresto anomalo del sistema, Archivio query può perdere i dati di runtime fino alla quantità definita con `DATA_FLUSH_INTERVAL_SECONDS`. Il valore predefinito di 900 secondi (15 minuti) rappresenta un punto di equilibrio ottimale tra le prestazioni di acquisizione delle query e la disponibilità dei dati.  
 In caso di uso intenso della memoria, le statistiche di runtime possono essere scaricate su disco prima di quanto definito con `DATA_FLUSH_INTERVAL_SECONDS`.  
-Durante la lettura dei dati di Archivio query, i dati in memoria e su disco sono unificati in modo trasparente.  
+Durante la lettura dei dati di Archivio query, i dati in memoria e su disco sono unificati in modo trasparente.
+In caso di chiusura della sessione o di riavvio o arresto anomalo dell'applicazione client, le statistiche sulla query non verranno registrate.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

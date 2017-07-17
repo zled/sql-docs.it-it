@@ -1,7 +1,7 @@
 ---
 title: Rinominare una stored procedure | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,14 +17,15 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 1d0ddb568fd162f4be42234607b5b8484cb89f60
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
-# <a name="rename-a-stored-procedure"></a>Rinominare una stored procedure
+# Rinominare una stored procedure
+<a id="rename-a-stored-procedure" class="xliff"></a>
   In questo argomento viene descritto come rinominare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -47,8 +48,10 @@ ms.lasthandoff: 06/22/2017
   
 -   I nomi delle procedure devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
--   La ridenominazione di una stored procedure non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo **sys.sql_modules** . È pertanto consigliabile evitare di rinominare questo tipo di oggetto. In alternativa, eliminare e ricreare la stored procedure con il nuovo nome.  
-  
+-   La ridenominazione di una stored procedure consente di mantenere il valore `object_id` e tutte le autorizzazioni assegnate in modo specifico alla stored procedure. Quando si elimina e ricrea l'oggetto, viene creato un nuovo `object_id` e vengono rimosse tutte le autorizzazioni assegnate in modo specifico alla stored procedure.
+
+-   La ridenominazione di una stored procedure non comporta la modifica del nome dell'oggetto corrispondente nella colonna di definizione della vista del catalogo **sys.sql_modules** . A questo scopo, è necessario eliminare e ricreare la stored procedure con il nuovo nome.  
+
 -   La modifica del nome o della definizione di una stored procedure può causare un errore degli oggetti dipendenti se questi non vengono aggiornati in base alle modifiche apportate alla stored procedure. Per altre informazioni, vedere [Visualizzare le dipendenze di una stored procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ###  <a name="Security"></a> Sicurezza  
@@ -62,37 +65,30 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
+#### Per rinominare una stored procedure
+<a id="to-rename-a-stored-procedure" class="xliff"></a>  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
-  
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
-  
 3.  [Determinare le dipendenze della stored procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
-  
 4.  Espandere **Stored Procedures**, fare clic con il pulsante destro del mouse sulla procedura da rinominare e quindi scegliere **Rinomina**.  
-  
 5.  Modificare il nome della stored procedure.  
-  
 6.  Modificare il nome della stored procedure in qualsiasi oggetto dipendente o script che vi fa riferimento.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
+#### Per rinominare una stored procedure
+<a id="to-rename-a-stored-procedure" class="xliff"></a>  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
 2.  Dalla barra Standard fare clic su **Nuova query**.  
-  
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come rinominare una stored procedure eliminandola e ricreandola con un nuovo nome. Nel primo esempio si crea la stored procedure `'HumanResources.uspGetAllEmployeesTest`, nel secondo esempio la stored procedure viene rinominata in `HumanResources.uspEveryEmployeeTest`.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
+
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  
 AS  
     SET NOCOUNT ON;  
@@ -101,20 +97,11 @@ AS
 GO  
   
 --Rename the stored procedure.  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
-CREATE PROCEDURE HumanResources.uspEveryEmployeeTest  
-AS  
-    SET NOCOUNT ON;  
-    SELECT LastName, FirstName, Department  
-    FROM HumanResources.vEmployeeDepartmentHistory;  
-GO  
+EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
@@ -124,3 +111,4 @@ GO
  [Visualizzare le dipendenze di una stored procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
   
+

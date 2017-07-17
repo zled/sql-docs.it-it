@@ -1,7 +1,7 @@
 ---
 title: Configurazione di PolyBase | Microsoft Docs
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,26 +14,29 @@ caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
-# <a name="polybase-configuration"></a>Configurazione di PolyBase
+# Configurazione di PolyBase
+<a id="polybase-configuration" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per configurare PolyBase, usare le procedure seguenti.  
   
-## <a name="external-data-source-configuration"></a>Configurazione con origine dati esterna  
- È necessario verificare la connettività all'origine dati esterna da SQL Server. Il tipo di connettività influenza notevolmente le prestazioni delle query previste. Un collegamento Ethernet da 10 Gbit comporterà ad esempio tempi di risposta delle query PolyBase più rapidi rispetto a un collegamento Ethernet da 1 Gbit.  
+## Configurazione con origine dati esterna
+<a id="external-data-source-configuration" class="xliff"></a>  
+ È necessario verificare la connettività all'origine dati esterna da SQL Server. Il tipo di connettività influenza notevolmente le prestazioni delle query. Un collegamento Ethernet da 10 Gbit comporterà ad esempio tempi di risposta delle query PolyBase più rapidi rispetto a un collegamento Ethernet da 1 Gbit.  
   
  È necessario configurare SQL Server per la connessione alla versione di Hadoop in uso o all'archivio BLOB di Azure usando **sp_configure**. PolyBase supporta due distribuzioni di Hadoop: Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH).  Per un elenco completo delle origini dati esterne supportate, vedere [Configurazione della connettività di PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
  
  Nota: PolyBase non supporta le zone Encrypted Cloudera. 
   
-### <a name="run-spconfigure"></a>Eseguire sp_configure  
+### Eseguire sp_configure
+<a id="run-spconfigure" class="xliff"></a>  
   
 1.  Eseguire sp_configure 'hadoop connectivity' e impostare un valore appropriato.  Per trovare il valore, vedere [Configurazione della connettività di PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
@@ -53,7 +56,8 @@ ms.lasthandoff: 06/23/2017
   
     -   Motore di PolyBase per SQL Server  
   
-## <a name="pushdown-configuration"></a>Configurazione della distribuzione  
+## Configurazione della distribuzione
+<a id="pushdown-configuration" class="xliff"></a>  
  Per migliorare le prestazioni delle query, abilitare il calcolo della distribuzione in un cluster Hadoop che è necessario fornire alcuni parametri di configurazione specifici per l'ambiente Hadoop di SQL Server:  
   
 1.  Trovare il file **yarn-site.xml** nel percorso di installazione di SQL Server. In genere il percorso è:  
@@ -68,7 +72,8 @@ ms.lasthandoff: 06/23/2017
 
 4. Per tutte le versioni di CDH 5.X sarà necessario aggiungere i parametri di configurazione **mapreduce.application.classpath** alla fine del **file yarn.site.xml** o nel **file mapred-site.xml**. HortonWorks include queste configurazioni all'interno delle configurazioni **yarn.application.classpath**.
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>File di esempio yarn-Site.XML e mapred-Site.XML per CDH cluster 5. x.
+## File di esempio yarn-Site.XML e mapred-Site.XML per CDH cluster 5. x.
+<a id="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster" class="xliff"></a>
 
 
 
@@ -175,7 +180,8 @@ Si noti che è stata aggiunta la proprietà mapreduce.application.classpath. In 
   
 ```
   
-## <a name="kerberos-configuration"></a>Configurazione di Kerberos  
+## Configurazione di Kerberos
+<a id="kerberos-configuration" class="xliff"></a>  
 Si noti che se PolyBase esegue l'autenticazione in un cluster protetto con Kerberos, il parametro hadoop.rpc.protection deve essere impostato su authentication. La comunicazione dei dati tra i nodi Hadoop rimarrà non crittografata. 
 
  Per connettersi a un cluster Hadoop protetto con Kerberos tramite MIT KDC:
@@ -203,12 +209,14 @@ Si noti che se PolyBase esegue l'autenticazione in un cluster protetto con Kerbe
   
 4.  Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## Passaggi successivi
+<a id="next-steps" class="xliff"></a>  
  [Oggetti T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)  
   
  [Introduzione a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Configurazione della connettività di PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)   
  [Guida a PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
