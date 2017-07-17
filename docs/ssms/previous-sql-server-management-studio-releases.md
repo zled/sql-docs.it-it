@@ -1,7 +1,7 @@
 ---
 title: Versioni precedenti di SQL Server Management Studio | Microsoft Docs
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,18 +14,35 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="previous-sql-server-management-studio-releases"></a>Versioni precedenti di SQL Server Management Studio
+# Versioni precedenti di SQL Server Management Studio
+<a id="previous-sql-server-management-studio-releases" class="xliff"></a>
   
 Sono disponibili le seguenti versioni precedenti di SQL Server Management Studio.
+
+## ![scaricare](../ssdt/media/download.png) [SQL Server Management Studio 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722" class="xliff"></a>
+
+**Informazioni sulla versione**  
+  
+*Questa versione di SSMS usa Visual Studio 2015 Isolated Shell.*  
+Numero di versione: 17.0  
+Numero di build per questa versione: 14.0.17099.0
+
+## Log delle modifiche
+<a id="changelog" class="xliff"></a>  
+
+Vedere [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![scaricare](../ssdt/media/download.png) [versione di SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
+## ![scaricare](../ssdt/media/download.png) [versione di SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946" class="xliff"></a>
 
 **Informazioni sulla versione**  
   
@@ -33,7 +50,8 @@ Sono disponibili le seguenti versioni precedenti di SQL Server Management Studio
 Numero di versione: 16.5.3  
 Numero di build per questa versione: 13.0.16106.4
 
-## <a name="changelog"></a>Log delle modifiche  
+## Log delle modifiche
+<a id="changelog" class="xliff"></a>  
 
 16.5.3
 
@@ -65,7 +83,8 @@ In questa versione sono stati risolti i problemi seguenti:
 
 
 
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
+## ![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812" class="xliff"></a>
 
 **Informazioni sulla versione**  
   
@@ -105,7 +124,8 @@ Numero di build per questa versione: 13.0.16000.28
 
 
    
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.4.1 (settembre 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
+## ![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (settembre 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615" class="xliff"></a>
 
 **Informazioni sulla versione**  
   
@@ -207,7 +227,7 @@ Le versioni di SSMS non localizzate in lingua inglese e installate in Windows 8,
 *  È stato corretto un problema per cui CTRL+Q non selezionava la barra degli strumenti Avvio veloce.
     
 *  È stato corretto un problema per cui la modifica del valore MaxSize di un database tramite la finestra di dialogo Proprietà server è stata interrotta per i database > 2 TB.  
-[Argomento Microsoft Connect n. 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
+[Argomento Microsoft Connect N. 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
     
 *  È stato corretto un problema per cui la procedura guidata Ripristina database non accettava nomi di file con spazio vuoto iniziale:   
 [Argomento Microsoft Connect N. 2395147](https://connect.microsoft.com/SQLServer/feedback/details/2395147)
@@ -217,7 +237,8 @@ Le versioni di SSMS non localizzate in lingua inglese e installate in Windows 8,
 
 
 
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio 16.3 (agosto 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
+## ![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (agosto 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938" class="xliff"></a>
  15 agosto 2016 | Numero di versione:  13.0.15700.28
 
 **Funzionalità**  
@@ -283,7 +304,8 @@ Le versioni di SSMS non localizzate in lingua inglese e installate in Windows 8,
 [Altre informazioni sulle correzioni disponibili nel log delle modifiche di SSMS.](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio - Aggiornamento hotfix luglio 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
+## ![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio - Aggiornamento hotfix luglio 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301" class="xliff"></a>
 
 13 luglio 2016 | Numero di versione: 13.0.15600.2
 
@@ -337,7 +359,8 @@ Come soluzione alternativa di questo problema, è possibile connettersi all'ista
 [Altre informazioni e correzioni di bug disponibili nel log delle modifiche di SSMS.](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio di giugno 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
+## ![Scaricare](../ssdt/media/download.png) [la versione di SQL Server Management Studio di giugno 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832" class="xliff"></a>
 
 01 giugno 2016 |Numero di versione: 13.0.15000.23
 
@@ -369,7 +392,8 @@ Come soluzione alternativa di questo problema, è possibile connettersi all'ista
 6. Correzioni di bug in Always Encrypted. Bug corretto dove l'opzione di menu Crittografia sempre attiva non risultava abilitata correttamente per l'estensione database. Bug corretto anche nella procedura guidata Crittografia sempre attiva dove non veniva eseguita correttamente tramite il provider HSM SafeNet (Luna SA).
 
 ---
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## ![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe" class="xliff"></a>
 
 14 maggio 2015 | Numero di versione: 12.0.4100.1
 
@@ -390,7 +414,8 @@ N/D
 7. È possibile che SSMS si arresti in modo anomalo quando si tenta di aggiornare l'icona della finestra di SSMS sulla barra delle applicazioni ([articolo n.799430 di Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)).
 
 ---
-## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## ![Scaricare](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+<a id="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe" class="xliff"></a>  
   
 21 novembre 2015 | Numero di versione: 11.0.6020.0
 
@@ -406,14 +431,16 @@ N/D
 2. Errore "Impossibile creare il piano di ripristino a causa di un'interruzione nella catena LSN" quando si ripristina un backup differenziale in SSMS
 
 ---
-## <a name="additional-downloads"></a>Download aggiuntivi  
+## Download aggiuntivi
+<a id="additional-downloads" class="xliff"></a>  
 Per un elenco di tutti i download di SQL Server Management Studio, vedere [Area download Microsoft](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
 Per la versione più recente di SQL Server Management Studio, vedere [Scaricare SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
 
 ---  
-## <a name="related-resources"></a>Risorse correlate
-[Update center for Microsoft SQL Server (Centro aggiornamenti per Microsoft SQL Server) (Centro aggiornamenti per Microsoft SQL Server)](https://technet.microsoft.com/sqlserver/ff803383.aspx)   
+## Risorse correlate
+<a id="related-resources" class="xliff"></a>
+[Update center for Microsoft SQL Server (Centro aggiornamenti per Microsoft SQL Server)](https://technet.microsoft.com/sqlserver/ff803383.aspx)   
 [Esercitazione: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [Forum di SQL Server Management Studio](https://social.msdn.microsoft.com/forums/en-us/home?forum=sqltools)  
 

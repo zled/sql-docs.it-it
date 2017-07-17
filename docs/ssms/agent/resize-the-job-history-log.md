@@ -21,15 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82aede2ce0a0f0a0271e73361292628049f97875
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 77a39273f5fa02bac3255ea0436341db2342c236
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
-# <a name="resize-the-job-history-log"></a>Resize the Job History Log
-In questo argomento viene illustrato come impostare le dimensioni massime per i log di cronologia dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+# Resize the Job History Log
+<a id="resize-the-job-history-log" class="xliff"></a>
+Questo argomento descrive come impostare le dimensioni massime per i log di cronologia dei processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].
   
 -   **Prima di iniziare:**  
   
@@ -46,7 +47,8 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
-#### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>Per ridimensionare il log cronologia processi in base alle dimensioni dei dati non elaborati  
+#### Per ridimensionare il log cronologia processi in base alle dimensioni dei dati non elaborati
+<a id="to-resize-the-job-history-log-based-on-raw-size" class="xliff"></a>  
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]ed espandere tale istanza.  
   
@@ -58,7 +60,8 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 5.  Nella casella **Numero massimo di righe di cronologia per processo** immettere il numero massimo di righe di cronologia consentito per un processo.  
   
-#### <a name="to-resize-the-job-history-log-based-on-time"></a>Per ridimensionare il log cronologia processi in base al tempo  
+#### Per ridimensionare il log cronologia processi in base al tempo
+<a id="to-resize-the-job-history-log-based-on-time" class="xliff"></a>  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
   
