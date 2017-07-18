@@ -1,5 +1,5 @@
 ---
-title: Guida sull&quot;architettura di elaborazione delle query | Microsoft Docs
+title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: 
 ms.date: 5/03/2017
 ms.prod: sql-non-specified
@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: it-it
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
@@ -37,7 +37,7 @@ L'elaborazione di una singola istruzione SQL rappresenta la modalità più sempl
 
 Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
 
-I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` sono illustrati nel diagramma seguente: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Un'istruzione `SELECT` definisce soltanto gli elementi seguenti:  
 * Il formato del set di risultati. Questo elemento viene nella maggior parte dei casi specificato nell'elenco di selezione. Altre clausole, ad esempio `ORDER BY` e `GROUP BY` , possono tuttavia influire sul formato finale del set di risultati.
@@ -58,7 +58,7 @@ Il piano di esecuzione di una query è costituito dalla definizione degli elemen
 * I metodi utilizzati per estrarre i dati da ogni tabella.  
   Per accedere ai dati di ogni tabella sono in genere disponibili metodi diversi. Se sono necessarie solo alcune righe con valori di chiave specifici, il server di database può utilizzare un indice. Se sono necessarie tutte le righe della tabella, il server di database può ignorare gli indici ed eseguire un'analisi di tabella. Se sono necessarie tutte le righe di una tabella, ma l'indice contiene colonne chiave incluse in una clausola `ORDER BY`, è consigliabile eseguire l'analisi dell'indice anziché della tabella per evitare che il set di risultati venga ordinato separatamente. Se una tabella è di dimensioni molto ridotte, l'analisi della tabella può rappresentare il metodo più efficiente per quasi tutti gli accessi alla tabella.
 
-Il processo di scelta di un piano di esecuzione è denominato ottimizzazione. Query Optimizer è uno dei componenti più importanti di un sistema di database SQL. L'overhead generato dall'utilizzo di Query Optimizer per l'analisi della query e la scelta di un piano è ampiamente compensato dall'efficienza del piano di esecuzione scelto. Si supponga, ad esempio, che il progetto di costruzione di una casa venga assegnato a due imprese edili diverse. Se un'impresa dedica alcuni giorni alla pianificazione della costruzione della casa e l'altra impresa inizia immediatamente la costruzione senza alcuna pianificazione, è molto probabile che l'impresa che ha pianificato il progetto termini la costruzione per prima.
+Il processo di scelta di un piano di esecuzione è denominato ottimizzazione. Query Optimizer è uno dei principali componenti di un sistema di database SQL. L'overhead generato dall'utilizzo di Query Optimizer per l'analisi della query e la scelta di un piano è ampiamente compensato dall'efficienza del piano di esecuzione scelto. Si supponga, ad esempio, che il progetto di costruzione di una casa venga assegnato a due imprese edili diverse. Se un'impresa dedica alcuni giorni alla pianificazione della costruzione della casa e l'altra impresa inizia immediatamente la costruzione senza alcuna pianificazione, è molto probabile che l'impresa che ha pianificato il progetto termini la costruzione per prima.
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un'utilità di ottimizzazione basata sui costi. A ogni piano di esecuzione possibile corrisponde un costo in termini di quantità di risorse del computer utilizzate. Query Optimizer analizza i piani possibili e sceglie il piano con il costo stimato minore. Per alcune istruzioni `SELECT` complesse i piani di esecuzione possibili sono migliaia. In questi casi, Query Optimizer non analizza tutte le combinazioni possibili, ma utilizza algoritmi complessi per individuare rapidamente un piano di esecuzione il cui costo si avvicini il più possibile al costo minimo teorico.
 
@@ -92,7 +92,7 @@ Anche le istruzioni DDL (Data Definition Language), quali `CREATE PROCEDURE` o `
 
 In Query Processor di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le viste indicizzate e non indicizzate vengono gestite in modi diversi: 
 
-* Le righe di una vista indicizzata vengono archiviate nel database con lo stesso formato di una tabella. Se Query Optimizer decide di usare una vista indicizzata in un piano di query, la vista indicizzata verrà gestita come una tabella di base.
+* Le righe di una vista indicizzata vengono archiviate nel database con lo stesso formato di una tabella. Se Query Optimizer decide di utilizzare una vista indicizzata in un piano di query, la vista indicizzata verrà gestita come una tabella di base.
 * Viene archiviata solo la definizione di una vista indicizzata e non le righe della vista. Query Optimizer incorpora la logica della definizione della vista nel piano di esecuzione compilato per l'istruzione SQL che fa riferimento alla vista non indicizzata. 
 
 La logica usata da Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per decidere quando usare una vista indicizzata è analoga alla logica usare per decidere quando usare un indice per una tabella. Se i dati della vista indicizzata coprono tutta o parte dell'istruzione SQL e Query Optimizer identifica un indice della vista come percorso di accesso più economico, tale indice verrà scelto indipendentemente dal fatto che nella query venga fatto o meno riferimento alla vista in questione.
@@ -198,37 +198,37 @@ In Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vie
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
   * L'opzione di sessione `NUMERIC_ROUNDABORT` è impostata su OFF.
-* Query Optimizer trova una corrispondenza tra le colonne dell'indice della vista e gli elementi della query, tra cui: 
+* In Query Optimizer viene trovata una corrispondenza tra le colonne dell'indice della vista e gli elementi della query, tra cui: 
   * Predicati relativi a condizioni di ricerca nella clausola WHERE
   * Operazioni di join
   * Funzioni di aggregazione
   * Clausole`GROUP BY` 
   * Riferimenti alla tabella
-* Il costo stimato necessario per l'uso dell'indice è inferiore a quello di qualsiasi altro meccanismo di accesso considerato in Query Optimizer. 
+* Il costo stimato necessario per l'utilizzo dell'indice è inferiore a quello di qualsiasi altro meccanismo di accesso considerato in Query Optimizer. 
 * Ogni tabella a cui si fa riferimento nella query, direttamente oppure espandendo una vista per accedere alle tabelle sottostanti, corrispondente a un riferimento alla tabella nella vista indicizzata, deve disporre dello stesso set di hint ad essa applicato nella query.
 
 > [!NOTE] 
 > Gli hint `READCOMMITTED` e `READCOMMITTEDLOCK` sono sempre considerati diversi in questo contesto, indipendentemente dal livello corrente di isolamento delle transazioni.
  
-Ad eccezione dei requisiti relativi alle opzioni `SET` e agli hint di tabella, si tratta delle stesse regole usate da Query Optimizer per determinare se l'indice di una tabella copre una query. Per utilizzare una vista indicizzata, non è necessario specificare nient'altro nella query.
+Ad eccezione dei requisiti relativi alle opzioni `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. Per utilizzare una vista indicizzata, non è necessario specificare nient'altro nella query.
 
-Non è necessario che una query faccia riferimento in modo esplicito a una vista indicizzata nella clausola `FROM` affinché Query Optimizer usi la vista indicizzata. Se la query include riferimenti alle colonne delle tabelle di base incluse anche nella vista indicizzata e Query Optimizer determina che l'uso della vista indicizzata è il meccanismo di accesso più economico, in Query Optimizer viene scelta la vista indicizzata con modalità analoghe a quelle usate per scegliere gli indici delle tabelle di base a cui non viene fatto riferimento diretto in una query. Query Optimizer potrebbe scegliere la vista anche se include colonne a cui non fa riferimento la query, a condizione che la vista stessa rappresenti la soluzione più economica ai fini della copertura di una o più colonne specificate nella query.
+Non è necessario che una query faccia riferimento in modo esplicito a una vista indicizzata nella clausola `FROM` clause for the Query Optimizer to use the indexed view. Se la query include riferimenti alle colonne delle tabelle di base incluse anche nella vista indicizzata e tramite Query Optimizer viene determinato che l'utilizzo della vista indicizzata è il meccanismo di accesso più economico, in Query Optimizer viene scelta la vista indicizzata con modalità analoghe a quelle utilizzate per scegliere gli indici delle tabelle di base a cui non viene fatto riferimento diretto in una query. Query Optimizer potrebbe scegliere la vista anche se include colonne a cui non fa riferimento la query, a condizione che la vista stessa rappresenti la soluzione più economica ai fini della copertura di una o più colonne specificate nella query.
 
-Query Optimizer elabora le viste indicizzate a cui fa riferimento la clausola `FROM` come viste standard. Tramite Query Optimizer la definizione della vista viene espansa nella query all'inizio del processo di ottimizzazione. Viene quindi eseguita la ricerca della corrispondenza nella vista indicizzata. La vista indicizzata potrebbe essere usata nel piano di esecuzione finale selezionato da Query Optimizer oppure il piano può ottenere dalla vista i dati necessari accedendo alle tabelle di base a cui fa riferimento la vista. Tramite Query Optimizer viene scelta l'alternativa con il costo inferiore.
+The Query Optimizer treats an indexed view referenced in the `FROM` come viste standard. Tramite Query Optimizer la definizione della vista viene espansa nella query all'inizio del processo di ottimizzazione. Viene quindi eseguita la ricerca della corrispondenza nella vista indicizzata. La vista indicizzata potrebbe essere usata nel piano di esecuzione finale selezionato da Query Optimizer oppure il piano può ottenere dalla vista i dati necessari accedendo alle tabelle di base a cui fa riferimento la vista. Tramite Query Optimizer viene scelta l'alternativa con il costo inferiore.
 
 #### <a name="using-hints-with-indexed-views"></a>Utilizzo di hint con viste indicizzate
 
-È possibile impedire l'uso delle viste indicizzate da parte di una query usando l'hint per la query `EXPAND VIEWS` oppure è possibile usare l'hint di tabella `NOEXPAND` per fare in modo che venga impiegato un indice per una vista indicizzata specificata nella clausola `FROM` di una query. È tuttavia consigliabile lasciar determinare in modo dinamico a Query Optimizer i metodi di accesso migliori da usare per ogni query. Limitare l'uso degli hint `EXPAND` e `NOEXPAND` a casi specifici per i quali si è verificato che in tal modo è possibile ottenere un miglioramento significativo delle prestazioni.
+È possibile impedire l'uso delle viste indicizzate da parte di una query usando l'hint per la query `EXPAND VIEWS` oppure è possibile usare l'hint di tabella `NOEXPAND` per fare in modo che venga impiegato un indice per una vista indicizzata specificata nella clausola `FROM` di una query. È tuttavia consigliabile lasciar determinare in modo dinamico a Query Optimizer i metodi di accesso migliori da utilizzare per ogni query. Limitare l'uso degli hint `EXPAND` e `NOEXPAND` a casi specifici per i quali si è verificato che in tal modo è possibile ottenere un miglioramento significativo delle prestazioni.
 
-L'opzione `EXPAND VIEWS` specifica che in Query Optimizer non verranno usati indici delle viste per l'intera query. 
+L'opzione `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-Se per una vista viene specificata l'opzione `NOEXPAND`, Query Optimizer valuta l'opportunità di usare gli indici definiti per la vista. Se l'opzione `NOEXPAND` viene specificata con la clausola `INDEX()` facoltativa, Query Optimizer userà gli indici specificati. L'opzione`NOEXPAND` può essere specificata solo per le viste indicizzate e non è supportata per quelle non indicizzate.
+Se per una vista viene specificata l'opzione `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. Se l'opzione`NOEXPAND` viene specificata con la clausola `INDEX()` clause forces the Query Optimizer to use the specified indexes. L'opzione`NOEXPAND` può essere specificata solo per le viste indicizzate e non è supportata per quelle non indicizzate.
 
 Quando non viene specificata né l'opzione `NOEXPAND` né `EXPAND VIEWS` in una query contenente una vista, la vista viene espansa per accedere alle tabelle sottostanti. Se la query che compone la vista contiene hint di tabella, tali hint vengono propagati alle tabelle sottostanti. Per altre informazioni su questo processo, vedere Risoluzione delle viste. Se i set di hint presenti nelle tabelle sottostanti della vista sono identici tra loro, la query può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. La maggior parte delle volte questi hint corrispondono tra loro in quanto vengono ereditati direttamente dalla vista. Se. tuttavia, la query fa riferimento a tabelle anziché a viste e gli hint applicati direttamente a tali tabelle non sono identici, la query non può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. Se gli hint `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`o `XLOCK` vengono applicati a tabelle a cui fa riferimento la query dopo l'espansione della vista, la query non può essere usata per la ricerca della corrispondenza con una vista indicizzata.
 
 Se un hint di tabella nel formato `INDEX (index_val[ ,...n] )` fa riferimento a una vista in una query e non viene specificato anche l'hint `NOEXPAND` , l'hint per l'indice viene ignorato. Per specificare l'uso di un determinato indice, usare `NOEXPAND`. 
 
-In genere, quando Query Optimizer trova una corrispondenza tra una vista indicizzata e una query, eventuali hint specificati nelle tabelle o nelle viste nella query vengono applicati direttamente alla vista indicizzata. Se Query Optimizer sceglie di non usare una vista indicizzata, gli eventuali hint vengono propagati direttamente alle tabelle a cui fa riferimento la vista. Per altre informazioni, vedere Risoluzione delle viste. Questa propagazione non riguarda gli hint di join, che vengono applicati solo nella relativa posizione originale nella query. Gli hint di join non vengono presi in considerazione da Query Optimizer durante la ricerca della corrispondenza tra query e viste indicizzate. Se in un piano della query viene utilizzata una vista indicizzata che corrisponde a una parte di una query contenente un hint di join, tale hint non viene utilizzato nel piano.
+In genere, quando Query Optimizer trova una corrispondenza tra una vista indicizzata e una query, eventuali hint specificati nelle tabelle o nelle viste nella query vengono applicati direttamente alla vista indicizzata. Se tramite Query Optimizer viene scelto di non utilizzare una vista indicizzata, eventuali hint vengono propagati direttamente alle tabelle a cui viene fatto riferimento nella vista. Per altre informazioni, vedere Risoluzione delle viste. Questa propagazione non riguarda gli hint di join, che vengono applicati solo nella relativa posizione originale nella query. Gli hint di join non vengono presi in considerazione da Query Optimizer durante la ricerca della corrispondenza tra query e viste indicizzate. Se in un piano della query viene utilizzata una vista indicizzata che corrisponde a una parte di una query contenente un hint di join, tale hint non viene utilizzato nel piano.
 
 Nelle definizioni delle viste indicizzate non sono consentiti hint. Nella modalità di compatibilità 80 e superiore, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono ignorati gli hint contenuti nelle definizioni delle viste indicizzate quando ne viene eseguita la manutenzione oppure quando vengono eseguite query in cui sono utilizzate viste indicizzate. Sebbene l'utilizzo di hint nelle definizioni delle viste indicizzate non comporti la generazione di un errore di sintassi nella modalità di compatibilità 80, gli hint vengono ignorati.
 
@@ -239,7 +239,7 @@ Query Processor di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ottimi
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila piani dinamici e intelligenti che consentono di usare le query distribuite in modo efficiente ai fini dell'accesso ai dati da tabelle membro remote: 
 
 * Query Processor usa prima di tutto OLE DB per recuperare le definizioni del vincolo CHECK da ogni tabella membro. In questo modo, può eseguire il mapping della distribuzione dei valori di chiave in tutte le tabelle membro.
-* Query Processor confronta gli intervalli di chiavi specificati nella clausola `WHERE` di un'istruzione SQL con la mappa in cui viene indicata la distribuzione delle righe nelle tabelle membro. Compila quindi un piano di esecuzione delle query che utilizza le query distribuite per recuperare solo le righe remote necessarie per completare l'istruzione SQL. Il piano di esecuzione viene compilato in modo che tutti gli accessi alle tabelle membro remote vengano rimandati al momento in cui vengono richieste le informazioni, indipendentemente dal fatto che si tratti di dati o metadati.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` di un'istruzione SQL con la mappa in cui viene indicata la distribuzione delle righe nelle tabelle membro. Compila quindi un piano di esecuzione delle query che utilizza le query distribuite per recuperare solo le righe remote necessarie per completare l'istruzione SQL. Il piano di esecuzione viene compilato in modo che tutti gli accessi alle tabelle membro remote vengano rimandati al momento in cui vengono richieste le informazioni, indipendentemente dal fatto che si tratti di dati o metadati.
 
 Si consideri, ad esempio, un sistema in cui la tabella Customers è partizionata tra Server1 (`CustomerID` da 1 a 3299999), Server2 (`CustomerID` da 3300000 a 6599999) e Server3 (`CustomerID` da 6600000 a 9999999).
 
@@ -370,7 +370,7 @@ La colonna `recompile_cause` dell'XEvent `sql_statement_recompile` contiene un c
 > [!NOTE]
 > Quando l'opzione di database `AUTO_UPDATE_STATISTICS` è impostata su `ON`, le query vengono ricompilate quando sono indirizzate a tabelle o viste indicizzate le cui statistiche sono state aggiornate o le cui cardinalità sono state modificate in modo significativo dall'ultima esecuzione. Questo comportamento si applica alle tabelle standard definite dall'utente, alle tabelle temporanee e alle tabelle inserite ed eliminate, create dai trigger DML. Se le prestazioni delle query sono influenzate da un numero eccessivo di ricompilazioni, è possibile modificare l'impostazione su `OFF`. Quando l'opzione `AUTO_UPDATE_STATISTICS` del database è impostata su `OFF`, non vengono eseguite ricompilazioni in base alle statistiche o alle modifiche delle cardinalità, ad eccezione delle tabelle inserite ed eliminate create dai trigger DML `INSTEAD OF`. Poiché tali tabelle vengono create in tempdb, la ricompilazione delle query che vi accedono dipende dall'impostazione di `AUTO_UPDATE_STATISTICS` in tempdb. Si noti che in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, la ricompilazione delle query continua in base alle modifiche delle cardinalità delle tabelle inerite ed eliminate del trigger DML, anche quando l'impostazione è `OFF`.
 
-### <a name="parameters-and-execution-plan-reuse"></a>Parametri e riutilizzo del piano di esecuzione
+### <a name="PlanReuse"></a> Parametri e riutilizzo del piano di esecuzione
 
 L'utilizzo dei parametri, inclusi i marcatori di parametro nelle applicazioni ADO, OLE DB e ODBC, può comportare un maggiore riutilizzo dei piani di esecuzione. 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 La query può tuttavia essere parametrizzata in base alle regole di parametrizzazione semplice. Quando un tentativo di parametrizzazione forzata ha esito negativo, viene successivamente tentata la parametrizzazione semplice.
 
-### <a name="simple-parameterization"></a>Parametrizzazione semplice
+### <a name="SimpleParam"></a> Parametrizzazione semplice
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'uso di parametri o di marcatori di parametro nelle istruzioni di Transact-SQL consente di aumentare la capacità del motore relazionale di trovare una corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti compilati in precedenza.
 
@@ -474,7 +474,7 @@ In base al comportamento predefinito della parametrizzazione semplice, in [!INCL
 
 In alternativa, è possibile specificare la parametrizzazione di una singola query e di tutte le altre con sintassi equivalente ma che differiscono solo per i valori dei parametri. 
 
-### <a name="forced-parameterization"></a>parametrizzazione forzata
+### <a name="ForcedParam"></a> Parametrizzazione forzata
 
 È possibile ignorare il comportamento predefinito di parametrizzazione semplice di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificando la parametrizzazione di tutte le istruzioni `SELECT`, `INSERT`, `UPDATE` e `DELETE` di un database in base a limiti specifici. La parametrizzazione forzata viene attivata impostando l'opzione `PARAMETERIZATION` su `FORCED` nell'istruzione `ALTER DATABASE` . La parametrizzazione forzata può offrire un miglioramento delle prestazioni di alcuni database riducendo la frequenza delle operazioni di compilazione e ricompilazione delle query. I database che possono essere soggetti a un miglioramento delle prestazione grazie alla parametrizzazione forzata sono in genere quelli che ricevono volumi elevati di query simultanee da origini quali le applicazioni POS.
 
@@ -525,7 +525,7 @@ Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono paramet
 * I valori letterali binari vengono parametrizzati in varbinary(8000) se il valore letterale non supera gli 8000 byte. Se il valore letterale è maggiore di 8000 byte, viene convertito in varbinary(max).
 * I valori letterali di tipo money vengono parametrizzati in money.
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>Linee guida per l'utilizzo della parametrizzazione forzata
+#### <a name="ForcedParamGuide"></a> Linee guida per l'utilizzo della parametrizzazione forzata
 
 Quando si desidera impostare l'opzione `PARAMETERIZATION` su FORCED, considerare gli aspetti seguenti:
 
@@ -538,7 +538,7 @@ Quando si desidera impostare l'opzione `PARAMETERIZATION` su FORCED, considerare
 È possibile ignorare il comportamento della parametrizzazione forzata specificando che su una singola query, e su qualsiasi altra query sintatticamente equivalente ma che differisca solo nei valori dei parametri, venga eseguita la parametrizzazione semplice. Viceversa è possibile specificare che la parametrizzazione forzata venga tentata solo su un set di query sintatticamente equivalenti, anche se disabilitata nel database. A tale scopo, vengono usate le[guide di piano](../relational-databases/performance/plan-guides.md) .
 
 > [!NOTE]
-> Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, il report dei messaggi di errore potrebbe presentare differenze rispetto a quello della parametrizzazione semplice: potrebbero essere segnalati più messaggi di errore nei casi in cui nella parametrizzazione semplice sarebbe stato segnalato un numero di messaggi di errore inferiore e i numeri di riga nei quali si sono verificati gli errori potrebbero non essere segnalati correttamente.
+> Quando l'opzione `PARAMETERIZATION` è impostata su `FORCED`, il report dei messaggi di errore potrebbe presentare differenze rispetto a quando l'opzione `PARAMETERIZATION` è impostata su `SIMPLE`: questa impostazione potrebbe comportare la segnalazione di più messaggi di errore nei casi in cui nella parametrizzazione semplice sarebbe stato segnalato un numero di messaggi di errore inferiore e i numeri di riga nei quali si sono verificati gli errori potrebbero non essere segnalati correttamente.
 
 ### <a name="preparing-sql-statements"></a>Preparazione delle istruzioni SQL
 
@@ -580,7 +580,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il modello di prepara
 * Il modello di preparazione/esecuzione è utilizzabile con altri database, incluse le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  
-### <a name="parameter-sniffing"></a>Analisi dei parametri
+### <a name="ParamSniffing"></a> Analisi dei parametri
 Il termine "analisi dei parametri" si riferisce a un processo in base al quale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] individua i valori dei parametri correnti durante la compilazione o ricompilazione e li passa a Query Optimizer in modo che possano essere usati per generare piani di esecuzione di query potenzialmente più efficienti.
 
 I valori dei parametri vengono individuati durante la compilazione o ricompilazione per i seguenti tipi di batch:
@@ -606,7 +606,7 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
 * Un piano di esecuzione seriale è considerato più veloce di ogni possibile piano di esecuzione parallela per la query in esame.
 * La query contiene operatori scalari o relazionali che non possono essere eseguiti in parallelo. Alcuni operatori possono richiedere l'esecuzione seriale di una sezione della query o dell'intero piano.
 
-### <a name="degree-of-parallelism"></a>Grado di parallelismo
+### <a name="DOP"></a> Grado di parallelismo
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rileva automaticamente il grado di parallelismo ottimale per ogni istanza di esecuzione parallela di una query o di operazione DDL sull'indice, utilizzando i criteri seguenti: 
 
@@ -620,7 +620,7 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
   Le operazioni di creazione o ricompilazione di un indice o di eliminazione di un indice cluster e le query che utilizzano molte risorse CPU sono candidate ideali per un piano parallelo. Esempi di operazioni di questo tipo sono i join di tabelle di grandi dimensioni, le aggregazioni di ampia portata e gli ordinamenti di set di risultati estesi. Nel caso di query semplici, spesso presenti nelle applicazioni di elaborazione delle transazioni, il coordinamento aggiuntivo necessario per eseguire una query in parallelo viene compensato dal potenziale miglioramento delle prestazioni. Per distinguere le query che possono trarre vantaggio dal parallelismo, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] confronta il costo stimato per l'esecuzione della query o dell'operazione sull'indice con il valore [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). È possibile, ma non consigliabile, modificare il valore predefinito (pari a 5) usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
 
 4. Presenza di un numero sufficiente di righe da elaborare.  
-  Se Query Optimizer determina che il numero di righe è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
+  Se Query Optimizer determina che il numero di righe di un flusso è troppo basso, non introduce gli operatori di scambio per la distribuzione delle righe. Gli operatori vengono pertanto eseguiti in modo seriale, evitando così le situazioni in cui il costo di avvio, distribuzione e coordinamento supera i vantaggi ottenuti tramite l'esecuzione parallela dell'operatore.
 
 5. Disponibilità di statistiche di distribuzione correnti.  
   Se il grado di parallelismo massimo non è disponibile, prima di annullare il piano parallelo vengono considerati i gradi inferiori.  
@@ -641,7 +641,7 @@ I cursori statici e gestiti da keyset possono essere popolati tramite piani di e
 
 L'impostazione dell'opzione max degree of parallelism su 0 (impostazione predefinita) consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 nell'esecuzione di piani paralleli. Anche se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] imposta una destinazione di runtime di 64 processori logici quando l'opzione MAXDOP è impostata su 0, è possibile impostare manualmente un valore diverso se necessario. L'impostazione di MAXDOP su 0 per query e indici consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 per le query o gli indici specificati nell'esecuzione di piani paralleli. MAXDOP non è un valore imposto per tutte le query parallele, ma piuttosto un valore target provvisorio per tutte le query idonee per il parallelismo. Ciò significa che se ci sono thread di lavoro sufficienti disponibili in fase di esecuzione, una query può essere eseguita con un grado di parallelismo minore rispetto all'opzione di configurazione del server MAXDOP.
 
-Fare riferimento a questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) per informazioni sulle procedure consigliate per la configurazione di MAXDOP.
+Fare riferimento a questo [articolo del supporto tecnico Microsoft](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) per informazioni sulle procedure consigliate per la configurazione di MAXDOP.
 
 ### <a name="parallel-query-example"></a>Esempio di query parallela
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-Si supponga che per le tabelle lineitem e orders vengano definiti gli indici seguenti:
+Si supponga che per le tabelle `lineitem` e `orders` vengano definiti gli indici seguenti:
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ Le fasi principali di un'operazione parallela sugli indici includono quanto segu
 
 Singole istruzioni `CREATE TABLE` o `ALTER TABLE` possono avere più vincoli che richiedono la creazione di un indice. Le operazioni di creazione dell'indice vengono eseguite in serie, anche se in un computer con più CPU ogni singola operazione può essere eseguita in parallelo.
 
-## <a name="distributted-query-architecture"></a>Architettura delle query distribuite
+## <a name="distributed-query-architecture"></a>Architettura delle query distribuite
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due metodi per fare riferimento a origini dati OLE DB eterogenee nelle istruzioni Transact-SQL:
 
@@ -791,7 +791,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile un mecc
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 sono state migliorate le prestazioni di elaborazione delle query su tabelle partizionate per molti piani paralleli, modificate le modalità di rappresentazione dei piani seriali e paralleli, nonché ottimizzate le informazioni relative al partizionamento fornite nei piani di esecuzione sia della fase di compilazione che di esecuzione. In questo argomento vengono descritti i miglioramenti apportati, viene spiegato come interpretare i piani di esecuzione delle query relativi a tabelle e indici partizionati e vengono fornite le procedure consigliate per migliorare le prestazioni delle query su oggetti partizionati. 
+In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] sono state migliorate le prestazioni di elaborazione delle query su tabelle partizionate per molti piani paralleli, modificate le modalità di rappresentazione dei piani seriali e paralleli, nonché ottimizzate le informazioni relative al partizionamento fornite nei piani di esecuzione sia nella fase di compilazione che di esecuzione. In questo argomento vengono descritti i miglioramenti apportati, viene spiegato come interpretare i piani di esecuzione delle query relativi a tabelle e indici partizionati e vengono fornite le procedure consigliate per migliorare le prestazioni delle query su oggetti partizionati. 
 
 > [!NOTE]
 > Il partizionamento di indici e tabelle è supportato solo nelle edizioni Enterprise, Developer ed Evaluation di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -802,7 +802,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la rappresentazione i
 
 L'eliminazione della partizione viene ora eseguita durante tale operazione di ricerca.
 
-Query Optimizer è inoltre stato ampliato, pertanto è ora possibile eseguire un'operazione di ricerca o di analisi con un'unica condizione su `PartitionID` (come colonna iniziale logica) e su altre colonne chiave indice e quindi un'operazione di ricerca di secondo livello, con una condizione diversa, su una o più colonne aggiuntive, per ogni valore distinto che soddisfa la qualificazione per l'operazione di ricerca di primo livello. Questa operazione, denominata ignorare l'analisi, consente a Query Optimizer di eseguire un'operazione di ricerca o di analisi basata su un unica condizione per determinare le partizioni a cui eseguire l'accesso e un'operazione Index Seek di secondo livello all'interno di tale operatore per restituire le righe delle partizioni che soddisfano una condizione diversa. Si consideri ad esempio la query seguente.
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (come colonna iniziale logica) e su altre colonne chiave indice e quindi un'operazione di ricerca di secondo livello, con una condizione diversa, su una o più colonne aggiuntive, per ogni valore distinto che soddisfa la qualificazione per l'operazione di ricerca di primo livello. Questa operazione, denominata skip scan consente a Query Optimizer di eseguire un'operazione di ricerca o di analisi basata su un unica condizione per determinare le partizioni a cui eseguire l'accesso e un'operazione Index Scan di secondo livello all'interno di tale operatore per restituire le righe delle partizioni che soddisfano una condizione diversa. Si consideri ad esempio la query seguente.
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 Per risolvere la query, Query Processor esegue un'operazione di ricerca di primo livello per individuare tutte le partizioni contenenti righe che soddisfano la condizione `T.a < 10`. In tal modo vengono identificate le partizioni a cui effettuare l'accesso. All'interno di ciascuna partizione identificata, viene quindi eseguita una ricerca di secondo livello nell'indice cluster della colonna B per individuare le righe che soddisfano le condizioni `T.b = 2` e `T.a < 10`. 
 
-Nell'illustrazione seguente è riportata una rappresentazione logica dell'operazione di "skip scan". Include la tabella T con i dati nelle colonne A e B. Le partizioni sono numerate da 1 a 4 e i limiti delle partizioni sono contraddistinti da righe verticali tratteggiate. In seguito a un'operazione di ricerca di primo livello eseguita sulle partizioni (non riportata nell'illustrazione) è stato determinato che le partizioni 1, 2 e 3 soddisfano la condizione di ricerca prevista dal partizionamento definito per la tabella e il predicato sulla colonna A, ovvero `T.a < 10`. Il percorso attraversato dalla parte di ricerca di secondo livello dell'operazione di skip scan è illustrata dalla linea curva. In pratica, l'operazione di skip scan cerca in ciascuna di queste partizioni le righe che soddisfano la condizione `b = 2`. Il costo totale dell'operazione di skip scan equivale a quello di tre operazioni Index Seek distinte.   
+Nell'illustrazione seguente è riportata una rappresentazione logica dell'operazione di "skip scan". Include la tabella `T` con i dati nelle colonne `a` e `b`. Le partizioni sono numerate da 1 a 4 e i limiti delle partizioni sono contraddistinti da righe verticali tratteggiate. In seguito a un'operazione di ricerca di primo livello eseguita sulle partizioni (non riportata nell'illustrazione) è stato determinato che le partizioni 1, 2 e 3 soddisfano la condizione di ricerca prevista dal partizionamento definito per la tabella e il predicato sulla colonna `a`, ovvero `T.a < 10`. Il percorso attraversato dalla parte di ricerca di secondo livello dell'operazione di skip scan è illustrata dalla linea curva. In pratica, l'operazione di skip scan cerca in ciascuna di queste partizioni le righe che soddisfano la condizione `b = 2`. Il costo totale dell'operazione di skip scan equivale a quello di tre operazioni Index Seek distinte.   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -943,24 +943,24 @@ Sebbene negli esempi precedenti venga suggerito un modo semplice per allocare i 
 
 Per illustrare un altro esempio, si supponga che la tabella dispone di quattro partizioni nella colonna A con punti limite (10, 20, 30), un indice nella colonna B e che la query include una clausola `WHERE B IN (50, 100, 150)`del predicato. Dal momento che partizioni della tabella sono basate sui valori di A, i valori di B possono trovarsi in qualsiasi partizione della tabella. Di conseguenza Query Processor ricercherà ciascuno dei tre valori di B (50, 100, 150) in ognuna delle quattro partizioni della tabella e assegnerà proporzionatamente i thread di lavoro in modo da eseguire ciascuna delle 12 analisi della query in parallelo.
 
-|Partizioni della tabella basate sulla colonna A    |Ricerca della colonna B in ogni partizione della tabella |
+|Partizioni della tabella basate sulla colonna A |Ricerca della colonna B in ogni partizione della tabella |
 |----|----|
-|Partizione della tabella 1: A < 10     |B=50, B=100, B=150 |
-|Partizione della tabella 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|Partizione della tabella 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|Partizione della tabella 4: A >= 30     |B=50, B=100, B=150 |
+|Partizione della tabella 1: A < 10   |B=50, B=100, B=150 |
+|Partizione della tabella 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|Partizione della tabella 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|Partizione della tabella 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Procedure consigliate
 
 Per migliorare le prestazioni di query che accedono a una grande quantità di dati da tabelle e indici partizionati estesi, è opportuno adottare le procedure consigliate seguenti:
 
-* Eseguire lo striping di ogni partizione tra molti dischi.
+* Eseguire lo striping di ogni partizione tra molti dischi. Questo è particolarmente importante durante l'uso della rotazione dei dischi.
 * Quando possibile, utilizzare un server con memoria principale sufficiente per contenere partizioni a cui viene effettuato l'accesso frequentemente o a tutte le partizioni in memoria per ridurre il costo delle operazioni di I/O.
 * Se i dati oggetto della query non sono tutti contenuti in memoria, comprimere le tabelle e gli indici al fine di ridurre il costo delle operazioni di I/O.
 * Utilizzare un server con processori veloci e il maggior numero possibile di core del processore per sfruttare a pieno la funzionalità di elaborazione di query parallele.
 * Assicurarsi che per il server sia disponibile larghezza di banda sufficiente del controller I/O. 
 * Creare un indice cluster in ogni tabella partizionata grande per sfruttare le ottimizzazioni dell'analisi dell'albero B.
-* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper " [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)" (Caricamento di bulk dati in una tabella partizionata).
+* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx) (Guida alle prestazioni del caricamento dati).
 
 ### <a name="example"></a>Esempio
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni  
  [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [Eventi estesi](../relational-databases/extended-events/extended-events.md)
+ [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
+ [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)
 
