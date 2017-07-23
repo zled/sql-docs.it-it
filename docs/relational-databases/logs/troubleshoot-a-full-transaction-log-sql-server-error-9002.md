@@ -22,11 +22,11 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
@@ -114,8 +114,7 @@ Questa istruzione consente di identificare l'ID utente del proprietario della tr
 In alcuni casi è necessario terminare il processo usando l'istruzione [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Usare l'istruzione con cautela, soprattutto quando sono in esecuzione processi importanti che non vanno terminati. Per altre informazioni, vedere [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
 
 ## <a name="see-also"></a>Vedere anche  
-[Articolo di supporto della Knowledge Base - Il log delle transazioni aumenta in modo imprevisto o diventa pieno in SQL Server](https://support.microsoft.com/en-us/kb/317375)
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Articolo di supporto della Knowledge Base - Il log delle transazioni aumenta in modo imprevisto o diventa pieno in SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
