@@ -1,96 +1,27 @@
-
-
 # [Soluzioni a disponibilità elevata](high-availability-solutions-sql-server.md)  
-
-
 # [Correzione di pagina automatica (Gruppi di disponibilità/Mirroring del database)](automatic-page-repair-availability-groups-database-mirroring.md)  
-
-
 # [Gestione di account di accesso e di processi dopo un cambio di ruolo](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
-
-
 # [Risolvere i problemi relativi agli utenti isolati](troubleshoot-orphaned-users-sql-server.md)  
 
-
-
-# Install
-
-
-## [Installazione del cluster di failover di SQL Server](install/sql-server-failover-cluster-installation.md)  
-
-
-## [Operazioni preliminari all'installazione del clustering di failover](install/before-installing-failover-clustering.md)  
-
-
-## [Creare un nuovo cluster di failover di SQL Server (programma di installazione)](install/create-a-new-sql-server-failover-cluster-setup.md)  
-
-
-## [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server (programma di installazione)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
-
-
-## [Installare strumenti client in un cluster di failover di SQL Server](install/install-client-tools-on-a-sql-server-failover-cluster.md)  
-
-
-## [Rimuovere un'istanza del cluster di failover di SQL Server (programma di installazione)](install/remove-a-sql-server-failover-cluster-instance-setup.md)  
-
-
-## [Rinominare un'istanza del cluster di failover di SQL Server](install/rename-a-sql-server-failover-cluster-instance.md)  
-
-
+# [Installazione del cluster di failover (articoli)](install/TOC.md)  
 
 # [WSFC (Windows Server Failover Clustering) con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-
-
 ## [Modalità quorum WSFC e configurazione del voto](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
-
-
 ### [Visualizzare le impostazioni NodeWeight per il quorum del cluster](windows/view-cluster-quorum-nodeweight-settings.md)  
-
-
 ### [Configurare le impostazioni NodeWeight per il quorum del cluster](windows/configure-cluster-quorum-nodeweight-settings.md)  
-
-
 ## [Ripristino di emergenza WSFC tramite quorum forzato](windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
-
-
 ### [Forzare l'avvio di un cluster WSFC senza un quorum](windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
-
-
 ## [Clustering su più subnet di SQL Server](windows/sql-server-multi-subnet-clustering-sql-server.md)  
-
-
 ## [Risoluzione dei problemi relativi al clustering di failover](windows/failover-cluster-troubleshooting.md)  
 
-
-
 # [Istanze del cluster di failover Always On](windows/always-on-failover-cluster-instances-sql-server.md)  
-
-
 ## [Criteri di failover per istanze del cluster di failover](windows/failover-policy-for-failover-cluster-instances.md)  
-
-
 ### [Configurare le impostazioni HealthCheckTimeout](windows/configure-healthchecktimeout-property-settings.md)  
-
-
 ### [Configurare le impostazioni della proprietà FailureConditionLevel](windows/configure-failureconditionlevel-property-settings.md)  
-
-
 ### [Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover](windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
-
-
 ## [Gestione e manutenzione dell'istanza del cluster di failover](windows/failover-cluster-instance-administration-and-maintenance.md)  
-
-
 ### [Aggiungere dipendenze a una risorsa di SQL Server](windows/add-dependencies-to-a-sql-server-resource.md)  
-
-
 ### [Recuperare da un errore dell'istanza del cluster di failover](windows/recover-from-failover-cluster-instance-failure.md)  
-
-
 ### [Modificare l'indirizzo IP di un'istanza del cluster di failover](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
-
-
 ## [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-
-
-### [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server (programma di installazione)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
+### [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server (programma di installazione)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
