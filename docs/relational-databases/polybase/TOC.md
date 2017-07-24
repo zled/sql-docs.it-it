@@ -6,4 +6,5 @@
 # [Configurazione](polybase-configuration.md)  
 # [Oggetti T-SQL](polybase-t-sql-objects.md)  
 # [Query](polybase-queries.md)  
-# [Risoluzione dei problemi](polybase-troubleshooting.md)  
+# [Risoluzione dei problemi](polybase-troubleshooting.md) 
+## [Risolvere i problemi di connettività di PolyBase Kerberos](polybase-troubleshoot-connectivity.md)   
