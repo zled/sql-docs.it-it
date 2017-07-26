@@ -28,15 +28,11 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
-
-# Miglioramento delle prestazioni di indici full-text
+# <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 Questo argomento descrive alcune delle cause comuni della riduzione delle prestazioni per gli indici e le query full-text. Vengono inoltre forniti alcuni suggerimenti per limitare i problemi e migliorare le prestazioni.
   
 ##  <a name="causes"></a> Common causes of performance issues
-<a id="hardware-resource-issues" class="xliff"></a>
-
-### Problemi relativi alle risorse hardware
+### <a name="hardware-resource-issues"></a>Problemi relativi alle risorse hardware
 Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
 
 La causa principale del calo delle prestazioni di esecuzione dell'indicizzazione full-text è data dai limiti delle risorse hardware.  
@@ -50,18 +46,14 @@ La causa principale del calo delle prestazioni di esecuzione dell'indicizzazione
     > [!NOTE]  
     >  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il motore di ricerca full-text può usare memoria AWE, in quanto parte del processo sqlservr.exe.  
 
-<a id="full-text-batching-issues" class="xliff"></a>
-
-### Problemi relativi ai batch full-text
+### <a name="full-text-batching-issues"></a>Problemi relativi ai batch full-text
  Se nel sistema non vengono rilevati colli di bottiglia a livello dell'hardware, le prestazioni di indicizzazione della ricerca full-text dipendono principalmente dagli elementi seguenti:  
   
 -   Tempo necessario per la creazione di batch full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Velocità di utilizzo di tali batch da parte del daemon di filtri.  
 
-<a id="full-text-index-population-issues" class="xliff"></a>
-
-### Problemi relativi al popolamento dell'indice full-text
+### <a name="full-text-index-population-issues"></a>Problemi relativi al popolamento dell'indice full-text
 -   **Tipo di popolamento**. A differenza del popolamento completo, i popolamenti incrementale, manuale e con rilevamento automatico delle modifiche non sono progettati per ottimizzare le risorse hardware ai fini di una maggiore velocità. Di conseguenza, i suggerimenti per l'ottimizzazione in questo argomento potrebbero non migliorare le prestazioni per l'indicizzazione full-text quando si usa il popolamento incrementale, manuale o con rilevamento automatico delle modifiche.  
   
 -   **Unione nell'indice master**. Al termine di un popolamento, viene attivato un processo di unione conclusivo che associa i frammenti di indice in un singolo indice full-text master. Ciò consente prestazioni di query superiori poiché è necessario eseguire query solo sull'indice master anziché su alcuni frammenti di indice ed è possibile utilizzare statistiche di punteggio migliori per la classificazione della pertinenza. Tuttavia, l'unione nell'indice master può richiedere l'esecuzione di molte operazioni di I/O, in quanto è necessario leggere e scrivere grandi quantità di dati, ma questa operazione non blocca le query in entrata.  
@@ -82,9 +74,7 @@ Per ottimizzare le prestazioni degli indici full-text, implementare le procedure
 -   Se si usa il popolamento incrementale basato su una colonna timestamp, compilare un indice secondario sulla colonna **timestamp** per migliorare le prestazioni di esecuzione del popolamento incrementale.  
   
 ##  <a name="full"></a> Risolvere i problemi relativi alle prestazioni di popolamenti completi  
-<a id="review-the-full-text-crawl-logs" class="xliff"></a>
-
-### Esaminare i log di ricerca per indicizzazione full-text
+### <a name="review-the-full-text-crawl-logs"></a>Esaminare i log di ricerca per indicizzazione full-text
  Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text.
  
 Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per impostazione predefinita, i log di ricerca per indicizzazione per un'istanza specifica, ad esempio l'istanza predefinita, si trovano nella cartella `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
@@ -100,9 +90,7 @@ Di seguito sono riportate le parti variabili del nome del file del log di ricerc
   
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  
 
-<a id="check-physical-memory-usage" class="xliff"></a>
-
-### Controllare l'utilizzo della memoria fisica  
+### <a name="check-physical-memory-usage"></a>Controllare l'utilizzo della memoria fisica  
  Durante un popolamento full-text, è possibile che la memoria disponibile per fdhost.exe o sqlservr.exe diventi insufficiente o si esaurisca.
 -   Se il log delle ricerche per indicizzazione full-text indica il riavvio frequente del processo fdhost.exe o la restituzione frequente del codice di errore 8007008, uno di questi processi non dispone di memoria sufficiente.
 -   Se fdhost.exe produce dump, in particolare in computer di grandi dimensioni con più CPU, è possibile che la memoria si esaurisca.  
@@ -120,9 +108,7 @@ Di seguito sono riportate le parti variabili del nome del file del log di ricerc
 
 -   **Problemi di paging**. Anche le dimensioni insufficienti del file di paging, ad esempio in un sistema con un file di paging ridotto con crescita limitata, possono generare condizioni di memoria insufficiente per fdhost.exe o sqlservr.exe. Se nei log delle ricerche per indicizzazione full-text non sono riportati errori di memoria, è probabile che le prestazioni non siano ottimali a causa del paging eccessivo.  
   
-<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
-
-### Stimare i requisiti di memoria per il processo host del daemon di filtri (fdhost.exe)  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Stimare i requisiti di memoria per il processo host del daemon di filtri (fdhost.exe)  
  La quantità di memoria richiesta dal processo fdhost.exe per un popolamento dipende principalmente dal numero di intervalli di ricerca per indicizzazione full-text utilizzati, dalla dimensione della memoria condivisa in ingresso e dal numero massimo di istanze di tale memoria.  
   
  È possibile stimare approssimativamente la quantità di memoria (in byte) utilizzata dall'host del daemon di filtri tramite la formula seguente:  
@@ -157,9 +143,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
 2.  500 MB è una stima della memoria necessaria per gli altri processi del sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
 3.  .*ism_size* sia 8 MB per le piattaforme x64.  
   
-<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
-
- #### Esempio: Stima dei requisiti di memoria di fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: Stima dei requisiti di memoria di fdhost.exe  
   
  Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero*F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
   
@@ -169,9 +153,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  `M = 8192-640-500=7052`  
   
-<a id="example-setting-max-server-memory" class="xliff"></a>
-
- #### Esempio: Impostazione del valore max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Esempio: Impostazione del valore max server memory  
   
  Questo esempio usa le istruzioni [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare **max server memory** sul valore calcolato per *M* nell'esempio precedente, `7052`:  
   
@@ -186,9 +168,7 @@ GO
   
 Per altre informazioni sulle opzioni per la memoria del server, vedere [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-<a id="check-cpu-usage" class="xliff"></a>
-
-### Controllare l'utilizzo della CPU  
+### <a name="check-cpu-usage"></a>Controllare l'utilizzo della CPU  
 Le prestazioni di esecuzione dei popolamenti completi non sono ottimali quando l'utilizzo medio della CPU è inferiore al 30%. Di seguito vengono illustrati alcuni fattori che influiscono sull'utilizzo della CPU.  
   
 -   Tempi di attesa lunghi delle pagine  
@@ -231,9 +211,7 @@ Il motore di ricerca full-text usa due tipi di filtri durante il popolamento di 
   
 Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo esempio il documento di Word, come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, impostare il valore **ThreadingModel** del Registro di sistema per il filtro su **Apartment Threaded**. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159).  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Popolamento degli indici full-text](../../relational-databases/search/populate-full-text-indexes.md)   
