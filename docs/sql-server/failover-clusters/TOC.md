@@ -3,7 +3,7 @@
 # [Gestione di account di accesso e di processi dopo un cambio di ruolo](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Risolvere i problemi relativi agli utenti isolati](troubleshoot-orphaned-users-sql-server.md)  
 
-# [Installazione del cluster di failover (articoli)](install/TOC.md)  
+# [Installazione del cluster di failover](install/sql-server-failover-cluster-installation.md)  
 
 # [WSFC (Windows Server Failover Clustering) con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [Modalità quorum WSFC e configurazione del voto](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
