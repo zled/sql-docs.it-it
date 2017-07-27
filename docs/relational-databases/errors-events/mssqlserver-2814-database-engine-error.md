@@ -23,11 +23,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/12/2017
 
 ---
-# MSSQLSERVER_2814
-<a id="mssqlserver2814" class="xliff"></a>
+# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
   
-## Dettagli
-<a id="details" class="xliff"></a>  
+## <a name="details"></a>Dettagli  
   
 |||  
 |-|-|  
@@ -38,8 +36,7 @@ ms.lasthandoff: 07/12/2017
 |Nome simbolico|PR_POSSIBLE_INFINITE_RECOMPILE|  
 |Testo del messaggio|Rilevata una possibile ricompilazione infinita per SQLHANDLE %hs, PlanHandle %hs, offset iniziale %d, offset finale %d. Motivo dell'ultima ricompilazione: % d.|  
   
-## Spiegazione
-<a id="explanation" class="xliff"></a>  
+## <a name="explanation"></a>Spiegazione  
 Una o più istruzioni ha determinato la ricompilazione del batch di query almeno 50 volte. Per evitare ulteriori ricompilazioni, è necessario correggere l'istruzione specificata.  
   
 I motivi della ricompilazione sono elencati nella tabella seguente.  
@@ -58,8 +55,7 @@ I motivi della ricompilazione sono elencati nella tabella seguente.
 |10|Opzioni cursore modificate|  
 |11|Opzione (recompile) richiesta|  
   
-## Azione dell'utente
-<a id="user-action" class="xliff"></a>  
+## <a name="user-action"></a>Azione dell'utente  
   
 1.  Visualizzare l'istruzione che determina la ricompilazione mediante l'esecuzione della query seguente. Sostituire i segnaposto *sql_handle*, *starting_offset*, *ending_offset* e *plan_handle* con i valori specificati nel messaggio di errore. Le colonne **database_name** e **object_name** sono NULL per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparate.  
   
@@ -78,8 +74,7 @@ I motivi della ricompilazione sono elencati nella tabella seguente.
   
 3.  Se il problema persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
 [Classe di evento SQL:StmtRecompile](../event-classes/sql-stmtrecompile-event-class.md)  
   
 

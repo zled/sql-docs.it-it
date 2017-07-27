@@ -24,14 +24,12 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/11/2017
 
 ---
-# Come Archivio query raccoglie i dati
-<a id="how-query-store-collects-data" class="xliff"></a>
+# <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Archivio query funziona come un' **utilità di traccia eventi** che raccoglie costantemente informazioni di compilazione e runtime correlate alle query e ai piani. I dati relativi alle query sono resi persistenti nelle tabelle interne e presentati agli utenti mediante una serie di viste.  
   
-## Viste
-<a id="views" class="xliff"></a>  
+## <a name="views"></a>Viste  
  Il diagramma seguente mostra le viste di Archivio query e le loro relazioni logiche, con le informazioni della fase di compilazione presentate come entità blu:  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
@@ -49,8 +47,7 @@ ms.lasthandoff: 07/11/2017
   
  Per ulteriori informazioni sulle viste di Archivio query, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni tramite Archivio query](https://msdn.microsoft.com/library/dn817826.aspx).  
   
-## Elaborazione delle query
-<a id="query-processing" class="xliff"></a>  
+## <a name="query-processing"></a>Elaborazione delle query  
  Archivio query interagisce con la pipeline di elaborazione delle query nei seguenti punti chiave:  
   
 1.  Quando la query viene compilata per la prima volta, il testo della query e il piano iniziale vengono inviati ad Archivio query  
@@ -77,8 +74,7 @@ In caso di chiusura della sessione o di riavvio o arresto anomalo dell'applicazi
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

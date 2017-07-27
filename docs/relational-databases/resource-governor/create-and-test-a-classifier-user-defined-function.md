@@ -26,8 +26,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/12/2017
 
 ---
-# Creare e testare una funzione di classificazione definita dall'utente
-<a id="create-and-test-a-classifier-user-defined-function" class="xliff"></a>
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Creare e testare una funzione di classificazione definita dall'utente
   In questo argomento viene illustrato come creare e testare una funzione di classificazione definita dall'utente. La procedura prevede l'esecuzione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Nell'esempio incluso nella procedura seguente vengono illustrate le diverse opzioni disponibili per la creazione di una funzione di classificazione definita dall'utente piuttosto complessa.  
@@ -45,8 +44,7 @@ ms.lasthandoff: 07/12/2017
   
  La funzione di classificazione prolunga i tempi di accesso. Una funzione eccessivamente complessa può provocare il timeout degli accessi o rallentare connessioni veloci.  
   
-## Per creare la funzione di classificazione definita dall'utente
-<a id="to-create-the-classifier-user-defined-function" class="xliff"></a>  
+## <a name="to-create-the-classifier-user-defined-function"></a>Per creare la funzione di classificazione definita dall'utente  
   
 1.  Creare e configurare i nuovi pool di risorse e i nuovi gruppi del carico di lavoro. Assegnare ogni gruppo del carico di lavoro al pool di risorse appropriato.  
   
@@ -160,8 +158,7 @@ ms.lasthandoff: 07/12/2017
     GO  
     ```  
   
-## Per verificare i pool di risorse, i gruppi del carico di lavoro e la funzione di classificazione definita dall'utente
-<a id="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function" class="xliff"></a>  
+## <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Per verificare i pool di risorse, i gruppi del carico di lavoro e la funzione di classificazione definita dall'utente  
   
 1.  Ottenere la configurazione dei pool di risorse e dei gruppi del carico di lavoro utilizzando la query seguente.  
   
@@ -241,8 +238,7 @@ ms.lasthandoff: 07/12/2017
     GO  
     ```  
   
-## Procedure consigliate per l'utilizzo di tabelle di ricerca in una funzione di classificazione
-<a id="best-practices-for-using-lookup-tables-in-a-classifier-function" class="xliff"></a>  
+## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Procedure consigliate per l'utilizzo di tabelle di ricerca in una funzione di classificazione  
   
 1.  Non utilizzare una tabella di ricerca, a meno che non sia strettamente necessario. Se è necessario utilizzare una tabella di ricerca, può essere specificata a livello di codice nella funzione stessa. È necessario tuttavia tenere presente la complessità e le modifiche dinamiche della funzione di classificazione.  
   
@@ -275,8 +271,7 @@ ms.lasthandoff: 07/12/2017
         > [!WARNING]  
         >  È consigliabile attenersi scrupolosamente a queste procedure consigliate. In caso non sia possibile seguire le procedure, contattare il supporto Microsoft per evitare in modo proattivo che si verifichino problemi in futuro.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Abilitare Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool di risorse di Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
