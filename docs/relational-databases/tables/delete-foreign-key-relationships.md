@@ -1,7 +1,7 @@
 ---
 title: Eliminare relazioni di chiave esterna | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-foreign-key-relationships"></a>Eliminazione di relazioni di chiave esterna
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile eliminare un vincolo di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'eliminazione di un vincolo di chiave esterna comporta la rimozione del requisito di attivazione dell'integrità referenziale.  
   

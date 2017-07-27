@@ -2,7 +2,7 @@
 title: Vincoli di chiavi primarie ed esterne | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Vincoli di chiavi primarie ed esterne
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le chiavi primarie e le chiavi esterne sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta di importanti oggetti di database.  
   

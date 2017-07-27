@@ -1,7 +1,7 @@
 ---
 title: Eliminare chiavi primarie | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-primary-keys"></a>Eliminazione di chiavi primarie
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile eliminare una chiave primaria in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando viene eliminata la chiave primaria, viene eliminato l'indice corrispondente.  
   
