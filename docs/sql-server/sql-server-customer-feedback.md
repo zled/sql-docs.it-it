@@ -13,15 +13,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
 ms.contentlocale: it-it
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 
-# Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
-<a id="configure-sql-server-to-send-feedback-to-microsoft" class="xliff"></a>
+# <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
 
-## Riepilogo
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>Riepilogo
 Per impostazione predefinita, Microsoft SQL Server raccoglie informazioni su come i clienti usano l'applicazione. In particolare, SQL Server raccoglie informazioni sull'esperienza di installazione, l'utilizzo e le prestazioni. Queste informazioni consentono a Microsoft di migliorare il prodotto per meglio soddisfare le esigenze dei clienti. Ad esempio, Microsoft raccoglie informazioni sui tipi di codici di errore riscontrati dai clienti in modo da poter correggere i bug correlati, migliorare la documentazione su come usare SQL Server e determinare se occorre aggiungere funzionalità al prodotto per offrire un'esperienza migliore ai clienti.
 
 In particolare, Microsoft non invia alcuna informazione dei tipi seguenti tramite questo meccanismo:
@@ -56,8 +54,7 @@ Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on
 > [!NOTE]
 > È possibile disabilitare l'invio di informazioni a Microsoft solo nelle versioni a pagamento di SQL Server.
 
-## Applicazione Segnalazione errori e utilizzo funzionalità
-<a id="error-and-usage-reporting-application" class="xliff"></a> 
+## <a name="error-and-usage-reporting-application"></a>Applicazione Segnalazione errori e utilizzo funzionalità 
 
 Dopo l'installazione, l'impostazione per la raccolta dei dati di utilizzo per i componenti e le istanze di SQL Server può essere modificata tramite l'applicazione Segnalazione errori e utilizzo funzionalità. L'applicazione è disponibile come parte dell'installazione di SQL Server. Questo strumento consente a ogni istanza di SQL Server di configurare un'impostazione specifica per i dati di utilizzo.
 
@@ -70,8 +67,7 @@ Per le versioni a pagamento, usare le caselle di controllo "Segnalazioni utilizz
 
 Per le versioni a pagamento o gratuite, usare le caselle di controllo "Segnalazioni errori" per gestire l'invio di commenti e suggerimenti per errori gravi e dump di arresto anomalo a Microsoft.
 
-## Impostare le sottochiavi del Registro di sistema nel server
-<a id="set-registry-subkeys-on-the-server" class="xliff"></a>
+## <a name="set-registry-subkeys-on-the-server"></a>Impostare le sottochiavi del Registro di sistema nel server
 
 I clienti aziendali possono configurare impostazioni di Criteri di gruppo per consentire o meno in modo esplicito alla raccolta dei dati di utilizzo. Questa operazione viene eseguita tramite la configurazione di un criterio basato sul Registro di sistema. Le sottochiavi del Registro di sistema e le impostazioni pertinenti sono le seguenti:
 
@@ -118,8 +114,7 @@ Inoltre, per disattivare Segnalazione errori e utilizzo funzionalità a livello 
  
 I Criteri di gruppo basati sul Registro di sistema per queste sottochiavi del Registro di sistema vengono rispettati dalla raccolta di dati di utilizzo di SQL Server 2017.
 
-## Impostare le sottochiavi del Registro di sistema per la raccolta di dump di arresto anomalo del sistema
-<a id="set-registry-subkeys-for-crash-dump-collection" class="xliff"></a>
+## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Impostare le sottochiavi del Registro di sistema per la raccolta di dump di arresto anomalo del sistema
 
 In modo analogo al comportamento in una versione precedente di SQL Server, i clienti aziendali di SQL Server 2017 possono configurare impostazioni di Criteri di gruppo nel server per acconsentire o meno in modo esplicito alla raccolta di dump di arresto anomalo del sistema. Questa operazione viene eseguita tramite la configurazione di un criterio basato sul Registro di sistema. Le sottochiavi del Registro di sistema e le impostazioni pertinenti sono le seguenti: 
 
@@ -151,8 +146,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
 I Criteri di gruppo basati sul Registro di sistema per queste sottochiavi del Registro di sistema vengono rispettati dalla raccolta di dump di arresto anomalo del sistema di SQL Server 2017. 
 
-## Raccolta di dump di arresto anomalo del sistema per SQL Server Management Studio
-<a id="crash-dump-collection-for-ssms" class="xliff"></a>
+## <a name="crash-dump-collection-for-ssms"></a>Raccolta di dump di arresto anomalo del sistema per SQL Server Management Studio
 SQL Server Management Studio non raccoglie autonomamente dump di arresto anomalo del sistema. Qualsiasi dump di arresto anomalo del sistema correlato a SQL Server Management Studio viene raccolto nell'ambito della funzionalità Segnalazione errori di Windows.
 
 La procedura per attivare o disattivare questa funzionalità dipende dalla versione del sistema operativo. Per attivare o disattivare la funzionalità, seguire la procedura indicata nell'articolo appropriato per la versione di Windows in uso.
@@ -164,8 +158,7 @@ La procedura per attivare o disattivare questa funzionalità dipende dalla versi
 
     [WER Settings](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx) (Impostazioni di segnalazione errori Windows)
  
-## Commenti e suggerimenti per Analysis Services
-<a id="feedback-for-analysis-services" class="xliff"></a>
+## <a name="feedback-for-analysis-services"></a>Commenti e suggerimenti per Analysis Services
 
 Durante l'installazione, SQL Server 2016 Analysis Services aggiunge un account speciale all'istanza di Analysis Services. Questo account è un membro del ruolo di amministratore del server di Analysis Services. L'account viene usato per raccogliere informazioni per commenti e suggerimenti dall'istanza di Analysis Services.  
 

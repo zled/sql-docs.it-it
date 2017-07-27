@@ -21,15 +21,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: ea0fbb6f0297dfdbe94974de472c7a48ce8ce831
 ms.openlocfilehash: b673559a735d3b28d6055a1440183861b3db692a
 ms.contentlocale: it-it
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/27/2017
 
 ---
-# Connetti ad Archiviazione di Microsoft Azure
-<a id="connect-to-microsoft-azure-storage" class="xliff"></a>
+# <a name="connect-to-microsoft-azure-storage"></a>Connetti ad Archiviazione di Microsoft Azure
 Usare la finestra di dialogo di **connessione di archiviazione Microsoft Azure** per specificare un account di archiviazione e convalidare la connessione a Microsoft Azure.  
   
-## Opzioni
-<a id="options" class="xliff"></a>  
+## <a name="options"></a>Opzioni  
 Specificare le informazioni seguenti sull'account di Microsoft Azure e fare clic su **Avanti** per continuare.  
   
 1.  **Account di archiviazione** - specificare il nome dell'account di archiviazione.
