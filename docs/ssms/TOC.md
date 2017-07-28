@@ -7,13 +7,10 @@
 ## [Articoli nuovi e aggiornati di recente](new-updated-ssms.md)
 ## [Versioni SSMS precedenti](previous-sql-server-management-studio-releases.md)
 
-# [Usare SSMS](use-sql-server-management-studio.md)
-# [Funzionalità in SSMS](features-in-sql-server-management-studio.md)
-# [Raccolta di dati relativi all'uso](sql-server-management-studio-telemetry-ssms.md)
 # [Scaricare il modulo PowerShell di SQL Server](download-sql-server-ps-module.md)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
-# [F1 Guida +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
+# [Guida sensibile al contesto +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
 # [Guida dei menu +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
 # [Esplora oggetti +](../ssms/object/object-explorer.md)
 # [Esplora soluzioni +](../ssms/solution/solution-explorer.md)
@@ -45,8 +42,8 @@
 # [Argomenti per gli strumenti esterni](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 # [Aggiungere uno strumento esterno al menu Strumenti](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Configurare il controllo accessi](configure-login-auditing-sql-server-management-studio.md)
-# [Usare la casella degli strumenti](use-the-toolbox.md)
+# [Utilizzo della casella degli strumenti](use-the-toolbox.md)
 
 # [Utilità Ssms](ssms-utility.md)  
 # [Tasti di scelta rapida di SSMS](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Dati di utilizzo anonimi](sql-server-management-studio-telemetry-ssms.md)

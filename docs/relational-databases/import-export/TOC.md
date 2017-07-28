@@ -26,6 +26,7 @@
 ## [Usare un file di formato per l'importazione in blocco dei dati](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [Usare un file di formato per ignorare una colonna di una tabella](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [Usare un file di formato per escludere un campo di dati](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Importare dati da Excel a SQL](import-data-from-excel-to-sql.md)  
 # [Esempi di importazione ed esportazione bulk di documenti XML](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  
