@@ -1,6 +1,6 @@
 ---
 title: Usare la Creazione guidata piano di manutenzione | Microsoft Docs
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
@@ -203,7 +203,7 @@ Casella di controllo**Includi indici**
      Il database viene organizzato in pagine contigue, ma queste ultime non vengono deallocate, né i file del database vengono compattati. Utilizzare questa opzione se si prevede una nuova espansione del database e non si desidera riallocare lo spazio. Con questa opzione, i file del database non verranno compattati al massimo. L'opzione utilizza l'istruzione NOTRUNCATE.  
   
      **Restituisci spazio liberato al sistema operativo**  
-     Il database viene organizzato in pagine contigue e queste ultime vengono rilasciate al sistema operativo per essere utilizzate da altri programmi. I file del database vengono compattati al massimo. L'opzione utilizza l'istruzione TRUNCATEONLY. Si tratta dell'impostazione predefinita.  
+     Il database viene organizzato in pagine contigue e queste ultime vengono rilasciate al sistema operativo per essere utilizzate da altri programmi. L'opzione utilizza l'istruzione TRUNCATEONLY. Si tratta dell'impostazione predefinita.  
   
 ## <a name="define-the-index-tasks"></a>Definizione delle attività dell'indice  
   
