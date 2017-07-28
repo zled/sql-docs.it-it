@@ -35,8 +35,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/22/2017
 
 ---
-# Popolamento degli indici full-text
-<a id="populate-full-text-indexes" class="xliff"></a>
+# <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
   La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
   
 ##  <a name="types"></a> Types of population  
@@ -45,8 +44,7 @@ Un indice full-text supporta i tipi di popolamento seguenti:
 -   Popolamento automatico o manuale basato sul **rilevamento delle modifiche**
 -   Popolamento incrementale basato su **timestamp**
   
-## Popolamento completo
-<a id="full-population" class="xliff"></a>  
+## <a name="full-population"></a>Popolamento completo  
  Durante un popolamento completo, vengono compilate voci di indice per tutte le righe di una tabella o di una vista indicizzata. Durante un popolamento completo di un indice full-text, vengono compilate voci di indice per tutte le righe di una tabella di base o di una vista indicizzata.  
   
 Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un nuovo indice full-text viene popolato completamente non appena viene creato.
@@ -55,8 +53,7 @@ Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 Per creare un indice full-text senza popolarlo immediatamente, specificare la clausola `CHANGE_TRACKING OFF, NO POPULATION` nell'istruzione `CREATE FULLTEXT INDEX`. Se si specifica `CHANGE_TRACKING MANUAL`, il motore di ricerca full-text non popola il nuovo indice full-text finché non viene eseguita l'istruzione `ALTER FULLTEXT INDEX` usando la clausola `START FULL POPULATION` o `START INCREMENTAL POPULATION`. 
 
-### Esempio: creare un indice full-text senza eseguire un popolamento completo
-<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>  
+### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Esempio: creare un indice full-text senza eseguire un popolamento completo  
  Nell'esempio seguente viene creato un indice full-text nella tabella `Production.Document` del database di esempio `AdventureWorks` . Questo esempio usa `WITH CHANGE_TRACKING OFF, NO POPULATION` per ritardare il popolamento completo iniziale.  
   
 ```tsql
@@ -75,8 +72,7 @@ GO
   
 ```  
   
-### Esempio: eseguire un popolamento completo in una tabella
-<a id="example---run-a-full-population-on-a-table" class="xliff"></a>  
+### <a name="example---run-a-full-population-on-a-table"></a>Esempio: eseguire un popolamento completo in una tabella  
  Nell'esempio seguente viene eseguito un popolamento completo nella tabella `Production.Document` del database di esempio `AdventureWorks` .  
   
 ```tsql
@@ -84,8 +80,7 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## Popolamento basato sul rilevamento delle modifiche
-<a id="population-based-on-change-tracking" class="xliff"></a>
+## <a name="population-based-on-change-tracking"></a>Popolamento basato sul rilevamento delle modifiche
  Facoltativamente, è possibile utilizzare il rilevamento delle modifiche per gestire un indice full-text dopo il popolamento completo iniziale. Al rilevamento delle modifiche è associato un overhead perché in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è presente una tabella nella quale vengono rilevate le modifiche apportate alla tabella di base dopo l'ultimo popolamento. Quando si usa il rilevamento delle modifiche, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene mantenuto un record delle righe della tabella di base o della vista indicizzata modificate tramite aggiornamenti, eliminazioni o inserimenti. Le modifiche apportate ai dati tramite WRITETEXT e UPDATETEXT non vengono riflesse nell'indice full-text e pertanto non vengono registrate dalla funzione di rilevamento delle modifiche.  
   
 > [!NOTE]  
@@ -93,8 +88,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  Quando il rilevamento delle modifiche viene abilitato durante la creazione dell'indice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il popolamento completo del nuovo indice full-text subito dopo la creazione. Le modifiche vengono quindi rilevate e propagate all'indice full-text.
 
-### Abilita rilevamento modifiche
-<a id="enable-change-tracking" class="xliff"></a>
+### <a name="enable-change-tracking"></a>Abilita rilevamento modifiche
 Esistono due tipi di rilevamento delle modifiche:
 -   Automatico (opzione `CHANGE_TRACKING AUTO`). Il rilevamento delle modifiche automatico è il comportamento predefinito.
 -   Manuale (opzione `CHANGE_TRACKING MANUAL`).   
@@ -155,16 +149,14 @@ Esistono due tipi di rilevamento delle modifiche:
     GO  
     ```
    
-### Disabilitare il rilevamento delle modifiche
-<a id="disable-change-tracking" class="xliff"></a> 
+### <a name="disable-change-tracking"></a>Disabilitare il rilevamento delle modifiche 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## Popolamento incrementale basato su timestamp
-<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>  
+## <a name="incremental-population-based-on-a-timestamp"></a>Popolamento incrementale basato su timestamp  
  Un popolamento incrementale è un meccanismo alternativo per il popolamento manuale di un indice full-text. Se in una tabella vengono eseguiti molti inserimenti, l'utilizzo del popolamento incrementale può rivelarsi più efficiente dell'utilizzo del popolamento manuale.
  
  È possibile eseguire un popolamento incrementale per un indice full-text per il quale CHANGE_TRACKING è impostato su MANUAL o OFF. 
@@ -178,8 +170,7 @@ In alcuni casi una richiesta di popolamento incrementale comporta un popolamento
 -   Se il primo popolamento di un indice full-text è incrementale, vengono indicizzate tutte le righe e il risultato è equivalente a un popolamento completo. 
 -   Se alcuni metadati che interessano l'indice full-text della tabella sono stati modificati dopo l'ultimo popolamento, le richieste di popolamento vengono implementate come popolamenti completi. Sono incluse le modifiche ai metadati causate dall'alterazione di qualsiasi definizione di colonna, indice o indice full-text. 
 
-### Eseguire un popolamento incrementale
-<a id="run-an-incremental-population" class="xliff"></a>
+### <a name="run-an-incremental-population"></a>Eseguire un popolamento incrementale
   
  Per eseguire un popolamento incrementale, eseguire un'istruzione `ALTER FULLTEXT INDEX` usando la clausola `START INCREMENTAL POPULATION`.  
   
@@ -234,8 +225,7 @@ Di seguito sono riportate le parti variabili del nome del file del log di ricerc
   
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Introduzione alla ricerca full-text](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

@@ -22,8 +22,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/29/2017
 
 ---
-# Indici columnstore - Novità
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
+# <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Riepilogo delle funzionalità columnstore disponibili per ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e per le versioni più recenti del database SQL di Azure Premium Edition, Azure SQL Data Warehouse e Parallel Data Warehouse.  
@@ -31,8 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > Per il database SQL di Azure gli indici columnstore sono disponibili solo nella Premium Edition.
  
-## Riepilogo delle funzionalità per le versioni dei prodotti
-<a id="feature-summary-for-product-releases" class="xliff"></a>  
+## <a name="feature-summary-for-product-releases"></a>Riepilogo delle funzionalità per le versioni dei prodotti  
  Questa tabella riepiloga le funzionalità principali per gli indici columnstore e i prodotti in cui sono disponibili.  
 
   
@@ -61,15 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] aggiunge queste nuove funzionalità.
 
-### Funzionale
-<a id="functional" class="xliff"></a>
+### <a name="functional"></a>Funzionale
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supporta le colonne calcolate non persistenti in indici columnstore cluster. Le colonne persistenti non sono supportate negli indici columnstore cluster. Non è possibile creare un indice non cluster in un indice columnstore che contiene una colonna calcolata. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aggiunge miglioramenti importanti per aumentare le prestazioni e la flessibilità degli indici columnstore. In questo modo è possibile migliorare gli scenari di data warehouse e abilitare l'analisi operativa in tempo reale.  
   
-### Funzionale
-<a id="functional" class="xliff"></a>  
+### <a name="functional"></a>Funzionale  
   
 -   Una tabella rowstore può avere un solo indice columnstore non cluster aggiornabile. In precedenza, l'indice columnstore non cluster era di sola lettura.  
   
@@ -83,8 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Gli indici columnstore hanno un'opzione relativa al ritardo di compressione che riduce al minimo l'impatto che il carico di lavoro transazionale ha sull'analisi operativa in tempo reale.  Questa opzione consente di modificare frequentemente le righe per stabilizzarle prima di comprimerle nel columnstore. Per informazioni dettagliate, vedere [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) (Creare un indice columnstore &#40;Transact-SQL&#41) e [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-### Prestazioni per il livello di compatibilità del database 120 o 130
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>Prestazioni per il livello di compatibilità del database 120 o 130  
   
 -   Gli indici columnstore supportano il livello di isolamento dello snapshot Read Committed e l'isolamento dello snapshot. Questo consente le query di analisi coerente transazionale senza alcun blocco.  
   
@@ -96,8 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   La distribuzione del predicato consente di velocizzare le query che confrontano le stringhe di tipo [v]char o n[v]char. Questo si applica ai comuni operatori di confronto e include operatori come LIKE che usano i filtri bitmap. Inoltre, funziona con tutte le regole di confronto supportate da SQL Server.  
   
-### Prestazioni per il livello di compatibilità del database 130
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>  
+### <a name="performance-for-database-compatibility-level-130"></a>Prestazioni per il livello di compatibilità del database 130  
   
 -   Nuovo supporto dell'esecuzione in modalità batch per le query che usano uno di questi operatori:  
   
@@ -115,8 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Le query delle tabelle con ottimizzazione per la memoria possono avere piani paralleli in modalità SQL InterOp durante l'accesso dei dati nell'indice rowstore o columnstore.  
   
-### Facilità di supporto
-<a id="supportability" class="xliff"></a>  
+### <a name="supportability"></a>Facilità di supporto  
  Queste viste di sistema sono una novità per columnstore:  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -147,8 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-### Limitazioni
-<a id="limitations" class="xliff"></a>  
+### <a name="limitations"></a>Limitazioni  
   
 -   MERGE è disabilitato quando viene definito un indice albero b su un indice columnstore cluster.  
   
@@ -156,8 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Per le tabelle in memoria, le query sugli indici columnstore vengono eseguite solo in modalità InterOP e non in modalità nativa in memoria. È supportata l'esecuzione parallela.  
   
-## SQL Server 2014
-<a id="sql-server-2014" class="xliff"></a>  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  SQL Server 2014 ha introdotto l'indice dell'archivio columnstore cluster come formato di archiviazione primario. Questo ha consentito caricamenti regolari, nonché operazioni di aggiornamento, eliminazione e inserimento.  
   
 -   La tabella può usare un indice columnstore cluster come archiviazione tabella primaria. Nella tabella non è consentito nessun altro indice, ma l'indice columnstore cluster è aggiornabile, pertanto è possibile eseguire caricamenti regolari e apportare modifiche alle singole righe.  
@@ -170,8 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Questi operatori vengono eseguiti in modalità batch per le query multithreading: SCAN, FILTER, PROJECT, JOIN, GROUP BY e UNION ALL.  
   
-## SQL Server 2012
-<a id="sql-server-2012" class="xliff"></a>  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  SQL Server 2012 ha introdotto l'indice columnstore non cluster come un altro tipo di indice nelle tabelle rowstore e l'elaborazione batch per le query sui dati columnstore.  
   
 -   Una tabella rowstore può avere un solo indice columnstore non cluster.  
@@ -182,8 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   L'elaborazione batch consente di raddoppiare o migliorare le prestazioni delle query, ma è disponibile solo per l'esecuzione di query parallele.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  Guida agli indici columnstore   
  Caricamento dati di indici columnstore   
  [Prestazioni delle query per gli indici columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
