@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Possono importare un pacchetto di applicazione livello dati in un progetto di database e continuare a progettare il database.  
   
-SQL Server Data Tools supporta anche un Local DB per lo sviluppo di applicazioni di database client non connessi. Lo sviluppatore può creare uno snapshot del database locale per creare pacchetto di applicazione livello dati contenuto in un file con estensione .dacpac.  
+        SQL Server Data Tools supporta anche un Local DB per lo sviluppo di applicazioni di database client non connessi. Lo sviluppatore può creare uno snapshot del database locale per creare pacchetto di applicazione livello dati contenuto in un file con estensione .dacpac.  
   
     -   Lo sviluppatore può pubblicare autonomamente un progetto di database direttamente in un database, senza generare un pacchetto di applicazione livello dati. L'operazione di pubblicazione segue un comportamento simile all'operazione di distribuzione di altri strumenti.  
   
