@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La query viene eseguita come risultato di un riferimento a un set di dati condiviso in un report recapitato tramite posta elettronica. In questo caso è probabile che un elevato numero di utenti selezioni il collegamento in un breve intervallo di tempo.  
   
--   Nell'elenco seguente vengono indicate le situazioni in cui non è opportuno memorizzare nella cache un set di dati condiviso:  
+ Nell'elenco seguente vengono indicate le situazioni in cui non è opportuno memorizzare nella cache un set di dati condiviso:  
   
 -   I risultati della query devono includere sempre i dati più recenti.  
   
