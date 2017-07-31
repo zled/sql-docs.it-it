@@ -16,22 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Help Viewer e contenuto offline per SQL Server
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>Help Viewer e contenuto offline per SQL Server
   
   
   
 Questo articolo descrive come installare Help Viewer e come visualizzare la documentazione di SQL Server offline. L'articolo è relativo alla documentazione per [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 e SQL Server 2017. 
 
-## Installare Help Viewer
-<a id="install-help-viewer" class="xliff"></a>
+## <a name="install-help-viewer"></a>Installare Help Viewer
 La tabella seguente elenca gli strumenti che installano Help Viewer a seconda della versione di SQL Server in uso. Installare uno degli strumenti elencati per installare Help Viewer.
 
 
@@ -54,8 +52,7 @@ La tabella seguente elenca gli strumenti che installano Help Viewer a seconda de
 > È possibile visualizzare la Guida locale per [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] con Help Viewer 2.x solo quando si usa l'opzione **Installa contenuto da disco**. 
 
 
-## Contenuto non in linea di SQL Server 2016 e SQL Server 2017
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>Contenuto non in linea di SQL Server 2016 e SQL Server 2017  
  
 **Per installare il contenuto non in linea**  
 1. Aprire Help Viewer avviando SQL Server Management Studio o Visual Studio e scegliendo **Aggiungi e rimuovi contenuto della Guida** dal menu **?**.  
@@ -82,8 +79,7 @@ La tabella seguente elenca gli strumenti che installano Help Viewer a seconda de
    >[!IMPORTANT]
    > Se viene visualizzato un messaggio che indica che l'operazione di spostamento non è riuscita, chiudere la finestra di messaggio, chiudere il visualizzatore della Guida e quindi riaprirlo. Il nuovo percorso per il contenuto dovrebbe ora essere visualizzato in **Percorso archivio locale**.   
  
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Contenuto non in linea
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a> 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Contenuto non in linea 
  
   
 **Per installare il contenuto non in linea**  
@@ -114,8 +110,7 @@ La tabella seguente elenca gli strumenti che installano Help Viewer a seconda de
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-## Visualizzare il contenuto online in Help Viewer
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
+## <a name="view-online-content-in-help-viewer"></a>Visualizzare il contenuto online in Help Viewer
 
 In Help Viewer v2.x è possibile visualizzare il contenuto online eseguendo una delle operazioni seguenti.
 
@@ -135,15 +130,13 @@ In Help Viewer v1.x è possibile visualizzare il contenuto online eseguendo una 
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-## F1 Guida e altri suggerimenti
-<a id="f1-help-and-other-tips" class="xliff"></a>
+## <a name="f1-help-and-other-tips"></a>F1 Guida e altri suggerimenti
 
 Quando si preme F1, l'argomento corrispondente viene visualizzato online. L'argomento non può essere visualizzato nella Guida locale.
 
 Help Viewer non supporta le impostazioni del proxy né il formato ISO. 
 
 
-## Informazioni aggiuntive
-<a id="additional-information" class="xliff"></a>
+## <a name="additional-information"></a>Informazioni aggiuntive
 [Visualizzatore della Guida Microsoft - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
