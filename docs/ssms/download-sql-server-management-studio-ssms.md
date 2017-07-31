@@ -28,14 +28,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
-ms.openlocfilehash: 8c43f57c6d40d3f2c29f220581dddcf74bf96287
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
 ms.contentlocale: it-it
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/20/2017
 
 ---
-# Scaricare SQL Server Management Studio (SSMS)
-<a id="download-sql-server-management-studio-ssms" class="xliff"></a>
+# <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. SSMS fornisce gli strumenti per configurare, monitorare e amministrare le istanze di SQL Server da qualsiasi posizione venga distribuito. Con SSMS è possibile distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, nonché creare query e script. 
 
 Questa versione offre una migliore compatibilità con le versioni precedenti di SQL Server, un programma di installazione Web autonomo e notifiche di tipo avviso popup all'interno di SSMS relative alla disponibilità di nuove versioni.  
@@ -47,15 +46,13 @@ Questa versione offre una migliore compatibilità con le versioni precedenti di 
 > [!NOTE]
 > Il modulo di PowerShell per SQL Server è ora un'installazione separata tramite PowerShell Gallery.  Per altre informazioni, vedere le [istruzioni per il download](download-sql-server-ps-module.md).
 
-## SQL Server Management Studio
-<a id="sql-server-management-studio" class="xliff"></a>   
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio   
 **Informazioni sulla versione**  
   
 Numero di versione: 17.1  
 Numero di build per questa versione: 14.0.17119.0
 
-## Novità in questa versione
-<a id="new-in-this-release" class="xliff"></a>  
+## <a name="new-in-this-release"></a>Novità in questa versione  
 
 SSMS 17.1 è il primo aggiornamento alla generazione 17.X di SQL Server Management Studio.  La generazione 17.X fornisce supporto per quasi tutte le aree di funzionalità da SQL Server 2008 fino a SQL Server 2017.  La versione 17.X è anche la generazione di SSMS che supporta SQL Analysis Services PaaS.
 
@@ -70,15 +67,13 @@ Per l'elenco completo delle modifiche, vedere
 Per informazioni sulla raccolta dei dati utente, vedere   
                 [Informativa sulla privacy di SQL Server](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx) 
   
-## Offerte di SQL supportate
-<a id="supported-sql-offerings" class="xliff"></a>
+## <a name="supported-sql-offerings"></a>Offerte di SQL supportate
   
 * Questa versione di SSMS funziona con tutte le [versioni supportate da SQL Server 2008 a SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) e offre il massimo livello di supporto per l'uso con le funzionalità cloud più recenti nel database SQL di Azure e in Azure SQL Data Warehouse.  
 * Non è presente alcun blocco esplicito per SQL Server 2000 o SQL Server 2005, ma alcune funzionalità potrebbero non funzionare correttamente.  
 * È supportata anche l'installazione affiancata di SSMS 17.X e SSMS 16.X o SQL Server 2014 SSMS e versioni precedenti. 
   
-## Sistemi operativi supportati
-<a id="supported-operating-systems" class="xliff"></a>
+## <a name="supported-operating-systems"></a>Sistemi operativi supportati
   
 Se usata con l'ultimo Service Pack disponibile, questa versione di SSMS supporta le piattaforme seguenti:   
 - Windows 10
@@ -93,8 +88,7 @@ Se usata con l'ultimo Service Pack disponibile, questa versione di SSMS supporta
 >[!NOTE]
 >SSMS 17.X è basato su Visual Studio 2015 Isolated Shell, rilasciato prima di Windows Server 2016. Per Microsoft la compatibilità delle app è molto importante, così come la garanzia che le applicazioni già rilasciate continuino a essere supportate nelle versioni più recenti di Windows. Per ridurre al minimo i problemi durante l'esecuzione di SSMS in Windows Server 2016, verificare che siano stati applicati tutti gli aggiornamenti di SSMS più recenti. In caso di problemi con SSMS in Windows Server 2016, contattare il supporto tecnico, che determinerà se il problema riguarda SSMS, Visual Studio o la compatibilità con Windows. Il team di supporto inoltrerà quindi il problema al team appropriato per ulteriori indagini.
 
-## Suggerimenti e problemi di installazione di SSMS
-<a id="ssms-installation-tips-and-issues" class="xliff"></a>
+## <a name="ssms-installation-tips-and-issues"></a>Suggerimenti e problemi di installazione di SSMS
 
 >[!NOTE]
 > L'installazione di SQL Server Management Studio 17.x non aggiorna o sostituisce le versioni precedenti di SQL Server Management Studio.  SQL Server Management Studio 17.x viene installato a fianco delle versioni precedenti in modo che entrambe le versioni siano disponibili per l'uso.
@@ -111,8 +105,7 @@ Se usata con l'ultimo Service Pack disponibile, questa versione di SSMS supporta
 
 - Per visualizzare l'elenco dei problemi noti e delle soluzioni alternative, vedere [SQL Server Management Studio - Note sulla versione](../ssms/sql-server-management-studio-release-notes.md)
 
-## Lingue disponibili
-<a id="available-languages" class="xliff"></a>  
+## <a name="available-languages"></a>Lingue disponibili  
 > Le versioni di SSMS localizzate in lingue diverse dall'inglese e installate in Windows 8, Windows 7, Windows Server 2012 e Windows Server 2008 R2 richiedono il [pacchetto di aggiornamento della sicurezza KB 2862966](https://support.microsoft.com/en-us/kb/2862966) . 
   
 Questa versione di SSMS può essere installata nelle lingue seguenti:
@@ -123,22 +116,16 @@ SQL Server Management Studio 17.1:<br>
 Pacchetto di aggiornamento di SQL Server Management Studio 17.1 (aggiornamento dalla versione 17.0 alla 17.1):<br>
 [Cinese (Repubblica popolare cinese)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x804) | [Cinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40a)
 
-## Rilasci precedenti
-<a id="previous-releases" class="xliff"></a>  
+## <a name="previous-releases"></a>Rilasci precedenti  
 [Versioni precedenti di SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
   
-## Commenti e suggerimenti
-<a id="feedback" class="xliff"></a>  
+## <a name="feedback"></a>Commenti e suggerimenti  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum (Forum sugli strumenti client di SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Segnalare un problema o inserire un suggerimento in Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
 [Esercitazione su SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [Documentazione di SQL Server Management Studio](https://msdn.microsoft.com/library/hh213248(v=sql.130).aspx)  
-[Microsoft SQL Server](https://msdn.microsoft.com/library/bb545450.aspx)  
 [Altri aggiornamenti e Service Pack](https://technet.microsoft.com/sqlserver/ff803383.aspx)  
 [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-
-
 

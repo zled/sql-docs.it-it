@@ -41,29 +41,30 @@ Prima di creare il gruppo di disponibilità, è necessario:
    sudo vi /etc/hosts
    ```
 
-   Nell'esempio seguente `/etc/hosts` su **node1** con le aggiunte per **node1** e **node2**. In questo documento **node1** fa riferimento alla replica primaria di SQL Server. **NODE2** fa riferimento a SQL Server secondario.;
+   L'esempio seguente illustra `/etc/hosts` su **node1** con aggiunte per **node1**, **node2** e **node3**. In questo documento **node1** si riferisce al server che ospita la replica primaria. **node2** e **node3** si riferiscono ai server che ospitano le repliche secondarie.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>Installare SQL Server
 
 Installare SQL Server. I collegamenti seguenti puntano alle istruzioni di installazione di SQL Server per distribuzioni diverse. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Abilitare gruppi di disponibilità Always On e riavviare SQL Server
 
-Abilitare sempre in gruppi di disponibilità in ogni nodo che ospita il servizio SQL Server, quindi riavviare `mssql-server`.  Eseguire lo script riportato di seguito:
+Abilitare i gruppi di disponibilità Always On su ogni nodo che ospita un'istanza di SQL Server e riavviare `mssql-server`.  Eseguire lo script riportato di seguito:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>Abilitare la sessione di eventi AlwaysOn_health 
 
-È possibile abilitare optionaly gruppi di disponibilità AlwaysOn specifici eventi estesi per facilitare la diagnosi della causa principale durante la risoluzione di un gruppo di disponibilità.
+Facoltativamente, è possibile abilitare gli eventi estesi dei gruppi di disponibilità Always On per diagnosticare più facilmente la causa radice durante la risoluzione dei problemi che interessano un gruppo di disponibilità. Eseguire il comando seguente in ogni istanza di SQL Server. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ Per ulteriori informazioni sulla sessione XE, vedere [sempre in eventi estesi](h
 
 ## <a name="create-db-mirroring-endpoint-user"></a>Creare l'utente dell'endpoint di mirroring del database
 
-Lo script di Transact-SQL seguente crea un account di accesso denominato `dbm_login`e un utente denominato `dbm_user`. Aggiornare lo script con una password complessa. Eseguire il comando seguente in tutti i server SQL per creare l'utente dell'endpoint di mirroring del database.
+Lo script di Transact-SQL seguente crea un account di accesso denominato `dbm_login`e un utente denominato `dbm_user`. Aggiornare lo script con una password complessa. Eseguire il comando seguente in tutte le istanze di SQL per creare l'utente dell'endpoint di mirroring del database.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>Creare un certificato
 
-Il servizio SQL Server in Linux Usa certificati per autenticare le comunicazioni tra gli endpoint del mirroring. 
+Il servizio SQL Server in Linux usa i certificati per autenticare la comunicazione tra gli endpoint del mirroring. 
 
-Lo script Transact-SQL seguente crea una chiave master e certificato. Quindi eseguito il backup del certificato e consente di proteggere il file con una chiave privata. Aggiornare lo script con una password complessa. Connettersi al Server SQL primario ed eseguire Transact-SQL seguente per creare il certificato:
+Lo script Transact-SQL seguente crea una chiave master e certificato. Quindi eseguito il backup del certificato e consente di proteggere il file con una chiave privata. Aggiornare lo script con una password complessa. Connettersi all'istanza di Server SQL primaria ed eseguire lo Transact-SQL seguente per creare il certificato:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-Nel server di destinazione, assegnare l'autorizzazione per accedere al certificato utente mssql.
+Nel server di destinazione assegnare l'autorizzazione per accedere al certificato all'utente mssql.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ Gli endpoint del mirroring del database utilizzano il protocollo TCP (Transmissi
 
 L'istruzione Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avviare l'endpoint e dell'autorizzazione di connessione consente all'utente che ha creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`.
 
-
 >[!NOTE]
 >Per questa versione, non utilizzare un indirizzo IP diverso per l'indirizzo IP del listener. Stiamo lavorando su una correzione per questo problema, ma l'unico valore accettabile per il momento è '0.0.0.0'.
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >La porta TCP sul firewall deve essere aperta per la porta del listener.
+
+>[!IMPORTANT]
+>In SQL Server 2017 l'unico metodo di autenticazione supportato per l'endpoint di mirroring del database è `CERTIFICATE`. L'opzione `WINDOWS` sarà abilitata in una versione futura.
 
 Per ulteriori informazioni, vedere [l'Endpoint del Mirroring Database (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
