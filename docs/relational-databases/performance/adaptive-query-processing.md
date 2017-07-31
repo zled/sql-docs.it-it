@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: "Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure."
 ms.custom: 
-ms.date: 06/22/2017
+ms.date: 07/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ ms.assetid:
 author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: fdade5bce38348e80085643c5f6f5a2b4e9663c1
+ms.translationtype: HT
+ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
+ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 
-# Elaborazione di query adattive nei database SQL
-<a id="adaptive-query-processing-in-sql-databases" class="xliff"></a>
+# <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
@@ -40,14 +39,12 @@ In alcuni casi il piano scelto da Query Optimizer non è ottimale per diversi mo
 
 ![Funzionalità dell'elaborazione di query adattive](./media/1_AQPFeatures.png)
 
-### Come abilitare l'elaborazione di query adattive
-<a id="how-to-enable-adaptive-query-processing" class="xliff"></a>
+### <a name="how-to-enable-adaptive-query-processing"></a>Come abilitare l'elaborazione di query adattive
 È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query adattive abilitando il livello di compatibilità 140 per il database.  Questa opzione è impostabile con Transact-SQL. Esempio:
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
-## Feedback delle concessioni di memoria in modalità batch
-<a id="batch-mode-memory-grant-feedback" class="xliff"></a>
+## <a name="batch-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità batch
 Un piano post esecuzione di una query in SQL Server include la memoria minima richiesta per l'esecuzione e la dimensione della concessione di memoria sufficiente a far sì che tutte le righe siano incluse nella memoria. Se le dimensioni della concessione di memoria non vengono impostate correttamente le prestazioni possono risultare ridotte. Le concessioni di dimensioni eccessive causano memoria non usata e riduzione della concorrenza. Le concessioni di memoria di dimensioni insufficienti causano costose distribuzioni su disco. Incentrandosi sui carichi di lavoro ripetuti, il feedback delle concessioni di memoria in modalità batch ricalcola la memoria effettiva necessaria per una query, quindi aggiorna il valore della concessione per il piano nella cache.  Quando viene eseguita un'istruzione query identica la query usa le dimensioni della concessione di memoria aggiornate, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
 Il grafico seguente visualizza un esempio dell'uso del feedback delle concessioni di memoria in modalità batch. La durata della prima esecuzione della query è pari a *88 secondi* a causa del numero elevato di distribuzioni:
 ```sql
@@ -65,30 +62,24 @@ Con il feedback delle concessioni di memoria attivato la durata della seconda es
 
 ![Nessuna distribuzione](./media/3_AQPGraphNoSpills.png)
 
-### Dimensionamento tramite il feedback delle concessioni di memoria
-<a id="memory-grant-feedback-sizing" class="xliff"></a>
+### <a name="memory-grant-feedback-sizing"></a>Dimensionamento tramite il feedback delle concessioni di memoria
 *Per le concessioni di memoria di dimensioni eccessive* se la memoria per le concessioni supera di oltre due volte la quantità di memoria realmente usata, il feedback delle concessioni di memoria ricalcola la concessione e aggiorna il piano memorizzato nella cache.  I piani con concessioni di memoria di dimensioni inferiori a 1 MB non vengono ricalcolati per le eccedenze.
 *Per le concessioni di memoria di dimensioni insufficienti* che generano distribuzioni su disco per gli operatori in modalità batch, il feedback delle concessioni di memoria attiva il ricalcolo della concessione di memoria. Gli eventi di distribuzione vengono segnalati al feedback delle concessioni di memoria e possono essere esposti con l'evento XEvent *spilling_report_to_memory_grant_feedback*. Questo evento restituisce l'ID del nodo dal piano e il volume dei dati distribuiti su disco da tale nodo.
 
-### Feedback delle concessioni di memoria e scenari dipendenti dai parametri
-<a id="memory-grant-feedback-and-parameter-sensitive-scenarios" class="xliff"></a>
+### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Feedback delle concessioni di memoria e scenari dipendenti dai parametri
 Per risultati ottimali, valori dei parametri diversi possono richiedere piani di query diversi. Le query di questo tipo sono definite "sensibili ai parametri". Per i piani sensibili ai parametri il feedback delle concessioni di memoria si disattiva quando una query registra requisiti di memoria non stabili.  Il piano viene disattivato dopo varie ripetizioni dell'esecuzione della query e la disattivazione può essere rilevata monitorando l'evento XEvent *memory_grant_feedback_loop_disabled*.
 
-### Memorizzazione nella cache del feedback delle concessioni di memoria
-<a id="memory-grant-feedback-caching" class="xliff"></a>
+### <a name="memory-grant-feedback-caching"></a>Memorizzazione nella cache del feedback delle concessioni di memoria
 Il feedback può essere archiviato nel piano memorizzato nella cache per una singola esecuzione. Tuttavia i vantaggi del feedback delle concessioni di memoria appaiono in caso di esecuzioni consecutive dell'istruzione. Questa funzionalità si applica all'esecuzione ripetuta di istruzioni. Il feedback delle concessioni di memoria modifica solo il piano memorizzato nella cache. Attualmente le modifiche non vengono acquisite nell'elemento Ssore della query.
 Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedback va perduto anche nel caso di un failover. Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano e non lo memorizza nella cache. Dato che il piano non è memorizzato nella cache il feedback delle concessioni di memoria non viene generato e non viene archiviato per la compilazione e l'esecuzione.  Se tuttavia un'istruzione equivalente (con lo stesso hash di query) che *non* ha usato OPTION(RECOMPILE) è stata memorizzata nella cache e quindi rieseguita, l'istruzione consecutiva può trarre vantaggio dal feedback delle concessioni di memoria.
 
-### Rilevamento delle attività di feedback delle concessioni di memoria
-<a id="tracking-memory-grant-feedback-activity" class="xliff"></a>
+### <a name="tracking-memory-grant-feedback-activity"></a>Rilevamento delle attività di feedback delle concessioni di memoria
 È possibile tenere traccia di eventi di feedback delle concessioni di memoria usando l'evento XEvent *memory_grant_updated_by_feedback*.  Questo evento rileva la cronologia del conteggio di esecuzione corrente, il numero di volte per il quale il piano è stato aggiornato dal feedback delle concessioni di memoria, la concessione di memoria aggiuntiva ideale prima della modifica e la concessione di memoria aggiuntiva ideale dopo che il feedback delle concessioni di memoria ha modificato il piano salvato nella cache.
 
-### Feedback delle concessioni di memoria, Resource Governor e hint per la query
-<a id="memory-grant-feedback-resource-governor-and-query-hints" class="xliff"></a>
+### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback delle concessioni di memoria, Resource Governor e hint per la query
 La memoria concessa reale è conforme al limite di memoria per le query determinato da Resource Governor o dall'hint per la query.
 
-## Join adattivi in modalità batch
-<a id="batch-mode-adaptive-joins" class="xliff"></a>
+## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 La funzionalità di join adattivo in modalità batch consente di rimandare a *dopo* la scansione del primo input la scelta tra l'esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati.  L'operatore di join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano a cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 Il funzionamento è il seguente:
 - Se il conteggio delle righe dell'input del join di compilazione è così ridotto che un join a cicli annidati è preferibile a un hash join, il piano passa a un algoritmo a cicli annidati.
@@ -132,20 +123,16 @@ Nel piano viene visualizzato quanto segue:
 - Dato che viene restituita una sola riga, ora il flusso di righe attraversa Ricerca indice cluster.
 - Dato che non è stata portata avanti la fase di compilazione dell'hash join, nessuna riga attraversa il secondo ramo.
 
-### Vantaggi del join adattivo
-<a id="adaptive-join-benefits" class="xliff"></a>
+### <a name="adaptive-join-benefits"></a>Vantaggi del join adattivo
 Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
 
-### Sovraccarichi del join adattivo
-<a id="adaptive-join-overhead" class="xliff"></a>
+### <a name="adaptive-join-overhead"></a>Sovraccarichi del join adattivo
 I join adattivi presentano requisiti di memoria superiori rispetto a un piano equivalente con join a cicli annidati indicizzati. La memoria aggiuntiva risulta necessaria, come se il join a cicli annidati fosse un hash join. Si registra un sovraccarico anche per la fase di compilazione come operazione stop-and-go rispetto a un join a cicli annidati equivalente a livello di flussi. A tale costo aggiuntivo corrisponde una maggior flessibilità per gli scenari in cui i conteggi delle righe possono variare nell'input di compilazione.
 
-### Memorizzazione nella cache e riuso dei join adattivi
-<a id="adaptive-join-caching-and-re-use" class="xliff"></a>
+### <a name="adaptive-join-caching-and-re-use"></a>Memorizzazione nella cache e riuso dei join adattivi
 I join adattivi in modalità batch funzionano per l'esecuzione iniziale di un'istruzione. Dopo la compilazione, le esecuzioni consecutive restano adattive sulla base della soglia di join adattivo di compilazione e delle righe di runtime del flusso di dati della fase di compilazione dell'input esterno.
 
-### Rilevamento delle attività di join adattivo
-<a id="tracking-adaptive-join-activity" class="xliff"></a>
+### <a name="tracking-adaptive-join-activity"></a>Rilevamento delle attività di join adattivo
 L'operatore di join adattivo ha i seguenti attributi dell'operatore del piano:
 
 | Attributo del piano | Description |
@@ -156,12 +143,10 @@ L'operatore di join adattivo ha i seguenti attributi dell'operatore del piano:
 
 Il piano stimato visualizza la struttura del piano di join adattivo, la soglia di join adattivo definita e il tipo di join stimato.
 
-### Interoperabilità tra join adattivi e Archivio query
-<a id="adaptive-join-and-query-store-interoperability" class="xliff"></a>
+### <a name="adaptive-join-and-query-store-interoperability"></a>Interoperabilità tra join adattivi e Archivio query
 Archivio query acquisisce e può imporre un piano di join adattivo in modalità batch.
 
-### Istruzioni idonee per i join adattivi
-<a id="adaptive-join-eligible-statements" class="xliff"></a>
+### <a name="adaptive-join-eligible-statements"></a>Istruzioni idonee per i join adattivi
 Alcune condizioni rendono un join logico idoneo per un join adattivo in modalità batch:
 - Il livello di compatibilità del database è 140
 - La query è un'istruzione SELECT (attualmente le istruzioni di modifica dei dati non sono idonee)
@@ -169,18 +154,15 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit�
 - L'hash join usa la modalità batch con un indice Columnstore nella query globale o una tabella Columnstore indicizzata alla quale fa riferimento direttamente il join
 - Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join
 
-### Efficienza dei join adattivi e dei join a cicli annidati
-<a id="adaptive-joins-and-nested-loop-efficiency" class="xliff"></a>
+### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Efficienza dei join adattivi e dei join a cicli annidati
 Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore *non* legge di nuovo le righe del riferimento esterno.
 
-### Righe della soglia adattiva
-<a id="adaptive-threshold-rows" class="xliff"></a>
+### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
 Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.  In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
 
 ![Soglia di join](./media/6_AQPJoinThreshold.png)
 
-## Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
-<a id="interleaved-execution-for-multi-statement-table-valued-functions" class="xliff"></a>
+## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
 L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella a più istruzioni (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.
 Le funzioni MSTVF hanno una stima di cardinalità predefinita pari a "100" in SQL Server 2014 e SQL Server 2016 e pari a "1" nelle versioni precedenti. L'esecuzione interleaved riduce i problemi di prestazioni del carico di lavoro dovute alle stime della cardinalità fisse associate alle funzioni con valori di tabella a più istruzioni.
 
@@ -199,29 +181,24 @@ Confrontare il piano precedente al piano reale generato con l'esecuzione interle
 1. Quanto agli algoritmi di join l'operazione di join a cicli annidati è stata sostituita da un'operazione Hash Match, più indicata con un numero di righe molto elevato.
 1. Si noti anche che gli avvisi di distribuzione su disco non sono più presenti, in quanto viene allocata una maggior quantità di memoria sulla base del conteggio reale delle righe del flusso della scansione di tabella MSTVF.
 
-### Istruzioni idonee per l'esecuzione interleaved
-<a id="interleaved-execution-eligible-statements" class="xliff"></a>
+### <a name="interleaved-execution-eligible-statements"></a>Istruzioni idonee per l'esecuzione interleaved
 Attualmente le funzioni MSTVF che fanno riferimento a istruzioni nell'esecuzione interleaved devono essere di sola lettura e non far parte di un'operazione di modifica dei dati. Inoltre le funzioni MSTVF non sono idonee per l'esecuzione interleaved se vengono usate all'interno di un operatore CROSS APPLY.
 
-### Vantaggi dell'esecuzione interleaved
-<a id="interleaved-execution-benefits" class="xliff"></a>
+### <a name="interleaved-execution-benefits"></a>Vantaggi dell'esecuzione interleaved
 In generale, maggiore è lo scarto tra il numero di righe stimato e il numero reale (associato al numero di operazioni del piano downstream), maggiore è l'impatto sulle prestazioni.
 L'esecuzione interleaved può risultare vantaggiosa nelle query in cui:
 1. Si registra uno scarto notevole tra il numero di righe stimato e il numero reale nel set di risultati intermedio (in questo caso la funzione MSTVF).
 1. La query nel suo complesso è sensibile alla variazione delle dimensioni del risultato intermedio. Ciò accade di solito quando nel piano della query è presente un albero complesso sopra il sottoalbero.
 Una semplice istruzione "SELECT *" di una funzione MSTVF non trae vantaggio dall'esecuzione interleaved.
 
-### Sovraccarichi dell'esecuzione interleaved
-<a id="interleaved-execution-overhead" class="xliff"></a>
+### <a name="interleaved-execution-overhead"></a>Sovraccarichi dell'esecuzione interleaved
 Il sovraccarico previsto è minimo o nullo. Le funzione con valori di tabella a più istruzioni venivano già materializzate prima dell'introduzione dell'esecuzione interleaved, ma ora grazie all'abilitazione dell'ottimizzazione differita tali funzioni sfruttano la stima della cardinalità del set di righe materializzate.
 È possibile che in seguito alle modifiche alcuni piani registrino un miglioramento della cardinalità per il sottoalbero ma una riduzione dell'efficienza per la query nel suo complesso. La prevenzione può includere il ripristino del livello di compatibilità o l'uso dell'Archivio query per imporre la versione non regredita del piano.
 
-### Esecuzione interleaved ed esecuzioni consecutive
-<a id="interleaved-execution-and-consecutive-executions" class="xliff"></a>
+### <a name="interleaved-execution-and-consecutive-executions"></a>Esecuzione interleaved ed esecuzioni consecutive
 Dopo che un piano di esecuzione interleaved viene memorizzato nella cache, il piano con le stime aggiornate alla prima esecuzione viene usato per le esecuzioni consecutive e non viene creata di nuovo l'istanza di esecuzione interleaved.
 
-### Rilevamento delle attività di esecuzione interleaved
-<a id="tracking-interleaved-execution-activity" class="xliff"></a>
+### <a name="tracking-interleaved-execution-activity"></a>Rilevamento delle attività di esecuzione interleaved
 È possibile visualizzare gli attributi d'uso nel piano di esecuzione query:
 
 | Attributo del piano | Description |
@@ -239,16 +216,18 @@ Dopo che un piano di esecuzione interleaved viene memorizzato nella cache, il pi
 
 Per consentire all'esecuzione interleaved di rivedere le stime della cardinalità MSTVF è necessario eseguire la query. Tuttavia il piano di esecuzione viene ancora visualizzato quando sono presenti candidati per l'esecuzione interleaved tramite l'attributo ContainsInterleavedExecutionCandidates.
 
-### Memorizzazione nella cache dell'esecuzione interleaved
-<a id="interleaved-execution-caching" class="xliff"></a>
+### <a name="interleaved-execution-caching"></a>Memorizzazione nella cache dell'esecuzione interleaved
 Se un piano è viene cancellato o espulso dalla cache, durante l'esecuzione della query l'esecuzione interleave viene usata da una nuova compilazione.
 Un'istruzione che usa OPTION(RECOMPILE) crea un nuovo piano usando l'esecuzione interleaved e non lo memorizza nella cache.
 
-### Interoperabilità tra esecuzione interleaved e Archivio query
-<a id="interleaved-execution-and-query-store-interoperability" class="xliff"></a>
+### <a name="interleaved-execution-and-query-store-interoperability"></a>Interoperabilità tra esecuzione interleaved e Archivio query
 È possibile forzare i piani che usano l'esecuzione interleaved. Il piano è la versione che presenta stime della cardinalità corrette sulla base dell'esecuzione iniziale.
 
-Vedere anche [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
+## <a name="see-also"></a>Vedere anche
+
+[Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md) (Dimostrazione dell'elaborazione di query adattive)      
 
 
 

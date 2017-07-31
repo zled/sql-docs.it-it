@@ -2,7 +2,7 @@
 title: Gestione configurazione SQL Server | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 02/25/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,11 +26,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>Gestione configurazione SQL Server
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/23/2017
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno strumento che consente di gestire i servizi associati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], di configurare i protocolli di rete utilizzati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e di gestire la configurazione della connettività di rete da computer client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console disponibile tramite il menu Start o che può essere aggiunto a qualsiasi altra visualizzazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) usa il file **SQLServerManager\<versione.msc** (ad esempio **SQLServerManager13.msc** per [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) per aprire Gestione configurazione. Ecco i percorsi per le ultime quattro versioni, con Windows installato nell'unità C.  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
->  Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle nuove versioni di Windows.  
+>  Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle versioni più recenti di Windows.  
 >   
 >  -   **Windows 10**:  
 >          Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nella **pagina iniziale**digitare SQLServerManager13.msc (per [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sostituire 13 con un numero inferiore. Se si fa clic su SQLServerManager13.msc, viene aperto Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  Usare sempre strumenti [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ad esempio Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , per modificare l'account usato dai servizi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent oppure per modificare la password per l'account. Oltre alla modifica del nome dell'account, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di eseguire altre configurazioni, ad esempio l'impostazione delle autorizzazioni nel Registro di sistema di Windows in modo che il nuovo account possa leggere le impostazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Altri strumenti, ad esempio Gestione controllo servizi di Windows, consentono di modificare il nome dell'account ma non le impostazioni ad esso associate. Se non riesce ad accedere alla parte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] del Registro di sistema, il servizio potrebbe non avviarsi correttamente.  
   
- Un ulteriore vantaggio è che le password modificate tramite Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], SMO o WMI diventano subito operative senza che sia necessario riavviare il servizio.  
+ Un ulteriore vantaggio è che le password modificate tramite Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , SMO o WMI diventano subito operative senza che sia necessario riavviare il servizio.  
   
 ## <a name="manage-server--client-network-protocols"></a>Gestione dei protocolli di rete server e client  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consente di configurare i protocolli di rete server e client e le opzioni di connessione. Dopo aver attivato i protocolli corretti, non è in genere necessario modificare le connessioni di rete server. È tuttavia possibile utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per riconfigurare le connessioni al server affinché [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esegua l'ascolto su una porta, una pipe o un protocollo di rete specifici. Per altre informazioni sull'attivazione di protocolli, vedere [Abilitare o disabilitare un protocollo di rete del server](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Per informazioni sull'attivazione dell'accesso ai protocolli tramite un firewall, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

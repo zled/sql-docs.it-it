@@ -18,20 +18,18 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: it-it
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Installazione di PolyBase
-<a id="polybase-installation" class="xliff"></a>
+# <a name="polybase-installation"></a>Installazione di PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Per installare una versione di valutazione di SQL Server, visitare [SQL Server Valutazioni](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## Prerequisiti
-<a id="prerequisites" class="xliff"></a>  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   Copia di valutazione di SQL Server a 64 bit  
   
@@ -43,14 +41,13 @@ ms.lasthandoff: 07/14/2017
   
 -   Spazio su disco minimo: 2 GB  
   
--   La connettività TCP/IP deve essere abilitata. Vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).  La connettività TCP/IP è disabilitata per impostazione predefinita con SQL Server Developer Edition e SQL Server Express Edition. È necessario abilitarla manualmente per consentire il funzionamento di PolyBase.
+-   Polybase funziona correttamente se è abilitato il protocollo TCP/IP. TCP/IP è abilitato per impostazione predefinita in tutte le edizioni di SQL Server tranne le edizioni Developer e SQL Server Express. Perché Polybase funzioni correttamente nelle edizioni Developer ed Express è necessario abilitare la connettività TCP/IP (vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
   
  **Note**  
   
  È possibile installare PolyBase in una sola istanza di SQL Server per computer.  
   
-## Singolo nodo o gruppo di scalabilità orizzontale di PolyBase
-<a id="single-node-or-polybase-scaleout-group" class="xliff"></a>
+## <a name="single-node-or-polybase-scaleout-group"></a>Singolo nodo o gruppo di scalabilità orizzontale di PolyBase
 Prima di iniziare a installare PolyBase nelle istanze di SQL Server, è consigliabile pianificare se si desidera eseguire un'installazione in un singolo nodo o in un gruppo di scalabilità orizzontale di PolyBase. Per un gruppo di scalabilità orizzontale di PolyBase, è necessario verificare le condizioni seguenti. 
 - Tutti i computer si trovano nello stesso dominio.
 - Usare lo stesso account del servizio e la stessa password durante l'installazione.
@@ -58,8 +55,7 @@ Prima di iniziare a installare PolyBase nelle istanze di SQL Server, è consigli
 
 Dopo aver installato PolyBase in un nodo singolo o in un gruppo di scalabilità orizzontale, non sarà più possibile apportare modifiche. Sarà necessario disinstallare e reinstallare la funzionalità per modificare questa impostazione.
 
-## Installare PolyBase tramite l'Installazione guidata
-<a id="install-using-the-installation-wizard" class="xliff"></a>  
+## <a name="install-using-the-installation-wizard"></a>Installare PolyBase tramite l'Installazione guidata  
   
 1.  Eseguire **Centro installazione SQL Server**. Inserire il supporto di installazione di SQL Server e fare doppio clic su **Setup.exe**.  
   
@@ -114,20 +110,17 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
   
 ```  
   
-## Note di post-installazione
-<a id="post-installation-notes" class="xliff"></a>  
+## <a name="post-installation-notes"></a>Note di post-installazione  
  PolyBase installa tre database utente, DWConfiguration, DWDiagnostics e DWQueue.   I database sono destinatati all'uso con PolyBase e non devono essere modificati o eliminati.  
   
-### Procedura per confermare l'installazione
-<a id="how-to-confirm-installation" class="xliff"></a>  
+### <a name="how-to-confirm-installation"></a>Procedura per confermare l'installazione  
  Eseguire il comando seguente. Se installato, PolyBase restituisce 1; in caso contrario, restituisce 0.  
   
 ```tsql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-### Regole del firewall
-<a id="firewall-rules" class="xliff"></a>  
+### <a name="firewall-rules"></a>Regole del firewall  
  L'installazione di PolyBase di SQL Server crea sul computer le regole del firewall seguenti.  
   
 -   PolyBase di SQL Server - Motore di database - \<NomeIstanzaSQLServer> (TCP-In)  
@@ -138,8 +131,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
  Al momento dell'installazione, se si sceglie di usare l'istanza di SQL Server come parte di un gruppo di scalabilità orizzontale di PolyBase, queste regole vengono attivate e il firewall si apre per consentire le connessioni in ingresso al motore di database di SQL Server, al motore PolyBase di SQL Server, a SQL Server PolyBase Data Movement Service e a SQL Browser. Tuttavia, se il servizio Firewall nel computer non è in esecuzione durante l'installazione, l'installazione di SQL Server non è in grado di attivare queste regole. In tal caso, è necessario avviare il servizio Firewall sul computer e abilitare queste regole dopo l'installazione.  
   
-#### Per abilitare le regole del firewall
-<a id="to-enable-the-firewall-rules" class="xliff"></a>  
+#### <a name="to-enable-the-firewall-rules"></a>Per abilitare le regole del firewall  
   
 -   Aprire il **Pannello di controllo**.  
   
@@ -149,12 +141,10 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Fare clic con il pulsante destro del mouse sulla regola disattivata e scegliere **Abilita regola**.  
   
-### Account del servizio PolyBase
-<a id="polybase-service-accounts" class="xliff"></a>
+### <a name="polybase-service-accounts"></a>Account del servizio PolyBase
 Per modificare gli account del servizio per il motore PolyBase e PolyBase Data Movement Service, disinstallare e reinstallare la funzionalità PolyBase.
    
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>  
+## <a name="next-steps"></a>Passaggi successivi  
  Vedere [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
   

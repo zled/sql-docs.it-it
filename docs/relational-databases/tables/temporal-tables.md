@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduce il supporto per le tabelle temporali con controllo delle versioni del sistema come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011 e ora è supportata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 introduce il supporto per le tabelle temporali con controllo delle versioni del sistema come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011 e ora è supportata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Avvio rapido**  
   

@@ -13,17 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 19b664245f45ad45a4c7d1eba249858030fad718
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Nuovi e recentemente aggiornato: docs database relazionali
-<a id="new-and-recently-updated-relational-databases-docs" class="xliff"></a>
+# <a name="new-and-recently-updated-relational-databases-docs"></a>Nuovi e recentemente aggiornato: docs database relazionali
 
 
 
@@ -35,7 +34,7 @@ Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'og
 
 
 
-- *Intervallo di date degli aggiornamenti:* &nbsp; **17/05/2017** &nbsp; - &nbsp; **30/06/2017**
+- *Intervallo di date degli aggiornamenti:* &nbsp; **23/05/2017** &nbsp; - &nbsp; **17/07/2017**
 - *Area di interesse:* &nbsp; **database relazionali**.
 
 
@@ -43,8 +42,7 @@ Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'og
 
 &nbsp;
 
-## Nuovi articoli creati di recente
-<a id="new-articles-created-recently" class="xliff"></a>
+## <a name="new-articles-created-recently"></a>Nuovi articoli creati di recente
 
 I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
@@ -52,15 +50,28 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 1. [Caratteristiche interne di OLTP in memoria di SQL Server per SQL Server 2016](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
 2. [Adaptive query processing in SQL databases](performance/adaptive-query-processing.md) (Elaborazione di query adattive nei database SQL)
 3. [Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform](security/microsoft-sql-and-the-gdpr-requirements.md) (Guida al miglioramento della privacy e ai requisiti GDPR con la piattaforma Microsoft SQL)
-4. [sys.dm_db_log_stats (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
+5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
+8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+
 
 
 
 &nbsp;
 
-## Articoli aggiornati con estratti
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
+
+## <a name="compact-list-of-articles-updated-recently"></a>Compact elenco degli articoli aggiornato di recente
+
+Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Articoli aggiornati con estratti
 
 In questa sezione vengono estratti gli aggiornamenti raccolti dagli articoli di cui si sono verificati recentemente un aggiornamento di grandi dimensioni.
 
@@ -76,8 +87,7 @@ Per queste e altre ragioni, non copiare da questi estratti di codice e non prend
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Modifica di tabelle ottimizzate per la memoria](in-memory-oltp/altering-memory-optimized-tables.md)
-<a id="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd" class="xliff"></a>
+### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1. &nbsp; [Modifica di tabelle ottimizzate per la memoria](in-memory-oltp/altering-memory-optimized-tables.md)
 
 *Aggiornamento: 23/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Successivo](#TitleNum_2))
 
@@ -122,8 +132,7 @@ In questo caso l'operazione a thread singolo registrerebbe l'intero contenuto de
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp;[Dimensioni di tabelle e righe per le tabelle ottimizzate per la memoria](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
-<a id="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd" class="xliff"></a>
+### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2. &nbsp;[Dimensioni di tabelle e righe per le tabelle ottimizzate per la memoria](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 
 *Aggiornamento: 22/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Precedente](#TitleNum_1) | [Successivo](#TitleNum_3))
 
@@ -166,8 +175,7 @@ In questo caso l'operazione a thread singolo registrerebbe l'intero contenuto de
 
 <a name="TitleNum_3"/>
 
-### 3. &nbsp;[Guida di ottimizzazione e convalida post-migrazione](post-migration-validation-and-optimization-guide.md)
-<a id="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd" class="xliff"></a>
+### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3. &nbsp;[Guida di ottimizzazione e convalida post-migrazione](post-migration-validation-and-optimization-guide.md)
 
 *Aggiornamento: 21/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Precedente](#TitleNum_2) | [Successivo](#TitleNum_4))
 
@@ -204,10 +212,9 @@ Per altre informazioni sulle modifiche di Query Optimizer introdotte in [!INCLUD
 
 <a name="TitleNum_4"/>
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-<a id="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd" class="xliff"></a>
+### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-*Aggiornamento: 05/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Precedente](#TitleNum_3) | [Successivo](#TitleNum_5))
+*Aggiornamento: 05/06/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Precedente](#TitleNum_3))
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -243,111 +250,45 @@ Infine, problemi del piano stesso:
 
 
 
-&nbsp;
+
+<a name="similars2"/>
 
 &nbsp;
 
----
-
-<a name="TitleNum_5"/>
-
-### 5. &nbsp;[Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni del sistema](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-<a id="5-nbsp-manage-retention-of-historical-data-in-system-versioned-temporal-tablestablesmanage-retention-of-historical-data-in-system-versioned-temporal-tablesmd" class="xliff"></a>
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**Approccio criteri di conservazione di cronologia temporale**
-
-> **Nota:** approccio utilizzando i criteri di conservazione della cronologia temporale si applica a [! Includi [sqldbesa--... /.. /Includes/sqldbesa-MD.MD]) e SQL Server 2017 a partire dalla versione CTP 1.3.  
-
-Periodo di memorizzazione cronologia temporale può essere configurato a livello di singola tabella, che consente agli utenti di creare degli oggetti eliminati flessibile criteri. L'applicazione di memorizzazione temporale è semplice: è necessario un solo parametro da impostare durante la modifica dello schema o di creazione tabella.
-
-Dopo aver definito i criteri di conservazione, Database SQL di Azure avvia verifica regolarmente se sono presenti righe cronologiche idonei per la pulizia automatica dei dati. Identificazione delle righe corrispondenti e la rimozione dalla tabella di cronologia si verificano in modo trasparente, l'attività in background pianificata, eseguire dal sistema. Condizione di validità per le righe della tabella di cronologia viene controllato in base alla colonna che rappresenta di fine del periodo SYSTEM_TIME. Se il periodo di memorizzazione, ad esempio, è impostato su sei mesi, idonei per la pulizia delle righe della tabella soddisfano la condizione seguente:
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-Nell'esempio precedente, si presuppone che la colonna ValidTo corrisponde alla fine del periodo SYSTEM_TIME.
-**Come configurare i criteri di conservazione?**
-
-Prima di configurare criteri di conservazione per una tabella temporale, controllare innanzitutto se il mantenimento di cronologia temporale è abilitato a livello di database:
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-Flag del database **is_temporal_history_retention_enabled** è impostata su ON per impostazione predefinita, ma gli utenti possono modificare con l'istruzione ALTER DATABASE. Si è impostato su OFF anche automaticamente dopo il punto di ripristino di tempo. Per attivare la pulizia di memorizzazione cronologia temporale per il database, eseguire l'istruzione seguente:
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact elenco degli articoli aggiornato di recente
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-Questo elenco compact vengono forniti collegamenti a tutti gli articoli aggiornati elencati nella sezione precedente.
-
-1. [Modifica di tabelle con ottimizzazione per la memoria](#TitleNum_1)
-2. [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](#TitleNum_2)
-3. [Guida di ottimizzazione e convalida post-migrazione](#TitleNum_3)
-4. [sys.query_store_plan (Transact-SQL)](#TitleNum_4)
-5. [Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema](#TitleNum_5)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-## Articoli sorella
-<a id="sister-articles" class="xliff"></a>
+## <a name="similar-articles"></a>Articoli simili
 
 In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno dello stesso repository GitHub: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-#### Aree di interesse con articoli nuovi o aggiornati di recente
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (12+2): **Advanced Analytics for SQL (Analisi avanzata per SQL)** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (1+0): **Analysis Services for SQL (Analysis Services per SQL)** Docs](../analysis-services/new-updated-analysis-services.md)
-- [Nuovo + aggiornato (0+2): **Connect to SQL (Connettersi a SQL)** Docs](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (3+0): **Database Engine for SQL (Motore di database per SQL)** Docs](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (1+2): **Integration Services for SQL (Integration Services per SQL)** Docs](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (2+8): **Linux for SQL (Linux per SQL)** Docs](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (1+0): **Master Data Services (MDS) for SQL (Master Data Services (MDS) per SQL)** Docs](../master-data-services/new-updated-master-data-services.md)
-- [Nuovo + aggiornato (5+5): **Relational Databases for SQL (Database relazionali per SQL)** Docs](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (2+0): **Reporting Services for SQL (Reporting Services per SQL)** Docs](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (0+4): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (0+1): **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (4+4): **Advanced Analytics per SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (2+0): **Analysis Services per SQL** Docs](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (1+2): **Connetti a SQL Server** Docs](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (6+0): **Motore di database per SQL** Docs](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (13+2): **Linux per SQL** Docs](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (1+0): **Master Data Services (MDS) per SQL** Docs](../master-data-services/new-updated-master-data-services.md)
+- [Nuovo + aggiornato (1+0): **ODBC (Open Database Connectivity) per SQL** Docs](../odbc/new-updated-odbc.md)
+- [Nuovo + aggiornato (8+4): **Database relazionali per SQL** Docs](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (2+2): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
 - [Nuovo + aggiornato (0+1): **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (1+0): **Tools for SQL (Strumenti per SQL)** Docs](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (1+0): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (1+0): **Strumenti per SQL** Docs](../tools/new-updated-tools.md)
 
 
-#### Aree di interesse senza articoli nuovi o aggiornati di recente
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
+- [Nuovo + aggiornato (0+0): **Integration Services per SQL** Docs](../integration-services/new-updated-integration-services.md)
 - [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
-- [Nuovo + aggiornato (0+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)** Docs](../odbc/new-updated-odbc.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
+- [Nuovo + aggiornato (0+0): **Reporting Services per SQL** Docs](../reporting-services/new-updated-reporting-services.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
+- [Nuovo + aggiornato (0+0): **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
 - [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
-- [Nuovo + aggiornato (0+0): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 
 
