@@ -10,7 +10,7 @@
 ## [Analisi utilizzo software](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Configurare SQL Server per inviare commenti e suggerimenti a Microsoft](sql-server-customer-feedback.md)
 
-# [Articoli aggiornato di recente per SQL Server](sql-server-new-updated-sql-docs-pr.md)
+# [Articoli nuovi e aggiornati di recente](sql-server-new-updated-sql-docs-pr.md)
 
 # Note sulla versione
 
@@ -23,7 +23,7 @@
 ## [Note sulla versione di SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [Note sulla versione SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
+## [Note sulla versione di SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
