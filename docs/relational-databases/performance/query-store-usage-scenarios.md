@@ -17,15 +17,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Scenari di utilizzo dell'Archivio query
-<a id="query-store-usage-scenarios" class="xliff"></a>
+# <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Archivio query può essere usato in diversi scenari in cui è fondamentale rilevare e garantire prestazioni prevedibili del carico di lavoro. Di seguito sono riportati alcuni esempi:  
@@ -40,8 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Identificare e migliorare i carichi di lavoro ad hoc  
   
-## Individuare e risolvere le query con regressioni nella scelta del piano
-<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Individuare e risolvere le query con regressioni nella scelta del piano  
  Durante l'esecuzione di query normali, Query Optimizer può selezionare un piano diverso se alcuni input importanti vengono modificati, ad esempio se viene modificata la cardinalità dei dati, se vengono creati, modificati o eliminati indici, se vengono aggiornate le statistiche e così via.  In generale, il nuovo piano selezionato è migliore o uguale a quello usato in precedenza. Tuttavia, a volte il nuovo piano risulta decisamente peggiore. In questi casi si parla di regressione nella scelta del piano. Prima di Archivio query, identificare e risolvere questo problema risultava molto difficile perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non forniva un archivio dati predefinito che gli utenti potessero esaminare per i piani di esecuzione usati nel corso del tempo.  
   
  Con Query Store, è possibile eseguire rapidamente le operazioni seguenti:  
@@ -56,8 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  Per una descrizione dettagliata dello scenario, vedere il blog sull' [Archivio query: un'utilità di traccia eventi dei dati per il database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) .  
   
-## Identificare e ottimizzare le prime query per consumo di risorse
-<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificare e ottimizzare le prime query per consumo di risorse  
  Anche se il carico di lavoro può generare migliaia di query, nella pratica la gran parte delle risorse di sistema viene usata solo da poche query che, di conseguenza, richiedono attenzione. Tra le prime query per consumo di risorse si rilevano in genere quelle regredite o quelle che possono essere migliorate con un'ottimizzazione aggiuntiva.  
   
  Il modo più facile per iniziare l'esplorazione consiste nell'aprire **Prime query per consumo di risorse** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L'interfaccia utente è suddivisa in tre riquadri: un istogramma che rappresenta le prime query per consumo di risorse (sinistra), un riepilogo del piano per la query selezionata (destra) e un piano di query visivo per il piano selezionato (in basso). Fare clic sul pulsante **Configura** per controllare il numero di query da analizzare e l'intervallo di tempo di interesse. È anche possibile scegliere tra diverse dimensioni di consumo delle risorse (durata, CPU, memoria, operazioni I/O, numero di esecuzione) e la baseline (Media, Min, Max, Totale, Deviazione standard).  
@@ -78,8 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Valutare l'opportunità di riscrivere la query con costo elevato. Ad esempio, sfruttare i vantaggi associati alla parametrizzazione della query e ridurre l'utilizzo di SQL dinamico. Implementare la logica ottimale durante la lettura dei dati (applicare il filtro dei dati sul lato database, non sul lato applicazione).  
   
-## Test A/B
-<a id="ab-testing" class="xliff"></a>  
+## <a name="ab-testing"></a>Test A/B  
  Usare Archivio query per confrontare le prestazioni del carico di lavoro prima e dopo la modifica dell'applicazione che si intende introdurre. L'elenco seguente contiene alcuni esempi in cui è possibile usare Archivio query per valutare l'impatto della modifica dell'ambiente o dell'applicazione sulle prestazioni del carico di lavoro:  
   
 -   Implementazione della nuova versione dell'applicazione.  
@@ -139,8 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Usare Query Store per le correzioni di analisi e regressioni: nella maggior parte dei casi, le nuove modifiche di Query Optimizer genereranno piani migliori. Query Store offre comunque un modo semplice per identificare le regressioni di scelta del piano e risolverle usando un meccanismo che forza il piano.  
   
-## Identificare e migliorare i carichi di lavoro ad hoc
-<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificare e migliorare i carichi di lavoro ad hoc  
  Alcuni carichi di lavoro non includono query dominanti che è possibile ottimizzare per migliorare le prestazioni complessive dell'applicazione. In genere, questi carichi di lavoro sono caratterizzati da un numero relativamente elevato di query diverse, ognuna delle quali utilizza una parte delle risorse di sistema. Essendo univoche, queste query vengono eseguite raramente, (di solito una sola volta, quindi si consiglia di assegnare un nome ad hoc), di conseguenza il consumo di runtime non è critico. D'altra parte, dato che l'applicazione genera continuamente nuove query, una parte significativa delle risorse di sistema viene impiegata per la compilazione di query, il che non rappresenta uno scenario ottimale. Questa situazione non è ideale per Archivio query perché un numero elevato di query e piani ne occupa lo spazio riservato e causa probabilmente il passaggio in tempi molto rapidi alla modalità di sola lettura di Archivio query. Se è attivato **Modalità di pulizia basata sulle dimensioni** , un'opzione[fortemente consigliata](https://msdn.microsoft.com/library/mt604821.aspx) per mantenere Archivio query sempre attivo e in esecuzione, il processo in background esegue costantemente la pulizia delle strutture di Archivio query assorbendo molto spesso notevoli risorse di sistema.  
   
  La visualizzazione**Prime query per consumo di risorse** fornisce la prima indicazione relativa alla natura ad hoc del carico di lavoro:  
@@ -226,8 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

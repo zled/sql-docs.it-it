@@ -17,15 +17,14 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Creare e applicare lo snapshot
-<a id="create-and-apply-the-snapshot" class="xliff"></a>
+# <a name="create-and-apply-the-snapshot"></a>Creare e applicare lo snapshot
   Gli snapshot vengono generati dall'agente snapshot al termine della creazione di una pubblicazione. La generazione può essere eseguita:  
   
 -   Immediatamente. Per impostazione predefinita, per una pubblicazione di tipo merge uno snapshot viene generato immediatamente dopo la creazione di una pubblicazione mediante la Creazione guidata nuova pubblicazione.  
@@ -52,8 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Programmazione della replica e programmazione di RMO: [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Inizializzare una sottoscrizione con uno snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

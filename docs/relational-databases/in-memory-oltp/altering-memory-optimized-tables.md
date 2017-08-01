@@ -15,21 +15,19 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
 ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Modifica di tabelle con ottimizzazione per la memoria
-<a id="altering-memory-optimized-tables" class="xliff"></a>
+# <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le modifiche dello schema e dell'indice nelle tabelle con ottimizzazione per la memoria possono essere eseguite con l'istruzione ALTER TABLE. In SQL Server 2016 e nel database SQL di Azure le operazioni ALTER TABLE su tabelle ottimizzate per la memoria sono OFFLINE, vale a dire che la tabella non è disponibile per eseguire una query mentre è in corso l'operazione. L'applicazione di database può proseguire l'esecuzione e qualsiasi operazione che accede alla tabella viene bloccata fino al termine del processo di modifica. È possibile combinare più operazioni ADD, DROP o ALTER in una singola istruzione ALTER TABLE.
   
-## ALTER TABLE
-<a id="alter-table" class="xliff"></a>  
+## <a name="alter-table"></a>ALTER TABLE  
  
 La sintassi ALTER TABLE viene usata per apportare modifiche allo schema della tabella e per aggiungere, eliminare e ricompilare gli indici. Gli indici sono considerati parte della definizione di tabella:  
   
@@ -82,14 +80,12 @@ La sintassi ALTER TABLE viene usata per apportare modifiche allo schema della ta
   
  Per altre informazioni sulla funzionalità ALTER TABLE e per la sintassi completa, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## Dipendenza associata a schema
-<a id="schema-bound-dependency" class="xliff"></a>  
+## <a name="schema-bound-dependency"></a>Dipendenza associata a schema  
  Le stored procedure compilate in modo nativo devono essere associate a schema, ovvero devono avere una dipendenza associata a schema rispetto alle tabelle con ottimizzazione per la memoria a cui accedono e alle colonne a cui fanno riferimento. Una dipendenza associata a schema è una relazione tra due entità che impedisce l'eliminazione o la modifica incompatibile dell'entità a cui si fa riferimento finché esiste l'entità di riferimento.  
   
  Ad esempio, se una stored procedure compilata in modo nativo con associazione a schema fa riferimento a una colonna *c1* dalla tabella *mytable*, la colonna *c1* non può essere eliminata. Analogamente, se esiste una procedura con un'istruzione INSERT senza elenco di colonne, ad esempio, `INSERT INTO dbo.mytable VALUES (...)`, non è possibile eliminare alcuna colonna nella tabella.  
  
-## Registrazione di ALTER TABLE nelle tabelle con ottimizzazione per la memoria
-<a id="logging-of-alter-table-on-memory-optimized-tables" class="xliff"></a>
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Registrazione di ALTER TABLE nelle tabelle con ottimizzazione per la memoria
 In una tabella con ottimizzazione per la memoria, la maggior parte degli scenari ALTER TABLE ora viene eseguita in parallelo, con conseguente ottimizzazione delle operazioni di scrittura nel log delle transazioni. L'ottimizzazione si ottiene registrando nel log delle transazioni solo le modifiche ai metadati. Le operazioni ALTER TABLE seguenti vengono tuttavia eseguite a thread singolo e non sono ottimizzate per il log.
 
 In questo caso l'operazione a thread singolo registrerebbe l'intero contenuto della tabella modificata nel log delle transazioni. Di seguito è riportato un elenco di operazioni a thread singolo:
@@ -108,8 +104,7 @@ In questo caso l'operazione a thread singolo registrerebbe l'intero contenuto de
 
     - *Eccezione:* il prolungamento di una colonna già all'esterno di righe viene registrato in modo ottimizzato. 
   
-## Esempi
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>Esempi  
  L'esempio seguente modifica il numero di bucket di un indice hash esistente. L'indice hash viene ricompilato con il nuovo numero di bucket mentre le altre proprietà dell'indice hash rimangono invariate.  
   
 ```tsql
@@ -175,8 +170,7 @@ GO
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
 
 [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

@@ -21,15 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: it-it
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Creazione di uno schema di database
-<a id="create-a-database-schema" class="xliff"></a>
+# <a name="create-a-database-schema"></a>Creazione di uno schema di database
   In questo argomento si illustra come creare uno schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -64,8 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-##### Per creare uno schema
-<a id="to-create-a-schema" class="xliff"></a>  
+##### <a name="to-create-a-schema"></a>Per creare uno schema  
   
 1.  In Esplora oggetti espandere la cartella **Database** .  
   
@@ -79,8 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opzioni aggiuntive
-<a id="additional-options" class="xliff"></a>  
+### <a name="additional-options"></a>Opzioni aggiuntive  
  Nella finestra di dialogo **Schema - Nuovo** sono inoltre disponibili opzioni in due pagine aggiuntive, cioè **Autorizzazioni** e **Proprietà estese**.  
   
 -   Nella pagina **Autorizzazioni** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
@@ -89,8 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per creare uno schema
-<a id="to-create-a-schema" class="xliff"></a>  
+#### <a name="to-create-a-schema"></a>Per creare uno schema  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

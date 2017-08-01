@@ -36,15 +36,14 @@ caps.latest.revision: 74
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Configurazione della sincronizzazione Web
-<a id="configure-web-synchronization" class="xliff"></a>
+# <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   L'opzione di sincronizzazione Web per la replica di tipo merge di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la replica dei dati tramite il protocollo HTTPS su Internet. Per utilizzare la sincronizzazione Web, è innanzitutto necessario eseguire le azioni di configurazione riportate di seguito:  
@@ -64,8 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  Nelle procedure riportate di seguito viene descritta una configurazione della sicurezza semplificata in cui vengono utilizzati account locali, per motivi di brevità. Questa configurazione semplificata è adatta per installazioni in cui sia IIS sia il server di pubblicazione e il server di distribuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguiti nello stesso computer, anche se è più probabile (e consigliabile) utilizzare una topologia a più server per un'installazione di produzione. È possibile sostituire gli account locali indicati nelle procedure con account di dominio.  
   
-## Creazione di nuovi account e mapping di account di accesso di SQL Server
-<a id="creating-new-accounts-and-mapping-sql-server-logins" class="xliff"></a>  
+## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>Creazione di nuovi account e mapping di account di accesso di SQL Server  
  Il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll) si connette al server di pubblicazione rappresentando l'account specificato per il pool di applicazioni associato al sito Web di replica.  
   
  L'account utilizzato per il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni come descritto in [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md), nella sezione relativa alla connessione al server di pubblicazione o al server di distribuzione". In breve è necessario che l'account:  
@@ -82,8 +80,7 @@ ms.lasthandoff: 06/22/2017
   
  Prima di configurare la sincronizzazione Web, vedere la sezione "Procedure consigliate per la sicurezza nella sincronizzazione Web" in questo argomento. Per ulteriori informazioni sulla sicurezza della sincronizzazione Web, vedere [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md).  
   
-## Configurazione del computer che esegue IIS
-<a id="configuring-the-computer-that-is-running-iis" class="xliff"></a>  
+## <a name="configuring-the-computer-that-is-running-iis"></a>Configurazione del computer che esegue IIS  
  La sincronizzazione Web richiede l'installazione e la configurazione di IIS. Prima di poter configurare una pubblicazione per l'utilizzo della sincronizzazione Web, è necessario l'URL del sito Web di replica.  
   
  La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0. A partire da SQL Server 2012, per usare il componente di sincronizzazione Web nel server IIS, è consigliabile installare SQL Server con la replica. Ad esempio, è possibile installare l'edizione gratuita SQL Server Express.  
@@ -97,16 +94,14 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurare IIS 7 per la sincronizzazione Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-## Creazione di un Web garden
-<a id="creating-a-web-garden" class="xliff"></a>  
+## <a name="creating-a-web-garden"></a>Creazione di un Web garden  
  Il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due operazioni di sincronizzazione simultanee per thread. Il superamento di questo limite potrebbe causare interruzioni nella risposta del listener. Il numero di thread allocato a replisapi.dll è determinato dalla proprietà Numero massimo di processi di lavoro del pool di applicazioni. Il valore predefinito della proprietà è 1.  
   
  È possibile supportare un numero maggiore di operazioni di sincronizzazione simultanee per CPU aumentando il valore della proprietà Numero massimo di processi di lavoro. L'operazione di scalabilità orizzontale applicata attraverso l'aumento del numero di processi di lavoro per CPU è nota come creazione di un Web garden.  
   
  Il Web garden consente la sincronizzazione di più di due sottoscrittori contemporaneamente. Aumenterà inoltre l'utilizzo della CPU da parte di replisapi.dll, con un potenziale impatto negativo sulle prestazioni complessive del server. È importante valutare queste considerazioni quando si sceglie un valore per la proprietà Numero massimo di processi di lavoro.  
   
-#### Per aumentare il valore di Numero massimo di processi di lavoro in IIS 7
-<a id="to-increase-maximum-worker-processes-in-iis-7" class="xliff"></a>  
+#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Per aumentare il valore di Numero massimo di processi di lavoro in IIS 7  
   
 1.  In **Gestione Internet Information Services (IIS)**espandere il nodo del server locale, quindi fare clic sul nodo **Pool di applicazioni** .  
   
@@ -114,8 +109,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Nella finestra di dialogo Impostazioni avanzate, sotto l'intestazione **Elabora modello** , fare clic sulla riga **Numero massimo di processi di lavoro**. Modificare il valore della proprietà, quindi fare clic su **OK**.  
   
-## Configurazione della pubblicazione
-<a id="configuring-the-publication" class="xliff"></a>  
+## <a name="configuring-the-publication"></a>Configurazione della pubblicazione  
  Per utilizzare la sincronizzazione Web, creare una pubblicazione con le stesse modalità utilizzate per una topologia di merge standard. Per altre informazioni, vedere [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
  Dopo la creazione della pubblicazione, abilitare l'opzione che consente la sincronizzazione Web utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o gli oggetti RMO (Replication Management Objects). Per abilitare la sincronizzazione Web, è necessario fornire l'indirizzo del server Web per le connessioni del sottoscrittore.  
@@ -124,16 +118,13 @@ ms.lasthandoff: 06/22/2017
   
  **gen** è una parola riservata nei file XML websync. Non tentare di pubblicare tabelle contenenti colonne denominate **gen**.  
   
-## Configurazione della sottoscrizione
-<a id="configuring-the-subscription" class="xliff"></a>  
+## <a name="configuring-the-subscription"></a>Configurazione della sottoscrizione  
  Dopo avere abilitato una pubblicazione e configurato IIS, creare una sottoscrizione pull e specificare che deve essere sincronizzata utilizzando IIS. La sincronizzazione Web è supportata solo per le sottoscrizioni pull.  
   
-## Aggiornamento da una versione precedente di SQL Server
-<a id="upgrading-from-an-earlier-version-of-sql-server" class="xliff"></a>  
+## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>Aggiornamento da una versione precedente di SQL Server  
  Se una topologia di sincronizzazione Web è presente e configurata e si aggiorna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario assicurarsi che la versione più recente di Replisapi.dll venga copiata nella directory virtuale utilizzata dalla sincronizzazione Web. Per impostazione predefinita, la versione più recente di Replisapi.dll si trova in C:\Programmi\ Microsoft SQL Server\\<nnn\>\COM.  
   
-## Replica di volumi elevati di dati
-<a id="replicating-large-volumes-of-data" class="xliff"></a>  
+## <a name="replicating-large-volumes-of-data"></a>Replica di volumi elevati di dati  
  Per evitare potenziali problemi di memoria nei computer sottoscrittori, nella sincronizzazione Web si utilizza una dimensione massima predefinita di 100 MB per il file XML utilizzato per trasferire le modifiche. Il limite può essere aumentato impostando la chiave del Registro di sistema seguente:  
   
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
@@ -152,8 +143,7 @@ ms.lasthandoff: 06/22/2017
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
-## Procedure consigliate per la sicurezza nella sincronizzazione Web
-<a id="security-best-practices-for-web-synchronization" class="xliff"></a>  
+## <a name="security-best-practices-for-web-synchronization"></a>Procedure consigliate per la sicurezza nella sincronizzazione Web  
  Sono disponibili numerose impostazioni relative alla sicurezza nella sincronizzazione Web. È consigliabile adottare l'approccio seguente:  
   
 -   Il server di distribuzione e il server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono trovarsi nello stesso computer. Si tratta della configurazione tipica nella replica di tipo merge. È tuttavia necessario che IIS sia installato in un computer separato.  
@@ -188,8 +178,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  L'apertura di porte nel firewall potrebbe esporre il server ad attacchi dannosi. Prima di aprire una porta, verificare di comprenderne le implicazioni per un sistema firewall. Per altre informazioni, vedere [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Sincronizzazione Web per la replica di tipo merge](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

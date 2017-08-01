@@ -22,15 +22,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Implementazione di un gestore della logica di business per un articolo di merge
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
   In questo argomento viene descritto come implementare un gestore della logica di business per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite la programmazione della replica o RMO (Replication Management Objects).  
   
  Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi che si verificano durante il processo di sincronizzazione della replica di tipo merge. I metodi del gestore della logica di business possono essere richiamati dal processo di replica per ogni riga modificata che viene replicata durante la sincronizzazione.  
@@ -57,8 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> Utilizzo della programmazione della replica  
   
-#### Per creare e distribuire un gestore della logica di business
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>Per creare e distribuire un gestore della logica di business  
   
 1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio creare un nuovo progetto per l'assembly .NET contenente il codice che implementa il gestore della logica di business.  
   
@@ -101,8 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  È necessario distribuire un gestore della logica di business su ogni server in cui viene eseguito l'agente di merge, incluso il server IIS che ospita il file replisapi.dll quando si utilizza la sincronizzazione tramite il Web.  
   
-#### Per registrare un gestore della logica di business
-<a id="to-register-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-register-a-business-logic-handler"></a>Per registrare un gestore della logica di business  
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
@@ -111,13 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Se l'assembly non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name**. Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
   
-#### Per utilizzare un gestore della logica di business con un nuovo articolo di tabella
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Per utilizzare un gestore della logica di business con un nuovo articolo di tabella  
   
 1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire l'articolo, specificando il nome descrittivo del gestore della logica di business per **@article_resolver**. Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Per utilizzare un gestore della logica di business con un articolo di tabella esistente
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Per utilizzare un gestore della logica di business con un articolo di tabella esistente  
   
 1.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication**, **@article**, il valore **article_resolver** per **@property** e il nome descrittivo del gestore della logica di business per **@value**.  
   
@@ -134,8 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
   
-#### Per creare un gestore della logica di business
-<a id="to-create-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-create-a-business-logic-handler"></a>Per creare un gestore della logica di business  
   
 1.  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio creare un nuovo progetto per l'assembly .NET contenente il codice che implementa il gestore della logica di business.  
   
@@ -176,8 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Compilare il progetto per creare l'assembly del gestore della logica di business.  
   
-#### Per registrare un gestore della logica di business
-<a id="to-register-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-register-a-business-logic-handler"></a>Per registrare un gestore della logica di business  
   
 1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -195,13 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> : valore **true**.  
   
-#### Per distribuire un gestore della logica di business
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-deploy-a-business-logic-handler"></a>Per distribuire un gestore della logica di business  
   
 1.  Distribuire l'assembly nel server in cui viene eseguito l'agente merge, nel percorso file specificato durante la registrazione del gestore della logica di business nel server di distribuzione. Per una sottoscrizione pull, l'agente viene eseguito nel Sottoscrittore, mentre per una sottoscrizione push nel server di distribuzione. Quando si utilizza la sincronizzazione tramite il Web, l'agente viene eseguito nel server Web. Se con il nome dell'assembly non è stato incluso il percorso completo durante la registrazione del gestore della logica di business, distribuire l'assembly nella stessa directory del file eseguibile dell'agente di merge o nella stessa directory dell'applicazione che avvia in modo sincrono l'agente di merge. È possibile installare l'assembly nella GAC se più applicazioni utilizzano lo stesso assembly.  
   
-#### Per utilizzare un gestore della logica di business con un nuovo articolo di tabella
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Per utilizzare un gestore della logica di business con un nuovo articolo di tabella  
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -217,8 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Per utilizzare un gestore della logica di business con un articolo di tabella esistente
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Per utilizzare un gestore della logica di business con un articolo di tabella esistente  
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -251,8 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Eseguire il debug di un gestore della logica di business &#40;programmazione della replica&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)   

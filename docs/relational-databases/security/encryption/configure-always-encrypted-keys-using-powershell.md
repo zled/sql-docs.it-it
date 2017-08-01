@@ -14,11 +14,11 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: 0d112912b35e05e5e96ec43cf6bc5f7caee21bf4
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurare le chiavi di Always Encrypted con PowerShell
@@ -38,7 +38,7 @@ Il metodo di provisioning delle chiavi descritto in questa sezione non supporta 
 Prima di eseguire passaggi che implicano l'accesso a chiavi di testo non crittografato o all'archivio chiavi (indicati nella colonna **Accede a chiavi di testo non crittografato/archivio chiavi** della tabella che segue), assicurarsi che l'ambiente PowerShell venga eseguito in un computer protetto diverso dal computer che ospita il database. Per altre informazioni, vedere ***Considerazioni sulla sicurezza per la gestione delle chiavi***.
 
 
-Attività  |Articolo  |Accede a chiavi di testo non crittografato/archivio chiavi  |Accede al database   
+Attività  |Articolo  |Accede alle chiavi in testo non crittografato o all'archivio delle chiavi  |Accede al database   
 ---------|---------|---------|---------
 Passaggio 1. Creare una chiave master della colonna in un archivio chiavi.<br><br>**Nota:** il modulo PowerShell SqlServer non supporta questo passaggio. Per eseguire questa attività da una riga di comando, usare gli strumenti specifici dell'archivio chiavi selezionato. |[Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sì | No     
 Passaggio 2.  Avviare un ambiente PowerShell e importare il modulo PowerShell SqlServer.  |   [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    No    | No         
@@ -192,7 +192,7 @@ Prima di eseguire i passaggi che prevedono l'accesso alle chiavi di testo non cr
 Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
 
-Attività  |Articolo  |Accede a chiavi di testo non crittografato/archivio chiavi  |Accede al database  
+Attività  |Articolo  |Accede alle chiavi in testo non crittografato o all'archivio delle chiavi  |Accede al database  
 ---------|---------|---------|---------
 Passaggio 1. Creare una chiave master della colonna in un archivio chiavi.<br><br>**Nota:** il modulo SqlServer non supporta questo passaggio. Per eseguire questa attività da una riga di comando, è necessario usare gli strumenti specifici del tipo di archivio chiavi.     | [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Sì    | No 
 Passaggio 2.  Avviare una sessione di PowerShell e importare il modulo SqlServer.      |     [Importazione del modulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | No | No         

@@ -20,17 +20,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="full-text-search" class="xliff"></a>
-
-# Ricerca full-text
+# <a name="full-text-search"></a>Ricerca full-text
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-<a id="basic-tasks" class="xliff"></a>
-
-## Attività di base
+## <a name="basic-tasks"></a>Attività di base
 Questo argomento offre una panoramica della ricerca full-text e descrive i componenti e l'architettura di questa funzionalità. Per iniziare subito, ecco le attività di base.
 -   [Introduzione alla ricerca full-text](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [Creazione e gestione dei cataloghi full-text](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -41,9 +37,7 @@ Questo argomento offre una panoramica della ricerca full-text e descrive i compo
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se non è stata selezionata l'opzione Ricerca full-text durante l'installazione di SQL Server, eseguire di nuovo il programma di installazione di SQL Server per aggiungerla.
 
-<a id="overview" class="xliff"></a>
-
-## Panoramica
+## <a name="overview"></a>Panoramica
 Un indice full-text include una o più colonne basate su caratteri in una tabella. Queste colonne possono avere uno dei tipi di dati seguenti: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** o **varbinary(max)** e **FILESTREAM**. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.  
   
  Attraverso le query full-text è possibile eseguire ricerche linguistiche sui dati di testo contenuti negli indici full-text, usando parole e frasi in base alle regole di una determinata lingua, come ad esempio l'inglese o il giapponese. Le query full-text possono contenere semplici parole e frasi oppure più forme di una parola o frase. Una query full-text restituisce qualsiasi documento contenente almeno una corrispondenza, nota anche come *riscontro*. Si ottiene una corrispondenza quando un documento di destinazione contiene tutti i termini specificati nella query full-text e soddisfa qualsiasi altra condizione di ricerca, come ad esempio la distanza entro i termini corrispondenti.    
@@ -152,9 +146,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 ###  <a name="querying"></a> Processo di esecuzione di query full-text  
  Query Processor consente di passare le parti full-text di una query al motore di ricerca full-text affinché vengano elaborate. Il motore di ricerca full-text esegue il word breaking e, facoltativamente, le espansioni del thesaurus, lo stemming e l'elaborazione delle parole non significative. Le parti full-text della query vengono rappresentate come operatori SQL, principalmente come funzioni di flusso con valori di tabella. Durante l'esecuzione della query, queste funzioni accedono all'indice invertito per recuperare i risultati corretti. I risultati vengono restituiti al client immediatamente oppure dopo essere stati ulteriormente elaborati.  
 
-<a id="full-text-index-architecture" class="xliff"></a>
-
-## Architettura degli indici full-text
+## <a name="full-text-index-architecture"></a>Architettura degli indici full-text
   Le informazioni contenute negli indici full-text vengono utilizzate dal motore di ricerca full-text per compilare query full-text che consentono di cercare rapidamente parole o combinazioni di parole specifiche in una tabella. In un indice full-text vengono archiviate informazioni su parole significative e sulla relativa posizione all'interno di una o più colonne di una tabella di database. Un indice full-text è un tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il processo di compilazione di un indice full-text è diverso da quello di altri tipi di indici. Anziché creare un albero B basato su un valore archiviato in una riga specifica, il motore di ricerca full-text compila una struttura con indice invertito, compresso e in pila dai singoli token dal testo indicizzato.  Le dimensioni di un indice full-text sono limitate solo dalle risorse di memoria disponibili del computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]gli indici full-text sono integrati nel Motore di database anziché risiedere nel file system come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un nuovo database, il catalogo full-text è ora un oggetto virtuale che non appartiene ad alcun filegroup. Si tratta semplicemente di un concetto logico che fa riferimento a un gruppo di indici full-text. Si noti tuttavia che durante l'aggiornamento di un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , ovvero qualsiasi catalogo full-text contenente file di dati, viene creato un nuovo filegroup. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -240,9 +232,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
 |Assembly|1|2|6|  
 |3|1|2|7|  
 
-<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
-
-### Differenze tra indici full-text e indici SQL Server normali:  
+### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Differenze tra indici full-text e indici SQL Server normali:  
   
 |Indici full-text|Indici di SQL Server normali|  
 |------------------------|--------------------------------|  

@@ -21,11 +21,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 1d0ddb568fd162f4be42234607b5b8484cb89f60
 ms.contentlocale: it-it
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Rinominare una stored procedure
-<a id="rename-a-stored-procedure" class="xliff"></a>
+# <a name="rename-a-stored-procedure"></a>Rinominare una stored procedure
   In questo argomento viene descritto come rinominare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -65,8 +64,7 @@ ms.lasthandoff: 07/11/2017
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per rinominare una stored procedure
-<a id="to-rename-a-stored-procedure" class="xliff"></a>  
+#### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
@@ -77,8 +75,7 @@ ms.lasthandoff: 07/11/2017
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per rinominare una stored procedure
-<a id="to-rename-a-stored-procedure" class="xliff"></a>  
+#### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 2.  Dalla barra Standard fare clic su **Nuova query**.  
@@ -100,8 +97,7 @@ GO
 EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
 ```  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

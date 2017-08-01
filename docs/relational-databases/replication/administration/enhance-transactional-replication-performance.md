@@ -25,26 +25,23 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Miglioramento delle prestazioni della replica transazionale
-<a id="enhance-transactional-replication-performance" class="xliff"></a>
+# <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
   Dopo aver considerato i suggerimenti sulle prestazioni generali descritti nella sezione [Miglioramento delle prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenere presente le aree aggiuntive specifiche della replica transazionale riportate di seguito.  
   
-## Progettazione di database
-<a id="database-design" class="xliff"></a>  
+## <a name="database-design"></a>Progettazione di database  
   
 -   Ridurre al minimo le dimensioni delle transazioni nella progettazione delle applicazioni.  
   
      Per impostazione predefinita, la replica transazionale propaga le modifiche in base ai limiti delle transazioni. Più piccole sono le transazioni, minori saranno le probabilità che l'agente di distribuzione dovrà rinviare una transazione a causa di problemi di rete. Se è necessario che l'agente rinvii una transazione, la quantità di dati inviati sarà inferiore.  
   
-## Configurazione del server di distribuzione
-<a id="distributor-configuration" class="xliff"></a>  
+## <a name="distributor-configuration"></a>Configurazione del server di distribuzione  
   
 -   Configurare il server di distribuzione in un server dedicato.  
   
@@ -54,8 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      Verificare la replica con un carico tipico per il sistema per determinare lo spazio necessario per archiviare i comandi. Verificare che il database sia sufficientemente grande da consentire l'archiviazione dei comandi senza richiedere un aumento automatico delle dimensioni frequente. Per altre informazioni sulla modifica delle dimensioni di un database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Progettazione della pubblicazione
-<a id="publication-design" class="xliff"></a>  
+## <a name="publication-design"></a>Progettazione della pubblicazione  
   
 -   Replicare l'esecuzione della stored procedure durante gli aggiornamenti batch delle tabelle pubblicate.  
   
@@ -65,8 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      Se non è possibile utilizzare il parametro **-SubscriptionStreams** , descritto più avanti in questo argomento, provare a creare più pubblicazioni. La distribuzione di articoli tra queste pubblicazioni consente alla replica di applicare le modifiche in parallelo con i Sottoscrittori.  
   
-## Considerazioni sulle sottoscrizioni
-<a id="subscription-considerations" class="xliff"></a>  
+## <a name="subscription-considerations"></a>Considerazioni sulle sottoscrizioni  
   
 -   Utilizzare agenti indipendenti anziché agenti condivisi se si dispone di più pubblicazioni nello stesso server di pubblicazione, in base all'impostazione predefinita di Creazione guidata nuova pubblicazione.  
   
@@ -76,8 +71,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specificare le pianificazioni della sincronizzazione](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## Parametri dell'agente di distribuzione e dell'agente di lettura log
-<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parametri dell'agente di distribuzione e dell'agente di lettura log  
   
 -   Per risolvere i colli di bottiglia accidentali, usare il parametro **–MaxCmdsInTran** per l'agente di lettura log.  
   

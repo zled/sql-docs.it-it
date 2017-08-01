@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
 ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="change-the-word-breaker-used-for-us-english-and-uk-english" class="xliff"></a>
-
-# Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installa una nuova versione (versione 14.0.4999.1038) del word breaker e dello stemmer per la lingua inglese che sostituisce la versione precedente (versione 12.0.6828.0). Per informazioni sul comportamento modificato dei nuovi componenti, vedere [Differenze di comportamento nella ricerca full-text](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). In questo argomento viene descritto come passare dalla nuova versione di questi componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente. Per le installazioni di cluster, queste modifiche devono essere apportate in tutti i nodi primari e passivi.  
   
  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano word breaker diversi rappresentati da CLSID diversi per la lingua inglese Stati Uniti (LCID 1033) e per la lingua inglese Regno Unito (LCID 2057). In questa versione entrambi gli LCID utilizzano gli stessi componenti con gli stessi CLSID, come illustrato nella tabella seguente:  
@@ -37,13 +35,9 @@ ms.lasthandoff: 07/10/2017
   
  Per informazioni generali su word breaker e stemmer, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-<a id="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers" class="xliff"></a>
-
-## Passaggio dal word breaker per la lingua inglese corrente ai word breaker per la lingua inglese precedenti  
+## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>Passaggio dal word breaker per la lingua inglese corrente ai word breaker per la lingua inglese precedenti  
   
-<a id="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version" class="xliff"></a>
-
-#### Per passare dalla versione corrente del word breaker per la lingua inglese Stati Uniti alla versione precedente  
+#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Stati Uniti alla versione precedente  
   
 1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
@@ -65,9 +59,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version" class="xliff"></a>
-
-#### Per passare dalla versione corrente del word breaker per la lingua inglese Regno Unito alla versione precedente  
+#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Regno Unito alla versione precedente  
   
 1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
@@ -89,13 +81,9 @@ ms.lasthandoff: 07/10/2017
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker" class="xliff"></a>
-
-## Passaggio dai word breaker per la lingua inglese precedenti al word breaker per la lingua inglese corrente  
+## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>Passaggio dai word breaker per la lingua inglese precedenti al word breaker per la lingua inglese corrente  
   
-<a id="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version" class="xliff"></a>
-
-#### Per tornare alla versione corrente del word breaker per la lingua inglese Stati Uniti dalla versione precedente  
+#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Per tornare alla versione corrente del word breaker per la lingua inglese Stati Uniti dalla versione precedente  
   
 1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
@@ -117,9 +105,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version" class="xliff"></a>
-
-#### Per tornare alla versione corrente del word breaker per la lingua inglese Regno Unito dalla versione precedente  
+#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Per tornare alla versione corrente del word breaker per la lingua inglese Regno Unito dalla versione precedente  
   
 1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
@@ -141,9 +127,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Differenze di comportamento nella ricerca full-text](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
