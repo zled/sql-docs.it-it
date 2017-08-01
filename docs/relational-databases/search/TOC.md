@@ -1,113 +1,39 @@
-
-
 # [Panoramica](full-text-search.md)
 
-
-
 # Ricerca full-text
-
-
 ## [Introduzione alla ricerca full-text](get-started-with-full-text-search.md)  
-
-
 ## [Eseguire query con ricerca full-text](query-with-full-text-search.md)  
-
-
 ## [Cercare parole vicine a un'altra parola con NEAR](search-for-words-close-to-another-word-with-near.md)  
-
-
 ## [Limitare i risultati della ricerca mediante RANK](limit-search-results-with-rank.md)  
-
-
 ## [Migliorare le prestazioni delle query full-text](improve-the-performance-of-full-text-queries.md)  
-
-
 ## [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](search-document-properties-with-search-property-lists.md)  
-
-
 ## [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
-
-
 ## [Creare e gestire cataloghi full-text](create-and-manage-full-text-catalogs.md)  
-
-
 ## [Creare e gestire indici full-text](create-and-manage-full-text-indexes.md)  
-
-
 ## [Scegliere una lingua durante la creazione di un indice full-text](choose-a-language-when-creating-a-full-text-index.md)  
-
-
 ## [Popolare gli indici full-text](populate-full-text-indexes.md)  
-
-
 ## [Migliorare le prestazioni degli indici full-text](improve-the-performance-of-full-text-indexes.md)  
-
-
 ## [Risolvere i problemi nell'indicizzazione full-text](troubleshoot-full-text-indexing.md)  
-
-
 ## [Backup e ripristino di indici e cataloghi full-text](back-up-and-restore-full-text-catalogs-and-indexes.md)  
-
-
 ## [Configurare e gestire filtri per la ricerca](configure-and-manage-filters-for-search.md)  
-
-
 ## [Configurare e gestire word breaker e stemmer per la ricerca](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-
-
 ## [Visualizzare o modificare word breaker e filtri registrati](view-or-change-registered-filters-and-word-breakers.md)  
-
-
 ## [Modificare il word breaker usato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
-
-
 ## [Ripristinare i word breaker usati dalla ricerca alla versione precedente](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
-
-
 ## [Personalizzare il comportamento dei word breaker con un dizionario personalizzato](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
-
-
 ## [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
-
-
 ## [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md)  
-
-
 ## [Gestire e monitorare la ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md)  
-
-
 ## [Impostare l'account del servizio dell'Utilità di avvio del daemon di filtri full-text](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
-
-
 ## [Aggiornare la ricerca full-text](upgrade-full-text-search.md)  
-
-
 ## [DDL, funzioni, stored procedure e viste di ricerca full-text](full-text-search-ddl-functions-stored-procedures-and-views.md)  
-
-
 ## [Usare l'Indicizzazione guidata full-text](use-the-full-text-indexing-wizard.md)  
-
-
 ## [Funzionalità deprecate della ricerca full-text in SQL Server 2016](deprecated-full-text-search-features-in-sql-server-2016.md)  
 
-
-
 # [Ricerca semantica](semantic-search-sql-server.md)  
-
-
 ## [Installare e configurare la ricerca semantica](install-and-configure-semantic-search.md)  
-
-
 ## [Abilitare la ricerca semantica in tabelle e colonne](enable-semantic-search-on-tables-and-columns.md)  
-
-
 ## [Trovare frasi chiave nei documenti tramite la ricerca semantica](find-key-phrases-in-documents-with-semantic-search.md)  
-
-
 ## [Trovare documenti simili e correlati tramite la ricerca semantica](find-similar-and-related-documents-with-semantic-search.md)  
-
-
 ## [Gestire e monitorare la ricerca semantica](manage-and-monitor-semantic-search.md)  
-
-
 ## [DDL, funzioni, stored procedure e viste di ricerca semantica](semantic-search-ddl-functions-stored-procedures-and-views.md)  

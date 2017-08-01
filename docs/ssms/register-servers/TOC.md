@@ -2,8 +2,8 @@
 
 # Azioni
 ## [Registrare un server connesso (SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)  
-## [Creare un nuovo server registrato (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
-## [Visualizzare i server registrati in SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)  
+## [Creazione di un nuovo server registrato (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
+## [Visualizzazione della finestra Server registrati in SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)  
 ## [Rimuovere un server registrato (SQL Server Management Studio)](remove-a-registered-server-sql-server-management-studio.md)  
 ## [Modificare la registrazione di un server (SQL Server Management Studio)](change-a-server-s-registration-sql-server-management-studio.md)  
 ## [Connettersi a un server registrato (SQL Server Management Studio)](connect-to-a-registered-server-sql-server-management-studio.md)  

@@ -20,7 +20,7 @@
 ### [Lezione 2-5 - Altri modi per visualizzare la finestra del codice](lesson-2-5-other-ways-of-viewing-the-code-window.md)  
 ### [Lezione 2-6 - Generare lo script per una tabella](lesson-2-6-script-a-table.md)  
 
-## [Lezione 3: Uso di modelli, soluzioni e progetti script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+## [Lezione 3: Utilizzo di modelli, soluzioni e progetti script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
 ### [Lezione 3-1 - Creare script usando i modelli](lesson-3-1-create-scripts-using-templates.md)  
 ### [Lezione 3-2 - Creare modelli personalizzati](lesson-3-2-create-custom-templates.md)  
 ### [Lezione 3-3 - Salvare gli script come progetti o soluzioni](lesson-3-3-save-scripts-as-projects-or-solutions.md)  

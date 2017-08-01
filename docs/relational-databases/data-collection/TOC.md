@@ -2,7 +2,7 @@
 # [Gestire la raccolta di dati](manage-data-collection.md)  
 ## [Configurare il data warehouse di gestione (SQL Server Management Studio)](configure-the-management-data-warehouse-sql-server-management-studio.md)  
 ## [Configurare le proprietà di un agente di raccolta dati](configure-properties-of-a-data-collector.md)  
-## [Abilitare o disabilitare la raccolta dati](enable-or-disable-data-collection.md)  
+## [Abilitazione o disabilitazione della raccolta dati](enable-or-disable-data-collection.md)  
 ## [Avviare o arrestare un set di raccolta](start-or-stop-a-collection-set.md)  
 ## [Usare SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
 ## [Visualizzare i log dei set di raccolta (SQL Server Management Studio)](view-collection-set-logs-sql-server-management-studio.md)  
