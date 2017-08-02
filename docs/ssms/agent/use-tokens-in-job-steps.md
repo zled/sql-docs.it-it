@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
@@ -70,8 +70,8 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**(A-ERR)**|Numero di errore. Se il processo viene eseguito da un avviso, il valore del numero di errore sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-SEV)**|Gravità dell'errore. Se il processo viene eseguito da un avviso, il valore della gravità dell'errore sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-MSG)**|Testo del messaggio. Se il processo viene eseguito da un avviso, il valore del testo del messaggio sostituisce automaticamente il token nel passaggio di processo.|  
-|**(AGENT_JOB_NAME)**|Nome del processo.|  
-|**(AGENT_STEP_NAME)**|Nome del passaggio.|  
+|**(JOBNAME)**|Nome del processo.|  
+|**(STEPNAME)**|Nome del passaggio.|  
 |**(DATE)**|Data corrente nel formato AAAAMMGG.|  
 |**(INST)**|Nome dell'istanza. Il nome di un'istanza predefinita di questo token sarà MSSQLSERVER.|  
 |**(JOBID)**|ID del processo.|  

@@ -14,26 +14,25 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>Note sulla versione di SQL Server Management Studio
 Questo articolo illustra la versione disponibile di SQL Server Management Studio.  Questa versione di SQL Server Management Studio (SSMS) è un'installazione autonoma non compresa nel rilascio di SQL Server. L'obiettivo di Microsoft è aggiornarla di frequente con nuove funzionalità, correzioni e supporto alle nuove funzionalità di SQL Server e Database SQL di Azure.  
   
-Per installare la versione più recente di SQL Server Management Studio, vedere [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
+Per installare la versione più recente di SQL Server Management Studio, vedere [Scaricare SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
   
 Di seguito è possibile trovare un elenco di problemi e limitazioni relativi a questa versione di SQL Server Management Studio:  
 
-1. **Ripristino guidato Database genera un modello di percorso errato per percorso di file di database di destinazione** 
-    si tratta di un problema noto quando SSMS viene connesso a un server Linux. Anche se il percorso è errato o dispari, viene gestita correttamente sul lato server, ad esempio non vi è alcun problema funzionale.
+1. **La procedura guidata Ripristina database genera un modello di percorso errato per il percorso di file di database di destinazione** Si tratta di un problema noto quando SQL Server Management Studio viene connesso a un server Linux. Anche se il percorso sembra errato o strano, viene gestito correttamente sul lato server, ovvero non vi è alcun problema funzionale.
 
-2. **Problemi di file del Browser**
-    - Quando si utilizza un'istanza basati su Windows di SQL Server 2017 CTP 2.0, il browser di file dell'interfaccia utente in SQL Server Management Studio potrebbe non riuscire aprire, se il server ha un'unità floppy vuota o un disco fisso protette da Bitlocker installato. 
-    - Interfaccia utente del browser di file non supporta più versioni di SQL Server 2017 prima della versione CTP 2.0.
+2. **Problemi del visualizzatore di file**
+    - Quando si usa un'istanza basata su Windows di SQL Server 2017 CTP 2.0, l'apertura dell'interfaccia utente del visualizzatore di file in SQL Server Management Studio potrebbe non riuscire se nel server sono installati un'unità disco floppy vuota oppure un disco fisso protetto da Bitlocker. 
+    - L'interfaccia utente del visualizzatore di file non supporta più versioni di SQL Server 2017 precedenti a CTP 2.0.
     
 
 
@@ -47,7 +46,7 @@ Di seguito è possibile trovare un elenco di problemi e limitazioni relativi a q
     
     In alternativa, è possibile usare altre forme di autenticazione disponibili in SSMS, come l'Autenticazione della password di Active Directory, l'Autenticazione integrata di Active Directory o l'Autenticazione di SQL Server.
 
-5. **SSMS può connettersi solo a istanze di SQL Server 2016 Integrated Services (SSIS 2016).**  
+5. **SSMS 17.x può connettersi solo a istanze di SQL Server 2017 Integrated Services (SSIS 2017).**  
     Esiste un limite noto di compatibilità con SQL Server Integration Services che impedisce la connessione a versioni precedenti.
     
     Come soluzione alternativa a questo problema, è possibile connettersi all'istanza di SQL Server Integration Service tramite la versione di [SSMS allineata con l'istanza di SSIS.](../ssms/previous-sql-server-management-studio-releases.md) 
@@ -67,7 +66,7 @@ In alcuni ambienti quando si fa clic su ? o si preme F1 un messaggio indica che 
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazione su SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Scaricare SQL Server Management Studio &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+[Scaricare SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [Versioni precedenti di SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
 
   
