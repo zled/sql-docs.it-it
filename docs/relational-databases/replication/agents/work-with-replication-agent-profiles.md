@@ -19,11 +19,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utilizzo dei profili agenti di replica
@@ -234,55 +234,55 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Create_RMO"></a> Per creare un nuovo profilo agente  
   
-1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.AgentProfile>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.AgentProfile> .  
   
 3.  Impostare le proprietà indicate di seguito nell'oggetto.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A>: nome del profilo.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> : nome del profilo.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A>: valore di <xref:Microsoft.SqlServer.Replication.AgentType> che specifica il tipo di agente di replica per il quale viene creato il profilo.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> : valore di <xref:Microsoft.SqlServer.Replication.AgentType> che specifica il tipo di agente di replica per il quale viene creato il profilo.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>: oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> : oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
-    -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A>: descrizione del profilo.  
+    -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> : descrizione del profilo.  
   
-    -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A>: impostare questa proprietà su **true** se tutti i processi del nuovo agente per <xref:Microsoft.SqlServer.Replication.AgentType> useranno questo profilo per impostazione predefinita.  
+    -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> : impostare questa proprietà su **true** se tutti i processi del nuovo agente per <xref:Microsoft.SqlServer.Replication.AgentType> utilizzeranno questo profilo per impostazione predefinita.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> per creare il profilo nel server.  
   
 5.  Una volta reso disponibile il profilo nel server, è possibile personalizzarlo aggiungendo, rimuovendo o modificando i valori dei parametri dell'agente di replica.  
   
-6.  Per assegnare il profilo a un processo dell'agente di replica esistente, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A>. Passare il nome del database di distribuzione per *distributionDBName* e l'ID del processo per *agentID*.  
+6.  Per assegnare il profilo a un processo dell'agente di replica esistente, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> . Passare il nome del database di distribuzione per *distributionDBName* e l'ID del processo per *agentID*.  
   
 ###  <a name="Modify_RMO"></a> Per modificare un profilo agente esistente  
   
-1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce **false**, verificare che il server di distribuzione esista.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se il metodo restituisce **false**, verificare che il server di distribuzione esista.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A>. Passare un valore di <xref:Microsoft.SqlServer.Replication.AgentType> per limitare i profili restituiti a un tipo specifico di agente di replica.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> . Passare un valore di <xref:Microsoft.SqlServer.Replication.AgentType> per limitare i profili restituiti a un tipo specifico di agente di replica.  
   
-5.  Ottenere l'oggetto <xref:Microsoft.SqlServer.Replication.AgentProfile> desiderato dall'oggetto <xref:System.Collections.ArrayList>, dove la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> dell'oggetto corrisponde al nome del profilo.  
+5.  Ottenere l'oggetto <xref:Microsoft.SqlServer.Replication.AgentProfile> desiderato dall'oggetto <xref:System.Collections.ArrayList>restituito, dove la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> dell'oggetto corrisponde al nome del profilo.  
   
-6.  Chiamare uno dei metodi di <xref:Microsoft.SqlServer.Replication.AgentProfile> indicati di seguito per modificare il profilo:  
+6.  Chiamare uno dei metodi di <xref:Microsoft.SqlServer.Replication.AgentProfile> indicati di seguito per modificare il profilo.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A>: aggiunge un parametro supportato al profilo, dove *name* è il nome del parametro dell'agente di replica e *value* è il valore specificato. Per enumerare tutti i parametri dell'agente supportati per un tipo di agente specificato, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A>. Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> che rappresentano tutti i parametri supportati.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> : aggiunge un parametro supportato al profilo, dove *name* è il nome del parametro dell'agente di replica e *value* è il valore specificato. Per enumerare tutti i parametri dell'agente supportati per un tipo di agente specificato, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> . Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> che rappresentano tutti i parametri supportati.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A>: rimuove un parametro esistente dal profilo, dove *name* è il nome del parametro dell'agente di replica. Per enumerare tutti i parametri dell'agente corrente definiti per il profilo, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A>. Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> che rappresentano il parametro esistente per il profilo.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> : rimuove un parametro esistente dal profilo, dove *name* è il nome del parametro dell'agente di replica. Per enumerare tutti i parametri dell'agente corrente definiti per il profilo, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> . Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> che rappresentano il parametro esistente per il profilo.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A>: modifica l'impostazione di un parametro esistente nel profilo, dove *name* è il nome del parametro dell'agente e *newValue* è il valore nel quale viene modificato il parametro. Per enumerare tutti i parametri dell'agente corrente definiti per il profilo, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A>. Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> che rappresentano il parametro esistente per il profilo. Per enumerare tutte le impostazioni del parametro dell'agente supportate, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A>. Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> che rappresentano i valori supportati per tutti i parametri.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> : modifica l'impostazione di un parametro esistente nel profilo, dove *name* è il nome del parametro dell'agente e *newValue* è il valore nel quale viene modificato il parametro. Per enumerare tutti i parametri dell'agente corrente definiti per il profilo, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> . Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> che rappresentano il parametro esistente per il profilo. Per enumerare tutte le impostazioni del parametro dell'agente supportate, chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> . Questo metodo restituisce una classe <xref:System.Collections.ArrayList> di oggetti <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> che rappresentano i valori supportati per tutti i parametri.  
   
 ###  <a name="Delete_RMO"></a> Per eliminare un profilo agente  
   
-1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al database di distribuzione tramite un'istanza della classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.AgentProfile>. Impostare il nome del profilo per la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> e l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> reato nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.AgentProfile> . Impostare il nome del profilo per la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> e l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce **false**, il nome specificato non è corretto o il profilo non esiste nel server.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se il metodo restituisce **false**, il nome specificato non è corretto o il profilo non esiste nel server.  
   
 4.  Verificare che la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> sia impostata su <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, in modo da indicare un profilo del cliente. Non è necessario rimuovere un profilo con valore <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> per <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>.  
   

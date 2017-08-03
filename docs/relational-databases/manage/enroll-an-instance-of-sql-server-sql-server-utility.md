@@ -24,11 +24,11 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
@@ -182,7 +182,7 @@ ms.lasthandoff: 06/22/2017
   
  Dopo avere completato la Registrazione guidata istanza, fare clic sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** in SSMS. Le istanze registrate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono visualizzate nella visualizzazione elenco nel riquadro **Contenuto Esplora utilità** .  
   
- Il processo di raccolta dati inizia immediatamente, ma possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità. La raccolta dati continua una volta ogni 15 minuti. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità**, scegliere quindi **Aggiorna[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o fare clic con il pulsante destro del mouse sul nome dell'istanza di**  nella visualizzazione elenco, quindi scegliere **Aggiorna**.  
+ Il processo di raccolta dati inizia immediatamente, ma possono essere necessari fino a 30 minuti affinché i dati vengano visualizzati nel dashboard e i punti di visualizzazione nel riquadro del contenuto Esplora utilità. La raccolta dati continua una volta ogni 15 minuti. Per aggiornare i dati, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità**, scegliere quindi** Aggiorna[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o fare clic con il pulsante destro del mouse sul nome dell'istanza di**  nella visualizzazione elenco, quindi scegliere **Aggiorna**.  
   
  Per rimuovere le istanze gestite da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** per popolare la visualizzazione elenco di istanze gestite, fare clic con il pulsante destro del mouse sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella visualizzazione elenco in **Contenuto Esplora utilità** , quindi scegliere **Rendi istanza non gestita**.  
   

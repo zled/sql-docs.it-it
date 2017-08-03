@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Visualizzazione e modifica delle proprietà del server di pubblicazione e del database di distribuzione
@@ -130,23 +130,23 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Per visualizzare e modificare le proprietà del database di distribuzione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
   
-3.  (Facoltativo) Controllare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> per verificare che il server attualmente connesso sia un database di distribuzione.  
+3.  (Facoltativo) Controllare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> per verificare che il server attualmente connesso sia un server di distribuzione.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> per ottenere le proprietà dal server.  
   
-5.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà del database di distribuzione che è possibile impostare sull'oggetto <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+5.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una o più proprietà del server di distribuzione che è possibile impostare sull'oggetto <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
 6.  (Facoltativo) Se la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> sull'oggetto <xref:Microsoft.SqlServer.Replication.ReplicationServer> è impostata su **true**, chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per eseguire il commit delle modifiche nel server.  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>Per visualizzare e modificare le proprietà del database di distribuzione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Specificare la proprietà relativa al nome e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Specificare la proprietà relativa al nome e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dal server. Se il metodo restituisce **false**, il database con il nome specificato non esiste nel server.  
   
@@ -156,9 +156,9 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-publisher-properties"></a>Per visualizzare e modificare le proprietà del server di pubblicazione  
   
-1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
   
 3.  (Facoltativo) Per modificare le proprietà, specificare un nuovo valore per una delle proprietà dell'oggetto <xref:Microsoft.SqlServer.Replication.DistributionPublisher> che è possibile impostare.  
   
@@ -166,30 +166,30 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>Per modificare la password per la connessione amministrativa dal server di pubblicazione al database di distribuzione  
   
-1.  Creare una connessione al database di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
 3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> per recuperare le proprietà dell'oggetto.  
   
-5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Passare il nuovo valore della password per il parametro *password* .  
+5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passare il nuovo valore della password per il parametro *password* .  
   
     > [!IMPORTANT]  
     >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](http://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Facoltativo) Eseguire i passaggi seguenti per modificare la password in ogni server di pubblicazione remoto che utilizza questo server di distribuzione:  
   
-    1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+    1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+    2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
     3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 6a.  
   
     4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> per recuperare le proprietà dell'oggetto.  
   
-    5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Passare il nuovo valore della password indicato nel passaggio 5 per il parametro *password* .  
+    5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passare il nuovo valore della password indicato nel passaggio 5 per il parametro *password* .  
   
 ###  <a name="PShellExample"></a> Esempio (RMO)  
  In questo esempio viene illustrato come modificare le proprietà del database di distribuzione e del database di distribuzione.  

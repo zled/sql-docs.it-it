@@ -23,11 +23,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replica di tipo merge avanzata - Rilevamento e risoluzione dei conflitti
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Un sistema di risoluzione personalizzato basato sul modello COM  
   
-     La replica di tipo merge utilizza un'API per la creazione di sistemi di risoluzione come oggetti COM in linguaggi quali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Per altre informazioni, vedere [Sistemi di risoluzione personalizzati basati su COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replica di tipo merge utilizza un'API per la creazione di sistemi di risoluzione come oggetti COM in linguaggi quali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Per altre informazioni, vedere [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un sistema di risoluzione basato sul modello COM implementato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 -   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica e programmazione di Replication Management Objects (RMO): [creare una sottoscrizione Pull](../../../relational-databases/replication/create-a-pull-subscription.md) e [creare una sottoscrizione Push](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Sistema di risoluzione interattivo  
- La replica prevede un'interfaccia utente del sistema di risoluzione interattivo che può essere utilizzata insieme al sistema di risoluzione dei conflitti predefinito basato sulla priorità o a un sistema di risoluzione dei conflitti di articolo. Quando si esegue la sincronizzazione su richiesta tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, il sistema di risoluzione interattivo visualizza i dati del conflitto in fase di esecuzione e consente di selezionare il modo in cui risolvere i conflitti. Per ulteriori informazioni sull'attivazione della risoluzione interattiva e sull'avvio del sistema di risoluzione interattivo, vedere [Risoluzione dei conflitti interattiva](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ La replica prevede un'interfaccia utente del sistema di risoluzione interattivo che può essere utilizzata insieme al sistema di risoluzione dei conflitti predefinito basato sulla priorità o a un sistema di risoluzione dei conflitti di articolo. Quando si esegue la sincronizzazione su richiesta tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, il sistema di risoluzione interattivo visualizza i dati del conflitto in fase di esecuzione e consente di selezionare il modo in cui risolvere i conflitti. Per ulteriori informazioni sull'attivazione della risoluzione interattiva e sull'avvio del sistema di risoluzione interattivo, vedere [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="viewing-conflicts"></a>Visualizzazione dei conflitti  
  Il modo più diretto per visualizzare i conflitti consiste nell'utilizzare Visualizzatore conflitti di replica, disponibile in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (anche in[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono incluse stored procedure per l'esecuzione di query nelle tabelle dei conflitti). Il Visualizzatore conflitti e il sistema di risoluzione interattivo sono strumenti simili, ma il sistema di risoluzione interattivo consente di risolvere i conflitti al momento della sincronizzazione, mentre il Visualizzatore conflitti è concepito per visualizzare i conflitti dopo la risoluzione. Se i metadati del conflitto sono ancora disponibili nelle tabelle di sistema (vengono conservati per 14 giorni per impostazione predefinita), è possibile sovrascrivere i risultati della risoluzione del conflitto nel Visualizzatore conflitti. Tuttavia, se è richiesto un intervento diretto, è consigliabile utilizzare il sistema di risoluzione interattivo.  
