@@ -1,22 +1,27 @@
 ---
-title: "Propriet&#224; personalizzate del file non elaborato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà personalizzate del File non elaborato | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a364ae62ebc8823f9d57fb44ef99b7b14469c608
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriet&#224; personalizzate del file non elaborato
+# <a name="raw-file-custom-properties"></a>Proprietà personalizzate del file non elaborato
   **Proprietà personalizzate delle origini**  
   
  L'origine file non elaborato include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -51,7 +56,7 @@ caps.handback.revision: 6
   
  Per altre informazioni, vedere [Destinazione file non elaborato](../../integration-services/data-flow/raw-file-destination.md).  
   
-## Vedere anche  
- [Proprietà comuni](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

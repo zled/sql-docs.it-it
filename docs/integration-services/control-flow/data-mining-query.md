@@ -1,45 +1,50 @@
 ---
-title: "Query di data mining | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataminingquery.f1"
+title: Query di Data Mining | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Query di data mining
+# <a name="data-mining-query"></a>Query di data mining
   Il riquadro di progettazione contiene il generatore delle query di stima di data mining che consente di compilare le query delle stime di data mining. È possibile progettare query di stima in base a tabelle di input o query di stima singleton. Passare alla visualizzazione dei risultati per eseguire la query e visualizzare i risultati. Nella visualizzazione Query viene visualizzata la query DMX (Data Mining Extensions) creata dal generatore delle query di stima.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  Pulsante Cambia visualizzazione  
  Fare clic su un'icona per alternare il riquadro di progettazione al riquadro Query. Per impostazione predefinita è aperto il riquadro di progettazione.  
   
- Per passare al riquadro di progettazione, fare clic sull'icona ![Icona Progettazione](../../integration-services/control-flow/media/ssis-designicon.png "Icona Progettazione").  
+ Per passare al riquadro di progettazione, scegliere il ![icona progettazione](../../integration-services/control-flow/media/ssis-designicon.gif "icona progettazione") icona.  
   
- Per passare al riquadro Query, fare clic sull'icona ![Icona SQL](../../integration-services/control-flow/media/ssis-queryicon.png "Icona SQL").  
+ Per passare al riquadro query, scegliere il ![icona SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "icona SQL") icona.  
   
  **Modello di data mining**  
  Consente di visualizzare il modello di data mining selezionato sul quale si desidera basare le stime.  
   
  **Seleziona modello**  
- Consente di aprire la finestra di dialogo **Seleziona modello di data mining**.  
+ Consente di aprire la finestra di dialogo **Seleziona modello di data mining** .  
   
  **Colonne di input**  
  Consente di visualizzare le colonne di input selezionate per la generazione delle stime.  
   
  **Origine**  
- Consente di selezionare l'origine contenente il campo che verrà utilizzato per la colonna nell'elenco a discesa. È possibile usare il modello di data mining selezionato nella tabella **Modello di data mining**, la tabella o le tabelle di input selezionate nella tabella **Seleziona tabella/e di input**, una funzione di stima o un'espressione personalizzata.  
+ Consente di selezionare l'origine contenente il campo che verrà utilizzato per la colonna nell'elenco a discesa. È possibile usare il modello di data mining selezionato nella tabella **Modello di data mining** , la tabella o le tabelle di input selezionate nella tabella **Seleziona tabella/e di input** , una funzione di stima o un'espressione personalizzata.  
   
  È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
@@ -61,8 +66,8 @@ caps.handback.revision: 23
  **Criteri/Argomento**  
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Statement%20Reference.md)  
+ [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

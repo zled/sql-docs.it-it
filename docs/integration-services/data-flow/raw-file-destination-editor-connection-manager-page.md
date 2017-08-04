@@ -1,24 +1,29 @@
 ---
-title: "Editor destinazione file non elaborato (pagina Gestione connessione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+title: Editor destinazione File non elaborato (pagina Gestione connessione) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f27180b2dca144905af1a5346d3d8747aa8248a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor destinazione file non elaborato (pagina Gestione connessione)
+# <a name="raw-file-destination-editor-connection-manager-page"></a>Editor destinazione file non elaborato (pagina Gestione connessione)
   Utilizzare l'Editor destinazione file non elaborato per configurare la destinazione file non elaborato in modo da scrivere dati non elaborati in un file.  
   
  **Per saperne di più**  
@@ -55,12 +60,12 @@ caps.handback.revision: 8
  Selezionare uno o più colonne di input per scrivere nel file non elaborato.  
   
  **Colonna di input**  
- Una colonna di input viene aggiunta automaticamente a questa tabella quando la si seleziona in **Colonne di input disponibili** o è possibile selezionare direttamente la colonna di input in questa tabella.  
+ Una colonna di input viene aggiunta automaticamente a questa tabella quando la si seleziona in **Colonne di input disponibili**o è possibile selezionare direttamente la colonna di input in questa tabella.  
   
  **Alias di output**  
  Specificare un nome alternativo da utilizzare per la colonna di output.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Destinazione file non elaborato](../../integration-services/data-flow/raw-file-destination.md)  
   
   

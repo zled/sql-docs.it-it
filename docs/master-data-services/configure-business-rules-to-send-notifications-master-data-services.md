@@ -1,33 +1,38 @@
 ---
-title: "Configurare regole business per l&#39;invio di notifiche (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regole business [Master Data Services], configurazione di notifiche"
-  - "posta elettronica [Master Data Services], configurazione di regole business"
-  - "notifiche [Master Data Services], configurazione di regole business"
+title: Configurare le regole di Business per l'invio di notifiche (Master Data Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], configuring notifications
+- e-mail [Master Data Services], configuring business rules
+- notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29ff569439e245100befb8e0a515a128aac91f79
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurare regole business per l&#39;invio di notifiche (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile configurare le regole di business per inviare notifiche agli utenti relative alle modifiche dei valori di attributo.  
+# <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurare regole business per l'invio di notifiche (Master Data Services)
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile configurare le regole di business per inviare notifiche agli utenti relative alle modifiche dei valori di attributo.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere alle aree funzionali **Amministrazione sistema** e **Autorizzazioni utenti e gruppi**. Se non si dispone dell'autorizzazione per l'area funzionale **Autorizzazioni utenti e gruppi**, non è possibile visualizzare l'elenco di utenti e gruppi cui inviare notifiche.  
+-   È necessario disporre dell'autorizzazione per accedere alle aree funzionali **Amministrazione sistema** e **Autorizzazioni utenti e gruppi** . Se non si dispone dell'autorizzazione per l'area funzionale **Autorizzazioni utenti e gruppi** , non è possibile visualizzare l'elenco di utenti e gruppi cui inviare notifiche.  
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -35,15 +40,15 @@ caps.handback.revision: 10
   
 -   È necessario che l'utente o il gruppo che riceve la notifica disponga almeno dell'autorizzazione **Sola lettura** per l'attributo la cui convalida ha esito negativo. Gli utenti o gruppi a cui è stata negata in modo esplicito o implicito l'autorizzazione all'attributo riceveranno la posta elettronica ma non potranno accedere all'attributo in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
--   Se i messaggi di posta elettronica vengono inviati a un gruppo, verranno ricevuti dai soli membri del gruppo che hanno effettuato l'accesso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+-   Se i messaggi di posta elettronica vengono inviati a un gruppo, verranno ricevuti dai soli membri del gruppo che hanno effettuato l'accesso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
-### Per configurare le regole business per l'invio di notifiche  
+### <a name="to-configure-business-rules-to-send-notifications"></a>Per configurare le regole business per l'invio di notifiche  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
 2.  Dalla barra dei menu scegliere **Gestisci** e fare clic su **Regole business**.  
   
-3.  Nella pagina **Regole business** selezionare un modello nell'elenco **Modello**.  
+3.  Nella pagina **Regole business** selezionare un modello nell'elenco **Modello** .  
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 10
   
 10. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore nella colonna **Stato della regola di business** diventa **Attivo** e la colonna **Notifica** mostra l'utente o il gruppo selezionato a cui inviare la notifica.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
     -   [Configurare notifiche di posta elettronica &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [Configurare notifiche di posta elettronica &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

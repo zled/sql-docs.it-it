@@ -1,22 +1,27 @@
 ---
-title: "Log richieste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Log richieste | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 754f96b5e43b26d59bb1e42be6dd2af008c28dd2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Log richieste
+# <a name="request-log"></a>Log richieste
   Usare la finestra di dialogo **Log richieste** per visualizzare gli eventi registrati durante la richiesta fatta al sistema SAP Netweaver BW per i dati di esempio. Queste informazioni possono essere utili se è necessario risolvere i problemi relativi alla configurazione dell'origine SAP BW.  
   
  Per altre informazioni sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
@@ -35,12 +40,12 @@ caps.handback.revision: 10
   
 3.  Nell' **Editor origine SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-4.  Dopo aver configurato l'origine SAP BW, fare clic su **Anteprima** per visualizzare gli eventi in anteprima nella finestra di dialogo **Log richieste**.  
+4.  Dopo aver configurato l'origine SAP BW, fare clic su **Anteprima** per visualizzare gli eventi in anteprima nella finestra di dialogo **Log richieste** .  
   
     > [!NOTE]  
-    >  Quando si fa clic su **Anteprima**, inoltre, viene aperta la finestra di dialogo **Anteprima**. Per altre informazioni su questa finestra di dialogo, vedere [Anteprima](../../integration-services/data-flow/preview.md).  
+    >  Quando si fa clic su **Anteprima** , inoltre, viene aperta la finestra di dialogo **Anteprima** . Per altre informazioni su questa finestra di dialogo, vedere [Anteprima](../../integration-services/data-flow/preview.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Time**  
  Visualizza l'ora di registrazione dell'evento.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 10
  **Message**  
  Visualizza il testo del messaggio associato all'evento registrato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
