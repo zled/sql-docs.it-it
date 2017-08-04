@@ -1,31 +1,36 @@
 ---
-title: "Editor trasformazione Ordinamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sorttransformation.f1"
-helpviewer_keywords: 
-  - "Editor trasformazione Ordinamento"
+title: Editor trasformazione ordinamento | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sorttransformation.f1
+helpviewer_keywords:
+- Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5e2f2d7e377495c658ec0caaaf325bcc8550817
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor trasformazione Ordinamento
+# <a name="sort-transformation-editor"></a>Editor trasformazione Ordinamento
   Utilizzare la finestra di dialogo **Editor trasformazione Ordinamento** per selezionare le colonne da ordinare, impostare il tipo di ordinamento e specificare se rimuovere i duplicati.  
   
  Per ulteriori informazioni sulla trasformazione Ordinamento, vedere [Sort Transformation](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Colonne di input disponibili**  
  Consente di specificare le colonne da ordinare utilizzando le caselle di controllo.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 25
  **Rimuovi righe con valori di ordinamento duplicati**  
  Indica se la trasformazione copia le righe duplicate nell'output della trasformazione o se invece crea un'unica voce per tutti i duplicati in base alla stringa specificata nelle opzioni di confronto.  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

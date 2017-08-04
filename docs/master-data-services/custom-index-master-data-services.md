@@ -1,25 +1,30 @@
 ---
-title: "Indice personalizzato (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Indice personalizzato (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Indice personalizzato (Master Data Services)
+# <a name="custom-index-master-data-services"></a>Indice personalizzato (Master Data Services)
   Gli indici personalizzati consentono di creare un indice non cluster in un attributo (indice singolo) o in un elenco di attributi (indice composto) e in un'entità. In genere gli indici migliorano le prestazioni del processo di esecuzione delle query. Per altre informazioni sugli indici di SQL Server, vedere [Indici](../relational-databases/indexes/indexes.md).  
   
-## Tipi di indici  
+## <a name="type-of-indexes"></a>Tipi di indici  
  È possibile creare i seguenti tipi di indici personalizzati per ogni entità.  
   
 -   Indice univoco  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  Un indice univoco garantisce che la colonna indicizzata non contenga valori duplicati. Per gli indici univoci composti, l'indice garantisce che ogni combinazione di valori nell'elenco di attributi selezionati sia univoca. Non è possibile creare un indice univoco se sono presenti valori duplicati per gli attributi selezionati.  
   
-## Regole  
+## <a name="rules"></a>Regole  
  Le regole seguenti si applicano agli indici personalizzati, sia univoci che non univoci.  
   
 -   Per creare un indice personalizzato, assicurarsi di selezionare almeno un attributo.  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   Non è possibile modificare il tipo di attributo incluso in un indice personalizzato.  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

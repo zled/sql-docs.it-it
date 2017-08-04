@@ -1,27 +1,32 @@
 ---
-title: "Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Filtrare la finestra di dialogo (componente aggiuntivo MDS per Excel) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel)
-  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] usare la finestra di dialogo **Filtro** per limitare l'elenco di dati gestiti da MDS prima di caricarlo in Excel.  
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel)
+  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]usare la finestra di dialogo **Filtro** per limitare l'elenco di dati gestiti da MDS prima di caricarlo in Excel.  
   
- Questa finestra di dialogo contiene tre sezioni: **Colonne**, **Righe** e **Riepilogo**.  
+ Questa finestra di dialogo contiene tre sezioni: **Colonne**, **Righe**e **Riepilogo**.  
   
-## Colonne  
+## <a name="columns"></a>Colonne  
  Usare la sezione **Colonne** per determinare quali attributi (colonne) visualizzare in Excel.  
   
 |Nome del controllo|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 |Cancella tutto|Fare clic per cancellare gli attributi selezionati visualizzati nell'elenco.<br /><br /> Non è possibile deselezionare **Nome** e **Codice**.|  
 |Freccia in giù, freccia in su|Consente di spostare l'attributo selezionato verso l'alto e verso il basso nell'elenco. L'ordine dall'alto verso il basso corrisponde all'ordine da sinistra a destra con cui le colonne vengono visualizzate nel foglio di lavoro.|  
   
-## Righe  
+## <a name="rows"></a>Righe  
  Usare la sezione **Righe** per determinare i membri (righe) da visualizzare in Excel. È possibile eseguire questa operazione definendo i criteri per filtrare le righe che saranno visualizzate.  
   
 |Nome del controllo|Description|  
@@ -42,11 +47,11 @@ caps.handback.revision: 8
 |Operatore|Visualizza gli operatori che corrispondono al tipo di attributo selezionato. Per altre informazioni, vedere [Operatori di filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Criteri|I criteri in base ai quali si desidera filtrare.|  
 |Aggiornare il riepilogo|Quando si usano set di dati di grandi dimensioni, fare clic per aggiornare la sezione **Riepilogo** con i dettagli sulla quantità di dati che verrà caricata.|  
-|Aggiungi|Quando si fa clic su un attributo nella sezione **Colonne**, quindi su **Aggiungi**, un attributo viene aggiunto all'elenco di filtri.|  
+|Aggiungi|Quando si fa clic su un attributo nella sezione **Colonne** , quindi su **Aggiungi**, un attributo viene aggiunto all'elenco di filtri.|  
 |Rimuovi tutto|Rimuove tutti i filtri dall'elenco.|  
 |Rimuovi|Rimuove il filtro selezionato dall'elenco.|  
   
-## Riepilogo  
+## <a name="summary"></a>Riepilogo  
  Usare la sezione **Riepilogo** per visualizzare i dettagli sulla quantità di dati che verrà caricata, prima di caricarla.  
   
 |Nome del controllo|Description|  
@@ -54,10 +59,10 @@ caps.handback.revision: 8
 |Modello|Il nome del modello.|  
 |Version|Il nome della versione.|  
 |Entità|Il nome dell'entità.|  
-|Righe|Il numero di righe che verrà caricato in Excel, in base ai filtri applicati nella sezione **Righe**.|  
-|Colonne|Il numero di colonne che verrà caricato in Excel, in base agli attributi selezionati nella sezione **Colonne**.|  
+|Righe|Il numero di righe che verrà caricato in Excel, in base ai filtri applicati nella sezione **Righe** .|  
+|Colonne|Il numero di colonne che verrà caricato in Excel, in base agli attributi selezionati nella sezione **Colonne** .|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtrare i dati prima dell'esportazione &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

@@ -1,49 +1,54 @@
 ---
-title: "Filtrare gli eventi in base all&#39;ora di inizio (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ore di inizio di eventi [SQL Server]"
-  - "filtri [SQL Server], tracce"
-  - "tracce [SQL Server], filtri"
-  - "tracce [SQL Server], eventi"
+title: Filtrare eventi in base all'ora di inizio (SQL Server Profiler) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event start times [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
+- traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c44076c02f6ecc2182927e4b46749424255a03d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Filtrare gli eventi in base all&#39;ora di inizio (SQL Server Profiler)
+# <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>Filtrare gli eventi in base all'ora di inizio (SQL Server Profiler)
   In questo argomento viene descritta la procedura per filtrare gli eventi di traccia in base all'ora di inizio mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Per filtrare un evento in base all'ora di inizio  
+### <a name="to-filter-an-event-based-on-the-event-start-time"></a>Per filtrare un evento in base all'ora di inizio  
   
-1.  Scegliere **Nuova traccia** dal menu **File** e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Verrà visualizzata la finestra di dialogo **Proprietà traccia**.  
   
     > [!NOTE]  
-    >  Se l'opzione **Avvia traccia non appena viene stabilita una connessione** è selezionata, la finestra di dialogo **Proprietà traccia** non viene visualizzata e viene invece avviata la traccia. Per disabilitare questa impostazione, scegliere **Opzioni**dal menu **Strumenti**e deselezionare la casella di controllo **Avvia traccia non appena viene stabilita una connessione** .  
+    >  Se l'opzione **Avvia traccia non appena viene stabilita una connessione**è selezionata, la finestra di dialogo **Proprietà traccia**non viene visualizzata e viene invece avviata la traccia. Per disabilitare questa impostazione, scegliere **Opzioni**dal menu **Strumenti**e deselezionare la casella di controllo **Avvia traccia non appena viene stabilita una connessione** .  
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
-3.  Nell'elenco dei nomi di **modello** selezionare un modello di traccia.  
+3.  Nell'elenco dei nomi di **modello**selezionare un modello di traccia.  
   
 4.  Facoltativamente, specificare una destinazione per i risultati della traccia.  
   
-5.  Nella scheda **Selezione eventi** fare clic sull'intestazione di colonna **StartTime**. È inoltre possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e quindi scegliere **Modifica filtro colonne** per avviare la finestra di dialogo **Modifica filtro**.  
+5.  Nella scheda **Selezione eventi**fare clic sull'intestazione di colonna **StartTime** . È inoltre possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e quindi scegliere **Modifica filtro colonne** per avviare la finestra di dialogo **Modifica filtro** .  
   
-6.  Espandere **Maggiore di** o **Minore di** e quindi immettere un valore **datetime** nel campo visualizzato sotto l'operatore di confronto.  
+6.  Espandere **Maggiore di** o **Minore di**e quindi immettere un valore **datetime** nel campo visualizzato sotto l'operatore di confronto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

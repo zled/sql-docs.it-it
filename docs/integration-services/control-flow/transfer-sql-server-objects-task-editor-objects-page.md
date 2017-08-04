@@ -1,40 +1,45 @@
 ---
-title: "Editor attivit&#224; Trasferisci oggetti di SQL Server (pagina Oggetti) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
-  - "Editor attività Trasferisci oggetti di SQL Server"
+title: "SQL Server Editor attività Trasferisci oggetti (pagina oggetti) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjects.objects.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67557562dd3f2efbe3c40673a835dd557f617604
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor attivit&#224; Trasferisci oggetti di SQL Server (pagina Oggetti)
+# <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor attività Trasferisci oggetti di SQL Server (pagina Oggetti)
   Utilizzare la pagina **Oggetti** della finestra di dialogo **Editor attività Trasferisci oggetti di SQL Server** per impostare le proprietà relative alla copia di uno o più oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra. Tabelle, viste, stored procedure e funzioni definite dall'utente rappresentano solo alcuni esempi di oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile copiare. Per ulteriori informazioni su questa attività, vedere [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md).  
   
 > [!NOTE]  
 >  L'utente che crea l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni sufficienti per gli oggetti del server di origine per selezionarli e copiarli, nonché dell'autorizzazione per l'accesso al database del server di destinazione in cui gli oggetti verranno trasferiti.  
   
-## Opzioni statiche  
+## <a name="static-options"></a>Opzioni statiche  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di origine.  
   
  **SourceDatabase**  
  Consente di selezionare un database nel server di origine dal quale verranno copiati gli oggetti.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di destinazione.  
   
  **DestinationDatabase**  
  Consente di selezionare un database nel server di destinazione nel quale verranno copiati gli oggetti.  
@@ -60,7 +65,7 @@ caps.handback.revision: 30
 >  L'opzione **ExistingData** è disponibile solo se **CopyData** è impostata su **True**.  
   
  **CopySchema**  
- Consente di indicare se lo schema deve essere copiato durante l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Consente di indicare se lo schema deve essere copiato durante l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  **CopySchema** è disponibile solo per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -126,62 +131,62 @@ caps.handback.revision: 30
  **GenerateScriptsInUnicode**  
  Consente di indicare se gli script di trasferimento generati sono in formato Unicode.  
   
-## Opzioni dinamiche  
+## <a name="dynamic-options"></a>Opzioni dinamiche  
   
-### CopyAllObjects = False  
+### <a name="copyallobjects--false"></a>CopyAllObjects = False  
  **CopyAllTables**  
  Consente di indicare se, durante l'attività, verranno copiate tutte le tabelle nel database di origine specificato o solo le tabelle selezionate.  
   
  **TablesList**  
- Fare clic per aprire la finestra di dialogo **Selezione tabelle**.  
+ Fare clic per aprire la finestra di dialogo **Selezione tabelle** .  
   
  **CopyAllViews**  
  Consente di indicare se, durante l'attività, verranno copiate tutte le viste nel database di origine specificato o solo quelle selezionate.  
   
  **ViewsList**  
- Fare clic per aprire la finestra di dialogo **Selezione viste**.  
+ Fare clic per aprire la finestra di dialogo **Selezione viste** .  
   
  **CopyAllStoredProcedures**  
  Consente di indicare se, durante l'attività, verranno copiate tutte le stored procedure definite dall'utente nel database di origine specificato o solo le stored procedure selezionate.  
   
  **StoredProceduresList**  
- Fare clic per aprire la finestra di dialogo **Selezione stored procedure**.  
+ Fare clic per aprire la finestra di dialogo **Selezione stored procedure** .  
   
  **CopyAllUserDefinedFunctions**  
  Consente di indicare se, durante l'attività, verranno copiate tutte le funzioni definite dall'utente nel database di origine specificato o solo le funzioni selezionate.  
   
  **UserDefinedFunctionsList**  
- Fare clic per aprire la finestra di dialogo **Selezione funzioni definite dall'utente**.  
+ Fare clic per aprire la finestra di dialogo **Selezione funzioni definite dall'utente** .  
   
  **CopyAllDefaults**  
  Consente di indicare se, durante l'attività, verranno copiati tutti i valori predefiniti nel database di origine specificato o solo i valori predefiniti selezionati.  
   
  **DefaultsList**  
- Fare clic per aprire la finestra di dialogo **Selezione valori predefiniti**.  
+ Fare clic per aprire la finestra di dialogo **Selezione valori predefiniti** .  
   
  **CopyAllUserDefinedDataTypes**  
  Consente di indicare se, durante l'attività, verranno copiati tutti i tipi di dati definiti dall'utente nel database di origine specificato o solo i tipi selezionati.  
   
  **UserDefinedDataTypesList**  
- Fare clic per aprire la finestra di dialogo **Selezione tipi di dati definiti dall'utente**.  
+ Fare clic per aprire la finestra di dialogo **Selezione tipi di dati definiti dall'utente** .  
   
  **CopyAllPartitionFunctions**  
  Consente di indicare se, durante l'attività, verranno copiate tutte le partizioni definite dall'utente nel database di origine specificato o solo le partizioni selezionate. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **PartitionFunctionsList**  
- Fare clic per aprire la finestra di dialogo **Selezione funzioni di partizione**.  
+ Fare clic per aprire la finestra di dialogo **Selezione funzioni di partizione** .  
   
  **CopyAllPartitionSchemes**  
  Consente di indicare se, durante l'attività, verranno copiati tutti gli schemi di partizione nel database di origine specificato o solo gli schemi selezionati. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **PartitionSchemesList**  
- Fare clic per aprire la finestra di dialogo **Selezione schemi di partizione**.  
+ Fare clic per aprire la finestra di dialogo **Selezione schemi di partizione** .  
   
  **CopyAllSchemas**  
  Consente di indicare se, durante l'attività, verranno copiati tutti gli schemi nel database di origine specificato o solo quelli selezionati. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **SchemasList**  
- Fare clic per aprire la finestra di dialogo **Seleziona schemi**.  
+ Fare clic per aprire la finestra di dialogo **Seleziona schemi** .  
   
  **CopyAllSqlAssemblies**  
  Consente di indicare se, durante l'attività, verranno copiati tutti gli assembly SQL nel database di origine specificato o solo quelli selezionati. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -193,25 +198,25 @@ caps.handback.revision: 30
  Consente di indicare se, durante l'attività, verranno copiate tutte le funzioni di aggregazione definite dall'utente nel database di origine specificato o solo le funzioni selezionate. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **UserDefinedAggregatesList**  
- Fare clic per aprire la finestra di dialogo **Selezione funzioni di aggregazione definite dall'utente**.  
+ Fare clic per aprire la finestra di dialogo **Selezione funzioni di aggregazione definite dall'utente** .  
   
  **CopyAllUserDefinedTypes**  
  Consente di indicare se, durante l'attività, verranno copiati tutti i tipi definiti dall'utente nel database di origine specificato o solo quelli selezionati. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **UserDefinedTypes**  
- Fare clic per aprire la finestra di dialogo **Selezione tipi definiti dall'utente**.  
+ Fare clic per aprire la finestra di dialogo **Selezione tipi definiti dall'utente** .  
   
  **CopyAllXmlSchemaCollections**  
  Consente di indicare se, durante l'attività, verranno copiate tutte le raccolte di XML Schema nel database di origine specificato o solo le raccolte di XML Schema selezionate. Opzione supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **XmlSchemaCollectionsList**  
- Fare clic per aprire la finestra di dialogo **Selezionare le raccolte XML Schema**.  
+ Fare clic per aprire la finestra di dialogo **Selezionare le raccolte XML Schema** .  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Generale&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
- [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)   
+ [Trasferire l'Editor attività gli oggetti SQL Server &#40; Pagina generale &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Pagina espressioni](../../integration-services/expressions/expressions-page.md)   
  [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

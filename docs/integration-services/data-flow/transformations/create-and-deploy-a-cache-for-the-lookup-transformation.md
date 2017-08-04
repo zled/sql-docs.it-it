@@ -1,26 +1,31 @@
 ---
-title: "Creazione e distribuzione di una cache per la trasformazione Ricerca | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione di file di cache per la trasformazione Ricerca"
-  - "distribuzione di file di cache per la trasformazione Ricerca"
-  - "file di cache per la trasformazione Ricerca"
+title: Creare e distribuire una Cache per la trasformazione ricerca | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating cache files for Lookup transformation
+- deploying cache files for Lookup transformation
+- Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Creazione e distribuzione di una cache per la trasformazione Ricerca
+# <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Creazione e distribuzione di una cache per la trasformazione Ricerca
   È possibile creare e distribuire un file di cache (.caw) per la trasformazione Ricerca. Il set di dati di riferimento è archiviato nel file di cache.  
   
  La trasformazione Ricerca esegue ricerche unendo in join i dati contenuti nelle colonne di input da un'origine dati connessa con le colonne nel set di dati di riferimento.  
@@ -29,13 +34,13 @@ caps.handback.revision: 23
   
  Per sapere di più sulla trasformazione Ricerca e i file di cache, vedere [Trasformazione Ricerca](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-### Per creare un file di cache  
+### <a name="to-create-a-cache-file"></a>Per creare un file di cache  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto che si desidera utilizzare.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto che si desidera utilizzare.  
   
-2.  Nella scheda **Flusso di controllo**, aggiungere un'attività Flusso di dati.  
+2.  Nella scheda **Flusso di controllo** , aggiungere un'attività Flusso di dati.  
   
-3.  Nella scheda **Flusso di dati**, aggiungere una trasformazione di tipo cache al flusso di dati e quindi connettere la trasformazione a un'origine dati.  
+3.  Nella scheda **Flusso di dati** , aggiungere una trasformazione di tipo cache al flusso di dati e quindi connettere la trasformazione a un'origine dati.  
   
      Configurare l'origine dati in base alle esigenze.  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 23
      Il sistema crea il file quando viene eseguito il pacchetto.  
   
     > [!NOTE]  
-    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../../integration-services/security/security-overview-integration-services.md#files).  
   
-6.  Fare clic sulla scheda **Colonne** e quindi specificare quali colonne sono le colonne di indice usando l'opzione **Posizione dell'indice**.  
+6.  Fare clic sulla scheda **Colonne** e quindi specificare quali colonne sono le colonne di indice usando l'opzione **Posizione dell'indice** .  
   
      Per le colonne non dell'indice, la posizione è 0. Per le colonne di indice, la posizione di indice è un numero sequenziale e positivo.  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 23
   
 8.  Eseguire il pacchetto.  
   
-### Per distribuire un file di cache  
+### <a name="to-deploy-a-cache-file"></a>Per distribuire un file di cache  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto che si desidera utilizzare.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto che si desidera utilizzare.  
   
 2.  Facoltativamente, creare una configurazione di pacchetto. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../../integration-services/packages/create-package-configurations.md).  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 23
   
 4.  Configurare il progetto per creare un'utilità di distribuzione e quindi compilare il progetto. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Viene creato un file manifesto, \<*nome progetto*>.SSISDeploymentManifest.xml che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
+     Un file manifesto, \< *nome progetto*>. Viene >.ssisdeploymentmanifest.XML che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
   
 5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## Vedere anche  
- [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Creare un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

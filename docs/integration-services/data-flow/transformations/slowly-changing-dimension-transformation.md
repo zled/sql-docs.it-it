@@ -1,29 +1,34 @@
 ---
-title: "Trasformazione Dimensione a modifica lenta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.slowlychangingdimtrans.f1"
-helpviewer_keywords: 
-  - "Dimensione a modifica lenta - trasformazione"
-  - "dimensioni a modifica lenta"
-  - "SCD - trasformazione"
-  - "aggiornamento di dimensioni a modifica lenta"
+title: Trasformazione dimensione a modifica lenta | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- SCD transformation
+- updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Dimensione a modifica lenta
+# <a name="slowly-changing-dimension-transformation"></a>Trasformazione Dimensione a modifica lenta
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  
   
 > [!IMPORTANT]  
@@ -56,9 +61,9 @@ caps.handback.revision: 55
   
  In fase di esecuzione la trasformazione Dimensione a modifica lenta cerca innanzitutto una corrispondenza tra la riga in ingresso e un record nella tabella di ricerca. Se non viene trovata alcuna corrispondenza, significa che la riga in ingresso è un nuovo record. In questo caso la trasformazione Dimensione a modifica lenta non esegue altre operazioni e invia la riga a **Nuovo output**.  
   
- Quando viene trovata una corrispondenza, la trasformazione Dimensione a modifica lenta verifica invece se sono presenti eventuali modifiche. Se la riga contiene modifiche, verrà identificato il tipo di aggiornamento eseguito sulle varie colonne e la riga verrà inviata a **Output aggiornamenti attributi modificabili**, **Output attributo fisso**, **Output inserimenti attributo cronologico** o **Output aggiornamenti membro derivato**. Se la riga non contiene modifiche, verrà inviata a **Output non modificato**.  
+ Quando viene trovata una corrispondenza, la trasformazione Dimensione a modifica lenta verifica invece se sono presenti eventuali modifiche. Se la riga contiene modifiche, verrà identificato il tipo di aggiornamento eseguito sulle varie colonne e la riga verrà inviata a **Output aggiornamenti attributi modificabili**, **Output attributo fisso**, **Output inserimenti attributo cronologico**o **Output aggiornamenti membro derivato**. Se la riga non contiene modifiche, verrà inviata a **Output non modificato**.  
   
-## Output della trasformazione Dimensione a modifica lenta  
+## <a name="slowly-changing-dimension-transformation-outputs"></a>Output della trasformazione Dimensione a modifica lenta  
  La trasformazione Dimensione a modifica lenta utilizza un solo input e un massimo di sei output. Un output indirizza una riga al subset del flusso di dati che corrisponde ai requisiti di aggiornamento e inserimento della riga. Questa trasformazione non supporta un output degli errori.  
   
  Nella tabella seguente vengono descritti gli output della trasformazione e i requisiti dei flussi di dati successivi. I requisiti descrivono il flusso di dati creato dalla Configurazione guidata dimensioni a modifica lenta.  
@@ -72,40 +77,40 @@ caps.handback.revision: 55
 |**Nuovo output**|La tabella di ricerca non contiene righe corrispondenti. La riga viene aggiunta alla tabella delle dimensioni. Questo output viene utilizzato per le nuove righe e per le modifiche alle righe con attributi cronologici.|Una trasformazione Colonna derivata imposta l'indicatore di riga corrente e una destinazione OLE DB inserisce la riga.|  
 |**Output non modificato**|I valori nella tabella di ricerca corrispondono a quelli della riga. Questo output viene utilizzato per le righe non modificate.|Non viene creato alcun flusso di dati perché la trasformazione Dimensione a modifica lenta non esegue alcuna operazione. Se si desidera acquisire queste righe, sarà necessario creare un flusso di dati per questo output.|  
   
-## Chiavi business  
+## <a name="business-keys"></a>Chiavi business  
  La trasformazione Dimensione a modifica lenta richiede almeno una colonna chiave business.  
   
  La trasformazione Dimensione a modifica lenta non supporta chiavi business Null. Se i dati includono righe in cui la colonna chiave business è Null, tali righe dovranno essere rimosse dal flusso di dati. Per filtrare le righe con colonne chiave business contenenti valori Null, è possibile utilizzare la trasformazione Suddivisione condizionale. Per altre informazioni, vedere [Trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-## Ottimizzazione delle prestazioni della trasformazione di dimensioni a modifica lenta  
+## <a name="optimizing-the-performance-of-the-slowly-changing-dimension-transformation"></a>Ottimizzazione delle prestazioni della trasformazione di dimensioni a modifica lenta  
  Per suggerimenti sul miglioramento delle prestazioni della trasformazione Dimensione a modifica lenta, vedere [Funzionalità delle prestazioni del flusso di dati](../../../integration-services/data-flow/data-flow-performance-features.md).  
   
-## Risoluzione dei problemi relativi alla trasformazione Dimensione a modifica lenta  
+## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>Risoluzione dei problemi relativi alla trasformazione Dimensione a modifica lenta  
  È possibile registrare le chiamate eseguite dalla trasformazione dimensioni a modifica lenta in provider di dati esterni. Questa nuova funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi a connessioni, comandi e query a origini di dati esterne eseguiti dalla trasformazione dimensioni a modifica lenta. Per registrare le chiamate eseguite dalla trasformazione Dimensione a modifica lenta a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Configurazione della trasformazione Dimensione a modifica lenta  
+## <a name="configuring-the-slowly-changing-dimension-transformation"></a>Configurazione della trasformazione Dimensione a modifica lenta  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Configurazione degli output della trasformazione Dimensione a modifica lenta  
+## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Configurazione degli output della trasformazione Dimensione a modifica lenta  
  Il coordinamento dell'aggiornamento e dell'inserimento dei record nelle tabelle delle dimensioni può risultare complesso, soprattutto se vengono utilizzate sia modifiche di tipo 1 che di tipo 2. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] La finestra di progettazione offre due modi per configurare il supporto delle dimensioni a modifica lenta:  
   
--   Usare la finestra di dialogo **Editor avanzato**, in cui è necessario selezionare una connessione, impostare le proprietà di componenti comuni e personalizzati, scegliere le colonne di input e impostare le proprietà delle colonne dei sei output. Per completare la configurazione del supporto di una dimensione a modifica lenta, è necessario creare manualmente il flusso di dati per gli output utilizzati dalla trasformazione Dimensione a modifica lenta. Per altre informazioni, vedere [Flusso di dati](../../../integration-services/data-flow/data-flow.md).  
+-   Usare la finestra di dialogo **Editor avanzato** , in cui è necessario selezionare una connessione, impostare le proprietà di componenti comuni e personalizzati, scegliere le colonne di input e impostare le proprietà delle colonne dei sei output. Per completare la configurazione del supporto di una dimensione a modifica lenta, è necessario creare manualmente il flusso di dati per gli output utilizzati dalla trasformazione Dimensione a modifica lenta. Per altre informazioni, vedere [Flusso di dati](../../../integration-services/data-flow/data-flow.md).  
   
 -   Utilizzare Caricamento guidato dimensione, che semplifica la configurazione della trasformazione Dimensione a modifica lenta e compila il flusso di dati per gli output della trasformazione. Per modificare la configurazione delle dimensioni a modifica lenta, eseguire nuovamente il Caricamento guidato dimensione. Per altre informazioni, vedere [Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog sull'[ottimizzazione della configurazione guidata dimensioni a modifica lenta](http://go.microsoft.com/fwlink/?LinkId=199481) sul sito Web blogs.msdn.com.  
+-   Intervento nel blog sull' [ottimizzazione della configurazione guidata dimensioni a modifica lenta](http://go.microsoft.com/fwlink/?LinkId=199481)sul sito Web blogs.msdn.com.  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "FINDSTRING (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FINDSTRING - funzione"
+title: FINDSTRING (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abadf6c9ce8d97a6aa1d1c4e649ccbdf69f4f8f4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# FINDSTRING (espressione SSIS)
+# <a name="findstring-ssis-expression"></a>FINDSTRING (espressione SSIS)
   Viene restituita la posizione dell'occorrenza specificata di una determinata stringa in un'espressione di caratteri. Il risultato restituito è l'indice in base 1 dell'occorrenza. Il parametro stringa deve restituire un'espressione di caratteri, mentre il parametro che indica l'occorrenza deve restituire un valore integer. Se la stringa non viene trovata, verrà restituito il valore 0. Se il numero delle occorrenze della stringa è inferiore a quello specificato dall'argomento occurrence, verrà restituito il valore 0.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 FINDSTRING(character_expression, searchstring, occurrence)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *character_expression*  
  Stringa di caratteri in cui eseguire la ricerca.  
   
@@ -38,11 +43,11 @@ FINDSTRING(character_expression, searchstring, occurrence)
  *occurrence*  
  Numero intero con o senza segno che specifica l'occorrenza di *searchstring* di cui restituire la posizione.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## Osservazioni  
- È possibile utilizzare FINDSTRING solo con il tipo di dati DT_WSTR.  Per gli argomenti *character_expression* e *searchstring* costituiti da valori letterali stringa o da colonne di dati con tipo di dati DT_STR, prima di eseguire l'operazione della funzione FINDSTRING viene eseguito il cast implicito al tipo di dati DT_WSTR. Per gli altri tipi di dati è necessario il cast esplicito al tipo di dati DT_WSTR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md) e [Cast &#40;espressione SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+## <a name="remarks"></a>Osservazioni  
+ È possibile utilizzare FINDSTRING solo con il tipo di dati DT_WSTR.  Per gli argomenti*character_expression* e *searchstring* costituiti da valori letterali stringa o da colonne di dati con tipo di dati DT_STR, prima di eseguire l'operazione della funzione FINDSTRING viene eseguito il cast implicito al tipo di dati DT_WSTR. Per gli altri tipi di dati è necessario il cast esplicito al tipo di dati DT_WSTR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md) e [Cast &#40;espressione SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  FINDSTRING restituirà Null se il valore *character_expression* o *searchstring* sono Null.  
   
@@ -50,7 +55,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
   
  L'argomento *occurrence* deve essere un numero intero maggiore di 0.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene utilizzato un valore letterale stringa. Il valore restituito è 11.  
   
 ```  
@@ -75,8 +80,8 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## Vedere anche  
- [REPLACE &#40;espressione SSIS&#41;](../../integration-services/expressions/replace-ssis-expression.md)   
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Sostituisci &#40; Espressione SSIS &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

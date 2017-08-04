@@ -1,28 +1,33 @@
 ---
-title: "Ordinamento dei dati per le trasformazioni Unione e Merge Join | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributi di ordinamento [Integration Services]"
-  - "colonne di output [Integration Services]"
+title: Ordinamento dei dati per le trasformazioni unione e Merge Join | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sort attributes [Integration Services]
+- output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ordinamento dei dati per le trasformazioni Unione e Merge Join
+# <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
   
-## Ordinamento dei dati  
+## <a name="sorting-the-data"></a>Ordinamento dei dati  
  È possibile ordinare i dati mediante uno dei seguenti metodi:  
   
 -   Utilizzare nell'origine una clausola ORDER BY nell'istruzione utilizzata per caricare i dati.  
@@ -31,7 +36,7 @@ caps.handback.revision: 31
   
  Se i dati sono di tipo stringa, le trasformazioni Unione e Merge join presuppongono che i valori stringa siano stati ordinati mediante le regole di confronto di Windows. Per fornire i valori stringa alle trasformazioni Unione e Merge join ordinate mediante le regole di confronto di Windows, utilizzare la procedura seguente:  
   
-#### Per fornire valori stringa ordinati tramite regole di confronto di Windows  
+#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>Per fornire valori stringa ordinati tramite regole di confronto di Windows  
   
 -   Utilizzare una trasformazione Ordinamento per ordinare i dati.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 31
     > [!IMPORTANT]  
     >  Non è possibile utilizzare solo la clausola ORDER BY perché tale clausola utilizza le regole di confronto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ordinare i valori stringa. L'uso delle regole di confronto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può restituire un ordinamento diverso rispetto alle regole di confronto di Windows, con risultati imprevisti nella trasformazione Unione o Merge join.  
   
-## Impostazione delle opzioni di ordinamento nei dati  
+## <a name="setting-sort-options-on-the-data"></a>Impostazione delle opzioni di ordinamento nei dati  
  È necessario impostare due importanti proprietà di ordinamento per l'origine o per la trasformazione a monte che fornisce i dati alle trasformazioni Unione e Merge join:  
   
 -   La proprietà **IsSorted** dell'output che indica se i dati sono stati ordinati. Questa proprietà deve essere impostata su **True**.  
@@ -54,13 +59,13 @@ caps.handback.revision: 31
   
 -   La proprietà **SortKeyPosition** delle colonne di output che indica se una colonna è ordinata, l'ordinamento della colonna e la sequenza di ordinamento di più colonne. Questa proprietà deve essere impostata per ogni colonna di dati ordinati.  
   
- Se si utilizza una trasformazione Ordinamento per ordinare i dati, entrambe le proprietà vengono impostate come richiesto dalla trasformazione Unione o Merge join, ovvero, la trasformazione Ordinamento imposta la proprietà **IsSorted** dell'output su **True** e le proprietà **SortKeyPosition** delle colonne di output.  
+ Se si utilizza una trasformazione Ordinamento per ordinare i dati, entrambe le proprietà vengono impostate come richiesto dalla trasformazione Unione o Merge join, ovvero, la trasformazione Ordinamento imposta la proprietà **IsSorted** dell'output su **True**e le proprietà **SortKeyPosition** delle colonne di output.  
   
  Tuttavia, se non si utilizza una trasformazione Ordinamento per ordinare i dati, è necessario impostare manualmente queste proprietà di ordinamento nell'origine o nella trasformazione a monte. Per impostare manualmente le proprietà di ordinamento nell'origine o nella trasformazione a monte, utilizzare la procedura seguente.  
   
-#### Per impostare manualmente gli attributi di ordinamento in un componente dell'origine o della trasformazione  
+#### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>Per impostare manualmente gli attributi di ordinamento in un componente dell'origine o della trasformazione  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
@@ -68,9 +73,9 @@ caps.handback.revision: 31
   
 4.  Fare clic sul componente con il pulsante destro del mouse e scegliere **Visualizza editor avanzato**.  
   
-5.  Fare clic sulla scheda **Proprietà input e output**.  
+5.  Fare clic sulla scheda **Proprietà input e output** .  
   
-6.  Fare clic su **Output \<nome componente>** e impostare la proprietà **IsSorted** su **True**.  
+6.  Fare clic su  **\<nome componente > Output**e impostare il **IsSorted** proprietà **True**.  
   
     > [!NOTE]  
     >  Se si imposta manualmente la proprietà **IsSorted** dell'output su **True** e se i dati non sono ordinati, quando si esegue il pacchetto alcuni dati potrebbero risultare mancanti o danneggiati nella trasformazione Unione o Merge Join.  
@@ -87,7 +92,7 @@ caps.handback.revision: 31
   
     -   Il valore predefinito 0 indica che la colonna non è ordinata. Lasciare il valore 0 per colonne di output che non vengono incluse nell'ordinamento.  
   
-     Come esempio per l'impostazione della proprietà **SortKeyPosition**, considerare l'istruzione Transact-SQL seguente che carica i dati in un'origine:  
+     Come esempio per l'impostazione della proprietà **SortKeyPosition** , considerare l'istruzione Transact-SQL seguente che carica i dati in un'origine:  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
@@ -105,11 +110,11 @@ caps.handback.revision: 31
   
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## Vedere anche  
- [Trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Trasformazione unione](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Trasformazione Merge Join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Attività Flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
+ [Attività flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
   
   

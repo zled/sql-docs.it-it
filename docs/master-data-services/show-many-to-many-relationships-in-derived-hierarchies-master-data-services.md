@@ -1,26 +1,31 @@
 ---
-title: "Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
   Le gerarchie derivate (DH), che già mostravano le relazioni uno-a-molti, ora possono mostrare anche le relazioni molti-a-molti.  
   
-## Relazioni molti-a-molti (M2M)  
+## <a name="many-to-many-m2m-relationships"></a>Relazioni molti-a-molti (M2M)  
  Una relazione molti-a-molti (M2M) tra due entità può essere modellata usando una terza entità che stabilisce un mapping tra esse.  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -37,7 +42,7 @@ caps.handback.revision: 13
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- Nella schermata precedente si noti che l'entità **Dipendente** appare sotto **Livelli correnti** al centro come unico livello. La gerarchia derivata **Anteprima** a destra mostra semplicemente un elenco di tutti i membri dell'entità **Dipendente** . La sezione **Livelli disponibili** a sinistra mostra i livelli che possono essere aggiunti sopra il livello corrente (**Dipendente**). Molti di questi sono attributi basati su dominio (DBA) per l'entità **Dipendente**, incluso il DBA **Reparto**.  
+ Nella schermata precedente si noti che l'entità **Dipendente** appare sotto **Livelli correnti** al centro come unico livello. La gerarchia derivata **Anteprima** a destra mostra semplicemente un elenco di tutti i membri dell'entità **Dipendente** . La sezione **Livelli disponibili** a sinistra mostra i livelli che possono essere aggiunti sopra il livello corrente (**Dipendente**). Molti di questi sono attributi basati su dominio (DBA) per l'entità **Dipendente** , incluso il DBA **Reparto** .  
   
  A partire da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], esiste un nuovo tipo di livello che modella le relazioni M2M, ad esempio: **Corso (mappato mediante RegistrazioneCorso.Studente)**. Il nome del livello è più dettagliato rispetto degli altri, in modo da riflettere le informazioni aggiuntive necessarie per descrivere univocamente la relazione di mapping. Trascinare il livello fino al livello **Dipendente** nella sezione **Livelli correnti** :  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 13
   
  I membri dell'entità di mapping **RegistrazioneCorso** non sono mostrati all'interno della gerarchia derivata. Vengono usati semplicemente per definire le relazioni tra i membri padre e figlio nella gerarchia.  
   
- È possibile modificare la relazione M2M cambiando i membri dell'entità di mapping. Procedere in uno dei modi seguenti. La relazione M2M è di sola lettura nella pagina **Esplora gerarchia derivata**.  
+ È possibile modificare la relazione M2M cambiando i membri dell'entità di mapping. Procedere in uno dei modi seguenti. La relazione M2M è di sola lettura nella pagina **Esplora gerarchia derivata** .  
   
 -   Modificare i membri dell'entità di mapping nella pagina **Esplora entità** mediante il componente aggiuntivo Master Data Services per Excel o mediante la gestione temporanea dei dati.  
   
@@ -76,9 +81,9 @@ Come mostra l'immagine seguente, il nome del livello che modella questa relazion
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-Per istruzioni sulla distribuzione del modello di esempio Customer e di altri modelli di esempio inclusi in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Distribuzione di modelli di esempio e dati](../sql-server/media/master-data-services.png#deploySample).   
+Per istruzioni sulla distribuzione del modello di esempio Customer e di altri modelli di esempio inclusi in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Distribuzione di modelli di esempio e dati](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
-## Relazione uno-a-molti  
+## <a name="one-many-relationship"></a>Relazione uno-a-molti  
  Un membro di una gerarchia derivata può essere padre di molti membri figlio, ma non può avere in genere più di un padre (per le eccezioni, vedere [Sicurezza dei membri](#bkmk_member_security)). Si supponga ad esempio che ci siano due entità, Dipendente e Reparto, in cui ogni dipendente appartiene a un singolo reparto. Questa relazione viene modellata aggiungendo all'entità Dipendente un attributo basato su dominio (DBA) che fa riferimento all'entità Reparto:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
@@ -96,10 +101,11 @@ Per istruzioni sulla distribuzione del modello di esempio Customer e di altri mo
   
 -   Una gerarchia derivata con un livello M2M (un elemento figlio può essere mappato a molti elementi padre).  
   
-## Raccolte  
+## <a name="collections"></a>Raccolte  
  Le raccolte e le gerarchie esplicite sono deprecate. La stored procedure di conversione (udpConvertCollectionAndConsolidatedMembersToLeaf) converte i membri della raccolta in membri foglia e crea gerarchie derivate molti-a-molti per acquisire informazioni sui membri della raccolta.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

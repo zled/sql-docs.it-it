@@ -1,25 +1,30 @@
 ---
-title: "Procedura di visualizzazione delle propriet&#224; dell&#39;istanza di CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Come visualizzare le proprietà di istanza di CDC | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Procedura di visualizzazione delle propriet&#224; dell&#39;istanza di CDC
+# <a name="how-to-view-the-cdc-instance-properties"></a>Procedura di visualizzazione delle proprietà dell'istanza di CDC
   In questa procedura viene descritto come utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create per gestire l'operazione delle istanze.  
   
-### Per visualizzare informazioni su un'istanza specifica  
+### <a name="to-view-information-about-a-specific-instance"></a>Per visualizzare informazioni su un'istanza specifica  
   
 1.  Scegliere **CDC Designer Console** dal menu **Start**.  
   

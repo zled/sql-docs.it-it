@@ -1,25 +1,30 @@
 ---
-title: "Lezione 2: Aggiungere cicli con SSIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Lezione 2: Aggiunta di ciclo con SSIS | Documenti Microsoft'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Lezione 2: Aggiungere cicli con SSIS
-Nella [Lezione 1: Creazione del progetto e del pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md) è stato creato un pacchetto che ha estratto i dati da un'unica origine file flat, ha trasformato i dati usando la trasformazione Ricerca e infine ha caricato i dati nella tabella dei fatti **FactCurrency** del database di esempio **AdventureWorksDW2012**.  
+# <a name="lesson-2-adding-looping-with-ssis"></a>Lezione 2: Aggiungere cicli con SSIS
+Nella [Lezione 1: Creazione del progetto e del pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)è stato creato un pacchetto che ha estratto i dati da un'unica origine file flat, ha trasformato i dati usando la trasformazione Ricerca e infine ha caricato i dati nella tabella dei fatti **FactCurrency** del database di esempio **AdventureWorksDW2012** .  
   
 Tuttavia, per un processo di estrazione, trasformazione e caricamento (ETL, Extract, Transform and Loading) raramente viene usato un unico file flat. In genere durante un processo ETL i dati vengono estratti da più origini file flat. L'estrazione dei dati da più origini richiede un flusso di controllo iterativo. Una delle caratteristiche più attese di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nella possibilità di aggiungere facilmente iterazioni o cicli ai pacchetti.  
   
@@ -50,22 +55,23 @@ In questa lezione verrà modificato solo il flusso di controllo, non il flusso d
 > [!IMPORTANT]  
 > Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Esempi di Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
-## Argomenti della lezione  
+## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  
   
--   [Passaggio 1: Copia del pacchetto della lezione 1](../integration-services/step-1-copying-the-lesson-1-package.md)  
+-   [Passaggio 1: Copia del pacchetto della lezione 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach](../integration-services/step-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Passaggio 3: Modifica della gestione connessione file flat](../integration-services/step-3-modifying-the-flat-file-connection-manager.md)  
+-   [Passaggio 3: Modifica della gestione connessione file flat](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione](../integration-services/step-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
-## Inizio della lezione  
-[Passaggio 1: Copia del pacchetto della lezione 1](../integration-services/step-1-copying-the-lesson-1-package.md)  
+## <a name="start-the-lesson"></a>Inizio della lezione  
+[Passaggio 1: Copia del pacchetto della lezione 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
 [Contenitore Ciclo For](../integration-services/control-flow/for-loop-container.md)  
   
   
   
+

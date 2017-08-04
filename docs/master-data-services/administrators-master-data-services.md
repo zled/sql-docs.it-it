@@ -1,30 +1,35 @@
 ---
-title: "Amministratori (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "amministratori [Master Data Services], informazioni sugli amministratori"
-  - "amministratori [Master Data Services]"
-  - "modelli [Master Data Services], amministratori"
+title: Gli amministratori (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administrators [Master Data Services], about administrators
+- administrators [Master Data Services]
+- models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aa037c47b7ec276188e1f67d5a415bfba1da232
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Amministratori (Master Data Services)
+# <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
   Questo articolo descrive i tipi di amministratori di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: amministratori di modelli, amministratori di entità e utenti con privilegi avanzati.  
   
-## Amministratori di modelli  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] un amministratore di modelli è un utente a cui è stata assegnata l'autorizzazione di **amministratore** per l'oggetto modello di livello superiore nella scheda **Oggetti modello**. Quando un utente ha l'autorizzazione di amministratore per un particolare modello, tutte le altre autorizzazioni per gli oggetti figlio del modello (autorizzazioni per oggetti e membri modello) sono surclassate dall'autorizzazione di **amministratore** del modello ed effettivamente ignorate.  
+## <a name="model-administrators"></a>Amministratori di modelli  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un amministratore di modelli è un utente a cui è stata assegnata l'autorizzazione di **amministratore** per l'oggetto modello di livello superiore nella scheda **Oggetti modello** . Quando un utente ha l'autorizzazione di amministratore per un particolare modello, tutte le altre autorizzazioni per gli oggetti figlio del modello (autorizzazioni per oggetti e membri modello) sono surclassate dall'autorizzazione di **amministratore** del modello ed effettivamente ignorate.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 14
   
  Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
-## Amministratori di entità  
+## <a name="entity-administrators"></a>Amministratori di entità  
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di entità è un utente per cui le autorizzazioni di amministratore sono assegnate all'oggetto entità nella scheda Oggetti modello. Quando un utente ha le autorizzazioni di amministratore per un'entità, tutte le altre autorizzazioni per gli oggetti figlio dell'entità (autorizzazioni per oggetti e membri modello) sono sostituite dalle autorizzazioni amministratore e vengono ignorate.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
@@ -45,8 +50,8 @@ caps.handback.revision: 14
   
  Un utente può essere configurato come amministratore di entità in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] o a livello di codice. Per altre informazioni, vedere [Creare un amministratore di entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-administrator-master-data-services.md).  
   
-## Utente con privilegi avanzati di Master Data Services  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile assegnare a un utente le autorizzazioni per l'area funzionale Utente con privilegi avanzati. Un utente con le autorizzazioni per l'area funzionale Utente con privilegi avanzati ha l'autorizzazione di amministratore per tutti i modelli e le autorizzazioni per tutte le altre aree funzionali. Per informazioni sulle autorizzazioni per le aree funzionali, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+## <a name="master-data-services-super-user"></a>Utente con privilegi avanzati di Master Data Services  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile assegnare a un utente le autorizzazioni per l'area funzionale Utente con privilegi avanzati. Un utente con le autorizzazioni per l'area funzionale Utente con privilegi avanzati ha l'autorizzazione di amministratore per tutti i modelli e le autorizzazioni per tutte le altre aree funzionali. Per informazioni sulle autorizzazioni per le aree funzionali, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  L'utente con privilegi avanzati predefinito viene specificato per l'**Account amministratore** quando si crea il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] usando la [Procedura guidata Crea database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -54,11 +59,11 @@ caps.handback.revision: 14
   
 -   Accedere a tutte le aree funzionali.  
   
--   Aggiungere, eliminare e aggiornare tutti i dati master per tutti i modelli nell'area funzionale **Visualizzatore**.  
+-   Aggiungere, eliminare e aggiornare tutti i dati master per tutti i modelli nell'area funzionale **Visualizzatore** .  
   
  È possibile assegnare le autorizzazioni di utente con privilegi avanzati a più utenti e/o gruppi di utenti.  
   
-## Confronto tra tipi di amministratore  
+## <a name="comparing-administrator-types"></a>Confronto tra tipi di amministratore  
   
 |Tipo di amministratore|Description|  
 |------------------------|-----------------|  
@@ -66,12 +71,12 @@ caps.handback.revision: 14
 |Amministratore di modelli|Può essere un amministratore di modelli in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nel modello specifico.|  
 |Amministratore di entità|Può essere un amministratore di entità in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nell'entità specifica.<br /><br /> Può approvare gli insiemi di modifiche in sospeso se le modifiche all'entità richiedono l'approvazione.|  
   
-## Risorse esterne  
+## <a name="external-resources"></a>Risorse esterne  
  Post del blog sui [miglioramenti della sicurezza](http://go.microsoft.com/fwlink/p/?LinkId=615376)su msdn.com.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Creare un database Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Notifiche &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+ [Creare un Database Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Le notifiche &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
   
   

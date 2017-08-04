@@ -1,25 +1,30 @@
 ---
-title: "Crea InfoSource per dati transazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crea InfoSource per dati transazione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Crea InfoSource per dati transazione
+# <a name="create-infosource-for-transaction-data"></a>Crea InfoSource per dati transazione
   Usare la finestra di dialogo **Crea InfoSource per dati transazione** per creare un nuovo InfoSource per i dati della transazione nel sistema SAP Netweaver BW.  
   
- È possibile aprire la finestra di dialogo **Crea InfoSource per dati transazione** dalla pagina **Gestione connessione** dell'**Editor destinazione SAP BW**. Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ È possibile aprire la finestra di dialogo **Crea InfoSource per dati transazione** dalla pagina **Gestione connessione** dell' **Editor destinazione SAP BW**. Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
@@ -28,15 +33,15 @@ caps.handback.revision: 10
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene la destinazione SAP BW.  
   
-2.  Nella scheda **Flusso dati** fare doppio clic sulla destinazione SAP BW.  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource** e quindi fare clic su **Crea**.  
+4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**e quindi fare clic su **Crea**.  
   
-5.  Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione** e quindi fare clic su **OK**.  
+5.  Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione**e quindi fare clic su **OK**.  
   
-## Opzioni generali  
+## <a name="general-options"></a>Opzioni generali  
  **Nome InfoSource**  
  Immettere un nome per il nuovo InfoSource.  
   
@@ -52,22 +57,22 @@ caps.handback.revision: 10
  **Salva e attiva**  
  Salvare e attivare il nuovo InfoSource.  
   
-## Opzioni della struttura di trasferimento di InfoSource  
+## <a name="infosource-transfer-structure-options"></a>Opzioni della struttura di trasferimento di InfoSource  
  La struttura di trasferimento di InfoSource consente di associare le colonne del flusso di dati agli InfoSource.  
   
  **PipelineElement**  
  Visualizza la colonna nell'output del flusso di dati connesso alla destinazione SAP BW.  
   
  **PipelineDataType**  
- Visualizza il tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]della colonna del flusso di dati.  
+ Visualizza il tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] della colonna del flusso di dati.  
   
  **Iobject - Ricerca**  
- Associare un InfoObject esistente alla colonna del flusso di dati nella riga corrente. Per effettuare questa associazione, fare clic su **Cerca** e quindi usare la finestra di dialogo **Cerca InfoObject** per selezionare l'InfoObject esistente. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
+ Associare un InfoObject esistente alla colonna del flusso di dati nella riga corrente. Per effettuare questa associazione, fare clic su **Cerca**e quindi usare la finestra di dialogo **Cerca InfoObject** per selezionare l'InfoObject esistente. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
- Dopo aver selezionato un InfoObject esistente, le colonne**InfoObject** e **Tipo** vengono popolate dal componente con i valori selezionati.  
+ Dopo aver selezionato un InfoObject esistente, le colonne **InfoObject** e **Tipo** vengono popolate dal componente con i valori selezionati.  
   
  **Iobject - Nuovo**  
- Creare un nuovo InfoObject e associarlo alla colonna del flusso di dati nella riga corrente. Per creare il nuovo InfoObject, fare clic su **Nuovo** quindi usare la finestra di dialogo **Crea nuovo InfoObject** per creare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
+ Creare un nuovo InfoObject e associarlo alla colonna del flusso di dati nella riga corrente. Per creare il nuovo InfoObject, fare clic su **Nuovo**quindi usare la finestra di dialogo **Crea nuovo InfoObject** per creare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
   
  Dopo aver creato un nuovo InfoObject, le colonne **InfoObject** e **Tipo** vengono popolate dal componente con i nuovi valori.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 10
  **Campo unità**  
  Specificare le unità che verranno utilizzate dall'InfoObject.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Crea InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

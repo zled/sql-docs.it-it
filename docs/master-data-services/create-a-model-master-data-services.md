@@ -1,36 +1,41 @@
 ---
-title: "Creare un modello (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelli [Master Data Services], creazione di modelli"
-  - "creazione di modelli [Master Data Services]"
+title: Creare un modello (Master Data Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], creating models
+- creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creare un modello (Master Data Services)
+# <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un modello per contenere oggetti modello.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Per creare un modello  
+### <a name="to-create-a-model"></a>Per creare un modello  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 13
   
  Per ogni modello creato, viene aggiunta una riga con otto colonne alla griglia. Le otto colonne sono:  
   
--   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello**, viene visualizzata l'immagine ![Updating](../master-data-services/media/mds-model-status-updating.png "Updating") che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine ![Error](../master-data-services/media/mds-model-status-error.png "Error"). In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK").  
+-   **Stato**: stato del modello. Quando si fa clic il **Salva modello** pulsante, il ![aggiornamento](../master-data-services/media/mds-model-status-updating.png "aggiornamento") viene visualizzata l'immagine, che indica che il modello sta aggiornando. Se si verificano errori durante la creazione o modifica di un modello, il ![errore](../master-data-services/media/mds-model-status-error.png "errore") viene visualizzata l'immagine. In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
 -   **Nome**: nome del modello.  
   
@@ -68,15 +73,15 @@ caps.handback.revision: 13
   
 -   **Data e ora di aggiornamento**: data e ora dell'ultimo aggiornamento del modello.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modelli &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Eliminare un modello &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Modifica modello &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Entità &#40; Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
+ [Eliminare un modello di &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Modifica modello &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

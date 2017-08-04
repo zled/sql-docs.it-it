@@ -1,31 +1,36 @@
 ---
-title: "TOKEN (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TOKEN (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKEN (espressione SSIS)
+# <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 TOKEN(character_expression, delimiter_string, occurrence)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *character_expression*  
  Stringa che contiene token separati da delimitatori.  
   
@@ -35,17 +40,17 @@ TOKEN(character_expression, delimiter_string, occurrence)
  *occurrence*  
  Intero con segno o senza segno che specifica il token da restituire. Ad esempio, se si specifica 3 come valore per questo parametro, viene restituito il terzo token nella stringa.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## Osservazioni  
- Tramite questa funzione la stringa <character_expression> viene suddivisa in un set di token separati dai delimitatori specificati nella <delimiter_string>, quindi viene restituito l'N token dove N è il numero di occorrenze del token specificato dal parametro \<occurrence>. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione divide la stringa < character_expression > in un set di token separati dai delimitatori specificati nella < delimiter_string > e restituito il n token dove N è il numero di occorrenze del token specificato per il \<occorrenza > parametro. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
   
  Le osservazioni seguenti riguardano la funzione TOKEN:  
   
 -   La stringa di delimitazione può contenere uno o più caratteri delimitatori.  
   
--   Se il valore del parametro \<occurrence> è maggiore del numero totale di token nella stringa, la funzione restituisce NULL.  
+-   Se il valore di \<occorrenza > parametro è maggiore del numero totale di token nella stringa, la funzione restituisce NULL.  
   
 -   I delimitatori iniziali vengono ignorati.  
   
@@ -55,7 +60,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
   
 -   È possibile utilizzare variabili e colonne come valori di tutti gli argomenti dell'espressione.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  Nell'esempio seguente la funzione TOKEN restituisce "a". La stringa "a little white dog" presenta 4 token "a", "little", "white", "dog" separati dal delimitatore " " (spazio). Il secondo argomento, una stringa delimitatore, specifica il solo delimitatore, lo spazio, da utilizzare per suddividere la stringa di input in token. L'ultimo argomento, 1, specifica che deve essere restituito il primo token. In questa stringa di esempio il primo token è "a".  
   
 ```  
@@ -98,7 +103,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## Vedere anche  
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

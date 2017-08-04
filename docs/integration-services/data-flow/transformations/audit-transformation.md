@@ -1,30 +1,35 @@
 ---
-title: "Trasformazione Controllo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.audittrans.f1"
-helpviewer_keywords: 
-  - "informazioni sull'ambiente nei pacchetti [Integration Services]"
-  - "Controllo - trasformazione"
+title: Trasformazione controllo | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.audittrans.f1
+helpviewer_keywords:
+- environment data in packages [Integration Services]
+- Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Controllo
+# <a name="audit-transformation"></a>Controllo - trasformazione
   La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
   
-## Variabili di sistema  
+## <a name="system-variables"></a>Variabili di sistema  
  Nella tabella seguente sono descritte le variabili di sistema che possono essere utilizzate dalla trasformazione Controllo.  
   
 |Variabile di sistema|Indice|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 46
 |**TaskName**|7|Nome dell'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
 |**TaskId**|8|Identificatore univoco dell'attività Flusso di dati.|  
   
-## Configurazione della trasformazione Controllo  
+## <a name="configuration-of-the-audit-transformation"></a>Configurazione della trasformazione Controllo  
  Per configurare la trasformazione Controllo è necessario specificare il nome di una nuova colonna di output da aggiungere all'output della trasformazione ed eseguire il mapping della variabile di sistema a tale colonna di output. È possibile eseguire il mapping di una stessa variabile di sistema a più colonne di output.  
   
  Questa trasformazione include un input e un output. Non supporta un output degli errori.  
@@ -50,10 +55,10 @@ caps.handback.revision: 46
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   

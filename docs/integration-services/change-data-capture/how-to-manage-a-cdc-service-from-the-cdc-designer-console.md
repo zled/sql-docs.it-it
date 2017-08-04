@@ -1,25 +1,30 @@
 ---
-title: "Modalit&#224; di gestione di un servizio CDC da CDC Designer Console | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Come gestire un servizio CDC da CDC Designer Console | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Modalit&#224; di gestione di un servizio CDC da CDC Designer Console
+# <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Modalità di gestione di un servizio CDC da CDC Designer Console
   In questa procedura viene illustrato come utilizzare CDC Designer Console per gestire un servizio CDC.  
   
-### Per gestire un servizio CDC da CDC Designer Console  
+### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Per gestire un servizio CDC da CDC Designer Console  
   
 1.  Scegliere **CDC Designer Console** dal menu **Start**.  
   

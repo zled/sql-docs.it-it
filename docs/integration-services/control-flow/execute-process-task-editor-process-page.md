@@ -1,31 +1,36 @@
 ---
-title: "Execute Process Task Editor (Process Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executeprocesstask.process.f1"
-helpviewer_keywords: 
-  - "Execute Process Task Editor"
+title: "Editor attività Esegui processo (pagina processo) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executeprocesstask.process.f1
+helpviewer_keywords:
+- Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a67668d07ec12efde2009268e8d0a4dae13d2130
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Execute Process Task Editor (Process Page)
+# <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Utilizzare la pagina **Processo** della finestra di dialogo **Editor attività Esegui processo** per configurare le opzioni di esecuzione del processo. Tali opzioni includono il file eseguibile da avviare, il relativo percorso, gli argomenti del prompt dei comandi, nonché le variabili per la generazione dell'input e l'acquisizione dell'output.  
   
  Per ulteriori informazioni su questa attività, vedere [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **RequireFullFileName**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il file eseguibile non venga trovato nel percorso specificato.  
   
@@ -39,15 +44,15 @@ caps.handback.revision: 31
  Consente di digitare il percorso della cartella contenente il file eseguibile. È inoltre possibile fare clic sul pulsante con i puntini di sospensione **(…)** per selezionare la cartella.  
   
  **StandardInputVariable**  
- Consente di selezionare una variabile per l'invio dell'input al processo. È inoltre possibile fare clic su \<**Nuova variabile**> per crearne una nuova:  
+ Selezionare una variabile per fornire input per il processo, fare clic su \< **nuova variabile...** > per creare una nuova variabile:  
   
- **Argomenti correlati:** [Aggiungi variabile](../Topic/Add%20Variable.md)  
+ **Argomenti correlati:** [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Consente di selezionare una variabile per l'acquisizione dell'output del processo. È inoltre possibile fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile per acquisire l'output del processo, fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
   
  **StandardErrorVariable**  
- Consente di selezionare una variabile per l'acquisizione dell'output di errore del processore. È inoltre possibile fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile per acquisire l'output degli errori di elaborazione, fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il codice di uscita del processo non corrisponda al valore specificato in **SuccessValue**.  
@@ -59,13 +64,13 @@ caps.handback.revision: 31
  Consente di specificare il numero di secondi di esecuzione del processo. Il valore **0** indica che non è previsto alcun timeout e il processo viene eseguito fino al completamento o finché non si verifica un errore.  
   
  **TerminateProcessAfterTimeOut**  
- Consente di indicare se il processo deve essere terminato allo scadere del periodo di timeout specificato nell'opzione **TimeOut**. Questa opzione è disponibile solo se **TimeOut** non è impostata su **0**.  
+ Consente di indicare se il processo deve essere terminato allo scadere del periodo di timeout specificato nell'opzione **TimeOut** . Questa opzione è disponibile solo se **TimeOut** non è impostata su **0**.  
   
  **WindowStyle**  
  Consente di specificare lo stile della finestra in cui viene eseguito il processo.  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
   

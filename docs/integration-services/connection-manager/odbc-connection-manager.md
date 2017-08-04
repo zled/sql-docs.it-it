@@ -1,27 +1,32 @@
 ---
-title: "Gestione connessione ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "connessioni [Integration Services], ODBC"
-  - "gestione connessione ODBC"
-  - "origini dati [Integration Services], connessioni"
-  - "gestioni connessioni [Integration Services], ODBC"
+title: Gestione connessione ODBC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [Integration Services], ODBC
+- ODBC connection manager
+- data sources [Integration Services], connections
+- connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a136e71727d1a0b729f7014448dd97d81a7af89d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gestione connessione ODBC
+# <a name="odbc-connection-manager"></a>gestione connessione ODBC
   Una gestione connessione ODBC consente la connessione di un pacchetto a un'ampia gamma di sistemi di gestione di database in base alla specifica ODBC (Open Database Connectivity).  
   
  Quando si aggiunge una connessione ODBC a un pacchetto e si impostano le proprietà della gestione connessione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione e la aggiunge alla raccolta **Connections** del pacchetto. In fase di esecuzione la gestione connessione viene risolta in una connessione ODBC fisica.  
@@ -36,16 +41,16 @@ caps.handback.revision: 41
   
 -   Indicare se la connessione viene mantenuta in fase di esecuzione.  
   
-## Configurazione della gestione connessione ODBC  
+## <a name="configuration-of-the-odbc-connection-manager"></a>Configurazione della gestione connessione ODBC  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
 -   [Riferimento all'interfaccia utente di Gestione connessione ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

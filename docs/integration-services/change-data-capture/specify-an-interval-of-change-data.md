@@ -1,35 +1,40 @@
 ---
-title: "Definizione di un intervallo dei dati delle modifiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caricamento incrementale [Integration Services], specifica dell'intervallo"
+title: Specificare un intervallo di dati delle modifiche | Documenti Microsoft
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: dbe685552f38f7da644d4e57d63fe47a1c400da6
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Definizione di un intervallo dei dati delle modifiche
+# <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Tali endpoint sono valori **datetime** e verranno archiviati in variabili del pacchetto per l'uso successivo nel pacchetto.  
   
 > [!NOTE]  
 >  Per una descrizione del processo complessivo di progettazione del flusso di controllo, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Configurare le variabili del pacchetto per gli endpoint  
+## <a name="set-up-package-variables-for-the-endpoints"></a>Configurare le variabili del pacchetto per gli endpoint  
  Prima di configurare l'attività Esegui SQL per il calcolo degli endpoint, è necessario definire le variabili del pacchetto in cui verranno archiviati gli endpoint.  
   
-#### Per configurare le variabili del pacchetto  
+#### <a name="to-set-up-package-variables"></a>Per configurare le variabili del pacchetto  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire un nuovo progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire un nuovo progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 2.  Nella finestra **Variabili** creare le variabili seguenti:  
   
@@ -41,10 +46,10 @@ caps.handback.revision: 30
   
          In questo esempio viene utilizzato il nome di variabile ExtractEndTime.  
   
- Se si calcolano gli endpoint in un pacchetto master che esegue più pacchetti figlio, è possibile utilizzare le configurazioni Variabile pacchetto padre per passare i valori di tali variabili a ciascun pacchetto figlio. Per altre informazioni, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md) e [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ Se si calcolano gli endpoint in un pacchetto master che esegue più pacchetti figlio, è possibile utilizzare le configurazioni Variabile pacchetto padre per passare i valori di tali variabili a ciascun pacchetto figlio. Per altre informazioni, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md) e [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-## Calcolare un punto iniziale e un punto finale per i dati delle modifiche  
- Dopo avere configurato le variabili del pacchetto per gli endpoint dell'intervallo, è possibile calcolare i valori effettivi per tali endpoint ed eseguirne il mapping alle variabili del pacchetto corrispondenti. Poiché gli endpoint sono valori **datetime**, sarà necessario usare funzioni in grado di calcolare o usare valori **datetime**. Sia il linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sia Transact-SQL includono funzioni che usano valori **datetime**:  
+## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Calcolare un punto iniziale e un punto finale per i dati delle modifiche  
+ Dopo avere configurato le variabili del pacchetto per gli endpoint dell'intervallo, è possibile calcolare i valori effettivi per tali endpoint ed eseguirne il mapping alle variabili del pacchetto corrispondenti. Poiché gli endpoint sono valori **datetime** , sarà necessario usare funzioni in grado di calcolare o usare valori **datetime** . Sia il linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sia Transact-SQL includono funzioni che usano valori **datetime** :  
   
  Funzioni nel linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che usano valori **datetime**  
  -   [DATEADD &#40;espressione SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)  
@@ -70,17 +75,17 @@ caps.handback.revision: 30
   
  Dopo avere determinato se l'intervallo di modifiche è fisso o più casuale, è possibile calcolare gli endpoint:  
   
--   **Calcolo della data e dell'ora di inizio**. Utilizzare la data e l'ora di fine del caricamento precedente come data e ora di inizio correnti. Se si usa un intervallo fisso per i caricamenti incrementali, è possibile calcolare questo valore usando le funzioni **datetime** di Transact-SQL o del linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In caso contrario, potrebbe essere necessario impostare la persistenza degli endpoint tra le esecuzioni e utilizzare un'attività Esegui SQL o un'attività Script per caricare l'endpoint precedente.  
+-   **Calcolo della data e dell'ora di inizio**. Utilizzare la data e l'ora di fine del caricamento precedente come data e ora di inizio correnti. Se si usa un intervallo fisso per i caricamenti incrementali, è possibile calcolare questo valore usando le funzioni **datetime** di Transact-SQL o del linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . In caso contrario, potrebbe essere necessario impostare la persistenza degli endpoint tra le esecuzioni e utilizzare un'attività Esegui SQL o un'attività Script per caricare l'endpoint precedente.  
   
--   **Calcolo della data e dell'ora di fine**. Se si utilizza un intervallo fisso per i carichi incrementali, calcolare la data e l'ora di fine correnti come offset della data e dell'ora di inizio. Anche in questo caso, è possibile calcolare questo valore usando le funzioni **datetime** di Transact-SQL o del linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+-   **Calcolo della data e dell'ora di fine**. Se si utilizza un intervallo fisso per i carichi incrementali, calcolare la data e l'ora di fine correnti come offset della data e dell'ora di inizio. Anche in questo caso, è possibile calcolare questo valore usando le funzioni **datetime** di Transact-SQL o del linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Nella procedura seguente l'intervallo di modifiche è un intervallo fisso e si presuppone che il pacchetto del caricamento incrementale venga eseguito ogni giorno senza eccezione. In caso contrario, i dati delle modifiche per gli intervalli in cui non viene eseguito il caricamento andranno perduti. Il punto iniziale per l'intervallo è costituito dalla mezzanotte del giorno precedente a ieri, ovvero tra le 24 e le 48 ore precedenti. Il punto finale per l'intervallo è costituito dalla mezzanotte di ieri, ovvero la notte precedente, tra le 0 e le 24 ore precedenti.  
   
-#### Per calcolare il punto iniziale e il punto finale per l'intervallo di acquisizione  
+#### <a name="to-calculate-the-starting-point-and-ending-point-for-the-capture-interval"></a>Per calcolare il punto iniziale e il punto finale per l'intervallo di acquisizione  
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un'attività Esegui SQL al pacchetto.  
   
-2.  Nella pagina **Generale** in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
     1.  Per **ResultSet**, selezionare **Riga singola**.  
   
@@ -96,20 +101,20 @@ caps.handback.revision: 30
   
         ```  
   
-3.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL** eseguire il mapping tra il risultato di ExtractStartTime e la variabile del pacchetto ExtractStartTime e tra il risultato di ExtractEndTime e la variabile del pacchetto ExtractEndTime.  
+3.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il risultato di ExtractStartTime e la variabile del pacchetto ExtractStartTime e tra il risultato di ExtractEndTime e la variabile del pacchetto ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quando si usa un'espressione per impostare il valore di una variabile in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'espressione viene valutata ogni volta che si accede al valore della variabile.  
+    >  Quando si usa un'espressione per impostare il valore di una variabile in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , l'espressione viene valutata ogni volta che si accede al valore della variabile.  
   
-## Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo  
  Dopo avere calcolato il punto iniziale e il punto finale per un intervallo di modifiche, il passaggio successivo consiste nel determinare se i dati delle modifiche sono pronti.  
   
  **Argomento successivo:** [Come determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## Vedere anche  
- [Utilizzo di variabili nei pacchetti](../Topic/Use%20Variables%20in%20Packages.md)   
- [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Integration Services &#40; SSIS &#41; Espressioni](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md)   
- [Attività Script](../../integration-services/control-flow/script-task.md)  
+ [Attività script](../../integration-services/control-flow/script-task.md)  
   
   

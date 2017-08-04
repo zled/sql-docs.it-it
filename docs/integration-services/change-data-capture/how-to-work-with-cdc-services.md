@@ -1,25 +1,30 @@
 ---
-title: "Procedura di utilizzo dei servizi CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Come lavorare con i servizi CDC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd4d1ea9deb9451701f84470ed2f35f7aa220df2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Procedura di utilizzo dei servizi CDC
+# <a name="how-to-work-with-cdc-services"></a>Procedura di utilizzo dei servizi CDC
   In questa procedura viene descritto come utilizzare CDC Service Configuration Console per preparare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare con i servizi Oracle CDC e creare un nuovo servizio CDC.  
   
-### Per utilizzare i servizi CDC  
+### <a name="to-work-with-cdc-services"></a>Per utilizzare i servizi CDC  
   
 1.  Dal menu **Start** , selezionare **CDC Service Configuration for Oracle**.  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 6
   
          Per informazioni su come utilizzare questa finestra di dialogo, vedere [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Per informazioni sulla procedura di creazione o modifica di un servizio CDC, vedere [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
-         È sufficiente che l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dal servizio Oracle CDC sia membro del ruolo predefinito del server `public`, non sono necessari altri privilegi. Tuttavia, per creare il servizio Oracle CDC, l'account di accesso deve avere l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio è necessario che all'account di accesso sia assegnato il ruolo del database **db_owner**. Quando si tenta di creare una nuova istanza di Oracle CDC da un account di accesso senza autorizzazione di scrittura per il database MSXDBDCDC, viene visualizzato un messaggio di errore. Fare clic su **OK** nella finestra di dialogo per visualizzare la finestra di dialogo Connect to SQL Server.  
+         È sufficiente che l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dal servizio Oracle CDC sia membro del ruolo predefinito del server `public` , non sono necessari altri privilegi. Tuttavia, per creare il servizio Oracle CDC, l'account di accesso deve avere l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio è necessario che all'account di accesso sia assegnato il ruolo del database **db_owner** . Quando si tenta di creare una nuova istanza di Oracle CDC da un account di accesso senza autorizzazione di scrittura per il database MSXDBDCDC, viene visualizzato un messaggio di errore. Fare clic su **OK** nella finestra di dialogo per visualizzare la finestra di dialogo Connect to SQL Server.  
   
-         Per informazioni su come immettere le credenziali per un account di accesso che ha l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio il ruolo del database **db_owner**, vedere [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) e [Connessione a SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
+         Per informazioni su come immettere le credenziali per un account di accesso che ha l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio il ruolo del database **db_owner** , vedere [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) e [Connessione a SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

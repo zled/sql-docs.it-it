@@ -1,29 +1,34 @@
 ---
-title: "Elemento Column per Index (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Column - elemento"
+title: Elemento Column per Index (DTA) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7aaf1a73356f2e5a2732e12e49b7e618c3bf1f0e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Elemento Column per Index (DTA)
+# <a name="column-element-for-index-dta"></a>Elemento Column per Index (DTA)
   Specifica le colonne sulle quali viene creato l'indice per una configurazione specificata dall'utente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 14
      </Column>  
 ```  
   
-## Attributi elemento  
+## <a name="element-attributes"></a>Attributi elemento  
   
  **Type**: facoltativo. Specifica il tipo di colonna dell'indice. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:  
   
@@ -65,25 +70,25 @@ caps.handback.revision: 14
 <Column SortOrder="Ascending">  
 ```  
   
-## Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Nessuno|  
 |**Valore predefinito**|Nessuno|  
-|**Occorrenza**|È possibile specificare un massimo di 1024 colonne per l'elemento **Index**.|  
+|**Occorrenza**|È possibile specificare un massimo di 1024 colonne per l'elemento **Index** .|  
   
-## Relazioni elemento  
+## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
-|**Elementi figlio**|[Elemento Name per Column &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**Elemento padre**|[Elemento index &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
+|**Elementi figlio**|[Elemento Name per Column &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

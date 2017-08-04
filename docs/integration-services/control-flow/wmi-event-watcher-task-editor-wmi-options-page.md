@@ -1,33 +1,38 @@
 ---
-title: "Editor attivit&#224; Monitoraggio eventi WMI (pagina Opzioni WMI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatcher.wmiquery.f1"
-helpviewer_keywords: 
-  - "Editor attività Monitoraggio eventi WMI"
+title: "Editor attività di monitoraggio eventi WMI (pagina Opzioni WMI) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
+helpviewer_keywords:
+- WMI Event Watcher Task Editor
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 410a65bf316b27fac565388d09bf4c9f5cd82b29
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor attivit&#224; Monitoraggio eventi WMI (pagina Opzioni WMI)
+# <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor attività Monitoraggio eventi WMI (pagina Opzioni WMI)
   Usare la pagina **Opzioni WMI** della finestra di dialogo **Editor attività Monitoraggio eventi WM** per specificare l'origine della query WQL e la modalità di risposta dell'attività Monitoraggio eventi WMI agli eventi del servizio Strumentazione Gestione Windows (WMI).  
   
- Per ulteriori informazioni su questa attività, vedere [WMI Event Watcher Task](../../integration-services/control-flow/wmi-event-watcher-task.md). Per altre informazioni su WQL (WMI Query Language), vedere l'argomento relativo a WMI (Windows Management Instrumentation) "[Query con WQL](http://go.microsoft.com/fwlink/?LinkId=79045)" in MSDN Library.  
+ Per ulteriori informazioni su questa attività, vedere [WMI Event Watcher Task](../../integration-services/control-flow/wmi-event-watcher-task.md). Per altre informazioni su WQL (WMI Query Language), vedere l'argomento relativo a WMI (Windows Management Instrumentation) " [Query con WQL](http://go.microsoft.com/fwlink/?LinkId=79045)" in MSDN Library.  
   
-## Opzioni statiche  
+## <a name="static-options"></a>Opzioni statiche  
  **WMIConnectionName**  
- Consente di selezionare una gestione connessione WMI nell'elenco o di creare una nuova gestione connessione facendo clic su \<**Nuova connessione WMI**>.  
+ Selezionare una gestione connessione WMI nell'elenco oppure fare clic su \< **nuova connessione WMI...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati**: [Gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -58,28 +63,28 @@ caps.handback.revision: 38
  **Timeout**  
  Consente di specificare il numero di secondi di attesa per la generazione dell'evento. Un valore pari a 0 significa che non è attivo alcun timeout.  
   
-## Opzioni dinamiche di WQLQuerySource  
+## <a name="wqlquerysource-dynamic-options"></a>Opzioni dinamiche di WQLQuerySource  
   
-### WQLQuerySource = Input diretto  
+### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Input diretto  
  **WQLQuerySource**  
  Consente di specificare una query o di immettere una query nella finestra di dialogo **Query WQL** visualizzata facendo clic sul pulsante (...).  
   
-### WQLQuerySource = Connessione file  
+### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Connessione file  
  **WQLQuerySource**  
- Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-### WQLQuerySource = Variabile  
+### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variabile  
  **WQLQuerySource**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](../Topic/Add%20Variable.md)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Monitoraggio eventi WMI &#40;pagina Generale&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)   
- [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)   
- [Attività Lettore di dati WMI](../../integration-services/control-flow/wmi-data-reader-task.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Monitoraggio eventi WMI &#40; Pagina generale &#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)   
+ [Pagina espressioni](../../integration-services/expressions/expressions-page.md)   
+ [Attività lettore di dati WMI](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
   

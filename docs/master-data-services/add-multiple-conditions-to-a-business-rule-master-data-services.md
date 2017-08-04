@@ -1,31 +1,36 @@
 ---
-title: "Aggiungere pi&#249; condizioni a una regola business (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regole business [Master Data Services], più condizioni"
+title: "Aggiungere più condizioni a una regola di Business (Master Data Services) | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f32a774b32d76a829e44ef699223c7a7f425dae8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Aggiungere pi&#249; condizioni a una regola business (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] aggiungere più condizioni **AND** o **OR** a una regola di business quando si vuole creare una regola più complessa.  
+# <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Aggiungere più condizioni a una regola business (Master Data Services)
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere più condizioni **AND** o **OR** a una regola di business quando si vuole creare una regola più complessa.  
   
 > [!NOTE]  
->  Se si crea una regola di business che usa l'operatore **OR**, considerare la possibilità di creare una regola separata per ogni istruzione condizionale che può essere valutata indipendentemente. È quindi possibile escludere regole in base alle esigenze, offrendo maggiore flessibilità e una più facile risoluzione dei problemi.  
+>  Se si crea una regola di business che usa l'operatore **OR** , considerare la possibilità di creare una regola separata per ogni istruzione condizionale che può essere valutata indipendentemente. È quindi possibile escludere regole in base alle esigenze, offrendo maggiore flessibilità e una più facile risoluzione dei problemi.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
@@ -34,13 +39,13 @@ caps.handback.revision: 9
   
 -   È necessario che sia presente una regola business. Per altre informazioni, vedere [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
-### Per aggiungere più condizioni a una regola business  
+### <a name="to-add-multiple-conditions-to-a-business-rule"></a>Per aggiungere più condizioni a una regola business  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
 2.  Dalla barra dei menu scegliere **Gestisci** e fare clic su **Regole business**.  
   
-3.  Nella pagina **Regole business** selezionare un modello dall'elenco a discesa **Modello**.  
+3.  Nella pagina **Regole business** selezionare un modello dall'elenco a discesa **Modello** .  
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 9
   
 12. Completare tutti i campi obbligatori.  
   
-13. Fare clic su **Salva**. Viene aggiunta una nuova riga alla griglia **If**.  
+13. Fare clic su **Salva**. Viene aggiunta una nuova riga alla griglia **If** .  
   
 14. Facoltativamente, per aggiungere altre condizioni completare i passaggi 8-13.  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 9
     > [!TIP]  
     >  È possibile selezionare più condizioni e fare clic con il pulsante destro del mouse per raggrupparle o separarle all'interno di un operatore logico specifico.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Modificare il nome di una regola business &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurare le regole di business per l'invio di notifiche &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Modificare il nome di una regola di Business &#40; Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Configurare le regole di Business per l'invio di notifiche &#40; Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Elemento Index (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Index - elemento (DTA)"
+title: Indice di elemento (DTA) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Elemento Index (DTA)
+# <a name="index-element-dta"></a>Index - elemento (DTA)
   Contiene informazioni su un indice che si desidera creare o eliminare per una configurazione specificata dall'utente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 18
     </Index>  
 ```  
   
-## Attributi elemento  
+## <a name="element-attributes"></a>Attributi elemento  
   
 |Attributo Index|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
@@ -52,25 +57,25 @@ caps.handback.revision: 18
 |**ANSI_WARNINGS**|**boolean**|Facoltativa. Specifica il funzionamento standard ISO in varie condizioni di errore. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
 |**NUMERIC_ROUNDABORT**|**boolean**|Facoltativa. Specifica il livello di segnalazione degli errori generato quando l'arrotondamento in un'espressione comporta una perdita di precisione. È necessario disattivare questo attributo se l'indice è definito in una colonna calcolata o in una vista.<br /><br /> La sintassi seguente consente di attivare questo attributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
   
-## Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Nessuno|  
 |**Valore predefinito**|Nessuno|  
-|**Occorrenza**|Obbligatorio una sola volta per ogni elemento **Create** o **Drop** se non è specificata nessun'altra struttura di progettazione fisica tramite gli elementi **Statistics** o **Heap**.|  
+|**Occorrenza**|Obbligatorio una sola volta per ogni elemento **Create** o **Drop** se non è specificata nessun'altra struttura di progettazione fisica tramite gli elementi **Statistics** o **Heap** .|  
   
-## Relazioni elemento  
+## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento **Drop**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
-|**Elementi figlio**|[Elemento Name per Index &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento **PartitionScheme**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento **PartitionColumn**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento **NumberOfReferences**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento **PercentUsage**. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elemento padre**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elementi figlio**|[Elemento Name per Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PartitionColumn** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento**PercentUsage** . Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Per un esempio di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

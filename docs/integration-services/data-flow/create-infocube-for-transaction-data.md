@@ -1,25 +1,30 @@
 ---
-title: "Crea InfoCube per dati transazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crea InfoCube per dati transazione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Crea InfoCube per dati transazione
+# <a name="create-infocube-for-transaction-data"></a>Crea InfoCube per dati transazione
   Usare la finestra di dialogo **Crea InfoCube per dati transazione** per creare un nuovo InfoCube per i dati della transazione nel sistema SAP Netweaver BW.  
   
- È possibile aprire la finestra di dialogo **Crea InfoCube per dati transazione** dalla pagina **Gestione connessione** dell'**Editor destinazione SAP BW**. Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ È possibile aprire la finestra di dialogo **Crea InfoCube per dati transazione** dalla pagina **Gestione connessione** dell' **Editor destinazione SAP BW**. Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoCube**, quindi fare clic su **Crea**.  
   
-## Opzioni generali  
+## <a name="general-options"></a>Opzioni generali  
  **Nome InfoCube**  
  Immettere un nome per il nuovo InfoCube.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
  **Salva e attiva**  
  Salvare e attivare il nuovo InfoCube.  
   
-## Opzioni della struttura di trasferimento di InfoCube  
+## <a name="infocube-transfer-structure-options"></a>Opzioni della struttura di trasferimento di InfoCube  
  La sezione della struttura di trasferimento di InfoCube consente di associare le colonne del flusso di dati agli InfoObject.  
   
  **PipelineElement**  
@@ -69,7 +74,7 @@ caps.handback.revision: 10
  **Iobject - Ricerca**  
  Associare un InfoObject esistente alla colonna del flusso di dati per la riga corrente. Per effettuare questa associazione, fare clic su **Cerca**, quindi usare la finestra di dialogo **Cerca InfoObject** per selezionare l'InfoObject esistente. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
- Dopo aver selezionato un InfoObject esistente, le colonne**InfoObject** e **Tipo** vengono popolate dal componente con i valori selezionati.  
+ Dopo aver selezionato un InfoObject esistente, le colonne **InfoObject** e **Tipo** vengono popolate dal componente con i valori selezionati.  
   
  **Iobject - Nuovo**  
  Creare un nuovo InfoObject e associarlo alla colonna del flusso di dati nella riga corrente. Per creare il nuovo InfoObject, fare clic su **Nuovo**, quindi usare la finestra di dialogo **Crea nuovo InfoObject** per creare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject - Rimuovi**  
  Rimuovere l'associazione tra l'InfoObject e la colonna del flusso di dati per la riga corrente. Per rimuovere l'associazione, scegliere **Rimuovi**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

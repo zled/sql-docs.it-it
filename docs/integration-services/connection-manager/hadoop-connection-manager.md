@@ -1,28 +1,33 @@
 ---
-title: "Gestione connessione Hadoop | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopconn.f1"
+title: Gestione connessione Hadoop | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gestione connessione Hadoop
+# <a name="hadoop-connection-manager"></a>Gestione connessione Hadoop
   Il componente Gestione connessione Hadoop consente di connettere un pacchetto SSIS a un cluster Hadoop usando i valori specificati per le proprietà.  
   
-## Configurare la gestione connessione Hadoop  
+## <a name="configure-the-hadoop-connection-manager"></a>Configurare la gestione connessione Hadoop  
   
 1.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **Hadoop**, quindi fare clic su **Aggiungi**. Verrà visualizzata la finestra di dialogo **Editor gestione connessione Hadoop** .  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 7
   
     3.  Selezionare il metodo di **Autenticazione** per accedere al servizio WebHCat. I valori disponibili sono **Base** e **Kerberos**.  
   
-         ![Hadoop connection manager editor with basic authentication](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![Editor gestione connessione di Hadoop con l'autenticazione di base](../../integration-services/connection-manager/media/hadoop-cm-basic.png "editor gestione connessione di Hadoop con l'autenticazione di base")  
   
-         ![Hadoop connection manager editor with Kerberos authentication](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![Editor gestione connessione di Hadoop con l'autenticazione Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "editor gestione connessione di Hadoop con l'autenticazione Kerberos")  
   
     4.  Per **Utente WebHCat**immettere l' **Utente** autorizzato ad accedere a WebHCat.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 7
   
 6.  Scegliere **OK** per chiudere la finestra di dialogo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Hive Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Attività Pig Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
- [Attività File system Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
+ [Attività File System Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

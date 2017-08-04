@@ -1,24 +1,29 @@
 ---
-title: "Incorporamento di un&#39;attivit&#224; Profiling dati nel flusso di lavoro del pacchetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attività Profiling dati [Integration Services], uso dell'output nel flusso di lavoro"
+title: "Incorporare un'attività Profiling dati nel pacchetto del flusso di lavoro | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Incorporamento di un&#39;attivit&#224; Profiling dati nel flusso di lavoro del pacchetto
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
   
  Tuttavia, una volta stabiliti i criteri per la qualità dei dati, è possibile automatizzare operazioni periodiche di analisi e pulizia dell'origine dati. Considerare gli scenari seguenti:  
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  Dopo aver ottenuto un flusso di lavoro in cui è possibile incorporare l'attività Flusso di dati, è necessario identificare i passaggi richiesti per aggiungere questa attività. Nella sezione seguente viene descritto il processo generale di incorporazione dell'attività Flusso di dati. Nelle due sezioni finali viene descritto come connettere l'attività Flusso di dati direttamente a un'origine dati o ai dati trasformati dal flusso di dati.  
   
-## Definizione di un flusso di lavoro generale per l'attività Flusso di dati  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>Definizione di un flusso di lavoro generale per l'attività Flusso di dati  
  Nella procedura seguente viene definito l'approccio generale per l'utilizzo dell'output dell'attività Profiling dati nel flusso di lavoro di un pacchetto.  
   
-#### Per utilizzare l'output dell'attività Profiling dati a livello di codice in un pacchetto  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>Per utilizzare l'output dell'attività Profiling dati a livello di codice in un pacchetto  
   
 1.  Aggiungere e configurare l'attività Profiling dati in un pacchetto.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  Nelle sezioni seguenti questo flusso di lavoro generale viene applicato al profiling di dati provenienti direttamente da un'origine dati esterna o trasformati dall'attività Flusso di dati. Viene inoltre illustrato come gestire i requisiti di input e di output dell'attività Flusso di dati.  
   
-## Connessione diretta dell'attività Profiling dati a un'origine dati esterna  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>Connessione diretta dell'attività Profiling dati a un'origine dati esterna  
  L'attività Profiling dati consente di eseguire il profiling di dati provenienti direttamente da un'origine dati.  Per illustrare questa funzionalità, nell'esempio seguente viene utilizzata l'attività Profiling dati per calcolare un profilo Rapporto di valori Null nella colonna per le colonne della tabella Person.Address nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Viene quindi utilizzata un'attività Script per recuperare i risultati dal file di output e popolare le variabili del pacchetto che è possibile utilizzare per indirizzare il flusso di lavoro.  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   Configurazione dei vincoli di precedenza che controlleranno quali rami a valle nel flusso di lavoro vengono eseguiti in base ai risultati dell'attività Profiling dati.  
   
-### Configurare le gestioni connessioni  
+### <a name="configure-the-connection-managers"></a>Configurare le gestioni connessioni  
  Per questo esempio, sono disponibili due gestioni connessioni:  
   
 -   Una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] che stabilisce la connessione al database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 -   Una gestione connessione file che crea il file di output che conterrà i risultati dell'attività Profiling dati.  
   
-##### Per configurare le gestioni connessioni  
+##### <a name="to-configure-the-connection-managers"></a>Per configurare le gestioni connessioni  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]creare un nuovo pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Aggiungere una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al pacchetto. Configurare questa gestione connessione per l'uso del provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e per la connessione a un'istanza disponibile del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+2.  Aggiungere una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al pacchetto. Configurare questa gestione connessione per l'uso del provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e per la connessione a un'istanza disponibile del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Per impostazione predefinita, il nome della gestione connessione è \<nome server>.AdventureWorks1.  
+     Per impostazione predefinita, la gestione connessione è il seguente nome: \<nome server >. AdventureWorks1.  
   
 3.  Aggiungere una gestione connessione file al pacchetto. Configurare questa gestione connessione per la creazione del file di output per l'attività Profiling dati.  
   
      In questo esempio viene utilizzato il nome file DataProfile1.xml. Per impostazione predefinita, la gestione connessione e il file hanno lo stesso nome.  
   
-### Configurare le variabili del pacchetto  
+### <a name="configure-the-package-variables"></a>Configurare le variabili del pacchetto  
  In questo esempio vengono utilizzate due variabili del pacchetto:  
   
 -   La variabile ProfileConnectionName passa il nome della gestione connessione file all'attività Script.  
   
 -   La variabile AddressLine2NullRatio passa il rapporto di valori Null calcolato per questa colonna dall'attività Script al pacchetto.  
   
-##### Per configurare le variabili del pacchetto che conterranno i risultati del profilo  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>Per configurare le variabili del pacchetto che conterranno i risultati del profilo  
   
 -   Nella finestra **Variabili** aggiungere e configurare le due variabili del pacchetto seguenti:  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   Immettere il nome **AddressLine2NullRatio**per l'altra variabile e impostare il tipo di questa variabile su **Double**.  
   
-### Configurare l'attività Profiling dati  
+### <a name="configure-the-data-profiling-task"></a>Configurare l'attività Profiling dati  
  L'attività Profiling dati deve essere configurata nel modo seguente:  
   
 -   Per utilizzare come input i dati forniti dalla gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] .  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   Per salvare i risultati del profilo nel file associato alla gestione connessione file.  
   
-##### Per configurare l'attività Profiling dati  
+##### <a name="to-configure-the-data-profiling-task"></a>Per configurare l'attività Profiling dati  
   
 1.  Aggiungere un'attività Profiling dati al flusso di controllo.  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  Chiudere l'editor attività Profiling dati.  
   
-### Configurare l'attività Script  
+### <a name="configure-the-script-task"></a>Configurare l'attività Script  
  L'attività Script deve essere configurata per recuperare i risultati dal file di output e popolare le variabili del pacchetto configurate in precedenza.  
   
-##### Per configurare l'attività Script  
+##### <a name="to-configure-the-script-task"></a>Per configurare l'attività Script  
   
 1.  Aggiungere un'attività Script al flusso di controllo.  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  Chiudere l'ambiente di sviluppo dello script, quindi l'editor attività Script.  
   
-#### Codice alternativo: lettura dell'output del profilo da una variabile  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Codice alternativo: lettura dell'output del profilo da una variabile  
  La procedura riportata in precedenza indica come caricare l'output dell'attività Profiling dati da un file. Un metodo alternativo consiste nel caricare questo output da una variabile del pacchetto. A tale scopo, è necessario apportare le modifiche seguenti al codice di esempio:  
   
 -   Chiamare il metodo **LoadXml** della classe **XmlDocument** anziché il metodo **Load** .  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### Configurare i vincoli di precedenza  
+### <a name="configure-the-precedence-constraints"></a>Configurare i vincoli di precedenza  
  I vincoli di precedenza devono essere configurati per controllare quali rami a valle nel flusso di lavoro vengono eseguiti in base ai risultati dell'attività Profiling dati.  
   
-##### Per configurare i vincoli di precedenza  
+##### <a name="to-configure-the-precedence-constraints"></a>Per configurare i vincoli di precedenza  
   
 -   Nei vincoli di precedenza che connettono l'attività Script ai rami a valle nel flusso di lavoro, scrivere espressioni che utilizzano i valori delle variabili per indirizzare il flusso di lavoro.  
   
      Ad esempio, è possibile impostare **Operazione valutazione** del vincolo di precedenza su **Espressione e vincolo**. È quindi possibile utilizzare `@AddressLine2NullRatio < .90` come valore dell'espressione. In questo modo il flusso di lavoro segue il percorso selezionato quando le attività precedenti vengono completate e quando la percentuale di valori Null nella colonna selezionata è minore del 90%.  
   
-## Connessione dell'attività Profiling dati ai dati trasformati dal flusso di dati  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>Connessione dell'attività Profiling dati ai dati trasformati dal flusso di dati  
  Anziché direttamente da un'origine dati, è possibile eseguire il profiling dei dati che sono già stati caricati e trasformanti nel flusso di lavoro. L'attività Profiling dati funziona, tuttavia, solo per dati persistenti, non per dati in memoria. Pertanto, è necessario utilizzare dapprima un componente di destinazione per salvare i dati trasformati in una tabella di gestione temporanea.  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  Nella procedura seguente viene fornito l'approccio generale per l'utilizzo dell'attività Profiling dati per eseguire il profiling di dati trasformati dal flusso di dati. Molti passaggi sono simili a quelli descritti in precedenza per il profiling dei dati provenienti direttamente da un'origine dati esterna. Può essere necessario rivedere questi passaggi precedenti per ulteriori informazioni su come configurare i vari componenti.  
   
-#### Per utilizzare l'attività Profiling dati nel flusso di dati  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>Per utilizzare l'attività Profiling dati nel flusso di dati  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]creare un pacchetto.  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 24
   
 7.  Nei vincoli di precedenza che connettono l'attività Script ai rami a valle nel flusso di lavoro, scrivere espressioni che utilizzano i valori delle variabili per indirizzare il flusso di lavoro.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md)  
   

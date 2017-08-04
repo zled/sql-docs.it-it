@@ -1,45 +1,50 @@
 ---
-title: "Eventi registrati dal servizio Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "servizio [Integration Services], eventi"
-  - "eventi [Integration Services], servizio"
-  - "servizio Integration Services, eventi"
+title: Gli eventi registrati dal servizio Integration Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service [Integration Services], events
+- events [Integration Services], service
+- Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Eventi registrati dal servizio Integration Services
+# <a name="events-logged-by-the-integration-services-service"></a>Eventi registrati dal servizio Integration Services
   Quando l'esecuzione del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviata, arrestata o quando si verificano determinati problemi, vengono registrati vari messaggi di evento nel registro eventi applicazioni di Windows.  
   
  In questo argomento vengono fornite informazioni sui messaggi di evento comuni registrati dal servizio nel registro eventi applicazioni. Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra tutti i messaggi descritti in questo argomento con un'origine evento di SQLISService.  
   
  Per informazioni generali sul servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-## Messaggi relativi allo stato del servizio  
+## <a name="service-status-messages"></a>Messaggi di stato del servizio
  Quando si seleziona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per l'installazione, viene installato e avviato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e l'opzione Tipo di avvio è impostata su Automatico.  
   
 |ID evento|Nome simbolico|Text|Note|  
 |--------------|-------------------|----------|-----------|  
-|256|DTS_MSG_SERVER_STARTING|È in corso l'avvio del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)].|Il servizio sta per essere avviato.|  
+|256|DTS_MSG_SERVER_STARTING|È in corso l'avvio del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|Il servizio sta per essere avviato.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio   avviato.|Il servizio è stato avviato.|  
 |260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Impossibile avviare il servizio.%nErrore: %1|Non è stato possibile avviare il servizio. L'impossibilità di avviare il servizio potrebbe dipendere da un'installazione danneggiata o da un account del servizio non corretto.|  
-|258|DTS_MSG_SERVER_STOPPING|È in corso l'arresto del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)].%n%nInterrompi tutti i pacchetti in esecuzione all'uscita: %1|Il servizio sta per essere arrestato e, se la configurazione lo prevede, verranno arrestati tutti i pacchetti in esecuzione. È possibile impostare un valore True o False nel file di configurazione per specificare se arrestare i pacchetti in esecuzione quando viene arrestato il servizio. Nel messaggio relativo a questo evento è incluso il valore di questa impostazione.|  
+|258|DTS_MSG_SERVER_STOPPING|È in corso l'arresto del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%n%nInterrompi tutti i pacchetti in esecuzione all'uscita: %1|Il servizio sta per essere arrestato e, se la configurazione lo prevede, verranno arrestati tutti i pacchetti in esecuzione. È possibile impostare un valore True o False nel file di configurazione per specificare se arrestare i pacchetti in esecuzione quando viene arrestato il servizio. Nel messaggio relativo a questo evento è incluso il valore di questa impostazione.|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio arrestato.%nVersione server %1|Il servizio è stato arrestato.|  
   
-## Messaggi relativi al file di configurazione  
- Le impostazioni per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono archiviate in un file XML che è possibile modificare. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+## <a name="settings-file-messages"></a>Messaggi di file di impostazioni  
+ Le impostazioni per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono archiviate in un file XML che è possibile modificare. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 |ID evento|Nome simbolico|Text|Note|  
 |--------------|-------------------|----------|-----------|  
@@ -47,16 +52,53 @@ caps.handback.revision: 19
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Il file di configurazione del servizio Microsoft SSIS non esiste.%nIl servizio verrà caricato con le impostazioni predefinite.|Il file di configurazione non esiste nel percorso specificato.|  
 |273|DTS_MSG_SERVER_BAD_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Il file di configurazione del servizio Microsoft SSIS non è corretto.%nErrore durante la lettura del file di configurazione:% 1%n%nIl servizio verrà caricato con le impostazioni predefinite.|Non è possibile leggere il file di configurazione o il file non è valido. Questo errore potrebbe essere determinato da un errore di sintassi di XML nel file.|  
   
-## Altri messaggi  
+## <a name="other-messages"></a>Altri messaggi  
   
 |ID evento|Nome simbolico|Text|Note|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Servizio Microsoft SSIS: è in corso l'interruzione del pacchetto in esecuzione.%nID istanza pacchetto: %1%nID pacchetto: %2%nNome pacchetto: %3%nDescrizione pacchetto: %4%nPacchetto|Il servizio sta tentando di arrestare l'esecuzione di un pacchetto. È possibile monitorare e arrestare i pacchetti in esecuzione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni su come gestire i pacchetti in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).|  
+
+## <a name="view-events"></a>Visualizza eventi
+  Sono disponibili due strumenti nei quali è possibile visualizzare eventi per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
   
-## Attività correlate  
- Per informazioni su come visualizzare le voci di log, vedere [Visualizzazione delle voci di log nella finestra Registra eventi](../../integration-services/performance/view-log-entries-in-the-log-events-window.md)  
+-   La finestra di dialogo **Visualizzatore file di log** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nella finestra di dialogo **Visualizzatore file di log** sono disponibili opzioni per l'esportazione, l'applicazione di filtri e l'esecuzione di ricerche nel log. Per altre informazioni sulle opzioni della finestra di dialogo **Visualizzatore file di log**, vedere [Guida sensibile al contesto del Visualizzatore file di log](../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
-## Vedere anche  
- [Eventi registrati da un pacchetto di Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+-   Visualizzatore eventi di Windows.  
   
+ Per descrizioni degli eventi registrati dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Eventi registrati dal servizio Integration Services](../../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
+### <a name="to-view-service-events-for-integration-services-in-sql-server-management-studio"></a>Per visualizzare gli eventi del servizio per Integration Services in SQL Server Management Studio  
+  
+1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  
+2.  Scegliere **Connetti Esplora oggetti** dal menu **File**.  
+  
+3.  Nella finestra di dialogo **Connetti al server** selezionare il tipo di server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selezionare o individuare il server a cui connettersi e quindi fare clic su **Connetti**.  
+  
+4.  In Esplora oggetti fare clic con il pulsante destro del mouse su [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e quindi scegliere **Visualizza log**.  
+  
+5.  Per visualizzare gli eventi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selezionare **SQL Server Integration Services**. L'opzione **Eventi NT** , selezionata automaticamente, viene deselezionata quando si seleziona l'opzione **SQL Server Integration Services** .  
+  
+### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Per visualizzare gli eventi del servizio per Integration Services in Windows nel Visualizzatore eventi  
+  
+1.  Nel **Pannello di controllo**fare clic su **Strumenti di amministrazione**nella visualizzazione classica oppure su **Prestazioni e manutenzione** e quindi su **Strumenti di amministrazione**nella visualizzazione per categorie.  
+  
+2.  Fare clic su **Visualizzatore eventi**.  
+  
+3.  Nella finestra di dialogo **Visualizzatore eventi** fare clic su **Applicazione**.  
+  
+4.  Nello snap-in **Applicazione** individuare nella colonna **Origine** la voce con valore **SQLISService**, fare clic con il pulsante destro del mouse sulla voce e quindi scegliere **Proprietà**.  
+  
+5.  Facoltativamente, fare clic sulla freccia SU o freccia GIÙ per visualizzare l'evento precedente o successivo.  
+  
+6.  Facoltativamente, fare clic sul pulsante Copia negli Appunti per copiare le informazioni sugli eventi.  
+  
+7.  Impostare la visualizzazione dei dati degli eventi in base a byte o parole.  
+  
+8.  Scegliere **OK**.  
+  
+9. Scegliere **Esci** dal menu **File** per chiudere la finestra di dialogo **Visualizzatore eventi** .  
+ 
+## <a name="related-tasks"></a>Attività correlate  
+ Per informazioni su come visualizzare le voci di log, vedere [Eventi registrati da un pacchetto di Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+

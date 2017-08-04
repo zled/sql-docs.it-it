@@ -1,30 +1,35 @@
 ---
-title: "== (uguale) (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "uguale a - operatore (==)"
-  - "== (operatore uguale a)"
+title: = = (Uguale) (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- equal operator (==)
+- == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2944b2ac0c650f3a7a3d447d20b34bee5fa27e20
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# == (uguale) (espressione SSIS)
+# <a name="-equal-ssis-expression"></a>== (uguale) (espressione SSIS)
   Viene eseguito un confronto per determinare se due espressioni sono uguali. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
  Per alcuni tipi di dati, tuttavia, è necessario che l'espressione includa un cast esplicito per consentirne la corretta valutazione. Per altre informazioni sui cast supportati tra tipi di dati, vedere [Cast &#40;espressione SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -32,17 +37,17 @@ expression1 == expression2
   
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *expression1, expression2*  
  Qualsiasi espressione valida.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
- Il set di espressioni *expression1* e *expression2* deve seguire una di queste regole:  
+ Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
   
 -   **Numeric** Sia *expression1* che *expression2* devono essere un tipo di dati numerici. L'intersezione dei tipi di dati deve essere un tipo di dati numeric come specificato dalle regole relative alle conversioni numeriche implicite eseguite dall'analizzatore di espressioni. L'intersezione dei due tipi di dati numeric non può essere Null. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
@@ -84,7 +89,7 @@ expression1 == expression2
   
  Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene restituito TRUE se la data corrente è il 4 luglio 2003. Per altre informazioni, vedere [GETDATE &#40;espressione SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
   
  "7/4/2003" == GETDATE()  
@@ -95,15 +100,15 @@ expression1 == expression2
 ListPrice == 500  
 ```  
   
- In questo esempio viene usata la variabile **LPrice**. Viene restituito TRUE se il valore di **LPrice**è 500. Per consentire la corretta analisi dell'espressione, il tipo di dati della variabile deve essere numeric.  
+ In questo esempio viene usata la variabile **LPrice**. Viene restituito TRUE se il valore di **LPrice** è 500. Per consentire la corretta analisi dell'espressione, il tipo di dati della variabile deve essere numeric.  
   
 ```  
 @LPrice == 500  
 ```  
   
-## Vedere anche  
- [! = &#40;diverso da&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
- [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [! = &#40; Diverso da &#41; &#40; Espressione SSIS &#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [Associatività e precedenza operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatori &#40; Espressione SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Esercitazione: utilizzo dell&#39;origine OData | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Esercitazione: Utilizzo dell''origine OData | Documenti Microsoft'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Esercitazione: utilizzo dell&#39;origine OData
+# <a name="tutorial-using-the-odata-source"></a>Esercitazione: utilizzo dell'origine OData
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (http://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  
   
-## 1. Creare un progetto di Integration Services  
+## <a name="1-create-an-integration-services-project"></a>1. Creare un progetto di Integration Services  
   
 1.  Avviare **SQL Server Data Tools** o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  Immettere un **nome** e selezionare un **percorso** per il progetto, quindi fare clic su **OK**.  
   
-## 2. Aggiungere e configurare l'origine OData per il pacchetto SSIS  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Aggiungere e configurare l'origine OData per il pacchetto SSIS  
   
 1.  Trascinare un'**Attività Flusso di dati** da **Casella degli strumenti SSIS** all'area di progettazione del flusso di controllo del pacchetto SSIS.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. Fare clic su **OK** per chiudere la finestra di dialogo **Editor origine OData** .  
   
-## 3. Aggiungere la destinazione del file flat e testare la soluzione  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Aggiungere la destinazione del file flat e testare la soluzione  
   
 1.  Trascinare una **Destinazione file flat** dalla **casella degli strumenti SSIS** all'area di progettazione del flusso di dati sotto il componente **Origine Odata**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
 5.  Nella finestra di dialogo **Formato file flat** selezionare **Delimitato**. Viene visualizzata la finestra di dialogo **Editor gestione connessione file flat** .  
   
-6.  Nella finestra di dialogo **Editor gestione connessione file flat** immettere **c:\Employees.txt** in **Nome file**.  
+6.  Nella finestra di dialogo **Editor gestione connessione file flat** immettere **c:\Employees.txt**in **Nome file**.  
   
 7.  Fare clic su **Colonne**nel pannello di navigazione sinistro. In questa pagina è possibile visualizzare l'anteprima dei dati.  
   

@@ -1,28 +1,33 @@
 ---
-title: "Creare un&#39;entit&#224; (componente aggiuntivo MDS per Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creare un'entità (componente aggiuntivo MDS per Excel) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creare un&#39;entit&#224; (componente aggiuntivo MDS per Excel)
-  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], gli amministratori possono creare nuove entità per archiviare i dati. Quando si crea un'entità, è necessario caricare almeno un campionamento dei dati che si desidera archiviare.  
+# <a name="create-an-entity-mds-add-in-for-excel"></a>Creare un'entità (componente aggiuntivo MDS per Excel)
+  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], gli amministratori possono creare nuove entità per archiviare i dati. Quando si crea un'entità, è necessario caricare almeno un campionamento dei dati che si desidera archiviare.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione di accesso alle aree funzionali **Amministrazione sistema** e **Visualizzatore**.  
+-   È necessario disporre dell'autorizzazione di accesso alle aree funzionali **Amministrazione sistema** e **Visualizzatore** .  
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
     -   Nei dati deve essere presente una riga di intestazione.  
   
-    -   È utile disporre delle colonne **Nome** e **Codice**. **Codice** è un identificatore univoco per ogni riga.  
+    -   È utile disporre delle colonne **Nome** e **Codice** . **Codice** è un identificatore univoco per ogni riga.  
   
     -   Deve essere presente almeno una riga di dati diversa dall'intestazione. Non è necessario che siano presenti valori in tutte le colonne, ma i dati devono essere rappresentativi di quelli che saranno presenti nell'entità.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 8
   
     -   Verificare che nessuna cella contenga valori relativi all'ora. In MDS è possibile salvare i valori relativi alla data ma non quelli relativi all'ora.  
   
-### Per creare un'entità e caricare i dati  
+### <a name="to-create-an-entity-and-load-data"></a>Per creare un'entità e caricare i dati  
   
 1.  Aprire o creare un foglio di lavoro di Excel contenente i dati che si desidera caricare.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 8
   
 5.  Nella finestra di dialogo **Crea entità** lasciare l'intervallo predefinito oppure modificarlo in base ai dati che si vuole caricare.  
   
-6.  Non deselezionare la casella di controllo **Dati con intestazioni**.  
+6.  Non deselezionare la casella di controllo **Dati con intestazioni** .  
   
-7.  Selezionare un modello dall'elenco **Modello**.  
+7.  Selezionare un modello dall'elenco **Modello** .  
   
 8.  Selezionare una versione dall'elenco **Versione** .  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 8
   
 12. Scegliere **OK**. Dopo che l'entità è stata creata, viene visualizzata una nuova riga di intestazione, le celle vengono evidenziate e il nome del foglio viene aggiornato in base al nome dell'entità.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Per visualizzare gli errori che si sono verificati, fare clic su **Mostra stato** nel gruppo **Pubblica e convalida**. Verranno visualizzate le colonne ValidationStatus e InputStatus. Per altre informazioni, vedere [Convalida dei dati &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Verificare che gli attributi siano stati creati con il tipo di dati previsto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un attributo basato su dominio &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

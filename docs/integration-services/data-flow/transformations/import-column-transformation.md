@@ -1,29 +1,34 @@
 ---
-title: "Trasformazione Importa colonna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.importcolumntrans.f1"
-helpviewer_keywords: 
-  - "Importa colonna - trasformazione [Integration Services]"
-  - "colonne [Integration Services], importazione"
-  - "importazione di dati, pacchetti SSIS"
-  - "inserimento di dati"
+title: Trasformazione Importa colonna | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.importcolumntrans.f1
+helpviewer_keywords:
+- Import Column transformation [Integration Services]
+- columns [Integration Services], importing
+- importing data, SSIS packages
+- inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13d509e0a064b7f8e831e41825496e745d88f831
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Importa colonna
+# <a name="import-column-transformation"></a>Trasformazione Importa colonna
   La trasformazione Importa colonna legge i dati dai file e li aggiunge alle colonne in un flusso di dati. Tramite questa trasformazione un pacchetto può aggiungere a un flusso di dati immagini e testo archiviati in file distinti. Un flusso di dati che carica dati in una tabella in cui sono archiviate informazioni sui prodotti può ad esempio includere la trasformazione Importa colonna per importare dai rispettivi file i commenti dei clienti su ogni prodotto e aggiungerli al flusso di dati.  
   
  Per configurare la trasformazione Importa colonna, procedere nel modo seguente:  
@@ -39,19 +44,19 @@ caps.handback.revision: 44
   
  Questa trasformazione include un input, un output e un output degli errori.  
   
-## Configurazione della trasformazione Importa colonna  
+## <a name="configuration-of-the-import-column-transformation"></a>Configurazione della trasformazione Importa colonna  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Esporta colonna](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

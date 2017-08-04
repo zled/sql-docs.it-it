@@ -1,36 +1,41 @@
 ---
-title: "Propriet&#224; - TCP/IP (scheda Indirizzi IP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "porte [SQL Server], ascolto"
-  - "ascolto [SQL Server], porte"
+title: "Proprietà TCP/IP (scheda indirizzi IP) | Documenti Microsoft"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], listening on
+- listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 581215c25f688b2f1e5661d370a31b5de4aed652
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; - TCP/IP (scheda Indirizzi IP)
+# <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
   La finestra di dialogo **Proprietà TCP/IP** (scheda Indirizzi IP) consente di configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  
   
  Le modifiche hanno effetto dopo il riavvio di SQL Server. Per informazioni sull'avvio e l'arresto del servizio SQL Server Browser, vedere [Avvio e arresto del servizio SQL Server Browser](https://msdn.microsoft.com/library/hh403394.aspx).  
   
-## Porte statiche e Porte dinamiche  
- L'istanza predefinita di SQL Server resta in attesa di connessioni in ingresso sulla porta 1433. È possibile cambiare la porta per ragioni di sicurezza oppure per soddisfare i requisiti di un'applicazione client. Per impostazione predefinita, le istanze denominate, incluso SQL Server Express, sono configurate per l'attesa su porte dinamiche. Per configurare una porta statica, lasciare vuota la casella **Porte dinamiche TCP** e fornire un numero di porta disponibile nella casella **Porta TCP**. Per ulteriori informazioni sull'apertura di porte nel firewall, vedere Configurazione di Windows Firewall per consentire l'accesso a SQL Server nella documentazione online.  
+## <a name="static-vs-dynamic-ports"></a>Porte statiche e Porte dinamiche  
+ L'istanza predefinita di SQL Server resta in attesa di connessioni in ingresso sulla porta 1433. È possibile cambiare la porta per ragioni di sicurezza oppure per soddisfare i requisiti di un'applicazione client. Per impostazione predefinita, le istanze denominate, incluso SQL Server Express, sono configurate per l'attesa su porte dinamiche. Per configurare una porta statica, lasciare vuota la casella **Porte dinamiche TCP** e fornire un numero di porta disponibile nella casella **Porta TCP** . Per ulteriori informazioni sull'apertura di porte nel firewall, vedere Configurazione di Windows Firewall per consentire l'accesso a SQL Server nella documentazione online.  
   
-## Porte dinamiche  
+## <a name="dynamic-ports"></a>Porte dinamiche  
  All'avvio, quando un'istanza di SQL Server è configurata per restare in attesa sulle porte dinamiche, verifica che nel sistema operativo sia disponibile una porta e apre un endpoint per la porta. Per eseguire la connessione, le connessioni in ingresso devono specificare il numero di quella porta. Poiché il numero di porta può variare a ogni avvio di SQL Server, SQL Server offre il servizio SQL Server Browser, che esegue il monitoraggio delle porte e indirizza le connessioni in ingresso alla porta corrente per l'istanza. L'uso di porte dinamiche rende più complessa la connessione a SQL Server tramite un firewall, perché il numero di porta può cambiare al riavvio di SQL Server con la conseguente necessità di modificare le impostazioni del firewall. Per evitare problemi di connessione attraverso un firewall, configurare SQL Server per l'uso di una porta statica.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Attiva**  
  Indica che l'indirizzo IP è attivo sul computer. Non disponibile per **IPAll**.  
   
@@ -50,17 +55,18 @@ caps.handback.revision: 47
   
  Il motore di database può restare in attesa su più porte sullo stesso indirizzo IP. Elencare le porte separandole con una virgola, nel formato 1433,1500,1501. La lunghezza massima del campo è 2047 caratteri.  
   
- Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No** nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP**. Per altre informazioni, vedere "Procedura: Configurazione del Motore di database per l'attesa su più porte TCP" nella documentazione online di SQL Server.  
+ Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No**nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP** . Per altre informazioni, vedere "Procedura: Configurazione del Motore di database per l'attesa su più porte TCP" nella documentazione online di SQL Server.  
   
-## Aggiunta o rimozione di indirizzi IP  
+## <a name="adding-or-removing-ip-addresses"></a>Aggiunta o rimozione di indirizzi IP  
  Gestione configurazione SQL Server visualizza gli indirizzi IP disponibili al momento dell'installazione di SQL Server. Aggiungendo o modificando schede di rete, alla scadenza di un indirizzo IP assegnato dinamicamente, quando si riconfigura la struttura della rete o quando si sposta fisicamente il computer, ad esempio quando un computer portatile si connette alla rete in un edificio diverso, gli indirizzi IP disponibili cambiano. Per modificare un indirizzo IP, modificare la casella **Indirizzo IP** e quindi riavviare SQL Server.  
   
-## Altri argomenti nella documentazione online  
+## <a name="additional-topics-in-books-online"></a>Altri argomenti nella documentazione online  
  Cercare in MSDN argomenti come quelli relativi alla **configurazione di un server per l'ascolto su una porta TCP specifica (Gestione configurazione SQL Server)** e alla **configurazione del motore di database per l'ascolto su più porte TCP**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Creazione di una stringa di connessione valida con TCP/IP](https://msdn.microsoft.com/library/ms191260.aspx)   
  [Servizio SQL Server Browser](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   
+

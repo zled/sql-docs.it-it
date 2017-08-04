@@ -1,28 +1,33 @@
 ---
-title: "Impostare le dimensioni massime di una tabella di traccia (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensioni [SQL Server], tabelle di traccia"
-  - "dimensioni massime di tabella per tracce"
+title: Impostare le dimensioni massime di una tabella di traccia (SQL Server Profiler) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- size [SQL Server], trace tables
+- maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 733cbc9e74e9e9e56c7bcb918f8c695dd1304a7e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Impostare le dimensioni massime di una tabella di traccia (SQL Server Profiler)
+# <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>Impostare le dimensioni massime di una tabella di traccia (SQL Server Profiler)
   In questo argomento viene descritta la procedura per l'impostazione delle dimensioni massime delle tabelle di traccia tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Per impostare le dimensioni massime di una tabella di traccia  
+### <a name="to-set-a-maximum-table-size-for-a-trace-table"></a>Per impostare le dimensioni massime di una tabella di traccia  
   
 1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di SQL Server.  
   
@@ -33,24 +38,24 @@ caps.handback.revision: 23
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
-3.  Nell'elenco **Nome del modello** selezionare un modello di traccia.  
+3.  Nell'elenco **Nome del modello**selezionare un modello di traccia.  
   
 4.  Selezionare la casella di controllo **Salva nella tabella**.  
   
 5.  Connettersi al server nel quale si desidera archiviare la traccia.  
   
-     Verrà visualizzata la finestra di dialogo **Tabella di destinazione**.  
+     Verrà visualizzata la finestra di dialogo **Tabella di destinazione** .  
   
-6.  Selezionare un database per la traccia dall'elenco **Database**.  
+6.  Selezionare un database per la traccia dall'elenco **Database** .  
   
 7.  Nella casella **Tabella** digitare o selezionare il nome di una tabella.  
   
-8.  Selezionare la casella di controllo **Numero massimo di righe**e specificare il numero massimo di righe della tabella di traccia.  
+8.  Selezionare la casella di controllo **Numero massimo di righe** e specificare il numero massimo di righe della tabella di traccia.  
   
     > [!NOTE]  
     >  Quando il numero di righe della tabella supererà il valore massimo specificato, gli eventi di traccia non verranno più registrati. L'esecuzione della traccia, tuttavia, proseguirà.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

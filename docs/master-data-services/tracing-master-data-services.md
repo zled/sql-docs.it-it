@@ -1,22 +1,27 @@
 ---
-title: "Traccia (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Traccia (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9697bf0ee7df005c5cdd5b12126df2e31c7deca2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Traccia (Master Data Services)
+# <a name="tracing-master-data-services"></a>Traccia (Master Data Services)
   Il file Web.config contiene una sezione di traccia, come illustrato di seguito. Questa sezione è nuova in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
@@ -63,7 +68,7 @@ caps.handback.revision: 7
     |Level|Livello di questa voce di traccia.|  
     |Message|Corpo del messaggio della traccia|  
   
-## Risorse esterne  
+## <a name="external-resources"></a>Risorse esterne  
  Post di blog sulla [risoluzione dei problemi relativi al miglioramento della registrazione](http://go.microsoft.com/fwlink/p/?LinkId=615377)su msdn.com.  
   
   

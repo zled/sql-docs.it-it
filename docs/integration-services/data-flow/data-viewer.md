@@ -1,29 +1,34 @@
 ---
-title: "Visualizzatore dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataviewer.f1"
-helpviewer_keywords: 
-  - "Visualizzatore dati - finestra di dialogo"
+title: Visualizzatore dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataviewer.f1
+helpviewer_keywords:
+- Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Visualizzatore dati
+# <a name="data-viewer"></a>Visualizzatore dati
   Se viene configurato un percorso per utilizzare un visualizzatore dati, in quest'ultimo viene visualizzato il buffer di dati in base al buffer durante lo spostamento dei dati tra due componenti di flusso di dati.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Freccia verde**  
  Fare clic sulla freccia per visualizzare i dati nel buffer successivo. Se i dati possono essere spostati in un unico buffer, l'opzione non è disponibile.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 13
  **Copia dati**  
  Consente di copiare i dati nel buffer corrente negli Appunti.  
   
-## Vedere anche  
- [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Debug del flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

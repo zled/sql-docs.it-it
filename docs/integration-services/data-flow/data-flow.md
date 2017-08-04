@@ -1,29 +1,34 @@
 ---
-title: "Flusso di dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dati di output [Integration Services]"
-  - "flusso di dati [Integration Services], elementi"
-  - "dati di input [Integration Services]"
-  - "metadati esterni [Integration Services]"
-  - "flusso di dati [Integration Services]"
-  - "errori [Integration Services], output del flusso di dati"
+title: Flusso di dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Flusso di dati
+# <a name="data-flow"></a>Flusso di dati
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è inoltre possibile creare percorsi che connettono l'output di un componente all'input di un altro componente. I percorsi definiscono la sequenza dei componenti e consentono di aggiungere annotazioni al flusso di dati o visualizzare l'origine della colonna.  
   
- Per connettere i componenti flusso di dati è necessario connettere l'output di origini e destinazioni all'input di trasformazioni e destinazioni. Durante la costruzione di un flusso di dati, il secondo componente e i successivi vengono in genere connessi a mano a mano che vengono aggiunti al flusso di dati. Dopo la connessione di un componente le colonne di input sono disponibili per l'utilizzo durante la configurazione del componente. Se non sono disponibili colonne di input, è necessario completare la configurazione del componente dopo averlo connesso al flusso di dati. Per altre informazioni, vedere [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Connessione di componenti con i percorsi](../Topic/Connect%20Components%20with%20Paths.md).  
+ Per connettere i componenti flusso di dati è necessario connettere l'output di origini e destinazioni all'input di trasformazioni e destinazioni. Durante la costruzione di un flusso di dati, il secondo componente e i successivi vengono in genere connessi a mano a mano che vengono aggiunti al flusso di dati. Dopo la connessione di un componente le colonne di input sono disponibili per l'utilizzo durante la configurazione del componente. Se non sono disponibili colonne di input, è necessario completare la configurazione del componente dopo averlo connesso al flusso di dati. Per altre informazioni, vedere [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Connessione di componenti con i percorsi](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
  Nella figura seguente viene illustrato un flusso di dati che include un'origine, una trasformazione con un input e un output e una destinazione. Oltre alle colonne di input, di output ed esterne, la figura include anche gli input, gli output e gli output degli errori.  
   
- ![Componenti del flusso di dati con relativi input e output](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Componenti del flusso di dati con relativi input e output")  
+ ![Componenti e i relativi input e output del flusso di dati](../../integration-services/data-flow/media/mw-dts-dataflow.gif "componenti e i relativi input e output del flusso di dati")  
   
 ## <a name="data-flow-implementation"></a>Implementazione del flusso di dati  
  L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto costituisce il primo passaggio dell'implementazione di un flusso di dati in un pacchetto. Un pacchetto può includere più attività Flusso di dati, ognuna con un proprio flusso di dati. Ad esempio, se i flussi di dati contenuti in un pacchetto devono essere eseguiti in una sequenza specifica o alternati ad altre attività, è necessario utilizzare un'attività Flusso di dati separata per ogni flusso di dati.  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
   
 ## <a name="connection-managers"></a>Gestioni connessioni  
- Molti componenti flusso di dati si connettono a origini dati e, affinché sia possibile configurare correttamente i componenti, è necessario aggiungere al pacchetto le gestioni connessioni richieste dai componenti stessi. È possibile aggiungere le gestioni connessioni prima o durante la costruzione del flusso di dati. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](../Topic/Create%20Connection%20Managers.md).  
+ Molti componenti flusso di dati si connettono a origini dati e, affinché sia possibile configurare correttamente i componenti, è necessario aggiungere al pacchetto le gestioni connessioni richieste dai componenti stessi. È possibile aggiungere le gestioni connessioni prima o durante la costruzione del flusso di dati. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ## <a name="external-metadata"></a>Metadati esterni  
  Quando si crea un flusso di dati in un pacchetto utilizzando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , i metadati delle origini e delle destinazioni vengono copiati nelle colonne esterne delle origini e delle destinazioni, fornendo uno snapshot dello schema. Quando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] convalida il pacchetto, Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] confronta tale snapshot con lo schema dell'origine o destinazione e invia gli errori e gli avvisi appropriati, a seconda delle differenze rilevate.  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
+

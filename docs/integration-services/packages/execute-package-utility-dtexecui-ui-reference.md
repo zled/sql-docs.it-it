@@ -1,36 +1,41 @@
 ---
-title: "Riferimento all&#39;interfaccia utente dell&#39;utilit&#224; di esecuzione pacchetti (DtExecUI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.dtexecui.setvalues.f1"
-  - "sql13.dts.dtexecui.reporting.f1"
-  - "sql13.dts.dtexecui.datasources.f1"
-  - "sql13.dts.dtexecui.commandfiles.f1"
-  - "sql13.dts.dtexecui.logging.f1"
-  - "sql13.dts.dtexecui.general.f1"
-  - "sql13.dts.dtexecui.verification.f1"
-  - "sql13.dts.dtexecui.executionoptions.f1"
-  - "sql13.dts.dtexecui.commandline.f1"
-  - "sql13.dts.dtexecui.configuration.f1"
-helpviewer_keywords: 
-  - "DTExecUI - utilità"
+title: "Eseguire l'utilità pacchetti (dtexecui) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.dtexecui.setvalues.f1
+- sql13.dts.dtexecui.reporting.f1
+- sql13.dts.dtexecui.datasources.f1
+- sql13.dts.dtexecui.commandfiles.f1
+- sql13.dts.dtexecui.logging.f1
+- sql13.dts.dtexecui.general.f1
+- sql13.dts.dtexecui.verification.f1
+- sql13.dts.dtexecui.executionoptions.f1
+- sql13.dts.dtexecui.commandline.f1
+- sql13.dts.dtexecui.configuration.f1
+helpviewer_keywords:
+- DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Riferimento all&#39;interfaccia utente dell&#39;utilit&#224; di esecuzione pacchetti (DtExecUI)
-  Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec**.  
+# <a name="execute-package-utility-dtexecui"></a>Eseguire l'utilità pacchetti (dtexecui)
+  Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
   
  I pacchetti vengono eseguiti nello stesso processo dell'utilità **dtexecui.exe** . Questa utilità è uno strumento a 32 bit, quindi i pacchetti eseguiti usando **dtexecui.exe** in un ambiente a 64 bit vengono eseguiti in Windows on Win32 (WOW). Quando si sviluppano e si verificano i comandi usando l'utilità dtexecui.exe in un computer a 64 bit, è consigliabile eseguire la verifica in modalità a 64 bit usando la versione a 64 bit di **dtexec.exe** prima della distribuzione o della pianificazione dei comandi su un server di produzione.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 39
   
  L' **Utilità di esecuzione pacchetti** può essere anche usata per assemblare le righe di comando usate dall'utente durante l'esecuzione diretta di **DTExec** .  
   
-### Per aprire l'Utilità di esecuzione pacchetti in SQL Server Management Studio  
+### <a name="to-open-execute-package-utility-in-sql-server-management-studio"></a>Per aprire l'Utilità di esecuzione pacchetti in SQL Server Management Studio  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
@@ -46,27 +51,27 @@ caps.handback.revision: 39
   
 3.  Nella finestra di dialogo **Connetti al server** immettere il nome del server nell'elenco **Nome server** e quindi fare clic su **Connetti**.  
   
-4.  Espandere la cartella **Pacchetti archiviati** e le relative sottocartelle, fare clic con il pulsante destro del mouse sul pacchetto da eseguire e quindi scegliere **Esegui pacchetto**.  
+4.  Espandere la cartella **Pacchetti archiviati**e le relative sottocartelle, fare clic con il pulsante destro del mouse sul pacchetto da eseguire e quindi scegliere **Esegui pacchetto**.  
   
-### Per aprire l'Utilità di esecuzione pacchetti dal prompt dei comandi  
+### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>Per aprire l'Utilità di esecuzione pacchetti dal prompt dei comandi  
   
 -   In una finestra del prompt dei comandi eseguire **dtexecui**.  
   
  Nelle sezioni seguenti vengono descritte le pagine della finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Generale  
+## <a name="general-page"></a>Pagina Generale  
  Utilizzare la pagina **Generale** della finestra di dialogo **Utilità di esecuzione pacchetti** per specificare il nome e il percorso di un pacchetto.  
   
  L'utilità di esecuzione pacchetti (dtexecui.exe) esegue sempre un pacchetto nel computer locale anche se il pacchetto si trova su un server remoto. Se il pacchetto remoto utilizza file di configurazione che si trovano a loro volta sul server remoto, l'Utilità di esecuzione pacchetti non è in grado di individuare tali file e l'esecuzione del pacchetto ha esito negativo. Per evitare questo problema, è necessario fare riferimento ai file di configurazione tramite un nome condiviso in formato UNC (Universal Naming Convention), ad esempio \\\mioserver\miofile.  
   
-### Opzioni statiche  
+### <a name="static-options"></a>Opzioni statiche  
  **Origine pacchetto**  
  Consente di specificare il percorso del pacchetto da eseguire mediante le opzioni seguenti:  
   
 |||  
 |-|-|  
 |Valore|Description|  
-|**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** *nomeutente* e **/PASSWORD** *password* al prompt dei comandi.|  
+|**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** *nomeutente* e **/PASSWORD** *password* options to the comme prompt.|  
 |**File system**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
 |**Archivio pacchetti SSIS**|Selezionare questa opzione se il pacchetto si trova nell'Archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
@@ -76,11 +81,11 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-### Opzioni dinamiche  
+### <a name="dynamic-options"></a>Opzioni dinamiche  
   
-#### Origine pacchetto = SQL Server  
+#### <a name="package-source--sql-server"></a>Origine pacchetto = SQL Server  
  **Server**  
  Consente di digitare il nome del server in cui si trova il pacchetto o di selezionare il server nell'elenco.  
   
@@ -91,19 +96,19 @@ caps.handback.revision: 39
  Selezionare questa opzione per usare l'autenticazione di Windows e accedere mediante un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usa autenticazione di SQL Server**  
- Selezionare questa opzione per usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un utente si connette con un nome di account di accesso e una password da una connessione non trusted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'autenticazione controllando se è stato impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se la password specificata corrisponde a quella registrata in precedenza. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riesce a trovare un account di accesso, l'autenticazione ha esito negativo e viene visualizzato un messaggio di errore.  
+ Selezionare questa opzione per usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando un utente si connette con un nome di account di accesso e una password da una connessione non trusted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'autenticazione controllando se è stato impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se la password specificata corrisponde a quella registrata in precedenza. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riesce a trovare un account di accesso, l'autenticazione ha esito negativo e viene visualizzato un messaggio di errore.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows.  
   
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS**.  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS** .  
   
-#### Origine pacchetto = File system  
+#### <a name="package-source--file-system"></a>Origine pacchetto = File system  
  **Pacchetto**  
  Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo Apri. Per impostazione predefinita, nella finestra di dialogo vengono elencati solo i file con estensione dtsx.  
   
-#### Origine pacchetto = Archivio pacchetti SSIS  
+#### <a name="package-source--ssis-package-store"></a>Origine pacchetto = Archivio pacchetti SSIS  
  **Server**  
  Consente di digitare il nome del computer in cui si trova il pacchetto o di selezionare il computer nell'elenco.  
   
@@ -114,15 +119,15 @@ caps.handback.revision: 39
  Selezionare questa opzione per utilizzare l'autenticazione di Windows e accedere mediante un account utente di Microsoft Windows.  
   
  **Usa autenticazione di SQL Server**  
- Questa opzione non è disponibile se si esegue un pacchetto incluso nell'**Archivio pacchetti SSIS**.  
+ Questa opzione non è disponibile se si esegue un pacchetto incluso nell' **Archivio pacchetti SSIS**.  
   
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS**.  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS** .  
   
-## Pagina Configurazioni  
+## <a name="configurations-page"></a>Pagina Configurazioni  
  Utilizzare la pagina **Configurazioni** della finestra di dialogo **Utilità di esecuzione pacchetti** per selezionare i file di configurazione da caricare in fase di esecuzione e di specificare l'ordine in cui devono essere caricati.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **File di configurazione**  
  Elenca le configurazioni utilizzate dal pacchetto. Ogni file di configurazione aggiunge un'opzione **/CONFIGFILE nomefile** al prompt dei comandi.  
   
@@ -133,7 +138,7 @@ caps.handback.revision: 39
 >  Se più configurazioni modificano la stessa proprietà, viene utilizzata la configurazione caricata per ultima.  
   
  **Aggiungi**  
- Fare clic su questo pulsante per aggiungere configurazioni tramite la finestra di dialogo **Apri**. Per impostazione predefinita, nella finestra di dialogo sono elencati solo i file con estensione dtsconfig.  
+ Fare clic su questo pulsante per aggiungere configurazioni tramite la finestra di dialogo **Apri** . Per impostazione predefinita, nella finestra di dialogo sono elencati solo i file con estensione dtsconfig.  
   
  **Rimuovi**  
  Selezionare un file di configurazione nell'elenco e quindi fare clic su **Rimuovi**.  
@@ -142,36 +147,36 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina File di comando  
+## <a name="command-files-page"></a>Pagina File di comando  
  Utilizzare la pagina **File di comando** della finestra di dialogo **Utilità di esecuzione pacchetti** per selezionare i file di comando da caricare in fase di esecuzione.  
   
-### Opzioni  
- **File di comando**  
+### <a name="options"></a>Opzioni  
+ **Command files**  
  Consente di elencare i file di comando utilizzati dal pacchetto. Un pacchetto può utilizzare più file per l'impostazione delle opzioni della riga di comando.  
   
  **Tasti di direzione**  
  Selezionare un file di comando nell'elenco e utilizzare i tasti di direzione a destra per modificare l'ordine di caricamento. I file di comando vengono caricati in ordine a partire dalla parte superiore dell'elenco.  
   
  **Aggiungi**  
- Fare clic su questo pulsante per aggiungere un file di comando usando la finestra di dialogo **Apri**.  
+ Fare clic su questo pulsante per aggiungere un file di comando usando la finestra di dialogo **Apri** .  
   
  **Rimuovi**  
- Selezionare un file di comando nella casella di testo e quindi rimuoverlo con il pulsante **Rimuovi**.  
+ Selezionare un file di comando nella casella di testo e quindi rimuoverlo con il pulsante **Rimuovi** .  
   
  **Execute**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Gestioni connessioni  
+## <a name="connection-managers-page"></a>Pagina Gestioni connessioni  
  Utilizzare la pagina **Gestioni connessioni** della finestra di dialogo **Utilità di esecuzione pacchetti** per modificare le stringhe di connessione delle gestioni connessioni utilizzate dal pacchetto.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Gestione connessione**  
- Selezionare la casella di controllo corrispondente per rendere modificabile la colonna **Stringa di connessione**.  
+ Selezionare la casella di controllo corrispondente per rendere modificabile la colonna **Stringa di connessione** .  
   
  **Description**  
  Consente di visualizzare una descrizione di ogni gestione connessione. Non è possibile modificare le descrizioni.  
@@ -183,12 +188,12 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Opzioni di esecuzione  
+## <a name="execution-options-page"></a>Pagina Opzioni di esecuzione  
  Usare la pagina **Opzioni di esecuzione** della finestra di dialogo **Utilità di esecuzione pacchetti** per specificare le opzioni di runtime per il pacchetto.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Interrompi il pacchetto in caso di avvisi di convalida**  
  Indica se il pacchetto deve essere interrotto quando vengono generati avvisi di convalida.  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 39
  Elenca i file del checkpoint utilizzati dal pacchetto, se si abilitano i checkpoint del pacchetto.  
   
  **Sfoglia**  
- Fare clic sul pulsante Sfoglia **(…)** per individuare il file del checkpoint tramite la finestra di dialogo **Apri**, se si abilitano i checkpoint del pacchetto. Se è già stato specificato un file del checkpoint, questo viene sostituito dal file selezionato.  
+ Fare clic sul pulsante Sfoglia **(…)** per individuare il file del checkpoint tramite la finestra di dialogo **Apri** , se si abilitano i checkpoint del pacchetto. Se è già stato specificato un file del checkpoint, questo viene sostituito dal file selezionato.  
   
  **Ignora opzioni di riavvio**  
  Indica se ignorare le opzioni di riavvio, se si abilitano i checkpoint del pacchetto.  
@@ -217,12 +222,12 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Report  
+## <a name="reporting-page"></a>Pagina Report  
  Utilizzare la pagina **Report** dell' **Utilità di esecuzione pacchetti** per specificare le informazioni e gli eventi relativi al pacchetto da registrare nella console durante l'esecuzione del pacchetto.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Eventi console**  
  Consente di specificare gli eventi e i tipi di messaggi da segnalare.  
   
@@ -278,12 +283,12 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Registrazione  
+## <a name="logging-page"></a>Pagina Registrazione  
  Utilizzare la pagina **Registrazione** della finestra di dialogo **Utilità di esecuzione pacchetti** per rendere disponibili i provider di log per il pacchetto in fase di esecuzione. Specificare il tipo di provider di log del pacchetto e la stringa di connessione al log. Per ogni voce di provider di log, viene aggiunta un'opzione **/LOGGER***idclasse* al prompt dei comandi.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Provider di log**  
  Selezionare un provider di log dall'elenco.  
   
@@ -297,12 +302,12 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Imposta valori  
+## <a name="set-values-page"></a>Pagina Imposta valori  
  Utilizzare la pagina **Imposta valori** della finestra di dialogo **Utilità di esecuzione pacchetti** per impostare i valori delle proprietà di pacchetti, file eseguibili, connessioni, variabili e provider di log specificando i percorsi delle proprietà e i valori di queste ultime. Ogni percorso aggiunge un'opzione **/SET***percorsoproprietà;valore* al prompt dei comandi.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Percorso proprietà**  
  Consente di immettere il percorso della proprietà. La sintassi del percorso usa una barra rovesciata (\\) per indicare che l'elemento seguente è un contenitore, il punto (.) per indicare che l'elemento seguente è una proprietà e le parentesi per indicare un membro di una raccolta. Il membro può essere identificato tramite il relativo indice o nome. Ad esempio, il percorso della proprietà di una variabile di pacchetto è \Pacchetto.Variabili[Variabile].Valore.  
   
@@ -316,12 +321,12 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Verifica  
+## <a name="verification-page"></a>Pagina Verifica  
  Utilizzare la pagina **Verifica** della finestra di dialogo **Utilità di esecuzione pacchetti** per impostare i criteri di verifica del pacchetto.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Esegui solo pacchetti firmati**  
  Selezionare questa opzione per eseguire solo i pacchetti firmati.  
   
@@ -347,28 +352,28 @@ caps.handback.revision: 39
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Pagina Riga di comando  
+## <a name="command-line-page"></a>Pagina Riga di comando  
  Utilizzare il nodo **Riga di comando** della finestra di dialogo **Utilità di esecuzione pacchetti** per modificare la riga di comando generata dalle opzioni create dalle varie finestre di dialogo.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **Ripristina opzioni originali**  
  Fare clic su questo pulsante per ripristinare lo stato originale della riga di comando. Usare questa opzione se sono state apportate modifiche tramite l'opzione **Modifica riga di comando manualmente** e si vogliono ripristinare le opzioni delle riga di comando originali.  
   
  **Modifica riga di comando manualmente**  
- Fare clic per modificare la riga di comando nella casella di testo **Riga di comando**.  
+ Fare clic per modificare la riga di comando nella casella di testo **Riga di comando** .  
   
- **Riga di comando**  
+ **Command line**  
  Consente di visualizzare la riga di comando corrente, che risulta modificabile se si seleziona l'opzione per la modifica manuale della riga di comando.  
   
  **Execute**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
- Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti**.  
+ Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
-## Vedere anche  
- [Utilità dtexec](../../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Utilità DTExec](../../integration-services/packages/dtexec-utility.md)  
   
   

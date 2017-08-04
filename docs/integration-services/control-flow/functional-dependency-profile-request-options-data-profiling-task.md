@@ -1,24 +1,29 @@
 ---
-title: "Opzioni di Richiesta profilo Dipendenza funzionale (Attivit&#224; Profiling dati) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Editor attività Profiling dati"
+title: "Opzioni di richiesta profilo dipendenza funzionale (attività Profiling dati) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Opzioni di Richiesta profilo Dipendenza funzionale (Attivit&#224; Profiling dati)
+# <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Dipendenza funzionale** selezionata nel riquadro delle richieste. Un profilo Dipendenza funzionale segnala il livello di dipendenza dei valori inclusi in una colonna (colonna dipendente) dai valori presenti in un'altra colonna o set di colonne (colonna determinante). Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, la dipendenza tra una colonna che contiene i codici postali ZIP (Stati Uniti) e una colonna che contiene gli stati degli Stati Uniti. Benché nel profilo uno stesso codice postale debba essere sempre associato allo stesso stato, vengono individuate violazioni di tale dipendenza.  
   
 > [!NOTE]  
@@ -26,10 +31,10 @@ caps.handback.revision: 24
   
  Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Informazioni sulla selezione di colonne determinanti e dipendenti  
- Una **Richiesta profilo Dipendenza funzionale** calcola il livello di determinazione del valore della colonna dipendente, specificata nella proprietà **DependentColumn**, da parte della colonna o del set di colonne determinanti, specificate nella proprietà **DeterminantColumns**. Tra una colonna che contiene gli stati degli Stati Uniti, ad esempio, e una colonna che contiene i codici postali ZIP (Stati Uniti) deve esistere una dipendenza funzionale. Ciò significa che se il codice postale ZIP (colonna determinante) è 98052, lo stato (colonna dipendente) deve essere sempre Washington.  
+## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>Informazioni sulla selezione di colonne determinanti e dipendenti  
+ Una **Richiesta profilo Dipendenza funzionale** calcola il livello di determinazione del valore della colonna dipendente, specificata nella proprietà **DependentColumn** , da parte della colonna o del set di colonne determinanti, specificate nella proprietà **DeterminantColumns** . Tra una colonna che contiene gli stati degli Stati Uniti, ad esempio, e una colonna che contiene i codici postali ZIP (Stati Uniti) deve esistere una dipendenza funzionale. Ciò significa che se il codice postale ZIP (colonna determinante) è 98052, lo stato (colonna dipendente) deve essere sempre Washington.  
   
- Per il lato determinante, è possibile specificare una colonna o un set di colonne nella proprietà **DeterminantColumns**. Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per la proprietà **DeterminantColumns** vengono selezionate le opzioni seguenti:  
+ Per il lato determinante, è possibile specificare una colonna o un set di colonne nella proprietà **DeterminantColumns** . Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per la proprietà **DeterminantColumns** vengono selezionate le opzioni seguenti:  
   
 -   Quando si seleziona il carattere jolly **(\*)**, l'attività Profiling dati testa ogni colonna come lato determinante della dipendenza.  
   
@@ -40,42 +45,42 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Se si seleziona **(\*)**, questa opzione potrebbe comportare un numero elevato di calcoli, riducendo le prestazioni dell'attività. Se l'attività, tuttavia, rileva un subset che soddisfa la soglia per una dipendenza funzionale, non vengono analizzate combinazioni aggiuntive. Nella tabella di esempio descritta in precedenza, ad esempio, se l'attività determina che la colonna C è una colonna determinante, non verranno analizzati altri candidati composti.  
   
-## Opzioni del riquadro Proprietà richiesta  
- Nel riquadro **Proprietà richiesta** per **Richiesta profilo Dipendenza funzionale** vengono visualizzati i gruppi di opzioni seguenti:  
+## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
+ Nel riquadro **Proprietà richiesta**per **Richiesta profilo Dipendenza funzionale** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati** che include le opzioni **DeterminantColumns** e **DependentColumn**  
+-   **Dati**che include le opzioni **DeterminantColumns** e **DependentColumn**  
   
 -   **Generale**  
   
 -   **Opzioni**  
   
-### Opzioni dati  
+### <a name="data-options"></a>Opzioni dati  
  **ConnectionManager**  
  Consente di selezionare la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] esistente che usa il provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) ai fini della connessione al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente la tabella o la vista di cui eseguire il profiling.  
   
  **TableOrView**  
  Consente di selezionare la tabella o la vista esistente da analizzare.  
   
- **DeterminantColumns**  
+ **DependentColumn**  
  Consente di selezionare la colonna o il set di colonne determinante. Consente pertanto di selezionare la colonna o il set di colonne i cui valori determinano il valore della colonna dipendente.  
   
  Per ulteriori informazioni, vedere le sezioni "Informazioni sulla selezione di colonne determinanti e dipendenti" e "Opzioni DeterminantColumns e DependentColumn" in questo argomento.  
   
- **DependentColumn**  
+ **DeterminantColumns**  
  Consente di selezionare la colonna dipendente. Consente pertanto di selezionare la colonna il cui valore è determinato dal valore della colonna o del set di colonne del lato determinante.  
   
  Per ulteriori informazioni, vedere le sezioni "Informazioni sulla selezione di colonne determinanti e dipendenti" e "Opzioni DeterminantColumns e DependentColumn" in questo argomento.  
   
-#### Opzioni DeterminantColumns e DependentColumn  
- Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **DeterminantColumns **e **DependentColumn**.  
+#### <a name="determinantcolumns-and-dependentcolumn-options"></a>Opzioni DeterminantColumns e DependentColumn  
+ Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **DeterminantColumns** e **DependentColumn**.  
   
  Per ulteriori informazioni, vedere la sezione "Informazioni sulla selezione di colonne determinanti e dipendenti" riportata in precedenza in questo argomento.  
   
  **IsWildCard**  
- Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per analizzare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
- Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per analizzare tutte le colonne. Questa opzione è di sola lettura.  
+ Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  
   
  **StringCompareOptions**  
  Consente di selezionare le opzioni per il confronto di valori stringa. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente. Il valore predefinito di questa opzione è **Default**.  
@@ -85,7 +90,7 @@ caps.handback.revision: 24
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Valore predefinito**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
+|**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
 |**DictionarySort**|Ordina e confronta i dati in base alle regole di ordinamento e confronto definite nei dizionari per la lingua o l'alfabeto associato.|  
   
@@ -98,17 +103,17 @@ caps.handback.revision: 24
 |**IgnoreKanaType**|Specifica se nel confronto viene fatta distinzione tra i due tipi di caratteri Kana giapponesi, Hiragana e Katakana. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la distinzione tra Katakana e Hiragana.|  
 |**IgnoreWidth**|Specifica se nel confronto viene fatta distinzione tra un carattere a un byte (metà larghezza) e lo stesso carattere rappresentato con due byte (larghezza intera). Se questa opzione è impostata, nel confronto tra stringhe la rappresentazione a un byte e quella a due byte dello stesso carattere verranno considerate uguali.|  
   
-### Opzioni generali  
+### <a name="general-options"></a>Opzioni generali  
  **RequestID**  
  Nome descrittivo per identificare la richiesta di profilo. Non è in genere necessario modificare il valore generato automaticamente.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **ThresholdSetting**  
  Consente di specificare l'impostazione della soglia. Il valore predefinito di questa proprietà è **Specified**.  
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
+|**None**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **FDStrengthThreshold**. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se la dipendenza funzionale tra le colonne selezionate è esatta.|  
   
@@ -118,8 +123,8 @@ caps.handback.revision: 24
  **MaxNumberOfViolations**  
  Specifica il numero massimo di violazioni della dipendenza funzionale da segnalare nell'output. Il valore predefinito di questa proprietà è 100. Questa opzione è disabilitata quando si seleziona **Exact** come **ThresholdSetting**.  
   
-## Vedere anche  
- [Editor attività Profiling dati &#40;pagina Generale&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Dati di profilatura Editor attività &#40; Pagina generale &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Form profilo rapido singola tabella &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

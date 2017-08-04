@@ -1,31 +1,36 @@
 ---
-title: "Sbloccare una versione (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sblocco di versioni [Master Data Services]"
-  - "versioni [Master Data Services], sblocco"
+title: Sbloccare una versione (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unlocking versions [Master Data Services]
+- versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e575a205a7fbe7f18c2b0313555ec1cf1cb34e50
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sbloccare una versione (Master Data Services)
+# <a name="unlock-a-version-master-data-services"></a>Sbloccare una versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sbloccare una versione di un modello per abilitare modifiche ai membri del modello e ai relativi attributi.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario avere l'autorizzazione per accedere all'area funzionale **Gestione versioni**.  
+-   È necessario avere l'autorizzazione per accedere all'area funzionale **Gestione versioni** .  
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 6
   
 -   È necessario avere l'autorizzazione per accedere all'area funzionale Gestione versioni. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
-### Per sbloccare una versione  
+### <a name="to-unlock-a-version"></a>Per sbloccare una versione  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Gestione versioni**.  
   
@@ -43,11 +48,11 @@ caps.handback.revision: 6
   
 4.  Nella finestra di dialogo di conferma fare clic su **OK**.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
   
--   [Bloccare una versione &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [Bloccare una versione &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## Vedere anche  
- [Versioni &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Versioni &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
   
   

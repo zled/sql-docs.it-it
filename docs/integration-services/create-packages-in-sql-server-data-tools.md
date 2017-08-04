@@ -1,30 +1,35 @@
 ---
-title: "Creare pacchetti in SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pacchetti SSIS, creazione"
-  - "pacchetti di Integration Services, creazione"
-  - "pacchetti [Integration Services], creazione"
-  - "pacchetti di SQL Server Integration Services, creazione"
+title: Creazione di pacchetti in SQL Server Data Tools | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSIS packages, creating
+- Integration Services packages, creating
+- packages [Integration Services], creating
+- SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64a48967dfff1230a6e718a329f7c745bf068365
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Creare pacchetti in SQL Server Data Tools
-  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile creare un nuovo pacchetto con uno dei metodi seguenti:  
+# <a name="create-packages-in-sql-server-data-tools"></a>Creare pacchetti in SQL Server Data Tools
+  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile creare un nuovo pacchetto con uno dei metodi seguenti:  
   
--   Utilizzare il modello di pacchetto incluso in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+-   Utilizzare il modello di pacchetto incluso in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 -   Utilizzare un modello personalizzato  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 51
   
 -   Copiare un pacchetto esistente.  
   
-     Se sono disponibili altri pacchetti che includono funzionalità che si desidera riutilizzare, sarà possibile compilare più rapidamente il flusso di controllo e i flussi di dati nel nuovo pacchetto copiando e incollando gli oggetti necessari da tali pacchetti. Per altre informazioni su come copiare e incollare oggetti nei progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Riutilizzo di oggetti di pacchetto](../integration-services/reuse-of-package-objects.md).  
+     Se sono disponibili altri pacchetti che includono funzionalità che si desidera riutilizzare, sarà possibile compilare più rapidamente il flusso di controllo e i flussi di dati nel nuovo pacchetto copiando e incollando gli oggetti necessari da tali pacchetti. Per altre informazioni su come copiare e incollare oggetti nei progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vedere [Riutilizzo di oggetti di pacchetto](../integration-services/reuse-of-package-objects.md).  
   
      Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto personalizzato come modello, verranno copiati anche il nome e il GUID del pacchetto esistente. Sarà pertanto necessario modificare il nome e il GUID del nuovo pacchetto per distinguerlo da quello da cui è stato copiato. Se ad esempio sono presenti più pacchetti con lo stesso GUID, sarà più difficile stabilire a quale pacchetto appartengono i dati di un log. È possibile rigenerare la GUID nella proprietà **ID** e aggiornare il valore della proprietà **Name** usando la finestra Proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](../integration-services/set-package-properties.md) e [Utilità dtutil](../integration-services/dtutil-utility.md).  
   
@@ -42,14 +47,14 @@ caps.handback.revision: 51
   
      L'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un pacchetto completo per un'importazione o un'esportazione semplice. Questa procedura guidata consente di configurare le connessioni, l'origine e la destinazione e di aggiungere tutte le trasformazioni dei dati necessarie per eseguire immediatamente l'importazione o l'esportazione. È facoltativamente possibile salvare il pacchetto per eseguirlo nuovamente in un secondo momento o rifinire e migliorare il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Se si salva il pacchetto, tuttavia, è necessario aggiungerlo a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] esistente prima che sia possibile modificarlo o eseguirlo in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- I pacchetti creati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] vengono salvati nel file system. Per salvare un pacchetto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti, è necessario salvare una copia del pacchetto. Per altre informazioni, vedere [Salvataggio di una copia di un pacchetto](../Topic/Save%20a%20Copy%20of%20a%20Package.md).  
+ I pacchetti creati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] vengono salvati nel file system. Per salvare un pacchetto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti, è necessario salvare una copia del pacchetto. Per altre informazioni, vedere [Salvataggio di una copia di un pacchetto](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
 
  Per un video che illustra come creare un pacchetto di base usando il modello di pacchetto predefinito, vedere [Creazione di un pacchetto di base (video su SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
 
-## Ottenere SQL Server Data Tools
+## <a name="get-sql-server-data-tools"></a>Ottenere SQL Server Data Tools
 Per installare SQL Server Data Tools (SSDT), vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
-## Creare un pacchetto in SQL Server Data Tools usando il modello del pacchetto  
+## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>Creare un pacchetto in SQL Server Data Tools usando il modello del pacchetto  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in cui si desidera creare un pacchetto.  
   
@@ -62,13 +67,13 @@ Per installare SQL Server Data Tools (SSDT), vedere [Scaricare SQL Server Data T
     > [!NOTE]  
     >  È possibile salvare un pacchetto vuoto.  
   
-## Scegliere la versione di destinazione di un progetto e i pacchetti correlati  
+## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>Scegliere la versione di destinazione di un progetto e i pacchetti correlati  
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su un progetto di Integration Services e scegliere **Proprietà** per aprire le pagine delle proprietà per il progetto.  
   
 2.  Nella scheda **Generale** di **Proprietà di configurazione**selezionare la proprietà **TargetServerVersion** , quindi scegliere SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
-     ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+     ![La proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto](../integration-services/media/targetserverversion2.png "proprietà TargetServerVersion nella finestra di dialogo Proprietà progetto")  
   
  È possibile creare, gestire ed eseguire pacchetti destinati a SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   

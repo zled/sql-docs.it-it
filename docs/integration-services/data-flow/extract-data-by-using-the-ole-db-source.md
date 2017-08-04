@@ -1,35 +1,40 @@
 ---
-title: "Estrazione dei dati tramite l&#39;origine OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estrazione di dati [Integration Services]"
-  - "origini [Integration Services], OLE DB"
-  - "origine OLE DB [Integration Services]"
+title: Estrarre dati utilizzando l'origine OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Estrazione dei dati tramite l&#39;origine OLE DB
+# <a name="extract-data-by-using-the-ole-db-source"></a>Estrazione dei dati tramite l'origine OLE DB
   È possibile aggiungere e configurare un'origine OLE DB solo se il pacchetto include già almeno un'attività Flusso di dati.  
   
-### Per estrarre dati tramite un'origine OLE DB  
+### <a name="to-extract-data-using-an-ole-db-source"></a>Per estrarre dati tramite un'origine OLE DB  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  Fare clic sulla scheda **Flusso di dati** e quindi dalla **Casella degli strumenti** trascinare l'origine OLE DB nell'area di progettazione.  
+3.  Fare clic sulla scheda **Flusso di dati** e quindi dalla **Casella degli strumenti**trascinare l'origine OLE DB nell'area di progettazione.  
   
 4.  Fare doppio clic sull'origine OLE DB.  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 23
   
 7.  Per aggiornare il mapping tra colonne esterne e colonne di output, fare clic su **Colonne** e selezionare colonne diverse nell'elenco **Colonna esterna** .  
   
-8.  Facoltativamente, aggiornare i nomi delle colonne di output modificando i valori nell'elenco **Colonna di output**.  
+8.  Facoltativamente, aggiornare i nomi delle colonne di output modificando i valori nell'elenco **Colonna di output** .  
   
-9. Per configurare l'output degli errori, fare clic su **Output errori**. Per altre informazioni, vedere [Configurare un output degli errori in un componente del flusso di dati](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Per configurare l'output degli errori, fare clic su **Output errori**. Per altre informazioni, vedere [Debug di un flusso di dati](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Facendo clic su **Anteprima** è possibile visualizzare fino a 200 righe di dati estratti dall'origine OLE DB.  
   
@@ -63,10 +68,10 @@ caps.handback.revision: 23
   
 12. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Origine OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Attività Flusso di dati](../../integration-services/control-flow/data-flow-task.md)  
+ [Attività flusso di dati](../../integration-services/control-flow/data-flow-task.md)  
   
   

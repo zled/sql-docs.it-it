@@ -1,35 +1,40 @@
 ---
-title: "Identificatori (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "identificatori regolari [Integration Services]"
-  - "variabili [Integration Services], espressioni"
-  - "identificatori [Integration Services]"
-  - "espressioni [Integration Services], variabili"
-  - "identificatori di derivazione"
-  - "colonne [Integration Services], identificatori"
-  - "nomi [Integration Services]"
-  - "espressioni [Integration Services], identificatori"
-  - "identificatori qualificati [Integration Services]"
+title: Identificatori (SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- regular identifiers [Integration Services]
+- variables [Integration Services], expressions
+- identifiers [Integration Services]
+- expressions [Integration Services], variables
+- lineage identifiers
+- columns [Integration Services], identifiers
+- names [Integration Services]
+- expressions [Integration Services], identifiers
+- qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Identificatori (SSIS)
+# <a name="identifiers-ssis"></a>Identificatori (SSIS)
   Nelle espressioni gli identificatori sono colonne e variabili disponibili per l'operazione. Le espressioni possono utilizzare identificatori regolari e qualificati.  
   
-## Identificatori regolari  
+## <a name="regular-identifiers"></a>Identificatori regolari  
  Un identificatore regolare è un identificatore per cui non sono necessari ulteriori qualificatori. È un identificatore regolare ad esempio la colonna **MiddleName**della tabella **Contacts** del database **AdventureWorks** .  
   
  Per gli identificatori regolari sono previste le regole di denominazione seguenti:  
@@ -41,23 +46,23 @@ caps.handback.revision: 45
 > [!IMPORTANT]  
 >  Gli identificatori regolari non possono contenere spazi e caratteri speciali diversi da quelli indicati. Se si desidera includere spazi e caratteri speciali, sarà necessario utilizzare un identificatore qualificato anziché un identificatore regolare.  
   
-## Identificatori qualificati  
+## <a name="qualified-identifiers"></a>Identificatori qualificati  
  Un identificatore qualificato è un identificatore delimitato da parentesi quadre. Può essere necessario un delimitatore perché il nome dell'identificatore include spazi o il primo carattere del nome non è una lettera né il carattere di sottolineatura (_). Se si usa il nome di colonna **Middle Name** in un'espressione, ad esempio, sarà necessario qualificarlo racchiudendolo tra parentesi quadre, in modo da ottenere [Middle Name].  
   
  Se il nome dell'identificatore include spazi o non è un nome di identificatore regolare valido, sarà necessario qualificarlo. Per qualificare gli identificatori l'analizzatore di espressioni utilizza le parentesi quadre aperta e chiusa ([]), che occupano rispettivamente la prima e l'ultima posizione della stringa. L'identificatore 5$> diventa ad esempio [5$>]. È possibile utilizzare parentesi quadre con nomi di colonne, variabili e funzioni.  
   
  Nelle espressioni compilate utilizzando le finestre di dialogo di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , gli identificatori regolari vengono automaticamente racchiusi tra parentesi quadre. Le parentesi quadre sono tuttavia necessarie solo se il nome include caratteri non validi. Il nome di colonna **MiddleName** , ad esempio, è valido anche senza parentesi quadre.  
   
- Nelle espressioni non è possibile fare riferimento a nomi di colonne che includono parentesi quadre. Il nome di colonna **Column[1]**, ad esempio, non può essere usato in un'espressione. Per utilizzarlo in un'espressione, è necessario modificarlo in un nome che non includa parentesi quadre.  
+ Nelle espressioni non è possibile fare riferimento a nomi di colonne che includono parentesi quadre. Il nome di colonna **Column[1]** , ad esempio, non può essere usato in un'espressione. Per utilizzarlo in un'espressione, è necessario modificarlo in un nome che non includa parentesi quadre.  
   
-## Identificatori di derivazione  
+## <a name="lineage-identifiers"></a>identificatori di derivazione  
  Nelle espressioni è possibile utilizzare identificatori di derivazione per fare riferimento alle colonne. Gli identificatori di derivazione vengono assegnati automaticamente al momento della creazione del pacchetto. L'identificatore di derivazione di una colonna è visualizzato nella scheda **Proprietà colonna** della finestra di dialogo **Editor avanzato** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Per fare riferimento a una colonna tramite il relativo identificatore di derivazione, è necessario anteporre a quest'ultimo un simbolo di cancelletto (#) come prefisso. Se ad esempio una colonna ha identificatore di derivazione 147, per farvi riferimento sarà necessario specificare #147.  
   
  Se l'analisi di un'espressione viene completata regolarmente, l'analizzatore di espressioni sostituirà gli identificatori di derivazione con i nomi delle colonne nella finestra di dialogo.  
   
-## Nomi di colonna univoci  
+## <a name="unique-column-names"></a>Nomi di colonna univoci  
  In uno stesso pacchetto possono essere utilizzati più componenti che espongono colonne con lo stesso nome. Per consentire l'analisi delle espressioni che utilizzano tali colonne, è necessario eliminare le ambiguità. L'analizzatore di espressioni supporta la notazione con punto per l'identificazione dell'origine della colonna. Due colonne con il nome **Age** possono ad esempio diventare **FlatFileSource.Age** e **OLEDBSource.Age**, per indicare che le rispettive origini sono FlatFileSource e OLEDBSource. L'analizzatore gestisce il nome completo come un singolo nome di colonna.  
   
  I nomi dei componenti di origine e di colonna vengono qualificati separatamente. Negli esempi seguenti viene illustrato il corretto utilizzo delle parentesi quadre nella notazione con punto:  
@@ -83,8 +88,8 @@ caps.handback.revision: 45
 > [!IMPORTANT]  
 >  Se nella notazione con punto entrambi gli elementi sono racchiusi da una coppia di parentesi quadre, l'analizzatore di espressioni interpreta la coppia come un identificatore unico, non come combinazione origine-colonna.  
   
-## Variabili nelle espressioni  
- Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso @ al nome della variabile. Per fare riferimento alla variabile **Counter** , ad esempio, è necessario specificare @Counter. Il carattere @ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si utilizzano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il carattere @ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere @ e il nome della variabile.  
+## <a name="variables-in-expressions"></a>Variabili nelle espressioni  
+ Quando in un'espressione viene fatto riferimento a una variabile, è necessario anteporre il prefisso @ al nome della variabile. Ad esempio, il **contatore** variabile fa riferimento tramite @Counter. Il carattere @ non fa parte del nome della variabile, ma consente all'analizzatore di espressioni di identificarla come tale. Se per compilare le espressioni si utilizzano le finestre di dialogo disponibili in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il carattere @ verrà aggiunto automaticamente al nome della variabile. Non è consentito includere spazi tra il carattere @ e il nome della variabile.  
   
  Per i nomi delle variabili valgono le stesse regole applicate agli altri identificatori regolari:  
   
@@ -92,15 +97,15 @@ caps.handback.revision: 45
   
 -   I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, il carattere di sottolineatura (_) e i caratteri @, $ e #.  
   
- I nomi di variabile contenenti caratteri diversi da quelli elencati devono essere racchiusi tra parentesi quadre. È ad esempio necessario racchiudere tra parentesi quadre i nomi di variabili che includono spazi. La parentesi quadra di apertura viene inserita dopo il carattere @. Per fare riferimento alla variabile **My Name**, ad esempio, è necessario specificare @[My Name]. Non è consentito includere spazi tra il nome della variabile e le parentesi quadre.  
+ I nomi di variabile contenenti caratteri diversi da quelli elencati devono essere racchiusi tra parentesi quadre. È ad esempio necessario racchiudere tra parentesi quadre i nomi di variabili che includono spazi. La parentesi quadra di apertura viene inserita dopo il carattere @. Per fare riferimento alla variabile **My Name** , ad esempio, è necessario specificare @[My Name]. Non è consentito includere spazi tra il nome della variabile e le parentesi quadre.  
   
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  
   
-## Nomi di variabile univoci  
+## <a name="unique-variable-names"></a>Nomi di variabile univoci  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono supportare le variabili personalizzate ed è disponibile un set di variabili di sistema. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare ulteriori spazi dei nomi per le variabili personalizzate e aggiornare i nomi degli spazi dei nomi in base alle esigenze della propria applicazione. Il generatore di espressioni elenca le variabili comprese nell'ambito corrente, a qualsiasi spazio dei nomi appartengano.  
   
- Tutte le variabili appartengono a uno spazio dei nomi e hanno un ambito, che può essere costituito da un pacchetto oppure da un contenitore o da un'attività in un pacchetto. Il generatore di espressioni di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] elenca solo le variabili comprese nell'ambito corrente. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usare variabili nei pacchetti](../Topic/Use%20Variables%20in%20Packages.md).  
+ Tutte le variabili appartengono a uno spazio dei nomi e hanno un ambito, che può essere costituito da un pacchetto oppure da un contenitore o da un'attività in un pacchetto. Il generatore di espressioni di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] elenca solo le variabili comprese nell'ambito corrente. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usare variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
  L'analizzatore di espressioni può valutare correttamente un'espressione solo se le variabili utilizzate hanno nomi univoci. Se un pacchetto utilizza più variabili con lo stesso nome, i relativi spazi dei nomi devono essere diversi. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un operatore di risoluzione degli spazi dei nomi composto da un doppio segno di due punti (::), per qualificare una variabile con il relativo spazio dei nomi. Nell'espressione seguente, ad esempio, vengono usate due variabili con il nome **Count**, una appartenente allo spazio dei nomi **User** e l'altra allo spazio dei nomi **MyNamespace** .  
   
@@ -113,13 +118,13 @@ caps.handback.revision: 45
   
  Se il valore della variabile **Count** dello spazio dei nomi **User** è 10, mentre il valore di **Count** in **MyNamespace** è 2, l'espressione restituirà **true** , perché l'analizzatore di espressioni le riconosce come due variabili diverse.  
   
- Se i nomi delle variabili non sono univoci, non verrà generato alcun errore, ma l'analizzatore di espressioni valuterà l'espressione utilizzando una sola istanza della variabile e restituirà un risultato non corretto. L'espressione seguente ha ad esempio lo scopo di confrontare i valori (10 e 2) di due variabili **Count** diverse, ma viene restituito **false** perché nell'analizzatore di espressioni viene usata due volte la stessa istanza della variabile **Count**.  
+ Se i nomi delle variabili non sono univoci, non verrà generato alcun errore, ma l'analizzatore di espressioni valuterà l'espressione utilizzando una sola istanza della variabile e restituirà un risultato non corretto. L'espressione seguente ha ad esempio lo scopo di confrontare i valori (10 e 2) di due variabili **Count** diverse, ma viene restituito **false** perché nell'analizzatore di espressioni viene usata due volte la stessa istanza della variabile **Count** .  
   
 ```  
 @Count > @Count  
 ```  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
   
   

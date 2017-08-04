@@ -1,27 +1,32 @@
 ---
-title: "Attivit&#224; Trasferisci stored procedure master | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfermasterspstask.f1"
-helpviewer_keywords: 
-  - "Trasferisci stored procedure master - attività [Integration Services]"
+title: "Attività Trasferisci Stored procedure Master | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfermasterspstask.f1
+helpviewer_keywords:
+- Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b309790e8ac39e9ac978c56bc451cfd68c5e3c75
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Trasferisci stored procedure master
-  L'attività Trasferisci stored procedure master trasferisce una o più stored procedure definite dall'utente tra i database **master** di istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per trasferire una stored procedure dal database **master**, è necessario che il proprietario stored della procedure sia un dbo.  
+# <a name="transfer-master-stored-procedures-task"></a>Attività Trasferisci stored procedure master
+  L'attività Trasferisci stored procedure master trasferisce una o più stored procedure definite dall'utente tra i database **master** di istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per trasferire una stored procedure dal database **master** , è necessario che il proprietario stored della procedure sia un dbo.  
   
  È possibile configurare l'attività Trasferisci stored procedure master per il trasferimento di tutte le stored procedure o delle stored procedure specificate. Questa attività non esegue la copia delle stored procedure di sistema.  
   
@@ -35,18 +40,18 @@ caps.handback.revision: 25
   
  In fase di esecuzione l'attività Trasferisci stored procedure master si connette al server di origine e al server di destinazione utilizzando due gestioni connessioni SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci stored procedure master, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione SMO](../../integration-services/connection-manager/smo-connection-manager.md).  
   
-## Trasferimento di stored procedure tra istanze di SQL Server  
- L'attività Trasferisci stored procedure master supporta un'origine e una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="transferring-stored-procedures-between-instances-of-sql-server"></a>Trasferimento di stored procedure tra istanze di SQL Server  
+ L'attività Trasferisci stored procedure master supporta un'origine e una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Eventi  
+## <a name="events"></a>Eventi  
  L'attività genera un evento informativo in cui è indicato il numero di stored procedure trasferite. Genera inoltre un evento di avviso quando una stored procedure viene sovrascritta.  
   
  Non viene riportato lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
   
-## Valore di esecuzione  
- Il valore di esecuzione, definito nella proprietà **ExecutionValue** dell'attività, restituisce il numero di stored procedure trasferite. Tramite l'assegnazione di una variabile definita dall'utente alla proprietà **ExecValueVariable** dell'attività, le informazioni sul trasferimento di stored procedure master possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../Topic/Use%20Variables%20in%20Packages.md).  
+## <a name="execution-value"></a>Valore di esecuzione  
+ Il valore di esecuzione, definito nella proprietà **ExecutionValue** dell'attività, restituisce il numero di stored procedure trasferite. Tramite l'assegnazione di una variabile definita dall'utente alla proprietà **ExecValueVariable** dell'attività, le informazioni sul trasferimento di stored procedure master possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## Voci di log  
+## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci stored procedure master include le voci di log personalizzate seguenti:  
   
 -   TransferStoredProceduresTaskStartTransferringObjects  Indica che il trasferimento è iniziato. La voce di log include l'ora di inizio.  
@@ -55,13 +60,13 @@ caps.handback.revision: 25
   
  Inoltre, una voce di log per l'evento **OnInformation** indica il numero di stored procedure che sono state trasferite e viene scritta una voce di log per l'evento **OnWarning** per ogni stored procedure sovrascritta nella destinazione.  
   
-## Sicurezza e autorizzazioni  
+## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  L'utente deve disporre dell'autorizzazione per la visualizzazione dell'elenco di stored procedure nel database **master** dell'origine ed essere un membro del ruolo del server amministratore di sistema o disporre dell'autorizzazione per la creazione di stored procedure nel database **master** del server di destinazione.  
   
-## Configurazione dell'attività Trasferisci stored procedure master  
+## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Configurazione dell'attività Trasferisci stored procedure master  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], fare clic su uno degli argomenti seguenti:  
+ Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor attività Trasferisci stored procedure master &#40;pagina Generale&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
   
@@ -73,14 +78,14 @@ caps.handback.revision: 25
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferStoredProceduresTask.TransferStoredProceduresTask>  
   
-### Configurazione dell'attività Trasferisci stored procedure master a livello di codice  
+### <a name="configuring-the-transfer-master-stored-procedures-task-programmatically"></a>Configurazione dell'attività Trasferisci stored procedure master a livello di codice  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Trasferisci oggetti di SQL Server](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)  

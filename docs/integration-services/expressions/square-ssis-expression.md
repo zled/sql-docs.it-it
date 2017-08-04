@@ -1,47 +1,52 @@
 ---
-title: "SQUARE (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQUARE"
-  - "valori al quadrato"
+title: SQUARE (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQUARE
+- square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18be83801a35d9b3512d85f69c91256147fb81a9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQUARE (espressione SSIS)
+# <a name="square-ssis-expression"></a>SQUARE (espressione SSIS)
   Restituisce il quadrato di un'espressione numerica.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 SQUARE(numeric_expression)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *numeric_expression*  
  Espressione numerica valida con qualsiasi tipo di dati numeric. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, SQUARE restituirà Null.  
   
  Prima del calcolo del quadrato viene eseguito il cast dell'argomento al tipo di dati DT_R8.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene restituito il quadrato di 12. Il risultato restituito è 144.  
   
 ```  
@@ -63,7 +68,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  Nelle espressioni i nomi delle variabili includono sempre il prefisso @.  
   
-## Vedere anche  
- [Funzioni &#40;Espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

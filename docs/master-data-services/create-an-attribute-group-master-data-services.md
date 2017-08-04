@@ -1,29 +1,34 @@
 ---
-title: "Creare un gruppo di attributi (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di attributi [Master Data Services], creazione"
-  - "creazione di gruppi di attributi [Master Data Services]"
+title: Creare un gruppo di attributi (Master Data Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], creating
+- creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd89cee45f9f0973764a2b4f4dc32f32abc6d1c9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creare un gruppo di attributi (Master Data Services)
+# <a name="create-an-attribute-group-master-data-services"></a>Creare un gruppo di attributi (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare gruppi di attributi quando si desidera che gli attributi vengano visualizzati in schede singole nella griglia **Esplora** .  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   È necessario che esista almeno un attributo. Per altre informazioni, vedere [Creare un attributo di testo &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
   
-### Per creare un gruppo di attributi  
+### <a name="to-create-an-attribute-group"></a>Per creare un gruppo di attributi  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 7
   
      Se il gruppo di attributi è per i membri foglia, selezionare **Foglia** dall'elenco a discesa **Tipo di membro** nella parte superiore della pagina.  
   
-     Se il gruppo di attributi è per i membri consolidati, selezionare **Consolidato** dall'elenco a discesa **Tipo di membro**.  
+     Se il gruppo di attributi è per i membri consolidati, selezionare **Consolidato** dall'elenco a discesa **Tipo di membro** .  
   
-     Se il gruppo di attributi è per le raccolte, selezionare **Raccolta** dall'elenco a discesa **Tipo di membro**.  
+     Se il gruppo di attributi è per le raccolte, selezionare **Raccolta** dall'elenco a discesa **Tipo di membro** .  
   
 6.  Fare clic su **Gruppi di foglie**, **Gruppi consolidati**o **Gruppi di raccolte** per creare rispettivamente un gruppo di attributi per membri foglia, membri consolidati o raccolte.  
   
@@ -64,16 +69,17 @@ caps.handback.revision: 7
   
 12. Fare clic su **Salva**.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Rendere visibile un gruppo di attributi per gli utenti &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gruppi di attributi &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Attributi &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Modificare il nome di un gruppo di attributi &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [Eliminare un gruppo di attributi &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [Attributi &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
+ [Modificare il nome di un gruppo di attributi &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [Eliminare un gruppo di attributi &#40; Master Data Services &#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
- [Autorizzazioni consolidate &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
+   
   
   
+

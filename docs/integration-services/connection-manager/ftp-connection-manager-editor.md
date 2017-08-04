@@ -1,26 +1,31 @@
 ---
-title: "Editor gestione connessione FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftpconnectionmanager.f1"
-helpviewer_keywords: 
-  - "Editor gestione connessione FTP"
+title: Editor gestione connessione FTP | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
+helpviewer_keywords:
+- FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2028a460ac0e7b56a3ad733150ff20029d72fd97
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor gestione connessione FTP
+# <a name="ftp-connection-manager-editor"></a>Editor gestione connessione FTP
   Usare la finestra di dialogo **Editor gestione connessione FTP** per specificare le proprietà per la connessione a un server FTP.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 26
   
  Per altre informazioni sulla gestione connessione FTP, vedere [Gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Nome server**  
  Consente di specificare il nome del server FTP.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 26
  Consente di specificare le dimensioni del blocco in KB per la trasmissione dei dati.  
   
  **Test connessione**  
- Dopo aver configurato la gestione connessione FTP, fare clic su **Test connessione** per assicurarsi che la connessione sia funzionante.  
+ Dopo aver configurato la gestione connessione FTP, fare clic su **Test connessione**per assicurarsi che la connessione sia funzionante.  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

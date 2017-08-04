@@ -1,26 +1,31 @@
 ---
-title: "Editor attivit&#224; Esegui pacchetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.package.f1"
-  - "sql13.dts.designer.executepackagetask.parameter.F1"
-  - "sql13.dts.designer.executepackagetask.general.f1"
+title: "Editor attività Esegui pacchetto | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.package.f1
+- sql13.dts.designer.executepackagetask.parameter.F1
+- sql13.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
+ms.openlocfilehash: 6f03d1bb15f1513a7683c6719c42e9cd7f440a71
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor attivit&#224; Esegui pacchetto
+# <a name="execute-package-task-editor"></a>Editor attività Esegui pacchetto
   Utilizzare l'editor attività Esegui pacchetto per configurare la relativa attività. L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
   
  **Per saperne di più**  
@@ -54,17 +59,17 @@ caps.handback.revision: 7
  Selezionare **Riferimento al progetto** per pacchetti figlio inclusi nel progetto. Selezionare **Riferimento esterno** per pacchetti figlio posizionati esternamente al pacchetto  
   
 > [!NOTE]  
->  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. Per altre informazioni sulla conversione, vedere [Distribuire progetti nel server Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Integration Services (SSIS) di distribuire progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Password**  
  Se il pacchetto figlio è protetto con password, specificare la password per il pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (…) per creare una nuova password per il pacchetto figlio.  
   
  **ExecuteOutOfProcess**  
- Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False** e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False**e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
-### Opzioni dinamiche relative a ReferenceType  
+### <a name="referencetype-dynamic-options"></a>Opzioni dinamiche relative a ReferenceType  
   
-#### ReferenceType = Riferimento esterno  
+#### <a name="referencetype--external-reference"></a>ReferenceType = Riferimento esterno  
  **Percorso**  
  Selezionare il percorso del pacchetto figlio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
@@ -79,24 +84,24 @@ caps.handback.revision: 7
  **PackageNameReadOnly**  
  Viene visualizzato il nome del pacchetto.  
   
-#### ReferenceType = Riferimento al progetto  
+#### <a name="referencetype--project-reference"></a>ReferenceType = Riferimento al progetto  
  **PackageNameFromProjectReference**  
  Selezionare un pacchetto contenuto nel progetto affinché sia considerato il pacchetto figlio.  
   
-### Opzioni dinamiche relative al percorso  
+### <a name="location-dynamic-options"></a>Opzioni dinamiche relative al percorso  
   
-#### Percorso = SQL Server  
+#### <a name="location--sql-server"></a>Percorso = SQL Server  
  **Connessione**  
- Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione OLE DB nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Configura gestione connessione OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Digitare il nome del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (…) per individuare il pacchetto.  
   
-#### Percorso = File system  
+#### <a name="location--file-system"></a>Percorso = File system  
  **Connessione**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 7
 ##  <a name="parameter"></a> Impostare le opzioni nella pagina Associazioni di parametro  
  È possibile passare i valori del pacchetto padre o del progetto al pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre.  
   
- Per informazioni sulla conversione dei progetti nel modello di distribuzione del progetto, vedere [Distribuire progetti nel server Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ Per informazioni sulla conversione di progetti nel modello di distribuzione del progetto, vedere [distribuire Integration Services (SSIS) progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Parametro del pacchetto figlio**  
  Immettere o selezionare un nome per il parametro del pacchetto figlio.  

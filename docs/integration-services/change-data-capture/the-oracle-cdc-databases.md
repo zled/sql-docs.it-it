@@ -1,22 +1,27 @@
 ---
-title: "Database Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: I database di Oracle CDC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Database Oracle CDC
+# <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
   Un'istanza di Oracle CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dallo stesso nome nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database è denominato database Oracle CDC o CDC.  
   
  Il database CDC viene creato e configurato utilizzando la Oracle CDC Designer Console e contiene gli elementi seguenti:  
@@ -44,7 +49,7 @@ caps.handback.revision: 17
  Quando viene creato un database CDC e vengono impostate le tabelle Oracle dell'origine CDC, il proprietario del database CDC può concedere l'autorizzazione SELECT delle tabelle mirror e definire ruoli di controllo di SQL Server CDC per controllare chi accede ai dati delle modifiche.  
   
 ## <a name="mirror-tables"></a>Tabelle mirror  
- Per ogni tabella acquisita, \<nome-schema>.\<nome-tabella>, nel database di origine Oracle, viene creata una tabella vuota analoga nel database CDC, con lo stesso nome di schema e di tabella. Non è possibile acquisire tabelle di origine Oracle con il nome di schema `cdc` (senza distinzione tra maiuscole e minuscole) perché lo schema `cdc` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è riservato a SQL Server CDC.  
+ Per ogni tabella acquisita, \<nome dello schema >.\< Nome tabella >, nel database di origine Oracle, viene creata una tabella vuota analoga nel Database CDC, con lo stesso nome di tabella e dello schema. Non è possibile acquisire tabelle di origine Oracle con il nome di schema `cdc` (senza distinzione tra maiuscole e minuscole) perché lo schema `cdc` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è riservato a SQL Server CDC.  
   
  Le tabelle mirror sono vuote; in esse non vengono archiviati dati. Vengono utilizzate per abilitare l'infrastruttura di SQL Server CDC standard utilizzata dall'istanza di Oracle CDC. Per evitare l'inserimento o l'aggiornamento di dati nelle tabelle mirror, tutte le operazioni UPDATE, DELETE e INSERT sono negate per PUBLIC. Ciò impedisce la modifica delle tabelle.  
   
@@ -72,23 +77,23 @@ caps.handback.revision: 17
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="a-namebkmkchangetablescta-change-tables-ct"></a><a name="BKMK_Change_Tables_CT"></a> Tabelle delle modifiche (_CT)  
+###  <a name="BKMK_Change_Tables_CT"></a> Tabelle delle modifiche (_CT)  
  Le tabelle delle modifiche vengono create dalle tabelle mirror. Contengono i dati delle modifiche acquisiti dal database Oracle. Le tabelle sono denominate secondo la convenzione seguente:  
   
- **[cdc].[\<istanza-acquisizione>_CT]**  
+ **[cdc]. [\<istanza-acquisizione > CT]**  
   
  Quando l'acquisizione è abilitata inizialmente per la tabella `<schema-name>.<table-name>`, il nome dell'istanza di acquisizione predefinito è `<schema-name>_<table-name>`. Ad esempio, il nome dell'istanza di acquisizione predefinito per la tabella Oracle HR.EMPLOYEES è HR_EMPLOYEES e la tabella delle modifiche associata è [cdc]. [HR_EMPLOYEES_CT].  
   
  Le scritture nelle tabelle di acquisizione sono eseguite dall'istanza di Oracle CDC. Tali tabelle vengono lette utilizzando funzioni speciali con valori di tabella generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla creazione dell'istanza di acquisizione. Ad esempio, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Per altre informazioni su queste funzioni CDC, vedere [Funzioni Change Data Capture (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="a-namebkmkcdclsntimemappinga-cdclsntimemapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La tabella **[cdc].[lsn_time_mapping]** viene generata dal componente SQL Server CDC. L'utilizzo di tale tabella con Oracle CDC è diverso dall'utilizzo normale.  
   
  Per Oracle CDC, i valori LSN archiviati in questa tabella sono basati sul valore System Change Number (SCN) Oracle associato alla modifica. I primi 6 byte del valore LSN sono il numero SCN Oracle originale.  
   
  Inoltre, quando si utilizza Oracle CDC, nelle colonne dell'ora (`tran_begin_time` e `tran_end_time`) viene archiviata l'ora UTC della modifica anziché l'ora locale come accade con il normale servizio SQL Server CDC. In questo modo, le modifiche dell'ora legale non influiscono sui dati archiviati in lsn_time_mapping.  
   
-###  <a name="a-namebkmkcdcxdbcdcconfiga-cdcxdbcdcconfig"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  In questa tabella sono contenuti i dati di configurazione per l'istanza di Oracle CDC. La tabella viene aggiornata tramite CDC Designer Console. La tabella ha una sola riga.  
   
  Nella tabella seguente sono descritte le colonne della tabella **cdc.xdbcdc_config** .  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Proprietà di tipo Boolean. Se il valore è**True** il servizio si arresta quando viene individuata una modifica di rilievo dello schema.<br /><br /> Se è**False** la tabella mirror e l'istanza di acquisizione vengono eliminate.|  
 |source_oracle_home||-|-|False|Può essere impostato su un percorso Oracle Home o un nome Oracle Home specifico utilizzato dall'istanza di CDC per la connessione a Oracle.|  
   
-###  <a name="a-namebkmkcdcxdbcdcstatea-cdcxdbcdcstate"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  In questa tabella sono contenute informazioni sullo stato persistente dell'istanza di Oracle CDC. Lo stato di acquisizione viene utilizzato negli scenari di recupero e failover e per il monitoraggio dello stato.  
   
  Nella tabella seguente sono descritte le colonne della tabella **cdc.xdbcdc_state** .  
@@ -156,7 +161,7 @@ caps.handback.revision: 17
 |read_changes|Numero dei record delle modifiche letti dal log delle transazioni Oracle di origine.|  
 |staged_transactions|Numero delle transazioni attualmente attive gestite temporaneamente nella tabella **cdc.xdbcdc_staged_transactions** .|  
   
-###  <a name="a-namebkmkcdcxdbcdctracea-cdcxdbcdctrace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  La tabella contiene informazioni sull'operazione dell'istanza di CDC. Le informazioni archiviate in questa tabella includono record di errore, modifiche rilevanti allo stato e record di traccia. Le informazioni sull'errore vengono inoltre scritte nel registro eventi di Windows per garantirne la disponibilità se la tabella **cdc.xcbcdc_trace** non è disponibile.  
   
  Nella tabella seguente vengono descritte le colonne della tabella cdc.xdbcdc_trace.  
@@ -171,7 +176,7 @@ caps.handback.revision: 17
 |status_message|Messaggio di stato utilizzato dalla tabella dello stato.|  
 |dati|Dati aggiuntivi per i casi in cui il record di errore o di traccia contiene un payload, ad esempio un record di log danneggiato.|  
   
-###  <a name="a-namebkmkcdcxdbcdcstagedtransactionsa-cdcxdbcdcstagedtransactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  In questa tabella vengono archiviati i record delle modifiche per le transazioni di grandi dimensioni o con esecuzione prolungata fino all'acquisizione del commit delle transazioni o dell'evento di rollback. I record del log acquisiti vengono ordinati dal servizio Oracle CDC in base all'ora dell'ultimo commit della transazione, quindi in base all'ordine cronologico per ciascuna transazione. I record del log per la stessa transazione vengono archiviati in memoria fino al termine della transazione, quindi vengono scritti nella tabella delle modifiche di destinazione o eliminati, in caso di rollback. Poiché la quantità di memoria disponibile è limitata, le transazioni di grandi dimensioni vengono scritte nella tabella **cdc.xdbcdc_staged_transactions** fino al completamento della transazione. Le transazioni vengono inoltre scritte nella tabella di gestione temporanea in caso di esecuzione prolungata. Pertanto, al riavvio dell'istanza di Oracle CDC, non è necessario rileggere le modifiche precedenti dai log delle transazioni Oracle.  
   
  Nella tabella seguente sono descritte le colonne della tabella **cdc.xdbcdc_staged_transactions** .  

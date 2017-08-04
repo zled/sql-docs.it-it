@@ -1,26 +1,31 @@
 ---
-title: "Data Profiling Task Editor (Profile Requests Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "Editor attività Profiling dati"
+title: "Editor attività (pagina richieste profilo) Profiling dati | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Data Profiling Task Editor (Profile Requests Page)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Utilizzare la pagina **Richieste profilo** di **Editor attività Profiling dati** per selezionare e configurare i profili che si desidera calcolare. In una singola attività Profiling dati è possibile calcolare più profili per più colonne o combinazioni di colonne in più tabelle o viste.  
   
  Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
@@ -33,10 +38,10 @@ caps.handback.revision: 26
   
 3.  In **Editor attività Profiling dati**fare clic su **Richieste profilo**.  
   
-## Utilizzo del riquadro delle richieste  
+## <a name="using-the-requests-pane"></a>Utilizzo del riquadro delle richieste  
  Il riquadro delle richieste viene visualizzato nella parte superiore della pagina. In questo riquadro sono inclusi tutti i profili configurati per l'attività Profiling dati corrente. Se non è stato configurato alcun profilo, il riquadro delle richieste è vuoto. Per aggiungere un nuovo profilo, fare clic in un'area vuota sotto la colonna **Tipo profilo** e selezionare un tipo di profilo dall'elenco. Per configurare un profilo, selezionare il profilo nel riquadro delle richieste e quindi impostare le proprietà del profilo nel riquadro **Proprietà richiesta** .  
   
-### Opzioni del riquadro delle richieste  
+### <a name="requests-pane-options"></a>Opzioni del riquadro delle richieste  
  Nel riquadro delle richieste sono disponibili le opzioni seguenti:  
   
  **Visualizza**  
@@ -44,7 +49,7 @@ caps.handback.revision: 26
   
  Le colonne nel riquadro delle richieste cambiano in base all'opzione **Visualizza** selezionata. Per ulteriori informazioni su ognuna di tali colonne, vedere la sezione seguente "Colonne del riquadro delle richieste".  
   
-### Colonne del riquadro delle richieste  
+### <a name="requests-pane-columns"></a>Colonne del riquadro delle richieste  
  Le colonne visualizzate nel riquadro delle richieste dipendono dall'opzione **Visualizza** selezionata:  
   
 -   Se si seleziona **Tutte le richieste**, nel riquadro delle richieste verranno visualizzate due colonne: **Tipo profilo** e **ID richiesta**.  
@@ -59,7 +64,7 @@ caps.handback.revision: 26
   
  Nelle sezioni seguenti vengono descritte tutte le colonne indicate in precedenza.  
   
-#### Colonne comuni a tutte le viste  
+#### <a name="columns-common-to-all-views"></a>Colonne comuni a tutte le viste  
  **Tipo profilo**  
  Selezionare un profilo dati nelle opzioni seguenti:  
   
@@ -77,38 +82,38 @@ caps.handback.revision: 26
  **RequestID**  
  Visualizza l'identificatore per la richiesta. Non è in genere necessario modificare il valore generato automaticamente.  
   
-#### Colonne comuni a tutti i singoli profili  
+#### <a name="columns-common-to-all-individual-profiles"></a>Colonne comuni a tutti i singoli profili  
  **Gestione connessione**  
  Visualizza la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] che stabilisce la connessione al database di origine.  
   
  **ID richiesta**  
  Visualizza un identificatore per la richiesta. Non è in genere necessario modificare il valore generato automaticamente.  
   
-#### Colonne comuni ai cinque singoli profili di colonna  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>Colonne comuni ai cinque singoli profili di colonna  
  **Tabella o vista**  
  Visualizza la tabella o la vista che contiene la colonna selezionata.  
   
  **Colonna**  
  Visualizza la colonna selezionata per il profiling.  
   
-#### Colonne specifiche del profilo Chiave candidata  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>Colonne specifiche del profilo Chiave candidata  
  **Tabella o vista**  
  Visualizza la tabella o la vista che contiene le colonne selezionate.  
   
  **Colonne chiave**  
  Visualizza le colonne selezionate per il profiling.  
   
-#### Colonne specifiche del profilo Dipendenza funzionale  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>Colonne specifiche del profilo Dipendenza funzionale  
  **Tabella o vista**  
  Visualizza la tabella o la vista che contiene le colonne selezionate.  
   
  **Colonne determinanti**  
  Visualizza le colonne selezionate per il profiling come colonna o colonne determinanti. Nell'esempio in cui il codice postale ZIP (Stati Uniti) determina lo stato degli Stati Uniti, la colonna determinante è quella contenente i codici postali.  
   
- **Colonna dipendente**  
+ **Dependent column**  
  Visualizza le colonne selezionate per il profiling come colonne dipendenti. Nell'esempio in cui il codice postale ZIP (Stati Uniti) determina lo stato degli Stati Uniti, la colonna dipendente è quella contenente gli stati.  
   
-#### Colonne specifiche del profilo Inclusione valore  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>Colonne specifiche del profilo Inclusione valore  
  **Tabella o vista lato subset**  
  Visualizza la tabella o la vista che contiene la colonna o le colonne selezionate come colonne del lato subset.  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 26
  **Colonne lato superset**  
  Visualizza la colonna o le colonne selezionate per il profiling come colonne del lato superset. Nell'esempio in cui si desidera verificare che i valori presenti in una colonna contenente gli stati degli Stati Uniti siano inclusi in una tabella di riferimento di codici a due caratteri degli stati degli Stati Uniti la colonna del superset è la colonna contenente i codici degli stati della tabella di origine.  
   
-## Utilizzo del riquadro Proprietà richiesta  
+## <a name="using-the-request-properties-pane"></a>Utilizzo del riquadro Proprietà richiesta  
  Il riquadro **Proprietà richiesta** viene visualizzato al di sotto del riquadro delle richieste. Questo riquadro contiene le opzioni per il profilo selezionato nel riquadro delle richieste.  
   
 > [!NOTE]  
@@ -129,24 +134,24 @@ caps.handback.revision: 26
   
  Queste opzioni variano in base al profilo selezionato. Per informazioni sulle opzioni specifiche per singoli tipi di profilo, vedere gli argomenti seguenti.  
   
--   [Opzioni di Richiesta profilo Chiave candidata &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo chiave candidata &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Rapporto di valori Null nella colonna &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo rapporto di valori Null colonne &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Statistiche di colonna &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo statistiche di colonna &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Distribuzione valori di colonna &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo distribuzione valori colonna &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Distribuzione lunghezze di colonna &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo distribuzione lunghezza colonne &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Criteri di ricerca colonna &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Colonna modello profilo richiesta opzioni &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Dipendenza funzionale &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Funzionale opzioni di richiesta profilo dipendenza &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opzioni di Richiesta profilo Inclusione valore &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di richiesta profilo inclusione valore &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## Vedere anche  
- [Editor attività Profiling dati &#40;pagina Generale&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Dati di profilatura Editor attività &#40; Pagina generale &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Form profilo rapido singola tabella &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Creare ed eseguire una relazione di sincronizzazione delle entit&#224; (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creare ed eseguire una relazione di sincronizzazione delle entità (Master Data Services) | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creare ed eseguire una relazione di sincronizzazione delle entit&#224; (Master Data Services)
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Creare ed eseguire una relazione di sincronizzazione delle entità (Master Data Services)
   La sincronizzazione delle entità è una sincronizzazione unidirezionale e ripetibile tra le versioni dell'entità. Consente di condividere i dati delle entità tra i vari modelli.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Prerequisiti per creare una relazione di sincronizzazione delle entità:  
   
 -   È necessaria l'autorizzazione per accedere all'area funzionale Amministrazione sistema. Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -89,12 +94,12 @@ caps.handback.revision: 6
   
 4.  Fare clic su **Esegui**.  
   
-## Informazioni sulle relazioni di sincronizzazione  
+## <a name="sync-relationship-information"></a>Informazioni sulle relazioni di sincronizzazione  
  Per ogni relazione di sincronizzazione creata, viene aggiunta alla griglia una riga con dieci colonne. La tabella seguente descrive le colonne.  
   
 |Colonna|Description|  
 |------------|-----------------|  
-|Stato|Stato della relazione di sincronizzazione.<br /><br /> Quando si fa clic su **Salva** o si esegue una relazione di sincronizzazione, viene visualizzata l'immagine ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") per indicare che la relazione di sincronizzazione è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione, la modifica o l'esecuzione di una relazione di sincronizzazione, viene visualizzata l'immagine ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Stato|Stato della relazione di sincronizzazione.<br /><br /> Quando fa clic su **salvare** o eseguire una relazione di sincronizzazione, il ![icona per l'aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "icona per l'aggiornamento dello stato") immagine, che indica che la relazione di sincronizzazione sta aggiornando.<br /><br /> Se si verificano errori durante la creazione, modifica o l'esecuzione di una relazione di sincronizzazione, il ![icona di stato di errore](../master-data-services/media/mds-statusicon-error.png "icona di stato di errore") immagine consente di visualizzare.<br /><br /> In caso contrario, lo stato è OK e ![icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "icona per lo stato OK") immagine consente di visualizzare.|  
 |Modello di origine|Nome del modello di origine.|  
 |Versione di origine|Nome della versione di origine.|  
 |Entità di origine|Nome dell'entità di origine.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   **Il**: la data e l'ora dell'ultimo aggiornamento della sincronizzazione.  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
  [Modificare ed eliminare una relazione di sincronizzazione delle entità &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

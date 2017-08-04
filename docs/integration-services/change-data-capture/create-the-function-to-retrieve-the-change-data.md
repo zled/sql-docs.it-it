@@ -1,41 +1,46 @@
 ---
-title: "Creazione della funzione per il recupero dei dati delle modifiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caricamento incrementale [Integration Services], creazione della funzione"
+title: Creare la funzione per recuperare i dati delle modifiche | Documenti Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Creazione della funzione per il recupero dei dati delle modifiche
+# <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
   
 > [!NOTE]  
 >  La creazione di una funzione per il recupero dei dati delle modifiche rappresenta il secondo passaggio del processo di creazione di un pacchetto che esegue il caricamento incrementale di tali dati. Per una descrizione del processo completo di creazione del pacchetto, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md) (Modificare i dati di acquisizione &#40;SSIS&#41).  
   
-## Considerazioni sulla progettazione per le funzioni Change Data Capture  
+## <a name="design-considerations-for-change-data-capture-functions"></a>Considerazioni sulla progettazione per le funzioni Change Data Capture  
  Per recuperare i dati delle modifiche, un componente di origine nel flusso di dati del pacchetto chiama una delle funzioni Change Data Capture seguenti:  
   
--   **cdc.fn_cdc_get_net_changes_<capture_instance>** Per questa query, la singola riga restituita per ogni aggiornamento contiene lo stato finale di ogni riga modificata. Nella maggior parte dei casi i dati restituiti da una query sono necessari solo per modifiche totali. Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md).  
+-   **cdc.fn_cdc_get_net_changes_<capture_instance>** Per questa query, la singola riga restituita per ogni aggiornamento contiene lo stato finale di ogni riga modificata. Nella maggior parte dei casi i dati restituiti da una query sono necessari solo per modifiche totali. Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
--   **cdc.fn_cdc_get_all_changes_<capture_instance>** Questa query restituisce tutte le modifiche apportate in ogni riga durante l'intervallo di acquisizione. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_all_changes_%3Ccapture_instance%3E%20%20\(Transact-SQL\).md).  
+-   **cdc.fn_cdc_get_all_changes_<capture_instance>** Questa query restituisce tutte le modifiche apportate in ogni riga durante l'intervallo di acquisizione. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
  Il componente di origine passa quindi i risultati restituiti dalla funzione a destinazioni e trasformazioni a valle, che applicano i dati delle modifiche alla destinazione finale.  
   
- Un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tuttavia, non è in grado di chiamare direttamente le funzioni di acquisizioni dei dati delle modifiche. Un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] richiede i metadati sulle colonne restituite dalla query. Le funzioni Change Data Capture non definiscono le colonne della relativa tabella di output. Di conseguenza, le funzioni non restituiscono metadati sufficienti per un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , tuttavia, non è in grado di chiamare direttamente le funzioni di acquisizioni dei dati delle modifiche. Un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] richiede i metadati sulle colonne restituite dalla query. Le funzioni Change Data Capture non definiscono le colonne della relativa tabella di output. Di conseguenza, le funzioni non restituiscono metadati sufficienti per un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Viene utilizzata invece una funzione wrapper con valori di tabella perché questo tipo di funzione definisce in modo esplicito le colonne della relativa tabella di output nella clausola RETURNS. Questa definizione esplicita di colonne fornisce i metadati necessari per un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. È necessario creare questa funzione per ogni tabella per cui si desidera recuperare dati delle modifiche.  
+ Viene utilizzata invece una funzione wrapper con valori di tabella perché questo tipo di funzione definisce in modo esplicito le colonne della relativa tabella di output nella clausola RETURNS. Questa definizione esplicita di colonne fornisce i metadati necessari per un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È necessario creare questa funzione per ogni tabella per cui si desidera recuperare dati delle modifiche.  
   
  Sono disponibili due opzioni per la creazione della funzione wrapper con valori di tabella che chiama la funzione di query Change Data Capture:  
   
@@ -43,16 +48,16 @@ caps.handback.revision: 29
   
 -   È possibile scrivere una funzione con valori di tabella personalizzata tramite le linee guida e l'esempio presenti in questo argomento.  
   
-## Chiamata di una stored procedure per la creazione della funzione con valori di tabella  
- Il modo più semplice e rapido per creare le funzioni con valori di tabella necessarie consiste nel chiamare la stored procedure di sistema **sys.sp_cdc_generate_wrapper_function**. Questa stored procedure genera gli script per creare le funzioni wrapper specificamente progettate per soddisfare le esigenze di un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+## <a name="calling-a-stored-procedure-to-create-the-table-valued-function"></a>Chiamata di una stored procedure per la creazione della funzione con valori di tabella  
+ Il modo più semplice e rapido per creare le funzioni con valori di tabella necessarie consiste nel chiamare la stored procedure di sistema **sys.sp_cdc_generate_wrapper_function** . Questa stored procedure genera gli script per creare le funzioni wrapper specificamente progettate per soddisfare le esigenze di un componente di origine di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  La stored procedure di sistema **sys.sp_cdc_generate_wrapper_function** non crea direttamente le funzioni wrapper, ma genera gli script CREATE per le funzioni wrapper. Lo sviluppatore deve eseguire gli script CREATE generati dalla stored procedure affinché le funzioni wrapper possano essere chiamate da un pacchetto del caricamento incrementale.  
   
  Per comprendere il modo in cui utilizzare questa stored procedure di sistema è necessario capire le operazioni eseguite dalla procedura, gli script generati dalla procedura e le funzioni wrapper create dagli script.  
   
-### Informazioni sulla stored procedure e relativo utilizzo  
- La stored procedure di sistema **sys.sp_cdc_generate_wrapper_function** genera gli script per creare le funzioni wrapper da usare con i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+### <a name="understanding-and-using-the-stored-procedure"></a>Informazioni sulla stored procedure e relativo utilizzo  
+ La stored procedure di sistema **sys.sp_cdc_generate_wrapper_function** genera gli script per creare le funzioni wrapper da usare con i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Di seguito vengono riportate le prime righe della definizione della stored procedure:  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 29
 > [!NOTE]  
 >  Per altre informazioni sulla sintassi di questa stored procedure e sui relativi parametri, vedere [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- La stored procedure genera sempre una funzione wrapper per restituire tutte le modifiche da ogni istanza di acquisizione. Se durante la creazione dell'istanza di acquisizione è stato impostato il parametro *@supports_net_changes*, la stored procedure genera anche una funzione wrapper per restituire le modifiche totali da ogni istanza di acquisizione applicabile.  
+ La stored procedure genera sempre una funzione wrapper per restituire tutte le modifiche da ogni istanza di acquisizione. Se durante la creazione dell'istanza di acquisizione è stato impostato il parametro *@supports_net_changes* , la stored procedure genera anche una funzione wrapper per restituire le modifiche totali da ogni istanza di acquisizione applicabile.  
   
  La stored procedure restituisce un set di risultati con due colonne:  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 29
   
 -   L'istruzione CREATE per la funzione wrapper.  
   
-### Informazioni sugli script creati dalla stored procedure e relativo utilizzo  
+### <a name="understanding-and-using-the-scripts-created-by-the-stored-procedure"></a>Informazioni sugli script creati dalla stored procedure e relativo utilizzo  
  Uno sviluppatore usa in genere un'istruzione INSERT...EXEC per chiamare la stored procedure **sys.sp_cdc_generate_wrapper_function** e salvare gli script creati dalla stored procedure in una tabella temporanea. Ogni script può quindi essere selezionato singolarmente ed eseguito per creare la funzione wrapper corrispondente. Uno sviluppatore può tuttavia utilizzare anche un set di comandi SQL per eseguire tutti gli script CREATE, come illustrato nel codice di esempio seguente:  
   
 ```  
@@ -106,7 +111,7 @@ close #hfunctions
 deallocate #hfunctions  
 ```  
   
-### Informazioni sulle funzioni create dalla stored procedure e relativo utilizzo  
+### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Informazioni sulle funzioni create dalla stored procedure e relativo utilizzo  
  Per ripercorrere sistematicamente la cronologia dei dati modificati acquisiti, le funzioni wrapper generate richiedono che il parametro *@end_time* di un intervallo sia il parametro *@start_time* dell'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
   
 -   Eseguire il mapping dei valori di data e ora ai valori LSN utilizzati internamente.  
@@ -115,9 +120,9 @@ deallocate #hfunctions
   
  Per semplificare l'esecuzione di query su tutte le righe di una tabella delle modifiche, le funzioni wrapper generate supportano inoltre le convenzioni seguenti:  
   
--   Se il parametro @start_time è null, le funzioni wrapper utilizzano il valore LSN minimo nell'istanza di acquisizione come limite inferiore della query.  
+-   Se il @start_time parametro è null, le funzioni wrapper utilizzano il valore LSN minimo nell'istanza di acquisizione come limite inferiore della query.  
   
--   Se il parametro @end_time è null, le funzioni wrapper utilizzano il valore LSN massimo nell'istanza di acquisizione come limite superiore della query.  
+-   Se il @end_time parametro è null, le funzioni wrapper utilizzano il valore LSN massimo nell'istanza di acquisizione come limite superiore della query.  
   
  La maggior parte degli utenti dovrebbe essere in grado di usare le funzioni wrapper create dalla stored procedure di sistema **sys.sp_cdc_generate_wrapper_function** senza apportare modifiche. Tuttavia, per personalizzare le funzioni wrapper, è necessario personalizzare gli script CREATE prima di eseguire gli script.  
   
@@ -125,7 +130,7 @@ deallocate #hfunctions
   
 -   Il valore data/ora di inizio e il valore data/ora di fine per l'intervallo. Mentre le funzioni wrapper utilizzano i valori di data e ora come endpoint per l'intervallo di query, le funzioni Change Data Capture utilizzano due valori LSN come endpoint.  
   
--   Il filtro di riga. Il parametro *@row_filter_option* è uguale sia per le funzioni wrapper che per le funzioni di Change Data Capture. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_all_changes_%3Ccapture_instance%3E%20%20\(Transact-SQL\).md) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md).  
+-   Il filtro di riga. Il parametro *@row_filter_option* è uguale sia per le funzioni wrapper che per le funzioni di Change Data Capture. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  Il set di risultati restituito dalle funzioni wrapper include i dati seguenti:  
   
@@ -133,11 +138,11 @@ deallocate #hfunctions
   
 -   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono: 'I' per inserimento, 'D' per eliminazione, 'UO' per aggiornamento di valori vecchi e 'UN' per aggiornamento di valori nuovi.  
   
--   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *@update_flag_list*. Il nome di queste colonne viene creato aggiungendo '_uflag' al nome della colonna associato.  
+-   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *@update_flag_list* . Il nome di queste colonne viene creato aggiungendo '_uflag' al nome della colonna associato.  
   
  Se il pacchetto chiama una funzione wrapper che esegue una query su tutte le modifiche, la funzione wrapper restituisce anche le colonne __CDC_STARTLSN e \__CDC_SEQVAL. Queste due colonne diventano rispettivamente la prima e la seconda colonna del set di risultati. La funzione wrapper ordina inoltre il set di risultati in base a queste due colonne.  
   
-## Scrittura della funzione con valori di tabella personalizzata  
+## <a name="writing-your-own-table-value-function"></a>Scrittura della funzione con valori di tabella personalizzata  
  È anche possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per scrivere una funzione wrapper con valori di tabella personalizzata che chiama la funzione di query Change Data Capture e archiviare la funzione wrapper con valori di tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sulla creazione di una funzione Transact-SQL, vedere [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
  Nell'esempio seguente viene definita una funzione con valori di tabella per il recupero delle modifiche da una tabella Customer per l'intervallo di modifiche specificato. La funzione usa le funzioni di Change Data Capture per eseguire il mapping tra i valori **datetime** e i valori dei numeri di sequenza del file di log (LSN) binario usati dalle tabelle delle modifiche. Questa funzione gestisce inoltre diverse condizioni speciali:  
@@ -148,7 +153,7 @@ deallocate #hfunctions
   
 -   Quando il numero LSN iniziale è uguale al numero LSN finale, a indicare in genere che non è presente alcun record per l'intervallo selezionato, la funzione viene chiusa.  
   
-### Esempio di una funzione con valori di tabella che esegue query per i dati delle modifiche  
+### <a name="example-of-a-table-value-function-that-queries-for-change-data"></a>Esempio di una funzione con valori di tabella che esegue query per i dati delle modifiche  
   
 ```  
 CREATE function CDCSample.uf_Customer (  
@@ -202,20 +207,20 @@ go
   
 ```  
   
-### Recupero di metadati aggiuntivi con i dati di modifica  
+### <a name="retrieving-additional-metadata-with-the-change-data"></a>Recupero di metadati aggiuntivi con i dati di modifica  
  Anche se la funzione con valori di tabella creata dall'utente illustrata in precedenza usa solo la colonna **__$operation**, la funzione **cdc.fn_cdc_get_net_changes_<capture_instance>** restituisce quattro colonne di metadati per ogni riga di modifica. Se si desidera utilizzare questi valori nel flusso di dati, è possibile restituirli come colonne aggiuntive dalla funzione wrapper con valori di tabella.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**__$start_lsn**|**binary(10)**|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn**.|  
+|**__$start_lsn**|**binary(10)**|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
 |**__$operation**|**int**|Operazione DML (Data Manipulation Language) associata alla modifica. I possibili valori sono i seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
 |**__$update_mask**|**varbinary(128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
-|**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
+|**\<colonne di tabella di origine acquisite >**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
   
- Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md).  
+ Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
-## Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo  
  Dopo avere creato la funzione con valori di tabella per l'esecuzione di query per i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
  **Argomento successivo:** [Recuperare e comprendere i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  

@@ -1,22 +1,27 @@
 ---
-title: "Propriet&#224; personalizzate di Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà personalizzate di Excel | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a635dcb4facce4cb9b6cf8501dc8bd01977a1b4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriet&#224; personalizzate di Excel
+# <a name="excel-custom-properties"></a>Proprietà personalizzate di Excel
   **Proprietà personalizzate delle origini**  
   
  L'origine Excel include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -26,7 +31,7 @@ caps.handback.revision: 8
 |Nome proprietà|Tipo di dati|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Valore intero|Modalità utilizzata per accedere al database. I valori possibili sono **OpenRowset**, **OpenRowset da variabile**, **Comando SQL**e **Comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
-|CommandTimeout|Valore intero|Numero di secondi prima del timeout del comando.  Il valore 0 indica un timeout infinito.<br /><br /> **Nota** Questa proprietà non è disponibile in **Editor origine Excel**, ma può essere impostata tramite **Editor avanzato**.|  
+|CommandTimeout|Valore intero|Numero di secondi prima del timeout del comando.  Il valore 0 indica un timeout infinito.<br /><br /> **Nota** Questa proprietà non è disponibile in **Editor origine Excel**, ma può essere impostata tramite **Editor avanzato**.|  
 |OpenRowset|String|Nome dell'oggetto di database utilizzato per aprire un set di righe.|  
 |OpenRowsetVariable|String|Variabile che contiene il nome dell'oggetto di database utilizzato per aprire un set di righe.|  
 |ParameterMapping|String|Mapping tra i parametri nel comando SQL e le variabili.|  
@@ -59,7 +64,7 @@ caps.handback.revision: 8
   
  Per altre informazioni, vedere [Destinazione Excel](../../integration-services/data-flow/excel-destination.md).  
   
-## Vedere anche  
- [Proprietà comuni](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

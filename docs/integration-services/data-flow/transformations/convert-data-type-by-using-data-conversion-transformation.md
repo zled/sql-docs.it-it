@@ -1,31 +1,36 @@
 ---
-title: "Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conversione di tipi di dati [Integration Services]"
-  - "Conversione dati - trasformazione"
-  - "tipo di dati [Integration Services], conversione"
+title: Convertire il tipo di dati utilizzando una trasformazione conversione dati | Documenti Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- converting data types [Integration Services]
+- Data Conversion transformation
+- data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Convertire il tipo di dati utilizzando una trasformazione conversione dati
   È possibile aggiungere e configurare una trasformazione Conversione dati solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
   
-### Per convertire i dati in un tipo di dati diverso  
+### <a name="to-convert-data-to-a-different-data-type"></a>Per convertire i dati in un tipo di dati diverso  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
@@ -40,23 +45,23 @@ caps.handback.revision: 41
     > [!NOTE]  
     >  È possibile applicare più conversioni di dati a una singola colonna di input.  
   
-7.  Facoltativamente, modificare i valori predefiniti nella colonna **Alias di output**.  
+7.  Facoltativamente, modificare i valori predefiniti nella colonna **Alias di output** .  
   
 8.  Nell'elenco **Tipo di dati** selezionare il nuovo tipo di dati per la colonna. Il tipo di dati predefinito è quello della colonna di input.  
   
-9. A seconda del tipo di dati selezionato, aggiornare facoltativamente i valori nelle colonne **Lunghezza**, **Precisione**, **Scala** e **Tabella codici**.  
+9. A seconda del tipo di dati selezionato, aggiornare facoltativamente i valori nelle colonne **Lunghezza**, **Precisione**, **Scala**e **Tabella codici** .  
   
-10. Per configurare l'output degli errori, fare clic su **Configura output errori**. Per altre informazioni, vedere [Configurare un output degli errori in un componente del flusso di dati](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. Per configurare l'output degli errori, fare clic su **Configura output errori**. Per altre informazioni, vedere [Debug di un flusso di dati](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Scegliere **OK**.  
   
 12. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## Vedere anche  
- [Trasformazione Conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Trasformazione conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Attività Flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
+ [Attività flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  
   
   

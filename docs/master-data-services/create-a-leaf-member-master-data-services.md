@@ -1,32 +1,37 @@
 ---
-title: "Creare un membro foglia (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "membri foglia [Master Data Services], creazione"
-  - "creazione di membri foglia [Master Data Services]"
-  - "membri [Master Data Services], creazione di membri foglia"
+title: Creare un membro foglia (Master Data Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creare un membro foglia (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] creare un membro foglia per aggiungere dati master al sistema. Per aggiungere i dati in blocco, usare invece le tabelle di gestione temporanea. Per altre informazioni, vedere [Importare dati dalle tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+# <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro foglia per aggiungere dati master al sistema. Per aggiungere i dati in blocco, usare invece le tabelle di gestione temporanea. Per altre informazioni, vedere [Importare dati dalle tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  È anche possibile usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
@@ -35,15 +40,15 @@ caps.handback.revision: 14
   
      Per altre informazioni, vedere [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
   
-### Per creare un membro foglia  
+### <a name="to-create-a-leaf-member"></a>Per creare un membro foglia  
   
 1.  Nella home page di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] selezionare un modello nell'elenco **Modello** .  
   
-2.  Se si è un utente, selezionare una versione aperta nell'elenco **Versione**. Se si è un amministratore, selezionare una versione con stato aperto o bloccato nell'elenco **Versione**.  
+2.  Se si è un utente, selezionare una versione aperta nell'elenco **Versione** . Se si è un amministratore, selezionare una versione con stato aperto o bloccato nell'elenco **Versione** .  
   
 3.  Fare clic su **Esplora**.  
   
-4.  Dalla barra dei menu scegliere **Entità**, quindi fare clic sul nome dell'entità alla quale si desidera aggiungere un membro.  
+4.  Dalla barra dei menu scegliere **Entità** , quindi fare clic sul nome dell'entità alla quale si desidera aggiungere un membro.  
   
 5.  Fare clic su **Aggiungi membro**.  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  Scegliere **OK**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare membri consolidati &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Membri &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+ [Membri &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
   
   

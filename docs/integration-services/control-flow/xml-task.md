@@ -1,27 +1,32 @@
 ---
-title: "Attivit&#224; XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "XML - attività [Integration Services]"
+title: "Attività XML | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.f1
+helpviewer_keywords:
+- XML [Integration Services]
+- XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 87e8a8a282e0d6973f1fd47157c9ea33b71a8c7f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; XML
+# <a name="xml-task"></a>XML Task
   L'attività XML consente di eseguire operazioni su dati in formato XML. Tramite questa attività un pacchetto può recuperare documenti XML, applicare operazioni ai documenti utilizzando fogli di stile XSLT (Extensible Stylesheet Language Transformation) ed espressioni XPath, unire più documenti oppure convalidare, confrontare e salvare i documenti aggiornati in file e variabili.  
   
  Questa attività consente ai pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di modificare dinamicamente documenti XML in fase di esecuzione. È possibile utilizzare l'attività XML per gli scopi seguenti:  
@@ -36,7 +41,7 @@ caps.handback.revision: 59
   
  È possibile includere dati XML in un flusso di dati utilizzando un'origine XML per estrarre valori da un documento XML. Per altre informazioni, vedere [Origine XML](../../integration-services/data-flow/xml-source.md).  
   
-## Operazioni XML  
+## <a name="xml-operations"></a>Operazioni XML  
  La prima azione eseguita dall'attività XML consiste nel recupero di un documento XML specifico. Tale azione è incorporata nell'attività XML e viene eseguita automaticamente. Il documento XML recuperato viene utilizzato come origine dei dati per l'operazione eseguita dall'attività XML.  
   
  Le operazioni XML Diff, Merge e Patch richiedono due operandi. Il primo operando specifica il documento XML di origine. Il secondo specifica un documento XML il cui contenuto dipende dai requisiti dell'operazione. L'operazione Diff, ad esempio, confronta due documenti. Il secondo operando specifica pertanto un altro documento XML simile, con cui confrontare il documento XML di origine.  
@@ -49,7 +54,7 @@ caps.handback.revision: 59
   
  L'attività XML può essere configurata in modo da salvare il risultato dell'operazione in una variabile o in un file. Se il risultato viene salvato in un file, l'attività XML utilizzerà una gestione connessione file per accedervi. Anche i risultati del Diffgram generato dall'operazione Diff possono essere salvati in file e variabili.  
   
-## Operazioni XML predefinite  
+## <a name="predefined-xml-operations"></a>Operazioni XML predefinite  
  L'attività XML include un set predefinito di operazioni applicabili ai documenti XML, descritte nella tabella seguente.  
   
 |Operazione|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 59
 |XPath|Consente di eseguire valutazioni e query XPath.|  
 |XSLT|Consente di eseguire trasformazioni XSL in documenti XML.|  
   
-### Operazione Diff  
+### <a name="diff-operation"></a>Operazione Diff  
  L'operazione Diff può essere configurata in modo da utilizzare un algoritmo di confronto diverso a seconda che il confronto debba essere rapido o preciso. L'operazione può essere inoltre configurata in modo da selezionare automaticamente il confronto rapido o preciso, in base alle dimensioni dei documenti da confrontare.  
   
  L'operazione Diff include un set di opzioni per la personalizzazione del confronto XML, Nella tabella seguente vengono descritte le opzioni disponibili.  
@@ -77,24 +82,24 @@ caps.handback.revision: 59
 |**IgnoreProcessingInstructions**|Valore che specifica se le istruzioni di elaborazione devono essere confrontate.|  
 |**IgnoreDTD**|Valore che specifica se il DTD deve essere ignorato.|  
   
-### Operazione Merge  
+### <a name="merge-operation"></a>Operazione Merge  
  Quando si utilizza un'istruzione XPath per identificare la posizione di unione nel documento di origine, è previsto che tale istruzione restituisca un unico nodo. Se l'istruzione restituisce più nodi, viene utilizzato solo il primo nodo. Il contenuto del secondo documento viene unito sotto il primo nodo restituito dalla query XPath.  
   
-### Operazione XPath  
+### <a name="xpath-operation"></a>Operazione XPath  
  L'operazione XPath può essere configurata in modo da utilizzare diversi tipi di funzionalità XPath.  
   
--   Per implementare funzioni XPath come sum(), selezionare l'opzione **Valutazione**.  
+-   Per implementare funzioni XPath come sum(), selezionare l'opzione **Valutazione** .  
   
 -   Per restituire come frammento XML i nodi selezionati, selezionare l'opzione **Elenco dei nodi** .  
   
 -   Per restituire il valore del testo interno di tutti i nodi selezionati, concatenato in modo da formare una stringa, selezionare l'opzione **Valori** .  
   
-### Operazione Validation  
+### <a name="validation-operation"></a>Operazione Validation  
  L'operazione Validate può essere configurata in modo da utilizzare un file DTD (Document Type Definition) o uno schema XSD (XML Schema Definition).  
   
  Abilitare **ValidationDetails** per ottenere output dettagliato degli errori. Per ulteriori informazioni, vedere [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
-## Codifica dei documenti XML  
+## <a name="xml-document-encoding"></a>Codifica dei documenti XML  
  L'attività XML supporta solo l'unione di documenti Unicode. È pertanto possibile applicare l'operazione Merge solo a documenti con codifica Unicode. Se si utilizzano altre codifiche, l'attività XML non verrà completata.  
   
 > [!NOTE]  
@@ -106,37 +111,37 @@ caps.handback.revision: 59
   
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
-## Messaggi di registrazione personalizzati disponibili nell'attività XML  
- Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività XML. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-xml-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività XML  
+ Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività XML. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Voce di log|Description|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornisce informazioni sull'operazione eseguita dall'attività.|  
   
-## Configurazione dell'attività XML  
+## <a name="configuration-of-the-xml-task"></a>Configurazione dell'attività XML  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività XML &#40;pagina Generale&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+-   [Editor attività XML &#40; Pagina generale &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
--   [Eseguire la convalida XML con Attività XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Convalida XML con l'attività XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
  Per ulteriori informazioni sull'impostazione delle proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configurazione a livello di codice dell'attività XML  
+## <a name="programmatic-configuration-of-the-xml-task"></a>Configurazione a livello di codice dell'attività XML  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Attività correlate  
+ [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
   
 -   Intervento nel blog sul [componente script di destinazione XML](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)sul sito Web agilebi.com  
   

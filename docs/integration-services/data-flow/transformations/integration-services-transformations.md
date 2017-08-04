@@ -1,36 +1,41 @@
 ---
-title: "Trasformazioni di Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trasformazioni [Integration Services], elencate"
-  - "trasformazioni [Integration Services], tipi"
-  - "trasformazioni [Integration Services]"
-  - "flusso di dati [Integration Services], trasformazioni"
-  - "trasformazioni di Business Intelligence [Integration Services]"
-  - "trasformazioni di unione"
-  - "trasformazioni di divisione [Integration Services]"
-  - "trasformazioni personalizzate [Integration Services]"
-  - "trasformazioni di righe [Integration Services]"
-  - "trasformazioni di set di righe [Integration Services]"
+title: Trasformazioni di Integration Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations [Integration Services], listed
+- transformations [Integration Services], types
+- transformations [Integration Services]
+- data flow [Integration Services], transformations
+- business intelligence transformations [Integration Services]
+- join transformations
+- split transformations [Integration Services]
+- custom transformations [Integration Services]
+- row transformations [Integration Services]
+- rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazioni di Integration Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], illustrandone il funzionamento.  
+# <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  
   
-## Trasformazioni di Business Intelligence  
+## <a name="business-intelligence-transformations"></a>Trasformazioni di Business Intelligence  
  Le trasformazioni seguenti eseguono operazioni di Business Intelligence quali la pulitura dei dati, il text mining e l'esecuzione di query di stima basate su un modello di data mining.  
   
 |Trasformazione|Description|  
@@ -43,7 +48,7 @@ caps.handback.revision: 56
 |[Trasformazione Query di data mining](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|Trasformazione che esegue query di stima di data mining.|  
 |[Trasformazione DQS Cleansing](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)|Trasformazione che corregge i dati di un'origine dati connessa applicando regole create per tale origine dati.|  
   
-## Trasformazioni a livello di riga  
+## <a name="row-transformations"></a>Trasformazioni a livello di riga  
  Le trasformazioni elencate di seguito consentono di aggiornare i valori delle colonne e di creare nuove colonne. La trasformazione viene applicata a tutte le righe dell'input.  
   
 |Trasformazione|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 56
 |[Componente script](../../../integration-services/data-flow/transformations/script-component.md)|Trasformazione che utilizza script per estrarre, trasformare o caricare dati.|  
 |[Trasformazione Comando OLE DB](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)|Trasformazione che esegue comandi SQL per ogni riga di un flusso di dati.|  
   
-## Trasformazioni a livello di set di righe  
+## <a name="rowset-transformations"></a>Trasformazioni a livello di set di righe  
  Le trasformazioni seguenti creano nuovi set di righe. Il set di righe può includere valori aggregati e ordinati, set di righe campione o set di righe trasformati tramite Pivot o UnPivot.  
   
 |Trasformazione|Description|  
@@ -69,7 +74,7 @@ caps.handback.revision: 56
 |[Trasformazione pivot](../../../integration-services/data-flow/transformations/pivot-transformation.md)|Trasformazione che crea una versione meno normalizzata di una tabella normalizzata.|  
 |[Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|Trasformazione che crea una versione più normalizzata di una tabella non normalizzata.|  
   
-## Trasformazioni di divisione e di unione  
+## <a name="split-and-join-transformations"></a>Trasformazioni di divisione e di unione  
  Le trasformazioni seguenti distribuiscono le righe tra output diversi, creano copie degli input della trasformazione, uniscono più input in un singolo output ed eseguono operazioni di ricerca.  
   
 |Trasformazione|Description|  
@@ -83,15 +88,15 @@ caps.handback.revision: 56
 |[Trasformazione Cache](../../../integration-services/data-flow/transformations/cache-transform.md)|Trasformazione che scrive dati da un'origine dati connessa nel flusso di dati a una gestione connessione cache che salva i dati in un file di cache. La trasformazione Ricerca esegue ricerche sui dati nel file di cache.|  
 |[Trasformazione del server di distribuzione di dati bilanciati](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|Tramite la trasformazione vengono distribuiti in modo uniforme i buffer di righe in entrata negli output di thread distinti per migliorare le prestazioni di pacchetti SSIS in esecuzione in server a più processori e più core.|  
   
-## Trasformazioni di controllo  
+## <a name="auditing-transformations"></a>Trasformazioni di controllo  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include le trasformazioni seguenti per l'aggiunta di informazioni di controllo e il conteggio delle righe.  
   
 |Trasformazione|Description|  
 |--------------------|-----------------|  
 |[Trasformazione Controllo](../../../integration-services/data-flow/transformations/audit-transformation.md)|Trasformazione che rende le informazioni sull'ambiente disponibili a un flusso di dati in un pacchetto.|  
-|[Trasformazione Conteggio righe ](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Trasformazione che conta le righe al suo interno e archivia il totale in una variabile.|  
+|[Trasformazione Conteggio righe](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Trasformazione che conta le righe al suo interno e archivia il totale in una variabile.|  
   
-## Trasformazioni personalizzate  
+## <a name="custom-transformations"></a>Trasformazioni personalizzate  
  È inoltre possibile creare trasformazioni personalizzate. Per altre informazioni, vedere [Sviluppo di un componente di trasformazione personalizzato con output sincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) e [Sviluppo di un componente di trasformazione personalizzato con output asincroni](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
   

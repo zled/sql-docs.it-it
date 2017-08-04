@@ -1,28 +1,33 @@
 ---
-title: "Azioni Regola business (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Azioni della regola business (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Azioni Regola business (Master Data Services)
+# <a name="business-rule-actions-master-data-services"></a>Azioni Regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le azioni della regola business sono la conseguenza delle valutazioni sulle condizioni della regola business. Se una condizione è vera, l'azione viene avviata.  
   
 > [!NOTE]  
 >  Per le azioni di tipo Valore predefinito e Modifica valore, se il valore generato supera la lunghezza massima dell'attributo, viene troncato il valore generato.  
   
-## Azioni Valori predefinito  
+## <a name="default-value-actions"></a>Azioni Valori predefinito  
  Le azioni di tipo**Valore predefinito** determinano l'impostazione del valore predefinito di un attributo specificato. Gli utenti che dispongono delle autorizzazioni necessarie possono modificare questi valori predefiniti.  
   
 |Nome del valore|Description|  
@@ -31,7 +36,7 @@ caps.handback.revision: 10
 |**assume un valore generato**|L'attributo selezionato **assume un valore generato** determinato dall'immissione di un valore iniziale e incrementale.<br /><br /> Questa azione è valida per valori di testo e numerici.|  
 |**assume un valore concatenato**|L'attributo selezionato **assume un valore concatenato** determinato mediante la specifica di più attributi.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
   
-## Azioni Modifica valore  
+## <a name="change-value-actions"></a>Azioni Modifica valore  
  Le azioni di tipo**Modifica valore** determinano l'aggiornamento del valore di un attributo o di un valore di attributo specificato. Gli utenti possono modificare questi valori solo se il nuovo valore rende vera l'azione.  
   
 |Nome del valore|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 10
 |**Uguale a**|L'attributo selezionato viene modificato in un valore di attributo definito, in un altro attributo o in un valore vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**uguale a un valore concatenato**|L'attributo selezionato viene modificato in un valore concatenato determinato mediante la specifica di più attributi.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
   
-## Azioni Convalida  
+## <a name="validation-actions"></a>Azioni Convalida  
  Le azioni di tipo**Convalida** , quando non restituiscono true, determinano l'invio di un messaggio di posta elettronica a un utente o gruppo specificato. Per eseguire il commit di una versione, tutte le azioni di convalida devono restituire true.  
   
  Le uniche eccezioni sono costituite dalle azioni **è obbligatorio** e **non è valido** . Queste azioni devono essere combinate con un'azione di modifica del valore, in modo che i dati possano essere convalidati e venga eseguito il commit della versione.  
@@ -60,16 +65,16 @@ caps.handback.revision: 10
 |**deve avere una lunghezza uguale o maggiore di**|L'attributo selezionato **deve avere una lunghezza uguale o maggiore di** quella del valore specificato.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
 |**deve avere una lunghezza minore o uguale a**|L'attributo selezionato **deve avere una lunghezza minore o uguale a** quella del valore specificato.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
   
-## Azione esterna  
+## <a name="external-action"></a>Azione esterna  
  Le**azioni esterne** interagiscono con le applicazioni al di fuori di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 |Nome dell'azione|Description|  
 |-----------------|-----------------|  
 |**avvia il flusso di lavoro**|Avvia un flusso di lavoro esterno. I dati che hanno causato questa azione vengono passati al flusso di lavoro. Per ulteriori informazioni, vedere [Integrazione del flusso di lavoro SharePoint con Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
   
-## Vedere anche  
- [Condizioni della regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Condizioni della regola business &#40; Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Le regole di business &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Creare e pubblicare una regola Business &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

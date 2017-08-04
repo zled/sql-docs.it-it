@@ -1,22 +1,27 @@
 ---
-title: "Propriet&#224; personalizzate dell&#39;origine XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà personalizzate dell'origine XML | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriet&#224; personalizzate dell&#39;origine XML
+# <a name="xml-source-custom-properties"></a>Proprietà personalizzate dell'origine XML
   L'origine XML include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate dell'origine XML. Tutte le proprietà sono di lettura/scrittura.  
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  Per altre informazioni, vedere [Origine XML](../../integration-services/data-flow/xml-source.md).  
   
-## Vedere anche  
- [Proprietà comuni](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

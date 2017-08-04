@@ -1,26 +1,31 @@
 ---
-title: "Modelli e autorizzazioni di SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], informazioni"
-  - "SQL Server Profiler, informazioni"
+title: Modelli di SQL Server Profiler e autorizzazioni | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], about SQL Server Profiler
+- SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d55a2aaf43865897995dea95fd900bf9f6eee422
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modelli e autorizzazioni di SQL Server Profiler
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mostra in che modo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risolve internamente le query. In questo modo gli amministratori possono verificare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o espressioni multidimensionali vengono inviate al server e in quale modo il server accede al database o al cubo per restituire i set di risultati.  
+# <a name="sql-server-profiler-templates-and-permissions"></a>Modelli e autorizzazioni di SQL Server Profiler
+  In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è possibile verificare come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risolve le query internamente. In questo modo gli amministratori possono verificare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o espressioni multidimensionali vengono inviate al server e in quale modo il server accede al database o al cubo per restituire i set di risultati.  
   
  Tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile eseguire una delle operazioni seguenti:  
   
@@ -39,23 +44,23 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  I valori della colonna di traccia maggiori di 1 GB restituiscono un errore e vengono troncati nell'output di traccia.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Modelli di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|Presenta informazioni sui modelli di traccia predefiniti disponibili in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
-|[Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Presenta informazioni sulle autorizzazioni necessarie per l'esecuzione di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Autorizzazioni necessarie per eseguire SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Presenta informazioni sulle autorizzazioni necessarie per l'esecuzione di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Salvare tracce e modelli di traccia](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|Presenta informazioni sul salvataggio di un output di traccia e sul salvataggio delle definizioni di traccia in un modello.|  
 |[Modificare modelli di traccia](../../tools/sql-server-profiler/modify-trace-templates.md)|Presenta informazioni sulla modifica dei modelli di traccia tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Avviare una traccia](../../tools/sql-server-profiler/start-a-trace.md)|Presenta informazioni sugli effetti dell'avvio, della sospensione o dell'arresto di una traccia.|  
-|[Correlare una traccia con i dati del log delle prestazioni di Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|Presenta informazioni sulla correlazione dei dati del registro prestazioni di Windows con una traccia tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler.|  
+|[Correlare una traccia con i dati di Log delle prestazioni di Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|Presenta informazioni sulla correlazione dei dati del registro prestazioni di Windows con una traccia tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler.|  
 |[Visualizzare e analizzare le tracce con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|Presenta informazioni sull'utilizzo delle tracce per la risoluzione di problemi relativi ai dati, sulla visualizzazione dei nomi degli oggetti in una traccia e sulla ricerca di eventi in una traccia.|  
 |[Analizzare deadlock con SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|Presenta informazioni sull'utilizzo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per identificare la causa di un deadlock.|  
 |[Analizzare query con risultati SHOWPLAN in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|Presenta informazioni sull'utilizzo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per raccogliere e visualizzare i risultati di Showplan e Showplan Statistics.|  
-|[Filtrare le tracce tramite SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|Presenta informazioni sull'impostazione di filtri per le colonne di dati allo scopo di filtrare l'output di traccia tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Filtrare le tracce con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|Presenta informazioni sull'impostazione di filtri per le colonne di dati allo scopo di filtrare l'output di traccia tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Riprodurre le tracce](../../tools/sql-server-profiler/replay-traces.md)|Presenta informazioni relative alla riproduzione di una traccia e ai relativi requisiti.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Avviare SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

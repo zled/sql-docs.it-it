@@ -1,32 +1,37 @@
 ---
-title: "Sicurezza di oggetti di database (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database [Master Data Services], sicurezza di oggetti"
-  - "sicurezza [Master Data Services], oggetti di database"
+title: Sicurezza (Master Data Services) di oggetti di database | Documenti Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database [Master Data Services], object security
+- security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bfccd4e9d3df93dbc6a968a1fc5961400afe234
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sicurezza di oggetti di database (Master Data Services)
-  Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+# <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
+  Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- In particolare è possibile che informazioni relative allo stipendio dei dipendenti siano contenute in un modello Employee o che informazioni finanziarie sulla società siano incluse in un modello Account. È possibile negare a un utente l'accesso a questi modelli nell'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. I dati, tuttavia, saranno visibili agli utenti con accesso al database.  
+ In particolare è possibile che informazioni relative allo stipendio dei dipendenti siano contenute in un modello Employee o che informazioni finanziarie sulla società siano incluse in un modello Account. È possibile negare a un utente l'accesso a questi modelli nell'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . I dati, tuttavia, saranno visibili agli utenti con accesso al database.  
   
  È possibile concedere autorizzazioni a oggetti di database per rendere disponibili dati specifici agli utenti. Per altre informazioni sulla concessione delle autorizzazioni, vedere [GRANT - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../t-sql/statements/grant-object-permissions-transact-sql.md). Per altre informazioni sulla sicurezza del server SQL, vedere [Sicurezza di SQL Server](../relational-databases/security/securing-sql-server.md).  
   
- Per le attività seguenti viene richiesto l'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]:  
+ Per le attività seguenti viene richiesto l'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
 -   [Dati di gestione temporanea](#Staging)  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 10
 |------------|---------------|-----------------|  
 |Convalidare una versione di dati rispetto a regole business|mdm.udpValidateModel|EXECUTE|  
   
- Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
+ Per altre informazioni, vedere [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 ##  <a name="Versions"></a> Eliminazione di versioni  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 10
 ##  <a name="SysSettings"></a> Configurazione di impostazioni di sistema  
  È possibile configurare alcune impostazioni di sistema per controllare il comportamento in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Queste impostazioni possono essere modificate in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oppure, se si dispone dell'autorizzazione di accesso UPDATE, direttamente nella tabella di database mdm.tblSystemSetting. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

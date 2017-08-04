@@ -1,24 +1,29 @@
 ---
-title: "Opzioni di Richiesta profilo Chiave candidata (Attivit&#224; Profiling dati) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Editor attività Profiling dati"
+title: "Opzioni di richiesta profilo chiave candidata (attività Profiling dati) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Opzioni di Richiesta profilo Chiave candidata (Attivit&#224; Profiling dati)
+# <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Chiave candidata** selezionata nel riquadro delle richieste. Il profilo Chiave candidata segnala se una colonna o un set di colonne è una chiave o una chiave approssimativa per la tabella selezionata. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori duplicati in una possibile colonna chiave.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 26
   
  Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Informazioni sulla selezione di colonne per la proprietà KeyColumns  
+## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>Informazioni sulla selezione di colonne per la proprietà KeyColumns  
  La funzionalità **Richiesta profilo Chiave candidata** consente di calcolare il livello di attendibilità di una singola chiave candidata costituita da una o più colonne:  
   
 -   Quando si seleziona solo una colonna in **KeyColumns**, l'attività calcola il livello di attendibilità della chiave di tale colonna.  
@@ -44,16 +49,16 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Se si seleziona (*), questa opzione potrebbe comportare un numero elevato di calcoli, riducendo le prestazioni dell'attività. Se l'attività, tuttavia, rileva un subset che soddisfa la soglia per una chiave, non vengono analizzate combinazioni aggiuntive. Se nella tabella di esempio descritta in precedenza, ad esempio, l'attività determina che la colonna C è una chiave, non verranno analizzate altre chiavi candidate composte.  
   
-## Opzioni del riquadro Proprietà richiesta  
- Nel riquadro **Proprietà richiesta** per **Richiesta profilo Chiave candidata** vengono visualizzati i gruppi di opzioni seguenti:  
+## <a name="request-properties-options"></a>Opzioni del riquadro Proprietà richiesta  
+ Nel riquadro **Proprietà richiesta**per **Richiesta profilo Chiave candidata** vengono visualizzati i gruppi di opzioni seguenti:  
   
--   **Dati** che include le opzioni **TableOrView** e **KeyColumns**  
+-   **Dati**che include le opzioni **TableOrView** e **KeyColumns**  
   
 -   **Generale**  
   
 -   **Opzioni**  
   
-### Opzioni dati  
+### <a name="data-options"></a>Opzioni dati  
  **ConnectionManager**  
  Consente di selezionare la gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] esistente che usa il provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) ai fini della connessione al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente la tabella o la vista di cui eseguire il profiling.  
   
@@ -67,23 +72,23 @@ caps.handback.revision: 26
   
  Per ulteriori informazioni, vedere le sezioni "Informazioni sulla selezione di colonne per la proprietà KeyColumns" e "Opzioni KeyColumns" in questo argomento.  
   
-#### Opzioni TableOrView  
+#### <a name="tableorview-options"></a>Opzioni TableOrView  
  **Schema**  
  Specifica lo schema a cui appartiene la tabella selezionata. Questa opzione è di sola lettura.  
   
  **Tabella**  
  Visualizza il nome della tabella selezionata. Questa opzione è di sola lettura.  
   
-#### Opzioni KeyColumns  
+#### <a name="keycolumns-options"></a>Opzioni KeyColumns  
  Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **KeyColumns** o per l'opzione **(\*)**.  
   
  Per ulteriori informazioni, vedere la sezione "Informazioni sulla selezione di colonne per la proprietà KeyColumns" riportata in precedenza in questo argomento.  
   
  **IsWildcard**  
- Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per analizzare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
- Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per analizzare tutte le colonne. Questa opzione è di sola lettura.  
+ Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  
   
  **StringCompareOptions**  
  Consente di selezionare le opzioni per il confronto di valori stringa. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente. Il valore predefinito di questa opzione è **Default**.  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
   
 |Valore|Description|  
 |-----------|-----------------|  
-|**Valore predefinito**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
+|**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
 |**DictionarySort**|Ordina e confronta i dati in base alle regole di ordinamento e confronto definite nei dizionari per la lingua o l'alfabeto associato.|  
   
@@ -106,11 +111,11 @@ caps.handback.revision: 26
 |**IgnoreKanaType**|Specifica se nel confronto viene fatta distinzione tra i due tipi di caratteri Kana giapponesi, Hiragana e Katakana. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la distinzione tra Katakana e Hiragana.|  
 |**IgnoreWidth**|Specifica se nel confronto viene fatta distinzione tra un carattere a un byte (metà larghezza) e lo stesso carattere rappresentato con due byte (larghezza intera). Se questa opzione è impostata, nel confronto tra stringhe la rappresentazione a un byte e quella a due byte dello stesso carattere verranno considerate uguali.|  
   
-### Opzioni generali  
+### <a name="general-options"></a>Opzioni generali  
  **RequestID**  
  Nome descrittivo per identificare la richiesta di profilo. Non è in genere necessario modificare il valore generato automaticamente.  
   
-### Opzioni  
+### <a name="options"></a>Opzioni  
  **ThresholdSetting**  
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente. Il valore predefinito di questa proprietà è **Specified**.  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 26
  **MaxNumberOfViolations**  
  Specifica il numero massimo di violazioni della chiave candidata da segnalare nell'output. Il valore predefinito di questa proprietà è 100. Questa opzione è disabilitata quando si seleziona **Exact** come **KeyStrengthThresholdSetting**.  
   
-## Vedere anche  
- [Editor attività Profiling dati &#40;pagina Generale&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Dati di profilatura Editor attività &#40; Pagina generale &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Form profilo rapido singola tabella &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Trasformazione Mappa caratteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactertrans.f1"
-helpviewer_keywords: 
-  - "mapping che si escludono a vicenda [Integration Services]"
-  - "mapping di dati [Integration Services]"
-  - "funzioni per i valori stringa"
-  - "Mappa caratteri - trasformazione [Integration Services]"
+title: Mappa caratteri-trasformazione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactertrans.f1
+helpviewer_keywords:
+- mutually exclusive mapping [Integration Services]
+- mapping data [Integration Services]
+- string functions
+- Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Mappa caratteri
+# <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
   La trasformazione Mappa caratteri consente di applicare funzioni per i valori stringa, quale la conversione da minuscolo a maiuscolo, a dati di tipo carattere. È possibile utilizzare questa trasformazione solo su dati di colonna con un tipo di dati string.  
   
  La trasformazione Mappa caratteri consente di convertire dati di colonna sul posto oppure di aggiungere una colonna all'output della trasformazione e inserire i dati convertiti nella nuova colonna. È possibile applicare vari set di operazioni di mapping alla stessa colonna di input e inserire i risultati in colonne diverse. È ad esempio possibile convertire la stessa colonna in maiuscolo e minuscolo, quindi inserire i risultati in due colonne diverse.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
   
  Questa trasformazione include un input, un output e un output degli errori.  
   
-## Operazioni di mapping  
+## <a name="mapping-operations"></a>Operazioni di mapping  
  Nella tabella seguente vengono descritte le operazioni di mapping supportate dalla trasformazione Mappa caratteri.  
   
 |Operazione|Description|  
@@ -48,7 +53,7 @@ caps.handback.revision: 42
 |Cinese tradizionale|Esegue il mapping da caratteri in cinese semplificato a caratteri in cinese tradizionale.|  
 |Maiuscolo|Converte i caratteri in maiuscolo.|  
   
-## Operazioni di mapping che si escludono a vicenda  
+## <a name="mutually-exclusive-mapping-operations"></a>Operazioni di mapping che si escludono a vicenda  
  In una stessa trasformazione è possibile eseguire più di un'operazione. Esistono tuttavia operazioni di mapping che si escludono a vicenda. Nella tabella seguente sono elencate le restrizioni applicate quando vengono eseguite più operazioni sulla stessa colonna. Le operazioni nelle colonne Operazione A e Operazione B si escludono a vicenda.  
   
 |Operazione A|Operazione B|  
@@ -60,7 +65,7 @@ caps.handback.revision: 42
 |Minuscolo|Hiragana, katakana, metà larghezza, larghezza intera|  
 |Maiuscolo|Hiragana, katakana, metà larghezza, larghezza intera|  
   
-## Configurazione della trasformazione Mappa caratteri  
+## <a name="configuration-of-the-character-map-transformation"></a>Configurazione della trasformazione Mappa caratteri  
  Per configurare la trasformazione Mappa caratteri, procedere nel modo seguente:  
   
 -   Specificare le colonne da convertire.  
@@ -69,11 +74,11 @@ caps.handback.revision: 42
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Mappa caratteri**, vedere [Editor trasformazione Mappa caratteri](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Mappa caratteri** , vedere [Editor trasformazione Mappa caratteri](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md).  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

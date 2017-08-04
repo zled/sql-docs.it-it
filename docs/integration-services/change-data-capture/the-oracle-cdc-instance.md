@@ -1,23 +1,28 @@
 ---
-title: "Istanza di Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: L'istanza di Oracle CDC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Istanza di Oracle CDC
-  L'istanza di Oracle CDC è un processo creato dal servizio Oracle CDC per elaborare le modifiche acquisite da un solo database di origine Oracle. Tramite l'istanza di Oracle CDC viene recuperata la configurazione dalla tabella **cdc.xdbcdc_config** e viene gestito lo stato nella tabella **cdc.xdbcdc_state**. Queste tabelle fanno parte del database CDC che definisce l'istanza di Oracle CDC. Per ulteriori informazioni sul database e le tabelle xdbcdc, vedere [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
+# <a name="the-oracle-cdc-instance"></a>Istanza di Oracle CDC
+  L'istanza di Oracle CDC è un processo creato dal servizio Oracle CDC per elaborare le modifiche acquisite da un solo database di origine Oracle. Tramite l'istanza di Oracle CDC viene recuperata la configurazione dalla tabella **cdc.xdbcdc_config** e viene gestito lo stato nella tabella **cdc.xdbcdc_state** . Queste tabelle fanno parte del database CDC che definisce l'istanza di Oracle CDC. Per ulteriori informazioni sul database e le tabelle xdbcdc, vedere [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
   
  Di seguito vengono descritte le attività eseguite dall'istanza di Oracle CDC:  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 8
   
     -   In un thread separato, viene scritto il numero più alto possibile di record memorizzati nella cache nella tabella delle transazioni gestite temporaneamente per un massimo di 30 secondi (dalla transazione meno recente alla più recente), quindi viene aggiornata la tabella **xdbcdc_state** e viene eseguito il commit di tutte le modifiche.  
   
--   **Gestione delle modifiche della configurazione**: viene inviata una notifica all'istanza di Oracle CDC relativamente alle modifiche della configurazione dal servizio CDC o mediante il rilevamento di una nuova versione nella tabella **cdc.xdbcdc_config**. La maggior parte delle modifiche non richiede il riavvio dell'istanza di Oracle CDC (ad esempio l'aggiunta o la rimozione delle istanze di acquisizione). Alcune modifiche, tuttavia, ad esempio la modifica della stringa di connessione Oracle o delle credenziali di accesso richiedono il riavvio dell'istanza di CDC.  
+-   **Gestione delle modifiche della configurazione**: viene inviata una notifica all'istanza di Oracle CDC relativamente alle modifiche della configurazione dal servizio CDC o mediante il rilevamento di una nuova versione nella tabella **cdc.xdbcdc_config** . La maggior parte delle modifiche non richiede il riavvio dell'istanza di Oracle CDC (ad esempio l'aggiunta o la rimozione delle istanze di acquisizione). Alcune modifiche, tuttavia, ad esempio la modifica della stringa di connessione Oracle o delle credenziali di accesso richiedono il riavvio dell'istanza di CDC.  
   
--   **Gestione del recupero**: all'avvio di un'istanza di Oracle CDC, il relativo stato interno viene ripristinato dalle tabelle **xdbcdc_state** e **xdbcdc_staged_transactions**. Una volta ripristinato lo stato, il processo dell'istanza di CDC prosegue nel modo consueto.  
+-   **Gestione del recupero**: all'avvio di un'istanza di Oracle CDC, il relativo stato interno viene ripristinato dalle tabelle **xdbcdc_state** e **xdbcdc_staged_transactions** . Una volta ripristinato lo stato, il processo dell'istanza di CDC prosegue nel modo consueto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione degli errori](../../integration-services/change-data-capture/error-handling.md)  
   
   

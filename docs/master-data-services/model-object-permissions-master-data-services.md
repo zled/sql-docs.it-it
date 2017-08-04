@@ -1,25 +1,30 @@
 ---
-title: "Autorizzazioni per oggetti modello (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazioni [Master Data Services], oggetti modello"
-  - "modelli [Master Data Services], autorizzazioni per oggetti"
+title: Autorizzazioni (Master Data Services) per oggetti modello | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], model objects
+- models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee6ede91067d2b358a403458e07af37b2f895ac3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Autorizzazioni per oggetti modello (Master Data Services)
+# <a name="model-object-permissions-master-data-services"></a>Autorizzazioni per oggetti modello (Master Data Services)
   Le autorizzazioni per oggetti modello sono obbligatorie. Esse determinano a quali attributi può accedere un utente nell'area funzionale **Visualizzatore** dell'interfaccia utente.  
   
  Ad esempio, se si assegna all'utente un'autorizzazione **Update** per l'entità Product, l'utente può aggiornare tutti gli attributi dell'entità Product. Se si assegna l'autorizzazione **Update** per un singolo attributo, l'utente potrà aggiornare solo quell'attributo.  
@@ -32,17 +37,17 @@ caps.handback.revision: 9
   
  È possibile assegnare una combinazione di autorizzazioni di lettura, creazione, aggiornamento ed eliminazione o negare le autorizzazioni per gli oggetti modello. La mancata assegnazione di autorizzazioni nella scheda **Modelli** determina l'impossibilità da parte dell'utente di visualizzare modelli o dati in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## Procedura consigliata  
+## <a name="best-practice"></a>Procedura consigliata  
  In generale, è consigliabile assegnare l'autorizzazione **ALL** all'oggetto modello e quindi assegnare in modo esplicito l'autorizzazione agli oggetti sottostanti.  
   
-## Risorse esterne  
+## <a name="external-resources"></a>Risorse esterne  
  Post del blog sui [miglioramenti della sicurezza](http://go.microsoft.com/fwlink/p/?LinkId=615376)su msdn.com.  
   
-## Vedere anche  
- [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Autorizzazioni per i modelli &#40;Master Data Services&#41;](../master-data-services/model-permissions-master-data-services.md)   
- [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Autorizzazioni membri gerarchie &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Assegnare autorizzazioni per oggetti modello &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Modello autorizzazioni &#40; Master Data Services &#41;](../master-data-services/model-permissions-master-data-services.md)   
+ [Area funzionale autorizzazioni &#40; Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [Le autorizzazioni membri gerarchia &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Determinazione delle autorizzazioni &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

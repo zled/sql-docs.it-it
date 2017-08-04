@@ -1,39 +1,44 @@
 ---
-title: "Contenitori in Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contenitori SSIS"
-  - "contenitori [Integration Services]"
-  - "contenitori [Integration Services], informazioni sui contenitori"
-  - "flusso di controllo [Integration Services], contenitori"
-  - "contenitori di SQL Server Integration Services"
+title: Contenitori in Integration Services | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSIS containers
+- containers [Integration Services]
+- containers [Integration Services], about containers
+- control flow [Integration Services], containers
+- SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Contenitori in Integration Services
+# <a name="integration-services-containers"></a>Contenitori in Integration Services
   I contenitori sono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che forniscono la struttura ai pacchetti e i servizi alle attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
   
  Nei pacchetti i contenitori vengono utilizzati per gli scopi seguenti:  
   
--   Ripetere determinate attività per ogni elemento di una raccolta, ad esempio i file in una cartella, schemi o oggetti SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Un pacchetto può ad esempio eseguire istruzioni Transact-SQL disponibili in più file.  
+-   Ripetere determinate attività per ogni elemento di una raccolta, ad esempio i file in una cartella, schemi o oggetti SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Un pacchetto può ad esempio eseguire istruzioni Transact-SQL disponibili in più file.  
   
 -   Ripetere determinate attività finché un'espressione specificata non restituisce **false**. Un pacchetto può ad esempio inviare un messaggio di posta elettronica diverso per sette volte, ovvero uno per ogni giorno della settimana.  
   
 -   Creare gruppi di attività e contenitori che devono avere esito positivo o negativo come singola unità. Un pacchetto può ad esempio raggruppare attività che eliminano e aggiungono righe in una tabella di database e quindi eseguire il commit o il rollback di tutte le attività quando una di queste non riesce.  
   
-## Tipi di contenitori  
+## <a name="container-types"></a>Tipi di contenitori  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre quattro tipi di contenitori per la compilazione dei pacchetti, elencati nella tabella seguente.  
   
 |Contenitore|Description|  
@@ -45,8 +50,8 @@ caps.handback.revision: 48
   
  Anche i gestori dell'evento e i pacchetti sono tipi di contenitori. Per altre informazioni, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) e [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Riepilogo delle proprietà dei contenitori  
- Tutti i tipi di contenitori dispongono di un set di proprietà comune. Se si creano pacchetti usando gli strumenti grafici offerti da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], per i contenitori Ciclo Foreach, Ciclo For e Sequenza vengono elencate nella finestra Proprietà le proprietà seguenti. Le proprietà dei contenitori host delle attività vengono configurate nell'ambito della configurazione dell'attività incapsulata nell'host. Le proprietà degli host delle attività vengono impostate quando si configura l'attività.  
+### <a name="summary-of-container-properties"></a>Riepilogo delle proprietà dei contenitori  
+ Tutti i tipi di contenitori dispongono di un set di proprietà comune. Se si creano pacchetti usando gli strumenti grafici offerti da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , per i contenitori Ciclo Foreach, Ciclo For e Sequenza vengono elencate nella finestra Proprietà le proprietà seguenti. Le proprietà dei contenitori host delle attività vengono configurate nell'ambito della configurazione dell'attività incapsulata nell'host. Le proprietà degli host delle attività vengono impostate quando si configura l'attività.  
   
 |Proprietà|Description|  
 |--------------|-----------------|  
@@ -61,7 +66,7 @@ caps.handback.revision: 48
 |**ForceExecutionResult**|Valore che specifica il risultato forzato dell'esecuzione del pacchetto o del contenitore. I valori sono **None**, **Success**, **Failure**e **Completion**. Il valore predefinito di questa proprietà è **None**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |**ForceExecutionValue**|Valore booleano che specifica se il valore di esecuzione facoltativo del contenitore deve essere forzato in modo da contenere un valore specifico. Il valore predefinito di questa proprietà è **False**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
 |**ID**|GUID del contenitore, assegnato al momento della creazione del pacchetto. Questa proprietà è di sola lettura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
-|**IsolationLevel**|Livello di isolamento della transazione del contenitore. I valori sono **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable** e **Snapshot**. Il valore predefinito di questa proprietà è **Serializable**. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|**IsolationLevel**|Livello di isolamento della transazione del contenitore. I valori sono **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**e **Snapshot**. Il valore predefinito di questa proprietà è **Serializable**. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**LocaleID**|Impostazioni locali Microsoft Win32. Il valore predefinito di questa proprietà è costituito dalle impostazioni locali del sistema operativo sul computer locale.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Valore che specifica il comportamento di registrazione del contenitore. I possibili valori sono **Disabled**, **Enabled**e **UseParentSetting**. Il valore predefinito di questa proprietà è **UseParentSetting**. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**MaximumErrorCount**|Numero massimo di errori che possono verificarsi prima che l'esecuzione del contenitore venga arrestata. Il valore predefinito di questa proprietà è **1**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
@@ -78,25 +83,25 @@ caps.handback.revision: 48
   
 -   T:Microsoft.SqlServer.Dts.Runtime.TaskHost  
   
-## Oggetti che estendono le funzionalità dei contenitori  
+## <a name="objects-that-extend-container-functionality"></a>Oggetti che estendono le funzionalità dei contenitori  
  I contenitori includono flussi di controllo costituiti da eseguibili e vincoli di precedenza. Possono inoltre utilizzare variabili e gestori di eventi. Il contenitore Host attività costituisce un'eccezione perché, dal momento che incapsula una singola attività, non utilizza vincoli di precedenza.  
   
-### Eseguibili  
+### <a name="executables"></a>Eseguibili  
  Il termine eseguibile si riferisce alle attività a livello di contenitore e a qualsiasi contenitore all'interno del contenitore in considerazione. Un eseguibile può essere costituito da uno dei contenitori e una delle attività disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oppure da un'attività personalizzata. Per altre informazioni, vedere [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
-### Vincoli di precedenza  
+### <a name="precedence-constraints"></a>Vincoli di precedenza  
  I vincoli di precedenza collegano in un flusso di controllo ordinato i contenitori e le attività presenti in uno stesso contenitore padre. Per altre informazioni, vedere [Vincoli di precedenza](../../integration-services/control-flow/precedence-constraints.md).  
   
-### Gestori di eventi  
+### <a name="event-handlers"></a>Gestori di eventi  
  I gestori di eventi a livello di contenitore rispondono agli eventi generati dal contenitore o dagli altri oggetti inclusi al suo interno. Per altre informazioni, vedere [Gestori eventi di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Variabili  
+### <a name="variables"></a>Variabili  
  Nelle variabili usate nei contenitori sono incluse le variabili di sistema a livello di contenitore disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e le variabili definite dall'utente usate dal contenitore. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Punti di interruzione  
+## <a name="break-points"></a>Punti di interruzione  
  Quando si imposta un punto di interruzione in un contenitore e la condizione di interruzione è **Interrompi quando il contenitore riceve l'evento OnVariableValueChanged**, definire la variabile nell'ambito del contenitore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)  
   
   

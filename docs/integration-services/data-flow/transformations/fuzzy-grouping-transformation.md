@@ -1,37 +1,42 @@
 ---
-title: "Trasformazione Raggruppamento fuzzy | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtrans.f1"
-helpviewer_keywords: 
-  - "pulitura di dati"
-  - "confronto di dati"
-  - "delimitatori token [Integration Services]"
-  - "indici temporanei [Integration Services]"
-  - "Raggruppamento fuzzy - trasformazione"
-  - "tabelle temporanee [Integration Services]"
-  - "raggruppamento di dati"
-  - "standardizzazione dei dati [Integration Services]"
-  - "colonne [Integration Services], standardizzazione"
-  - "soglie di somiglianza [Integration Services]"
-  - "pulitura di dati [Integration Services]"
-  - "dati duplicati [Integration Services]"
+title: Trasformazione Raggruppamento fuzzy | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- Fuzzy Grouping transformation
+- temporary tables [Integration Services]
+- grouping data
+- standardizing data [Integration Services]
+- columns [Integration Services], standardizing
+- similarity thresholds [Integration Services]
+- data cleaning [Integration Services]
+- duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Raggruppamento fuzzy
+# <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
   La trasformazione Raggruppamento fuzzy consente di eseguire attività di pulizia dei dati identificando le righe che con maggiore probabilità sono duplicate e selezionando una riga canonica di dati da utilizzare per la standardizzazione dei dati.  
   
 > [!NOTE]  
@@ -39,7 +44,7 @@ caps.handback.revision: 58
   
  La trasformazione Raggruppamento fuzzy richiede la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per la creazione delle tabelle temporanee di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] necessarie all'algoritmo di trasformazione. La connessione deve corrispondere a un utente autorizzato che dispone dell'autorizzazione per la creazione di tabelle nel database.  
   
- Per configurare la trasformazione, è necessario selezionare le colonne di input da utilizzare per l'identificazione di duplicati e il tipo di corrispondenza, fuzzy o esatta, per ogni colonna. Con una corrispondenza esatta vengono raggruppate solo le righe della colonna contenenti gli stessi valori. Questo tipo di corrispondenza può essere applicato alle colonne con qualsiasi tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], ad eccezione di DT_TEXT, DT_NTEXT e DT_IMAGE. Con una corrispondenza fuzzy vengono raggruppate le righe contenenti valori simili. Questo tipo di corrispondenza è basato su un punteggio di somiglianza specificato dall'utente. Nella corrispondenza fuzzy è possibile utilizzare solo colonne con tipo di dati DT_WSTR o DT_STR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Per configurare la trasformazione, è necessario selezionare le colonne di input da utilizzare per l'identificazione di duplicati e il tipo di corrispondenza, fuzzy o esatta, per ogni colonna. Con una corrispondenza esatta vengono raggruppate solo le righe della colonna contenenti gli stessi valori. Questo tipo di corrispondenza può essere applicato alle colonne con qualsiasi tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , ad eccezione di DT_TEXT, DT_NTEXT e DT_IMAGE. Con una corrispondenza fuzzy vengono raggruppate le righe contenenti valori simili. Questo tipo di corrispondenza è basato su un punteggio di somiglianza specificato dall'utente. Nella corrispondenza fuzzy è possibile utilizzare solo colonne con tipo di dati DT_WSTR o DT_STR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'output della trasformazione include tutte le colonne di input, una o più colonne con dati standardizzati e una colonna contenente il punteggio di somiglianza. Il punteggio è un valore decimale compreso tra 0 e 1. La riga canonica ha un punteggio di 1. Le altre righe nel raggruppamento fuzzy hanno punteggi che indicano il livello di corrispondenza di queste righe rispetto alla riga canonica. I punteggi più prossimi a 1 indicano una corrispondenza maggiore. Se il raggruppamento fuzzy include righe che sono duplicati esatti della riga canonica, anche queste righe avranno un punteggio di 1. La trasformazione non rimuove le righe duplicate ma le raggruppa creando una chiave di correlazione tra la riga canonica e queste righe.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 58
   
 -   **_key_in**, colonna che identifica in modo univoco ogni riga.  
   
--   **_key_out**, colonna che identifica un gruppo di righe duplicate. Il valore della colonna **_key_out** corrisponde al valore della colonna **_key_in** nella riga di dati canonica. Le righe della colonna **_key_out** aventi lo stesso valore fanno parte dello stesso gruppo. Il valore di **_key_out** di un gruppo corrisponde al valore **_key_in** nella riga di dati canonica.  
+-   **_key_out**, colonna che identifica un gruppo di righe duplicate. Il valore della colonna **_key_out** corrisponde al valore della colonna **_key_in** nella riga di dati canonica. Le righe della colonna **_key_out** aventi lo stesso valore fanno parte dello stesso gruppo. Il valore di **_key_out**di un gruppo corrisponde al valore **_key_in** nella riga di dati canonica.  
   
 -   **_score**, valore compreso tra 0 e 1 che indica la somiglianza della riga di input con la riga canonica.  
   
@@ -67,20 +72,20 @@ caps.handback.revision: 58
   
  Questa trasformazione include un input e un output. Non supporta un output degli errori.  
   
-## Confronto tra righe  
+## <a name="row-comparison"></a>Confronto tra righe  
  Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà Exhaustive su **true**, ogni riga dell'input viene confrontata con le altre righe dell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare un impatto negativo sulle prestazioni, è consigliabile impostare la proprietà Exhaustive su **true** solo in fase di sviluppo dei pacchetti.  
   
-## Tabelle e indici temporanei  
+## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione, la trasformazione Raggruppamento fuzzy crea oggetti temporanei, quali tabelle e indici, potenzialmente di grandi dimensioni, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici sono proporzionali al numero di righe dell'input della trasformazione Raggruppamento fuzzy e al numero di token creati dalla trasformazione.  
   
- La trasformazione esegue inoltre query nelle tabelle temporanee. È pertanto consigliabile connettere la trasformazione Raggruppamento fuzzy a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non di produzione, soprattutto se lo spazio su disco disponibile nel server di produzione è ridotto.  
+ La trasformazione esegue inoltre query nelle tabelle temporanee. È pertanto consigliabile connettere la trasformazione Raggruppamento fuzzy a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]non di produzione, soprattutto se lo spazio su disco disponibile nel server di produzione è ridotto.  
   
  Le prestazioni della trasformazione possono risultare migliori se le tabelle e gli indici utilizzati si trovano sullo stesso computer locale.  
   
-## Configurazione della trasformazione Raggruppamento fuzzy  
+## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>Configurazione della trasformazione Raggruppamento fuzzy  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Raggruppamento fuzzy**, fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Gestione connessione&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
@@ -90,18 +95,18 @@ caps.handback.revision: 58
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione di questa attività, fare clic su uno degli argomenti seguenti:  
   
 -   [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

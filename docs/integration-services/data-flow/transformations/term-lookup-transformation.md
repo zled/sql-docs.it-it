@@ -1,32 +1,37 @@
 ---
-title: "Trasformazione Ricerca termini | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "estrazione di dati [Integration Services]"
-  - "corrispondenza tra termini estratti [Integration Services]"
-  - "estrazione di termini [Integration Services]"
-  - "estrazioni di termini [Integration Services]"
-  - "ricerche [Integration Services]"
-  - "conteggio di elementi estratti"
-  - "Ricerca termini - trasformazione"
+title: Trasformazione Ricerca termini | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Ricerca termini
+# <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
   La trasformazione Ricerca termini rileva le corrispondenze tra i termini estratti dal testo in una colonna di input della trasformazione e quelli contenuti in una tabella di riferimento, quindi conta il numero delle occorrenze di un termine della tabella di ricerca nel set di dati di input e scrive tale numero nelle colonne di output della trasformazione, insieme al termine della tabella di riferimento. Questa trasformazione può essere utilizzata per creare un elenco di termini personalizzato basato sul testo di input, completo di statistiche sulla frequenza dei termini.  
   
  Prima di eseguire una ricerca la trasformazione Ricerca termini estrae le parole dal testo di una colonna di input utilizzando lo stesso procedimento utilizzato dalla trasformazione Estrazione termini:  
@@ -39,17 +44,17 @@ caps.handback.revision: 56
   
  Per personalizzare ulteriormente la determinazione delle corrispondenze, è possibile configurare la trasformazione Ricerca termini in modo da fare distinzione tra maiuscole e minuscole.  
   
-## Corrisponde a  
+## <a name="matches"></a>Corrisponde a  
  La trasformazione Ricerca termini esegue una ricerca e restituisce un valore utilizzando le regole seguenti:  
   
--   Se la trasformazione è configurata in modo da fare distinzione tra maiuscole e minuscole, i termini che presentano combinazioni di maiuscole e minuscole non corrispondenti vengono ignorati. I termini *studente* e *STUDENTE*, ad esempio, vengono considerati come due parole diverse.  
+-   Se la trasformazione è configurata in modo da fare distinzione tra maiuscole e minuscole, i termini che presentano combinazioni di maiuscole e minuscole non corrispondenti vengono ignorati. I termini *studente* e *STUDENTE* , ad esempio, vengono considerati come due parole diverse.  
   
     > [!NOTE]  
-    >  Una parola priva di maiuscole può corrispondere a una parola con iniziale maiuscola all'inizio di una frase. Le parole *studente* e *Studente*, ad esempio, vengono considerate corrispondenti quando *Studente* è la prima parola di una frase.  
+    >  Una parola priva di maiuscole può corrispondere a una parola con iniziale maiuscola all'inizio di una frase. Le parole *studente* e *Studente* , ad esempio, vengono considerate corrispondenti quando *Studente* è la prima parola di una frase.  
   
--   Se nella tabella di riferimento è presente la forma plurale del sostantivo o sintagma nominale, la ricerca individuerà solo la forma plurale del sostantivo o sintagma nominale. Tutte le istanze della parola *studenti*, ad esempio, vengono conteggiate separatamente da quelle della parola *studente*.  
+-   Se nella tabella di riferimento è presente la forma plurale del sostantivo o sintagma nominale, la ricerca individuerà solo la forma plurale del sostantivo o sintagma nominale. Tutte le istanze della parola *studenti* , ad esempio, vengono conteggiate separatamente da quelle della parola *studente*.  
   
--   Se nella tabella di riferimento è presente solo la forma singolare della parola, sia la forma singolare che quella plurale della parola o frase verranno considerate corrispondenti alla forma singolare. Se ad esempio la tabella di ricerca contiene la parola *studente* e la trasformazione trova *studente* e *studenti*, entrambe le parole verranno conteggiate come corrispondenze del termine di ricerca *studente*.  
+-   Se nella tabella di riferimento è presente solo la forma singolare della parola, sia la forma singolare che quella plurale della parola o frase verranno considerate corrispondenti alla forma singolare. Se ad esempio la tabella di ricerca contiene la parola *studente*e la trasformazione trova *studente* e *studenti*, entrambe le parole verranno conteggiate come corrispondenze del termine di ricerca *studente*.  
   
 -   Se il testo nella colonna di input è un sintagma nominale lemmatizzato, la normalizzazione interesserà solo l'ultima parola del sintagma nominale. La versione lemmatizzata di *doctors appointments* è ad esempio *doctors appointment*.  
   
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |Termini di riferimento|Windows 7 x64 Professional|  
 |Output|Windows|  
   
- La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+ La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @ &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", e '.  
   
-## Tipi di dati  
+## <a name="data-types"></a>Tipi di dati  
  La trasformazione Ricerca termini può utilizzare solo colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Ricerca termini. Per altre informazioni, vedere [Trasformazione Conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-## Configurazione della trasformazione Ricerca termini  
+## <a name="configuration-the-term-lookup-transformation"></a>Configurazione della trasformazione Ricerca termini  
  Le colonne di input della trasformazione Ricerca termini includono la proprietà InputColumnType che ne indica l'uso. InputColumnType può contenere i valori seguenti:  
   
 -   Il valore 0 indica che la colonna viene semplicemente passata all'output e non viene utilizzata nella ricerca.  
@@ -91,7 +96,7 @@ caps.handback.revision: 56
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca termini**, fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca termini** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor trasformazione Ricerca termini &#40;scheda Tabella di riferimento&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
   
@@ -101,10 +106,10 @@ caps.handback.revision: 56
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   

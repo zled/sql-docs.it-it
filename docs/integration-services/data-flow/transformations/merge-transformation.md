@@ -1,30 +1,35 @@
 ---
-title: "Trasformazione Unione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.mergetrans.f1"
-helpviewer_keywords: 
-  - "unione di set di dati [Integration Services]"
-  - "unione di dati [Integration Services]"
-  - "Unione - trasformazione"
-  - "combinazione di set di dati"
-  - "set di dati [Integration Services], unione"
+title: Trasformazione unione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.mergetrans.f1
+helpviewer_keywords:
+- merging datasets [Integration Services]
+- merging data [Integration Services]
+- Merge transformation
+- combining datasets
+- datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Unione
+# <a name="merge-transformation"></a>Unione - trasformazione
   La trasformazione Unione consente di combinare due set di dati ordinati in un singolo set di dati. Le righe di ogni set di dati vengono inserite nell'output in base ai valori delle relative colonne chiave.  
   
  Includendo la trasformazione Unione in un flusso di dati, è possibile eseguire le attività seguenti:  
@@ -43,7 +48,7 @@ caps.handback.revision: 43
   
 -   La trasformazione include più di due input.  
   
-## Requisiti relativi all'input  
+## <a name="input-requirements"></a>Requisiti relativi all'input  
  Per eseguire la trasformazione Unione, è necessario che i relativi dati di input siano ordinati. Per altre informazioni su questo requisito importante, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
  La trasformazione Unione richiede inoltre che le colonne da unire nei relativi input abbiano metadati corrispondenti. Non è ad esempio possibile unire una colonna con tipo di dati numeric a una colonna con tipo di dati character. Se i dati sono di tipo string, la lunghezza della colonna nel secondo input dovrà essere minore o uguale a quella della colonna nel primo input, alla quale verrà unita.  
@@ -52,27 +57,27 @@ caps.handback.revision: 43
   
  Questa trasformazione include due input e un output. Non supporta un output degli errori.  
   
-## Configurazione della trasformazione Unione  
+## <a name="configuration-of-the-merge-transformation"></a>Configurazione della trasformazione Unione  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Unione** , vedere [Editor trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation-editor.md).  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione delle proprietà, vedere i seguenti argomenti:  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; - Analysis Server (scheda Avanzate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà computer Analysis Server (scheda Avanzate) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; - Analysis Server (scheda Avanzate)
+# <a name="analysis-server-properties-advanced-tab"></a>Proprietà - Analysis Server (scheda Avanzate)
   Si tratta del servizio Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Cluster**  
  Indica se il servizio è installato come risorsa di un server di cluster.  
   

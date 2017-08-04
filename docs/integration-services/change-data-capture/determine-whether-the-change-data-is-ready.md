@@ -1,31 +1,36 @@
 ---
-title: "Come determinare se i dati delle modifiche sono pronti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caricamento incrementale [Integration Services], verifica disponibilità"
+title: Determinare se i dati delle modifiche sono pronti | Documenti Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Come determinare se i dati delle modifiche sono pronti
+# <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, la seconda attività consiste nel verificare che i dati delle modifiche per l'intervallo selezionato siano pronti. Questo passaggio è necessario in quanto il processo di acquisizione asincrono potrebbe non avere ancora elaborato tutte le modifiche fino all'endpoint selezionato.  
   
 > [!NOTE]  
 >  La prima attività per il flusso di controllo consiste nel calcolare gli endpoint dell'intervallo di modifiche. Per altre informazioni su questa attività, vedere [Definizione di un intervallo dei dati delle modifiche](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). Per una descrizione del processo complessivo di progettazione del flusso di controllo, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Informazioni sui componenti della soluzione  
- La soluzione descritta in questo argomento usa 4 componenti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
+## <a name="understanding-the-components-of-the-solution"></a>Informazioni sui componenti della soluzione  
+ La soluzione descritta in questo argomento usa 4 componenti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   Un contenitore Ciclo For che valuta ripetutamente l'output di un'attività Esegui SQL.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 26
   
  Tali componenti impostano o leggono i valori di numerose variabili del pacchetto per controllare il flusso di esecuzione all'interno del ciclo e successivamente nel pacchetto.  
   
-#### Per configurare le variabili del pacchetto  
+#### <a name="to-set-up-package-variables"></a>Per configurare le variabili del pacchetto  
   
-1.  Nella finestra **Variabili** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] creare le variabili seguenti:  
+1.  Nella finestra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Variabili **di** creare le variabili seguenti:  
   
     1.  Creare una variabile con un tipo di dati integer per memorizzare il valore di stato restituito dall'attività Esegui SQL.  
   
@@ -61,16 +66,16 @@ caps.handback.revision: 26
   
          In questo esempio viene utilizzato il nome di variabile IntervalID e viene verificata solo l'eventuale presenza di un valore pari a 0 per indicare il caricamento iniziale.  
   
-## Configurazione di un contenitore Ciclo For  
+## <a name="configuring-a-for-loop-container"></a>Configurazione di un contenitore Ciclo For  
  Dopo avere impostato le variabili, il contenitore Ciclo For rappresenta il primo componente da aggiungere.  
   
-#### Per configurare un contenitore Ciclo For per attendere che i dati delle modifiche siano pronti  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>Per configurare un contenitore Ciclo For per attendere che i dati delle modifiche siano pronti  
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un contenitore Ciclo For al flusso di controllo.  
   
 2.  Connettere l'attività Esegui SQL per il calcolo degli endpoint dell'intervallo al contenitore Ciclo For.  
   
-3.  In **Editor ciclo For** selezionare le opzioni seguenti:  
+3.  In **Editor ciclo For**selezionare le opzioni seguenti:  
   
     1.  Per **InitExpression**, immettere `@DataReady = 0`.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          Quando questa espressione restituisce **False**, l'esecuzione passa all'esterno del ciclo e viene avviato il caricamento incrementale.  
   
-## Configurazione dell'attività Esegui SQL per l'esecuzione di una query per i dati delle modifiche  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>Configurazione dell'attività Esegui SQL per l'esecuzione di una query per i dati delle modifiche  
  È necessario aggiungere un'attività Esegui SQL all'interno del contenitore Ciclo For. Questa attività esegue una query sulle tabelle gestite dal processo Change Data Capture nel database. Il risultato della query è un valore di stato che indica se i dati delle modifiche sono pronti.  
   
  Nella tabella seguente la prima colonna indica i valori restituiti dall'attività Esegui SQL tramite la query Transact-SQL di esempio. La seconda colonna indica il modo in cui gli altri componenti rispondono a tali valori.  
@@ -93,13 +98,13 @@ caps.handback.revision: 26
 |3|Indica il caricamento iniziale di tutti i dati delle modifiche disponibili.<br /><br /> La logica condizionale ottiene questo valore da una variabile del pacchetto speciale utilizzata solo a questo scopo.|L'esecuzione passa all'esterno del contenitore Ciclo For e viene avviato il caricamento incrementale.|  
 |5|Indica che è stato raggiunto il valore di TimeoutCeiling.<br /><br /> Il ciclo ha testato i dati per il numero specificato di volte e i dati non sono ancora disponibili. Senza questo test o uno simile, l'esecuzione del pacchetto potrebbe continuare per un tempo illimitato.|L'esecuzione prosegue con il componente facoltativo che registra il timeout.|  
   
-#### Per configurare un'attività Esegui SQL per l'esecuzione di una query per verificare se i dati sono pronti  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>Per configurare un'attività Esegui SQL per l'esecuzione di una query per verificare se i dati sono pronti  
   
 1.  Aggiungere un'attività Esegui SQL all'interno del contenitore Ciclo For.  
   
-2.  Nella pagina **Generale** di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale**di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**, selezionare **Riga singola**.  
+    1.  Per **ResultSet**selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 26
   
         ```  
   
-3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL** creare i mapping seguenti:  
+3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL**creare i mapping seguenti:  
   
     1.  Eseguire il mapping tra la variabile ExtractEndTime e il parametro 0.  
   
@@ -148,15 +153,15 @@ caps.handback.revision: 26
   
     5.  Mapping tra la variabile TimeoutCeiling e il parametro 4.  
   
-4.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL** eseguire il mapping tra il risultato di DataReady e la variabile DataReady e tra il risultato di TimeoutCount e la variabile TimeoutCount.  
+4.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il risultato di DataReady e la variabile DataReady e tra il risultato di TimeoutCount e la variabile TimeoutCount.  
   
-## Attesa che i dati delle modifiche siano pronti  
+## <a name="waiting-until-the-change-data-is-ready"></a>Attesa che i dati delle modifiche siano pronti  
  È possibile utilizzare uno dei numerosi metodi per implementare un ritardo quando i dati delle modifiche non sono pronti. Nelle due procedure seguenti viene illustrato come utilizzare un'attività Script o un'attività Esegui SQL per implementare il ritardo.  
   
 > [!NOTE]  
 >  Uno script precompilato è soggetto a un overhead minore rispetto a un'attività Esegui SQL.  
   
-#### Per implementare un ritardo tramite un'attività Script  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>Per implementare un ritardo tramite un'attività Script  
   
 1.  Aggiungere un'attività Script all'interno del contenitore Ciclo For.  
   
@@ -176,7 +181,7 @@ caps.handback.revision: 26
   
 4.  Nella pagina**Script** di **Editor attività Script** per **ReadOnlyVariables** selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds**.  
   
-5.  Nella pagina **Script** di **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+5.  Nella pagina **Script**di **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
 6.  Nella routine Main immettere una delle righe di codice seguenti:  
   
@@ -202,7 +207,7 @@ caps.handback.revision: 26
   
 8.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
-#### Per implementare un ritardo tramite un'attività Esegui SQL  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>Per implementare un ritardo tramite un'attività Esegui SQL  
   
 1.  Aggiungere un'attività Esegui SQL all'interno del contenitore Ciclo For.  
   
@@ -222,9 +227,9 @@ caps.handback.revision: 26
   
          Questa opzione richiede che entrambe le condizioni, il vincolo e l'espressione, siano True.  
   
-4.  Nella pagina **Generale** di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+4.  Nella pagina **Generale**di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**, selezionare **Riga singola**.  
+    1.  Per **ResultSet**selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  Nella pagina **Mapping parametri** dell'editor eseguire il mapping tra la variabile stringa DelaySeconds e il parametro 0.  
   
-## Gestione di una condizione di errore  
+## <a name="handling-an-error-condition"></a>Gestione di una condizione di errore  
  Se si desidera, è possibile configurare un componente aggiuntivo nel ciclo per registrare una condizione di errore o di timeout:  
   
 -   Questo componente può registrare una condizione di errore quando il valore della variabile DataReady = 1. Questo valore indica che non sono disponibili dati delle modifiche prima dell'inizio dell'intervallo selezionato.  
   
 -   Questo componente può registrare una condizione di timeout anche quando viene raggiunto il valore della variabile TimeoutCeiling. Questo valore indica che il ciclo ha testato i dati per il numero specificato di volte e i dati non sono ancora disponibili. Senza questo test o uno simile, l'esecuzione del pacchetto potrebbe continuare per un tempo illimitato.  
   
-#### Per configurare un'attività Script facoltativa per la registrazione di una condizione di errore  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>Per configurare un'attività Script facoltativa per la registrazione di una condizione di errore  
   
-1.  Se si desidera segnalare l'errore o il timeout scrivendo un messaggio nel log, configurare la registrazione per il pacchetto. Per altre informazioni, vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+1.  Se si desidera segnalare l'errore o il timeout scrivendo un messaggio nel log, configurare la registrazione per il pacchetto. Per altre informazioni, vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#ssdt).  
   
 2.  Aggiungere un'attività Script all'interno del contenitore Ciclo For.  
   
@@ -268,15 +273,15 @@ caps.handback.revision: 26
   
          Questa opzione richiede che entrambe le condizioni, il vincolo e l'espressione, siano True.  
   
-5.  Nella pagina **Script** di **Editor attività Script** per **ReadOnlyVariables** selezionare **User::DataReady** e **User::ExtractStartTime** dall'elenco per rendere i valori disponibili per lo script.  
+5.  Nella pagina **Script**di **Editor attività Script** per **ReadOnlyVariables**selezionare **User::DataReady** e **User::ExtractStartTime** dall'elenco per rendere i valori disponibili per lo script.  
   
      Se si desidera includere informazioni da determinate variabili di sistema, ad esempio System::PackageName, nelle informazioni scritte nel log, selezionare anche tali variabili.  
   
-6.  Nella pagina **Script** di **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+6.  Nella pagina **Script**di **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
-7.  Nella routine Main immettere il codice per registrare un errore chiamando il metodo **Dts.Log** o per generare un evento chiamando uno dei metodi dell'interfaccia **Dts.Events**. Informare dell'errore il pacchetto restituendo `Dts.TaskResult = Dts.Results.Failure`.  
+7.  Nella routine Main immettere il codice per registrare un errore chiamando il metodo **Dts.Log** o per generare un evento chiamando uno dei metodi dell'interfaccia **Dts.Events** . Informare dell'errore il pacchetto restituendo `Dts.TaskResult = Dts.Results.Failure`.  
   
-     Nell'esempio seguente viene illustrato come scrivere un messaggio nel log. Per altre informazioni, vedere [Registrazione nell'attività Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md), [Generazione di eventi nell'attività Script](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md) e [Risultati restituiti dall'attività Script](../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Nell'esempio seguente viene illustrato come scrivere un messaggio nel log. Per altre informazioni, vedere [Registrazione nell'attività Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md), [Generazione di eventi nell'attività Script](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)e [Risultati restituiti dall'attività Script](../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
     ```  
     ' User variables.  
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
-## Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo  
  Dopo avere determinato che i dati delle modifiche sono pronti, il passaggio successivo consiste nel prepararsi a eseguire una query per tali dati delle modifiche.  
   
  **Argomento successivo:** [Preparazione dell'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

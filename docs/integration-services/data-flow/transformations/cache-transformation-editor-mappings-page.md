@@ -1,24 +1,29 @@
 ---
-title: "Editor trasformazione cache (pagina Mapping) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetransmap.f1"
+title: Editor trasformazione cache (pagina Mapping) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778b7cbcc861b9bdee2c027e5d7d85220b913072
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor trasformazione cache (pagina Mapping)
+# <a name="cache-transformation-editor-mappings-page"></a>Editor trasformazione cache (pagina Mapping)
   Utilizzare la pagina **Mapping** di **Editor trasformazione cache** per eseguire il mapping delle colonne di input nella trasformazione Trasformazione cache alle colonne di destinazione nella gestione connessione della cache.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Colonne di input disponibili**  
  Consente di visualizzare l'elenco delle colonne di input disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di input disponibili e le colonne di destinazione.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 16
  **Colonna di destinazione**  
  Consente di visualizzare le colonne di destinazione disponibili.  
   
-## Vedere anche  
- [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Editor trasformazione cache &#40; Pagina Gestione connessione &#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
   
   

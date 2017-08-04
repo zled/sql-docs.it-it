@@ -1,42 +1,47 @@
 ---
-title: "HEX (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dati esadecimali"
-  - "HEX - funzione"
+title: HEX (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hexadecimal data
+- HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# HEX (espressione SSIS)
+# <a name="hex-ssis-expression"></a>HEX (espressione SSIS)
   Viene restituita una stringa che rappresenta il valore esadecimale di un valore integer.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 HEX(integer_expression)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *integer_expression*  
  Valore integer con o senza segno.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  HEX restituisce Null se *integer_expression* è Null.  
   
  L'argomento *integer_expression* argomento deve valutare un numero intero. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -55,14 +60,14 @@ HEX(integer_expression)
   
 -   Per i tipi di dati DT_I8 e DT_UI8 viene restituita una stringa con lunghezza massima pari a 16.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene utilizzato un valore letterale numerico. La funzione restituisce il valore 190.  
   
 ```  
 HEX(400)   
 ```  
   
- In questo esempio viene usata la colonna **ReorderPoint**. Il tipo di dati della colonna è **smallint**. Se **ReorderPoint** ha valore 750, la funzione restituirà 2EE.  
+ In questo esempio viene usata la colonna **ReorderPoint** . Il tipo di dati della colonna è **smallint**. Se **ReorderPoint** ha valore 750, la funzione restituirà 2EE.  
   
 ```  
 HEX(ReorderPoint)   
@@ -74,7 +79,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## Vedere anche  
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

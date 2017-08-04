@@ -1,31 +1,36 @@
 ---
-title: "Confronto di dati stringa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "confronto di dati stringa"
-  - "opzioni di confronto [Integration Services]"
-  - "impostazioni locali [Integration Services]"
-  - "conversione di dati stringa"
-  - "confronti di stringhe"
+title: Confronto di dati stringa | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing string data
+- comparison options [Integration Services]
+- locales [Integration Services]
+- converting string data
+- string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee8d749695838be53ebbb0b9de11baf722ace7e2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Confronto di dati stringa
-  Il confronto tra stringhe costituisce una parte importante di molte delle trasformazioni eseguite da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e viene utilizzato anche nella valutazione di espressioni in variabili ed espressioni di proprietà. La trasformazione Ordinamento, ad esempio, confronta i valori in un set di dati per disporre i dati in ordine crescente o decrescente.  
+# <a name="comparing-string-data"></a>confronto di dati stringa
+  Il confronto tra stringhe costituisce una parte importante di molte delle trasformazioni eseguite da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e viene utilizzato anche nella valutazione di espressioni in variabili ed espressioni di proprietà. La trasformazione Ordinamento, ad esempio, confronta i valori in un set di dati per disporre i dati in ordine crescente o decrescente.  
   
-## Configurazione di trasformazioni per i confronti di stringhe  
+## <a name="configuring-transformations-for-string-comparisons"></a>Configurazione di trasformazioni per i confronti di stringhe  
  Le trasformazioni Ordinamento, Aggregazione, Raggruppamento fuzzy e Ricerca fuzzy possono essere personalizzate modificando la modalità di confronto delle stringhe a livello di colonna. È ad esempio possibile specificare di ignorare maiuscole e minuscole nel confronto, ovvero considerare identici i caratteri maiuscoli e minuscoli.  
   
  Le trasformazioni seguenti utilizzano espressioni che possono includere confronti tra stringhe.  
@@ -36,7 +41,7 @@ caps.handback.revision: 39
   
  Anche le variabili, i mapping di variabili e i vincoli di precedenza utilizzano espressioni, che possono includere confronti tra stringhe. Per altre informazioni sulle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## Elaborazione durante il confronto di stringhe  
+## <a name="processing-during-string-comparison"></a>Elaborazione durante il confronto di stringhe  
  A seconda dei dati e della configurazione della trasformazione, durante il confronto dei dati stringa è possibile eseguire le operazioni di elaborazione seguenti:  
   
 -   Conversione dei dati in formato Unicode. Se i dati dell'origine non sono già in formato Unicode, verranno automaticamente convertiti in tale formato prima dell'esecuzione del confronto.  
@@ -45,23 +50,23 @@ caps.handback.revision: 39
   
 -   Applicazione di opzioni di confronto a livello di colonna per definire la distinzione tra maiuscole e minuscole per i confronti.  
   
-## Conversione di dati stringa in formato Unicode  
+## <a name="converting-string-data-to-unicode"></a>Conversione di dati stringa in formato Unicode  
  A seconda della configurazione e delle operazioni eseguite da una trasformazione, i dati stringa possono essere convertiti nel tipo di dati DT_WSTR, ovvero una rappresentazione Unicode dei caratteri delle stringhe.  
   
  I dati stringa con il tipo di dati DT_STR vengono convertiti in Unicode utilizzando la tabella codici della colonna. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta le tabelle codici a livello di colonna e ogni colonna può essere convertita usando una tabella codici diversa.  
   
- Nella maggior parte dei casi [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è in grado di identificare la tabella codici appropriata basandosi sull'origine dati. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, è possibile impostare regole di confronto a livello di database e di colonna. La tabella codici viene ricavata dalle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], che possono essere quelle di Windows o le regole di confronto SQL.  
+ Nella maggior parte dei casi [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è in grado di identificare la tabella codici appropriata basandosi sull'origine dati. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, è possibile impostare regole di confronto a livello di database e di colonna. La tabella codici viene ricavata dalle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che possono essere quelle di Windows o le regole di confronto SQL.  
   
- Se in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene specificata una tabella codici imprevista oppure se tramite il pacchetto viene effettuato l'accesso a un'origine dati usando un provider da cui non vengono fornite informazioni sufficienti per determinare la tabella codici appropriata, è possibile specificare una tabella codici predefinita nell'origine e nella destinazione OLE DB. Le tabelle codici predefinite vengono utilizzate al posto di quelle specificate da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Se in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene specificata una tabella codici imprevista oppure se tramite il pacchetto viene effettuato l'accesso a un'origine dati usando un provider da cui non vengono fornite informazioni sufficienti per determinare la tabella codici appropriata, è possibile specificare una tabella codici predefinita nell'origine e nella destinazione OLE DB. Le tabelle codici predefinite vengono utilizzate al posto di quelle specificate da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  I file non hanno tabelle codici, ma le gestioni connessioni file flat e per più file flat utilizzate dai pacchetti per connettersi ai file includono una proprietà che consente di specificare le tabelle codici dei file. La tabella codici può essere impostata solo a livello di file, non a livello di colonna.  
   
-## Impostazione delle impostazioni locali  
+## <a name="setting-locale"></a>Impostazione delle impostazioni locali  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non usa la tabella codici per ricavare regole specifiche delle impostazioni locali per l'ordinamento dei dati o l'interpretazione di valori di data, ora e decimali. La trasformazione legge invece le impostazioni locali specificate dalla proprietà LocaleId del componente del flusso di dati, dell'attività Flusso di dati, del contenitore o del pacchetto. Per impostazione predefinita, le impostazioni locali di una trasformazione vengono ereditate dalla relativa attività Flusso di dati, che a sua volta le eredita dal pacchetto. Se l'attività Flusso di dati si trova in un contenitore, ad esempio Ciclo For, erediterà le impostazioni locali dal contenitore.  
   
  È inoltre possibile specificare impostazioni locali per le gestioni connessioni file flat e per più file flat.  
   
-## Impostazione delle opzioni di confronto  
+## <a name="setting-comparison-options"></a>Impostazione delle opzioni di confronto  
  Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. Questa opzione consente di ignorare segni diacritici quale l'accento, di modo che caratteri come "a" e "á" vengano considerati identici ai fini del confronto.  
   
  Nella tabella seguente vengono descritte le opzioni di confronto disponibili e uno stile di ordinamento.  
@@ -77,11 +82,11 @@ caps.handback.revision: 39
   
  Le trasformazioni Ordinamento, Aggregazione, Raggruppamento fuzzy e Ricerca fuzzy includono queste opzioni per il confronto dei dati.  
   
- Nella finestra **Editor avanzato** per le trasformazioni Raggruppamento fuzzy e Ricerca fuzzy è visualizzato il flag di confronto **FullySensitive**. Se si seleziona il flag di confronto **FullySensitive** vengono applicate tutte le opzioni di confronto.  
+ Nella finestra **Editor avanzato** per le trasformazioni Raggruppamento fuzzy e Ricerca fuzzy è visualizzato il flag di confronto **FullySensitive** . Se si seleziona il flag di confronto **FullySensitive** vengono applicate tutte le opzioni di confronto.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
- [Analisi veloce](../Topic/Fast%20Parse.md)   
- [Analisi standard](../Topic/Standard%20Parse.md)  
+ [Analisi veloce](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Analisi standard](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

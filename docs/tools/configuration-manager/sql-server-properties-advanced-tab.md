@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; - SQL Server (scheda Avanzate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà SQL Server (scheda Avanzate) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; - SQL Server (scheda Avanzate)
+# <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
   Le proprietà descritte di seguito sono presenti nella scheda **Avanzate** per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Cluster**  
  Indica se il servizio è installato come risorsa di un server di cluster.  
   
@@ -33,10 +38,10 @@ caps.handback.revision: 19
  Indica la posizione in cui vengono memorizzati i dump di memoria in caso di errore.  
   
  **Segnalazione errori**  
- Se l'opzione è impostata su **Sì**, il programma Dr. Watson inoltra le informazioni a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o al server interno per la segnalazione degli errori se si verifica un errore grave. Per ulteriori informazioni sulla funzionalità di segnalazione degli errori, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online. Per modificare questo valore, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server, scegliere **Proprietà** e quindi fare clic sulla pagina **Impostazioni varie server**. Le opzioni verranno visualizzate nell'area **Segnalazione informazioni**.  
+ Se l'opzione è impostata su **Sì**, il programma Dr. Watson inoltra le informazioni a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o al server interno per la segnalazione degli errori se si verifica un errore grave. Per ulteriori informazioni sulla funzionalità di segnalazione degli errori, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online. Per modificare questo valore, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server, scegliere **Proprietà** e quindi fare clic sulla pagina **Impostazioni varie server**. Le opzioni verranno visualizzate nell'area **Segnalazione informazioni** .  
   
  **Versione file**  
- Visualizza la versione dell'eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Visualizza la versione dell'eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Percorso installazione**  
  Visualizza il percorso dei file binari di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relativi all'installazione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

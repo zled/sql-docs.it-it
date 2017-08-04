@@ -1,27 +1,32 @@
 ---
-title: "Modificare le propriet&#224; delle tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "editTabProps"
+title: "Modificare le proprietà della tabella | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5213e0c5757afd3a74c8b76f43bf1a2c88ced7e4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Modificare le propriet&#224; delle tabelle
+# <a name="edit-the-table-properties"></a>Modificare le proprietà delle tabelle
   Utilizzare questa finestra di dialogo per modificare colonne specifiche della tabella selezionata in cui vengono acquisite le modifiche. È anche possibile modificare le informazioni **Security Role** e **Capture Instance** .  
   
-### Per modificare le colonne da includere nell'istanza di CDC  
+### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>Per modificare le colonne da includere nell'istanza di CDC  
   
 1.  Eseguire una o entrambe le operazioni seguenti:  
   
@@ -29,11 +34,11 @@ caps.handback.revision: 8
   
     -   Deselezionare la casella di controllo accanto alle colonne che non si desidera più includere.  
   
-### Per modificare il ruolo di sicurezza  
+### <a name="to-edit-the-security-role"></a>Per modificare il ruolo di sicurezza  
   
 1.  Digitare un nuovo nome oppure modificare il nome esistente del ruolo di sicurezza nel campo **Security Role** .  
   
-### Per creare una nuova istanza di acquisizione  
+### <a name="to-create-a-new-capture-instance"></a>Per creare una nuova istanza di acquisizione  
   
 1.  Nel campo **Name** della sezione **Security Role** immettere un nome per l'istanza di acquisizione. Per impostazione predefinita, il nome immesso nel campo è il nome dell'istanza di acquisizione corrente con **_NEW** aggiunto alla fine del nome, ad esempio **old_instance_NEW**.  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 8
   
  Dopo avere immesso le informazioni in questa finestra di dialogo, scegliere **OK** per accettare le modifiche.  
   
-## Vedere anche  
- [Procedura di modifica delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Apportare modifiche alle tabelle selezionate per l'acquisizione di modifiche](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Come modificare le proprietà di istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Apportare modifiche alle tabelle selezionate per l'acquisizione delle modifiche](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

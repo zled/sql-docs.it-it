@@ -1,26 +1,31 @@
 ---
-title: "Generatore di espressioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.expressionbuilder.f1"
-helpviewer_keywords: 
-  - "Generatore di espressioni - finestra di dialogo"
+title: Generatore di espressioni | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords:
+- Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Generatore di espressioni
+# <a name="expression-builder"></a>Generatore di espressioni
   Usare la finestra di dialogo **Generatore di espressioni** per creare e modificare un'espressione di proprietà o scrivere l'espressione che imposta il valore di una variabile tramite un'interfaccia utente grafica in cui sono elencate variabili ed è specificato un riferimento predefinito alle funzioni, i cast di tipo e gli operatori inclusi nel linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Un'espressione di proprietà è un'espressione assegnata a una proprietà. Quando l'espressione viene valutata, la proprietà viene aggiornata in modo dinamico per utilizzare il risultato della valutazione dell'espressione. In modo analogo, un'espressione utilizzata in una variabile consente l'aggiornamento del valore della variabile con il risultato della valutazione dell'espressione.  
@@ -35,7 +40,7 @@ caps.handback.revision: 18
   
  Per sapere di più sulle espressioni di proprietà e sulla scrittura di espressioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md) e [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
 |Nome|Definizione|  
 |----------|----------------|  
@@ -45,10 +50,10 @@ caps.handback.revision: 18
 |**Valore valutato**|Indica il valore restituito dall'espressione.|  
 |**Valuta espressione**|Fare clic su **Valuta espressione** per visualizzare i valori restituiti dell'espressione.|  
   
-## Vedere anche  
- [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Pagina espressioni](../../integration-services/expressions/expressions-page.md)   
  [Editor espressioni di proprietà](../../integration-services/expressions/property-expressions-editor.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40; SSIS &#41; Variabili](../../integration-services/integration-services-ssis-variables.md)   
  [Variabili di sistema](../../integration-services/system-variables.md)  
   
   

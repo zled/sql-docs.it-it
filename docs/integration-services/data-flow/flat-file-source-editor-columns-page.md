@@ -1,26 +1,31 @@
 ---
-title: "Editor origine file flat (pagina Colonne) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.columns.f1"
-helpviewer_keywords: 
-  - "Editor origine file flat"
+title: File di origine Editor flat (pagina colonne) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a34e304d72b80412f5527dcb75f00b6dcb2fcbb2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor origine file flat (pagina Colonne)
+# <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  Per ulteriori informazioni sull'origine file flat, vedere [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Colonne esterne disponibili**  
  Consente di visualizzare l'elenco delle colonne esterne disponibili nell'origine dei dati. Non è possibile utilizzare questa tabella per l'aggiunta o l'eliminazione di colonne.  
   
@@ -38,10 +43,10 @@ caps.handback.revision: 28
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine file flat &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
- [Editor origine file flat &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
- [Gestione connessione file flat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine File flat &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
+ [Editor origine File flat &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [Gestione connessione File flat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

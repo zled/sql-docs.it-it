@@ -1,57 +1,62 @@
 ---
-title: "Filtrare i dati prima dell&#39;esportazione (aggiuntivo MDS per Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Filtrare i dati prima dell'esportazione (componente aggiuntivo MDS per Excel) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3bc2b1200364c76321c127823c0b9a6161fe4d0
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Filtrare i dati prima dell&#39;esportazione (aggiuntivo MDS per Excel)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtrare i dati quando si desidera limitare le dimensioni e l'ambito dei dati che si siano esportando in Excel.  
+# <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>Filtrare i dati prima dell'esportazione (componente aggiuntivo MDS per Excel)
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtrare i dati quando si desidera limitare la dimensione o l'ambito dei dati che si desidera esportare in Excel.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
-### Per filtrare i dati prima dell'esportazione  
+### <a name="to-filter-data-before-exporting"></a>Per filtrare i dati prima dell'esportazione  
   
-1.  Aprire Excel e il **dati Master** scheda, connettersi a un repository MDS. Per ulteriori informazioni, vedere [connettersi a un Repository MDS & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md).  
+1.  Aprire Excel e nella scheda **Dati master** connettersi a un repository MDS. Per altre informazioni, vedere [Connettersi a un repository MDS &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md).  
   
-2.  Nel **Esplora dati Master** riquadro, selezionare un modello e versione. L'elenco di entità viene popolato.  
+2.  Nel riquadro **Esplora dati master** selezionare un modello e una versione. L'elenco di entità viene popolato.  
   
-    -   Se il **Esplora dati Master** riquadro non è visibile, il **Connetti e carica** gruppo, fare clic su **Mostra Esplora**.  
+    -   Se il riquadro **Esplora dati master** non è visibile, nel gruppo **Connetti e carica** fare clic su **Esplora dati master**.  
   
-    -   Se il **Esplora dati Master** riquadro è disabilitato, perché il foglio esistente contiene già dati gestiti da MDS. Per abilitare il riquadro, aprire un nuovo foglio di lavoro.  
+    -   Se il riquadro **Esplora dati master** è disabilitato, significa che il foglio esistente contiene già i dati gestiti da MDS. Per abilitare il riquadro, aprire un nuovo foglio di lavoro.  
   
-3.  Nel **Esplora dati Master** riquadro, nell'elenco di entità, fare clic sull'entità che si desidera filtrare.  
+3.  Nel riquadro **Esplora dati master** , nell'elenco di entità fare clic sull'entità che si desidera filtrare.  
   
-4.  Sulla barra multifunzione, nel **Connetti e carica** gruppo, fare clic su **filtro**.  
+4.  Sulla barra multifunzione, nel gruppo **Connetti e carica** fare clic su **Filtro**.  
   
-5.  Completare il **filtro** la finestra di dialogo selezionando gli attributi (colonne) per visualizzare, impostare l'ordine delle colonne e se necessario, filtrando i dati in modo vengano restituite meno righe. Visualizzazione di **riepilogo** riquadro per la quantità di dati verrà restituito. Per ulteriori informazioni, vedere [la finestra di dialogo filtro & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md).  
+5.  Completare la finestra di dialogo **Filtro** selezionando gli attributi (colonne) da visualizzare, impostando l'ordine delle colonne e se necessario, filtrando i dati in modo che vengano restituite meno righe. Visualizzare il riquadro **Riepilogo** per sapere quanti dati saranno restituiti. Per ulteriori informazioni, vedere [la finestra di dialogo filtro &#40; Il componente aggiuntivo MDS per Excel &#41; ](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md).  
   
-6.  Fare clic su **caricare i dati**. Il foglio viene popolato con i dati gestiti da MDS.  
+6.  Fare clic su **Carica dati**. Il foglio viene popolato con i dati gestiti da MDS.  
   
     > [!NOTE]  
     >  -   Solo il primo milione di membri viene caricato in Excel.  
     > -   Nelle colonne che sono elenchi vincolati (attributi basati su dominio) vengono caricati solo i primi 25000 valori per impostazione predefinita.  
   
-## Passaggi successivi  
- [Importare dati da Excel per Master Data Services & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+## <a name="next-steps"></a>Passaggi successivi  
+ [Importare dati da Excel in Master Data Services &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## Vedere anche  
- [Panoramica: Esportazione dei dati in Excel & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [La finestra di dialogo filtro & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
- [Riordinare le colonne & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Nella finestra di dialogo filtro &#40; Il componente aggiuntivo MDS per Excel &#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+ [Riordinare le colonne &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
   
   

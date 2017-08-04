@@ -1,50 +1,55 @@
 ---
-title: "Attivit&#224; Inserimento bulk | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.f1"
-helpviewer_keywords: 
-  - "Inserimento bulk - attività"
-  - "copia di dati [Integration Services]"
+title: "Attività inserimento bulk | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.f1
+helpviewer_keywords:
+- Bulk Insert task
+- copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Inserimento bulk
-  L'attività Inserimento bulk rappresenta un modo efficiente per copiare grandi quantità di dati in una tabella o in una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si supponga, ad esempio, che nella propria società venga usato un mainframe per archiviare l'elenco prodotti, che include un milione di righe, ma che il sistema e-commerce dell'azienda usi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per popolare le pagine Web. È necessario aggiornare la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei prodotti durante la notte utilizzando l'elenco master dei prodotti del mainframe. A tale scopo è possibile salvare l'elenco prodotti in un file delimitato da tabulazione e utilizzare l'attività Inserimento bulk per copiare i dati direttamente nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="bulk-insert-task"></a>Inserimento bulk - attività
+  L'attività Inserimento bulk rappresenta un modo efficiente per copiare grandi quantità di dati in una tabella o in una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si supponga, ad esempio, che nella propria società venga usato un mainframe per archiviare l'elenco prodotti, che include un milione di righe, ma che il sistema e-commerce dell'azienda usi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per popolare le pagine Web. È necessario aggiornare la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei prodotti durante la notte utilizzando l'elenco master dei prodotti del mainframe. A tale scopo è possibile salvare l'elenco prodotti in un file delimitato da tabulazione e utilizzare l'attività Inserimento bulk per copiare i dati direttamente nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per garantire la massima velocità di copia, non è consentito eseguire trasformazioni durante lo spostamento dei dati dal file di origine alla tabella o alla vista.  
   
-## Considerazioni sull'utilizzo  
+## <a name="usage-considerations"></a>Considerazioni sull'utilizzo  
  Prima di utilizzare l'attività Inserimento bulk, considerare gli aspetti seguenti:  
   
--   Con l'attività Inserimento bulk i dati possono essere trasferiti solo da un file di testo a una tabella o a una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per usare l'attività Inserimento bulk per trasferire dati da altri sistemi di gestione di database (DBMS, Database Management System), è necessario esportare i dati dall'origine a un file di testo e quindi importarli dal file di testo a una tabella o vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Con l'attività Inserimento bulk i dati possono essere trasferiti solo da un file di testo a una tabella o a una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per usare l'attività Inserimento bulk per trasferire dati da altri sistemi di gestione di database (DBMS, Database Management System), è necessario esportare i dati dall'origine a un file di testo e quindi importarli dal file di testo a una tabella o vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   La destinazione deve essere una tabella o vista di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se nella tabella o vista di destinazione sono già presenti dati, durante l'esecuzione dell'attività Inserimento bulk i nuovi dati verranno aggiunti a quelli esistenti. Se si desidera sostituire i dati, prima dell'attività Inserimento bulk avviare un'attività Esegui SQL che esegue un'istruzione DELETE o TRUNCATE. Per altre informazioni, vedere [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md).  
+-   La destinazione deve essere una tabella o vista di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se nella tabella o vista di destinazione sono già presenti dati, durante l'esecuzione dell'attività Inserimento bulk i nuovi dati verranno aggiunti a quelli esistenti. Se si desidera sostituire i dati, prima dell'attività Inserimento bulk avviare un'attività Esegui SQL che esegue un'istruzione DELETE o TRUNCATE. Per altre informazioni, vedere [Attività Esegui SQL](../../integration-services/control-flow/execute-sql-task.md).  
   
--   Nell'oggetto attività Inserimento bulk è possibile utilizzare un file di formato. Se il file di formato è stato creato dall'utilità **bcp**, è possibile specificarne il percorso nell'attività Inserimento bulk. L'attività Inserimento bulk supporta file di formato sia XML che non XML. Per altre informazioni sui file di formato, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+-   Nell'oggetto attività Inserimento bulk è possibile utilizzare un file di formato. Se il file di formato è stato creato dall'utilità **bcp** , è possibile specificarne il percorso nell'attività Inserimento bulk. L'attività Inserimento bulk supporta file di formato sia XML che non XML. Per altre informazioni sui file di formato, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 -   I pacchetti che contengono attività Inserimento bulk possono essere eseguiti solo dai membri del ruolo predefinito del server sysadmin.  
   
-## Attività Inserimento bulk con le transazioni  
- Se le dimensioni del batch non sono impostate, l'intera operazione di copia bulk verrà considerata come un'unica transazione. Se il valore delle dimensioni del batch è **0**, i dati verranno inseriti in un solo batch. Se le dimensioni del batch sono impostate, ogni batch rappresenterà una transazione di cui verrà eseguito il commit alla fine dell'esecuzione.  
+## <a name="bulk-insert-task-with-transactions"></a>Attività Inserimento bulk con le transazioni  
+ Se le dimensioni del batch non sono impostate, l'intera operazione di copia bulk verrà considerata come un'unica transazione. Se il valore delle dimensioni del batch è **0** , i dati verranno inseriti in un solo batch. Se le dimensioni del batch sono impostate, ogni batch rappresenterà una transazione di cui verrà eseguito il commit alla fine dell'esecuzione.  
   
  Il comportamento dell'attività Inserimento bulk in relazione alle transazioni varia a seconda che l'attività partecipi o meno alla transazione del pacchetto. Se l'attività Inserimento bulk non partecipa alla transazione del pacchetto, per ogni batch privo di errori verrà eseguito il commit prima di procedere con il batch successivo. Se l'attività Inserimento bulk partecipa alla transazione, al termine dell'attività i batch privi di errori rimarranno nella transazione e saranno soggetti alle operazioni di commit o di rollback del pacchetto.  
   
  In caso di errore nell'attività Inserimento bulk, i batch già caricati non verranno sottoposti automaticamente a rollback. Analogamente l'esito positivo dell'attività non comporta automaticamente l'esecuzione del commit per tali batch. Le operazioni di commit e di rollback vengono eseguite solo se le proprietà del flusso di lavoro o del pacchetto sono state impostate in questo senso.  
   
-## Origine e destinazione  
+## <a name="source-and-destination"></a>Origine e destinazione  
  Quando si specifica il percorso del file di testo di origine, prendere in considerazione i fattori seguenti:  
   
 -   Il server deve disporre delle autorizzazioni necessarie per accedere sia al file che al database di destinazione.  
@@ -53,15 +58,15 @@ caps.handback.revision: 61
   
 -   Il file di origine caricato dall'attività Inserimento bulk può trovarsi sullo stesso server del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui vengono inseriti i dati oppure su un server remoto. Se il file si trova in un server remoto, è necessario specificarne il percorso in formato UNC (Universal Naming Convention).  
   
-## Ottimizzazione delle prestazioni  
+## <a name="performance-optimization"></a>Ottimizzazione delle prestazioni  
  Per ottimizzare le prestazioni, prendere in considerazione i fattori seguenti:  
   
 -   Se il file di testo si trova nello stesso computer del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui vengono inseriti i dati, l'operazione di copia avviene a una velocità superiore, in quanto i dati non devono essere trasferiti in rete.  
   
 -   L'attività Inserimento bulk non registra le righe che determinano errori. Se è necessario acquisire tali informazioni, utilizzare gli output degli errori dei componenti flusso di dati per registrare in un file di eccezioni le righe che provocano errori.  
   
-## Voci di log personalizzate disponibili nell'attività Inserimento bulk  
- Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Inserimento bulk. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Voci di log personalizzate disponibili nell'attività Inserimento bulk  
+ Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Inserimento bulk. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Voce di log|Description|  
 |---------------|-----------------|  
@@ -69,7 +74,7 @@ caps.handback.revision: 61
 |**BulkInsertTaskEnd**|Indica che l'inserimento bulk è terminato.|  
 |**BulkInsertTaskInfos**|Offre informazioni descrittive sull'attività.|  
   
-## Configurazione dell'attività Inserimento bulk  
+## <a name="bulk-insert-task-configuration"></a>Configurazione dell'attività Inserimento bulk  
  Per configurare l'attività Inserimento bulk, procedere nel modo seguente:  
   
 -   Specificare la gestione connessione OLE DB da usare per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione e la tabella o la vista in cui inserire i dati. L'attività Inserimento bulk supporta solo le connessioni OLE DB per il database di destinazione.  
@@ -96,24 +101,24 @@ caps.handback.revision: 61
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
- Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], fare clic sull'argomento seguente:  
+ Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### Configurazione a livello di codice dell'attività Inserimento bulk  
+### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configurazione a livello di codice dell'attività Inserimento bulk  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Attività correlate  
+ [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](http://go.microsoft.com/fwlink/?LinkId=233693) sul sito support.microsoft.com.  
+-   Articolo tecnico relativo alla possibile [visualizzazione dell'errore "Impossibile preparare l'attività Inserimento bulk SSIS per l'inserimento dei dati" nei sistemi con Controllo dell'account utente abilitato](http://go.microsoft.com/fwlink/?LinkId=233693)sul sito support.microsoft.com.  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](http://go.microsoft.com/fwlink/?LinkId=233700) sul sito msdn.microsoft.com.  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](http://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
   
--   Articolo tecnico relativo all'[utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](http://go.microsoft.com/fwlink/?LinkId=233701) sul sito Web simple-talk.com.  
+-   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](http://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
   
   

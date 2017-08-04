@@ -1,30 +1,35 @@
 ---
-title: "!= (diverso da) (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diverso da - operatore (!=)"
-  - "!= (diverso da)"
+title: '! = (Diverso da) (espressione SSIS) | Documenti Microsoft'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unequal operator (!=)
+- '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# != (diverso da) (espressione SSIS)
+# <a name="-unequal-ssis-expression"></a>!= (diverso da) (espressione SSIS)
   Viene eseguito un confronto per determinare se due espressioni con tipi di dati compatibili sono diverse. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
   
  Per alcuni tipi di dati, tuttavia, è necessario che l'espressione includa un cast esplicito per consentirne la corretta valutazione. Per altre informazioni sui cast supportati tra tipi di dati, vedere [Cast &#40;espressione SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -32,17 +37,17 @@ expression1 != expression2
   
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *expression1, expression2*  
  Qualsiasi espressione valida.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
- Il set di espressioni *expression1* e *expression2* deve seguire una di queste regole:  
+ Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
   
 -   **Numeric** Sia *expression1* che *expression2* devono essere un tipo di dati numerici. L'intersezione dei tipi di dati deve essere un tipo di dati numeric come specificato dalle regole relative alle conversioni numeriche implicite eseguite dall'analizzatore di espressioni. L'intersezione dei due tipi di dati numeric non può essere Null. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
@@ -84,7 +89,7 @@ expression1 != expression2
   
  Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene restituito TRUE solo se la data corrente non è il 4 luglio 2003. Per altre informazioni, vedere [GETDATE &#40;espressione SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
   
 ```  
@@ -97,15 +102,15 @@ expression1 != expression2
 ListPrice != 500  
 ```  
   
- In questo esempio viene usata la variabile **LPrice**. Viene restituito TRUE se il valore di **LPrice**non è 500. Per consentire l'analisi dell'espressione, il tipo di dati della variabile deve essere numeric.  
+ In questo esempio viene usata la variabile **LPrice**. Viene restituito TRUE se il valore di **LPrice** non è 500. Per consentire l'analisi dell'espressione, il tipo di dati della variabile deve essere numeric.  
   
 ```  
 @LPrice != 500  
 ```  
   
-## Vedere anche  
- [== &#40;uguale&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [= = &#40; Uguale &#41; &#40; Espressione SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Associatività e precedenza operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatori &#40; Espressione SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

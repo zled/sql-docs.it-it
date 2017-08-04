@@ -1,30 +1,35 @@
 ---
-title: "Utilit&#224; tablediff | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "confronto di dati"
-  - "utilità tablediff"
-  - "tabelle [replica di SQL Server]"
-  - "confronti di tabelle [SQL Server]"
-  - "utilità del prompt dei comandi [SQL Server], tablediff"
-  - "risoluzione dei problemi [replica di SQL Server], mancata convergenza"
-  - "non convergenza [SQL Server]"
+title: "Utilità tablediff | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing data
+- tablediff utility
+- tables [SQL Server replication]
+- table comparisons [SQL Server]
+- command prompt utilities [SQL Server], tablediff
+- troubleshooting [SQL Server replication], non-convergence
+- non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilit&#224; tablediff
+# <a name="tablediff-utility"></a>utilità tablediff
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
   
 -   Confronto riga per riga tra una tabella di origine in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che funge da server di pubblicazione per la replica e una tabella di destinazione in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che fungono da Sottoscrittori della replica.  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
   
 -   Registrazione dei risultati in un file di output oppure in una tabella nel database di destinazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -73,7 +78,7 @@ tablediff
 }  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  [ **-?** ]  
  Restituisce l'elenco dei parametri supportati.  
   
@@ -90,13 +95,13 @@ tablediff
  Proprietario dello schema della tabella di origine. Per impostazione predefinita, dbo viene considerato il proprietario della tabella.  
   
  **-sourcepassword** *source_password*  
- Password di accesso usata per connettersi al server di origine mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Password di accesso usata per connettersi al server di origine mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Se possibile, specificare le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è consigliabile proteggere il file per evitare accessi non autorizzati.  
   
  **-sourceuser** *source_login*  
- Account di accesso usato per connettersi al server di origine mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il parametro *source_login*, durante la connessione al server di origine viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ Account di accesso usato per connettersi al server di origine mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se non si specifica il parametro *source_login* , durante la connessione al server di origine viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
@@ -114,31 +119,31 @@ tablediff
  Proprietario dello schema della tabella di destinazione. Per impostazione predefinita, dbo viene considerato il proprietario della tabella.  
   
  **-destinationpassword** *destination_password*  
- Password di accesso usata per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Password di accesso usata per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Se possibile, specificare le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è consigliabile proteggere il file per evitare accessi non autorizzati.  
   
  **-destinationuser** *destination_login*  
- Account di accesso usato per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il parametro *destination_login*, durante la connessione al server viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ Account di accesso usato per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se non si specifica il parametro *destination_login* , durante la connessione al server viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  La tabella di destinazione viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Numero di byte da confrontare per le colonne dei tipi di dati di grandi dimensioni, ovvero: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. L'impostazione predefinita di *large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
+ Numero di byte da confrontare per le colonne dei tipi di dati di grandi dimensioni, ovvero: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. L'impostazione predefinita di*large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
   
  **-bf**  *number_of_statements*  
- Numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] da scrivere nel file script [!INCLUDE[tsql](../includes/tsql-md.md)] corrente quando si usa l'opzione **-f**. Se il numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] supera il valore di *number_of_statements*, viene creato un nuovo file script [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ Numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] da scrivere nel file script [!INCLUDE[tsql](../includes/tsql-md.md)] corrente quando si usa l'opzione **-f** . Se il numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] supera il valore di *number_of_statements*, viene creato un nuovo file script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **-c**  
  Esegue il confronto per individuare eventuali differenze a livello di colonna.  
   
  **-dt**  
- Elimina la tabella dei risultati specificata da *table_name* se la tabella esiste già.  
+ Elimina la tabella dei risultati specificata da *table_name*se la tabella esiste già.  
   
  **-et** *table_name*  
- Specifica il nome della tabella dei risultati da creare. Se questa tabella esiste già, è necessario usare l'opzione **-DT**. In caso contrario, l'operazione ha esito negativo.  
+ Specifica il nome della tabella dei risultati da creare. Se questa tabella esiste già, è necessario usare l'opzione **-DT** . In caso contrario, l'operazione ha esito negativo.  
   
  **-f** [ *file_name* ]  
  Genera uno script [!INCLUDE[tsql](../includes/tsql-md.md)] per ripristinare la convergenza tra la tabella nel server di destinazione e quella nel server di origine. È possibile specificare facoltativamente un nome e un percorso per il file script [!INCLUDE[tsql](../includes/tsql-md.md)] generato. Se *file_name* viene omesso, il file script [!INCLUDE[tsql](../includes/tsql-md.md)] verrà generato nella directory in cui si esegue l'utilità.  
@@ -161,7 +166,7 @@ tablediff
  **-t** *connection_timeouts*  
  Imposta il periodo di timeout della connessione, espresso in secondi, per le connessioni al server di origine e al server di destinazione.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -169,8 +174,8 @@ tablediff
 |**1**|Errore critico|  
 |**2**|Differenze tra tabelle|  
   
-## Osservazioni  
- L'utilità **tablediff** non può essere usata con server non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Osservazioni  
+ L'utilità **tablediff** non può essere usata con server non[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Le tabelle contenenti colonne con il tipo di dati **sql_variant** non sono supportate.  
   
@@ -191,7 +196,7 @@ tablediff
   
  Usare l'opzione **-strict** per disabilitare questi mapping ed eseguire una convalida di tipo strict.  
   
- La tabella di origine utilizzata per il confronto deve contenere almeno una chiave primaria, un'identità o una colonna ROWGUID. Se si usa l'opzione **-strict**, anche la tabella di destinazione deve contenere una chiave primaria, un'identità o una colonna ROWGUID.  
+ La tabella di origine utilizzata per il confronto deve contenere almeno una chiave primaria, un'identità o una colonna ROWGUID. Se si usa l'opzione **-strict** , anche la tabella di destinazione deve contenere una chiave primaria, un'identità o una colonna ROWGUID.  
   
  Lo script [!INCLUDE[tsql](../includes/tsql-md.md)] generato per rendere convergente la tabella di destinazione non include i tipi di dati seguenti:  
   
@@ -211,16 +216,16 @@ tablediff
   
 -   **image**  
   
-## Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni  
  Per confrontare tabelle, è necessario disporre delle autorizzazioni SELECT ALL sugli oggetti tabella da confrontare.  
   
- Per usare l'opzione **-et**, è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione CREATE TABLE nel database di sottoscrizione e dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  
+ Per usare l'opzione **-et** , è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione CREATE TABLE nel database di sottoscrizione e dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  
   
- Per usare l'opzione **-dt**, è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  
+ Per usare l'opzione **-dt** , è necessario essere membro del ruolo predefinito del database db_owner oppure disporre almeno dell'autorizzazione ALTER per lo schema del proprietario della destinazione nel server di destinazione.  
   
- Per usare l'opzione **-o** oppure **-f**, è necessario avere autorizzazioni di scrittura per il percorso della directory di file specificato.  
+ Per usare l'opzione **-o** oppure **-f** , è necessario avere autorizzazioni di scrittura per il percorso della directory di file specificato.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Confronto di tabelle replicate al fine di individuare le differenze &#40;programmazione della replica&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

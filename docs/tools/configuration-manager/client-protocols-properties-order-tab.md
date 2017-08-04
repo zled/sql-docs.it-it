@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; - Protocolli client (scheda Ordine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolli client [SQL Server]"
+title: "Proprietà (scheda ordine)-protocolli client | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; - Protocolli client (scheda Ordine)
-  Usare la pagina **Ordine** della finestra di dialogo **Proprietà protocolli client** per visualizzare e abilitare i protocolli client.  
+# Proprietà - Protocolli client (scheda Ordine)
+  Usare la pagina **Ordine**della finestra di dialogo **Proprietà protocolli client** per visualizzare e abilitare i protocolli client.  
   
  Fare clic su un protocollo e quindi su **Abilita** o **Disabilita** per spostare il protocollo selezionato nell'elenco **Protocolli disabilitati** o **Protocolli abilitati**.  
   
@@ -36,10 +41,10 @@ caps.handback.revision: 18
  Include un elenco dei protocolli disponibili per i client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer corrente.  
   
  **>**  
- Abilita il protocollo selezionato nella casella **Protocolli disabilitati**, spostandolo nella casella **Protocolli abilitati**.  
+ Abilita il protocollo selezionato nella casella **Protocolli disabilitati** , spostandolo nella casella **Protocolli abilitati** .  
   
  **\<**  
- Disabilita il protocollo selezionato nella casella **Protocolli abilitati**, spostandolo nella casella **Protocolli disabilitati**.  
+ Disabilita il protocollo selezionato nella casella **Protocolli abilitati** , spostandolo nella casella **Protocolli disabilitati** .  
   
  Freccia in su  
  Sposta il protocollo selezionato verso l'alto nell'elenco. In tal modo, è possibile aumentare le priorità in base alla quale la libreria di rete tenterà di utilizzare il protocollo selezionato per le connessioni.  
@@ -54,6 +59,6 @@ caps.handback.revision: 18
 >  Se il protocollo viene specificato tramite un prefisso o come parte della stringa di connessione, viene eseguito un tentativo solo con il protocollo specificato.  
   
 ## Vedere anche  
- [Scelta di un protocollo di rete](../Topic/Choosing%20a%20Network%20Protocol.md)  
+ [Scelta di un protocollo di rete](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

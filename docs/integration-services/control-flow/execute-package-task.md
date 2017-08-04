@@ -1,28 +1,33 @@
 ---
-title: "Attivit&#224; Esegui pacchetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "Esegui pacchetto - attività [Integration Services]"
-  - "pacchetti figlio"
-  - "pacchetti padre [Integration Services]"
+title: "Attività Esegui pacchetto | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c78071650af34e9dc4baf5754781700921f5d293
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Esegui pacchetto
+# <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
   
  È possibile utilizzare l'attività Esegui pacchetto per gli scopi seguenti:  
@@ -39,15 +44,15 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include attività per l'esecuzione delle operazioni del flusso di lavoro, ad esempio l'esecuzione di eseguibili e file batch. Per altre informazioni, vedere [Attività Esegui processo](../../integration-services/control-flow/execute-process-task.md).  
   
-## Esecuzione di pacchetti  
- L'attività Esegui pacchetto consente di eseguire i pacchetti figlio contenuti nello stesso progetto in cui è contenuto il pacchetto padre. Per selezionare un pacchetto figlio dal progetto, impostare la proprietà **ReferenceType** su **Riferimento al progetto** e quindi impostare la proprietà **PackageNameFromProjectReference**.  
+## <a name="running-packages"></a>Esecuzione di pacchetti  
+ L'attività Esegui pacchetto consente di eseguire i pacchetti figlio contenuti nello stesso progetto in cui è contenuto il pacchetto padre. Per selezionare un pacchetto figlio dal progetto, impostare la proprietà **ReferenceType** su **Riferimento al progetto**e quindi impostare la proprietà **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. Per altre informazioni sulla conversione, vedere [Distribuire progetti nel server Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. [Integration Services (SSIS) di distribuire progetti e pacchetti](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  L'attività Esegui pacchetto può eseguire sia pacchetti archiviati nel database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che pacchetti archiviati nel file system. L'attività usa una gestione connessione OLE DB per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una gestione connessione file per l'accesso al file system. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
- Poiché l'attività Esegui pacchetto consente anche di eseguire un piano di manutenzione database, è possibile gestire sia pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] che piani di manutenzione database nella stessa soluzione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Un piano di manutenzione database è simile a un pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ma può includere solo attività di manutenzione del database e viene sempre archiviato nel database msdb.  
+ Poiché l'attività Esegui pacchetto consente anche di eseguire un piano di manutenzione database, è possibile gestire sia pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] che piani di manutenzione database nella stessa soluzione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Un piano di manutenzione database è simile a un pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ma può includere solo attività di manutenzione del database e viene sempre archiviato nel database msdb.  
   
  Se si sceglie un pacchetto archiviato nel file system, sarà necessario specificare il nome e il percorso del pacchetto. Il pacchetto può risiedere in qualunque posizione del file system e non deve necessariamente trovarsi nella stessa cartella del pacchetto padre.  
   
@@ -55,15 +60,15 @@ caps.handback.revision: 63
   
  Talvolta può essere tuttavia necessario che l'esito dei pacchetti padre e figlio venga determinato come per una singola unità oppure si desidera evitare l'overhead di un processo aggiuntivo. Se ad esempio un processo figlio non riesce e nel processo padre la fase successiva dell'elaborazione dipende dal completamento del processo figlio, è preferibile eseguire il pacchetto figlio nello stesso processo del pacchetto padre.  
   
- Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False** e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False**e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
-## Estensione delle transazioni  
- Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](../Topic/Inherited%20Transactions.md).  
+## <a name="extending-transactions"></a>Estensione delle transazioni  
+ Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
-## Propagazione dei dettagli di registrazione  
+## <a name="propagating-logging-details"></a>Propagazione dei dettagli di registrazione  
  Il pacchetto figlio eseguito dall'attività Esegui pacchetto invia sempre i dettagli di registrazione al pacchetto padre, anche se non è configurato per l'utilizzo della registrazione. I dettagli ricevuti dal pacchetto figlio verranno tuttavia registrati solo se l'attività Esegui pacchetto è configurata per l'utilizzo della registrazione. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-## Passaggio di valori ai pacchetti figlio  
+## <a name="passing-values-to-child-packages"></a>Passaggio di valori ai pacchetti figlio  
  I pacchetti figlio utilizzano in genere valori ricevuti dal pacchetto chiamante, che normalmente è il pacchetto padre. L'utilizzo di valori ricevuti da un pacchetto padre può essere utile negli scenari seguenti:  
   
 -   Parti di un flusso di lavoro più grande sono assegnate a pacchetti diversi. È ad esempio possibile creare un pacchetto che scarica dati durante la notte, li riepiloga, assegna i valori di riepilogo alle variabili appropriate e quindi le passa a un altro pacchetto per un'ulteriore elaborazione dei dati.  
@@ -95,12 +100,12 @@ caps.handback.revision: 63
   
  La variabile del pacchetto padre può essere definita nell'ambito dell'attività Esegui pacchetto o in un contenitore padre, ad esempio il pacchetto. Se sono presenti più variabili con lo stesso nome, verrà utilizzata quella definita nell'ambito dell'attività Esegui pacchetto oppure quella con ambito più vicino all'attività.  
   
- Per altre informazioni, vedere [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ Per altre informazioni, vedere [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-### Accesso alle variabili del pacchetto padre  
+### <a name="accessing-parent-package-variables"></a>Accesso alle variabili del pacchetto padre  
  Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **Utente:** nel nome della variabile. In caso contrario, tramite il pacchetto figlio non viene individuata la variabile quando si esegue il pacchetto padre.  
   
-## Configurazione dell'attività Esegui pacchetto  
+## <a name="configuring-the-execute-package-task"></a>Configurazione dell'attività Esegui pacchetto  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
@@ -111,9 +116,9 @@ caps.handback.revision: 63
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configurazione dell'attività Esegui pacchetto a livello di codice  
+## <a name="configuring-the-execute-package-task-programmatically"></a>Configurazione dell'attività Esegui pacchetto a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  

@@ -1,29 +1,34 @@
 ---
-title: "+ (addizione) (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "+ (addizione)"
-  - "addizione - operatore (+)"
-  - "aggiunta di espressioni"
+title: + (Aggiungere) (SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- + (add)
+- add operator (+)
+- adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04596cf4762f2473da1555f4ce5f9cd210678986
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# + (addizione) (SSIS)
+# <a name="-add-ssis"></a>+ (addizione) (SSIS)
   Vengono aggiunte due espressioni numeriche.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -31,17 +36,17 @@ numeric_expression1 + numeric_expression2
   
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *numeric_expression1, numeric_expression2*  
  Espressione valida con tipo di dati numeric.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio vengono sommati alcuni valori letterali numerici.  
   
 ```  
@@ -60,8 +65,8 @@ VacationHours + SickLeaveHours
 StandardCost + (StandardCost * @[Profit%])  
 ```  
   
-## Vedere anche  
- [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Associatività e precedenza operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatori &#40; Espressione SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

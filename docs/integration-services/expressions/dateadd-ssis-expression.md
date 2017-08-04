@@ -1,36 +1,41 @@
 ---
-title: "DATEADD (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "date [Integration Services], DATEADD"
-  - "date [Integration Services]"
-  - "DATEADD - funzione"
+title: DATEADD (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dates [Integration Services], DATEADD
+- dates [Integration Services]
+- DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77230956969fb2fd2d27a1dec42140dd91a5cbd5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEADD (espressione SSIS)
+# <a name="dateadd-ssis-expression"></a>DATEADD (espressione SSIS)
   Viene restituito un nuovo valore DT_DBTIMESTAMP dopo aver aggiunto alla parte specificata di una data un numero che rappresenta un intervallo di date o di ore. Il parametro number deve restituire un valore integer e il parametro date deve restituire una data valida.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 DATEADD(datepart, number, date)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *parte di una data*  
  Parametro che specifica la parte della data a cui aggiungere il numero.  
   
@@ -40,13 +45,13 @@ DATEADD(datepart, number, date)
  *data*  
  Espressione che restituisce una data valida o una stringa con formato di data.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_DBTIMESTAMP  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencate le parti della data e le abbreviazioni riconosciute dall'analizzatore di espressioni. Per i nomi delle parti della data non viene fatta distinzione tra maiuscole e minuscole.  
   
-|Datepart|Abbreviazioni|  
+|parte di una data|Abbreviazioni|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
@@ -70,14 +75,14 @@ DATEADD(datepart, number, date)
   
  Se la data non è valida, l'unità di data o tempo non è una stringa oppure l'incremento non è un valore integer statico, verrà generato un errore.  
   
-## Esempi di espressione SSIS  
+## <a name="ssis-expression-examples"></a>Esempi di espressione SSIS  
  In questo esempio viene aggiunto un mese alla data corrente.  
   
 ```  
 DATEADD("Month", 1,GETDATE())  
 ```  
   
- In questo esempio vengono aggiunti 21 giorni alle date nella colonna **ModifiedDate**.  
+ In questo esempio vengono aggiunti 21 giorni alle date nella colonna **ModifiedDate** .  
   
 ```  
 DATEADD("day", 21, ModifiedDate)  
@@ -89,12 +94,12 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## Vedere anche  
- [DATEDIFF &#40;espressione SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40;espressione SSIS&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40;espressione SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;espressione SSIS&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;espressione SSIS&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [DATEDIFF &#40; Espressione SSIS &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART &#40; Espressione SSIS &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [GIORNO &#40; Espressione SSIS &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [MESE &#40; Espressione SSIS &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [ANNO &#40; Espressione SSIS &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

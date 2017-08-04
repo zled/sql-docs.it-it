@@ -1,22 +1,27 @@
 ---
-title: "Installare Riesecuzione distribuita | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Installare riesecuzione distribuita | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Installare Riesecuzione distribuita
+# <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
   È possibile disinstallare Riesecuzione distribuita in tre modi diversi:  
   
 -   [Installare Riesecuzione distribuita dall'Installazione guidata](#bkmk_wizard)  
@@ -26,7 +31,7 @@ caps.handback.revision: 21
 -   [Installare i componenti Riesecuzione distribuita tramite un file di configurazione](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> Installare Riesecuzione distribuita dall'Installazione guidata  
- Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
+ Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
   
 -   Lo strumento di amministrazione può essere installato nello stesso computer del controller di Riesecuzione distribuita o in computer diversi.  
   
@@ -38,16 +43,16 @@ caps.handback.revision: 21
   
 -   Per gli scenari di test delle prestazioni, non si consiglia di installare lo strumento di amministrazione, ovvero il servizio controller di Riesecuzione distribuita, o il servizio client nell'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'installazione di tutte queste caratteristiche nel server di destinazione deve essere limitata al test funzionale per la compatibilità dell'applicazione.  
   
--   Dopo l'installazione, prima di avviare il servizio client Riesecuzione distribuita nei client è necessario che il servizio controller, ovvero il controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sia in esecuzione.  
+-   Dopo l'installazione, prima di avviare il servizio client Riesecuzione distribuita nei client è necessario che il servizio controller, ovvero il controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sia in esecuzione.  
   
 > [!NOTE]  
->  Per rimuovere o modificare le funzionalità di Riesecuzione distribuita, utilizzare la finestra **Programmi e funzionalità** di Windows nel **Pannello di controllo**. Selezionare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella finestra **Disinstalla o modifica programma**, quindi fare clic su **Rimuovi** per aprire l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nella pagina **Seleziona funzionalità** selezionare le funzionalità di Riesecuzione distribuita che si desidera rimuovere.  
+>  Per rimuovere o modificare le funzionalità di Riesecuzione distribuita, utilizzare la finestra **Programmi e funzionalità** di Windows nel **Pannello di controllo**. Selezionare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella finestra **Disinstalla o modifica programma** , quindi fare clic su **Rimuovi** per aprire l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella pagina **Seleziona funzionalità** selezionare le funzionalità di Riesecuzione distribuita che si desidera rimuovere.  
   
  **Prerequisiti**  
   
 -   Verificare che i computer che si desidera utilizzare dispongano dei requisiti descritti nell'argomento [Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
--   Prima di iniziare questa procedura, è necessario creare gli account utente di dominio in cui verranno eseguiti i servizi controller e client. È consigliabile che tali account non siano membri del gruppo Administrators di Windows. Per altre informazioni, vedere la sezione Account utente e di servizio nell'argomento [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md).  
+-   Prima di iniziare questa procedura, è necessario creare gli account utente di dominio in cui verranno eseguiti i servizi controller e client. È consigliabile che tali account non siano membri del gruppo Administrators di Windows. Per altre informazioni, vedere la sezione Account utente e di servizio nell'argomento [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md) .  
   
     > [!NOTE]  
     >  Se lo strumento di amministrazione, il servizio controller e il servizio client sono in esecuzione nello stesso computer è possibile utilizzare gli account utente locali.  
@@ -62,7 +67,7 @@ caps.handback.revision: 21
   
      \- oppure -  
   
-     \<directory della funzionalità condivisa>\Tools\\(directory della funzionalità condivisa alternativa fornita dall'utente)  
+     \<Condividere funzionalità Directory > \Tools\\(directory della funzionalità condivisa alternativa fornita dall'utente)  
   
 -   In un sistema a 64 bit:  
   
@@ -70,21 +75,21 @@ caps.handback.revision: 21
   
      \- oppure -  
   
-     \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa fornita dall'utente)  
+     \<Condividere la directory della funzionalità (x86) > \Tools\\(directory utente-funzionalità condivisa alternativa fornita (x86))  
   
-#### Per installare le funzionalità di Riesecuzione distribuita  
+#### <a name="to-install-distributed-replay-features"></a>Per installare le funzionalità di Riesecuzione distribuita  
   
-1.  Per avviare l'installazione di una qualsiasi funzionalità di Riesecuzione distribuita, avviare l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+1.  Per avviare l'installazione di una qualsiasi funzionalità di Riesecuzione distribuita, avviare l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 2.  Nella pagina **Regole di supporto per l'installazione** sono riportati i problemi che si potrebbero verificare durante l'installazione dei file di supporto dell'installazione di SQL Server. Prima di continuare con l'installazione, è necessario correggere qualsiasi errore del supporto dell'installazione.  
   
-3.  Nella pagina relativa al **codice Product Key** selezionare un pulsante di opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versione di produzione del prodotto con una chiave PID. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+3.  Nella pagina relativa al **codice Product Key** selezionare un pulsante di opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versione di produzione del prodotto con una chiave PID. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 4.  Nella pagina **Condizioni di licenza** leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 5.  Nella pagina **File di supporto per l'installazione** fare clic su **Installa** per installare o aggiornare i file di supporto dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-6.  Nella pagina **Impostazione ruolo** selezionare **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità**.  
+6.  Nella pagina **Impostazione ruolo** selezionare **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità** .  
   
 7.  Nella pagina **Selezione funzionalità** specificare le funzionalità che si desidera installare.  
   
@@ -112,34 +117,34 @@ caps.handback.revision: 21
   
     1.  Nei computer a 32 bit il percorso di installazione predefinito è **C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Nei computer a 64 bit il percorso di installazione predefinito è **C:\Programmi (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  Nei computer a 64 bit il percorso di installazione predefinito è **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. Al termine dell'operazione scegliere **Avanti**.  
   
-10. Nella pagina **Regole di installazione** viene convalidata la configurazione del computer tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una volta completato il processo di convalida, fare clic su **Avanti**.  
+10. Nella pagina **Regole di installazione** viene convalidata la configurazione del computer tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una volta completato il processo di convalida, fare clic su **Avanti**.  
   
 11. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
 12. Nella pagina **Segnalazione errori** specificare le informazioni che si desidera inviare a [!INCLUDE[msCoName](../../includes/msconame-md.md)] per contribuire a migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'opzione Segnalazione errori è abilitata.  
   
-13. Nella pagina**Regole di configurazione per l'installazione** Controllo configurazione sistema consentirà di eseguire uno o più set di regole per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate.  
+13. Nella pagina **Regole di configurazione per l'installazione** Controllo configurazione sistema consentirà di eseguire uno o più set di regole per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate.  
   
 14. Nella pagina **Installazione del programma** fare clic su **Installa**.  
   
     > [!IMPORTANT]  
     >  Dopo aver installato i componenti Riesecuzione distribuita, è necessario creare regole del firewall nei computer controller e client e concedere a ogni computer client autorizzazioni nel server di destinazione. Per altre informazioni, vedere [Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-### Sicurezza di .NET Framework  
+### <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per installare qualsiasi funzionalità di Riesecuzione distribuita, è necessario disporre di autorizzazioni di amministratore. Solo un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che dispone di autorizzazioni sysadmin può aggiungere gli account del servizio client al ruolo del server sysadmin del server di prova. Per alcune considerazioni relative alla sicurezza di Riesecuzione distribuita, vedere [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Installare Riesecuzione distribuita dal prompt dei comandi  
- L'installazione di una nuova istanza di Riesecuzione distribuita dal prompt dei comandi consente di specificare le funzionalità da installare e le relative modalità di configurazione. L'installazione dal prompt dei comandi supporta l'installazione, il ripristino, l'aggiornamento e la disinstallazione dei componenti Riesecuzione distribuita. Quando l'installazione viene eseguita tramite il prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro /Q.  
+ L'installazione di una nuova istanza di Riesecuzione distribuita dal prompt dei comandi consente di specificare le funzionalità da installare e le relative modalità di configurazione. L'installazione dal prompt dei comandi supporta l'installazione, il ripristino, l'aggiornamento e la disinstallazione dei componenti Riesecuzione distribuita. Quando l'installazione viene eseguita tramite il prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro /Q.  
   
 > [!NOTE]  
 >  Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  
   
-### Parametri di installazione  
- L'elenco delle funzionalità di livello principale include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Strumenti. La funzionalità Strumenti installa gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e altri componenti condivisi. Per installare i componenti Riesecuzione distribuita, specificare i parametri seguenti:  
+### <a name="installation-parameters"></a>Parametri di installazione  
+ L'elenco delle funzionalità di livello principale include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e Strumenti. La funzionalità Strumenti installa gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e altri componenti condivisi. Per installare i componenti Riesecuzione distribuita, specificare i parametri seguenti:  
   
 |Componente|Parametro|  
 |---------------|---------------|  
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **Facoltativo**|Directory di lavoro per il servizio client Riesecuzione distribuita.|Percorso valido|  
 |/CLTRESULTDIR<br /><br /> **Facoltativo**|Directory dei risultati per il servizio client Riesecuzione distribuita.|Percorso valido|  
   
-### Sintassi di esempio:  
+### <a name="sample-syntax"></a>Sintassi di esempio:  
  **Per installare il componente Controller di Riesecuzione distribuita**  
   
 ```  
@@ -192,13 +197,13 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 > [!IMPORTANT]  
 >  Dopo aver installato i componenti Riesecuzione distribuita, è necessario creare regole del firewall nei computer controller e client e concedere a ogni computer client autorizzazioni nel server di destinazione. Per altre informazioni, vedere [Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-#### Per generare un file di configurazione  
+#### <a name="to-generate-a-configuration-file"></a>Per generare un file di configurazione  
   
-1.  Seguire l'Installazione guidata nella pagina **Inizio installazione**. Il percorso del file di configurazione viene specificato nella pagina **Inizio installazione** nella sezione relativa al percorso del file di configurazione.  
+1.  Seguire l'Installazione guidata nella pagina **Inizio installazione** . Il percorso del file di configurazione viene specificato nella pagina **Inizio installazione** nella sezione relativa al percorso del file di configurazione.  
   
 2.  Annullare l'installazione senza completarla per generare il file INI.  
   
-#### Per installare i componenti Riesecuzione distribuita tramite il file di configurazione  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>Per installare i componenti Riesecuzione distribuita tramite il file di configurazione  
   
 -   Eseguire l'installazione tramite il prompt dei comandi e specificare il file ConfigurationFile.ini utilizzando il parametro ConfigurationFile.  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  È necessario specificare entrambe le password nella riga di comando perché non è possibile configurarle nel file di configurazione.  
   
-## Vedere anche  
- [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Requisiti relativi a riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40; utilità riesecuzione distribuita &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "Attivit&#224; Elaborazione Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.f1"
-helpviewer_keywords: 
-  - "Elaborazione Analysis Services - attività"
-  - "elaborazione di oggetti [Integration Services]"
+title: "Attività di elaborazione di Analysis Services | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.f1
+helpviewer_keywords:
+- Analysis Services Processing task
+- processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f607edcad955a4d0a22cc246a13d9d97a06fe24
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Elaborazione Analysis Services
+# <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
   Con l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile elaborare gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quali modelli tabulari, cubi, dimensioni e modelli di data mining.  
   
  Quando si elaborano modelli tabulari, tenere presente quanto segue:  
@@ -40,7 +45,7 @@ caps.handback.revision: 52
   
 -   [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Elaborazione di oggetti  
+## <a name="object-processing"></a>Elaborazione di oggetti  
  È possibile elaborare più oggetti contemporaneamente. Per l'elaborazione di più oggetti è necessario definire impostazioni applicabili all'elaborazione di tutti gli oggetti nel batch.  
   
  Gli oggetti in un batch possono essere elaborati sequenzialmente o in parallelo. Se il batch non contiene oggetti per i quali la sequenza di elaborazione è importante, l'elaborazione parallela può accelerare l'operazione. Se gli oggetti nel batch vengono elaborati in parallelo, sarà possibile configurare l'attività in modo da determinare automaticamente il numero degli oggetti da elaborare in parallelo oppure specificare tale numero manualmente. Se gli oggetti vengono elaborati sequenzialmente, sarà possibile impostare un attributo di transazione sul batch integrando tutti gli oggetti in un'unica transazione oppure utilizzando una transazione distinta per ogni oggetto del batch.  
@@ -49,18 +54,18 @@ caps.handback.revision: 52
   
  In genere, si elaborano tabelle delle dimensioni prima di elaborare tabelle dei fatti. È possibile rilevare errori se si tenta di elaborare le tabelle dei fatti prima di elaborare le tabelle delle dimensioni.  
   
- Questa attività consente inoltre di configurare la gestione degli errori nelle chiavi delle dimensioni. È ad esempio possibile ignorare gli errori oppure arrestare l'attività dopo un numero di errori specificato. È possibile utilizzare la configurazione di gestione degli errori predefinita oppure creare una configurazione di gestione degli errori personalizzata, in cui sono specificate le condizioni di errore e la modalità con cui l'attività gestisce gli errori. È ad esempio possibile specificare che l'esecuzione dell'attività deve essere arrestata dopo il quarto errore oppure come devono essere gestiti i valori di chiave **Null**. La configurazione di gestione degli errori personalizzata può inoltre includere il percorso di un log degli errori.  
+ Questa attività consente inoltre di configurare la gestione degli errori nelle chiavi delle dimensioni. È ad esempio possibile ignorare gli errori oppure arrestare l'attività dopo un numero di errori specificato. È possibile utilizzare la configurazione di gestione degli errori predefinita oppure creare una configurazione di gestione degli errori personalizzata, in cui sono specificate le condizioni di errore e la modalità con cui l'attività gestisce gli errori. È ad esempio possibile specificare che l'esecuzione dell'attività deve essere arrestata dopo il quarto errore oppure come devono essere gestiti i valori di chiave **Null** . La configurazione di gestione degli errori personalizzata può inoltre includere il percorso di un log degli errori.  
   
 > [!NOTE]  
->  L'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in grado di elaborare solo oggetti di analisi creati utilizzando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  L'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in grado di elaborare solo oggetti di analisi creati utilizzando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Questa attività viene spesso usata insieme a un'attività Inserimento bulk che carica dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure a un'attività Flusso di dati che implementa un flusso di dati per il caricamento di dati in una tabella. L'attività Flusso di dati può ad esempio includere un flusso di dati che estrae dati da un database OLTP (Online Transaction Processing) e li carica in una tabella dei fatti in un data warehouse, quindi chiama l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per elaborare il cubo compilato in base al data warehouse.  
   
  L'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa una gestione connessione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## Gestione degli errori  
+## <a name="error-handling"></a>Gestione degli errori  
   
-## Configurazione dell'attività Elaborazione Analysis Services  
+## <a name="configuration-of-the-analysis-services-processing-task"></a>Configurazione dell'attività Elaborazione Analysis Services  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
@@ -71,11 +76,11 @@ caps.handback.revision: 52
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
- Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], fare clic sull'argomento seguente:  
+ Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configurazione a livello di codice dell'attività Elaborazione Analysis Services  
+## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configurazione a livello di codice dell'attività Elaborazione Analysis Services  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  

@@ -1,29 +1,34 @@
 ---
-title: "Finestra di dialogo Propriet&#224; cartella | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isfolderprop.permissions.f1"
-  - "sql13.ssis.ssms.iscreatefolder.f1"
-  - "sql13.ssis.ssms.isfolderprop.general.f1"
+title: "Finestra di dialogo Proprietà cartella | Documenti Microsoft"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isfolderprop.permissions.f1
+- sql13.ssis.ssms.iscreatefolder.f1
+- sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37ac39c3aa4aea9c4c2d9ed65b7aadde7a27887b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Finestra di dialogo Propriet&#224; cartella
+# <a name="folder-properties-dialog-box"></a>Finestra di dialogo Proprietà cartella
   Nel catalogo di **SSISDB** della cartella sono contenuti pacchetti e ambienti. In ogni cartella vengono definite le autorizzazioni che si applicano al contenuto della cartella. Per altre informazioni sulle autorizzazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [catalog.grant_permission &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
   
-## Per impostare la descrizione e le autorizzazioni della cartella  
+## <a name="to-set-folder-description-and-permissions"></a>Per impostare la descrizione e le autorizzazioni della cartella  
   
 1.  Fare clic con il pulsante destro del mouse sulla cartella e scegliere **Proprietà**.  
   
@@ -35,8 +40,9 @@ caps.handback.revision: 8
   
 5.  Fare clic su **OK** per accettare le modifiche e chiudere la finestra di dialogo **Proprietà cartella** .  
   
-## Vedere anche  
- [Server Integration Services &#40;SSIS&#41;](https://msdn.microsoft.com/library/ms141134.aspx)   
- [catalog.grant_permission &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Integration Services &#40; SSIS &#41; Server](https://msdn.microsoft.com/library/ms141134.aspx)   
+ [Catalog. grant_permission &#40; Database SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   
+

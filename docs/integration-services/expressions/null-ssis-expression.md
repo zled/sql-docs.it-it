@@ -1,42 +1,47 @@
 ---
-title: "NULL (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "NULL - funzione"
-  - "valori Null [Integration Services]"
+title: NULL (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- NULL function
+- null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# NULL (espressione SSIS)
+# <a name="null-ssis-expression"></a>NULL (espressione SSIS)
   Restituisce un valore Null di un tipo di dati richiesto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 NULL(typespec)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *typespec*  
  Tipo di dati valido. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  Qualsiasi tipo di dati valido con valore Null.  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, NULL restituirà Null.  
   
  Per ottenere un valore Null per determinati tipi di dati, è necessario specificare i parametri appropriati. Nella tabella seguente vengono elencati tali tipi di dati e i parametri corrispondenti.  
@@ -50,7 +55,7 @@ NULL(typespec)
 |DT_NUMERIC|*precisione*<br /><br /> *scala*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252): esegue il cast di un valore al tipo di dati DT_TEXT utilizzando la tabella codici 1252.|  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questi esempi viene restituito il valore Null per i tipi di dati DT_STR, DT_DATE e DT_BOOL.  
   
 ```  
@@ -59,8 +64,8 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## Vedere anche  
- [ISNULL &#40;espressione SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [ISNULL &#40; Espressione SSIS &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

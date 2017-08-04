@@ -1,56 +1,61 @@
 ---
-title: "SQRT (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQRT - funzione"
-  - "radice quadrata dell'espressione specificata"
+title: SQRT (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQRT function
+- square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5ae5e55d52ba0e4232d8e7a83d3aab2f70a6b56
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQRT (espressione SSIS)
+# <a name="sqrt-ssis-expression"></a>SQRT (espressione SSIS)
   Restituisce la radice quadrata di un'espressione numerica.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 SQRT(numeric_expression)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *numeric_expression*  
  Espressione numerica valida con qualsiasi tipo di dati numeric. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, SQRT restituirà Null.  
   
  Se l'argomento è un valore negativo, SQRT restituirà un errore.  
   
  Prima del calcolo della radice quadrata viene eseguito il cast dell'argomento al tipo di dati DT_R8.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene restituita la radice quadrata di un valore letterale numerico. Il risultato restituito è 12.  
   
 ```  
 SQRT(144)  
 ```  
   
- In questo esempio viene restituita la radice quadrata di un'espressione, ovvero il risultato della sottrazione dei valori nelle colonne **Value1** e **Value2**.  
+ In questo esempio viene restituita la radice quadrata di un'espressione, ovvero il risultato della sottrazione dei valori nelle colonne **Value1** e **Value2** .  
   
 ```  
 SQRT(Value1 - Value2)  
@@ -65,7 +70,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  Nelle espressioni i nomi delle variabili includono sempre il prefisso @.  
   
-## Vedere anche  
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

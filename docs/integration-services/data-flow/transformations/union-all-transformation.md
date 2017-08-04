@@ -1,32 +1,37 @@
 ---
-title: "Trasformazione Unione input multipli | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.unionalltrans.f1"
-helpviewer_keywords: 
-  - "unione di set di dati [Integration Services]"
-  - "combinazione di set di dati"
-  - "Unione input multipli - trasformazione"
-  - "set di dati [Integration Services], unione"
+title: Union All Transformation | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.unionalltrans.f1
+helpviewer_keywords:
+- merging datasets [Integration Services]
+- combining datasets
+- Union All transformation
+- datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Unione input multipli
+# <a name="union-all-transformation"></a>Unione input multipli - trasformazione
   La trasformazione Unione input multipli consente di combinare più input in un unico output. È ad esempio possibile utilizzare gli output di cinque diverse origini file flat come input per la trasformazione Unione input multipli e combinarli in un singolo output.  
   
-## Input e output  
+## <a name="inputs-and-outputs"></a>Input e output  
  Gli input della trasformazione vengono aggiunti all'output della trasformazione uno dopo l'altro, senza riordinare le righe. Se il pacchetto richiede un output ordinato, sarà necessario utilizzare la trasformazione Unione anziché la trasformazione Unione input multipli.  
   
  L'output della trasformazione Unione input multipli viene creato a partire dal primo input connesso alla trasformazione. Sulle colonne negli input connessi successivamente alla trasformazione viene eseguito il mapping a quelle dell'output della trasformazione.  
@@ -37,18 +42,18 @@ caps.handback.revision: 39
   
  Questa trasformazione include più input e un output. Non supporta un output degli errori.  
   
-## Configurazione della trasformazione Unione input multipli  
+## <a name="configuration-of-the-union-all-transformation"></a>Configurazione della trasformazione Unione input multipli  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Unione**, vedere [Editor trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Unione** , vedere [Editor trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
   
- Per altre informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](../Topic/Common%20Properties.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Unione di dati tramite la trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   

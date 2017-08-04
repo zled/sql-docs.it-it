@@ -1,37 +1,42 @@
 ---
-title: "Trasformazione Aggregazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregatetrans.f1"
-helpviewer_keywords: 
-  - "IsBig - proprietà"
-  - "funzioni di aggregazione [Integration Services]"
-  - "Aggregazione - trasformazione [Integration Services]"
-  - "dati di grandi dimensioni, trasformazioni SSIS"
+title: Trasformazione aggregazione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregatetrans.f1
+helpviewer_keywords:
+- IsBig property
+- aggregate functions [Integration Services]
+- Aggregate transformation [Integration Services]
+- large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Aggregazione
+# <a name="aggregate-transformation"></a>Trasformazione Aggregazione
   La trasformazione Aggregazione applica funzioni di aggregazione, ad esempio Media, ai valori delle colonne e copia i risultati nell'output della trasformazione. Oltre alle funzioni di aggregazione, per questa trasformazione è disponibile la clausola GROUP BY, che consente di specificare i gruppi su cui eseguire l'aggregazione.  
   
-## Operazioni  
+## <a name="operations"></a>Operazioni  
  La trasformazione Aggregazione supporta le operazioni seguenti.  
   
 |Operazione|Description|  
 |---------------|-----------------|  
-|Group by|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per altre informazioni, vedere [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md).|  
+|Group by|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per altre informazioni, vedere [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |Sum|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Medio|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per altre informazioni, vedere [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
@@ -39,7 +44,7 @@ caps.handback.revision: 59
 |Minimo|Restituisce il valore minimo in un gruppo. Per altre informazioni, vedere [MIN &#40;Transact-SQL&#41;](../../../t-sql/functions/min-transact-sql.md). Diversamente dalla funzione Transact-SQL MIN, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
 |Massimo|Restituisce il valore massimo in un gruppo. Per altre informazioni, vedere [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). Diversamente dalla funzione Transact-SQL MAX, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
   
- La trasformazione Aggregazione gestisce i valori Null come il motore di database relazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questo comportamento è definito nello standard SQL-92. Sono applicabili le regole seguenti:  
+ La trasformazione Aggregazione gestisce i valori Null come il motore di database relazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questo comportamento è definito nello standard SQL-92. Sono applicabili le regole seguenti:  
   
 -   In una clausola GROUP BY i valori Null vengono considerati come gli altri valori di colonna. Se la colonna di raggruppamento include più valori Null, questi verranno inseriti in un unico gruppo.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
 -   Nella funzione COUNT (*) vengono conteggiate tutte le righe, incluse quelle con valori Null.  
   
-## Valori numerici elevati nelle aggregazioni  
+## <a name="big-numbers-in-aggregates"></a>Valori numerici elevati nelle aggregazioni  
  Una colonna può contenere valori numerici che richiedono particolare attenzione perché hanno valori o precisione elevata. La trasformazione Aggregazione include la proprietà IsBig, che può essere impostata sulle colonne di output per richiedere una speciale modalità di gestione per i numeri con precisione o valore elevato. Se un valore di colonna può superare i 4 miliardi o richiedere una precisione superiore a quella del tipo di dati float, sarà necessario impostare la proprietà IsBig su 1.  
   
  L'impostazione della proprietà IsBig su 1 modifica l'output della trasformazione Aggregazione nel modo seguente:  
@@ -61,27 +66,27 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  Non è possibile impostare su 1 la proprietà IsBig delle colonne usate nelle operazioni GROUP BY, MAX e MIN.  
   
-## Considerazioni sulle prestazioni  
+## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
  La trasformazione Aggregazione include un set di proprietà che è possibile impostare per migliorarne le prestazioni.  
   
--   Quando si esegue un'operazione **Group by**, impostare la proprietà Keys o KeysScale del componente e gli output del componente. Tramite Keys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione. In questo contesto, Keys fa riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by**. Tramite KeysScale, è possibile specificare un numero approssimativo di chiavi. Quando si specifica un valore appropriato per Keys o KeyScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
+-   Quando si esegue un'operazione **Group by** , impostare la proprietà Keys o KeysScale del componente e gli output del componente. Tramite Keys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione. In questo contesto, Keys fa riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by**. Tramite KeysScale, è possibile specificare un numero approssimativo di chiavi. Quando si specifica un valore appropriato per Keys o KeyScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
   
--   Quando si esegue un'operazione **Distinct count**, impostare la proprietà CountDistinctKeys o CountDistinctScale del componente. Tramite CountDistinctKeys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione per un'operazione Count Distinct. In questo contesto, CountDistinctKeys fa riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count**. La proprietà CountDistinctScale consente di specificare un numero approssimativo di chiavi per un'operazione Count Distinct. Quando si specifica un valore appropriato per CountDistinctKeys o CountDistinctScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
+-   Quando si esegue un'operazione **Distinct count** , impostare la proprietà CountDistinctKeys o CountDistinctScale del componente. Tramite CountDistinctKeys, è possibile specificare il numero esatto di chiavi che dovrà essere gestito dalla trasformazione per un'operazione Count Distinct. In questo contesto, CountDistinctKeys fa riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct Count**. La proprietà CountDistinctScale consente di specificare un numero approssimativo di chiavi per un'operazione Count Distinct. Quando si specifica un valore appropriato per CountDistinctKeys o CountDistinctScale, si migliorano le prestazioni in quanto la trasformazione è in grado di allocare una quantità di memoria appropriata per i dati memorizzati nella cache.  
   
-## Configurazione della trasformazione Aggregazione  
+## <a name="aggregate-transformation-configuration"></a>Configurazione della trasformazione Aggregazione  
  La trasformazione Aggregazione può essere configurata a livello di trasformazione, output e colonna.  
   
 -   A livello di trasformazione, è possibile configurare la trasformazione Aggregazione per ottimizzare le prestazioni specificando i valori seguenti:  
   
-    -   Numero di gruppi che dovrebbero risultare da un'operazione **Group by**.  
+    -   Numero di gruppi che dovrebbero risultare da un'operazione **Group by** .  
   
-    -   Numero di valori distinct che dovrebbero risultare da un'operazione **Count Distinct**.  
+    -   Numero di valori distinct che dovrebbero risultare da un'operazione **Count Distinct** .  
   
     -   Percentuale di estensione della memoria durante l'aggregazione.  
   
      La trasformazione Aggregazione può essere inoltre configurata in modo da generare un avviso anziché un errore quando il valore di un divisore è zero.  
   
--   A livello di output, è possibile configurare la trasformazione Aggregazione per ottimizzare le prestazioni specificando il numero di gruppi che dovrebbero risultare da un'operazione **Group by**. La trasformazione Aggregazione supporta più output, ognuno dei quali può essere configurato in modo diverso.  
+-   A livello di output, è possibile configurare la trasformazione Aggregazione per ottimizzare le prestazioni specificando il numero di gruppi che dovrebbero risultare da un'operazione **Group by** . La trasformazione Aggregazione supporta più output, ognuno dei quali può essere configurato in modo diverso.  
   
 -   A livello di colonna, è possibile specificare i valori seguenti:  
   
@@ -99,17 +104,17 @@ caps.handback.revision: 59
   
  La trasformazione Aggregazione è asincrona, pertanto non legge e pubblica i dati riga per riga, ma legge l'intero set di righe, ne esegue i raggruppamenti e le aggregazioni e quindi pubblica i risultati.  
   
- Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City** e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population**. L'output non include pertanto la colonna **City**.  
+ Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City**e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
   
  È inoltre possibile aggiungere più output alla trasformazione Aggregazione e indirizzare ogni aggregazione a un output diverso. Se ad esempio la trasformazione Aggregazione applica le funzioni Somma e Media, ogni aggregazione potrà essere indirizzata a un output diverso.  
   
- È possibile applicare più aggregazioni a una singola colonna di input. Se ad esempio si vuole ottenere i valori della somma e della media per una colonna di input di nome **Sales**, sarà possibile configurare la trasformazione in modo da applicare le funzioni Somma e Media alla colonna **Sales**.  
+ È possibile applicare più aggregazioni a una singola colonna di input. Se ad esempio si vuole ottenere i valori della somma e della media per una colonna di input di nome **Sales**, sarà possibile configurare la trasformazione in modo da applicare le funzioni Somma e Media alla colonna **Sales** .  
   
  La trasformazione Aggregazione include un input e uno o più output. Non supporta un output degli errori.  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Aggregazione**, fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Aggregazione** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor trasformazione Aggregazione &#40;scheda Aggregazioni&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 59
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -129,10 +134,10 @@ caps.handback.revision: 59
   
 -   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "Elemento Workload (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Workload - elemento"
+title: Elemento Workload (DTA) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cacc7a628f0682938b7db6821e08106a3eeaac3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Elemento Workload (DTA)
+# <a name="workload-element-dta"></a>Elemento Workload (DTA)
   Specifica il carico di lavoro da utilizzare per una sessione di ottimizzazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 16
     <Workload>...</Workload>  
 ```  
   
-## Caratteristiche elemento  
+## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -41,21 +46,21 @@ caps.handback.revision: 16
 |**Valore predefinito**|Nessuno|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento **DTAInput** .|  
   
-## Relazioni elemento  
+## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Elementi figlio**|[Elemento File &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Elemento Database per Workload &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**Elementi figlio**|[Elemento file &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Elemento database per Workload &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Elemento EventString &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Ottimizzazione guidata motore di database può utilizzare come carichi di lavoro script [!INCLUDE[tsql](../../includes/tsql-md.md)] , file di traccia e tabelle di traccia.  
   
  Se viene specificato un carico di lavoro in un file di input XML e un carico di lavoro nella riga di comando con lo strumento **dta** , per l'ottimizzazione verrà utilizzato il carico di lavoro specificato nella riga di comando. Tutte le opzioni di ottimizzazione specificate nella riga di comando prevalgono su quelle specificate in un file di input XML. L'unica eccezione è rappresentata dal caso in cui una configurazione definita dall'utente venga specificata in modalità di valutazione nel file di input XML. Se, ad esempio, viene immessa una configurazione nell'elemento **Configuration** del file di input XML e anche l'elemento **EvaluateConfiguration** viene specificato come una delle opzioni di ottimizzazione, le opzioni di ottimizzazione specificate nel file di input XML prevarranno su qualsiasi opzione di ottimizzazione immessa dalla riga di comando.  
   
  È necessario specificare un carico di lavoro per ogni sessione di ottimizzazione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene specificata la tabella di traccia **MyDatabase.MyDBOwner.TuningTable001** per l'elemento **Workload** . La tabella **TuningTable001** è stata creata con il modello Tuning di SQL Server Profiler e salvando l'output della traccia come tabella.  
   
 ```  
@@ -80,7 +85,7 @@ caps.handback.revision: 16
 </DTAXML>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

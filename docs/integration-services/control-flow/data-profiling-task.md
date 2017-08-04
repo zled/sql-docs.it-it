@@ -1,28 +1,33 @@
 ---
-title: "Attivit&#224; Profiling dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.f1"
-helpviewer_keywords: 
-  - "Attività Profiling dati [Integration Services], informazioni sull'attività Profiling dati"
-  - "profiling dati"
-  - "profiling dati"
+title: "Attività Profiling dati | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.f1
+helpviewer_keywords:
+- Data Profiling task [Integration Services], about Data Profiling task
+- data profiling
+- profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: cb13596ddd01922f10632ccb3e1b801937c9941a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Profiling dati
+# <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  
   
  È possibile utilizzare l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il profiling dei dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e identificare i possibili problemi relativi alla qualità dei dati.  
@@ -30,20 +35,20 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  In questo argomento vengono descritti i requisiti e le caratteristiche dell'attività Profiling dati. Per la procedura dettagliata relativa all'uso dell'attività Profiling dati, vedere la sezione [Attività Profiling dati e visualizzatore](../../integration-services/control-flow/data-profiling-task-and-viewer.md).  
   
-## Requisiti e limitazioni  
+## <a name="requirements-and-limitations"></a>Requisiti e limitazioni  
  L'attività Profiling dati funziona solo con i dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'attività non funziona con origini dati di terze parti o basate su file.  
   
  Per eseguire un pacchetto contenente l'attività Profiling dati, inoltre, è necessario utilizzare un account che disponga di autorizzazioni di lettura/scrittura per il database tempdb.  
   
-## Visualizzatore profiler dati  
+## <a name="data-profiler-viewer"></a>Visualizzatore profiler dati  
  Dopo avere utilizzato l'attività per calcolare i profili dei dati e salvare tali profili in un file, è possibile utilizzare il Visualizzatore profilo dati autonomo per esaminare l'output del profilo. Il Visualizzatore profilo dati supporta anche la funzione drill-down che consente di analizzare i problemi di qualità dei dati identificati nell'output del profilo. Per altre informazioni, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
   
 > [!IMPORTANT]  
->  Il file di output potrebbe contenere dati sensibili relativi al database e i dati inclusi nel database. Per suggerimenti su come migliorare la sicurezza di questo file, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  Il file di output potrebbe contenere dati sensibili relativi al database e i dati inclusi nel database. Per suggerimenti su come migliorare la sicurezza di questo file, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
 >   
 >  La funzionalità di drill-down, disponibile nel Visualizzatore profilo dati, consente di inviare query in tempo reale all'origine dati originale.  
   
-## Profili disponibili  
+## <a name="available-profiles"></a>Profili disponibili  
  L'attività Profiling dati consente di calcolare otto profili dati diversi. Cinque di questi profili analizzano singole colonne e i tre rimanenti analizzano più colonne o relazioni tra colonne e tabelle.  
   
  Nei cinque profili seguenti vengono analizzate colonne singole.  
@@ -64,15 +69,15 @@ caps.handback.revision: 32
 |Profilo Dipendenza funzionale|Segnala la misura in cui i valori in una colonna (la colonna dipendente) dipendono dai valori in un'altra colonna o in un set di colonne (la colonna determinante).<br /><br /> Questo profilo consente inoltre di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, la dipendenza tra una colonna che contiene i codici postali ZIP (Stati Uniti) e una colonna che contiene gli stati degli Stati Uniti. Benché uno stesso codice postale debba essere sempre associato allo stesso stato, il profilo individua alcune violazioni di questa dipendenza.|  
 |Profilo di inclusione di valori|Consente di calcolare la sovrapposizione nei valori tra due colonne o set di colonne. Questo profilo può determinare se una colonna o un set di colonne è adatto per fungere da chiave esterna tra le tabelle selezionate.<br /><br /> Questo profilo consente inoltre di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, la colonna ProductID di una tabella Sales e si individua che la colonna contiene valori non disponibili nella colonna ProductID della tabella Products.|  
   
-## Prerequisiti per un profilo valido  
+## <a name="prerequisites-for-a-valid-profile"></a>Prerequisiti per un profilo valido  
  Un profilo non è valido se non vengono selezionate tabelle e colonne non vuote e colonne che contengono tipi di dati validi per il profilo.  
   
-### Tipi di dati validi  
+### <a name="valid-data-types"></a>Tipi di dati validi  
  Alcuni dei profili disponibili sono significativi solo per determinati tipi di dati. Ad esempio, il calcolo di un profilo di criteri di ricerca colonna per una colonna che contiene valori numerici o **datetime** non è significativo e quindi tale profilo non è valido.  
   
 |Profilo|Tipi di dati validi*|  
 |-------------|------------------------|  
-|ColumnStatisticsProfile|Colonne di tipo numerico o **datetime** (nessuna colonna **mean** e **stddev** per **datetime**)|  
+|ColumnStatisticsProfile|Colonne di tipo numerico o **datetime** (nessuna colonna **mean** e **stddev** per **datetime** )|  
 |ColumnNullRatioProfile|Tutte le colonne**|  
 |ColumnValueDistributionProfile|Colonne di tipo **integer** , tipo **char** e tipo **datetime**|  
 |ColumnValueDistributionProfile|Colonne di tipo **char**|  
@@ -81,40 +86,40 @@ caps.handback.revision: 32
 |FunctionalDependencyProfile|Colonne di tipo **integer** , tipo **char** e tipo **datetime**|  
 |InclusionProfile|Colonne di tipo **integer** , tipo **char** e tipo **datetime**|  
   
- \* Nella tabella precedente di tipi di dati validi, i tipi **integer**, **char**, **datetime** e **numeric** includono i tipi di dati specifici seguenti:  
+ \* Nella tabella precedente di tipi di dati validi, i tipi **integer**, **char**, **datetime**e **numeric** includono i tipi di dati specifici seguenti:  
   
  I tipi integer includono **bit**, **tinyint**, **smallint**, **int**e **bigint**.  
   
- I tipi di carattere includono **char**, **nchar**, **varchar** e **nvarchar**, ma non **varchar(max)** e **nvarchar(max)**.  
+ I tipi di carattere includono **char**, **nchar**, **varchar**e **nvarchar** , ma non **varchar(max)** e **nvarchar(max)**.  
   
  I tipi di data e ora includono **datetime**, **smalldatetime**e **timestamp**.  
   
- I tipi numerici includono **integer** (tranne **bit**), **money**, **smallmoney**, **decimal**, **float**, **real** e **numeric**.  
+ I tipi numerici includono **integer** (tranne **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**e **numeric**.  
   
- \*\* I tipi **image**, **text**, **XML**, **udt** e **variant** non sono supportati per profili diversi dal profilo del rapporto di valori di colonna Null.  
+ \*\* **image**, **text**, **XML**, **udt**e **variant** non sono supportati per profili diversi dal profilo del rapporto di valori di colonna Null.  
   
-### Tabelle e colonne valide  
+### <a name="valid-tables-and-columns"></a>Tabelle e colonne valide  
  Se la tabella o la colonna è vuota, l'attività Profiling dati esegue le seguenti azioni:  
   
 -   Quando la tabella o la vista selezionata è vuota, l'attività Profiling dati non calcola i profili.  
   
 -   Quando tutti i valori nella colonna selezionata sono Null, l'attività Profiling dati calcola solo il profilo del rapporto di valori di colonna Null. L'attività non calcola il profilo della distribuzione della lunghezza di colonna, il profilo criteri di ricerca colonna, il profilo di statistiche di colonna o il profilo di distribuzione dei valori di colonna.  
   
-## Caratteristiche dell'attività Profiling dati  
+## <a name="features-of-the-data-profiling-task"></a>Caratteristiche dell'attività Profiling dati  
  L'attività Profiling dati presenta le seguenti opzioni di configurazione di facile utilizzo:  
   
 -   **Colonne jolly** Quando si configura una richiesta di profilo, l'attività accetta il carattere jolly **(\*)** al posto del nome di colonna. In questo modo viene semplificata la configurazione e diventa più facile individuare le caratteristiche dei dati non noti. Quando viene eseguita l'attività, è possibile analizzare ciascuna colonna che presenta un tipo di dati adatto.  
   
 -   **Profilo rapido** You can select Profilo rapido to configure the task quickly. Un profilo rapido analizza una tabella o una vista utilizzando tutti i profili e le impostazioni predefiniti.  
   
-## Messaggi di registrazione personalizzati disponibili nell'attività Profiling dati  
- Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Profiling dati. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Profiling dati  
+ Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Profiling dati. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Voce di log|Description|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Fornisce informazioni descrittive sullo stato dell'attività. I messaggi includono le informazioni seguenti:<br /><br /> Avvio elaborazione richieste<br /><br /> Inizio query<br /><br /> Query End<br /><br /> Fine calcolo richiesta|  
   
-## Output e relativo schema  
+## <a name="output-and-its-schema"></a>Output e relativo schema  
  L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
   
  Questo schema per informazioni sulla qualità dei dati può essere utile per:  
@@ -125,10 +130,10 @@ caps.handback.revision: 32
   
  Lo spazio dei nomi di destinazione è identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
-## Output nel flusso di lavoro condizionale di un pacchetto  
+## <a name="output-in-the-conditional-workflow-of-a-package"></a>Output nel flusso di lavoro condizionale di un pacchetto  
  I componenti di profiling dei dati non includono la funzionalità predefinita per implementare la logica condizionale nel flusso di lavoro del pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basata sull'output dell'attività Profiling dati. È tuttavia facile aggiungere questa logica con una programmazione minima in un'attività Script. Con questo codice verrebbe eseguita una query XPath sull'output XML e quindi il risultato verrebbe salvato in una variabile del pacchetto. I vincoli di precedenza che collegano l'attività Script alle attività successive possono utilizzare un'espressione per determinare il flusso di lavoro. Ad esempio, l'attività Script rileva che la percentuale di valori Null in una colonna supera una determinata soglia. Quando questa condizione è vera, potrebbe essere necessario interrompere il pacchetto e risolvere il problema prima di continuare.  
   
-## Configurazione dell'attività Profiling dati  
+## <a name="configuration-of-the-data-profiling-task"></a>Configurazione dell'attività Profiling dati  
  Configurare l'attività Profiling dati utilizzando **Editor attività Profiling dati**. L'editor è composto da due pagine:  
   
  [Pagina Generale](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  

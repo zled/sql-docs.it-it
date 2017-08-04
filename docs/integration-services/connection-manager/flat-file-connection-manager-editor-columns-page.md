@@ -1,40 +1,45 @@
 ---
-title: "Editor gestione connessione file flat (pagina Colonne) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columns.f1"
-helpviewer_keywords: 
-  - "Editor gestione connessione file flat"
+title: Flat File Connection Manager Editor (pagina colonne) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columns.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 791bc8b3edbee92a0154dc03011666a488c19e7a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor gestione connessione file flat (pagina Colonne)
+# <a name="flat-file-connection-manager-editor-columns-page"></a>Editor gestione connessione file flat (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor gestione connessione file flat** per specificare le informazioni di riga e di colonna e per visualizzare un'anteprima del file.  
   
  Per ulteriori informazioni sull'Editor gestione connessione file flat, vedere [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-## Opzioni statiche  
+## <a name="static-options"></a>Opzioni statiche  
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione del file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Description**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
-## Opzioni dinamiche relative al formato file flat  
+## <a name="flat-file-format-dynamic-options"></a>Opzioni dinamiche relative al formato file flat  
   
-### Formato = Delimitato  
+### <a name="format--delimited"></a>Formato = Delimitato  
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
@@ -64,15 +69,15 @@ caps.handback.revision: 21
 |**Barra verticale {&#124;}**|Le colonne sono delimitate da una barra verticale.|  
   
  **Aggiorna**  
- Se si fa clic su **Aggiorna** è possibile visualizzare gli effetti delle modifiche ai delimitatori da ignorare. Questo pulsante viene visualizzato solo dopo la modifica di altre opzioni della connessione.  
+ Se si fa clic su **Aggiorna**è possibile visualizzare gli effetti delle modifiche ai delimitatori da ignorare. Questo pulsante viene visualizzato solo dopo la modifica di altre opzioni della connessione.  
   
  **Anteprima righe**  
  Consente di visualizzare dati di esempio del file flat, suddivisi in righe e colonne in base alle opzioni selezionate.  
   
  **Reimposta colonne**  
- Il pulsante **Reimposta colonne** consente di rimuovere tutte le colonne tranne quelle originali.  
+ Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
   
-### Formato = A larghezza fissa  
+### <a name="format--fixed-width"></a>Formato = A larghezza fissa  
  **Carattere**  
  Consente di selezionare il tipo di carattere per la visualizzazione in anteprima dei dati.  
   
@@ -83,9 +88,9 @@ caps.handback.revision: 21
  Consente di specificare la larghezza della riga prima dell'aggiunta dei delimitatori per le singole colonne. In alternativa, trascinare la linea rossa verticale nella finestra di anteprima per contrassegnare la fine della riga. Il valore relativo alla larghezza della riga viene aggiornato automaticamente.  
   
  **Reimposta colonne**  
- Il pulsante **Reimposta colonne** consente di rimuovere tutte le colonne tranne quelle originali.  
+ Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
   
-### Formato = Non allineato a destra  
+### <a name="format--ragged-right"></a>Formato = Non allineato a destra  
   
 > [!NOTE]  
 >  I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.  
@@ -111,12 +116,12 @@ caps.handback.revision: 21
 |**Barra verticale {&#124;}**|Le righe sono delimitate da una barra verticale.|  
   
  **Reimposta colonne**  
- Il pulsante **Reimposta colonne** consente di rimuovere tutte le colonne tranne quelle originali.  
+ Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione file flat &#40;pagina Generale&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
- [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Flat File Connection Manager Editor &#40; Pagina generale &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [Flat File Connection Manager Editor &#40; Pagina avanzate &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
  [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

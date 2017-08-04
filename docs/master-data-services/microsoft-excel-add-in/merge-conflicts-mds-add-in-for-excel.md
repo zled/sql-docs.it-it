@@ -1,26 +1,31 @@
 ---
-title: "Conflitti di unione (componente aggiuntivo MDS per Excel) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Merge è in conflitto (componente aggiuntivo MDS per Excel) | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4ede349c35ea8bd25d81b42e6240c6c7a7ebdab9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Conflitti di unione (componente aggiuntivo MDS per Excel)
+# <a name="merge-conflicts-mds-add-in-for-excel"></a>Conflitti di unione (componente aggiuntivo MDS per Excel)
   Se nel componente aggiuntivo [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per Excel i dati sono stati modificati nel server da un altro utente, la pubblicazione non riesce e viene visualizzato un errore di conflitto. Per risolvere questo errore, è possibile usare la funzionalità Conflitti di unione e ripubblicare le modifiche.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
@@ -31,11 +36,11 @@ caps.handback.revision: 6
   
 -   Il foglio di lavoro attivo deve contenere un errore di conflitto dopo il tentativo di pubblicazione delle modifiche.  
   
-### Per gestire i conflitti di unione  
+### <a name="to-merge-conflicts"></a>Per gestire i conflitti di unione  
   
 1.  Nel foglio di lavoro attivo selezionare la riga o la cella con l'errore di conflitto.  
   
-2.  Nel gruppo di menu **Pubblica e convalida** selezionare **Conflitti di unione** per aprire la finestra di dialogo **Conflitti di unione**.  
+2.  Nel gruppo di menu **Pubblica e convalida** selezionare **Conflitti di unione** per aprire la finestra di dialogo **Conflitti di unione** .  
   
 3.  Nella finestra di dialogo **Conflitti di unione** è possibile:  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 6
   
 4.  Dopo aver fatto clic su **Applica**, è possibile apportare altre modifiche ed eseguire di nuovo la pubblicazione. In alternativa, è possibile fare clic su **Annulla** per annullare l'aggiornamento e ricaricare la versione più recente dal server.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica: Importazione di dati da Excel &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

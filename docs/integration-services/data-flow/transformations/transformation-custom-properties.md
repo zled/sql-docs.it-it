@@ -1,60 +1,65 @@
 ---
-title: "Propriet&#224; personalizzate delle trasformazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Aggregazione - trasformazione [Integration Services]"
-  - "Dimensione a modifica lenta - trasformazione"
-  - "Importa colonna - trasformazione [Integration Services]"
-  - "Ordinamento - trasformazione"
-  - "UnPivot - trasformazione"
-  - "Merge join - trasformazione"
-  - "Query di data mining - trasformazione"
-  - "Raggruppamento fuzzy - trasformazione"
-  - "Conversione dati - trasformazione"
-  - "Ricerca fuzzy - trasformazione"
-  - "Estrazione termini - trasformazione"
-  - "Conteggio righe - proprietà personalizzate della trasformazione [Integration Services]"
-  - "trasformazioni [Integration Services], proprietà"
-  - "Pivot - trasformazione"
-  - "Ricerca - trasformazione"
-  - "Campionamento percentuale - trasformazione"
-  - "Esporta colonna - trasformazione [Integration Services]"
-  - "Campionamento righe - trasformazione"
-  - "Suddivisione condizionale - proprietà personalizzate della trasformazione [Integration Services]"
-  - "proprietà personalizzate [Integration Services]"
-  - "Controllo - trasformazione"
-  - "Ricerca termini - trasformazione"
-  - "Componente script - proprietà personalizzate della trasformazione [Integration Services]"
-  - "Trasformazione Colonna derivata"
-  - "Comando OLE DB - trasformazione"
-  - "Copia colonna - proprietà personalizzate della trasformazione [Integration Services]"
-  - "Mappa caratteri - proprietà personalizzate della trasformazione [Integration Services]"
+title: "Proprietà personalizzate della trasformazione | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- Slowly Changing Dimension transformation
+- Import Column transformation [Integration Services]
+- Sort transformation
+- Unpivot transformation
+- Merge Join transformation
+- Data Mining Query transformation
+- Fuzzy Grouping transformation
+- Data Conversion transformation
+- Fuzzy Lookup transformation
+- Term Extraction transformation
+- Row Count transformation custom properties [Integration Services]
+- transformations [Integration Services], properties
+- Pivot transformation
+- Lookup transformation
+- Percentage Sampling transformation
+- Export Column transformation [Integration Services]
+- Row Sampling transformation
+- Conditional Split transformation custom properties [Integration Services]
+- custom properties [Integration Services]
+- Audit transformation
+- Term Lookup transformation
+- Script Component transformation custom properties [Integration Services]
+- Derived Column transformation
+- OLE DB Command transformation
+- Copy Column transformation custom properties [Integration Services]
+- Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 72
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriet&#224; personalizzate delle trasformazioni
-  Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+# <a name="transformation-custom-properties"></a>Proprietà personalizzate delle trasformazioni
+  Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
- In questo argomento vengono elencate e descritte le proprietà personalizzate delle diverse trasformazioni del flusso di dati. Per informazioni sulle proprietà comuni alla maggior parte degli oggetti del flusso di dati, vedere [Proprietà comuni](../Topic/Common%20Properties.md).  
+ In questo argomento vengono elencate e descritte le proprietà personalizzate delle diverse trasformazioni del flusso di dati. Per informazioni sulle proprietà comuni alla maggior parte degli oggetti del flusso di dati, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
- È possibile impostare alcune proprietà delle trasformazioni utilizzando espressioni di proprietà. Per altre informazioni, vedere [Proprietà del flusso di dati che è possibile impostare tramite espressioni](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md).  
+ È possibile impostare alcune proprietà delle trasformazioni utilizzando espressioni di proprietà. Per altre informazioni, vedere [Proprietà del flusso di dati che è possibile impostare tramite espressioni](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
-## Trasformazioni con proprietà personalizzate  
+## <a name="transformations-with-custom-properties"></a>Trasformazioni con proprietà personalizzate  
   
 ||||  
 |-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 72
 |[Query di data mining](#dmquery)|[Campionamento percentuale](#percent)|[UnPivot](#unpivot)|  
 |[Colonna derivata](#derived)|[Pivot](#pivot)||  
   
-### Trasformazioni senza proprietà personalizzate  
+### <a name="transformations-without-custom-properties"></a>Trasformazioni senza proprietà personalizzate  
  Le trasformazioni seguenti non includono proprietà personalizzate a livello di componente, input o output: [Trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation.md), [Trasformazione Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md), e [Trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation.md). Tali trasformazioni utilizzano solo le proprietà comuni a tutti i componenti del flusso di dati.  
   
 ##  <a name="aggregate"></a> Proprietà personalizzate della trasformazione Aggregazione  
@@ -140,7 +145,7 @@ caps.handback.revision: 72
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Valore intero|Valore che specifica la proprietà **LineageID** della colonna di input che costituisce l'origine della colonna di output.|  
-|MapFlags|Integer (enumerazione)|Valore che specifica le operazioni di stringa eseguite dalla trasformazione Mappa caratteri nella colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Inversione byte** (2)<br /><br /> **Larghezza intera** (6)<br /><br /> **Metà larghezza** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Conversione da maiuscole a minuscole (e viceversa) basata sulla lingua** (7)<br /><br /> **Minuscolo** (0)<br /><br /> **Cinese semplificato** (8)<br /><br /> **Cinese tradizionale** (9)<br /><br /> **Maiuscolo** (1)|  
+|MapFlags|Integer (enumerazione)|Valore che specifica le operazioni di stringa eseguite dalla trasformazione Mappa caratteri nella colonna. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **Inversione byte** (2)<br /><br /> **Larghezza intera** (6)<br /><br /> **Metà larghezza** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Conversione da maiuscole a minuscole (e viceversa) basata sulla lingua** (7)<br /><br /> **Minuscolo** (0)<br /><br /> **Cinese semplificato** (8)<br /><br /> **Cinese tradizionale**(9)<br /><br /> **Maiuscolo** (1)|  
   
  L'input, le colonne di input e l'output della trasformazione Mappa caratteri non includono proprietà personalizzate.  
   
@@ -182,7 +187,7 @@ caps.handback.revision: 72
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valore che indica se la colonna utilizza le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oppure le routine di analisi standard dipendenti dalle impostazioni locali. Il valore predefinito di questa proprietà è **False**. Per altre informazioni, vedere [Analisi veloce](../Topic/Fast%20Parse.md) e [Analisi standard](../Topic/Standard%20Parse.md). .<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Conversione dati**, ma può essere impostata in **Editor avanzato**.|  
+|FastParse|Boolean|Valore che indica se la colonna utilizza le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oppure le routine di analisi standard dipendenti dalle impostazioni locali. Il valore predefinito di questa proprietà è **False**. Per altre informazioni, vedere [Analisi veloce](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Analisi standard](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Conversione dati**, ma può essere impostata in **Editor avanzato**.|  
 |SourceInputColumnLineageId|Valore intero|**LineageID** della colonna di input che costituisce l'origine della colonna di output.|  
   
  L'input, le colonne di input e l'output della trasformazione Conversione dati non includono proprietà personalizzate.  
@@ -197,8 +202,8 @@ caps.handback.revision: 72
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|Identificatore univoco dell'oggetto Connection.|  
-|ASConnectionString|String|Stringa di connessione a un progetto di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o a un database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|CatalogName|String|Nome di un database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|ASConnectionString|String|Stringa di connessione a un progetto di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o a un database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|CatalogName|String|Nome di un database di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |ModelName|String|Nome del modello di data mining.|  
 |ModelStructureName|String|Nome della struttura di data mining.|  
 |ObjectRef|String|Tag XML che identifica la struttura di data mining utilizzata dalla trasformazione.|  
@@ -220,7 +225,7 @@ caps.handback.revision: 72
   
  L'input e l'output della trasformazione Colonna derivata non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [Trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+ Per altre informazioni, vedere [trasformazione Colonna derivata](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
 ##  <a name="extract"></a> Proprietà personalizzate della trasformazione Esporta colonna  
  La trasformazione Esporta colonna include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
@@ -259,7 +264,7 @@ caps.handback.revision: 72
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|String|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimiters|String|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i seguenti caratteri: spazio (), virgola, punto (.), punto e virgola (;), due punti (:), trattino (-), retta di virgolette doppie ("), segno di virgolette semplici ('), contrassegnare e commerciale (&), barra (/), barra rovesciata (\\), simbolo di chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi ((), parentesi ()), minore di (\<), maggiore di (>), apertura tra parentesi quadre ([), parentesi di apertura di parentesi graffe ({), parentesi graffa (}), barra verticale (&#124;) di chiusura (]), chiudere il simbolo di cancelletto (#), asterisco (*), accento circonflesso (^) e (%).|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore **True** è destinato per lo più al debug. Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MaxMemoryUsage|Valore intero|Quantità di memoria massima che può essere utilizzata dalla trasformazione. Il valore predefinito di questa proprietà è **0**, che consente l'uso della memoria dinamica.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione per identificare duplicati, espressa come valore compreso tra 0 e 1.  Il valore predefinito di questa proprietà è 0.8.|  
@@ -288,12 +293,12 @@ caps.handback.revision: 72
 ##  <a name="flookup"></a> Proprietà personalizzate della trasformazione Ricerca fuzzy  
  La trasformazione Ricerca fuzzy include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
- Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca fuzzy. Tutte le proprietà, ad eccezione di **ReferenceMetadataXML**, sono di lettura/scrittura.  
+ Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca fuzzy. Tutte le proprietà, ad eccezione di **ReferenceMetadataXML** , sono di lettura/scrittura.  
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Specifica se è necessario creare una copia della tabella di riferimento per la creazione dell'indice di ricerca fuzzy e le ricerche successive. Il valore predefinito di questa proprietà è **True**.|  
-|Delimiters|String|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimiters|String|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i seguenti caratteri: spazio (), virgola (,), semicolon(;) punto (.), trattino di due punti (:) (-), le virgolette doppie ("), segno di virgolette semplici ('), contrassegnare e commerciale (&), barra (/), barra rovesciata (\\), simbolo di chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi ()), minore di (\<), maggiore di (>), apertura di parentesi quadra ([), parentesi di apertura di parentesi graffe ({), parentesi graffa (}), barra verticale (&#124;) di chiusura (]), di chiusura. cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |DropExistingMatchIndex|Boolean|Un valore che specifica se l'indice delle corrispondenze specificato in MatchIndexName viene eliminato quando MatchIndexOptions non è impostata su ReuseExistingIndex. Il valore predefinito di questa proprietà è **True**.|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore **True** è destinato per lo più al debug. Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MatchIndexName|String|Nome dell'indice delle corrispondenze. L'indice delle corrispondenze è la tabella in cui la trasformazione crea e salva l'indice utilizzato. Se viene riusato l'indice delle corrispondenze, MatchIndexName specifica l'indice da riusare. MatchIndexName deve essere un nome di identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido. Se il nome contiene spazi, ad esempio, deve essere racchiuso tra parentesi.|  
@@ -310,9 +315,9 @@ caps.handback.revision: 72
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Valore intero|Valore che specifica il modo in cui la trasformazione confronta i dati di tipo stringa in una colonna. Per altre informazioni, vedere [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|FuzzyComparisonFlagsEx|Integer (enumerazione)|Valore che specifica i flag di confronto estesi utilizzati dalla trasformazione. I valori possono includere **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed** e **NoMapping**. Non è possibile usare il flag **NoMapping** con altri flag.|  
+|FuzzyComparisonFlagsEx|Integer (enumerazione)|Valore che specifica i flag di confronto estesi utilizzati dalla trasformazione. I valori possono includere **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**e **NoMapping**. Non è possibile usare il flag**NoMapping** con altri flag.|  
 |JoinToReferenceColumn|String|Valore che specifica il nome della colonna della tabella di riferimento a cui è unita in join la colonna.|  
-|JoinType|Valore intero|Valore che specifica se la trasformazione esegue una corrispondenza fuzzy o una corrispondenza esatta. Il valore predefinito di questa proprietà è **Fuzzy**. L'integer per il tipo di join esatto è **1**, quello per il tipo di join fuzzy è **2**.|  
+|JoinType|Valore intero|Valore che specifica se la trasformazione esegue una corrispondenza fuzzy o una corrispondenza esatta. Il valore predefinito di questa proprietà è **Fuzzy**. L'integer per il tipo di join esatto è **1** , quello per il tipo di join fuzzy è **2**.|  
 |MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione a livello di colonna, specificata come valore compreso tra 0 e 1. Solo le righe che superano tale soglia vengono considerate corrispondenze.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Ricerca fuzzy. Tutte le proprietà sono di lettura/scrittura.  
@@ -333,7 +338,7 @@ caps.handback.revision: 72
 ##  <a name="lookup"></a> Proprietà personalizzate della trasformazione Ricerca  
  La trasformazione Ricerca include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
   
- Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca. Tutte le proprietà, ad eccezione di **ReferenceMetadataXML**, sono di lettura/scrittura.  
+ Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Ricerca. Tutte le proprietà, ad eccezione di **ReferenceMetadataXML** , sono di lettura/scrittura.  
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
@@ -342,8 +347,8 @@ caps.handback.revision: 72
 |MaxMemoryUsage|Valore intero|Dimensione massima della cache per la tabella di ricerca. Il valore predefinito di questa proprietà è **25**, che indica l'assenza di limiti per la dimensione della cache.|  
 |MaxMemoryUsage64|Valore intero|Dimensioni massime della cache per la tabella di ricerca in un computer a 64 bit.|  
 |NoMatchBehavior|Integer (enumerazione)|Valore che specifica se le righe prive di voci corrispondenti nel set di dati di riferimento devono essere considerate errori.<br /><br /> Quando la proprietà è impostata su **Gestisci come errori le righe senza voci corrispondenti** (0), le righe prive di voci corrispondenti vengono considerate errori. È possibile specificare l'azione necessaria quando viene restituito questo tipo di errore usando la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Quando la proprietà è impostata su **Invia le righe senza voci corrispondenti all'output nessuna corrispondenza** (1), le righe non sono considerate errori.<br /><br /> Il valore predefinito è **Gestisci come errori le righe senza voci corrispondenti** (0).|  
-|ParameterMap|String|Elenco con valori delimitati da punti e virgola di ID di derivazione che eseguono il mapping ai parametri usati nell'istruzione **SqlCommand**.|  
-|ReferenceMetaDataXML|String|Metadati per le colonne nella tabella di ricerca copiati nell'output dalla trasformazione.|  
+|ParameterMap|String|Elenco con valori delimitati da punti e virgola di ID di derivazione che eseguono il mapping ai parametri usati nell'istruzione **SqlCommand** .|  
+|ReferenceMetadataXML|String|Metadati per le colonne nella tabella di ricerca copiati nell'output dalla trasformazione.|  
 |SqlCommand|String|Istruzione SELECT che popola la tabella di ricerca.|  
 |SqlCommandParam|String|Istruzione SQL con parametri che popola la tabella di ricerca.|  
   
@@ -374,7 +379,7 @@ caps.handback.revision: 72
 |JoinType|Integer (enumerazione)|Specifica se il join è un inner join (2), un left outer join (1) o un full join (0).|  
 |MaxBuffersPerInput|Valore intero|Non è più necessario configurare il valore della proprietà **MaxBuffersPerInput** , in quanto Microsoft ha apportato modifiche che riducono il rischio di utilizzo di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.|  
 |NumKeyColumns|Valore intero|Numero di colonne utilizzate nel join.|  
-|TreatNullsAsEqual|Boolean|Valore che specifica se la trasformazione considera i valori Null come valori uguali. Il valore predefinito di questa proprietà è **True**. Se il valore della proprietà è **False**, la trasformazione gestisce i valori Null come in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|TreatNullsAsEqual|Boolean|Valore che specifica se la trasformazione considera i valori Null come valori uguali. Il valore predefinito di questa proprietà è **True**. Se il valore della proprietà è **False**, la trasformazione gestisce i valori Null come in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Merge Join. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -395,7 +400,7 @@ caps.handback.revision: 72
 |-------------------|---------------|-----------------|  
 |CommandTimeout|Valore intero|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
 |DefaultCodePage|Valore intero|Tabella codici da utilizzare quando le informazioni sulla tabella codici non sono disponibili dall'origine dati.|  
-|SQLCommand|String|Istruzione Transact-SQL eseguita dalla trasformazione per ogni riga nel flusso di dati.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
+|SqlCommand|String|Istruzione Transact-SQL eseguita dalla trasformazione per ogni riga nel flusso di dati.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne esterne della trasformazione Comando OLE DB. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -515,7 +520,7 @@ caps.handback.revision: 72
 |FailOnLookupFailure|Boolean|Valore che specifica se la trasformazione ha esito negativo quando la ricerca di un record esistente non riesce. Il valore predefinito di questa proprietà è **False**.|  
 |IncomingRowChangeType|Valore intero|Valore che specifica se tutte le righe in ingresso sono righe nuove o se la trasformazione deve rilevare il tipo di modifica.|  
 |InferredMemberIndicator|String|Nome di colonna per il membro derivato.|  
-|SQLCommand|String|Istruzione SQL utilizzata per creare un set di righe dello schema.|  
+|SqlCommand|String|Istruzione SQL utilizzata per creare un set di righe dello schema.|  
 |UpdateChangingAttributeHistory|Boolean|Valore che indica se gli aggiornamenti dell'attributo cronologico vengono indirizzati all'output della trasformazione per gli aggiornamenti dell'attributo modificabile.|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione Dimensione a modifica lenta. Tutte le proprietà sono di lettura/scrittura.  
@@ -553,7 +558,7 @@ caps.handback.revision: 72
   
  L'input e l'output della trasformazione Ordinamento non includono proprietà personalizzate.  
   
- Per altre informazioni, vedere [Trasformazione Ordinamento](../../../integration-services/data-flow/transformations/sort-transformation.md).  
+ Per altre informazioni, vedere [Trasformazione ordinamento](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
 ##  <a name="textract"></a> Proprietà personalizzate della trasformazione Estrazione termini  
  La trasformazione Estrazione termini include proprietà personalizzate e le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -606,14 +611,14 @@ caps.handback.revision: 72
  La trasformazione tramite UnPivot include solo le proprietà comuni a tutti i componenti del flusso di dati a livello di componente.  
   
 > [!NOTE]  
->  Per illustrare l'uso delle opzioni descritte in questa sezione, viene usato lo scenario UnPivot descritto in [Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
+>  Per illustrare l'uso delle opzioni descritte in questa sezione, viene usato lo scenario UnPivot descritto in [Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md) .  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di input della trasformazione tramite UnPivot. Tutte le proprietà sono di lettura/scrittura.  
   
 |Proprietà|Tipo di dati|Description|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Valore intero|**LineageID** della colonna di output a cui viene eseguito il mapping della colonna di input. Il valore -1 indica che il mapping tra la colonna di input e una colonna di output non viene eseguito.|  
-|PivotKeyValue|String|Valore copiato in una colonna di output della trasformazione.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nello scenario UnPivot descritto in [Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md) i valori pivot sono i valori di testo Ham, Coke, Milk, Beer e Chips. Tali valori verranno visualizzati come valori di testo nella nuova colonna Product definita dall'opzione **Nome colonna valore chiave pivot**.|  
+|PivotKeyValue|String|Valore copiato in una colonna di output della trasformazione.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nello scenario UnPivot descritto in [Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)i valori pivot sono i valori di testo Ham, Coke, Milk, Beer e Chips. Tali valori verranno visualizzati come valori di testo nella nuova colonna Product definita dall'opzione **Nome colonna valore chiave pivot** .|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione tramite UnPivot. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -625,10 +630,10 @@ caps.handback.revision: 72
   
  Per altre informazioni, vedere [Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Proprietà comuni](../Topic/Common%20Properties.md)   
- [Proprietà del percorso](../Topic/Path%20Properties.md)   
- [Proprietà del flusso di dati che è possibile impostare tramite espressioni](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md)  
+ [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [Proprietà del percorso](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Proprietà del flusso di dati che è possibile impostare tramite espressioni](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

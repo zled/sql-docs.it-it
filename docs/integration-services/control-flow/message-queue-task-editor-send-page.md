@@ -1,31 +1,36 @@
 ---
-title: "Editor attivit&#224; Message Queue (pagina Invio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.send.f1"
-helpviewer_keywords: 
-  - "Editor attività Message Queue"
+title: "Editor attività Message Queue (pagina invio) | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.send.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0914b6ab2222fa91d7db229970b081d4a43314d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor attivit&#224; Message Queue (pagina Invio)
+# <a name="message-queue-task-editor-send-page"></a>Editor attività Message Queue (pagina Invio)
   Utilizzare la pagina **Invio** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue per l'invio di messaggi da un pacchetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Per ulteriori informazioni su questa attività, vedere [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **UseEncryption**  
  Consente di indicare se crittografare il messaggio. Il valore predefinito è **False**.  
   
@@ -47,26 +52,26 @@ caps.handback.revision: 37
 |**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
 |**Messaggio stringa**|Il messaggio viene archiviato nell'attività Message Queue. La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
   
-## Opzioni dinamiche di MessageType  
+## <a name="messagetype-dynamic-options"></a>Opzioni dinamiche di MessageType  
   
-### MessageType = Messaggio file di dati  
+### <a name="messagetype--data-file-message"></a>MessageType = Messaggio file di dati  
  **DataFileMessage**  
- Consente di digitare il percorso del file di dati o di trovare il file usando il pulsante **(…)**.  
+ Consente di digitare il percorso del file di dati o di trovare il file usando il pulsante **(…)** .  
   
-### MessageType = Messaggio variabili  
+### <a name="messagetype--variable-message"></a>MessageType = Messaggio variabili  
  **VariableMessage**  
- Consente di digitare i nomi delle variabili o di selezionare le variabili usando il pulsante **(…)**. Le variabili sono separate da virgole.  
+ Consente di digitare i nomi delle variabili o di selezionare le variabili usando il pulsante **(…)** . Le variabili sono separate da virgole.  
   
  **Argomenti correlati:** Seleziona variabili  
   
-### MessageType = Messaggio stringa  
+### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
  **StringMessage**  
- Consente di digitare il messaggio stringa direttamente o nella finestra di dialogo **Immettere il messaggio stringa** visualizzata facendo clic sul pulsante **(…)**.  
+ Consente di digitare il messaggio stringa direttamente o nella finestra di dialogo **Immettere il messaggio stringa** visualizzata facendo clic sul pulsante **(…)** .  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Message Queue &#40;pagina Generale&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [Editor attività Message Queue &#40;pagina Ricezione&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Message Queue &#40; Pagina generale &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [Editor attività Message Queue &#40; Ricezione pagina &#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
  [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
   

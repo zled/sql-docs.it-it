@@ -1,28 +1,33 @@
 ---
-title: "Condizioni della regola business (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Condizioni della regola business (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47b8ae7924ae590156479209b2ae0ba639d07ec
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Condizioni della regola business (Master Data Services)
+# <a name="business-rule-conditions-master-data-services"></a>Condizioni della regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le condizioni della regola business determinano le condizioni che devono essere true per una o più azioni da eseguire.  
   
 > [!NOTE]  
 >  Le condizioni sono facoltative. Se non si specifica una condizione, le azioni vengono eseguite ogni volta che i dati vengono convalidati rispetto alle regole business.  
   
-## Condizioni della regola business  
+## <a name="business-rule-conditions"></a>Condizioni della regola business  
   
 |Nome condizione|Description|  
 |--------------------|-----------------|  
@@ -50,9 +55,9 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  Quando in una regola business è inclusa una condizione che consente di confrontare due valori e la regola viene applicata a un membro per il quale entrambi i valori sono NULL, la convalida eseguita dal membro in questione non verrà completata.  
   
-## Vedere anche  
- [Azioni Regola business &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Azioni regola business &#40; Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)   
+ [Le regole di business &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Creare e pubblicare una regola Business &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

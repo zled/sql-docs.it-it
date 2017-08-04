@@ -1,29 +1,34 @@
 ---
-title: "? : (condizionale) (espressione SSIS) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "operatore condizionale (?:)"
-  - "?: (operatore condizionale)"
+title: '? : (Condizionale) (espressione SSIS) | Documenti Microsoft'
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? : (condizionale) (espressione SSIS)
+# <a name="--conditional-ssis-expression"></a>? : (condizionale) (espressione SSIS)
   Viene restituita una di due espressioni in base alla valutazione di un'espressione booleana. Se l'espressione booleana restituisce TRUE, verrà valutata la prima espressione e il risultato sarà il risultato di tale espressione. Se l'espressione booleana restituisce FALSE, verrà valutata la seconda espressione e il risultato sarà il risultato di tale espressione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *boolean_expression*  
  Qualsiasi espressione valida che restituisce TRUE, FALSE o NULL.  
   
@@ -41,10 +46,10 @@ boolean_expression?expression1:expression2
  *expression2*  
  Qualsiasi espressione valida.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  Il tipo di dati *expression1* o *expression2*.  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se *boolean_expression* restituisce NULL, il risultato dell'espressione sarà NULL. Se un'espressione selezionata, *expression1* o *expression2* è NULL, il risultato sarà NULL. Se l'espressione selezionata non è NULL, ma quella non selezionata è NULL, il risultato sarà il valore dell'espressione selezionata.  
   
  Se *expression1* e *expression2* hanno lo stesso tipo di dati, anche il risultato sarà di tale tipo. Ai tipi di risultato si applicano le seguenti ulteriori regole:  
@@ -84,21 +89,21 @@ boolean_expression?expression1:expression2
   
  Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene illustrata un'espressione tramite cui viene restituito `savannah` o `unknown`, a seconda del valore restituito dalla condizione.  
   
 ```  
 @AnimalName == "Elephant"? "savannah": "unknown"  
 ```  
   
- In questo esempio viene illustrata un'espressione che fa riferimento a una colonna di nome **ListPrice**. **ListPrice** ha tipo di dati DT_CY. Tramite l'espressione **ListPrice** viene moltiplicato per 0,2 o 0,1, a seconda del valore restituito dalla condizione.  
+ In questo esempio viene illustrata un'espressione che fa riferimento a una colonna di nome **ListPrice** . **ListPrice** ha tipo di dati DT_CY. Tramite l'espressione **ListPrice** viene moltiplicato per 0,2 o 0,1, a seconda del valore restituito dalla condizione.  
   
 ```  
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## Vedere anche  
- [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Associatività e precedenza operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatori &#40; Espressione SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

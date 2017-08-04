@@ -1,45 +1,50 @@
 ---
-title: "Attivit&#224; Trasferisci database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.f1"
-helpviewer_keywords: 
-  - "Trasferisci database - attività [Integration Services]"
+title: "Attività Trasferisci Database | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.f1
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 86e2b602632d1492d3889981af041c5ee38cfb6b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Trasferisci database
+# <a name="transfer-database-task"></a>Attività Trasferisci database
   L'attività Trasferisci database trasferisce un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A differenza di altre attività che trasferiscono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo eseguendone una copia, l'attività Trasferisci database può copiare o spostare un database. Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.  
   
-## Modalità offline e online  
+## <a name="offline-and-online-modes"></a>Modalità offline e online  
  Il database può essere trasferito in modalità online o offline. Nella modalità online il database rimane collegato e viene trasferito tramite SQL Management Object (SMO) per la copia degli oggetti di database. Nella modalità offline il database viene scollegato, i corrispondenti file vengono copiati o spostati e il database viene quindi collegato alla destinazione dopo essere stato trasferito correttamente. Se il database viene copiato, viene ricollegato automaticamente all'origine, quando la copia ha esito positivo. Nella modalità offline la copia del database viene eseguita più rapidamente, ma durante il trasferimento il database non è disponibile agli utenti.  
   
  Quando si utilizza la modalità offline, è necessario specificare le condivisioni file di rete del server di origine e di destinazione in cui si trovano i file di database. Se la cartella è condivisa e accessibile dall'utente, è possibile fare riferimento alla condivisione di rete in base alla sintassi \\\nomecomputer\Programmi\cartellapersonale\\. In caso contrario, è necessario adottare la sintassi \\\nomecomputer\c$\Programmi\cartellapersonale\\. Per poter utilizzare questa seconda sintassi, l'utente deve disporre dell'accesso in scrittura alle condivisioni di rete nell'origine e nella destinazione.  
   
-## Trasferimento di database tra versioni di SQL Server  
- L'attività Trasferisci database consente di trasferire un database tra istanze di versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Trasferimento di database tra versioni di SQL Server  
+ L'attività Trasferisci database consente di trasferire un database tra istanze di versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Eventi  
+## <a name="events"></a>Eventi  
  L'attività Trasferisci database non visualizza lo stato incrementale del trasferimento di messaggi di errore, ma solo il completamento 0% e 100%.  
   
-## Valore di esecuzione  
+## <a name="execution-value"></a>Valore di esecuzione  
  Il valore di esecuzione, definito nella proprietà **ExecutionValue** dell'attività, restituisce il valore 1, in quanto a differenza di altre attività di trasferimento, l'attività Trasferisci database può trasferire un solo database.  
   
- Tramite l'assegnazione di una variabile definita dall'utente alla proprietà **ExecValueVariable** dell'attività, le informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../Topic/Use%20Variables%20in%20Packages.md).  
+ Tramite l'assegnazione di una variabile definita dall'utente alla proprietà **ExecValueVariable** dell'attività, le informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## Voci di log  
+## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci database include le voci di log personalizzate seguenti:  
   
 -   SourceSQLServer    Indica il nome del server di origine.  
@@ -50,12 +55,12 @@ caps.handback.revision: 26
   
  Viene scritta inoltre una voce di log per l'evento **OnInformation** quando il database di destinazione viene sovrascritto.  
   
-## Sicurezza e autorizzazioni  
+## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  Per poter trasferire un database in modalità offline, l'utente che esegue il pacchetto deve essere membro del ruolo del server _sysadmin.  
   
  Per poter trasferire un database in modalità online, l'utente che esegue il pacchetto deve essere membro del ruolo del server sysadmin o il proprietario (dbo) del database selezionato.  
   
-## Configurazione dell'attività Trasferisci database  
+## <a name="configuration-of-the-transfer-database-task"></a>Configurazione dell'attività Trasferisci database  
  È possibile specificare se, in caso di trasferimento non riuscito, deve essere eseguito un altro tentativo di collegamento del database di origine.  
   
  È inoltre possibile configurare l'attività Trasferisci database in modo da consentire la sovrascrittura di un database di destinazione avente lo stesso nome.  
@@ -78,9 +83,9 @@ caps.handback.revision: 26
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configurazione a livello di codice dell'attività Trasferisci database  
+## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configurazione a livello di codice dell'attività Trasferisci database  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  

@@ -1,26 +1,31 @@
 ---
-title: "Generare automaticamente valori per l&#39;attributo Code (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generare automaticamente valori di attributo Code (Master Data Services) | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 469c1d37c52791d463986814ee1566fbc4cdaee4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Generare automaticamente valori per l&#39;attributo Code (Master Data Services)
+# <a name="automatically-generate-code-attribute-values-master-data-services"></a>Generare automaticamente valori per l'attributo Code (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono automaticamente generati valori per l'attributo Code di un'entità quando si desidera che un valore intero venga assegnato automaticamente al valore Code ogni volta che viene creato un nuovo membro.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
 -   Deve essere presente l'entità. Per altre informazioni, vedere [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-### Per generare automaticamente valori Code  
+### <a name="to-automatically-generate-code-values"></a>Per generare automaticamente valori Code  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
@@ -43,8 +48,8 @@ caps.handback.revision: 5
   
 6.  Fare clic su **Salva**.  
   
-## Vedere anche  
- [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Generare automaticamente valori di attributi diversi da Code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Creazione di codice automatica &#40; Master Data Services &#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [Generare automaticamente valori per attributi diversi da Code &#40; Master Data Services &#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   

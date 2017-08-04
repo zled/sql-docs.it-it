@@ -1,29 +1,34 @@
 ---
-title: "+ (concatenazione) (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "concatenazione [Integration Services]"
-  - "+ (operatore di concatenazione)"
-  - "concatenazione - operatore (+)"
+title: + (Concatenazione) (Espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- concatenation [Integration Services]
+- + (concatenate operator)
+- concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ba1fcd0a00289d7c2f97fa344be196885c7e7451
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# + (concatenazione) (espressione SSIS)
+# <a name="-concatenate-ssis-expression"></a>+ (concatenazione) (espressione SSIS)
   Vengono concatenate due espressioni in modo da formare un'unica espressione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -31,14 +36,14 @@ character_expression1 + character_expression2
   
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *expression1, expression2*  
  Qualsiasi espressione valida con tipo di dati DT_STR, DT_WSTR, DT_TEXT, DT_NTEXT o DT_IMAGE.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Nell'espressione è possibile utilizzare sia il tipo di dati DT_STR che il tipo di dati DT_WSTR.  
   
  La concatenazione dei tipi di dati DT_STR e DT_WSTR restituisce un risultato di tipo DT_WSTR. La lunghezza della stringa risultante è data dalla somma della lunghezza in caratteri delle due stringhe di origine.  
@@ -53,21 +58,21 @@ character_expression1 + character_expression2
   
  I valori letterali stringa devono essere racchiusi tra virgolette.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio vengono concatenati i valori delle colonne **FirstName** e **LastName** , separandoli con uno spazio.  
   
 ```  
 FirstName + ' ' + LastName  
 ```  
   
- In questo esempio vengono concatenate le variabili **ZIPCode** e **ZIPCode+4**, che hanno entrambe un tipo di dati string. Poiché il nome della variabile **ZIPCode+4** include il carattere +, deve essere racchiuso tra parentesi quadre.  
+ In questo esempio vengono concatenate le variabili **ZIPCode** e **ZIPCode+4**, che hanno entrambe un tipo di dati string. Poiché il nome della variabile**ZIPCode+4** include il carattere +, deve essere racchiuso tra parentesi quadre.  
   
 ```  
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## Vedere anche  
- [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Associatività e precedenza operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatori &#40; Espressione SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

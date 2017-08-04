@@ -1,36 +1,41 @@
 ---
-title: "Annotare una transazione (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "annotazioni [Master Data Services], per transazioni"
+title: Annotare una transazione (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 279808cca74dbbc7c5ca9aa09c4996660fe949dc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Annotare una transazione (Master Data Services)
+# <a name="annotate-a-transaction-master-data-services"></a>Annotare una transazione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] annotare una transazione quando si desidera fornire dettagli di supporto sulla transazione per scopi cronologici.  
   
 > [!NOTE]  
 >  Non è possibile eliminare le annotazioni.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   Per annotare le transazioni create, è necessario disporre dell'autorizzazione per accedere all'area funzionale **Visualizzatore** e almeno dell'autorizzazione **Update** per l'oggetto modello che si vuole annotare.  
   
 -   Per annotare le transazioni per tutti gli utenti, è necessario disporre dell'autorizzazione per l'accesso all'area funzionale **Gestione versioni** ed essere un amministratore di modelli. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Per annotare una transazione in Esplora  
+### <a name="to-annotate-a-transaction-in-explorer"></a>Per annotare una transazione in Esplora  
   
 1.  Nella home page di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] selezionare un modello nell'elenco **Modello** .  
   
@@ -48,11 +53,11 @@ caps.handback.revision: 6
   
 8.  Nella casella in corrispondenza della parte inferiore della finestra di dialogo digitare l'annotazione.  
   
-9. Fare clic su **Aggiungi annotazione**. L'annotazione verrà visualizzata nel riquadro **Annotazioni**.  
+9. Fare clic su **Aggiungi annotazione**. L'annotazione verrà visualizzata nel riquadro **Annotazioni** .  
   
-### Per annotare una transazione in Gestione versioni (solo amministratori)  
+### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>Per annotare una transazione in Gestione versioni (solo amministratori)  
   
-1.  Scegliere **Gestione versioni** dalla pagina iniziale di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+1.  Scegliere [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Gestione versioni **dalla pagina iniziale di**.  
   
 2.  Sulla barra dei menu fare clic su **Transazioni**.  
   
@@ -62,8 +67,8 @@ caps.handback.revision: 6
   
 5.  Scegliere **OK**.  
   
-## Vedere anche  
- [Annotazioni &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Annotazioni &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)   
  [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

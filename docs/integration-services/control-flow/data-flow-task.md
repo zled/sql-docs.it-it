@@ -1,58 +1,63 @@
 ---
-title: "Attivit&#224; Flusso di dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "attività del flusso di dati [Integration Services]"
-  - "prestazioni [Integration Services]"
-  - "flusso di dati [Integration Services], prestazioni"
-  - "flusso di dati [Integration Services], attività Flusso di dati"
-  - "Integration Services, prestazioni"
+title: "Attività flusso di dati | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Flusso di dati
+# <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
   
  Un flusso di dati è costituito da almeno un componente dei flussi di dati, ma è in genere formato da un set di componenti dei flussi di dati opportunamente connessi: origini che estraggono i dati, trasformazioni che modificano, inviano o riepilogano i dati e destinazioni che caricano i dati.  
   
  In fase di esecuzione l'attività Flusso di dati compila un piano di esecuzione, basato sul flusso di dati, che viene eseguito dal motore flusso di dati. È possibile creare un'attività Flusso di dati priva di flusso di dati, ma l'attività verrà eseguita solo se include almeno un flusso di dati.  
   
- Per l'inserimento bulk dei dati di file di testo in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile utilizzare l'attività Inserimento bulk anziché un'attività Flusso di dati e un flusso di dati. L'attività Inserimento bulk non consente tuttavia la trasformazione dei dati. Per altre informazioni, vedere [Attività Inserimento bulk](../../integration-services/control-flow/bulk-insert-task.md).  
+ Per l'inserimento bulk dei dati di file di testo in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile utilizzare l'attività Inserimento bulk anziché un'attività Flusso di dati e un flusso di dati. L'attività Inserimento bulk non consente tuttavia la trasformazione dei dati. Per altre informazioni, vedere [Attività Inserimento bulk](../../integration-services/control-flow/bulk-insert-task.md).  
   
-## Più flussi  
+## <a name="multiple-flows"></a>Più flussi  
  Un'attività Flusso di dati può includere più flussi di dati. Se un'attività copia più set di dati e l'ordine in cui i dati vengono copiati non è significativo, è consigliabile includere più flussi di dati in un'unica attività Flusso di dati. È ad esempio possibile creare cinque flussi di dati, ognuno dei quali copia dati da un file flat a una tabella delle dimensioni diversa in uno schema star di data warehouse.  
   
  Se un'attività flusso di dati contiene più flussi di dati, l'ordine di esecuzione verrà automaticamente determinato dal motore flusso di dati. Se l'ordine di esecuzione è rilevante, sarà pertanto necessario includere nel pacchetto più attività Flusso di dati, ognuna contenente un solo flusso di dati. Sarà quindi possibile applicare vincoli di precedenza per controllare l'ordine di esecuzione delle attività.  
   
  Nella figura seguente viene illustrata un'attività Flusso di dati che include più flussi di dati.  
   
- ![Flussi di dati](../../integration-services/control-flow/media/mw-dts-09.gif "Flussi di dati")  
+ ![I flussi di dati](../../integration-services/control-flow/media/mw-dts-09.gif "flussi di dati")  
   
-## Voci di log  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../integration-services/performance/custom-messages-for-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
+## <a name="log-entries"></a>Voci di log  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
   
 |Voce di log|Description|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica che l'attività Flusso di dati ha modificato le dimensioni del buffer. In questa voce di log vengono indicati i motivi della modifica delle dimensioni del buffer e le nuove dimensioni temporanee del buffer.|  
-|**OnPipelinePostEndOfRowset**|Indica che a un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo **ProcessInput**. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
-|**OnPipelinePostPrimeOutput**|Indica che il componente ha completato l'ultima chiamata al metodo **PrimeOutput**. A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, questa voce di log indica che tale componente ha terminato l'elaborazione delle righe.|  
-|**OnPipelinePreEndOfRowset**|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo **ProcessInput**. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
-|**OnPipelinePrePrimeOutput**|Indica che il componente sta per ricevere una chiamata dal metodo **PrimeOutput**. A seconda del flusso di dati, è possibile che vengano scritte più voci di log.|  
-|**OnPipelineRowsSent**|Specifica il numero delle righe inviate all'input di un componente da una chiamata al metodo **ProcessInput**. La voce di log include il nome del componente.|  
+|**OnPipelinePostEndOfRowset**|Indica che a un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo **ProcessInput** . Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|**OnPipelinePostPrimeOutput**|Indica che il componente ha completato l'ultima chiamata al metodo **PrimeOutput** . A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, questa voce di log indica che tale componente ha terminato l'elaborazione delle righe.|  
+|**OnPipelinePreEndOfRowset**|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo **ProcessInput** . Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|**OnPipelinePrePrimeOutput**|Indica che il componente sta per ricevere una chiamata dal metodo **PrimeOutput** . A seconda del flusso di dati, è possibile che vengano scritte più voci di log.|  
+|**OnPipelineRowsSent**|Specifica il numero delle righe inviate all'input di un componente da una chiamata al metodo **ProcessInput** . La voce di log include il nome del componente.|  
 |**PipelineBufferLeak**|Fornisce informazioni su tutti i componenti che hanno mantenuto attivi i buffer dopo la chiusura di Gestione buffer. Se vi è ancora un buffer attivo, le risorse dei buffer non sono state rilasciate e potrebbero verificarsi perdite di memoria. Nella voce di log vengono indicati il nome del componente e l'ID del buffer.|  
 |**PipelineComponentTime**|Indica la quantità di tempo (in millisecondi) utilizzata dal componente per ciascuno dei cinque passaggi principali dell'elaborazione, ovvero Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
 |**PipelineExecutionPlan**|Specifica il piano di esecuzione del flusso di dati. Il piano di esecuzione offre informazioni sulle modalità di invio dei buffer ai componenti. Insieme alla voce di log PipelineExecutionTrees, queste informazioni illustrano ciò che avviene nell'attività Flusso di dati.|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [Funzionalità delle prestazioni del flusso di dati](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### Messaggi di esempio di un'attività Flusso di dati  
+### <a name="sample-messages-from-a-data-flow-task"></a>Messaggi di esempio di un'attività Flusso di dati  
  Nella tabella seguente vengono elencati messaggi di esempio per le voci di log relative a un pacchetto molto semplice. Il pacchetto utilizza un'origine OLE DB per estrarre dati da una tabella, una trasformazione Ordinamento per ordinare i dati e una destinazione OLE DB per scrivere i dati in una tabella diversa.  
   
 |Voce di log|Messaggi|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|Valore della proprietà **Name** dell'input della trasformazione Ordinamento.|Input ordinamento|  
 |**RowsSent**|Numero di righe inviate all'input della trasformazione Ordinamento.|76|  
   
-## Configurazione dell'attività Flusso di dati  
- È possibile impostare le proprietà a livello di codice o nella finestra **Proprietà**.  
+## <a name="configuration-of-the-data-flow-task"></a>Configurazione dell'attività Flusso di dati  
+ È possibile impostare le proprietà a livello di codice o nella finestra **Proprietà** .  
   
- Per altre informazioni sull'impostazione di queste proprietà nella finestra **Proprietà**, fare clic sull'argomento seguente:  
+ Per altre informazioni sull'impostazione di queste proprietà nella finestra **Proprietà** , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configurazione a livello di codice dell'attività Flusso di dati  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configurazione a livello di codice dell'attività Flusso di dati  
  Per ulteriori informazioni sull'aggiunta di un'attività Flusso di dati a un pacchetto a livello di codice e sulle impostazioni delle proprietà del flusso di dati, fare clic sull'argomento seguente:  
   
 -   [Aggiunta dell'attività Flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Attività correlate  
+ [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Contenuto correlato  
- Video relativo al [server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409) sul sito technet.microsoft.com.  
+## <a name="related-content"></a>Contenuto correlato  
+ Video relativo al [server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   
   
