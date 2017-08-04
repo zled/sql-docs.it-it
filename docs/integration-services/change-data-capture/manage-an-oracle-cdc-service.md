@@ -1,24 +1,29 @@
 ---
-title: "Gestire un servizio Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: Gestire un servizio Oracle CDC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gestire un servizio Oracle CDC
+# <a name="manage-an-oracle-cdc-service"></a>Gestire un servizio Oracle CDC
   È possibile utilizzare CDC Service Configuration Console per gestire un servizio CDC specifico.  
   
  **Per selezionare il servizio CDC che si desidera utilizzare**  
@@ -37,13 +42,13 @@ caps.handback.revision: 8
   
      È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da utilizzare e selezionare l'azione desiderata. Vedere [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> Attività che è possibile eseguire con un servizio CDC  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  Quando si utilizza un servizio CDC è possibile eseguire le azioni seguenti:  
   
-### Eliminare il servizio  
+### <a name="delete-the-service"></a>Eliminare il servizio  
  Dal riquadro **Actions** sul lato destro di CDC Service Configuration Console, fare clic su **Delete** per eliminare il servizio.  
   
- È anche possibile fare clic con il pulsante destro del mouse sul servizio CDC da eliminare e scegliere **Elimina**.  
+ È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da eliminare e scegliere **Delete**.  
   
  **Nota**: se il servizio è in esecuzione al momento dell'eliminazione, il servizio viene arrestato prima di essere eliminato.  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  Per informazioni sui dati da immettere nella finestra di dialogo Connect to SQL Server, vedere [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md).  
   
-### Modificare le proprietà del servizio CDC  
+### <a name="edit-the-cdc-service-properties"></a>Modificare le proprietà del servizio CDC  
  Dal riquadro **Actions** sul lato destro di CDC Service Configuration Console, fare clic su **Properties**.  
   
- È anche possibile fare clic con il pulsante destro del mouse sul servizio CDC in cui si desidera modificare le proprietà e scegliere **Proprietà**.  
+ È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC in cui si desidera modificare le proprietà e scegliere **Properties**.  
   
-## Vedere anche  
- [Procedura di gestione di un servizio CDC locale](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Come gestire un servizio CDC locale](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

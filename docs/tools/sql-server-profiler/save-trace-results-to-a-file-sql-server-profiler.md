@@ -1,30 +1,35 @@
 ---
-title: "Salvare i risultati della traccia in un file (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "salvataggio di tracce"
-  - "tracce [SQL Server], salvataggio"
+title: Salvare i risultati della traccia in un File (SQL Server Profiler) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- saving traces
+- traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d246e703f40e1e617118c35a655c0b999e4ff1d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Salvare i risultati della traccia in un file (SQL Server Profiler)
+# <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Salvare i risultati della traccia in un file (SQL Server Profiler)
   Nel presente argomento viene illustrata la procedura di salvataggio dei risultati della traccia in un file utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Per salvare i risultati della traccia in un file  
+### <a name="to-save-trace-results-to-a-file"></a>Per salvare i risultati della traccia in un file  
   
-1.  Scegliere **Nuova traccia** dal menu **File** e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Scegliere **Nuova traccia** dal menu **File**e quindi connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Verrà visualizzata la finestra di dialogo **Proprietà traccia**.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 23
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
-3.  Selezionare la casella di controllo **Salva nel file**.  
+3.  Selezionare la casella di controllo **Salva nel file** .  
   
      Verrà visualizzata la finestra di dialogo **Salva con nome**.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  Assicurarsi che il servizio SQL Server disponga delle autorizzazioni necessarie per la scrittura su un file nella directory specificata.  
   
-5.  Nella finestra di dialogo **Proprietà traccia** digitare le dimensioni massime del file nella casella di testo **Dimensioni massime del file (MB)**. Il valore predefinito è 5 megabyte (MB).  
+5.  Nella finestra di dialogo **Proprietà traccia** digitare le dimensioni massime del file nella casella di testo **Dimensioni massime del file (MB)** . Il valore predefinito è 5 megabyte (MB).  
   
 6.  Facoltativamente, specificare le opzioni seguenti:  
   
@@ -51,9 +56,9 @@ caps.handback.revision: 23
     -   Selezionare la casella di controllo **Dati di traccia elaborati dal server** per assicurare che il server registri ogni evento di traccia.  
   
         > [!NOTE]  
-        >  Quando la casella di controllo **Dati di traccia elaborati dal server** deselezionata, il server non registra gli eventi se tale registrazione determina una significativa riduzione delle prestazioni.  
+        >  Quando la casella di controllo **Dati di traccia elaborati dal server**deselezionata, il server non registra gli eventi se tale registrazione determina una significativa riduzione delle prestazioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

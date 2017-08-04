@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; - Server di report (scheda Servizio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà Server (scheda servizio) report | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37d55395dbd3692c4853f5620360a65bf987b69c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; - Server di report (scheda Servizio)
+# <a name="report-server-properties-service-tab"></a>Proprietà - Server di report (scheda Servizio)
   Si tratta del servizio del server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Percorso binario**  
  Visualizza il percorso dei file di programma utilizzati dal servizio.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 22
  Visualizza l'ID di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Tipo di servizio SQL Server**  
- Tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ Tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
@@ -53,7 +58,7 @@ caps.handback.revision: 22
  **State**  
  Indica se il servizio è in esecuzione, arrestato o disabilitato.  
   
-## Vedere anche  
- [Servizi di SQL Server](../../tools/configuration-manager/sql-server-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Servizi SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   

@@ -1,54 +1,59 @@
 ---
-title: "Riordinare le colonne (componente aggiuntivo MDS per Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Riordinare le colonne (componente aggiuntivo MDS per Excel) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b13f3c630f9f00910bf4b6e99d4d29fde3ab04fd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Riordinare le colonne (componente aggiuntivo MDS per Excel)
-  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], è possibile riordinare le colonne filtrando l'elenco prima del caricamento.  
+# <a name="reorder-columns-mds-add-in-for-excel"></a>Riordinare le colonne (componente aggiuntivo MDS per Excel)
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è possibile riordinare le colonne filtrando l'elenco prima del caricamento.  
   
- Quando si riordinano gli attributi di **filtro** la finestra di dialogo, i dati verrà caricata in Excel con il nuovo ordine. Tuttavia, quando si filtrano i dati dell'attributo la volta successiva, verrà ripristinato l'ordine della progettazione originale. Per modificare l'ordine in modo permanente, un amministratore deve modificare l'ordine nel **Amministrazione sistema** area di gestione dati Master. Per ulteriori informazioni, vedere [modificare l'ordine degli attributi](../../master-data-services/change-the-order-of-attributes.md).  
+ Quando si riordinano gli attributi nella finestra di dialogo **Filtro** , i dati vengono caricati in Excel con il nuovo ordine. Tuttavia, quando si filtrano i dati dell'attributo la volta successiva, verrà ripristinato l'ordine della progettazione originale. Per modificare l'ordine in modo permanente, è consigliabile che un amministratore modifichi l'ordine nell'area **Amministrazione sistema** di Gestione dati master. Per altre informazioni, vedere [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md).  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
-### Per riordinare le colonne gestite da MDS  
+### <a name="to-reorder-mds-managed-columns"></a>Per riordinare le colonne gestite da MDS  
   
-1.  Aprire Excel e il **dati Master** scheda, connettersi a un repository MDS. Per ulteriori informazioni, vedere [connettersi a un Repository MDS & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md).  
+1.  Aprire Excel e nella scheda **Dati master** connettersi a un repository MDS. Per altre informazioni, vedere [Connettersi a un repository MDS &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md).  
   
-2.  Nel **Esplora dati Master** riquadro, selezionare un modello e versione. L'elenco di entità viene popolato.  
+2.  Nel riquadro **Esplora dati master** selezionare un modello e una versione. L'elenco di entità viene popolato.  
   
-    -   Se il **Esplora dati Master** riquadro non è visibile, il **Connetti e carica** gruppo, fare clic su **Mostra Esplora**.  
+    -   Se il riquadro **Esplora dati master** non è visibile, nel gruppo **Connetti e carica** fare clic su **Esplora dati master**.  
   
-    -   Se il **Esplora dati Master** riquadro è disabilitato, perché il foglio esistente contiene già dati gestiti da MDS. Per abilitare il riquadro, aprire un nuovo foglio di lavoro.  
+    -   Se il riquadro **Esplora dati master** è disabilitato, significa che il foglio esistente contiene già i dati gestiti da MDS. Per abilitare il riquadro, aprire un nuovo foglio di lavoro.  
   
-3.  Nel **Esplora dati Master** riquadro, fare clic su un'entità.  
+3.  Nel riquadro **Esplora dati master** , fare clic su un'entità.  
   
-4.  Nel **Connetti e carica** gruppo, fare clic su **filtro**.  
+4.  Nel gruppo **Connetti e carica** fare clic su **Filtro**.  
   
-5.  Nel **filtro** della finestra di dialogo di **colonne** sezione nell'elenco di attributi, fare clic sull'attributo che si desidera spostare.  
+5.  Nella finestra di dialogo **Filtro** , nella sezione **Colonne** , nell'elenco di attributi fare clic sull'attributo che si desidera spostare.  
   
-6.  A destra dell'elenco, fare clic su di **di** o **verso il basso** sulla freccia per spostare l'attributo a sinistra e a destra nel foglio di lavoro.  
+6.  A destra dell'elenco, fare clic sulla freccia **SU** o **GIÙ** per spostare l'attributo a sinistra o a destra nel foglio di lavoro.  
   
 7.  Ripetere il passaggio 7 per ogni attributo fino a che l'ordine dall'alto in basso rappresenta l'ordine da sinistra a destra che si desidera nel foglio di lavoro.  
   
-8.  Fare clic su **caricare i dati**. Il foglio viene popolato con dati gestiti da MDS e le colonne vengono visualizzate nell'ordine specificato.  
+8.  Fare clic su **Carica dati**. Il foglio viene popolato con dati gestiti da MDS e le colonne vengono visualizzate nell'ordine specificato.  
   
-## Vedere anche  
- [Panoramica: Esportazione dei dati in Excel & #40; Il componente aggiuntivo MDS per Excel & #41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica: Esportazione dei dati in Excel &#40;componente aggiuntivo MDS per Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

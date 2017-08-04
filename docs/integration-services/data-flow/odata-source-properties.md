@@ -1,23 +1,28 @@
 ---
-title: "Propriet&#224; dell&#39;origine OData | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà dell'origine OData | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4f3283de9e26ce05849a34c8906a3095c229680
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propriet&#224; dell&#39;origine OData
-  Quando si fa clic con il pulsante destro del mouse su **Origine OData** nel flusso di dati e si sceglie **Proprietà**, vengono visualizzate le proprietà per il componente **Origine OData** nella finestra **Proprietà**.  
+# <a name="odata-source-properties"></a>Proprietà dell'origine OData
+  Quando si fa clic con il pulsante destro del mouse su **Origine OData** nel flusso di dati e si sceglie **Proprietà**, vengono visualizzate le proprietà per il componente **Origine OData** nella finestra **Proprietà** .  
   
 |||  
 |-|-|  

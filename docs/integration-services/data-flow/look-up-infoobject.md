@@ -1,22 +1,27 @@
 ---
-title: "Cerca InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cercare InfoObject | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cerca InfoObject
+# <a name="look-up-infoobject"></a>Cerca InfoObject
   Utilizzare la finestra di dialogo **Cerca InfoObject** per cercare un InfoObject definito nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco degli InfoObject disponibili, selezionare l'InfoObject desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione SAP BW.  
   
  La destinazione SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW utilizza la finestra di dialogo **Cerca InfoObject** . Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -42,7 +47,7 @@ caps.handback.revision: 10
   
  È inoltre possibile aprire la finestra di dialogo **Cerca InfoObject** facendo clic su **Aggiungi** nella sezione **Attributi** della finestra di dialogo **Crea nuovo InfoObject** .  
   
-## Opzioni di ricerca  
+## <a name="lookup-options"></a>Opzioni di ricerca  
  Nelle caselle di testo dei campi di ricerca è possibile filtrare i risultati tramite il carattere jolly asterisco (*) oppure utilizzando una stringa parziale in combinazione con il carattere jolly asterisco. Tuttavia, se si lascia un campo di ricerca vuoto, il processo di ricerca restituirà solo stringhe vuote in tale campo.  
   
  **Caratteristiche**  
@@ -63,10 +68,10 @@ caps.handback.revision: 10
  **Description**  
  Immettere la descrizione o una descrizione parziale con il carattere jolly asterisco (*). In alternativa, utilizzare il carattere jolly asterisco da solo per includere tutti gli InfoObject indipendentemente dalla descrizione.  
   
- **Ricerca**  
+ **Cerca**  
  Cercare gli InfoObject corrispondenti definiti nel sistema SAP Netweaver BW.  
   
-## Risultati di ricerca  
+## <a name="lookup-results"></a>Risultati di ricerca  
  Dopo avere fatto clic sul pulsante Ricerca, viene visualizzato un elenco di InfoObject nel sistema SAP Netweaver BW in una tabella con le intestazioni di colonna seguenti.  
   
  **InfoObject**  
@@ -77,13 +82,13 @@ caps.handback.revision: 10
   
  Quando viene visualizzato l'elenco degli InfoObject disponibili, selezionare l'InfoObject desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Crea InfoCube per dati transazione](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Crea InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Crea InfoSource per dati transazione](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [Crea InfoSource per dati master](../../integration-services/data-flow/create-infosource-for-master-data.md)   
+ [Crea InfoSource per dati Master](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor destinazione SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

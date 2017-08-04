@@ -1,44 +1,49 @@
 ---
-title: "RIGHT (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RIGHT - funzione"
+title: RIGHT (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT (espressione SSIS)
+# <a name="right-ssis-expression"></a>RIGHT (espressione SSIS)
   Viene restituito il numero specificato di caratteri della parte più a destra dell'espressione di caratteri indicata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *character_expression*  
  Espressione di caratteri da cui estrarre i caratteri.  
   
  *integer_expression*  
  Espressione integer in cui viene indicato il numero di caratteri da restituire.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se *integer_expression* è maggiore della lunghezza di *character_expression*, la funzione restituirà *character_expression*.  
   
  Se *integer_expression* ha valore 0, la funzione restituirà una stringa di lunghezza zero.  
@@ -51,7 +56,7 @@ RIGHT(character_expression,integer_expression)
   
  Se l'argomento è Null, verrà restituito Null da RIGHT.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  Nell'esempio seguente viene utilizzato un valore letterale stringa. Il risultato restituito sarà `"Bike"`.  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## Vedere anche  
- [LEFT &#40;espressione SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [SINISTRA &#40; Espressione SSIS &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

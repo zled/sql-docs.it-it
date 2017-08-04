@@ -1,22 +1,27 @@
 ---
-title: "Preparare SQL Server per lo script di visualizzazione di Oracle CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Preparare SQL Server per Oracle CDC-Visualizza Script | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cc704a115bbdb0ea7407f246f41c123ffdf89b0
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Preparare SQL Server per lo script di visualizzazione di Oracle CDC
+# <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Preparare SQL Server per lo script di visualizzazione di Oracle CDC
   In questa finestra di dialogo viene illustrato lo script di preparazione di SQL mediante il quale viene creato il database MSXDBCDC. Questo database deve trovarsi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per poter essere utilizzato con Oracle CDC per SQL Server.  
   
  Nella finestra di dialogo Prepare SQL Server Script effettuare le operazioni seguenti:  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
  **Copia**  
  Tramite questa opzione è possibile copiare lo script negli Appunti. È quindi possibile incollare lo script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per eseguirli e creare il database MSXDBCDC.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Preparare SQL Server per CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

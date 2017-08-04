@@ -1,31 +1,36 @@
 ---
-title: "Trasformazione Ricerca | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptrans.f1"
-helpviewer_keywords: 
-  - "Trasformazione Ricerca"
-  - "unione di colonne [Integration Services]"
-  - "cache [Integration Services]"
-  - "corrispondenza esatta [Integration Services]"
-  - "ricerche [Integration Services]"
-  - "corrispondenze esatte [Integration Services]"
+title: Trasformazione ricerca | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptrans.f1
+helpviewer_keywords:
+- Lookup transformation
+- joining columns [Integration Services]
+- cache [Integration Services]
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 106
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trasformazione Ricerca
+# <a name="lookup-transformation"></a>Trasformazione Ricerca
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
   
  Il set di dati di riferimento può essere un file di cache, una vista o una tabella esistente, una nuova tabella o il risultato di una query SQL. La trasformazione Ricerca utilizza una gestione connessione OLE DB o una gestione connessione cache per connettersi al set di dati di riferimento. Per altre informazioni, vedere [Gestione connessione OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gestione connessione della cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
@@ -74,14 +79,14 @@ caps.handback.revision: 106
   
 -   Output degli errori.  
   
-## Memorizzazione nella cache del set di dati di riferimento  
+## <a name="caching-the-reference-dataset"></a>Memorizzazione nella cache del set di dati di riferimento  
  Una cache in memoria archivia il set di dati di riferimento e una tabella hash che indicizza i dati. La cache rimane in memoria fino a quando l'esecuzione del pacchetto non viene completata. È possibile salvare in modo permanente la cache in un file di cache (.caw).  
   
  Quando si rende la cache persistente in un file, il sistema carica la cache più velocemente. In questo modo le prestazioni della trasformazione Ricerca e del pacchetto vengono migliorate. È importante ricordare che quando si utilizza un file di cache, i dati utilizzati non sono aggiornati come quelli presenti nel database.  
   
  Di seguito sono elencati i vantaggi aggiuntivi del salvataggio permanente della cache in un file:  
   
--   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere ***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  ***.***  
+-   ***Condividere il file di cache tra più pacchetti. Per altre informazioni, vedere ***  [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Distribuire il file di cache con un pacchetto. ***È quindi possibile usare i dati su più computer.*** Per altre informazioni, vedere [Creazione e distribuzione di una cache per la trasformazione Ricerca](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -112,30 +117,30 @@ caps.handback.revision: 106
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si comportano in modo diverso ai fini del confronto tra le stringhe. Se la trasformazione Ricerca è configurata per caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca, in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] viene eseguito il confronto della ricerca nella cache. In caso contrario, l'operazione di ricerca usa un'istruzione SQL con parametri e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito il confronto della ricerca. Ciò significa che la trasformazione Ricerca potrebbe restituire un diverso numero di corrispondenze dalla stessa tabella di ricerca in base al tipo di cache.  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni dettagliate, vedere gli argomenti seguenti.  
   
 -   [Implementazione di una ricerca in modalità No Cache o Partial Cache](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  
+-   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - ole db connection manager.md)  
+-   [Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
   
--   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](http://go.microsoft.com/fwlink/?LinkId=131031) sul sito Web all'indirizzo msdn.microsoft.com  
+-   Video [Procedura: Implementazione di una trasformazione Ricerca nella modalità Full Cache](http://go.microsoft.com/fwlink/?LinkId=131031)sul sito Web all'indirizzo msdn.microsoft.com  
   
--   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](http://go.microsoft.com/fwlink/?LinkId=146623) sul sito Web all'indirizzo blogs.msdn.com  
+-   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](http://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   
--   Intervento nel blog relativo allo [schema di ricerca che non è sensibile alle maiuscole](http://go.microsoft.com/fwlink/?LinkId=157782) sul sito Web all'indirizzo blogs.msdn.com  
+-   Intervento nel blog relativo allo [schema di ricerca che non è sensibile alle maiuscole](http://go.microsoft.com/fwlink/?LinkId=157782)sul sito Web all'indirizzo blogs.msdn.com  
   
 -   Esempio [trasformazione Ricerca](http://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
   
-     Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vedere [Esempi del prodotto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Trasformazione Ricerca termini](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   

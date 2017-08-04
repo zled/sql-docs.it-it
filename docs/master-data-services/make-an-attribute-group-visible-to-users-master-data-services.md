@@ -1,37 +1,42 @@
 ---
-title: "Rendere visibile un gruppo di attributi per gli utenti (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rendere visibile agli utenti (Master Data Services) un gruppo di attributi | Documenti Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9b4e9b3fb165d2aa8c445daa5d38c7a8d81ed03
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Rendere visibile un gruppo di attributi per gli utenti (Master Data Services)
+# <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendere visibile un gruppo di attributi per gli utenti (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] rendere visibile un gruppo di attributi a utenti o gruppi quando si vuole che gli utenti dispongano di schede sopra alla griglia nell'area funzionale **Visualizzatore**.  
   
  Quando si crea un gruppo di attributi, questo viene automaticamente nascosto a tutti gli utenti ad eccezione di quello che lo creato.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   È necessario che sia presente almeno un gruppo di attributi. Per altre informazioni, vedere [Creare un gruppo di attributi &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   È necessario che sia presente almeno un gruppo di attributi. Per altre informazioni, vedere [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
-### Per rendere visibile un gruppo di attributi agli utenti  
+### <a name="to-make-an-attribute-group-visible-to-users"></a>Per rendere visibile un gruppo di attributi agli utenti  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
@@ -45,12 +50,12 @@ caps.handback.revision: 6
   
 6.  Selezionare il gruppo di attributi che si vuole modificare nella griglia e quindi fare clic su **Modifica**.  
   
-7.  Fare clic su un utente o gruppo nella casella **Disponibile** e quindi sulla freccia **Aggiungi**. Per aggiungere tutto, fare clic sulla freccia **Aggiungi tutto**.  
+7.  Fare clic su un utente o gruppo nella casella **Disponibile** e quindi sulla freccia **Aggiungi** . Per aggiungere tutto, fare clic sulla freccia **Aggiungi tutto** .  
   
 8.  Fare clic su **Salva**.  
   
-## Vedere anche  
- [Gruppi di attributi &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Creare un gruppo di attributi &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Gruppi di attributi &#40; Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Creare un gruppo di attributi &#40; Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

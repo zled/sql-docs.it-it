@@ -1,23 +1,28 @@
 ---
-title: "Origine SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Origine SAP BW | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origine SAP BW
-  L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+# <a name="sap-bw-source"></a>Origine SAP BW
+  L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Questa origine include un output e un output degli errori.  
   
@@ -43,19 +48,19 @@ caps.handback.revision: 10
   
 1.  Accedere al sistema SAP Netweaver BW tramite la GUI SAP, immettere il codice di transazione SM59 e creare una destinazione RFC:  
   
-    1.  In **Tipo di connessione** selezionare **TCP/IP**.  
+    1.  In **Tipo di connessione**selezionare **TCP/IP**.  
   
     2.  In **Tipo di attivazione**selezionare **Programma server registrato**.  
   
-    3.  In **Communication Type with Target System** (Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)** (Non Unicode (Impostazioni MDMP inattive)).  
+    3.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)**(Non Unicode (Impostazioni MDMP inattive)).  
   
     4.  Assegnare un ID programma appropriato.  
   
 2.  Creare una destinazione di hub aperto:  
   
-    1.  Passare alla workbench dell'amministratore (codice di transazione RSA1) e, nel riquadro sinistro, selezionare **Open Hub Destination** (Destinazione hub aperto).  
+    1.  Passare alla workbench dell'amministratore (codice di transazione RSA1) e, nel riquadro sinistro, selezionare **Open Hub Destination**(Destinazione hub aperto).  
   
-    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"** (Crea destinazione di hub aperto).  
+    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"**(Crea destinazione di hub aperto).  
   
     3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"**, quindi immettere la destinazione RFC creata in precedenza.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
   
 3.  Creare un processo di trasferimento dati (DTP):  
   
-    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"** (Crea processo di trasferimento dati).  
+    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"**(Crea processo di trasferimento dati).  
   
     2.  Configurare, salvare e attivare il DTP.  
   
@@ -99,11 +104,11 @@ caps.handback.revision: 10
   
 -   A seconda del metodo selezionato per estrarre dati, fornire le informazioni aggiuntive seguenti:  
   
-    -   Per l'opzione **P - Attivazione catena processi**, fornire il nome host del gateway, il nome del servizio gateway, l'ID programma per la destinazione RFC e il nome della catena di processi.  
+    -   Per l'opzione **P - Attivazione catena processi** , fornire il nome host del gateway, il nome del servizio gateway, l'ID programma per la destinazione RFC e il nome della catena di processi.  
   
-    -   Per l'opzione **W - Attesa notifica**, fornire il nome host del gateway, il nome del server gateway e l'ID programma per la destinazione RFC. È inoltre possibile specificare il timeout (in secondi). Il timeout è il periodo di tempo massimo di attesa della notifica da parte dell'origine.  
+    -   Per l'opzione **W - Attesa notifica** , fornire il nome host del gateway, il nome del server gateway e l'ID programma per la destinazione RFC. È inoltre possibile specificare il timeout (in secondi). Il timeout è il periodo di tempo massimo di attesa della notifica da parte dell'origine.  
   
-    -   Per l'opzione **E - Solo estrazione**, fornire l'ID richiesta.  
+    -   Per l'opzione **E - Solo estrazione** , fornire l'ID richiesta.  
   
 -   Specificare le regole per la conversione di stringhe. Convertire, ad esempio, tutte le stringhe a seconda che il sistema SAP Netweaver BW sia Unicode oppure no; in alternativa, convertire tutte le stringhe in **varchar** or **nvarchar**.  
   
@@ -115,28 +120,28 @@ caps.handback.revision: 10
   
  Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   
-### Utilizzo di Progettazione SSIS per configurare l'origine  
+### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilizzo di Progettazione SSIS per configurare l'origine  
  Per ulteriori informazioni sulle proprietà dell'origine SAP BW che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Editor origine SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor origine SAP BW &#40;pagina Colonne&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Editor origine SAP BW &#40; Pagina colonne &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Editor origine SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Editor origine SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Editor origine SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Editor origine SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  Quando si configura l'origine SAP BW, è inoltre possibile utilizzare varie finestre di dialogo per cercare gli oggetti SAP Netweaver BW o visualizzare in anteprima i dati di origine. Per ulteriori informazioni su queste finestre di dialogo, fare clic su uno degli argomenti seguenti:  
   
 -   [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md)  
   
--   [Cerca ProcessChain](../../integration-services/data-flow/look-up-process-chain.md)  
+-   [Cerca Processchain](../../integration-services/data-flow/look-up-process-chain.md)  
   
--   [Log richieste](../../integration-services/data-flow/request-log.md)  
+-   [Log delle richieste](../../integration-services/data-flow/request-log.md)  
   
 -   [Anteprima](../../integration-services/data-flow/preview.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

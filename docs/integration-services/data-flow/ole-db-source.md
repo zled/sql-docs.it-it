@@ -1,28 +1,33 @@
 ---
-title: "Origine OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbsource.f1"
-helpviewer_keywords: 
-  - "origini [Integration Services], OLE DB"
-  - "origine OLE DB [Integration Services]"
+title: Origine OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbsource.f1
+helpviewer_keywords:
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origine OLE DB
-  L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="ole-db-source"></a>Origine OLE DB
+  L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Se l'origine dati è [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, è richiesta una gestione connessione diversa rispetto alle versioni precedenti di Excel. Per altre informazioni, vedere [Connessione a una cartella di lavoro di Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
@@ -54,43 +59,43 @@ caps.handback.revision: 69
   
  L'origine OLE DB include un output regolare e un output degli errori.  
   
-## Utilizzo di istruzioni SQL con parametri  
+## <a name="using-parameterized-sql-statements"></a>Utilizzo di istruzioni SQL con parametri  
  Per l'estrazione dei dati l'origine OLE DB può utilizzare un'istruzione SQL, che può essere costituita da un'istruzione SELECT o EXEC.  
   
  L'origine OLE DB utilizza una gestione connessione OLE DB per connettersi all'origine dei dati da cui estrae i dati. A seconda del provider utilizzato dalla gestione connessione OLE DB e del sistema di gestione di database relazionali (RDBMS) a cui si connette la gestione connessione, verranno applicate regole diverse per la denominazione e l'elencazione dei parametri. Se i nomi dei parametri vengono restituiti dal sistema RDBMS, sarà possibile utilizzare nomi di parametro per eseguire il mapping dei parametri di un elenco di parametri a quelli inclusi in un'istruzione SQL. In caso contrario, sui parametri viene eseguito il mapping a quelli dell'istruzione SQL in base alla posizione ordinale nell'elenco dei parametri. I tipi di nomi di parametro supportati variano a seconda del provider. Alcuni provider richiedono ad esempio che vengano utilizzati i nomi delle variabili o delle colonne, mentre altri richiedono l'utilizzo di nomi simbolici, quali 0 o Param0. Per informazioni sui nomi di parametro da utilizzare nelle istruzioni SQL, vedere la documentazione specifica del provider.  
   
- Quando si utilizza una gestione connessione OLE DB, non è possibile utilizzare sottoquery con parametri, perché l'origine OLE DB non può derivare le informazioni sui parametri tramite il provider OLE DB. Tuttavia, è possibile usare un'espressione per concatenare i valori dei parametri nella stringa di query e impostare la proprietà SqlCommand dell'origine. In Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], è possibile configurare un'origine OLE DB usando la finestra di dialogo **Editor origine OLE DB**ed eseguire il mapping dei parametri alle variabili nella finestra di dialogo **Imposta parametri query**.  
+ Quando si utilizza una gestione connessione OLE DB, non è possibile utilizzare sottoquery con parametri, perché l'origine OLE DB non può derivare le informazioni sui parametri tramite il provider OLE DB. Tuttavia, è possibile usare un'espressione per concatenare i valori dei parametri nella stringa di query e impostare la proprietà SqlCommand dell'origine. In Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , è possibile configurare un'origine OLE DB usando la finestra di dialogo **Editor origine OLE DB** ed eseguire il mapping dei parametri alle variabili nella finestra di dialogo **Imposta parametri query** .  
   
-### Indicazione dei parametri tramite la posizione ordinale  
- Se non viene restituito alcun nome di parametro, gli indicatori di parametro a cui viene eseguito il mapping dei parametri in fase di esecuzione sono determinati dall'ordine in cui compaiono i parametri nell'elenco **Parametri** della finestra di dialogo **Imposta parametri query**. Viene eseguito il mapping del primo parametro dell'elenco al primo ? nell'istruzione SQL, il secondo al secondo? e così via.  
+### <a name="specifying-parameters-by-using-ordinal-positions"></a>Indicazione dei parametri tramite la posizione ordinale  
+ Se non viene restituito alcun nome di parametro, gli indicatori di parametro a cui viene eseguito il mapping dei parametri in fase di esecuzione sono determinati dall'ordine in cui compaiono i parametri nell'elenco **Parametri** della finestra di dialogo **Imposta parametri query** . Viene eseguito il mapping del primo parametro dell'elenco al primo ? nell'istruzione SQL, il secondo al secondo? e così via.  
   
- L'istruzione SQL seguente seleziona righe dalla tabella **Product[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] del database **. Sul primo parametro nell'elenco **Mapping** viene eseguito il mapping al primo parametro nella colonna**Color**, mentre sul secondo parametro viene eseguito il mapping alla colonna **Size**.  
+ L'istruzione SQL seguente seleziona righe dalla tabella **Product[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] del database** . Sul primo parametro nell'elenco **Mapping** viene eseguito il mapping al primo parametro nella colonna**Color**, mentre sul secondo parametro viene eseguito il mapping alla colonna **Size**.  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
- I nomi di parametro sono ininfluenti. Se ad esempio un determinato parametro ha lo stesso nome della colonna a cui si riferisce, ma non compare nella posizione ordinale corretta nell'elenco **Parameters**, per il mapping dei parametri eseguito in fase di esecuzione verrà comunque usata la posizione ordinale del parametro e non il suo nome.  
+ I nomi di parametro sono ininfluenti. Se ad esempio un determinato parametro ha lo stesso nome della colonna a cui si riferisce, ma non compare nella posizione ordinale corretta nell'elenco **Parameters** , per il mapping dei parametri eseguito in fase di esecuzione verrà comunque usata la posizione ordinale del parametro e non il suo nome.  
   
  Per il comando EXEC, come nomi di parametro è in genere necessario utilizzare i nomi delle variabili che specificano i valori dei parametri nella procedura.  
   
-### Indicazione dei parametri tramite i nomi  
+### <a name="specifying-parameters-by-using-names"></a>Indicazione dei parametri tramite i nomi  
  Se il sistema RDBMS restituisce i nomi effettivi dei parametri, sui parametri utilizzati dalle istruzioni SELECT ed EXEC verrà eseguito il mapping in base al nome. I nomi dei parametri devono essere quelli previsti dalla stored procedure eseguita dall'istruzione SELECT o EXEC.  
   
- L'istruzione SQL seguente esegue la stored procedure **uspGetWhereUsedProductID** disponibile nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
+ L'istruzione SQL seguente esegue la stored procedure **uspGetWhereUsedProductID** disponibile nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] .  
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
  La stored procedure prevede che i valori dei parametri vengano specificati dalle variabili `@StartProductID` e `@CheckDate`. L'ordine in cui i parametri sono visualizzati nell'elenco **Mapping** è irrilevante. L'unico requisito consiste nel fatto che i nomi dei parametri devono coincidere con quelli delle variabili nella stored procedure, incluso il simbolo @.  
   
-### Mapping di parametri a variabili  
- Il mapping dei parametri alle variabili che ne specificano i valori avviene in fase di esecuzione. Sebbene in genere vengano usate variabili definite dall'utente, è possibile usare anche le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se si utilizzano variabili definite dall'utente, verificare che il tipo di dati impostato sia compatibile con quello della colonna a cui fa riferimento il parametro di cui viene eseguito il mapping. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+### <a name="mapping-parameters-to-variables"></a>Mapping di parametri a variabili  
+ Il mapping dei parametri alle variabili che ne specificano i valori avviene in fase di esecuzione. Sebbene in genere vengano usate variabili definite dall'utente, è possibile usare anche le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se si utilizzano variabili definite dall'utente, verificare che il tipo di dati impostato sia compatibile con quello della colonna a cui fa riferimento il parametro di cui viene eseguito il mapping. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Risoluzione dei problemi relativi all'origine OLE DB  
+## <a name="troubleshooting-the-ole-db-source"></a>Risoluzione dei problemi relativi all'origine OLE DB  
  È possibile registrare le chiamate eseguite dall'origine OLE DB a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi al caricamento di dati da origini esterne da parte dell'origine OLE DB. Per registrare le chiamate eseguite dall'origine OLE DB a provider di dati esterni, attivare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Configurazione dell'origine OLE DB  
- È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+## <a name="configuring-the-ole-db-source"></a>Configurazione dell'origine OLE DB  
+ È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine OLE DB**, fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine OLE DB** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
   
@@ -100,11 +105,11 @@ caps.handback.revision: 69
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
   
 -   [Estrazione dei dati tramite l'origine OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -114,12 +119,12 @@ caps.handback.revision: 69
   
 -   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Contenuto correlato  
- Articolo di Wiki sui [connettori SSIS con Oracle](http://go.microsoft.com/fwlink/?LinkId=220670) sul sito Web social.technet.microsoft.com.  
+## <a name="related-content"></a>Contenuto correlato  
+ Articolo di Wiki sui [connettori SSIS con Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)sul sito Web social.technet.microsoft.com.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
- [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40; SSIS &#41; Variabili](../../integration-services/integration-services-ssis-variables.md)   
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
   
   

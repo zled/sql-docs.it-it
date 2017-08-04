@@ -1,30 +1,35 @@
 ---
-title: "Preparazione dell&#39;esecuzione di una query per i dati delle modifiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caricamento incrementale [Integration Services], preparazione dell'esecuzione di query"
+title: Preparare la Query per i dati delle modifiche | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Preparazione dell&#39;esecuzione di una query per i dati delle modifiche
+# <a name="prepare-to-query-for-the-change-data"></a>Preparazione dell'esecuzione di una query per i dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per l'esecuzione di un caricamento incrementale dei dati delle modifiche, la terza e ultima attività consiste nel preparare l'esecuzione di una query per i dati delle modifiche e nell'aggiungere un'attività Flusso di dati.  
   
 > [!NOTE]  
 >  La seconda attività per il flusso di controllo consiste nel verificare che i dati delle modifiche per l'intervallo selezionato siano pronti. Per altre informazioni su questa attività, vedere [Determinare se i dati delle modifiche sono pronti](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md). Per una descrizione del processo complessivo di progettazione del flusso di controllo, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Considerazioni sulla progettazione  
+## <a name="design-considerations"></a>Considerazioni sulla progettazione  
  Per recuperare i dati delle modifiche, è necessario chiamare una funzione Transact-SQL con valori di tabella che accetti gli endpoint dell'intervallo come parametri di input e restituisca i dati delle modifiche per l'intervallo specificato. Un componente di origine nel flusso di dati chiama questa funzione. Per informazioni su questo componente di origine, vedere [Recuperare e comprendere i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md).  
   
  I componenti di origine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usati più di frequente, incluse l'origine OLE DB, l'origine ADO e l'origine ADO NET, non possono derivare informazioni sui parametri per una funzione valutata a livello di tabella. La maggior parte delle origini, pertanto, non può chiamare una funzione con parametri direttamente.  
@@ -40,31 +45,31 @@ caps.handback.revision: 26
   
  In questo argomento viene utilizzata la prima opzione di progettazione, assemblando una query con parametri come stringa.  
   
-## Preparazione della query  
+## <a name="preparing-the-query"></a>Preparazione della query  
  Prima che sia possibile concatenare i valori dei parametri di input in una singola stringa di query, è necessario configurare le variabili del pacchetto necessarie per la query.  
   
-#### Per configurare le variabili del pacchetto  
+#### <a name="to-set-up-package-variables"></a>Per configurare le variabili del pacchetto  
   
--   Nella finestra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Variabili** in ** creare una variabile con un tipo di dati stringa per memorizzare la stringa di query restituita dall'attività Esegui SQL.  
+-   Nella finestra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Variabili **in** creare una variabile con un tipo di dati stringa per memorizzare la stringa di query restituita dall'attività Esegui SQL.  
   
      In questo esempio viene utilizzato il nome di variabile SqlDataQuery.  
   
  Dopo avere creato la variabile del pacchetto, è possibile utilizzare un'attività Script o un'attività Esegui SQL per concatenare i valori dei parametri di input. Nelle due procedure seguenti viene descritto come configurare tali componenti.  
   
-#### Per utilizzare un'attività Script per concatenare la stringa di query  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>Per utilizzare un'attività Script per concatenare la stringa di query  
   
 1.  Nella scheda **Flusso di controllo** aggiungere un'attività Script al pacchetto dopo il contenitore Ciclo For e connettere tale contenitore all'attività.  
   
     > [!NOTE]  
     >  In questa procedura si presuppone che il pacchetto esegua un caricamento incrementale da una singola tabella. Se il pacchetto esegue il caricamento da più tabelle e ha un pacchetto padre con più pacchetti figlio, questa attività viene aggiunta come primo componente a ciascun pacchetto figlio. Per altre informazioni, vedere [Eseguire un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
-2.  Nella pagina **Script** in **Editor attività Script** selezionare le opzioni seguenti:  
+2.  Nella pagina **Script**in **Editor attività Script** selezionare le opzioni seguenti:  
   
-    1.  Per **ReadOnlyVariables** selezionare **User::DataReady**, **User::ExtractStartTime** e **User::ExtractEndTime**.  
+    1.  Per **ReadOnlyVariables**selezionare **User::DataReady**, **User::ExtractStartTime**e **User::ExtractEndTime** .  
   
-    2.  Per **ReadWriteVariables** selezionare User::SqlDataQuery nell'elenco.  
+    2.  Per **ReadWriteVariables**selezionare User::SqlDataQuery nell'elenco.  
   
-3.  Nella pagina **Script** in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+3.  Nella pagina **Script**in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
 4.  Nella routine Main immettere uno dei segmenti di codice seguenti:  
   
@@ -127,22 +132,22 @@ caps.handback.revision: 26
   
 6.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
-#### Per utilizzare un'attività Esegui SQL per concatenare la stringa di query  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>Per utilizzare un'attività Esegui SQL per concatenare la stringa di query  
   
 1.  Nella scheda **Flusso di controllo** aggiungere un'attività Esegui SQL al pacchetto dopo il contenitore Ciclo For e connettere tale contenitore all'attività.  
   
     > [!NOTE]  
     >  In questa procedura si presuppone che il pacchetto esegua un caricamento incrementale da una singola tabella. Se il pacchetto esegue il caricamento da più tabelle e ha un pacchetto padre con più pacchetti figlio, questa attività viene aggiunta come primo componente a ciascun pacchetto figlio. Per altre informazioni, vedere [Eseguire un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
-2.  Nella pagina **Generale** in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet** selezionare **Riga singola**.  
+    1.  Per **ResultSet**selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
-    3.  Per **SQLSourceType** selezionare **Input diretto**.  
+    3.  Per **SQLSourceType**, selezionare **Input diretto**.  
   
-    4.  Per **SQLStatement** immettere l'istruzione SQL seguente:  
+    4.  Per **SQLStatement**immettere l'istruzione SQL seguente:  
   
         ```  
         declare @ExtractStartTime datetime,  
@@ -171,7 +176,7 @@ caps.handback.revision: 26
         > [!NOTE]  
         >  In questo esempio la clausola **else** genera una query per il caricamento iniziale dei dati delle modifiche passando un valore Null per la data e l'ora di inizio. Questo esempio non si applica a uno scenario in cui le modifiche apportate prima dell'attivazione di Change Data Capture devono essere caricate anche nel data warehouse.  
   
-3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL** creare i mapping seguenti:  
+3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL**creare i mapping seguenti:  
   
     1.  Eseguire il mapping tra la variabile DataReady e il parametro 0.  
   
@@ -179,7 +184,7 @@ caps.handback.revision: 26
   
     3.  Eseguire il mapping tra la variabile ExtractEndTime e il parametro 2.  
   
-4.  Nella pagina **Set di risultati** di **Editor attività Esegui SQL** eseguire il mapping tra il nome del risultato e la variabile SqlDataQuery.  
+4.  Nella pagina **Set di risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il nome del risultato e la variabile SqlDataQuery.  
   
      Il nome del risultato è il nome della singola colonna restituita, ovvero SqlDataQuery.  
   
@@ -187,14 +192,14 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## Aggiunta di un'attività Flusso di dati  
+## <a name="adding-a-data-flow-task"></a>Aggiunta di un'attività Flusso di dati  
  L'ultimo passaggio nella progettazione del flusso di controllo per il pacchetto consiste nell'aggiungere un'attività Flusso di dati.  
   
-#### Per aggiungere un'attività Flusso di dati e completare il flusso di controllo  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>Per aggiungere un'attività Flusso di dati e completare il flusso di controllo  
   
 -   Nella scheda **Flusso di controllo** aggiungere un'attività Flusso di dati e connettere l'attività che ha concatenato la stringa di query.  
   
-## Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo  
  Dopo avere preparato la stringa di query e avere configurato l'attività Flusso di dati, il passaggio successivo consiste nel creare la funzione valutata a livello di tabella per il recupero dei dati delle modifiche dal database.  
   
  **Argomento successivo:** [Creare la funzione per il recupero dei dati delle modifiche](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

@@ -1,44 +1,49 @@
 ---
-title: "POWER (espressione SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "POWER - funzione"
+title: POWER (espressione SSIS) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0f4c9e1509dd69af6bc12c6d00c17585fe23552
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# POWER (espressione SSIS)
+# <a name="power-ssis-expression"></a>POWER (espressione SSIS)
   Restituisce il risultato dell'elevamento a potenza di un'espressione numerica. Il parametro power deve restituire un valore integer.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 POWER(numeric_expression,power)  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  *numeric_expression*  
  Espressione numerica valida.  
   
  *power*  
  Espressione numerica valida.  
   
-## Tipi restituiti  
+## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Prima del calcolo della potenza, viene eseguito il cast degli argomenti *numeric_expression* e *power* nel tipo di dati DT_R8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Se *numeric_expression* restituisce zero e *power* è negativo, l'analizzatore di espressioni restituisce un errore e imposta il risultato restituito su Null.  
@@ -47,20 +52,20 @@ POWER(numeric_expression,power)
   
  L'argomento *power* può essere una frazione. ad esempio 0,5.  
   
-## Esempi di espressione  
+## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio viene utilizzato un valore letterale numerico. La funzione eleva 4 all'esponente 3 e restituisce 64.  
   
 ```  
 POWER(4,3)  
 ```  
   
- Questo esempio usa la colonna **Length** e la variabile **DimensionCount**. Se **Length** è 8 e **DimensionCount** è 2, il risultato restituito è 64.  
+ Questo esempio usa la colonna **Length** e la variabile **DimensionCount** . Se **Length** è 8 e **DimensionCount** è 2, il risultato restituito è 64.  
   
 ```  
 POWER(Length, @DimensionCount)   
 ```  
   
-## Vedere anche  
- [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni &#40; Espressione SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

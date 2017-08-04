@@ -1,25 +1,30 @@
 ---
-title: "Propriet&#224; - Server di report (scheda Avanzate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proprietà Server (scheda Avanzate) report | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd77ea1315a7b959dbcfec479cd0da3bb11360bd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; - Server di report (scheda Avanzate)
+# <a name="report-server-properties-advanced-tab"></a>Proprietà - Server di report (scheda Avanzate)
   Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Segnalazione commenti e suggerimenti utenti**  
  Indica se il monitoraggio della qualità del servizio è stato abilitato per il servizio. Per ulteriori informazioni sulla funzionalità di segnalazione del feedback dei clienti, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online.  
   

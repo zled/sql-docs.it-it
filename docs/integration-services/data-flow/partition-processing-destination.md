@@ -1,28 +1,33 @@
 ---
-title: "Destinazione elaborazione partizione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.partitionprocessingdest.f1"
-helpviewer_keywords: 
-  - "partizioni [Analysis Services], elaborazione"
-  - "elaborazione partizione - destinazione [Integration Services]"
-  - "destinazioni [Integration Services], elaborazione di partizioni"
+title: Destinazione elaborazione partizione | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.partitionprocessingdest.f1
+helpviewer_keywords:
+- partitions [Analysis Services], processing
+- Partition Processing destination [Integration Services]
+- destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036b792f9895c6b5d56438ce52455aeb5622e0ba
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destinazione elaborazione partizione
+# <a name="partition-processing-destination"></a>Destinazione elaborazione partizione
   La destinazione Elaborazione partizione consente di caricare ed elaborare una partizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle partizioni, vedere [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
   
  La destinazione elaborazione partizione include le funzionalità seguenti:  
@@ -38,14 +43,14 @@ caps.handback.revision: 44
 > [!NOTE]  
 >  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
   
-## Configurazione della destinazione Elaborazione partizione  
+## <a name="configuration-of-the-partition-processing-destination"></a>Configurazione della destinazione Elaborazione partizione  
  Nella destinazione Elaborazione partizione viene usata una gestione connessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per connettersi al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che contiene le partizioni e i cubi elaborati dalla destinazione. Per altre informazioni, vedere [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
  Questa destinazione include un input. Non supporta un output degli errori.  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor destinazione elaborazione partizione**, fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor destinazione elaborazione partizione** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor destinazione elaborazione partizione &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md)  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 44
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate della destinazione elaborazione partizione](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   

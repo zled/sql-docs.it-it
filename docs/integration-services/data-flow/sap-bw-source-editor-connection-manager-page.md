@@ -1,27 +1,32 @@
 ---
-title: "Editor origine SAP BW (pagina Gestione connessione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.connection.f1"
+title: Editor origine SAP BW (pagina Gestione connessione) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor origine SAP BW (pagina Gestione connessione)
+# <a name="sap-bw-source-editor-connection-manager-page"></a>Editor origine SAP BW (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine SAP BW** per selezionare la gestione connessione SAP BW per l'origine SAP BW. In questa pagina vengono inoltre selezionati la modalità di esecuzione e i parametri per estrarre i dati dal sistema SAP Netweaver BW.  
   
- Per altre informazioni sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
+ Per altre informazioni sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
 3.  Nell' **Editor origine SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-## Opzioni statiche  
+## <a name="static-options"></a>Opzioni statiche  
   
 > [!NOTE]  
 >  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
@@ -46,7 +51,7 @@ caps.handback.revision: 11
  Selezionare una gestione connessione esistente nell'elenco oppure crearne una nuova facendo clic su **Nuova**.  
   
  **Nuova**  
- Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW**.  
+ Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
   
  Per altre informazioni sulla questa finestra di dialogo, vedere [Editor gestione connessione SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md).  
   
@@ -66,18 +71,18 @@ caps.handback.revision: 11
  Aprire la finestra di dialogo **Anteprima** in cui è possibile visualizzare i risultati in anteprima. Per altre informazioni, vedere [Anteprima](../../integration-services/data-flow/preview.md).  
   
 > [!IMPORTANT]  
->  Con l'opzione **Anteprima**, disponibile nella pagina **Gestione connessione** dell'Editor di origine SAP BW, vengono effettivamente estratti i dati. Se è stato configurato SAP Netweaver BW per estrarre solo i dati modificati dall'estrazione precedente, la selezione di **Anteprima** escluderà i dati visualizzati in anteprima dall'estrazione successiva.  
+>  Con l'opzione **Anteprima** , disponibile nella pagina **Gestione connessione** dell'Editor di origine SAP BW, vengono effettivamente estratti i dati. Se è stato configurato SAP Netweaver BW per estrarre solo i dati modificati dall'estrazione precedente, la selezione di **Anteprima** escluderà i dati visualizzati in anteprima dall'estrazione successiva.  
   
- Quando si fa clic su **Anteprima**, viene inoltre aperta la finestra di dialogo **Log richieste**. È possibile utilizzare questa finestra di dialogo per visualizzare gli eventi registrati durante la richiesta fatta al sistema SAP Netweaver BW per i dati di esempio. Per altre informazioni, vedere [Log richieste](../../integration-services/data-flow/request-log.md).  
+ Quando si fa clic su **Anteprima**, viene inoltre aperta la finestra di dialogo **Log richieste** . È possibile utilizzare questa finestra di dialogo per visualizzare gli eventi registrati durante la richiesta fatta al sistema SAP Netweaver BW per i dati di esempio. Per altre informazioni, vedere [Log richieste](../../integration-services/data-flow/request-log.md).  
   
-## Opzioni dinamiche della modalità di esecuzione  
+## <a name="execution-mode-dynamic-options"></a>Opzioni dinamiche della modalità di esecuzione  
   
 > [!NOTE]  
 >  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
   
-### Modalità di esecuzione = P - Attivazione catena di processi  
+### <a name="execution-mode--p---trigger-process-chain"></a>Modalità di esecuzione = P - Attivazione catena di processi  
   
-#### Opzioni della destinazione RFC  
+#### <a name="rfc-destination-options"></a>Opzioni della destinazione RFC  
  Non è necessario conoscere e immettere questi valori in anticipo. Usare il pulsante **Ricerca** per individuare e selezionare la destinazione RFC appropriata. Dopo aver selezionato una destinazione RFC, il componente inserisce i valori appropriati per queste opzioni.  
   
  **Host gateway**  
@@ -90,20 +95,20 @@ caps.handback.revision: 11
  Immettere l'ID programma associato alla destinazione RFC.  
   
  **Ricerca**  
- Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC**. Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-#### Opzioni della catena di processi  
+#### <a name="process-chain-options"></a>Opzioni della catena di processi  
  Non è necessario conoscere e immettere questi valori in anticipo. Usare il pulsante **Ricerca** per individuare e selezionare la catena di processi appropriata. Dopo aver selezionato una catena di processi, il componente inserisce il valore appropriato per l'opzione.  
   
  **Catena di processi**  
  Immettere il nome della catena di processi che verrà attivata da parte dell'origine.  
   
  **Ricerca**  
- Individuare la catena di processi usando la finestra di dialogo **Cerca ProcessChain**. Per altre informazioni su questa finestra di dialogo, vedere [Cerca ProcessChain](../../integration-services/data-flow/look-up-process-chain.md).  
+ Individuare la catena di processi usando la finestra di dialogo **Cerca ProcessChain** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca ProcessChain](../../integration-services/data-flow/look-up-process-chain.md).  
   
-### Modalità di esecuzione = W - Attesa notifica  
+### <a name="execution-mode--w---wait-for-notify"></a>Modalità di esecuzione = W - Attesa notifica  
   
-#### Opzioni della destinazione RFC  
+#### <a name="rfc-destination-options"></a>Opzioni della destinazione RFC  
  Non è necessario conoscere e immettere questi valori in anticipo. Usare il pulsante **Ricerca** per individuare e selezionare la destinazione RFC appropriata. Dopo aver selezionato una destinazione RFC, il componente inserisce i valori appropriati per le opzioni.  
   
  **Host gateway**  
@@ -116,16 +121,16 @@ caps.handback.revision: 11
  Immettere l'ID programma associato alla destinazione RFC.  
   
  **Ricerca**  
- Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC**. Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-### Modalità di esecuzione = E - Solo estrazione  
+### <a name="execution-mode--e---extract-only"></a>Modalità di esecuzione = E - Solo estrazione  
  **ID richiesta**  
  Immettere l'ID richiesta associato all'estrazione.  
   
-## Vedere anche  
- [Editor origine SAP BW &#40;pagina Colonne&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Editor origine SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Editor origine SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Editor origine SAP BW &#40; Pagina colonne &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [Editor origine SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Editor origine SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Editor destinazione SAP BW (pagina Gestione connessione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.connection.f1"
+title: Editor destinazione SAP BW (pagina Gestione connessione) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor destinazione SAP BW (pagina Gestione connessione)
+# <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor destinazione SAP BW (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione SAP BW** per selezionare la gestione connessione SAP BW che verrà usata dalla destinazione SAP BW. In questa pagina vengono inoltre selezionati i parametri per il caricamento dei dati nel sistema SAP Netweaver BW.  
   
  Per altre informazioni sulla destinazione SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Destinazione SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -30,11 +35,11 @@ caps.handback.revision: 10
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene la destinazione SAP BW.  
   
-2.  Nella scheda **Flusso dati** fare doppio clic sulla destinazione SAP BW.  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
 > [!NOTE]  
 >  Se non si conoscono tutti i valori richiesti per configurare la destinazione, può essere necessario consultare l'amministratore SAP.  
@@ -43,12 +48,12 @@ caps.handback.revision: 10
  Selezionare una gestione connessione esistente nell'elenco oppure crearne una nuova facendo clic su **Nuova**.  
   
  **Nuova**  
- Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW**.  
+ Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
   
  **Test del carico**  
  Eseguire un test del processo di caricamento che utilizzi le impostazioni selezionate e carichi zero righe.  
   
-### Opzioni di InfoPackage/InfoSource  
+### <a name="infopackageinfosource-options"></a>Opzioni di InfoPackage/InfoSource  
  Non è necessario conoscere e immettere questi valori in anticipo. Usare il pulsante **Ricerca** per individuare e selezionare l'InfoPackage appropriato. Dopo aver selezionato un InfoPackage, il componente inserisce i valori appropriati per queste opzioni.  
   
  **InfoPackage**  
@@ -71,9 +76,9 @@ caps.handback.revision: 10
  Immettere il nome del sistema logico associato all'InfoPackage.  
   
  **Ricerca**  
- Individuare l'InfoPackage usando la finestra di dialogo **Cerca InfoPackage**. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
+ Individuare l'InfoPackage usando la finestra di dialogo **Cerca InfoPackage** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
   
-### Opzioni della destinazione RFC  
+### <a name="rfc-destination-options"></a>Opzioni della destinazione RFC  
  Non è necessario conoscere e immettere questi valori in anticipo. Usare il pulsante **Ricerca** per individuare e selezionare la destinazione RFC appropriata. Dopo aver selezionato una destinazione RFC, il componente inserisce i valori appropriati per queste opzioni.  
   
  **Host gateway**  
@@ -86,9 +91,9 @@ caps.handback.revision: 10
  Immettere l'ID programma associato alla destinazione RFC.  
   
  **Ricerca**  
- Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC**. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-### Opzioni di Crea oggetti SAP BW  
+### <a name="create-sap-bw-objects-options"></a>Opzioni di Crea oggetti SAP BW  
  **Seleziona il tipo di oggetto**  
  Selezionare il tipo di oggetto SAP Netweaver BW che si desidera creare. È possibile selezionare uno dei tipi seguenti:  
   
@@ -105,15 +110,15 @@ caps.handback.revision: 10
   
 |Tipo oggetto|Risultato|  
 |-----------------|------------|  
-|**InfoObject**|Creare un nuovo InfoObject usando la finestra di dialogo **Crea nuovo InfoObject**. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).|  
-|**InfoCube**|Creare un nuovo InfoCube usando la finestra di dialogo **Crea InfoCube per dati transazione**. Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoCube per dati transazione](../../integration-services/data-flow/create-infocube-for-transaction-data.md).|  
-|**InfoSource**|Creare un nuovo InfoSource usando la finestra di dialogo **Crea InfoSource** e quindi la finestra di dialogo **Crea InfoSource per dati transazione** o **Crea InfoSource per dati master**. Per altre informazioni su queste finestre di dialogo, vedere [Crea InfoSource](../../integration-services/data-flow/create-infosource.md), [Crea InfoSource per dati transazione](../../integration-services/data-flow/create-infosource-for-transaction-data.md) e [Crea InfoSource per dati master](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
-|**InfoPackage**|Creare un nuovo InfoPackage usando la finestra di dialogo **Crea InfoPackage**. Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
+|**InfoObject**|Creare un nuovo InfoObject usando la finestra di dialogo **Crea nuovo InfoObject** . Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).|  
+|**InfoCube**|Creare un nuovo InfoCube usando la finestra di dialogo **Crea InfoCube per dati transazione** . Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoCube per dati transazione](../../integration-services/data-flow/create-infocube-for-transaction-data.md).|  
+|**InfoSource**|Creare un nuovo InfoSource usando la finestra di dialogo **Crea InfoSource** e quindi la finestra di dialogo **Crea InfoSource per dati transazione** o **Crea InfoSource per dati master** . Per altre informazioni su queste finestre di dialogo, vedere [Crea InfoSource](../../integration-services/data-flow/create-infosource.md), [Crea InfoSource per dati transazione](../../integration-services/data-flow/create-infosource-for-transaction-data.md) e [Crea InfoSource per dati master](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
+|**InfoPackage**|Creare un nuovo InfoPackage usando la finestra di dialogo **Crea InfoPackage** . Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## Vedere anche  
- [Editor destinazione SAP BW &#40;pagina Mapping&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Editor destinazione SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor destinazione SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Editor destinazione SAP BW &#40; Pagina mapping &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Editor destinazione SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor destinazione SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

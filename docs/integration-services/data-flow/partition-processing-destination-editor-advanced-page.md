@@ -1,26 +1,31 @@
 ---
-title: "Editor destinazione elaborazione partizione (pagina Avanzate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.partprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "Editor destinazione elaborazione partizione"
+title: Editor di destinazione elaborazione partizione (pagina avanzate) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 556e00f1e5e597817ff2c5275a01b9c4ac208e10
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor destinazione elaborazione partizione (pagina Avanzate)
+# <a name="partition-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione partizione (pagina Avanzate)
   Utilizzare la pagina **Avanzate** della finestra di dialogo **Editor destinazione elaborazione partizione** per configurare la gestione degli errori.  
   
  Per ulteriori informazioni sulla destinazione elaborazione partizione, vedere [Partition Processing Destination](../../integration-services/data-flow/partition-processing-destination.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Usa configurazione errori predefinita**  
  Consente di specificare se utilizzare la gestione degli errori predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il valore predefinito è **True**.  
   
@@ -94,13 +99,13 @@ caps.handback.revision: 32
 |**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
   
  **Percorso log degli errori**  
- Consente di digitare il percorso del log degli errori o di selezionare una destinazione usando il pulsante Sfoglia **(...)**.  
+ Consente di digitare il percorso del log degli errori o di selezionare una destinazione usando il pulsante Sfoglia **(...)** .  
   
  **Sfoglia (...)**  
  Consente di selezionare il percorso del log degli errori.  
   
-## Vedere anche  
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor destinazione elaborazione partizione &#40;pagina Mapping&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor destinazione elaborazione partizione &#40; Pagina mapping &#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
   
   

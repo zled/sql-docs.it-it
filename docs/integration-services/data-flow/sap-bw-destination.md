@@ -1,22 +1,27 @@
 ---
-title: "Destinazione SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Destinazione SAP BW | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destinazione SAP BW
+# <a name="sap-bw-destination"></a>Destinazione SAP BW
   La destinazione SAP BW è il componente di destinazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, la destinazione SAP BW carica i dati dal flusso di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un sistema SAP Netweaver BW versione 7.  
   
  Questa destinazione include un input e un output degli errori.  
@@ -40,9 +45,9 @@ caps.handback.revision: 11
   
 1.  Creare un nuovo sistema di origine:  
   
-    1.  Selezionare il tipo **"Third Party/Staging BAPIs"** (BAPI gestione temporanea/terze parti).  
+    1.  Selezionare il tipo **"Third Party/Staging BAPIs"**(BAPI gestione temporanea/terze parti).  
   
-    2.  In **Communication Type with Target System** (Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)** (Non Unicode (Impostazioni MDMP inattive)).  
+    2.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)**(Non Unicode (Impostazioni MDMP inattive)).  
   
     3.  Assegnare un ID programma appropriato.  
   
@@ -84,20 +89,20 @@ caps.handback.revision: 11
   
  Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   
-### Utilizzo di Progettazione SSIS per configurare la destinazione  
+### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Utilizzo di Progettazione SSIS per configurare la destinazione  
  Per ulteriori informazioni sulle proprietà della destinazione SAP BW che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Editor destinazione SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione SAP BW &#40;pagina Mapping&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Editor destinazione SAP BW &#40; Pagina mapping &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Editor destinazione SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Editor destinazione SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor destinazione SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Editor destinazione SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  Quando si configura la destinazione SAP BW, è inoltre possibile utilizzare varie finestre di dialogo per cercare o creare gli oggetti SAP Netweaver BW. Per ulteriori informazioni su queste finestre di dialogo, fare clic su uno degli argomenti seguenti:  
   
--   [Cerca InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [Cerca Infopackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
@@ -109,11 +114,11 @@ caps.handback.revision: 11
   
 -   [Crea InfoSource per dati transazione](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
--   [Crea InfoSource per dati master](../../integration-services/data-flow/create-infosource-for-master-data.md)  
+-   [Crea InfoSource per dati Master](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [Crea InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

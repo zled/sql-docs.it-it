@@ -1,77 +1,82 @@
 ---
-title: "Autorizzazioni per modelli e membri sovrapposte (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelli [Master Data Services], autorizzazioni valide"
-  - "autorizzazioni [Master Data Services], modelli e membri sovrapposti"
-  - "membri [Master Data Services], autorizzazioni valide"
+title: Modello di autorizzazioni e membri sovrapposte (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], effective permissions
+- permissions [Master Data Services], model and member overlaps
+- members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ffb74e06b9b6bfed579959db993d418599086fef
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
+# <a name="overlapping-model-and-member-permissions-master-data-services"></a>Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
   Le autorizzazioni assegnate a un membro possono sovrapporsi alle autorizzazioni assegnate a un oggetto modello. Quando si verificano sovrapposizioni, viene applicata l'autorizzazione più restrittiva.  
   
  Se un membro dispone di autorizzazione diversa da quella del relativo oggetto modello corrispondente, si applicano le regole seguenti:  
   
--   **Negare** esegue l'override di tutte le altre autorizzazioni.  
+-   **Nega** esegue l'override di tutte le altre autorizzazioni.  
   
--   **Amministrazione** autorizzazione a livello di modello esegue l'override di tutte le altre autorizzazioni e viene modificato con autorizzazione di accesso (CRUD) tutti i livelli di sub.  
+-   L'autorizzazione di**amministratore** al livello del modello esegue l'override di tutte le altre autorizzazioni e viene modificata nell'autorizzazione di accesso All (CRUD) ai livelli secondari.  
   
 -   Un'autorizzazione di accesso valida interseca le autorizzazioni per membri e attributi.  
   
-     Ad esempio, se le autorizzazioni membri includono **Crea** e **aggiornamento**, l'autorizzazione per gli attributi è **aggiornamento**. L'autorizzazione valida è **aggiornamento**.  
+     Ad esempio, se le autorizzazioni per i membri includono **Create** e **Update**, l'autorizzazione per gli attributi è **Update**. L'autorizzazione valida è **Update**.  
   
  Nell'immagine seguente viene indicato quali autorizzazioni vengono applicate a ogni singolo valore di attributo quando le autorizzazioni per gli attributi sono diverse dalle autorizzazioni per i membri.  
   
  ![mds_conc_security_member_overlap_table](../master-data-services/media/mds-conc-security-member-overlap-table.gif "mds_conc_security_member_overlap_table")  
   
-## Esempio 1  
+## <a name="example-1"></a>Esempio 1  
  ![mds_conc_overlap_model_1](../master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
- Nel **modelli** scheda, l'entità Product presenta **aggiornamento** assegnata l'autorizzazione. Tutti gli attributi nell'entità ereditano questa autorizzazione.  
+ Nella scheda **Modelli** all'entità Product è stata assegnata l'autorizzazione **Aggiorna** . Tutti gli attributi nell'entità ereditano questa autorizzazione.  
   
- Nel **membri della gerarchia** scheda, il nodo della sottocategoria Mountain Bikes in una gerarchia derivata include **aggiornamento** assegnata l'autorizzazione.  
+ Nella scheda **Membri gerarchia** il nodo della sottocategoria Mountain Bikes in una gerarchia derivata dispone dell'autorizzazione **Aggiorna** .  
   
- Risultato: In **Explorer**, l'utente ha **aggiornamento** autorizzazione a tutti i valori di attributo per tutti i membri nel nodo Mountain bike. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora**l'utente dispone dell'autorizzazione **Aggiorna** per tutti i valori di attributo per tutti i membri nel nodo Mountain Bike. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## Esempio 2  
+## <a name="example-2"></a>Esempio 2  
  ![mds_conc_overlap_model_2](../master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
- Nel **modelli** scheda, all'attributo Subcategory è **aggiornamento** assegnata l'autorizzazione.  
+ Nella scheda **Modelli** all'attributo Subcategory è assegnata l'autorizzazione **Aggiorna** .  
   
- Nel **membri della gerarchia** scheda, il nodo della sottocategoria Mountain Bikes in una gerarchia derivata viene assegnato in modo esplicito **lettura** autorizzazione.  
+ Nella scheda **Membri gerarchia** al nodo della sottocategoria Mountain Bikes in una gerarchia derivata è stata assegnata in modo esplicito l'autorizzazione **Lettura** .  
   
- Risultato: In **Explorer**, l'utente ha **lettura** autorizzazione ai valori di attributo Subcategory per i membri nel nodo Mountain bike. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora**l'utente ha l'autorizzazione **Lettura** per i valori dell'attributo Subcategory per i membri del nodo Mountain Bikes. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## Esempio 3  
+## <a name="example-3"></a>Esempio 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- Nel **modelli** scheda, all'attributo Subcategory è **lettura** assegnata l'autorizzazione.  
+ Nella scheda **Modelli** all'attributo Subcategory è stata assegnata l'autorizzazione **Lettura** .  
   
- Nel **membri della gerarchia** scheda alla sottocategoria Mountain Bikes in una gerarchia derivata viene assegnata in modo esplicito **aggiornamento** autorizzazione.  
+ Nella scheda **Membri gerarchia** alla sottocategoria Mountain Bikes in una gerarchia derivata è stata assegnata in modo esplicito l'autorizzazione **Aggiorna** .  
   
- Risultato: In **Explorer**, l'utente ha **lettura** autorizzazione ai valori di attributo. Tutti gli altri membri e attributi sono nascosti.  
+ Risultato: in **Esplora**l'utente ha l'autorizzazione **Lettura** per i valori di attributo. Tutti gli altri membri e attributi sono nascosti.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## Vedere anche  
- [Come vengono determinate le autorizzazioni & #40; Master Data Services & #41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Sovrapposizione di utenti e autorizzazioni del gruppo di 40 #; Master Data Services & #41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [Sovrapposizione di utente e le autorizzazioni del gruppo &#40; Master Data Services &#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

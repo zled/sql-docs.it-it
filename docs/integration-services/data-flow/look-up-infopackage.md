@@ -1,22 +1,27 @@
 ---
-title: "Cerca InfoPackage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cerca Infopackage | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603f32bbcf61ce562b0e8f6645e0384bb4dccdf2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cerca InfoPackage
+# <a name="look-up-infopackage"></a>Cerca InfoPackage
   Utilizzare la finestra di dialogo **Cerca InfoPackage** per cercare un InfoPackage definito nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco di InfoPackage, selezionare l'InfoPackage desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione.  
   
  La destinazione SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW utilizza la finestra di dialogo **Cerca ProcessChain** . Per ulteriori informazioni sulla destinazione SAP BW, vedere [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -32,9 +37,9 @@ caps.handback.revision: 10
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-4.  Nella pagina **Gestione connessione**, nella casella di gruppo **InfoPackage/InfoSource** fare clic su **Ricerca** per visualizzare la finestra di dialogo **Cerca InfoPackage**.  
+4.  Nella pagina **Gestione connessione** , nella casella di gruppo **InfoPackage/InfoSource** fare clic su **Ricerca** per visualizzare la finestra di dialogo **Cerca InfoPackage** .  
   
-## Opzioni di ricerca  
+## <a name="lookup-options"></a>Opzioni di ricerca  
  Nei campi di ricerca è possibile filtrare i risultati tramite il carattere jolly asterisco (*) oppure utilizzando una stringa parziale in combinazione con il carattere jolly asterisco. Tuttavia, se si lascia un campo di ricerca vuoto, l'operazione di ricerca restituirà solo stringhe vuote in tale campo.  
   
  **InfoPackage**  
@@ -49,7 +54,7 @@ caps.handback.revision: 10
  **Ricerca**  
  Cercare gli InfoPackage corrispondenti definiti nel sistema SAP Netweaver BW.  
   
-## Risultati di ricerca  
+## <a name="lookup-results"></a>Risultati di ricerca  
  Dopo avere fatto clic sul pulsante Ricerca, viene visualizzato un elenco di InfoPackage nel sistema SAP Netweaver BW in una tabella con le intestazioni di colonna seguenti.  
   
  **InfoPackage**  
@@ -70,12 +75,12 @@ caps.handback.revision: 10
  **InfoSource**  
  Visualizza il nome dell'InfoSource, se esistente, associato all'InfoPackage.  
   
- **Sistema di origine**  
+ **Source System**  
  Visualizza il nome del sistema di origine.  
   
  Quando viene visualizzato l'elenco di InfoPackage, selezionare l'InfoPackage desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

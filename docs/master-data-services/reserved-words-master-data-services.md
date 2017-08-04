@@ -1,25 +1,30 @@
 ---
-title: "Parole riservate (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parole riservate [Master Data Services]"
-  - "Master Data Services, parole riservate"
+title: (Master Data Services) di parole riservate | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reserved words [Master Data Services]
+- Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6815fb319b670226694e2fad4ed5768470d79e5e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Parole riservate (Master Data Services)
+# <a name="reserved-words-master-data-services"></a>Parole riservate (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], quando si creano oggetti modello o membri, alcune parole non possono essere utilizzate. È possibile che l'utilizzo di queste parole provochi errori.  
   
 > [!NOTE]  
@@ -48,13 +53,13 @@ caps.handback.revision: 11
   
 -   **ID**  
   
--   **Codice**  
+-   **Code**  
   
 -   **EnterUserName**  
   
 -   **LastChgUserName**  
   
--   **Nome**  
+-   **Name**  
   
 -   **EnterDTM**  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 11
 -   **Version_ID**  
   
 ##  <a name="members"></a> Membri  
- Per i membri, non è possibile usare **MDMMemberStatus**, **MDMUnused** o **ROOT** per il valore di attributo **Code**.  
+ Per i membri, non è possibile usare **MDMMemberStatus**, **MDMUnused**o **ROOT** per il valore di attributo **Code** .  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

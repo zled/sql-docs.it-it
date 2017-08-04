@@ -1,25 +1,30 @@
 ---
-title: "Tabella di gestione temporanea delle relazioni (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabella di gestione temporanea delle relazioni [Master Data Services]"
-  - "database [Master Data Services], tabella delle relazioni"
+title: Tabella di gestione temporanea delle relazioni (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relationships staging table [Master Data Services]
+- database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b2a6a4d1bd4e62c5c8edb3a5149dab402e0b897
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Tabella di gestione temporanea delle relazioni (Master Data Services)
+# <a name="relationship-staging-table-master-data-services"></a>Tabella di gestione temporanea delle relazioni (Master Data Services)
   Usare la tabella di gestione temporanea delle relazioni nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per modificare il percorso dei membri in una gerarchia esplicita, in base alla relazione esistente tra i membri.  
   
 ##  <a name="TableColumns"></a> Colonne della tabella  
@@ -36,11 +41,12 @@ caps.handback.revision: 8
 |**ParentCode**|Obbligatorio<br /><br /> Per le relazioni padre-figlio, il codice del membro consolidato che sarà il padre della foglia figlio o del membro consolidato.<br /><br /> Per le relazioni di pari livello, il codice di uno degli elementi di pari livello.||  
 |**ChildCode**|Obbligatorio<br /><br /> Per le relazioni padre-figlio, il codice del membro consolidato o foglia che sarà il figlio.<br /><br /> Per le relazioni di pari livello, il codice di uno degli elementi di pari livello.||  
 |**Ordinamento**|Facoltativo<br /><br /> Un valore intero che indica l'ordine del membro in relazione agli altri membri sottostanti l'elemento padre. Ciascun membro figlio deve disporre di un identificatore univoco.||  
-|**ErrorCode**|Visualizza un codice di errore. Per tutti i record con **ImportStatus_ID** di **2**, vedere [Errori del processo di gestione temporanea &#40;Master Data Services&#41](../master-data-services/staging-process-errors-master-data-services.md).||  
+|**ErrorCode**|Visualizza un codice di errore. Per tutti i record con **ImportStatus_ID** di **2**, vedere [Errori del processo di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Visualizzare gli errori che si verificano durante il processo di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Errori del processo di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Errori del processo di gestione temporanea &#40; Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

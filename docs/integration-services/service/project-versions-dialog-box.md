@@ -1,24 +1,29 @@
 ---
-title: "Finestra di dialogo Versioni progetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.versions.f1"
+title: Finestra di dialogo versioni progetto | Documenti Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bdf9a0d6fa3ae9a022b720ff0bac003cd65c00db
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Finestra di dialogo Versioni progetto
+# <a name="project-versions-dialog-box"></a>Finestra di dialogo Versioni progetto
   Utilizzare la finestra di dialogo **Versioni di progetto** per visualizzare le versioni di un progetto e per ripristinare una versione precedente.  
   
  È anche possibile visualizzare le versioni precedenti nella vista [catalog.object_versions &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md) e usare la stored procedure [catalog.restore_project &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) per ripristinare le versioni precedenti.  

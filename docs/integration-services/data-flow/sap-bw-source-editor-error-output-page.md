@@ -1,24 +1,29 @@
 ---
-title: "Editor origine SAP BW (pagina Output degli errori) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.erroroutput.f1"
+title: Editor origine SAP BW (pagina Output degli errori) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00e596fd1c4b200e4f0fe1342fa56a9a3191f991
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor origine SAP BW (pagina Output degli errori)
+# <a name="sap-bw-source-editor-error-output-page"></a>Editor origine SAP BW (pagina Output degli errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **Editor origine SAP BW** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
   
  Per sapere di più sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 3.  Nell' **Editor origine SAP BW**fare clic su **Output degli errori** per aprire la pagina **Output degli errori** dell'editor.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
 > [!NOTE]  
 >  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
@@ -46,7 +51,7 @@ caps.handback.revision: 10
  Consente di visualizzare il nome dell'origine dei dati.  
   
  **Colonna**  
- Visualizzare le colonne esterne (di origine) selezionate nella pagina **Colonne** della finestra di dialogo **Editor origine SAP BW**. Per altre informazioni su questa finestra di dialogo, vedere [Editor origine SAP BW &#40;pagina Colonne&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md).  
+ Visualizzare le colonne esterne (di origine) selezionate nella pagina **Colonne** della finestra di dialogo **Editor origine SAP BW** . Per altre informazioni su questa finestra di dialogo, vedere [Editor origine SAP BW &#40;pagina Colonne&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md).  
   
  **Errore**  
  Specificare quale operazione dovrà essere eseguita dal componente di origine SAP BW in caso di errore: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
@@ -63,10 +68,10 @@ caps.handback.revision: 10
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Editor origine SAP BW &#40;pagina Colonne&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Editor origine SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [Editor origine SAP BW &#40; Pagina colonne &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [Editor origine SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

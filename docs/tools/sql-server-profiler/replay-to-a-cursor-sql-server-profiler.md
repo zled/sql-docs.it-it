@@ -1,29 +1,34 @@
 ---
-title: "Riprodurre fino a un cursore (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "riproduzione di cursori"
-  - "tracce [SQL Server], riproduzione"
-  - "riproduzione di tracce"
+title: Riproduzione di un cursore (SQL Server Profiler) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replaying cursors
+- traces [SQL Server], replaying
+- replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 775216d4634aced69ecc3248064b9539599fe54c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Riprodurre fino a un cursore (SQL Server Profiler)
+# <a name="replay-to-a-cursor-sql-server-profiler"></a>Riprodurre fino a un cursore (SQL Server Profiler)
   In questo argomento viene descritto come sospendere la riproduzione di tabelle o file di traccia in corrispondenza di un cursore utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La sospensione della riproduzione delle tracce in corrispondenza dei cursori supporta il debug in quanto è possibile interrompere la riproduzione di script di traccia lunghi in segmenti più brevi per eseguirne l'analisi incrementale.  
   
-### Per eseguire la riproduzione fino al cursore  
+### <a name="to-replay-to-the-cursor"></a>Per eseguire la riproduzione fino al cursore  
   
 1.  Aprire il file o la tabella di traccia che si desidera riprodurre. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) o [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 22
   
 2.  Nella finestra di traccia fare clic su un evento.  
   
-3.  Scegliere **Esegui fino al cursore** dal menu **Riproduci** e quindi connettersi al server di cui si vuole riprodurre la traccia.  
+3.  Scegliere **Esegui fino al cursore** dal menu **Riproduci**e quindi connettersi al server di cui si vuole riprodurre la traccia.  
   
 4.  Nella finestra di dialogo **Configurazione riproduzione** verificare le impostazioni e quindi fare clic su **OK**.  
   
@@ -41,8 +46,8 @@ caps.handback.revision: 22
   
 6.  Ripetere l'operazione descritta al passaggio 5 fino alla fine della traccia.  
   
-## Vedere anche  
- [Riprodurre fino a un punto di interruzione &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Riprodurre fino a un punto di interruzione &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)   
  [Riprodurre le tracce](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

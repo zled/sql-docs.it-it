@@ -1,30 +1,35 @@
 ---
-title: "Novit&#224; in Master Data Services (MDS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Novità &#39; s New in Master Data Services (MDS) | Documenti Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Novit&#224; in Master Data Services (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>Novità &#39; s New in Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Questo argomento riepiloga le modifiche e gli aggiornamenti disponibili nella versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
- **Per installare Master Data Services, configurare il database e il sito Web e distribuire i modelli di esempio, vedere ** [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
+ **Per installare Master Data Services, configurare il database e il sito Web e distribuire i modelli di esempio, vedere** [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
  **Download**  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -77,7 +82,7 @@ caps.handback.revision: 85
   
  Ora l'autorizzazione di amministratore può essere assegnata a un utente in modo esplicito al livello del modello. Ciò significa che l'utente non perderà l'autorizzazione di amministratore se in un secondo momento gli vengono assegnate autorizzazioni nel sottoalbero di modello, ad esempio per il livello di entità.  
   
- In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono forniti altri livelli di autorizzazioni grazie all'introduzione di questi nuovi tipi: lettura, creazione, aggiornamento ed eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
+ In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono forniti altri livelli di autorizzazioni grazie all'introduzione di questi nuovi tipi: lettura, creazione, aggiornamento ed eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
   
  Durante l'aggiornamento a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le autorizzazioni precedenti vengono convertite nelle nuove autorizzazioni, come illustrato nella tabella seguente.  
   
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  I pacchetti di esempio sono stati aggiornati per supportare nuovi scenari. Per altre informazioni, vedere [Esempi: pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità di Master Data Services e Data Quality Services supportate dalle edizioni di SQL Server 2016](../master-data-services/master data services and data quality services features support.md)  
+ [Funzionalità di Master Data Services e Data Quality Services supportate dalle edizioni di SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Funzionalità deprecate di Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

@@ -1,24 +1,29 @@
 ---
-title: "Origine ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcsource.f1"
+title: Origine ODBC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa8fcf2545618602bcf9f574a52ba51d0074a850
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origine ODBC
+# <a name="odbc-source"></a>Origine ODBC
   Tramite l'origine ODBC vengono estratti dati da un database supportato da ODBC mediante una tabella di database, una vista o un'istruzione SQL.  
   
  Per l'origine ODBC sono disponibili le modalità di accesso ai dati seguenti per l'estrazione dei dati:  
@@ -33,7 +38,7 @@ caps.handback.revision: 9
   
  L'origine ODBC include un output regolare e un output degli errori.  
   
-## Gestione degli errori  
+## <a name="error-handling"></a>Gestione degli errori  
  L'origine ODBC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
 -   **Error Code**: numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database supportato da ODBC in uso. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
@@ -44,36 +49,36 @@ caps.handback.revision: 9
   
  A seconda dell'impostazione del comportamento in seguito all'errore, l'origine ODBC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
-## Supporto dei tipi di dati  
+## <a name="data-type-support"></a>Supporto dei tipi di dati  
  Per informazioni sui tipi di dati supportati dall'origine ODBC, vedere Connettore per ODBC (Open Database Connectivity) di Attunity.  
   
-## Opzioni di estrazione  
- L'origine ODBC usa la modalità **Batch** o **Row-by-Row**. La modalità utilizzata è determinata dalla proprietà **FetchMethod**. Nell'elenco seguente vengono descritte le diverse modalità.  
+## <a name="extract-options"></a>Opzioni di estrazione  
+ L'origine ODBC usa la modalità **Batch** o **Row-by-Row** . La modalità utilizzata è determinata dalla proprietà **FetchMethod** . Nell'elenco seguente vengono descritte le diverse modalità.  
   
--   **Batch**: il componente tenta di usare il metodo di recupero più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, tale metodo è SQLFetchScroll con associazione di matrici (in cui le dimensioni delle matrici sono determinate dalla proprietà **BatchSize**). Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Row-by-row**.  
+-   **Batch**: il componente tenta di usare il metodo di recupero più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, tale metodo è SQLFetchScroll con associazione di matrici (in cui le dimensioni delle matrici sono determinate dalla proprietà **BatchSize** ). Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Row-by-row** .  
   
 -   **Row-by Row**: il componente usa SQLFetch per recuperare le righe una per volta.  
   
- Per altre informazioni sulla proprietà **FetchMethod**, vedere [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
+ Per altre informazioni sulla proprietà **FetchMethod** , vedere [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## Parallelismo  
+## <a name="parallelism"></a>Parallelismo  
  Non sussiste alcuna limitazione al numero di componenti dell'origine ODBC che possono essere eseguiti in parallelo rispetto alla stessa tabella o a tabelle diverse, nello stesso computer o in computer diversi, ad eccezione dei normali limiti di sessione globali.  
   
  Alcune limitazioni del provider ODBC utilizzato possono tuttavia ridurre il numero di connessioni simultanee tramite il provider. Queste limitazioni riducono il numero di possibili istanze parallele supportate per l'origine ODBC. Lo sviluppatore di SSIS deve essere a conoscenza delle limitazioni di qualsiasi provider ODBC utilizzato e tenerne conto in caso di compilazione di pacchetti SSIS.  
   
-## Risoluzione dei problemi relativi all'origine ODBC  
+## <a name="troubleshooting-the-odbc-source"></a>Risoluzione dei problemi relativi all'origine ODBC  
  È possibile registrare le chiamate eseguite dall'origine ODBC a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi al caricamento di dati da origini dati esterne eseguito dall'origine ODBC. Per registrare le chiamate eseguite dall'origine ODBC a provider di dati esterni, abilitare la traccia di Gestione driver ODBC. Per altre informazioni, vedere la documentazione di Microsoft su *come generare una traccia ODBC con l'amministratore dell'origine dati ODBC*.  
   
-## Configurazione dell'origine ODBC  
+## <a name="configuring-the-odbc-source"></a>Configurazione dell'origine ODBC  
  È possibile configurare l'origine ODBC a livello di codice o tramite Progettazione SSIS.  
   
  Per ulteriori informazioni, vedere uno degli argomenti seguenti:  
   
--   [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+-   [Editor origine ODBC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [Editor origine ODBC &#40;pagina Colonne&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
+-   [Editor origine ODBC &#40; Pagina colonne &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+-   [Editor origine ODBC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -83,15 +88,15 @@ caps.handback.revision: 9
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo Editor avanzato, vedere [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+-   [Editor origine ODBC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
--   [Editor origine ODBC &#40;pagina Colonne&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
+-   [Editor origine ODBC &#40; Pagina colonne &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+-   [Editor origine ODBC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [Estrarre dati tramite l'origine ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Estrarre dati utilizzando l'origine ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   

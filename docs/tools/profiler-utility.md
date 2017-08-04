@@ -1,34 +1,39 @@
 ---
-title: "Utilit&#224; profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilità del prompt dei comandi [SQL Server], utilità profiler90"
-  - "profiler90 - utilità"
-  - "Profiler [SQL Server Profiler], avvio"
-  - "SQL Server Profiler, avvio"
-  - "avvio di SQL Server Profiler"
+title: "Utilità profiler | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- command prompt utilities [SQL Server], profiler90 utility
+- profiler90 utility
+- Profiler [SQL Server Profiler], starting
+- SQL Server Profiler, starting
+- starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilit&#224; profiler
+# <a name="profiler-utility"></a>Utilità profiler
   L'utilità **profiler** consente di avviare lo strumento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Gli argomenti facoltativi elencati di seguito in questo argomento consentono di controllare la modalità di avvio dell'applicazione.  
   
 > [!NOTE]  
 >  L'utilità **profiler** non viene usata per lo scripting delle tracce. Per altre informazioni, vedere [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -51,27 +56,27 @@ profiler
 ]  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  **/?**  
- Visualizza il riepilogo della sintassi degli argomenti di **profiler**.  
+ Visualizza il riepilogo della sintassi degli argomenti di **profiler** .  
   
  **/U** *login_id*  
- ID di accesso utente per l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per gli ID di accesso la distinzione tra maiuscole e minuscole è rilevante.  
+ ID di accesso utente per l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per gli ID di accesso la distinzione tra maiuscole e minuscole è rilevante.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
- Specifica una password definita dall'utente per l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Specifica una password definita dall'utente per l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
  Specifica la connessione tramite l'autenticazione di Windows e le credenziali dell'utente corrente.  
   
  **/S**  *sql_server_name*  
- Specifica un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E**. Usare **/S** *sql_server_name*\\*instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Specifica un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **** *per connettersi a un'istanza denominata di*\\*per connettersi a un'istanza denominata di*.  
   
  **/A**  *analysis_services_server_name*  
- Consente di specificare un'istanza di Analysis Services. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E**. Usare **/A** *analysis_services_server_name\instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Consente di specificare un'istanza di Analysis Services. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  **** *per connettersi a un'istanza denominata di*.  
   
  **/D** *database*  
  Specifica il nome del database da utilizzare con la connessione. Se non si specifica alcun database, questa opzione selezionerà il database predefinito per l'utente specificato.  
@@ -104,7 +109,7 @@ profiler
 |DD|Giorno nel formato a 2 cifre|  
 |YY|Anno nel formato a 2 cifre|  
 |hh|Ora a 2 cifre nel formato a 24 ore|  
-|mm|Minuti nel formato a 2 cifre|  
+|MM|Minuti nel formato a 2 cifre|  
 |ss|Secondi nel formato a 2 cifre|  
   
 > [!NOTE]  
@@ -116,14 +121,14 @@ profiler
  **/Z**  *file_size*  
  Specifica le dimensioni del file di traccia espresse in megabyte (MB). Le dimensioni predefinite sono pari a 5 MB. Se si abilita il rollover, a tutti i file di rollover verrà applicato il valore limite specificato in questo argomento.  
   
-## Osservazioni  
- Per avviare la traccia con un modello specifico, usare contemporaneamente le opzioni **/S** e **/T**. Per avviare una traccia utilizzando il modello Standard in MyServer\MyInstance, ad esempio, al prompt dei comandi digitare quanto segue:  
+## <a name="remarks"></a>Osservazioni  
+ Per avviare la traccia con un modello specifico, usare contemporaneamente le opzioni **/S** e **/T** . Per avviare una traccia utilizzando il modello Standard in MyServer\MyInstance, ad esempio, al prompt dei comandi digitare quanto segue:  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## Vedere anche  
- [Guida di riferimento alle utilità del prompt dei comandi &#40;motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

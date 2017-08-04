@@ -1,31 +1,36 @@
 ---
-title: "Editor trasformazione Ricerca (pagina Avanzate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.advanced.f1"
-helpviewer_keywords: 
-  - "Editor trasformazione Ricerca"
+title: Editor trasformazione ricerca (pagina avanzate) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.advanced.f1
+helpviewer_keywords:
+- Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13b342d7db5106451f7355c7dd1672181443f18d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor trasformazione Ricerca (pagina Avanzate)
+# <a name="lookup-transformation-editor-advanced-page"></a>Editor trasformazione Ricerca (pagina Avanzate)
   La pagina **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca** consente di configurare la memorizzazione nella cache parziale e di modificare l'istruzione SQL della trasformazione Ricerca.  
   
  Per ulteriori informazioni sulla trasformazione Ricerca, vedere [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Dimensioni cache (32 bit)**  
  Consente di regolare le dimensioni della cache (in megabyte) per i computer a 32 bit. Il valore predefinito è 5 MB.  
   
@@ -45,17 +50,17 @@ caps.handback.revision: 42
 >  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
   
  **Impostazione dei parametri**  
- Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query**.  
+ Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query** .  
   
-## Risorse esterne  
+## <a name="external-resources"></a>Risorse esterne  
  Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
-## Vedere anche  
- [Editor trasformazione Ricerca &#40;pagina Generale&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
- [Guida di riferimento ai messaggi e agli errori di Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Editor trasformazione Ricerca &#40; Pagina generale &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
+ [Editor trasformazione Ricerca &#40; Pagina connessione &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
+ [Editor trasformazione Ricerca &#40; Pagina colonne &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
+ [Editor trasformazione Ricerca &#40; Pagina Output degli errori &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
+ [Errori di Integration Services e riferimento ai messaggi](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

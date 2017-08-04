@@ -1,26 +1,31 @@
 ---
-title: "Finestra di dialogo Propriet&#224; progetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.general.f1"
-  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+title: "Finestra di dialogo Proprietà progetto | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.general.f1
+- sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Finestra di dialogo Propriet&#224; progetto
-  Un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è un'unità di distribuzione. In ogni progetto possono essere inclusi pacchetti, parametri e riferimenti all'ambiente. Un progetto è un oggetto a protezione diretta in cui è possibile definire autorizzazioni per le entità di database. Quando un progetto viene ridistribuito, la versione precedente può essere archiviata nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+# <a name="project-properties-dialog-box"></a>Finestra di dialogo Proprietà progetto
+  Un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è un'unità di distribuzione. In ogni progetto possono essere inclusi pacchetti, parametri e riferimenti all'ambiente. Un progetto è un oggetto a protezione diretta in cui è possibile definire autorizzazioni per le entità di database. Quando un progetto viene ridistribuito, la versione precedente può essere archiviata nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  I parametri del progetto e quelli del pacchetto possono essere utilizzati per assegnare valori alle proprietà dei pacchetti durante la fase di esecuzione. In alcuni parametri devono essere presenti valori prima che il pacchetto possa essere eseguito. Per i valori di parametri che fanno riferimento alle variabili di ambiente è necessario che il progetto disponga del riferimento all'ambiente corrispondente prima dell'esecuzione.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 9
  Utilizzare la pagina **Autorizzazioni** per visualizzare e impostare le autorizzazioni esplicite per il progetto.  
   
  Sfoglia  
- Fare clic su **Sfoglia** per selezionare gli utenti e i ruoli per cui si vuole impostare le autorizzazioni, usando la finestra di dialogo **Sfoglia tutte le entità**.  
+ Fare clic su **Sfoglia** per selezionare gli utenti e i ruoli per cui si vuole impostare le autorizzazioni, usando la finestra di dialogo **Sfoglia tutte le entità** .  
   
  **Nome**  
  Viene elencato il nome dell'utente o del ruolo.  

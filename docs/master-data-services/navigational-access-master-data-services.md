@@ -1,26 +1,31 @@
 ---
-title: "Accesso per la navigazione (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "accesso per la navigazione [Master Data Services]"
-  - "sicurezza [Master Data Services], accesso per la navigazione"
+title: Accesso per la navigazione (Master Data Services) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- navigational access [Master Data Services]
+- security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3979b0f5749182f3188ee3baafd43cd3e0cbb8b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Accesso per la navigazione (Master Data Services)
-  L'accesso per la navigazione si applica alla sicurezza dell'oggetto modello, assegnata nella scheda **Modelli**.  
+# <a name="navigational-access-master-data-services"></a>Accesso per la navigazione (Master Data Services)
+  L'accesso per la navigazione si applica alla sicurezza dell'oggetto modello, assegnata nella scheda **Modelli** .  
   
  L'accesso per la navigazione è l'accesso che si ottiene ai livelli superiori a quello per cui è stata assegnata la sicurezza.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 5
   
  Quando si assegnano autorizzazioni alle raccolte, è possibile leggere o aggiornare nome, codice, descrizione e ID proprietario. È inoltre possibile leggere il nome del modello.  
   
-## Vedere anche  
- [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Determinazione delle autorizzazioni &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

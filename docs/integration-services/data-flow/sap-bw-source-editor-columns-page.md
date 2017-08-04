@@ -1,24 +1,29 @@
 ---
-title: "Editor origine SAP BW (pagina Colonne) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.columns.f1"
+title: Editor origine SAP BW (pagina colonne) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor origine SAP BW (pagina Colonne)
+# <a name="sap-bw-source-editor-columns-page"></a>Editor origine SAP BW (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine SAP BW** per eseguire il mapping di una colonna di output a ogni colonna esterna (di origine).  
   
  Per sapere di più sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 3.  Nell' **Editor origine SAP BW**fare clic su **Colonne** per aprire la pagina **Colonne** dell'editor.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
   
 > [!NOTE]  
 >  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
@@ -53,12 +58,12 @@ caps.handback.revision: 10
  Per modificare l'ordine delle colonne, nell'elenco **Colonne esterne disponibili** deselezionare le caselle di controllo per tutte le colonne. Selezionare quindi le colonne nell'ordine in cui si desidera visualizzarle.  
   
  **Colonna di output**  
- Consente di specificare un nome univoco per ogni colonna di output. L'impostazione predefinita è il nome della colonna (di origine) esterna selezionata. Tuttavia, è possibile immettere qualsiasi nome descrittivo univoco. [!INCLUDE[ssIS](../../includes/ssis-md.md)] verranno visualizzati i nomi di **Colonna di output** per le colonne quando si configurano i componenti a valle che utilizzano i dati di questa origine.  
+ Consente di specificare un nome univoco per ogni colonna di output. L'impostazione predefinita è il nome della colonna (di origine) esterna selezionata. Tuttavia, è possibile immettere qualsiasi nome descrittivo univoco. [!INCLUDE[ssIS](../../includes/ssis-md.md)]Finestra di progettazione verrà visualizzato il **colonna di Output** nomi per le colonne quando si configurano i componenti a valle che utilizzano i dati dall'origine.  
   
-## Vedere anche  
- [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Editor origine SAP BW &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Editor origine SAP BW &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Editor origine SAP BW &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Editor origine SAP BW &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Editor origine SAP BW &#40; Pagina avanzate &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

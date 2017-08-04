@@ -1,25 +1,30 @@
 ---
-title: "Esecuzione di un caricamento incrementale di pi&#249; tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caricamento incrementale [Integration Services], più tabelle"
+title: "Eseguire un caricamento incrementale di più tabelle | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Esecuzione di un caricamento incrementale di pi&#249; tabelle
-  Il diagramma incluso nell'argomento [Miglioramento dei caricamenti incrementali tramite Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md) illustra un pacchetto di base che esegue un caricamento incrementale in un'unica tabella. Il caricamento di una tabella, tuttavia, non rappresenta un'operazione tanto comune quanto l'esecuzione di un caricamento incrementale di più tabelle.  
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>Esecuzione di un caricamento incrementale di più tabelle
+  Il diagramma incluso nell'argomento [Miglioramento dei caricamenti incrementali tramite Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md)illustra un pacchetto di base che esegue un caricamento incrementale in un'unica tabella. Il caricamento di una tabella, tuttavia, non rappresenta un'operazione tanto comune quanto l'esecuzione di un caricamento incrementale di più tabelle.  
   
  Quando si esegue un caricamento incrementale di più tabelle, alcuni passaggi devono essere eseguiti una volta per tutte le tabelle, mentre altri passaggi devono essere ripetuti per ogni tabella di origine. Per implementare tali passaggi in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sono disponibili più opzioni:  
   
@@ -27,10 +32,10 @@ caps.handback.revision: 26
   
 -   Utilizzare più attività Flusso di dati in un singolo pacchetto.  
   
-## Caricamento di più tabelle tramite un pacchetto padre e più pacchetti figlio  
+## <a name="loading-multiple-tables-by-using-a-parent-package-and-multiple-child-packages"></a>Caricamento di più tabelle tramite un pacchetto padre e più pacchetti figlio  
  È possibile utilizzare un pacchetto padre per i passaggi che devono essere eseguiti solo una volta. I pacchetti figlio verranno utilizzati per i passaggi necessari per ogni tabella di origine.  
   
-#### Per creare un pacchetto padre per l'esecuzione dei passaggi necessari solo una volta  
+#### <a name="to-create-a-parent-package-that-performs-those-steps-that-only-have-to-be-done-once"></a>Per creare un pacchetto padre per l'esecuzione dei passaggi necessari solo una volta  
   
 1.  Creare un pacchetto padre.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 26
   
 4.  Utilizzare più attività Esegui pacchetto per eseguire pacchetti figlio per ogni tabella da caricare. Passare gli endpoint calcolati nel pacchetto padre a ciascun pacchetto figlio utilizzando le configurazioni Variabile pacchetto padre.  
   
-     Per altre informazioni, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md) e [Usare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Per altre informazioni, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md) e [Usare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-#### Per creare pacchetti figlio per l'esecuzione dei passaggi necessari per ogni tabella di origine  
+#### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Per creare pacchetti figlio per l'esecuzione dei passaggi necessari per ogni tabella di origine  
   
 1.  Creare un pacchetto figlio per ogni tabella di origine.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 26
   
          Per un esempio di come usare questa trasformazione per applicare aggiornamenti ed eliminazioni, vedere [Applicare le modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
-## Caricamento di più tabelle tramite più attività Flusso di dati in un singolo pacchetto  
+## <a name="loading-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Caricamento di più tabelle tramite più attività Flusso di dati in un singolo pacchetto  
  In alternativa, è possibile utilizzare un singolo pacchetto contenente un'attività Flusso di dati distinta per ogni tabella di origine da caricare.  
   
-#### Per caricare più tabelle utilizzando più attività Flusso di dati in un singolo pacchetto  
+#### <a name="to-load-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Per caricare più tabelle utilizzando più attività Flusso di dati in un singolo pacchetto  
   
 1.  Creare un singolo pacchetto.  
   

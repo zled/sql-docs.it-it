@@ -1,24 +1,29 @@
 ---
-title: "Gestire un&#39;istanza di CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manIns"
+title: Gestire un'istanza di CDC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gestire un&#39;istanza di CDC
+# <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
   
  Fare clic sul nome di un'istanza nel riquadro sinistro per visualizzare le relative informazioni.  
@@ -26,7 +31,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  Se si seleziona un servizio nel riquadro sinistro, l'elenco delle istanze disponibili viene visualizzato al centro di CDC Designer Console. Se si seleziona una delle istanze in questa sezione, è possibile eseguire le attività nel riquadro destro. Non è tuttavia possibile visualizzare le informazioni nelle schede delle proprietà.  
   
-## Operazioni possibili quando si visualizzano le informazioni sull'istanza di CDC  
+## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>Operazioni possibili quando si visualizzano le informazioni sull'istanza di CDC  
  Dal riquadro destro vengono eseguite le azioni seguenti:  
   
  **Start**  
@@ -36,7 +41,7 @@ caps.handback.revision: 11
  Fare clic su **Stop** per arrestare l'acquisizione delle modifiche per l'istanza di CDC selezionata. Quando si arresta l'istanza di CDC, le modifiche acquisite fino a quel momento non vanno perse e verranno recapitate alla ripresa dell'istanza di CDC.  
   
  **Reimposta**  
- Fare clic su **Reset**per reimpostare l'istanza di CDC sullo stato iniziale (vuoto). Questa opzione diventa disponibile dopo che l'istanza di CDC è stata interrotta. Tutte le modifiche presenti nelle tabelle delle modifiche e lo stato interno dell'istanza di CDC vengono eliminati. Al successivo avvio dell'istanza di CDC, l'acquisizione delle modifiche verrà avviata da quel momento e includerà solo le transazioni avviate dopo l'avvio dell'istanza di CDC.  
+ Fare clic su **Reset** per reimpostare l'istanza di CDC sullo stato iniziale (vuoto). Questa opzione diventa disponibile dopo che l'istanza di CDC è stata interrotta. Tutte le modifiche presenti nelle tabelle delle modifiche e lo stato interno dell'istanza di CDC vengono eliminati. Al successivo avvio dell'istanza di CDC, l'acquisizione delle modifiche verrà avviata da quel momento e includerà solo le transazioni avviate dopo l'avvio dell'istanza di CDC.  
   
  Scegliere **OK** nella finestra di dialogo di conferma per reimpostare l'istanza di CDC ed eliminare le modifiche scritte nelle tabelle delle modifiche.  
   
@@ -69,8 +74,8 @@ caps.handback.revision: 11
     |||  
     |-|-|  
     |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. L'istanza di Oracle CDC non è in esecuzione perché si è verificato un errore irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Misconfigured**: si è verificato un errore di configurazione che richiede l'intervento manuale.<br /><br /> **Password Required:**nessuna password impostata per l'istanza di Oracle CDC oppure la password non è valida.<br /><br /> **Unexpected**. Tutti gli altri errori non reversibili.|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**Running**: l'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche. Sono disponibili gli stati secondari seguenti:<br /><br /> **Idle**: tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **Processing**: è in corso l'elaborazione di alcuni record delle modifiche che non sono ancora stati scritti nelle tabelle delle modifiche.|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**Stopped**: l'istanza di CDC non è in esecuzione. Lo stato stopped indica che l'istanza di CDC è stata interrotta in modo normale.|  
+    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**Running**: l'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche. Sono disponibili gli stati secondari seguenti:<br /><br /> **Idle**: tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **Processing**: è in corso l'elaborazione di alcuni record delle modifiche che non sono ancora stati scritti nelle tabelle delle modifiche.|  
+    |![Arresta](../../integration-services/change-data-capture/media/stop.gif "Arresta")|**Stopped**: l'istanza di CDC non è in esecuzione. Lo stato stopped indica che l'istanza di CDC è stata interrotta in modo normale.|  
     |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**Paused**: l'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore non irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Disconnected**: non è possibile stabilire la connessione al database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> **Storage**: lo spazio di archiviazione è esaurito. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione.<br /><br /> **Logger**: il logger è connesso a Oracle ma non è in grado di leggere i log delle transazioni Oracle a causa di un problema temporaneo, ad esempio un log delle transazioni necessario non è disponibile.|  
   
 -   **Detailed Status**: stato secondario corrente.  
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
     -   **Active transactions**: numero corrente di transazioni Oracle di origine elaborate dall'istanza di Oracle CDC e non ancora sottoposte a commit o a rollback.  
   
-    -   **Staged transactions**: numero corrente di transazioni Oracle di origine temporanee nella tabella [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions).  
+    -   **Staged transactions**: numero corrente di transazioni Oracle di origine temporanee nella tabella [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) .  
   
 -   **Counters**: vengono monitorate le informazioni seguenti in questa sezione.  
   
@@ -102,24 +107,24 @@ caps.handback.revision: 11
     -   **Written changes**: numero di modifiche scritte nelle tabelle delle modifiche di SQL Server.  
   
  **Oracle**  
- Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, l'istanza nel riquadro a sinistra e scegliere **proprietà** oppure fare clic su **proprietà** nel riquadro di destra per aprire la \<istanza > la finestra di dialogo proprietà.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tabelle**  
- Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, l'istanza nel riquadro a sinistra e scegliere **proprietà** oppure fare clic su **proprietà** nel riquadro di destra per aprire la \<istanza > la finestra di dialogo proprietà.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Avanzate**  
- Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, l'istanza nel riquadro a sinistra e scegliere **proprietà** oppure fare clic su **proprietà** nel riquadro di destra per aprire la \<istanza > la finestra di dialogo proprietà.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## Vedere anche  
- [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Procedura di visualizzazione delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
- [Procedura di modifica delle proprietà dell'istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Come creare l'istanza SQL Server Change Database](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Come visualizzare le proprietà di istanza di CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
+ [Come modificare le proprietà di istanza di CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Utilizzare la New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

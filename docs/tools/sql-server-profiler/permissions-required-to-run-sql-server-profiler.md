@@ -1,37 +1,42 @@
 ---
-title: "Autorizzazioni necessarie per l&#39;esecuzione di SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], autorizzazioni"
-  - "tracce [SQL Server], riproduzione"
-  - "riproduzione di tracce"
-  - "SQL Server Profiler, autorizzazioni"
-  - "sicurezza [SQL Server], SQL Server Profiler"
+title: Autorizzazioni necessarie per eseguire SQL Server Profiler | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], permissions
+- traces [SQL Server], replaying
+- replaying traces
+- SQL Server Profiler, permissions
+- security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a444574b79bac234d14e5643397ecfca58d16a63
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Autorizzazioni necessarie per l&#39;esecuzione di SQL Server Profiler
+# <a name="permissions-required-to-run-sql-server-profiler"></a>Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler
   Per impostazione predefinita, l'esecuzione di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] richiede le stesse autorizzazioni utente necessarie per le stored procedure Transact-SQL utilizzate per la creazione di tracce. Per eseguire [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è necessario che agli utenti venga concessa l'autorizzazione ALTER TRACE. Per altre informazioni, vedere [GRANT - autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Gli utenti che dispongono dell'autorizzazione SHOWPLAN, ALTER TRACE o VIEW SERVER STATE possono visualizzare le query acquisite nell'output di Showplan. Poiché tali query possono contenere informazioni riservate, ad esempio password, è consigliabile concedere tali autorizzazioni solo agli utenti che possono visualizzare le informazioni riservate, ad esempio ai membri del ruolo predefinito del database db_owner oppure ai membri del ruolo predefinito del server sysadmin. È inoltre consigliabile salvare file Showplan o file di traccia che contengono eventi correlati a Showplan solo in una posizione che utilizza il file system NTFS e limitare l'accesso agli utenti autorizzati a visualizzare le informazioni riservate.  
   
-## Autorizzazioni per la riproduzione di tracce  
+## <a name="permissions-used-to-replay-traces"></a>Autorizzazioni per la riproduzione di tracce  
  Per riprodurre le tracce, è necessario che l'utente che desidera eseguire questa operazione disponga dell'autorizzazione ALTER TRACE.  
   
- Durante la riproduzione, in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene tuttavia utilizzato il comando EXECUTE AS, se nella traccia riprodotta viene rilevato un evento Audit Login. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa il comando EXECUTE AS per rappresentare l'utente associato all'evento di accesso.  
+ Durante la riproduzione, in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene tuttavia utilizzato il comando EXECUTE AS, se nella traccia riprodotta viene rilevato un evento Audit Login. In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] questo comando viene utilizzato per rappresentare l'utente associato all'evento di accesso.  
   
  Se [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rileva un evento di accesso in una traccia che si desidera riprodurre, verranno eseguite le verifiche delle autorizzazioni seguenti:  
   
@@ -39,9 +44,9 @@ caps.handback.revision: 20
   
 2.  Nella traccia riprodotta viene rilevato un evento di accesso per Utente2.  
   
-3.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa il comando EXECUTE AS per rappresentare Utente2.  
+3.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utilizza il comando EXECUTE AS per rappresentare Utente2.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a eseguire l'autenticazione di Utente2 e, in base ai risultati, si verifica una delle situazioni seguenti:  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tenta di eseguire l'autenticazione di Utente2 e, in base ai risultati, si verifica una delle operazioni seguenti:  
   
     1.  Se non è possibile eseguire l'autenticazione di Utente2, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] restituisce un errore e continua la riproduzione della traccia come Utente1.  
   
@@ -61,13 +66,13 @@ caps.handback.revision: 20
   
  Nella figura seguente viene illustrato il processo di verifica delle autorizzazioni per la riproduzione delle tracce:  
   
- ![Autorizzazioni per la riproduzione di tracce di SQL Server Profiler](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "Autorizzazioni per la riproduzione di tracce di SQL Server Profiler")  
+ ![Le autorizzazioni di SQL Server Profiler riproduzione traccia](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "autorizzazioni trace replay di SQL Server Profiler")  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure di SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [Riprodurre le tracce](../../tools/sql-server-profiler/replay-traces.md)   
- [Creare una traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Riprodurre una tabella di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Creare una traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Riprodurre una tabella di traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Riprodurre un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
   

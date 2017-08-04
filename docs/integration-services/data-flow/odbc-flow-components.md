@@ -1,34 +1,39 @@
 ---
-title: "Componenti di flusso ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Componenti di flusso ODBC | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Componenti di flusso ODBC
+# <a name="odbc-flow-components"></a>Componenti di flusso ODBC
   In questo argomento vengono descritti i concetti necessari per la creazione di un flusso di dati ODBC tramite [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  Con il connettore per ODBC (Open Database Connectivity) di Attunity per [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] gli sviluppatori di SSIS possono creare in modo facile pacchetti per il caricamento e lo scaricamento di dati da database supportati da ODBC.  
   
  Il connettore ODBC è progettato per ottenere prestazioni ottimali per il caricamento o lo scaricamento dei dati in o da un database supportato da ODBC nel contesto di [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
-## Vantaggi  
+## <a name="benefits"></a>Vantaggi  
  L'origine ODBC e la destinazione ODBC per [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] offrono un vantaggio competitivo per SSIS in progetti correlati al caricamento o allo scaricamento di dati in o da database supportati da ODBC.  
   
  Sia l'origine ODBC sia la destinazione ODBC consentono l'integrazione di dati a prestazioni elevate con database abilitati per ODBC. È possibile configurare entrambi i componenti per l'utilizzo con associazioni di matrici di parametri a livello di riga per provider ODBC con funzionalità di livello elevato che supportano questa modalità di associazione e associazioni di parametri di singole righe per provider ODBC con funzionalità di basso livello.  
   
-## Introduzione all'origine e alla destinazione ODBC  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>Introduzione all'origine e alla destinazione ODBC  
  Prima che sia possibile configurare pacchetti che utilizzano [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], è necessario assicurarsi che siano disponibili gli elementi seguenti.  
   
 -   [Origine ODBC](../../integration-services/data-flow/odbc-source.md)  
@@ -61,10 +66,10 @@ caps.handback.revision: 10
   
  Editor destinazione ODBC (pagina Output errori)  
   
-## Scenari operativi  
+## <a name="operating-scenarios"></a>Scenari operativi  
  In questa sezione vengono descritti alcuni degli utilizzi principali per i componenti di origine e di destinazione ODBC.  
   
-### Copia bulk di dati da tabelle di SQL Server a qualsiasi tabella di database supportata da ODBC  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>Copia bulk di dati da tabelle di SQL Server a qualsiasi tabella di database supportata da ODBC  
  È possibile usare i componenti per eseguire la copia bulk di dati da una o più tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'unica tabella di database supportata da ODBC.  
   
  Nell'esempio seguente viene illustrato come creare un'attività Flusso di dati SSIS per l'estrazione di dati da una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il caricamento dei dati in una tabella DB2.  
@@ -79,8 +84,8 @@ caps.handback.revision: 10
   
 -   Trascinare una destinazione ODBC nell'area di progettazione, connettere l'output di origine alla destinazione ODBC, quindi configurare la destinazione per il caricamento dei dati nella tabella DB2 con i dati estratti dal database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilizzare la gestione connessione ODBC creata in precedenza.  
   
-### Copia bulk di dati da tabelle di database supportate da ODBC a qualsiasi tabella di SQL Server  
- È possibile utilizzare i componenti per eseguire la copia bulk di dati da una o più tabelle di database supportate da ODBC a un'unica tabella di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>Copia bulk di dati da tabelle di database supportate da ODBC a qualsiasi tabella di SQL Server  
+ È possibile utilizzare i componenti per eseguire la copia bulk di dati da una o più tabelle di database supportate da ODBC a un'unica tabella di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Nell'esempio seguente viene illustrato come creare un'attività Flusso di dati SSIS per l'estrazione di dati da una tabella di database Sybase e il caricamento dei dati in una tabella di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   Trascinare una destinazione OLE DB nella superficie di progettazione, connettere l'output di origine alla destinazione OLE DB, quindi configurare la destinazione per il caricamento dei dati nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati estratti dal database Sybase. Utilizzare la gestione connessione OLE DB creata in precedenza.  
   
-## Tipi di dati supportati  
+## <a name="supported-data-types"></a>Tipi di dati supportati  
  I componenti SSIS di copia bulk ODBC supportano tutti i tipi di dati ODBC predefiniti e includono il supporto per oggetti di grandi dimensioni (CLOB e BLOB).  
   
 I tipi di dati C estensibili non sono supportati, come descritto nelle specifiche di ODBC 3.8. La tabella seguente descrive quali tipi di dati SSIS vengono usati per ogni tipo SQL ODBC. Uno sviluppatore di SSIS può eseguire l'override del mapping predefinito e specificare un tipo di dati SSIS diverso per le colonne di input/output senza influire sulle prestazioni per le conversioni di dati necessarie.  
@@ -128,7 +133,7 @@ I tipi di dati C estensibili non sono supportati, come descritto nelle specifich
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Tipi di dati specifici del provider|DT_BYTES<br /><br />DT_IMAGE|DT_BYTES viene utilizzato se la lunghezza di colonna è minore o uguale a 8000.<br /><br />DT_IMAGE viene utilizzato se la lunghezza di colonna è uguale a zero o maggiore di 8000.|  
   
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Origine ODBC](../../integration-services/data-flow/odbc-source.md)  
   

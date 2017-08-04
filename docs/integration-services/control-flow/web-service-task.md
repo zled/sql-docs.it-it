@@ -1,26 +1,31 @@
 ---
-title: "Attivit&#224; Servizio Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "Servizio Web - attività [Integration Services]"
+title: "L'attività servizio Web | Documenti Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Attivit&#224; Servizio Web
+# <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
   
 -   Scrivere in una variabile i valori restituiti da un metodo di servizio Web. È ad esempio possibile ottenere la temperatura massima del giorno da un metodo di servizio Web e quindi utilizzare tale valore per aggiornare una variabile utilizzata in un'espressione che imposta il valore di una colonna.  
@@ -50,7 +55,7 @@ caps.handback.revision: 57
  I risultati del metodo di servizio Web possono essere scritti in una variabile o in un file. Per specificare il file o il nome della variabile in cui scrivere i risultati, è necessario utilizzare una gestione connessione file. Per altre informazioni, vedere [Gestione connessione File](../../integration-services/connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Servizio Web  
- Nella tabella seguente sono elencate le voci di log personalizzate che è possibile attivare per l'attività Servizio Web. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../integration-services/performance/custom-messages-for-logging.md).  
+ Nella tabella seguente sono elencate le voci di log personalizzate che è possibile attivare per l'attività Servizio Web. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Voce di log|Description|  
 |---------------|-----------------|  
@@ -73,7 +78,7 @@ caps.handback.revision: 57
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -82,3 +87,4 @@ caps.handback.revision: 57
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642)sul sito technet.microsoft.com.  
+

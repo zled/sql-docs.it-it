@@ -1,36 +1,41 @@
 ---
-title: "Componente script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scriptcomponentdetails.f1"
-helpviewer_keywords: 
-  - "Script - trasformazione"
-  - "script [Integration Services], trasformazioni"
-  - "componente script [Integration Services], informazioni sul componente script"
-  - "componente di script [Integration Services]"
+title: Componente di script | Documenti Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scriptcomponentdetails.f1
+helpviewer_keywords:
+- Script transformation
+- scripts [Integration Services], transformations
+- Script component [Integration Services], about Script component
+- Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Componente script
+# <a name="script-component"></a>Componente script
   Il componente Script ospita lo script e consente a un pacchetto di includere ed eseguire codice script personalizzato. È possibile utilizzare il componente script nei pacchetti per gli scopi seguenti:  
   
 -   Applicare più trasformazioni ai dati anziché utilizzare più trasformazioni nel flusso di dati. Uno script può ad esempio sommare i valori in due colonne e quindi calcolare la media della somma.  
   
--   Accedere a regole business in un assembly .NET esistente. Uno script può ad esempio applicare una regola business che specifica l'intervallo dei valori validi in una colonna di nome **Income**.  
+-   Accedere a regole business in un assembly .NET esistente. Uno script può ad esempio applicare una regola business che specifica l'intervallo dei valori validi in una colonna di nome **Income** .  
   
--   Utilizzare formule e funzioni personalizzate, in aggiunta alle funzioni e agli operatori forniti dalla grammatica delle espressioni di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. È ad esempio possibile convalidare i numeri delle carte di credito che usano la formula LUHN.  
+-   Utilizzare formule e funzioni personalizzate, in aggiunta alle funzioni e agli operatori forniti dalla grammatica delle espressioni di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . È ad esempio possibile convalidare i numeri delle carte di credito che usano la formula LUHN.  
   
 -   Convalidare i dati delle colonne e ignorare i record che contengono dati non validi. Uno script può ad esempio stabilire se l'importo delle spese postali è ragionevole e ignorare i record che includono importi troppo alti o troppo bassi.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 70
   
  Una volta stabilito che il componente Script è la scelta più appropriata per il pacchetto, è necessario configurare gli input e gli output, sviluppare lo script utilizzato dal componente e configurare il componente stesso.  
   
-## Informazioni sulle modalità del componente script  
+## <a name="understanding-the-script-component-modes"></a>Informazioni sulle modalità del componente script  
  In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. In modalità progettazione metadati è possibile aggiungere e modificare gli input e gli output del componente script, ma non scrivere codice. Dopo avere configurato tutti gli input e gli output è possibile passare alla modalità progettazione codice per creare lo script. Il componente script genera automaticamente il codice di base dai metadati degli input e degli output. Se si modificano i metadati dopo la generazione del codice di base, non sarà più possibile compilare il codice perché il codice di base aggiornato potrebbe essere incompatibile con quello inserito dall'utente.  
   
-## Scrittura dello script utilizzato dal componente  
- Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall'**Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+## <a name="writing-the-script-that-the-component-uses"></a>Scrittura dello script utilizzato dal componente  
+ Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
  Il componente script fornisce un progetto VSTA che include una classe generata automaticamente, ScriptMain, che rappresenta i metadati del componente. Se ad esempio il componente script viene utilizzato come trasformazione con tre output, la classe ScriptMain includerà un metodo per ogni output. La classe ScriptMain costituisce il punto di ingresso dello script.  
   
- In VSTA sono disponibili tutte le caratteristiche standard dell'ambiente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], come l'editor di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con codifica a colori, la tecnologia IntelliSense e il Visualizzatore oggetti. Lo script utilizzato dal componente script è archiviato nella definizione del pacchetto. Durante la progettazione del pacchetto, il codice di script viene scritto temporaneamente in un file di progetto.  
+ In VSTA sono disponibili tutte le caratteristiche standard dell'ambiente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , come l'editor di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con codifica a colori, la tecnologia IntelliSense e il Visualizzatore oggetti. Lo script utilizzato dal componente script è archiviato nella definizione del pacchetto. Durante la progettazione del pacchetto, il codice di script viene scritto temporaneamente in un file di progetto.  
   
  VSTA supporta il linguaggio di programmazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 70
 > [!NOTE]  
 >  A differenza delle versioni precedenti in cui era possibile indicare se gli script erano precompilati o meno, in [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] e versioni successive tutti gli script sono precompilati. Se uno script è precompilato, il motore del linguaggio non verrà caricato in fase di esecuzione e il pacchetto verrà eseguito molto più rapidamente. I file binari precompilati occupano tuttavia una notevole quantità di spazio su disco.  
   
-## Configurazione del componente script  
+## <a name="configuring-the-script-component"></a>Configurazione del componente script  
  Per configurare il componente script, procedere nel modo seguente:  
   
 -   Selezionare le colonne di input a cui fare riferimento.  
   
     > [!NOTE]  
-    >  È possibile configurare un solo input quando si usa Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+    >  È possibile configurare un solo input quando si usa Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
 -   Specificare lo script che deve essere eseguito dal componente.  
   
@@ -86,8 +91,8 @@ caps.handback.revision: 70
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
-### Configurazione del componente script in Progettazione  
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Script**, fare clic su uno degli argomenti seguenti:  
+### <a name="configuring-the-script-component-in-the-designer"></a>Configurazione del componente script in Progettazione  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Script** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor trasformazione Script &#40;pagina Colonne di input&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
   
@@ -101,10 +106,10 @@ caps.handback.revision: 70
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-### Configurazione del componente script a livello di codice  
+### <a name="configuring-the-script-component-programmatically"></a>Configurazione del componente script a livello di codice  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra **Proprietà** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](../Topic/Common%20Properties.md)  
+-   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 70
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Estensione del flusso di dati con il componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  

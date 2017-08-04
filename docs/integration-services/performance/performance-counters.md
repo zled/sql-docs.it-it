@@ -1,31 +1,36 @@
 ---
-title: "Contatori delle prestazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log [Integration Services], contatori delle prestazioni"
-  - "contatori delle prestazioni [Integration Services]"
-  - "flusso di dati [Integration Services], prestazioni"
-  - "contatori [Integration Services]"
-  - "motore del flusso di dati [Integration Services]"
+title: I contatori delle prestazioni | Documenti Microsoft
+ms.custom: 
+ms.date: 08/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Integration Services], performance counters
+- performance counters [Integration Services]
+- data flow [Integration Services], performance
+- counters [Integration Services]
+- data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Contatori delle prestazioni
+# <a name="performance-counters"></a>Contatori delle prestazioni
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa un set di contatori delle prestazioni che è possibile usare per monitorare le prestazioni del motore flusso di dati. Ad esempio controllando il contatore "Buffer con spooling" è possibile stabilire se i buffer dei dati vengano scritti temporaneamente sul disco mentre il pacchetto è in esecuzione. Lo swapping riduce le prestazioni e indica che la memoria del computer è insufficiente.  
   
-> **NOTA:** se [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato in un computer che esegue [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] e il computer viene aggiornato a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], il processo di aggiornamento rimuove i contatori delle prestazioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dal computer. Per ripristinare i contatori delle prestazioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel computer, eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità di ripristino.  
+> **NOTA:** se [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato in un computer che esegue [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]e il computer viene aggiornato a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], il processo di aggiornamento rimuove i contatori delle prestazioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dal computer. Per ripristinare i contatori delle prestazioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel computer, eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità di ripristino.  
   
  Nella tabella seguente sono descritti i contatori delle prestazioni disponibili.  
   
@@ -48,8 +53,8 @@ caps.handback.revision: 63
   
  Per informazioni sull'ottimizzazione delle prestazioni, vedere [Funzionalità delle prestazioni del flusso di dati](../../integration-services/data-flow/data-flow-performance-features.md).  
   
-## Ottenere statistiche del contatore delle prestazioni  
- Per i progetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile ottenere statistiche del contatore delle prestazioni usando la funzione [dm_execution_performance_counters &#40;SSISDB Database&#41;](../Topic/dm_execution_performance_counters%20\(SSISDB%20Database\).md).  
+## <a name="obtain-performance-counter-statistics"></a>Ottenere statistiche del contatore delle prestazioni  
+ Per i progetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile ottenere statistiche del contatore delle prestazioni usando la funzione [dm_execution_performance_counters &#40;SSISDB Database&#41;](../../integration-services/functions-dm-execution-performance-counters.md).  
   
  Nell'esempio seguente la funzione restituisce le statistiche di un'esecuzione in corso con ID 34.  
   
@@ -57,24 +62,64 @@ caps.handback.revision: 63
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
- Nell'esempio seguente la funzione restituisce le statistiche di tutte le esecuzioni in corso nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Nell'esempio seguente la funzione restituisce le statistiche di tutte le esecuzioni in corso nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ```  
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  
   
-> **IMPORTANTE** Se si è un membro del ruolo del database **ssis_admin**, vengono restituite le statistiche sulle prestazioni per tutte le esecuzioni in corso.  Se non si è un membro del ruolo del database **ssis_admin**, vengono restituite le statistiche sulle prestazioni per le esecuzioni in corso per cui si dispone delle autorizzazioni di lettura.  
+> **IMPORTANTE** Se si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per tutte le esecuzioni in corso.  Se non si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per le esecuzioni in corso per cui si dispone delle autorizzazioni di lettura.  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
   
--   Strumento nella [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626) (Visualizzazione delle prestazione di SSIS per Business Intelligence Development Studio (progetto CodePlex)) nel sito codeplex.com.  
+-   Strumento nella [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626)(Visualizzazione delle prestazione di SSIS per Business Intelligence Development Studio (progetto CodePlex)) nel sito codeplex.com.  
   
--   Video [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=150497) (Misurazione e comprensione delle prestazioni dei pacchetti SSIS nell'organizzazione (video di SQL Server)) nel sito msdn.microsoft.com.  
+-   Video [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=150497)(Misurazione e comprensione delle prestazioni dei pacchetti SSIS nell'organizzazione (video di SQL Server)) nel sito msdn.microsoft.com.  
   
--   Articolo di supporto [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319) (Mancata disponibilità del contatore delle prestazioni di SSIS in Performance Monitor dopo l'aggiornamento a Windows Server 2008) nel sito support.microsoft.com.  
+-   Articolo di supporto [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319)(Mancata disponibilità del contatore delle prestazioni di SSIS in Performance Monitor dopo l'aggiornamento a Windows Server 2008) nel sito support.microsoft.com.  
+
+## <a name="add-a-log-for-data-flow-performance-counters"></a>Aggiunta di un registro per i contatori delle prestazioni del flusso di dati
+  In questo argomento viene descritta la procedura per l'aggiunta di un registro per i contatori delle prestazioni forniti dal motore del flusso di dati.  
   
-## Vedere anche  
- [Esecuzione di progetti e pacchetti](https://msdn.microsoft.com/library/ms141708.aspx)  
+> [!NOTE]  
+>  Se [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installato in un computer che esegue [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]e tale computer viene aggiornato a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], il processo di aggiornamento rimuove i contatori delle prestazioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dal computer. Per ripristinare i contatori delle prestazioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel computer, eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità di ripristino.  
   
+### <a name="to-add-logging-of-performance-counters"></a>Per attivare la creazione di registri dei contatori delle prestazioni  
   
+1.  Nel **Pannello di controllo**fare clic su **Strumenti di amministrazione**nella visualizzazione classica. Nella visualizzazione Categoria fare clic su **Prestazioni e manutenzione** e quindi su **Strumenti di amministrazione**.  
+  
+2.  Fare clic su **Prestazioni**.  
+  
+3.  Nella finestra di dialogo **Prestazioni** espandere il nodo **Avvisi e registri di prestazioni**, fare clic con il pulsante destro del mouse su **Registri contatori**e quindi fare clic su **Nuove impostazioni registro**. Digitare il nome del registro, ad esempio **MioRegistro**.  
+  
+4.  Scegliere **OK**.  
+  
+5.  Nella finestra di dialogo **MioRegistro** fare clic su **Aggiungi contatori**.  
+  
+6.  Fare clic su **Utilizza contatori del computer locale** per la registrazione dei contatori delle prestazioni nel computer locale oppure fare clic su **Seleziona contatori dal computer** , quindi selezionare un computer dall'elenco in cui registrare i contatori delle prestazioni.  
+  
+7.  Nella finestra di dialogo **Aggiungi contatori** selezionare **SQL Server:SSIS Pipeline** (SQL Server:Pipeline SSIS) nell'elenco **Oggetto prestazione** .  
+  
+8.  Per selezionare contatori delle prestazioni, eseguire una delle operazioni seguenti:  
+  
+    -   Selezionare **All Counters** (Tutti i contatori) per registrare tutti i contatori delle prestazioni.  
+  
+    -   Selezionare **Select counters in list** (Seleziona i contatori dall'elenco) e selezionare i contatori delle prestazioni da usare.  
+  
+9. Scegliere **Aggiungi**.  
+  
+10. Scegliere **Chiudi**.  
+  
+11. Nella finestra di dialogo **MioRegistro** esaminare l'elenco della registrazione dei contatori delle prestazioni nell'elenco **Contatori** .  
+  
+12. Per aggiungere altri contatori, ripetere i passaggi da 5 a 10.  
+  
+13. Scegliere **OK**.  
+  
+    > [!NOTE]  
+    >  Il servizio Avvisi e registri di prestazioni deve essere avviato in base a un account locale o un account di dominio appartenente al gruppo Administrators.  
+
+## <a name="see-also"></a>Vedere anche  
+ [Esecuzione di progetti e pacchetti](https://msdn.microsoft.com/library/ms141708.aspx) [gli eventi registrati da un pacchetto di Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+

@@ -1,31 +1,36 @@
 ---
-title: "Editor trasformazione Ricerca (pagina Colonne) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.columns.f1"
-helpviewer_keywords: 
-  - "Editor trasformazione Ricerca"
+title: Editor trasformazione ricerca (pagina colonne) | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.columns.f1
+helpviewer_keywords:
+- Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1903f316c601a1685d8644d24a2a6eb12116293d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor trasformazione Ricerca (pagina Colonne)
+# <a name="lookup-transformation-editor-columns-page"></a>Editor trasformazione Ricerca (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Ricerca** per specificare il join tra la tabella di origine e la tabella di riferimento e selezionare colonne di ricerca nella tabella di riferimento.  
   
  Per ulteriori informazioni sulla trasformazione Ricerca, vedere [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Colonne di input disponibili**  
  Consente di visualizzare l'elenco delle colonne di input disponibili. Le colonne di input sono le colonne nel flusso di dati provenienti da un'origine connessa. Le colonne di input e le colonne di ricerca devono contenere tipi di dati corrispondenti.  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 39
  **Alias di output**  
  Consente di digitare un alias per l'output relativo a ogni colonna di ricerca. Per impostazione predefinita viene suggerito il nome della colonna di ricerca. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
-## Vedere anche  
- [Editor trasformazione Ricerca &#40;pagina Generale&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Avanzate&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
- [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Editor trasformazione Ricerca &#40; Pagina generale &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
+ [Editor trasformazione Ricerca &#40; Pagina connessione &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
+ [Editor trasformazione Ricerca &#40; Pagina avanzate &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
+ [Editor trasformazione Ricerca &#40; Pagina Output degli errori &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

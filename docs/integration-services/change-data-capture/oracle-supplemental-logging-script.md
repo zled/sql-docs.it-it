@@ -1,29 +1,34 @@
 ---
-title: "Script di registrazione supplementare Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Script di registrazione supplementare Oracle | Documenti Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
+ms.contentlocale: it-it
+ms.lasthandoff: 08/03/2017
+
 ---
-# Script di registrazione supplementare Oracle
+# <a name="oracle-supplemental-logging-script"></a>Script di registrazione supplementare Oracle
   Questa finestra di dialogo contiene lo script della registrazione supplementare Oracle.  
   
  Quando si prepara un'istanza di CDC per l'utilizzo, nella finestra di progettazione di CDC viene creato uno script SQL Oracle per la configurazione della registrazione supplementare per le tabelle da acquisire. Nello script di registrazione supplementare è indicato quando una tabella specifica viene aggiornata. I record delle modifiche scritti nel log delle transazioni dovrebbero contenere i dati di tutte le colonne di interesse, non solo quelle modificate.  
   
  A seconda dei criteri DBA Oracle nell'organizzazione, l'esecuzione dello script di registrazione supplementare potrebbe richiedere l'esame e l'approvazione da parte di un amministratore di database Oracle.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  Di seguito sono riportate le opzioni disponibili relative all'esecuzione dello script.  
   
  **Run Script**  
@@ -35,8 +40,8 @@ caps.handback.revision: 6
  **Copia**  
  Tramite questa opzione è possibile copiare lo script negli Appunti. Incollare lo script in un percorso desiderato qualora un amministratore di database Oracle (DBA) debba esaminare ed eseguire lo script di registrazione supplementare.  
   
-## Vedere anche  
- [Procedura di gestione di un'istanza di CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Come gestire un'istanza di CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Gestire un'istanza di CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   
