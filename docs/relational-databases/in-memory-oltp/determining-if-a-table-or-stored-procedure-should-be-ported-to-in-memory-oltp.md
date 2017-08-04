@@ -2,7 +2,7 @@
 title: Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>Report di analisi delle prestazioni delle transazioni  
  Per generare report di analisi delle prestazioni delle transazioni in **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Report**, quindi **Report standard**e infine **Panoramica dell'analisi delle prestazioni delle transazioni**. Per generare un report di analisi significativo, è richiesto un carico di lavoro attivo o di recente esecuzione del database.  
   
+### <a name="tables"></a>Tabelle
+  
  Il report dettagli per una tabella è costituito da tre sezioni:  
   
 -   Sezione relativa alle statistiche sull'analisi  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   Percentuale di accessi totali. Percentuale di analisi e ricerche in questa tabella rispetto all'attività dell'intero database. Più alta è questa percentuale, molto più frequente è l'utilizzo della tabella confrontata con altre tabelle del database.  
   
     -   Statistiche di ricerca/Statistiche analisi intervallo. In questa colonna vengono registrati il numero di ricerche di punti e di analisi di intervalli (analisi di indici e scansioni di tabelle) eseguite sulla tabella durante la profilatura. La media per ogni transazione è una stima.  
-  
-    -   Guadagno di interoperabilità e Guadagno nativo. In queste colonne si stima il vantaggio in termini di prestazioni di una ricerca di punto o di un'analisi di intervalli qualora la tabella venisse convertita in una tabella con ottimizzazione per la memoria.  
-  
+    
 -   Sezione relativa alle statistiche sulle contese  
   
      In questa sezione è inclusa una tabella in cui viene mostrata la contesa nella tabella di database. Per altre informazioni su latch e blocchi del database, vedere la pagina relativa all'architettura di blocco. Le colonne sono le seguenti:  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      In questa sezione è inclusa una tabella in cui vengono mostrate le difficoltà di conversione della tabella di database in una tabella con ottimizzazione per la memoria. Un grado di difficoltà più elevato indica una maggiore difficoltà di conversione della tabella. Per visualizzare i dettagli relativi alla conversione di questa tabella di database, usare l'Ottimizzazione guidata per la memoria.  
   
- Le statistiche sulle contese e sulle analisi nel report dettagli della tabella vengono raccolte e aggregate da sys.dm_db_index_operational_stats (Transact-SQL).  
-  
+Le statistiche sulle contese e sulle analisi nel report dettagli della tabella vengono raccolte e aggregate da sys.dm_db_index_operational_stats (Transact-SQL).  
+
+### <a name="stored-procedures"></a>Stored procedure
+
  Una stored procedure con un alto rapporto di tempo di utilizzo della CPU rispetto al tempo trascorso è una candidata per la migrazione. Il report include tutti i riferimenti alle tabelle perché le stored procedure compilate in modo nativo possono fare riferimento solo alle tabelle con ottimizzazione per la memoria che possono costituire un'aggiunta al costo di migrazione.  
   
  Il report dettagli per una stored procedure è costituito da due sezioni:  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  È possibile generare un elenco di controllo per la migrazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando il comando **Generazione guidata elenchi di controllo per migrazione OLTP in memoria** o tramite PowerShell.  
   
- **Per generare un elenco di controllo per migrazione tramite il comando dell'interfaccia utente**  
+**Per generare un elenco di controllo per migrazione tramite il comando dell'interfaccia utente**  
   
 1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse su un database diverso dal database di sistema, scegliere **Attività**e quindi fare clic su **Generazione guidata elenchi di controllo per migrazione OLTP in memoria**.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  È possibile verificare l'accuratezza dei report confrontandoli con i report generati dagli strumenti Ottimizzazione guidata per la memoria e Assistente compilazione nativa. Per ulteriori informazioni, vedere [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) e [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
- **Per generare un elenco di controllo per migrazione tramite SQL Server PowerShell**  
+**Per generare un elenco di controllo per migrazione tramite SQL Server PowerShell**  
   
 1.  In **Esplora oggetti**fare clic su un database e quindi scegliere **Avvia PowerShell**. Verificare che sia visualizzato il prompt seguente.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Il report dell'elenco di controllo per migrazione viene generato per tutte le tabelle e stored procedure nel database e archiviato nella posizione specificata da folder_path.  
   
- **Per generare un elenco di controllo per migrazione tramite Windows PowerShell**  
+**Per generare un elenco di controllo per migrazione tramite Windows PowerShell**  
   
 1.  Avviare una sessione di Windows PowerShell elevata.  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
