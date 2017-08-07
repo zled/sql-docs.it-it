@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un collegamento ipertestuale a un URL (Generatore Report e SSRS) | Documenti Microsoft
+title: Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)

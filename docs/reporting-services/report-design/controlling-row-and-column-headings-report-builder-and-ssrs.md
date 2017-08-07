@@ -1,5 +1,5 @@
 ---
-title: Controllo di riga e intestazioni di colonna (Generatore Report e SSRS) | Documenti Microsoft
+title: Controllo delle intestazioni di riga e di colonna (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controllo delle intestazioni di riga e di colonna (Generatore report e SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Nell'area di progettazione** Nell'area di progettazione linee punteggiate dividono un'area dati Tablix in quattro aree. Ogni cella in un'area dell'area dati Tablix è organizzata in righe e colonne. Le righe e le colonne sono associate a gruppi, incluso il gruppo dettagli. Per un'area dati Tablix selezionata, handle di riga e di colonna e barre di evidenziazione indicano l'appartenenza al gruppo. Le celle contenute nell'area dei gruppi di righe o di colonne rappresentano intestazioni di gruppo per i membri Tablix. È possibile associare una singola riga o colonna a più gruppi.  
   
-     Per altre informazioni, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) e [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+     Per altre informazioni, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) e [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report&#41; e SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Per le aree dati Tablix contenenti aree dei gruppi di righe o di colonne, è possibile controllare le righe e le colonne associate impostando le proprietà nell'area dati Tablix. In tutti gli altri casi, è possibile controllare le righe e le colonne impostandone le proprietà nel riquadro Proprietà del membro Tablix selezionato. Per istruzioni dettagliate, vedere [Visualizzare le intestazioni di riga e colonna in più pagine &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) e [Mantenere visibili le intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
@@ -67,11 +67,11 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Matrix"></a> Matrice  
  Per impostazione predefinita, in una matrice semplice sono inclusi un gruppo di righe e un gruppo di colonne. Nella figura seguente è illustrata una matrice con un gruppo di righe basato su Categoria e un gruppo di colonne basato su Geografia:  
   
- ![Una matrice, riga Category e gruppo di colonne Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matrice, riga Category e gruppo di colonne Geography")  
+ ![Matrice, riga Category e gruppo di colonne Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrice, riga Category e gruppo di colonne Geography")  
   
  Le linee punteggiate mostrano le quattro aree della Tablix. Nell'area dei gruppi di righe è inclusa un'intestazione che controlla le etichette delle categorie nella prima colonna. Analogamente, nell'area dei gruppi di colonne è inclusa un'intestazione che controlla le etichette geografiche nella prima riga. Nell'anteprima, mentre la matrice si espande orizzontalmente nella pagina, nella prima riga vengono visualizzate le intestazioni di colonna, come mostrato nella figura seguente:  
   
- ![Anteprima per la matrice con gruppi espansi sottoposta a rendering](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "anteprima per matrice sottoposta a rendering con gruppi espansi")  
+ ![Anteprima della matrice con gruppi espansi sottoposta a rendering](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Anteprima della matrice con gruppi espansi sottoposta a rendering")  
   
  Per ripetere o bloccare le intestazioni di colonna nella prima riga, impostare le proprietà per le intestazioni di colonna nell'area dati Tablix. Le intestazioni di colonna per i gruppi di colonne nidificati vengono incluse automaticamente.  
   
@@ -82,19 +82,19 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TableNoGroups"></a> Tabella senza gruppi di righe  
  Per impostazione predefinita, in una tabella semplice senza gruppi è incluso il gruppo dettagli. Nella figura seguente è illustrata una tabella con la categoria, il numero di ordine e i dati di vendita visualizzati:  
   
- ![Progettazione, tabella con una riga statica e una riga dinamica](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "progettazione, tabella con una riga statica e una riga dinamica")  
+ ![Progettazione, tabella con una riga statica e una riga dinamica](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Progettazione, tabella con una riga statica e una riga dinamica")  
   
  Non sono presenti linee punteggiate perché la tabella è costituita solo dall'area del corpo della Tablix. La prima riga, in cui sono visualizzate intestazioni di colonna, rappresenta un membro Tablix statico non associato a un gruppo. La seconda riga, in cui sono visualizzati dati dettaglio, rappresenta un membro Tablix dinamico associato al gruppo dettagli. Nella figura seguente è illustrata un'anteprima della tabella:  
   
- ![Anteprima, tabella con una riga statica e una riga dinamica](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "anteprima, tabella con una riga statica e una riga dinamica")  
+ ![Anteprima, tabella con una riga statica e una riga dinamica](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "Anteprima, tabella con una riga statica e una riga dinamica")  
   
  Per ripetere o bloccare le intestazioni di colonna, impostare le proprietà sul membro Tablix della riga statica che fa parte della definizione dell'area dati Tablix. Per selezionare la riga statica, è necessario utilizzare la modalità Avanzate del riquadro Raggruppamento. Nella figura seguente è illustrato il riquadro Gruppi di righe.  
   
- ![Riga di gruppi, tabella con 1 statico e 1 riga dinamica](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "gruppi di righe, tabella con 1 statico e 1 riga dinamica")  
+ ![Gruppi di righe, tabella con una riga statica e una riga dinamica](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Gruppi di righe, tabella con una riga statica e una riga dinamica")  
   
  Nella figura seguente sono illustrati i membri Tablix statici e dinamici per i gruppi di righe della tabella nella modalità Avanzate:  
   
- ![Gruppi di righe, modalità avanzata per tabella predefinita](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "avanzato di gruppi di righe per tabella predefinita")  
+ ![Gruppi di righe, modalità avanzata per tabella predefinita](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "Gruppi di righe, modalità avanzata per tabella predefinita")  
   
  Per ripetere o bloccare le intestazioni di colonna per il membro Tablix, selezionare la riga statica con etichetta (**Statico**). Nel riquadro delle proprietà vengono visualizzate le proprietà relative al membro Tablix selezionato. Impostando le proprietà per questo membro Tablix, è possibile controllare se ripetere la prima riga o lasciarla visualizzata.  
   
@@ -103,19 +103,19 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TableRowGroupsGroupHeader"></a> Tabella con gruppi di righe e un'area dei gruppi di righe  
  Se si aggiunge un gruppo di righe a una tabella semplice, viene aggiunta un'area dei gruppi di righe alla tabella nell'area di progettazione. Nella figura seguente è illustrata una tabella con un gruppo di righe basato su Categoria:  
   
- ![Progettazione, tabella con un gruppo di righe e dettagli](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "progettazione, tabella con un gruppo di righe e dettagli")  
+ ![Progettazione, tabella con un gruppo di righe e dettagli](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Progettazione, tabella con un gruppo di righe e dettagli")  
   
  Le linee punteggiate indicano l'area dei gruppi di righe della Tablix e l'area del corpo della Tablix. Nell'area dei gruppi di righe è inclusa un'intestazione per il gruppo di righe ma non per il gruppo di colonne. Nella figura seguente è illustrata un'anteprima di tale tabella:  
   
- ![Anteprima, tabella con un gruppo di righe e dettagli](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "anteprima, tabella con un gruppo di righe e dettagli")  
+ ![Anteprima, tabella con un gruppo di righe e dettagli](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "Anteprima, tabella con un gruppo di righe e dettagli")  
   
  Per ripetere o bloccare le intestazioni di colonna, utilizzare lo stesso approccio dell'esempio precedente. Nella figura seguente è illustrata la vista predefinita del riquadro Gruppi di righe.  
   
- ![Gruppi di righe, impostazione predefinita con membri dinamici](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "predefinito di gruppi di righe, con i membri dinamici")  
+ ![Gruppi di righe, impostazione predefinita con membri dinamici](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Gruppi di righe, impostazione predefinita con membri dinamici")  
   
  Usare la modalità **Avanzate** del riquadro Gruppi di righe per visualizzare i membri Tablix, come mostrato nella figura seguente:  
   
- ![Gruppi, modalità avanzata con membri statici righe](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "gruppi di righe, modalità avanzata con membri statici")  
+ ![Gruppi di righe, modalità avanzata con membri statici](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata con membri statici")  
   
  Vengono elencati i membri Tablix seguenti: **Statico**, (**Statico**), Categoria e (**Dettagli**). Un membro Tablix che include le parentesi () indica l'assenza di un'intestazione di gruppo corrispondente. Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix statico superiore e impostare le proprietà nel riquadro Proprietà.  
   
@@ -130,19 +130,19 @@ ms.lasthandoff: 06/22/2017
   
  Nella figura seguente è illustrata una tabella con un gruppo di righe ma senza un'area dei gruppi di righe nell'area di progettazione:  
   
- ![Progettazione, tabella con gruppo di righe, ma senza intestazione gruppo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "progettazione, tabella con gruppo di righe, ma senza intestazione gruppo")  
+ ![Progettazione, tabella con gruppo di righe, ma senza intestazione gruppo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "Progettazione, tabella con gruppo di righe, ma senza intestazione gruppo")  
   
  Nella tabella sono presenti tre righe. Nella prima riga sono contenute le intestazioni di colonna, nella seconda sono contenuti il valore del gruppo e i subtotali e nella terza sono contenuti i dati dettaglio. Non sono presenti linee punteggiate perché è disponibile una sola area del corpo della Tablix. Nella figura seguente è illustrata un'anteprima di tale tabella:  
   
- ![Anteprima, tabella con gruppo di righe, ma senza intestazione gruppo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "anteprima, tabella con gruppo di righe, ma senza intestazione gruppo")  
+ ![Anteprima, tabella con gruppo di righe, ma senza intestazione gruppo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "Anteprima, tabella con gruppo di righe, ma senza intestazione gruppo")  
   
  Per stabilire se ripetere o lasciare visualizzate le righe, è necessario impostare le proprietà sul membro Tablix di ogni riga. Nella modalità predefinita non esiste alcuna differenza tra questo esempio e quello precedente basato su una tabella con un gruppo di righe e un'intestazione di gruppo. Nella figura seguente viene illustrato il riquadro di raggruppamento per questa tabella nella modalità predefinita:  
   
- ![Gruppi di righe, impostazione predefinita con membri dinamici](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "predefinito di gruppi di righe, con i membri dinamici")  
+ ![Gruppi di righe, impostazione predefinita con membri dinamici](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Gruppi di righe, impostazione predefinita con membri dinamici")  
   
  Nella modalità avanzata, tuttavia, in questa struttura di layout è riportato un set di membri Tablix differente. Nella figura seguente viene illustrato il riquadro di raggruppamento per questa tabella nella modalità avanzata:  
   
- ![Riga di gruppi, modalità avanzata, senza intestazione gruppo. ] (../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata, senza intestazione gruppo.")  
+ ![Gruppi di righe, modalità avanzata, senza intestazione gruppo.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata, senza intestazione gruppo.")  
   
  Nel riquadro Gruppi di righe vengono elencati i membri Tablix seguenti: (**Statico**), (Categoria), (**Statico**) e (**Dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix (**Statico**) superiore e impostare le proprietà nel riquadro Proprietà.  
   
@@ -163,12 +163,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Visualizzazione delle intestazioni di colonna durante lo scorrimento verticale verso il basso di un report.  
   
- Per altre informazioni, vedere [Tipi di rendering &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Interfaccia utente di progettazione Query basata su testo (Generatore Report) | Documenti Microsoft
+title: Interfaccia utente di Progettazione query basata su testo (Generatore report) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query basata su testo (Generatore report)
@@ -45,13 +45,13 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|  
-|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "eseguire la query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
+|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
 |**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati. Il supporto per il tipo di comando varia in base al tipo di origine dati. Ad esempio, solo OLE DB e ODBC supportano **TableDirect**.<br /><br /> Nota: se una stored procedure restituisce più set di risultati, solo il primo set viene usato per popolare il set di dati.|  
   
 ### <a name="command-type-text"></a>Tipo di comando Text  
  Quando si crea un set di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , per impostazione predefinita viene visualizzata la finestra Progettazione query relazionale. Per passare alla finestra Progettazione query basata su testo, fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti. La finestra Progettazione query basata su testo include due riquadri, il riquadro Query e il riquadro Risultati. Nella figura seguente vengono etichettati tutti i riquadri.  
   
- ![Progettazione query standard, per query di dati relazionali](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Progettazione query standard, per query di dati relazionali")  
+ ![Finestra Progettazione query standard per query di dati relazionali](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   
@@ -74,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  Nella figura seguente vengono illustrati i riquadri Query e Risultati quando si esegue una stored procedure. In questo caso, i parametri di input sono costanti.  
   
- ![Stored procedure di Progettazione query basata su testo](../../reporting-services/report-data/media/rs-relational-text-sp.gif "Stored procedure in Progettazione query basata su testo")  
+ ![Stored procedure in Progettazione query basata su testo](../../reporting-services/report-data/media/rs-relational-text-sp.gif "Stored procedure in Progettazione query basata su testo")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   

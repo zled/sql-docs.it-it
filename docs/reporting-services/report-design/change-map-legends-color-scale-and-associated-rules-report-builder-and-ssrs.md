@@ -1,5 +1,5 @@
 ---
-title: Modificare le regole associate alla scala di mappa legende colore in Generatore Report-SSRS | Documenti Microsoft
+title: Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -38,11 +38,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
@@ -62,11 +62,11 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Per modificare la posizione di una legenda rispetto al viewport  
   
-1.  Nella visualizzazione progettazione, fare clic sulla legenda e aprire il  *\<elemento report >***proprietà** pagina.  
+1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina **Proprietà** *\<elemento report>*.  
   
 2.  In **Posizione**fare clic sulla posizione che specifica il punto in cui visualizzare la legenda rispetto al viewport.  
   
-3.  Per visualizzare la legenda di fuori del viewport, selezionare **Mostra \<elemento report > di fuori del riquadro di visualizzazione**.  
+3.  Per visualizzare la legenda al di fuori del viewport, selezionare **Mostra elemento del report>\< al di fuori del viewport**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere *\<tipo di elemento mappa>***Regola colore**.  
   
 3.  Fare clic su **Legenda**.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere *\<tipo di elemento mappa>***Regola colore**.  
   
 3.  Fare clic su **Applica stile modello**.  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare *\<tipo di elemento mappa>***Regola colore**.  
   
 3.  Fare clic su **Visualizza dati tramite tavolozza colori**.  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare *\<tipo di elemento mappa>***Regola colore**.  
   
 3.  Fare clic su **Visualizza dati tramite intervalli colori**.  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare *\<tipo di elemento mappa>***Regola colore**.  
   
 3.  Fare clic su **Visualizza dati tramite colori personalizzati**.  
   
@@ -194,9 +194,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare *\<tipo di elemento mappa>***Regola colore**.  
   
-3.  Selezionare il **Visualizza dati tramite** \<tipo di regola > opzione. Per usare le opzioni di distribuzione, è necessario creare intervalli nella pagina **Distribuzione** in base ai dati analitici associati al livello.  
+3.  Selezionare l'opzione **Visualizza dati tramite** \<tipo di regola>. Per usare le opzioni di distribuzione, è necessario creare intervalli nella pagina **Distribuzione** in base ai dati analitici associati al livello.  
   
 4.  Fare clic su **Distribuzione**.  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
   
      Per altre informazioni sulle opzioni di distribuzione, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-6.  In **Numero di intervalli secondari** digitare il numero di intervalli secondari da usare. Se il tipo di distribuzione è **Ottimale**, il numero di intervalli secondari viene calcolato automaticamente.  
+6.  In **Numero di intervalli secondari**digitare il numero di intervalli secondari da usare. Se il tipo di distribuzione è **Ottimale**, il numero di intervalli secondari viene calcolato automaticamente.  
   
 7.  In **Inizio intervallo**digitare un valore di intervallo minimo. Tutti i valori inferiori a questo numero corrispondono al minimo dell'intervallo.  
   
@@ -226,9 +226,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** *\<tipo di elemento mappa>*.  
   
-3.  Verificare che **Visualizza dati tramite** \< *tipo di regola*> è selezionata.  
+3.  Verificare che l'opzione **Visualizza dati tramite** \<*tipo di regola*> sia selezionata.  
   
 4.  In **Campo dati**verificare che vengano selezionati i dati analitici visualizzati sul livello.  
   
@@ -247,9 +247,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare *\<tipo di elemento mappa>***Regola colore**.  
   
-3.  Selezionare l'opzione della regola colore da utilizzare. Per visualizzare gli elementi in una scala di colore o legenda mappa, è necessario selezionare una del **Visualizza dati tramite** \<tipo di regola > Opzioni.  
+3.  Selezionare l'opzione della regola colore da utilizzare. Per visualizzare gli elementi in una legenda della mappa o in una scala dei colori, è necessario selezionare una delle opzioni **Visualizza dati tramite** tipo di regola>\<.  
   
 4.  In **Campo dati**verificare che vengano selezionati i dati analitici visualizzati sul livello.  
   
@@ -268,7 +268,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** *\<tipo di elemento mappa>*.  
   
 3.  Fare clic su **Legenda**.  
   
@@ -281,7 +281,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare doppio clic su livello che contiene i dati che si desidera e quindi fare clic su  *\<tipo di elemento mappa >***regola**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** *\<tipo di elemento mappa>*.  
   
 3.  Fare clic su **Legenda**.  
   
@@ -293,7 +293,7 @@ ms.lasthandoff: 06/22/2017
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Risolvere problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

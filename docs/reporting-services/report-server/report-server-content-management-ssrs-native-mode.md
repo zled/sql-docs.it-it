@@ -1,5 +1,5 @@
 ---
-title: "Report Gestione contenuto del Server (modalità nativa SSRS) | Documenti Microsoft"
+title: "Gestione contenuto del server di report (modalità nativa SSRS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,11 +21,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
@@ -66,11 +66,11 @@ ms.lasthandoff: 06/22/2017
   
 |Icona|Elemento spostabile|  
 |----------|-------------------|  
-|![Icona report](../../reporting-services/report-server/media/hlp-16doc.gif "sull'icona Report")|Report|  
-|![Icona di report collegato](../../reporting-services/report-server/media/hlp-16linked.gif "sull'icona report collegato")|Report collegato|  
-|![Icona della cartella](../../reporting-services/report-server/media/hlp-16folder.gif "icona della cartella")|Cartella|  
-|![icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "icona di risorsa generica")|Risorsa generica|  
-|![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "icona di origine dati condivisa")|Origine dati condivisa|  
+|![Icona di report](../../reporting-services/report-server/media/hlp-16doc.gif "Icona di report")|Report|  
+|![Icona di report collegato](../../reporting-services/report-server/media/hlp-16linked.gif "Icona di report collegato")|Report collegato|  
+|![Icona di cartella](../../reporting-services/report-server/media/hlp-16folder.gif "Icona di cartella")|Cartella|  
+|![Icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "Icona di risorsa generica")|Risorsa generica|  
+|![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
 ||Set di dati condiviso|  
   
  Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione modelli", "Gestione di cartelle" e "Gestione di origini dei dati".  

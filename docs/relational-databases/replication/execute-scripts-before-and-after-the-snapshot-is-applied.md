@@ -43,6 +43,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Inizializzare una sottoscrizione con uno snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [Opzioni per gli snapshot](../../relational-databases/replication/snapshot-options.md)  
   
   

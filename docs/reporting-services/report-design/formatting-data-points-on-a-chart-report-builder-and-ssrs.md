@@ -1,5 +1,5 @@
 ---
-title: Formattazione dei punti dati in un grafico (Generatore Report e SSRS) | Documenti Microsoft
+title: Formattazione dei punti dati di un grafico (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
@@ -65,7 +65,7 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
   
 |Parola chiave del grafico|Description|Applicabile al tipo di grafico|Esempio di espressione semplice equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valore Y del punto dati.|All|`=Fields!MyDataField.Value`|  
+|#VALY|Valore Y del punto dati.|Tutto|`=Fields!MyDataField.Value`|  
 |#VALY2|Valore Y #2 del punto dati.|Con intervalli, a bolle|Nessuno|  
 |#VALY3|Valore Y #3 del punto dati.|Azionario, a candela|Nessuno|  
 |#VALY4|Valore Y #4 del punto dati.|Azionario, a candela|Nessuno|  
@@ -73,12 +73,12 @@ In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 |#LABEL|Etichetta del punto dati.|Tutto|Nessuno|  
 |#AXISLABEL|Etichetta del punto dati dell'asse.|Con forme|`=Fields!MyDataField.Value`|  
 |#INDEX|Indice del punto dati.|Tutto|Nessuno|  
-|#PERCENT|Percentuale del valore Y del punto dati.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Totale di tutti i valori Y della serie|All|`=Sum(Fields!MyDataField.Value)`|  
+|#PERCENT|Percentuale del valore Y del punto dati.|Tutto|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Totale di tutti i valori Y della serie|Tutto|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|Testo corrispondente al testo dell'elemento della legenda.|Tutto|Nessuno|  
-|#AVG|Media di tutti i valori Y della serie|All|`=Avg(Fields!MyDataField.Value)`|  
+|#AVG|Media di tutti i valori Y della serie|Tutto|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimo di tutti i valori Y della serie|Tutto|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Massimo di tutti i valori Y della serie|All|`=Max(Fields!MyDataField.Value)`|  
+|#MAX|Massimo di tutti i valori Y della serie|Tutto|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Primo di tutti i valori Y della serie|Tutto|`=First(Fields!MyDataField.Value)`|  
   
  Per formattare la parola chiave, racchiudere tra parentesi una stringa di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per specificare il valore del punto dati in una descrizione comandi come numero con due posizioni decimali, includere la stringa di formato "N2" tra parentesi, indicando ad esempio il valore "#VALY {N2}" per la proprietà **ToolTip** della serie. Per altre informazioni sulle stringhe di formato di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Formattazione dei tipi di dati](http://go.microsoft.com/fwlink/?LinkId=112024) sul sito MSDN. Per altre informazioni sulla formattazione dei numeri in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  

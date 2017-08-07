@@ -1,5 +1,5 @@
 ---
-title: "Proprietà (Management Studio) processo | Documenti Microsoft"
+title: "Proprietà processo (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Proprietà processo (Management Studio)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
  Per i report, in questa colonna vengono indicati i processi di esecuzione del report in corso. Questo valore corrisponde sempre a **Rendering**.  
   
  **Descrizione del processo**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Reporting Services per impostazione predefinita non fornisce descrizioni dei processi.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per impostazione predefinita non fornisce descrizioni dei processi.  
   
  **Nome server**  
  Indica il nome del server di report che sta elaborando il processo. Se è stata configurata una distribuzione con scalabilità orizzontale, questo valore indica il server che sta elaborando il processo.  
@@ -75,6 +75,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

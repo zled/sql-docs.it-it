@@ -1,5 +1,5 @@
 ---
-title: "Impostare le proprietà di distribuzione (Reporting Services) | Documenti Microsoft"
+title: "Impostare le proprietà di distribuzione (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 >  Non confondere questa caratteristica con Gestione configurazione Reporting Services, utilizzato per configurare Reporting Services dopo l'installazione. Per altre informazioni, vedere [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
   
 > [!NOTE]  
->  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] l'azione di pubblicazione di report da una soluzione o da un progetto server di report è nota come *distribuzione di report*.  
+>  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]l'azione di pubblicazione di report da una soluzione o da un progetto server di report è nota come *distribuzione di report*.  
   
 ### <a name="to-set-deployment-properties"></a>Per impostare le proprietà di distribuzione  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Nella finestra di dialogo **Pagine delle proprietà** del progetto fare clic su **Gestione configurazione**.  
   
-3.  Nella finestra di dialogo **Gestione configurazione** selezionare la configurazione da modificare. La configurazione attualmente attiva è visualizzata come **Active (***\<configurazione >***)**.  
+3.  Nella finestra di dialogo **Gestione configurazione** selezionare la configurazione da modificare. La configurazione attualmente attiva è visualizzata come **Attiva(***\<configurazione>***)**.  
   
 4.  Per ogni progetto nella soluzione, in **Contesti progetto**selezionare o deselezionare la casella di controllo **Compila** o **Distribuisci**.  
   

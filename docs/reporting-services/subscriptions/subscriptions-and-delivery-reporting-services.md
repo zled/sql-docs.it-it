@@ -1,5 +1,5 @@
 ---
-title: Sottoscrizioni e recapito (Reporting Services) | Documenti Microsoft
+title: Sottoscrizioni e recapito (Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  È possibile creare più sottoscrizioni per un singolo report per usare opzioni di sottoscrizione diverse. Si potrebbero specificare valori diversi per i parametri in modo da creare tre versioni di un report, ad esempio un report delle vendite per le regioni centro-settentrionali, un report delle vendite per le regioni centro-meridionali e un report relativo a tute le vendite.  
   
- ![flusso di sottoscrizione ssrs esempio](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "esempio flusso di sottoscrizione ssrs")  
+ ![esempio di flusso di sottoscrizione ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "esempio di flusso di sottoscrizione ssrs")  
   
  Le sottoscrizioni non sono disponibili in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   

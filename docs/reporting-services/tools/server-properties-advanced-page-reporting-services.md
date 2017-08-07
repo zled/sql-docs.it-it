@@ -1,5 +1,5 @@
 ---
-title: "Proprietà server (pagina avanzate) - Reporting Services | Documenti Microsoft"
+title: "Proprietà server (pagina Avanzate) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è **60**.  
  
 > [!NOTE] 
-> Se si imposta un valore **0** verrà *eliminare* tutte le voci dal log di esecuzione. Il valore **-1** manterrà le voci del log di esecuzione e non verrà eliminato.
+> Se si imposta un valore **0** verranno *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** manterrà le voci del log di esecuzione e non verrà eliminato.
   
  **SessionTimeout**  
  Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è **600**.  

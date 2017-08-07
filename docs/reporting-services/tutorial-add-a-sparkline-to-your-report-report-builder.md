@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un grafico Sparkline al Report (Generatore Report) | Documenti Microsoft'
+title: 'Esercitazione: Aggiunta di un grafico sparkline al report (Generatore report) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -41,7 +41,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -49,10 +49,10 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 3.  Nel riquadro destro fare clic su **Creazione guidata tabella o matrice**.  
   
-4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** > **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
+4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati** > **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
     > [!NOTE]  
-    > In questa esercitazione non sono necessari dati specifici; è sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di SQL Server. Se in **Connessioni a origini dati**è già disponibile una connessione all'origine dati, sarà possibile selezionarla e andare al passaggio 10. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
@@ -72,7 +72,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
     Verrà visualizzata di nuovo la pagina **Scegliere una connessione a un'origine dei dati** .  
   
-11. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
+11. Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
   
     Verrà visualizzato il messaggio "Creazione connessione completata".  
   
@@ -209,7 +209,7 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
-4.  Nella nuova colonna fare clic con il pulsante destro del mouse sulla cella nella riga `[Product]` > **Inserisci**** > Grafico sparkline**.  
+4.  Nella nuova colonna fare clic con il pulsante destro del mouse sulla cella nella `[Product]` riga > **Inserisci** > **Grafico sparkline**.  
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
@@ -325,9 +325,9 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 ## <a name="next-steps"></a>Passaggi successivi  
 
-L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per ulteriori informazioni sui grafici sparkline, vedere [grafici sparkline e barre dei dati](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per altre informazioni, vedere [Grafici sparkline e barre dei dati](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 [Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

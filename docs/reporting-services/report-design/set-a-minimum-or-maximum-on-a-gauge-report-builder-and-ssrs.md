@@ -1,5 +1,5 @@
 ---
-title: Impostare un valore minimo o massimo su un misuratore (Generatore Report e SSRS) | Documenti Microsoft
+title: Impostare un valore minimo o massimo su un misuratore (Generatore report e SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Impostare un valore minimo o massimo su un misuratore (Generatore report e SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Se l'intervallo dei valori è grande, ad esempio da 0 a 10000, utilizzare un moltiplicatore per ridurre il numero di zero sul misuratore. Il moltiplicatore ridurrà solo la scala dei numeri sul misuratore, non il valore stesso.  
   
- È possibile usare espressioni per impostare i valori delle opzioni **Minimo** e **Massimo**. Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ È possibile usare espressioni per impostare i valori delle opzioni **Minimo** e **Massimo** . Per altre informazioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>Per impostare i valori minimo e massimo sul misuratore  
   

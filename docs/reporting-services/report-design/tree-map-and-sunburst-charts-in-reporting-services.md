@@ -1,5 +1,5 @@
 ---
-title: Mappa ad albero e grafici radiali in Reporting Services | Documenti Microsoft
+title: Mappa ad albero e grafici radiali in Reporting Services | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Mappa ad albero e grafici radiali in Reporting Services
