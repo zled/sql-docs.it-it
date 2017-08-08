@@ -37,7 +37,4 @@
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Estensione database](../sql-server/stretch-database/stretch-database.md)
 # [Esercitazioni di SQL Server](tutorials-for-sql-server-2016.md)
-
-# Informazioni sulla documentazione
-## [Risorse di SQL Server](sql-server-resources.md)
-## [Visualizzatore della Guida](../release-notes/sql-server-help-installation.md)
+# [Contenuto locale con il visualizzatore della Guida](../release-notes/sql-server-help-installation.md)
