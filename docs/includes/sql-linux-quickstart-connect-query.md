@@ -9,7 +9,7 @@ Nella procedura seguente viene usato **sqlcmd** per connettersi in locale alla n
    ```
 
    > [!TIP]
-   > È possibile omettere la password nella riga di comanda perché sia richiesto di essere immessa.
+   > È possibile omettere la password nella riga di comando perché venga richiesto di immetterla.
 
    > [!TIP]
    > Se successivamente si decide di connettersi da remoto, specificare il nome del computer o l'indirizzo IP per il parametro **-S** e assicurarsi che la porta 1433 sia aperta nel firewall.
@@ -18,8 +18,8 @@ Nella procedura seguente viene usato **sqlcmd** per connettersi in locale alla n
 
 1. Se si verifica un errore di connessione, provare a diagnosticare il problema dal messaggio di errore. Rivedere poi i [consigli per la risoluzione dei problemi di connessione](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
-## <a name="create-and-query-data"></a>Creare i dati della query
-Nelle sezioni seguenti viene descritto l'uso di **sqlcmd** e Transact-SQL per creare un nuovo database, aggiungere dati ed eseguire una query semplice.
+## <a name="create-and-query-data"></a>Creare i dati e recuperarli tramite query
+Nelle sezioni seguenti viene descritto l'uso di **sqlcmd** per creare un nuovo database, aggiungere dati ed eseguire una query semplice.
 
 ### <a name="create-a-new-database"></a>Creare un nuovo database
 
@@ -73,9 +73,9 @@ Creare poi una nuova tabella `Inventory` e inserire due nuove righe.
 
 ### <a name="select-data"></a>Selezionare i dati
 
-A questo punto, eseguire una query per restituire i dati della tabella `Inventory`.
+A questo punto, eseguire una query per restituire i dati dalla tabella `Inventory`.
 
-1. Dal prompt dei comandi **sqlcmd** immettere una query che restituisca le righe della tabella `Inventory` che ne contiene oltre 152:
+1. Dal prompt dei comandi **sqlcmd** immettere una query che restituisca le righe dalla tabella `Inventory` che ne contiene oltre 152:
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -97,9 +97,9 @@ QUIT
 
 ## <a name="connect-from-windows"></a>Eseguire la connessione da Windows
 
-È importante notare che gli strumenti di SQL Server in Windows consentono di connettersi alle istanze di SQL Server in Linux nello stesso modo in cui si connettono a qualsiasi istanza remota di SQL Server.
+Gli strumenti di SQL Server in Windows consentono di connettersi alle istanze di SQL Server in Linux nello stesso modo in cui si connettono a qualsiasi istanza remota di SQL Server.
 
-Se si usa un computer Windows con possibilità di connessione al computer Linux, seguire la stessa procedura descritta in questo argomento, usando il prompt dei comandi di Windows che esegue **sqlcmd**. Verificare però che si stiano usando il nome del computer Linux e l'indirizzo IP di destinazione anziché il localhost. Assicurarsi anche che la porta TCP 1433 sia aperta. Nel caso di problemi di connessione da Windows, vedere i [consigli per la risoluzione dei problemi di connessione](../linux/sql-server-linux-troubleshooting-guide.md#connection).
+Se si usa un computer Windows con possibilità di connessione al computer Linux, seguire la stessa procedura descritta in questo argomento da un prompt dei comandi di Windows che esegue **sqlcmd**. Verificare però che si stiano usando il nome del computer Linux e l'indirizzo IP di destinazione anziché il localhost. Assicurarsi anche che la porta TCP 1433 sia aperta. Nel caso di problemi di connessione da Windows, vedere i [consigli per la risoluzione dei problemi di connessione](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 Per altri strumenti che vengono eseguiti in Windows, ma si connettono a SQL Server in Linux, vedere:
 
@@ -109,6 +109,15 @@ Per altri strumenti che vengono eseguiti in Windows, ma si connettono a SQL Serv
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se non si ha familiarità con T-SQL, vedere [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md) (Esercitazione: Scrittura di istruzioni Transact-SQL) e [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md) (Guida di riferimento a Transact-SQL (Motore di database)).
+Per altri scenari di installazione, vedere le risorse seguenti:
 
-Per esaminare altri modi per connettersi e gestire SQL Server, vedere [Visusal Studio Code](../linux/sql-server-linux-develop-use-vscode.md) (Codice di Visual Studio) e [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+|||
+|---|---|
+| [Aggiornamento](../linux/sql-server-linux-setup.md#upgrade) | Informazioni su come aggiornare un'installazione esistente di SQL Server in Linux |
+| [Disinstallazione](../linux/sql-server-linux-setup.md#uninstall) | Disinstallare SQL Server in Linux |
+| [Installazione automatica](../linux/sql-server-linux-setup.md#unattended) | Informazioni su come creare uno script per eseguire l'installazione senza interazioni |
+| [Installazione offline](../linux/sql-server-linux-setup.md#offline) | Informazioni su come scaricare manualmente i pacchetti per l'installazione offline |
+
+Per esaminare altri modi per connettersi e gestire SQL Server, vedere [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) e [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+
+Per altre informazioni sulla scrittura di istruzioni e query Transact-SQL, vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
