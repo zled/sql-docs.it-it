@@ -2,16 +2,16 @@
 # [Articoli nuovi e aggiornati di recente](new-updated-relational-databases.md)
 
 # [Guide di SQL Server](sql-server-guides.md)
-## Guida alla risoluzione dei problemi e monitoraggio di gruppi di disponibilità AlwaysOn
+## Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
 ## [Progettazione degli indici](sql-server-index-design-guide.md)
 ## [Architettura di gestione della memoria](memory-management-architecture-guide.md)
 ### [Lettura di pagine](reading-pages.md)  
 ### [Scrittura di pagine](writing-pages.md)
-## [Architettura pagine ed extent](pages-and-extents-architecture-guide.md)
+## [Architettura di pagine ed extent](pages-and-extents-architecture-guide.md)
 ## [Ottimizzazione e convalida post-migrazione](post-migration-validation-and-optimization-guide.md)
 ## [Architettura di elaborazione delle query](query-processing-architecture-guide.md)
-## [Architettura di attività e thread](thread-and-task-architecture-guide.md)
-## [Gestione e l'architettura del Log delle transazioni](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Architettura dei thread e delle attività](thread-and-task-architecture-guide.md)
+## [Architettura e gestione del log delle transazioni](sql-server-transaction-log-architecture-and-management-guide.md)
 ## Guida per il controllo delle versioni delle righe e il blocco della transazione
 
 # [Backup e ripristino](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)

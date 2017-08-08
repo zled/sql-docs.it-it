@@ -1,6 +1,6 @@
 # [Libreria di estensioni di Reporting Services](reporting-services-extension-library.md)
 
-# [L'elaborazione dei dati +](../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md)
+# [Elaborazione dati +](../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md)
 # [Estensione per il recapito +](../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md)
 # [Estensione per il rendering +](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)
 # [Estensione di sicurezza +](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)

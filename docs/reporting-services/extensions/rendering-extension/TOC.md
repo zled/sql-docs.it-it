@@ -1,5 +1,5 @@
 # [Distribuzione di un'estensione per il rendering](deploying-a-rendering-extension.md)
-# [Implementazione di un'estensione per il Rendering](implementing-a-rendering-extension.md)
+# [Implementazione di un'estensione per il rendering](implementing-a-rendering-extension.md)
 # [Implementazione dell'interfaccia IRenderingExtension](implementing-the-irenderingextension-interface.md)
-# [Rimozione di un'estensione per il Rendering](removing-a-rendering-extension.md)
-# [Cenni preliminari sulle estensioni di rendering](rendering-extensions-overview.md)
+# [Rimozione di un'estensione per il rendering](removing-a-rendering-extension.md)
+# [Panoramica delle estensioni per il rendering](rendering-extensions-overview.md)

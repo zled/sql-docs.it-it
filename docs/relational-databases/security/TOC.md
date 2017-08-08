@@ -1,5 +1,5 @@
 # [Panoramica](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-# [White paper di requisiti sulla privacy e PILR](microsoft-sql-and-the-gdpr-requirements.md) 
+# [White paper sui requisiti per privacy e PILR](microsoft-sql-and-the-gdpr-requirements.md) 
 # [Controllo](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
 # [Accesso di autenticazione](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 # [Crittografia](../../relational-databases/security/encryption/sql-server-encryption.md)

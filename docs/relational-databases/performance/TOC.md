@@ -3,7 +3,7 @@
 # [Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [Elaborazione di Query adattivo](adaptive-query-processing.md)
-# [L'ottimizzazione automatica](../automatic-tuning/automatic-tuning.md)
+# [Ottimizzazione automatica](../automatic-tuning/automatic-tuning.md)
 # [Stima della cardinalità](cardinality-estimation-sql-server.md)  
 
 # [Monitoraggio e ottimizzazione delle prestazioni](monitor-and-tune-for-performance.md)  
