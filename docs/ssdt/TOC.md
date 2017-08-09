@@ -5,3 +5,4 @@
 # [Versioni precedenti di SSDT e SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
 # [Strumenti di SQL Server](sql-server-tools.md)
 # [Condizioni di licenza - SSDT](sql-server-data-tools-license-terms.md)
+# [Condizioni di licenza - SSDT (VS 2017)](sql-server-data-tools-license-terms-vs2017.md)
