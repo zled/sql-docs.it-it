@@ -29,7 +29,7 @@ In questi argomenti vengono descritti i comandi e le opzioni delle finestre di d
 Per accedere agli argomenti relativi alle finestre di dialogo, premere F1 quando la finestra di dialogo desiderata è aperta e attiva. Per accedere agli argomenti relativi alle finestre delle proprietà, fare clic nella finestra Proprietà e premere F1.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Progettazione di tabelle &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[Procedure per la progettazione di query e viste &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Progettazione di tabelle &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
