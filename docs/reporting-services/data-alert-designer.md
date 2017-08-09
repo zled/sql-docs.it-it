@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Finestra di progettazione Avviso dati
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
  ![Aree all'interno dell'interfaccia utente di Alert Designer](../reporting-services/media/rs-alertdesigner.gif "aree all'interno dell'interfaccia utente di Alert Designer")  
   
   
-### Dati di avviso
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>Dati di avviso  
  Quando si apre la finestra di progettazione Avviso dati, vengono generati e resi disponibili tutti i feed di dati del report e i nomi dei feed sono inclusi nell'elenco a discesa **Nome dati report** . I feed di dati vengono memorizzati nella cache in memoria durante la creazione della definizione di avviso mentre la tabella, tramite cui vengono visualizzati i dati del feed di dati, viene popolata rapidamente quando si passa tra feed di dati per esplorare i dati del report.  
   
  Il primo passaggio per la creazione di una definizione di avviso dati consiste nel selezionare il feed di dati del report contenente i dati che si desidera monitorare tramite l'avviso. I report possono disporre di zero o più feed di dati. Se un report non dispone di alcun feed di dati, non è possibile creare avvisi per tale report. Un feed di dati può essere generato da qualsiasi area dati, inclusi tutti i tipi di grafici, misuratori, indicatori nonché tabelle, matrici ed elenchi.  
@@ -82,14 +80,12 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  Alcuni report dispongono di milioni di righe di dati. Nella tabella vengono mostrate solo le prime 100 righe di dati nel feed.  
   
-### Nome dell'avviso
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>Nome dell'avviso  
  Per impostazione predefinita, la definizione di avviso e il report hanno lo stesso nome. È possibile modificare il nome dell'avviso per renderlo più significativo. In questo modo sarà più semplice gestire gli avvisi, determinando quali aggiornare, eliminare e così via.  
   
  È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre infomrazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestire gli avvisi dati in Gestione avvisi dati](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-### Regole e clausole
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>Regole e clausole  
  L'ambito delle modifiche ai dati e delle regole di avviso definisce le modifiche ai dati tramite cui viene attivato l'avviso. L'ambito delle modifiche ai dati può essere uno dei seguenti:  
   
 -   **Alcuni dati hanno**: almeno un valore nei dati soddisfa le regole specificate dalla condizione.  
@@ -160,8 +156,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  Le regole e le clausole sono incluse nel messaggio di avviso dati.  
   
-### Impostazioni di pianificazione
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>Impostazioni di pianificazione  
  Tramite la pianificazione definita per l'avviso dati viene stabilito il criterio di ricorrenza per l'invio del messaggio di avviso dati, nonché quando avviare e arrestare l'invio dei messaggi di avviso. I criteri prevedono singola occorrenza, minuto, giornaliero e settimanale. Anche se un avviso dispone di una sola pianificazione, utilizzando tali intervalli è possibile creare criteri di ricorrenza complessi in grado di soddisfare la maggior parte delle esigenze aziendali. Di seguito sono riportati esempi di criteri di ricorrenza comuni da utilizzare nelle pianificazioni:  
   
 -   **Giornaliera, ogni 10 giorni** : gli avvisi vengono inviati una volta al giorno, ogni 10 giorni.  
@@ -179,8 +174,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 > [!IMPORTANT]  
 >  È consigliabile non utilizzare un criterio di ricorrenza con una frequenza maggiore di quella giornaliera, a meno che non vi siano importanti motivi aziendali per farlo. L'elaborazione della definizione di avviso dati in tempo reale non è un scenario supportato. L'elaborazione troppo frequente delle definizioni di avviso dati influisce sulle prestazioni del server di report e sulla distribuzione globale di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-### Impostazioni posta elettronica
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>Impostazioni posta elettronica  
  L'opzione **Destinatario/i** consente di specificare gli indirizzi di posta elettronica dei destinatari dei messaggi di avviso dati. Separare più indirizzi di posta elettronica tramite punti e virgola, analogamente a quanto avviene nei messaggi di posta elettronica di Microsoft Office Outlook. È anche possibile specificare come destinatari gruppi di distribuzione, in modo da poter gestire l'elenco destinatari in modo più semplice ed efficace. Se in SharePoint è possibile determinare l'indirizzo di posta elettronica personale quando si crea una definizione di avviso, tale indirizzo viene aggiunto automaticamente all'elenco di destinatari; in caso contrario, è necessario aggiungerlo in modo esplicito come destinatario.  
   
  L'oggetto predefinito del messaggio di posta elettronica è **di avviso dati per \<nome avviso >**. È possibile modificare l'oggetto in base alle proprie esigenze.  
@@ -223,8 +217,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
 -   [Creare un avviso dati nella finestra di progettazione Avviso dati](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vedere anche
 
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

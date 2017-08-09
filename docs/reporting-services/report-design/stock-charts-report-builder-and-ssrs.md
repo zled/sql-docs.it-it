@@ -19,11 +19,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4a37208813e989353a381070e1ecfa0888e1e33b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# <a name="stock-charts-report-builder-and-ssrs"></a>Grafici azionari (Generatore report e SSRS)
+# Grafici azionari (Generatore report e SSRS)
 
   I grafici azionari sono progettati appositamente per i dati finanziari o scientifici in cui si usano fino a quattro valori per ogni punto dati. Questi valori si allineano ai valori massimo, minimo, di apertura e di chiusura usati per tracciare dati azionari finanziari. In questo tipo di grafico i valori di apertura o di chiusura vengono visualizzati tramite i marcatori, solitamente linee o triangoli. Nell'esempio seguente i valori di apertura sono rappresentati dai marcatori a sinistra, mentre quelli di chiusura dai marcatori a destra.  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Variazioni  
+## Variazioni  
   
 -   **Candela**. Il grafico a candela è un tipo speciale di grafico azionario in cui si usano caselle per indicare l'intervallo tra i valori di apertura e di chiusura. Analogamente al grafico azionario, il grafico a candela consente di visualizzare fino a quattro valori per ogni punto dati.  
   
-## <a name="data-considerations-for-stock-charts"></a>Considerazioni sui dati per i grafici azionari  
+## Considerazioni sui dati per i grafici azionari  
   
 -   Quando si presentano molti punti dati azionari, ad esempio la tendenza annua dei prezzi azionari, risulta difficile distinguere ogni valore di apertura, di chiusura, massimo e minimo di ogni punto dati. In questo scenario è consigliabile usare un grafico a linee anziché un grafico azionario.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili molte formule calcolate da usare con i grafici azionari, tra cui Indicatori prezzo, Indice di forza relativa, MACD e così via.  
 
-## <a name="next-steps"></a>Passaggi successivi
+## Passaggi successivi
 
 [Grafici con intervalli](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Grafici](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

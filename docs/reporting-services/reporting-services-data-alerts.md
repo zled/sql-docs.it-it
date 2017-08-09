@@ -19,11 +19,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Avvisi dati di Reporting Services
-<a id="reporting-services-data-alerts" class="xliff"></a>
+# <a name="reporting-services-data-alerts"></a>Avvisi dati di Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -58,8 +57,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  ![Flusso di lavoro negli avvisi Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "flusso di lavoro negli avvisi Reporting Services")  
   
-### Report supportati dagli avvisi dati
-<a id="reports-supported-by-data-alerts" class="xliff"></a>  
+### <a name="reports-supported-by-data-alerts"></a>Report supportati dagli avvisi dati  
  È possibile creare avvisi dati per tutti i tipi di report professionali scritti in linguaggio RDL (Report Definition Language) e creati in Progettazione report o Generatore report. Si tratta di report in cui sono incluse aree dati, quali tabelle e grafici, report con sottoreport e report complessi con più gruppi di colonne paralleli e aree dati annidate. Gli unici requisiti sono che il report includa almeno un'area dati di qualsiasi tipo e che l'origine dati del report sia configurata per utilizzare le credenziali archiviate o nessuna credenziale. Se nel report non è disponibile alcuna area dati, non è possibile creare un avviso per questo report.  
   
  Non è possibile creare avvisi dati nei report creato con [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
@@ -74,34 +72,29 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   [Autenticazione con il server di report](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### Eseguire report
-<a id="run-reports" class="xliff"></a>  
+### <a name="run-reports"></a>Eseguire report  
  Il primo passaggio per la creazione di una definizione di avviso dati consiste nell'individuare il report desiderato nella raccolta di SharePoint, quindi eseguire il report. Se in un report non sono contenuti dati al momento dell'esecuzione, non è possibile creare un avviso per questo report.  
   
  Nel caso di un report con parametri, è necessario specificare i valori dei parametri da utilizzare quando si esegue il report. I valori dei parametri saranno salvati nelle definizioni di avviso dati create in un report. I valori vengono utilizzati quando il report viene eseguito di nuovo come passaggio nell'elaborazione della definizione di avviso dati. Se si desidera modificare i valori dei parametri, è necessario eseguire di nuovo il report con questi valori e creare una definizione di avviso in questa versione del report.  
   
-### Creare definizioni di avviso dati
-<a id="create-data-alert-definitions" class="xliff"></a>  
+### <a name="create-data-alert-definitions"></a>Creare definizioni di avviso dati  
  Tra le funzionalità relative agli avvisi di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è inclusa la finestra di progettazione Avviso dati, che viene utilizzata per la creazione di definizioni di avviso dati.  
   
  Per creare una definizione di avviso dati, eseguire il report, quindi aprire la finestra di progettazione Avviso dati dal menu **Azioni** del visualizzatore di report di SharePoint. Verranno generati i feed di dati del report per il report e le prime 100 righe del feed di dati verranno visualizzate in una tabella di anteprima dei dati nella finestra di progettazione Avviso dati. Tutti i feed di dati di un report vengono memorizzati nella cache finché si utilizza la definizione di avviso nella finestra di progettazione Avviso dati. La memorizzazione nella cache consente di passare rapidamente tra feed di dati. Quando si apre di nuovo una definizione di avviso nella finestra di progettazione Avviso dati, i feed di dati vengono aggiornati.  
   
  Le definizioni di avviso dati sono costituite da regole e clausole che i dati del report devono soddisfare per attivare un messaggio di avviso dati, una pianificazione che definisce la frequenza per l'invio del messaggio di avviso e, facoltativamente, le date per l'inizio e la fine dell'invio del messaggio di avviso, informazioni come la riga dell'oggetto e una descrizione da includere nel messaggio di avviso, nonché i destinatari del messaggio. Dopo aver creato una definizione di avviso, è possibile salvarla nel database di avvisi di SQL Server.  
   
-### Salvare definizioni di avviso dati e metadati di avviso
-<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Salvare definizioni di avviso dati e metadati di avviso  
  Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, il database di avvisi di SQL Server viene creato automaticamente.  
   
  Le definizioni di avviso dati e i metadati di avviso vengono salvati nel database di avvisi. Per impostazione predefinita, questo database è denominato ReportingServices\<GUID > alerting.  
   
  Quando si salva la definizione di avviso dati, tramite l'avviso viene creato un processo di SQL Server Agent per la definizione di avviso. Il processo include una pianificazione. La pianificazione è basata sul criterio di ricorrenza specificato nella definizione di avviso. L'esecuzione del processo consente di avviare l'elaborazione della definizione di avviso dati.  
   
-### Elaborare definizioni di avviso dati
-<a id="process-data-alert-definitions" class="xliff"></a>  
+### <a name="process-data-alert-definitions"></a>Elaborare definizioni di avviso dati  
  Quando tramite la pianificazione del processo di SQL Server Agent viene avviata l'elaborazione della definizione di avviso, il report viene eseguito per aggiornare i feed di dati del report. Tramite il servizio avvisi i feed di dati vengono letti e le regole specificate dalle definizioni di avviso dati vengono applicate ai valori dei dati. Se uno o più valori dei dati soddisfanno le regole, viene creata un'istanza di avviso dati e viene inviato a tutti i destinatari tramite posta elettronica un messaggio di avviso dati con i risultati dell'avviso. I risultati sono righe di dati del report che soddisfacevano tutte le regole al momento della creazione dell'istanza di avviso. Per impedire la creazione di più messaggi di avviso con gli stessi risultati, è possibile specificare che i messaggi devono essere inviati solamente quando i risultati cambiano. In questo caso, viene creata un'istanza di avviso che viene salvata nel database di avvisi, ma non viene generato alcun messaggio di avviso. Anche se si verifica un errore l'istanza di avviso viene salvata nel database di avvisi e ai destinatari viene inviato un messaggio di avviso con informazioni dettagliate sull'errore. Nella sezione Diagnostica e registrazione più avanti in questo argomento vengono fornite ulteriori informazioni sulla registrazione e sulla risoluzione dei problemi.  
   
-### Inviare messaggi di avviso dati
-<a id="send-data-alert-messages" class="xliff"></a>  
+### <a name="send-data-alert-messages"></a>Inviare messaggi di avviso dati  
  I messaggi di avviso dati vengono inviati tramite posta elettronica.  
   
  Nella riga **Da** è contenuto un valore fornito dalla configurazione di recapito di posta elettronica di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Nella riga **A** sono elencati i destinatari specificati al momento della creazione dell'avviso nella finestra di progettazione Avviso dati.  
@@ -155,8 +148,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  Per impostazione predefinita, le impostazioni MaxRetries e SecondsBeforeRetry si applicano a tutti gli eventi generati dagli avvisi dati. Se si desidera un controllo più granulare dei tentativi e dei tempi di attesa tra tentativi, è possibile aggiungere elementi per uno o più gestori di eventi che specificano valori per MaxRetries e SecondsBeforeRetry diversi.  
   
-### Gestori eventi e nuovo tentativo
-<a id="event-handlers-and-retry" class="xliff"></a>  
+### <a name="event-handlers-and-retry"></a>Gestori eventi e nuovo tentativo  
  I gestori di eventi sono i seguenti:  
   
 |Gestore evento|Description|  
@@ -227,8 +219,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
 ##  <a name="DiagnosticsLogging"></a> Diagnostica e registrazione  
  Gli avvisi dati consentono agli Information Worker e agli amministratori di tenere traccia degli avvisi in diversi modi e di comprendere il motivo per il quale gli avvisi non hanno esito positivo e consentono agli amministratori di utilizzare i log per acquisire informazioni sui destinatari dei messaggi di avviso, sul numero di istanze di avviso inviate e così via.  
   
-### Gestione avvisi dati
-<a id="data-alert-manager" class="xliff"></a>  
+### <a name="data-alert-manager"></a>Gestione avvisi dati  
  In Gestione avvisi dati vengono elencate definizioni di avviso e informazioni sugli errori che consentono agli Information Worker e agli amministratori di avvisi di comprendere il motivo per il quale si è verificato l'errore. Tra le cause di errore comuni sono incluse le seguenti:  
   
 -   Feed di dati del report modificati e colonne utilizzate nelle regole di definizione di avviso dati non più incluse nel feed di dati.  
@@ -237,14 +228,12 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   Tipo di dati nell'origine dati sottostante modificato e definizione di avviso non più valida.  
   
-### Log
-<a id="logs" class="xliff"></a>  
+### <a name="logs"></a>Log  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce numerosi log che consentono di ottenere ulteriori informazioni sui report eseguiti durante l'elaborazione delle definizioni di avviso dati, sulle istanze di avviso dati create e così via. Vi sono tre log particolarmente utili: il log di esecuzione degli avvisi, il log di esecuzione del server di report e il log di traccia del server di report.  
   
  Per informazioni su altri log di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vedere [File di log e origini di Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-#### Log di esecuzione degli avvisi
-<a id="alerting-execution-log" class="xliff"></a>  
+#### <a name="alerting-execution-log"></a>Log di esecuzione degli avvisi  
  Il servizio di runtime di avvisi scrive voci nella tabella ExecutionLogView del database di avvisi. È possibile eseguire una query sulla tabella oppure eseguire le stored procedure seguenti per ottenere informazioni di diagnostica più esaustive sugli avvisi dati salvati nel database di avvisi.  
   
 -   ReadAlertData  
@@ -265,12 +254,10 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  È possibile utilizzare SQL Server Agent per eseguire la stored procedure in una pianificazione. Per altre informazioni, vedere [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
   
-#### Log di esecuzione del server di report
-<a id="report-server-execution-log" class="xliff"></a>  
+#### <a name="report-server-execution-log"></a>Log di esecuzione del server di report  
  I report vengono eseguiti per generare i feed di dati in base ai quali vengono compilate le definizioni di avviso. Il log di esecuzione del server di report nel database del server di report consente di acquisire informazioni ogni volta che un report viene eseguito. È possibile eseguire una query sulla vista ExecutionLog2 nel database per informazioni dettagliate. Per altre informazioni, vedere [Vista ExecutionLog ed ExecutionLog3 del server di report](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-#### Log di traccia del server di report
-<a id="report-server-trace-log" class="xliff"></a>  
+#### <a name="report-server-trace-log"></a>Log di traccia del server di report  
  Il log di traccia del server di report contiene informazioni estremamente dettagliate relative alle operazioni del servizio del server di report, ad esempio operazioni eseguite dal servizio Web ReportServer ed elaborazione in background. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione. Per altre informazioni, vedere [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Contatori delle prestazioni  
@@ -334,8 +321,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
 -   [Concedere autorizzazione a utenti e amministratori di avvisi](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vedere anche
 
 [Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

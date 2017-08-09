@@ -1,5 +1,5 @@
 ---
-title: Tipo di connessione dell'elenco SharePoint (SSRS) | Microsoft Docs
+title: Tipo di connessione elenco SharePoint (SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Per includere dati da un elenco Microsoft SharePoint nel report, è necessario aggiungere o creare un set di dati basato su un'origine dati del report di tipo Elenco Microsoft SharePoint. Si tratta di un tipo di origine dati predefinito basato sull'estensione per i dati dell'Elenco SharePoint di Microsoft SQL Server Reporting Services. Usare questo tipo di origine dati per connettersi e recuperare i dati dell'elenco dai siti di SharePoint 2013 e seguenti.
+Per includere dati da un elenco Microsoft SharePoint nel report, è necessario aggiungere o creare un set di dati basato su un'origine dati del report di tipo Elenco Microsoft SharePoint. Si tratta di un tipo di origine dati predefinito basato sull'estensione per i dati dell'Elenco SharePoint di Microsoft SQL Server Reporting Services. Utilizzare questo tipo di origine dati per connettersi e recuperare i dati dell'elenco di SharePoint 2013 e versioni successive.
 
 Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
@@ -74,7 +74,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
  Per una tecnologia SharePoint configurata per essere usata senza un server di report (modalità locale), questa opzione non è supportata. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Credenziali non richieste (Non usare credenziali):**  
- Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account per l'esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
@@ -162,7 +162,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
  I parametri non sono supportati da questa estensione per i dati.  
   
 ##  <a name="HowTo"></a> Procedure  
- In questa sezione sono contenute istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
+ In questa sezione sono contenute le istruzioni dettagliate per l'utilizzo di connessioni dati, origini dati e set di dati.  
   
  [Aggiungere e verificare una connessione dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -190,8 +190,8 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parametri di report](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[Filtro, raggruppamento e ordinamento di dati](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[Parametri del report](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+[Filtro, raggruppamento e ordinamento dei dati](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Introduzione alle espressioni | Microsoft Docs'
+title: 'Esercitazione: Introduzione alle espressioni | Documenti Microsoft'
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
@@ -49,7 +49,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -155,7 +155,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
-In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** (**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
+In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione**(**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
   
 1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince** , scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
   
@@ -183,7 +183,7 @@ In questa sezione, viene usata la funzione **Left** e l'operatore di **concatena
   
 8.  Digitare **, 1)**  
   
-    Questa espressione consente di estrarre un carattere dal valore **FirstName** , a partire da sinistra.  
+    Questa espressione consente di estrarre un carattere dal valore **FirstName**, a partire da sinistra.  
   
 9. Digitare **&". "&**  
 
@@ -326,7 +326,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 2.  Nel riquadro Dati report fare clic su **Nuovo** e selezionare **Set di dati**.  
   
-3.  Fare clic su **Usare un set di dati incorporato nel report** nella finestra di dialogo **Proprietà set di dati.  
+3.  In * * proprietà set di dati, fare clic su **utilizzare un set di dati incorporato nel report**.  
   
 4.  Selezionare ExpressionsDataSource nell'elenco **Origine dati** .  
   
@@ -412,7 +412,7 @@ In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o
   
 11. Immediatamente dopo `Fields!LastPurchase.Value`, digitare **,** (una virgola). 
   
-13. Nell'elenco **Categoria** fare clic di nuovo su **Data/Ora** e nell'elenco **Elemento** fare doppio clic su **Now**.  
+13. Nell'elenco **Categoria** fare clic di nuovo su **Data/Ora** e nell'elenco **Elemento** fare clic su **Now**.  
   
     > [!WARNING]  
     > Nei report di produzione non è consigliabile usare la funzione **Now** in espressioni valutate più volte quando si esegue il rendering del report, ad esempio nelle righe di dettaglio di un report. Il valore di **Now** cambia da riga a riga e i valori diversi influiscono sui risultati della valutazione delle espressioni, generando risultati leggermente incoerenti. Usare invece la variabile globale `ExecutionTime` di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -492,7 +492,7 @@ La configurazione dell'indicatore e dei relativi stati richiede numerosi passagg
   
 24. Espandere di nuovo **Funzioni comuni** , fare clic su **Aggregazione**e nell'elenco **Elemento** fare doppio clic su **Avg**.  
   
-26. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)**e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
+26. Nell'elenco **Categoria** fare clic su **Campi (Espressioni)** e nell'elenco **Valori** fare doppio clic su **AcquistiDaInizioAnno**.  
   
 28. Immediatamente dopo `Fields!YTDPurchase.Value`, digitare **, "Espressioni")) < 0**  
   

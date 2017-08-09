@@ -1,5 +1,5 @@
 ---
-title: Progettare report con Progettazione report (SSRS) | Microsoft Docs
+title: Progettare report con progettazione Report (SSRS) | Documenti Microsoft
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 02e1eb6504ae66ba6e48cedc0c511c4cd9505fb2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
 
 Usare Progettazione report per creare report e soluzioni di creazione di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginati completi. Tale strumento offre un'interfaccia grafica in cui è possibile definire origini dati, set di dati, query, posizioni di layout del report per aree dati e campi, nonché caratteristiche interattive, quali l'interazione tra parametri e set di report.  
 
-Progettazione report è una funzionalità di  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un ambiente Microsoft Visual Studio per la creazione di soluzioni di Business Intelligence. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in SQL Server. Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Progettazione report è una funzionalità di  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un ambiente Microsoft Visual Studio per la creazione di soluzioni di Business Intelligence. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è incluso in SQL Server. Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## <a name="benefits-of-report-projects"></a>Vantaggi dei progetti report  
 I progetti report costituiscono il contenitore per le definizioni e le risorse del report. Utilizzare i progetti per:  
@@ -45,14 +45,14 @@ I progetti report costituiscono il contenitore per le definizioni e le risorse d
  Usare le informazioni contenute in questo argomento per progettare report impaginati ed elementi correlati per un unico progetto di report in una soluzione di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per altre informazioni sulle soluzioni e più progetti in SQL Server Data Tools, vedere [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Origini dati condivise  
+##  <a name="bkmk_SharedDataSources"></a> Shared Data Sources  
  Utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per definire e distribuire origini dati condivise per una soluzione di report. Le origini dati condivise possono essere distribuite indipendentemente dagli altri elementi di un progetto tramite le proprietà **OverwriteDataSources** e **TargetDataSourceFolder** . Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  In Progettazione report per definire le origini dati utilizzate in un report è possibile utilizzare sia il riquadro dei dati del report che Esplora soluzioni. Per altre informazioni, vedere [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Non è possibile utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per aprire origini dati pubblicate in un server di report o in un sito di SharePoint, ma non incluse nella soluzione di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per tale caratteristica, usare [Ambiente di creazione di Generatore report &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è uno strumento client. È possibile testare la soluzione di report localmente nel computer, distribuirla in un ambiente di testing per il test della soluzione server, quindi distribuirla in un ambiente di produzione. Dopo la distribuzione, verificare che le estensioni per l'elaborazione dell'origine dati e le credenziali dell'origine dati siano configurate per l'ambiente del server di report. È possibile utilizzare Gestione configurazione per gestire le proprietà per distribuzioni diverse. Per altre informazioni, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Set di dati condivisi  
  Utilizzare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per definire e distribuire set di dati condivisi per una soluzione di report. I set di dati condivisi possono essere distribuiti indipendentemente dagli altri elementi di un progetto tramite le proprietà **OverwriteDatasets** e **TargetDatasetFolder** . Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -77,14 +77,14 @@ I report impaginati sono file archiviati in un progetto report. I report possono
   
 -   **Aggiungere un elemento esistente.** In Progettazione report verrà visualizzata una definizione di report esistente (con estensione rdl). L'apertura di un report o di un progetto da una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe determinare l'aggiornamento automatico del progetto alla versione corrente e del report allo schema corrente. Per altre informazioni, vedere [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Importare un [!INCLUDE[msCoName](../../includes/msconame-md.md)]report di Access.** Importare tutti i report da un file di database di Access (con estensione mdb, accdb) o da un file di progetto (con estensione adp). In Progettazione report ogni report nel file di database o di progetto viene convertito in formato RDL e salvato nel progetto report. Non tutte le funzionalità di un report di Access vengono trasferite in un file di definizione di report (con estensione rdl). Per altre informazioni, vedere [Importazione report da Microsoft Access &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) e [Caratteristiche supportate dei report di Access &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Importare un report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Importare tutti i report da un file di database di Access (con estensione mdb, accdb) o da un file di progetto (con estensione adp). In Progettazione report ogni report nel file di database o di progetto viene convertito in formato RDL e salvato nel progetto report. Non tutte le funzionalità di un report di Access vengono trasferite in un file di definizione di report (con estensione rdl). Per altre informazioni, vedere [Importazione report da Microsoft Access &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) e [Caratteristiche supportate dei report di Access &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
   
     > [!NOTE]  
     >  Per utilizzare la caratteristica di importazione è necessario che Access 2002 o versione successiva sia installato nello stesso computer di Progettazione report. Per l'importazione dei report è necessario che sia disponibile l'origine dati dei report di Access.  
   
 -   **Utilizzare direttamente RDL.** Al momento della scrittura in Progettazione report, il report viene salvato in formato XML come file RDL (Report Definition Language). È possibile modificare questo file in Progettazione report, in un editor di testo o con qualsiasi strumento che supporti la modifica di codice XML.  
   
-     Quando si modifica l'origine della definizione di report in Progettazione report, si utilizza lo schema RDL corrente della versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui sono stati installati gli strumenti di sviluppo. Durante la compilazione di un progetto, la versione dello schema potrebbe variare a seconda delle proprietà della distribuzione. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+     Quando si modifica l'origine della definizione di report in Progettazione report, si utilizza lo schema RDL corrente della versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui sono stati installati gli strumenti di sviluppo. Durante la compilazione di un progetto, la versione dello schema potrebbe variare a seconda delle proprietà della distribuzione. Per altre informazioni, vedere [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
      La modifica diretta del file RDL può determinare la mancata pubblicazione nel server di report o la mancata esecuzione del report. Come per qualsiasi file XML, assicurarsi che i caratteri specifici del linguaggio XML utilizzati negli elementi siano correttamente codificati. Quando il report viene pubblicato, il server di report utilizza lo schema per convalidare il codice XML incluso nel file RDL.  
   
@@ -100,14 +100,14 @@ I report impaginati sono file archiviati in un progetto report. I report possono
 ##  <a name="bkmk_Resources"></a> Risorse  
  È possibile aggiungere al progetto file correlati al report, ma non elaborati dal server di report. È ad esempio possibile aggiungere immagini per le immagini o file di forma ESRI per i dati spaziali. Per altre informazioni, vedere [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Layout del report impaginato  
+##  <a name="bkmk_ReportLayout"></a> Paginated Report Layout  
  Per creare il layout del report, trascinare gli elementi e le aree dati del report dalla casella degli strumenti nell'area di progettazione e disporli. Trascinare i campi del set di dati sugli elementi dell'area di progettazione per aggiungere dati al report. Per organizzare i dati in gruppi in un'area dati Tablix, trascinare i campi del set di dati nel riquadro di raggruppamento. Poiché gli strumenti per la creazione di report costituiscono essenzialmente un modo per creare definizioni di report, l'approccio alla progettazione di report di Generatore report e Progettazione report è piuttosto simile.  
    
-##  <a name="bkmk_Preview"></a> Visualizzare in anteprima un report impaginato  
+##  <a name="bkmk_Preview"></a> Preview a Paginated Report  
  Utilizzare **Anteprima** per verificare i dati del report e la progettazione del layout. Quando un report viene visualizzato in anteprima, il componente Elaborazione report convalida lo schema di definizione del report e la sintassi dell'espressione ed elenca i problemi nella finestra [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
->  Quando un report viene visualizzato in anteprima, i dati per il report vengono memorizzati nella cache in un file nel computer locale. Quando lo stesso report viene visualizzato di nuovo in anteprima utilizzando la stessa query, gli stessi parametri e le stesse credenziali, in Progettazione report viene recuperata la copia memorizzata nella cache anziché rieseguire la query. Il file di dati viene salvato come *\<nomereport>*.rdl.data nella stessa directory del file di definizione del report. e non viene eliminato alla chiusura di Progettazione report.  
+>  Quando un report viene visualizzato in anteprima, i dati per il report vengono memorizzati nella cache in un file nel computer locale. Quando lo stesso report viene visualizzato di nuovo in anteprima utilizzando la stessa query, gli stessi parametri e le stesse credenziali, in Progettazione report viene recuperata la copia memorizzata nella cache anziché rieseguire la query. Il file di dati viene salvato come  *\<reportname >*. rdl nella stessa directory del file di definizione del report. e non viene eliminato alla chiusura di Progettazione report.  
   
  È possibile visualizzare l'anteprima di un report nei modi seguenti:  
   
@@ -146,7 +146,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
   
     -   Layout del report che deve essere modificato per essere più leggibile nel formato di stampa.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Salvare e distribuire report impaginati  
+##  <a name="bkmk_SaveandDeploy"></a> Save and Deploy Paginated Reports  
  In Progettazione report è possibile salvare report e altri file di progetto in locale oppure distribuirli in un server di report o in un sito di SharePoint. È possibile distribuire origini dati condivise, set di dati condivisi, report, risorse del report e parti del report singolarmente o insieme a seconda delle proprietà di distribuzione del progetto configurate. Per altre informazioni, vedere [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  In Progettazione report è importante tenere presente che si progetta un report utilizzando lo schema di definizione del report supportato dalla versione corrente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando si impostano le proprietà di distribuzione del progetto per un server di report o un sito di SharePoint specifico e si salva il report, in Progettazione report la definizione del report viene salvata nella directory di compilazione nello schema che corrisponde alla versione sul server di report di destinazione. Per creare report pubblicabili su un server di report di livello inferiore, in Progettazione report gli elementi del report non esistenti nello schema di destinazione vengono rimossi. Ciò si verifica automaticamente, senza richiesta di conferma. Quando ciò si verifica, la definizione di report originale viene mantenuta nella cartella del progetto. La definizione di report modificata che viene distribuita si trova nella cartella di compilazione.  
@@ -154,7 +154,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
 > [!NOTE]  
 >  Per le espressioni di debug e gli errori di distribuzione, è necessario visualizzare la definizione di report nella cartella di compilazione. Non utilizzare **Visualizza origine**. **Visualizza origine** consente di visualizzare l'origine della definizione del report dalla cartella del progetto.  
   
- Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Per altre informazioni, vedere [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### <a name="save-a-report-locally"></a>Salvare un report in locale  
  Quando si utilizza un report o altri elementi di progetto in Progettazione report, i file vengono salvati nel computer locale o in una condivisione di un altro computer a cui si ha accesso.  
@@ -170,7 +170,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> Convalida del report e livelli di errore  
  I report vengono convalidati prima dell'anteprima e durante la distribuzione. Durante la compilazione dei report si possono verificare diversi problemi. I report potrebbero ad esempio contenere stringhe quali espressioni o query incompatibili con la versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificata nella configurazione del progetto.  
   
- Usare la proprietà ErrorLevel per gestire avvisi ed errori relativi alla compilazione. La proprietà ErrorLevel può contenere un valore da 0 a 4 incluso. Il valore determina quali problemi di compilazione vengono segnalati come errori e quali come avvisi. Il valore predefinito è 2. Gli avvisi e gli errori vengono scritti nella finestra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output).  
+ Usare la proprietà ErrorLevel per gestire avvisi ed errori relativi alla compilazione. La proprietà ErrorLevel può contenere un valore da 0 a 4 incluso. Il valore determina quali problemi di compilazione vengono segnalati come errori e quali come avvisi. Il valore predefinito è 2. Gli avvisi e gli errori vengono scritti nella finestra [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  I problemi con livelli di gravità minori o uguali al valore di ErrorLevel vengono segnalati come errori; in caso contrario, vengono segnalati come avvisi.  
   
@@ -190,7 +190,7 @@ I report impaginati sono file archiviati in un progetto report. I report possono
 
 [Scaricare SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
-[Strumenti di progettazione query](../../reporting-services/report-data/query-design-tools-ssrs.md)   
+[Strumenti di Progettazione query](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

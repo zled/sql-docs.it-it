@@ -20,11 +20,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Installare Reporting Services
-<a id="install-reporting-services" class="xliff"></a>
+# <a name="install-reporting-services"></a>Installare Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -50,8 +49,7 @@ Installazione di SQL Server Reporting Services include i componenti server per a
 > [!NOTE]
 > SQL Server Data Tools (SSDT) non è incluso con SQL Server 2016. [Scaricare SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714).
 
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Passaggi successivi
 
 [Combinazioni supportate di SharePoint, Server Reporting Services e componente aggiuntivo](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

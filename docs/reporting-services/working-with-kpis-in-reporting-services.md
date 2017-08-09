@@ -17,12 +17,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Usare gli indicatori KPI in Reporting Services
-<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+# <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -36,19 +35,16 @@ Grazie agli indicatori KPI, SQL Server 2016 Reporting Services consente di rispo
   
 -   Quale obiettivo minimo ho raggiunto?  
   
-## Creazione di un set di dati
-<a id="creating-a-dataset" class="xliff"></a>  
+## <a name="creating-a-dataset"></a>Creazione di un set di dati  
 Un indicatore KPI usa solo la prima riga di dati di un set di dati condiviso. Verificare che i dati da usare si trovino nella prima riga. Per creare un set di dati condiviso, è possibile usare Generatore report o SQL Server Data Tools.  
   
 > **Nota**: non è necessario che il set di dati si trovi nella stessa cartella dell'indicatore KPI.  
   
-## Posizionamento di indicatori KPI
-<a id="placement-of-kpis" class="xliff"></a>  
+## <a name="placement-of-kpis"></a>Posizionamento di indicatori KPI  
   
 È possibile creare gli indicatori KPI in qualsiasi cartella nel server di report.  Prima di creare un indicatore KPI, è bene considerare quale sia il percorso corretto in cui inserirlo. È consigliabile, ad esempio, collocarlo in una cartella visibile agli utenti e al contempo pertinente anche per altri report e indicatori KPI.  
   
-## Aggiunta di un indicatore KPI
-<a id="adding-a-kpi" class="xliff"></a>  
+## <a name="adding-a-kpi"></a>Aggiunta di un indicatore KPI  
   
 Dopo aver stabilito la posizione dell'indicatore KPI, passare alla cartella e nel menu principale selezionare **Nuovo** > **KPI** .  
   
@@ -96,8 +92,7 @@ Per usare i dati di un nuovo set di dati condiviso, eseguire le operazioni segue
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## Rimozione di un indicatore KPI
-<a id="removing-a-kpi" class="xliff"></a>  
+## <a name="removing-a-kpi"></a>Rimozione di un indicatore KPI  
   
 Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.  
   
@@ -109,13 +104,11 @@ Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## Aggiornamento di un indicatore KPI
-<a id="refreshing-a-kpi" class="xliff"></a>  
+## <a name="refreshing-a-kpi"></a>Aggiornamento di un indicatore KPI  
   
 Per aggiornare l'indicatore KPI, è necessario configurare una cache per il set di dati condiviso. Per ulteriori informazioni sulla cache di piani di aggiornamento, vedere [funziona con set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Passaggi successivi
   
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)

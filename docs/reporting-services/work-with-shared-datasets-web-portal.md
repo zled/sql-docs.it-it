@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Utilizzare i set di dati condivisi - portale web
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>Utilizzare i set di dati condivisi - portale web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ Un set di dati condiviso consente di gestire le impostazioni per un set di dati 
 
 È possibile visualizzare e gestire le proprietà di un set di dati condivisi all'interno del portale Web. Dal portale Web è possibile avviare Generatore report per creare o modificare i set di dati condivisi.
 
-## Creare un set di dati condiviso
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>Creare un set di dati condiviso
   
 Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.  
   
@@ -49,8 +47,7 @@ Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.
   
 6.  Creare il set di dati e quindi selezionare l'icona **Salva** in alto a sinistra per salvare di nuovo il set di dati nel server d report.  
   
-## Gestire un set di dati condiviso esistente
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>Gestire un set di dati condiviso esistente
   
 Per gestire un set di dati condiviso esistente, è possibile eseguire le operazioni seguenti.  
   
@@ -65,15 +62,13 @@ Per gestire un set di dati condiviso esistente, è possibile eseguire le operazi
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## Proprietà
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>Proprietà
   
 Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il set di dati. È anche possibile scegliere **Elimina**, **Sposta**, **Modifica in Generatore report**, **Scarica** o **Sostituisci**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## Memorizzazione nella cache
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>Memorizzazione nella cache
   
 Per la memorizzazione nella cache dei dati per un set di dati sono disponibili varie opzioni. Per iniziare, è necessario effettuare una semplice selezione.  
   
@@ -87,8 +82,7 @@ Con la selezione di **Memorizzare nella cache copie di questo report e usarle qu
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### Scadenza della cache
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Scadenza della cache  
   
 È possibile stabilire se si vuole che la cache scada, per il set di dati condiviso, dopo un determinato periodo di tempo oppure se si preferisce impostare una pianificazione. È possibile usare una pianificazione condivisa  
   
@@ -97,8 +91,7 @@ Con la selezione di **Memorizzare nella cache copie di questo report e usarle qu
 > [!NOTE]
 > L'impostazione di scadenza non comporta l'aggiornamento della cache. Senza un piano di aggiornamento della cache, i dati verranno aggiornati durante l'esecuzione successiva del set di dati.  
   
-### Piani di aggiornamento della cache
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Piani di aggiornamento della cache  
   
 È possibile usare piani di aggiornamento della cache per creare pianificazioni per precaricare nella cache copie temporanee di dati per un set di dati condiviso. Un piano di aggiornamento include una pianificazione e l'opzione per specificare o eseguire l'override di valori per i parametri. Non è possibile eseguire l'override di valori per i parametri contrassegnati come di sola lettura. È possibile creare e usare più piani di aggiornamento.   
   

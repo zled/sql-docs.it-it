@@ -23,13 +23,11 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="integrating-reporting-services-using-reportviewer-controls---get-started" class="xliff"></a>
-# L'integrazione di Reporting Services utilizzando i controlli ReportViewer - introduzione
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>L'integrazione di Reporting Services utilizzando i controlli ReportViewer - introduzione
 
 Informazioni su come gli sviluppatori possono incorporare report impaginati in siti web ASP.Net e le applicazioni di Windows forms, tramite il controllo ReportViewer di Reporting Services 2016. È possibile aggiungere il controllo a un progetto nuovo o aggiornare un progetto esistente.
 
-<a id="adding-the-reportviewer-control-to-a-new-web-project" class="xliff"></a>
-## Aggiunta del controllo ReportViewer a un nuovo progetto web
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto web
 
 1. Creare un nuovo **sito Web ASP.NET vuoto** o aprire un progetto ASP.NET esistente.
 
@@ -82,13 +80,11 @@ Nella pagina finale dovrebbe essere simile al seguente.
 
 ```
 
-<a id="updating-an-existing-project-to-use-the-reportviewer-control" class="xliff"></a>
-## Aggiornamento di un progetto esistente per utilizzare il controllo ReportViewer
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Aggiornamento di un progetto esistente per utilizzare il controllo ReportViewer
 
 Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente, aggiungere il controllo tramite Nuget e aggiornare i riferimenti all'assembly alla versione *14.0.0.0*. Ciò include l'aggiornamento di Web. config del progetto e tutte le pagine aspx che fa riferimento il controllo ReportViewer.
 
-<a id="sample-webconfig-changes" class="xliff"></a>
-### Modifiche di Web. config di esempio
+### <a name="sample-webconfig-changes"></a>Modifiche di Web. config di esempio
 
 ```
 <?xml version="1.0"?>
@@ -135,8 +131,7 @@ Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente,
 </configuration>
 ```
 
-<a id="sample-aspx" class="xliff"></a>
-### Esempio con estensione aspx
+### <a name="sample-aspx"></a>Esempio con estensione aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -147,8 +142,7 @@ Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente,
 <!DOCTYPE html>
 ```
 
-<a id="adding-the-reportviewer-control-to-a-new-windows-forms-project" class="xliff"></a>
-## Aggiunta del controllo ReportViewer a un nuovo progetto Windows Form
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Aggiunta del controllo ReportViewer a un nuovo progetto Windows Form
 
 1. Creare un nuovo **Windows Forms Application** o aprire un progetto esistente.
 
@@ -183,15 +177,13 @@ Per rendere l'utilizzo del controllo ReportViewer 2016 in un progetto esistente,
     }
     ```
 
-<a id="how-to-set-100-height-on-the-report-viewer-2016-control" class="xliff"></a>
-## Come impostare l'altezza di 100% sul controllo Report Viewer 2016
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Come impostare l'altezza di 100% sul controllo Report Viewer 2016
 
 Il nuovo controllo Report Viewer 2016 è ottimizzato per pagine in modalità standard di HTML5 e funziona su tutti i browser moderni. In passato, con il controllo RVC precedente, quando si imposta la proprietà height di 100%, funzionava anche se nessuno dei progenitori altezza specificata. Questo comportamento è cambiato in HTML5. Quando si imposta questa proprietà sul nuovo controllo RVC, funzionerà correttamente solo se l'elemento padre ha un'altezza definita, ad esempio, non un valore di auto o tutti i relativi predecessori RVC sono disponibili altezza 100%.
 
 Di seguito sono i due esempi per eseguire questa operazione.
 
-<a id="by-setting-the-height-of-all-the-parent-elements-to-100" class="xliff"></a>
-### Impostando l'altezza del padre tutti gli elementi al 100%
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Impostando l'altezza del padre tutti gli elementi al 100%
 
 ```
 <!DOCTYPE html>
@@ -217,8 +209,7 @@ Di seguito sono i due esempi per eseguire questa operazione.
 
 ```
 
-<a id="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control" class="xliff"></a>
-### Impostando l'attributo di stile altezza nell'elemento padre del controllo reportviewer
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Impostando l'attributo di stile altezza nell'elemento padre del controllo reportviewer
 
 Per ulteriori informazioni sulle lunghezze percentuale viewport, vedere [Viewport percentuale lunghezze](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -241,8 +232,7 @@ Per ulteriori informazioni sulle lunghezze percentuale viewport, vedere [Viewpor
 
 ```
 
-<a id="adding-control-to-visual-studio-toolbar" class="xliff"></a>
-## Aggiunta controllo alla barra degli strumenti di Visual Studio
+## <a name="adding-control-to-visual-studio-toolbar"></a>Aggiunta controllo alla barra degli strumenti di Visual Studio
 
 Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet. Per questo motivo, non noterai controllo Visualizzatore di Report visualizzati nella casella degli strumenti di Visual Studio per impostazione predefinita. È possibile aggiungere il controllo alla casella degli strumenti nel modo seguente.
 
@@ -269,16 +259,14 @@ Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet. Per 
 
     ![ssRS: casella degli strumenti-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-<a id="things-to-be-aware-of" class="xliff"></a>
-### Aspetti da tenere presenti
+### <a name="things-to-be-aware-of"></a>Aspetti da tenere presenti
 
 - Verrà aggiunto un riferimento per il pacchetto NuGet installato all'interno del progetto corrente. L'elemento della casella degli strumenti verrà mantenuti in altri progetti. Quando si installa il pacchetto NuGet in un nuova soluzione/progetto, l'elemento della casella degli strumenti può fare riferimento a una versione precedente. 
 
 - Il controllo rimane nella casella degli strumenti anche se l'assembly non è più disponibile. Se è stato eliminato il progetto, Visual Studio genererà un errore se si prova e aggiungere il controllo dalla casella degli strumenti. Per correggere l'errore, rimuovere il controllo dalla casella degli strumenti e aggiungerlo di nuovo utilizzando la procedura descritta sopra.
 
 
-<a id="common-issues" class="xliff"></a>
-## Problemi comuni
+## <a name="common-issues"></a>Problemi comuni
     
 - Il controllo ReportViewer 2016 è progettato per essere utilizzato con i browser moderni. Il controllo potrebbe non funzionare se browser esegue il rendering della pagina web in una modalità di compatibilità di Internet Explorer. I siti Intranet richieda un tag meta per sostituire le impostazioni che incoraggia la collaborazione il rendering di pagine intranet in modalità di compatibilità.
 
@@ -286,13 +274,11 @@ Il controllo Visualizzatore Report è ora disponibile come pacchetto NuGet. Per 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-<a id="providing-feedback" class="xliff"></a>
-## Inviare commenti e suggerimenti
+## <a name="providing-feedback"></a>Inviare commenti e suggerimenti
 
 Informare il team sui problemi riscontrati con il controllo sul [forum di Reporting Services MSDN](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) o tramite posta elettronica al [ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com).
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 [Raccolta dei dati nel controllo ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016 | Microsoft Docs"
+title: "Funzionalità supportate dalle edizioni di SQL Server 2016 Reporting Services | Documenti Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,17 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016
 
-Questo argomento illustra i dettagli delle funzionalità supportate dalle diverse edizioni di SQL Server 2016.  
+In questo argomento fornisce i dettagli delle funzionalità supportate dalle diverse edizioni di SQL Server 2016.  
   
  SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 180 giorni.  
   
@@ -33,9 +33,9 @@ Questo argomento illustra i dettagli delle funzionalità supportate dalle divers
     
  **Per provare SQL Server 2016**    
     
- > [![Download da Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Scaricare SQL Server 2016 da Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Macchina virtuale di Azure piccola](../analysis-services/media/azure-virtual-machine-small.png) **[Attivare una macchina virtuale con SQL Server 2016 già installato](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Macchina virtuale di Azure small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** (Accedere a una macchina virtuale con SQL Server 2016 già installato)    
 
 Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere SQL Server Enterprise Edition.
 
@@ -77,7 +77,7 @@ Per passare alla tabella per una tecnologia SQL Server, fare clic sul relativo c
 |Avvisi<sup>2</sup>|Sì||||||Sì|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Sì||||||Sì|  
   
- <sup>1</sup> Per altre informazioni sulle origini dati supportate in SQL Server 2016 Reporting Services (SSRS), vedere [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> per ulteriori informazioni sulle origini dati supportate in SQL Server 2016 Reporting Services (SSRS), vedere [origini dati supportate da Reporting Services &#40; SSRS &#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> Richiede Reporting Services in modalità SharePoint. Per altre informazioni, vedere [Installare la modalità SharePoint di Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -112,4 +112,4 @@ Per passare alla tabella per una tecnologia SQL Server, fare clic sul relativo c
 [Specifiche di prodotto per SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [Installazione per SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

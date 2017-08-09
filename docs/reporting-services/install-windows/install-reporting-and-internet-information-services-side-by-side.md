@@ -20,12 +20,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Installazione di Reporting e Internet Information Services Side-by-Side
-<a id="install-reporting-and-internet-information-services-side-by-side" class="xliff"></a>
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installazione di Reporting e Internet Information Services Side-by-Side
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -37,8 +36,7 @@ ms.lasthandoff: 07/03/2017
 |-----------------|------------|-----------------|  
 |8.0, 8.5|Richieste destinate a un'applicazione vengono accettate da un'applicazione diversa.<br /><br /> HTTP.SYS applica regole di precedenza per le prenotazioni URL. Le richieste inviate ad applicazioni con lo stesso nome di directory virtuale e che eseguono congiuntamente il monitoraggio della porta 80 potrebbero non raggiungere la destinazione desiderata se la prenotazione URL è debole rispetto alla prenotazione URL di un'altra applicazione.|In determinate condizioni, un endpoint registrato che prevale su un altro endpoint URL nello schema di prenotazione degli URL potrebbe ricevere richieste HTTP destinate all'altra applicazione.<br /><br /> L'uso di nomi univoci per le directory virtuali per il servizio Web ReportServer e [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] consente di evitare questo conflitto.<br /><br /> Informazioni dettagliate su questo scenario vengono fornite nel presente argomento.|  
   
-## Regole di precedenza per le prenotazioni URL
-<a id="precedence-rules-for-url-reservations" class="xliff"></a>  
+## <a name="precedence-rules-for-url-reservations"></a>Regole di precedenza per le prenotazioni URL  
  Prima di poter passare alla risoluzione dei problemi di interoperabilità tra IIS e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario comprendere le regole di precedenza relative alle prenotazioni di URL. Le regole di precedenza possono essere generalizzate nell'affermazione in base alla quale una prenotazione URL che ha valori definiti in modo più esplicito ha la precedenza nella ricezione di richieste che corrispondono all'URL.  
   
 -   Una prenotazione URL che specifica una directory virtuale è più esplicita di una prenotazione che la omette.  
@@ -59,8 +57,7 @@ ms.lasthandoff: 07/03/2017
   
  Un'indicazione di un conflitto di porte è la visualizzazione del messaggio di errore seguente: "System.IO.FileLoadException: Il processo non può accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020)".  
   
-## Prenotazioni URL per IIS 8.0, 8.5 con SQL Server Reporting Services
-<a id="url-reservations-for-iis-80-85-with-sql-server-reporting-services" class="xliff"></a>  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Prenotazioni URL per IIS 8.0, 8.5 con SQL Server Reporting Services  
  Stabilite le regole di precedenza descritte nella sezione precedente, è possibile iniziare a comprendere in che modo le prenotazioni URL definite per Reporting Services e IIS agevolino l'interoperabilità. Reporting Services riceve le richieste che specificano in modo esplicito i nomi delle directory virtuali per le proprie applicazioni, mentre IIS riceve tutte le richieste rimanenti che possono pertanto essere dirette ad applicazioni eseguite all'interno del modello di processo di IIS.  
   
 |Applicazione|Prenotazione URL|Descrizione|Ricezione richiesta|  
@@ -69,8 +66,7 @@ ms.lasthandoff: 07/03/2017
 |Portale Web|`http://+:80/Reports`|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. Il [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] riceve tutte le richieste a http://\<computername > / reports.|  
 |IIS|`http://*:80/`|Carattere jolly vulnerabile sulla porta 80.|Riceve sulla porta 80 tutte le richieste rimanenti che non vengono ricevute da un'altra applicazione.|  
 
-## Distribuzioni side-by-Side di SQL Server Reporting Services in IIS 8.0, 8.5
-<a id="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85" class="xliff"></a>
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Distribuzioni side-by-Side di SQL Server Reporting Services in IIS 8.0, 8.5
 
  I problemi di interoperabilità tra IIS e Reporting Services si verificano quando i nomi delle directory virtuali dei siti Web di IIS sono identici a quelli utilizzati da Reporting Services. Si supponga ad esempio di disporre della configurazione seguente:  
   
@@ -88,8 +84,7 @@ ms.lasthandoff: 07/03/2017
   
 -   Per installazioni da configurare manualmente, adottare le convenzioni di denominazione predefinite negli URL configurati. Se si installa [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] come istanza denominata, includere il nome dell'istanza al momento della creazione di una directory virtuale.  
 
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Passaggi successivi
 
 [Configurare gli URL di Server di Report](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurare un URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

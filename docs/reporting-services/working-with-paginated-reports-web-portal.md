@@ -18,19 +18,17 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Utilizzo di report impaginati (portale web)
-<a id="working-with-paginated-reports-web-portal" class="xliff"></a>
+# <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 È possibile visualizzare e gestire le proprietà di un report impaginato all'interno del portale Web, da cui è possibile anche avviare Generatore report per creare o modificare report impaginati.  
    
-## Creare un report impaginato
-<a id="create-a-paginated-report" class="xliff"></a>  
+## <a name="create-a-paginated-report"></a>Creare un report impaginato  
   
 Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.  
   
@@ -44,8 +42,7 @@ Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.
   
 4.  Creare il report e quindi selezionare l'icona **Salva** in alto a sinistra per salvare di nuovo il report impaginato nel server di report.  
   
-## Gestire un report impaginato esistente
-<a id="manage-an-existing-paginated-report" class="xliff"></a>  
+## <a name="manage-an-existing-paginated-report"></a>Gestire un report impaginato esistente  
   
 Per gestire un report impaginato esistente, è possibile eseguire le operazioni seguenti.  
   
@@ -60,22 +57,19 @@ Per gestire un report impaginato esistente, è possibile eseguire le operazioni 
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## Proprietà
-<a id="properties" class="xliff"></a>  
+## <a name="properties"></a>Proprietà  
   
 Nella schermata delle proprietà è possibile modificare **Nome** e **Descrizione** per il report impaginato. È anche possibile scegliere **Elimina**, **Sposta**, **Crea report collegato**, **Modifica in Generatore report**, **Scarica** o **Sostituisci**.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## Parametri
-<a id="parameters" class="xliff"></a>  
+## <a name="parameters"></a>Parametri  
   
 È possibile modificare i parametri esistenti di un report impaginato. Per aggiungere un nuovo parametro, è necessario modificare il report in Generatore Report o SQL Server Data Tools.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## Data Source
-<a id="data-source" class="xliff"></a>  
+## <a name="data-source"></a>Data Source  
 È possibile selezionare un'origine dati condivisa oppure immettere le informazioni di connessione per un'origine dati personalizzata.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -131,18 +125,15 @@ In questo caso, non è necessario specificare alcun tipo di credenziali per l'or
   
 Per usare questa opzione, è necessario aver prima configurato l'account di esecuzione automatica per il server di report. L'account di esecuzione automatica consente di connettersi a origini dati esterne quando non sono disponibili altri tipi di credenziali. Se si specifica questa opzione e l'account non è configurato, la connessione all'origine dati del report ha esito negativo e il report non viene elaborato. Per altre informazioni su questo account, vedere [Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## Sottoscrizioni
-<a id="subscriptions" class="xliff"></a>  
+## <a name="subscriptions"></a>Sottoscrizioni  
 Una sottoscrizione di Reporting Services è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato di file precedentemente specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report. Per ulteriori informazioni, vedere [utilizzo delle sottoscrizioni di](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## Elementi dipendenti
-<a id="dependent-items" class="xliff"></a>  
+## <a name="dependent-items"></a>Elementi dipendenti  
 La pagina Elementi dipendenti consente di visualizzare l'elenco degli elementi a cui si fa riferimento in questo report. Per ognuno di essi un'icona indica di che tipo di elemento si tratta. È quindi possibile selezionare il **i puntini di sospensione (...)**  su ogni elemento per gestire gli elementi ulteriormente.  
   
-## Memorizzazione nella cache
-<a id="caching" class="xliff"></a>  
+## <a name="caching"></a>Memorizzazione nella cache  
 Per la memorizzazione nella cache di un report impaginato sono disponibili varie opzioni. Per iniziare, è necessario effettuare una semplice selezione.  
   
 1.  **Esegui sempre il report con i dati più recenti** consente di eseguire query sull'origine dati ogni volta che si esegue il report. In questo modo viene generato un report su richiesta con i dati più aggiornati. Ogni volta che si apre il report, infatti, viene creata una nuova istanza del report con i risultati di una nuova query. In questo modo se un report viene aperto da dieci utenti contemporaneamente, per l'elaborazione delle istanze del report vengono eseguite dieci query sull'origine dati.  
@@ -159,16 +150,14 @@ Con la selezione di **Memorizzare nella cache copie di questo report e usarle qu
 
 Per ulteriori informazioni, vedere [utilizzo snapshot](working-with-snapshots-web-portal.md).
   
-### Scadenza della cache
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Scadenza della cache  
   
 È possibile stabilire se si vuole che la cache scada, per il report impaginato, dopo un determinato periodo di tempo oppure se si preferisce impostare una pianificazione. È possibile usare una pianificazione condivisa.  
   
 > [!NOTE]
 > In questo caso, la cache non viene aggiornata.  
   
-### Piani di aggiornamento della cache
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Piani di aggiornamento della cache  
   
 La pagina Piani di aggiornamento della cache consente di creare pianificazioni per precaricare nella cache copie temporanee dei dati relativi a un report impaginato. Un piano di aggiornamento include una pianificazione e l'opzione per specificare o eseguire l'override di valori per i parametri. Non è possibile eseguire l'override di valori per i parametri contrassegnati come di sola lettura. È possibile creare e usare più piani di aggiornamento.  
    
@@ -187,8 +176,7 @@ Al termine, selezionare **Crea piano di aggiornamento della cache**.
   
 Sarà quindi possibile **modificare** o **eliminare** i piani elencati. L'opzione **Nuovo piano da esistente** viene abilitata quando è selezionato un solo piano di aggiornamento della cache. Consente di creare un nuovo piano di aggiornamento copiato dal piano originale. La pagina del piano di aggiornamento della cache viene aperta con i dettagli dal piano selezionato. È possibile modificare le opzioni del piano di aggiornamento e salvare il piano con una nuova descrizione.  
   
-## Snapshot della cronologia
-<a id="history-snapshots" class="xliff"></a>  
+## <a name="history-snapshots"></a>Snapshot della cronologia  
   
 La pagina Snapshot della cronologia consente di visualizzare gli snapshot del report generati e archiviati nel corso del tempo. A seconda delle opzioni impostate, è possibile che la cronologia del report includa solo gli snapshot più recenti.  
   
@@ -198,8 +186,7 @@ Per generare uno snapshot, è necessario che il report possa essere eseguito in 
   
 È possibile fare clic su uno snapshot della cronologia del report per visualizzarlo. L'unico elemento distintivo degli snapshot visualizzati nella cronologia del report è rappresentato dalla data e ora di creazione. Non sono disponibili indicatori visivi per distinguere gli snapshot generati tramite una pianificazione o un'operazione manuale.  
   
-## Sicurezza
-<a id="security" class="xliff"></a>  
+## <a name="security"></a>Sicurezza  
 La pagina Proprietà di sicurezza consente di visualizzare o modificare le impostazioni di sicurezza che regolano l'accesso al report. Questa pagina è disponibile per gli elementi per i quali l'utente è autorizzato a definire le impostazioni di sicurezza.  
   
 Il livello di accesso agli elementi viene impostato tramite assegnazioni di ruolo che specificano le attività consentite per un gruppo o un utente. Le assegnazioni di ruolo sono costituite da un nome di utente o gruppo e da una o più definizioni di ruolo che specificano la raccolta di attività consentite.  
@@ -208,8 +195,7 @@ Il livello di accesso agli elementi viene impostato tramite assegnazioni di ruol
   
 Selezionare questa opzione per modificare le impostazioni di sicurezza definite per l'elemento corrente.
 
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Passaggi successivi
 
 [Portale Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utilizzare i set di dati condivisi](../reporting-services/work-with-shared-datasets-web-portal.md)

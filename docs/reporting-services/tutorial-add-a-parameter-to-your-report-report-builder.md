@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un parametro al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un parametro al Report (Generatore Report) | Documenti Microsoft'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
@@ -31,7 +31,7 @@ In questa esercitazione viene aggiunto un parametro in un report impaginato di [
 I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report. 
    
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo stimato per il completamento dell'esercitazione: 25 minuti.  
   
@@ -48,9 +48,9 @@ Creare un report matrice, un'origine dati e un set di dati.
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
+    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
   
-    Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
+    Se la finestra di dialogo **Nuovo report o set di dati** non è visualizzata, scegliere **Nuovo** dal menu **File**.  
   
 2.  Nel riquadro sinistro assicurarsi che sia selezionata l'opzione **Nuovo report** .  
   

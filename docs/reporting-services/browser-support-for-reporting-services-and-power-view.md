@@ -29,11 +29,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Supporto browser per Reporting Services e Power View
-<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
+# <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,8 +41,7 @@ Informazioni su quali browser versioni sono supportate per la gestione e visuali
 > [!NOTE]
 > Integrazione con SharePoint di Reporting Services non è più disponibile dopo SQL Server 2016.
 
-## Requisiti del browser per il portale web
-<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
+## <a name="browser-requirements-for-the-web-portal"></a>Requisiti del browser per il portale web
 
 Di seguito è riportato l'elenco corrente dei browser supportati per il portale web.
 
@@ -73,8 +71,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
-## Requisiti del browser per il controllo Web del visualizzatore di report (2015)
-<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
+## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>Requisiti del browser per il controllo Web del visualizzatore di report (2015)
 
  Di seguito è riportato l'elenco corrente dei browser supportati dal controllo Web del visualizzatore di report (2015). Il visualizzatore di report supporta la visualizzazione dei report dal portale Web e dalle raccolte di SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
 
@@ -95,8 +92,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  Se si usa un prodotto SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere  [Pianificare il supporto dei browser in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-### Requisiti di autenticazione
-<a id="authentication-requirements" class="xliff"></a>
+### <a name="authentication-requirements"></a>Requisiti di autenticazione
 
  I browser supportano schemi di autenticazione specifici che devono essere gestiti dal server di report affinché la richiesta del client abbia esito positivo. Nella tabella seguente sono indicati i tipi di autenticazione predefiniti supportati da ogni browser eseguito in un sistema operativo Windows.
 
@@ -110,8 +106,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
-### Requisiti dello script per la visualizzazione di report
-<a id="script-requirements-for-viewing-reports" class="xliff"></a>
+### <a name="script-requirements-for-viewing-reports"></a>Requisiti dello script per la visualizzazione di report
 
  Per utilizzare il visualizzatore di report, configurare il browser per l'esecuzione di script.
 
@@ -124,8 +119,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 > [!NOTE]
 > La barra degli strumenti report fa parte del componente Visualizzatore HTML. Per impostazione predefinita la barra degli strumenti viene visualizzata nella parte superiore di ogni report di cui viene eseguito il rendering in una finestra del browser. Nel visualizzatore di report sono disponibili funzionalità tramite cui è possibile eseguire ricerche di informazioni nel report, scorrere fino a una pagina specifica e adattare le dimensioni della pagina per la visualizzazione. Per ulteriori informazioni sulla barra degli strumenti per report o sul Visualizzatore HTML, vedere [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md).
 
-## Supporto del browser per controlli del server Web ReportViewer in Visual Studio
-<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
+## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Supporto del browser per controlli del server Web ReportViewer in Visual Studio
 
  Il controllo server Web ReportViewer è utilizzato per incorporare la funzionalità del report in un'applicazione Web ASP.NET. I controlli sono inclusi con Visual Studio e supportano browser diversi e versioni di browser differenti rispetto agli altri componenti descritti in questo argomento. Il tipo di browser utilizzato per visualizzare l'applicazione determina il tipo di funzionalità di ReportViewer che è possibile fornire nell'applicazione. Utilizzare la tabella fornita in questo argomento per determinare quali browser supportati sono soggetti a restrizioni di funzionalità e quali piattaforme sono supportate.  
 
@@ -141,8 +135,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
-## Supporto browser per Power View
-<a id="power-view-browser-support" class="xliff"></a>
+## <a name="power-view-browser-support"></a>Supporto browser per Power View
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -159,8 +152,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  Per altre informazioni sul supporto browser per SharePoint 2016, vedere [Pianificare il supporto dei browser in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Passaggi successivi
 
 [Ricerca e visualizzazione dei report nel portale web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  

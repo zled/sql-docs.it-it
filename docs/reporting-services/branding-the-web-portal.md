@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Personalizzazione del portale Web
-<a id="branding-the-web-portal" class="xliff"></a>
+# <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/03/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## Creazione del pacchetto del marchio
-<a id="creating-the-brand-package" class="xliff"></a>  
+## <a name="creating-the-brand-package"></a>Creazione del pacchetto del marchio  
   
 Un pacchetto del marchio per Reporting Services consiste di tre elementi e presenta la forma di un file ZIP.   
   
@@ -42,8 +40,7 @@ Un pacchetto del marchio per Reporting Services consiste di tre elementi e prese
   
 I file devono avere i nomi elencati sopra. Al file ZIP è possibile assegnare il nome che si vuole.  
   
-### metadata.xml
-<a id="metadataxml" class="xliff"></a>  
+### <a name="metadataxml"></a>metadata.xml  
   
 Il file metadata.xml consente di impostare il nome del pacchetto del marchio e ha una voce di riferimento sia per il file colors.json che per il file logo.png.  
   
@@ -66,8 +63,7 @@ Esempio con un file del logo.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json
-<a id="colorsjson" class="xliff"></a>  
+### <a name="colorsjson"></a>Colors.json  
   
 Quando viene caricato il pacchetto del marchio, il server estrae le coppie nome/valore appropriate dal file colors.json e le unisce con il foglio di stile LESS master, brand.less. Questo file LESS viene quindi elaborato e il file CSS risultante viene servito al client. Tutti i colori del foglio di stile sono indicati nel formato esadecimale e sei caratteri.  
   
@@ -118,15 +114,13 @@ La prima volta che ci si connette a un server con Mobile Report Publisher dove �
   
 È quindi possibile usare quel tema nei report per dispositivi mobili che verranno creati, anche se non sono per lo stesso server su cui il tema è distribuito.   
   
-### Uso di un logo
-<a id="using-a-logo" class="xliff"></a>  
+### <a name="using-a-logo"></a>Uso di un logo  
   
 Se si include un logo nel pacchetto del marchio, esso apparirà nel portale Web al posto del nome che è stato specificato per il portale Web nel menu Impostazioni sito.  
   
 Il file che si include per il logo deve usare il formato di file PNG. Le dimensioni del file saranno scalate dopo il caricamento sul server. Dovrebbe essere scalato a circa 290 x 60 px.  
    
-## Applicazione del pacchetto del marchio al portale Web
-<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Applicazione del pacchetto del marchio al portale Web  
   
 Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile eseguire le operazioni seguenti.  
   
@@ -146,8 +140,7 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
   
 È anche possibile **scaricare** o **rimuovere** il pacchetto. Rimuovendo il pacchetto, il portale Web sarà reimpostato immediatamente sul marchio predefinito.  
   
-## Esempio metadata.xml
-<a id="metadataxml-example" class="xliff"></a>  
+## <a name="metadataxml-example"></a>Esempio metadata.xml  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -161,8 +154,7 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
         </Contents>  
     </SystemResourcePackage>  
    
-## Esempio colors.json
-<a id="colorsjson-example" class="xliff"></a>  
+## <a name="colorsjson-example"></a>Esempio colors.json  
   
     {  
         "name":"Multicolored example brand",  
