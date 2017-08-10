@@ -33,10 +33,10 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Errori di Integration Services e riferimento ai messaggi](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione script & #40; pagina colonne di Input & #41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)   
- [Editor trasformazione script & #40; input e output pagina & #41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor trasformazione script & #40; Pagina di script & #41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   
- [Editor trasformazione script & #40; Pagina gestioni connessioni & #41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)   
+ [Editor trasformazione script &#40; pagina colonne di Input &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)   
+ [Editor trasformazione script &#40; input e output pagina &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor trasformazione script &#40; Pagina di script &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   
+ [Editor trasformazione script &#40; Pagina gestioni connessioni &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)   
  [Esempi di componente di Script aggiuntivi](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   
