@@ -1,5 +1,5 @@
 ---
-title: Monitoraggio delle prestazioni con Archivio query | Microsoft Docs
+title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 11/28/2016
@@ -18,15 +18,14 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: it-it
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# Monitoraggio delle prestazioni con Query Store
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
+# <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi di prestazioni in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. Archivio query acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva per la consultazione. I dati vengono separati in base a intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
@@ -36,8 +35,7 @@ ms.lasthandoff: 06/28/2017
 ##  <a name="Enabling"></a> Abilitazione di Archivio query  
  Per impostazione predefinita, la funzionalità Archivio query non è attiva per i nuovi database.  
   
-#### Usare la pagina Archivio query in Management Studio
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Usare la pagina Archivio query in Management Studio  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un database e quindi scegliere **Proprietà**.  
   
@@ -48,8 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  Nella casella **Modalità operativa (richiesta)** selezionare **Attivato**.  
   
-#### Usare istruzioni Transact-SQL
-<a id="use-transact-sql-statements" class="xliff"></a>  
+#### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL  
   
 1.  Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Esempio:  
   
@@ -155,7 +152,7 @@ Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'ar
  Intero che rappresenta il numero massimo di piani mantenuti per ogni query. Il valore predefinito è 200.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- Controlla se l'archivio Query acquisisce informazioni sulle statistiche di attesa. Può essere OFF = 0 o ON = 1 (impostazione predefinita)  
+ Controlla se Query Store acquisisce informazioni sulle statistiche relative all'attesa. Può essere OFF = 0 o ON = 1 (impostazione predefinita)  
  
  Per determinare le opzioni correnti dell'archivio query, eseguire una query sulla vista **sys.database_query_store_options** . Per altre informazioni sui valori, vedere [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
@@ -168,8 +165,7 @@ Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'ar
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-### Viste del catalogo di Archivio query
-<a id="query-store-catalog-views" class="xliff"></a>  
+### <a name="query-store-catalog-views"></a>Viste del catalogo di Archivio query  
  Le informazioni su Query Store vengono presentate nelle viste del catalogo.  
 
 ||| 
@@ -177,10 +173,9 @@ Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'ar
 |[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[Sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-### Stored procedure di Archivio query
-<a id="query-store-stored-procedures" class="xliff"></a>  
+### <a name="query-store-stored-procedures"></a>Stored procedure di Archivio query  
  Per configurare Query Store vengono usate le stored procedure.  
 
 ||| 
@@ -455,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  Per visualizzare tutte le regressioni delle prestazioni, non solo quelle correlate alla modifica del piano selezionato, è sufficiente rimuovere la condizione `AND p1.plan_id <> p2.plan_id` dalla query precedente.  
 
  **Query che rimangono più a lungo in attesa**
- Questa query restituirà le prime 10 query che rimangono più a lungo in attesa. 
+Questa query restituirà le prime 10 query che rimangono più a lungo in attesa. 
  
  ```tsql 
   SELECT TOP 10
@@ -574,8 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Uso di Archivio query con OLTP in-memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Scenari di utilizzo dell'Archivio query](../../relational-databases/performance/query-store-usage-scenarios.md)   
