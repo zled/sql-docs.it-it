@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: it-it
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 |Database|Nome di esempio||  
 |--------------|------------------|-|  
-|Database del catalogo|ReportingService_[GUID applicazione del servizio] **(\*)**|L'utente esegue la migrazione.|  
-|Database temporaneo|ReportingService_[GUID applicazione del servizio]TempDB **(\*)**|L'utente esegue la migrazione.|  
-|Database di avviso|ReportingService_[GUID applicazione del servizio]_Alerting|Viene creato al momento della creazione di un'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|Database del catalogo|Reportingservice _ [GUID applicazione del servizio] **(\*)**|L'utente esegue la migrazione.|  
+|Database temporaneo|Reportingservice _ [GUID applicazione del servizio] TempDB **(\*)**|L'utente esegue la migrazione.|  
+|Database di avviso|ReportingService_[GUID applicazione del servizio]_Alerting|Viene creato al momento della creazione di un'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
- **(\*)** I nomi di esempio indicati nella tabella seguono la convenzione di denominazione usata in SSRS quando si crea una nuova applicazione del servizio SSRS. Se si esegue la migrazione da un server diverso, i tempDB e il catalogo manterranno i nomi dall'installazione originale.  
+ **(\*)** i nomi di esempio illustrati nella tabella di seguono la convenzione di denominazione usata in SSRS quando si crea una nuova applicazione di servizio SSRS. Se si esegue la migrazione da un server diverso, i tempDB e il catalogo manterranno i nomi dall'installazione originale.  
   
 ####  <a name="bkmk_backup_operations"></a> Operazioni di backup  
  In questa sezione vengono descritti i tipi di informazioni necessari per eseguire la migrazione e gli strumenti o il processo da usare per completare il backup.  

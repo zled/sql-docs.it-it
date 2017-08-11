@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: it-it
@@ -37,7 +37,7 @@ Questo argomento illustra le operazioni seguenti:
 ## <a name="before-we-start"></a>Prima di iniziare  
 Per proseguire, sono necessari questi prodotti:  
   
-* Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a un [server di report di [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] in modalità nativa](https://msdn.microsoft.com/library/ms143711.aspx).  
+* Per creare origini dati e indicatori KPI e pubblicare i set di dati e report per dispositivi mobili, è necessario accedere a un [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [server di report in modalità nativa](https://msdn.microsoft.com/library/ms143711.aspx).  
 * Per [creare set di dati condivisi](#shared-dataset), è necessario [installare Generatore report](https://msdn.microsoft.com/library/ff519551.aspx).  
 * Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Script e database di esempio di AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
@@ -235,9 +235,9 @@ Gli elenchi di selezione funzionano come filtri dei dati in Power BI ed Excel. �
   
 Ora che sono stati creati gli oggetti visivi nel layout master, è possibile creare un report per dispositivi mobili con un layout ottimizzato in modo specifico per gli utenti dei telefoni.    
   
-1. Nell'angolo superiore destro fare clic sull'icona dell'area di disegno > **Telefono**.  
+1. Nell'angolo superiore destro, fare clic sull'icona dell'area di disegno > **Phone**.  
   
-2. Nella scheda Layout in **Control Instances** (Istanze di controllo) verranno visualizzati i due grafici creati.   
+2. Nella scheda Layout in **Control Instances**(Istanze di controllo) verranno visualizzati i due grafici creati.   
   
 3. Trascinare la mappa ad albero fino all'area di disegno del telefono e modificarla in modo che abbia una larghezza pari a quattro colonne e un'altezza pari a tre righe.  
   

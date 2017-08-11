@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: it-it
@@ -41,7 +41,7 @@ Ogni istanza del server di report richiede una connessione al database del serve
   
 -   Configurazione di un server di report per utilizzare un database diverso del server di report.  
   
--   Modifica dell'account utente o della password utilizzati per la connessione al database. È necessario aggiornare la connessione al database solo quando le informazioni dell'account sono archiviate nel file RSReportServer.config. Se la connessione viene eseguita tramite l'account del servizio, che utilizza la sicurezza integrata di Windows come tipo di credenziali, la password non viene archiviata e non è quindi necessario aggiornare le informazioni di connessione. Per altre informazioni sulla modifica degli account, vedere [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+-   Modifica dell'account utente o della password utilizzati per la connessione al database. È necessario aggiornare la connessione al database solo quando le informazioni dell'account sono archiviate nel file RSReportServer.config. Se la connessione viene eseguita tramite l'account del servizio, che utilizza la sicurezza integrata di Windows come tipo di credenziali, la password non viene archiviata e non è quindi necessario aggiornare le informazioni di connessione. Per altre informazioni sulla modifica degli account, vedere [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 -   Configurazione della distribuzione con scalabilità orizzontale di un server di report. Per configurare una distribuzione con scalabilità orizzontale è necessario creare più connessioni a un database del server di report. Per altre informazioni su come eseguire questa operazione in più passaggi, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -61,7 +61,7 @@ Ogni istanza del server di report richiede una connessione al database del serve
   
 -   Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report.  
   
--   Nome del database del server di report. Quando si crea una connessione per la prima volta, è possibile creare un nuovo database del server di report oppure selezionare un database esistente. Per altre informazioni, vedere [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+-   Nome del database del server di report. Quando si crea una connessione per la prima volta, è possibile creare un nuovo database del server di report oppure selezionare un database esistente. Per altre informazioni, vedere [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
 -   Tipo di credenziali. È possibile utilizzare gli account di servizio, un account di dominio di Windows o un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -70,7 +70,7 @@ Ogni istanza del server di report richiede una connessione al database del serve
  Alle credenziali fornite deve essere concesso l'accesso al database del server di report. Se si utilizza lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , questo passaggio verrà eseguito automaticamente. Per ulteriori informazioni sulle autorizzazioni necessarie per accedere al database, vedere la sezione "Autorizzazioni per il database" di questo argomento.  
   
 ### <a name="storing-database-connection-information"></a>Archiviazione delle informazioni di connessione al database  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni di connessione vengono archiviate e crittografate nelle impostazioni di RSreportserver.config seguenti. Per creare valori crittografati per queste impostazioni, è necessario utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o l'utilità rsconfig.  
+ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni di connessione vengono archiviate e crittografate nelle impostazioni di RSreportserver.config seguenti. Per creare valori crittografati per queste impostazioni, è necessario utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o l'utilità rsconfig.  
   
  Non tutti i valori vengono impostati per ogni tipo di connessione. Se si configura la connessione utilizzando i valori predefiniti (che utilizzano gli account del servizio per stabilire la connessione), \< **LogonUser**>, \< **LogonDomain**>, e \< **LogonCred**> risulteranno vuoti, come indicato di seguito:  
   
@@ -101,7 +101,7 @@ Ogni istanza del server di report richiede una connessione al database del serve
 ##### <a name="using-service-accounts-and-integrated-security"></a>Utilizzo di account di servizio e sicurezza integrata  
  È possibile utilizzare la sicurezza integrata di Windows per connettersi tramite l'account di servizio del server di report. All'account vengono concessi diritti di accesso al database del server di report. Si tratta del tipo di credenziali predefinito scelto dal programma di installazione se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato nella configurazione predefinita.  
   
- L'account del servizio è un account attendibile che consente di adottare un approccio con interventi minimi di manutenzione per la gestione di una connessione al database del server di report. Poiché l'account del servizio utilizza la sicurezza integrata di Windows per stabilire la connessione, non è necessario archiviare le credenziali. Se in seguito, tuttavia, si modifica la password dell'account del servizio o l'identità, ad esempio passando da un account predefinito a un account di dominio, assicurarsi di utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per apportare la modifica. Lo strumento aggiorna automaticamente le autorizzazioni per il database per utilizzare le informazioni sull'account modificate. Per altre informazioni, vedere [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ L'account del servizio è un account attendibile che consente di adottare un approccio con interventi minimi di manutenzione per la gestione di una connessione al database del server di report. Poiché l'account del servizio utilizza la sicurezza integrata di Windows per stabilire la connessione, non è necessario archiviare le credenziali. Se in seguito, tuttavia, si modifica la password dell'account del servizio o l'identità, ad esempio passando da un account predefinito a un account di dominio, assicurarsi di utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per apportare la modifica. Lo strumento aggiorna automaticamente le autorizzazioni per il database per utilizzare le informazioni sull'account modificate. Per altre informazioni, vedere [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
  Se si configura la connessione di database per l'utilizzo dell'account del servizio, l'account dovrà disporre di autorizzazione di rete se il database del server di report si trova in un computer remoto. Non utilizzare l'account di servizio se il database del server di report si trova in un dominio diverso, dietro un firewall o se si utilizza la sicurezza dei gruppi di lavoro anziché la sicurezza di dominio. Utilizzare invece un account utente del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -132,7 +132,7 @@ Ogni istanza del server di report richiede una connessione al database del serve
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Creare un database del Server di Report](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Gestire un Server di Report di Reporting Services in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Configurare l'Account di servizio Server di Report](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

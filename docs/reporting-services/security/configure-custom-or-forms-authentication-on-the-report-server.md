@@ -18,7 +18,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
 ms.contentlocale: it-it
@@ -86,8 +86,8 @@ Inoltre, se si desidera utilizzare l'autenticazione basata su form o un'estensio
 
 [Implementazione di un'estensione di sicurezza](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 [Esempio di sicurezza personalizzato Reporting Services (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
-[Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
+[Autenticazione con il Server di Report](../../reporting-services/security/authentication-with-the-report-server.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[Configurare l'autenticazione di base nel Server di Report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[Configurare l'autenticazione di Windows nel server di report.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+[Configurare l'autenticazione di Windows nel Server di Report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

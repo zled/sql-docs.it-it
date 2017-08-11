@@ -16,7 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: it-it
@@ -38,7 +38,7 @@ Nell'illustrazione seguente è mostrato l'istogramma che verrà creato con una m
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
+Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -53,7 +53,7 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -127,9 +127,9 @@ Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori 
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare clic con il pulsante destro del mouse sull'asse orizzontale > **Proprietà asse orizzontale**.  
+2.  Pulsante destro del mouse sull'asse orizzontale > **proprietà asse orizzontale**.  
   
-3.  Nella scheda **Numero**, in **Categoria**  selezionare **Data**.  
+3.  Nella scheda **Numero** , in **Categoria**selezionare **Data**.  
   
 5.  Nella casella **Tipo** selezionare **31 gennaio 2000**.  
   
@@ -143,15 +143,15 @@ La data viene visualizzata nel formato selezionato. Il grafico continua a non as
   
 È possibile personalizzare la visualizzazione delle etichette ruotandole e specificando l'intervallo.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Ruotare le etichette asse sull'asse orizzontale  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Ruotare le etichette dell'asse sull'asse orizzontale  
   
 1.  Passare alla visualizzazione di progettazione report.  
   
 2.  Fare clic con il pulsante destro del mouse sul titolo dell'asse orizzontale, quindi scegliere **Mostra titolo asse** per rimuovere il titolo. Poiché sull'asse orizzontale vengono visualizzate le date, il titolo non è necessario.  
   
-3.  Fare clic con il pulsante destro del mouse sull'asse orizzontale > **Proprietà asse orizzontale**.  
+3.  Pulsante destro del mouse sull'asse orizzontale > **proprietà asse orizzontale**.  
   
-5.  Nella scheda **Etichette**, in **Modifica opzioni adattamento etichetta asse** selezionare **Disabilita adattamento**.  
+5.  Nella scheda **Etichette** , in **Modifica opzioni adattamento etichetta asse**selezionare **Disabilita adattamento**.  
   
 7.  In **Angolo di rotazione etichetta**selezionare **-90**.  
   
@@ -172,15 +172,15 @@ La legenda viene creata automaticamente dai dati di categoria e serie. È possib
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare clic con il pulsante destro del mouse sul grafico > **Proprietà legenda**.  
+2.  Fare doppio clic su legenda nel grafico > **proprietà legenda**.  
   
-3.  In **Layout e posizione** selezionare una posizione diversa. Ad esempio, selezionare l'opzione centrale inferiore.  
+3.  In **Layout e posizione**selezionare una posizione diversa. Ad esempio, selezionare l'opzione centrale inferiore.  
   
     Quando la legenda viene posizionata alla fine o all'inizio di un grafico, il relativo layout viene modificato da verticale in orizzontale. È possibile selezionare un altro layout nella casella **Layout** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Facoltativo) Poiché in questa esercitazione è presente una sola categoria, il grafico non richiede una legenda. Fare clic con il pulsante destro del mouse sulla legenda > **Elimina legenda**.  
+5.  (Facoltativo) Poiché in questa esercitazione è presente una sola categoria, il grafico non richiede una legenda. Per rimuoverlo, fare doppio clic su legenda > **Elimina legenda**.  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -199,21 +199,21 @@ Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in
   
 2. Fare clic sulle etichette dell'asse verticale sul lato sinistro del grafico per selezionarle.  
   
-3.  Nella scheda **Home** > gruppo **Numero** fare clic sul pulsante **Valuta**. Le etichette dell'asse cambiano per mostrare il formato della valuta.  
+3.  Nel **Home** scheda > **numero** gruppo, fare clic su di **valuta** pulsante. Le etichette dell'asse cambiano per mostrare il formato della valuta.  
   
 4.  Fare clic due volte sul pulsante **Diminuisci decimali** per visualizzare il numero arrotondato al dollaro più vicino.  
   
-5.  Fare clic con il pulsante destro del mouse sull'asse verticale > **Proprietà asse verticale**.  
+5.  L'asse verticale destro > **proprietà asse verticale**.  
   
 6.  Nella scheda **Numero** osservare che **Valuta** è già selezionata nella casella **Categoria** e che in **Cifre decimali** è già indicato **0** (zero).  
   
-7.  Selezionare **Mostra valori in**. L'opzione **Migliaia** è già selezionata.  
+7.  Selezionare **Mostra valori in**. L'opzione**Migliaia** è già selezionata.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Fare clic con il pulsante destro del mouse sull'asse verticale > **Mostra titolo asse**. 
+9. L'asse verticale destro > **Mostra titolo asse**. 
 
-10. Fare clic con il pulsante destro del mouse sul titolo dell'asse verticale > **Proprietà titolo asse**.  
+10. Fare doppio clic sul titolo dell'asse verticale > **proprietà titolo asse**.  
   
 10. Sostituire il testo nel campo **Testo titolo** con il testo **Totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
   
@@ -223,7 +223,7 @@ Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Visualizzare tutte le etichette sull'asse orizzontale (x)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostra tutte le etichette sull'asse orizzontale (x)
 
 Si noti che sull'asse x sono visualizzate solo alcune etichette. In questa sezione si imposterà una proprietà nel riquadro Proprietà per visualizzare tutte le etichette.
 
@@ -283,9 +283,9 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 4.  Selezionare **Grafico a barre - Vendite**, quindi nella scheda **Home** > sezione **Carattere** > **Grassetto**.  
   
-5.  Selezionare **Gennaio - dicembre 2015** e nella scheda **Home** > sezione **Carattere** > impostare le dimensioni del carattere su **10**.  
+5.  Selezionare **gennaio-dicembre 2015**e scegliere il **Home** scheda > **carattere** sezione > impostare dimensioni del carattere **10**.  
   
-6.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo **Titolo**. Tirare verso il basso le doppie frecce quando si fa clic al centro del bordo inferiore. Può anche essere necessario trascinare la parte superiore del grafico in modo che il titolo non si sovrapponga.  
+6.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo **Titolo** . Tirare verso il basso le doppie frecce quando si fa clic al centro del bordo inferiore. Può anche essere necessario trascinare la parte superiore del grafico in modo che il titolo non si sovrapponga.  
   
     Il titolo viene visualizzato nella parte superiore del report. Quando non è definita un'intestazione di pagina, gli elementi nella parte superiore del corpo del report equivalgono a un'intestazione di report.  
   
@@ -306,7 +306,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
 4.  Fare clic su **Salva**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma al report. Per ulteriori informazioni sui grafici, vedere [grafici &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [grafici sparkline e barre dei dati &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 -    [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 

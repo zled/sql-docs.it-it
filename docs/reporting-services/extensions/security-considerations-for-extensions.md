@@ -18,14 +18,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7e953f9beea75f08e6c87a210975172e5768d68
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-considerations-for-extensions"></a>Considerazioni sulla sicurezza per le estensioni
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Le estensioni distribuite in un server di report è necessario eseguire come completamente attendibile, vale a dire che l'estensione deve far parte di un gruppo di codice che viene concessa la **FullTrust** set di autorizzazioni. Questo significa inoltre che l'estensione può disporre di accesso a determinate operazioni e risorse del server disponibili tramite CLR, a seconda dell'utente autenticato per un report specifico. Per ulteriori informazioni sulle estensioni e i gruppi di codice, vedere [sicurezza dall'accesso di codice in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
-> In  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene applicata la sicurezza di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per tutte le estensioni.  
+>  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene applicata la sicurezza di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per tutte le estensioni.  
   
  Le condizioni seguenti riguardano la distribuzione delle estensioni di elaborazione dati, recapito, rendering e sicurezza in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   

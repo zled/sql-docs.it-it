@@ -14,7 +14,7 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
 ms.contentlocale: it-it
@@ -90,7 +90,7 @@ Determina le modalità di formattazione dei numeri visualizzati nel misuratore, 
 ### <a name="see-also"></a>Vedere anche 
 
 * [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
-* [Esegue il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Aggiungere gli strumenti di navigazione ai report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations to Reporting Services mobile reports (Visualizzazioni nei report per dispositivi mobili di Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Aggiungere griglie dei dati al report per dispositivi mobili](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 

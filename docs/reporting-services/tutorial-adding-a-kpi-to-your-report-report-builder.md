@@ -16,7 +16,7 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
 ms.contentlocale: it-it
@@ -47,7 +47,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -59,7 +59,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 5.  Scegliere **Avanti**.  
   
-6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non vi è alcuna origine dati disponibile o non si dispone dell'accesso a un server di report, è possibile utilizzare un'origine dati incorporata. Per altre informazioni, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non vi è alcuna origine dati disponibile o non si dispone dell'accesso a un server di report, è possibile utilizzare un'origine dati incorporata. Per ulteriori informazioni, vedere [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -163,7 +163,7 @@ Allargare le colonne e impostare il formato per date e valuta.
 
 3. Premere CTRL e selezionare le quattro celle contenenti [Sum(Sales)].
 
-4. On the **Home** tab > **Number** > **Currency**. Nelle celle i numeri vengono visualizzati nel formato di valuta.
+4. Nel **Home** scheda > **numero** > **valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.
 
    Se la lingua delle impostazioni locali è inglese (Stati Uniti), il testo di esempio predefinito sarà [$12,345.00]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.
     
@@ -173,7 +173,7 @@ Allargare le colonne e impostare il formato per date e valuta.
 
 6. Fare clic sulla cella contenente [SalesDate].
 
-6. Nel gruppo **Numero** > **Data**.
+6. Nel **numero** gruppo > **data**.
 
    Nella cella verrà visualizzata la data di esempio [1/31/2000]. 
 
@@ -213,13 +213,13 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
   
 1.  Passare alla visualizzazione della struttura.  
   
-2.  Nella tabella fare clic con il pulsante destro del mouse sul quadratino della colonna Sales > **Inserisci colonna** > **A destra**. Alla tabella verrà aggiunta una nuova colonna.  
+2.  Nella tabella, fare doppio clic su handle di colonna per la colonna Sales > **Inserisci colonna** > **destra**. Alla tabella verrà aggiunta una nuova colonna.  
 
     ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Digitare **Linear KPI** nell'intestazione di colonna.  
   
-4.  Nella scheda **Inserimento** > **Visualizzazioni dati** > **Misuratore** fare clic nell'area di progettazione esterna alla tabella.   
+4.  Nel **inserire** scheda > **visualizzazioni dati** > **misuratore**e quindi fare clic nell'area di progettazione all'esterno della tabella.   
   
 5.  Nella finestra di dialogo **Seleziona tipo di misuratore** selezionare il primo misuratore lineare **Orizzontale**.  
   
@@ -235,13 +235,13 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
    
 9. Nel riquadro **Dati del misuratore** fare clic sulla freccia accanto a **LinearPointer1** > **Proprietà indicatore di misura**.  
   
-10. Nella finestra di dialogo **Proprietà indicatore di misura lineare** > scheda **Opzioni dell'indicatore di misura** > **Tipo di indicatore di misura** assicurarsi che l'opzione**Barre** sia selezionata. 
+10. Nel **proprietà puntatore lineare** la finestra di dialogo > **opzioni del puntatore** scheda > **tipo di puntatore**, assicurarsi che **barra** è selezionata. 
  
 11. Scegliere **OK**.  
   
 12. Fare clic con il pulsante destro del mouse sulla scala nel misuratore e selezionare **Proprietà scala**.  
   
-13. Nella finestra di dialogo **Proprietà scala lineare** > scheda **Generale** impostare il valore di **Massimo** su 25000.  
+13. Nel **proprietà scala lineare** la finestra di dialogo > **generale** scheda, impostare **massimo** su 25000.  
 
     > [!NOTE]  
     > Per calcolare dinamicamente il valore dell'opzione **Massimo** è possibile usare un'espressione invece di una costante, ad esempio 25000. L'espressione utilizzerebbe in tal caso l'aggregazione della funzionalità di aggregazione, rendendola simile all'espressione `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -262,21 +262,21 @@ Un misuratore raffigura un singolo valore di un set di dati. In questa esercitaz
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5. Visualizzare un indicatore KPI tramite un indicatore  
-Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare i valori dei dati in modo immediato. Grazie alle loro dimensioni e alla semplicità, gli indicatori vengono spesso utilizzati nelle tabelle e nelle matrici. Per altre informazioni, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare i valori dei dati in modo immediato. Grazie alle loro dimensioni e alla semplicità, gli indicatori vengono spesso utilizzati nelle tabelle e nelle matrici. Per ulteriori informazioni, vedere [indicatori &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Per visualizzare lo stato attuale di un indicatore KPI utilizzando un indicatore  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nella tabella fare clic con il pulsante destro del mouse sul quadratino della colonna Linear KPI aggiunta nell'ultima procedura > **Inserisci colonna**  > **A destra**. Alla tabella verrà aggiunta una nuova colonna.  
+2.  Nella tabella, fare doppio clic su handle di colonna per la colonna indicatore KPI lineare che è stato aggiunto nella procedura precedente > **Inserisci colonna** > **destra**. Alla tabella verrà aggiunta una nuova colonna.  
   
 3.  Digitare **Stoplight KPI** nell'intestazione di colonna.  
   
 4.  Selezionare la cella del subtotale della categoria accanto al misuratore lineare aggiunto nell'ultima procedura.  
   
-5.  Nella scheda **Inserisci** scheda > **Visualizzazioni dati** > fare doppio clic su **Indicatore**.  
+5.  Nel **inserire** scheda > **visualizzazioni dati** > fare doppio clic su **indicatore.**  
   
-6.  Nella finestra di dialogo **Seleziona tipo indicatore** in **Forme** selezionare il primo tipo di forma **"3 semafori (con bordo)"**.  
+6.  Nella finestra di dialogo **Seleziona tipo indicatore** in **Forme**selezionare il primo tipo di forma **"3 semafori (con bordo)"**.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

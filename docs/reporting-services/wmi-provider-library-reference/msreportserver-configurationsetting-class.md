@@ -23,7 +23,7 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
 ms.contentlocale: it-it
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  Tutti i membri statici pubblici (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) di questo tipo sono sicuri per le operazioni a thread multipli. Non è invece garantita la sicurezza dei membri dell'istanza.  
   
 ## <a name="example"></a>Esempio  
- Per eseguire il codice seguente, aggiungere il nome del server al posto di ogni \< *servername*>. Aggiornare il percorso in modo che punti al percorso di installazione, se non è l'impostazione predefinita. L'esempio di codice seguente esegue l’iterazione di ogni proprietà nella classe *MSReportServer_ConfigurationSetting* , stampandone il nome e il relativo valore nella console.  
+ Per eseguire il codice seguente, aggiungere il nome del server al posto di ogni \< *servername*>. Aggiornare il percorso in modo che punti al percorso di installazione, se non è l'impostazione predefinita. L'esempio di codice seguente esegue l’iterazione di ogni proprietà nella classe *MSReportServer_ConfigurationSetting*, stampandone il nome e il relativo valore nella console.  
   
 ```vb  
 Imports System  
@@ -174,9 +174,9 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **Piattaforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Piattaforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

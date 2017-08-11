@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
 ms.contentlocale: it-it
@@ -38,7 +38,7 @@ L'illustrazione seguente visualizza il grafico a barre che verrà creato con le 
   
  
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: creazione di un report di tabelle semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -97,7 +97,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 ## <a name="ChartType"></a>2. Creare un grafico a barre  
  
-1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico**.  
+1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** .  
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
@@ -220,7 +220,7 @@ Per impostazione predefinita, sull'asse orizzontale vengono visualizzati valori 
   
 2.  Fare clic sull'asse orizzontale lungo il bordo inferiore del grafico per selezionarlo.  
   
-3.  Nella scheda **Home** > gruppo **Numero** > **Valuta**. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
+3.  Nel **Home** scheda > **numero** gruppo > **valuta**. Le etichette dell'asse orizzontale vengono convertite nel formato valuta.  
   
 3.  (Facoltativo) Rimuovere le cifre decimali. Fare clic due volte sul pulsante **Diminuisci decimali** accanto al pulsante **Valuta** .  
   
@@ -271,7 +271,7 @@ Nel grafico verranno visualizzati i nomi dei primi cinque venditori dai dati rel
   
 ## <a name="Title"></a>9. Aggiungere un titolo al report  
   
-1.  Nell'area di progettazione scegliere **Fare clic per aggiungere il titolo**.  
+1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
 2.  Digitare **Grafico a barre - Vendite**, premere INVIO, quindi digitare **Primi cinque venditori del 2015**in modo da ottenere un risultato analogo al seguente:  
   

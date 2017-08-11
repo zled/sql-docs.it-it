@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: it-it
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Nella cartella System32 deve essere presente il file Authz.dll.  
   
- Il programma di impostazione non verifica più la presenza di Internet Information Services (IIS) o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]richiede MDAC 2.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0. Il programma di installazione verrà installati automaticamente se non sono già installati.  
+ Il programma di impostazione non verifica più la presenza di Internet Information Services (IIS) o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede MDAC 2.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0, che verranno installati automaticamente se non sono già presenti.  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> Risoluzione dei problemi relativi alle installazioni della modalità SharePoint  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Icona freccia usata con Back collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [risolvere i problemi relativi alle installazioni della modalità SharePoint](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>Non presente il servizio SQL Server Reporting Services in Amministrazione centrale SharePoint dopo l'installazione di SQL Server 2016 SSRS in modalità SharePoint  
+###  <a name="bkmk_no_ssrs_service"></a> Il servizio SQL Server Reporting Services in Amministrazione centrale SharePoint non viene visualizzato dopo l'installazione di SQL Server 2016 SSRS in modalità SharePoint  
  **Descrizione:** se dopo l'installazione SQL Server 2016 Reporting Services in modalità SharePoint e SQL Server 2016 Reporting Services aggiuntivo per SharePoint 2013/2016, viene visualizzato "SQL Server Reporting Services" nei due menu seguenti, quindi il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio non è stato registrato:  
   
 -   Amministrazione centrale SharePoint 2013/2016 -> "Gestione applicazioni" -> pagina "Gestisci servizi nel server"  
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Aprire una finestra del prompt dei comandi e digitare il comando seguente:  
   
-    -   **eseguire \< ** *directory .NET Framework 4.0* **> \InstallUtil.exe \< ** *directory Bin Server di Report* **> \ReportingServicesLibrary.dll**  
+    -   **eseguire \<**  *directory .NET Framework 4.0* **> \InstallUtil.exe \<**  *directory Bin Server di Report* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Sostituire \< *directory .NET Framework 4.0*> con il percorso fisico di .NET Framework 4.0 file e sostituire \< *directory Bin Server di Report*> con il percorso fisico dei file bin del server di report.  

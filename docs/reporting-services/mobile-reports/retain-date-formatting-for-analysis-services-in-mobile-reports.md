@@ -14,7 +14,7 @@ caps.latest.revision: 3
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
 ms.contentlocale: it-it
@@ -44,5 +44,5 @@ La soluzione alternativa consiste nell'aggiungere un membro calcolato quando si 
    
 ### <a name="see-also"></a>Vedere anche
 
--  [Dati per i report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Dati per report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [Preparare i dati per report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

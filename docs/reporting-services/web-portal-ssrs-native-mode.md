@@ -1,5 +1,5 @@
 ---
-title: "Portale Web (modalità nativa SSRS) | Documenti Microsoft"
+title: "Portale Web (modalità nativa SSRS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/02/2017
@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: it-it
@@ -26,13 +26,13 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Il portale web di Reporting Services è un'esperienza basata su web che consente di visualizzare i report per dispositivi mobili, gli indicatori KPI, report e spostarsi tra gli elementi che sono nell'istanza di server di report. Inoltre, è possibile utilizzare il portale web per amministrare un'istanza del server singolo report.
+Il portale Web di Reporting Services è un'esperienza basata su Web che consente di visualizzare report, inclusi quelli per dispositivi mobili, e indicatori KPI e di spostarsi tra gli elementi presenti nell'istanza del server di report. Il portale Web consente anche di amministrare una singola istanza del server di report.
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-## <a name="what-is-the-web-portal"></a>Che cos'è il portale web
+## <a name="what-is-the-web-portal"></a>Informazioni sul portale Web
 
-È possibile utilizzare il portale web per eseguire le attività seguenti:
+È possibile usare il portale Web per eseguire le attività seguenti:
 
 - Visualizzare, cercare, stampare e sottoscrivere report.
 
@@ -54,33 +54,33 @@ Il portale web di Reporting Services è un'esperienza basata su web che consente
 
 - Inviare commenti e suggerimenti o richieste di funzionalità.
 
-È possibile utilizzare il portale web per esplorare le cartelle del server di report o cercare report specifici. È possibile visualizzare un report, le sue proprietà generali e vecchie copie del report acquisite nella cronologia del report. A seconda delle autorizzazioni di cui si dispone, potrebbe inoltre essere possibile sottoscrivere report per il recapito in una casella di posta elettronica o in una cartella condivisa nel file system.
+È possibile usare portale Web per esplorare le cartelle del server di report o cercare report specifici. È possibile visualizzare un report, le sue proprietà generali e vecchie copie del report acquisite nella cronologia del report. A seconda delle autorizzazioni di cui si dispone, potrebbe inoltre essere possibile sottoscrivere report per il recapito in una casella di posta elettronica o in una cartella condivisa nel file system.
 
 > [!NOTE]
 > Per informazioni sulle versioni e i browser supportati, vedere [Pianificazione per il supporto browser di Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-Il portale web viene utilizzato solo per un server di report eseguito in modalità nativa. Non è supportato per un server di report configurato per la modalità integrata SharePoint.
+Il portale Web viene usato solo per un server di report in esecuzione in modalità nativa. Non è supportato per un server di report configurato per la modalità integrata SharePoint.
 
-Alcune funzionalità del portale web sono disponibili solo in determinate edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]. Per ulteriori informazioni, vedere [Reporting Services funzionalità supportate dalle edizioni di SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Alcune funzionalità del portale Web sono disponibili solo in determinate edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]. Per altre informazioni, vedere [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per ulteriori informazioni, vedere [concedere l'accesso utente a un Server di Report](security/grant-user-access-to-a-report-server-report-manager.md)
+In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report](security/grant-user-access-to-a-report-server-report-manager.md)
 
 > [!NOTE]
-> Se si sta esplorando il portale Web nel computer locale su cui è in esecuzione il server, è possibile visualizzare un messaggio che indica che non è consentito visualizzare questa cartella. Ciò è dovuto a Controllo dell'account utente e al fatto che non si esegue il browser come amministratore. Non è possibile eseguire Microsoft Edge come amministratore. È necessario usare Internet Explorer. È possibile esplorare il server in modalità remota oppure avviare Internet Explorer come amministratore e usarlo per esplorare il portale Web. Per usare il portale Web in modalità remota, sarà necessario concedere all'account i diritti di gestione contenuto per la cartella.  
+> Se si sta esplorando il portale Web nel computer locale su cui è in esecuzione il server, è possibile visualizzare un messaggio che indica che non è consentito visualizzare questa cartella. Ciò è dovuto a Controllo dell'account utente e al fatto che non si esegue il browser come amministratore. Non è possibile eseguire Edge come amministratore. È necessario usare Internet Explorer. È possibile esplorare il server in modalità remota oppure avviare Internet Explorer come amministratore e usarlo per esplorare il portale Web. Per usare il portale Web in modalità remota, sarà necessario concedere all'account i diritti di gestione contenuto per la cartella.  
 
 ## <a name="start-and-use-the-web-portal"></a>Avviare e usare il portale Web
 
-Il portale web è un'applicazione web che si apre digitando il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL nella barra degli indirizzi della finestra del browser. Quando si avvia il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], le pagine, le opzioni e i collegamenti visualizzati variano in base alle autorizzazioni disponibili per il server di report. Per eseguire un'attività, è necessario essere assegnato a un ruolo che include l'attività.  Gli utenti assegnati a un ruolo con autorizzazioni complete hanno accesso a tutti i menu e le pagine disponibili per la gestione di un server di report. Un utente assegnato a un ruolo autorizzato a visualizzare ed eseguire i report, invece, potrà visualizzare solo le pagine e i menu correlati a queste attività specifiche. Per ogni utente è possibile impostare assegnazioni di ruolo diverse per server di report diversi o anche per le varie cartelle e i vari report archiviati in un singolo server di report.
+Il portale Web è un'applicazione Web che si apre digitando l'URL del [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] nella barra degli indirizzi della finestra del browser. Quando si avvia il [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], le pagine, le opzioni e i collegamenti visualizzati variano in base alle autorizzazioni disponibili per il server di report. Per eseguire un'attività, è necessario essere assegnato a un ruolo che include l'attività.  Gli utenti assegnati a un ruolo con autorizzazioni complete hanno accesso a tutti i menu e le pagine disponibili per la gestione di un server di report. Un utente assegnato a un ruolo autorizzato a visualizzare ed eseguire i report, invece, potrà visualizzare solo le pagine e i menu correlati a queste attività specifiche. Per ogni utente è possibile impostare assegnazioni di ruolo diverse per server di report diversi o anche per le varie cartelle e i vari report archiviati in un singolo server di report.
 
 Per altre informazioni sui ruoli, vedere [Concessione di autorizzazioni in un server di report in modalità nativa](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
-### <a name="start-the-web-portal"></a>Avviare il portale web
+### <a name="start-the-web-portal"></a>Avviare il portale Web
 
-Per avviare il portale web da un browser, eseguire le operazioni seguenti:
+Per avviare il portale Web da un browser, eseguire le operazioni seguenti:
 
 1. Aprire il Web browser. Per un elenco dei Web browser supportati, vedere [Pianificazione per il supporto browser di Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. Nella barra degli indirizzi del web browser, digitare il portale web di URL.
+2. Nella barra degli indirizzi del Web browser digitare l'URL del portale Web.
 
     L'URL predefinito è *http://[NomeComputer]/reports*.
 
@@ -88,7 +88,7 @@ Per avviare il portale web da un browser, eseguire le operazioni seguenti:
 
 ## <a name="grouping-by-categories"></a>Raggruppamento per categorie
 
-Il portale web Raggruppa gli elementi in categorie diverse. Le categorie disponibili sono le seguenti.
+Il portale Web raggruppa gli elementi in diverse categorie. Le categorie disponibili sono le seguenti.
 
 - KPI
 - Report per dispositivi mobili
@@ -133,6 +133,6 @@ I file vengono archiviati in Reporting Services, in modo analogo ad altri file d
 [Configurare un URL (Gestione configurazione SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Pianificazione per il supporto browser di Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[Funzionalità di Reporting Services è supportata dalle edizioni di SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

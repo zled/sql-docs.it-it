@@ -22,7 +22,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 935e2d44cbfd0363832eb6401b63d4a0b36623b4
 ms.contentlocale: it-it
@@ -70,7 +70,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  L'account specificato nel parametro *Account* richiede diritti **LogonAsService** in Windows. Il metodo concede questo diritto all'account specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

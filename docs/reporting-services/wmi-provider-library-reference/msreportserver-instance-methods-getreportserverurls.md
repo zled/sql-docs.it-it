@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4b7067d9e6360902bf76b1bfe27c7ed6541f481
 ms.contentlocale: it-it
@@ -58,7 +58,7 @@ public void GetReportServerUrls(out string[] applicationName,
  I metodi esposti dagli oggetti di gestione WMI vengono chiamati tramite la funzione InvokeMethod. Per altre informazioni, vedere gli argomenti relativi all'esecuzione di metodi in oggetti di gestione all'interno della documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

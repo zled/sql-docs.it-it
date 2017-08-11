@@ -17,7 +17,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: it-it
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Per visualizzare in anteprima un report con le origini dati esistenti, è necessario disporre delle autorizzazioni per l'origine dati dal client di creazione report. Per altre informazioni, vedere l'articolo relativo a [connessioni dati, origini dati e stringhe di connessione](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Dopo l'aggiunta di un report, è possibile definire origini dati e set di dati, nonché progettarne il layout. Per iniziare, vedere [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) o [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Dopo l'aggiunta di un report, è possibile definire origini dati e set di dati, nonché progettarne il layout. Per iniziare, vedere [creare un Report tabella semplice &#40; Esercitazione su SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) o [tabelle &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>Per aggiungere un nuovo report tramite la Creazione guidata report  
   

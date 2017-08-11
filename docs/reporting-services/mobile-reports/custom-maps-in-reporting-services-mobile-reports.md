@@ -14,14 +14,14 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
 ms.contentlocale: it-it
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>mappe personalizzate nei report di Reporting Services per dispositivi mobili
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Esegue il mapping personalizzato nei report di Reporting Services per dispositivi mobili
 Mappe geografiche in SQL Server Mobile Report Publisher sono definite in un formato noto come *di forma ESRI*.  
   
 Inizialmente progettato da una società privata, oggi è un formato semi aperto molto diffuso, usato in gran parte delle applicazioni GIS. In conformità con questo formato, Mobile Report Publisher richiede due file deve essere fornito quando si definisce una mappa:  
@@ -57,7 +57,7 @@ Molti file di forma esistenti possono essere scaricati dal Web, da siti come i s
 - OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
   
 ### <a name="see-also"></a>Vedere anche  
-- [Esegue il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+- [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   

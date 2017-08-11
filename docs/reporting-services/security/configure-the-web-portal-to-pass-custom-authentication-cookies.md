@@ -18,7 +18,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0f1131c191fa64c6dc6f2a074a9cd5db7a8b0e1b
 ms.contentlocale: it-it
@@ -52,6 +52,6 @@ Per abilitare ulteriori cookie deve essere trasmesso tramite richieste HTTP quan
 
 [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[Cenni preliminari sulle estensioni di sicurezza](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
+[Panoramica sulle estensioni di sicurezza](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Configurare e amministrare un Server di Report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -29,7 +29,7 @@ caps.latest.revision: 93
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ef2c94d2ee518262825d3e34bfb181ddb921690d
 ms.contentlocale: it-it
@@ -70,7 +70,7 @@ Un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.
   
  In SQL Server Reporting Services è possibile passare un server di report da una modalità a altra. Se si desidera modificare il tipo di server di report usato dall'ambiente, è necessario installare la modalità desiderata del server di report e copiare o spostare gli elementi del report o il database del server di report dal server di report precedente in quello nuovo. Questo processo viene in genere chiamato "migrazione". I passaggi necessari per eseguire la migrazione dipendono dalla modalità con cui si esegue questa operazione e dalla versione dalla quale si esegue la migrazione. Per altre informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-##  <a name="bkmk_featuresupport"></a>Confronto tra le funzionalità di SharePoint e modalità nativa  
+##  <a name="bkmk_featuresupport"></a> Feature comparison of SharePoint and native mode  
   
 |Funzionalità o componente|Modalità nativa|Modalità SharePoint|  
 |--------------------------|-----------------|---------------------|  
@@ -161,7 +161,7 @@ Un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.
 |Illustra come ottimizzare le impostazioni di memoria per il servizio Web ReportServer e il servizio Windows.|[Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Vengono illustrati i passaggi consigliati per configurare il server di report per l'amministrazione remota.|[Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Vengono fornite istruzioni per la configurazione della disponibilità della funzionalità **Report personali** in un'istanza del server di report nativa.|[Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
-|Vengono fornite istruzioni per la configurazione del controllo RSClientPrint tramite cui viene fornita la funzionalità di stampa nei browser supportati. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Abilitare e disabilitare la stampa sul lato client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|Vengono fornite istruzioni per la configurazione del controllo RSClientPrint tramite cui viene fornita la funzionalità di stampa nei browser supportati. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Abilitare e disabilitare la stampa sul lato Client per Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -171,6 +171,6 @@ Un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.
 [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [Implementazione di un'estensione di sicurezza](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Origini dati supportate da Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

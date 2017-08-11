@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee37721958f30f9fdae8573f205b59ae996f4df6
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparazione all'implementazione di un'estensione per l'elaborazione dati
@@ -73,17 +73,17 @@ ms.lasthandoff: 06/22/2017
   
 |Interfaccia|Description|Implementazione|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, la sessione può essere equivalente a una connessione di rete al server.|Obbligatorio|  
+|IDbConnection|Rappresenta una sessione univoca con un'origine dati. Nel caso di un sistema di database client/server, la sessione può essere equivalente a una connessione di rete al server.|Required|  
 |IDbConnectionExtension|Rappresenta proprietà di connessione aggiuntive che possono essere implementate dalle estensioni per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] per quanto riguarda sicurezza e autenticazione.|Facoltativo|  
-|IDbTransaction|Rappresenta una transazione locale.|Obbligatorio|  
+|IDbTransaction|Rappresenta una transazione locale.|Required|  
 |IDbTransactionExtension|Rappresenta proprietà aggiuntive della transazione che possono essere implementate dalle estensioni per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Facoltativo|  
-|IDbCommand|Rappresenta una query o un comando utilizzato per la connessione a un'origine dati.|Obbligatorio|  
+|IDbCommand|Rappresenta una query o un comando utilizzato per la connessione a un'origine dati.|Required|  
 |IDbCommandAnalysis|Rappresenta informazioni aggiuntive sul comando per l'analisi di una query e la restituzione di un elenco di nomi di parametri utilizzati nella query.|Facoltativo|  
-|IDataParameter|Rappresenta una coppia nome/valore o un parametro passato a un comando o a una query.|Obbligatorio|  
-|IDataParameterCollection|Rappresenta una raccolta di tutti i parametri relativi a un comando o a una query.|Obbligatorio|  
-|IDataReader|Fornisce un metodo per leggere un flusso di dati forward-only di sola lettura dall'origine dati.|Obbligatorio|  
+|IDataParameter|Rappresenta una coppia nome/valore o un parametro passato a un comando o a una query.|Required|  
+|IDataParameterCollection|Rappresenta una raccolta di tutti i parametri relativi a un comando o a una query.|Required|  
+|IDataReader|Fornisce un metodo per leggere un flusso di dati forward-only di sola lettura dall'origine dati.|Required|  
 |IDataReaderExtension|Fornisce un metodo per leggere uno o più flussi forward-only di set di risultati, ottenuti eseguendo un comando in un'origine dati. Questa interfaccia fornisce supporto aggiuntivo per le aggregazioni di campi.|Facoltativo|  
-|IExtension|Fornisce la classe di base per un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Consente inoltre a un implementatore di includere un nome localizzato per l'estensione e di passare le impostazioni di configurazione dal file di configurazione all'estensione.|Obbligatorio|  
+|IExtension|Fornisce la classe di base per un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Consente inoltre a un implementatore di includere un nome localizzato per l'estensione e di passare le impostazioni di configurazione dal file di configurazione all'estensione.|Required|  
   
  Le interfacce dell'estensione per l'elaborazione dati sono identiche a un subset delle proprietà, dei metodi e delle interfacce del provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], quando possibile. Per ulteriori informazioni sull'implementazione di un provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] completo, vedere l'argomento relativo all'implementazione di un provider di dati nella documentazione di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK).  
   

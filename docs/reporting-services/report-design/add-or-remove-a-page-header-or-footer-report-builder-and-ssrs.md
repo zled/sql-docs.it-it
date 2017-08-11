@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: it-it
@@ -68,6 +68,6 @@ ms.lasthandoff: 08/09/2017
 >  Quando si rimuove un'intestazione o un piè di pagina, l'elemento viene eliminato dal report. Gli elementi aggiunti in precedenza non verranno visualizzati di nuovo se in seguito si decide di reinserire l'intestazione o il piè di pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

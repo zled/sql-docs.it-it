@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: it-it
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Se non si conosce l'indirizzo Web di un report, è possibile utilizzare l'indirizzo Web del server di report e quindi esplorare la gerarchia delle cartelle del server di report per selezionare il report che si desidera visualizzare. Nella figura seguente viene illustrata una gerarchia di cartelle visualizzata in una finestra del browser.  
   
- ![Cartelle visualizzate in un browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Le cartelle in un browser](../../reporting-services/report-builder/media/rs-browserfolder.GIF "cartelle in un browser")  
 Cartelle visualizzate in un browser  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ Cartelle visualizzate in un browser
 -   Un'estensione del nome file rappresenta una risorsa. L'estensione identifica il tipo MIME della risorsa. Ad esempio, l'estensione jpg indica un'immagine in formato JPEG.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>Digitazione dell'URL di un report  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportato l'accesso tramite URL a elementi specifici disponibili in un server di report. URL deve includere il percorso completo del report e i comandi per eseguire il rendering del report. Se il report include parametri, è inoltre necessario specificare eventuali valori richiesti per aprire il report. Se per un report si digita un URL che comprende spazi nel percorso, valori di parametro o un'estensione per il rendering, è necessario includere caratteri codificati nell'URL per ottenere il risultato desiderato. Nell'esempio riportato di seguito viene illustrato l'URL di un report che include la codifica per gli spazi nel nome del percorso, parametri e un'estensione per il rendering:  
+ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportato l'accesso tramite URL a elementi specifici disponibili in un server di report. URL deve includere il percorso completo del report e i comandi per eseguire il rendering del report. Se il report include parametri, è inoltre necessario specificare eventuali valori richiesti per aprire il report. Se per un report si digita un URL che comprende spazi nel percorso, valori di parametro o un'estensione per il rendering, è necessario includere caratteri codificati nell'URL per ottenere il risultato desiderato. Nell'esempio riportato di seguito viene illustrato l'URL di un report che include la codifica per gli spazi nel nome del percorso, parametri e un'estensione per il rendering:  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 44
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 260e104d2686ab9111c9b38c2ecf6c5da2fbdb91
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
   Dopo avere scritto e compilato il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report estensione per il rendering in un [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] libreria, è necessario renderla individuabile dal server di report e da Progettazione Report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento di estensione del rendering del file di configurazione  
- Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer.. L'elemento padre è \<eseguire il rendering >. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. L'elemento **Extension** contiene due attributi, Name e Type.  
+ Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer. L'elemento padre è \<eseguire il rendering >. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. L'elemento **Extension** contiene due attributi, Name e Type.  
   
  Nella tabella riportata di seguito vengono descritti gli attributi relativi all'elemento **Extension** per le estensioni per il rendering:  
   
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-deploy-the-assembly"></a>Per distribuire l'assembly  
   
-1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera usare l'estensione per il rendering. Il percorso predefinito della directory Bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer\bin..  
+1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera usare l'estensione per il rendering. Il percorso predefinito della directory Bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer\bin.  
   
-2.  Dopo aver copiato il file di assembly, aprire il file rsreportserver.config, situato nella directory bin del server di report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione. È possibile aprire il file con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un semplice editor di testo.  
+2.  Dopo aver copiato il file di assembly, aprire il file rsreportserver.config. situato nella directory bin del server di report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione. È possibile aprire il file con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un semplice editor di testo.  
   
      Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   

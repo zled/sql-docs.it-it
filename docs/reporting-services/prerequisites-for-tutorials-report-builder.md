@@ -16,7 +16,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: it-it
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 Per eseguire le esercitazioni di Generatore report è necessario essere in grado di visualizzare e salvare i report impaginati di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] in un server di report o in un sito di SharePoint integrato in un server di report. Per i dati, tutte le esercitazioni utilizzano query letterali che devono essere elaborate da un'istanza di SQL Server.  
   
-Se non si dispone dell'accesso a un server di report, a un sito o a un'origine dati, sarà possibile apprendere l'utilizzo di Generatore report attraverso la compilazione di un report offline. Vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Se non si dispone dell'accesso a un server di report, a un sito o a un'origine dati, sarà possibile apprendere l'utilizzo di Generatore report attraverso la compilazione di un report offline. Vedere [esercitazione: creare un Report grafico rapido Offline &#40; Generatore report &#41; ](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Requisiti
 

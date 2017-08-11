@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: it-it
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Fare clic su **Consenti** per continuare.  
   
-3.  Nell'indirizzo URL immettere l'URL di Gestione report. Per istruzioni, vedere [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Nell'indirizzo URL immettere l'URL di Gestione report. Per istruzioni, vedere [gestione Report &#40; Modalità nativa SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea.  
   
 4.  Fare clic su **Strumenti**.  
   

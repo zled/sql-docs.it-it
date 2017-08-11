@@ -15,14 +15,14 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
 ms.contentlocale: it-it
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="data-for-reporting-services-mobile-reports"></a>Dati per report di Reporting Services per dispositivi mobili
+# <a name="data-for-reporting-services-mobile-reports"></a>Dati per i report per dispositivi mobili di Reporting Services
 Il modello di dati [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] è semplice. I dati vengono importati in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] come raccolta di set di dati. Non sono necessarie relazioni formali tra i set di dati. È possibile eseguire ricerche da un set di dati a un altro fino a quando i valori chiave corrispondono. Le aggregazioni data/ora vengono gestite dal runtime del report per dispositivi mobili e corrisponderanno tra diversi set di dati, anche se la granularità dei dati data/ora differisce tra i set di dati.   
   
 È possibile importare dati da due tipi di origini:   

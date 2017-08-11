@@ -18,7 +18,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
 ms.contentlocale: it-it
@@ -131,7 +131,7 @@ ms.lasthandoff: 08/09/2017
 |File TIFF|Interruzione di pagina manuale|L'estensione per il rendering delle immagini genera bitmap o metafile dei report. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata.<br /><br /> L'estensione per il rendering delle immagini consente di generare file in tutti i formati supportati da [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Per ulteriori informazioni, vedere [l'esportazione in un File di immagine](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Archivio Web|Interruzione di pagina automatica|L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.<br /><br /> L'estensione per il rendering HTML è l'estensione per il rendering predefinita per i report visualizzati in anteprima in Generatore report e visualizzati in un browser, inclusi quelli eseguiti nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Per ulteriori informazioni, vedere [Rendering in formato HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Interruzione di pagina automatica|Visualizzato come "Word" nel menu di esportazione durante la visualizzazione dei report. L'estensione per il rendering di Word consente di eseguire il rendering di un report in formato Word (con estensione docx) compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Per ulteriori informazioni, vedere [esportazione in Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
-|XML|Dati|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br/><br/> Per ulteriori informazioni, vedere [esportazione in XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
+|XML|Dati|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, utilizzato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br/><br/> Per ulteriori informazioni, vedere [esportazione in XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> Generazione di feed di dati da un report  
  Per generare feed di dati da un report, eseguire il report nel portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e quindi fare clic sull'icona **Generazione di feed di dati** sulla barra degli strumenti del portale Web. Verrà chiesto se si desidera salvare o aprire il file. Se si sceglie **Apri**, il documento di servizio Atom verrà aperto nell'applicazione associata all'estensione di file atomsvc. Se si sceglie **Salva**, il documento verrà salvato come file con estensione atomsvc. Per impostazione predefinita, il nome del file corrisponde al nome del report. È possibile modificare il nome per renderlo più descrittivo.  
@@ -196,9 +196,9 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Controllo di interruzioni di pagina, intestazioni, colonne e righe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
-[Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
-[Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+[Il controllo di interruzioni di pagina, intestazioni, colonne e righe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+[Stampare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
 [Salvataggio di report &#40; Generatore report &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

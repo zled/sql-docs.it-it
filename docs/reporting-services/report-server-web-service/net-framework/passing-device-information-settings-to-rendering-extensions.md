@@ -25,14 +25,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 47
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da897abf38fb1c6e89178a9314189890b88eab87
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: dfbc65590c676278c89ca2646dae0d347abcd3ee
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/13/2017
 </DeviceInfo>  
 ```  
   
- Quando viene eseguito il rendering di un report come frammento HTML, il contenuto del report si trova all'interno di un elemento TABLE senza l'utilizzo di un elemento HTML o BODY. È possibile usare il frammento HTML per incorporare il report in un documento HTML esistente. Per ulteriori informazioni sulle impostazioni informazioni dispositivo per l'output HTML, vedere [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
+ Quando viene eseguito il rendering di un report come frammento HTML, il contenuto del report si trova all'interno di un elemento TABLE senza l'utilizzo di un elemento HTML o BODY. È possibile usare il frammento HTML per incorporare il report in un documento HTML esistente. Per altre informazioni sulle impostazioni delle informazioni sul dispositivo per l'output HTML, vedere [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Passaggio delle informazioni sul dispositivo con accesso tramite URL  
  È inoltre possibile passare le impostazioni delle informazioni sul dispositivo con accesso tramite URL. Le impostazioni relative alle informazioni sul dispositivo vengono passate come parametri URL. È possibile passare al server di report la stringa di accesso tramite URL per generare un report visualizzabile senza la barra degli strumenti del visualizzatore HTML.  

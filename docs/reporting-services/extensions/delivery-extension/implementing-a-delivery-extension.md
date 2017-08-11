@@ -19,14 +19,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9909a4711eb5b1ffde9b865411bd552e6b409bc6
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 5db9bf52437c018bc1dcb40e7fa8a8ce2824fa12
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-delivery-extension"></a>Implementazione di un'estensione per il recapito
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
  Per un esempio di implementazione di un'estensione di recapito, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Cenni preliminari sulle estensioni di recapito](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  
  Vengono fornite informazioni introduttive per la scrittura di un'estensione per il recapito personalizzata per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   

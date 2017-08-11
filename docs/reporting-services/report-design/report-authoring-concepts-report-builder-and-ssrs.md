@@ -18,7 +18,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
 ms.contentlocale: it-it
@@ -32,13 +32,13 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [I report, parti di Report e definizioni di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Vengono illustrati i vari termini utilizzati per descrivere un report nei diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato dall'utente.  
   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Vengono illustrate le differenze nella creazione, archiviazione e gestione di set di dati incorporati e condivisi.  
   
- [Aree dati e mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Aree dati e mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Vengono descritti i tipi di aree dati che è possibile aggiungere a un layout del report. Le aree dati determinano l'aspetto di un report, ovvero tabella, matrice, elenco o grafico.  
   
  [Concetto dei parametri di report (Generatore report e SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  

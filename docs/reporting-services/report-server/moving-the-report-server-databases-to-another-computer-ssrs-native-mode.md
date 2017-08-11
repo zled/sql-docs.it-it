@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
 ms.contentlocale: it-it
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
   È possibile spostare i database del server di report usati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Lo spostamento di un database non influisce sulle operazioni pianificate attualmente definite per gli elementi del server di report.  
   
@@ -226,7 +226,7 @@ GO
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Creare RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
-[Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Avviare e arrestare il servizio Server di Report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [Configurare una connessione di Database Server di Report](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Configurare l'Account di esecuzione automatica](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Gestione configurazione Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

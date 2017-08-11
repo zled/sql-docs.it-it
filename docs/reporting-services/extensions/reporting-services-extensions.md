@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Estensioni di Reporting Services
@@ -46,10 +46,10 @@ ms.lasthandoff: 06/22/2017
  [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  Vengono descritti i requisiti e i passaggi per l'implementazione di un'estensione per l'elaborazione dati per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementazione di un'estensione di recapito](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [Implementazione di un'estensione per il recapito](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  Vengono descritti i requisiti e i passaggi per l'implementazione di un'estensione per il recapito per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementazione di un'estensione per il Rendering](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [Implementazione di un'estensione per il rendering](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  Viene fornita un'introduzione allo sviluppo delle estensioni per il rendering.  
   
  [Implementazione di un'estensione di sicurezza](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  

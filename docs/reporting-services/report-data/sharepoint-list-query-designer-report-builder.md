@@ -17,7 +17,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
 ms.contentlocale: it-it
@@ -100,6 +100,6 @@ ms.lasthandoff: 08/09/2017
 |**Mostra campi nascosti**|Consente di mostrare o nascondere i campi che sono stati generati automaticamente da SharePoint, quali ProgId e Level per gli elementi collegamento di SharePoint, ma che in genere non sono utilizzati nei report. Nascondendo questi campi, l'elenco dei campi diventa più breve e più facile da utilizzare.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Finestre Progettazione query &#40; Generatore report &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

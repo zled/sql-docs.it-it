@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: it-it
@@ -56,7 +56,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  Valore **booleano** che indica lo stato desiderato per Gestione report.
  
  > [!NOTE] 
- > Questa impostazione è stata deprecata a partire da SQL Server 2016 Reporting Services aggiornamento cumulativo 2. Il portale web verrà sempre abilitato. Il valore verrà ignorato.
+ > Questa impostazione è stata deprecata a partire dall'aggiornamento cumulativo 2 di SQL Server 2016 Reporting Services. Il portale Web verrà sempre abilitato. Il valore verrà ignorato.
   
  *HRESULT*  
  [out] Valore che indica se la chiamata ha avuto esito positivo o negativo.  
@@ -67,7 +67,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

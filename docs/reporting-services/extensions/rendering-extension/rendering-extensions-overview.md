@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 caps.latest.revision: 41
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cb9aec71556ad17066432725a1f37d9157c357d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="rendering-extensions-overview"></a>Cenni preliminari sulle estensioni per il rendering
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  Ognuna delle estensioni per il rendering implementate da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e fornite con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza un set comune di interfacce. Questo garantisce che ogni estensione implementi funzionalità simili e riduce la complessità del codice di rendering nel nucleo del server di report.  
   
 ## <a name="rendering-object-model"></a>Modello a oggetti per il rendering  
- Quando un report viene elaborato, il risultato è un modello a oggetti esposto pubblicamente noto come Modello a oggetti per il rendering (ROM, Rendering Object Model). Il modello a oggetti per il rendering è una raccolta di classi che definiscono il contenuto, il layout e i dati di un report che è stato elaborato. Questo modello è disponibile per gli sviluppatori che desiderano progettare, sviluppare e distribuire estensioni per il rendering personalizzate per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il modello a oggetti per il rendering viene creato quando il server di report elabora la definizione XML di un report insieme ai dati del report definiti dall'utente. Al termine dell'elaborazione, il modello a oggetti pubblico viene utilizzato da un'estensione per il rendering per definire l'output del report. Le classi pubbliche disponibili del modello a oggetti per il rendering sono definite nello spazio dei nomi **Microsoft.ReportingServices.OnDemandReportRendering**.  
+ Quando un report viene elaborato, il risultato è un modello a oggetti esposto pubblicamente noto come Modello a oggetti per il rendering (ROM, Rendering Object Model). Il modello a oggetti per il rendering è una raccolta di classi che definiscono il contenuto, il layout e i dati di un report che è stato elaborato. Questo modello è disponibile per gli sviluppatori che desiderano progettare, sviluppare e distribuire estensioni per il rendering personalizzate per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il modello a oggetti per il rendering viene creato quando il server di report elabora la definizione XML di un report insieme ai dati del report definiti dall'utente. Al termine dell'elaborazione, il modello a oggetti pubblico viene utilizzato da un'estensione per il rendering per definire l'output del report. Classi pubbliche disponibili del ROM sono definite nel **Microsoft.ReportingServices.OnDemandReportRendering** dello spazio dei nomi.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Creazione di estensioni per il rendering personalizzate  
  Prima di decidere di creare un'estensione per il rendering personalizzata, è consigliabile valutare alternative più semplici. È possibile effettuare le operazioni seguenti:  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Aggiungere funzionalità di presentazione e formattazione personalizzate combinando XSLT (XSL Transformations, trasformazioni XSL) con l'output del formato di rendering XML.  
   
- La scrittura di un'estensione per il rendering personalizzata è complessa. Un'estensione per il rendering deve in genere supportare tutte le combinazioni possibili di elementi del report e richiede l'implementazione di centinaia di classi, interfacce, metodi e proprietà. Se è necessario eseguire il rendering di un report in un formato non incluso in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e si decide di scrivere un'implementazione di codice gestito di un'estensione per il rendering, è necessario che il codice dell'estensione per il rendering implementi l'interfaccia **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, richiesta dal server di report.  
+ La scrittura di un'estensione per il rendering personalizzata è complessa. Un'estensione per il rendering deve in genere supportare tutte le combinazioni possibili di elementi del report e richiede l'implementazione di centinaia di classi, interfacce, metodi e proprietà. Se è necessario eseguire il rendering di un report in un formato che non è incluso in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e si decide di scrivere la propria implementazione di codice gestito di un'estensione per il rendering, deve implementare il codice di estensione per il rendering di **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** interfaccia, è richiesto dal server di report.  
   
  Per documentazione e white paper aggiuntivi su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vedere le risorse tecniche più recenti nel [sito Web di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
   

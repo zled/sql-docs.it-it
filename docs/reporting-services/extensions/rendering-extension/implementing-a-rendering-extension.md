@@ -20,14 +20,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68e74b4a67a1edc6517c9e6b2b0160ce2db258b9
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: c6be8db763c82a47d0635169f33a0f0543910abe
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementazione di un'estensione per il rendering
@@ -37,16 +37,16 @@ ms.lasthandoff: 06/22/2017
 >  Per determinare quali sono le estensioni per il rendering disponibili, è possibile visualizzare l'elenco delle estensioni installate nel file RSReportServer.config.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Cenni preliminari sulle estensioni di rendering](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
+ [Panoramica delle estensioni per il rendering](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
  Vengono fornite informazioni introduttive per la scrittura di un'estensione per il rendering personalizzata per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Implementazione dell'interfaccia IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)  
  Vengono descritti gli attributi di un'estensione per il rendering.  
   
- [Distribuzione di un'estensione per il Rendering](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
+ [Distribuzione di un'estensione per il rendering](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
  Viene descritto come distribuire un'estensione per il rendering in un server di report.  
   
- [Rimozione di un'estensione per il Rendering](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
+ [Rimozione di un'estensione per il rendering](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
  Viene descritto come rimuovere un'estensione per il rendering da un server di report.  
   
 ## <a name="see-also"></a>Vedere anche  

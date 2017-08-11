@@ -22,14 +22,14 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1db09303de945d18f7e71d2d88ca295bb025b26
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilizzo di file di criteri di sicurezza di Reporting Services
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente. I file di configurazione della sicurezza contengono informazioni sulla gerarchia dei gruppi di codice e sui set di autorizzazioni associati a un livello di criteri in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Si consiglia di utilizzare lo strumento di configurazione di .NET Framework (Mscorcfg.msc) o lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) per modificare innanzitutto i criteri di sicurezza nel file Security.config, in modo che le modifiche dei criteri corrispondono agli elementi di configurazione XML validi per i file di criteri. Dopo avere eseguito questa operazione, è possibile tagliare e incollare i nuovi gruppi di codice e i nuovi set di autorizzazioni dal file Security.config a quello di criteri per il componente cui vengono aggiunte le autorizzazioni per il codice.  
   
 > [!IMPORTANT]  
->  Prima di apportare qualsiasi modifica, è necessario eseguire il backup dei file di configurazione dei criteri..  
+>  Prima di apportare qualsiasi modifica, è necessario eseguire il backup dei file di configurazione dei criteri.  
   
  L'utilizzo di questo approccio consente di realizzare due obiettivi. Innanzitutto è possibile utilizzare uno strumento di visualizzazione per compilare i gruppi di codice e i set di autorizzazioni per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questa operazione risulta più semplice rispetto alla definizione di elementi di configurazione XML. In secondo luogo, si ottiene la certezza di non danneggiare i file di configurazione dei criteri di sicurezza con elementi XML e attributi in formato non valido. Per ulteriori informazioni sull'utilità Criteri di sicurezza dall'accesso di codice, vedere Utilizzo di file di criteri di sicurezza di Reporting Services in MSDN.  
   

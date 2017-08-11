@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: it-it
@@ -31,11 +31,11 @@ ms.lasthandoff: 08/09/2017
   
  È possibile aggiornare i valori e gli stati di indicatori. Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [Modificare le icone degli indicatori e dei set di indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modificare le icone degli indicatori e set di indicatori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Impostare e configurare le unità di misura &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Impostare e configurare le unità di misura &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Impostare l'ambito di sincronizzazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Imposta ambito di sincronizzazione &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Poiché un indicatore viene posizionato nel pannello del misuratore, è necessario selezionare l'indicatore anziché il pannello quando si vuole configurare l'indicatore tramite la finestra di dialogo **Proprietà indicatori** o il riquadro **Proprietà** . Nell'immagine seguente viene mostrato un indicatore selezionato nel relativo pannello del misuratore.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>Per aggiungere un indicatore a una tabella o a una matrice  
   
-1.  Aprire un report esistente o crearne uno nuovo contenente una tabella e una matrice con i dati che si desidera visualizzare. Per altre informazioni, vedere [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) o [Matrici](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
+1.  Aprire un report esistente o crearne uno nuovo contenente una tabella e una matrice con i dati che si desidera visualizzare. Per ulteriori informazioni, vedere [tabelle &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) o [matrici](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
 2.  Inserire una colonna nella tabella o nella matrice. Per altre informazioni, vedere [Inserire o eliminare una colonna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
@@ -76,6 +76,6 @@ ms.lasthandoff: 08/09/2017
 2.  Fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Indicatori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 664bf6ff099454060779ff19dd4e07b48acf6d2c
 ms.contentlocale: it-it
@@ -236,10 +236,10 @@ ms.lasthandoff: 08/09/2017
   
 2.  Nella barra multifunzione di SharePoint selezionare il pulsante **Nuovo** .  
   
-3.  Scegliere **Applicazione di servizio SQL Server Reporting Services** dal menu Nuovo.  
+3.  Scegliere **Applicazione di servizio SQL Server Reporting Services**dal menu Nuovo.  
   
     > [!IMPORTANT]  
-    >  Se l'opzione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene visualizzata nell'elenco, **significa che il servizio condiviso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è installato**. Rivedere la sezione precedente sull'utilizzo di cmdlts di PowerShell per installare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+    >  Se il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] opzione non viene visualizzata nell'elenco, è un **indicazione che il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizi condivisi non sono installato**. Rivedere la sezione precedente sull'utilizzo di cmdlts di PowerShell per installare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Nella pagina **Creazione di un'applicazione di servizio di SQL Server Reporting Services** immettere un nome per l'applicazione. Se si creano più applicazioni di servizio Reporting Services, tramite un nome descrittivo o una convenzione di denominazione sarà possibile organizzare le operazioni di amministrazione e gestione.  
   
@@ -412,7 +412,7 @@ Inoltre, l'account di sicurezza del pool di applicazioni utilizzato dall'applica
  Le funzionalità di sottoscrizione e avviso dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono richiedere la configurazione di autorizzazioni di SQL Server Agent. Se viene visualizzato un messaggio di errore che indica che SQL Server Agent è richiesto sebbene sia in esecuzione, aggiornare le autorizzazioni. È possibile fare clic sul collegamento **Provisioning di sottoscrizioni e avvisi** nella pagina di creazione dell'applicazione di servizio per passare a un'altra pagina di provisioning di SQL Server Agent. Il passaggio del provisioning è necessario se la distribuzione interessa più computer, ad esempio quando l'istanza di database di SQL Server si trova in un computer diverso. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Configurare la posta elettronica per le applicazioni di servizio SSRS  
- La funzionalità relativa agli avvisi dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di inviare avvisi come messaggi di posta elettronica. Per inviare messaggi di posta elettronica potrebbe essere necessario configurare l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , nonché modificare l'estensione per il recapito tramite posta elettronica per l'applicazione di servizio. Le impostazioni della posta elettronica sono richieste se si prevede di utilizzare l'estensione per il recapito tramite posta elettronica per la funzionalità di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
+ La funzionalità relativa agli avvisi dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di inviare avvisi come messaggi di posta elettronica. Per inviare messaggi di posta elettronica potrebbe essere necessario configurare l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , nonché modificare l'estensione per il recapito tramite posta elettronica per l'applicazione di servizio. Le impostazioni della posta elettronica sono richieste se si prevede di utilizzare l'estensione per il recapito tramite posta elettronica per la funzionalità di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere [configurare posta elettronica per un'applicazione di servizio Reporting Services &#40; SharePoint 2013 e SharePoint 2016 &#41; ](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Aggiungere i tipi di contenuto di Reporting Services alle raccolte contenuto  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce tipi di contenuto predefiniti usati per gestire file di origini dati condivise (con estensione rsds), modelli di report (con estensione smdl) e di definizione del report di Generatore report (con estensione rdl). Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  

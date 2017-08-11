@@ -17,7 +17,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 01bfda1933bc12672c4959eafd7c95ef9a389139
 ms.contentlocale: it-it
@@ -67,7 +67,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Questo metodo causa l'esecuzione dell'operazione di riciclo pesante da parte di tutti i domini applicazione. Una volta completata l'operazione, i domini applicazione vengono riavviati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

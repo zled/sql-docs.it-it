@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: it-it
@@ -37,7 +37,7 @@ Per poter creare, modificare, eliminare e visualizzare avvisi dati, è necessari
 
 Per altre informazioni sulle autorizzazioni di SharePoint, vedere la pagina relativa alle [autorizzazioni utente e ai livelli di autorizzazione (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).
 
-## <a name="grant-permissions"></a>Concedere le autorizzazioni
+## <a name="grant-permissions"></a>Concedi autorizzazioni
   
 1.  Accedere al sito di SharePoint in cui si desidera concedere autorizzazioni.  
   
@@ -59,7 +59,7 @@ Per altre informazioni sulle autorizzazioni di SharePoint, vedere la pagina rela
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Impostare autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40; Reporting Services in SharePoint integrata modalità &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

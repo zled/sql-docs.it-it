@@ -18,7 +18,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 526abc46fe3b7fc3f923c29f4b4857b06f55a37c
 ms.contentlocale: it-it
@@ -30,9 +30,9 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Modalità nativa** vengono utilizzati due [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionali per archiviare i metadati del server e oggetti del report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinita, i database sono denominati **reportserver** e **reportservertempdb**. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **modalità nativa** usa due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione di metadati e oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinita, i database sono denominati **reportserver** e **reportservertempdb**. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Modalità SharePoint** incluso un terzo database utilizzato per i metadati di avviso dati. I tre database vengono creati per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nei nomi dei database è incluso, per impostazione predefinita, un GUID che rappresenta l'applicazione di servizio. Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **modalità SharePoint** include un terzo database usato per i metadati di avviso dei dati. I tre database vengono creati per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nei nomi dei database è incluso, per impostazione predefinita, un GUID che rappresenta l'applicazione di servizio. Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:
 
 -   ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Automaticamente. Utilizzare la Configurazione guidata di SQL Server, se si sceglie l'opzione di installazione della configurazione predefinita. Nell'Installazione guidata di SQL Server, si tratta dell'opzione **Installazione e configurazione** disponibile nella pagina delle opzioni di installazione del server di report. Se si sceglie l'opzione **Solo installazione** , è necessario usare Gestione configurazione Reporting Services per creare il database.  
   
--   Manualmente. Utilizzare lo strumento Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario creare manualmente il database del server di report se per ospitare il database si utilizza un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   Manualmente. Utilizzare lo strumento Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario creare manualmente il database del server di report se per ospitare il database si utilizza un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto. Per ulteriori informazioni, vedere [creare un Database del Server di Report in modalità nativa &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- **Modalità SharePoint**: nella pagina delle opzioni di installazione del server di report è disponibile la sola opzione **Solo installazione** per la modalità SharePoint. Questa opzione consente di installare tutti i file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e il servizio condiviso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il passaggio successivo prevede la creazione di almeno un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una delle modalità seguenti:  
+ **Modalità SharePoint** : nella pagina delle opzioni di installazione del server di report è disponibile la sola opzione **Solo installazione**per la modalità SharePoint. Questa opzione consente di installare tutti i file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e il servizio condiviso [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il passaggio successivo prevede la creazione di almeno un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una delle modalità seguenti:  
   
 -   Utilizzare Amministrazione centrale SharePoint per creare un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere la sezione "Applicazione di servizio" di [Passaggio 3: Creare un'applicazione di servizio Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- Per creare il database del server di report in un computer remoto, è necessario configurare la connessione per l'utilizzo di un account utente di dominio o un account di servizio con accesso alla rete. Se si sceglie di utilizzare un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], valutare attentamente le credenziali che il server di report dovrà utilizzare per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Per creare il database del server di report in un computer remoto, è necessario configurare la connessione per l'utilizzo di un account utente di dominio o un account di servizio con accesso alla rete. Se si sceglie di utilizzare un'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , valutare attentamente le credenziali che il server di report dovrà utilizzare per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 >  Il server di report e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database del server di report possono trovarsi in domini diversi. Per la distribuzione in Internet, è pratica comune utilizzare un server protetto da firewall. Se si configura un server di report per l'accesso a Internet, utilizzare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protetta dal firewall e utilizzare IPSEC per proteggere la connessione.  
@@ -83,4 +83,4 @@ ms.lasthandoff: 08/09/2017
 
 [Gestione configurazione Reporting Services](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

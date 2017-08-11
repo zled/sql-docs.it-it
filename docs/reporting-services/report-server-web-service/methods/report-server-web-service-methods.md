@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>Metodi del servizio Web ReportServer
@@ -40,16 +40,16 @@ ms.lasthandoff: 06/13/2017
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Endpoint del servizio Web ReportServer](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Descrive gli endpoint di gestione ed esecuzione del servizio Web ReportServer.|  
-|[Metodi di gestione di report Server Namespace](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Descrive i metodi che è possibile utilizzare per gestire il database del server di report. In particolare, è possibile gestire le cartelle e le risorse e impostare le proprietà dell'elemento.|  
+|[Metodi di gestione dello spazio dei nomi del server di report](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Descrive i metodi che è possibile utilizzare per gestire il database del server di report. In particolare, è possibile gestire le cartelle e le risorse e impostare le proprietà dell'elemento.|  
 |[Metodi di autorizzazione](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Descrive i metodi che è possibile utilizzare per gestire attività, ruoli e criteri.|  
-|[Origini dati e i metodi di connessione](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Descrive i metodi che è possibile utilizzare per impostare e gestire la connessione all'origine dati e le informazioni sulle credenziali per i report.|  
-|[Metodi di parametri di report](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Descrive i metodi che è possibile utilizzare per impostare e recuperare parametri per i report.|  
-|[Metodi del modello - servizio Web ReportServer](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Descrive i metodi che è possibile utilizzare per gestire modelli.|  
-|[Per il rendering e i metodi di esecuzione](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Descrive i metodi che è possibile utilizzare per gestire l'esecuzione, il rendering e la memorizzazione nella cache dei report.|  
-|[Metodi relativi alla cronologia report](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire gli snapshot della cronologia dei report.|  
+|[Origini dati e metodi di connessione](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Descrive i metodi che è possibile utilizzare per impostare e gestire la connessione all'origine dati e le informazioni sulle credenziali per i report.|  
+|[Metodi per i parametri dei report](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Descrive i metodi che è possibile utilizzare per impostare e recuperare parametri per i report.|  
+|[Metodi del modello - Servizio Web ReportServer](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Descrive i metodi che è possibile utilizzare per gestire modelli.|  
+|[Metodi di rendering e di esecuzione](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Descrive i metodi che è possibile utilizzare per gestire l'esecuzione, il rendering e la memorizzazione nella cache dei report.|  
+|[Metodi relativi alla cronologia dei report](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire gli snapshot della cronologia dei report.|  
 |[Metodi di pianificazione](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire pianificazioni condivise e piani di aggiornamento della cache utilizzate dal server di report.|  
 |[Metodi di sottoscrizione e recapito](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire sottoscrizioni e recapito dei report.|  
-|[Metodi di report collegati](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire i report collegati.|  
+|[Metodi dei report collegati](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Descrive i metodi che è possibile utilizzare per creare e gestire i report collegati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [L'accesso all'API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   

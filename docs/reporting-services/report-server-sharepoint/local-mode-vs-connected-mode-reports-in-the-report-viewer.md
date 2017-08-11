@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ca6519365ae81c5a7875825fb976c163dbb588f3
 ms.contentlocale: it-it
@@ -23,13 +23,13 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Report in modalità locale e con connessione nel visualizzatore di report
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere configurati per l'esecuzione in *modalità locale* o *modalità connessa*, che usa un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] repot server. In alternativa, è possibile utilizzare il visualizzatore di report per eseguire il rendering dei report direttamente da SharePoint quando l'estensione per i dati supporta la creazione di report in modalità locale. Questo approccio è definito *modalità locale*. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è necessario che la farm di SharePoint sia connessa a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato in modalità SharePoint per eseguire il rendering dei report tramite il controllo Visualizzatore report. Questo approccio è definito *modalità remota* o *modalità con connessione*.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i report possono essere configurati per l'esecuzione in *modalità locale* o *modalità connessa*, che usa un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report. In alternativa, è possibile utilizzare il visualizzatore di report per eseguire il rendering dei report direttamente da SharePoint quando l'estensione per i dati supporta la creazione di report in modalità locale. Questo approccio è definito *modalità locale*. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è necessario che la farm di SharePoint sia connessa a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato in modalità SharePoint per eseguire il rendering dei report tramite il controllo Visualizzatore report. Questo approccio è definito *modalità remota* o *modalità con connessione*.  
   
  In *modalità locale* non è presente un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint, ma non è richiesto alcun server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Con la modalità locale, gli utenti possono visualizzare report ma non potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint|  
   
  **Contenuto dell'argomento:**  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
  Di seguito è riportato un elenco delle estensioni per l'elaborazione dati che supportano la creazione di report in modalità locale:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010. Per altre informazioni su Access Services, vedere l'articolo [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)(Utilizzo di Access Services con SQL Reporting Services: installazione del componente aggiuntivo SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)).  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Estensione di report di Access 2010. Per altre informazioni su Access Services, vedere l'articolo [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)(Utilizzo di Access Services con SQL Reporting Services: installazione del componente aggiuntivo SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)).  
   
--   Estensione per i dati dell'elenco SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni sull'estensione per i dati dell'elenco SharePoint, vedere [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+-   Estensione per i dati dell'elenco SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni sull'estensione per i dati dell'elenco SharePoint, vedere [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
  È inoltre possibile sviluppare estensioni personalizzate per l'elaborazione dati per il supporto della modalità locale. Per ulteriori informazioni, vedere [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
@@ -89,6 +89,6 @@ ms.lasthandoff: 08/09/2017
  Per le informazioni più recenti sull'uso delle estensioni ADS con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità connessa, vedere l'articolo relativo al [report di Access Services nel sito di SharePoint con errori nell'estensione dati 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Origini dati supportate da Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

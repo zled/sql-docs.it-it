@@ -14,7 +14,7 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
 ms.contentlocale: it-it
@@ -37,7 +37,7 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
   
 1.  Aprire [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
   
-2.  Nel menu **File** > **Nuovo** > **Progetto**.  
+2.  Nel **File** menu > **New** > **progetto**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -80,7 +80,7 @@ Nelle lezioni successive verranno definiti un'origine dati per il report, un set
     I dati vengono definiti nel riquadro **Dati report** . Il layout dei report viene definito nella vista **Progettazione** . Dopo aver eseguito il report, è possibile vederne l'aspetto nella vista **Anteprima** .  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-In questo modo è stato creato un progetto di report denominato Esercitazione, cui è stato aggiunto un file di definizione del report (con estensione rdl). Il passaggio successivo consiste nello specificare un'origine dei dati per il report. Vedere [Lezione 2: Specifica delle informazioni di connessione &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+In questo modo è stato creato un progetto di report denominato Esercitazione, cui è stato aggiunto un file di definizione del report (con estensione rdl). Il passaggio successivo consiste nello specificare un'origine dei dati per il report. Vedere [lezione 2: specificare le informazioni di connessione &#40; Reporting Services &#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

@@ -19,7 +19,7 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: it-it
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
      ![Iniziare a Generatore report](../../reporting-services/media/rb-getstarted.png "iniziare a Generatore Report")  
   
-     If the **Getting Started** dialog box does not appear, click **File** >**New**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
+     Se la finestra di dialogo **Riquadro attività iniziale** non viene visualizzata, fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Nella casella **Seleziona tipo di connessione** fare clic su **XML**.  
   
-8.  Fare clic sulla scheda **Credenziali**, selezionare **Usa utente di Windows corrente. Potrebbe essere richiesta la delega Kerberos** e fare clic su **OK**.  
+8.  Fare clic su di **credenziali** , selezionare **Usa utente di Windows corrente. Potrebbe essere richiesta la delega Kerberos**, quindi fare clic su **OK**.  
   
 9. Nella pagina **Scegliere una connessione a un'origine dei dati** fare clic su **Grafico a torta**, quindi su **Avanti**.  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 08/09/2017
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
+    >  Se la finestra di dialogo **Riquadro attività iniziale** non viene visualizzata, fare clic su **File** >**Nuovo**. La finestra di dialogo **Nuovo report o set di dati** include all'incirca lo stesso contenuto della finestra di dialogo **Riquadro attività iniziale** .  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -234,11 +234,11 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
   
  Per salvare infine i report in un server di report o in un sito di SharePoint integrato con un server di report, è necessario disporre dell'URL e delle autorizzazioni appropriate. Tutti i report creati possono essere eseguiti direttamente dal computer, tuttavia quando vengono eseguiti dal server di report o dal sito di SharePoint i report offrono maggiori funzionalità. Per eseguire i propri report o quelli presenti sul server di report o nel sito di SharePoint in cui vengono pubblicati è necessario disporre delle autorizzazioni appropriate. Per ottenere l'accesso è necessario rivolgersi all'amministratore di sistema.  
   
- Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Vedere [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Vedere [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Vedere [concetti &#40; di creazione di Report Generatore report e SSRS &#41; ](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Vedere [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
 [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -20,7 +20,7 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: it-it
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>Avviare Generatore report
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]ambiente di creazione è un report autonomo. Permette di creare report impaginati e di pubblicarli in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o nella modalità integrata SharePoint.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] è un ambiente di creazione di report autonomo. Permette di creare report impaginati e di pubblicarli in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installato in modalità nativa o nella modalità integrata SharePoint.  
   
  La prima volta che si avvia [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] dal portale Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità integrata SharePoint, viene richiesto di scaricarlo dall'Area download Microsoft. 
  

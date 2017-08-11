@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: it-it
@@ -33,7 +33,7 @@ Quando si installa SQL Server 2016 Reporting Services in modalità SharePoint, i
 -   Gestione delle funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio estensioni e chiavi di crittografia.  
 
 ##  <a name="bkmk_cmdlet_sum"></a> Riepilogo dei cmdlet  
- Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per ulteriori informazioni, vedere [avvio di Windows PowerShell in Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet seguenti, i riferimenti ai database delle applicazioni di servizio indicano tutti i database creati e utilizzati da un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+ Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](http://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet seguenti, i riferimenti ai database delle applicazioni di servizio indicano tutti i database creati e utilizzati da un'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Sono inclusi i database di configurazione, di avvisi e temporaneo.  
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -50,7 +50,7 @@ Quando si installa SQL Server 2016 Reporting Services in modalità SharePoint, i
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Per ulteriori informazioni vedere [utilizzare Windows PowerShell per amministrare SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Per altre informazioni, vedere [Utilizzare Windows PowerShell per amministrare SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Per aprire la shell di gestione di SharePoint ed eseguire i cmdlet  
   
@@ -280,8 +280,8 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Elenco di controllo: Utilizzare PowerShell per verificare PowerPivot per SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[Visualizzazione della Guida SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
-[Script di PowerShell di gestione SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)   
+[Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Visualizzazione della Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Script di PowerShell di gestione di SharePoint nel sito CodePlex](http://sharepointpsscripts.codeplex.com/)   
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

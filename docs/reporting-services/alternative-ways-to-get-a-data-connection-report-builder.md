@@ -16,7 +16,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
 ms.contentlocale: it-it
@@ -67,7 +67,7 @@ Per usare un'origine dati condivisa, è necessario selezionare un server di repo
   
     Verrà visualizzata di nuovo la pagina **Scegliere una connessione a un'origine dei dati** .  
   
-6.  Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
+6.  Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
   
     Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
 ms.contentlocale: it-it
@@ -122,13 +122,13 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
      Il valore predefinito è soggetto **di avviso dati per \<nome avviso dati >**.  
   
-21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione** .  
+21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione**.  
   
 22. Fare clic su **Salva**.  
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione Avviso dati](../reporting-services/data-alert-designer.md)   
+[Finestra di progettazione avviso dati](../reporting-services/data-alert-designer.md)   
 [Gestione avvisi dati per gli amministratori di avvisi](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 

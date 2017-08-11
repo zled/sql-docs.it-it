@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c7fa3b57de4a8b5854951c266168e22ae57ab928
 ms.contentlocale: it-it
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 |Set di dati|Sì||  
 |Parti del report||Al termine della migrazione verificare o aggiornare il percorso alle parti del report.|  
 |Pianificazioni|Sì|Vedere il metodo ListSchedules in [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Sottoscrizioni|Sì|Vedere il metodo Listsubscriptions [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) e <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> metodo.|  
+|Sottoscrizioni|Sì|Vedere il metodo ListSubscriptions in [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) e il metodo <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Snapshot|||
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

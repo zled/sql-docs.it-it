@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abb928e42a7420b421c91f6b5f78256213cb5df9
 ms.contentlocale: it-it
@@ -36,6 +36,6 @@ ms.lasthandoff: 08/09/2017
     -   Per consentire la riduzione della casella di testo in base al contenuto, selezionare **Consenti diminuzione altezza**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caselle di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Caselle di testo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

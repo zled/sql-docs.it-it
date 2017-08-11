@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d34dfcd5c6c4ecb6ef91dc57cb7e98ee71512393
 ms.contentlocale: it-it
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Servizio SharePoint di Reporting Services e applicazioni di servizio
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è basata sull'architettura del servizio SharePoint e prevede l'utilizzo di un servizio SharePoint e di applicazioni di servizio uno-a-molti. Creando un'applicazione di servizio si rende disponibile il servizio e si genera il database dell'applicazione di servizio. È possibile creare più applicazioni di servizio Reporting Services, tuttavia un'unica applicazione di servizio è sufficiente per la maggior parte degli scenari di distribuzione.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità SharePoint è basata sull'architettura del servizio SharePoint e prevede l'utilizzo di un servizio di SharePoint e uno per molte applicazioni di servizio. Creando un'applicazione di servizio si rende disponibile il servizio e si genera il database dell'applicazione di servizio. È possibile creare più applicazioni di servizio Reporting Services, tuttavia un'unica applicazione di servizio è sufficiente per la maggior parte degli scenari di distribuzione.  
   
  In questo argomento vengono illustrate le informazioni seguenti:  
   
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
 |Attività|Collegamento|  
 |----------|----------|  
 |Gestire le impostazioni dell'applicazione di servizio.|[Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
-|Eseguire il backup e il ripristino dell'applicazione di servizio e dei componenti correlati, quali chiavi di crittografia e proxy.|[Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
+|Eseguire il backup e il ripristino dell'applicazione di servizio e dei componenti correlati, quali chiavi di crittografia e proxy.|[Applicazioni di servizio SharePoint di backup e ripristino configurazione di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
   
   

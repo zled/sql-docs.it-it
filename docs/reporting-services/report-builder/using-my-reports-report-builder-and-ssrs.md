@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: it-it
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  La caratteristica funzionalità Report personali è facoltativa e può essere disabilitata da un amministratore del server di report. Se è abilitata, viene visualizzata una cartella Report personali nella cartella Home, alla quale è possibile accedere tramite Gestione report o un Web browser. Per altre informazioni, vedere [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
   
- In un server di report configurato nella modalità integrata SharePoint, non esiste una cartella Report personali equivalente. Per altre informazioni, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ In un server di report configurato nella modalità integrata SharePoint, non esiste una cartella Report personali equivalente. Per altre informazioni, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  Quando un utente esegue una ricerca in un database del server di report, tra i contenuti in cui viene eseguita la ricerca vengono inclusi quelli della cartella Report personali dell'utente mentre sono esclusi quelli delle cartelle Report personali degli altri utenti. Nell'elenco dei risultati della ricerca vengono inclusi solo i report a cui l'utente che ha eseguito la ricerca è autorizzato ad accedere.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

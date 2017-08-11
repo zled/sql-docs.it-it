@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c30ea734a30e00fdefeb9b30a1ced9c3f60d5fca
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-processing-extensions-overview"></a>Cenni preliminari sulle estensioni per l'elaborazione dati
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  È possibile sviluppare estensioni per l'elaborazione dati per le proprie origini dati oppure è possibile utilizzare le interfacce per aggiungere un ulteriore livello di elaborazione dati alle infrastrutture di database comuni. È possibile distribuire le estensioni per l'elaborazione dati personalizzate per consentire un'agevole integrazione dei dati nei server di report esistenti nell'organizzazione. È inoltre possibile utilizzarle come parte di una famiglia di prodotti di creazione di report personalizzati forniti agli utenti.  
   
- ![Architettura dell'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![Architettura di estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "architettura dell'estensione di elaborazione dei dati")  
 Architettura delle estensioni per l'elaborazione dati di Reporting Services  
   
  I vantaggi dell'implementazione di un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] personalizzata includono:  
@@ -61,7 +61,7 @@ Architettura delle estensioni per l'elaborazione dati di Reporting Services
 ## <a name="data-extension-process-flow"></a>Flusso di processo dell'estensione per i dati  
  Prima di sviluppare un'estensione per i dati personalizzata, è necessario capire in che modo le estensioni per i dati vengono utilizzate dal server di report per elaborare i dati. È inoltre necessario comprendere i costruttori e i metodi chiamati dal server di report.  
   
- ![Flusso di processo per l'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![Processo di flusso per l'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "flusso per l'estensione per l'elaborazione di dati del processo")  
 Flusso di processo dettagliato di un'estensione per i dati chiamata dal server di report  
   
  Nella figura è illustrata la sequenza di eventi seguente:  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ed23ebf2bd6cbecbd028488c5188368e1a076d46
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: a60c685ebdfd9d549e100cf5b5eda0ab056c1c46
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Distribuzione di un'estensione di elaborazione dei dati in un Server di Report
@@ -34,12 +34,12 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Per distribuire un assembly dell'estensione per l'elaborazione dati  
   
-1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per l'elaborazione dati. Il percorso predefinito della directory bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \< *Nome istanza*> Services\ReportServer\bin..  
+1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per l'elaborazione dati. Il percorso predefinito della directory bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \< *Nome istanza*> Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Con questo passaggio viene evitato l'aggiornamento a un'istanza di SQL Server più recente. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
-2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config che si trova nella directory ReportServer. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione per l'elaborazione dati. È possibile aprire il file di configurazione con Visual Studio o di un semplice editor di testo, ad esempio Blocco note.  
+2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config. che si trova nella directory ReportServer. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione per l'elaborazione dati. È possibile aprire il file di configurazione con Visual Studio o di un semplice editor di testo, ad esempio Blocco note.  
   
 3.  Individuare l'elemento **Data** nel file RSReportServer.config. È necessario immettere una voce per l'estensione per l'elaborazione dati appena creata nel percorso seguente:  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
      Il valore per **nome** è il nome univoco dell'estensione per l'elaborazione dati. Il valore per **tipo** è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa il <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> interfacce, seguite dal nome dell'assembly (senza l'estensione del file con estensione dll). Per impostazione predefinita, le estensioni per l'elaborazione dati sono visibili. Per nascondere un'estensione dalle interfacce utente, come Gestione report, aggiungere un attributo **Visible** all'elemento **Extension** e impostarlo su **false**.  
   
-5.  Aggiungere un gruppo di codice per l'assembly personalizzato che conceda **FullTrust** dell'autorizzazione per l'estensione. Questo scopo, aggiungere il gruppo di codice per il file rssrvpolicy. config si trova per impostazione predefinita in %ProgramFiles%\Microsoft SQL Server\\< MSRS10_50.\< *Nome istanza*> Services\ReportServer.. Il gruppo di codice può essere simile a quanto riportato di seguito:  
+5.  Aggiungere un gruppo di codice per l'assembly personalizzato che conceda **FullTrust** dell'autorizzazione per l'estensione. Questo scopo, aggiungere il gruppo di codice per il file rssrvpolicy. config si trova per impostazione predefinita in %ProgramFiles%\Microsoft SQL Server\\< MSRS10_50.\< *Nome istanza*> Services\ReportServer. Il gruppo di codice può essere simile a quanto riportato di seguito:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -80,9 +80,9 @@ ms.lasthandoff: 06/22/2017
  È possibile verificare se l'estensione per l'elaborazione dati è stata distribuita correttamente nel server di report tramite il metodo <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servizio Web. È inoltre possibile aprire Gestione report e verificare che l'estensione sia inclusa nell'elenco delle origini dati disponibili. Per altre informazioni su Gestione report e sulle origini dati, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Distribuzione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementazione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementazione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

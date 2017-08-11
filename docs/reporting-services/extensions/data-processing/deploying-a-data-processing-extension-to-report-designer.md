@@ -17,14 +17,14 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 41
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42974101d21082568442d73d063de1d1b937c428
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: e5e309ee7092bdc64efa89fa27579e9e8944da14
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Distribuzione di un'estensione di elaborazione dei dati per progettazione Report
@@ -86,9 +86,9 @@ ms.lasthandoff: 06/22/2017
  Per poter verificare la distribuzione, è necessario chiudere tutte le istanze di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] nel computer locale. Dopo aver chiuso tutte le sessioni correnti, è possibile verificare se l'estensione per l'elaborazione dati è stata distribuita correttamente in Progettazione report creando un nuovo progetto report in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Quando si crea un nuovo set di dati per il report, l'estensione dovrebbe essere inclusa nell'elenco dei tipi di origini dati disponibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Distribuzione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementazione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementazione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

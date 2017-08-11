@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: it-it
@@ -72,7 +72,7 @@ Mediante la visualizzazione in anteprima di un report è possibile visualizzare 
 > Per salvare il report, scegliere **Salva tutti** nel menu **File** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [lezione 5: formattazione di un Report &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Tabelle &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

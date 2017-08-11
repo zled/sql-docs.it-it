@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
 ms.contentlocale: it-it
@@ -58,6 +58,6 @@ ms.lasthandoff: 08/09/2017
 3.  In **Opzioni snapshot cronologia**fare clic su **Archivia tutti gli snapshot di dati del report nella cronologia del report**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+ [Impostare le opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   

@@ -15,7 +15,7 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
 ms.contentlocale: it-it
@@ -31,9 +31,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
--   [Aggiungere un ulteriore server di report a una farm &#40;con scalabilità orizzontale SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+-   [Aggiungere un ulteriore Server di Report a una Farm &#40; Scalabilità orizzontale SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- Per informazioni sulle novità disponibili in questa versione, vedere la sezione "SharePoint" in [Novità di Reporting Services &#40;SSRS&#41;](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Per informazioni sulle novità in questa versione, vedere la sezione "SharePoint" in [novità di Reporting Services &#40; SSRS &#41; ](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
   
  Contenuto dell'argomento:  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_connectedandlocal"></a> Modalità con connessione e modalità locale  
  Con la versione SQL Server 2008 R2 viene introdotta una nuova *modalità locale* per la visualizzazione di report da un server SharePoint 2010 in cui è installato il componente aggiuntivo Reporting Services di Microsoft SQL Server 2008 R2 o versione successiva per prodotti SharePoint 2010.  
   
--   *Modalità locale*: la modalità locale consente l'esecuzione del rendering locale dei report dalla raccolta documenti di SharePoint, senza l'integrazione con un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A differenza del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Il componente aggiuntivo può essere installato in diversi modi, tra cui l'Utilità preparazione prodotti Microsoft SharePoint 2010. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Report in modalità locale nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) e [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Modalità locale*: la modalità locale consente l'esecuzione del rendering locale dei report dalla raccolta documenti di SharePoint, senza l'integrazione con un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A differenza del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Il componente aggiuntivo può essere installato in diversi modi, tra cui l'Utilità preparazione prodotti Microsoft SharePoint 2010. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Report in modalità locale nel Visualizzatore di Report &#40; Reporting Services in modalità SharePoint &#41; ](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) e [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   *Modalità con connessione*: la modalità con connessione è supportata tramite l'integrazione di un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella farm di SharePoint utilizzando Amministrazione centrale SharePoint. L'integrazione con un server di report consente la creazione completa di report, fornendo le funzionalità di collaborazione di SharePoint 2010 e le funzionalità basate su server di un server di report, tra cui sottoscrizioni, snapshot ed elaborazione basata su server.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/09/2017
      La cronologia delle versioni della raccolta documenti viene configurata nella pagina "Impostazioni controllo versioni" di "Impostazioni raccolta".  
   
 ##  <a name="bkmk_supportedcombinations"></a> Combinazioni supportate del componente aggiuntivo di SharePoint e del server di report  
- Non tutte le funzionalità sono supportate in tutte le combinazioni di server di report, componente aggiuntivo di Reporting Services per SharePoint e prodotti SharePoint. Per altre informazioni, vedere [Combinazioni supportate di SharePoint, server Reporting Services e componente aggiuntivo &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ Non tutte le funzionalità sono supportate in tutte le combinazioni di server di report, componente aggiuntivo di Reporting Services per SharePoint e prodotti SharePoint. Per ulteriori informazioni, vedere [combinazioni supportate di SharePoint e Server Reporting Services e componente aggiuntivo &#40; SQL Server 2016 &#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  La versione corretta del componente aggiuntivo di Reporting Services deve essere utilizzata con la versione corrispondente dei prodotti SharePoint.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
  L'integrazione viene realizzata tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. Il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un componente distribuito gratuitamente, che può essere scaricato e quindi installato in un server in cui viene eseguita la versione appropriata di SharePoint.  
   
 > [!TIP]  
->  Non tutte le funzionalità sono supportate in tutte le combinazioni di server di report, componente aggiuntivo di Reporting Services per SharePoint e prodotti SharePoint. Per altre informazioni, vedere [Combinazioni supportate di SharePoint, server Reporting Services e componente aggiuntivo &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  Non tutte le funzionalità sono supportate in tutte le combinazioni di server di report, componente aggiuntivo di Reporting Services per SharePoint e prodotti SharePoint. Per ulteriori informazioni, vedere [combinazioni supportate di SharePoint e Server Reporting Services e componente aggiuntivo &#40; SQL Server 2016 &#41; ](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
 -   In SharePoint il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce l'endpoint proxy ReportServer, una web part di visualizzatore di report e pagine dell'applicazione che consentono di visualizzare, archiviare e gestire il contenuto del server di report in un sito o una farm di SharePoint.  
   
@@ -140,8 +140,8 @@ ms.lasthandoff: 08/09/2017
   
 |**Attività**|**Collegamento**|  
 |--------------|--------------|  
-|Passaggi dettagliati per l'installazione e la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) e [Aggiungere un ulteriore server di report a una farm &#40;con scalabilità orizzontale SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Scalabilità orizzontale della distribuzione di SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiungendo server di report aggiuntivi.|[Aggiungere un ulteriore server di report a una farm &#40;con scalabilità orizzontale SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Passaggi dettagliati per l'installazione e la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.|[Installare Reporting Services per SharePoint 2010 con SharePoint](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) e [aggiungere un ulteriore Server di Report a una Farm &#40; Scalabilità orizzontale SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Scalabilità orizzontale della distribuzione di SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiungendo server di report aggiuntivi.|[Aggiungere un ulteriore Server di Report a una Farm &#40; Scalabilità orizzontale SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Aggiunta di front-end Web SharePoint aggiuntivi con componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installati per la visualizzazione e gli elementi del report.|[Aggiungere un ulteriore front-end Web di Reporting Services a una farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configurazione della posta elettronica per le funzionalità di sottoscrizione e avvisi dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|[Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
 |Informazioni recenti per questa versione, disponibili nel sito Wiki TechNet.|[Suggerimenti e risoluzione dei problemi per SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/09/2017
 
 [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Web part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: Configurazione di SSRS 2012 per l'integrazione con SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Quiz: configurazione di SSRS 2012 per l'integrazione con SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d312cdf2c5588c8dc12ff000fe4163d7f562ea7f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: dbf0fd628630b51b3e8847539888d46c0c8a590e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-data-processing-extension"></a>Distribuzione di un'estensione per l'elaborazione dati
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
  Per ulteriori informazioni sui file RSReportServer. config o RSReportDesigner. config, vedere [del file di configurazione di Reporting Services](../../../reporting-services/report-server/reporting-services-configuration-files.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Description|  
 |-----------|-----------------|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementazione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementazione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

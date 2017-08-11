@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2396af94f8c28c41d41c52cd505d12aa8dceee17
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="custom-report-items"></a>Elementi dei report personalizzati
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Oltre a disporre di funzionalità non supportate a livello nativo, alcuni sviluppatori potrebbero avere l'esigenza di estendere le funzionalità esistenti con versioni alternative di controlli già inclusi in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo scenario, uno sviluppatore potrebbe disporre di tre componenti: un componente runtime, un componente della fase di progettazione e un componente di conversione dell'elemento del report in fase di progettazione che consente di convertire su richiesta un elemento del report esistente in un elemento del report personalizzato.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Architettura di un elemento del Report personalizzato](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
  Vengono descritti i componenti che costituiscono un elemento del report personalizzato.  
   
@@ -58,6 +58,6 @@ ms.lasthandoff: 06/22/2017
  Vengono descritte le classi di infrastruttura dell'elemento di report personalizzato e classi wrapper gestite nel **Microsoft.ReportDesigner** dello spazio dei nomi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

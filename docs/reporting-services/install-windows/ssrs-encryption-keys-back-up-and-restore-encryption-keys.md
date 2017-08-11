@@ -19,7 +19,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
 ms.contentlocale: it-it
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Utilizzare una password complessa.  
   
-4.  Specificare un file in cui includere la chiave archiviata. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiunge l'estensione snk al file. È consigliabile archiviare il file su un disco separato dal server di report.  
+4.  Specificare un file in cui includere la chiave archiviata. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Aggiunge un'estensione di file con estensione snk al file. È consigliabile archiviare il file su un disco separato dal server di report.  
   
 5.  Fare clic su **OK**.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

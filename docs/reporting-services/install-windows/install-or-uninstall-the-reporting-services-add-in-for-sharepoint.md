@@ -14,7 +14,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
 ms.contentlocale: it-it
@@ -110,7 +110,7 @@ Rssharepoint.msi /?
   
          **CD %temp%**.  
   
-         Il file si trova in: **\Users\\<nome utente\>\AppData\Local\Temp**  
+         Il file deve trovarsi: **\Users\\< nome\>\AppData\Local\Temp.**  
   
     2.  Digitare il comando seguente. Il completamento di questo passaggio di configurazione richiede alcuni minuti. Durante questo processo verrà riavviato il servizio W3SVC. Verranno memorizzati diversi messaggi di stato durante la copia dei file, la registrazione dei componenti e l'esecuzione della Configurazione guidata del prodotto SharePoint.  
   
@@ -277,6 +277,6 @@ Rssharepoint.msi /?
 ## <a name="see-also"></a>Vedere anche
 
 [Installare la modalità SharePoint di Reporting Services per SharePoint 2013](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
-[Server Reporting Services Report &#40; Modalità SharePoint &#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+[Server di report di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

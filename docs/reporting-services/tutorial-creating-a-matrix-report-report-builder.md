@@ -16,7 +16,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
 ms.contentlocale: it-it
@@ -45,7 +45,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -57,7 +57,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 5.  Scegliere **Avanti**.  
   
-6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per informazioni sulla creazione di un'origine dati incorporata, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -162,7 +162,7 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 2.  Premere CTRL e selezionare le nove celle contenenti `[Sum(Sales)]`.  
   
-3.  On the **Home** tab > **Number** > **Currency**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
+3.  Nel **Home** scheda > **numero** > **valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
     Se la lingua delle impostazioni locali è Inglese - Stati Uniti, il testo di esempio predefinito corrisponderà a [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
@@ -170,7 +170,7 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 4.  Fare clic sulla cella contenente `[SalesDate]`.  
   
-5.  Nel gruppo **Numero** > **Data**.  
+5.  Nel **numero** gruppo > **data**.  
   
     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
@@ -268,7 +268,7 @@ L'area dell'angolo si trova in corrispondenza dell'angolo superiore sinistro del
   
 5.  Fare clic con il pulsante destro del mouse nella cella unita e scegliere **Proprietà casella di testo**.  
   
-6.  On the **Border** tab > **Presets** > **None**.
+6.  Nel **bordo** scheda > **predefiniti** > **Nessuno**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +285,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 2.  Selezionare la casella di testo nella parte superiore del corpo del report contenente il testo **Fare clic per aggiungere il titolo**, quindi premere il tasto CANC.  
   
-3.  Nella scheda **Inserisci** > **Intestazione** > **Aggiungi intestazione**.  
+3.  Nel **inserire** scheda > **intestazione** > **Aggiungi intestazione**.  
   
     Nella parte superiore del corpo del report verrà aggiunta un'intestazione.  
   
@@ -335,7 +335,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 ## <a name="RotateTextBox"></a>9. (Facoltativo) Ruotare una casella di testo di 270 gradi  
 Al momento dell'esecuzione, un report con matrici può espandersi orizzontalmente e verticalmente. La rotazione verticale, o di 270 gradi, delle caselle di testo consente di risparmiare spazio orizzontale. Il report visualizzabile risulterà quindi più stretto e nel caso venga esportato in un formato quale Microsoft Word si adatterà con maggiore facilità alle dimensioni della pagina stampata.  
   
-Il testo in una casella di testo può inoltre essere visualizzato in senso orizzontale e verticale (dall'alto in basso). Per altre informazioni, vedere [Caselle di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Il testo in una casella di testo può inoltre essere visualizzato in senso orizzontale e verticale (dall'alto in basso). Per ulteriori informazioni, vedere [caselle di testo &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Per ruotare una casella di testo di 270 gradi  
   
@@ -353,7 +353,7 @@ Il testo in una casella di testo può inoltre essere visualizzato in senso orizz
   
 4.  Verificare che la proprietà CanGrow sia impostata su **True**.  
   
-5.  Nella sezione **Paragrafo** della scheda **Home** selezionare **Medio** e **Centro** per posizionare il testo al centro delle celle sia verticalmente sia orizzontalmente.  
+5.  Nella scheda **Home** della sezione **Paragrafo** selezionare **Al centro** e **Al centro** per posizionare il testo al centro delle celle sia verticalmente sia orizzontalmente.  
  
 6. Ridimensionare la colonna Territory assegnandole una larghezza di circa 1 centimetro ed eliminare il titolo della colonna.  
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  

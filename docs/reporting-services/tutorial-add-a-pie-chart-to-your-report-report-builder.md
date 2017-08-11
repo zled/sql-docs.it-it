@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: it-it
@@ -35,7 +35,7 @@ Nell'illustrazione seguente viene mostrato il grafico a torta che verrà creato.
 Se sono presenti troppi punti dati su un grafico a torta, le etichette dei punti dati potrebbero essere difficili da leggere. In tal caso, prendere in considerazione la possibilità di unire le sezioni piccole in un'unica sezione più grande. I grafici a torta risultano più leggibili dopo avere aggregato i dati in pochi punti dati.  
  
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in due procedure. Per istruzioni dettagliate su come selezionare un server di report, aggiungere un'origine dati e un set di dati vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in due procedure. Per istruzioni dettagliate su come selezionare un server di report, aggiungere un'origine dati e aggiungere un set di dati, vedere la prima esercitazione di questa serie: [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Il tempo stimato per il completare l'esercitazione è di 10 minuti.  
   
@@ -48,7 +48,7 @@ In questa sezione si usa la Creazione guidata grafico per creare un set di dati 
   
 1.  [Avviare Generatore report](../reporting-services/report-builder/start-report-builder.md) dal computer, dal portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o in modalità integrata SharePoint.  
   
-    Si apre la finestra di dialogo **Nuovo report o set di dati**.  
+    Si apre la finestra di dialogo **Nuovo report o set di dati** .  
   
     Se la finestra di dialogo **Nuovo report o set di dati** non viene visualizzata, scegliere **Nuovo** dal menu **File**.  
   
@@ -123,7 +123,7 @@ Su ogni sezione della torta, è possibile visualizzare una percentuale per quest
   
 4.  Nella casella **Dati etichetta** selezionare **#PERCENT**.  
     
-5.  (Facoltativo) Per specificare il numero di cifre decimali l'etichetta seguente, nel **etichetta dati** casella dopo **#PERCENT**, tipo **{Pn}** in  *n*  è il numero di posizioni decimali da visualizzare. Ad esempio per non visualizzare cifre decimali, digitare **#PERCENT{P0}**.  
+5.  (Facoltativo) Per specificare il numero di cifre decimali da visualizzare nell'etichetta, nella casella **Dati etichetta** dopo **#PERCENT**digitare **{Pn}** dove *n* è il numero di cifre decimali da visualizzare. Ad esempio per non visualizzare cifre decimali, digitare **#PERCENT{P0}**.  
 
 6.  Per visualizzare i valori come percentuali, la proprietà UseValueAsLabel deve essere impostata su false. Se viene richiesto di impostare questo valore nella finestra di dialogo **Conferma azione** fare clic su **Sì**.  
   
@@ -143,7 +143,7 @@ Tre delle sezioni della torta sono piuttosto sottili. È possibile unire più se
 
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Se il riquadro Proprietà non è visualizzato, nel gruppo **Mostra/Nascondi** della scheda **Visualizza** selezionare **Proprietà**.  
+2.  Se non viene visualizzato il riquadro proprietà, scegliere il **vista** scheda > **Mostra/Nascondi** gruppo > selezionare **proprietà**.  
   
 3.  Nell'area di progettazione fare clic su una sezione del grafico a torta. Le proprietà della serie verranno visualizzate nel riquadro Proprietà.  
   
@@ -197,7 +197,7 @@ Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non
   
 3.  Selezionare **Vendite di fotocamere e di cineprese** e nella sezione **Font** della scheda **Home** fare clic su **Grassetto**.  
   
-4.  Selezionare **Come percentuale delle vendite totali** e nella sezione **Carattere** della scheda **Home** impostare la dimensione del carattere su **10**.  
+4.  Selezionare **come percentuale del totale vendite**e scegliere il **Home** scheda > **carattere** sezione > impostare le dimensioni del carattere **10**.  
   
 5.  (Facoltativo) Per contenere le due righe del testo potrebbe essere necessario aumentare l'altezza della casella di testo Titolo.  
   
@@ -220,7 +220,7 @@ Poiché il grafico a torta è l'unica visualizzazione nel report, il grafico non
 Il report verrà salvato sul server di report.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a torta al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Questo passaggio conclude l'esercitazione relativa all'aggiunta di un grafico a torta al report. Per ulteriori informazioni sui grafici, vedere [grafici &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [grafici sparkline e barre dei dati &#40; Generatore report e SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  

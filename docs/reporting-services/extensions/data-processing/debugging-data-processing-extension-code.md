@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], debugging
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7af6b33039d19029d1595ac08f5d5345cdaa1c58
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 0b7ee42be2f3d54fc8fb19ab48b3b603e29669e2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="debugging-data-processing-extension-code"></a>Debug del codice di un'estensione per l'elaborazione dati
@@ -52,9 +52,9 @@ ms.lasthandoff: 06/22/2017
 8.  Esaminare il codice istruzione per istruzione premendo F11 Per ulteriori informazioni sull'utilizzo di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per eseguire il debug, vedere la documentazione di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Distribuzione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementazione di un'estensione per l'elaborazione dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementazione di un'estensione di elaborazione dei dati](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Libreria di estensioni di Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

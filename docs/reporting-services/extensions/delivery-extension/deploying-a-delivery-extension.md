@@ -21,7 +21,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d072577828375a08c133bb1a68d93e652e5cf168
 ms.contentlocale: it-it
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/09/2017
     > [!IMPORTANT]  
     >  Se si tenta di sovrascrivere un assembly di estensioni per il recapito esistente, è necessario arrestare il servizio del server di report prima di copiare l'assembly aggiornato. Riavviare il servizio dopo il completamento della copia dell'assembly.  
   
-2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config Il file RSReportServer. config si trova in %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer. directory. È necessario immettere una voce nel file di configurazione per il file di assembly di estensioni per il recapito. È possibile aprire il file di configurazione con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un editor di testo semplice, ad esempio Blocco note.  
+2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config. Il file RSReportServer. config si trova in %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer. directory. È necessario immettere una voce nel file di configurazione per il file di assembly di estensioni per il recapito. È possibile aprire il file di configurazione con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un editor di testo semplice, ad esempio Blocco note.  
   
 3.  Individuare il **recapito** elemento nel file RSReportServer. config. È necessario immettere una voce per l'estensione per il recapito appena creata nel percorso seguente:  
   

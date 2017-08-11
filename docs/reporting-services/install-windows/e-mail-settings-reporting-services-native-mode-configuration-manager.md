@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
 ms.contentlocale: it-it
@@ -134,9 +134,9 @@ Per ovviare a questo problema, è possibile modificare le impostazioni di config
 ## <a name="configuration-options-for-remote-smtp-service"></a>Opzioni di configurazione per il servizio SMTP remoto
 La connessione tra il server di report e un server SMTP o un server d'inoltro viene determinata tramite le impostazioni di configurazione seguenti:
 
-- `<SendUsing>` specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.
-- `<SMTPServer>` specifica il server SMTP remoto o il server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
-- `<From>` imposta il valore che viene visualizzato nella riga **Da:** di un messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
+- `<SendUsing>`Specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.
+- `<SMTPServer>`Specifica il server SMTP remoto o server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
+- `<From>`Imposta il valore visualizzato nel **da:** riga di un messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.
 
 Tra gli altri valori utilizzati per il servizio SMTP remoto sono inclusi quelli indicati di seguito. Si noti che non è necessario specificare tali valori, a meno che non si desideri ignorare i valori predefiniti.
 
@@ -228,7 +228,7 @@ La connessione tra il server di report e un server SMTP locale o un server d'ino
   
 ## <a name="see-also"></a>Vedere anche  
 [Gestione configurazione Reporting Services (modalità nativa)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-[Modificare un File di configurazione di Reporting Services (RSReportServer. config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+[Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [File di configurazione Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   

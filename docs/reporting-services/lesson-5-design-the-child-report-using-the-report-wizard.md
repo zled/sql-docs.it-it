@@ -16,7 +16,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 285ade0eaf63fee0733fcfcb9e8f627e8c666a6b
 ms.contentlocale: it-it
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lezione 5: Progettare il report figlio tramite la Creazione guidata report
-Dopo aver creato una connessione dati e una tabella di dati per il report figlio, il passaggio successivo consiste nel progettare il report figlio utilizzando la Creazione guidata report in Progettazione report. Per altre informazioni su Progettazione report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+Dopo aver creato una connessione dati e una tabella di dati per il report figlio, il passaggio successivo consiste nel progettare il report figlio utilizzando la Creazione guidata report in Progettazione report. Per ulteriori informazioni su progettazione Report, vedere [progettare report con progettazione Report &#40; SSRS &#41; ](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>Per progettare il report figlio tramite la Creazione guidata report  
   

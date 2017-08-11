@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: it-it
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      Per ulteriori informazioni, vedere [Apertura di un report con elementi del report personalizzati in Progettazione report](#OpeningaReport) più avanti in questo argomento.  
   
- Per informazioni sull'identificazione dello spazio dei nomi RDL corrente per un server di report, per [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o per un report, vedere [Individuare la versione dello schema di definizione del report &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Per informazioni sull'identificazione di spazio dei nomi RDL corrente per un server di report, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o un report, vedere [individuare la versione dello Schema di definizione del Report &#40; SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Aggiornamento di report in un server di report  
  La prima volta che un report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene eseguito in un server di report aggiornato a un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , viene aggiornato automaticamente allo spazio dei nomi della definizione del report corrente supportato dal server di report. È possibile che il report fosse presente nel server di report prima dell'aggiornamento, fosse stato caricato con Gestione report o fosse stato pubblicato nel server di report da Progettazione report in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
 |Elementi del report personalizzati di terze parti|Aggiornamento non eseguito.<br /><br /> Elaborazione eseguita dal componente Elaborazione report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
 ###  <a name="OpeningaReport"></a> Apertura di un report con elementi del report personalizzati in Progettazione report  
- Quando si apre un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report con elementi del report personalizzati in Progettazione Report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], il report verrà aggiornato al nuovo schema di definizione di report. In base agli elementi del report personalizzati contenuti nel report, verrà effettuata una delle azioni seguenti:  
+ Se si apre un report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con elementi del report personalizzati in Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], questo report viene aggiornato al nuovo schema di definizione del report. In base agli elementi del report personalizzati contenuti nel report, verrà effettuata una delle azioni seguenti:  
   
 -   Vengono rilevati elementi del report personalizzati di terze parti. Se la versione di tali elementi installata nel computer di creazione del report non è compatibile con il nuovo schema RDL, nell'area di progettazione viene visualizzata una casella di testo con una lettera X rossa. È necessario contattare l'amministratore di sistema per installare nuove versioni degli elementi del report personalizzati di fornitori di terze parti compatibili con il nuovo schema RDL.  
   
@@ -147,10 +147,10 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Modifiche di rilievo in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
 [Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Funzionalità non più supportate in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
-[Elementi del Report personalizzati](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Aggiornare un database del Server di Report](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[Elementi dei report personalizzati](../../reporting-services/custom-report-items/custom-report-items.md)   
+[Aggiornare un database del server di report](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

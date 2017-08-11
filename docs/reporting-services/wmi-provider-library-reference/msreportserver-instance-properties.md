@@ -22,7 +22,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c41f22af9e492ed8bf1be8ba159ce84e8cfbc7db
 ms.contentlocale: it-it
@@ -36,8 +36,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Proprietà EditionID &#40;MSReportServer_Instance WMI&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Restituisce l'edizione del server di report.|  
-|[Proprietà EditionName &#40;MSReportServer_Instance WMI&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Restituisce il nome leggibile dell'edizione del server di report.|  
+|[Proprietà EditionID &#40; MSReportServer_Instance WMI &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Restituisce l'edizione del server di report.|  
+|[Proprietà EditionName &#40; MSReportServer_Instance WMI &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Restituisce il nome leggibile dell'edizione del server di report.|  
 |[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Questo oggetto supporta l'infrastruttura di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e non può essere utilizzato direttamente dal codice.|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Restituisce il nome di un'istanza del server di report in un computer specifico. Di sola lettura.|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Indica se il server di report è configurato per la modalità integrata SharePoint.|  

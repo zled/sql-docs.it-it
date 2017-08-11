@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
 ms.contentlocale: it-it
@@ -172,11 +172,11 @@ SSRS supporta e applica la protezione estesa che è stata abilitata nel sistema 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Connessione al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[Protezione estesa per una panoramica dell'autenticazione](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[Autenticazione integrata di Windows con protezione estesa](http://go.microsoft.com/fwlink/?LinkId=179922)   
+[Extended Protection for Authentication Overview](http://go.microsoft.com/fwlink/?LinkID=177943)   
+[Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](http://go.microsoft.com/fwlink/?LinkId=179922)   
 [Microsoft Security Advisory: Protezione estesa per l'autenticazione](http://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[Metodo SetExtendedProtectionSettings &#40; WMI MSReportServer_ConfigurationSetting &#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+[Metodo SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

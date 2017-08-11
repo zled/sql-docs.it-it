@@ -20,14 +20,14 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 15901a45f5342fa5c7d26a9b95230eabb67e20af
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 0ace8ba0e6fd98f62280be116e4b80a7931da6ae
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrazione di Reporting Services tramite SOAP - applicazione Web
@@ -92,7 +92,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di applicazioni mediante il servizio Web e .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrazione di Reporting Services nelle applicazioni](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Utilizzo dell'API SOAP in un'applicazione Windows](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
   
   

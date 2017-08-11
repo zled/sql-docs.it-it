@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 708144d726d97380f32d39ac88901e0f6d57ba0b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 064d5556dca130324f69dd49d14f3caa76c8eec8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Utilizzo della classe Notification per un'estensione per il recapito
   La classe <xref:Microsoft.ReportingServices.Interfaces.Notification> si trova nello spazio dei nomi <xref:Microsoft.ReportingServices.Interfaces> e rappresenta le informazioni sulla sottoscrizione utilizzate dalle estensioni per il recapito per recapitare i report. La classe <xref:Microsoft.ReportingServices.Interfaces.Notification> fornisce numerose proprietà che possono essere utilizzate per eseguire il rendering dei report per il recapito, determinare lo stato della notifica e impostare i dati degli utenti.  
   
- ![Processo di notifica di report](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Report notification process")  
+ ![Processo di notifica del report](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "processo di notifica del Report")  
 La notifica rappresenta l'oggetto centrale di qualsiasi tipo di recapito  
   
  Quando viene generato un evento associato a una sottoscrizione che utilizza l'estensione per il recapito personalizzata, viene creata una notifica contenente un oggetto <xref:Microsoft.ReportingServices.Interfaces.Report>. L'oggetto <xref:Microsoft.ReportingServices.Interfaces.Report> incapsula le funzionalità necessarie per eseguire il rendering di un determinato report in un formato di rendering supportato e contiene proprietà specifiche del report, ad esempio il nome del report e il suo URL nel server. Per ulteriori informazioni sul <xref:Microsoft.ReportingServices.Interfaces.Report> classe, vedere [utilizzando la classe di Report per l'estensione per il recapito](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md).  

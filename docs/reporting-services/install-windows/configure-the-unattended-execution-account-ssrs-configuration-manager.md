@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: it-it
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **RSConfig -e -u\<dominio/nomeutente > -p\<password >**  
   
- **rsconfig -e** supporta argomenti aggiuntivi. Per altre informazioni sulla sintassi ed esempi di comandi, vedere [Utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nella documentazione online di SQL Server.  
+ **rsconfig -e** supporta argomenti aggiuntivi. Per ulteriori informazioni sulla sintassi ed esempi di comandi, vedere [rsconfig utilità &#40; SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) nella documentazione Online di SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Modalità di archiviazione delle informazioni sull'account  
  Quando si imposta l'account, le impostazioni seguenti vengono specificate come valori crittografati nel file RSreportserver.config in un'istanza locale o remota del server di report:  

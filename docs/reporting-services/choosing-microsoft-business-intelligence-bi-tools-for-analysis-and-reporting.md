@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
 ms.contentlocale: it-it
@@ -27,7 +27,7 @@ La scelta dello strumento di business intelligence appropriato può risultare co
 
 Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'analisi dei dati e gli strumenti di Business Intelligence di Microsoft più appropriati per i carichi di lavoro. Per ulteriori informazioni su un prodotto, fare clic sul relativo collegamento nella tabella.  
   
- Per una breve panoramica di questi strumenti che permetta di definire quelli più appropriati, vedere la pagina sull' [introduzione agli strumenti di Microsoft Business Intelligence (BI)](http://msdn.microsoft.com/library/dn655131.aspx).  
+ Per una breve panoramica di questi strumenti che permetta di definire quelli più appropriati, vedere la pagina sull'[introduzione agli strumenti di Microsoft Business Intelligence (BI)](http://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Carichi di lavoro|Utente|||Strumenti di Business Intelligence|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -38,7 +38,7 @@ Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'ana
 |Eseguire analisi predittive self-service||||||[Componenti aggiuntivi di data mining per Excel](http://msdn.microsoft.com/library/dn282385.aspx) (supporto per Excel 2016)|  
 |Visualizzare ed esplorare i dati||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Mappe 3D](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Porre domande tramite query in linguaggio naturale|||||[DOMANDE E RISPOSTE](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Accedere ai report tramite i dispositivi mobili||||[HTML 5 (supporta la visualizzazione di file &lt;10 MB)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (supporta la visualizzazione di file &lt;1 GB)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [App di Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(uso di app di Power BI per dispositivi mobili)|  
+|Accedere ai report tramite i dispositivi mobili||||[HTML 5 (supporta la visualizzazione di file <10 MB)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (supporta la visualizzazione di file <1 GB)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [App di Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(uso di app di Power BI per dispositivi mobili)|  
 |Collaborare e condividere|||[Siti di SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Siti del team SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Business Intelligence aziendale**|Professionisti IT||||||  
 |Creare modelli aziendali multidimensionali e tabulari||||||[Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx)|  

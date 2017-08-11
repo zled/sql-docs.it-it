@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 caps.latest.revision: 35
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3c024efb9f8531ed9b87b0e2b7d7b22489a76dcf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: cf8ee5462bd75ab82ea4296a5b71136cb2eb9ee9
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Utilizzo di assembly personalizzati con nome sicuro
@@ -50,6 +50,6 @@ ms.lasthandoff: 06/22/2017
 >  Quando **AllowPartiallyTrustedCallersAttribute** è presente, il valore predefinito **FullTrustLinkDemand** controlli di sicurezza, rendendo possibile chiamare da qualsiasi altro assembly parzialmente attendibile di assembly. Tutti i controlli di sicurezza, inclusi gli attributi di sicurezza dichiarativi a livello di classe o di metodo, devono essere dichiarati in modo esplicito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Uso di assembly personalizzati con i report](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

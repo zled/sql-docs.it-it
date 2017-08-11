@@ -19,7 +19,7 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
 ms.contentlocale: it-it
@@ -39,7 +39,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
 
  Nell'elenco seguente sono incluse le condizioni necessarie per l'aggiornamento di un database del server di report:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione aggiorna una singola istanza di un server di report. Lo schema del database del server di report viene quindi aggiornato automaticamente dopo l'avvio del servizio e il server di report determina che la versione dello schema del database non corrisponde alla versione del server.  
+-   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiorna una singola istanza di un server di report. Lo schema del database del server di report viene quindi aggiornato automaticamente dopo l'avvio del servizio e il server di report determina che la versione dello schema del database non corrisponde alla versione del server.  
   
      All'avvio del servizio, il server di report verifica che la versione dello schema del database corrisponda alla versione del server. Se la versione dello schema del database è precedente, il database viene aggiornato automaticamente alla versione dello schema richiesta dal server di report. La funzionalità di aggiornamento automatico è particolarmente utile se è stato ripristinato o collegato un database del server di report meno recente. Nel file del log di traccia del server di report viene immesso un messaggio indicante che è stato eseguito l'aggiornamento della versione dello schema del database.  
   
@@ -61,7 +61,7 @@ Il database del server di report fornisce archiviazione per una o più istanze d
  Oltre al database del server di report, un server di report utilizza anche un database temporaneo. Il database temporaneo viene aggiornato automaticamente durante l'aggiornamento del database del server di report.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Autorizzazioni richieste per aggiornare un database del server di report  
- Se si sta aggiornando un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che include un database del server di report, potrebbe essere visualizzato un messaggio di errore se l'aggiornamento del database viene eseguito con autorizzazioni insufficienti. Per impostazione predefinita, nel programma di installazione viene utilizzato il token di sicurezza dell'utente che sta eseguendo il programma di installazione per connettersi all'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiornare lo schema. Se si hanno le autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** permissions on the database server that hosts the report server databases, the database upgrade will succeed. Allo stesso modo, se si esegue il programma di installazione dal prompt dei comandi e si specificano gli argomenti RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD per un account che ha l'autorizzazione **sysadmin** per modificare lo schema nel computer remoto, l'aggiornamento del database avrà esito positivo.  
+ Se si sta aggiornando un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che include un database del server di report, potrebbe essere visualizzato un messaggio di errore se l'aggiornamento del database viene eseguito con autorizzazioni insufficienti. Per impostazione predefinita, nel programma di installazione viene utilizzato il token di sicurezza dell'utente che sta eseguendo il programma di installazione per connettersi all'istanza remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiornare lo schema. Se si hanno le autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** sul server di database che ospita i database del server di report, l'aggiornamento del database avrà esito positivo. Allo stesso modo, se si esegue il programma di installazione dal prompt dei comandi e si specificano gli argomenti RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD per un account che ha l'autorizzazione **sysadmin** per modificare lo schema nel computer remoto, l'aggiornamento del database avrà esito positivo.  
   
  Se invece non si ha l'autorizzazione **sysadmin** per il database nel computer remoto, la connessione verrà rifiutata con l'errore seguente:  
   

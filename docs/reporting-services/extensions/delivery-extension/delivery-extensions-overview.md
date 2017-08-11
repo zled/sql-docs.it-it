@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>Cenni preliminari sulle estensioni per il recapito
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |Messaggio di posta elettronica dal server di report|Utilizza un server SMTP per inviare tramite posta elettronica i report a singoli utenti o gruppi.|  
 |Condivisione file server di report|Utilizzata per distribuire i report all'interno dell'organizzazione nelle condivisioni file di rete. Consente di copiare automaticamente un report in una condivisione file in base a una pianificazione definita.|  
   
- ![Architettura di Reporting Services recapito estensione](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Architettura di Reporting Services recapito estensione](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "architettura di estensione di recapito di Reporting Services")  
 Architettura delle estensioni per il recapito di Reporting Services  
   
  Le estensioni per il recapito sono abbinate alle sottoscrizioni. Al momento della creazione di una sottoscrizione, gli utenti hanno la possibilità di scegliere una delle estensioni per il recapito disponibili che determinano il metodo di recapito del report. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le sottoscrizioni si trovano nel database del server di report. Quando si verifica un evento, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene trovata la corrispondenza tra l'evento e le sottoscrizioni contenute nel database del server di report. Per ogni sottoscrizione collegata all'evento, il server di report crea una notifica. Per le sottoscrizioni guidate dai dati, viene creata una notifica per ogni destinatario. Dopo aver creato la notifica, il server di report richiama una particolare estensione per il recapito e passa i valori per le impostazioni dell'estensione specificate nella notifica. L'estensione per il recapito invia la notifica all'utente come specificato dall'estensione selezionata.  

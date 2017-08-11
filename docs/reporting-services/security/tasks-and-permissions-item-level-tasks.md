@@ -17,7 +17,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 067a0b9d4f33e20625fb796fa98f7b4ec6184f3e
 ms.contentlocale: it-it
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
   Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
->  Se si gestiscono queste attività a livello di programmazione, è necessario utilizzare metodi che supportano attività a livello di elemento. Per ulteriori informazioni, vedere <xref:ReportService2010.ReportingService2010.ListTasks%2A> e <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
+>  Se si gestiscono queste attività a livello di programmazione, è necessario utilizzare metodi che supportano attività a livello di elemento. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListTasks%2A> e <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
   
 ## <a name="permissions-in-item-level-tasks"></a>Autorizzazioni delle attività a livello di elemento  
  Nella tabella seguente vengono elencate le attività a livello di elemento e le relative autorizzazioni e gli elementi ai quali si applicano tali autorizzazioni. L'elenco delle autorizzazioni è puramente informativo e ha lo scopo di offrire una descrizione più precisa delle funzionalità disponibili tramite ogni attività.  

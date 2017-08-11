@@ -23,7 +23,7 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: it-it
@@ -127,9 +127,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  Per un esempio dettagliato, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-- [Eseguire un File di Script di Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [La distribuzione di script e attività amministrative](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Script con l'utilità rs.exe e il servizio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [Utilità di prompt dei comandi di Server di report &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [Eseguire un file script di Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Eseguire lo script con l'utilità rs.exe e il servizio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

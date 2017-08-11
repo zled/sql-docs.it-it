@@ -21,7 +21,7 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
 ms.contentlocale: it-it
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 
 Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in modalità nativa.
 
-- È necessario essere un membro del gruppo Administrators locale nel computer server di report. Se si distribuisce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o in Windows Server 2008, la configurazione aggiuntiva è obbligatoria per amministrare un server di report localmente. Per ulteriori informazioni, vedere [configurare un Server di Report in modalità nativa per l'amministrazione locale](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+- È necessario essere un membro del gruppo Administrators locale nel computer server di report. Se si distribuisce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o in Windows Server 2008, la configurazione aggiuntiva è obbligatoria per amministrare un server di report localmente. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 - Per delegare questa attività ad altri utenti, creare assegnazioni di ruolo che eseguono il mapping degli account utente ai ruoli Gestione contenuto e Amministratore sistema. Gli utenti che dispongono di queste autorizzazioni possono aggiungere utenti a un server di report.
 
@@ -102,7 +102,7 @@ Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[Creare e gestire le assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [Nuova assegnazione ruolo: Modifica pagina assegnazione di ruolo &#40; Gestione report &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
 [Pagina delle proprietà sicurezza, gli elementi di &#40; Gestione report &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)   

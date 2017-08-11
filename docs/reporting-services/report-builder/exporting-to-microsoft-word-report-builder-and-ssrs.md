@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
 ms.contentlocale: it-it
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Il tipo di contenuto dei file generati da questo renderer è **application/vnd.openxmlformats-officedocument.wordprocessingml.document** e l'estensione dei file è docx.  
   
- Per informazioni dettagliate su come esportare in Word, vedere [Esportazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Vedere [esportare report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) per ulteriori informazioni sull'esportazione in Word.  
   
  Dopo l'esportazione del report in un documento di Word, è possibile modificarne il contenuto e progettare report in formato documento, ad esempio etichette di indirizzi, ordini di acquisto o lettere tipo.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Generatore report in modalità senza connessione e anteprima di un report in Generatore report.  
   
--   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere [vs modalità locale. con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se il renderer di **Word 2003** è configurato per essere visibile, entrambe le opzioni di menu **Word** e **Word 2003** sono disponibili negli scenari seguenti:  
   
