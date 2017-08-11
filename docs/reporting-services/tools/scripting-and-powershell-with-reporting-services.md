@@ -19,26 +19,26 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2bb429f6b2f7ffb876887714a1eea64d97d76773
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Script e PowerShell con Reporting Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta un'ampia gamma di scenari di sviluppo e gestione tramite script, tra cui l'utilità della riga di comando rs.exe, i cmdlet PowerShell per server di report in modalità SharePoint, sfruttando il modello a oggetti [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da PowerShell per la modalità nativa e SharePoint.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]supporta un'ampia gamma di scenari di sviluppo e gestione tramite script, tra cui l'utilità della riga di comando rs.exe, i cmdlet di PowerShell per server di report in modalità SharePoint, sfruttando il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modello a oggetti di PowerShell per la modalità nativa e SharePoint.  
   
 -   Gli amministratori possono scrivere script in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per automatizzare le procedure di distribuzione e gestione dell'installazione di un server di report. Gli amministratori possono anche generare ed eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di creare, configurare e aggiornare un database del server di report. Gli amministratori possono inoltre utilizzare le caratteristiche script di registrazione e riproduzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per automatizzare le attività di manutenzione di routine.  
   
 -   Gli sviluppatori possono creare applicazioni personalizzate che includono script. È possibile eseguire uno script che effettua chiamate al servizio Web ReportServer. Nello script è possibile scrivere quasi tutte le operazioni che si possono scrivere in codice gestito.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET script as the script language that can be processed by the RS.exe utility, a script host that runs on the report server.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]supporta [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] script .NET come linguaggio di script che può essere elaborato dall'utilità RS.exe, un host di script che viene eseguito nel server di report.  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Cmdlet ed esempi di PowerShell in modalità SharePoint di Reporting Services  
  ![Contenuto correlato di PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenuto correlato di PowerShell")  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include i cmdlet [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per l'amministrazione del server di report.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]La modalità SharePoint include [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlet per l'amministrazione di server di report.  
   
 -   [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) Sono inclusi gli esempi seguenti:  
   
@@ -69,9 +69,9 @@ ms.lasthandoff: 06/22/2017
 -   Per altri esempi di script, applicazioni ed estensioni, vedere gli [esempi di prodotti di Reporting Services di SQL Server](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Eseguire lo script con l'utilità rs.exe e il servizio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [Utilità RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
+ [La distribuzione di script e attività amministrative](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+ [Script con l'utilità rs.exe e il servizio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   
 

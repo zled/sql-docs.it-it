@@ -22,17 +22,17 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
   Le proprietà di esecuzione dei report consentono di controllarne le modalità di esecuzione e devono essere impostate singolarmente per ogni report.  
   
- Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. Per altre informazioni, vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). È inoltre possibile impostare le proprietà tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. Per ulteriori informazioni, vedere [pagina delle proprietà di opzioni di elaborazione &#40; Gestione report &#41; ](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). È inoltre possibile impostare le proprietà utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; vedere [pagina delle proprietà di opzioni di elaborazione &#40; Gestione report &#41; ](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Modalità di esecuzione dei report  
  I report possono essere eseguiti su richiesta o come snapshot. Nella sezione seguente vengono descritte le due diverse modalità.  
@@ -58,13 +58,13 @@ ms.lasthandoff: 06/22/2017
   
 -   Le sottoscrizioni esistenti vengono configurate in modo da utilizzare valori di parametri diversi da quelli predefiniti specificati per lo snapshot.  
   
- Quando si verifica questa condizione, il server di report disabilita la sottoscrizione alla successiva pianificazione di esecuzione. Per riattivare la sottoscrizione, aprire e quindi salvare la sottoscrizione. Quando si apre la sottoscrizione, il server di report aggiorna i valori dei parametri della sottoscrizione in modo che corrispondano a quelli specificati per lo snapshot. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ Quando si verifica questa condizione, il server di report disabilita la sottoscrizione alla successiva pianificazione di esecuzione. Per riattivare la sottoscrizione, aprire e quindi salvare la sottoscrizione. Quando si apre la sottoscrizione, il server di report aggiorna i valori dei parametri della sottoscrizione in modo che corrispondano a quelli specificati per lo snapshot. Per ulteriori informazioni sulle sottoscrizioni, vedere [sottoscrizioni e recapito &#40; Reporting Services &#41; ](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services Concepts &#40;SSRS&#41; (Concetti di Reporting Services (SSRS))](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Procedura: Aggiunta di uno snapshot alla cronologia del report.](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Reporting Services concetti &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Procedura: aggiunta di uno Snapshot alla cronologia del Report](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

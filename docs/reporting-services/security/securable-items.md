@@ -20,15 +20,15 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="securable-items"></a>Elementi a sicurezza diretta
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la sicurezza basata sui ruoli per controllare l'accesso agli elementi archiviati in un server di report. Quando si concede a un utente l'accesso a un server di report, in genere si creano due assegnazioni di ruolo:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]utilizza la sicurezza basata sui ruoli per controllare l'accesso agli elementi archiviati in un server di report. Quando si concede a un utente l'accesso a un server di report, in genere si creano due assegnazioni di ruolo:  
   
 -   Al livello di sito  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 08/03/2017
 |Set di dati condivisi|È possibile proteggere i set di dati condivisi per controllare il tipo di azioni eseguibili da un utente, ad esempio la visualizzazione o la modifica della definizione o la modifica delle proprietà di un set di dati condiviso specifico.<br /><br /> Per ulteriori informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Creare, eliminare o modificare un ruolo &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Concessione dell'accesso utente a un Server di Report &#40; Gestione report &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

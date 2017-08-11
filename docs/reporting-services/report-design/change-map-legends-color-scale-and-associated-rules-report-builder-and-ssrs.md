@@ -38,11 +38,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/03/2017
   
      Per altre informazioni sulle opzioni di distribuzione, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-6.  In **Numero di intervalli secondari**digitare il numero di intervalli secondari da usare. Se il tipo di distribuzione è **Ottimale**, il numero di intervalli secondari viene calcolato automaticamente.  
+6.  In **Numero di intervalli secondari** digitare il numero di intervalli secondari da usare. Se il tipo di distribuzione è **Ottimale**, il numero di intervalli secondari viene calcolato automaticamente.  
   
 7.  In **Inizio intervallo**digitare un valore di intervallo minimo. Tutti i valori inferiori a questo numero corrispondono al minimo dell'intervallo.  
   
@@ -290,10 +290,10 @@ ms.lasthandoff: 08/03/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare una mappa o livello mappa &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Personalizzare i dati e la visualizzazione di una mappa o di livello mappa &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Risolvere i problemi di report: Eseguire il mapping di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Creazione guidata mappa e creazione guidata livello mappa &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

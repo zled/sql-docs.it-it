@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)
@@ -48,7 +48,7 @@ In questo istogramma, l'intervallo di etichette orizzontali è impostato su Auto
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Nella scheda **Opzioni asse** della finestra di dialogo **Proprietà asse orizzontale** impostare **Intervallo** su **1** per visualizzare tutte le etichette dei gruppi di categorie. Per visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**. 
+2.  Nel **proprietà asse orizzontale** la finestra di dialogo > **opzioni asse** scheda, impostare **intervallo** a **1** per visualizzare ogni etichetta di gruppo categoria. Per visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +85,17 @@ Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
   
 1.  Fare clic con il pulsante destro del mouse sull'asse da modificare, quindi scegliere **Proprietà asse**. 
   
-2.  Nella scheda **Opzioni asse** della finestra di dialogo **Proprietà asse orizzontale** impostare **Intervallo** su **Automatico**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
+2.  Nel **proprietà asse orizzontale** la finestra di dialogo > **opzioni asse** scheda, impostare **intervallo** a **Auto**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formattazione dei punti dati in un grafico (Generatore Report e SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Ordinare i dati in un'area dati (Generatore Report e SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Traccia di dati su un asse secondario &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Finestra di dialogo Proprietà asse, opzioni asse &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Specificare una scala logaritmica &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Traccia di dati su un asse secondario &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

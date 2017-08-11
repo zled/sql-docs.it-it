@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="what-comes-with-a-report-part"></a>Elementi forniti con una parte di report  
  Quando una parte di report viene aggiunta al report in uso, vengono aggiunti anche tutti gli elementi necessari affinché funzioni. Ad esempio, un qualsiasi oggetto che consente la visualizzazione dei dati dipende da un set di dati, ovvero una query e una connessione a un'origine dati. È possibile che disponga anche di più parametri. Tutti gli elementi dai quali dipende sono le relative *dipendenze*e tutti questi elementi o i relativi puntatori sono inclusi nella parte di report quando quest'ultima viene aggiunta al report in uso. I set di dati e i parametri sono elencati nel riquadro dei dati del report del report.  
   
- Il set di dati per la parte di report può essere incorporato nella parte di report o è possibile che sia un set di dati separato, condiviso a cui punta la parte di report. Se è incorporato nella parte di report, è possibile modificarlo. Se è un set di dati condiviso, è un oggetto separato per il quale sono necessarie autorizzazioni. Per altre informazioni sui set di dati condivisi e incorporati, vedere [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ Il set di dati per la parte di report può essere incorporato nella parte di report o è possibile che sia un set di dati separato, condiviso a cui punta la parte di report. Se è incorporato nella parte di report, è possibile modificarlo. Se è un set di dati condiviso, è un oggetto separato per il quale sono necessarie autorizzazioni. Per ulteriori informazioni sulle condivisi e incorporati, vedere [i set di dati &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Risoluzione dei conflitti dei nomi  
  Quando si aggiunge una parte di report, è possibile risolvere qualsiasi conflitto di nome mediante Generatore report. Ad esempio, se si dispone già di un elemento Chart1 nel report e si aggiunge una parte di report denominata Chart1, mediante Generatore report la nuova parte di report viene rinominata automaticamente Chart2. Se si dispone già di un elemento Dataset1 nel report e si aggiunge una parte di report che fa riferimento a un set di dati diverso denominato anch'esso Dataset1, Generatore report consente di rinominare il nuovo set di dati Dataset2 e di aggiornare i riferimenti.  

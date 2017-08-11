@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Aggiungere filtri per set di dati, aree dati e gruppi
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>Valore  
  L'espressione Valore specifica la parte finale dell'equazione di filtro. Il componente Elaborazione report converte l'espressione valutata nel tipo di dati specificato dall'utente, quindi valuta l'intera equazione di filtro per determinare se i dati specificati in Espressione passano attraverso il filtro.  
   
- Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati vengono archiviati come un **money** del tipo di dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati, l'estensione per l'elaborazione dati restituisce il valore del campo come un <xref:System.Decimal> tipo di dati. Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00`=CDec(50000.00)` nella valuta del report, convertire il valore in Decimal mediante l'espressione** .  
+ Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati archiviati come tipo di dati **money** in un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'estensione per l'elaborazione dati restituisce il valore del campo come tipo di dati <xref:System.Decimal> . Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00`=CDec(50000.00)` nella valuta del report, convertire il valore in Decimal mediante l'espressione** .  
   
  Questo valore può inoltre includere un riferimento di parametro per consentire la selezione interattiva di un valore in base al quale applicare un filtro.  
   
  Torna all'inizio  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Utilizzo delle espressioni nei report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

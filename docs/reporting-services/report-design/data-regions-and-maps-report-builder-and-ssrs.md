@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Aree dati e mappe (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>Tabella  
- Una tabella è un'area dati in cui i dati vengono presentati riga per riga. Le colonne della tabella sono statiche, ovvero il numero di colonne viene definito dall'utente durante la progettazione del report. Le righe della tabella sono dinamiche e si espandono verso il basso per includere tutti i dati. È possibile aggiungere gruppi alle tabelle, in modo da organizzare i dati in base ai campi selezionati o tramite espressioni. Per informazioni sull'aggiunta di una tabella a un report, vedere [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Una tabella è un'area dati in cui i dati vengono presentati riga per riga. Le colonne della tabella sono statiche, ovvero il numero di colonne viene definito dall'utente durante la progettazione del report. Le righe della tabella sono dinamiche e si espandono verso il basso per includere tutti i dati. È possibile aggiungere gruppi alle tabelle, in modo da organizzare i dati in base ai campi selezionati o tramite espressioni. Per informazioni sull'aggiunta di una tabella a un report, vedere [tabelle &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Matrice  
  Una matrice è nota anche come area dati a campi incrociati. Un'area dati della matrice contiene sia colonne che righe dinamiche che si espandono in modo da includere tutti i dati. Una matrice può includere colonne e righe dinamiche, nonché colonne e righe statiche. Le colonne e le righe possono contenere altre colonne o righe e possono essere usate per raggruppare i dati. Altre informazioni sull' [aggiunta di una matrice a un report](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Pagina Layout e Rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

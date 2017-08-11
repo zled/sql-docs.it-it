@@ -17,11 +17,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 349180bb3cfe2b03bee076dfc2dbb90265118fa4
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rename-a-report-server-computer"></a>Rinominare un computer del server di report
@@ -52,9 +52,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
+ [Reporting Services di Configuration Manager &#40; Modalità nativa &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Avviare e arrestare il servizio Server di Report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+ [Utilità RSConfig &#40; SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
   

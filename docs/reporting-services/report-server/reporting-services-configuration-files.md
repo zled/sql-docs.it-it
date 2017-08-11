@@ -20,17 +20,17 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e11b155e7a0f800ea4d62859c9c2c95fa10550e8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-configuration-files"></a>File di configurazione di Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni sui componenti vengono archiviate nel Registro di sistema e in file di configurazione che vengono copiati nel file system durante l'installazione. I file di configurazione contengono una combinazione di valori solo per uso interno e valori definiti dall'utente. I valori definiti dall'utente vengono specificati durante l'installazione, tramite gli strumenti di configurazione e le utilità della riga di comando e mediante la modifica manuale dei file di configurazione.  
   
- La modifica dei file di configurazione è necessaria solo se si aggiungono o si configurano impostazioni avanzate. Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente. Per altre informazioni sulla modifica di un file di configurazione o sulla modalità in cui il server di report legge le impostazioni di configurazione nuove e aggiornate, vedere [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;).  
+ La modifica dei file di configurazione è necessaria solo se si aggiungono o si configurano impostazioni avanzate. Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente. Per ulteriori informazioni su come modificare un file di configurazione o per altre informazioni su come il server di report legge le impostazioni di configurazione nuovi e aggiornati, vedere [modificare un File di configurazione di Reporting Services &#40; RSReportServer. config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
 >  Nelle versioni precedenti Gestione report dispone di un file configurazione denominato RSWebApplication.config. Tale file è diventato obsoleto. Se si esegue l'aggiornamento da un'installazione precedente, il file non verrà eliminato ma il server di report non leggerà alcuna impostazione presente nel file. Se il file esiste nel computer, eliminarlo. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive tutte le impostazioni di configurazione di Gestione report vengono archiviate e lette dal file RSReportServer.config. Per un elenco delle impostazioni eliminate o spostate, vedere [Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
@@ -80,7 +80,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ## <a name="see-also"></a>Vedere anche  
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Estensioni di Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
- [utilità rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
+ [Utilità RSConfig &#40; SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+ [Avviare e arrestare il servizio Server di Report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

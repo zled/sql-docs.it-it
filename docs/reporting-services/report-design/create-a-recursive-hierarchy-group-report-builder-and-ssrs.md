@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
@@ -61,19 +61,19 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Le proprietà di riempimento tutti richiedono una stringa nel formato *nnyy*, dove  *nn*  è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza la funzione **Level** per aumentare le dimensioni del riempimento in base al livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sulla funzione **Level** , vedere [Livello](../../reporting-services/report-design/report-builder-functions-level-function.md).  
+     Per tutte le proprietà relative a Riempimento è necessario usare una stringa con il formato *nnyy*, dove *nn* è un numero e *yy* è l'unità di misura. L'espressione di esempio consente di compilare una stringa che utilizza la funzione **Level** per aumentare le dimensioni del riempimento in base al livello di ricorsione. A una riga di livello 1, ad esempio, verrà applicato un riempimento di (2 + (1\*10))=12pt e a una riga di livello 3 verrà applicato un riempimento di (2 + (3\*10))=32pt. Per informazioni sulla funzione **Level** , vedere [Livello](../../reporting-services/report-design/report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Eseguire il report. Nel report viene visualizzata una vista gerarchica dei dati raggruppati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Creazione di gruppi di gerarchie ricorsive &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Riferimento a funzioni di aggregazione &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

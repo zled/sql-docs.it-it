@@ -10,14 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 9
+f1_keywords:
+- sql13.dts.designer.odatasource.connectionmanager.f1
+- sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22374d52835c37ecf45fef20e15d563dad8e5917
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
@@ -62,6 +65,24 @@ ms.lasthandoff: 08/03/2017
 |UserName|Nome utente da utilizzare per l'autenticazione di base.|  
 |Password|Password da utilizzare per l'autenticazione di base.|  
 |ConnectionString|Riflette altre proprietà della gestione connessione.|  
+  
+## <a name="odata-connection-manager-editor"></a>Editor gestione connessione OData
+  Utilizzare la finestra di dialogo **Editor gestione connessione OData** per aggiungere una connessione o modificare una connessione esistente a un'origine OData.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome gestione connessione**  
+ Nome della gestione connessione.  
+  
+ **Percorso documento di servizio**  
+ URL del servizio OData. Ad esempio, http://services.odata.org/V3/Northwind/Northwind.svc/.  
+  
+ **Autenticazione**  
+ Selezionare **Autenticazione di Windows** oppure **Usa il nome utente e la password seguenti** per l' **Autenticazione di base**. Se si seleziona la seconda opzione immettere il **nome utente** e la **password**. 
+ 
+ Esistono tre ulteriori opzioni. Selezionare **Microsoft Dynamics AX Online** per Dynamics AX Online, selezionare **Microsoft Dynamics CRM Online** per Dynamics CRM Online e selezionare **Microsoft Online Services** per Microsoft Online Services. Se si seleziona una di queste tre opzioni, immettere **nome utente** e **password**.
+  
+ **Test connessione**  
+ Fare clic su questo pulsante per testare la connessione all'origine OData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor gestione connessione OData](../../integration-services/connection-manager/odata-connection-manager-editor.md)  

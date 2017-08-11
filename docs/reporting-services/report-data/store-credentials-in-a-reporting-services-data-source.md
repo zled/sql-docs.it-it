@@ -21,14 +21,14 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
+# <a name="store-credentials-in-a-reporting-services-data-source"></a>Archiviare le credenziali in un'origine dati di Reporting Services
   È possibile configurare le credenziali archiviate usate da un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per accedere ai dati esterni di un report. Le credenziali archiviate vengono usate se il report viene eseguito in modo automatico, ad esempio una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che pubblica un report come messaggio di posta elettronica. Il server di report recupera e usa le credenziali quando viene pianificata o attivata l'elaborazione del report. Questo argomento illustra la configurazione delle credenziali archiviate per i server di report sia in modalità nativa che in modalità SharePoint.  
   
 ||  
@@ -110,13 +110,13 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurare le credenziali archiviate per un'origine dati condivisa (modalità nativa)  
   
-1.  In Gestione report in modalità nativa passare all'origine dati condivisa. ![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "icona di origine dati condivisa")  
+1.  In Gestione report in modalità nativa passare all'origine dati condivisa. ![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa")  
   
 2.  Scegliere il menu di scelta rapida ![menu di scelta rapida in Gestione report per gli elementi ssrs](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "menu di scelta rapida in Gestione report per gli elementi ssrs") e quindi fare clic su **Gestisci**.  
   
 3.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-4.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
+4.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)]consiglia di non specificare credenziali nella stringa di connessione.  
   
      Nell'esempio riportato di seguito viene illustrata una stringa di connessione utilizzata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
+5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)]consiglia di non specificare credenziali nella stringa di connessione.  
   
      Nell'esempio riportato di seguito viene illustrata una stringa di connessione utilizzata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
      ![Icona freccia usata con Back collegamento Torna all'inizio](../../analysis-services/instances/media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [dei requisiti di protezione per le credenziali archiviate](#bkmk_top)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Pagina Nuova origine dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [Specificare le credenziali e informazioni di connessione per origini dati del Report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Configurare le proprietà di origine dati per un Report &#40; Gestione report &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [Creare, eliminare o modificare un'origine dati condivisa &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Pagina delle proprietà origini dati &#40; Gestione report &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Nuova pagina di origine dati &#40; Gestione report &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
 

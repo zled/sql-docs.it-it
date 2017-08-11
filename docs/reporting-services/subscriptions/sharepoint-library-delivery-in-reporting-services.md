@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
@@ -90,9 +90,9 @@ ms.lasthandoff: 06/22/2017
  Se si utilizza la funzionalità di copia automatica per copiare automaticamente l'ultima versione di un file in più percorsi, il file verrà copiato se l'opzione **Sovrascrivi** è abilitata. Se si utilizza **Incremento automatico** o **None**, il recapito avrà esito negativo e si verificherà l'errore **rsDeliveryError** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Specificare le credenziali e informazioni di connessione per origini dati del Report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 

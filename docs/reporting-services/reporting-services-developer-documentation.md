@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3704373a08b29a8f36ce843db5f67a860a04a47b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentazione per sviluppatori di Reporting Services
@@ -43,25 +43,25 @@ ms.lasthandoff: 06/22/2017
  [Servizio Web ReportServer](../reporting-services/report-server-web-service/report-server-web-service.md)  
  Il servizio Web ReportServer consente di accedere alle funzionalità complete del server di report. Il servizio Web utilizza SOAP tramite HTTP e funge da interfaccia di comunicazione tra i programmi client e il server di report. Il servizio Web e i relativi metodi espongono le funzionalità del server di report e consentono di creare strumenti personalizzati per qualsiasi parte del ciclo di vita del report, dalla gestione all'esecuzione.  
   
- [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
+ [Accesso con URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta un set completo di richieste basate su URL che è possibile utilizzare come punto di accesso semplice e rapido per la navigazione e la visualizzazione dei report. È possibile utilizzare questa tecnologia insieme al servizio Web ReportServer per integrare una soluzione completa di creazione di report nelle applicazioni aziendali personalizzate. L'accesso con URL è particolarmente utile in caso di integrazione dei report come parte di un portale Web o in caso di visualizzazione dei report da un browser.  
   
  [Estensioni di Reporting Services](../reporting-services/extensions/reporting-services-extensions.md)  
  L'architettura modulare di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è progettata per offrire estendibilità. È disponibile un'API in codice gestito che consente di sviluppare, installare e gestire in modo semplice le estensioni usate da numerosi componenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. È possibile creare assembly utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e aggiungere nuove [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funzionalità di rendering, sicurezza, recapito e l'elaborazione dati per soddisfare le esigenze aziendali in continua evoluzione.  
   
- [Elementi del Report personalizzati](../reporting-services/custom-report-items/custom-report-items.md)  
+ [Elementi dei report personalizzati](../reporting-services/custom-report-items/custom-report-items.md)  
  Viene descritto come creare elementi dei report personalizzati per aggiungere funzionalità a RDL o per estendere le funzionalità dei controlli esistenti.  
   
- [Utilizzo di assembly personalizzati con i report](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Uso di assembly personalizzati con i report](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
  Viene descritto come utilizzare assembly personalizzati con i report includendo riferimenti al codice nella definizione del report.  
   
- [Accedere al Provider WMI di Reporting Services](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
+ [Accedere al provider WMI per Reporting Services](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
  Viene descritto come utilizzare il provider WMI di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire le distribuzioni del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services &#40; SSRS &#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Report Definition Language &#40; SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [Riferimento tecnico &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
  [Proteggere Development &#40; Reporting Services &#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

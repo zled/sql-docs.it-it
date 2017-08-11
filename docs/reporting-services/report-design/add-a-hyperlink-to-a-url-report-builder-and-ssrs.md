@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
@@ -93,8 +93,8 @@ Provare ad aggiungere collegamenti ipertestuali con i dati di esempio forniti in
 7.  Per verificare il collegamento,fare clic **Esegui** per visualizzare il report in anteprima, quindi fare clic sull'elemento di report su cui è stato impostato il collegamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Creare una mappa documento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Ordinamento interattivo, mappe documento e i collegamenti &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Creare una mappa documento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
 

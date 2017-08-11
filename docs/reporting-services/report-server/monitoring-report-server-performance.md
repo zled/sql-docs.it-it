@@ -23,11 +23,11 @@ caps.latest.revision: 64
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e9aed18a938de82189349d9e3eaa4dcb8e720b5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
   
   

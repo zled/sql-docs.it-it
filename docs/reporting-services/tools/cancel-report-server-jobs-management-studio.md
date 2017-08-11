@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Annulla processi server di report (Management Studio)
@@ -60,8 +60,8 @@ ms.lasthandoff: 08/03/2017
  Consente di annullare un singolo processo o più processi. I processi vengono annullati immediatamente e non possono essere ripresi. Se si annulla erroneamente un processo, è necessario richiedere di nuovo il report o la sottoscrizione per avviare un nuovo processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

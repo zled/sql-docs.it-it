@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
@@ -180,7 +180,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Quando si esegue il report, la scala dei colori non viene visualizzata.  
  La scala dei colori visualizza informazioni all'utente quando un livello mappa specifica le regole colore per poligoni, linee o punti per tutto il livello o per gli elementi incorporati della mappa. Se nessun elemento della mappa specifica una regola colore o se le regole colore forniscono un'indicazione tramite una legenda anziché la mappa colori, quest'ultima non viene mostrata nel report visualizzabile.  
   
- Per visualizzare la scala dei colori, specificare regole colore per un livello o un elemento incorporato della mappa. Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Per visualizzare la scala dei colori, specificare regole colore per un livello o un elemento incorporato della mappa. Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Tile"></a> Problemi relativi alle sezioni  
  Usare questa sezione per risolvere i problemi relativi alle opzioni dello sfondo a sezioni.  
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
  Per specificare i dati correlati ai dati spaziali che non fanno parte di un set di dati del report, è necessario usare il simbolo # seguito da un'etichetta che specifica il nome dei dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi a Generatore report](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Risolvere i problemi relativi a Generatore Report](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

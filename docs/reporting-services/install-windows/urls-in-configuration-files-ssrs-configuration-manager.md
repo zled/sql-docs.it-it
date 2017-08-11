@@ -16,11 +16,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c3add6da899bdf6d62134d3df15db35aa5b1b569
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL nei file di configurazione (Gestione configurazione SSRS)
@@ -32,9 +32,9 @@ ms.lasthandoff: 06/22/2017
 #### <a name="urls-for-application-access"></a>URL per l'accesso alle applicazioni  
  Gli URL vengono utilizzati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per configurare gli URL, è necessario utilizzare lo strumento di configurazione di Reporting Services. Lo strumento crea le prenotazioni URL per ogni applicazione in HTTP.SYS e aggiunge voci per gli URL nella sezione **URLReservations** di RSReportServer.config.  
   
--   Per visualizzare le descrizioni di ogni elemento della sezione **URLReservations**, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Per visualizzare le descrizioni di ogni elemento della sezione **URLReservations** , vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Per altre informazioni sulla sintassi dell'elemento **UrlString** in particolare, vedere [Sintassi delle prenotazioni URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+-   Per ulteriori informazioni sulla sintassi dei soli **UrlString** elemento, vedere [sintassi delle prenotazioni URL &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 -   Per indicazioni su come configurare gli URL per l'accesso alle applicazioni, vedere [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
@@ -63,6 +63,6 @@ ms.lasthandoff: 06/22/2017
 |**ReportServerExternalUrl**|Facoltativa. Questo elemento non è incluso nel file RSReportServer.config a meno che non lo si aggiunga manualmente.<br /><br /> Impostare questo elemento solo se si utilizzano le web part di SharePoint 2.0 e si desidera che gli utenti siano in grado di recuperare un report e aprirlo in una nuova finestra del browser.<br /><br /> Aggiungere \< **ReportServerExternalUrl**> di sotto di \< **ReportServerUrl**> elemento, quindi impostarlo su un server di report completo nome che viene risolto a un'istanza di server di report quando vi si accede in una finestra distinta del browser. Non eliminare \< **ReportServerUrl**>.<br /><br /> Nell'esempio seguente viene illustrata la sintassi:<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|Questo valore viene utilizzato dalle web part di SharePoint 2.0.<br /><br /> Nelle versioni precedenti è consigliabile impostare questo valore per distribuire Generatore report in un server di report che si interfaccia a Internet. Si tratta di un scenario di distribuzione non testato. Se questa impostazione è stata utilizzata in passato per supportare l'accesso a Generatore report tramite Internet, è consigliabile valutare una strategia alternativa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [Configurare gli URL di Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurare un URL &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
 

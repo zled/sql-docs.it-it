@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 8.  In **Opzioni sovrascrittura**specificare un'opzione che determina se sovrascrivere i file durante i recapiti successivi. Se si desidera mantenere i file recapitati in precedenza, selezionare l'opzione per creare un file con nome univoco. **** Per creare il nome di file univoco, ai nomi dei nuovi file viene automaticamente aggiunto un numero.  
   
-9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per ulteriori informazioni sulle pianificazioni e l'elaborazione dati, vedere [impostare opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. La sezione dei parametri non è visibile in questa pagina se il report selezionato non contiene parametri. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/22/2017
   
 10. In **Nome utente** e **Password**immettere le credenziali di un account dotato di autorizzazioni di scrittura per la cartella condivisa.  
   
-11. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per ulteriori informazioni sulle pianificazioni e l'elaborazione dati, vedere [impostare opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 12. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/22/2017
   
      Il formato di rendering e il browser determinano se il report verrà incorporato o allegato. Se il browser supporta HTML 4.0 e MHTML e si sceglie il formato di rendering archivio Web, il report verrà incorporato nel messaggio. Con tutti gli altri formati di rendering (CSV, PDF e così via), il report verrà recapitato come allegato. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non esegue la verifica delle dimensioni dell'allegato né di quelle del messaggio prima dell'invio del report. Se l'allegato o il messaggio supera il limite massimo consentito dal server di posta elettronica, il report non verrà recapitato. Se il report è di grandi dimensioni, è consigliabile selezionare una delle altre opzioni di recapito, ad esempio la notifica o l'invio dell'URL.  
   
-9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per altre informazioni sulle pianificazione e l'elaborazione dei dati, vedere [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. In **Evento di recapito**specificare una pianificazione o un evento che determina l'esecuzione della sottoscrizione. È possibile creare una pianificazione personalizzata, selezionare una pianificazione condivisa, se disponibile, oppure eseguire la sottoscrizione ogni volta che vengono aggiornati i dati per un report eseguito con i dati di uno snapshot. Per ulteriori informazioni sulle pianificazioni e l'elaborazione dati, vedere [impostare opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Se si sta creando una sottoscrizione per un report con parametri, specificare in **Parametri**i valori da utilizzare con il report durante l'elaborazione della sottoscrizione. Per altre informazioni sui parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 06/22/2017
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Recapito tramite condivisione file in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Recapito tramite la raccolta di SharePoint in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
+ [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
  [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

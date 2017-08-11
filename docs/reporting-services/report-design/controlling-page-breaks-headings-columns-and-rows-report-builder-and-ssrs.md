@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67507b8373f0d7c08bdf9303593d30ef0cb7c027
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report e SSRS)
@@ -35,9 +35,9 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Riquadro di raggruppamento &#40;Generatore report&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)   
- [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Controllo della visualizzazione dell'area dati Tablix in una pagina del Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Riquadro di raggruppamento &#40; Generatore report &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)   
+ [Visualizzazione di intestazioni e piè di pagina con un gruppo di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

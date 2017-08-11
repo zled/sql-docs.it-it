@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4e010bccf1cee56d0f572c899f81e54f122f050e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creare e modificare origini dati incorporate
@@ -40,13 +40,13 @@ ms.lasthandoff: 06/22/2017
   
     2.  Specificare una stringa di connessione utilizzando una delle alternative seguenti:  
   
-        -   Digitare la stringa di connessione direttamente nella casella di testo **Stringa di connessione** . Per un elenco di stringhe di connessione di esempio, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   Digitare la stringa di connessione direttamente nella casella di testo **Stringa di connessione** . Per un elenco di stringhe di connessione di esempio, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [connessioni dati, origini dati e le stringhe di connessione &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Fare clic sul pulsante relativo all'espressione (**fx)**) per creare un'espressione che restituisca una stringa di connessione. Nella finestra di dialogo **Espressione** digitare l'espressione nel riquadro relativo. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Fare clic sul pulsante relativo all'espressione (**fx)** ) per creare un'espressione che restituisca una stringa di connessione. Nella finestra di dialogo **Espressione** digitare l'espressione nel riquadro relativo. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   Fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà connessione** per il tipo di origine dati scelto nel passaggio 2.  
   
-             Nei campi della finestra di dialogo **Proprietà connessione** inserire le informazioni appropriate per il tipo di origine dati. Le proprietà della connessione includono il tipo e il nome dell'origine dati e le credenziali da utilizzare. Dopo avere specificato i valori in questa finestra di dialogo, fare clic su **Test connessione** per verificare che l'origine dati sia disponibile e che le credenziali specificate siano corrette. Per altre informazioni sui tipi di origini dati specifici, vedere [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+             Nei campi della finestra di dialogo **Proprietà connessione** inserire le informazioni appropriate per il tipo di origine dati. Le proprietà della connessione includono il tipo e il nome dell'origine dati e le credenziali da utilizzare. Dopo avere specificato i valori in questa finestra di dialogo, fare clic su **Test connessione** per verificare che l'origine dati sia disponibile e che le credenziali specificate siano corrette. Per ulteriori informazioni sui tipi di origini dati specifiche, vedere gli argomenti in [aggiungere dati da origini dati esterne &#40; SSRS &#41; ](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
     3.  Fare clic su **Credenziali**.  
   

@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report nel portale Web (Generatore report e SSRS)
-  Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;Modalità nativa&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
+  Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
   
  Le autorizzazioni che l'amministratore di sistema ha impostato sul server di report determinano gli elementi che vengono visualizzati quando si utilizza Gestione report. Le autorizzazioni vengono concesse tramite un'assegnazione di ruolo. Per individuare e visualizzare report, è necessario disporre di un'assegnazione di ruolo che includa l'attività Visualizzazione di report. Per individuare un report in un server di report, cercarlo in base al nome o alla descrizione oppure esplorare le cartelle del server di report. È possibile cercare o individuare solo report pubblicati o caricati nel server di report. Per altre informazioni su come eseguire la ricerca di un report, vedere [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navigazione della gerarchia delle cartelle in Gestione report  
  Per individuare i report che si desidera eseguire, è possibile utilizzare la Home page, visualizzata automaticamente quando si avvia Gestione report e quando si apre una qualsiasi cartella nella gerarchia delle cartelle. Nella Home page vengono visualizzati solo gli elementi per i quali si dispone delle autorizzazioni per la visualizzazione. Il percorso delle cartelle viene invece indicato come sequenza di collegamenti nella parte superiore della Home page. I nomi delle cartelle sono elencati in sequenza a partire dalla cartella radice (Home). Quando si apre un'altra cartella, il nome di tale cartella viene aggiunto al percorso indicato nella parte superiore della pagina. **(1)** nell'immagine illustrata di seguito. Se si apre un report, anche il nome del report viene aggiunto al percorso della cartella.  
   
- ![Barra multifunzione di gestione report e di navigazione](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![Barra multifunzione di gestione report e navigazione](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "navigazione e barra multifunzione di gestione Report")  
 Barra multifunzione di Gestione report  
   
  Per navigare in una gerarchia di cartelle, utilizzare le tecniche seguenti:  
@@ -47,7 +47,7 @@ Barra multifunzione di Gestione report
 ## <a name="opening-a-report"></a>Apertura di un report  
  Dopo avere individuato un report, fare clic sul nome per aprirlo. Il report, di cui viene eseguito il rendering in formato HTML, viene visualizzato nella pagina Contenuto in Gestione report. I report vengono sempre memorizzati nella cache per ogni sessione del browser. Ciò significa che se si apre un report è in genere possibile tornarvi tramite il pulsante **Indietro** . Questa possibilità è disponibile anche se sono stati richiesti nome utente e password per l'esecuzione del report. Un report visualizzabile viene quindi chiuso effettivamente solo quando si chiude il browser.  
   
- Non tutti i report visibili nella gerarchia delle cartelle sono immediatamente accessibili. Per alcuni report potrebbe essere richiesta l'immissione di nome utente e password per verificare se l'utente può accedere all'origine dati per il report. Per altre informazioni sull'apertura di report in Gestione Report, vedere [Aprire e chiudere un report &#40;Gestione report&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ Non tutti i report visibili nella gerarchia delle cartelle sono immediatamente accessibili. Per alcuni report potrebbe essere richiesta l'immissione di nome utente e password per verificare se l'utente può accedere all'origine dati per il report. Per ulteriori informazioni sull'apertura di report in Gestione Report, vedere [apertura e chiusura di un Report &#40; Gestione report &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  È inoltre possibile individuare e aprire un report direttamente dal server di report in Generatore report. Per altre informazioni, vedere [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -61,6 +61,6 @@ Barra multifunzione di Gestione report
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -32,11 +32,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Legenda del grafico - formattazione (Generatore Report)
@@ -85,11 +85,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Nascondere elementi legenda nel grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Modificare il testo di un elemento della legenda &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei colori delle serie in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Nascondere elementi legenda nel grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Finestra di dialogo Proprietà set di dati, Query (Generatore report)
@@ -31,13 +31,13 @@ ms.lasthandoff: 08/03/2017
   
  Nella finestra di dialogo **Proprietà set di dati** sono presenti le seguenti opzioni:  
   
--   [Finestra di dialogo Proprietà set di dati, Parametri &#40;Generatore report&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
+-   [Finestra di dialogo Proprietà set di dati, parametri &#40; Generatore report &#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
+-   [Finestra di dialogo Proprietà set di dati, campi &#40; Generatore report &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
--   [Finestra di dialogo Proprietà set di dati, Opzioni &#40;Generatore report&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
+-   [Finestra di dialogo Proprietà set di dati, opzioni &#40; Generatore report &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Finestra di dialogo Proprietà set di dati, Filtri &#40;Generatore report&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
+-   [Finestra di dialogo Proprietà set di dati, filtri &#40; Generatore report &#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
  Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -84,6 +84,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Finestre Progettazione query &#40; Generatore report &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

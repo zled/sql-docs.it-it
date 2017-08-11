@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>Pianificazioni
@@ -129,20 +129,20 @@ ms.lasthandoff: 06/22/2017
 >  È possibile utilizzare il facet **Configurazione superficie di attacco per Reporting Services** per arrestare le operazioni pianificate temporaneamente o definitivamente. Anche se è possibile creare e distribuire estensioni personalizzate per il recapito, Elaborazione pianificazione e recapito non è estendibile né è possibile modificare il modo in cui gestisce eventi e notifiche. Per altre informazioni sulla disabilitazione delle funzionalità, vedere la sezione relativa al **recapito e agli eventi pianificati** di [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Effetti dell'arresto di SQL Server Agent  
- Per l'elaborazione pianificata di report viene utilizzato SQL Server Agent per impostazione predefinita. Se si arresta il servizio, non verranno aggiunte nuove richieste di elaborazione alla coda a meno di aggiungerle a livello di programmazione utilizzando il metodo <xref:ReportService2010.ReportingService2010.FireEvent%2A>. Quando si riavvia il servizio, i processi che creano le richieste di elaborazione di report vengono ripresi. Il server di report non tenterà di ricreare i processi di elaborazione di report riferiti al periodo in cui SQL Server Agent era offline. Se si arresta SQL Server Agent per una settimana, tutte le operazioni pianificate per quella settimana andranno perse.  
+ Per l'elaborazione pianificata di report viene utilizzato SQL Server Agent per impostazione predefinita. Se si arresta il servizio, non verranno aggiunte nuove richieste di elaborazione alla coda a meno di aggiungerle a livello di programmazione usando il metodo <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Quando si riavvia il servizio, i processi che creano le richieste di elaborazione di report vengono ripresi. Il server di report non tenterà di ricreare i processi di elaborazione di report riferiti al periodo in cui SQL Server Agent era offline. Se si arresta SQL Server Agent per una settimana, tutte le operazioni pianificate per quella settimana andranno perse.  
   
 > [!NOTE]  
->  La funzionalità assicurata da SQL Server Agent a Reporting Services può essere sostituita da codice personalizzato che utilizza il metodo <xref:ReportService2010.ReportingService2010.FireEvent%2A> per aggiungere eventi pianificati alla coda.  
+>  La funzionalità assicurata da SQL Server Agent a Reporting Services può essere sostituita da codice personalizzato che usa il metodo <xref:ReportService2010.ReportingService2010.FireEvent%2A> per aggiungere eventi pianificati alla coda.  
   
 ###  <a name="bkmk_stoppingservice"></a> Effetti dell'arresto del servizio del server di report  
  Se si arresta il servizio del server di report, SQL Server Agent continuerà ad aggiungere richieste di elaborazione di report alla coda. Le informazioni sullo stato di SQL Server Agent indicano che il processo è stato completato, ma poiché il servizio del server di report è arrestato, non viene effettivamente eseguita alcuna operazione di elaborazione di report. Le richieste continueranno ad accumularsi nella coda finché il servizio non verrà riavviato. Dopo il riavvio del servizio del server di report tutte le richieste di elaborazione di report presenti nella coda verranno elaborate nell'ordine in cui sono state inserite.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, modificare ed eliminare snapshot nella cronologia dei report](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [La memorizzazione nella cache di report &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

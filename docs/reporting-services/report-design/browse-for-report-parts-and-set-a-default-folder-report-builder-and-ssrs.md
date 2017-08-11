@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Ricerca di parti del report e impostazione di una cartella predefinita (Generatore report e SSRS)
@@ -27,7 +27,7 @@ Il modo più semplice per creare un report impaginato di [!INCLUDE[ssRSnoversion
   
  È possibile impostare una cartella predefinita per la pubblicazione di parti di report sul server di report o su un sito di SharePoint integrato con un server di report.  
   
- Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ## <a name="to-browse-for-report-parts"></a>Per cercare parti di report  
   
@@ -69,9 +69,9 @@ Il modo più semplice per creare un report impaginato di [!INCLUDE[ssRSnoversion
   
 ## <a name="see-also"></a>Vedere anche  
  [Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
- [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Parti di report e set di dati in Generatore Report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Pubblicazione e ripubblicazione di parti di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

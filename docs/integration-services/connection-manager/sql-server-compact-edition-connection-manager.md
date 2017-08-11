@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.connection.f1
+- sql13.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad3c3c379b62863de834386783b595c984c49ed
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gestione connessione SQL Server Compact Edition
@@ -48,12 +51,72 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
--   [Editor gestione connessione SQL Server Compact Edition &#40;pagina Connessione&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor gestione connessione SQL Server Compact Edition (pagina Connessione)
+  Utilizzare la finestra di dialogo **Editor gestione connessione SQL Server Compact Edition** per specificare le proprietà di connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
--   [Editor gestione connessione SQL Server Compact Edition &#40;pagina Tutte&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ Per ulteriori informazioni sulla gestione connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition, vedere [Editor gestione connessione SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+### <a name="options"></a>Opzioni  
+ **Percorso e nome di file del database**  
+ Immettere il percorso e il nome del file per il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
+ **Sfoglia**  
+ Consente di individuare il file di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact desiderato usando la finestra di dialogo **Select SQL Server Compact Edition database** (Seleziona database di SQL Compact Edition).  
   
+ **Password del database**  
+ Consente di immettere la password per il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor gestione connessione SQL Server Compact Edition (pagina Tutte)
+  Utilizzare la finestra di dialogo **Editor gestione connessione SQL Server Compact Edition** per specificare le proprietà di connessione a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ Per ulteriori informazioni sulla gestione connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition, vedere [Editor gestione connessione SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
+  
+### <a name="options"></a>Opzioni  
+ **AutoShrink Threshold**  
+ Consente di specificare la quantità di spazio libero in percentuale consentito nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact al raggiungimento della quale verrà avviata l'operazione di compattazione automatica.  
+  
+ **Default Lock Escalation**  
+ Consente di specificare il numero di blocchi di database acquisiti dal database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact prima di tentare l'escalation.  
+  
+ **Default Lock Timeout**  
+ Consente di specificare l'intervallo di tempo predefinito (in millisecondi) per cui una transazione deve rimanere in attesa di un blocco.  
+  
+ **Flush Interval**  
+ Consente di specificare l'intervallo di tempo (in secondi) dopo il quale le transazioni completate devono essere scaricate su disco.  
+  
+ **Locale Identifier**  
+ Consente di specificare l'ID delle impostazioni locali (LCID) del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Max Buffer Size**  
+ Consente di specificare la quantità massima di memoria in KB usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact al raggiungimento della quale viene eseguito lo scaricamento dei dati su disco.  
+  
+ **Max Database Size**  
+ Consente di specificare le dimensioni massime in MB del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Mode**  
+ Consente di specificare la modalità file in cui aprire il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. Il valore predefinito di questa proprietà è **Read Write**.  
+  
+ Nella tabella seguente sono descritti i quattro valori disponibili per la proprietà Mode.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Sola lettura**|Imposta l'accesso di sola lettura al database.|  
+|**Read Write**|Imposta l'autorizzazione di lettura/scrittura per il database.|  
+|**Exclusive**|Imposta l'accesso esclusivo al database.|  
+|**Shared Read**|Specifica che altri utenti possono accedere contemporaneamente in lettura al database.|  
+  
+ **Persist Security Info**  
+ Consente di specificare se le informazioni di sicurezza vengono restituite all'interno della stringa di connessione. Il valore predefinito dell'opzione è **False**.  
+  
+ **Temp File Directory**  
+ Consente di specificare il percorso del file di database temporaneo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Data Source**  
+ Consente di specificare il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+ **Password**  
+ Consente di immettere la password per il database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  
+

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
@@ -59,10 +59,10 @@ ms.lasthandoff: 06/22/2017
 >  Per assicurarsi di poter utilizzare i dati di un set di dati condiviso, è necessario comprendere i principi che regolano la protezione degli elementi del report. Per altre informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Sicurezza &#40;Generatore report&#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [Parti del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Visualizzazione di progettazione di report &#40; Generatore report &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Sicurezza &#40; Generatore report &#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [Parti di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

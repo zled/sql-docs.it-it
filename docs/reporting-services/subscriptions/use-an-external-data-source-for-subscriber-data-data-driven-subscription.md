@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Modelli di report  
   
- Se si dispone di un'estensione di elaborazione dati personalizzata che si desidera utilizzare nelle sottoscrizioni guidate dai dati, è necessario implementare la <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> e <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> interfacce. L'estensione per l'elaborazione dati deve supportare l'esecuzione di query sul solo schema. Questo tipo di query è utilizzato per recuperare i metadati delle colonne in fase di progettazione, per consentire agli utenti di eseguire il mapping tra le colonne e le opzioni di recapito e i parametri del report nella definizione della sottoscrizione. L'esecuzione di query sul solo schema avviene in una fase iniziale, durante la definizione della sottoscrizione.  
+ Se si ha un'estensione per l'elaborazione dati personalizzata che si vuole usare nelle sottoscrizioni guidate dai dati, è necessario che siano implementate le interfacce <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> e <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> . L'estensione per l'elaborazione dati deve supportare l'esecuzione di query sul solo schema. Questo tipo di query è utilizzato per recuperare i metadati delle colonne in fase di progettazione, per consentire agli utenti di eseguire il mapping tra le colonne e le opzioni di recapito e i parametri del report nella definizione della sottoscrizione. L'esecuzione di query sul solo schema avviene in una fase iniziale, durante la definizione della sottoscrizione.  
   
 ## <a name="query-requirements"></a>Requisiti per le query  
  Quando si crea una query per recuperare i dati di sottoscrizione, tenere presente quanto segue:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Passaggio di valori dei parametri dal database del Sottoscrittore al report  
  Se si sta creando una sottoscrizione guidata dai dati per un report con parametri, è possibile fornire valori dei parametri variabili per personalizzare l'output di ogni report. Ad esempio, un database del Sottoscrittore potrebbe contenere numeri di identificazione, date di assunzione, titoli professionali e ubicazioni degli uffici dei dipendenti, tutte informazioni utilizzabili per filtrare i dati dei report. Se il report accetta parametri basati su queste o altre colonne di dati disponibili, è possibile eseguire il mapping di ogni parametro alla colonna appropriata.  
   
- Quando si esegue il mapping dei campi del Sottoscrittore ai parametri del report, verificare che i tipi di dati e la lunghezza delle colonne siano compatibili. Nel caso siano presenti tipi di dati non corrispondenti si verificherà un errore durante l'elaborazione della sottoscrizione. Per altre informazioni sull'uso di dati del sottoscrittore in un report con parametri, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Quando si esegue il mapping dei campi del Sottoscrittore ai parametri del report, verificare che i tipi di dati e la lunghezza delle colonne siano compatibili. Nel caso siano presenti tipi di dati non corrispondenti si verificherà un errore durante l'elaborazione della sottoscrizione. Per ulteriori informazioni sull'utilizzo di dati del sottoscrittore in un report con parametri, vedere [creare una sottoscrizione guidata dai dati &#40; Esercitazione su SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modifica dell'origine dei dati del sottoscrittore  
  Le modifiche all'origine dei dati del sottoscrittore descritte di seguito possono impedire l'esecuzione della sottoscrizione:  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Sottoscrizioni guidate dai dati](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

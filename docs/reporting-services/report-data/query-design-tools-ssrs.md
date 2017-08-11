@@ -25,11 +25,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb010d0c545e0ff6031a07ff0d4439f5d9dc8116
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="query-design-tools-ssrs"></a>Strumenti di progettazione query (SSRS)
@@ -70,14 +70,14 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="Textbased"></a> Finestra Progettazione query basata su testo  
  La finestra Progettazione query basata su testo è lo strumento di compilazione di query predefinito per la maggior parte delle origini dati relazionali supportate, incluse [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML e ODBC. A differenza della finestra Progettazione query con interfaccia grafica, questo strumento non consente di convalidare la sintassi delle query durante la fase di progettazione. Nella figura seguente viene illustrato lo strumento Progettazione query basata su testo.  
   
- ![Progettazione query standard, per query di dati relazionali](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Progettazione query standard, per query di dati relazionali")  
+ ![Finestra Progettazione query standard per query di dati relazionali](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")  
   
  È consigliabile utilizzare la finestra Progettazione query basata su testo per creare query complesse, impiegare stored procedure, eseguire query sui dati XML e scrivere query dinamiche. A seconda dell'origine dei dati, è possibile attivare/disattivare il pulsante **Modifica come testo** sulla barra degli strumenti per passare dalla finestra Progettazione query con interfaccia grafica alla finestra Progettazione query basata su testo e viceversa. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c).  
   
 ##  <a name="Graphical"></a> Finestra Progettazione query con interfaccia grafica  
  La finestra Progettazione query con interfaccia grafica viene usata per creare o modificare query [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite su un database relazionale. Questo strumento di progettazione delle query viene utilizzato in diversi prodotti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] e in altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A seconda del tipo di origine dei dati, esso supporta le modalità Text, StoredProcedure e TableDirect. Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica.  
   
- ![Progettazione query con interfaccia grafica per query sql](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Progettazione query con interfaccia grafica per query sql")  
+ ![Finestra Progettazione query con interfaccia grafica per query SQL](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Finestra Progettazione query con interfaccia grafica per query SQL")  
   
  È possibile fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti per passare dalla finestra Progettazione query con interfaccia grafica alla finestra Progettazione query basata su testo e viceversa. Per altre informazioni, vedere [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Creare un'origine dati incorporata o condivisa &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Origini dati supportate da Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Creare un'origine dati incorporata o condivisa &#40; SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

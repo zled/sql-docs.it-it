@@ -19,11 +19,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gestione di un server di report in modalità nativa
@@ -72,6 +72,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Configurazione e amministrazione di un Server di Report &#40; Reporting Services con SharePoint &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   

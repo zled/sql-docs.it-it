@@ -28,11 +28,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
@@ -75,7 +75,7 @@ In Esplora soluzioni fare clic con il pulsante destro del mouse sul report e sce
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Aggiornare i report](../../reporting-services/install-windows/upgrade-reports.md)  
   
   

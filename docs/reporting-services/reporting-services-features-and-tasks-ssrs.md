@@ -18,15 +18,15 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8134ebc66d9b0d75b3eae53b666eea37dee3df5a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Caratteristiche e attività di Reporting Services (SSRS)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è organizzato in base ai report, le caratteristiche dei report, le caratteristiche del server di report e le caratteristiche dei prodotti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]è organizzato per i report e le funzionalità di report, le funzionalità server di report, e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] le funzionalità del prodotto.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
@@ -37,21 +37,21 @@ ms.lasthandoff: 06/22/2017
   
  [Dati del report &#40;SSRS&#41;](../reporting-services/report-data/report-data-ssrs.md)  
   
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [I parametri di report &#40; Generatore report e progettazione Report &#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [Parti del report in Progettazione report &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Parti di report in Progettazione Report &#40; SSRS &#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
  [Pianificazioni](../reporting-services/subscriptions/schedules.md)  
   
- [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Le sottoscrizioni e recapito &#40; Reporting Services &#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
  [Avvisi dati di Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
   
  [Sicurezza e protezione di Reporting Services](../reporting-services/security/reporting-services-security-and-protection.md)  
   
- [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
+ [Accesso con URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)  
   
- [Estensioni &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)  
+ [Estensioni &#40; SSRS &#41;](../reporting-services/extensions-ssrs.md)  
   
  [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
   

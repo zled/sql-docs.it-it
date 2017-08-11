@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51cf021c47749367bba6fcc08081dfeed688298f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Caricare documenti in una raccolta di SharePoint (Reporting Services in modalità SharePoint)
@@ -53,8 +53,8 @@ ms.lasthandoff: 06/22/2017
  Un report può contenere parametri che consentono agli utenti di filtrare i dati. È possibile configurare i parametri in modo che utilizzino valori specifici o modificare la visualizzazione di tali parametri per gli utenti. Per altre informazioni, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicare un report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Pubblicare un Report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Pubblicare un'origine dati condivisa in una raccolta di SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

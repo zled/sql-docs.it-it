@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   La cronologia di un report è costituita dalla raccolta delle copie di un report eseguite in precedenza. È pertanto possibile usare la cronologia di un report per mantenere una registrazione dei diversi risultati dell'esecuzione del report ottenuti durante un determinato periodo di tempo. Non è consigliabile usare la cronologia del report per i report contenenti informazioni riservate e personali. Per questo motivo, la cronologia del report può essere creata solo per i report che eseguono query su origini dati che utilizzano un unico set di credenziali (credenziali archiviate o credenziali utilizzate per l'esecuzione automatica dei report), che sono disponibili a tutti gli utenti che eseguono il report.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con SharePoint utilizza le caratteristiche di gestione contenuto di estrazione e archiviazione di SharePoint per salvare gli aggiornamenti nei tipi di contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , tra cui la creazione di snapshot dei report. Pertanto se è stato abilitato il controllo delle versioni su una raccolta documenti, verrà visualizzata la versione del report aggiornata quando viene creato un nuovo snapshot di cronologia del report. Si tratta di un effetto collaterale dell'aggiornamento di snapshot. L'aggiornamento di uno snapshot determina la modifica della proprietà LastExecution del report con una conseguente modifica della versione del report.  
+    >  L'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con SharePoint utilizza le caratteristiche di gestione contenuto di estrazione e archiviazione di SharePoint per salvare gli aggiornamenti nei tipi di contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], tra cui la creazione di snapshot dei report. Pertanto se è stato abilitato il controllo delle versioni su una raccolta documenti, verrà visualizzata la versione del report aggiornata quando viene creato un nuovo snapshot di cronologia del report. Si tratta di un effetto collaterale dell'aggiornamento di snapshot. L'aggiornamento di uno snapshot determina la modifica della proprietà LastExecution del report con una conseguente modifica della versione del report.  
   
 -   È possibile specificare valori di timeout per limitare l'utilizzo delle risorse del sistema.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint|  
   
  **Contenuto dell'argomento:**  
   
@@ -110,8 +110,8 @@ ms.lasthandoff: 06/22/2017
 1.  Usare Windows PowerShell per impostare il timeout del database di un server di report di SharePoint. Per altre informazioni, vedere la sezione "Ottenere e impostare le proprietà del database dell'applicazione Reporting Service" dell'argomento [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Impostare le proprietà di elaborazione di Report](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [La memorizzazione nella cache di report &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Impostazione dei valori di timeout per i Report e l'elaborazione di set di dati condiviso &#40; SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

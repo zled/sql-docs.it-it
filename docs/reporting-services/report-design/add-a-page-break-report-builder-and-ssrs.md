@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 81f305fdb34231a14c53d376ed9c4535ce6b9f53
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Aggiungere un'interruzione di pagina (Generatore report e SSRS)
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
 3.  Facoltativamente, selezionare **Anche all'inizio di un gruppo** o **Anche alla fine di un gruppo** per specificare che un'interruzione di pagina deve essere aggiunta all'inizio o alla fine di un gruppo nella tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

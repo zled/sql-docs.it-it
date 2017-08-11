@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9737d90041d9916bf4a1fae892391d2255cc55ab
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-connection-manager"></a>gestione connessione file
@@ -63,6 +65,33 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## <a name="file-connection-manager-editor"></a>Editor gestione connessione file
+  Utilizzare la finestra di dialogo **Editor gestione connessione file** per specificare le proprietà utilizzate per la connessione a un file o a una cartella.  
+  
+> [!NOTE]  
+>  È possibile impostare la proprietà ConnectionString per la gestione connessione file specificando un'espressione nella finestra Proprietà di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Tuttavia, per evitare un errore di convalida quando si usa un'espressione per specificare il file o la cartella, aggiungere il percorso di un file o di una cartella in **Editor gestione connessione file**per **File/Cartella**.  
+  
+ Per ulteriori informazioni sulla gestione connessione file, vedere [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Tipo di utilizzo**  
+ Consente di specificare se **Gestione connessione file flat** deve connettersi a un file o a una cartella esistente o creare un nuovo file o cartella.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Creazione file|Consente di creare un nuovo file in fase di esecuzione.|  
+|File esistente|Consente di utilizzare un file esistente.|  
+|Creazione cartella|Consente di creare una nuova cartella in fase di esecuzione.|  
+|Cartella esistente|Consente di utilizzare una cartella esistente.|  
+  
+ **File/Cartella**  
+ Se si sceglie **File**, specificare il file da usare.  
+  
+ Se si sceglie **Cartella**, specificare la cartella da utilizzare.  
+  
+ **Sfoglia**  
+ Selezionare il file o la cartella usando la finestra di dialogo **Seleziona file** o **Sfoglia cartella** .  
   
   

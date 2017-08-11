@@ -25,11 +25,11 @@ caps.latest.revision: 96
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d3fc9080d28a3b187478fc02f64bd7b38a99b178
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], and tabular models  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]e modelli tabulari  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  I provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard non supportano necessariamente tutte le funzionalità offerte dalle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Alcuni provider di dati OLE DB e driver ODBC possono inoltre essere utilizzati per creare e visualizzare in anteprima i report, tuttavia non sono progettati per supportare i report pubblicati in un server di report. Il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Jet non è ad esempio supportato sul server di report. Per altre informazioni, vedere [Estensioni per l'elaborazione dati e provider di dati .NET Framework &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
   
- Per altre informazioni sulle estensioni per l'elaborazione dati personalizzate, vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Per ulteriori informazioni sui provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, vedere lo spazio dei nomi <xref:System.Data>.   
+ Per altre informazioni sulle estensioni per l'elaborazione dati personalizzate, vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Per altre informazioni sui provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, vedere lo spazio dei nomi <xref:System.Data> .   
   
 ## <a name="platform-support-for-report-data-sources"></a>Supporto delle piattaforme per le origini dei dati del report  
  Le origini dati utilizzabili in una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variano in base all'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , alla versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alla piattaforma. Per ulteriori informazioni sulle funzionalità, vedere [Reporting Services funzionalità supportate dalle edizioni di SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Nella tabella disponibile più avanti in questo argomento sono disponibili informazioni sulle origini dei dati supportate per versione e piattaforma.  
@@ -173,13 +173,13 @@ Questa origine dati è stata deprecata. Utilizzare il tipo di origine dati di SQ
 ###  <a name="AnalysisServices"></a> Estensione per l'elaborazione dati di Microsoft SQL Server Analysis Services  
  Quando si seleziona il tipo di origine dati **Microsoft SQL Server Analysis Services**, viene seleziona un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di estendere il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questa estensione per l'elaborazione dati è compilata in modo nativo per piattaforme x86 e basate su x64 e può essere eseguita su di esse.  
   
- Il provider di dati utilizza il modello a oggetti ADOMD.NET per creare query mediante XML for Analysis (XMLA) versione 1.1. I risultati vengono restituiti in un set di righe bidimensionale. Per altre informazioni, vedere [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interfaccia utente di Progettazione query DMX in Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
+ Il provider di dati utilizza il modello a oggetti ADOMD.NET per creare query mediante XML for Analysis (XMLA) versione 1.1. I risultati vengono restituiti in un set di righe bidimensionale. Per ulteriori informazioni, vedere [tipo di connessione di Analysis Services per MDX &#40; SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo di connessione di analysis Services per DMX &#40; SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interfaccia utente di progettazione di Query MDX di analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md), e [interfaccia utente di progettazione di Query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
- Quando ci si connette a un'origine dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'estensione per l'elaborazione dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta parametri multivalore ed esegue il mapping di celle e proprietà dei membri alle proprietà estese supportate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ Quando ci si connette a un'origine dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l'estensione per l'elaborazione dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta parametri multivalore ed esegue il mapping di celle e proprietà dei membri alle proprietà estese supportate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
  È anche possibile creare modelli provenienti dalle origini dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-###  <a name="OLEDBAll"></a>Estensione per l'elaborazione dati OLE DB  
+###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  L'estensione per l'elaborazione dati OLE DB richiede la scelta di un ulteriore livello di provider di dati in base alla versione dell'origine dati da utilizzare nel report. Se non si seleziona un provider di dati specifico, verrà utilizzato uno predefinito. Scegliere un provider di dati specifico tramite il **le proprietà di connessione** la finestra di dialogo, accessibile tramite il **modifica** pulsante finestre di dialogo origine dati o origini dati condivise.  
   
  Per altre informazioni sulla finestra Progettazione query associata OLE DB, vedere [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per altre informazioni sul supporto specifico per i provider OLE DB, vedere [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](http://support.microsoft.com/default.aspx/kb/811241) (Visual Studio .NET Designer Tool supporta specifici provider OLE DB) nella Knowledge Base [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -275,14 +275,14 @@ Per installare gli strumenti Client Oracle è possibile eseguire le operazioni s
   
  I parametri multivalore non sono supportati da questa estensione. Le macro possono essere specificate in una query tramite il comando EXECUTE in modalità query TEXT.  
   
- Per altre informazioni, vedere [Tipo di connessione Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
+ Per ulteriori informazioni, vedere [tipo di connessione Teradata &#40; SSRS &#41; ](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
  È inoltre possibile creare modelli basati su un database Teradata. Per altre informazioni, vedere il white paper seguente nel sito Teradata [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Microsoft SQL Server 2012 Reporting e Teradata Corporation).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> Estensione per i dati dell'elenco SharePoint  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]include il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estensione per i dati elenco SharePoint in modo che è possibile utilizzare gli elenchi SharePoint come origine dei dati in un report. È possibile recuperare i dati elenco da:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include l'estensione per i dati dell'elenco SharePoint di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che consente di usare elenchi SharePoint come origine dati in un report. È possibile recuperare i dati elenco da:  
   
 -   SharePoint Server 2016  
 
@@ -299,7 +299,7 @@ Per installare gli strumenti Client Oracle è possibile eseguire le operazioni s
  Le credenziali specificate dipendono dall'implementazione utilizzata dall'applicazione client. Per altre informazioni, vedere [Tipo di connessione Elenco Microsoft SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Estensione per l'elaborazione dati XML  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Reporting Services: Uso di origini dati XML e servizio Web).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per ulteriori informazioni, vedere [tipo di connessione XML &#40; SSRS &#41; ](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Reporting Services: Uso di origini dati XML e servizio Web).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   

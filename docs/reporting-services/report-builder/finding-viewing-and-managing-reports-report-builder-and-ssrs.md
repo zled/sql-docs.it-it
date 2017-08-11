@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   Creare nuove cartelle nel server per organizzare i report nella modalità desiderata.  
   
- Alcune di queste attività potrebbero essere eseguite per conto dell'utente dall'amministratore del server di report. Per altre informazioni sulle attività eseguite in un server di report, vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Alcune di queste attività potrebbero essere eseguite per conto dell'utente dall'amministratore del server di report. Per ulteriori informazioni sulle attività eseguite in un server di report, vedere [del Server di Report di Reporting Services &#40; Modalità nativa &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  In Gestione report sono inclusi in genere cartelle, report, origini dati e modelli di report, nonché la cartella Report personali. Report personali è un'area di lavoro personale utilizzabile per archiviare e gestire i report di cui si è proprietari. Le altre cartelle del server di report sono pubbliche e in genere è necessario disporre di autorizzazioni avanzate per aggiungere o modificare contenuto in tali cartelle. È possibile creare cartelle all'interno di Report personali per migliorare l'organizzazione dei report. Per altre informazioni, vedere [Uso della cartella Report personali &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
   
  Tramite Gestione report, i report vengono visualizzati nel Visualizzatore HTML di Reporting Services. Il Visualizzatore HTML fornisce un framework per la visualizzazione di report in HTML e include una barra degli strumenti dei report, una sezione relativa ai parametri, una relativa alle credenziali e una mappa documento. Nella barra degli strumenti dei report sono disponibili funzionalità di navigazione, zoom, aggiornamento, ricerca, esportazione, stampa e feed di dati per la pagina. La barra degli strumenti dei report viene inoltre visualizzata in una finestra del browser nella parte superiore dei report quando si accede ad essi tramite un URL. La funzionalità di stampa è facoltativa e deve essere attivata dall'amministratore. Se disponibile, sulla barre degli strumenti dei report viene visualizzata l'icona di una stampante. Nelle illustrazioni seguenti la barra degli strumenti dei report in una finestra Gestione report e le relative funzionalità vengono mostrate in primo piano.  
   
- ![Barra degli strumenti di report in Gestione Report](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![Barra degli strumenti di report in Gestione Report](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "barra degli strumenti di Report in Gestione Report")  
 Finestra Gestione report  
   
- ![Barra degli strumenti dei report](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barra degli strumenti report](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra degli strumenti Report")  
 Barra degli strumenti dei report  
   
- Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. Inoltre è possibile esportare il report utilizzando un'estensione per il rendering dei dati, ad esempio valori delimitati da virgole (CSV, Comma-Separated Value), e utilizzare quindi il file di dati CSV come input per un'altra applicazione. Per altre informazioni sull'esportazione dei report, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) ed [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ Dopo aver eseguito un report, è possibile esportarlo in un altro formato, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. Inoltre è possibile esportare il report utilizzando un'estensione per il rendering dei dati, ad esempio valori delimitati da virgole (CSV, Comma-Separated Value), e utilizzare quindi il file di dati CSV come input per un'altra applicazione. Per ulteriori informazioni sull'esportazione di report, vedere [esportazione di report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) e [esportare un Report come tipo di un altro File &#40; Generatore report e SSRS &#41; ](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- Il modo più semplice per selezionare ed eseguire un report consiste nell'aprire Gestione report e, successivamente, nel cercare o selezionare il report desiderato. Per istruzioni dettagliate su come aprire un report, vedere [Aprire e chiudere un report &#40;Gestione report&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ Il modo più semplice per selezionare ed eseguire un report consiste nell'aprire Gestione report e, successivamente, nel cercare o selezionare il report desiderato. Per istruzioni dettagliate su come aprire i report, vedere [apertura e chiusura di un Report &#40; Gestione report &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Dopo aver eseguito un report, è possibile aggiornarlo per visualizzare i nuovi dati.  
   
@@ -107,7 +107,7 @@ Barra degli strumenti dei report
   
  Per accedere alle pagine dell'applicazione, selezionare azioni specifiche dell'elemento da un menu a discesa in un report o in un altro elemento del server di report in precedenza aggiunto a una raccolta di SharePoint. A seconda dell'elemento selezionato e delle autorizzazioni di cui dispone, l'utente ha la possibilità di creare report in Generatore report, generare modelli e configurare la sicurezza degli elementi dei modelli.  
   
- Per altre informazioni su Reporting Services e la tecnologia SharePoint, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel sito msdn.microsoft.com.  
+ Per ulteriori informazioni sulla tecnologia SharePoint e Reporting Services, vedere [configurazione e amministrazione di un Server di Report &#40; Reporting Services con SharePoint &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Ricerca di elementi di un server di report in un sito di SharePoint  
  Per impostare le proprietà, è prima necessario individuare l'elemento desiderato. Gli elementi dei server di report sono sempre archiviati in raccolte o in una cartella all'interno di una raccolta.  
@@ -161,6 +161,6 @@ Barra degli strumenti dei report
 ## <a name="see-also"></a>Vedere anche  
  [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Installare e disinstallare Generatore report](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [Installare e disinstallare Generatore Report](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

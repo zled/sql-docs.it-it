@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c643b94c86109a99e1448093b4b9744924fcd7f7
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Unire le celle in un'area dati (Generatore report e SSRS)
@@ -40,7 +40,7 @@ Le celle possono essere unite solo all'interno delle singole aree di un'area dat
   
 ## <a name="see-also"></a>Vedere anche  
 [Area dati Tablix](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
- [Tabelle &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tabelle &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Creare una matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Creare fatture e moduli con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
 [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

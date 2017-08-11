@@ -18,11 +18,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  L'uso di **RSWindowsNegotiate** comporterà un errore di autenticazione Kerberos se il servizio del server di report è stato configurato per essere eseguito con un account utente di dominio e non è stato registrato un nome SPN per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve essere configurato per usare l'autenticazione di Windows. Per impostazione predefinita, i file Web. config per il servizio Web ReportServer includono il \<modalità di autenticazione = "Windows" > impostazione. Se si modifica in \<modalità di autenticazione = "Form" >, l'autenticazione di Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]deve essere configurato per l'autenticazione di Windows. Per impostazione predefinita, i file Web. config per il servizio Web ReportServer includono il \<modalità di autenticazione = "Windows" > impostazione. Se si modifica in \<modalità di autenticazione = "Form" >, l'autenticazione di Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo.  
   
 -   I file Web. config per il servizio Web ReportServer deve disporre \<identity impersonate = "true" / >.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  Le istruzioni seguenti sono relative a un server di report in modalità nativa. Se il server di report è distribuito in modalità integrata SharePoint, è necessario utilizzare le impostazioni di autenticazione predefinite che specificano la sicurezza integrata di Windows. Per supportare server di report in modalità integrata SharePoint, il server di report utilizza caratteristiche interne nell'estensione di autenticazione di Windows predefinita.  
   
 ## <a name="extended-protection-for-authentication"></a>Protezione estesa per l'autenticazione  
- A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è disponibile il supporto per la protezione estesa per l'autenticazione. La caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'uso del binding di canale e dell'associazione al servizio per migliorare la protezione dell'autenticazione. Le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere utilizzate con un sistema operativo che supporti la protezione estesa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La configurazione per la protezione estesa è determinata dalle impostazioni presenti nel file RSReportServer.config. È possibile aggiornare il file modificandolo o utilizzando le API di WMI. Per altre informazioni, vedere [Protezione estesa per l'autenticazione con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
+ A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è disponibile il supporto per la protezione estesa per l'autenticazione. La caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'uso del binding di canale e dell'associazione al servizio per migliorare la protezione dell'autenticazione. Le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere utilizzate con un sistema operativo che supporti la protezione estesa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]configurazione per la protezione estesa è determinata dalle impostazioni nel file RSReportServer. config. È possibile aggiornare il file modificandolo o utilizzando le API di WMI. Per altre informazioni, vedere [Protezione estesa per l'autenticazione con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Per configurare un server di report per l'utilizzo della sicurezza integrata di Windows  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
  È possibile rilevare l'errore se è stata abilitata la registrazione Kerberos. Un altro sintomo dell'errore consiste in più richieste delle credenziali e successivamente nella visualizzazione di una finestra del browser vuota.  
   
- Per confermare che si è verificato un errore di autenticazione Kerberos, rimuovere <**RSWindowsNegotiate** /> dal file di configurazione, quindi riprovare a stabilire la connessione.  
+ È possibile confermare che si è verificato un errore di autenticazione Kerberos, la rimozione di < **RSWindowsNegotiate** / > dal file di configurazione, quindi riprovare a stabilire la connessione.  
   
  Dopo avere confermato la presenza del problema, è possibile risolverlo nei modi seguenti:  
   
@@ -175,7 +175,7 @@ ms.lasthandoff: 06/22/2017
   
 -   I valori in \<Explicit > conterranno i nomi SPN configurati in Active Directory per il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] account del servizio.  
   
- Se non desidera continuare a usare la Protezione estesa, ripristinare le impostazioni predefinite per i valori di configurazione e riavviare l'account di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Se non desidera continuare a usare la Protezione estesa, ripristinare le impostazioni predefinite per i valori di configurazione e riavviare l'account di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  
@@ -212,11 +212,11 @@ ms.lasthandoff: 06/22/2017
 -   Per altre informazioni su server di report e Kerberos, vedere [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)(Distribuzione di una soluzione di Business Intelligence utilizzando SharePoint, Reporting Services e server di monitoraggio di PerformancePoint con Kerberos).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Autenticazione con il Server di Report](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
- [Configurare l'autenticazione personalizzata o basata su form nel server di report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Configurare l'autenticazione di base nel Server di Report](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+ [Configurazione personalizzata o autenticazione basata su form nel Server di Report](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Protezione estesa per l'autenticazione con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

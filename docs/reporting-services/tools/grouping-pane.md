@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
@@ -32,7 +32,7 @@ Durante la progettazione di report di [!INCLUDE[ssRSnoversion_md](../../includes
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Se il riquadro di raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Report**.
   
- Le celle nelle aree dei gruppi di colonne e di righe possono essere membri statici o dinamici di un gruppo. I membri statici vengono ripetuti una volta per ogni gruppo e in genere contengono etichette o totali. I membri dinamici vengono ripetuti una volta per ogni istanza di gruppo e in genere contengono i valori univoci dell'espressione di raggruppamento. Quando si selezionano celle della Tablix nell'area dei gruppi di righe o di colonne, viene selezionato il membro di gruppo corrispondente nel riquadro Gruppi di righe o Gruppi di colonne. Viceversa, se si selezionano gruppi nel riquadro di raggruppamento, la cella corrispondente associata al membro del gruppo viene selezionata nell'area di progettazione. Per altre informazioni sulle aree dei gruppi di colonne e righe Tablix, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Le celle nelle aree dei gruppi di colonne e di righe possono essere membri statici o dinamici di un gruppo. I membri statici vengono ripetuti una volta per ogni gruppo e in genere contengono etichette o totali. I membri dinamici vengono ripetuti una volta per ogni istanza di gruppo e in genere contengono i valori univoci dell'espressione di raggruppamento. Quando si selezionano celle della Tablix nell'area dei gruppi di righe o di colonne, viene selezionato il membro di gruppo corrispondente nel riquadro Gruppi di righe o Gruppi di colonne. Viceversa, se si selezionano gruppi nel riquadro di raggruppamento, la cella corrispondente associata al membro del gruppo viene selezionata nell'area di progettazione. Per ulteriori informazioni sulle aree di gruppi di righe e colonne Tablix, vedere [aree dell'area dati Tablix &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Il riquadro di raggruppamento supporta le modalità seguenti:  
   
@@ -76,7 +76,7 @@ Per modificare i valori predefiniti, è necessario selezionare il membro di grup
   
 -   **ToggleItem.** Proprietà di tipo String. Il nome della casella di testo alla quale aggiungere l'immagine dell'elemento Toggle. La casella di testo deve trovarsi nello stesso ambito del gruppo o in un ambito contenitore.  
   
- Per altre informazioni su come è possibile controllare questo comportamento in un'area data Tablix, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+ Per ulteriori informazioni su come è possibile controllare questo comportamento in un'area dati Tablix, vedere [controllare la visualizzazione dell'area dati Tablix in una pagina del Report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  Non tutti i membri statici dispongono di un'intestazione che corrisponde a una cella nell'area di progettazione. Nel riquadro di raggruppamento la convenzione seguente indica se un membro statico non dispone di intestazione:  
   
@@ -86,7 +86,7 @@ Per modificare i valori predefiniti, è necessario selezionare il membro di grup
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

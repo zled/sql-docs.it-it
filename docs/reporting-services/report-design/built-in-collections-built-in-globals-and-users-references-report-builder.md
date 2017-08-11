@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - alle raccolte predefinite Globals e Users riferimenti (Generatore Report)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Utilizzo della raccolta Globals  
- La raccolta **Globals** contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri della raccolta **Globals** .  
+ La raccolta **Globals** contiene le variabili globali per il report. Nell'area di progettazione, queste variabili sono precedute dal prefissata un & (e commerciale), ad esempio, `[&ReportName]`. Nella tabella seguente vengono descritti i membri della raccolta **Globals** .  
   
 |**Membro**|**Tipo**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Utilizzo della raccolta User  
- La raccolta **User** contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&UserID]`.  
+ La raccolta **User** contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione, queste variabili sono precedute dal prefissata un & (e commerciale), ad esempio, `[&UserID]`.  
   
  Nella tabella seguente vengono descritti i membri della raccolta **User** .  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Finestra di dialogo Espressione &#40;Generatore report&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Nella finestra di dialogo Espressione &#40; Generatore report &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Tipi di dati in espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

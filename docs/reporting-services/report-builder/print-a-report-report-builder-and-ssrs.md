@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Stampare un report (Generatore report e SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  I margini di stampa non vengono visualizzati nelle modalità di progettazione o esecuzione. Non c'è relazione tra l'area dell'area di progettazione e l'area di stampa del report. Per vedere i margini di stampa, in modalità di esecuzione fare clic su Layout di stampa nella scheda **Esegui** sulla barra multifunzione.  
   
- Per altre informazioni sulla paginazione dei report, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Per ulteriori informazioni sulla paginazione di report, vedere [paginazione in Reporting Services &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -101,7 +101,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vedere anche  
  [Stampa di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà report, Imposta pagina &#40;Generatore report&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [Finestra di dialogo Proprietà report, Imposta pagina &#40; Generatore report &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

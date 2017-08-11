@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Informazioni sui gruppi (Generatore report e SSRS)
@@ -104,10 +104,10 @@ ms.lasthandoff: 06/22/2017
  Le celle in una riga o colonna di un'area dati Tablix possono appartenere a più gruppi di righe e di colonne. Quando si definisce un'espressione nella casella di testo di una cella che utilizza una funzione di aggregazione (ad esempio `=Sum(Fields!FieldName.Value`), l'ambito del gruppo predefinito per una cella è il gruppo figlio più interno a cui appartiene. Quando una cella appartiene sia a gruppi di righe che di colonne, l'ambito è rappresentato dai gruppi più interni di entrambe le categorie. È possibile anche scrivere espressioni che calcolino i subtotali di aggregazione di cui viene calcolato l'ambito per un gruppo rispetto a un altro set di dati. È possibile ad esempio calcolare la percentuale di un gruppo rispetto al gruppo di colonne e a tutti i dati dell'area dati (ad esempio `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Per altre informazioni, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) e [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Azione di drill-down &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Aggiungere o eliminare un gruppo in un'area dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Aggiungere un totale a un gruppo o area dati Tablix &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Ordinamento dei dati in un'area dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Azione di drill-down &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

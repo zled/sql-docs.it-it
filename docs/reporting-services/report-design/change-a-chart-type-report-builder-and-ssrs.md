@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
@@ -43,7 +43,7 @@ Quando si inserisce un grafico in un report impaginato di [!INCLUDE[ssRSnoversio
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Misuratori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [I misuratori &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

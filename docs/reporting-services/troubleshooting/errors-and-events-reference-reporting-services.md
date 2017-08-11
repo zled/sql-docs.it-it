@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guida di riferimento a errori ed eventi (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|Errore|Avvio/Chiusura|Server di report|La versione del database del server di report non è valida.|  
 |118|Avviso|Registrazione|Server di report<br /><br /> Gestione report|Il log di traccia non è disponibile nel percorso di directory previsto. Verrà creato un nuovo log di traccia nella directory predefinita. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Errore|Attivazione|Server di report<br /><br /> Elaborazione pianificazione e recapito|*\<Origine >* non è stato concesso l'accesso al contenuto del database del server di report.|  
-|120|Errore|Attivazione|Server di report|Impossibile decrittografare la chiave simmetrica. È stato probabilmente modificato l'account con cui viene eseguito il servizio. Per altre informazioni, vedere [Configurare e gestire le chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|120|Errore|Attivazione|Server di report|Impossibile decrittografare la chiave simmetrica. È stato probabilmente modificato l'account con cui viene eseguito il servizio. Per ulteriori informazioni, vedere [configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Errore|Avvio/Chiusura|Server di report|Impossibile avviare il servizio RPC (Remote Procedure Call).|  
 |122|Avviso|Recapito|Elaborazione pianificazione e recapito|Elaborazione pianificazione e recapito non è in grado di connettersi al server SMTP utilizzato per il recapito della posta elettronica. Per altre informazioni sulle connessioni server SMTP, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Avviso|Registrazione|Server di report<br /><br /> Gestione report|Il server di report non è stato in grado di scrivere nel log di traccia. Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|124|Informazioni|Attivazione|Server di report|Il servizio del server di report è stato inizializzato. Per altre informazioni, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
-|125|Informazioni|Attivazione|Server di report|La chiave utilizzata per la crittografia dei dati è stata estratta. Per altre informazioni sulle chiavi, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|126|Informazioni|Attivazione|Server di report|La chiave utilizzata per la crittografia dei dati è stata applicata. Per altre informazioni sulle chiavi, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|127|Informazioni|Attivazione|Server di report|Il contenuto crittografato è stato rimosso dal database del server di report. Per altre informazioni sull’eliminazione di dati crittografati non recuperabili, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|124|Informazioni|Attivazione|Server di report|Il servizio del server di report è stato inizializzato. Per ulteriori informazioni, vedere [inizializzare un Server di Report &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|Informazioni|Attivazione|Server di report|La chiave utilizzata per la crittografia dei dati è stata estratta. Per ulteriori informazioni sulle chiavi, vedere [configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|Informazioni|Attivazione|Server di report|La chiave utilizzata per la crittografia dei dati è stata applicata. Per ulteriori informazioni sulle chiavi, vedere [configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|Informazioni|Attivazione|Server di report|Il contenuto crittografato è stato rimosso dal database del server di report. Per ulteriori informazioni sull'eliminazione di dati crittografati non recuperabili, vedere [configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|Errore|Attivazione|Server di report|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Impossibile utilizzare contemporaneamente componenti appartenenti a edizioni diverse di|  
 |129|Errore|Gestione|Server di report<br /><br /> Elaborazione pianificazione e recapito|Impossibile decrittografare un'impostazione crittografata nel file di configurazione.|  
 |130|Errore|Gestione|Server di report<br /><br /> Elaborazione pianificazione e recapito|*\<Origine >* Impossibile trovare il file di configurazione. I file di configurazione sono necessari per il server di report.|  

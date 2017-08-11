@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossibile confrontare tipi di dati per un filtro  
  In un'equazione di filtro è necessario che il tipo di dati dell'espressione che definisce gli elementi da filtrare e quello del valore del filtro sia lo stesso, in modo che sia possibile eseguirne il confronto. Se viene visualizzato uno degli errori seguenti, modificare l'espressione del campo o il valore del filtro in modo che i tipi di dati corrispondano:  
   
--   L'elaborazione di  *\<tipo di elemento del report >* per il * \<nome elemento report >* non può essere eseguita. Impossibile confrontare tipi di dati  *\<tipo >* e * \<tipo >*. Verificare il tipo di dati restituito dal  *\<nome elemento report >*.  
+-   L'elaborazione di  *\<tipo di elemento del report >* per il  *\<nome elemento report >* non può essere eseguita. Impossibile confrontare tipi di dati  *\<tipo >* e  *\<tipo >*. Verificare il tipo di dati restituito dal  *\<nome elemento report >*.  
   
 -   Impossibile valutare il  *\<nome proprietà >*.  
   
@@ -118,11 +118,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Il  *\<tipo di elemento del report >* '*\<nome elemento report >*' ha un ambito non valido "*\<nome ambito >*". L'ambito deve essere l'ambito corrente oppure deve essere contenuto nell'ambito corrente.  
   
--   Il  *\<nome proprietà >* espressione per il * \<tipo di elemento del report >* '*\<nome di elemento di report >*' ha un parametro di ambito che non è valido per una funzione di aggregazione. Il parametro di ambito deve essere impostato su una costante stringa uguale al nome di un gruppo contenitore, al nome di un'area dati contenitore oppure al nome di un set di dati.  
+-   Il  *\<nome proprietà >* espressione per il  *\<tipo di elemento del report >* '*\<nome di elemento di report >*' ha un parametro di ambito che non è valido per una funzione di aggregazione. Il parametro di ambito deve essere impostato su una costante stringa uguale al nome di un gruppo contenitore, al nome di un'area dati contenitore oppure al nome di un set di dati.  
   
  Per le funzioni di aggregazione che calcolano i totali parziali (**Previous**, **RunningValue**o **RowNumber**), è possibile specificare come parametro di ambito un nome di un gruppo di righe oppure un nome di un gruppo di colonne, ma non entrambi. Questa condizione è valida per il seguente messaggio di errore:  
   
--   **Precedente**, **RunningValue** o **RowNumber** utilizzate nelle celle di dati di funzioni di aggregazione di  *\<tipo degli elementi del report >* '*\<nome di elemento di report >*' fare riferimento ad ambiti in entrambe le colonne e righe di raggruppamento il * \<tipo di elemento del report >*. I parametri di ambito di tutti **precedente**, **RunningValue** e **RowNumber** le funzioni di aggregazione un  *\<tipo di elemento del report >* può fare riferimento a raggruppamenti di righe o raggruppamenti di colonne di dati, ma non entrambi.  
+-   **Precedente**, **RunningValue** o **RowNumber** utilizzate nelle celle di dati di funzioni di aggregazione di  *\<tipo degli elementi del report >* '*\<nome di elemento di report >*' fare riferimento ad ambiti in entrambe le colonne e righe di raggruppamento il  *\<tipo di elemento del report >*. I parametri di ambito di tutti **precedente**, **RunningValue** e **RowNumber** le funzioni di aggregazione un  *\<tipo di elemento del report >* può fare riferimento a raggruppamenti di righe o raggruppamenti di colonne di dati, ma non entrambi.  
   
  Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  Non usare un ambito predefinito per una casella di testo aggiunta all'area di progettazione del report quando nel report è contenuto più di un set di dati. Usare invece un'espressione che includa il nome del set di dati come ambito e una funzione di aggregazione, Ad esempio, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Riferimento a funzioni di aggregazione &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Filtri di uso comune &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Codice personalizzato e riferimenti ad Assembly in espressioni in Progettazione Report &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Riferimenti alla raccolta di parametri &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

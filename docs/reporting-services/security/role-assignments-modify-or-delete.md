@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>Le assegnazioni di ruolo, modificare o eliminare
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 6.  Per eliminare un'assegnazione di ruolo, fare clic sulla casella di controllo accanto al nome dell'utente o del gruppo, quindi fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Creare e gestire le assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md)   
- [Pagina Impostazioni sito &#40;Gestione report&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema &#40;Gestione report&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Pagina Impostazioni sito &#40; Gestione report &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Nuove assegnazioni di ruolo di sistema: Modifica pagina Assegnazioni ruolo di sistema &#40; Gestione report &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="update-a-resource-report-manager"></a>Aggiornare una risorsa (Gestione report)
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
  Se la risorsa in corso di aggiornamento contiene un'immagine utilizzata nel report, per visualizzare l'immagine aggiornata sarà necessario aggiornare il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Pagina Carica file &#40;Gestione report&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Pagina contenuto &#40; Gestione report &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Caricamento File pagina &#40; Gestione report &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Caricare file in una cartella](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Guida sensibile al contesto di Gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Guida F1 di gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

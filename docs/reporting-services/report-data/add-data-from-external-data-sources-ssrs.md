@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 76e09d1f90d7eb2f3d91aef60e4ce2a9c671ab13
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Aggiungere dati da origini dati esterne (SSRS)
@@ -104,9 +104,9 @@ ms.lasthandoff: 08/03/2017
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Viene fornita una panoramica sull'accesso ai dati del report.|  
-|[Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Vengono fornite informazioni sulle connessioni dati e sulle origini dati.|  
-|[Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Vengono fornite informazioni sui set di dati incorporati e condivisi.|  
-|[Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.|  
+|[Connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Vengono fornite informazioni sulle connessioni dati e sulle origini dati.|  
+|[Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Vengono fornite informazioni sui set di dati incorporati e condivisi.|  
+|[Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.|  
 |[Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.|  
 |[Cenni preliminari sulle estensioni per l'elaborazione dati](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](http://go.microsoft.com/fwlink/?linkid=121312).|Vengono fornite informazioni dettagliate destinate agli utenti avanzati sulle estensioni per i dati.|  
   

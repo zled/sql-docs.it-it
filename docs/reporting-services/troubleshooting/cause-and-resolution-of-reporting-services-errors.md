@@ -19,11 +19,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 653001080c8ede72abf608c7b8b982558d55c46b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa e risoluzione degli errori di Reporting Services
@@ -33,16 +33,16 @@ ms.lasthandoff: 06/22/2017
   
 |Errore|Message|  
 |-----------|-------------|  
-|[rsAccessedDenied - Errore di Reporting Services](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|Le autorizzazioni concesse all'utente 'mydomain\myAccount' non sono sufficienti per eseguire questa operazione. (rsAccessDenied) (ReportingServicesLibrary).|  
-|[rsInternalError - Errore di Reporting Services](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|Errore interno nel server di report. Per altre informazioni, vedere il log degli errori.|  
-|[rsModelGenerationError - Errore di Reporting Services](../../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md)|Errore durante la generazione del modello. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
-|[rsProcessingError - Errore di Reporting Services](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|Errori durante l'elaborazione del report.|  
-|[rsServerConfigurationError - Errore di Reporting Services](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|Il server di report ha rilevato un errore di configurazione.|  
-|[rrRenderingError - Errore di Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Errore durante il rendering del report. (rrRenderingError) %1.|  
-|[Servizio Windows ReportServer &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Il servizio Windows ReportServer (MSSQLSERVER) non è in grado di connettersi al database del server di report.|  
+|[rsAccessedDenied - errore di Reporting Services](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|Le autorizzazioni concesse all'utente 'mydomain\myAccount' non sono sufficienti per eseguire questa operazione. (rsAccessDenied) (ReportingServicesLibrary).|  
+|[rsInternalError - errore di Reporting Services](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|Errore interno nel server di report. Per altre informazioni, vedere il log degli errori.|  
+|[rsModelGenerationError - errore di Reporting Services](../../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md)|Errore durante la generazione del modello. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
+|[rsProcessingError - errore di Reporting Services](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|Errori durante l'elaborazione del report.|  
+|[rsServerConfigurationError - errore di Reporting Services](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|Il server di report ha rilevato un errore di configurazione.|  
+|[rrRenderingError - errore di Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Errore durante il rendering del report. (rrRenderingError) %1.|  
+|[Servizio Windows ReportServer &#40; MSSQLServer &#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Il servizio Windows ReportServer (MSSQLSERVER) non è in grado di connettersi al database del server di report.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Servizi file di Log e origini di Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Errori e gli eventi riferimento &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

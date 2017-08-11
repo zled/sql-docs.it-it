@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS)
@@ -71,10 +71,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Area dati Tablix (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
- [Tabelle (Generatore report e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrici (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [Elenchi (Generatore report e SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
- [Tabelle, matrici ed elenchi (Generatore report e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Celle dell'area dati Tablix, righe e colonne (Generatore Report) e SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tabelle (Generatore Report e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrici (Generatore Report e SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
+ [Elenchi (Generatore Report e SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [Tabelle, matrici ed elenchi (Generatore Report e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

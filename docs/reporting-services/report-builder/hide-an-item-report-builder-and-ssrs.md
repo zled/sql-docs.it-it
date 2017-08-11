@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Nascondere un elemento (Generatore report e SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
         > [!NOTE]  
         >  Quando si specifica un'espressione per la visibilità, viene impostata la proprietà Hidden dell'elemento di report, come mostrato nell'immagine seguente. L'espressione valutata consente di mostrare l'elemento di report quando il valore è False e di nasconderlo quando il valore è True.   
-        > ![Finestra di dialogo Properties_Visibility e proprietà Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Finestra di dialogo Properties_Visibility e proprietà nascosta](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "finestra di dialogo Properties_Visibility e proprietà nascosta")  
   
 4.  Fare due volte clic su **OK** .  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Azione di drill-down &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Aggiungere l'azione un Espandi o Comprimi a un elemento &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09e1655e7945a459cf9d606d24cf7479ee4fc568
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>Specificare le impostazioni relative alle informazioni sul dispositivo in un URL
@@ -38,7 +38,7 @@ Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
+ [Accesso con URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Riferimento ai parametri URL accesso](../reporting-services/url-access-parameter-reference.md)  
   
   

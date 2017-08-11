@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bd6668bfd3fe7553f9b132e4ad0f3843eb6351fd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Report Builder funzioni - funzione LookupSet
@@ -40,7 +40,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (**Variant**) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare. Ad esempio, `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza. Ad esempio, `=Fields!CustomerID.Value`.  
+ (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
  (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio, `=Fields!PhoneNumber.Value`.  
@@ -64,7 +64,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Restituisce il set di valori dell'espressione di risultato.  
   
- Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare [Funzione Ricerca &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Per chiamare la funzione **Ricerca** per un set di valori, usare la [funzione Multilookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare [Funzione Ricerca &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Per chiamare **ricerca** per un set di valori, utilizzare [funzione Multilookup &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
  Sono previste le restrizioni seguenti:  
   
@@ -152,9 +152,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Utilizzo delle espressioni nei report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tipi di dati in espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

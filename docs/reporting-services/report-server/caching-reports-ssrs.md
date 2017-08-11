@@ -27,11 +27,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="caching-reports-ssrs"></a>Memorizzazione dei report nella cache (SSRS)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  La memorizzazione nella cache è una tecnica per il miglioramento delle prestazioni Il contenuto della cache è volatile e può cambiare in seguito all'aggiunta, alla sostituzione e alla rimozione di report. Se si desidera una strategia di memorizzazione nella cache più prevedibile, è consigliabile creare uno snapshot del report. Per altre informazioni, vedere [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] archivia i file temporanei in un database per supportare le sessioni utente e l'elaborazione dei report. Questi file vengono memorizzati nella cache per uso interno e per il supporto di una visualizzazione uniforme nel corso di un'unica sessione del browser. Per altre informazioni sulle modalità di memorizzazione nella cache di file temporanei a uso interno, vedere [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Archivia i file temporanei in un database per supportare le sessioni utente e l'elaborazione del report. Questi file vengono memorizzati nella cache per uso interno e per il supporto di una visualizzazione uniforme nel corso di un'unica sessione del browser. Per altre informazioni sulle modalità di memorizzazione nella cache di file temporanei a uso interno, vedere [Database del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Istanze memorizzate nella cache  
  Un'istanza di un report memorizzata nella cache si basa sul formato temporaneo di un report. Nella cache del server di report viene in genere memorizzata una sola istanza di un report basata sul nome del report. Se tuttavia un report può contenere dati diversi in base ai parametri delle query, potrebbero risultare memorizzate nella cache più versioni del report contemporaneamente. Si supponga, ad esempio, di disporre di un report con parametri che accetta un indicativo di paese come valore di parametro. Se quattro utenti diversi specificano quattro indicativi di paese diversi, nella cache vengono create quattro copie del report.  
@@ -75,12 +75,12 @@ ms.lasthandoff: 06/22/2017
  Se per qualsiasi motivo non è possibile eseguire il rendering del report da un'istanza memorizzata nella cache (ad esempio se i valori dei parametri specificati da un utente sono diversi da quelli utilizzati per creare il report memorizzato nella cache) il report viene eseguito nuovamente dal server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Concetti relativi a Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Precaricare la cache &#40;Gestione report&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Impostare le opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Impostare le proprietà di elaborazione di Report](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Reporting Services concetti &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Precaricare la Cache &#40; Gestione report &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Pianificazioni](../../reporting-services/subscriptions/schedules.md)   
- [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Opzioni di aggiornamento cache &#40;Gestione report&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Memorizzare nella cache set di dati condivisi &#40; SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [Opzioni &#40; l'aggiornamento della cache Gestione report &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

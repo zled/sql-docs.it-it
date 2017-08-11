@@ -17,17 +17,17 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , origini dati condivise, set di dati condivisi e parti di report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è incluso in SQL Server. Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è un ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] per la creazione di soluzioni di Business Intelligence. SSDT vanta l'ambiente di creazione Progettazione report in cui è possibile aprire, modificare, visualizzare in anteprima, salvare e distribuire definizioni impaginate di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , origini dati condivise, set di dati condivisi e parti di report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è incluso in SQL Server. Scaricare [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
  Questo argomento descrive le soluzioni, i progetti, i modelli di progetto e le configurazioni di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usati per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], nonché le visualizzazioni, le barre degli strumenti e i collegamenti che è possibile usare in Progettazione report.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_ReportServerProjects"></a> Progetti server di report  
  Dopo l'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sono disponibili i modelli di progetto seguenti:  
   
--   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto server di report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e disponibile nella finestra di dialogo **Nuovo progetto**. Per altre informazioni, vedere [Aggiungere un report nuovo o esistente a un progetto report &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Le proprietà dei progetti server di report sono applicabili a tutti i report e a tutte le origini dati condivise di un progetto di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle pagine delle proprietà del progetto per visualizzare i valori correnti delle proprietà. **** Per aprire questa finestra di dialogo, scegliere **Proprietà** dal menu **Progetto**.  
+-   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto server di report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e disponibile nella finestra di dialogo **Nuovo progetto** . Per ulteriori informazioni, vedere [aggiungere un nuovo o esistente a un progetto di Report &#40; SSRS &#41; ](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Proprietà di progetto Server di report si applicano a tutti i report e tutti i condivise origini dati un [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] progetto. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle pagine delle proprietà del progetto per visualizzare i valori correnti delle proprietà. **** Per aprire questa finestra di dialogo, scegliere **Proprietà** dal menu **Progetto**.  
   
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Immagini** L'elenco delle immagini disponibili da includere come elemento del report Immagine in un report.  
   
- Le origini dati e i set di dati nel riquadro dei dati del report rappresentano gli elementi inclusi nella definizione del report. Il riquadro dei dati del report è una funzionalità supportata da più ambienti di creazione di report. In Generatore report, è l'unico riquadro disponibile per la gestione delle origini dati e dei set di dati. In Progettazione report il riquadro dei dati del report funziona con Esplora soluzioni in cui le origini dati condivise e i set di dati condivisi vengono elencati come file. Le origini dati condivise e i set di dati condivisi nel riquadro dei dati del report devono puntare alle origini dati condivise e ai set di dati condivisi corrispondenti di Esplora soluzioni. Gli elementi del riquadro dei dati del report contengono un riferimento ai file di dati di Esplora soluzioni. Le proprietà del progetto determinano se le origini dati condivise e i set di dati condivisi vengono distribuiti nel server di report o nel sito di SharePoint. Per altre informazioni, vedere [Conversione di origini dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ Le origini dati e i set di dati nel riquadro dei dati del report rappresentano gli elementi inclusi nella definizione del report. Il riquadro dei dati del report è una funzionalità supportata da più ambienti di creazione di report. In Generatore report, è l'unico riquadro disponibile per la gestione delle origini dati e dei set di dati. In Progettazione report il riquadro dei dati del report funziona con Esplora soluzioni in cui le origini dati condivise e i set di dati condivisi vengono elencati come file. Le origini dati condivise e i set di dati condivisi nel riquadro dei dati del report devono puntare alle origini dati condivise e ai set di dati condivisi corrispondenti di Esplora soluzioni. Gli elementi del riquadro dei dati del report contengono un riferimento ai file di dati di Esplora soluzioni. Le proprietà del progetto determinano se le origini dati condivise e i set di dati condivisi vengono distribuiti nel server di report o nel sito di SharePoint. Per ulteriori informazioni, vedere [convertire le origini dati &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Se non è possibile visualizzare il riquadro dei dati del report, fare clic nell'area di progettazione e scegliere **Dati report** dal menu **Visualizza**. Se il riquadro dei dati del report è mobile, è possibile ancorarlo. Per altre informazioni, vedere [Ancorare il riquadro dei dati del report in Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Utilizzare i pulsanti della barra degli strumenti del riquadro Proprietà per modificare la modalità di visualizzazione della griglia passando dalla visualizzazione per categorie alla visualizzazione in ordine alfabetico. In visualizzazione categorie può essere necessario espandere una categoria per visualizzare tutte le proprietà sottostanti. Per aprire la finestra di dialogo Proprietà di un elemento, fare clic sul pulsante delle **pagine delle proprietà** sulla barra degli strumenti oppure fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà**.  
   
--   Impostare le proprietà per il membro del gruppo attualmente selezionato nel riquadro di raggruppamento. Le proprietà dei membri del gruppo consentono di controllare in che modo le righe dell'intestazione e del piè di pagina di un gruppo statico si ripetono per ogni istanza di un gruppo. Per altre informazioni, vedere [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
+-   Impostare le proprietà per il membro del gruppo attualmente selezionato nel riquadro di raggruppamento. Le proprietà dei membri del gruppo consentono di controllare in che modo le righe dell'intestazione e del piè di pagina di un gruppo statico si ripetono per ogni istanza di un gruppo. Per ulteriori informazioni, vedere [visualizzare intestazioni e piè di pagina con un gruppo di &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Per visualizzare il riquadro Proprietà, scegliere **Finestra Proprietà** dal menu **Visualizza**. È possibile annullare l'ancoraggio a questo riquadro e spostarlo in un'altra area della finestra di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oppure aprirlo come visualizzazione a schede nell'area di progettazione.  
   
@@ -248,13 +248,13 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
- Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella si trova nel percorso seguente:  `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
+ Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella è nel seguente percorso: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
   
  È inoltre possibile aggiungere stili personalizzati alla procedura guidata del report.  
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Supporto della riga di comando per SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]si basa sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] è basato su [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
   
 -   Proprietà del progetto per OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder e TargetServerURL.  
   
@@ -319,4 +319,4 @@ ms.lasthandoff: 06/22/2017
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Altre domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

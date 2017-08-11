@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
@@ -41,11 +41,11 @@ ms.lasthandoff: 06/22/2017
   
 4.  Se si desidera pubblicare le origini dati condivise nel progetto e sovrascrivere origini dati condivise pubblicate in precedenza, impostare **OverwriteDataSources** su **True**.  
   
-5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, Ad esempio, `http://TestServer/TestSite/Documents/DataSources`.  
+5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, ad esempio `http://TestServer/TestSite/Documents/DataSources`.  
   
      Se non si specifica alcun valore, verrà utilizzato il valore **TargetReportFolder** .  
   
-6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, Ad esempio, `http://TestServer/TestSite/Documents/Reports`.  
+6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, ad esempio `http://TestServer/TestSite/Documents/Reports`.  
   
 7.  Per **TargetServerURL**, digitare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio `http://servername`, `http://servername/site` o `http://servername/site/subsite`.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
  [Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Pubblicazione dei report in un server di report](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [Usare una connessione Office Data Connection &#40;.odc&#41; ai report &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Pubblicazione dei report in un Server di Report](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
+ [Utilizzare una connessione Office Data Connection &#40;. odc &#41; con i report &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

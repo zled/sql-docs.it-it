@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce7657f048154ab0cf68c8e160bf1e5e6d15c210
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Riferimento della libreria del provider WMI Reporting Services (SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  Per altre informazioni sulle operazioni WMI, vedere la documentazione di WMI SDK inclusa in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accedere al provider WMI per Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Accedere al Provider WMI di Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+ [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

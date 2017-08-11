@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo. Per altre informazioni, vedere [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Per informazioni dettagliate su come esportare in Excel, vedere [Esportazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Vedere [esportare report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) per informazioni dettagliate su come esportare in Excel.  
   
 > [!IMPORTANT]  
 >  Quando si definisce un parametro di tipo **String**, viene visualizzata una casella di testo che può accettare qualsiasi valore. Se un parametro di report non è correlato a un parametro di query e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL, uno script o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Generatore report in modalità senza connessione e anteprima di un report in Generatore report. Poiché il file di configurazione RSReportServer si trova nel server di report, gli strumenti o prodotti da cui si esportano i report devono essere connessi a un server di report per la lettura del file di configurazione.  
   
--   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Report in modalità locale e Report in modalità locale nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Web part di Visualizzatore report in modalità locale e farm di SharePoint non integrata con un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni, vedere [vs modalità locale. con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Se il renderer dell'opzione di menu **Excel 2003** è configurato per essere visibile, sia le opzioni di Excel sia di Excel 2003 sono disponibili negli scenari seguenti:  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  I grafici, le barre dei dati, i grafici sparkline, le mappe, i misuratori e gli indicatori vengono esportati come immagini. I dati rappresentati, ad esempio le etichette del valore e del membro per un grafico, non vengono esportati con gli oggetti elencati in precedenza e non sono disponibili nella cartella di lavoro di Excel a meno che non siano inclusi in una colonna o riga di un'area dati all'interno di un report.  
   
- Se si desidera usare i dati di grafici, grafici sparkline, barre dei dati, mappe, misuratori e indicatori esportare il report in un file con estensione csv o generare feed di dati conformi ad Atom dal report. Per altre informazioni, vedere [Esportazione in un file CSV &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Se si desidera usare i dati di grafici, grafici sparkline, barre dei dati, mappe, misuratori e indicatori esportare il report in un file con estensione csv o generare feed di dati conformi ad Atom dal report. Per ulteriori informazioni, vedere [l'esportazione in un File CSV &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) e [la generazione di feed di dati da report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Ridimensionamento della pagina  
  Nell'estensione per il rendering di Excel vengono usate le impostazioni relative all'altezza e alla larghezza della pagina per determinare l'impostazione del foglio da definire nel foglio di lavoro di Excel. Excel tenta di abbinare le impostazioni delle proprietà PageHeight e PageWidth a uno dei formati carta più comuni.  
@@ -270,14 +270,14 @@ ms.lasthandoff: 06/22/2017
  Il rendering dei collegamenti a segnalibro visualizzati nelle caselle di testo viene eseguito come collegamenti ipertestuali di Excel nella cella in cui viene eseguito il rendering del testo. Il rendering dei collegamenti a segnalibro per immagini e grafici viene eseguito come collegamenti ipertestuali di Excel nell'immagine durante il rendering stesso. Quando si fa clic su un segnalibro, si passa alla cella di Excel in cui viene eseguito il rendering dell'elemento di report con segnalibro.  
   
 ##  <a name="ConditionalFormat"></a> Modifica dei report in fase di esecuzione  
- Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Se per un report è necessario eseguire il rendering in più formati e non è possibile creare un layout del report che consenta di eseguire il rendering nel modo desiderato in tutti i formati necessari, considerare la possibilità di usare il valore incluso nell'elemento globale predefinito RenderFormat per modificare in modo condizionale l'aspetto del report in fase di esecuzione. In questo modo è possibile nascondere o rendere visibili gli elementi del report a seconda del renderer usato per ottenere i migliori risultati in ogni formato. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Tipi di rendering &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginazione in Reporting Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamenti di rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Il rendering elementi di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

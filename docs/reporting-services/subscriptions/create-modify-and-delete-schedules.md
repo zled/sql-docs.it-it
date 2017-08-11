@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>Creare, modificare ed eliminare pianificazioni
@@ -145,9 +145,9 @@ Fare clic su **Annulla**.
   
 ## <a name="see-also"></a>Vedere anche  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Pause and Resume Shared Schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Memorizzare nella cache un report &#40;Gestione report&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Sospendere e riprendere le pianificazioni condivise](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [Memorizzare nella cache un Report &#40; Gestione report &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Aggiunta di uno Snapshot per generare un Report cronologia &#40; Gestione report &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

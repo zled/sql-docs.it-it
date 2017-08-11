@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effetti grafico - 3D, smussature e altri (Generatore Report)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Gli effetti tridimensionali possono essere applicati a singoli grafici ed è possibile visualizzare grafici 2D e 3D nello stesso report.  
   
- Per tutti i tipi di grafico, è possibile aggiungere effetti tridimensionali a un'area del grafico nella finestra di dialogo **Proprietà area grafico** selezionando **Abilita 3D**. Per altre informazioni, vedere [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ Per tutti i tipi di grafico, è possibile aggiungere effetti tridimensionali a un'area del grafico nella finestra di dialogo **Proprietà area grafico** selezionando **Abilita 3D**. Per altre informazioni, vedere [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  Per aumentare l'impatto visivo dei grafici, è anche possibile aggiungere gli stili smussato, rilievo e trama nei grafici a barre, a torta e ad anello, nonché negli istogrammi. Per altre informazioni, vedere [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  È possibile aggiungere stili di evidenziazione a un grafico 3D tramite la proprietà **Shading** visualizzata sotto Area3DStyle nel riquadro Proprietà quando si seleziona l'area del grafico. Un semplice stile di illuminazione applica la stessa tonalità agli elementi dell'area del grafico. Uno stile realistico modifica le tonalità degli elementi dell'area del grafico a seconda di un angolo di illuminazione specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Aggiunta di effetti 3D a un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  Specifica il nome del computer remoto in cui risiede l'istanza del server di report che si sta unendo in join all'implementazione del server di report basata sulla scalabilità orizzontale. Utilizzare il nome del computer che lo identifica all'interno della rete.  
   
  **-n**  
- Specifica il nome dell'istanza del server di report in un computer remoto. Questo argomento è facoltativo se il valore predefinito è installato il server di report [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza (il valore predefinito per  **-n**  è MSSQLSERVER). Se il server di report è stato installato come istanza denominata,  **-n**  è obbligatorio.  
+ Specifica il nome dell'istanza del server di report in un computer remoto. Questo argomento è facoltativo se il server di report è stato installato nell'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (il valore predefinito per **-n** è MSSQLSERVER). Se si installa il server di report come istanza denominata, l'argomento **-n** è obbligatorio.  
   
  **-u**  *useraccount*  
  Consente di specificare l'account amministratore nel computer remoto che si sta unendo in join alla distribuzione con scalabilità orizzontale Se non si specifica un account, vengono utilizzate le credenziali dell'utente corrente.  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Percorso del file  
- RSKEYMGMT.exe è  **\<* unità*>: \Programmi\Microsoft SQL Server\110\Tools\Binn * * o * * \<* unità*>: \Programmi file (x86) \Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
+ RSKEYMGMT.exe è  **\<* unità*>: \Programmi\Microsoft SQL Server\110\Tools\Binn * * o  **\<* unità*>: \Programmi file (x86) \Microsoft SQL Server\110\Tools\Binn**. È possibile eseguire l'utilità da qualsiasi cartella del file system.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il server di report crittografa le informazioni di connessione e le credenziali archiviate. Per la crittografia dei dati vengono utilizzate una chiave pubblica e una chiave simmetrica. Il server di report viene eseguito solo se un database del server di report dispone di chiavi valide. È possibile usare **rskeymgmt** per eseguire il backup, eliminare o ripristinare le chiavi. Se non è possibile ripristinare le chiavi, questo strumento consente di eliminare il contenuto crittografato non più utilizzabile.  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilità di prompt dei comandi di Server di report &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

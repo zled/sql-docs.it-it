@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Aggiungere, spostare o eliminare una casella di testo (Generatore report e SSRS)
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
     >  Se facendo clic nella casella di testo è stata attivata la modalità di modifica, premere ESC per selezionare la casella di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caselle di testo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Tasti di scelta rapida &#40;Generatore report&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [Caselle di testo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Tasti di scelta rapida &#40; Generatore report &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

@@ -25,11 +25,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
@@ -144,10 +144,10 @@ Il più tempo di preparazione con attenzione e comprensione dei dati prima di cr
   
 ## <a name="see-also"></a>Vedere anche  
  [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Aree dati annidate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un istogramma al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Ordinamento interattivo, mappe documento e i collegamenti &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Le aree dati nidificate &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Esercitazione: Aggiungere un istogramma al Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Esercitazione: Aggiungere un grafico a barre al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un grafico a barre al Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

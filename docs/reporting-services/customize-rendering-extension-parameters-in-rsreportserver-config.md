@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  La modifica dei parametri di estensione per il rendering influisce solo sulle operazioni di rendering nel server di report. Non è possibile sostituire le impostazioni dell'estensione per il rendering in un'anteprima del report in Progettazione report.  
   
- La definizione dei parametri di estensione per il rendering nei file di configurazione influisce globalmente sulle estensioni per il rendering. Le impostazioni nei file di configurazione sono utilizzate al posto dei valori predefiniti ogni volta che viene utilizzata un'estensione per il rendering specifica. Se si desidera impostare i parametri di estensione per il rendering per un'operazione di rendering o per un report specifico, è necessario specificare le informazioni sul dispositivo a livello di programmazione tramite il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> o nell'URL di un report. Per altre informazioni sulla definizione delle impostazioni relative alle informazioni sul dispositivo per un'operazione di rendering e per visualizzare l'elenco completo di tali impostazioni, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ La definizione dei parametri di estensione per il rendering nei file di configurazione influisce globalmente sulle estensioni per il rendering. Le impostazioni nei file di configurazione sono utilizzate al posto dei valori predefiniti ogni volta che viene utilizzata un'estensione per il rendering specifica. Se si vuole impostare i parametri di estensione per il rendering per un'operazione di rendering o per un report specifico, è necessario specificare le informazioni sul dispositivo a livello di programmazione tramite il metodo <xref:ReportExecution2005.ReportExecutionService.Render%2A> o nell'URL di un report. Per altre informazioni sulla definizione delle impostazioni relative alle informazioni sul dispositivo per un'operazione di rendering e per visualizzare l'elenco completo di tali impostazioni, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>Individuazione e modifica del file RSReportServer.config  
  Le impostazioni di configurazione per i formati di output del report vengono specificate come parametri di estensione per il rendering nel file RSReportServer.config. Per specificare i parametri di estensione per il rendering nei file di configurazione, è necessario saper definire le strutture XML per l'impostazione dei parametri di rendering. È possibile modificare due strutture XML:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La struttura XML **DeviceInfo** definisce le impostazioni relative alle informazioni sul dispositivo usate da un'estensione per il rendering. La maggior parte dei parametri di estensione per il rendering viene specificata come impostazioni relative alle informazioni sul dispositivo.  
   
- Per modificare il file, è possibile utilizzare un editor di testo. Il file RSReportServer.config si trova nella cartella \Reporting Services\Report Server\Bin. Per altre informazioni sulla modifica dei file di configurazione, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Per modificare il file, è possibile utilizzare un editor di testo. Il file RSReportServer.config si trova nella cartella \Reporting Services\Report Server\Bin. Per ulteriori informazioni sulla modifica dei file di configurazione, vedere [modificare un File di configurazione di Reporting Services &#40; RSReportServer. config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Modifica del nome visualizzato  
  Il nome di un'estensione per il rendering viene visualizzato nell'elenco Esporta sulla barra degli strumenti del report. Tra i nomi visualizzati predefiniti vi sono Archivio Web, File TIFF e File Acrobat (PDF). È possibile sostituire il nome visualizzato predefinito con un valore personalizzato specificando l'elemento **OverrideNames** nei file di configurazione. Se si stanno definendo due istanze di un'unica estensione per il rendering, è anche possibile usare l'elemento **OverrideNames** per distinguere ogni istanza nell'elenco Esporta.  
@@ -136,12 +136,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File di configurazione RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Impostazioni relative alle informazioni sul dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
- [Impostazioni relative alle informazioni sul dispositivo Excel](../reporting-services/excel-device-information-settings.md)   
- [Impostazioni relative alle informazioni sul dispositivo HTML](../reporting-services/html-device-information-settings.md)   
- [Impostazioni relative alle informazioni sul dispositivo di acquisizione immagini](../reporting-services/image-device-information-settings.md)   
- [Impostazioni relative alle informazioni sul dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
- [Impostazioni relative alle informazioni sul dispositivo PDF](../reporting-services/pdf-device-information-settings.md)   
- [Impostazioni relative alle informazioni sul dispositivo XML](../reporting-services/xml-device-information-settings.md)  
+ [CSV Device Information Settings](../reporting-services/csv-device-information-settings.md)   
+ [Excel Device Information Settings](../reporting-services/excel-device-information-settings.md)   
+ [HTML Device Information Settings](../reporting-services/html-device-information-settings.md)   
+ [Image Device Information Settings](../reporting-services/image-device-information-settings.md)   
+ [MHTML Device Information Settings](../reporting-services/mhtml-device-information-settings.md)   
+ [PDF Device Information Settings](../reporting-services/pdf-device-information-settings.md)   
+ [XML Device Information Settings](../reporting-services/xml-device-information-settings.md)  
   
   

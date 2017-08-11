@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41363d15ebb18431c658c4f990d10a1fa67260ae
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 17eb520881cb87315dc6c3dd77de7369ed0e5736
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
@@ -65,6 +67,24 @@ ms.lasthandoff: 08/03/2017
 -   [Configura gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## <a name="configure-adonet-connection-manager"></a>Configura gestione connessione ADO.NET
+  Utilizzare la finestra di dialogo **Configura gestione connessione ADO.NET** per aggiungere una connessione a un'origine dati accessibile mediante un provider di dati .NET Framework, ad esempio il provider SqlClient. La gestione connessione può utilizzare una connessione esistente oppure è possibile crearne una nuova.  
+  
+ Per ulteriori informazioni sulla gestione connessione ADO.NET, vedere [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Connessioni dati**  
+ Consente di selezionare una connessione dati ADO.NET esistente nell'elenco.  
+  
+ **Proprietà connessione dati**  
+ Consente di visualizzare proprietà e valori per la connessione dati ADO.NET selezionata.  
+  
+ **Nuova**  
+ Consente di creare una connessione dati ADO.NET tramite la finestra di dialogo **Gestione connessione** .  
+  
+ **Elimina**  
+ Selezionare una connessione e quindi eliminarla utilizzando il pulsante **Elimina** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

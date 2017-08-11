@@ -21,15 +21,15 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Le chiavi di crittografia - SSRS inizializzare un Server di Report
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] un server inizializzato è un server in grado di crittografare e decrittografare dati in un database del server di report. L'inizializzazione è un requisito per il funzionamento del server di report. L'inizializzazione viene eseguita al primo avvio del servizio del server di report, quando il server di report viene unito in join alla distribuzione esistente o quando vengono ricreate manualmente le chiavi come parte del processo di recupero. Per altre informazioni su come e perché usare le chiavi di crittografia, vedere [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Le chiavi di crittografia sono basate in parte sulle informazioni sul profilo del servizio del server di report. Se si modifica l'identità utente utilizzata per l'esecuzione del servizio del server di report, è necessario aggiornare le chiavi di conseguenza. Se si utilizza lo strumento di configurazione di Reporting Services per modificare l'identità utente, questa operazione viene eseguita automaticamente.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  Il servizio del server di report si connette nuovamente al database del server di report e aggiunge la chiave simmetrica ai valori dell'identificatore dell'installazione e della chiave pubblica archiviati al passaggio 3. Prima di archiviarla, il servizio del server di report utilizza la chiave pubblica per crittografare la chiave simmetrica. Dopo che la chiave simmetrica è stata archiviata, il server di report viene considerato inizializzato e può essere utilizzato.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>Inizializzazione di un server di report per la distribuzione con scalabilità orizzontale  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta un modello di distribuzione con scalabilità orizzontale che condivide un singolo database del server di report tra più istanze del server di report. Per unire in join una distribuzione con scalabilità orizzontale, è necessario che un server di report crei e archivi la propria copia della chiave simmetrica nel database condiviso. Sebbene i server che utilizzano il database utilizzino una sola chiave simmetrica, ogni server di report ha una propria copia della chiave. Ogni copia varia perché è crittografata in modo univoco tramite la relativa chiave pubblica.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]supporta un modello di distribuzione con scalabilità orizzontale che condivide un database del server di report singola tra più istanze di server di report. Per unire in join una distribuzione con scalabilità orizzontale, è necessario che un server di report crei e archivi la propria copia della chiave simmetrica nel database condiviso. Sebbene i server che utilizzano il database utilizzino una sola chiave simmetrica, ogni server di report ha una propria copia della chiave. Ogni copia varia perché è crittografata in modo univoco tramite la relativa chiave pubblica.  
   
  I primi passaggi del processo di inizializzazione di un server di report per la distribuzione con scalabilità orizzontale sono identici ai primi tre passaggi in cui viene descritta l'inizializzazione di una singola combinazione di server e database.  
   

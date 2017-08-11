@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OutputPath è una proprietà di compilazione che identifica il percorso delle cartelle per archiviare la definizione del report usata nella verifica della compilazione, nella distribuzione e nell'anteprima dei report.  
   
--   ErrorLevel è una proprietà di compilazione che identifica la gravità dei problemi di compilazione segnalati come errori. I problemi con livelli di gravità minori o uguali al valore di ErrorLevel vengono segnalati come errori; in caso contrario, vengono segnalati come avvisi. Per altre informazioni, vedere la sezione "Convalida del report e livelli di errore" di [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel è una proprietà di compilazione che identifica la gravità dei problemi di compilazione segnalati come errori. I problemi con livelli di gravità minori o uguali al valore di ErrorLevel vengono segnalati come errori; in caso contrario, vengono segnalati come avvisi. Per ulteriori informazioni, vedere la sezione "Convalida di Report e livelli di errore" in [progettare report con progettazione Report &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion è una proprietà di distribuzione che consente di identificare la versione prevista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installata nel server di report di destinazione specificato nella proprietà TargetServerURL.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_SupportedVersions"></a> Versioni supportate  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non è progettato per l'esecuzione in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti Server di Report, non è progettato per l'esecuzione [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-computer basati su e non è installato nel [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basato su server. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
   
  Nella tabella seguente sono descritte le versioni supportate per la creazione e la pubblicazione di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

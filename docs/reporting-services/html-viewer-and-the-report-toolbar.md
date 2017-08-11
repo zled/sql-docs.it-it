@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizzatore HTML e barra degli strumenti dei report
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>Barra degli strumenti dei report  
  La barra degli strumenti dei report include funzionalità di navigazione tra le pagine, ingrandimento o riduzione, aggiornamento, ricerca, esportazione, stampa e feed di dati per i report gestiti tramite l'estensione per il rendering HTML.  
   
- La funzionalità di stampa è facoltativa. Se disponibile, sulla barra degli strumenti dei report viene visualizzata l'icona di una stampante. Al primo utilizzo, facendo clic sull'icona della stampante viene scaricato un controllo ActiveX da installare. Dopo aver installato il controllo, quando si fa clic sull'icona della stampante viene aperta una finestra di dialogo Stampa che consente di selezionare una delle stampanti configurate per il computer. La disponibilità della funzionalità di stampa è determinata dalle impostazioni del server e del browser. Per altre informazioni, vedere [Stampare report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ La funzionalità di stampa è facoltativa. Se disponibile, sulla barra degli strumenti dei report viene visualizzata l'icona di una stampante. Al primo utilizzo, facendo clic sull'icona della stampante viene scaricato un controllo ActiveX da installare. Dopo aver installato il controllo, quando si fa clic sull'icona della stampante viene aperta una finestra di dialogo Stampa che consente di selezionare una delle stampanti configurate per il computer. La disponibilità della funzionalità di stampa è determinata dalle impostazioni del server e del browser. Per ulteriori informazioni, vedere [stampa di report da un Browser con il controllo di stampa &#40; Generatore report e SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [abilitare e disabilitare la stampa sul lato Client per Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  La barra degli strumenti dei report è simile a quella illustrata nella figura seguente. La barra degli strumenti dei report effettivamente visualizzata può essere diversa rispetto a questa figura, a seconda delle funzionalità per i report o delle opzioni di rendering disponibili.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Esportare report &#40;Generatore Report e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Sottoscrizioni standard appartenenti a utenti singoli.  
   
- L'annullamento di un processo comporta l'annullamento solo dei processi in esecuzione nel server di report. Poiché il server di report non gestisce elaborazione di dati su altri computer, è necessario annullare manualmente i processi di query che rimangono di conseguenza isolati su altri sistemi. Per chiudere automaticamente le query con esecuzione eccessivamente prolungata, è possibile specificare valori di timeout delle query. Per altre informazioni, vedere [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Per altre informazioni sulla sospensione temporanea di un report, vedere [Disabilitare o sospendere l'elaborazione di report e sottoscrizioni](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ L'annullamento di un processo comporta l'annullamento solo dei processi in esecuzione nel server di report. Poiché il server di report non gestisce elaborazione di dati su altri computer, è necessario annullare manualmente i processi di query che rimangono di conseguenza isolati su altri sistemi. Per chiudere automaticamente le query con esecuzione eccessivamente prolungata, è possibile specificare valori di timeout delle query. Per ulteriori informazioni, vedere [impostazione valori di timeout per il Report e condivise l'elaborazione di set di dati &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Per altre informazioni sulla sospensione temporanea di un report, vedere [Disabilitare o sospendere l'elaborazione di report e sottoscrizioni](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Per annullare un processo, in rare circostanze potrebbe essere necessario riavviare il server. Per la modalità SharePoint, potrebbe essere necessario riavviare il pool di applicazioni in cui viene ospitata l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -121,14 +121,14 @@ ms.lasthandoff: 06/22/2017
 5.  In alternativa, fare clic sulla casella per il processo e scegliere **Elimina** per annullare il processo. L'eliminazione del processo non comporta l'eliminazione della sottoscrizione.  
   
 ##  <a name="bkmk_programmatically"></a> Gestione di processi a livello di programmazione  
- I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per ulteriori informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A> e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Annulla processi server di report &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Proprietà processo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Proprietà processo &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modificare un File di configurazione di Reporting Services &#40; RSReportServer. config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Monitoraggio delle prestazioni del server di report](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

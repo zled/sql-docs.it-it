@@ -20,15 +20,15 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9791cd34a321173e30bf2016956f02e54e62112c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i report, i modelli di report e le sottoscrizioni guidate dai dati recuperano i dati da origini dati esterne. Per connettersi a un'origine dati esterna, un server di report utilizza le informazioni di connessione all'origine dei dati definite in o a cui si fa riferimento dal report, dal modello o dalla sottoscrizione. Le proprietà di connessione alle origini dati vengono sempre definite al momento della creazione del report o del modello, ma possono essere gestite in modo indipendente dopo la pubblicazione del report o del modello in un server di report.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i report, i modelli di report e le sottoscrizioni guidate dai dati recuperano i dati da origini dati esterne. Per connettersi a un'origine dati esterna, un server di report utilizza le informazioni di connessione all'origine dei dati definite in o a cui si fa riferimento dal report, dal modello o dalla sottoscrizione. Le proprietà di connessione alle origini dati vengono sempre definite al momento della creazione del report o del modello, ma possono essere gestite in modo indipendente dopo la pubblicazione del report o del modello in un server di report.  
   
  Per gestire le origini dati del report, è possibile utilizzare Gestione report per un server di report in modalità nativa o le pagine dell'applicazione in un sito di SharePoint se il server di report è stato distribuito in modalità integrata SharePoint.  
   
@@ -67,25 +67,25 @@ ms.lasthandoff: 06/22/2017
 |Attività|Strumento|Collegamento|  
 |----------|----------|----------|  
 |Visualizzare esempi di stringhe di connessione.||[Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|Scegliere un approccio per ottenere le credenziali per la connessione a un'origine dati.||[Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Aggiungere proprietà di connessione alle origini dati in un file di definizione del report (con estensione rdl).|Progettazione report|[Creare un'origine dati incorporata o condivisa &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
-|Aggiungere un collegamento al file di un'origine dati condivisa (con estensione rds) nel progetto di un report.|Progettazione report|[Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
+|Scegliere un approccio per ottenere le credenziali per la connessione a un'origine dati.||[Specificare le credenziali e informazioni di connessione per origini dati del Report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
+|Aggiungere proprietà di connessione alle origini dati in un file di definizione del report (con estensione rdl).|Progettazione report|[Creare un'origine dati incorporata o condivisa &#40; SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Aggiungere un collegamento al file di un'origine dati condivisa (con estensione rds) nel progetto di un report.|Progettazione report|[Creare, modificare ed eliminare origini dati condivise &#40; SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Creare un elenco predefinito di origini dati che gli utenti possono selezionare in fase di esecuzione. Quando un utente richiede un report, viene fornito un elenco di origini dati. L'utente deve selezionare l'origine dati da utilizzare prima di eseguire il report. Per aggiungere un elenco di selezione di origini dati a un report, si utilizza un'espressione<br /><br /> Tale espressione è nota come connessione all'origine dati dinamica.|Progettazione report|[Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
-|Creare un'origine dei dati condivisa in un server di report.|Gestione report|[Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
-|Archiviare credenziali come prerequisito per la creazione di sottoscrizioni o snapshot del report.|Gestione report|[Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
-|Modificare le proprietà di connessione alle origini dati in un report pubblicato.|Gestione report|[Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
+|Creare un'origine dei dati condivisa in un server di report.|Gestione report|[Creare, eliminare o modificare un'origine dati condivisa &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)|  
+|Archiviare credenziali come prerequisito per la creazione di sottoscrizioni o snapshot del report.|Gestione report|[Archiviare le credenziali in un'origine di dati Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
+|Modificare le proprietà di connessione alle origini dati in un report pubblicato.|Gestione report|[Configurare le proprietà di origine dati per un Report &#40; Gestione report &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
 |Creare un'origine dei dati condivisa in un server di report.|Sito di SharePoint|[Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
-|Utilizzare le informazioni di connessione odc esistenti con un report.|Sito di SharePoint|[Utilizzare una connessione Office Data Connection &#40;.odc&#41; ai report &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
+|Utilizzare le informazioni di connessione odc esistenti con un report.|Sito di SharePoint|[Utilizzare una connessione Office Data Connection &#40;. odc &#41; con i report &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Le connessioni alle origini dei dati dei report vengono gestite in modo diverso rispetto alla connessione del server di report al relativo database. Per altre informazioni sulla connessione di un server di report al relativo archivio dati interno, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associare un report o un modello a un'origine dati condivisa &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
+ [Associare un Report o un modello a un'origine dati condivisa &#40; SSRS &#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Creare, eliminare o modificare un'origine dati condivisa &#40; Gestione report &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Archiviare le credenziali in un'origine di dati Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Origini dati supportate da Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Gestione contenuto di Server di report &#40; Modalità nativa SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

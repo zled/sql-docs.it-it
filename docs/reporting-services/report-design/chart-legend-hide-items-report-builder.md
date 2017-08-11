@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 06f1cf8cde2eb9a9c9aa261188e64aa2fc7afe4b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>Legenda del grafico - Nascondi elementi (Generatore Report)
@@ -40,10 +40,10 @@ Per impostazione predefinita, qualsiasi serie aggiunta a un grafico senza forme 
     >  Non è possibile nascondere una serie per un solo gruppo. Se è stato aggiunto un campo all'area **Gruppi di serie** , verranno nascoste tutte le serie che appartengono a questo gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà legenda, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
+ [Formattazione della legenda in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Formattazione dei punti dati in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Modificare il testo di un elemento della legenda &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Aggiungere una media mobile per un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà legenda, generale &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
   
   

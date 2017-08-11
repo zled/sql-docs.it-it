@@ -15,17 +15,17 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Aggiungere i tipi di contenuto di Reporting Services a una libreria SharePoint
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di tipi di contenuto di SharePoint predefiniti usati per gestire file di origini dati condivise (con estensione rsds), modelli di report (con estensione smdl) e file di definizione dei report di Generatore report (con estensione rdl). Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint  
   
  Per aggiungere tipi di contenuto a una raccolta, è necessario essere un amministratore del sito o disporre del livello di autorizzazione Controllo completo.  
   

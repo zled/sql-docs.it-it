@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Spostare o eliminare un elemento (Gestione report)
@@ -35,11 +35,11 @@ ms.lasthandoff: 06/22/2017
   
 |Icona|Elemento spostabile|  
 |----------|-------------------|  
-|![Icona report](../../reporting-services/report-server/media/hlp-16doc.gif "sull'icona Report")|Report|  
-|![Icona di report collegato](../../reporting-services/report-server/media/hlp-16linked.gif "sull'icona report collegato")|Report collegato|  
-|![Icona della cartella](../../reporting-services/report-server/media/hlp-16folder.gif "icona della cartella")|Cartella|  
-|![icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "icona di risorsa generica")|Risorsa generica|  
-|![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "icona di origine dati condivisa")|Origine dati condivisa|  
+|![Icona di report](../../reporting-services/report-server/media/hlp-16doc.gif "Icona di report")|Report|  
+|![Icona di report collegato](../../reporting-services/report-server/media/hlp-16linked.gif "Icona di report collegato")|Report collegato|  
+|![Icona di cartella](../../reporting-services/report-server/media/hlp-16folder.gif "Icona di cartella")|Cartella|  
+|![Icona di risorsa generica](../../reporting-services/report-server/media/hlp-16file.gif "Icona di risorsa generica")|Risorsa generica|  
+|![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
 ||Set di dati condiviso|  
   
  Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione modelli", "Gestione di cartelle" e "Gestione di origini dei dati".  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Pagina contenuto &#40; Gestione report &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [La ricerca, visualizzazione e gestione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

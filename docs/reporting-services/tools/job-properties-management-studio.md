@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Proprietà processo (Management Studio)
@@ -73,8 +73,8 @@ ms.lasthandoff: 08/03/2017
  Per i processi avviati da un utente, in questa colonna viene indicato il nome dell'utente. Per i processi di sistema, si tratta del nome del server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

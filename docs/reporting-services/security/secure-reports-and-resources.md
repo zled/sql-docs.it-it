@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
@@ -79,10 +79,10 @@ ms.lasthandoff: 06/22/2017
  È consigliabile proteggere i report che contengono informazioni riservate in corrispondenza del livello di accesso ai dati, richiedendo agli utenti di specificare le credenziali per l'accesso ai dati riservati. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). È inoltre possibile proteggere una cartella in modo da renderla inaccessibile agli utenti non autorizzati. Per altre informazioni, vedere [Proteggere le cartelle](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Proteggere le origini dei dati condivise](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Creare e gestire le assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Configurare l'accesso a Generatore Report](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Elementi di origine dati condivisa protetta](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Archiviare le credenziali in un'origine di dati Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

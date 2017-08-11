@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>Gestione connessione SMTP
@@ -50,6 +52,33 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md).  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="smtp-connection-manager-editor"></a>Editor gestione connessione SMTP
+  Usare la finestra di dialogo **Editor gestione connessioni SMTP** per specificare un server SMTP (Simple Mail Transfer Protocol).  
   
+ Per ulteriori informazioni sulla gestione connessioni SMTP, vedere [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di specificare un nome univoco per la gestione connessione.  
+  
+ **Description**  
+ Consente di aggiungere una descrizione per la gestione connessione. È consigliabile includere nella descrizione informazioni sugli scopi della gestione connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
+  
+ **Server SMTP**  
+ Consente di specificare il nome del server SMTP.  
+  
+ **Usa autenticazione di Windows**  
+ Selezionare questa opzione per inviare la posta elettronica mediante un server SMTM che utilizza l'autenticazione di Windows per consentire l'accesso.  
+  
+> [!IMPORTANT]  
+>  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
+  
+> [!NOTE]  
+>  Se si utilizza Microsoft Exchange come server SMTP, potrebbe essere necessario impostare l'opzione **Usa autenticazione di Windows** su **True**. È possibile configurare i server Exchange in modo da impedire le connessioni SMTP non autenticate.  
+  
+ **Attiva SSL (Secure Sockets Layer)**  
+ Selezionare questa opzione per crittografare le comunicazioni mediante SSL (Secure Sockets Layer) durante l'invio di messaggi di posta elettronica.  
+  
+

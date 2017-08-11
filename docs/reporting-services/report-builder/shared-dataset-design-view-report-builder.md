@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Usare il pulsante **Seleziona** nel gruppo Connessione per selezionare un'origine dati condivisa o individuare e selezionare l'origine dati condivisa nel server di report.  
   
 > [!NOTE]  
->  Un set di dati condiviso deve essere basato su un'origine dati condivisa. Se l'origine dati richiesta non è disponibile, è necessario crearne una nel server di report. Per altre informazioni, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+>  Un set di dati condiviso deve essere basato su un'origine dati condivisa. Se l'origine dati richiesta non è disponibile, è necessario crearne una nel server di report. Per ulteriori informazioni, vedere [crea, modifica ed eliminare origini dati condivise &#40; SSRS &#41; ](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
  Per altre informazioni, vedere [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Per altre informazioni sui piani di aggiornamento della cache, vedere [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ Per ulteriori informazioni sui piani di aggiornamento della cache, vedere [Cache set di dati condivisi &#40; SSRS &#41; ](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 ### <a name="query-designer"></a>Progettazione query  
  Utilizzare la barra degli strumenti di Progettazione query per compilare una query che specifichi quali dati recuperare dalla connessione dati. La barra degli strumenti visualizzata dipende dalla finestra Progettazione query associata al tipo di origine dati della connessione dati.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Impostare la lingua per i parametri del report in un URL
@@ -47,7 +47,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  Oltre ai valori **true** e **false** , per il parametro di accesso con URL *rc:Parameters*è ora possibile passare il valore **Collapsed**. Quando si usa *rc:Parameters*=**Collapsed** in un URL, l'area dei messaggi di richiesta dei parametri del visualizzatore HTML viene compressa e non è più visualizzata, ma l'utente può comunque scegliere di visualizzarla. Il valore **false** consente di rimuovere l'area dei messaggi di richiesta dei parametri dalla barra degli strumenti del visualizzatore HTML, in modo che non sia più disponibile per l'utente finale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
+ [Accesso con URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Riferimento ai parametri URL accesso](../reporting-services/url-access-parameter-reference.md)  
   
   

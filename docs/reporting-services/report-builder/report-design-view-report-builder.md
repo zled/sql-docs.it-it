@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
@@ -73,10 +73,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Le proprietà degli elementi del report facendo clic con il pulsante destro del mouse sull'elemento e scegliendo **Proprietà**.  
   
- Per informazioni sull'uso della tastiera per modificare gli elementi nell'area di progettazione, vedere [Tasti di scelta rapida &#40;Generatore report&#41](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ Per informazioni sull'utilizzo della tastiera per modificare gli elementi nell'area di progettazione, vedere [tasti di scelta rapida &#40; Generatore report &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>Dimensioni dell'area di progettazione e area di stampa  
- Le dimensioni dell'area di progettazione potrebbero essere diverse da quelle dell'area di stampa della pagina specificata per stampare il report. La modifica delle dimensioni dell'area di progettazione non altera l'area di stampa del report. Indipendentemente dalle dimensioni impostate per l'area di stampa del report, le dimensioni totali dell'area di progettazione non vengono modificate. Per altre informazioni, vedere [Tipi di rendering &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Le dimensioni dell'area di progettazione potrebbero essere diverse da quelle dell'area di stampa della pagina specificata per stampare il report. La modifica delle dimensioni dell'area di progettazione non altera l'area di stampa del report. Indipendentemente dalle dimensioni impostate per l'area di stampa del report, le dimensioni totali dell'area di progettazione non vengono modificate. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!TIP]  
 >  Per visualizzare il righello, nella scheda **Visualizza** selezionare la casella di controllo **Righello** .  

@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Tipo|LS|Default|Description|  
+|Proprietà|Tipo|LS|Valore predefinito|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
@@ -149,8 +149,8 @@ ms.lasthandoff: 06/13/2017
  `</BODY>`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stampare i report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Stampa di report &#40;Generatore report e SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Stampare i report da un Browser con il controllo di stampa &#40; Generatore report e SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Stampa di report &#40; Generatore report e SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Image Device Information Settings](../../../reporting-services/image-device-information-settings.md)  
   
   

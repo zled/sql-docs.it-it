@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="planning-a-report-report-builder"></a>Pianificazione di un report (Generatore report)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Formato per visualizzare il report**  
   
-     È possibile eseguire il rendering dei report online in un browser, ad esempio il portale web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o esportarli in altri formati, come Excel, Word o PDF. Il formato finale di un report è una scelta importante in quanto non tutte le caratteristiche sono disponibili in tutti i formati di esportazione. Per altre informazioni, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     È possibile eseguire il rendering dei report online in un browser, ad esempio il portale web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o esportarli in altri formati, come Excel, Word o PDF. Il formato finale di un report è una scelta importante in quanto non tutte le caratteristiche sono disponibili in tutti i formati di esportazione. Per altre informazioni, vedere [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Struttura da utilizzare per presentare i dati nel report**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Report creazione concetti &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)  
   
   

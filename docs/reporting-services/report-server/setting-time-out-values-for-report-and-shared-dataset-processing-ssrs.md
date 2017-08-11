@@ -20,11 +20,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b64cfa425784e7e495b510f960a50109175537b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS)
@@ -60,9 +60,9 @@ ms.lasthandoff: 06/22/2017
 >  È possibile definire l'impostazione **RunningRequestsDbCycle** nel file RSReportServer.config per modificare la frequenza di valutazione dei processi in esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Impostare le opzioni di elaborazione &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Server Reporting Services Report &#40; Modalità nativa &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Gestire un processo in esecuzione](../../reporting-services/subscriptions/manage-a-running-process.md)   
+ [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

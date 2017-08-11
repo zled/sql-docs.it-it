@@ -23,11 +23,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verifying-a-report-run"></a>Verifica dell'esecuzione di un report
@@ -45,13 +45,13 @@ ms.lasthandoff: 06/22/2017
   
 |Tipo di report|Posizione delle informazioni sulla data e l'ora|Operazioni da eseguire per visualizzare le informazioni|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Report che viene eseguito come snapshot del report|Pagina Contenuto. Per altre informazioni, vedere [Pagina Contenuto &#40;Gestione report&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Individuare la cartella che contiene il report.<br /><br /> 2) Impostare la visualizzazione Dettagli per la cartella.<br /><br /> 3) Osservare data e ora nella colonna **Data ultima esecuzione** .|  
-|Snapshot della cronologia del report|Pagina delle proprietà Cronologia. Per altre informazioni, vedere [Pagina delle proprietà Opzioni snapshot &#40;Gestione report&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Aprire il report.<br /><br /> 2) Fare clic sulla pagina **Proprietà** .<br /><br /> 3) Fare clic sulla scheda **Cronologia** .<br /><br /> 4) Osservare data e ora nella colonna **Data ultima esecuzione** .|  
+|Report che viene eseguito come snapshot del report|Pagina Contenuto. Per ulteriori informazioni, vedere [pagina contenuto &#40; Gestione report &#41; ](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Individuare la cartella che contiene il report.<br /><br /> 2) Impostare la visualizzazione Dettagli per la cartella.<br /><br /> 3) Osservare data e ora nella colonna **Data ultima esecuzione** .|  
+|Snapshot della cronologia del report|Pagina delle proprietà Cronologia. Per ulteriori informazioni, vedere [pagina delle proprietà Opzioni Snapshot &#40; Gestione report &#41; ](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Aprire il report.<br /><br /> 2) Fare clic sulla pagina **Proprietà** .<br /><br /> 3) Fare clic sulla scheda **Cronologia** .<br /><br /> 4) Osservare data e ora nella colonna **Data ultima esecuzione** .|  
 |Report memorizzato nella cache|Pianificazione utilizzata per creare e aggiornare il report memorizzato nella cache.|1) Aprire il report.<br /><br /> 2) Fare clic sulla pagina **Proprietà** .<br /><br /> 3) Fare clic sulla scheda **Esecuzione** .<br /><br /> 4) Aprire la pianificazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Impostare le proprietà di elaborazione di Report](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

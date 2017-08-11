@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funzionalità interattiva - diverse estensioni di Rendering dei Report
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |Anteprima/Visualizzatore report, HTML|Gli utenti fanno clic sulle icone di espansione o compressione per visualizzare le sezioni di un report.|  
 |PDF|Il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
-|Excel|Il rendering di elementi e collegamenti drill-down che è possibile attivare/disattivare viene eseguito come strutture comprimibili in Excel. In Excel è possibile espandere e comprimere le sezioni del report. Per altre informazioni sulle limitazioni imposte da Excel, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Il rendering di elementi e collegamenti drill-down che è possibile attivare/disattivare viene eseguito come strutture comprimibili in Excel. In Excel è possibile espandere e comprimere le sezioni del report. Per ulteriori informazioni sulle limitazioni imposte da Excel, vedere [l'esportazione in Microsoft Excel &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|Il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
 |Altro|Non disponibili in MHTML, XML o CSV. In caso di esportazione in un formato immagine, il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Ordinamento interattivo, mappe documento e i collegamenti &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

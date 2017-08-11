@@ -32,11 +32,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
@@ -256,7 +256,7 @@ ms.lasthandoff: 06/22/2017
      Inoltre è possibile nascondere il livello in base a condizioni specifiche. Per altre informazioni, vedere [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Risolvere i problemi di report: Eseguire il mapping di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

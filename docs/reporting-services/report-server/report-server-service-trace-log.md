@@ -20,11 +20,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37d44eeb29ad4e2acfd4f9618c755f2c5d8b9b28
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
@@ -115,8 +115,8 @@ Nelle versioni precedenti di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 + Reportserverservice_main _*\<timestamp >*. log
   
 ## <a name="see-also"></a>Vedere anche  
- [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Servizi file di Log e origini di Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Errori e gli eventi riferimento &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
  Ulteriori domande? [Provare il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
 

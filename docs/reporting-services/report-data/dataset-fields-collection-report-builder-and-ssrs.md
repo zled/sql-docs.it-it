@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|Data e ora con differenza di fuso orario|  
     |**DateTime2**|**DateTime**|Data e ora con millisecondi frazionari|  
   
- Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati (motore di database)](http://go.microsoft.com/fwlink/?linkid=98362) e [Funzioni e tipi di dati di data e ora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati (motore di database)](http://go.microsoft.com/fwlink/?linkid=98362) e [Funzioni e tipi di dati di data e ora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
   
  Per altre informazioni sull'inclusione di riferimenti in un campo del set di dati da un'espressione, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Parti del report e set di dati in Generatore report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Parti di report e set di dati in Generatore Report](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

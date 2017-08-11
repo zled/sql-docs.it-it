@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Aggiunta di un parametro multivalore a un report
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
      Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro. Per più valori, la funzionalità **Seleziona tutto** è disponibile all'inizio dell'elenco, in modo che l'utente possa selezionare o deselezionare tutti i valori con un solo clic. Se si sceglie di ottenere i valori disponibili per il parametro del report da una query del set di dati, assicurarsi di selezionare un set di dati che non contenga la variabile di query associata allo stesso parametro del report.  
   
-     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Per ulteriori informazioni, vedere [aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="to-add-a-multi-value-parameter"></a>Per aggiungere un parametro multivalore  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
      Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro. Per più valori, la funzionalità **Seleziona tutto** è disponibile all'inizio dell'elenco, in modo che l'utente possa selezionare o deselezionare tutti i valori con un solo clic. Se si sceglie di ottenere i valori disponibili per il parametro del report da una query del set di dati, assicurarsi di selezionare un set di dati che non contenga la variabile di query associata allo stesso parametro del report.  
   
-     Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Per ulteriori informazioni, vedere [aggiungere, modificare o eliminare valori disponibili per un parametro di Report &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   

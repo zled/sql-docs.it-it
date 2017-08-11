@@ -15,15 +15,15 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Esempi di URL per gli elementi in un Server di Report - modalità SharePoint
-  Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
+  Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
   
  Per i siti di SharePoint vengono usati indirizzi Web diversi rispetto a un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. In una gerarchia Web di un sito di SharePoint sono inclusi l'applicazione Web di SharePoint, un sito principale, eventuali siti secondari e raccolte. È necessario conoscere la procedura per la creazione di un indirizzo URL che specifichi il server di SharePoint, nonché il percorso nella gerarchia dei siti di SharePoint in cui si desidera pubblicare un report o elementi correlati.  
   
@@ -140,9 +140,9 @@ ms.lasthandoff: 06/22/2017
  Quando un server di report viene eseguito in modalità integrata SharePoint, il concetto di risorsa è più limitato. In questo caso il concetto di risorsa viene utilizzato per l'archiviazione di report che fanno riferimento a un'immagine esterna. Ciò è valido se il report è uno snapshot o una copia mantenuta per uso interno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicare un report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Pubblicare un Report in una raccolta di SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Pubblicare un'origine dati condivisa in una raccolta di SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Finestra di dialogo Pagine delle proprietà del progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Finestra di dialogo Pagine delle proprietà di progetto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
 

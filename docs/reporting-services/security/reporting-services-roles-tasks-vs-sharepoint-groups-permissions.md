@@ -23,11 +23,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Visual Studio servizi ruoli-attività di Reporting. Autorizzazioni di gruppi di SharePoint
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_compare_tools_terms"></a> Confrontare strumenti di autorizzazione e terminologia  
  **Modalità nativa** : gli oggetti di autorizzazione (ruoli e attività) in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono creati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurati per i singoli utenti in Gestione report.  
   
- **SharePoint mode:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode utilizes the SharePoint permission features. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
+ **Modalità SharePoint** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usate le funzionalità di autorizzazione di SharePoint. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
   
  Nella tabella seguente vengono confrontati gli oggetti e i concetti correlati all'autorizzazione tra la modalità SharePoint e nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -109,9 +109,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Impostare le autorizzazioni per operazioni del Server di Report in un'applicazione Web di SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Concessione di autorizzazioni per elementi di Server di Report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definizioni di ruolo](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

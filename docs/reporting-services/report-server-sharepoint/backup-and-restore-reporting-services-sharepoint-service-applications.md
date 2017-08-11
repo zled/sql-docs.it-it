@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_Restrictions"></a> Limitazioni e restrizioni  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizzando le funzionalità di backup e ripristino di SharePoint. **Sono necessari passaggi aggiuntivi** , illustrati in questo argomento. Attualmente, tramite il processo di backup **non** viene eseguito il backup di credenziali e chiavi di crittografia per gli account di esecuzione automatica (UEA) o l'autenticazione di Windows nel database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]applicazioni di servizio possono essere parzialmente backup e ripristino di SharePoint utilizzando backup e ripristino delle funzionalità. **Sono necessari passaggi aggiuntivi** , illustrati in questo argomento. Attualmente, tramite il processo di backup **non** viene eseguito il backup di credenziali e chiavi di crittografia per gli account di esecuzione automatica (UEA) o l'autenticazione di Windows nel database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Indicazioni  
   

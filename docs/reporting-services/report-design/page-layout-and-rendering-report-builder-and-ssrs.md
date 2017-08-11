@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
@@ -92,7 +92,7 @@ In un report possono essere contenuti sottoreport.
   
  Quando si usa un'estensione per il rendering di **interruzioni di pagina software** , ad esempio l'estensione per il rendering HTML, è possibile che si desideri conoscere l'aspetto del report stampato, nonché la relativa qualità di rendering usando un renderer di interruzioni di pagina manuali, ad esempio in PDF. Un report può essere visualizzato in anteprima ed esportato in Generatore report e Progettazione report durante la creazione o l'aggiornamento.  
   
- I renderer di **interruzioni di pagina manuali** influenzano soprattutto il layout del report e le dimensioni fisiche della pagina. Per sapere di più, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ I renderer di**interruzioni di pagina manuali** influenzano soprattutto il layout del report e le dimensioni fisiche della pagina. Per sapere di più, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene mostrato in dettaglio l'utilizzo della paginazione nei report.  

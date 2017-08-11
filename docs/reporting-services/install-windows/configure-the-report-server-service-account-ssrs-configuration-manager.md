@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance used to host the report server database. Il nuovo account verrà aggiunto a **RSExecRole**.  
   
-     L'account di accesso al database per l'account precedente non verrà rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per altre informazioni, vedere [Amministrare un database del server di report &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) in SQL Server Books Online.  
+     L'account di accesso al database per l'account precedente non verrà rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per ulteriori informazioni, vedere [amministrare un database del Server di Report &#40; Modalità nativa SSRS &#41; ](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) nella documentazione Online di SQL Server.  
   
      Al nuovo account del servizio vengono concesse autorizzazioni per il database solo se la connessione al database del server di report è stata configurata fin dall'inizio per l'uso dell'account del servizio. Se la connessione al database del server di report è stata configurata per l'utilizzo di un account utente di dominio o di un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'aggiornamento dell'account del servizio non influisce sulle informazioni di connessione.  
   
@@ -113,5 +113,5 @@ Per la scelta dell'approccio ottimale per la propria distribuzione, è possibile
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Reporting Services di Configuration Manager &#40; Modalità nativa &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 

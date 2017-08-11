@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Tipi di rendering (Generatore report e SSRS)
@@ -133,8 +133,8 @@ ms.lasthandoff: 06/22/2017
 -   Le interruzioni di pagina logiche definite su elementi contenuti in celle di tabella o matrice non vengono mantenute. Questo comportamento non viene applicato agli elementi negli elenchi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Funzionalità interattiva per estensioni &#40; di Rendering del Report diversi Generatore report e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Esegue il rendering in HTML &#40; Generatore report e SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Pagina Layout e Rendering &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

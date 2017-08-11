@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions"></a>Definizioni di ruolo
@@ -61,10 +61,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Creare, eliminare o modificare un ruolo &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Concessione dell'accesso utente a un Server di Report &#40; Gestione report &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

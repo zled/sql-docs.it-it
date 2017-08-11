@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-shared-datasets"></a>Gestire set di dati condivisi
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Nella definizione del set di dati condiviso sono inclusi una query, parametri del set di dati con i relativi valori predefiniti, opzioni dei dati, ad esempio la distinzione tra maiuscole e minuscole, e filtri del set di dati. I valori impostati nella definizione vengono utilizzati tutte le volte che il set di dati condiviso è incluso in un report.  
   
- Per utilizzare un set di dati condiviso in un report, aprire un'applicazione, ad esempio Generatore report, spostarsi nel server di report oppure in un sito di SharePoint, quindi selezionare il set di dati condiviso. In questo modo un'istanza del set di dati condiviso viene aggiunta al report. Nel report non è possibile visualizzare o modificare la query o l'origine dati condivisa per il set di dati condiviso, ma è possibile specificare un set aggiuntivo di valori della proprietà del set di dati da applicare all'istanza nel report. È possibile ad esempio aggiungere un filtro o modificare le opzioni dei dati, quale la distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) nella [documentazione di Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
+ Per utilizzare un set di dati condiviso in un report, aprire un'applicazione, ad esempio Generatore report, spostarsi nel server di report oppure in un sito di SharePoint, quindi selezionare il set di dati condiviso. In questo modo un'istanza del set di dati condiviso viene aggiunta al report. Nel report non è possibile visualizzare o modificare la query o l'origine dati condivisa per il set di dati condiviso, ma è possibile specificare un set aggiuntivo di valori della proprietà del set di dati da applicare all'istanza nel report. È possibile ad esempio aggiungere un filtro o modificare le opzioni dei dati, quale la distinzione tra maiuscole e minuscole. Per ulteriori informazioni, vedere [set di dati incorporati di Report e set di dati condivisi &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) nel [documentazione di Generatore Report](http://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Gestione di set di dati condivisi  
  Per gestire le proprietà di un set di dati condiviso pubblicato, è possibile utilizzare Gestione report per un server di report in modalità nativa o le pagine dell'applicazione in un sito di SharePoint se il server di report è stato distribuito in modalità integrata SharePoint. Le attività che è possibile eseguire su un set di dati condiviso dipendono dalle assegnazioni di ruolo e dalle autorizzazioni a livello di sito e di elemento, incluse le autorizzazioni sulla cartella se è attiva l'ereditarietà delle autorizzazioni. Il modello di sicurezza a livello di elemento per i set di dati condivisi è lo stesso di quello utilizzato per i report. Per altre informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |Modifica nome|Consente di modificare il nome del set di dati condiviso. Tutti i riferimenti dagli elementi dipendenti continueranno a funzionare.|  
 |Modifica descrizione|Consente di modificare la descrizione del set di dati condiviso.|  
-|Modifica timeout esecuzione query|Consente di impostare il timeout di esecuzione delle query in secondi. Il valore zero (0) indica l'assenza di timeout. La proprietà determina il numero di secondi prima del timeout della query del set di dati. Per non utilizzare alcun timeout, specificare il valore 0. Per altre informazioni, vedere [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Modifica timeout esecuzione query|Consente di impostare il timeout di esecuzione delle query in secondi. Il valore zero (0) indica l'assenza di timeout. La proprietà determina il numero di secondi prima del timeout della query del set di dati. Per non utilizzare alcun timeout, specificare il valore 0. Per ulteriori informazioni, vedere [impostazione valori di timeout per il Report e condivise l'elaborazione di set di dati &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Visualizza elementi dipendenti|Consente di visualizzare gli elementi che utilizzano questo set di dati condiviso, ovvero parti di report pubblicate, origini dati condivise e report.|  
   
  Le proprietà aggiuntive del set di dati condiviso seguenti vengono configurate automaticamente:  
@@ -126,6 +126,6 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

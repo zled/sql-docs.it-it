@@ -25,14 +25,14 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 00778c0861d701aee22b366e202c25f8be60871e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici
+# <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   Le opzioni di visualizzazione per poligoni, linee e punti su un livello mappa vengono controllate impostando le opzioni del livello, le regole per gli elementi della mappa sul livello o sostituendo le opzioni per specifici elementi incorporati della mappa su un livello.  
   
  L'applicazione delle opzioni di visualizzazione è determinata in un elenco a partire da quelle con priorità più bassa:  
@@ -135,7 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
- [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Creazione guidata mappa e creazione guidata livello mappa &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

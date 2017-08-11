@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Un server di report configurato per la modalità nativa viene eseguito come server applicazioni che fornisce tutte le funzionalità di elaborazione e gestione esclusivamente tramite i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Per gestire report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia Gestione report. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
+ È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o gestione Report per gestire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
   
  Se il server di report è configurato per la modalità SharePoint, è necessario utilizzare le pagine di gestione contenuto nel sito di SharePoint per gestire report, origini dati condivise e altri elementi del server di report.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
  Le operazioni di gestione del contenuto in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]includono la gestione dei report, dei modelli, delle cartelle, delle risorse e delle origini dati condivise. È possibile gestire questi elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto.  
   
 > [!NOTE]  
->  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per altre informazioni su come gestire l'ambiente in cui viene eseguito un server di report, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per ulteriori informazioni su come gestire l'ambiente in cui viene eseguito un server di report, vedere [configurazione e amministrazione di un Server di Report &#40; Reporting Services con SharePoint &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  Nella gestione del contenuto sono incluse le attività seguenti:  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Bilanciamento delle richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
- Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per ulteriori informazioni su questi ruoli predefiniti, vedere [ruoli e autorizzazioni &#40; Reporting Services &#41; ](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o Gestione report. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Gestione report consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e utilizzare report e altri tipi di contenuto, nonché visualizzare e utilizzare tutti gli elementi condivisi e le funzionalità di distribuzione del report.  
   

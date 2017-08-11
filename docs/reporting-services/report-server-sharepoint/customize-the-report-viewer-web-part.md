@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
  L'area Parametri contiene alcuni campi in cui è possibile immettere valori prima dell'esecuzione del report e viene utilizzata solo se la definizione del report include parametri. Se è visualizzata l'area Parametri o l'area Credenziali, le dimensioni dell'area di visualizzazione del report verranno modificate in modo da utilizzare la parte rimanente della web part. È possibile personalizzare la larghezza dell'area Parametri impostando le proprietà della web part. È inoltre possibile specificare le etichette da visualizzare accanto ai singoli parametri della pagina. Per altre informazioni sulla modifica dei parametri, vedere [Impostazione dei parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Web part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [Web Part Visualizzatore report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Aggiungere la Web Part Visualizzatore Report a una pagina Web &#40; Reporting Services in SharePoint integrata modalità &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

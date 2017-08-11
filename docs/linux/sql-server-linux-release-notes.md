@@ -4,16 +4,16 @@ description: "In questo argomento contiene le note sulla versione e tutte le fun
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
@@ -152,6 +152,8 @@ Nelle sezioni seguenti vengono descritti problemi noti relativi a questa version
       sudo systemctl restart mssql-server
       ```
 
+- Impossibile ripristinare i database di SQL Server 2014 in Windows che utilizzano OLTP In memoria in SQL Server 2017 in Linux. Per ripristinare un database di SQL Server 2014 che utilizza OLTP in memoria, aggiornare i database a SQL Server 2016 o 2017 di SQL Server in Windows prima di spostarli in SQL Server in Linux tramite backup e ripristino o scollegare o collegare.
+
 #### <a name="remote-database-files"></a>File di database remoto
 
 - Hosting dei file di database in un server NFS non è supportata in questa versione. Include l'utilizzo di NFS per disco condiviso clustering di failover e database nelle istanze non cluster. Stiamo lavorando su come abilitare il supporto di server NFS nelle prossime versioni.
@@ -267,6 +269,7 @@ Le funzionalità e i servizi seguenti non sono disponibili su Linux in questo mo
 | &nbsp; | Estensione database |
 | &nbsp; | Polybase |
 | &nbsp; | Query distribuite |
+| &nbsp; | Servizi di Machine Learning |
 | &nbsp; | (XP_CMDSHELL, e così via). le stored procedure estese di sistema |
 | &nbsp; | Tabella filetable |
 | &nbsp; | Impostare gli assembly CLR con il EXTERNAL_ACCESS o UNSAFE autorizzazione |
@@ -856,7 +859,7 @@ Nelle sezioni seguenti vengono descritti problemi noti con questa versione di SQ
     - Change Data Capture
 
 #### <a name="in-memory-oltp"></a>OLTP in memoria
-- Database OLTP in memoria possono essere creati solo nella directory /var/opt/mssql. Per ulteriori informazioni, visitare il [argomento OLTP In memoria](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- Database OLTP in memoria possono essere creati solo nella directory /var/opt/mssql. Per ulteriori informazioni, visitare il [argomento OLTP In memoria](sql-server-linux-performance-get-started.md#use-in-memory-oltp).
 
 #### <a name="sqlpackage"></a>SqlPackage
 - Utilizzando SqlPackage, è necessario specificare un percorso assoluto per i file. Utilizzando i percorsi relativi verrà eseguito il mapping di file sotto il "tmp/sqlpackage. \<codice \> /sistema/system32 "cartella. 

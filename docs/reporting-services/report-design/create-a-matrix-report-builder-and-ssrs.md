@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Creare una matrice (Generatore report e SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
  Aggiungere i gruppi trascinando i campi del set di dati nelle aree Gruppi di righe e Gruppi di colonne del riquadro di raggruppamento. Il primo campo che si trascina nel riquadro dei gruppi di righe o dei gruppi di colonne sostituisce il gruppo vuoto iniziale predefinito. È quindi possibile applicare la formattazione per ogni cella, in base ai dati.  
   
- ![Una matrice, riga Category e gruppo di colonne Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matrice, riga Category e gruppo di colonne Geography")  
+ ![Matrice, riga Category e gruppo di colonne Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrice, riga Category e gruppo di colonne Geography")  
   
  Nell'anteprima la matrice si espande per mostrare i valori dei gruppi di righe e di colonne. Nelle celle vengono visualizzati valori di riepilogo, come illustrato nella figura seguente.  
   
- ![Anteprima per la matrice con gruppi espansi sottoposta a rendering](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "anteprima per matrice sottoposta a rendering con gruppi espansi")  
+ ![Anteprima della matrice con gruppi espansi sottoposta a rendering](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Anteprima della matrice con gruppi espansi sottoposta a rendering")  
   
  La matrice iniziale è un modello basato sull'area dati Tablix. È possibile continuare a sviluppare la struttura della matrice aggiungendo gruppi di righe o gruppi di colonne nidificati o adiacenti o persino aggiungendo righe di dettaglio. Per altre informazioni, vedere [Esplorazione della flessibilità di un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  `=SUM(Fields!Linetotal.Value)/SUM(Fields! Linetotal.Value,"Category")`  
   
- Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
+ Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &40#;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
   
 ##  <a name="AddingAdjacentGroup"></a> Aggiunta di un gruppo adiacente a una matrice  
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Riferimento a funzioni di aggregazione &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

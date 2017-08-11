@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>Visualizzazione Progettazione
@@ -61,8 +61,8 @@ Utilizzare la casella degli strumenti per selezionare gli elementi da inserire n
  Utilizzare il riquadro Proprietà per visualizzare nell'area di progettazione le proprietà dell'elemento del report selezionato o nel Riquadro di raggruppamento le proprietà del gruppo selezionato. In alternativa, è possibile fare clic con il pulsante destro del mouse su un gruppo o elemento del report selezionato, quindi scegliere **Proprietà** per aprire la finestra di dialogo **Proprietà** corrispondente per l'elemento del report o il gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Le intestazioni di pagina e piè di pagina &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Suggerimenti sulla progettazione di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

@@ -19,11 +19,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---predefined-roles"></a>Le definizioni di ruolo, i ruoli predefiniti.
@@ -215,10 +215,10 @@ ms.lasthandoff: 06/22/2017
  Il ruolo **Utente sistema** può essere utilizzato per integrare la sicurezza predefinita. È possibile includerlo in nuove assegnazioni di ruolo per estendere le autorizzazioni di accesso al server di report agli utenti dei report. Per altre informazioni, vedere [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Creare, eliminare o modificare un ruolo &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Concessione dell'accesso utente a un Server di Report &#40; Gestione report &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificare o eliminare un'assegnazione di ruolo &#40; Gestione report &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md)  
   
   

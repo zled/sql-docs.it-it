@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-datasets-ssrs"></a>Set di dati del report (SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  È inoltre possibile aggiungere set di dati a un report aggiungendo parti del report che includono i set di dati da cui dipendono. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Per informazioni su come creare un report in cui sono visualizzati i dati di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Per creare un report comprendente i propri dati, vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Per informazioni su come creare un report che visualizza i dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, vedere [esercitazione: creazione di un Report tabella semplice &#40; Generatore report &#41; ](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Per creare un report comprendente i propri dati, vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 06/22/2017
 -   Aggiungendo set di dati incorporati basati su origini dati incorporate.  
   
 > [!NOTE]  
->  In un server di report, gli elementi condivisi sono protetti singolarmente o ereditando autorizzazioni dalla cartella in cui sono pubblicati. Per consentire ad altri utenti di avere accesso ai set di dati condivisi che sono stati salvati, è necessario comprendere il modo in cui vengono concesse le autorizzazioni. Per altre informazioni, vedere [Sicurezza &#40;Generatore report&#41;](../../reporting-services/report-builder/security-report-builder.md) o [Proteggere gli elementi del set di dati condiviso](../../reporting-services/security/secure-shared-dataset-items.md).  
+>  In un server di report, gli elementi condivisi sono protetti singolarmente o ereditando autorizzazioni dalla cartella in cui sono pubblicati. Per consentire ad altri utenti di avere accesso ai set di dati condivisi che sono stati salvati, è necessario comprendere il modo in cui vengono concesse le autorizzazioni. Per ulteriori informazioni, vedere [sicurezza &#40; Generatore report &#41; ](../../reporting-services/report-builder/security-report-builder.md) o [sicura condivise Dataset](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  Dopo avere aggiunto dati a un report, è possibile organizzare i dati nella pagina del report con le aree dati, modificare le parti di report, condividendo tali modifiche con altri utenti, e consentire agli utenti di limitare od ordinare i dati che visualizzano nel report. Per altre informazioni, vedere i seguenti argomenti correlati:  
   
 -   [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [Grafici sparkline e barre dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  Nella Progettazione query, è possibile eseguire la query per visualizzare i dati di esempio e convalidare la sintassi del comando di query. I nomi di colonna nel set di risultati diventano i nomi campo visualizzati nel riquadro dei dati del report. Il set di risultati deve essere un singolo set di righe e colonne in cui esiste lo stesso numero di valori per ogni riga di dati. Non sono supportati più set di risultati di una singola query. Non sono supportate le gerarchie incomplete che non dispongono di un numero costante di colonne e che possono produrre un numero diverso di valori dei dati per ogni riga.  
   
- Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) e [Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per ulteriori informazioni, vedere [specificare le credenziali in Generatore Report](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) e [connessioni dati, origini dati e le stringhe di connessione &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Report creazione concetti &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

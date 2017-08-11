@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo di connessione PowerPivot (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  I dati di una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono molto compressi, mentre i dati recuperati dalla cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per un report non sono compressi. Utilizzare Progettazione query per specificare i filtri e i parametri utili per limitare i dati a quelli necessari per il report.  
   
- A differenza della connessione a un cubo di Analysis Services, un modello [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non ha gerarchie. Per fornire una funzionalità simile ai filtri dei dati correlati nella cartella di lavoro, è necessario creare parametri di propagazione nel report. Per altre informazioni, vedere [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ A differenza della connessione a un cubo di Analysis Services, un modello [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non ha gerarchie. Per fornire una funzionalità simile ai filtri dei dati correlati nella cartella di lavoro, è necessario creare parametri di propagazione nel report. Per altre informazioni, vedere [Aggiungere parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  In alcuni casi, potrebbe essere necessario regolare le espressioni per contenere i valori dei dati sottostanti dal modello [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , nonché modificare le espressioni per convertire i dati nel tipo di dati corretto oppure aggiungere o rimuovere una funzione di aggregazione. Ad esempio, per convertire il tipo di dati da String a Integer, utilizzare `=CInt`. Verificare sempre che nel report vengano visualizzati i valori previsti dai dati del modello [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] prima di pubblicare il report.  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia utente di Progettazione query MDX di Analysis Services &#40;Generatore report&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

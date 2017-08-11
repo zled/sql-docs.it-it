@@ -21,11 +21,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Eseguire lo script con l'utilità rs.exe e il servizio Web
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [Servizio Web ReportServer](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilità RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

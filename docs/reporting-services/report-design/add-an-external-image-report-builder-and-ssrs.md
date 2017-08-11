@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 291a906484a6f7d812d091252802b706d207a69e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Aggiungere un'immagine esterna (Generatore report e SSRS)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  In **Selezionare l'origine dell'immagine**selezionare **Esterna**.  
   
-     Per un'immagine in un server di report in modalità nativa, digitare il percorso relativo dell'immagine nella casella **Utilizzare questa immagine** , ad esempio ../images/image1.jpg.  
+     Per un'immagine in un server di report in modalità nativa, digitare il percorso relativo dell'immagine nella casella **Utilizzare questa immagine**, ad esempio ../images/image1.jpg.  
   
      Per un'immagine in un server di report in modalità integrata SharePoint, o qualsiasi altro sito Web, digitare un URL completo dell'immagine nella **utilizzare questa immagine** casella, ad esempio, http://\<NomeServerSharePoint > /\<sito > / Documents/Images/Image1.jpg.  
   
@@ -51,8 +51,8 @@ ms.lasthandoff: 06/22/2017
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [Incorporare un'immagine in un Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere un'immagine di sfondo &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà immagine, generale &#40; Generatore report e SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

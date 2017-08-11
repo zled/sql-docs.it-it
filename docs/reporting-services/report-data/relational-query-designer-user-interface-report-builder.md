@@ -21,18 +21,18 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
   Generatore report e Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]forniscono entrambi una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo che semplificano la creazione di una query per specificare i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
   
 > [!NOTE]  
->  Per specificare in Generatore report una query per i tipi di origine dati Oracle, OLE DB, ODBC e Teradata, è necessario utilizzare la finestra Progettazione query basata su testo. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report &#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+>  Per specificare in Generatore report una query per i tipi di origine dati Oracle, OLE DB, ODBC e Teradata, è necessario utilizzare la finestra Progettazione query basata su testo. Per ulteriori informazioni, vedere [interfaccia utente di progettazione di Query basate su testo &#40; Generatore report &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 > [!IMPORTANT]  
 >  Gli utenti accedono alle origini dati quando creano ed eseguono query. È necessario concedere autorizzazioni minime per le origini dati, ad esempio autorizzazioni di sola lettura.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  La finestra Progettazione query con interfaccia grafica è suddivisa in tre aree. A seconda che la query utilizzi tabelle/viste o stored procedure/funzioni con valori di tabella, il layout di Progettazione query cambia.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] non supporta stored procedure o funzioni con valori di tabella.  
+>  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]non supporta stored procedure o funzioni con valori di tabella.  
   
  Nella figura seguente è illustrata la finestra Progettazione query con interfaccia grafica nell'utilizzo con tabelle o viste.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  Le aggregazioni forniscono un riepilogo dei dati. Per supportare l'aggregazione che recapita i dati di riepilogo, i dati vengono raggruppati. Quando si utilizza un'aggregazione nella query, gli altri campi restituiti dalla query vengono raggruppati automaticamente e la query include la clausola SQL GROUP BY. È possibile riepilogare i dati senza aggiungere un'aggregazione semplicemente usando l'opzione **Raggruppato per** nell'elenco **Raggruppa e aggrega** . In gran parte delle aggregazioni è inclusa una versione che utilizza la parola chiave DISTINCT. L'inclusione di DISTINCT consente di eliminare i valori duplicati.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
  Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Tabella a sinistra** Visualizza il nome della prima tabella che fa parte di una relazione di join.  
   
--   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni su tipi di JOIN, vedere "Nozioni fondamentali sui join" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+-   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni su tipi di JOIN, vedere "Nozioni fondamentali sui join" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](http://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com.  
   
 -   **Tabella a destra** Visualizza il nome della seconda tabella nella relazione di join.  
   
@@ -199,9 +199,9 @@ ms.lasthandoff: 06/22/2017
  Quando nel riquadro Vista di database si selezionano tabelle e colonne o stored procedure e viste, Progettazione query recupera le relazioni di chiave esterna e di chiave primaria sottostanti dallo schema del database. Grazie all'analisi di queste relazioni, Progettazione query rileva le relazioni tra due tabelle e aggiunge join alla query. È quindi possibile modificare la query aggiungendo gruppi e aggregazioni, aggiungendo o modificando relazioni e aggiungendo filtri. Per visualizzare il testo della query che mostra le colonne dalle quali recuperare i dati, i join tra tabelle e i gruppi o le aggregazioni, fare clic su **Modifica come testo**.  
   
 ## <a name="text-based-query-designer"></a>Progettazione query basata su testo  
- Per disporre del massimo controllo sulla query, utilizzare la finestra Progettazione query basata su testo. Per passare alla finestra Progettazione query basata su testo, fare clic su **Modifica come testo**sulla barra degli strumenti. Una volta modificata una query nella finestra Progettazione query basata su testo, non è più possibile utilizzare la finestra Progettazione query relazionale. La query verrà quindi sempre aperta nella finestra Progettazione query basata su testo. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report &#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Per disporre del massimo controllo sulla query, utilizzare la finestra Progettazione query basata su testo. Per passare alla finestra Progettazione query basata su testo, fare clic su **Modifica come testo**sulla barra degli strumenti. Una volta modificata una query nella finestra Progettazione query basata su testo, non è più possibile utilizzare la finestra Progettazione query relazionale. La query verrà quindi sempre aperta nella finestra Progettazione query basata su testo. Per ulteriori informazioni, vedere [interfaccia utente di progettazione di Query basate su testo &#40; Generatore report &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione query &#40;Generatore report&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Finestre Progettazione query &#40; Generatore report &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

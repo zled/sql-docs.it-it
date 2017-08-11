@@ -26,11 +26,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6e55323aade7a87123817b4a53c3ee03d5e336d5
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 31966275516c514ebfc8809090a0342be70f1d53
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="calling-web-service-methods"></a>Chiamata ai metodi del servizio Web
@@ -51,6 +51,6 @@ CatalogItem[] items = rs.ListChildren("/", true);
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di applicazioni mediante il servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servizio Web ReportServer](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Riferimento tecnico &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

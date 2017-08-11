@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
@@ -160,11 +160,11 @@ ms.lasthandoff: 06/22/2017
   
     4.  Nelle intestazioni di colonna modificare la proprietà della casella di testo WritingMode per usare il testo verticale.  
   
- La combinazione di questo comportamento, ovvero le proprietà relative alla larghezza e all'altezza degli elementi del report, le dimensioni del corpo del report, la definizione dell'altezza e della larghezza di pagina, le impostazioni dei margini del report padre e il supporto specifico del renderer per paging, consente di determinare quali elementi del report disporre in una pagina di cui è stato eseguito il rendering. Per altre informazioni, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ La combinazione di questo comportamento, ovvero le proprietà relative alla larghezza e all'altezza degli elementi del report, le dimensioni del corpo del report, la definizione dell'altezza e della larghezza di pagina, le impostazioni dei margini del report padre e il supporto specifico del renderer per paging, consente di determinare quali elementi del report disporre in una pagina di cui è stato eseguito il rendering. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)  
   
   

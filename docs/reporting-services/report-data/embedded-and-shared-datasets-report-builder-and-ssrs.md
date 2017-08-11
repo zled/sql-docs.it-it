@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati (Generatore report e SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  In Generatore report è possibile eseguire le operazioni seguenti:  
   
-1.  Per creare un set di dati condiviso, utilizzare visualizzazione di progettazione del set di dati condiviso. È possibile salvarlo in un server di report o in un sito di SharePoint per condividere con altri report. È inoltre possibile accedere al server di report e modificare il set di dati condiviso esistente. In questa visualizzazione è possibile compilare una query e impostare tutte le opzioni del set di dati. Per altre informazioni, vedere [Visualizzazione di progettazione del set di dati condivisi &#40;Generatore report&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  Per creare un set di dati condiviso, utilizzare visualizzazione di progettazione del set di dati condiviso. È possibile salvarlo in un server di report o in un sito di SharePoint per condividere con altri report. È inoltre possibile accedere al server di report e modificare il set di dati condiviso esistente. In questa visualizzazione è possibile compilare una query e impostare tutte le opzioni del set di dati. Per ulteriori informazioni, vedere [visualizzazione di progettazione set di dati condiviso &#40; Generatore report &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  Per aggiungere un set di dati condiviso al report, aprire Generatore report in visualizzazione di progettazione report. Nella procedura guidata o nel riquadro dei dati del report individuare il server di report e selezionare il set di dati condiviso da aggiungere al report. In questa visualizzazione non è possibile modificare la query eccetto per aggiungere campi. È possibile eseguire l'override di altre opzioni dei dati e aggiungere filtri. Non è possibile rimuovere filtri.  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Creare un set di dati condiviso o set di dati incorporato &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
- [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

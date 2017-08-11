@@ -20,11 +20,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d0e65c6d190976934fa9c5177585cc88a34df8fa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -32,30 +32,30 @@ ms.lasthandoff: 06/22/2017
 
   Trovare gli strumenti e documentazione di riferimento di PowerShell per l'utilizzo o di amministrazione di SQL Server Reporting Services.  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Errori ed eventi**  
- [Causa e risoluzione degli errori di Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **errori ed eventi**  
+ [Causa e risoluzione degli errori di servizi di Reporting](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Guida di riferimento alle funzionalità**  
- [Guida sensibile al contesto di Progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
+ ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **funzionalità riferimento**  
+ [Guida F1 della finestra di progettazione report](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Guida sensibile al contesto di Gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Guida F1 di gestione report](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
- [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services di Configuration Manager &#40; Modalità nativa &#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Guida della Creazione guidata report](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Guida della creazione guidata report](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
- [Visualizzatore HTML e barra degli strumenti dei report](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+ [Il visualizzatore HTML e barra degli strumenti Report](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
- [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
+ [Impostazioni del dispositivo per il Rendering delle estensioni &#40; Reporting Services &#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **utilità della riga di comando Server di Report**  
- [Utilità RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **utilità della riga di comando Server di Report**  
+ [Utilità RS.exe &#40; SSRS &#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
- [utilità rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
+ [Utilità RSConfig &#40; SSRS &#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [Utilità rskeymgmt &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting libreria di classi Provider WMI di servizi**  
- [Riferimento della libreria del provider WMI Reporting Services &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
+ ![Icona della cartella File di piccole dimensioni](../analysis-services/media/filefolder-small.png "icona della cartella File di piccole dimensioni") **Reporting libreria di classi Provider WMI di servizi**  
+ [Reporting Services riferimenti alla libreria del Provider WMI &#40; SSRS &#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Ulteriori domande? [Provare a porre il forum di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

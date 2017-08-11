@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
@@ -156,9 +156,9 @@ Report validi presentano informazioni che consentono una migliore comprensione e
  Per utilizzare i dati spaziali dinamici, l'origine dei dati spaziali deve trovarsi sul server di report. Quando i report vengono progettati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le origini dati spaziali possono essere aggiunte a un progetto e pubblicate sul server di report insieme alla definizione del report. Se per progettare i report si utilizza Generatore report, è necessario innanzitutto caricare i dati spaziali sul server di report, quindi specificare tale origine dei dati spaziali per il livello mappa nella procedura guidata o nelle proprietà del livello mappa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Esercitazione: Report mappa &#40;Generatore report&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Personalizzare i dati e la visualizzazione di una mappa o di livello mappa &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Esercitazione: Eseguire il mapping di Report &#40; Generatore report &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Mappe &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Risolvere i problemi di report: Eseguire il mapping di report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

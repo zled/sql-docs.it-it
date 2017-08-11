@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formattare un file script di Reporting Services
@@ -53,13 +53,13 @@ End Sub
 > [!IMPORTANT]  
 >  Le credenziali dell'utente vengono gestite dall'ambiente di script e vengono passate agli argomenti del prompt dei comandi tramite RS.exe. Anche se è possibile usare la variabile *rs* per impostare l'autenticazione del servizio Web, si consiglia di usare l'ambiente di script. Non è necessario autenticare il servizio Web nel file script. Per altre informazioni sull'autenticazione degli ambienti di script, vedere [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
- Non dichiarare gli spazi dei nomi all'interno del file script. L'ambiente di scripting rende disponibili molti spazi dei nomi [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utili: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** e **System.IO**.  
+ Non dichiarare gli spazi dei nomi all'interno del file script. L'ambiente di scripting risulta più utile [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] spazi dei nomi disponibili: **System.Web.Services**, **spazio**, **System**, e **System.IO**.  
   
- Per esempi di script, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
+ Per esempi di script, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)(Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Web ReportServer](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Utilità RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilità RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

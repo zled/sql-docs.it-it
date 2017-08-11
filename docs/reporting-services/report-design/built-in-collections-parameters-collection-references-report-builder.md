@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 17698a3c268e824d2f638042b71b3ec21f994e86
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Raccolte predefinite - riferimenti alla raccolta di parametri (Generatore Report)
@@ -37,12 +37,12 @@ ms.lasthandoff: 06/22/2017
   
 |Esempio|Description|  
 |-------------|-----------------|  
-|`=Parameters!`* \<Nomeparametro >*`.IsMultiValue`|Restituisce **False**.<br /><br /> Verifica se un parametro è multivalore. Se è **True**, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è **False**, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
-|`=Parameters!`* \<Nomeparametro >*`.Count`|Restituisce il valore intero 1. Per un parametro a valore singolo, il conteggio è sempre 1.|  
-|`=Parameters!`* \<Nomeparametro >*`.Label`|Restituisce l'etichetta del parametro, utilizzata di frequente come nome visualizzato in un elenco a discesa di valori disponibili.|  
-|`=Parameters!`* \<Nomeparametro >*`.Value`|Restituisce il valore del parametro. Se la proprietà Etichetta non è stata impostata, questo valore verrà visualizzato nell'elenco a discesa dei valori disponibili.|  
+|`=Parameters!` *\<Nomeparametro >*`.IsMultiValue`|Restituisce **False**.<br /><br /> Verifica se un parametro è multivalore. Se è **True**, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è **False**, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
+|`=Parameters!` *\<Nomeparametro >*`.Count`|Restituisce il valore intero 1. Per un parametro a valore singolo, il conteggio è sempre 1.|  
+|`=Parameters!` *\<Nomeparametro >*`.Label`|Restituisce l'etichetta del parametro, utilizzata di frequente come nome visualizzato in un elenco a discesa di valori disponibili.|  
+|`=Parameters!` *\<Nomeparametro >*`.Value`|Restituisce il valore del parametro. Se la proprietà Etichetta non è stata impostata, questo valore verrà visualizzato nell'elenco a discesa dei valori disponibili.|  
 |`=CStr(Parameters!`  *\<Nomeparametro >*`.Value)`|Restituisce il valore del parametro sotto forma di stringa.|  
-|`=Fields(Parameters!`* \<Nomeparametro >*`.Value).Value`|Restituisce il valore del campo il cui nome è uguale a quello del parametro.|  
+|`=Fields(Parameters!` *\<Nomeparametro >*`.Value).Value`|Restituisce il valore del campo il cui nome è uguale a quello del parametro.|  
   
  Per altre informazioni sull'uso dei parametri in un filtro, vedere [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
@@ -51,21 +51,21 @@ ms.lasthandoff: 06/22/2017
   
 |Esempio|Description|  
 |-------------|-----------------|  
-|`=Parameters!`* \<MultivalueParameterName >*`.IsMultiValue`|Restituisce **True** o **False**.<br /><br /> Verifica se un parametro è multivalore. Se è **True**, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è **False**, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
-|`=Parameters!`* \<MultivalueParameterName >*`.Count`|Restituisce un valore intero.<br /><br /> Fa riferimento al numero di valori. Per un parametro a valore singolo, il conteggio è sempre 1. Per un parametro multivalore, il conteggio è 0 o maggiore di zero.|  
-|`=Parameters!`* \<MultivalueParameterName >*`.Value(0)`|Restituisce il primo valore di un parametro multivalore.|  
-|`=Parameters!`* \<MultivalueParameterName >* `.Value(Parameters!` * \<MultivalueParameterName >*`.Count-1)`|Restituisce l'ultimo valore di un parametro multivalore.|  
+|`=Parameters!` *\<MultivalueParameterName >*`.IsMultiValue`|Restituisce **True** o **False**.<br /><br /> Verifica se un parametro è multivalore. Se è **True**, il parametro è multivalore ed è costituito da una raccolta di oggetti. Se è **False**, il parametro è a valore singolo ed è costituito da un solo oggetto.|  
+|`=Parameters!` *\<MultivalueParameterName >*`.Count`|Restituisce un valore intero.<br /><br /> Fa riferimento al numero di valori. Per un parametro a valore singolo, il conteggio è sempre 1. Per un parametro multivalore, il conteggio è 0 o maggiore di zero.|  
+|`=Parameters!` *\<MultivalueParameterName >*`.Value(0)`|Restituisce il primo valore di un parametro multivalore.|  
+|`=Parameters!` *\<MultivalueParameterName >* `.Value(Parameters!`  *\<MultivalueParameterName >*`.Count-1)`|Restituisce l'ultimo valore di un parametro multivalore.|  
 |`=Split("Value1,Value2,Value3",",")`|Restituisce una matrice di valori.<br /><br /> Creare una matrice di valori per un parametro multivalore di tipo **Stringa** . È possibile utilizzare qualsiasi delimitatore nel secondo parametro per dividere. È possibile utilizzare questa espressione per impostare i valori predefiniti di un parametro multivalore oppure creare un parametro multivalore da inviare a un sottoreport o a un report drill-through.|  
-|`=Join(Parameters!`* \<MultivalueParameterName >*`.Value,", ")`|Restituisce un oggetto **Stringa** costituito da un elenco di valori delimitati da virgole in un parametro multivalore. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per unire.|  
+|`=Join(Parameters!` *\<MultivalueParameterName >*`.Value,", ")`|Restituisce un oggetto **Stringa** costituito da un elenco di valori delimitati da virgole in un parametro multivalore. È possibile utilizzare qualsiasi delimitatore nel secondo parametro per unire.|  
   
- Per altre informazioni sull'uso dei parametri in un filtro, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Per ulteriori informazioni sull'utilizzo di parametri in un filtro, vedere [i parametri di Report &#40; Generatore report e progettazione Report &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Filtri di uso comune &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Esercitazione: Aggiungere un parametro di Report &#40; Generatore report &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni di Generatore report](../../reporting-services/report-builder-tutorials.md)   
- [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [Raccolte predefinite nelle espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
   

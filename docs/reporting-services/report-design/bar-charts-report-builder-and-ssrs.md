@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
@@ -63,16 +63,16 @@ ms.lasthandoff: 06/22/2017
 -   In presenza di più punti dati nel set di dati relativo alla dimensione del grafico, vengono ridotte la dimensione delle colonne o delle barre e la spaziatura tra di esse. Per impostare manualmente la larghezza delle colonne in un grafico, sostituirne il valore in pixel modificando la proprietà **PointWidth** . Il valore predefinito di questa proprietà è 0,8. Aumentando la larghezza delle colonne o delle barre di un grafico si riduce lo spazio tra di esse.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tipi di grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Grafici a intervalli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tipi di grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Punti dati in grafici &#40; vuoti e Null Generatore report e SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Istogrammi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [I grafici con intervalli &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Formattazione dei colori delle serie in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione della legenda in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Esercitazione: Aggiunta di un grafico a barre a un report (Generatore report)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un report](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Esercitazione: Aggiunta di un grafico a barre a un Report (Generatore Report)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Esercitazione: Aggiunta di un grafico a barre a un Report](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

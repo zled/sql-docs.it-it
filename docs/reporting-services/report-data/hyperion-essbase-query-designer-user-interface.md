@@ -24,15 +24,15 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68a0a5da224c0f6f78eca8df1ae766e85d7750f2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interfaccia utente di Progettazione query Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro Metadati dal quale è possibile trascinare membri da un cubo selezionato nell'origine dei dati per compilare una query MDX che recuperi dati quando il report viene elaborato.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro Metadati dal quale è possibile trascinare membri da un cubo selezionato nell'origine dei dati per compilare una query MDX che recuperi dati quando il report viene elaborato.  
   
 > [!IMPORTANT]  
 >  Gli utenti accedono alle origini dati quando creano ed eseguono query. È necessario concedere autorizzazioni minime per le origini dati, ad esempio autorizzazioni di sola lettura.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 |![Attiva/Disattiva per le celle vuote Mostra](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "attiva/disattiva per le celle vuote Mostra")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|  
 |![Esecuzione automatica query](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "esecuzione automatica della query")|Consente di eseguire automaticamente la query e visualizza il risultato a ogni modifica, ad esempio, quando viene eliminata una colonna nel riquadro Dati. I risultati verranno visualizzati nel riquadro Dati.|  
 |![Elimina](../../reporting-services/report-data/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare l'elemento selezionato dalla query. Utilizzare questo pulsante per eliminare righe selezionate nel riquadro Filtro.|  
-|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "eseguire la query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
+|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
 |![Annullare la query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "annullare la query")|Consente di annullare la query.|  
 |![Passare alla modalità progettazione](../../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa.|  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
 -   **Esecuzione automatica** (![esecuzione automatica query](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "esecuzione automatica query"))  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Creare un set di dati condiviso o set di dati incorporato &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

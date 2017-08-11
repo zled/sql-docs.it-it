@@ -23,11 +23,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrazione di Reporting Services nelle applicazioni
@@ -51,13 +51,13 @@ ms.lasthandoff: 06/22/2017
  [Integrazione di Reporting Services utilizzando i controlli ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Viene descritto come integrare le funzionalità di visualizzazione dei report nelle applicazioni esistenti utilizzando i controlli ReportViewer.  
   
- [Integrazione di Reporting Services con accesso tramite URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [Integrazione di Reporting Services tramite l'accesso con URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Viene descritto come integrare le funzionalità di navigazione dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni esistenti utilizzando l'accesso con URL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestione report &#40; Modalità nativa SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Scelta tra SOAP e l'accesso con URL](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Riferimento tecnico &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Servizio Web ReportServer](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

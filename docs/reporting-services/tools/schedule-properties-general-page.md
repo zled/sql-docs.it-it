@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedule-properties-general-page"></a>Proprietà pianificazione (pagina Generale)
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/03/2017
  Consente di specificare una pianificazione che viene eseguita una sola volta nella data e all'ora specifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Server di report in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Connettersi a un Server di Report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Pianificazioni](../../reporting-services/subscriptions/schedules.md)  
   

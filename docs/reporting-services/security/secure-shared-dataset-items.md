@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-dataset-items"></a>Proteggere gli elementi del set di dati condiviso
@@ -54,10 +54,10 @@ ms.lasthandoff: 06/22/2017
  Per altre informazioni, vedere [Attività a livello di elemento](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) e [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)(Ruoli predefiniti).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)   
- [Proteggere le cartelle](../../reporting-services/security/secure-folders.md)   
- [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Gestire origini dati condivise](../../reporting-services/report-data/manage-shared-datasets.md)   
+ [Cartelle condivise sicure](../../reporting-services/security/secure-folders.md)   
+ [Proteggere i report e risorse](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Concessione di autorizzazioni in un Server di Report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

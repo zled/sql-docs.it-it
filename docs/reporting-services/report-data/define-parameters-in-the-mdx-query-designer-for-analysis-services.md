@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Nel **parametro** colonna, fare clic su  **\<parametro immettere >**e quindi digitare il nome di un parametro.  
   
-5.  Selezionare un valore nell'elenco a discesa della colonna **Dimensione** .  
+5.  Selezionare un valore nell'elenco a discesa della colonna **Dimensione**.  
   
 6.  Selezionare un valore nell'elenco a discesa della colonna **Gerarchia** .  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      Per visualizzare il set di dati dei valori disponibili per il parametro del report, fare clic con il pulsante destro del mouse su un'area vuota nel riquadro Dati report e selezionare **Mostra set di dati nascosti**. Nel riquadro dei dati del report verranno visualizzati tutti i set di dati contenuti nel report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interfaccia utente di Progettazione query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Tipo di connessione di Analysis Services per MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Interfaccia utente di progettazione Query MDX di Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

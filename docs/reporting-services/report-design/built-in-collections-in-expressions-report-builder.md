@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ff834d00c915ae81179ff9b0bebed19e7c9ec6c1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Raccolte predefinite nelle espressioni (Generatore Report)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 |**Elementi globali**|Campi predefiniti|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Rappresenta le variabili globali utili per i report, quali il nome del report o il numero di pagina. Sempre disponibile.<br /><br /> Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Utente**|Campi predefiniti|`=User.UserID`<br /><br /> - oppure -<br /><br /> `=User.Language`|Rappresenta una raccolta di dati relativi all'utente che esegue il report, ad esempio l'impostazione della lingua o l'ID utente. Sempre disponibile.<br /><br /> Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e User &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Parametri**|Parametri|`=Parameters("ReportMonth").Value`<br /><br /> - oppure -<br /><br /> `=Parameters!ReportYear.Value`|Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Non disponibile prima del completamento dell'inizializzazione dell'elaborazione. Per altre informazioni, vedere [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).|  
-|**Fields(** *\<Dataset>* **)**|Campi|`=Fields!Sales.Value`|Rappresenta la raccolta di campi del set di dati disponibili per il report. Disponibile dopo il recupero dei dati da un'origine dei dati in un set di dati. Per altre informazioni, vedere [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
+|**Campi (**  *\<set di dati >* **)**|Campi|`=Fields!Sales.Value`|Rappresenta la raccolta di campi del set di dati disponibili per il report. Disponibile dopo il recupero dei dati da un'origine dei dati in un set di dati. Per altre informazioni, vedere [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |**DataSets**|Non visualizzata|`=DataSets("TopEmployees").CommandText`|Rappresenta la raccolta di set di dati a cui si fa riferimento nel corpo della definizione del report. Non include origini dei dati utilizzate solo nelle intestazioni pagina o nei piè di pagina. Non disponibile nell'anteprima locale. Per altre informazioni, vedere [Riferimenti a raccolte DataSources e DataSets &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**DataSources**|Non visualizzata|`=DataSources("AdventureWorks2012").Type`|Rappresenta la raccolta di origini dei dati a cui viene fatto riferimento nel corpo di un report. Non include origini dei dati utilizzate solo nelle intestazioni pagina o nei piè di pagina. Non disponibile nell'anteprima locale. Per altre informazioni, vedere [Riferimenti a raccolte DataSources e DataSets &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**Variabili**|`Variables`|`=Variables!CustomTimeStamp.Value`|Rappresenta la raccolta di variabili del report e variabili di gruppo. Per altre informazioni, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 |*Collection.Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Aggiungere un'espressione &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

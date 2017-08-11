@@ -21,11 +21,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaccia utente di Progettazione query MDX di Analysis Services
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 |![Elimina](../../reporting-services/report-data/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
 |![Icona per la finestra di dialogo parametri Query](../../reporting-services/report-data/media/iconqueryparameter.gif "icona per la finestra di dialogo parametri Query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si specificano valori per un parametro di query, viene creato automaticamente un parametro di report con lo stesso nome. Il valore del parametro di query viene impostato su un'espressione che fa riferimento al parametro di report.|  
 |![Pulsante Query Prepare](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "pulsante Prepara Query")|Consente di preparare la query.|  
-|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "eseguire la query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
+|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
 |![Annullare la query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "annullare la query")|Consente di annullare la query.|  
 |![Passare alla modalità progettazione](../../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa.|  
   
@@ -123,10 +123,10 @@ ms.lasthandoff: 06/22/2017
 -   **Mostra aggregazioni** (![pulsante Mostra aggregazioni](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "pulsante Mostra aggregazioni"))  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definizione dei parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Definizione dei parametri in Progettazione Query MDX per Analysis Services &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Creare un set di dati condiviso o set di dati incorporato &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Tipo di connessione di Analysis Services per DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Tipo di connessione di Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Tipo di connessione di Analysis Services per MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

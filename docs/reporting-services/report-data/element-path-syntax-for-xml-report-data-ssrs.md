@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/03/2017
 |&#124; (barra verticale)|Separa gli elementi della sintassi. Indica che è possibile scegliere un solo elemento.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |**{ }** (parentesi graffe)|Delimitano i parametri degli elementi della sintassi.|  
-|[**,**...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[**,**...*n*]|L'elemento precedente può essere ripetuto  *n*  numero di volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -209,9 +209,9 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Esercitazioni su Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Tipo di connessione XML &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del Report &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce più strumenti per compilare i file RDL. Per altre informazioni, vedere [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
- Uno dei modi più semplici per generare codice RDL da un'applicazione consiste nell'utilizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classi del <xref:System.Xml> dello spazio dei nomi e <xref:System.Linq> dello spazio dei nomi. In particolare, la classe **XmlTextWriter** può essere usata per scrivere codice RDL. Con **XmlTextWriter**è possibile generare una definizione di report completa in qualsiasi applicazione [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Gli sviluppatori possono inoltre estendere il linguaggio RDL aggiungendo elementi del report personalizzati con proprietà personalizzate. Per ulteriori informazioni sul **XmlTextWriter** classe e <xref:System.Xml> dello spazio dei nomi, vedere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] manuale dello sviluppatore. Per ulteriori informazioni su LINQ (Language-Integrated Query), cercare "LINQ to XML" in MSDN.  
+ Uno dei modi più semplici per generare codice RDL da un'applicazione consiste nell'usare le classi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dello spazio dei nomi <xref:System.Xml> e dello spazio dei nomi <xref:System.Linq> . In particolare, la classe **XmlTextWriter** può essere usata per scrivere codice RDL. Con **XmlTextWriter**è possibile generare una definizione di report completa in qualsiasi applicazione [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Gli sviluppatori possono inoltre estendere il linguaggio RDL aggiungendo elementi del report personalizzati con proprietà personalizzate. Per altre informazioni sulla classe **XmlTextWriter** e sullo spazio dei nomi <xref:System.Xml> , vedere la Guida per gli sviluppatori di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per ulteriori informazioni su LINQ (Language-Integrated Query), cercare "LINQ to XML" in MSDN.  
   
  L'estensione di file standard per i file di definizione dei report è rdl. È inoltre possibile sviluppare file di definizione dei report del client la cui estensione è rdlc. Il tipo MIME per entrambe le estensioni è text/xml. Per altre informazioni sui report, vedere [Report di Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   

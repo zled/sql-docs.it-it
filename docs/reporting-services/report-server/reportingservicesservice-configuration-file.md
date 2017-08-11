@@ -19,11 +19,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
@@ -95,7 +95,7 @@ Il file ReportingServicesService.exe.config contiene impostazioni di configurazi
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Log di traccia del servizio Server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b9200dd4152625e0dce4c0c77b10fa2f3ad196ef
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 |Passaggio|Description|Ulteriori informazioni|  
 |----------|-----------------|----------------------|  
-|1|Prima di installare Reporting Services nei nodi del server in un cluster per il bilanciamento del carico di rete, verificare i requisiti per la distribuzione con scalabilità orizzontale.|[Distribuzione con scalabilità orizzontale - Modalità nativa di Reporting Services &#40;Gestione configurazione&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|1|Prima di installare Reporting Services nei nodi del server in un cluster per il bilanciamento del carico di rete, verificare i requisiti per la distribuzione con scalabilità orizzontale.|[Distribuzione con scalabilità orizzontale - modalità nativa di Reporting Services &#40; Gestione configurazione &#41; ](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea|  
 |2|Configurare il cluster per il bilanciamento del carico di rete e verificarne il corretto funzionamento.<br /><br /> Assicurarsi di eseguire il mapping di un nome dell'intestazione host all'IP del server virtuale del cluster per il bilanciamento del carico di rete. Il nome dell'intestazione host viene utilizzato nell'URL del server di report ed è più semplice da ricordare e digitare rispetto a un indirizzo IP.|Per ulteriori informazioni, vedere la documentazione di Windows Server relativa alla versione del sistema operativo Windows utilizzato.|  
 |3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Seguire i passaggi descritti nella sezione relativa al **metodo 2 per la specifica dei nomi host** nell'articolo [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861), con la rettifica seguente. In base a quanto specificato nel**passaggio 7** dell'articolo della KB: uscire dall'editor del Registro di sistema e riavviare il servizio IISAdmin. Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer > è un nome virtuale per il nome del computer Windows "contoso", è probabilmente possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
 |4|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità solo file in nodi che appartengono già a un cluster per il bilanciamento del carico di rete e configurare le istanze del server di report per la distribuzione con scalabilità orizzontale.<br /><br /> La scalabilità orizzontale configurata potrebbe non rispondere a richieste indirizzate all'IP del server virtuale. La configurazione della scalabilità orizzontale per l'utilizzo dell'IP del server virtuale viene effettuata in un passaggio successivo, dopo la configurazione della convalida dello stato di visualizzazione.|[Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  Se si integra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 o [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o se i report vengono ospitati in un'applicazione Web personalizzata, potrebbe essere necessario configurare solo la proprietà **UrlRoot** . In questo caso, configurare la proprietà **UrlRoot** in modo che rappresenti l'URL del sito di SharePoint o dell'applicazione Web. In questo modo il traffico di rete relativo all'ambiente di gestione dei report verrà indirizzato all'applicazione che gestisce i report anziché al server di report o al cluster per il bilanciamento del carico di rete.  
   
- Non modificare **ReportServerUrl** per evitare di introdurre un round trip aggiuntivo attraverso il server virtuale ogni volta che viene gestita una richiesta interna. Per altre informazioni, vedere [URL nei file di configurazione &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Per altre informazioni sulla modifica del file di configurazione, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Non modificare **ReportServerUrl** per evitare di introdurre un round trip aggiuntivo attraverso il server virtuale ogni volta che viene gestita una richiesta interna. Per ulteriori informazioni, vedere [URL nei file di configurazione &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Per ulteriori informazioni sulla modifica del file di configurazione, vedere [modificare un File di configurazione di Reporting Services &#40; RSReportServer. config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea.  
   
 1.  Aprire RSReportServer.config in un editor di testo.  
   
@@ -118,8 +118,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Configurare un URL &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurare una distribuzione di scalabilità orizzontale Server di Report in modalità nativa &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Gestire un Server di Report di Reporting Services in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

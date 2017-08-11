@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cache-a-report-report-manager"></a>Memorizzare un report nella cache (Gestione report)
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Selezionare una delle due opzioni cache seguenti e configurare la scadenza come segue:  
   
-    -   Per configurare una copia memorizzata nella cache in modo che scada dopo un periodo di tempo specifico, fare clic su **Memorizza nella cache una copia temporanea del report. La copia del report scadrà dopo il numero di minuti seguente**. Digitare il numero di minuti alla scadenza del report.  
+    -   Per configurare una copia memorizzata nella cache in modo che scada dopo un periodo di tempo specifico, fare clic su **Memorizza nella cache una copia temporanea del report. Copia del report scadrà dopo un numero di minuti**. Digitare il numero di minuti alla scadenza del report.  
   
-    -   Per configurare una copia memorizzata nella cache affinché scada in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Fare clic su **Configura** oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
+    -   Per configurare una copia memorizzata nella cache affinché scada in base alla pianificazione, fare clic su **memorizzare nella Cache una copia temporanea del report. Copia del report in base alla pianificazione seguente scadrà.** Fare clic su **Configura**oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
   
 7.  Fare clic su **Applica**.  
   

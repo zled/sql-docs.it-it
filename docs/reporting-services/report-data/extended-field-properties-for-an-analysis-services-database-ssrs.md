@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dati, per le quali viene eseguito il mapping a nomi di proprietà di campo specifiche e risultano accessibili per nome tramite la raccolta predefinita **Campi** . Le proprietà personalizzate sono specifiche per ogni provider di dati ed è possibile accedervi mediante la raccolta predefinita **Campi** solo tramite la sintassi che usa il nome della proprietà estesa come stringa.  
   
- Quando si usa la finestra Progettazione query MDX con interfaccia grafica di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per definire la query, a quest'ultima viene automaticamente aggiunto un set predefinito di proprietà delle celle e delle dimensioni. Nel report è possibile utilizzare solo le proprietà estese specificatamente elencate nella query MDX. A seconda del report, potrebbe essere opportuno modificare il testo del comando MDX in modo che includa altre proprietà personalizzate o delle dimensioni definite nel cubo. Per altre informazioni sui campi estesi disponibili nelle origini dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ Quando si usa la finestra Progettazione query MDX con interfaccia grafica di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per definire la query, a quest'ultima viene automaticamente aggiunto un set predefinito di proprietà delle celle e delle dimensioni. Nel report è possibile utilizzare solo le proprietà estese specificatamente elencate nella query MDX. A seconda del report, potrebbe essere opportuno modificare il testo del comando MDX in modo che includa altre proprietà personalizzate o delle dimensioni definite nel cubo. Per ulteriori informazioni sui campi estesi disponibili in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origini dati, vedere [creazione e utilizzo dei valori di proprietà &#40; MDX &#41; ](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Utilizzo delle proprietà di campo in un report  
  Le proprietà di campo estese includono proprietà predefinite e proprietà specifiche del provider di dati. Le proprietà di campo non vengono visualizzate con l'elenco dei campi nel riquadro **Dati report** , sebbene siano incluse nella query compilata per un set di dati. Non è possibile pertanto trascinarle nell'area di progettazione del report. È invece necessario trascinare il campo nel report e quindi modificare la proprietà **Value** del campo impostando la proprietà che si vuole usare. Se, ad esempio, i dati delle celle di un cubo sono già stati formattati, è possibile usare la proprietà di campo FormattedValue usando l'espressione seguente: `=Fields!FieldName.FormattedValue`.  
@@ -155,7 +155,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Raccolte predefinite nelle espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

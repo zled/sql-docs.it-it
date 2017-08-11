@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d18adbfb6ce7a50b458ac1f8197c197281e9d81e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintassi delle prenotazioni URL (Gestione configurazione SSRS)
@@ -43,8 +43,8 @@ ms.lasthandoff: 06/22/2017
 |VirtualDirectory|ReportServer*[_NomeIstanza]*<br /><br /> Reports*[_NomeIstanza]*<br /><br /> \<personalizzate >|Specifica il nome dell'applicazione. Questo valore è una stringa. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza ReportServer e Report come nomi dell'applicazione per le applicazioni del servizio Web ReportServer e di Gestione report. Se lo si desidera, è possibile utilizzare nomi diversi.<br /><br /> Questo valore è obbligatorio. e identifica l'applicazione.<br /><br /> Specificare solo una directory virtuale per ogni istanza dell'applicazione. Per creare più URL per la stessa applicazione nella stessa istanza, creare più versioni di **UrlString**. Per creare nomi univoci delle directory virtuali per più istanze dell'applicazione, includere il nome di istanza nel nome della directory virtuale utilizzando il carattere di sottolineatura (_) per aggiungere il nome di istanza. *NomeIstanza* è facoltativo, ma è consigliato in presenza di più istanze nello stesso computer. Per altre informazioni sull'impostazione delle prenotazioni URL per le istanze denominate, vedere [Prenotazioni URL per le distribuzioni di più istanze del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> Il valore per la directory virtuale non supporta la distinzione tra maiuscole e minuscole. È possibile utilizzare qualsiasi stringa, a condizione che non includa caratteri separatori dell'URL o codifica URL.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurare gli URL di Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurare un URL &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

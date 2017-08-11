@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelle (Generatore report e SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  Per altre informazioni, vedere [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingRowGroups"></a> Aggiunta di gruppi di righe a una tabella  
- Così come è possibile trascinare un campo dal riquadro dei dati del report in una cella per visualizzare i dati dettaglio, è possibile trascinare un campo nel riquadro Raggruppamento allo scopo di aggiungere un gruppo. Per una tabella, trascinare il campo nel riquadro Gruppi di righe. Dopo avere aggiunto un gruppo, la tabella aggiunge automaticamente celle nelle nuove colonne dell'area del gruppo di righe nelle quali visualizzare i valori di gruppo. Per altre informazioni sulle aree, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Così come è possibile trascinare un campo dal riquadro dei dati del report in una cella per visualizzare i dati dettaglio, è possibile trascinare un campo nel riquadro Raggruppamento allo scopo di aggiungere un gruppo. Per una tabella, trascinare il campo nel riquadro Gruppi di righe. Dopo avere aggiunto un gruppo, la tabella aggiunge automaticamente celle nelle nuove colonne dell'area del gruppo di righe nelle quali visualizzare i valori di gruppo. Per ulteriori informazioni sulle aree, vedere [aree dell'area dati Tablix &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Nella figura seguente è illustrata una tabella con due gruppi di righe nidificati nella visualizzazione Progettazione. I gruppi di righe sono stati creati trascinando il campo Ordine e quindi il campo Data nel riquadro Gruppi di righe e inserendo ogni gruppo come elemento padre dei gruppi esistenti. Nella figura sono illustrati un gruppo padre basato sulla data e un gruppo figlio basato sul numero di ordine, nonché il gruppo dettagli specificato per impostazione predefinita.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Tabella raggruppata per data e quindi ordinare](../../reporting-services/media/rs-basictablegroupspreview.png "tabella raggruppata per data e quindi ordinare")  
   
- Una modalità alternativa per la visualizzazione dei dati raggruppati consiste nell'impostare un rientro per la gerarchia dei gruppi in modo da visualizzare la relazione nidificata dei gruppi anziché presentare ogni valore nella rispettiva colonna. Questo stile di formattazione è definito report con rientri. Per altre informazioni sulla formattazione delle informazioni sui gruppi come report con rientri, vedere [Creazione di un report con rientri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
+ Una modalità alternativa per la visualizzazione dei dati raggruppati consiste nell'impostare un rientro per la gerarchia dei gruppi in modo da visualizzare la relazione nidificata dei gruppi anziché presentare ogni valore nella rispettiva colonna. Questo stile di formattazione è definito report con rientri. Per ulteriori informazioni sulla formattazione delle informazioni sui gruppi come un report con rientri, vedere [creare un Report con rientri &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>Aggiunta dei totali ai gruppi di righe  
  Per visualizzare i totali per un gruppo, è possibile usare il comando sensibile al contesto **Aggiungi totale** . Per un gruppo di righe, il comando Aggiungi totale inserisce una riga all'esterno del gruppo in modo che venga ripetuta una sola volta in relazione al gruppo. Per i gruppi nidificati, la riga del totale relativa al gruppo figlio è esterna a quest'ultimo ma interna al gruppo padre. Per questo motivo può essere utile impostare il colore di sfondo della riga del totale per il gruppo figlio in modo da distinguerla dalle righe di dettaglio. È anche possibile usare un colore di sfondo differente per distinguere le righe di intestazione dalle righe dei piè di pagina della tabella. Nella figura seguente è illustrata la tabella con una riga del totale aggiunta per il gruppo in base ai numeri di ordine.  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Esempi di espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tabelle, matrici e gli elenchi di &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

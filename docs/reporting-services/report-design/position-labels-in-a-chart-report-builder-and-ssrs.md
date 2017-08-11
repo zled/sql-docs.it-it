@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53f0d4b0c6aed30746af82de7d5f1caf5e42721c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Posizionamento di etichette in un grafico (Generatore report e SSRS)
@@ -100,11 +100,11 @@ ms.lasthandoff: 06/22/2017
 6.  Selezionare un valore per la proprietà Position.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Grafici a torta &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Grafici a barre &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
+ [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattare le etichette dell'asse come date o valute &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Visualizzare le etichette dei punti dati all'esterno di un grafico a torta &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo di connessione Hyperion Essbase (SSRS)
@@ -82,7 +82,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ### <a name="predefined-field-properties"></a>Proprietà di campo predefinite  
  Proprietà di campo generalmente supportate da più provider di dati e incluse nella query MDX sottostante relativa a un set di dati di report. La proprietà delle dimensioni MDX MEMBER_UNIQUE_NAME è ad esempio mappata alla proprietà di campo predefinita del set di dati del report **UniqueName**. Per includere il valore del nome univoco in una casella di testo, utilizzare l'espressione `=Fields!`  *\<FieldName >*`.UniqueName`.  
   
- Nella tabella seguente viene riportato un elenco delle proprietà di campo predefinite che è possibile utilizzare per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
+ Nella tabella seguente viene riportato un elenco delle proprietà di campo predefinite che è possibile utilizzare per un'origine dati [!INCLUDE[extEssbase](../../includes/extessbase-md.md)].  
   
 |**Proprietà**|**Tipo**|**Descrizione o valore previsto**|  
 |------------------|--------------|---------------------------------------|  
@@ -123,7 +123,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Aggiungere un filtro a un set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> Sezioni correlate  
@@ -132,13 +132,13 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Viene fornita una panoramica sull'accesso ai dati del report.  
   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Vengono fornite informazioni sulle connessioni dati e sulle origini dati.  
   
- [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Report di set di dati incorporati e condivisi &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sui set di dati incorporati e condivisi.  
   
- [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Raccolta di campi del set di dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi generata dalla query del set di dati.  
   
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -149,8 +149,8 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [I parametri di report &#40; Generatore report e progettazione Report &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtro, gruppo e ordinamento dei dati &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Espressioni &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

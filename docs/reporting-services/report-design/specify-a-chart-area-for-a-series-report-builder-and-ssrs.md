@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d88358516e05214b230ec57b6243168ef9aac048
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Specificare un'area del grafico per una serie (Generatore report e SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
 4.  (Facoltativo) Allineare le aree del grafico in senso verticale. A questo scopo, fare clic con il pulsante destro del mouse sul grafico e scegliere **Proprietà area grafico**. In **Allineamento**selezionare un'altra area del grafico con la quale si desidera allineare l'area del grafico selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Più serie in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Grafici polari &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
- [Grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
- [Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [Più serie in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Definire i colori in un grafico utilizzando una tavolozza &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [I grafici polari &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
+ [Grafici con forme &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
+ [Grafici a torta &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

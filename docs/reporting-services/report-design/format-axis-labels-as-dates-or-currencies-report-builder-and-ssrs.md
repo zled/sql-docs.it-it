@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b8f82c7824a44d46a282eca8d617fb12ac9ade5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS)
@@ -28,7 +28,7 @@ Quando i valori DateTime sono formattati correttamente su un asse, vengono visua
 > [!NOTE]  
 >  Nei grafici a dispersione e negli istogrammi, l'asse orizzontale, o asse x, è l'asse delle categorie. Nei grafici a barre l'asse delle categorie è l'asse verticale, ovvero l'asse y.  
   
- Per formattare correttamente gli intervalli di tempo, i valori visualizzati sull'asse X devono restituire un tipo di dati <xref:System.DateTime>. Se il campo dispone di un tipo di dati <xref:System.String>, il grafico non calcolerà gli intervalli come date o ore. Per altre informazioni, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+ Per formattare correttamente gli intervalli di tempo, i valori visualizzati sull'asse X devono restituire un tipo di dati <xref:System.DateTime> . Se il campo dispone di un tipo di dati <xref:System.String>, il grafico non calcolerà gli intervalli come date o ore. Per altre informazioni, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Quando un valore numerico viene aggiunto all'asse Y, per impostazione predefinita il grafico non formatta il numero prima di visualizzarlo. Se il campo numerico è una cifra relativa alle vendite, è possibile formattare i numeri come valute per migliorare la leggibilità del grafico.  
   
@@ -63,9 +63,9 @@ Quando i valori DateTime sono formattati correttamente su un asse, vengono visua
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Formattazione delle etichette dell'asse in un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Specificare una scala logaritmica &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Specificare un intervallo dell'asse &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

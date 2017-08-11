@@ -22,15 +22,15 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0617201275bec8a2ff254d328f8105f18d6a35b7
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Interfaccia utente di Progettazione query SAP NetWeaver BI
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati SAP NetWeaver® Business Intelligence. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro metadati dal quale è possibile trascinare membri da un InfoCube, un MultiProvider o una query Web definita sull'origine dei dati per la compilazione di una query MDX che recupera dati quando il report viene elaborato.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati SAP NetWeaver® Business Intelligence. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro metadati dal quale è possibile trascinare membri da un InfoCube, un MultiProvider o una query Web definita sull'origine dei dati per la compilazione di una query MDX che recupera dati quando il report viene elaborato.  
   
 > [!IMPORTANT]  
 >  Gli utenti accedono alle origini dati quando creano ed eseguono query. È necessario concedere autorizzazioni minime per le origini dati, ad esempio autorizzazioni di sola lettura.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
 |![Esecuzione automatica query](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "esecuzione automatica della query")|Consente di eseguire automaticamente la query e visualizza il risultato a ogni modifica, ad esempio, quando viene eliminata una colonna nel riquadro Dati. I risultati verranno visualizzati nel riquadro Dati.|  
 |![Elimina](../../reporting-services/report-data/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
 |![Icona per la finestra di dialogo parametri Query](../../reporting-services/report-data/media/iconqueryparameter.gif "icona per la finestra di dialogo parametri Query")|Consente di visualizzare la finestra di dialogo **Variabili** . Questo pulsante è abilitato solo quando il cubo selezionato è una query sul cubo, dato che solo le query sui cubi supportano le variabili. Quando si assegna un valore predefinito a una variabile, viene creato un parametro corrispondente del report.|  
-|![Eseguire la query](../../reporting-services/report-data/media/rsqdicon-run.gif "eseguire la query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
+|![Esecuzione della query](../../reporting-services/report-data/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
 |![Annullare la query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "annullare la query")|Consente di annullare la query.|  
 |![Passare alla modalità progettazione](../../reporting-services/media/rsqdicon-designmode.gif "passare alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa.|  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 06/22/2017
 -   **Elimina** (![Elimina](../../reporting-services/report-data/media/rsqdicon-delete.gif "Elimina"))  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Creare un set di dati condiviso o set di dati incorporato &#40; Generatore report e SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

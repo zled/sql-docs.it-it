@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03a8fc7800821a235076b5652506c2247db1226f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente di creazione di Generatore report (SSRS)
@@ -52,8 +52,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Configurare l'accesso a Generatore Report](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Progettare report con Progettazione report &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [Progettare report con progettazione Report &#40; SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

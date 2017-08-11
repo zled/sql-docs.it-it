@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 711b648b41294d6c32530407b31aec8401db389c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei colori delle serie in un grafico (Generatore report e SSRS)
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
  Se il numero di serie è maggiore di quello dei colori disponibili nella tavolozza, i colori verranno riutilizzati. In questo modo è possibile che due serie presentino lo stesso colore. Ciò si verifica di frequente nei casi in cui si utilizza un grafico con forme, in cui a ogni punto dati viene assegnato un colore della tavolozza. Per evitare confusione, definire una tavolozza personalizzata con almeno un numero di colori pari a quello delle serie presenti nel grafico.  
   
- È possibile selezionare una nuova tavolozza o definire una tavolozza personalizzata dal riquadro Proprietà. Per altre informazioni, vedere [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
+ È possibile selezionare una nuova tavolozza o definire una tavolozza personalizzata dal riquadro Proprietà. Per ulteriori informazioni, vedere [Definisci colori in un grafico utilizzando una tavolozza &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,15 +45,15 @@ ms.lasthandoff: 06/22/2017
  La tavolozza predefinita è stata utilizzata come tavolozza dei grafici predefinita nelle versioni precedenti di Reporting Services e viene tuttora utilizzata per una questione di coerenza. I grafici vengono aggiornati perfettamente con la tavolozza predefinita. Tuttavia, in seguito all'aggiornamento, la tavolozza può essere cambiata.  
   
 ## <a name="using-custom-palettes"></a>Utilizzo di tavolozze personalizzate  
- Se si desidera applicare colori diversi al grafico, utilizzare una tavolozza personalizzata. Una tavolozza personalizzata consente di aggiungere colori nell'ordine di visualizzazione desiderato nel grafico e risulta utile soprattutto se il numero di serie del grafico non è noto in fase di progettazione. Per altre informazioni, vedere [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
+ Se si desidera applicare colori diversi al grafico, utilizzare una tavolozza personalizzata. Una tavolozza personalizzata consente di aggiungere colori nell'ordine di visualizzazione desiderato nel grafico e risulta utile soprattutto se il numero di serie del grafico non è noto in fase di progettazione. Per ulteriori informazioni, vedere [Definisci colori in un grafico utilizzando una tavolozza &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
   
 ## <a name="using-a-color-fill-on-each-series"></a>Utilizzo di un colore di riempimento su ogni serie  
  Per definire colori personalizzati nel grafico è anche possibile specificare un colore per ogni serie. A tale scopo, aprire la finestra di dialogo **Proprietà serie** e impostare la proprietà **Color** per **Riempimento**. Questo approccio sostituisce tutte le tavolozze definite. Generalmente, è preferibile utilizzare una tavolozza personalizzata per definire i colori desiderati poiché il numero di serie nel set di dati non può essere noto fino a quando non viene eseguita l'elaborazione del report.  
   
  Questo approccio è adatto a situazioni in cui si desidera impostare in modo condizionale il colore della serie in base a un'espressione.  Per altre informazioni, vedere [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Specificare i colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Specificare colori coerenti in più grafici con forme &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Grafici &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   
   

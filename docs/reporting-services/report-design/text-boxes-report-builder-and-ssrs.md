@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  Per visualizzare il testo ripetuto in un layout in formato libero, creare un'area dati elenco e posizionare la casella di testo al suo interno. Usare un elenco quando si desidera ripetere un form per più valori, ad esempio il form di una fattura ripetuto una volta per ogni cliente. Per altre informazioni, vedere l'argomento sulla [creazione di fatture e moduli con elenchi](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Usare un contenitore rettangolare se si desidera controllare il layout della casella di testo e lo spazio vuoto sotto l'ultima casella di testo. Per altre informazioni, vedere [Rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Usare un contenitore rettangolare se si desidera controllare il layout della casella di testo e lo spazio vuoto sotto l'ultima casella di testo. Per ulteriori informazioni, vedere [rettangoli e linee &#40; Generatore report e SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  Le espressioni in una casella di testo possono contenere testo letterale, puntare a un campo del database o calcolare dati. Tutte le espressioni vengono visualizzate come testo segnaposto per consentire la formattazione di numeri, colori e altre proprietà relative all'aspetto. È inoltre possibile combinare segnaposti e testo letterale nella stessa casella di testo.  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formattazione di numeri e date &#40; Generatore report e SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   
