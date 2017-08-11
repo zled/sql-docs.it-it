@@ -17,21 +17,21 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-guides"></a>Guide di SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Sono disponibili le guide seguenti. Vengono trattati i concetti generali e si applicano a tutte le versioni di SQL Server, salvo diversa indicazione nella rispettiva Guida. 
+Sono disponibili le guide seguenti. Vengono trattati i concetti generali che riguardano tutte le versioni di SQL Server, salvo diversa indicazione nella rispettiva Guida. 
 
-[Guida alla risoluzione dei problemi e monitoraggio di gruppi di disponibilità AlwaysOn](http://msdn.microsoft.com/library/dn135328)  
-[Guida alla progettazione degli indici](../relational-databases/sql-server-index-design-guide.md)  
-[Guida all'architettura di gestione della memoria](../relational-databases/memory-management-architecture-guide.md)  
+[Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On](http://msdn.microsoft.com/library/dn135328)  
+[Guida per la progettazione di indici](../relational-databases/sql-server-index-design-guide.md)  
+[Guida sull'architettura di gestione della memoria](../relational-databases/memory-management-architecture-guide.md)  
 [Guida sull'architettura di pagina ed extent](../relational-databases/pages-and-extents-architecture-guide.md)  
 [Guida di ottimizzazione e convalida post-migrazione](post-migration-validation-and-optimization-guide.md)  
 [Guida sull'architettura di elaborazione delle query](../relational-databases/query-processing-architecture-guide.md)  

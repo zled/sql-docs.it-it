@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
@@ -51,29 +51,29 @@ ms.lasthandoff: 06/23/2017
 
 Sono supportati i costrutti delle query indicati di seguito:  
 
-Espressione CASE: CASE può essere utilizzato in qualsiasi istruzione o clausola che consenta un'espressione valida.
-   - **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le istruzioni CASE sono ora supportate per i moduli di T-SQL compilati in modo nativo.
+Espressione CASE: CASE può essere utilizzata in qualsiasi istruzione o clausola che consenta un'espressione valida.
+   - **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).  
+    A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le istruzioni CASE sono supportate per i moduli T-SQL compilati in modo nativo.
 
 Clausola SELECT:  
 
 -   Alias di nomi e colonne (usando la sintassi AS o =).  
 
 -   Sottoquery scalari
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], sottoquery scalari sono ora supportate nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le istruzioni scalari sono supportate per i moduli compilati in modo nativo.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l'operatore DISTINCT è supportato nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l'operatore DISTINCT è supportato in moduli compilati in modo nativo.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION e UNION ALL
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori UNION e UNION ALL sono ora supportati nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori UNION e UNION ALL sono supportati in moduli compilati in modo nativo.
 
 -   Assegnazioni di variabili  
 
@@ -84,21 +84,21 @@ Clausola FROM:
 -   FROM \<funzione con valori di tabella inline compilata in modo nativo>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], join sono ora supportati nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori JOINS sono supportati in moduli compilati in modo nativo.
 
 -   Sottoquery `[AS] table_alias`. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery sono ora supportate nei moduli compilati in modo nativo.
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery sono supportate in moduli compilati in modo nativo.
 
 Clausola WHERE:  
 
 -   Predicato del filtro IS [NOT] NULL  
 
--   E TRA  
--   OR, NON ESISTE,
-    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori OR/NOT/IN/EXISTS sono ora supportati nei moduli compilati in modo nativo.
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
+    - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], gli operatori OR/NOT/IN/EXISTS sono supportati in moduli compilati in modo nativo.
 
 
 Clausola[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
@@ -194,7 +194,7 @@ Sono supportate le istruzioni DML seguenti.
 -   Operatori bit per bit ~, &, | e ^  
 
 -   APPLY - operatore
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato nei moduli compilati in modo nativo.
 
 ##  <a name="bfncsp"></a> Funzioni integrate nei moduli compilati in modo nativo  
@@ -205,7 +205,7 @@ Sono supportate le istruzioni DML seguenti.
 -   Funzioni di data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
 
 -   Funzioni stringa: LEN, LTRIM, RTRIM e SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, sono supportate anche le funzioni integrate seguenti: TRIM, TRANSLATE e CONCAT_WS.  
 
 -   Funzione di identità: SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ Sono supportate le istruzioni DML seguenti.
 -   Funzioni di identificazione univoca: NEWID e NEWSEQUENTIALID  
 
 -   Funzioni JSON  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le funzioni JSON sono supportate nei moduli compilati in modo nativo.
 
 -   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  

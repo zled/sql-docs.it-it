@@ -21,19 +21,19 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
   È consigliabile esaminare il contenuto di un pacchetto di un'applicazione livello dati prima di distribuirlo nella produzione nonché convalidare le azioni di aggiornamento prima di aggiornare un'applicazione livello dati esistente, in particolare nel caso in cui si distribuiscano pacchetti non sviluppati dalla propria organizzazione.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
-2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>Visualizzare esempio di azioni di aggiornamento (PowerShell)  
  **Visualizzare esempio di azioni di aggiornamento (PowerShell)**  
   
- Nell'esempio seguente vengono segnalate le istruzioni Transact-SQL che sarebbero eseguite per l'aggiornamento di un'applicazione livello dati con nome MyApplicaiton allo schema definito in un file MyApplication2017.dacpac.  
+ L'esempio seguente illustra le istruzioni Transact-SQL da eseguire per aggiornare un'applicazione livello dati denominata MyApplication allo schema definito in un file MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

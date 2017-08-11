@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipi di dati supportati per OLTP In memoria
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/23/2017
   
 -   Tabelle con ottimizzazione per la memoria  
   
--   Moduli di T-SQL compilati in modo nativo  
+-   Moduli T-SQL compilati in modo nativo  
   
 ## <a name="unsupported-data-types"></a>Tipi di dati non supportati  
  I tipi di dati indicati di seguito non sono supportati:  

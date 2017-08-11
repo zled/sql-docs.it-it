@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
@@ -166,12 +166,11 @@ I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizi
  la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni crittografiche che usano la chiave asimmetrica vengono eseguite nel servizio dell'insieme di credenziali delle chiavi di Azure e sono protette dalla sicurezza del servizio.  
   
  **Che cos'è un URI della chiave?**  
- Ogni chiave nell'insieme di credenziali delle chiavi di Azure ha un URI (Uniform Resource Identifier) che può essere usato per fare riferimento alla chiave dell'applicazione. Utilizzare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` per ottenere la versione corrente e utilizzare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` per ottenere una versione specifica.  
+ Ogni chiave nell'insieme di credenziali delle chiavi di Azure ha un URI (Uniform Resource Identifier) che può essere usato per fare riferimento alla chiave dell'applicazione. Usare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` per ottenere la versione corrente e usare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` per ottenere una versione specifica.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Informazioni sulla configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Quali sono gli endpoint a cui deve accedere Connettore SQL Server?** 
- Il connettore comunica con due endpoint che devono essere inclusi nell'elenco degli elementi consentiti. L'unica porta necessaria per la comunicazione in uscita a questi altri servizi è 443 per Https:
+**Quali sono gli endpoint a cui deve accedere Connettore SQL Server?** Il connettore comunica con due endpoint che devono essere inclusi nell'elenco degli elementi consentiti. L'unica porta necessaria per la comunicazione in uscita a questi altri servizi è 443 per Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -188,7 +187,7 @@ I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizi
   
 -   Per creare una chiave asimmetrica è necessaria l'autorizzazione `CREATE ASYMMETRIC KEY` .  
 
-**Come è possibile cambiare l'istanza predefinita di Active Directory in modo che l'insieme di credenziali delle chiavi venga creato nella stessa sottoscrizione dell'entità servizio di Active Directory creata per il Connettore [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]?**
+**Come è possibile cambiare l'istanza predefinita di Active Directory in modo che l'insieme di credenziali delle chiavi venga creato nella stessa sottoscrizione dell'entità servizio di Active Directory creata per il Connettore [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 -   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://msdn.microsoft.com/library/dn868052.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>File di dati di SQL Server in Microsoft Azure
@@ -126,7 +126,7 @@ ON
  Questa sezione descrive gli strumenti e le librerie di riferimento per la programmazione che è possibile usare quando si archiviano file di dati di SQL Server in Archiviazione di Azure.  
   
 ### <a name="powershell-support"></a>Supporto PowerShell  
- Usare i cmdlet di PowerShell per archiviare file di dati di SQL Server nel servizio di archiviazione BLOB di Azure facendo riferimento a un percorso URL di archiviazione BLOB anziché a un percorso di file. Accedere ai BLOB utilizzando il formato di URL seguente: `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
+ Usare i cmdlet di PowerShell per archiviare file di dati di SQL Server nel servizio di archiviazione BLOB di Azure facendo riferimento a un percorso URL di archiviazione BLOB anziché a un percorso di file. Accedere agli oggetti BLOB usando il formato di URL seguente`http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Supporto di oggetti di SQL Server e dei contatori delle prestazioni  
  A partire da SQL Server 2014 è stato aggiunto un nuovo oggetto di SQL Server da usare con la funzionalità relativa ai file di dati di SQL Server in Archiviazione di Azure. Il nuovo oggetto di SQL Server è denominato [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) e può essere usato da Monitoraggio di sistema per monitorare l'attività quando SQL Server viene eseguito con il servizio di archiviazione di Microsoft Azure.  
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>Supporto di SQL Server Management Studio  
  SQL Server Management Studio consente di usare questa funzionalità tramite diverse finestre di dialogo. Ad esempio, è possibile digitare il percorso URL del contenitore di archiviazione, > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- come un **percorso** in diverse finestre di dialogo, ad esempio **Nuovo database**, **Collega database** e **Ripristina database**. Per altre informazioni, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx).  
+ come un **percorso** in diverse finestre di dialogo, ad esempio **Nuovo database**, **Collega database**e **Ripristina database**. Per altre informazioni, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx).  
   
 ### <a name="sql-server-management-objects-support"></a>Supporto di SQL Server Management Objects  
  Quando si usa la funzionalità relativa ai file di dati di SQL Server in Azure, sono supportati tutti gli oggetti SMO (SQL Server Management Objects). Se un oggetto SMO richiede un percorso di file, usare il formato URL dell'oggetto BLOB anziché un percorso di file locale, ad esempio `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Per altre informazioni su SQL Server Management Objects (SMO), vedere [Guida alla programmazione di SMO &#40;SQL Server Management Objects&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) nella documentazione online di SQL Server.  

@@ -15,18 +15,18 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Le tabelle temporali sono in genere utili negli scenari che richiedono il rilevamento della cronologia delle modifiche dei dati.    
-È consigliabile prendere in considerazione le tabelle temporali nei seguenti casi di utilizzo per i principali vantaggi.  
+È consigliabile prendere in considerazione le tabelle temporali nei casi d'uso seguenti per ottenere vantaggi significativi in termini di produttività.  
   
 ## <a name="data-audit"></a>Controllo dei dati  
  Usare il controllo delle versioni di sistema temporale nelle tabelle che archiviano informazioni critiche per le quali è necessario tenere traccia di cosa è stato modificato e quando ed eseguire analisi scientifiche dei dati in qualsiasi momento.    
@@ -315,9 +315,9 @@ ALTER TABLE Product
 ALTER TABLE [Location]  
 ADD   
     SysStartTime datetime2 (2) GENERATED ALWAYS AS ROW START HIDDEN    
-        constraint DF_ValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
+        constraint DFValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
     , SysEndTime datetime2 (2)  GENERATED ALWAYS AS ROW END HIDDEN     
-        constraint DF_ValidTo DEFAULT '9999.12.31 23:59:59.99'  
+        constraint DFValidTo DEFAULT '9999.12.31 23:59:59.99'  
     , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);  
   
 ALTER TABLE [Location]    

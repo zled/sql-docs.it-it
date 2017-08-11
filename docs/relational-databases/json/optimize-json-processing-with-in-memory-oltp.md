@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
 ms.contentlocale: it-it
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Ottimizzare l'elaborazione JSON con OLTP in memoria
@@ -47,7 +47,7 @@ CREATE TABLE xtp.Product(
 Le funzionalità disponibili in SQL Server e nel database SQL di Azure consentono di integrare le funzionalità JSON con le tecnologie OLTP in memoria esistenti. Ad esempio, è possibile eseguire le operazioni seguenti:
  - [Convalidare la struttura dei documenti JSON](#validate) archiviati in tabelle ottimizzate per la memoria usando vincoli CHECK compilati in modo nativo.
  - [Esporre e tipizzare i valori](#computedcol) archiviati nei documenti JSON usando colonne calcolate.
- - [Indicizzare i valori](#index) nei documenti JSON usando indici con ottimizzazione per la memoria.
+ - [Indicizzare i valori](#index) nei documenti JSON usando indici ottimizzati per la memoria.
  - [Compilare in modo nativo le query SQL](#compile) che usano valori di documenti JSON o formattano i risultati come testo JSON.
 
 ## <a name="validate"></a> Convalidare le colonne JSON
@@ -105,7 +105,7 @@ CREATE TABLE xtp.Product(
 ```
 
 ## <a name="index"></a> Indicizzare i valori nelle colonne JSON
-SQL Server e il database SQL di Azure consentono di indicizzare i valori nelle colonne JSON tramite indici con ottimizzazione per la memoria. I valori JSON indicizzati devono essere esposti e fortemente tipizzati usando colonne calcolate, come illustrato nell'esempio precedente.
+SQL Server e il database SQL di Azure consentono di indicizzare i valori nelle colonne JSON tramite indici ottimizzati per la memoria. I valori JSON indicizzati devono essere esposti e fortemente tipizzati usando colonne calcolate, come illustrato nell'esempio precedente.
 
 I valori nelle colonne JSON possono essere indicizzati usando sia gli indici NONCLUSTERED sia gli indici HASH standard.
 -   Gli indici NONCLUSTERED ottimizzano le query che eseguono la selezione di intervalli di righe in base a un valore JSON oppure l'ordinamento dei risultati in base ai valori JSON.
@@ -165,6 +165,6 @@ AS BEGIN
 END
 ```
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Acquisire familiarità con il supporto JSON integrato in SQL Server  
-Per un numero elevato di soluzioni specifiche, casi di utilizzo e indicazioni, vedere il [post di blog sul supporto JSON predefinito](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e Database SQL di Azure per Microsoft Program Manager Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
+Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
 

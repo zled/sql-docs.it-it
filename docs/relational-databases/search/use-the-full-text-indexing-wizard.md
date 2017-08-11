@@ -27,11 +27,11 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
@@ -102,9 +102,9 @@ ms.lasthandoff: 06/23/2017
      e. Selezionare un valore:  
       |Valore|Descrizione|  
       |-----------|-----------------|
-      |**<default>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o vista è partizionata, viene utilizzato il filegroup primario|
+      |**<default>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o la vista è partizionata, viene usato il filegroup primario|
       |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|
-      *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome dall'elenco per utilizzare tale filegroup per il nuovo indice full-text.|   
+      *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per usare questo filegroup per il nuovo indice full-text.|   
   
      
  11. **Selezione elenco di parole non significative full-text**  

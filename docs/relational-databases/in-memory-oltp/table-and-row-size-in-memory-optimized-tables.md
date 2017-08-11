@@ -14,15 +14,14 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: it-it
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Prima di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] le dimensioni dei dati all'interno delle righe di un tabella ottimizzata per la memoria non potevano essere superiori a [8.060 byte](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel database SQL di Azure è invece possibile creare una tabella ottimizzata per la memoria con più colonne di grandi dimensioni, ad esempio più colonne varbinary (8000), e colonne LOB, ad esempio colonne varbinary (max), varchar (max) e nvarchar (max). È anche possibile eseguire operazioni sulle colonne usando moduli T-SQL compilati in modo nativo e tipi di tabella. 
@@ -43,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   Una tabella con ottimizzazione per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. Nella figura seguente viene illustrata una tabella con indici e righe, che a loro volta contengono intestazioni e corpi di riga:  
   
- ![Tabella con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![Tabella ottimizzata per la memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabella ottimizzata per la memoria.")  
 Tabella con ottimizzazione per la memoria, costituita da indici e righe.  
 
 ##  <a name="bkmk_TableSize"></a> Calcolo delle dimensioni di una tabella
@@ -247,8 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 Il post di blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (Novità di OLTP in memoria in SQL Server 2016 a partire da CTP3) spiega nel dettaglio alcuni di questi aspetti complessi.   
  
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

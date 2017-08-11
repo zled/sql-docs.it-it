@@ -28,11 +28,11 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>Aggiornare un'applicazione livello dati
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
   
 -   **Prima di iniziare:**  [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions), [Limitazioni e restrizioni](#LimitationsRestrictions), [Prerequisiti](#Prerequisites), [Sicurezza](#Security), [Autorizzazioni](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati, usare:** [la procedura guidata Aggiorna applicazione livello dati](#UsingDACUpgradeWizard)[, PowerShell](#UpgradeDACPowerShell)  
+-   **Per aggiornare un'applicazione livello dati, usare: **[la procedura guidata Aggiorna applicazione livello dati](#UsingDACUpgradeWizard)[, PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Un aggiornamento dell'applicazione livello dati è un processo sul posto che consente di modificare lo schema del database esistente affinché corrisponda allo schema definito in una nuova versione dell'applicazione livello dati. La nuova versione dell'applicazione livello dati è fornita in un file del pacchetto di applicazione livello dati. Per altre informazioni sulla creazione di un pacchetto di applicazione livello dati, vedere [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  Chiudere il flusso di file usato per leggere il file del pacchetto di applicazione livello dati.  
   
 ### <a name="example-powershell"></a>Esempio (PowerShell)  
- L'esempio seguente aggiorna un'applicazione livello dati denominata MyApplication su un'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)], utilizzando una nuova versione dell'applicazione livello dati in un pacchetto MyApplication2017.dacpac.  
+ Nell'esempio seguente viene aggiornata un'applicazione livello dati denominata MyApplication su un'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando una nuova versione DAC in un pacchetto MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

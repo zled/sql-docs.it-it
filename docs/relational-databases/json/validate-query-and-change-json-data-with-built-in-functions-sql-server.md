@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 017f0c1a33ea00e675115d91e6654ec7730b4bd3
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: d8c99e842ceaa2351c98583238cbba28e2a152c7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Convalidare, eseguire query e modificare i dati JSON con funzioni predefinite (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Il supporto integrato per JSON include le seguenti funzioni predefinite descritte brevemente in questo argomento.  
+Il supporto integrato per JSON include le funzioni predefinite seguenti descritte brevemente in questo argomento.  
   
 -   [ISJSON](#ISJSON) verifica se una stringa include contenuto JSON valido.  
   
@@ -61,7 +61,7 @@ SET @jsonInfo=N'{
 ##  <a name="ISJSON"></a> Convalidare il testo JSON tramite la funzione ISJSON  
  La funzione **ISJSON** verifica se una stringa include contenuto JSON valido.  
   
-L'esempio seguente restituisce le righe in cui la colonna `json_col` contiene contenuto JSON valido.  
+L'esempio seguente restituisce le righe in cui la colonna `json_col` include contenuto JSON valido.  
   
 ```sql  
 SELECT id, json_col
@@ -74,7 +74,7 @@ Per altre informazioni, vedere [ISJSON &#40;Transact-SQL&#41;](../../t-sql/funct
 ##  <a name="VALUE"></a> Estrarre un valore dal testo JSON tramite la funzione JSON_VALUE  
 La funzione **JSON_VALUE** estrae un valore scalare da una stringa JSON.  
   
-Nell'esempio seguente viene estratto il valore della proprietà JSON nidificata `town` in una variabile locale.  
+Nell'esempio seguente viene estratto il valore della proprietà JSON annidata `town` in una variabile locale.  
   
 ```sql  
 SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
@@ -124,7 +124,7 @@ Testare le funzioni predefinite descritte in questo argomento tramite l'esecuzio
 Negli esempi seguenti la colonna `Info` nella tabella `SalesOrder_json` contiene testo JSON.  
   
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>Esempio 1: restituire colonne standard e dati JSON  
-La query seguente restituisce valori sia dalle colonne relazionali standard che da una colonna JSON.  
+La query seguente restituisce valori sia dalle colonne relazionali standard sia da una colonna JSON.  
   
 ```sql  
 SELECT SalesOrderNumber, OrderDate, Status, ShipDate, Status, AccountNumber, TotalDue,
@@ -161,7 +161,7 @@ HAVING SUM(SubTotal)>1000
 ##  <a name="MODIFY"></a> Aggiornare i valori delle proprietà in testo JSON tramite la funzione JSON_MODIFY  
 La funzione **JSON_MODIFY** aggiorna il valore di una proprietà in una stringa JSON e restituisce la stringa JSON aggiornata.  
   
-L'esempio seguente aggiorna il valore di una proprietà JSON in una variabile che include contenuto JSON.  
+Nell'esempio seguente viene aggiornato il valore di una proprietà JSON in una variabile che include contenuto JSON.  
   
 ```sql  
 SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
@@ -169,8 +169,8 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
   
  Per altre informazioni, vedere [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
   
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Acquisire familiarità con il supporto JSON integrato in SQL Server  
-Per un numero elevato di soluzioni specifiche, casi di utilizzo e indicazioni, vedere il [post di blog sul supporto JSON predefinito](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e Database SQL di Azure per Microsoft Program Manager Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
+Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
   
 ## <a name="see-also"></a>Vedere anche  
  [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   

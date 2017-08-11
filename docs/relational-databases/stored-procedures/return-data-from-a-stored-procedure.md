@@ -17,16 +17,16 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [dati restituiti da una Stored Procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Restituire dati da una stored procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
   Sono disponibili due modalità di restituzione di set di risultati o di dati da una procedura a un programma chiamante, cioè i parametri di output e i codici restituiti. In questo argomento vengono fornite informazioni su entrambi gli approcci.  
   

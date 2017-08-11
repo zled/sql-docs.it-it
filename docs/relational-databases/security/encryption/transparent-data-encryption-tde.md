@@ -23,19 +23,19 @@ caps.latest.revision: 75
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: dc40b37eeab532f4143350800154fb34af6d4ea0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-US/library/bb934049(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-US/library/bb934049(SQL.120).aspx).
 
-  *Transparent Data Encryption* (TDE) consente di crittografare file di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] con un'operazione nota come crittografia dei dati inattivi. Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
+  *Transparent Data Encryption* (TDE) consente di crittografare file di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] con un'operazione nota come crittografia dei dati inattivi. Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
   
  TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di crittografia del database è una chiave simmetrica protetta tramite un certificato archiviato nel database master del server o una chiave asimmetrica protetta da un modulo EKM. TDE consente di proteggere i dati "non operativi", ovvero i file di dati e di log, e assicura la conformità a numerose leggi, normative e linee guida stabilite in vari settori. Gli sviluppatori software possono ora crittografare i dati usando gli algoritmi di crittografia AES e 3DES senza modificare applicazioni esistenti.  
   

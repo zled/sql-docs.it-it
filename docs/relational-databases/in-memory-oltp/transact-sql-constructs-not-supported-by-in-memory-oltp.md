@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione **CREATE TABLE** .<br /><br /> Tutte le tabelle con ottimizzazione per la memoria vengono mappate al filegroup con ottimizzazione per la memoria.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per altre informazioni, vedere [Tipi di dati supportati](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle con ottimizzazione per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.|  
+|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle con ottimizzazione per la memoria. Rimuovere le colonne calcolate dall'istruzione **CREATE TABLE** .<br/><br/>**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Replica|La replica non è supportata con le tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle con ottimizzazione per la memoria. Rimuovere la parola chiave **FILESTREAM** dalla definizione della colonna.|  
 |Funzionalità|SPARSE|Le colonne delle tabelle con ottimizzazione per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave **SPARSE** dalla definizione della colonna.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |Operazione|Aggiornamento di colonne chiave primaria|Le colonne chiave primaria delle tabelle con ottimizzazione per la memoria e dei tipi di tabella non possono essere aggiornate. Se la chiave primaria deve essere aggiornata, eliminare la vecchia riga e inserire una nuova riga con la chiave primaria aggiornata.|  
 |Operazione|CREATE INDEX|Gli indici delle tabelle con ottimizzazione per la memoria devono essere specificati inline con l'istruzione **CREATE TABLE** o **ALTER TABLE** .|  
 |Operazione|CREATE FULLTEXT INDEX|Gli indici full-text non sono supportati dalle tabelle con ottimizzazione per la memoria.|  
-|Operazione|modifica schema|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano le modifiche dello schema, ad esempio **sp_rename**.<br /><br /> Il tentativo di apportare modifiche allo schema genererà l'errore 12320. Le operazioni che richiedono una modifica alla versione dello schema, ad esempio la ridenominazione, non sono supportate nelle tabelle con ottimizzazione per la memoria.<br /><br /> Sono consentite alcune modifiche dello schema apportate mediante ALTER TABLE e ALTER PROCEDURE.<br/><br/>**Si applica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename è supportata.| 
+|Operazione|modifica schema|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano le modifiche dello schema, ad esempio **sp_rename**.<br /><br /> Il tentativo di apportare modifiche allo schema genererà l'errore 12320. Le operazioni che richiedono una modifica alla versione dello schema, ad esempio la ridenominazione, non sono supportate nelle tabelle con ottimizzazione per la memoria.<br /><br /> Sono consentite alcune modifiche dello schema apportate mediante ALTER TABLE e ALTER PROCEDURE.<br/><br/>**Si applica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename è supportato.| 
 |Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle con ottimizzazione per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM***table* oppure eliminare e ricreare la tabella.|  
 |Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella con ottimizzazione per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
 |Operazione|ALTER SCHEMA|Trasferimento di un'entità a protezione diretta da uno schema a un altro.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |Operatore|OFFSET|Questo operatore non è supportato. Rimuovere **OFFSET** dalla stored procedure compilata in modo nativo.|  
 |Operatore|INTERSECT|Questo operatore non è supportato. Rimuovere **INTERSECT** dalla stored procedure compilata in modo nativo. In alcuni casi è possibile usare INNER JOIN per ottenere lo stesso risultato.|  
 |Operatore|EXCEPT|Questo operatore non è supportato. Rimuovere **EXCEPT** dalla stored procedure compilata in modo nativo.|  
-|Operatore|APPLY|Questo operatore non è supportato. Rimuovere **APPLY** dalla stored procedure compilata in modo nativo.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato in moduli compilati in modo nativo.|  
+|Operatore|APPLY|Questo operatore non è supportato. Rimuovere **APPLY** dalla stored procedure compilata in modo nativo.<br/><br/>**Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l'operatore APPLY è supportato in moduli compilati in modo nativo.|  
 |Operatore|PIVOT|Questo operatore non è supportato. Rimuovere **PIVOT** dalla stored procedure compilata in modo nativo.|  
 |Operatore|UNPIVOT|Questo operatore non è supportato. Rimuovere **UNPIVOT** dalla stored procedure compilata in modo nativo.|  
 |Operatore|CONTAINS|Questo operatore non è supportato. Rimuovere **CONTAINS** dalla stored procedure compilata in modo nativo.|  

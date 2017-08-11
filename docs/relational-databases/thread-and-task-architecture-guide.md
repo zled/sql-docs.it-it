@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
@@ -93,14 +93,14 @@ Non utilizzare l'aumento automatico per aumentare le dimensioni del file del log
 
 Le prestazioni delle operazioni sugli indici, quali la creazione o la ricompilazione degli indici, possono essere ottimizzate nei computer dotati di molte CPU impostando temporaneamente il modello di recupero del database sul modello con registrazione minima delle operazioni bulk o sul modello con registrazione minima. Queste operazioni sugli indici possono generare attività del log significative e le contese relative al log possono influire sul grado di parallelismo selezionato in SQL Server.
 
-Inoltre, provare a regolare il **massimo grado di parallelismo (MAXDOP)** opzione di configurazione del server per queste operazioni. Le linee guida seguenti sono basate su test interni e costituiscono consigli generali. È consigliabile provare diverse impostazioni MAXDOP per determinare quella ottimale per l'ambiente.
+Valutare inoltre la modifica dell'opzione di configurazione del server relativa al **massimo grado di parallelismo (MAXDOP)** per queste operazioni. Le linee guida seguenti sono basate su test interni e costituiscono consigli generali. È consigliabile provare diverse impostazioni MAXDOP per determinare quella ottimale per l'ambiente.
 
 * Per il modello di recupero con registrazione completa, limitare l'opzione Massimo grado di parallelismo a un valore minore o uguale a 8.   
 * Per il modello di recupero con registrazione minima delle operazioni bulk o per il modello di recupero con registrazione minima, è consigliabile impostare l'opzione Massimo grado di parallelismo su un valore maggiore di 8.   
 * Nei server con configurazione NUMA, il grado massimo di parallelismo non deve superare il numero di CPU assegnate a ogni nodo NUMA. Ciò è dovuto al fatto che la query utilizzerà con maggiore probabilità memoria locale da un nodo NUMA, migliorando i tempi di accesso alla memoria.  
-* Per i server con hyper-threading abilitata e prodotti nel 2009 sono versioni precedenti (prima che la funzionalità hyper-threading è stata migliorata), il valore MAXDOP non deve superare il numero di processori fisici, invece di processori logici.
+* Nei server con tecnologia Hyper-Threading abilitata e prodotti nel 2009 o in anni precedenti, ovvero prima che la funzionalità di hyper-threading venisse migliorata, il valore MAXDOP non deve superare il numero di processori fisici anziché di processori logici.
 
-Per ulteriori informazioni sull'opzione max degree of parallelism, vedere [il max degree of parallelism opzione di configurazione Server Configurare](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Per altre informazioni sull'opzione relativa al massimo grado di parallelismo, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Impostazione del numero massimo di thread di lavoro
 
