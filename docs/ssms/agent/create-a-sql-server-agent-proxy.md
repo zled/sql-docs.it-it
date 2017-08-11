@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Creazione di un proxy di SQL Server Agent
@@ -48,7 +48,7 @@ Un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Ag
   
 -   Se non disponibili, prima di creare un proxy è necessario creare le credenziali.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows. L'utente specificato nella credenziale deve disporre dell'autorizzazione "Accedi al computer dalla rete" (specificato SeNetworkLogonRight) nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è in esecuzione.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows. L'utente specificato nella credenziale deve avere l'autorizzazione "Accedi al computer dalla rete" (SeNetworkLogonRight) nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è in esecuzione.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent verifica l'accesso al sottosistema per un proxy e garantisce l'accesso al proxy ad ogni esecuzione del passaggio di processo. Se il proxy non dispone più di accesso al sottosistema, il passaggio di processo non viene eseguito correttamente. In caso contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent rappresenta l'utente specificato nel proxy ed esegue il passaggio di processo.  
   

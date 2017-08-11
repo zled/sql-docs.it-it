@@ -1,5 +1,5 @@
 ---
-title: Guida dell'installazione guidata | Documenti Microsoft
+title: Guida dell'installazione guidata | Microsoft Docs
 ms.custom: 
 ms.date: 2017-04-21
 ms.prod: sql-server-2016
@@ -19,16 +19,16 @@ caps.latest.revision: 62
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="installation-wizard-help"></a>Guida dell'installazione guidata
+# <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 
-In questo argomento vengono descritte alcune delle pagine di configurazione nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata. 
+In questo argomento vengono descritte alcune delle pagine di configurazione della procedura di installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 ## <a name="instance-configuration"></a>Configurazione dell'istanza
 Utilizzare la pagina **Configurazione dell'istanza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare se creare un'istanza predefinita oppure un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è già installata, verrà creata un'istanza predefinita a meno che non si specifichi un'istanza denominata.  
@@ -82,7 +82,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
      Nei nomi di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare solo i caratteri indicati come validi nella tabella codici corrente di Windows. Se viene utilizzato un carattere Unicode non supportato, si verificherà un errore di installazione.  
   
- **Istanze e caratteristiche rilevate**  
+ **Istanze e funzionalità rilevate**  
  È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
@@ -126,11 +126,10 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 >  Controllo account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni sul controllo dell'account utente e sulla relativa configurazione, vedere [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350) (Guida dettagliata sul controllo dell'account utente in Windows) e [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a>Vedere anche  
- [Configurare gli account del servizio &#40; Analysis Services &#41; ](../../analysis-services/instances/configure-service-accounts-analysis-services.md) 
-  [Configurare account di servizio Windows e le autorizzazioni](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+ [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Configurazione di Analysis Services - Directory dati
-  Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del SQLServerMSASUser$\<istanza > gruppo di sicurezza che viene creato e il provisioning durante l'installazione.  
+  Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del gruppo di sicurezza SQLServerMSASUser$\<istanza> creato e di cui viene effettuato il provisioning durante l'installazione.  
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
@@ -163,18 +162,18 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
 ## <a name="database-engine-configuration---data-directories"></a>Configurazione Motore di database - Directory dati
-  Utilizzare questa pagina per specificare il percorso di installazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] programma e file di dati. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
+  Usare questa pagina per specificare il percorso di installazione per i file di dati e di programma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
   
  Per specificare una condivisione file SMB come directory, è necessario immettere manualmente il percorso UNC supportato. La selezione di una condivisione file SMB non è supportata. Il formato di un percorso UNC supportato di una condivisione file SMB è \\\NomeServer\NomeCondivisione\\...  
   
-### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Istanza autonoma di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nella tabella seguente vengono elencati i tipi di archivio supportati e le directory predefinite per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
 |Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Directory radice dati|Disco locale, file server SMB, archiviazione condivisa* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verranno configurati gli elenchi ACL per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory e viene disattivata l'ereditarietà come parte della configurazione.|  
+|Directory radice dati|Disco locale, file server SMB, archiviazione condivisa* |C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.|  
 |Directory database utente|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data |Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.|  
 |Directory log database utente|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data|Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
 |Directory di backup|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Backup|Impostare le autorizzazioni appropriate in modo da impedire la perdita di dati e assicurarsi che all'account utente per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
@@ -186,7 +185,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 |Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Directory radice dati|Spazio di archiviazione condiviso, file server SMB|\<Unità: > \Programmi file\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verranno configurati gli elenchi ACL per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory e viene disattivata l'ereditarietà come parte della configurazione.|  
+|Directory radice dati|Spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.|  
 |Directory database utente|Spazio di archiviazione condiviso, file server SMB|\<Unità:>Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.|  
 |Directory log database utente|Spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
 |Directory di backup|Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Backup<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Impostare le autorizzazioni appropriate in modo da impedire la perdita di dati e assicurarsi che all'account utente per il servizio SQL Server vengano concesse autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
@@ -220,7 +219,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 ### <a name="see-also"></a>Vedere anche  
 ### <a name="analysis-services-configuration---data-directories"></a>Configurazione di Analysis Services - Directory dati
-  Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del SQLServerMSASUser$\<istanza > gruppo di sicurezza che viene creato e il provisioning durante l'installazione.  
+  Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del gruppo di sicurezza SQLServerMSASUser$\<istanza> creato e di cui viene effettuato il provisioning durante l'installazione.  
   
 #### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
@@ -253,7 +252,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
- [Condivisione e autorizzazioni NTFS in un File Server](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [Autorizzazioni NTFS e di condivisione per un file server](http://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>Configurazione del Motore di database - Filestream
   Utilizzare questa pagina per abilitare FILESTREAM per l'installazione corrente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando dati BLOB (Binary Large Object) binari **varbinary(max)** come file nel file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  
@@ -308,21 +307,21 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Non impostare mai password vuote o vulnerabili.  
   
- **Modalità mista (autenticazione di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione)**  
+ **Modalità mista (autenticazione di Windows o autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
  Consente agli utenti di connettersi tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli utenti che utilizzano un account utente di Windows per la connessione possono utilizzare connessioni trusted convalidate da Windows.  
   
  Se è necessario selezionare l'autenticazione Modalità mista e utilizzare account di accesso SQL per le applicazioni legacy, sarà necessario impostare password complesse per tutti gli account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
-> L'autenticazione di  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile solo per la compatibilità con le versioni precedenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile solo per la compatibilità con le versioni precedenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- **Immettere la Password**  
+ **Immettere la password**  
  Immettere e confermare l'account di accesso dell'amministratore di sistema (sa). Le password rappresentano la prima forma di difesa contro eventuali intrusi, pertanto l'impostazione di password complesse costituisce una misura di sicurezza fondamentale per la sicurezza del sistema. Non impostare mai password dell'account "sa" vuote o vulnerabili.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le password possono contenere da 1 a 128 caratteri, inclusa una combinazione di lettere, simboli e numeri. Se si seleziona l'autenticazione Modalità mista, sarà necessario immettere una password dell'account sa complessa prima di passare alla pagina successiva dell'Installazione guidata.  
+>  Le password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono contenere da 1 a 128 caratteri, inclusa qualsiasi combinazione di lettere, simboli e numeri. Se si seleziona l'autenticazione Modalità mista, sarà necessario immettere una password dell'account sa complessa prima di passare alla pagina successiva dell'Installazione guidata.  
   
- **Password complesse**  
+ **Linee guida per la creazione di password complesse**  
  Le password complesse non vengono decifrate facilmente, né da parte degli utenti né mediante l'utilizzo di programmi specifici. Le password complesse non prevedono l'utilizzo di termini o condizioni non consentite, quali:  
   
 -   Condizione di spazio vuoto o NULL  
@@ -356,31 +355,31 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Le password immesse in questa pagina devono soddisfare i requisiti relativi ai criteri password complessi. In presenza di qualsiasi componente di automazione in cui viene utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assicurarsi che la password soddisfi i requisiti relativi ai criteri password complessi.  
   
 ### <a name="related-content"></a>Contenuto correlato  
- Per ulteriori informazioni sulla scelta tra l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L'autenticazione, vedere [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
+ Per ulteriori informazioni sulla scelta tra l'autenticazione di Windows e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Per ulteriori informazioni sulla scelta di un account per l'esecuzione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [configurare account di servizio Windows e le autorizzazioni](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+ Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
   
 ## <a name="database-engine-configuration---tempdb"></a>Configurazione del motore di database - TempDB
-  Utilizzare questa pagina per specificare **tempdb** file di registro e dati posizione, dimensione, impostazioni di espansione e numero di file per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.  
+  Usare questa pagina per specificare posizione, dimensione, impostazioni di espansione e numero di file di log e di dati **tempdb** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seconda del tipo di installazione possono essere supportati i tipi di archivio seguenti: disco locale, spazio di archiviazione condiviso o file server SMB.Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server  
   
  Per specificare una condivisione file SMB come directory, è necessario immettere manualmente il percorso UNC supportato. La selezione di una condivisione file SMB non è supportata. Il formato di un percorso UNC supportato di una condivisione file SMB è \\\NomeServer\NomeCondivisione\\...  
   
-### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directory dati e log per un'istanza autonoma di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directory di dati e log per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  La tabella seguente elenca i tipi di archivio supportati e le directory predefinite per le istanze autonome di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione.  
   
 |Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**Directory dati**|Disco locale, file server SMB, spazio di archiviazione condiviso* |C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verranno configurati gli elenchi ACL per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Le procedure consigliate per le directory dei dati del database **tempdb** dipendono dai requisiti del carico di lavoro e delle prestazioni. Specificare più cartelle o unità per distribuire i file di dati su più volumi.|  
+|**Directory dati**|Disco locale, file server SMB, spazio di archiviazione condiviso* |C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Le procedure consigliate per le directory dei dati del database **tempdb** dipendono dai requisiti del carico di lavoro e delle prestazioni. Specificare più cartelle o unità per distribuire i file di dati su più volumi.|  
 |**Directory log**|Disco locale, file server SMB, spazio di archiviazione condiviso*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data|Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
   
  *Anche se i dischi condivisi sono supportati, è consigliabile non usarli per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directory dati e log per un'istanza del cluster di failover di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directory di dati e log per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nella tabella seguente vengono elencati i tipi di archivio supportati e le directory predefinite per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Directory dati**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verranno configurati gli elenchi ACL per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Assicurarsi che la directory (o le directory se vengono specificati più file) sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.|  
+|Directory dati**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Assicurarsi che la directory (o le directory se vengono specificati più file) sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.|  
 |Directory log**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IDistanza>\MSSQL\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.<br /><br /> Assicurarsi che la directory specificata sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.<br /><br /> Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -388,11 +387,11 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 -   **Numero di file** è il numero totale di file di dati **tempdb**. Il valore predefinito è minore di 8 o corrisponde al numero di core logici rilevato durante l'installazione. In generale, se il numero di processori logici è minore o uguale a 8, usare un numero di file di dati pari al numero dei processori logici. Se il numero di processori logici è maggiore di 8, usare 8 file di dati e, se la contesa persiste, aumentare il numero di file di dati per multipli di 4 (fino al numero di processori logici) fino a quando la contesa si riduce a livelli accettabili o modificare il carico di lavoro o codice. 
   
--   **Dimensioni iniziali (MB)** è la dimensione iniziale in MB per ogni file di dati **tempdb** . Il valore predefinito è 8 MB (4 MB per [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]introduce una dimensione massima file iniziale di 262.144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)]stato iniziale dimensioni massime pari a 1024 MB. Tutti i file di dati **tempdb** hanno le stesse dimensioni iniziali. Poiché il file **tempdb** viene ricreato a ogni avvio o failover di SQL Server, è necessario specificare una dimensione vicina al valore richiesto dal carico di lavoro per il normale funzionamento. Per ottimizzare ulteriormente la creazione di **tempdb** durante l'avvio, abilitare [Inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).  
+-   **Dimensioni iniziali (MB)** è la dimensione iniziale in MB per ogni file di dati **tempdb** . Il valore predefinito è 8 MB (4 MB per [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduce dimensioni iniziali massime dei file pari a 262.144 MB (256 GB). Le dimensioni iniziali massime dei file in [!INCLUDE[sssql15](../../includes/sssql15-md.md)] erano 1024 MB. Tutti i file di dati **tempdb** hanno le stesse dimensioni iniziali. Poiché il file **tempdb** viene ricreato a ogni avvio o failover di SQL Server, è necessario specificare una dimensione vicina al valore richiesto dal carico di lavoro per il normale funzionamento. Per ottimizzare ulteriormente la creazione di **tempdb** durante l'avvio, abilitare [Inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 -   **Dimensioni iniziali totali (MB)** è la dimensione complessiva di tutti i file di dati **tempdb** .  
   
--   **Aumento automatico (MB)** è la quantità di spazio in MB di cui aumenterà automaticamente ogni file di dati **tempdb** quando esaurirà lo spazio. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] e versioni successive tutti i file di dati aumentano al contempo della quantità specificata in questa impostazione.  
+-   **Aumento automatico (MB)** è la quantità di spazio in MB di cui aumenterà automaticamente ogni file di dati **tempdb** quando esaurirà lo spazio. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] e versioni successive tutti i file di dati aumentano contemporaneamente della quantità specificata in questa impostazione.  
   
 -   **Aumento automatico totale (MB)** è la dimensione complessiva di ogni evento di aumento automatico.  
   
@@ -404,7 +403,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
  **File di log Tempdb** è il nome del file di log. Viene creato automaticamente. Le impostazioni seguenti si applicano solo ai file di dati **tempdb** :  
   
--   **Dimensioni iniziali (MB)** è la dimensione iniziale del file di log **tempdb** . Il valore predefinito è 8 MB (4 MB per [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]introduce una dimensione massima file iniziale di 262.144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)]stato iniziale dimensioni massime pari a 1024 MB. Poiché il file **tempdb** viene ricreato a ogni avvio o failover di SQL Server, è necessario specificare una dimensione vicina al valore richiesto dal carico di lavoro per il normale funzionamento. Per ottimizzare ulteriormente la creazione di **tempdb** durante l'avvio, abilitare [Inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).  
+-   **Dimensioni iniziali (MB)** è la dimensione iniziale del file di log **tempdb** . Il valore predefinito è 8 MB (4 MB per [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduce dimensioni iniziali massime dei file pari a 262.144 MB (256 GB). Le dimensioni iniziali massime dei file in [!INCLUDE[sssql15](../../includes/sssql15-md.md)] erano 1024 MB. Poiché il file **tempdb** viene ricreato a ogni avvio o failover di SQL Server, è necessario specificare una dimensione vicina al valore richiesto dal carico di lavoro per il normale funzionamento. Per ottimizzare ulteriormente la creazione di **tempdb** durante l'avvio, abilitare [Inizializzazione immediata dei file di database](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 -   **Nota: Tempdb** usa la registrazione minima. Non è possibile eseguire il backup del log di **tempdb** . Il database viene ricreato a ogni avvio di SQL Server o in caso di failover di un'istanza del cluster.  
   
@@ -431,7 +430,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 ### <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Condivisione e autorizzazioni NTFS in un File Server](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Autorizzazioni NTFS e di condivisione per un file server](http://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>Configurazione del Motore di database – Istanze utente
 Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per gli utenti che non dispongono di autorizzazioni di amministratore, nonché per aggiungere utenti al ruolo di amministratore.  
@@ -448,7 +447,7 @@ Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!I
  Aggiungi utente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Per impostazione predefinita, questa opzione non è abilitata. Per aggiungere l'utente dell'installazione corrente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare la casella di controllo.  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]gli utenti che sono membri di BUILTIN\Administrators non vengono automaticamente aggiunti al ruolo predefinito del server sysadmin quando si connettono a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Solo gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] aggiunti esplicitamente a un ruolo di amministratore a livello di server possono amministrare [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tutti i membri del gruppo Built-In\Users possono connettersi all'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , ma dispongono di autorizzazioni limitate per l'esecuzione delle operazioni relative al database. Agli utenti che ereditano i privilegi di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] dai gruppi BUILTIN\Administrators e Built-In\Users delle versioni precedenti di Windows devono pertanto essere concessi esplicitamente privilegi amministrativi nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in esecuzione in [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+ Gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] che sono membri di BUILTIN\Administrators non vengono automaticamente aggiunti al ruolo predefinito del server sysadmin quando si connettono a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Solo gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] aggiunti esplicitamente a un ruolo di amministratore a livello di server possono amministrare [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tutti i membri del gruppo Built-In\Users possono connettersi all'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , ma dispongono di autorizzazioni limitate per l'esecuzione delle operazioni relative al database. Agli utenti che ereditano i privilegi di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] dai gruppi BUILTIN\Administrators e Built-In\Users delle versioni precedenti di Windows devono pertanto essere concessi esplicitamente privilegi amministrativi nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in esecuzione in [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
  Per apportare modifiche ai ruoli utente al termine del programma di installazione, utilizzare lo strumento Configurazione superficie di attacco (SQLSAC.exe) di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Per aggiornare l'elenco degli utenti nel ruolo di amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic sul collegamento **Aggiungi nuovo amministratore** .  
   

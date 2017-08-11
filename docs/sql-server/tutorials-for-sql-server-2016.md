@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni di SQL Server | Documenti Microsoft
+title: Esercitazioni di SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,24 +14,24 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]fornisce esercitazioni che consentono di acquisire nuove tecnologie e funzionalità. Esercitazioni per le versioni precedenti in genere possono essere utilizzate con le versioni più recenti. Quando una funzionalità più recenti di indirizzi di esercitazioni, indicano la versione minima per completare l'esercitazione.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornisce esercitazioni che consentono l'apprendimento di nuove tecnologie e funzionalità. In genere le esercitazioni per le versioni precedenti possono essere usate con le versioni più recenti. Quando le esercitazioni riguardano una nuova funzionalità viene indicata la versione minima necessaria per il completamento dell'esercitazione.  
      
--   Se un'esercitazione viene utilizzato uno del [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] database, è necessario scaricare e utilizzare la versione più recente da CodePlex. Per ulteriori informazioni, vedere [script e database AdventureWorks per SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Se in un'esercitazione viene usato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] è necessario scaricare e usare la versione più recente da CodePlex. Per altre informazioni, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Script e database AdventureWorks per SQL Server 2016 CTP3).    
 -   Scaricare una cartella di lavoro di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e i report di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] da usare con le esercitazioni di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vedere la pagina relativa agli [esempi di Power View per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
 - Vedere il nuovo database di esempio [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) disponibile nel repository [sql-server-samples](https://github.com/Microsoft/sql-server-samples) di GitHub. 
 
  
-## <a name="current-tutorials"></a>Esercitazioni corrente  
+## <a name="current-tutorials"></a>Esercitazioni correnti  
   
 |Technology|Description|  
 |--------------|---------------|  
