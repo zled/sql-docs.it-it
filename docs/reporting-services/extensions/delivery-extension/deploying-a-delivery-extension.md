@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d072577828375a08c133bb1a68d93e652e5cf168
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deploying-a-delivery-extension"></a>Distribuzione di un'estensione per il recapito
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Per distribuire un assembly di estensioni per il recapito in un server di report  
   
-1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per il recapito. Il percorso predefinito della directory bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer\bin..  
+1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per il recapito. Il percorso predefinito della directory bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Se si tenta di sovrascrivere un assembly di estensioni per il recapito esistente, è necessario arrestare il servizio del server di report prima di copiare l'assembly aggiornato. Riavviare il servizio dopo il completamento della copia dell'assembly.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
      Il valore per **nome** è il nome univoco dell'estensione per il recapito. Il valore per **tipo** è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa il <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> interfaccia, seguito dal nome dell'assembly (senza l'estensione del file con estensione dll). Per impostazione predefinita, le estensioni per il recapito sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio il portale web, aggiungere un **Visible** attributo la **estensione** elemento e impostarlo su **false**.  
   
-5.  Infine, aggiungere un gruppo di codice per l'assembly personalizzato che conceda **FullTrust** l'autorizzazione per l'estensione per il recapito. Questo scopo, aggiungere il gruppo di codice per il file rssrvpolicy. config si trova per impostazione predefinita in %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer.. Il gruppo di codice può essere simile a quanto riportato di seguito:  
+5.  Infine, aggiungere un gruppo di codice per l'assembly personalizzato che conceda **FullTrust** l'autorizzazione per l'estensione per il recapito. Questo scopo, aggiungere il gruppo di codice per il file rssrvpolicy. config si trova per impostazione predefinita in %ProgramFiles%\Microsoft SQL Server\MSRS13. \<InstanceName > Services\ReportServer. Il gruppo di codice può essere simile a quanto riportato di seguito:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

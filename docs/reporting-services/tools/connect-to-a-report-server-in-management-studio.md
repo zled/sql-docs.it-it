@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Fare clic su **Connetti**. Il server di report verrà visualizzato in Esplora oggetti.  
   
-6.  Fare clic con il pulsante destro del mouse sul nodo del server per impostare le proprietà di sistema e valori predefiniti per il server. Per altre informazioni, vedere [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Fare clic con il pulsante destro del mouse sul nodo del server per impostare le proprietà di sistema e valori predefiniti per il server. Per ulteriori informazioni, vedere [impostare proprietà Server di Report &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>Per connettersi a un server di report in modalità integrata SharePoint  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Fare clic su **Connetti**. Il server di report verrà visualizzato in Esplora oggetti.  
   
-6.  Fare clic con il pulsante destro del mouse sul nodo del server per impostare le proprietà di sistema e valori predefiniti per il server. Per altre informazioni, vedere [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Fare clic con il pulsante destro del mouse sul nodo del server per impostare le proprietà di sistema e valori predefiniti per il server. Per ulteriori informazioni, vedere [impostare proprietà Server di Report &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>Per registrare un server di report  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Reporting Services di SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services in SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

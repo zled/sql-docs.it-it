@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Eseguire **rskeymgmt.exe** localmente nel computer che ospita un server di report già membro della distribuzione con scalabilità orizzontale.  
   
-2.  Usare l'argomento **-j** per unire in join un server di report al database del server di report. Utilizzare il **-m** e  **-n**  argomenti per specificare l'istanza del server di report remoto che si desidera aggiungere alla distribuzione. Usare gli argomenti **-u** e **-v** per specificare un account amministratore nel computer remoto. Se si sta creando una distribuzione con scalabilità orizzontale utilizzando più istanze del server di report sullo stesso computer, la sintassi da utilizzare è leggermente diversa. Per altre informazioni sulla sintassi da utilizzare, vedere [Utilità rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Usare l'argomento **-j** per unire in join un server di report al database del server di report. Per inizializzare un'istanza del server di report affinché usi un database del server di report condiviso, eseguire l'utilità **-m** e **-n** per specificare l'istanza del server di report remoto che si desidera aggiungere alla distribuzione. Usare gli argomenti **-u** e **-v** per specificare un account amministratore nel computer remoto. Se si sta creando una distribuzione con scalabilità orizzontale utilizzando più istanze del server di report sullo stesso computer, la sintassi da utilizzare è leggermente diversa. Per altre informazioni sulla sintassi da utilizzare, vedere [Utilità rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare se si sta unendo in join un server di report remoto a una distribuzione con scalabilità orizzontale (è possibile omettere le credenziali se si dispone di autorizzazioni di amministratore sul computer remoto):  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="how-to-remove-a-report-server-from-a-scale-out-deployment-rskeymgmt"></a>Come rimuovere un server di report da una distribuzione con scalabilità orizzontale (rskeymgmt)  
   
-1.  Aprire il file rsreportserver.config del server di report che si desidera rimuovere e trovare l'ID di installazione. Per impostazione predefinita, questo file si trova nel programma SQL Server\MSSQL..  *n* Services\ReportServer).  
+1.  Aprire il file rsreportserver.config del server di report che si desidera rimuovere e trovare l'ID di installazione. Per impostazione predefinita, questo file si trova nel programma SQL Server\MSSQL.  *n* Services\ReportServer).  
   
      Se è stata installata un'unica istanza, sul computer sarà presente un solo file rsreportserver.config. Se sono state installate più istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , utilizzare la pagina Stato server dello strumento di configurazione di Reporting Services per individuare l'identificatore dell'istanza, ad esempio MSSQL.2, per il server di report che si desidera rimuovere. Il nome della cartella in cui vengono archiviati i file di programma dell'istanza del server di report si baserà sull'identificativo istanza, ad esempio, Programmi\Microsoft SQL Server\MSSQL.2.  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  Questi passaggi rimuovono il server di report da una distribuzione con scalabilità orizzontale, ma non disinstallano l'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sul server di report. Dopo avere rimosso il server di report dalla distribuzione con scalabilità orizzontale, è possibile disinstallare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dal server, se su tale server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è più necessario. Per informazioni, vedere [Disinstallare un'istanza esistente di SQL Server &#40;programma di installazione&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurare e gestire chiavi di crittografia &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inizializzare un Server di Report &#40; Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 
