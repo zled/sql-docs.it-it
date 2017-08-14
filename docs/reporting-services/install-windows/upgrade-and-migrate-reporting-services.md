@@ -20,7 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
 ms.contentlocale: it-it
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Aggiornamento:** vengono aggiornati i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nei server e nelle istanze in cui sono attualmente installati. Si tratta dell'aggiornamento comunemente definito "sul posto". L'aggiornamento sul posto non è supportato da una modalità all'altra del server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile ad esempio eseguire l'aggiornamento da un server di report in modalità nativa a un server di report in modalità SharePoint. È possibile eseguire la migrazione degli elementi del report da una modalità all'altra. Per ulteriori informazioni, vedere la sezione relativa alla migrazione dalla modalità nativa alla modalità SharePoint più avanti in questo documento.  
   
--   **Migrazione**: viene installato e configurato un nuovo ambiente SharePoint, vengono copiate risorse ed elementi di report nel nuovo ambiente che viene configurato in modo da usare il contesto esistente. Un tipo di migrazione di livello inferiore consiste nel copiare i database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], i file di configurazione e, se si utilizza la modalità SharePoint, i database di contenuto di SharePoint.  
+-   **Migrazione**: viene installato e configurato un nuovo ambiente SharePoint, vengono copiate risorse ed elementi di report nel nuovo ambiente che viene configurato in modo da usare il contesto esistente. Un tipo di migrazione di livello inferiore consiste nel copiare i database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i file di configurazione e, se si utilizza la modalità SharePoint, i database di contenuto di SharePoint.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Eseguire il backup di eventuali personalizzazioni nelle directory virtuali di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esistenti in IIS.  
   
--   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  Certificati non validi causerà l'esito negativo e verrà scritto un messaggio di errore simile al seguente al file di log di Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site**.  
+-   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  I certificati non validi causano l'esito negativo dell'aggiornamento e un messaggio di errore simile al seguente verrà scritto nel file di registro di Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Nel sito Web non è configurato un certificato SSL (Secure Sockets Layer).**.  
   
  Prima di aggiornare un ambiente di produzione, eseguire sempre un aggiornamento di prova in un ambiente di pre-produzione che abbia la stessa configurazione dell'ambiente di produzione.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  È tuttavia necessario eseguire manualmente la **migrazione** di un'installazione del server di report se si verifica una delle condizioni seguenti:  
   
--   Si desidera modificare il tipo di server di report usato nella distribuzione. Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Per altre informazioni, vedere [Migrazione dalla modalità nativa alla modalità SharePoint &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Si desidera modificare il tipo di server di report usato nella distribuzione. Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Per ulteriori informazioni, vedere [nativo per la migrazione di SharePoint &#40; SSRS &#41; ](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Si desidera ridurre la quantità di tempo in cui il server di report viene portato offline durante il processo di aggiornamento. L'installazione corrente rimane online durante la copia dei dati di contenuto in una nuova istanza del server di report e il test dell'installazione senza la modifica dello stato di installazione del server di report esistente.  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_native_scaleout"></a> Aggiornare una distribuzione con scalabilità orizzontale in modalità nativa di Reporting Services  
  Di seguito viene illustrato come aggiornare una distribuzione in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con scalabilità orizzontale a più di un server di report. Questo processo implica tempi di inattività della distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per altre informazioni, vedere [Operazioni di backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Eseguire il backup dei database e delle chiavi di crittografia del server di report. Per ulteriori informazioni, vedere [operazioni di Backup e ripristino per Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) e [aggiungere e rimuovere le chiavi di crittografia per la distribuzione con scalabilità orizzontale &#40; Gestione configurazione SSRS &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  Utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e rimuovere tutti i server di report dalla distribuzione con scalabilità orizzontale. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Componente aggiuntivo per prodotti SharePoint. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
- Per informazioni dettagliate sulla migrazione di un'installazione in modalità SharePoint, vedere [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+ Per informazioni dettagliate sulla migrazione di un'installazione in modalità SharePoint, vedere [eseguire la migrazione di un'installazione di Reporting Services &#40; Modalità SharePoint &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  Alcuni degli scenari seguenti richiedono l'inattività dell'ambiente SharePoint a causa delle diverse tecnologie che devono essere aggiornate. Se non è possibile rendere inattivo l'ambiente, sarà necessario completare una migrazione anziché un aggiornamento sul posto.  
@@ -188,7 +188,7 @@ ms.lasthandoff: 08/09/2017
      Se si dispone di un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrata con SharePoint 2010, non è possibile eseguire l'aggiornamento sul posto del server SharePoint. È tuttavia possibile eseguire la migrazione dei database del contenuto e di quelli dell'applicazione di servizio dalla farm di SharePoint 2010 a una di SharePoint 2013/2016.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]per SQL Server Reporting Services  
- **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+ **Ambiente iniziale:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
  **Ambiente finale:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.  
  
