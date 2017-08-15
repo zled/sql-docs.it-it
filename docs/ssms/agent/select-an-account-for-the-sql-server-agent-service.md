@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
@@ -60,7 +60,7 @@ Per migliorare la sicurezza, selezionare l'opzione **Account seguente**che conse
   
     -   Autorizzazione a modificare le quote di memoria per un processo (SeIncreaseQuotaPrivilege)  
   
-    -   Autorizzazione per l'accesso al computer dalla rete (SeNetworkLogonRight)  
+    -   Autorizzazione per l'accesso a questo computer dalla rete (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > Se l'account non dispone delle autorizzazioni necessarie per supportare i proxy, solo i membri del ruolo predefinito del server **sysadmin** possono creare i processi.  
@@ -112,7 +112,7 @@ Per risolvere il problema, riavviare il computer in cui [!INCLUDE[ssNoVersion](.
 ## <a name="common-tasks"></a>Attività comuni  
 **Per specificare l'account di avvio del servizio SQL Server Agent**  
   
--   [Impostazione dell'account di avvio del servizio SQL Server Agent &amp;#40;Gestione configurazione SQL Server&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Impostazione dell'account di avvio del servizio SQL Server Agent &#40;Gestione configurazione SQL Server&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **Per specificare il profilo di posta di SQL Server Agent**  
   

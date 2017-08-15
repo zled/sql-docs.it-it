@@ -186,8 +186,9 @@ Per installare gli strumenti per montagna di El Capitan Mac e Sierra, utilizzare
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a>Docker
@@ -263,3 +264,4 @@ Per un esempio di come utilizzare **sqlcmd** per connettersi a SQL Server e crea
 - [Eseguire in Docker](quickstart-install-connect-ubuntu.md)
 
 Per un esempio di come utilizzare **bcp** per importazione ed esportazione bulk dei dati, vedere [copia Bulk di dati a SQL Server in Linux](sql-server-linux-migrate-bcp.md).
+
