@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Per informazioni dettagliate sulla trasformazione Ricerca fuzzy, inclusi i limiti di memoria e le prestazioni, vedere il white paper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005).  
   
- La differenza tra la trasformazione Ricerca fuzzy e la trasformazione Ricerca è l'utilizzo della corrispondenza fuzzy. La trasformazione Ricerca individua i record corrispondenti nella tabella di riferimento tramite un equijoin Restituisce record con almeno un record corrispondente e record senza alcuna corrispondenza. La trasformazione Ricerca fuzzy invece restituisce anche corrispondenze fuzzy.  
+ La differenza tra la trasformazione Ricerca fuzzy e la trasformazione Ricerca è l'utilizzo della corrispondenza fuzzy. La trasformazione Ricerca individua i record corrispondenti nella tabella di riferimento tramite un equijoin. Restituisce record con almeno un record corrispondente e record senza alcuna corrispondenza. La trasformazione Ricerca fuzzy invece restituisce anche corrispondenze fuzzy.  
   
  La trasformazione Ricerca fuzzy viene spesso eseguita dopo la trasformazione Ricerca nel flusso di dati di un pacchetto. La trasformazione Ricerca individua innanzitutto eventuali corrispondenze esatte. Se non esiste alcuna corrispondenza esatta, la trasformazione Ricerca fuzzy individua le corrispondenze fuzzy nella tabella di riferimento.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/03/2017
   
  Questa trasformazione include un input e un output.  
   
- Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** data type, but invalid to join a column with the **DT_WSTR** e una colonna con tipo di dati **int** data type.  
+ Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **di** , ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int** .  
   
  È possibile personalizzare questa trasformazione specificando la quantità di memoria massima, l'algoritmo di confronto tra righe, nonché la memorizzazione nella cache delle tabelle di riferimento e degli indici utilizzati dalla trasformazione.  
   
