@@ -269,7 +269,7 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 - [Nuovo + aggiornato (6+0): **Database Engine for SQL (Motore di database per SQL)** Docs](../database-engine/new-updated-database-engine.md)
 - [Nuovo + aggiornato (13+2): **Linux for SQL (Linux per SQL)** Docs](../linux/new-updated-linux.md)
 - [Nuovo + aggiornato (1+0): **Master Data Services (MDS) for SQL (Master Data Services (MDS) per SQL)** Docs](../master-data-services/new-updated-master-data-services.md)
-- [Nuovo + aggiornato (1+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL) ** Docs](../odbc/new-updated-odbc.md)
+- [Nuovo + aggiornato (1+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)**  Docs](../odbc/new-updated-odbc.md)
 - [Nuovo + aggiornato (8+4): **Database relazionali per SQL** Docs](../relational-databases/new-updated-relational-databases.md)
 - [Nuovo + aggiornato (2+2): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
 - [Nuovo + aggiornato (0+1): **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
