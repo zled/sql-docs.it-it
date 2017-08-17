@@ -4,10 +4,10 @@ hide_bc: true
 title: Documentazione di Microsoft SQL | Microsoft Docs
 description: Informazioni su SQL
 ms.translationtype: HT
-ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
-ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
@@ -239,8 +239,13 @@ ms.lasthandoff: 08/09/2017
                                                 <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Eseguire la migrazione di un database</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Scaricare gli strumenti di migrazione</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Aggiornare il database di SQL Server</h4>
                                                 <ul>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54090">Database Experimentation Assistant</a></li> 
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Strumenti e servizi per la migrazione</h4>
+                                                <ul>
+                                                    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Servizio di migrazione del database di Azure (anteprima privata)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA per Access</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA per DB2</a></li>
@@ -248,10 +253,10 @@ ms.lasthandoff: 08/09/2017
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA per Oracle</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA per ASE SAP</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Eseguire la migrazione del database SQL Server</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Eseguire la migrazione del database in Azure</h4>
                                                 <ul>
-                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Nel database SQL di Azure</a></li>
-                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">In Azure SQL Data Warehouse</a></li>
+                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Eseguire la migrazione al database SQL di Azure</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">Eseguire la migrazione ad Azure SQL Data Warehouse</a></li>
                                                 </ul>
                                             </div>
                                         </div>
