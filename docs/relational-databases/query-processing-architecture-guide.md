@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: 
-ms.date: 5/03/2017
+ms.date: 05/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
