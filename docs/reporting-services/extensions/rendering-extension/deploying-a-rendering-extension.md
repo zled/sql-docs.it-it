@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera usare l'estensione per il rendering. Il percorso predefinito della directory Bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > Services\ReportServer\bin.  
   
-2.  Dopo aver copiato il file di assembly, aprire il file rsreportserver.config. situato nella directory bin del server di report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione. È possibile aprire il file con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un semplice editor di testo.  
+2.  Dopo aver copiato il file di assembly, aprire il file rsreportserver.config, situato nella directory bin del server di report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione. È possibile aprire il file con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un semplice editor di testo.  
   
      Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
