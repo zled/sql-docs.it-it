@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f134aea8903ab0c31c3790c90d07f062ff292055
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Rinomina di un diagramma di database (Visual Database Tools)
@@ -44,6 +44,6 @@ Per rinominare un diagramma di database, è possibile utilizzare Esplora oggetti
     Il diagramma di database apparirà in Esplora oggetti con il nuovo nome.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Usare i diagrammi di database &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

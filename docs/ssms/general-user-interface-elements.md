@@ -17,15 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="general-user-interface-elements"></a>Elementi generali dell'interfaccia utente
-L'**Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+L' **Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
 [Finestra di dialogo Informazioni su](../ssms/about-dialog-box.md)  
@@ -37,7 +37,7 @@ Viene descritto come in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_m
 [Finestra di dialogo Strumenti esterni](../ssms/external-tools-dialog-box.md)  
 Consente di aggiungere al menu **Strumenti** voci relative a strumenti che non fanno parte di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
-[Finestra Proprietà &amp;#40;Management Studio&amp;#41;](../ssms/properties-window-management-studio.md)  
+[Finestra Proprietà &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 Consente di visualizzare le proprietà e gli eventi degli oggetti selezionati che si trovano negli editor e nelle finestre di progettazione. Consente inoltre di modificare e visualizzare le proprietà di file, progetti e soluzioni. Alcune proprietà possono essere modificate nella finestra Proprietà.  
   
 [Utilizzo della casella degli strumenti](../ssms/use-the-toolbox.md)  

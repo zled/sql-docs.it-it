@@ -16,11 +16,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91683b0358d76a072517e1b5fd5507cf8c6cb57e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Autorizzazioni e Visual Database Tools (Visual Database Tools)
@@ -29,6 +29,6 @@ Le autorizzazioni, che consentono agli utenti di accedere agli oggetti origine d
 Se le autorizzazioni del database consentono di visualizzare ma non di modificare la struttura del database, sarà possibile utilizzare script delle modifiche per progettare le modifiche senza trasmetterle al database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Ambienti multiutente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[Ambienti multiutente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

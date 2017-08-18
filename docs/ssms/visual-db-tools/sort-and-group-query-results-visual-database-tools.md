@@ -26,11 +26,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1adeb21a6fca540cd4359c57ac6756bffa8cd16
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Ordinare e raggruppare i risultati delle query (Visual Database Tools)
@@ -39,38 +39,38 @@ ms.lasthandoff: 06/22/2017
 Per informazioni dettagliate sulla creazione di query di questo tipo, vedere gli argomenti indicati nella seguente tabella:  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
-[Ordinare le righe &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-rows-visual-database-tools.md)  
+[Ordinare le righe &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-rows-visual-database-tools.md)  
 Vengono illustrati i vari metodi di ordinamento delle righe e i motivi per cui utilizzare l'uno o l'altro.  
   
-[Comprimere i gruppi di righe &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md)  
+[Comprimere i gruppi di righe &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md)  
 Vengono illustrati i vari metodi di compressione delle righe, ad esempio il calcolo o l'eliminazione dei duplicati.  
   
-[Ordinare con ORDER BY &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-with-order-by-visual-database-tools.md)  
+[Ordinare con ORDER BY &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-with-order-by-visual-database-tools.md)  
 Viene descritta la procedura per ottenere i risultati in un ordine specifico.  
   
-[Ordinare in modo crescente o decrescente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-in-ascending-or-descending-order-visual-database-tools.md)  
+[Ordinare in modo crescente o decrescente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-in-ascending-or-descending-order-visual-database-tools.md)  
 Viene descritta la procedura per cambiare o impostare la direzione dell'ordinamento.  
   
-[Ordinare più colonne nelle query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md)  
+[Ordinare più colonne nelle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md)  
 Viene descritta la procedura per impostare l'ordine dei set di risultati per più colonne.  
   
-[Raggruppare righe nei risultati di una query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)  
+[Raggruppare righe nei risultati di una query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)  
 Viene descritta la procedura per creare subset di informazioni di riepilogo organizzando i dati in gruppi.  
   
-[Specificare le condizioni per i gruppi &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md)  
+[Specificare le condizioni per i gruppi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md)  
 Viene descritta la procedura per creare condizioni di ricerca applicabili a gruppi di righe.  
   
-[Riordinare le colonne di output &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md)  
+[Riordinare le colonne di output &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md)  
 Viene descritta la procedura per modificare le impostazioni di ordinamento correnti.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
-[Creare un riepilogo dei risultati di query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi al riepilogo dei risultati delle query.  
   
-[Eseguire operazioni di base con le query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi alle operazioni che è possibile eseguire più comunemente con le query.  
   
-[Procedure per la progettazione di query e viste &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti in cui viene descritto come utilizzare Progettazione query e Progettazione viste.  
   
 

@@ -17,31 +17,31 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Guida sensibile al contesto delle finestre di dialogo Opzioni
 In questa sezione è inclusa la Guida sensibile al contesto per le finestre di dialogo che vengono visualizzate quando si sceglie **Opzioni** dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-[Opzioni &amp;#40;finestre di progettazione - finestre di progettazione di Analysis Services - Generale&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
+[Opzioni &#40;finestre di progettazione - finestre di progettazione di Analysis Services - Generale&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
-[Opzioni &amp;#40;finestre di progettazione - pagina Piani di manutenzione&amp;#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
+[Opzioni &#40;finestre di progettazione - pagina Piani di manutenzione&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   
-[Opzioni &amp;#40;finestre di progettazione - pagina Progettazione tabelle e Progettazione database&amp;#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
+[Opzioni &#40;finestre di progettazione - pagina Progettazione tabelle e Progettazione database&#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
   
-[Opzioni &amp;#40;Ambiente - pagina Tipi di carattere e colori&amp;#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
+[Opzioni &#40;Ambiente - pagina Tipi di carattere e colori&#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
   
-[Opzioni &amp;#40;Ambiente - pagina Generale&amp;#41;](../../ssms/menu-help/options-environment-general-page.md)  
+[Opzioni &#40;Ambiente - pagina Generale&#41;](../../ssms/menu-help/options-environment-general-page.md)  
   
-[Opzioni &amp;#40;Ambiente - Guida - pagina Generale&amp;#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
+[Opzioni &#40;Ambiente - Guida - pagina Generale&#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
   
-[Opzioni &amp;#40;Ambiente - Guida - pagina Online&amp;#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
+[Opzioni &#40;Ambiente - Guida - pagina Online&#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
   
-[Opzioni &amp;#40;Ambiente - pagina Tastiera&amp;#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
+[Opzioni &#40;Ambiente - pagina Tastiera&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
 [Opzioni (Esecuzione query - Analysis Server - pagina Generale)](http://msdn.microsoft.com/en-us/456867d0-724c-449c-abf9-013a694d7924)  
   

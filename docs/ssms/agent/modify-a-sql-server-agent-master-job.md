@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 78567637cde259cfe36cbcffd6cc9b0cc253b9f1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificare un processo master di SQL Server Agent
@@ -36,6 +36,6 @@ Negli argomenti seguenti viene descritto come modificare un processo master di [
   
 [Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   
-[Modificare i server di destinazione&amp;#40;s&amp;#41; associati a un processo master di SQL Server Agent](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+[Modificare i server di destinazione&#40;s&#41; associati a un processo master di SQL Server Agent](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
 

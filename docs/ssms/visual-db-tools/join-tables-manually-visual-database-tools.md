@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57821cd36a4684de594df52b0722b7e043097b46
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Unione di tabelle in modo manuale (Visual Database Tools)
@@ -47,6 +47,6 @@ I join possono essere creati sulla base del confronto tra qualsiasi coppia di co
 In Progettazione query e Progettazione viste verrà aggiunta una clausola INNER JOIN all'istruzione SQL nel [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md). È possibile trasformare il tipo in outer join. Per informazioni dettagliate, vedere [Creazione di join esterni &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Eseguire query con join &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Eseguire query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

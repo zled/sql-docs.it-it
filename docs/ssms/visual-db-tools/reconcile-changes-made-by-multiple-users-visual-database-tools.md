@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Riconciliare le modifiche apportate da più utenti (Visual Database Tools)
 In un ambiente multiutente può accadere che uno stesso oggetto venga modificato contemporaneamente da più utenti. Questo problema può accadere quando si lavora alla struttura dell'oggetto in Progettazione tabelle o in Progettazione diagrammi di database oppure con i valori dei risultati restituiti nel riquadro Risultati di Progettazione query e Progettazione viste. In questo caso possono verificarsi conflitti che è possibile risolvere.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflitti in Progettazione tabelle o Progettazione diagrammi di database  
-È possibile ad esempio che un altro utente elimini o rinomini una tabella mentre si sta utilizzando la stessa tabella o una tabella correlata in Progettazione tabelle. Quando si prova a salvare la tabella, si viene avvisati dalla [Database Changes Detected Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) che il database è stato aggiornato dopo l'apertura della tabella.  
+È possibile ad esempio che un altro utente elimini o rinomini una tabella mentre si sta utilizzando la stessa tabella o una tabella correlata in Progettazione tabelle. Quando si prova a salvare la tabella, si viene avvisati dalla [Finestra di dialogo Rilevate modifiche al database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) che il database è stato aggiornato dopo l'apertura della tabella.  
   
 In questa finestra di dialogo viene inoltre visualizzato un elenco degli oggetti di database che verranno influenzati dal salvataggio della tabella. A questo punto, è possibile:  
   
@@ -63,6 +63,6 @@ Si supponga ad esempio di eseguire contemporaneamente a un proprio collega una q
     In questo caso non sarà possibile eseguire il commit delle modifiche nel database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Finestra di dialogo Rilevate modifiche al database &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
+[Finestra di dialogo Rilevate modifiche al database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
 

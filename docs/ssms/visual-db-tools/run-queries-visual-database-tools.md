@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c988c7f2cf6128c0ddab4c126d4424aaead11deb
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="run-queries-visual-database-tools"></a>Esecuzione di query (Visual Database Tools)
@@ -44,7 +44,7 @@ Progettazione query e Progettazione viste restituisce i risultati in batch, ovve
 Nel caso di una query di aggiornamento (Update), di accodamento (Insert From), di accodamento valori (Insert Into), di eliminazione (Delete) o di creazione tabella (Make Table), in Progettazione query e Progettazione viste verrà visualizzato un messaggio contenente il numero di righe interessate dalla query.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Usare i dati nel riquadro Risultati &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[Eseguire operazioni di base con le query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

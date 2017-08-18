@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b8628cf736650c53493501777f79f970ff864209
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-an-operator"></a>Modifica di un operatore
@@ -72,11 +72,11 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo *Proprietà***nome_operatore** , vedere:  
   
-    -   [Proprietà operatore - nuovo operatore &amp;#40;pagina generale&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [Proprietà operatore - nuovo operatore &#40;pagina generale&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [Proprietà operatore -nuovo operatore &amp;#40;pagina notifiche&amp;#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [Proprietà operatore -nuovo operatore &#40;pagina notifiche&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [Proprietà operatore &amp;#40;pagina Cronologia&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [Proprietà operatore &#40;pagina Cronologia&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  Al termine, fare clic su **OK**.  
   

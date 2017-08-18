@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri (Visual Database Tools)
@@ -170,6 +170,6 @@ In Progettazione query e Progettazione viste questa clausola WHERE viene rappres
 Se si apporta una modifica alla query, ad esempio modificando uno dei valori nel riquadro Criteri, in Progettazione query e Progettazione viste l'istruzione SQL verrà ricreata nel riquadro SQL. L'istruzione SQL ricreata sarà analoga alla visualizzazione del riquadro Criteri invece che all'istruzione originaria. Se ad esempio il riquadro Criteri contiene clausole AND distribuite, l'istruzione risultante nel riquadro SQL verrà ricreata con clausole AND distribuite esplicitamente. Per ulteriori informazioni, tornare a "Funzionamento di AND con più clausole OR" in questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Specificare i criteri di ricerca &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

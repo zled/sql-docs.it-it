@@ -21,15 +21,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54ac206f363cfdb5698d02d16fdf197933b87a72
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="solution-explorer"></a>Esplora soluzioni
-Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
+Nel riquadro Esplora soluzioni in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sono presenti contenitori chiamati progetti per la gestione di elementi quali script di database, query, connessioni dati e file. Uno o più i progetti correlati l'uno all'altro possono essere combinati in un contenitore chiamato soluzione.  
   
 Una soluzione include uno o più progetti, oltre ai file e ai metadati che contribuiscono a definire la soluzione nel suo complesso. Un progetto è composto da un set di file e da metadati correlati, ad esempio le informazioni di connessione. Le soluzioni e i progetti contengono elementi che rappresentano gli script, le query, le informazioni di connessione e i file necessari per creare la soluzione di database.  
   
@@ -57,8 +57,8 @@ Utilizzare gli argomenti seguenti per iniziare a utilizzare le soluzioni di SQL 
 |||  
 |-|-|  
 |**Description**|**Argomento**|  
-|Viene illustrato come raccogliere uno o più progetti in una soluzione.|[Soluzioni &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
-|Viene illustrato come creare un progetto e aggiungere elementi quali script e connessioni.|[Progetti &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
+|Viene illustrato come raccogliere uno o più progetti in una soluzione.|[Soluzioni &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
+|Viene illustrato come creare un progetto e aggiungere elementi quali script e connessioni.|[Progetti &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Vengono fornite informazioni sui file utilizzati da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per la gestione di soluzioni e file.|[File per la gestione di soluzioni e progetti](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   
 

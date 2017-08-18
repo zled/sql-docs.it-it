@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5643c68421bd731f9615a7e54e3e24d9f5237b37
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Salvataggio del lavoro in Progettazione tabelle (Visual Database Tools)
@@ -46,6 +46,6 @@ ms.lasthandoff: 06/22/2017
 > Per salvare le modifiche relative a tutti gli elementi aperti, ad esempio tabelle, viste o stored procedure, scegliere **Salva tutto** dal menu **File**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Proprietà delle tabelle &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[Proprietà delle tabelle &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

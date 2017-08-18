@@ -17,15 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f6955727dd2fa31e76ad6cf5e0195650abdc2ded
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-queries-visual-database-tools"></a>Apertura di query (Visual Database Tools)
-In Progettazione query e Progettazione viste è possibile aprire una query esistente usando il comando **Apri**.  
+In Progettazione query e Progettazione viste è possibile aprire una query esistente usando il comando **Apri** .  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Per aprire una query in tutti i pannelli  
   
@@ -39,8 +39,8 @@ In Progettazione query e Progettazione viste è possibile aprire una query esist
 > Per impostazione predefinita, vengono aperti tutti i riquadri di Progettazione query e Progettazione viste, ovvero SQL, Criteri, Diagramma e Risultati. Tale impostazione predefinita può tuttavia essere modificata nella finestra di dialogo **Opzioni** . Per aprire questi riquadri qualora siano chiusi, scegliere **Pannello** dal menu **Progettazione query**e fare clic sul riquadro che si vuole aprire.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Eseguire operazioni di base con le query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Salvataggio di query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Usare i dati nel riquadro Risultati &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Salvataggio di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

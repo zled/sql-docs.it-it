@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Guida dei menu di SQL Server Management Studio
@@ -31,17 +31,17 @@ Questa sezione contiene gli argomenti della Guida sensibile al contesto per le f
   
 [Opzioni di salvataggio avanzate](../../ssms/menu-help/advanced-save-options.md)  
   
-[Finestra di dialogo Seleziona cartelle di ricerca &amp;#40;Visual Studio&amp;#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
+[Finestra di dialogo Seleziona cartelle di ricerca &#40;Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[Scegli elementi della Casella degli strumenti &amp;#40;pagina Attività di manutenzione&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[Scegli elementi della Casella degli strumenti &#40;pagina Attività di manutenzione&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
-[Personalizza &amp;#40;pagina Comandi&amp;#41;](../../ssms/menu-help/customize-commands-page.md)  
+[Personalizza &#40;pagina Comandi&#41;](../../ssms/menu-help/customize-commands-page.md)  
   
-[Personalizza &amp;#40;pagina Barre degli strumenti&amp;#41;](../../ssms/menu-help/customize-toolbars-page.md)  
+[Personalizza &#40;pagina Barre degli strumenti&#41;](../../ssms/menu-help/customize-toolbars-page.md)  
   
 [Strumenti esterni](../../ssms/menu-help/external-tools.md)  
   
-[Apri con &amp;#40;Nuovo file&amp;#41;](../../ssms/menu-help/open-with-new-file.md)  
+[Apri con &#40;Nuovo file&#41;](../../ssms/menu-help/open-with-new-file.md)  
   
 [Guida sensibile al contesto delle finestre di dialogo Opzioni](../../ssms/menu-help/options-dialog-boxes-f1-help.md)  
   
@@ -49,6 +49,6 @@ Questa sezione contiene gli argomenti della Guida sensibile al contesto per le f
   
 [Salva modifiche](../../ssms/menu-help/save-changes.md)  
   
-[Finestra di dialogo di Windows &amp;#40;Guida di Microsoft Document Explorer&amp;#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
+[Finestra di dialogo di Windows &#40;Guida di Microsoft Document Explorer&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
 

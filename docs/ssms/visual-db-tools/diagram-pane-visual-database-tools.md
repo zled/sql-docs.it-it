@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Riquadro Diagramma (Visual Database Tools)
@@ -69,8 +69,8 @@ Nella seguente tabella sono elencati i simboli e le caselle di controllo utilizz
   
 |Casella di controllo o simbolo|Description|  
 |-----------------------|---------------|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|Specifica se una colonna di dati viene visualizzata nel set di risultati di una query di selezione o viene utilizzata in una query di aggiornamento, accodamento, creazione tabella o accodamento valori. Per aggiungere la colonna ai risultati è sufficiente selezionarla. Se si è selezionato **(Tutte le colonne)** , nell'output verranno visualizzate tutte le colonne di dati.<br /><br />L'icona utilizzata con la casella di controllo varia in base al tipo di query creato. Quando si crea una query di eliminazione, non è possibile selezionare singole colonne.|  
-|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|Indica che la colonna di dati viene utilizzata per ordinare i risultati della query (ovvero fa parte di una clausola ORDER BY). L'icona indica A-Z se l'ordinamento è crescente o Z-A se l'ordinamento è decrescente.|  
+|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Icona di Visual Database Tools")|Specifica se una colonna di dati viene visualizzata nel set di risultati di una query di selezione o viene utilizzata in una query di aggiornamento, accodamento, creazione tabella o accodamento valori. Per aggiungere la colonna ai risultati è sufficiente selezionarla. Se si è selezionato **(Tutte le colonne)** , nell'output verranno visualizzate tutte le colonne di dati.<br /><br />L'icona utilizzata con la casella di controllo varia in base al tipo di query creato. Quando si crea una query di eliminazione, non è possibile selezionare singole colonne.|  
+|![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Icona di Visual Database Tools")<br /><br />![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Icona di Visual Database Tools")|Indica che la colonna di dati viene utilizzata per ordinare i risultati della query (ovvero fa parte di una clausola ORDER BY). L'icona indica A-Z se l'ordinamento è crescente o Z-A se l'ordinamento è decrescente.|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbid.gif "Icona di Visual Database Tools")|Indica che la colonna di dati viene utilizzata per creare un set di risultati raggruppato (ovvero fa parte di una clausola GROUP BY) in una query di aggregazione.|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbie.gif "Icona di Visual Database Tools")|Indica che la colonna di dati è inclusa in una condizione di ricerca per la query (ovvero fa parte di una clausola WHERE o HAVING).|  
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbif.gif "Icona di Visual Database Tools")|Indica che il contenuto della colonna di dati viene riepilogato per l'output (ovvero è incluso in una funzione SUM, AVG o un'altra funzione di aggregazione).|  
@@ -100,8 +100,8 @@ Le icone alle estremità della linea di join indicano il tipo di join. Nella seg
 |![Icona di Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icona di Visual Database Tools")|In Progettazione query e Progettazione viste non è possibile determinare il tipo di join|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedure per la progettazione di query e viste &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Riquadro Criteri &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[Ordinare e raggruppare i risultati delle query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Riquadro Criteri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
 

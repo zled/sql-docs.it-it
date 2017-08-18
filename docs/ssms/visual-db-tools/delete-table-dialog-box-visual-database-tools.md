@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Finestra di dialogo Elimina tabella (Visual Database Tools)
@@ -33,6 +33,6 @@ Selezionare la tabella da cui eliminare i record e quindi scegliere **OK**.
 > Una query di eliminazione rimuove intere righe dalla tabella. Se si desidera eliminare i valori da singole colonne di dati, utilizzare una query di aggiornamento. Se si desidera eliminare colonne dalla definizione di una tabella o eliminare la tabella stessa, utilizzare Progettazione tabelle o gli strumenti di progettazione del database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Rimozione di tabelle da query &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
+[Rimozione di tabelle da query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 46b028b87458139b7180c1f60dd871128b988472
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Disposizione di tabelle in diagrammi (Visual Database Tools)
@@ -35,6 +35,6 @@ ms.lasthandoff: 06/22/2017
 2.  Scegliere **Disponi tabelle**dal menu di scelta rapida.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Usare i diagrammi di database &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utilizzare diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

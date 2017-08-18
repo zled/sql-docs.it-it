@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6474761a4aaf0d0e3d8cea032b54be39ed759a92
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navigare all'interno di Progettazione diagrammi di database (Visual Database Tools)
@@ -42,6 +42,6 @@ In Progettazione diagrammi di database è possibile utilizzare sia la tastiera c
 |Zoom|CTRL+TASTO PIÙ o TASTO MENO|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Progettare diagrammi di database &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+[Progettare diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   
 

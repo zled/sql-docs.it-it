@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
@@ -80,14 +80,14 @@ Utilizzare questa casella per cambiare il numero di righe restituite o specifica
 **Espressione**  
 Specifica il numero o la percentuale delle righe che verranno restituite dalla query. Se si imposta **Percentuale** su Sì, il numero indicherà la percentuale delle righe che verranno restituite dalla query, mentre se si imposta **Percentuale** su No, il valore rappresenterà il numero di righe da restituire (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
   
-**Percentualeuale**  
+**Percentuale**  
 Specifica che la query restituirà soltanto il primo *n* percento delle righe del set di risultati (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
   
 **Con valori equivalenti**  
 Specifica che la vista includerà una clausola WITH TIES. WITH TIES è utile se nella vista sono incluse anche una clausola ORDER BY e una clausola TOP basata sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata cade all'interno di un set di righe con valori identici nella clausola ORDER BY, la vista verrà estesa oltre tale percentuale fino a includere tutte queste righe (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versione successiva).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query con parametri &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
-[Procedure per la progettazione di query e viste &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Esecuzione di query con parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
+[Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

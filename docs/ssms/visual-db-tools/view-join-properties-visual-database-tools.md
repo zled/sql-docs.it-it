@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4ce8f5339b5221f1888106ed032fe84c1922fa08
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Visualizzazione delle proprietà di un join (Visual Database Tools)
@@ -37,6 +37,6 @@ Per visualizzare una raccolta delle proprietà di un join, è possibile utilizza
     Le proprietà del join verranno visualizzate nella finestra Proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Eseguire query con join &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Eseguire query con join &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

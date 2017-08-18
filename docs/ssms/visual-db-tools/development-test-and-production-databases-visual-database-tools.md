@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b702cadee477e53a0af109dee115b11132f9cd74
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Database di sviluppo, verifica e produzione (Visual Database Tools)
@@ -31,6 +31,6 @@ Se si dispone di due database con la stessa struttura, è possibile apportare al
 A tale scopo, apportare tutte le modifiche in un'unica sessione del database di sviluppo, creare uno script delle modifiche della sessione e successivamente eseguire lo script sul database di verifica.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Ambienti multiutente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[Ambienti multiutente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 
