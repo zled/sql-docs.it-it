@@ -1,24 +1,29 @@
 ---
-title: "Portare un gruppo di disponibilit&#224; offline (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di disponibilità [SQL Server], disconnessione"
+title: "Portare un gruppo di disponibilità offline (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], take offline
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1aa3279aaba12034c58c2b0afdfc4a1016c4fd0d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Portare un gruppo di disponibilit&#224; offline (SQL Server)
+# <a name="take-an-availability-group-offline-sql-server"></a>Portare un gruppo di disponibilità offline (SQL Server)
   In questo argomento viene descritto come portare un gruppo di disponibilità AlwaysOn da uno stato ONLINE a uno stato OFFLINE tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e versioni successive. Non si verifica alcuna perdita di dati per i database con commit sincrono, poiché se una replica con commit sincrono non è sincronizzata, l'operazione OFFLINE genera un errore e mantiene il gruppo di disponibilità nello stato ONLINE. Mantenendo il gruppo di disponibilità online, verrà evitata una possibile perdita di dati nei database non sincronizzati con commit sincrono. Dopo aver portato un gruppo di disponibilità offline, i relativi database non saranno più disponibili per i client e non sarà possibile riportare nuovamente online il gruppo di disponibilità. Pertanto, portare un gruppo di disponibilità offline esclusivamente per eseguire la migrazione delle risorse del gruppo di disponibilità da un cluster WSFC a un altro.  
   
  Durante la migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], se si connettono applicazioni direttamente alla replica primaria di un gruppo di disponibilità, il gruppo di disponibilità dovrà essere portato offline. La migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta l'aggiornamento del sistema operativo con tempi di inattività minimi dei gruppi di disponibilità. Lo scenario tipico prevede l'utilizzo della migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'aggiornamento del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Per altre informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità AlwaysOn per l'aggiornamento del sistema operativo.](http://msdn.microsoft.com/library/jj873730.aspx).  
@@ -31,7 +36,7 @@ caps.handback.revision: 37
   
      [Sicurezza](#Security)  
   
--   **Per portare offline un gruppo di disponibilità tramite: **  [Transact-SQL](#TsqlProcedure)  
+-   **Per portare offline un gruppo di disponibilità tramite:**  [Transact-SQL](#TsqlProcedure)  
   
 -   **Completamento:**  [dopo aver portato il gruppo di disponibilità offline](#FollowUp)  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 37
   
      dove *nome_gruppo* è il nome del gruppo di disponibilità.  
   
-### Esempio  
+### <a name="example"></a>Esempio  
  Nell'esempio seguente il gruppo di disponibilità `AccountsAG` viene portato offline.  
   
 ```  
@@ -90,9 +95,10 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [Articoli tecnici su SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (Pagina relativa ai blog del team di SQL Server AlwaysOn in cui è disponibile il blog del team ufficiale di SQL Server AlwaysOn)](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

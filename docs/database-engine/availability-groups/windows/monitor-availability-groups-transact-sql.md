@@ -1,29 +1,34 @@
 ---
-title: "Monitorare Gruppi di disponibilit&#224; (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], monitoraggio"
-  - "DMV [SQL Server], gruppi di disponibilità AlwaysOn"
-  - "Gruppi di disponibilità [SQL Server], repliche di disponibilità"
-  - "Gruppi di disponibilità [SQL Server], listener"
-  - "Gruppi di disponibilità [SQL Server], database"
-  - "viste del catalogo [SQL Server], gruppi di disponibilità AlwaysOn"
+title: "Monitorare Gruppi di disponibilità (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- dynamic management views [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], listeners
+- Availability Groups [SQL Server], databases
+- catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3eee47f8a0a3a032e9ccf74600769c8f7388bbb1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Monitorare Gruppi di disponibilit&#224; (Transact-SQL)
+# <a name="monitor-availability-groups-transact-sql"></a>Monitorare Gruppi di disponibilità (Transact-SQL)
   Per monitorare le repliche e i gruppi di disponibilità e i database associati tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] offre un set di viste del catalogo, di DMV e di proprietà del server. Tramite le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT, è possibile utilizzare le viste per monitorare i gruppi di disponibilità e i relativi database e repliche. Le informazioni restituite per un gruppo di disponibilità variano a seconda che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui si è connessi ospiti la replica primaria o una replica secondaria.  
   
 > [!TIP]  
@@ -55,7 +60,7 @@ caps.handback.revision: 49
 ##  <a name="AoAgFeatureOnSI"></a> Monitoraggio della funzionalità Gruppi di disponibilità Always On su un'istanza del server  
  Per monitorare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in un'istanza del server, utilizzare la funzione predefinita seguente:  
   
- Funzione [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
+ Funzione[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
  Restituisce informazioni sulle proprietà del server in cui è specificato se [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è abilitato e, in caso affermativo, se è stato avviato sull'istanza del server.  
   
  **Nomi delle colonne:** IsHadrEnabled, HadrManagerStatus  
@@ -66,7 +71,7 @@ caps.handback.revision: 49
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
  Se il nodo WSFC (Windows Server Failover Clustering) che ospita un'istanza di SQL Server con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] abilitato ha il quorum WSFC, **sys.dm_hadr_cluster** restituisce una riga che espone il nome del cluster e informazioni sul quorum. Se il nodo WSFC non dispone di quorum, non viene restituita alcuna riga.  
   
- **Nomi delle colonne:**cluster_name, quorum_type, quorum_type_desc, quorum_state, quorum_state_desc  
+ **Nomi delle colonne:** cluster_name, quorum_type, quorum_type_desc, quorum_state, quorum_state_desc  
   
  [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
  Se il nodo WSFC che ospita l'istanza locale Always On di SQL Server ha il quorum WSFC, restituisce una riga per ogni membro che costituisce il quorum e lo stato di ognuno di essi.  
@@ -123,33 +128,33 @@ caps.handback.revision: 49
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
  Restituisce una riga per ogni replica di disponibilità in ogni gruppo di disponibilità per il quale l'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ospita una replica di disponibilità.  
   
- **:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
+ **Nomi colonne:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
   
  [sys.availability_read_only_routing_lists](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
- Viene restituita una riga per l'elenco di routing di sola lettura di ogni replica di disponibilità in un gruppo di disponibilità Always On nel cluster di failover WSFC.  
+ Restituisce una riga per l'elenco di routing di sola lettura di ogni replica di disponibilità in un gruppo di disponibilità AlwaysOn nel cluster di failover WSFC.  
   
- **:** replica_id, routing_priority, read_only_replica_id  
+ **Nomi colonne:** replica_id, routing_priority, read_only_replica_id  
   
  [sys.dm_hadr_availability_replica_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
- Restituisce una riga per ogni replica di disponibilità, indipendentemente dallo stato di join, dei gruppi di disponibilità Always On nel cluster WSFC (Windows Server Failover Clustering).  
+ Restituisce una riga per ogni replica di disponibilità, indipendentemente dallo stato di join, dei gruppi di disponibilità AlwaysOn nel cluster WSFC (Windows Server Failover Clustering).  
   
- **Nomi delle colonne:** group_name, replica_server_name, node_name  
+ **Nomi colonne:** group_name, replica_server_name, node_name  
   
  [sys.dm_hadr_availability_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)  
- Restituisce una riga per ogni replica, indipendentemente dallo stato del join, di tutti i gruppi di disponibilità Always On, indipendentemente dal percorso della replica, nel cluster WSFC (Windows Server Failover Clustering).  
+ Restituisce una riga per ogni replica, indipendentemente dallo stato del join, di tutti i gruppi di disponibilità AlwaysOn, indipendentemente dal percorso della replica, nel cluster WSFC (Windows Server Failover Clustering).  
   
- **:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
+ **Nomi colonne:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
   
  [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
  Restituisce una riga in cui viene mostrato lo stato di ogni replica di disponibilità locale e una riga per ogni replica di disponibilità remota nello stesso gruppo di disponibilità.  
   
- **Nomi delle colonne:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description e last_connect_error_timestamp  
+ **Nomi colonne:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description e last_connect_error_timestamp  
   
  [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)  
  Determina se la replica corrente è la replica di backup preferita.  
   
 > [!NOTE]  
->  Per informazioni sui contatori delle prestazioni per le repliche di disponibilità (oggetto prestazioni **SQLServer:Availability Replica**), vedere [SQL Server, replica di disponibilità](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
+>  Per informazioni sui contatori delle prestazioni per le repliche di disponibilità (oggetto prestazioni **SQLServer:Availability Replica**  ), vedere [SQL Server, replica di disponibilità](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
 ##  <a name="AvDbs"></a> Monitoraggio dei database di disponibilità  
  Per monitorare i database di disponibilità, utilizzare le viste seguenti:  
@@ -165,7 +170,7 @@ caps.handback.revision: 49
  [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
  Contiene una riga per ogni database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un database appartiene a una replica di disponibilità, la riga per quel database contiene il GUID della replica e l'identificatore univoco del database all'interno del gruppo di disponibilità.  
   
- **Nomi delle colonne [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:** replica_id, group_database_id  
+ **[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] :** replica_id, group_database_id  
   
  [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)  
  Restituisce una riga per ogni tentativo di correzione automatica della pagina in qualsiasi database di disponibilità in una replica di disponibilità ospitata per qualsiasi gruppo di disponibilità dall'istanza del server. Questa vista contiene le righe degli ultimi tentativi automatici di correzione automatica della pagina in un database primario o secondario, con un massimo di 100 righe per database. Non appena un database raggiunge il limite massimo, la riga per il tentativo successivo di correzione automatica della pagina sostituisce una delle voci esistenti.  
@@ -186,7 +191,7 @@ caps.handback.revision: 49
 >  Il percorso della replica primaria è l'origine autorevole per un gruppo di disponibilità.  
   
 > [!NOTE]  
->  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica**), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Per monitorare l'attività dei log delle transazioni dei database di disponibilità, usare i contatori seguenti dell'oggetto prestazioni **SQLServer:Databases**: **Ora di scrittura scaricamento log (ms)**, **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec** e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Per monitorare l'attività dei log delle transazioni dei database di disponibilità, usare i contatori seguenti dell'oggetto prestazioni **SQLServer:Databases** : **Ora di scrittura scaricamento log (ms)**, **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec**e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitoraggio dei listener del gruppo di disponibilità  
  Per monitorare i listener del gruppo di disponibilità sulle subnet del cluster WSFC, utilizzare le viste seguenti:  
@@ -208,12 +213,12 @@ caps.handback.revision: 49
   
  **Chiave primaria:** listener_id  
   
- Per informazioni sui listener dei gruppi di disponibilità, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Per informazioni sui listener dei gruppi di disponibilità, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Attività di monitoraggio dei gruppi di disponibilità Always On:**  
   
--   [Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)  
+-   [Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  
   
 -   [Visualizzare le proprietà dei gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
@@ -281,7 +286,7 @@ caps.handback.revision: 49
   
 -   [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, oggetto di database](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Gestione basata su criteri per gruppi di disponibilità Always On**  
   
@@ -289,9 +294,10 @@ caps.handback.revision: 49
   
 -   [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+
