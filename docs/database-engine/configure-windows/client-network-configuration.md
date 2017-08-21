@@ -1,30 +1,35 @@
 ---
-title: "Configurazione di rete dei client | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "configurazione client [SQL Server], connessioni"
-  - "Motore di database [SQL Server], configurazioni di rete"
-  - "connessioni [SQL Server], configurazione client"
-  - "connessioni client [SQL Server], informazioni sulle connessioni di rete client"
-  - "computer client [SQL Server]"
-  - "connessioni client [SQL Server]"
-  - "connessioni di rete [SQL Server], configurazione client"
+title: Configurazione di rete dei client | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client configuration [SQL Server], connections
+- Database Engine [SQL Server], network configurations
+- connections [SQL Server], client configuration
+- client connections [SQL Server], about client network connections
+- client computers [SQL Server]
+- client connections [SQL Server]
+- network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0cbddc4384df93a3a1987c12d3fbd2664d57e3b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurazione di rete dei client
+# <a name="client-network-configuration"></a>Configurazione di rete dei client
   Il software client consente ai computer di connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile in rete. Un client è un'applicazione front-end che utilizza i servizi forniti da un server quale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il computer nel quale è installata l'applicazione viene definito *computer client*.  
   
  Al livello più semplice, un client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può risiedere nello stesso computer di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere tuttavia, un client si connette a uno o più server remoti in rete. L'architettura client/server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di gestire più client e server in una rete. Le configurazioni client predefinite risultano adeguate nella maggior parte dei casi.  
@@ -33,11 +38,11 @@ caps.handback.revision: 38
   
 -   Consumer OLE DB  
   
-     Queste applicazioni usano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider OLE DB funge da intermediario tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le applicazioni client che utilizzano dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sotto forma di set di righe OLE DB. L'utilità del prompt dei comandi **sqlcmd** e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono esempi di applicazioni OLE DB.  
+     Queste applicazioni usano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider OLE DB funge da intermediario tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le applicazioni client che utilizzano dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sotto forma di set di righe OLE DB. L'utilità del prompt dei comandi **sqlcmd** e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sono esempi di applicazioni OLE DB.  
   
 -   applicazioni ODBC  
   
-     Queste applicazioni includono utilità client installate con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio l'utilità del prompt dei comandi **osql**, nonché altre applicazioni che usano il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Queste applicazioni includono utilità client installate con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio l'utilità del prompt dei comandi **osql** , nonché altre applicazioni che usano il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Client DB-Library  
   
@@ -48,11 +53,11 @@ caps.handback.revision: 38
   
  Indipendentemente dal tipo di applicazione, la gestione di un client consiste principalmente nel configurarne la connessione con i componenti server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A seconda dei requisiti del sito, le attività di gestione dei client possono variare dalla semplice immissione del nome del server alla compilazione di una libreria di voci di configurazione personalizzate, destinate a un ambiente multiserver eterogeneo.  
   
- La DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client contiene le librerie di rete e viene installata dal programma di installazione. Durante una nuova installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i protocolli di rete non vengono abilitati. Le installazioni di aggiornamento mantengono i protocolli abilitati in precedenza. I protocolli di rete sottostanti vengono installati durante l'installazione di Windows (o tramite Reti nel Pannello di controllo). Gli strumenti elencati di seguito consentono la gestione dei client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ La DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client contiene le librerie di rete e viene installata dal programma di installazione. Durante una nuova installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i protocolli di rete non vengono abilitati. Le installazioni di aggiornamento mantengono i protocolli abilitati in precedenza. I protocolli di rete sottostanti vengono installati durante l'installazione di Windows (o tramite Reti nel Pannello di controllo). Gli strumenti elencati di seguito consentono la gestione dei client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione  
   
-     I componenti di rete client e server vengono gestiti mediante Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], che combina l'utilità Configurazione di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilità Configurazione di rete client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Gestione servizi delle versioni precedenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Viene inoltre visualizzato come un nodo nello snap-in Gestione computer di Windows. È possibile abilitare, disabilitare, configurare e impostare la priorità delle singole librerie di rete utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione.  
+     I componenti di rete client e server vengono gestiti mediante Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che combina l'utilità Configurazione di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'utilità Configurazione di rete client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Gestione servizi delle versioni precedenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Viene inoltre visualizzato come un nodo nello snap-in Gestione computer di Windows. È possibile abilitare, disabilitare, configurare e impostare la priorità delle singole librerie di rete utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione.  
   
 -   Installazione  
   
@@ -62,10 +67,10 @@ caps.handback.revision: 38
   
      Amministrazione origine dati ODBC consente di creare e modificare origini dati ODBC in computer su cui è in esecuzione il sistema operativo Microsoft Windows.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Configurazione di protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)  
   
- [Creare o eliminare un alias server per l'uso da parte di un client &#40;Gestione configurazione SQL Server Manager&#41;](../../database-engine/configure-windows/create or delete a server alias for use by a client.md)  
+ [Creare o eliminare un alias server per l'uso da parte di un client &#40;Gestione configurazione SQL Server Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
  [Accesso a SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 38
   
  [Verificare la versione dei driver ODBC di SQL Server &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Configurazione di rete del server](../../database-engine/configure-windows/server-network-configuration.md)  
   
  [Gestire il servizio Motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)  

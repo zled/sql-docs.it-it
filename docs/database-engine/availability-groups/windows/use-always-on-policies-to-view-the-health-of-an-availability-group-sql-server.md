@@ -1,32 +1,37 @@
 ---
-title: "Usare i criteri Always On per visualizzare l&#39;integrit&#224; di un gruppo di disponibilit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], criteri"
+title: "Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 401214465aadc17a4a8633801c170194f0623611
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Usare i criteri Always On per visualizzare l&#39;integrit&#224; di un gruppo di disponibilit&#224; (SQL Server)
+# <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Questo argomento illustra come determinare l'integrità operativa di un gruppo di disponibilità Always On usando i criteri Always On in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per informazioni sulla gestione basata su criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+  Questo argomento illustra come determinare l'integrità operativa di un gruppo di disponibilità Always On usando i criteri Always On in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per informazioni sulla gestione basata su criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Per i criteri Always On, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria Always On causa l'interruzione della funzionalità di valutazione dell'integrità. Quindi, i nomi di categoria Always On non devono mai essere modificati.  
   
--   **Prima di iniziare**: [Sicurezza](#Security)  
+-   **Prima di iniziare** [Sicurezza](#Security)  
   
 -   **Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità con:**  
   
@@ -48,16 +53,16 @@ caps.handback.revision: 16
   
 2.  Fare clic sul nome del server per espandere il relativo albero.  
   
-3.  Espandere il nodo **Disponibilità elevata Always On**.  
+3.  Espandere il nodo **Disponibilità elevata Always On** .  
   
      Fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità** o espandere il nodo e fare clic con il pulsante destro del mouse su un gruppo di disponibilità specifico.  
   
 4.  Selezionare il comando **Mostra dashboard** .  
   
- Per informazioni su come usare il Dashboard Always On, vedere [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Always On%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md).  
+ Per informazioni su come usare il Dashboard Always On, vedere [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
- **Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità**  
+ **Use Always On policies to view the health of an availability group**  
   
 1.  Impostare il valore predefinito (**cd**) su un'istanza del server che ospita una delle repliche di disponibilità. Per visualizzare informazioni su tutte le repliche di disponibilità di un determinato gruppo, connettersi all'istanza del server che ospita la replica primaria.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 16
     |------------|-----------------|  
     |**AllowUserPolicies**|Esegue i criteri utente trovati nelle categorie dei criteri Always On.|  
     |**InputObject**|Raccolta di oggetti che rappresentano gruppi di disponibilità, repliche di disponibilità o stati dei database di disponibilità. Il cmdlet calcolerà l'integrità degli oggetti specificati.|  
-    |**NoRefresh**|Quando questo parametro è impostato, il cmdlet non aggiorna manualmente gli oggetti specificati dal parametro **-Path** o **-InputObject**.|  
+    |**NoRefresh**|Quando questo parametro è impostato, il cmdlet non aggiorna manualmente gli oggetti specificati dal parametro **-Path** o **-InputObject** .|  
     |**Percorso**|Percorso del gruppo di disponibilità, una o più repliche di disponibilità o stato del cluster della replica di database del database di disponibilità (a seconda del cmdlet utilizzato). Questo parametro è facoltativo. Se non specificato, il valore predefinito di questo parametro sarà il percorso di lavoro corrente.|  
     |**ShowPolicyDetails**|Mostra il risultato di ogni valutazione dei criteri eseguita da questo cmdlet. Il cmdlet restituisce un oggetto per ogni valutazione dei criteri e questo oggetto contiene campi che descrivono i risultati della valutazione, ovvero se i criteri sono stati soddisfatti, il nome e la categoria dei criteri e così via.|  
   
@@ -119,23 +124,26 @@ caps.handback.revision: 16
   
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Visualizzazione della Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  **SQL Server Always On Team Blogs—Monitoring Always On Health with PowerShell: (Blog del team di SQL Server Always On: monitoraggio dell'integrità Always On con PowerShell)**  
   
--   [Pagina relativa alla prima parte riguardante la panoramica su cmdlet di base](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/13/monitoring-Always%20On-health-with-powershell-part-1.aspx)  
+-   [Pagina relativa alla prima parte riguardante la panoramica su cmdlet di base](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   
--   [Pagina relativa alla seconda parte riguardante l'utilizzo avanzato di cmdlet](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/13/monitoring-Always%20On-health-with-powershell-part-2.aspx)  
+-   [Pagina relativa alla seconda parte riguardante l'utilizzo avanzato di cmdlet](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [Pagina relativa alla terza parte riguardante un'applicazione di monitoraggio semplice](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/15/monitoring-Always%20On-health-with-powershell-part-3.aspx)  
+-   [Pagina relativa alla terza parte riguardante un'applicazione di monitoraggio semplice](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [Pagina relativa alla quarta parte riguardante l'integrazione con SQL Server Agent](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [Pagina relativa alla quarta parte riguardante l'integrazione con SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
-## Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../Topic/Overview%20of%20Always On%20Availability%20Groups%20\(SQL%20Server\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Amministrazione di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+ [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+
+
+

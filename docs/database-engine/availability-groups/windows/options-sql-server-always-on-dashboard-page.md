@@ -1,24 +1,29 @@
 ---
-title: "Opzioni (SQL Server AlwaysOn, pagina Dashboard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Alwayson.Dashboard"
+title: Opzioni (SQL Server AlwaysOn, pagina Dashboard) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6edac25ccc503679e45bdc3477a819e0285e2909
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Opzioni (SQL Server AlwaysOn, pagina Dashboard)
+# <a name="options-sql-server-always-on-dashboard-page"></a>Opzioni (SQL Server AlwaysOn, pagina Dashboard)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Usare la pagina del **dashboard AlwaysOn** della finestra di dialogo **Opzioni** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per configurare il dashboard AlwaysOn.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
   
  Nel menu **Strumenti** fare clic su **Opzioni**, espandere la cartella **SQL Server AlwaysOn** e quindi fare clic su **Dashboard**.  
   
-## In questa pagina  
+## <a name="on-this-page"></a>In questa pagina  
  **Abilitare l'aggiornamento automatico.**  
  Fare clic per abilitare l'aggiornamento automatico. Le opzioni disponibili sono le seguenti:  
   
@@ -38,7 +43,8 @@ caps.handback.revision: 8
  **Abilita criteri AlwaysOn definiti dall'utente**  
  Se sono stati definiti criteri AlwaysOn, fare clic su questa opzione per abilitarli.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

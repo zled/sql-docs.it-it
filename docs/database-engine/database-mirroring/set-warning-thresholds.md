@@ -1,33 +1,38 @@
 ---
-title: "Imposta valori soglia avvisi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.setwarningthreshold.f1"
+title: Imposta valori soglia avvisi | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b82e8ee22179c71ef30475ff3ac9d0fd3fdcbe38
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Imposta valori soglia avvisi
-  Usare questa finestra di dialogo per abilitare e configurare una o più soglie degli avvisi per il database selezionato nell'albero di navigazione della finestra di dialogo **Monitoraggio mirroring del database**.  
+# <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
+  Usare questa finestra di dialogo per abilitare e configurare una o più soglie degli avvisi per il database selezionato nell'albero di navigazione della finestra di dialogo **Monitoraggio mirroring del database** .  
   
  La finestra di dialogo tenta di connettersi a entrambe le istanze del server. Queste connessioni vengono stabilite in modo asincrono. Nella finestra di dialogo viene visualizzato lo stato di connessione di ogni partner. Se il partner non è connesso, fare clic su **Connetti**.  
   
  **Per utilizzare SQL Server Management Studio per il monitoraggio del mirroring del database**  
   
--   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  *Istanza del server e relativo stato di connessione*  
  Nome di un'istanza del server partner nel formato *SYSTEM***\\***INSTANCE_NAME*. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
   
@@ -35,23 +40,23 @@ caps.handback.revision: 28
   
 -   **Non connesso a**  *nome_istanza_server*  
   
--   **Tentativo di connessione a**  *nome_istanza_server* in corso  
+-   **Tentativo di connessione a**  *nome_istanza_server*  
   
 -   **Connesso a**  *nome_istanza_server*  
   
     > [!NOTE]  
-    >  Se non si è membri del ruolo predefinito del server **sysadmin**, lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)**.  
+    >  Se non si è membri del ruolo predefinito del server **sysadmin** , lo stato è impostato su **Connesso a** *nome_istanza_server* **(autorizzazioni limitate)**.  
   
  Il nome di ogni istanza del server partner è visualizzato in un campo *Istanza del server e relativo stato di connessione* separato. Il campo in alto indica il server principale all'avvio dell'esecuzione del monitoraggio.  
   
  **Connetti**/**Annulla**  
- Un pulsante **Connetti**/**Annulla** è associato a ogni *istanza del server e al relativo stato di connessione*. Lo stato del pulsante dipende dallo stato di connessione:  
+ Un pulsante **Connetti**/**Annulla** è associato a ogni *istanza del server e al relativo stato di connessione* . Lo stato del pulsante dipende dallo stato di connessione:  
   
 -   Se non è presente alcuna connessione all'istanza del server, il testo del pulsante è **Connetti**. Fare clic sul pulsante per connettersi all'istanza del server.  
   
 -   Quando è in corso un tentativo di connessione, il testo del pulsante è **Annulla**. Fare clic sul pulsante per annullare il tentativo di connessione.  
   
--   Se il server è connesso, il testo del pulsante è **Connesso** e il pulsante è disattivato.  
+-   Se il server è connesso, il testo del pulsante è **Connesso**e il pulsante è disattivato.  
   
  **Thresholds**  
  Nella griglia **Valori soglia** sono visualizzate le impostazioni degli avvisi per le due istanze del server.  
@@ -80,16 +85,16 @@ caps.handback.revision: 28
  Quando un avviso non è abilitato, il campo non è attivo.  
   
  **OK**  
- Se si fa clic su **OK**, questa finestra di dialogo viene chiusa e vengono visualizzati i valori attualmente specificati per le soglie degli avvisi nella griglia **Valori di soglia** della pagina a schede **Avvisi**.  
+ Se si fa clic su **OK** , questa finestra di dialogo viene chiusa e vengono visualizzati i valori attualmente specificati per le soglie degli avvisi nella griglia **Valori di soglia** della pagina a schede **Avvisi**.  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Una soglia è applicabile solo a un partner per volta, ma è consigliabile impostare una soglia per un determinato evento su entrambi i partner per assicurare che l'avviso venga mantenuto in caso di failover del database. La soglia appropriata per ogni partner dipende dalle capacità in termini di prestazioni del sistema di tale partner.  
   
  Un evento viene scritto nel log eventi per una prestazione solo se il relativo valore è uguale o superiore alla relativa soglia quando la tabella dello stato è in fase di aggiornamento. Se un valore di picco raggiunge la soglia solo temporaneamente tra gli aggiornamenti di stato, tale picco non viene segnalato.  
   
-## Vedere anche  
- [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

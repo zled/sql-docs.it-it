@@ -1,27 +1,32 @@
 ---
-title: "Propriet&#224; server (pagina Impostazioni varie) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+title: "Proprietà server - pagina Impostazioni varie | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; server (pagina Impostazioni varie)
+# <a name="server-properties---misc-server-settings-page"></a>Proprietà server - pagina Impostazioni varie
   Utilizzare questa pagina per visualizzare o modificare le impostazioni del server.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Lingua predefinita per l'utente**  
  Specifica la lingua predefinita per tutti i nuovi account di accesso creati.  
   
@@ -37,12 +42,12 @@ caps.handback.revision: 22
  Impostare l'anno di fine nella casella a destra. Quando l'anno di fine viene salvato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popola automaticamente la casella a sinistra con l'anno di inizio.  
   
  **Valori configurati**  
- Consente di visualizzare i valori configurati per le opzioni nel riquadro. Se si modificano i valori, fare clic su **Valori correnti** per verificare se le modifiche sono diventate effettive. Se le modifiche non sono diventate effettive, è innanzitutto necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Consente di visualizzare i valori configurati per le opzioni nel riquadro. Se si modificano i valori, fare clic su **Valori correnti** per verificare se le modifiche sono diventate effettive. Se le modifiche non sono diventate effettive, è innanzitutto necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valori correnti**  
  Consente di visualizzare i valori correnti per le opzioni contenute nel riquadro. I valori sono di sola lettura.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

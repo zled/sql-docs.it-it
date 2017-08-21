@@ -1,25 +1,30 @@
 ---
-title: "Risultato della valutazione dei criteri (Always On) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.agdashboard.policyeval.f1"
-  - "sql13.swb.agdashboard.policyeval.f1"
+title: Risultato della valutazione dei criteri (Always On) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.agdashboard.policyeval.f1
+- sql13.swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 99e4bfcb27e83991ca69b775f6db846eaec5d585
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Risultato della valutazione dei criteri (Always On)
+# <a name="policy-evaluation-result-always-on"></a>Risultato della valutazione dei criteri (Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Usare la pagina **Risultato di valutazione criteri** del dashboard Always On per visualizzare qualsiasi problema corrente relativo ai criteri.  
@@ -36,8 +41,8 @@ caps.handback.revision: 9
   
 |Icona|Severity|  
 |----------|--------------|  
-|![Icona interfaccia utente: errore](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "Icona interfaccia utente: errore")|Critico|  
-|![Icona interfaccia utente: avviso](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "Icona interfaccia utente: avviso")|Avviso|  
+|![Icona interfaccia utente: errore](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icona interfaccia utente: errore")|Critico|  
+|![Icona interfaccia utente: avviso](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icona interfaccia utente: avviso")|Avviso|  
   
  **Descrizione**  
  In questa griglia viene visualizzata una breve descrizione del problema selezionato.  
@@ -51,8 +56,9 @@ caps.handback.revision: 9
   
 -   [Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+ [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+

@@ -1,25 +1,30 @@
 ---
-title: "Service Broker con i gruppi di disponibilit&#224; Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Service Broker, Gruppi di disponibilità AlwaysOn"
-  - "Gruppi di disponibilità [SQL Server], interoperabilità"
+title: "Service Broker con i gruppi di disponibilità Always On (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Service Broker, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e57858f580d34c2ba830f9e1732e555f677338a5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Service Broker con i gruppi di disponibilit&#224; Always On (SQL Server)
+# <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker con i gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento sono contenute informazioni sulla configurazione di Service Broker per poter utilizzarlo con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -45,7 +50,7 @@ caps.handback.revision: 13
     -   Impostare la porta di Service Broker sullo stesso numero di porta in tutte le istanze del server host.  
   
         > [!TIP]  
-        >  Per visualizzare il numero di porta dell'endpoint di Service Broker in un'istanza del server specifica, eseguire una query sulla colonna **port** della vista del catalogo [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md), dove **type_desc** = 'SERVICE_BROKER'.  
+        >  Per visualizzare il numero di porta dell'endpoint di Service Broker in un'istanza del server specifica, eseguire una query sulla colonna **port** della vista del catalogo [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) , dove **type_desc** = 'SERVICE_BROKER'.  
   
      Nell'esempio seguente viene creato un endpoint di Service Broker con autenticazione di Windows in cui viene utilizzata la porta predefinita di Service Broker (4022) e si è in ascolto di tutti gli indirizzi IP validi.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 13
   
      Per altre informazioni, vedere [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
-2.  **Assicurarsi che msdb contenga una route AutoCreatedLocal o una route al servizio specifico.** Per altre informazioni, vedere [Requisiti necessari affinché i messaggi remoti vengano ricevuti da un servizio in un gruppo di disponibilità](#ReceiveRemoteMessages) più indietro in questo argomento.  
+2.  **Assicurarsi che msdb contenga una route AutoCreatedLocal o una route al servizio specifico.** Per altre informazioni, vedere [Requisiti necessari affinché i messaggi remoti vengano ricevuti da un servizio in un gruppo di disponibilità](#ReceiveRemoteMessages)più indietro in questo argomento.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -112,11 +117,12 @@ caps.handback.revision: 13
   
 -   [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set up login accounts - database mirroring always on availability.md)  
+-   [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

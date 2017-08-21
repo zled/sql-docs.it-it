@@ -1,26 +1,31 @@
 ---
-title: "Modificare il periodo di timeout della sessione per una replica di disponibilit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gruppi di disponibilità [SQL Server], configurazione"
-  - "Gruppi di disponibilità [SQL Server], timeout della sessione"
-  - "timeout della sessione [SQL Server]"
+title: "Modificare il periodo di timeout della sessione per una replica di disponibilità (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], session timeout
+- session timeout [SQL Server]
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ea5d18bb457d56ef175a8bc03e9b34c4383784de
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modificare il periodo di timeout della sessione per una replica di disponibilit&#224; (SQL Server)
+# <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>Modificare il periodo di timeout della sessione per una replica di disponibilità (SQL Server)
   Questo argomento illustra come configurare il periodo di timeout della sessione di una replica di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Il periodo di timeout della sessione è una proprietà della replica che determina i secondi di attesa di una replica di disponibilità per una risposta del ping da una replica connessa prima di considerare la connessione non riuscita. Per impostazione predefinita, l'attesa di una replica è di 10 secondi per una risposta del ping. Questa proprietà della replica si applica solo alla connessione tra una determinata replica secondaria e la replica primaria del gruppo di disponibilità. Per altre informazioni sul periodo di timeout della sessione, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 -   **Prima di iniziare:**  
@@ -58,7 +63,7 @@ caps.handback.revision: 26
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
-2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
 3.  Fare clic sul gruppo di disponibilità di cui si desidera configurare la replica di disponibilità.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 26
   
      dove *nome_gruppo* è il nome del gruppo di disponibilità, *nome_istanza* è il nome dell'istanza del server che ospita la replica di disponibilità da modificare e *secondi* specifica il numero minimo di secondi di attesa della replica prima di applicare log ai database quando funge da replica secondaria. Il valore predefinito è 0 secondi, che indica la non applicazione di ritardo.  
   
-     Nell'esempio seguente, relativo alla replica primaria del gruppo di disponibilità `AccountsAG`, il valore del timeout della sessione viene impostato su `15` secondi per la replica presente nell'istanza del server `INSTANCE09`.  
+     Nell'esempio seguente, relativo alla replica primaria del gruppo di disponibilità `AccountsAG` , il valore del timeout della sessione viene impostato su `15` secondi per la replica presente nell'istanza del server `INSTANCE09` .  
   
     ```  
     ALTER AVAILABILITY GROUP AccountsAG   
@@ -107,7 +112,8 @@ caps.handback.revision: 26
   
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

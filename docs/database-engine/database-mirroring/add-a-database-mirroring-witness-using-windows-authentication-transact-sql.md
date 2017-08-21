@@ -1,26 +1,31 @@
 ---
-title: "Aggiungere un server di controllo del mirroring del database tramite l&#39;autenticazione di Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "server di controllo del mirroring [SQL Server], definizione"
-  - "autenticazione di Windows [SQL Server]"
-  - "mirroring del database [SQL Server], server di controllo del mirroring"
+title: Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Aggiungere un server di controllo del mirroring del database tramite l&#39;autenticazione di Windows (Transact-SQL)
+# <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
   Per installare un server di controllo per un database, il proprietario del database assegna un'istanza di Motore di database al ruolo di server di controllo. L'istanza del server di controllo può essere eseguita sullo stesso computer dell'istanza del server principale o mirror, ma questo riduce in modo significativo l'affidabilità del failover automatico.  
   
  È fortemente consigliabile che il server di controllo risieda su un computer separato. Un determinato server può prendere parte a più sessioni di mirroring del database simultanee con lo stesso o diversi partner. Un determinato server può essere partner in alcune sessioni e server di controllo in altre.  
@@ -30,7 +35,7 @@ caps.handback.revision: 51
 > [!IMPORTANT]  
 >  È consigliabile configurare il mirroring del database durante le fasce orarie di minore attività, in quanto la configurazione può influire sulle prestazioni.  
   
-### Per creare un server di controllo  
+### <a name="to-establish-a-witness"></a>Per creare un server di controllo  
   
 1.  Sull'istanza del server di controllo, assicurarsi che sia presente un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, è necessario che l'istanza del server disponga di un unico endpoint di mirroring del database. Se si desidera usare l'istanza del server esclusivamente come server di controllo nelle sessioni di mirroring del database, assegnare il ruolo di server di controllo all'endpoint (ROLE**=**WITNESS). Se si desidera utilizzare l'istanza del server come partner in una o più sessioni di mirroring del database, assegnare il ruolo di server dell'endpoint come ALL.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 51
   
      Se il server di controllo manca di un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Se le istanze dei partner sono in esecuzione con account utente di dominio diversi, creare un account di accesso per i diversi account sul database master di ogni istanza. Per altre informazioni, vedere [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+2.  Se le istanze dei partner sono in esecuzione con account utente di dominio diversi, creare un account di accesso per i diversi account sul database master di ogni istanza. Per altre informazioni, vedere [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Connettersi al server principale ed eseguire la seguente istruzione:  
   
@@ -57,9 +62,9 @@ caps.handback.revision: 51
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP**://**\<*indirizzo_sistema>***:**\<*porta>*  
   
-     dove \<*system-address>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*port>* è il numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Ad esempio, sull'istanza del server principale l'istruzione ALTER DATABASE seguente imposta il server di controllo del mirroring. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER3, ovvero il nome del server di controllo del mirroring, e la porta utilizzata dall'endpoint del mirroring del database del server di controllo del mirroring è `7022`:  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 51
       SET WITNESS = 'TCP://DBSERVER3:7022'  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un server di controllo del mirroring dei dati. Sull'istanza del server di controllo (istanza predefinita in `WITNESSHOST4`):  
   
 1.  Creare un endpoint per questa istanza del server solo per il ruolo WITNESS utilizzando la porta `7022`.  
@@ -125,11 +130,11 @@ caps.handback.revision: 51
   
  Per un esempio completo che illustri le impostazioni relative alla sicurezza e ai partner, nonché l'aggiunta di un server di controllo del mirroring, vedere [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+ [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
+ [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
  [Rimuovere il server di controllo del mirroring da una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

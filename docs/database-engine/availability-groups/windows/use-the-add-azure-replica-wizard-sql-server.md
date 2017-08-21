@@ -1,24 +1,29 @@
 ---
-title: "Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.azurereplica.f1"
+title: Usare la procedura guidata Aggiungi replica Azure (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server)
+# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utilizzare la procedura guidata Aggiungi replica Azure (SQL Server)
   La procedura guidata Aggiungi replica Azure consente di creare una nuova macchina virtuale di Azure in un ambiente IT ibrido e di configurarla come replica secondaria per un gruppo di disponibilità Always On nuovo o esistente.  
   
 -   **Prima di iniziare:**  
@@ -27,10 +32,10 @@ caps.handback.revision: 12
   
      [Sicurezza](#Security)  
   
--   **Per aggiungere una replica con la **[Procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Per aggiungere una replica mediante:**  [Procedura guidata Aggiungi replica Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
- Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "Istanze del server" e "Repliche e gruppi di disponibilità" in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Se non è mai stata aggiunta una replica di disponibilità a un gruppo di disponibilità, vedere le sezioni "Istanze del server" e "Repliche e gruppi di disponibilità" in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 12
   
  Dopo aver avviato la procedura guidata Aggiungi replica Azure effettuare i passaggi seguenti:  
   
-1.  Scaricare innanzitutto un certificato di gestione per la sottoscrizione di Windows Azure. Fare clic su **Download**per aprire la pagina di accesso.  
+1.  Scaricare innanzitutto un certificato di gestione per la sottoscrizione di Windows Azure. Fare clic su **Download** per aprire la pagina di accesso.  
   
-2.  Accedere a Microsoft Azure con il proprio account Microsoft o aziendale. L'account Microsoft o aziendale è nel formato di un indirizzo di posta elettronica, ad esempio HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Per altre informazioni sulle credenziali di Azure, vedere [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (Domande frequenti sull'account Microsoft per le organizzazioni) e [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852) (Risoluzione dei problemi di accesso con l'account dell'organizzazione).  
+2.  Accedere a Microsoft Azure con il proprio account Microsoft o aziendale. L'account Microsoft o aziendale è nel formato di un indirizzo di posta elettronica, ad esempio HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Per altre informazioni sulle credenziali di Azure, vedere [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) (Domande frequenti sull'account Microsoft per le organizzazioni) e [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852)(Risoluzione dei problemi di accesso con l'account dell'organizzazione).  
   
 3.  Connettersi quindi alla sottoscrizione facendo clic su **Connetti**. Una volta connessi, gli elenchi a discesa vengono popolati con i parametri di Microsoft Azure, ad esempio **Rete virtuale** e **Subnet rete virtuale**.  
   
@@ -108,9 +113,10 @@ caps.handback.revision: 12
   
 -   [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

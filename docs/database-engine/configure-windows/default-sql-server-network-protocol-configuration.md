@@ -1,26 +1,31 @@
 ---
-title: "Configurazione dei protocolli di rete predefiniti di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolli [SQL Server], impostazioni predefinite"
-  - "protocolli predefiniti, dopo l'installazione"
+title: Configurazione dei protocolli di rete predefiniti di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 07/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- protocols [SQL Server], default settings
+- default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 95adc8c5246284a8f82131f853e6a28b91b8dc5f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
 # Configurazione dei protocolli di rete predefiniti di SQL Server
-Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
+Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard, Evaluation o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
 
 Usare il nodo Configurazione di rete [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare i protocolli di rete dopo l'installazione. Usare il nodo Servizi di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser. Per altre informazioni, vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -35,24 +40,24 @@ Enterprise  | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate pe
 Standard    | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
 Web | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
 Sviluppatore   | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
-Copia di valutazione  | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
+Copia di valutazione  | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
 SQL Server Express  | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
 Tutte le edizioni    | L'installazione precedente è presente, ma non viene aggiornata.   | Come in una nuova installazione  | Come in una nuova installazione  | Come in una nuova installazione
 Tutte le edizioni    | Aggiornamento   | Abilitata   | Impostazioni mantenute dall'installazione precedente.    | Impostazioni mantenute dall'installazione precedente.
 
 
 >[!NOTE]
-> Se è in esecuzione in un cluster di failover di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], l'istanza resterà in attesa sulle porte specificate per ogni indirizzo IP selezionato per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante l'installazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+> Se è in esecuzione in un cluster di failover di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , l'istanza resta in attesa sulle porte specificate per ogni indirizzo IP selezionato per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante l'installazione di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
  
 >[!NOTE]
-> Quando si installa [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argomenti del prompt dei comandi, è possibile specificare i protocolli da abilitare utilizzando i parametri `TCPENABLED` e `NPENABLED`. Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+> Quando si installa [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argomenti del prompt dei comandi, è possibile specificare i protocolli da abilitare utilizzando i parametri `TCPENABLED` e `NPENABLED` . Per altre informazioni, vedere [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
 
 ## Creazione di una stringa di connessione
 
 Per esempi di stringhe di connessione, vedere gli argomenti seguenti:
 * [Creazione di una stringa di connessione valida mediante il protocollo di memoria condivisa](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
 * [Creazione di una stringa di connessione valida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
-* [Creazione di una stringa di connessione valida tramite named pipe](Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.xml)
+
 
 
 ## [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Impostazioni del servizio Browser
@@ -67,7 +72,10 @@ Il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser
 
 ## Vedere anche
 
-[Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)
+[Requisiti hardware e software per l'installazione di SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)  
+
+
+
 

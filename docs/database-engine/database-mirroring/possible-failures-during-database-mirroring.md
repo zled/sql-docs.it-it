@@ -1,30 +1,35 @@
 ---
-title: "Possibili errori durante il mirroring del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "periodo di timeout [mirroring di database di SQL Server]"
-  - "errori software [SQL Server]"
-  - "mirroring del database [SQL Server], risoluzione dei problemi"
-  - "errori di timeout [SQL Server]"
-  - "risoluzione dei problemi [SQL Server], mirroring del database"
-  - "errori hardware"
-  - "sessioni di mirroring del database non completate [SQL Server]"
+title: Possibili errori durante il mirroring del database | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Possibili errori durante il mirroring del database
+# <a name="possible-failures-during-database-mirroring"></a>Possibili errori durante il mirroring del database
   Gli errori in una sessione di mirroring del database possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il mirroring del database non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, il mirroring del database implementa un proprio meccanismo di timeout. Quando si verifica un timeout di mirroring, il mirroring del database presuppone che si sia verificato un errore e dichiara un *errore software*. Tuttavia, alcuni errori che si verificano a livello dell'istanza di SQL Server non provocano il timeout del mirroring a timeout e possono non essere rilevati.  
   
 > [!IMPORTANT]  
@@ -32,7 +37,7 @@ caps.handback.revision: 59
   
  La velocità di rilevamento degli errori, e quindi il tempo di reazione della sessione di mirroring a un errore, varia a seconda che si tratti di un errore hardware o software. Alcuni errori hardware, quali gli errori di rete, vengono segnalati immediatamente. In alcuni casi, invece, i periodi di timeout specifici dei componenti possono ritardare la segnalazione di determinati errori hardware. Per gli errori software, la velocità di rilevamento degli errori dipende dalla durata del periodo di timeout per il mirroring. L'impostazione predefinita è 10 secondi. Questo è il valore minimo consigliato.  
   
-## Errori provocati da errori hardware  
+## <a name="failures-due-to-hard-errors"></a>Errori provocati da errori hardware  
  Di seguito vengono riportate alcune possibili cause di errori hardware:  
   
 -   Interruzione di una connessione o danneggiamento di un cavo  
@@ -73,7 +78,7 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  Il mirroring non fornisce protezione da problemi specifici dei client che accedono ai server. Si consideri, ad esempio, un caso in cui una scheda di rete pubblica gestisce le connessioni client all'istanza del server principale, mentre una scheda di interfaccia di rete privata gestisce tutto il traffico di mirroring tra le istanze del server. In questo caso, l'errore della scheda di rete pubblica impedirebbe l'accesso dei client al database, anche senza interruzione del mirroring del database.  
   
-## Errori provocati da errori software  
+## <a name="failures-due-to-soft-errors"></a>Errori provocati da errori software  
  Di seguito vengono riportate alcune possibili cause dei timeout per il mirroring:  
   
 -   Errori di rete, ad esempio timeout di collegamenti TCP, pacchetti ignorati, danneggiati o in ordine errato.  
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   Risorse di elaborazione insufficienti, ad esempio overload della CPU o del disco, esaurimento dello spazio del log delle transazioni o esaurimento della memoria o dei thread di sistema. In questi casi è necessario aumentare il periodo di timeout, ridurre il carico di lavoro o cambiare l'hardware per gestire il carico di lavoro.  
   
-### Meccanismo di timeout per il mirroring  
+### <a name="the-mirroring-time-out-mechanism"></a>Meccanismo di timeout per il mirroring  
  Poiché non sono direttamente rilevabili da un'istanza del server, gli errori software possono provocare l'attesa illimitata da parte di un'istanza del server. Per evitare questo problema, il mirroring del database implementa un proprio meccanismo di timeout in base al quale ogni istanza del server di una sessione di mirroring invia un ping a ogni connessione aperta a intervalli fissi.  
   
  Per mantenere aperta una connessione, è necessario che un'istanza del server riceva un ping su tale connessione entro il periodo definito dalla somma del valore del timeout e del tempo necessario per l'invio del ping successivo. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Quando riceve un ping, un'istanza del server reimposta il contatore del timeout su tale connessione.  
@@ -103,10 +108,10 @@ caps.handback.revision: 59
   
 -   Eseguire una query su **mirroring_connection_timeout** in [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
-## Risposta a un errore  
+## <a name="responding-to-an-error"></a>Risposta a un errore  
  Indipendentemente dal tipo di errore, un'istanza del server che rileva un errore esegue l'azione appropriata in base al proprio ruolo, alla modalità operativa della sessione e allo stato delle altre connessioni della sessione. Per informazioni sulle conseguenze della perdita di un partner, vedere [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modalità di funzionamento del mirroring del database](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

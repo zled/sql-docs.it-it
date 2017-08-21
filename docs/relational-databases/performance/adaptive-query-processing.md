@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: "Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure."
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ La query restituisce 336 righe.  Se si attiva Statistiche query dinamiche viene 
 ![Risultato della query: 336 righe](./media/4_AQPStats336Rows.png)
 
 Nel piano viene visualizzato quanto segue:
-- È presente un'Analisi indice Columnstore che specifica righe per la fase di compilazione dell'hash join.
-- È presente il nuovo operatore di join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano con ciclo annidato.  In questo esempio la soglia corrisponde a 78 righe.  Se il risultato è &gt;= 78 righe verrà usato un hash join.  Se è inferiore alla soglia verrà usato un join a cicli annidati.
-- Dato che le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche sulle query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
-- L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
+1. È presente un'Analisi indice Columnstore che specifica righe per la fase di compilazione dell'hash join.
+1. È presente il nuovo operatore di join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano con ciclo annidato.  In questo esempio la soglia corrisponde a 78 righe.  Se il risultato è &gt;= 78 righe verrà usato un hash join.  Se è inferiore alla soglia verrà usato un join a cicli annidati.
+1. Dato che le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche sulle query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
+1. L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
  Ora si confronti il piano con la stessa query che tuttavia nella tabella restituisce una quantità pari a una sola riga:
  
 ```sql

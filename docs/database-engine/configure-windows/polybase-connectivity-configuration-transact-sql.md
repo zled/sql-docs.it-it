@@ -1,29 +1,34 @@
 ---
-title: "Configurazione della connettivit&#224; di PolyBase (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "Configurazione della connettività di PolyBase (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurazione della connettivit&#224; di PolyBase (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza o modifica le impostazioni di configurazione globali per la connettività tra PolyBase, Hadoop e l'archivio BLOB di Azure.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.png "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +49,10 @@ RECONFIGURE
   
 ## <a name="arguments"></a>Argomenti  
  [ **@configname=** ] **'***option_name***'**  
- Nome di un'opzione di configurazione. *option_name* è **varchar(35)** e il valore predefinito è NULL. Se non si specifica alcun nome di opzione, viene restituito l'elenco completo delle opzioni.  
+ Nome di un'opzione di configurazione. *option_name* è **varchar(35)**e il valore predefinito è NULL. Se non si specifica alcun nome di opzione, viene restituito l'elenco completo delle opzioni.  
   
  [ **@configvalue=** ] **'***value***'**  
- Nuova impostazione di configurazione. *value* è **int** e il valore predefinito è NULL. Il valore massimo dipende dalla singola opzione.  
+ Nuova impostazione di configurazione. *value* è **int**e il valore predefinito è NULL. Il valore massimo dipende dalla singola opzione.  
   
  **'hadoop connectivity'**  
  Specifica il tipo di origine dati Hadoop per tutte le connessioni da PolyBase a cluster Hadoop o archivi BLOB di Azure (WASB). Questa impostazione è necessaria per creare un'origine dati esterna per una tabella esterna. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
@@ -70,9 +75,9 @@ RECONFIGURE
   
 -   Opzione 5: Hortonworks HDP 2.0 su Linux  
   
--   Opzione 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5 e 5.9 su Linux  
+-   Opzione 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10 e 5.11 su Linux  
   
--   Opzione 7: Hortonworks 2.1, 2.2, 2.3, 2.4 e 2.5 su Linux  
+-   Opzione 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 e 2.6 su Linux  
   
 -   Opzione 7: Hortonworks 2.1, 2.2 e 2.3 su Windows Server  
   
@@ -86,7 +91,7 @@ RECONFIGURE
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a> Set di risultati  
+##  <a name="ResultSets"></a> Set di risultati  
  Se eseguita senza parametri, **sp_configure** restituisce un set di risultati con cinque colonne.  
   
 |Nome colonna|Tipo di dati|Description|  
@@ -99,15 +104,15 @@ RECONFIGURE
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dopo aver eseguito RECONFIGURE, per rendere effettivo il valore di esecuzione di 'hadoop connectivity', è necessario riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], dopo aver eseguito RECONFIGURE, per rendere effettivo il valore di esecuzione di 'hadoop connectivity', è necessario riavviare l'area [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], dopo aver eseguito RECONFIGURE, per rendere effettivo il valore di esecuzione di 'hadoop connectivity', è necessario riavviare l'area [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  L'istruzione RECONFIGURE non è consentita in una transazione esplicita o implicita.  
   
 ## <a name="permissions"></a>Permissions  
- Tutti gli utenti possono eseguire **sp_configure** senza parametri o con il parametro @configname.  
+ Tutti gli utenti possono eseguire **sp_configure** senza parametri o con il parametro @configname .  
   
- Per modificare un valore di configurazione o per eseguire RECONFIGURE, è necessaria l'autorizzazione a livello di server **ALTER SETTINGS** o l'appartenenza al ruolo predefinito del server **sysadmin**.  
+ Per modificare un valore di configurazione o per eseguire RECONFIGURE, è necessaria l'autorizzazione a livello di server **ALTER SETTINGS** o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+

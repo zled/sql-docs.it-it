@@ -1,25 +1,30 @@
 ---
-title: "Log shipping e replica (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replica [SQL Server], log shipping e"
-  - "log shipping [SQL Server], replica e"
+title: Log shipping e replica (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], log shipping and
+- log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Log shipping e replica (SQL Server)
+# <a name="log-shipping-and-replication-sql-server"></a>Log shipping e replica (SQL Server)
   Il log shipping coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia è nota come database primario. Gli aggiornamenti al database primario apportati dai client vengono propagati attraverso il log shipping all'altra copia del database, nota come database secondario. Il processo di log shipping prevede l'applicazione nel database secondario del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database primario.  
   
  Quando il log shipping viene utilizzato in combinazione con la replica, si noti quanto segue:  
@@ -33,7 +38,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Per garantire la disponibilità del database di pubblicazione è consigliabile utilizzare il mirroring del database invece del log shipping. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
-## Requisiti e procedure per la replica dal database secondario se quello primario viene perso  
+## <a name="requirements-and-procedures-for-replicating-from-the-secondary-if-the-primary-is-lost"></a>Requisiti e procedure per la replica dal database secondario se quello primario viene perso  
  Tenere presenti i requisiti e le considerazioni seguenti:  
   
 -   Se nel server primario sono inclusi più database di pubblicazione, distribuire i log per tutti i database di pubblicazione allo stesso server secondario.  
@@ -44,8 +49,8 @@ caps.handback.revision: 30
   
 -   Il log shipping non costituisce una garanzia completa contro la perdita di dati. Un errore nel database primario può provocare la perdita di dati di cui non è ancora stato eseguito il backup o di copie di backup andate perse quando si è verificato l'errore.  
   
-### Log shipping con replica transazionale  
- Nel caso della replica transazionale, il funzionamento del log shipping dipende dall'opzione **sync with backup**. Questa opzione può essere impostata nel database di pubblicazione e nel database di distribuzione. Nel caso del log shipping per il server di pubblicazione, è importante che l'opzione sia impostata nel database di pubblicazione.  
+### <a name="log-shipping-with-transactional-replication"></a>Log shipping con replica transazionale  
+ Nel caso della replica transazionale, il funzionamento del log shipping dipende dall'opzione **sync with backup** . Questa opzione può essere impostata nel database di pubblicazione e nel database di distribuzione. Nel caso del log shipping per il server di pubblicazione, è importante che l'opzione sia impostata nel database di pubblicazione.  
   
  L'impostazione di questa opzione nel database di pubblicazione garantisce che le transazioni vengano recapitate al database di distribuzione solo dopo che è stato eseguito il backup nel database di pubblicazione. L'ultimo backup del database di pubblicazione può quindi essere ripristinato nel server secondario. In questo modo il database di distribuzione avrà le stesse transazioni del database di pubblicazione ripristinato. Questa opzione garantisce la consistenza tra server di pubblicazione, server di distribuzione e Sottoscrittori in caso di failover del server di pubblicazione in un server secondario. L'impostazione di questa opzione ha effetto sulla latenza e sulla velocità effettiva in quanto le transazioni non possono essere recapitate al database di distribuzione finché non ne viene eseguito il backup nel server di pubblicazione. Se l'applicazione in uso consente questa latenza, è consigliabile impostare l'opzione nel database di pubblicazione. Se l'opzione **sync with backup** non è impostata, i Sottoscrittori potrebbero ricevere modifiche che non sono più incluse nel database recuperato nel server secondario. Per altre informazioni, vedere [Strategie per il backup e il ripristino della replica snapshot e della replica transazionale](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 30
   
 2.  Configurare il log shipping per il database di pubblicazione. Per altre informazioni, vedere [Configurare il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-3.  Se si verifica un errore nel server di pubblicazione, ripristinare l'ultimo log del database nel server secondario mediante l'opzione KEEP_REPLICATION di RESTORE LOG. In questo modo vengono mantenute tutte le impostazioni di replica per il database. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Se si verifica un errore nel server di pubblicazione, ripristinare l'ultimo log del database nel server secondario mediante l'opzione KEEP_REPLICATION di RESTORE LOG. In questo modo vengono mantenute tutte le impostazioni di replica per il database. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Ripristinare i database **msdb** e **master** dal server primario al server secondario. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Se il server primario è anche un server di distribuzione, ripristinare il database di distribuzione dal server primario a quello secondario.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 30
   
 1.  Configurare il log shipping per il database di pubblicazione. Per altre informazioni, vedere [Configurare il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-2.  Se si verifica un errore nel server di pubblicazione, ripristinare l'ultimo log del database nel server secondario mediante l'opzione KEEP_REPLICATION di RESTORE LOG. In questo modo vengono mantenute tutte le impostazioni di replica per il database. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+2.  Se si verifica un errore nel server di pubblicazione, ripristinare l'ultimo log del database nel server secondario mediante l'opzione KEEP_REPLICATION di RESTORE LOG. In questo modo vengono mantenute tutte le impostazioni di replica per il database. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 3.  Ripristinare i database **msdb** e **master** dal server primario al server secondario. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Se il server primario è anche un server di distribuzione, ripristinare il database di distribuzione dal server primario a quello secondario.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 30
   
 8.  Le transazioni che sono già state distribuite al Sottoscrittore possono essere applicate al server di pubblicazione. Affinché non si verifichi un errore dell'agente di distribuzione durante il tentativo di riapplicazione di tali transazioni al Sottoscrittore, specificare il profilo agente **Continua in caso di errori di coerenza dei dati**.  
   
-### Log shipping con replica di tipo merge  
+### <a name="log-shipping-with-merge-replication"></a>Log shipping con replica di tipo merge  
  Eseguire la procedura seguente per configurare la replica di tipo merge e il log shipping.  
   
  **Per configurare la replica di tipo merge e il log shipping**  
@@ -96,7 +101,7 @@ caps.handback.revision: 30
   
 2.  In caso di errore del server di pubblicazione, nel server secondario rinominare il computer e quindi l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che i nuovi nomi corrispondano al nome del server primario. Per informazioni sulla ridenominazione di un computer, vedere la documentazione di Windows. Per informazioni sulla ridenominazione del server, vedere [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) e [Ridenominare un'istanza del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
-3.  Ripristinare l'ultimo log del database nel server secondario mediante l'opzione KEEP_REPLICATION di RESTORE LOG. In questo modo vengono mantenute tutte le impostazioni di replica per il database. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Ripristinare l'ultimo log del database nel server secondario mediante l'opzione KEEP_REPLICATION di RESTORE LOG. In questo modo vengono mantenute tutte le impostazioni di replica per il database. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) e [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Ripristinare i database **msdb** e **master** dal server primario al server secondario. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Se il server primario è anche un server di distribuzione, ripristinare il database di distribuzione dal server primario a quello secondario.  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 30
   
      Se si esegue la sincronizzazione con un Sottoscrittore che esegue una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la sottoscrizione non può essere anonima, ma deve essere una sottoscrizione client o una sottoscrizione server (chiamate sottoscrizioni locali e sottoscrizioni globali nelle versioni precedenti del prodotto). Per altre informazioni, vedere [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Caratteristiche e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Mirroring e replica del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

@@ -1,29 +1,34 @@
 ---
-title: "Informazioni sull&#39;accesso alla connessione client per le repliche di disponibilit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], repliche di disponibilità"
-  - "gruppi di disponibilità [SQL Server], repliche secondarie leggibili"
-  - "repliche secondarie attive [SQL Server], accesso di sola lettura"
-  - "gruppi di disponibilità [SQL Server], configurazione"
-  - "gruppi di disponibilità [SQL Server], connettività client"
-  - "gruppi di disponibilità [SQL Server], repliche secondarie attive"
+title: "Informazioni sull'accesso alla connessione client per le repliche di disponibilità (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], client connectivity
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5fd4c6e3172fb2386e1b683153df98e526f304ef
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Informazioni sull&#39;accesso alla connessione client per le repliche di disponibilit&#224; (SQL Server)
+# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informazioni sull'accesso alla connessione client per le repliche di disponibilità (SQL Server)
   In un gruppo di disponibilità AlwaysOn è possibile configurare una o più repliche di disponibilità per consentire connessioni di sola lettura quando in esecuzione nel ruolo secondario, ovvero quando in esecuzione come replica secondaria. È inoltre possibile configurare ogni replica di disponibilità per consentire o escludere le connessioni di sola lettura quando l'esecuzione avviene nel ruolo primario, ossia come replica primaria.  
   
  Per facilitare l'accesso client ai database primari o secondari di un determinato gruppo di disponibilità, è necessario definire un listener del gruppo di disponibilità. Per impostazione predefinita, il listener del gruppo di disponibilità instrada le connessioni in ingresso alla replica primaria. Tuttavia, è possibile configurare un gruppo di disponibilità per supportare il routing di sola lettura che consente al listener del gruppo di disponibilità di reinstradare le richieste di connessione di applicazioni con finalità di lettura a una replica secondaria leggibile. Per altre informazioni, vedere [Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
@@ -31,7 +36,7 @@ caps.handback.revision: 15
  Durante un failover, una replica secondaria assume il ruolo primario e la replica primaria precedente passa al ruolo secondario. Durante il processo di failover, tutte le connessioni client sia alla replica primaria sia alle repliche secondarie vengono terminate. Dopo il failover, quando un client si riconnette al listener del gruppo di disponibilità, il listener riconnette il client alla nuova replica primaria, ad eccezione di una richiesta di connessione con finalità di lettura. Se il routing di sola lettura viene configurato sul client e sulle istanze del server che ospitano la nuova replica primaria e su almeno un replica secondaria leggibile, le richieste di connessione con finalità di lettura vengono indirizzate nuovamente a una replica secondaria che supporta il tipo di accesso alla connessione richiesto dal client. Per garantire un'esperienza client senza problemi dopo un failover, è importante per configurare l'accesso alla connessione sia per i ruoli secondari, sia per quelli primari di ogni replica di disponibilità.  
   
 > [!NOTE]  
->  Per informazioni sul listener del gruppo di disponibilità che gestisce le richieste di connessione del client, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Per informazioni sul listener del gruppo di disponibilità che gestisce le richieste di connessione del client, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
  **Contenuto dell'argomento**  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 15
  Non sono consentite connessioni utente. I database secondari non sono disponibili per l'accesso in lettura. Si tratta del comportamento predefinito nel ruolo secondario.  
   
  Solo connessioni con finalità di lettura  
- I database secondari sono disponibili solo per le connessioni la cui proprietà di connessione **Finalità dell'applicazione** è impostata su **Sola lettura**, ovvero le *connessioni con finalità di lettura*.  
+ I database secondari sono disponibili solo per le connessioni la cui proprietà di connessione **Finalità dell'applicazione** è impostata su **Sola lettura** , ovvero le*connessioni con finalità di lettura*.  
   
  Per informazioni su questa proprietà di connessione, vedere [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -87,9 +92,9 @@ caps.handback.revision: 15
 |Primaria|Lettura/scrittura|Solo finalità di lettura|Failure|  
 |Primaria|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Operazione completata|  
   
- Per informazioni sulla configurazione di un gruppo di disponibilità in modo che accetti le connessioni dei client alle proprie repliche, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Per informazioni sulla configurazione di un gruppo di disponibilità in modo che accetti le connessioni dei client alle proprie repliche, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-### Esempio di configurazione dell'accesso alla connessione  
+### <a name="example-connection-access-configuration"></a>Esempio di configurazione dell'accesso alla connessione  
  A seconda della modalità di configurazione delle diverse repliche di disponibilità per l'accesso alla connessione, è possibile che il supporto per le connessioni client cambi dopo il failover di un gruppo di disponibilità. Ad esempio, si consideri un gruppo di disponibilità per il quale la creazione di report viene eseguita nelle repliche secondarie con commit asincrono remote. Per tutte le applicazioni di sola lettura per i database in questo gruppo di disponibilità la proprietà di connessione **Finalità dell'applicazione** è impostata su **Sola lettura**, in modo che tutte le connessioni in sola lettura abbiano finalità di lettura.  
   
  Questo gruppo di disponibilità di esempio dispone di due repliche con commit sincrono al centro del calcolo principale e due repliche con commit asincrono a un sito satellite. Per il ruolo primario, tutte le repliche vengono configurate per l'accesso di lettura/scrittura che impedisce le connessioni con finalità di lettura alla replica primaria in tutte le situazioni. Nel ruolo secondario con commit sincrono viene utilizzata la configurazione dell'accesso alla connessione predefinita ("nessuno") tramite cui vengono impedite tutte le connessioni client nel ruolo secondario.  Al contrario, le repliche con commit asincrono sono configurate per consentire le connessioni con finalità di lettura nel ruolo secondario. Nella tabella seguente viene riepilogata questa configurazione di esempio:  
@@ -119,11 +124,12 @@ caps.handback.revision: 15
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (Blog del team di SQL Server AlwaysOn: blog ufficiale del team di SQL Server AlwaysOn)](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (Blog del team di SQL Server AlwaysOn: blog ufficiale del team di SQL Server AlwaysOn)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiche](../../../relational-databases/statistics/statistics.md)  
   
   
+

@@ -1,25 +1,30 @@
 ---
-title: "Mirroring del database e log shipping (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mirroring del database [SQL Server], interoperabilità"
-  - "log shipping [SQL Server], mirroring del database"
+title: Mirroring del database e log shipping (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mirroring del database e log shipping (SQL Server)
+# <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
   Per un database specifico è possibile eseguire il mirroring o il log shipping oppure eseguire le due operazioni simultaneamente. Per scegliere l'approccio da utilizzare, considerare gli aspetti seguenti:  
   
 -   Numero di server di destinazione necessari  
@@ -35,20 +40,20 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Per informazioni introduttive su queste tecnologie, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md) e [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Combinazione del log shipping e del mirroring del database  
+## <a name="combining-log-shipping-and-database-mirroring"></a>Combinazione del log shipping e del mirroring del database  
  Il database principale in una sessione di mirroring può anche fungere da database primario in una configurazione per il log shipping o viceversa, se la condivisione di backup per il log shipping è integra. La sessione di mirroring del database viene eseguita in qualsiasi modalità operativa, sia sincrona (con la protezione delle transazioni impostata su FULL) che asincrona (con la protezione delle transazioni impostata su OFF).  
   
 > [!NOTE]  
 >  Per utilizzare il mirroring del database su un database è sempre necessario il modello di recupero con registrazione completa.  
   
- Quando si combinano il log shipping e il mirroring del database, benché non sia necessario, la sessione di mirroring viene in genere stabilita prima del log shipping. Il database principale corrente viene quindi configurato come database primario per il log shipping (*database principale/primario*), insieme a uno o più database secondari remoti. Il database mirror, inoltre, deve essere configurato come database primario per il log shipping (*database mirror/primario*). È consigliabile che i database secondari per il log shipping siano presenti in istanze del server diverse rispetto al server principale/primario o al server mirror/primario.  
+ Quando si combinano il log shipping e il mirroring del database, benché non sia necessario, la sessione di mirroring viene in genere stabilita prima del log shipping. Il database principale corrente viene quindi configurato come database primario per il log shipping ( *database principale/primario*), insieme a uno o più database secondari remoti. Il database mirror, inoltre, deve essere configurato come database primario per il log shipping ( *database mirror/primario*). È consigliabile che i database secondari per il log shipping siano presenti in istanze del server diverse rispetto al server principale/primario o al server mirror/primario.  
   
 > [!NOTE]  
 >  Le impostazioni relative alla distinzione tra maiuscole e minuscole dei server implicati nel log shipping devono corrispondere.  
   
  Durante una sessione di log shipping, i processi di backup nel database primario comportano la creazione di backup del log in una cartella di backup. Da questa cartella i backup vengono copiati tramite i processi di copia dei server secondari. Ai fini della corretta esecuzione, è necessario che i processi di backup e di copia possano accedere alla cartella di backup per il log shipping. Per ottimizzare la disponibilità del server primario, è consigliabile definire la cartella di backup in un percorso di backup condiviso in un computer host distinto. Assicurarsi che tutti i server per il log shipping, incluso il server mirror/primario, possano accedere al percorso di backup condiviso, noto come *condivisione di backup*.  
   
- Per consentire il proseguimento del log shipping in seguito a un errore di mirroring del database, è inoltre necessario configurare il server mirror come server primario utilizzando la stessa configurazione del database primario nel database principale. Il database mirror è in stato di ripristino, che impedisce ai processi di backup di eseguire il backup del log nel database mirror. Questo comportamento garantisce che il database mirror/primario non interferisca con il database principale/primario i cui backup del log vengono copiati dai server secondari. Per evitare avvisi non corretti, in seguito all'esecuzione del processo di backup nel database mirror/primario, il log del processo di backup registra un messaggio nella tabella **log_shipping_monitor_history_detail** e il processo agente restituisce uno stato con esito positivo.  
+ Per consentire il proseguimento del log shipping in seguito a un errore di mirroring del database, è inoltre necessario configurare il server mirror come server primario utilizzando la stessa configurazione del database primario nel database principale. Il database mirror è in stato di ripristino, che impedisce ai processi di backup di eseguire il backup del log nel database mirror. Questo comportamento garantisce che il database mirror/primario non interferisca con il database principale/primario i cui backup del log vengono copiati dai server secondari. Per evitare avvisi non corretti, in seguito all'esecuzione del processo di backup nel database mirror/primario, il log del processo di backup registra un messaggio nella tabella**log_shipping_monitor_history_detail** e il processo agente restituisce uno stato con esito positivo.  
   
  Il database mirror/primario è inattivo durante la sessione di log shipping. Se, tuttavia, il mirroring ha esito negativo, il database mirror precedente viene portato online come database principale. A questo punto, il database viene inoltre attivato come database primario per il log shipping. I processi di backup per il log shipping precedentemente non disponibili per distribuire il log nel database avviano la distribuzione. Al contrario, un failover fa sì che il database principale/primario precedente venga impostato come nuovo database mirror/primario e sia in stato di ripristino e che i processi di backup nel database non eseguano più il backup del log.  
   
@@ -59,24 +64,24 @@ caps.handback.revision: 36
   
  Quando si utilizza un server di monitoraggio log shipping locale, non è necessaria alcuna considerazione specifica ai fini di questo scenario. Per informazioni sull'utilizzo di un'istanza di monitoraggio remota con questo scenario, vedere "Impatto del mirroring del database su un'istanza di monitoraggio remota" più avanti in questo argomento.  
   
-## Failover dal database principale al database mirror  
- Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. Il **Server_B** rappresenta il server mirror ed è inoltre configurato come server primario, attualmente non attivo. I **Server_C** e **Server_D** rappresentano i server secondari per il log shipping. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
+## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover dal database principale al database mirror  
+ Nella figura seguente viene illustrata la combinazione del log shipping e del mirroring del database quando il mirroring viene eseguito in modalità a sicurezza elevata con failover automatico. Inizialmente il **Server_A** rappresenta sia il server principale per il mirroring, sia il server primario per il log shipping. Il**Server_B** rappresenta il server mirror ed è inoltre configurato come server primario, attualmente non attivo. I**Server_C** e **Server_D** rappresentano i server secondari per il log shipping. Per ottimizzare la disponibilità della sessione di log shipping, il percorso di backup è incluso in una directory condivisa di un computer host distinto.  
   
  ![Log shipping e mirroring del database](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping e mirroring del database")  
   
  In seguito a un failover del mirroring, il nome del server primario definito nel server secondario risulta inalterato .  
   
-## Impatto del mirroring del database su un'istanza di monitoraggio remota  
+## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Impatto del mirroring del database su un'istanza di monitoraggio remota  
  Quando il log shipping viene utilizzato con un'istanza di monitoraggio remota, la combinazione della sessione di log shipping e del mirroring del database influisce sulle informazioni incluse nelle tabelle di monitoraggio. Le informazioni sul server primario rappresentano una combinazione di quelle configurate nel server principale/primario e del server di monitoraggio configurato in ogni server secondario.  
   
  Per mantenere il monitoraggio il più semplice possibile, quando si utilizza un server di monitoraggio remoto è consigliabile specificare il nome del server primario originale durante la configurazione del server primario nel server secondario. Questo approccio semplifica la modifica della configurazione per il log shipping tramite Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sul monitoraggio, vedere [Monitorare il log shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md).  
   
-## Impostazione della combinazione di mirroring e log shipping  
+## <a name="setting-up-mirroring-and-log-shipping-together"></a>Impostazione della combinazione di mirroring e log shipping  
  Per impostare insieme il mirroring del database e il log shipping, è necessario attenersi alla procedura seguente:  
   
 1.  Ripristinare i backup del database principale/primario con NORECOVERY in un'altra istanza del server per utilizzarli in seguito come database mirror per il mirroring del database principale/primario. Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-2.  Impostare il mirroring del database. Per altre informazioni, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) o [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+2.  Impostare il mirroring del database. Per altre informazioni, vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) o [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 3.  Ripristinare i backup del database principale/primario in altre istanze del server per utilizzarli in seguito come database secondari del log shipping per il database primario.  
   

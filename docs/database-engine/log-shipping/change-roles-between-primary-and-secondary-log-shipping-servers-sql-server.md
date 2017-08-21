@@ -1,32 +1,37 @@
 ---
-title: "Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log shipping [SQL Server], modifiche dei ruoli"
-  - "secondary data files [SQL Server], ruoli modificati tra"
-  - "database primari [SQL Server]"
-  - "modifiche iniziali del ruolo [SQL Server]"
-  - "log shipping [SQL Server], failover"
-  - "failover [SQL Server], log shipping"
+title: Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], role changes
+- secondary data files [SQL Server], roles changed between
+- primary databases [SQL Server]
+- initial role changes [SQL Server]
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server)
+# <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server)
   Dopo aver eseguito il failover di una configurazione per il log shipping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un server secondario, è possibile configurare il database secondario per operare come database primario. Sarà quindi possibile scambiare il database primario e quello secondario in base alle proprie esigenze.  
   
-## Esecuzione della modifica iniziale del ruolo  
+## <a name="performing-the-initial-role-change"></a>Esecuzione della modifica iniziale del ruolo  
  La prima volta che si desidera eseguire il failover al database secondario e impostarlo come nuovo database primario, è necessario eseguire alcuni passaggi specifici. Dopo avere eseguito tali passaggi iniziali, sarà possibile scambiare i ruoli tra database primario e secondario in modo semplice.  
   
 1.  Eseguire manualmente il failover dal database primario a un database secondario. Eseguire il backup del log delle transazioni attive nel server primario con l'opzione NORECOVERY. Per altre informazioni, vedere [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md).  
@@ -67,7 +72,7 @@ caps.handback.revision: 20
         GO  
         ```  
   
-## Scambio di ruoli  
+## <a name="swapping-roles"></a>Scambio di ruoli  
  Dopo avere completato i passaggi descritti in precedenza per la modifica iniziale dei ruoli, è possibile scambiare i ruoli tra il database primario e quello secondario eseguendo i passaggi indicati in questa sezione. Per modificare i ruoli, eseguire la procedura seguente:  
   
 1.  Portare online il database secondario, eseguendo il backup del log delle transazioni nel server primario con l'opzione NORECOVERY.  
@@ -77,7 +82,7 @@ caps.handback.revision: 20
 3.  Abilitare il processo di backup per il log shipping nel server secondario, ovvero il nuovo server primario, e i processi di copia e ripristino nel server primario, ovvero il nuovo server secondario.  
   
 > [!IMPORTANT]  
->  Se si modifica un database secondario in database primario per offrire a utenti e applicazioni un sistema più coerente, potrebbe essere necessario ricreare alcuni o tutti i metadati del database, ad esempio account di accesso e processi, nell'istanza del nuovo server primario. Per altre informazioni, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+>  Se si modifica un database secondario in database primario per offrire a utenti e applicazioni un sistema più coerente, potrebbe essere necessario ricreare alcuni o tutti i metadati del database, ad esempio account di accesso e processi, nell'istanza del nuovo server primario. Per altre informazioni, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 20
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e stored procedure relative al log shipping](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "Clustering di failover e gruppi di disponibilit&#224; Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clustering [SQL Server]"
-  - "gruppi di disponibilità [SQL Server], cluster WSFC"
-  - "Istanze del cluster di failover [SQL Server], vedere clustering di failover [SQL Server]"
-  - "quorum [SQL Server]"
-  - "clustering di failover [SQL Server], gruppi di disponibilità AlwaysOn "
-  - "Gruppi di disponibilità [SQL Server], istanze del cluster di failover"
+title: "Clustering di failover e gruppi di disponibilità Always On (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [SQL Server]
+- Availability Groups [SQL Server], WSFC clusters
+- Failover Cluster Instances [SQL Server], see failover clustering [SQL Server]
+- quorum [SQL Server]
+- failover clustering [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
----
-# Clustering di failover e gruppi di disponibilit&#224; Always On (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c1184d2ea29ccf64159df67950b5b078010e73a7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la soluzione di ripristino di emergenza a disponibilità elevata introdotta in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], richiede WSFC (Windows Server Failover Clustering). Sebbene inoltre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipenda dal clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è possibile utilizzare un'istanza di clustering di failover per ospitare una replica di disponibilità per un gruppo di disponibilità. È importante conoscere la funzione di ogni tecnologia di clustering e sapere quali sono le considerazioni necessarie per la progettazione di un ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+---
+# <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la soluzione di ripristino di emergenza a disponibilità elevata introdotta in [!INCLUDE[sssql11](../../../includes/sssql11_md.md)], richiede WSFC (Windows Server Failover Clustering). Sebbene inoltre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipenda dal clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è possibile utilizzare un'istanza di clustering di failover per ospitare una replica di disponibilità per un gruppo di disponibilità. È importante conoscere la funzione di ogni tecnologia di clustering e sapere quali sono le considerazioni necessarie per la progettazione di un ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > [!NOTE]  
->  Per informazioni sui concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+>  Per informazioni sui concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  **Contenuto dell'argomento**  
   
@@ -53,8 +58,8 @@ caps.handback.revision: 47
   
  Per informazioni sull'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nei nodi WSFC (Windows Server Failover Clustering) e sul quorum WSFC, vedere [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-### Migrazione tra cluster di gruppi di disponibilità Always On per l'aggiornamento del sistema operativo  
- A partire da [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è supportata migrazione tra cluster di gruppi di disponibilità per distribuzioni in un nuovo cluster WSFC (Windows Server Failover Clustering). In una migrazione tra cluster un gruppo o un batch di gruppi di disponibilità viene spostato nel nuovo cluster WSFC di destinazione con tempi di inattività minimi. Il processo di migrazione tra cluster consente di gestire i contratti di servizio (SLA, Service Level Agreement) durante l'aggiornamento a un cluster [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (o versioni successive) deve essere installato e abilitato per Always On nel cluster WSFC di destinazione. L'esito positivo della migrazione tra cluster dipende da una pianificazione e una preparazione dettagliate del cluster WSFC di destinazione.  
+### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Migrazione tra cluster di gruppi di disponibilità Always On per l'aggiornamento del sistema operativo  
+ A partire da [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è supportata migrazione tra cluster di gruppi di disponibilità per distribuzioni in un nuovo cluster WSFC (Windows Server Failover Clustering). In una migrazione tra cluster un gruppo o un batch di gruppi di disponibilità viene spostato nel nuovo cluster WSFC di destinazione con tempi di inattività minimi. Il processo di migrazione tra cluster consente di gestire i contratti di servizio (SLA, Service Level Agreement) durante l'aggiornamento a un cluster [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (o versioni successive) deve essere installato e abilitato per Always On nel cluster WSFC di destinazione. L'esito positivo della migrazione tra cluster dipende da una pianificazione e una preparazione dettagliate del cluster WSFC di destinazione.  
   
  Per altre informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità Always On per l'aggiornamento del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
   
@@ -63,9 +68,9 @@ caps.handback.revision: 47
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipende da alcun mezzo di archiviazione condivisa. Tuttavia, se si utilizza un'istanza del cluster di failover (FCI) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ospitare una o più repliche di disponibilità, per ognuna di queste FCI sarà richiesta l'archiviazione condivisa in base all'installazione dell'istanza del cluster di failover di SQL Server standard.  
   
- Per altre informazioni sui prerequisiti aggiuntivi, vedere la sezione "Prerequisiti e restrizioni per l'uso di un'istanza del cluster di failover di SQL Server per ospitare una replica di disponibilità" di [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Per altre informazioni sui prerequisiti aggiuntivi, vedere la sezione "Prerequisiti e restrizioni per l'uso di un'istanza del cluster di failover di SQL Server per ospitare una replica di disponibilità" di [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### Confronto tra le istanze del cluster di failover e i gruppi di disponibilità  
+### <a name="comparison-of-failover-cluster-instances-and-availability-groups"></a>Confronto tra le istanze del cluster di failover e i gruppi di disponibilità  
  Indipendentemente dal numero di nodi nell'istanza FCI, in un'intera FCI viene ospitata una sola replica all'interno di un gruppo di disponibilità. Nella tabella seguente sono descritte le differenze dei concetti tra i nodi di un'istanza FCI e le repliche all'interno di un gruppo di disponibilità.  
   
 ||Nodi all'interno di un'istanza FCI|Repliche all'interno di un gruppo di disponibilità|  
@@ -78,17 +83,17 @@ caps.handback.revision: 47
 |**Impostazioni dei criteri di failover applicabili**|Quorum WSFC<br /><br /> Specifiche per FCI<br /><br /> Impostazioni dei gruppi di disponibilità*|Quorum WSFC<br /><br /> Impostazioni dei gruppi di disponibilità|  
 |**Risorse di cui è stato eseguito il failover**|Server, istanza e database|Solo database|  
   
- * Mentre le repliche secondarie sincrone di un gruppo di disponibilità sono sempre in esecuzione nelle rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i nodi secondari in un'istanza del cluster di failover non hanno avviato le rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi non sono leggibili. In un'istanza FCI, un nodo secondario consente di avviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo quando la proprietà del gruppo di risorse viene trasferita a questo nodo durante un failover dell'istanza FCI. Tuttavia, nel nodo FCI attivo, se un database ospitato da FCI appartiene a un gruppo di disponibilità e la replica di disponibilità locale è in esecuzione come replica secondaria leggibile, il database è leggibile.  
+ * Mentre le repliche secondarie sincrone di un gruppo di disponibilità sono sempre in esecuzione nelle rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , i nodi secondari in un'istanza del cluster di failover non hanno avviato le rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi non sono leggibili. In un'istanza FCI, un nodo secondario consente di avviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo quando la proprietà del gruppo di risorse viene trasferita a questo nodo durante un failover dell'istanza FCI. Tuttavia, nel nodo FCI attivo, se un database ospitato da FCI appartiene a un gruppo di disponibilità e la replica di disponibilità locale è in esecuzione come replica secondaria leggibile, il database è leggibile.  
   
  ** Le impostazioni dei criteri di failover per il gruppo di disponibilità si applicano a tutte le repliche, indipendentemente dal fatto che siano ospitate in un'istanza autonoma o in un'istanza del cluster di failover.  
   
 > [!NOTE]  
 >  Per altre informazioni sul **numero di nodi** all'interno di clustering di failover e **Gruppi di disponibilità Always On** per edizioni diverse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
-### Considerazioni sull'hosting di una replica di disponibilità in un'istanza FCI  
+### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerazioni sull'hosting di una replica di disponibilità in un'istanza FCI  
   
 > [!IMPORTANT]  
->  Se si intende ospitare una replica di disponibilità in un'istanza del cluster di failover di SQL Server (FCI), assicurarsi che i nodi host di Windows Server 2008 soddisfino i prerequisiti e le restrizioni di Always On per le istanze del cluster di failover (FCI). Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+>  Se si intende ospitare una replica di disponibilità in un'istanza del cluster di failover di SQL Server (FCI), assicurarsi che i nodi host di Windows Server 2008 soddisfino i prerequisiti e le restrizioni di Always On per le istanze del cluster di failover (FCI). Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha istanze del cluster di failover che non supportano il failover automatico da gruppi di disponibilità, quindi le repliche di disponibilità ospitate da un'istanza del cluster di failover possono essere configurate solo per il failover manuale.  
   
@@ -98,13 +103,13 @@ caps.handback.revision: 47
   
  Nello scenario di esempio seguente si descrivono i potenziali problemi causati da questa configurazione:  
   
- Marcel configura un cluster WSFC con due nodi, `NODE01` e `NODE02`. Installa un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `fciInstance1`, sia in `NODE01` sia in `NODE02` dove `NODE01` è il proprietario corrente di `fciInstance1`.  
- In `NODE02` Marcel installa un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, che è un'istanza autonoma.  
- In `NODE01` Marcel abilita fciInstance1 per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. In `NODE02`abilita `Instance3` per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Successivamente configura un gruppo di disponibilità per il quale in `fciInstance1` è ospitata la replica primaria e in `Instance3` quella secondaria.  
- A un certo punto `fciInstance1` non è più disponibile in `NODE01` e il cluster WSFC comporta il failover di `fciInstance1` in `NODE02`. Dopo il failover, `fciInstance1` è un'istanza abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in esecuzione nel ruolo primario di `NODE02`. Tuttavia, `Instance3` si trova ora nello stesso nodo WSFC di `fciInstance1`. Viene pertanto violato il vincolo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+ Marcel configura un cluster WSFC con due nodi, `NODE01` e `NODE02`. Installa un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , `fciInstance1`, sia in `NODE01` sia in `NODE02` dove `NODE01` è il proprietario corrente di `fciInstance1`.  
+ In `NODE02`Marcel installa un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, che è un'istanza autonoma.  
+ In `NODE01`Marcel abilita fciInstance1 per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. In `NODE02`abilita `Instance3` per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Successivamente configura un gruppo di disponibilità per il quale in `fciInstance1` è ospitata la replica primaria e in `Instance3` quella secondaria.  
+ A un certo punto `fciInstance1` non è più disponibile in `NODE01`e il cluster WSFC comporta il failover di `fciInstance1` in `NODE02`. Dopo il failover, `fciInstance1` è un'istanza abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]in esecuzione nel ruolo primario di `NODE02`. Tuttavia, `Instance3` si trova ora nello stesso nodo WSFC di `fciInstance1`. Viene pertanto violato il vincolo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
  Per risolvere il problema presentato in questo scenario, l'istanza autonoma, `Instance3`, deve trovarsi in un altro nodo dello stesso cluster WSFC come per `NODE01` e `NODE02`.  
   
- Per altre informazioni sul clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Per altre informazioni sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 ##  <a name="FCMrestrictions"></a> Le restrizioni sull'utilizzo di Gestione cluster di failover WSFC con i gruppi di disponibilità  
  Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità, ad esempio:  
@@ -119,9 +124,9 @@ caps.handback.revision: 47
   
 -   **Blog:**  
   
-     [Pagina relativa alla configurazione del clustering di failover di Windows per SQL Server (gruppo di disponibilità o FCI) con sicurezza limitata](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [Pagina relativa alla configurazione del clustering di failover di Windows per SQL Server (gruppo di disponibilità o FCI) con sicurezza limitata](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
   
@@ -135,10 +140,11 @@ caps.handback.revision: 47
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Abilitare e disabilitare la funzionalità Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
+ [Abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
+

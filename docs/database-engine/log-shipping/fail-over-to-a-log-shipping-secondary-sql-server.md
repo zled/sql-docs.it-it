@@ -1,35 +1,40 @@
 ---
-title: "Failover su un database secondario per il log shipping (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "database primari [SQL Server]"
-  - "file di dati secondari [SQL Server], failover manuale"
-  - "log shipping [SQL Server], failover"
-  - "failover [SQL Server], log shipping"
+title: Failover su un database secondario per il log shipping (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- primary databases [SQL Server]
+- secondary data files [SQL Server], manual fail over
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 93360a54442a6a959b7044288bd74d16f13fa559
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Failover su un database secondario per il log shipping (SQL Server)
+# <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover su un database secondario per il log shipping (SQL Server)
   L'esecuzione del failover in un database secondario per il log shipping è utile in caso di errore o di manutenzione dell'istanza del server primario.  
   
-## Preparazione di un failover controllato  
+## <a name="preparing-for-a-controlled-failover"></a>Preparazione di un failover controllato  
  I database primario e secondario non sono in genere sincronizzati, in quanto il database primario continua a essere aggiornato dopo l'ultimo processo di backup. In alcuni casi, inoltre, i backup del log delle transazioni recenti non sono stati copiati nelle istanze del server secondario oppure è possibile che alcuni backup del log copiati non siano stati ancora applicati al database secondario. Se possibile, è consigliabile iniziare con la sincronizzazione di tutti i database secondari con il database primario.  
   
  Per informazioni sui processi per il log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Esecuzione del failover  
+## <a name="failing-over"></a>Esecuzione del failover  
  Per eseguire il failover su un database secondario, eseguire le operazioni seguenti:  
   
 1.  Copiare i file di backup non ancora copiati dalla condivisione di backup alla cartella di destinazione della copia in ogni server secondario.  
@@ -45,7 +50,7 @@ caps.handback.revision: 31
 4.  Dopo la sincronizzazione dei server secondari, è possibile eseguire il failover su qualsiasi server recuperando il relativo database secondario e reindirizzando i client a quell'istanza del server. L'operazione di recupero consente di rendere consistente il database e di portarlo online.  
   
     > [!NOTE]  
-    >  Quando si rende disponibile un database secondario, è necessario assicurarsi che i relativi metadati siano coerenti con quelli del database primario originale. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+    >  Quando si rende disponibile un database secondario, è necessario assicurarsi che i relativi metadati siano coerenti con quelli del database primario originale. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  Dopo il recupero di un database secondario, è possibile riconfigurarlo affinché funga da database primario per altri database secondari.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 31
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e stored procedure relative al log shipping](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)   
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  

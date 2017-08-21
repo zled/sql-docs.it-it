@@ -1,40 +1,45 @@
 ---
-title: "Pagina Specifica repliche (Creazione guidata Gruppo di disponibilit&#224;: Aggiungi replica) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.newagwizard.listeners.f1"
-  - "sql13.swb.addreplicawizard.specifyreplicas.f1"
-  - "sql13.swb.newagwizard.specifyreplicas.f1"
+title: "Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità/Aggiungi replica) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.newagwizard.listeners.f1
+- sql13.swb.addreplicawizard.specifyreplicas.f1
+- sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pagina Specifica repliche (Creazione guidata Gruppo di disponibilit&#224;: Aggiungi replica)
-  In questo argomento vengono descritte le opzioni della pagina **Specifica repliche** . Questa pagina si trova nella [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite la pagina **Specifica repliche** è possibile specificare e configurare una o più repliche di disponibilità da aggiungere al gruppo di disponibilità. Nella pagina sono presenti quattro schede, presentate nella tabella seguente. Fare clic sul nome di una scheda nella tabella per accedere alla sezione corrispondente, più avanti in questo argomento.  
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Aggiungi replica)
+  In questo argomento vengono descritte le opzioni della pagina **Specifica repliche** . Questa pagina si trova nella **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e nella **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Tramite la pagina **Specifica repliche** è possibile specificare e configurare una o più repliche di disponibilità da aggiungere al gruppo di disponibilità. Nella pagina sono presenti quattro schede, presentate nella tabella seguente. Fare clic sul nome di una scheda nella tabella per accedere alla sezione corrispondente, più avanti in questo argomento.  
   
 |Scheda|Breve descrizione|  
 |---------|-----------------------|  
-|[Repliche](#ReplicasTab)|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà o ospita attualmente una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.<br /><br /> Completare specificando tutte le repliche nella scheda **Repliche** prima di iniziare le altre schede.|  
+|[Repliche](#ReplicasTab)|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà o ospita attualmente una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.<br /><br /> Completare specificando tutte le repliche nella scheda **Repliche** prima di iniziare le altre schede.<br/><br/> Nota: il **failover automatico** è disabilitato se il tipo di cluster è **NONE**. SQL Server supporta solo il failover manuale quando un gruppo di disponibilità non è presente in un cluster. <br/><br/> Quando il tipo di cluster è EXTERNAL, la modalità di failover è **Esterno**. <br/><br/> Quando si aggiunge una replica, tutte le nuove repliche devono trovarsi nello stesso tipo di sistema operativo delle repliche esistenti. <br/><br/>Quando si aggiunge una replica, se la replica primaria è in un cluster WSFC, le repliche secondarie devono essere nello stesso cluster.|
 |[Endpoint](#EndpointsTab)|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente.|  
 |[Preferenze di backup](#BackupPreferencesTab)|Usare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso e le priorità di backup per le singole repliche di disponibilità.|  
-|[Listener](#Listener)|Utilizzare questa scheda, se disponibile, per creare un listener del gruppo di disponibilità. Per impostazione predefinita, non viene creato un listener.<br /><br /> Questa scheda è disponibile solo se si esegue la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
+|[Listener](#Listener)|Utilizzare questa scheda, se disponibile, per creare un listener del gruppo di disponibilità. Per impostazione predefinita, non viene creato un listener.<br /><br /> Questa scheda è disponibile solo se si esegue la [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP è disabilitato quando il tipo di cluster è EXTERNAL o NESSUNO. |  
   
 ##  <a name="ReplicasTab"></a> Scheda Repliche  
  **Istanza del server**  
  Consente di visualizzare il nome dell'istanza del server che ospiterà la replica di disponibilità.  
   
- Se un'istanza del server utilizzata per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con repliche secondarie in Windows Azure.  
+ Se un'istanza del server che si pensa di usare per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con repliche secondarie in Windows Azure.  
   
  **Ruolo iniziale**  
  Indica il ruolo che verrà inizialmente svolto dalla nuova replica: **Primario** o **Secondario**.  
@@ -45,12 +50,12 @@ caps.handback.revision: 35
  Per informazioni sulla modalità di disponibilità con commit sincrono, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). Per informazioni sul failover automatico, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Commit sincrono (fino a 3)**  
- Se è stata selezionata l'opzione **Failover automatico (fino a 3)** per la replica, verrà anche selezionata l'opzione **Commit sincrono (fino a 3)**. Se la casella di controllo è vuota, selezionarla solo se si desidera che la modalità con commit sincrono venga utilizzata dalla replica solo con il failover manuale pianificato. La modalità con commit sincrono può essere utilizzata solo da tre repliche.  
+ Se è stata selezionata l'opzione **Failover automatico (fino a 3)** per la replica, verrà anche selezionata l'opzione **Commit sincrono (fino a 3)** . Se la casella di controllo è vuota, selezionarla solo se si desidera che la modalità con commit sincrono venga utilizzata dalla replica solo con il failover manuale pianificato. La modalità con commit sincrono può essere utilizzata solo da tre repliche.  
   
  Se si desidera utilizzare la modalità di disponibilità con commit asincrono per questa replica, lasciare vuota questa casella di controllo. La replica supporterà solo il failover manuale forzato (con possibile perdita di dati). Per informazioni sulla modalità di disponibilità con commit asincrono, vedere [Modalità di disponibilità &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). Per informazioni sul failover manuale pianificato e sul failover manuale forzato, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Ruolo secondario leggibile**  
- Selezionare un valore dall'elenco a discesa **Secondario leggibile**, come indicato di seguito:  
+ Selezionare un valore dall'elenco a discesa **Secondario leggibile** , come indicato di seguito:  
   
  **No**  
  Non sono consentite connessioni dirette ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Si tratta dell'impostazione predefinita.  
@@ -77,7 +82,7 @@ caps.handback.revision: 35
  Visualizza il nome di un'istanza del server che ospiterà una replica di disponibilità.  
   
  **URL endpoint**  
- Visualizza l'URL effettivo o proposto dell'endpoint del mirroring del database. Per un nuovo endpoint proposto, è possibile modificare questo valore. Per informazioni sul formato di questi URL, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md).  
+ Visualizza l'URL effettivo o proposto dell'endpoint del mirroring del database. Per un nuovo endpoint proposto, è possibile modificare questo valore. Per informazioni sul formato di questi URL, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Numero di porta**  
  Visualizza il numero di porta effettivo o proposto dell'endpoint. Per un nuovo endpoint proposto, è possibile modificare questo valore.  
@@ -89,7 +94,7 @@ caps.handback.revision: 35
  Indica se i dati inviati su questo endpoint sono crittografati. Per un nuovo endpoint proposto, è possibile modificare questa impostazione.  
   
  **Account del servizio SQL Server**  
- Nome utente dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Nome utente dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Affinché in un'istanza del server si utilizzi un endpoint che prevede l'autenticazione di Windows, l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere un account di dominio.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 35
   
     -   Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per modificare l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un account di dominio. Per altre informazioni, vedere [Modificare l'account di avvio del servizio di SQL Server &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
   
-    -   Utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per creare manualmente un endpoint del mirroring del database in cui venga utilizzato un certificato. Per altre informazioni, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) o [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell di SQL Server&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md).  
+    -   Utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per creare manualmente un endpoint del mirroring del database in cui venga utilizzato un certificato. Per altre informazioni, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) o [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md).  
   
      Se si lascia aperta la pagina **Specifica repliche** durante la configurazione degli endpoint, tornare alla scheda **Endpoint** e fare clic su **Aggiorna** per aggiornare la griglia **Valori endpoint** .  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  L'impostazione della preferenza di backup non viene forzata. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
-### Griglia Priorità di backup replica  
+### <a name="replica-backup-priorities-grid"></a>Griglia Priorità di backup replica  
  Utilizzare la griglia **Priorità di backup replica** per specificare le priorità di backup per ciascuna replica del gruppo di disponibilità. La griglia include le colonne seguenti:  
   
  **Istanza del server**  
@@ -136,7 +141,7 @@ caps.handback.revision: 35
  Evita che questa replica di disponibilità venga scelta per l'esecuzione di backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
 ##  <a name="Listener"></a> Scheda Listener  
- Specificare la preferenza per un[listener del gruppo di disponibilità](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)che fornirà un punto di connessione client. I valori possibili sono:  
+ Specificare la preferenza per un[listener del gruppo di disponibilità](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)che fornirà un punto di connessione client. I valori possibili sono:  
   
  **Non creare ora un listener del gruppo di disponibilità.**  
  Selezionare questa opzione per ignorare questo passaggio. È possibile creare un listener in un secondo momento. Per altre informazioni, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -148,13 +153,13 @@ caps.handback.revision: 35
  Specificare il nome di rete del listener. Questo nome deve essere univoco nel dominio e può contenere solo caratteri alfanumerici, trattini (**-**) e caratteri di sottolineatura (**_**), in qualsiasi ordine. Se viene specificato tramite la scheda **Listener** , il nome DNS può avere una lunghezza massima di 15 caratteri.  
   
 > [!IMPORTANT]  
->  Se si immette un nome del listener DNS (o numero di porta) non valido nella scheda **Listener**, il pulsante **Avanti** è disabilitato nella pagina **Specifica repliche**.  
+>  Se si immette un nome del listener DNS (o numero di porta) non valido nella scheda **Listener** , il pulsante **Avanti** è disabilitato nella pagina **Specifica repliche** .  
   
  **Porta**  
  Specificare la porta TCP utilizzata dal listener.  
   
 > [!NOTE]  
->  Se si immette un numero di porta (o nome del listener DNS) non valido nella scheda **Listener**, il pulsante **Avanti** è disabilitato nella pagina **Specifica repliche**.  
+>  Se si immette un numero di porta (o nome del listener DNS) non valido nella scheda **Listener** , il pulsante **Avanti** è disabilitato nella pagina **Specifica repliche** .  
   
  **Modalità di rete**  
  Utilizzare l'elenco a discesa per selezionare la modalità di rete che verrà utilizzata da questo listener. I valori possibili sono:  
@@ -164,10 +169,10 @@ caps.handback.revision: 35
   
  Se si seleziona **Indirizzo IP statico** come modalità di rete (selezione predefinita), viene visualizzata una griglia con le colonne **Subnet** e **Indirizzo IP** e i pulsanti **Aggiungi** e **Rimuovi** associati. Si noti che la griglia è vuota finché non si aggiunge la prima subnet.  
   
- Colonna **Subnet**  
+ Colonna**Subnet**   
  Viene visualizzato l'indirizzo subnet selezionato per ogni subnet aggiunta per il listener.  
   
- Colonna **Indirizzo IP**  
+ Colonna**Indirizzo IP**   
  Viene visualizzato l'indirizzo IPv4 o IPv6 specificato per una determinata subnet.  
   
  **Aggiungi**  
@@ -177,7 +182,7 @@ caps.handback.revision: 35
  Fare clic per rimuovere la subnet attualmente selezionata nella griglia.  
   
  **DHCP**  
- Selezionare questa opzione se si desidera che il listener sia in ascolto su una sola subnet e utilizzi un indirizzo IPv4 dinamico assegnato da un server in cui viene eseguito il protocollo DHCP (Dynamic Host Configuration Protocol). DHCP è limitato a una sola subnet comune a ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità.  
+ Selezionare questa opzione se si desidera che il listener sia in ascolto su una sola subnet e utilizzi un indirizzo IPv4 dinamico assegnato da un server in cui viene eseguito il protocollo DHCP (Dynamic Host Configuration Protocol). DHCP è limitato a una sola subnet comune a ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità. DHCP non è disponibile per il tipo di cluster EXTERNAL o NONE.  
   
 > [!IMPORTANT]  
 >  Non è consigliabile utilizzare DHCP negli ambienti di produzione. Se si verifica un periodo di inattività e il lease IP DHCP scade, è necessario del tempo aggiuntivo per registrare il nuovo indirizzo IP della rete DHCP che è associato al nome DNS del listener e influisce sulla connettività client. DHCP può essere tranquillamente usato per la configurazione dell'ambiente di sviluppo e test per verificare le funzioni di base di gruppi di disponibilità e per l'integrazione con le applicazioni.  
@@ -205,11 +210,12 @@ caps.handback.revision: 35
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

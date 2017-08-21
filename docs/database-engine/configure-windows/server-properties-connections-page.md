@@ -1,35 +1,40 @@
 ---
-title: "Propriet&#224; server (pagina Connessioni) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+title: "Proprietà server (pagina Connessioni) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; server (pagina Connessioni)
+# <a name="server-properties---connections-page"></a>Proprietà server (pagina Connessioni)
   Utilizzare questa pagina per visualizzare o modificare le opzioni di connessione.  
   
-## Connessioni  
+## <a name="connections"></a>Connessioni  
  **Numero massimo di connessioni simultanee (0 = illimitato)**  
- Se questa opzione è impostata su un valore diverso da zero, limita il numero di connessioni consentite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se questa opzione è impostata su un valore diverso da zero, limita il numero di connessioni consentite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  L'impostazione di un valore basso, ad esempio 1 o 2, può impedire la connessione da parte degli amministratori ai fini dell'amministrazione del server. Tuttavia, è sempre possibile eseguire la connessione amministrativa dedicata.  
   
-## Opzioni di connessione predefinite  
- **Opzioni di connessione predefinite**  
+## <a name="default-connection-options"></a>Opzioni di connessione predefinite  
+ **Default connection options**  
  Specifica le opzioni di connessione predefinite descritte nella tabella seguente.  
   
 |Opzione di configurazione|Descrizione|  
@@ -52,25 +57,25 @@ caps.handback.revision: 27
   
  Per ulteriori informazioni sulle opzioni di connessione, cercare l'opzione specifica sulla documentazione online.  
   
-## Connessioni remote  
+## <a name="remote-server-connections"></a>Connessioni remote  
  **Consenti connessioni remote al server**  
  Controlla l'esecuzione di stored procedure dai server remoti che eseguono istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La selezione di questa casella di controllo ha lo stesso effetto dell'impostazione dell'opzione **sp_configureremote access** su 1. La deselezione della casella di controllo impedisce l'esecuzione di stored procedure da un server remoto.  
   
  **Timeout query remote (in secondi, 0 = nessun timeout)**  
- Specifica la durata (in secondi) di un'operazione remota prima del timeout di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è 600 secondi, corrispondente a un'attesa di 10 minuti.  
+ Specifica la durata (in secondi) di un'operazione remota prima del timeout di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il valore predefinito è 600 secondi, corrispondente a un'attesa di 10 minuti.  
   
  **Richiedi transazioni distribuite per le comunicazioni tra server**  
- Consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Per altre informazioni, vedere [Configurare l'opzione di configurazione del server remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Per altre informazioni, vedere [Configurare l'opzione di configurazione del server remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
-## Opzioni di visualizzazione delle pagine delle proprietà  
+## <a name="property-page-display-options"></a>Opzioni di visualizzazione delle pagine delle proprietà  
  **Valori configurati**  
  Consente di visualizzare i valori configurati per le opzioni nel riquadro. Se si modificano i valori, fare clic su **Valori correnti** per verificare se le modifiche sono diventate effettive. In caso contrario, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere prima riavviata.  
   
  **Valori correnti**  
  Consente di visualizzare i valori correnti per le opzioni contenute nel riquadro. I valori sono di sola lettura.  
   
-## Vedere anche  
- [Opzioni &#40;Esecuzione query: SQL Server: pagina Avanzate&#41;](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
+## <a name="see-also"></a>Vedere anche  
+ [Opzioni &#40;Esecuzione query: SQL Server: pagina Avanzate&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

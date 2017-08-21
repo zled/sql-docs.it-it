@@ -1,37 +1,42 @@
 ---
-title: "Informazioni sul log shipping (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "server secondari [SQL Server]"
-  - "log shipping [SQL Server], processi"
-  - "processi di copia [SQL Server]"
-  - "database primari [SQL Server]"
-  - "log shipping [SQL Server], monitoraggio"
-  - "log shipping [SQL Server], informazioni"
-  - "processi di avviso [SQL Server]"
-  - "disponibilità [SQL Server]"
-  - "processi [SQL Server], log shipping"
-  - "server di monitoraggio [SQL Server]"
-  - "processi di ripristino [SQL Server]"
-  - "log shipping [SQL Server]"
-  - "processi di backup [SQL Server]"
-  - "server primari [SQL Server]"
+title: Informazioni sul log shipping (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Informazioni sul log shipping (SQL Server)
+# <a name="about-log-shipping-sql-server"></a>Informazioni sul log shipping (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di inviare automaticamente i backup del log delle transazioni da un *database primario* in un'istanza del *server primario* a uno o più *database secondari* in istanze separate del *server secondario* . I backup del log delle transazioni vengono applicati singolarmente a ogni database secondario. Un terzo server facoltativo, noto come *server di monitoraggio*, registra la cronologia e lo stato delle operazioni di backup e di ripristino e genera avvisi nel caso in cui tali operazioni non vengano eseguite come previsto.  
   
  **Contenuto dell'argomento:**  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  È inoltre possibile configurare avvisi per la configurazione per il log shipping.  
   
-### Configurazione tipica per il log shipping  
+### <a name="a-typical-log-shipping-configuration"></a>Configurazione tipica per il log shipping  
  Nella figura seguente viene illustrata una configurazione per il log shipping con l'istanza del server primario, tre istanze del server secondario e un'istanza del server di monitoraggio. Nella figura vengono illustrati i passaggi eseguiti dai processi di backup, copia e ripristino:  
   
 1.  L'istanza del server primario esegue il processo di backup per eseguire il backup del log delle transazioni nel database primario. Il backup del log viene quindi inserito in un file di backup del log primario, che viene inviato alla cartella di backup.  In questa figura, la cartella di backup risiede in una directory condivisa, la *condivisione di backup*.  
@@ -127,7 +132,7 @@ caps.handback.revision: 65
 ##  <a name="Interoperability"></a> Interoperabilità  
  Il log shipping può essere utilizzato con le funzionalità o i componenti seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Mirroring del database e log shipping &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

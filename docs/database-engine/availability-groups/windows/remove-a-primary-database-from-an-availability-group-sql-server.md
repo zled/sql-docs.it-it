@@ -1,30 +1,35 @@
 ---
-title: "Rimuovere un database primario da un gruppo di disponibilit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeprimarydb.f1"
-helpviewer_keywords: 
-  - "database primari [SQL Server], in un gruppo di disponibilità"
-  - "gruppi di disponibilità [SQL Server], rimozione"
-  - "gruppi di disponibilità [SQL Server], configurazione"
-  - "Gruppi di disponibilità [SQL Server], database"
+title: "Rimuovere un database primario da un gruppo di disponibilità (SQL Server) | Microsoft docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeprimarydb.f1
+helpviewer_keywords:
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64c6b353bb46dd08f69823e85826fc93553e6e0d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Rimuovere un database primario da un gruppo di disponibilit&#224; (SQL Server)
-  Questo argomento illustra come rimuovere il database primario e il database o i database secondari corrispondenti da un gruppo di disponibilità Always On usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Rimuovere un database primario da un gruppo di disponibilità (SQL Server)
+  Questo argomento illustra come rimuovere il database primario e il database o i database secondari corrispondenti da un gruppo di disponibilità Always On usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Prima di iniziare:**  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 28
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria del database o dei database da rimuovere ed espandere l'albero del server.  
   
-2.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità**.  
+2.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità** .  
   
 3.  Selezionare il gruppo di disponibilità ed espandere il nodo **Database di disponibilità** .  
   
 4.  Questo passaggio dipende dalla scelta di rimuovere uno o più database:  
   
-    -   Per rimuovere più database, utilizzare il riquadro **Dettagli Esplora oggetti** per visualizzare e selezionare tutti i database che si desidera rimuovere. Per altre informazioni, vedere [Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Per rimuovere più database, utilizzare il riquadro **Dettagli Esplora oggetti** per visualizzare e selezionare tutti i database che si desidera rimuovere. Per altre informazioni, vedere [Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Per rimuovere un singolo database, selezionarlo nel riquadro **Esplora oggetti** o **Dettagli Esplora oggetti** .  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 28
   
      dove *group_name* è il nome del gruppo di disponibilità e *database_name* è il nome di un database da aggiungere al gruppo.  
   
-     Nell'esempio seguente viene rimosso un database denominato `Db6` dal gruppo di disponibilità `MyAG`.  
+     Nell'esempio seguente viene rimosso un database denominato `Db6` dal gruppo di disponibilità `MyAG` .  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
@@ -123,8 +128,9 @@ caps.handback.revision: 28
   
      Per altre informazioni, vedere [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Rimuovere un database secondario da un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
   
+

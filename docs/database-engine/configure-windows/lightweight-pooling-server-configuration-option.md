@@ -1,32 +1,37 @@
 ---
-title: "Opzione di configurazione del server lightweight pooling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "impostazione predefinita per lightweight pooling"
-  - "diminuzione di overhead"
-  - "lightweight pooling - opzione"
-  - "overhead di sistema [SQL Server]"
-  - "prestazioni [SQL Server], lightweight pooling"
-  - "cambio di contesto [SQL Server], opzione lightweight pooling"
-  - "cambio di contesto eccessivo [SQL Server]"
-  - "riduzione di overhead"
-  - "overhead [SQL Server]"
+title: Opzione di configurazione del server lightweight pooling | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default lightweight pooling
+- decreasing overhead
+- lightweight pooling option
+- system overhead [SQL Server]
+- performance [SQL Server], lightweight pooling
+- context switching [SQL Server], lightweight pooling option
+- excessive context switching [SQL Server]
+- reducing overhead
+- overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c82f1c64430cd45299b9378f86c6670841de2707
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Opzione di configurazione del server lightweight pooling
+# <a name="lightweight-pooling-server-configuration-option"></a>Opzione di configurazione del server lightweight pooling
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   L'opzione **lightweight pooling** consente di ridurre l'overhead del sistema associato a un'eccessiva attività di scambio del contesto che talvolta si riscontra negli ambienti SMP (multiprocessori simmetrici, Symmetric Multiprocessor). Quando si verifica un'eccessiva attività di cambio del contesto, l'opzione lightweight pooling può assicurare una migliore velocità effettiva eseguendo direttamente il cambio del contesto e quindi riducendo le transizioni utente/kernel ring.  
@@ -43,10 +48,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  L'esecuzione di CLR (Common Language Runtime) non è supportata nell'ambito dell'opzione lightweight pooling. Disabilitare una delle due opzioni tra "clr enabled" e "lightweight pooling". Le caratteristiche che si basano su CLR e che non funzionano correttamente in modalità fiber includono il tipo di dati hierarchy, la replica e la gestione basata su criteri.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzione di configurazione del server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opzione di configurazione del server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)  
   
   
+

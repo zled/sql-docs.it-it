@@ -1,25 +1,30 @@
 ---
-title: "Configurare il log shipping (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "log shipping [SQL Server], abilitazione"
-  - "log shipping [SQL Server], configurazione"
+title: Configurare il log shipping (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurare il log shipping (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
   In questo argomento viene descritto come configurare il log shipping in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
@@ -52,11 +57,11 @@ caps.handback.revision: 42
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin**.  
+ Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per configurare il log shipping  
+#### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   
 1.  Fare clic con il pulsante destro del mouse sul database da utilizzare come primario nella configurazione per il log shipping e quindi scegliere **Proprietà**.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 42
 14. Nella scheda **Inizializza database secondario** scegliere l'opzione che si intende utilizzare per inizializzare il database secondario.  
   
     > [!NOTE]  
-    >  Se si sceglie di configurare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modo da inizializzare il database secondario da un backup di database, i file di dati e di log del database secondario vengono inseriti nello stesso percorso dei file di dati e di log del database **master**. Questo percorso sarà probabilmente diverso da quello dei file di dati e di log del database primario.  
+    >  Se si sceglie di configurare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modo da inizializzare il database secondario da un backup di database, i file di dati e di log del database secondario vengono inseriti nello stesso percorso dei file di dati e di log del database **master** . Questo percorso sarà probabilmente diverso da quello dei file di dati e di log del database primario.  
   
 15. Nella casella **Cartella di destinazione per i file copiati** della scheda **Copia file** digitare il percorso della cartella in cui copiare i backup dei log delle transazioni. Spesso questa cartella si trova nel server secondario.  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per configurare il log shipping  
+#### <a name="to-configure-log-shipping"></a>Per configurare il log shipping  
   
 1.  Per inizializzare il database secondario, ripristinare un backup completo del database primario sul server secondario.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. Nel server primario eseguire [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) per aggiungere le informazioni necessarie relative al nuovo database secondario.  
   
-10. Nel server secondario abilitare i processi di copia e ripristino. Per altre informazioni, vedere [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+10. Nel server secondario abilitare i processi di copia e ripristino. Per altre informazioni, vedere [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -161,9 +166,9 @@ caps.handback.revision: 42
   
 -   [Monitorare il log shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
--   [Eseguire il failover in un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tabelle e stored procedure relative al log shipping](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

@@ -1,30 +1,35 @@
 ---
-title: "Modifica della modalit&#224; di autenticazione del server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "account sa"
-  - "autenticazione [SQL Server], modifica delle modalità"
-  - "modalità di autenticazione server [SQL Server]"
-  - "modifica della modalità di autenticazione server"
+title: "Modifica della modalità di autenticazione del server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sa account
+- authentication [SQL Server], changing modes
+- server authentication mode [SQL Server]
+- modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b2ad077cbd029cf1fa4b2ff0243c078467c17a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modifica della modalit&#224; di autenticazione del server
+# <a name="change-server-authentication-mode"></a>Modifica della modalità di autenticazione del server
   In questo argomento viene descritto come modificare la modalità di autenticazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante l'installazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è impostato su **Autenticazione di Windows** o **Autenticazione di SQL Server e di Windows**. Dopo l'installazione, è possibile modificare in qualsiasi momento la modalità di autenticazione.  
   
- Se si seleziona **Modalità di autenticazione di Windows** durante l'installazione, l'account di accesso sa viene disabilitato e il programma di installazione assegna una password. Se in seguito si modifica la modalità di autenticazione in **Autenticazione di SQL Server e di Windows**, l'account di accesso sa resterà disabilitato. Per usare l'account di accesso sa, usare l'istruzione ALTER LOGIN per abilitare l'account sa e assegnare una nuova password. È possibile connettersi al server tramite l'account sa solo se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se si seleziona **Modalità di autenticazione di Windows** durante l'installazione, l'account di accesso sa viene disabilitato e il programma di installazione assegna una password. Se in seguito si modifica la modalità di autenticazione in **Autenticazione di SQL Server e di Windows**, l'account di accesso sa resterà disabilitato. Per usare l'account di accesso sa, usare l'istruzione ALTER LOGIN per abilitare l'account sa e assegnare una nuova password. È possibile connettersi al server tramite l'account sa solo se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Contenuto dell'argomento**  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### Per modificare la modalità di autenticazione di sicurezza  
+#### <a name="to-change-security-authentication-mode"></a>Per modificare la modalità di autenticazione di sicurezza  
   
 1.  In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server e quindi scegliere **Proprietà**.  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 31
   
 4.  In Esplora oggetti fare clic con il pulsante destro del mouse sul server e quindi scegliere **Riavvia**. Se è in esecuzione, è necessario riavviare anche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-#### Per abilitare l'account di accesso sa  
+#### <a name="to-enable-the-sa-login"></a>Per abilitare l'account di accesso sa  
   
-1.  In Esplora oggetti espandere **Sicurezza** e quindi Account di accesso, fare clic con il pulsante destro del mouse su **sa** e infine scegliere **Proprietà**.  
+1.  In Esplora oggetti espandere **Sicurezza**e quindi Account di accesso, fare clic con il pulsante destro del mouse su **sa**e infine scegliere **Proprietà**.  
   
 2.  Nella pagina **Generale** potrebbe essere necessario creare e confermare una password per l'account di accesso.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 31
   
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Password complesse](../../relational-databases/security/strong-passwords.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

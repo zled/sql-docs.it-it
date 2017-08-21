@@ -1,22 +1,27 @@
 ---
-title: "Ottimizzare la compressione per un gruppo di disponibilit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ottimizzare la compressione per un gruppo di disponibilità | Microsoft Docs"
+ms.custom: 
+ms.date: 06/22/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: v-saume
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ottimizzare la compressione per un gruppo di disponibilit&#224;
+# <a name="tune-compression-for-availability-group"></a>Ottimizzare la compressione per un gruppo di disponibilità
 
 Per impostazione predefinita, SQL Server comprime i flussi di dati quando opportuno per i gruppi di disponibilità. La compressione riduce il traffico di rete, aumenta il carico della CPU e può generare latenza. Per abilitare la compressione, è necessario essere membro del ruolo predefinito del server sysadmin. La tabella seguente illustra i casi in cui SQL Server usa la compressione per i flussi di log dei gruppi di disponibilità.
 
@@ -26,7 +31,7 @@ Per impostazione predefinita, SQL Server comprime i flussi di dati quando opport
 | Repliche con commit asincrono | Compressione
 | Durante il seeding automatico | Nessuna compressione
 
-## Flag di traccia per la compressione dei gruppi di disponibilità 
+## <a name="trace-flags-for-availability-group-compression"></a>Flag di traccia per la compressione dei gruppi di disponibilità 
 
 Per la maggior parte degli scenari, non è consigliabile modificare queste impostazioni. Per testarne la modifica è possibile usare flag di traccia globali. SQL Server applica i flag di traccia globali all'intera istanza. Queste impostazioni influiranno su tutti i gruppi di disponibilità dell'istanza.  
 
@@ -39,7 +44,7 @@ Flag di traccia | Descrizione
 9592          | Abilita la compressione dei flussi di log per i gruppi di disponibilità con repliche sincrone. Per impostazione predefinita, questa funzionalità è disabilitata per le repliche sincrone perché la compressione aggiunge latenza. La compressione dei flussi di log è abilitata per impostazione predefinita per le repliche asincrone.
 
 
-## Risorse
+## <a name="resources"></a>Risorse
 
 
 [Opzioni di avvio del motore di database](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
@@ -47,3 +52,4 @@ Flag di traccia | Descrizione
 [Seeding automatico](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Prerequisiti per AlwaysOn](https://msdn.microsoft.com/library/ff878487.aspx) 
+

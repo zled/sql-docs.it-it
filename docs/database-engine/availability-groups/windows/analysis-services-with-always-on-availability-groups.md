@@ -1,22 +1,27 @@
 ---
-title: "Analysis Services con i gruppi di disponibilit&#224; AlwaysOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services con i gruppi di disponibilità AlwaysOn | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analysis Services con i gruppi di disponibilit&#224; AlwaysOn
+# <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Un gruppo di disponibilità AlwaysOn è una raccolta predefinita di database relazionali di SQL Server per cui è previsto un failover reciproco quando le condizioni attivano un failover in uno dei database, reindirizzando le richieste a un database con mirroring su un'altra istanza nello stesso gruppo di disponibilità. Se i gruppi di disponibilità vengono utilizzati come soluzione di disponibilità elevata, è possibile utilizzare un database di questo gruppo come origine dati in una soluzione multidimensionale o tabulare di Analysis Services. Tutte le operazioni di Analysis Services elencate di seguito funzionano nel modo previsto quando si utilizza un database di disponibilità: elaborazione o importazione di dati, query dirette su dati relazionali (utilizzando la modalità DirectQuery o l'archiviazione ROLAP) e writeback.  
@@ -50,7 +55,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  I passaggi seguenti presumono l'esistenza di un gruppo di disponibilità AlwaysOn e dei relativi database. Se si configura un nuovo gruppo, utilizzare la Creazione guidata Gruppo di disponibilità per creare il gruppo e creare un join dei database. Tramite la procedura guidata vengono controllati i prerequisiti, vengono fornite istruzioni per ogni passaggio e viene eseguita la sincronizzazione iniziale. Per altre informazioni, vedere [Utilizzare la Creazione guidata Gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### Passaggio 1: Configurare l'accesso su una replica di disponibilità  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Passaggio 1: Configurare l'accesso su una replica di disponibilità  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 12
   
          Questa proprietà è anche un requisito per il failover pianificato. Per eseguire un failover manuale pianificato a scopo di testing, impostare **Modalità di disponibilità** su **Commit sincrono** per le repliche primaria e secondaria.  
   
-#### Passaggio 2: Configurare il routing di sola lettura  
+#### <a name="step-2-configure-read-only-routing"></a>Passaggio 2: Configurare il routing di sola lettura  
   
 1.  Connettersi alla replica primaria.  
   
@@ -130,9 +135,9 @@ caps.handback.revision: 12
 ##  <a name="bkmk_ssasAODB"></a> Creare un'origine dati di Analysis Services utilizzando un database di disponibilità AlwaysOn  
  In questa sezione viene illustrato come creare un'origine dati di Analysis Services connessa a un database in un gruppo di disponibilità. È possibile utilizzare queste istruzioni per configurare una connessione a una replica primaria (impostazione predefinita) o a una replica secondaria leggibile configurata in base ai passaggi della sezione precedente. Le impostazioni di configurazione AlwaysOn e le proprietà di connessione impostate nel client determineranno l'uso della replica primaria o di quella secondaria.  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], in un progetto di modello di data mining e multidimensionale di Analysis Services, fare clic con il pulsante destro del mouse su **Origini dati** e selezionare **Nuova origine dati**. Per creare una nuova origine dati, fare clic su **Nuova**.  
+1.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], in un progetto di modello di data mining e multidimensionale di Analysis Services, fare clic con il pulsante destro del mouse su **Origini dati** e selezionare **Nuova origine dati**. Per creare una nuova origine dati, fare clic su **Nuova** .  
   
-     In alternativa, per un progetto di modello tabulare scegliere **Importa da origine dati** dal menu Modello.  
+     In alternativa, per un progetto di modello tabulare scegliere **Importa da origine dati**dal menu Modello.  
   
 2.  In Gestione connessione, in Provider, scegliere un provider che supporti il protocollo TDS (Tabular Data Stream ). Questo protocollo è supportato da SQL Server Native Client 11.0.  
   
@@ -140,9 +145,7 @@ caps.handback.revision: 12
   
      Il listener del gruppo di disponibilità reindirizza una connessione client a una replica primaria per le richieste di lettura-scrittura o a una replica secondaria se si specifica la finalità di lettura nella stringa di connessione. Poiché i ruoli delle repliche cambiano durante un failover (la replica primaria diventa secondaria e una secondaria diventa primaria), è sempre necessario specificare il listener in modo che la connessione client venga reindirizzata di conseguenza.  
   
-     Per determinare il nome del listener del gruppo di disponibilità, è possibile rivolgersi a un amministratore di database o connettersi a un'istanza del gruppo di disponibilità e visualizzare la relativa configurazione della disponibilità AlwaysOn. Nella schermata seguente il listener del gruppo di disponibilità è **AdventureWorks2**.  
-  
-     ![](../Image/SSAS_Always OnInfoInSSMS.png)  
+     Per determinare il nome del listener del gruppo di disponibilità, è possibile rivolgersi a un amministratore di database o connettersi a un'istanza del gruppo di disponibilità e visualizzare la relativa configurazione della disponibilità AlwaysOn.   
   
 4.  In Gestione connessione scegliere **Tutto** nel riquadro di navigazione sinistro per visualizzare la griglia delle proprietà del provider di dati.  
   
@@ -163,23 +166,23 @@ caps.handback.revision: 12
 ##  <a name="bkmk_test"></a> Testare la configurazione  
  Dopo avere configurato la replica secondaria e creato una connessione all'origine dati in Analysis Services, è possibile confermare che i comandi di query ed elaborazione vengano reindirizzati alla replica secondaria. È anche possibile eseguire un failover manuale pianificato per verificare il piano di recupero per questo scenario.  
   
-#### Passaggio 1: Confermare che la connessione all'origine dati venga reindirizzata alla replica secondaria  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Passaggio 1: Confermare che la connessione all'origine dati venga reindirizzata alla replica secondaria  
   
 1.  Avviare SQL Server Profiler e connettersi all'istanza di SQL Server che ospita la replica secondaria.  
   
      Durante l'esecuzione della traccia, tramite gli eventi **SQL:BatchStarting** e **SQL:BatchCompleting** verranno mostrate le query emesse da Analysis Services eseguite sull'istanza del motore di database. Questi eventi sono selezionati per impostazione predefinita, pertanto è sufficiente avviare la traccia.  
   
-2.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] aprire il progetto o la soluzione di Analysis Services contenente la connessione all'origine dati che si desidera testare. Assicurarsi che l'origine dati specifichi il listener del gruppo di disponibilità e non un'istanza nel gruppo.  
+2.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]aprire il progetto o la soluzione di Analysis Services contenente la connessione all'origine dati che si desidera testare. Assicurarsi che l'origine dati specifichi il listener del gruppo di disponibilità e non un'istanza nel gruppo.  
   
      Questo passaggio è importante. Il routing alla replica secondaria non avviene se si specifica un nome di istanza del server.  
   
-3.  Disporre le finestre dell'applicazione per una visualizzazione side-by-side di SQL Server Profiler e [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
+3.  Disporre le finestre dell'applicazione per una visualizzazione side-by-side di SQL Server Profiler e [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] .  
   
 4.  Distribuire la soluzione, e al termine, arrestare la traccia.  
   
      Nella finestra di traccia vengono visualizzati gli eventi correlati all'applicazione **Microsoft SQL Server Analysis Services**. Vengono anche visualizzate le istruzioni **SELECT** che consentono di recuperare dati da un database sull'istanza del server che ospita la replica secondaria, a prova che la connessione è stata effettuata attraverso il listener alla replica secondaria.  
   
-#### Passaggio 2: Eseguire un failover pianificato per testare la configurazione  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Passaggio 2: Eseguire un failover pianificato per testare la configurazione  
   
 1.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verificare le repliche primaria e secondaria per assicurarsi che entrambe siano configurate per la modalità commit sincrono e siano attualmente sincronizzate.  
   
@@ -194,15 +197,15 @@ caps.handback.revision: 12
   
 3.  Eseguire un comando di elaborazione o query da Analysis Services. Poiché l'origine dati è stata configurata per una connessione di sola lettura, il comando viene eseguito sulla replica secondaria.  
   
-4.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] connettersi alla replica secondaria.  
+4.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]connettersi alla replica secondaria.  
   
-5.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
+5.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
-6.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare il comando **Failover**. Verrà avviata la Creazione guidata Gruppo di disponibilità di failover. Utilizzare la procedura guidata per scegliere la replica da impostare come nuova replica primaria.  
+6.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare il comando **Failover** . Verrà avviata la Creazione guidata Gruppo di disponibilità di failover. Utilizzare la procedura guidata per scegliere la replica da impostare come nuova replica primaria.  
   
 7.  Confermare che il failover sia stato eseguito correttamente:  
   
-    -   In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] espandere i gruppi di disponibilità per visualizzare le designazioni (primaria) e (secondaria). L'istanza che in precedenza era una replica primaria dovrebbe ora essere una replica secondaria.  
+    -   In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]espandere i gruppi di disponibilità per visualizzare le designazioni (primaria) e (secondaria). L'istanza che in precedenza era una replica primaria dovrebbe ora essere una replica secondaria.  
   
     -   Visualizzare il dashboard per determinare se sono stati rilevati problemi di integrità. Fare clic con il pulsante destro del mouse sul gruppo di disponibilità e scegliere **Mostra dashboard**.  
   
@@ -228,11 +231,12 @@ caps.handback.revision: 12
   
  A tale scopo, creare un'origine dati aggiuntiva in un modello di Analysis Services per supportare la connessione di lettura-scrittura. Quando si crea l'origine dati aggiuntiva, usare lo stesso nome di listener e lo stesso database specificati nella connessione di sola lettura, ma anziché modificare **Finalità dell'applicazione**, mantenere l'impostazione predefinita che supporta le connessioni READWRITE. È ora possibile aggiungere le nuove tabelle delle dimensioni e dei fatti alla vista origine dati basate sull'origine dati di lettura-scrittura, quindi abilitare il writeback sulle nuove tabelle.  
   
-## Vedere anche  
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+ [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Abilitare il writeback della dimensione](../../../analysis-services/multidimensional-models/enable-dimension-writeback.md)  
+ [Abilitare il writeback della dimensione](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

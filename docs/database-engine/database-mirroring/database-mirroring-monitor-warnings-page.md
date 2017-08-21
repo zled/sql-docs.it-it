@@ -1,31 +1,36 @@
 ---
-title: "Monitoraggio mirroring del database (pagina Avvisi) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.warningsandalerts.f1"
+title: Monitoraggio mirroring del database (pagina Avvisi) | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c67c02e3e06ccf7617ebd33356290d2c2f632d36
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Monitoraggio mirroring del database (pagina Avvisi)
+# <a name="database-mirroring-monitor-warnings-page"></a>Monitoraggio mirroring del database (pagina Avvisi)
   Consente di visualizzare un elenco di sola lettura degli avvisi supportati negli eventi di mirroring del database e i valori soglia degli avvisi specificati, se disponibili.  
   
  **Per utilizzare SQL Server Management Studio per il monitoraggio del mirroring del database**  
   
 -   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Colonne  
+## <a name="columns"></a>Colonne  
  **Avviso**  
  Gli avvisi per i quali è possibile definire una soglia includono:  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 31
 |**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|Specifica la quantità di transazioni, espressa in minuti, che può accumularsi nella coda di invio prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di tempo ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  
 |**Avvisa se l'overhead di commit del mirror supera la soglia**|Specifica il ritardo medio per transazione, espresso in millisecondi, che è consentito prima che venga generato un avviso nell'istanza del server principale. Questo ritardo rappresenta la quantità di overhead generato mentre l'istanza del server principale è in attesa che l'istanza del server mirror scriva il record di log della transazione nella coda di rollforward. Questo valore è rilevante solo nella modalità a sicurezza elevata.|  
   
- **Valore di soglia su '** *<istanza_server>* **'**  
+ **Valore soglia su '** *<server_instance>* **'**  
  Per ogni avviso, visualizza l'eventuale soglia corrente specificata dall'utente, per una delle istanze del server. Il nome completo dell'istanza del server è indicato nell'intestazione di colonna corrispondente.  
   
  Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
  Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
   
-## Osservazioni  
+## <a name="remarks"></a>Osservazioni  
  Se attualmente le informazioni per un'istanza del server non sono disponibili, le celle della colonna **Valore soglia su** sono visualizzate con uno sfondo grigio e un testo filigrana. Se il monitoraggio non è connesso all'istanza del server, in ogni cella della griglia viene visualizzato **Non connesso a** *<NOME_SISTEMA>* o **Non connesso a** *<NOME_SISTEMA>***\\***<nome_istanza>*, a seconda che l'istanza sia quella predefinita o una denominata. Se il monitoraggio è in attesa della restituzione di una query, in ogni cella della griglia viene visualizzato **In attesa di dati…** .  
   
  Quando le informazioni sono disponibili, nella cella per ogni avviso viene visualizzato un valore soglia specificato (insieme all'unità di misura) o **Non abilitato**.  
@@ -67,14 +72,14 @@ caps.handback.revision: 31
 |**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|Transazione non inviata meno recente|32044|  
 |**Avvisa se l'overhead di commit del mirror supera la soglia**|Overhead commit mirror|32045|  
   
-## Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni  
  Per l'accesso completo è richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Solo i membri di **sysadmin** possono configurare e visualizzare i valori soglia degli avvisi per le metriche delle prestazioni chiave.  
   
  L'appartenenza al ruolo **dbm_monitor** consente di visualizzare nella pagina **Avvisi** solo la riga di stato più recente.  
   
-## Vedere anche  
- [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

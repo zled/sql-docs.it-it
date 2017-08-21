@@ -1,28 +1,33 @@
 ---
-title: "Sospendere o riprendere una sessione di mirroring del database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ripresa del mirroring del database"
-  - "mirroring del database [SQL Server], sessioni"
-  - "mirroring del database [SQL Server], sospensione"
-  - "mirroring del database [SQL Server], ripresa"
-  - "sospensione del mirroring del database"
+title: Sospendere o riprendere una sessione di mirroring del database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sospendere o riprendere una sessione di mirroring del database (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Sospendere o riprendere una sessione di mirroring del database (SQL Server)
   In questo argomento viene descritto come sospendere o riprendere il mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
@@ -53,13 +58,13 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Per sospendere o riprendere una sessione di mirroring del database, utilizzare la pagina **Proprietà database - Mirroring** .  
   
-#### Per sospendere o riprendere il mirroring del database  
+#### <a name="to-pause-or-resume-database-mirroring"></a>Per sospendere o riprendere il mirroring del database  
   
 1.  Durante una sessione di mirroring del database, connettersi all'istanza del server principale e in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**e selezionare il database.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività** e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Server mirror**. Viene visualizzata la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
   
 4.  Per sospendere la sessione, scegliere **Sospendi**.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
-#### Per sospendere il mirroring del database  
+#### <a name="to-pause-database-mirroring"></a>Per sospendere il mirroring del database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] per qualsiasi partner.  
   
@@ -83,13 +88,13 @@ caps.handback.revision: 34
   
      dove *nome_database* è il database con mirroring di cui si vuole sospendere la sessione.  
   
-     Nell'esempio seguente viene sospeso il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     Nell'esempio seguente viene sospeso il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### Per riprendere il mirroring del database  
+##### <a name="to-resume-database-mirroring"></a>Per riprendere il mirroring del database  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] per qualsiasi partner.  
   
@@ -101,13 +106,13 @@ caps.handback.revision: 34
   
      dove *nome_database* è il database con mirroring di cui si vuole riprendere la sessione.  
   
-     Nell'esempio seguente viene sospeso il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     Nell'esempio seguente viene sospeso il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la sospensione o ripresa del mirroring del database  
+##  <a name="FollowUp"></a> Completamento: Dopo la sospensione o ripresa del mirroring del database  
   
 -   **Dopo la sospensione del mirroring del database**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

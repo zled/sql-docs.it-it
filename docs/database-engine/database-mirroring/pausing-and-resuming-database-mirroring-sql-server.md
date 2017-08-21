@@ -1,28 +1,33 @@
 ---
-title: "Sospensione e ripresa del mirroring del database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sessioni [SQL Server], mirroring del database"
-  - "ripresa del mirroring del database"
-  - "mirroring del database [SQL Server], sospensione"
-  - "mirroring del database [SQL Server], ripresa"
-  - "sospensione del mirroring del database"
+title: Sospensione e ripresa del mirroring del database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sessions [SQL Server], database mirroring
+- resuming database mirroring
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sospensione e ripresa del mirroring del database (SQL Server)
+# <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Sospensione e ripresa del mirroring del database (SQL Server)
   Il proprietario del database può sospendere una sessione di mirroring del database, riprenderla in qualsiasi momento e preservare così lo stato della sessione durante la sospensione del mirroring. In caso di colli di bottiglia, la sospensione può essere utile per migliorare le prestazioni del server principale.  
   
  Quando si sospende una sessione, il database principale resta disponibile. In caso di sospensione, lo stato della sessione di mirroring viene impostato su SUSPENDED e il database mirror perde la sincronizzazione con il database principale, che viene quindi eseguito in una condizione nota come esposizione senza mirroring.  
@@ -55,7 +60,7 @@ caps.handback.revision: 32
   
 -   Arrestare la sessione di mirroring del database rimuovendo il mirroring.  
   
-     A differenza della sospensione di una sessione, la rimozione del mirroring provoca l'eliminazione di tutte le informazioni relative alla sessione di mirroring. Ogni istanza del server partner mantiene la sua copia del database. Se recuperata, pertanto, la copia precedente del database mirror può risultare diversa dalla copia precedente del database principale e indicare un periodo di tempo inferiore rispetto a quello trascorso dalla sospensione della sessione. Per altre informazioni, vedere [Rimozione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+     A differenza della sospensione di una sessione, la rimozione del mirroring provoca l'eliminazione di tutte le informazioni relative alla sessione di mirroring. Ogni istanza del server partner mantiene la sua copia del database. Se recuperata, pertanto, la copia precedente del database mirror può risultare diversa dalla copia precedente del database principale e indicare un periodo di tempo inferiore rispetto a quello trascorso dalla sospensione della sessione. Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per sospendere o riprendere il mirroring del database**  
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

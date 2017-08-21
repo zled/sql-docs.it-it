@@ -1,29 +1,34 @@
 ---
-title: "Propriet&#224; server (pagina Impostazioni database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
+title: "Proprietà server (pagina Impostazioni database) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; server (pagina Impostazioni database)
+# <a name="server-properties---database-settings-page"></a>Proprietà server (pagina Impostazioni database)
   Utilizzare questa pagina per visualizzare o modificare le impostazioni del database.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Fattore di riempimento indice predefinito**  
- Indica il livello di riempimento di ogni pagina in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando viene creato un nuovo indice utilizzando dati esistenti. Il fattore di riempimento ha effetto sulle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in quanto la suddivisione delle pagine mano a mano che vengono riempite richiede tempo.  
+ Indica il livello di riempimento di ogni pagina in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando viene creato un nuovo indice utilizzando dati esistenti. Il fattore di riempimento ha effetto sulle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in quanto la suddivisione delle pagine mano a mano che vengono riempite richiede tempo.  
   
  Il valore predefinito è 0. I valori validi sono compresi nell'intervallo da 0 a 100. Un fattore di riempimento 0 o 100 crea indici cluster con pagine di dati complete e indici non cluster con pagine foglia complete, ma lascia uno spazio all'interno del livello superiore dell'albero dell'indice. I valori 0 e 100 relativi al fattore di riempimento sono equivalenti.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 32
  Specifica un valore predefinito valido in tutto il sistema per il periodo di memorizzazione di ogni supporto di backup dopo l'utilizzo per il backup di un database o di un log delle transazioni. Questa opzione consente di impedire la sovrascrittura dei backup per il numero di giorni indicato.  
   
  **Comprimi backup**  
- In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive indica l'impostazione corrente dell'opzione **Valore predefinito di compressione backup**. Questa opzione determina l'impostazione predefinita a livello di server per la compressione di backup, come riportato di seguito:  
+ In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versioni successive indica l'impostazione corrente dell'opzione **Valore predefinito di compressione backup** . Questa opzione determina l'impostazione predefinita a livello di server per la compressione di backup, come riportato di seguito:  
   
 -   Se la casella **Comprimi backup** è vuota, per impostazione predefinita i nuovi backup non sono compressi.  
   
@@ -59,18 +64,18 @@ caps.handback.revision: 32
  Imposta per ogni database il numero massimo di minuti per il recupero dei database. L'impostazione predefinita è 0, che rappresenta la configurazione automatica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò equivale a un tempo di recupero inferiore a un minuto e all'impostazione di checkpoint a intervalli di circa un minuto per i database attivi. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
  **Dati**  
- Specifica il percorso predefinito dei file di dati. Fare clic sul pulsante Sfoglia per passare a un nuovo percorso predefinito. Le modifiche verranno applicate solo dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifica il percorso predefinito dei file di dati. Fare clic sul pulsante Sfoglia per passare a un nuovo percorso predefinito. Le modifiche verranno applicate solo dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **File di log**  
- Specifica il percorso predefinito dei file di log. Fare clic sul pulsante Sfoglia per passare a un nuovo percorso predefinito. Le modifiche verranno applicate solo dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifica il percorso predefinito dei file di log. Fare clic sul pulsante Sfoglia per passare a un nuovo percorso predefinito. Le modifiche verranno applicate solo dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valori configurati**  
- Consente di visualizzare i valori configurati per le opzioni nel riquadro. Se si modificano i valori, fare clic su **Valori correnti** per verificare se le modifiche sono diventate effettive. Se non sono diventate effettive, è necessario per prima cosa riformulare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Consente di visualizzare i valori configurati per le opzioni nel riquadro. Se si modificano i valori, fare clic su **Valori correnti** per verificare se le modifiche sono diventate effettive. Se non sono diventate effettive, è necessario per prima cosa riformulare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valori correnti**  
  Consente di visualizzare i valori correnti per le opzioni contenute nel riquadro. I valori sono di sola lettura.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

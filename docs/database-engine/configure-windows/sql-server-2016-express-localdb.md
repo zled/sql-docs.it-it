@@ -1,47 +1,55 @@
 ---
-title: "SQL Server 2016 Express LocalDB | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "istanze utente"
-  - "LocalDB, descritto"
-  - "runtime database locale"
-  - "database del file"
-  - "Database locale"
+title: SQL Server 2016 Express LocalDB | Microsoft Docs
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user instances
+- LocalDB, described
+- local database runtime
+- file database
+- LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64d008b25aacd5ad76b711662f9b6ffd3e5e5926
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 2016 Express LocalDB
+# <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
+
+ > Per contenuti relativi alle versioni precedenti di SQL Server, vedere [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+
 Microsoft SQL Server 2016 Express **LocalDB** è una funzionalità di [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) destinata agli sviluppatori. È disponibile in SQL Server 2016 Express with Advanced Services.  
 
  Con l'installazione del**database locale** viene copiato un set di file minimo necessario per avviare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una volta installato LocalDB, è possibile avviare una connessione tramite una stringa di connessione speciale. Durante la connessione, l'infrastruttura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessaria viene creata automaticamente e avviata, consentendo all'applicazione di usare il database senza attività di configurazione complesse. Con Developer Tools gli sviluppatori dispongono di un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che consente di scrivere e verificare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] senza dover gestire un'istanza del server completa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  
- ## Per provarlo: 
+ ## <a name="try-it-out"></a>Per provarlo: 
   
--   Per scaricare e installare SQL Server 2016 Express, passare all'**[Area download](http://www.microsoft.com/download/details.aspx?id=52679)**. LocalDB è una funzionalità che viene selezionata durante l'installazione. Nell'**Area Download** LocalDB è disponibile da **Installazione personalizzata** o quando si scarica il supporto. Se si scarica il supporto, scegliere **Express Advanced** o il pacchetto **LocalDB**. 
+-   Per scaricare e installare SQL Server 2016 Express, passare ai **[download di SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB è una funzionalità selezionabile durante l'installazione ed è disponibile quando si scarica il supporto. Se si scarica il supporto, scegliere **Express Advanced** o il pacchetto **LocalDB** . 
   
--   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016ctp33evaluationwindowsserver2012r2/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+-   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
   
-## Installare LocalDB  
+## <a name="install-localdb"></a>Installare LocalDB  
  Installare **LocalDB** tramite l'installazione guidata o usando il programma SqlLocalDB.msi. **LocalDB** è un'opzione dell'installazione di [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
 Selezionare **LocalDB** nella pagina **Selezione funzionalità** durante l'installazione. È possibile un'unica installazione dei file binari di **LocalDB** per ogni versione principale del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . È possibile avviare più processi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e in tutti verranno usati gli stessi file binari. Un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avviata come **LocalDB** presenta le stesse limitazioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
 
- Un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** viene gestita con l'utilità **SqlLocalDB.exe**. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** deve essere usato al posto della funzionalità dell'istanza utente [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] deprecata. 
+ Un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** viene gestita con l'utilità **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** deve essere usato al posto della funzionalità dell'istanza utente [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] deprecata. 
   
-## Descrizione  
+## <a name="description"></a>Descrizione  
  Il programma di installazione di **LocalDB** usa il programma SqlLocalDB.msi per installare i file necessari nel computer. Una volta installato, **LocalDB** è un'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con cui è possibile creare e aprire database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file del database di sistema per il database sono archiviati nel percorso locale AppData degli utenti che generalmente è nascosto. Ad esempio **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. I file del database utente sono archiviati nel percorso indicato dall'utente, in genere nella cartella **C:\Users\\<user\>\Documents\\**.  
   
  Per altre informazioni su come includere **LocalDB** in un'applicazione, vedere la documentazione su [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] relativa a [ Cenni preliminari sui dati locali](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Procedura dettagliata: Creazione di un database LocalDB di SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) e [Procedura dettagliata: Connessione ai dati di un database SQL Server Express LocalDB (Windows Form)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -52,7 +60,7 @@ Selezionare **LocalDB** nella pagina **Selezione funzionalità** durante l'insta
   
  Le regole di confronto dell'istanza per **LocalDB** sono impostate su SQL_Latin1_General_CP1_CI_AS e non possono essere modificate. Le regole di confronto a livello di database, di colonna e di espressione sono supportate normalmente. Ai database indipendenti vengono applicate le regole di confronto dei metadati e di tempdb definite da [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
-### Restrizioni  
+### <a name="restrictions"></a>Restrizioni  
  **LocalDB** non può essere un Sottoscrittore della replica di tipo merge.  
   
  **LocalDB** non supporta FILESTREAM.  
@@ -61,7 +69,7 @@ Selezionare **LocalDB** nella pagina **Selezione funzionalità** durante l'insta
   
  Un'istanza di **LocalDB** di proprietà degli account predefiniti, ad esempio NT AUTHORITY\SYSTEM, può avere problemi di gestibilità a causa del reindirizzamento del file system di Windows. Usare invece un account di Windows normale come proprietario.  
   
-### Istanze denominate e automatiche  
+### <a name="automatic-and-named-instances"></a>Istanze denominate e automatiche  
  **LocalDB** supporta due tipi di istanze, ovvero istanze automatiche e istanze denominate.  
   
 -   Le istanze automatiche di **LocalDB** sono pubbliche. Vengono create e gestite automaticamente per l'utente e possono essere usate da qualsiasi applicazione. Un'istanza automatica di **LocalDB** esiste per ogni versione di **LocalDB** installato nel computer dell'utente. Le istanze automatiche di **LocalDB** forniscono una gestione continua dell'istanza. Non c'è necessità di creare l'istanza in quanto già funziona. In tal modo è possibile migrare e installare e l'applicazione con facilità in un computer diverso. Se nel computer di destinazione è installata la versione specificata di **LocalDB** , l'istanza automatica di **LocalDB** per quella versione è disponibile anche sul computer di destinazione. Le istanze automatiche di **LocalDB** dispongono di un modello speciale per il nome dell'istanza che appartiene a uno spazio dei nomi riservato. In tal modo si evitano conflitti di nomi con le istanze denominate di **LocalDB**. Il nome per l'istanza automatica è **MSSQLLocalDB**.  
@@ -70,20 +78,20 @@ Selezionare **LocalDB** nella pagina **Selezione funzionalità** durante l'insta
   
  I diversi utenti di un computer possono avere istanze con lo stesso nome. Ogni istanza è un processo diverso in esecuzione come utente diverso.  
   
-## Istanze condivise di LocalDB  
- Per supportare scenari dove più utenti del computer devono connettersi a una sola istanza di **LocalDB**, **LocalDB** supporta la condivisione dell'istanza. Il proprietario di un'istanza può decidere di consentire agli altri utenti del computer di connettersi all'istanza. È possibile condividere le istanze automatiche e denominate di **LocalDB** . Per condividere un'istanza di **LocalDB**, un utente ne seleziona un nome condiviso (alias). Poiché il nome condiviso è visibile a tutti gli utenti del computer, questo nome condiviso deve essere univoco nel computer. Il nome condiviso di un'istanza di **LocalDB** ha lo stesso formato dell'istanza denominata di **LocalDB**.  
+## <a name="shared-instances-of-localdb"></a>Istanze condivise di LocalDB  
+ Per supportare scenari dove più utenti del computer devono connettersi a una sola istanza di **LocalDB**, **LocalDB** supporta la condivisione dell'istanza. Il proprietario di un'istanza può decidere di consentire agli altri utenti del computer di connettersi all'istanza. È possibile condividere le istanze automatiche e denominate di **LocalDB** . Per condividere un'istanza di **LocalDB** , un utente ne seleziona un nome condiviso (alias). Poiché il nome condiviso è visibile a tutti gli utenti del computer, questo nome condiviso deve essere univoco nel computer. Il nome condiviso di un'istanza di **LocalDB** ha lo stesso formato dell'istanza denominata di **LocalDB**.  
   
  Solo un amministratore del computer può creare un'istanza condivisa di **LocalDB**. La condivisione di un'istanza di **LocalDB** può essere annullata da un amministratore o dal proprietario dell'istanza condivisa di **LocalDB**. Per condividere e annullare la condivisione di un'istanza di **LocalDB**, usare i metodi `LocalDBShareInstance` e `LocalDBUnShareInstance` dell'API **LocalDB** o le opzioni di condivisione e annullamento della condivisione dell'utilità SqlLocalDb.  
   
-## Avvio e connessione a LocalDB  
+## <a name="starting-localdb-and-connecting-to-localdb"></a>Avvio e connessione a LocalDB  
   
-### Connessione all'istanza automatica  
+### <a name="connecting-to-the-automatic-instance"></a>Connessione all'istanza automatica  
  Il modo più semplice per usare **LocalDB** consiste nel connettersi all'istanza automatica dell'utente corrente usando la stringa di connessione **"Server=(localdb)\MSSQLLocalDB;Integrated Security=true"**. Per connettersi a un database specifico usando il nome del file, usare una stringa di connessione simile a **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"**.  
   
 > [!NOTE]  
 >  La prima volta che un utente prova a connettersi a **LocalDB**in un computer, l'istanza automatica deve essere creata e avviata. Il tempo aggiuntivo necessario per la creazione dell'istanza può determinare un errore di tentativo di connessione generando un messaggio di timeout. In una situazione simile, attendere pochi secondi per consentire il completamento del processo di creazione, quindi riconnettersi.  
   
-### Creazione e connessione alle istanze denominate  
+### <a name="creating-and-connecting-to-a-named-instances"></a>Creazione e connessione alle istanze denominate  
  Oltre all'istanza automatica, **LocalDB** supporta anche istanze denominate. Usare il programma SqlLocalDB.exe per creare, avviare e arrestare un'istanza denominata di **LocalDB**. Per altre informazioni su SqlLocalDB.exe, vedere [Utilità SqlLocalDB](../../tools/sqllocaldb-utility.md).  
   
 ```ms-dos  
@@ -100,7 +108,7 @@ REM Gather information about the instance of LocalDB
 |||  
 |-|-|  
 |Nome|"LocalDBApp1"|  
-|Version|\<Versione corrente>|  
+|Versione|\<Versione corrente>|  
 |Nome condiviso|""|  
 |Proprietario|"\<utente di Windows>"|  
 |Creazione automatica|No|  
@@ -111,19 +119,20 @@ REM Gather information about the instance of LocalDB
 > [!NOTE]  
 >  Se nell'applicazione viene usato una versione di .NET precedente alla versione 4.0.2 è necessario connettersi direttamente alla named pipe di **LocalDB**. Il valore Nome pipe dell'istanza è la named pipe su cui l'istanza di **LocalDB** è in ascolto. La parte del nome pipe dell'istanza successiva a LOCALDB# verrà modificata a ogni avvio dell'istanza di **LocalDB**. Per connettersi all'istanza di **LocalDB** tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], immettere il nome pipe dell'istanza nella casella **Nome server** della finestra di dialogo **Connetti al [!INCLUDE[ssDE](../../includes/ssde-md.md)]**. Dal programma personalizzato è possibile stabilire una connessione all'istanza di **LocalDB** usando una stringa di connessione simile a `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
   
-### Connessione a un'istanza condivisa di LocalDB  
+### <a name="connecting-to-a-shared-instance-of-localdb"></a>Connessione a un'istanza condivisa di LocalDB  
  Per connettersi a un'istanza condivisa di **LocalDB** aggiungere **.\\** (punto + barra rovesciata) alla stringa di connessione per fare riferimento allo spazio dei nomi riservato per le istanze condivise. Ad esempio, per connettersi a un'istanza condivisa di **LocalDB** denominata `AppData` usare `(localdb)\.\AppData` come stringa di connessione. Un utente che si connette a un'istanza condivisa di **LocalDB** di cui non è proprietario, deve disporre di un account di accesso con autenticazione di Windows o autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Risoluzione dei problemi  
+## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Per informazioni sulla risoluzione dei problemi di **LocalDB**, vedere la pagina relativa alla [risoluzione dei problemi di SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
-## Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni  
  Un'istanza di [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** è un'istanza creata da un utente per l'uso personale. Qualsiasi utente del computer è in grado di creare un database mediante un'istanza di **LocalDB**, archiviando i file nel relativo percorso utente ed eseguendo il processo con le relative credenziali. Per impostazione predefinita, l'accesso all'istanza di **LocalDB** è limitato al relativo proprietario. I dati contenuti in **LocalDB** sono protetti dall'accesso ai file di database tramite il file system. Se i file di database dell'utente vengono archiviati in un percorso condiviso, il database può essere aperto da qualsiasi utente con accesso al file system in quel percorso usando un'istanza di **LocalDB** di cui è proprietario. Se i file di database si trovano in un percorso protetto, ad esempio la cartella dati utente, solo quell'utente e gli amministratori con accesso a quella cartella, possono aprire il database. I file di **LocalDB** possono essere aperti solo da un'istanza di **LocalDB** alla volta.  
   
 > [!NOTE]  
 >  **LocalDB** viene eseguito sempre nel contesto di sicurezza dell'utente. Questo significa che **LocalDB** non viene mai eseguito con credenziali del gruppo di amministratori locali. Pertanto, tutti i file di database usati da un'istanza di **LocalDB** devono essere accessibili mediante l'account di Windows dell'utente proprietario, senza considerare l'appartenenza al gruppo di amministratori locali.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità SqlLocalDB](../../tools/sqllocaldb-utility.md)  
   
   
+

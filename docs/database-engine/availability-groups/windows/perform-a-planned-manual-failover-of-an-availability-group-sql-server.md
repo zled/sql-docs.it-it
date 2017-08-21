@@ -1,28 +1,33 @@
 ---
-title: "Eseguire un failover manuale pianificato di un gruppo di disponibilit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.manualfailover.f1"
-helpviewer_keywords: 
-  - "gruppi di disponibilità [SQL Server], failover"
-  - "failover [SQL Server], gruppi di disponibilità AlwaysOn"
+title: "Eseguire un failover manuale pianificato di un gruppo di disponibilità (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.manualfailover.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], failover
+- failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5017d65bb6324f7137c4b5a2a2e0e59b95829748
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Eseguire un failover manuale pianificato di un gruppo di disponibilit&#224; (SQL Server)
-  Questo argomento descrive come eseguire un failover manuale senza perdite di dati (*failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Con un failover manuale pianificato, come con qualsiasi failover [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la replica secondaria passa al ruolo primario e, contemporaneamente, la replica primaria precedente passa al ruolo secondario.  
+# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità (SQL Server)
+  Questo argomento descrive come eseguire un failover manuale senza perdite di dati ( *failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Con un failover manuale pianificato, come con qualsiasi failover [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , la replica secondaria passa al ruolo primario e, contemporaneamente, la replica primaria precedente passa al ruolo secondario.  
   
  Un failover manuale pianificato, supportato solo quando la replica primaria e la replica secondaria di destinazione sono in esecuzione in modalità con commit sincrono e sono attualmente sincronizzate, mantiene tutti i dati nei database secondari uniti in join al gruppo di disponibilità nella replica secondaria di destinazione. Quando la replica primaria precedente passa al ruolo secondario, i relativi database diventeranno database secondari e viene iniziata la sincronizzazione con i nuovi database primari. Dopo la transizione di tutti i database allo stato SYNCHRONIZED, la nuova replica secondaria diventa idonea a fungere da destinazione di un futuro failover manuale pianificato.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 36
 -   La coerenza tra i database all'interno del gruppo di disponibilità potrebbe non essere mantenuta nel failover.  
   
     > [!NOTE]  
-    >  Il supporto delle transazioni distribuite e tra database varia in base alle versioni di SQL Server e del sistema operativo. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md).  
+    >  Il supporto delle transazioni distribuite e tra database varia in base alle versioni di SQL Server e del sistema operativo. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisiti e restrizioni  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 36
   
 1.  In Esplora oggetti connettersi a un'istanza del server che ospita una replica secondaria del gruppo di disponibilità di cui eseguire il failover ed espandere l'albero del server.  
   
-2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
-3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare il comando **Failover**.  
+3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità di cui eseguire il failover e selezionare il comando **Failover** .  
   
-4.  Verrà avviata la Creazione guidata Gruppo di disponibilità di failover. Per altre informazioni, vedere [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+4.  Verrà avviata la Creazione guidata Gruppo di disponibilità di failover. Per ulteriori informazioni, vedere [Utilizzare la Procedura guidata Failover del gruppo di disponibilità &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per eseguire manualmente il failover di un gruppo di disponibilità**  
@@ -107,7 +112,7 @@ caps.handback.revision: 36
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica secondaria di destinazione.  
   
-2.  Usare il cmdlet **Switch-SqlAvailabilityGroup**.  
+2.  Usare il cmdlet **Switch-SqlAvailabilityGroup** .  
   
     > [!NOTE]  
     >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
@@ -122,14 +127,15 @@ caps.handback.revision: 36
   
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Visualizzazione della Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo il failover manuale su un gruppo di disponibilità  
  Se è stato eseguito il failover al di fuori del [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] del gruppo di disponibilità, modificare i voti del quorum dei nodi WSFC per riflettere la nuova configurazione del gruppo di disponibilità. Per altre informazioni, vedere [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-## Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
   
+

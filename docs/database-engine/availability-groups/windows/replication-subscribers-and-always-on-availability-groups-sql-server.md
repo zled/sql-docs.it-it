@@ -1,31 +1,36 @@
 ---
-title: "Sottoscrittori della replica e gruppi di disponibilit&#224; AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sottoscrittori di failover con AlwaysOn"
-  - "Gruppi di disponibilità [SQL Server], interoperabilità"
-  - "replica [SQL Server], gruppi di disponibilità AlwaysOn"
+title: "Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover subscribers with AlwaysOn
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sottoscrittori della replica e gruppi di disponibilit&#224; AlwaysOn (SQL Server)
+# <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori transazionali, l'agente di distribuzione continuerà a replicare automaticamente se la sottoscrizione utilizza il nome del listener del gruppo di disponibilità del sottoscrittore. Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  
   
-## Operazioni supportate  
+## <a name="what-is-supported"></a>Operazioni supportate  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione, il failover automatico dei sottoscrittori transazionali e il failover manuale dei sottoscrittore di merge. Il failover di un server di distribuzione in un database di disponibilità non è supportato. Non è possibile combinare AlwaysOn con gli scenari Websync e ssNoVersion Compact.  
   
  **Failover di una sottoscrizione pull di merge**  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
   
  Durante il failover del gruppo di disponibilità si verifica un errore nella sottoscrizione push poiché l'agente push non può più connettersi al database di sottoscrizione originale nel sottoscrittore originale.  
   
-## Come creare una sottoscrizione transazionale in un ambiente AlwaysOn  
+## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Come creare una sottoscrizione transazionale in un ambiente AlwaysOn  
  Per la replica transazionale, usare i passaggi seguenti per configurare un gruppo di disponibilità del sottoscrittore e impostarne il failover:  
   
 1.  Prima di creare la sottoscrizione, aggiungere il database sottoscrittore al gruppo di disponibilità AlwaysOn appropriato.  
@@ -60,7 +65,7 @@ caps.handback.revision: 19
   
  Quando si crea la sottoscrizione utilizzando questa procedura, non si dovranno eseguire azioni dopo un failover.  
   
-## Creazione di una sottoscrizione push di una replica transazionale  
+## <a name="creating-a-transactional-replication-push-subscription"></a>Creazione di una sottoscrizione push di una replica transazionale  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  
@@ -79,7 +84,7 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
   
-## Per riprendere gli agenti di merge dopo il failover del gruppo di disponibilità del sottoscrittore  
+## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Per riprendere gli agenti di merge dopo il failover del gruppo di disponibilità del sottoscrittore  
  Per eseguire il merge della replica, un relativo amministratore deve riconfigurare manualmente il sottoscrittore attenendosi alla procedura seguente:  
   
 1.  Eseguire **sp_subscription_cleanup** per rimuovere la sottoscrizione precedente per il sottoscrittore. Effettuare questa operazione nella nuova replica primaria, che precedentemente era la secondaria.  
@@ -90,3 +95,4 @@ GO
 >  Il processo corrente non è pratico per i sottoscrittori della replica di tipo merge. Lo scenario principale per la replica di tipo merge, tuttavia, è composto da utenti disconnessi (desktop, portatili, dispositivi palmari) che non usano i gruppi di disponibilità AlwaysOn con il sottoscrittore.  
   
   
+

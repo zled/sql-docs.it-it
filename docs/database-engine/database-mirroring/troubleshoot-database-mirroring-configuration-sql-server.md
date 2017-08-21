@@ -1,27 +1,32 @@
 ---
-title: "Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mirroring del database [SQL Server], distribuzione"
-  - "endpoint [SQL Server], mirroring del database"
-  - "mirroring del database [SQL Server], risoluzione dei problemi"
-  - "risoluzione dei problemi [SQL Server], mirroring del database"
+title: Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- endpoints [SQL Server], database mirroring
+- database mirroring [SQL Server], troubleshooting
+- troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 69
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c06d67efd16f0ceb894516bcdd3c47e1ff520284
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server)
+# <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server)
   In questo argomento vengono fornite informazioni sulla risoluzione dei problemi relativi all'impostazione di una sessione di mirroring del database.  
   
 > [!NOTE]  
@@ -29,14 +34,14 @@ caps.handback.revision: 69
   
 |Problema|Riepilogo|  
 |-----------|-------------|  
-|Messaggio di errore 1418|Questo messaggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica che l'indirizzo di rete del server non è raggiungibile o non esiste, pertanto si consiglia di controllare il nome dell'indirizzo di rete e quindi eseguire nuovamente il comando. Per altre informazioni, vedere l'argomento [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md).|  
+|Messaggio di errore 1418|Questo messaggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica che l'indirizzo di rete del server non è raggiungibile o non esiste, pertanto si consiglia di controllare il nome dell'indirizzo di rete e quindi eseguire nuovamente il comando. |  
 |[Accounts](#Accounts)|Illustra i requisiti per la corretta configurazione degli account in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Endpoint](#Endpoints)|Illustra i requisiti per la corretta configurazione dell'endpoint di mirroring del database di ogni istanza del server.|  
 |[SystemAddress](#SystemAddress)|Riepiloga le alternative per la specifica del nome di sistema di un'istanza del server in una configurazione di mirroring del database.|  
 |[Accesso alla rete](#NetworkAccess)|Documenta il requisito in base a cui ogni istanza del server deve essere in grado di accedere alle porte dell'altra istanza o delle altre istanze tramite TCP.|  
 |[Preparazione del database mirror](#MirrorDbPrep)|Riepiloga i requisiti per la preparazione del database mirror per consentire l'avvio del mirroring.|  
 |[Operazione di creazione file non riuscita](#FailedCreateFileOp)|Descrive le attività da eseguire in seguito a un'operazione di creazione file non riuscita.|  
-|[Avvio del mirroring mediante Transact-SQL](#StartDbm)|Descrive l'ordine richiesto per le istruzioni ALTER DATABASE *_database* SET PARTNER **='***_partner***'**.|  
+|[Avvio del mirroring mediante Transact-SQL](#StartDbm)|Descrive l'ordine richiesto per le istruzioni ALTER DATABASE *_database* SET PARTNER **='***_partner***'** .|  
 |[Transazioni tra database](#CrossDbTxns)|Un failover automatico può portare a una risoluzione automatica e talvolta errata delle transazioni in dubbio. Per questo motivo, il mirroring del database non supporta transazioni tra database.|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -46,9 +51,9 @@ caps.handback.revision: 69
   
     1.  Per ridurre l'eventualità di una configurazione non corretta, utilizzare account eseguiti negli stessi account di dominio.  
   
-    2.  Se gli account vengono eseguiti in domini diversi oppure non sono account di dominio, è necessario che un account di accesso sia creato nel database **master** dell'altro computer e disponga delle autorizzazioni CONNECT per l'endpoint. Per altre informazioni, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md). Queste informazioni si riferiscono anche all'account Servizio di rete.  
+    2.  Se gli account vengono eseguiti in domini diversi oppure non sono account di dominio, è necessario che un account di accesso sia creato nel database **master** dell'altro computer e disponga delle autorizzazioni CONNECT per l'endpoint. Per altre informazioni, vedere [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md). Queste informazioni si riferiscono anche all'account Servizio di rete.  
   
-2.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito come servizio con l'account di sistema locale, è necessario utilizzare i certificati per l'autenticazione. Per altre informazioni, vedere [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+2.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito come servizio con l'account di sistema locale, è necessario utilizzare i certificati per l'autenticazione. Per ulteriori informazioni, vedere [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 ##  <a name="Endpoints"></a> Endpoint  
  È necessario configurare correttamente gli endpoint.  
@@ -57,9 +62,9 @@ caps.handback.revision: 69
   
 2.  Verificare che i numeri di porta siano corretti.  
   
-     Per trovare la porta attualmente associata all'endpoint del mirroring del database per un'istanza del server, usare le viste del catalogo [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) e [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md).  
+     Per trovare la porta attualmente associata all'endpoint del mirroring del database per un'istanza del server, usare le viste del catalogo [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) e [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) .  
   
-3.  Per i problemi di impostazione del mirroring del database che sono difficili diagnosticare, è consigliabile controllare ogni istanza del server per verificare che sia in attesa sulle porte corrette. Per informazioni sulla verifica della disponibilità delle porte, vedere [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md).  
+3.  Per i problemi di impostazione del mirroring del database che sono difficili diagnosticare, è consigliabile controllare ogni istanza del server per verificare che sia in attesa sulle porte corrette.   
   
 4.  Verificare che gli endpoint siano stati avviati (STATE=STARTED). A tale scopo, utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente su ogni istanza del server:  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 69
 ##  <a name="SystemAddress"></a> Indirizzo di sistema  
  Quale nome di sistema di un'istanza del server in una configurazione di mirroring del database è possibile utilizzare qualsiasi nome che identifichi univocamente il sistema. L'indirizzo del server può essere un nome di sistema (se i sistemi si trovano nello stesso dominio), un nome di dominio completo o un indirizzo IP (preferibilmente un indirizzo IP statico). L'utilizzo del nome di dominio completo è una soluzione efficace. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-##  <a name="NetworkAccess"></a> Accesso alla rete  
+##  <a name="NetworkAccess"></a> Network Access  
  Ogni istanza del server deve essere in grado di accedere alle porte dell'altra istanza o delle altre istanze tramite TCP. Questo requisito è particolarmente importante quando le istanze del server appartengono a domini diversi non trusted. il che limita buona parte delle comunicazioni tra le istanze del server.  
   
-##  <a name="MirrorDbPrep"></a> Preparazione del database mirror  
+##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
  Sia che si avvii il mirroring per la prima volta o che lo si avvii nuovamente dopo averlo rimosso, verificare che il database mirror sia predisposto per il mirroring.  
   
  Quando si crea il database mirror sul server mirror, assicurarsi di ripristinare il backup del database principale specificando lo stesso nome di database con l'opzione WITH NORECOVERY. È inoltre necessario applicare tutti i backup di log creati dopo l'esecuzione di tale backup, sempre tramite WITH NORECOVERY.  
@@ -125,9 +130,9 @@ caps.handback.revision: 69
   
  Se il mirroring di database è stato arrestato, prima di poter riavviare il mirroring è necessario che tutti i backup di log successivi eseguiti sul database vengano applicati al database.  
   
- Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-##  <a name="FailedCreateFileOp"></a> Operazione di creazione file non riuscita  
+##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Per aggiungere un file senza conseguenze per la sessione di mirroring, è necessario che il percorso del file esista in entrambi i server. Pertanto, se durante la creazione del database mirror i file del database vengono spostati, potrebbe essere impossibile aggiungere successivamente file al database mirror senza sospendere il mirroring.  
   
  Per risolvere il problema:  
@@ -138,7 +143,7 @@ caps.handback.revision: 69
   
 3.  Per preparare il database per una nuova sessione di mirroring, il proprietario deve inoltre ripristinare con l'opzione WITH NO RECOVERY tutti gli altri backup del log in sospeso dal server principale.  
   
- Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md), [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) oppure [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+ Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) oppure [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Avvio del mirroring mediante Transact-SQL  
  L'ordine con cui vengono rilasciate le istruzioni ALTER DATABASE *_database* SET PARTNER **='***server_partner***'** è molto importante.  
@@ -150,7 +155,7 @@ caps.handback.revision: 69
  Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 > [!NOTE]  
->  Per altre informazioni sull'uso di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+>  Per altre informazioni sull'uso di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="CrossDbTxns"></a> Transazioni tra database  
  Quando viene eseguito il mirroring di un database in modalità a protezione elevata con failover automatico, un failover automatico può portare a una risoluzione automatica e talvolta errata delle transazioni in dubbio. Se si verifica un failover automatico su uno dei database mentre è stato eseguito il commit di una transazione tra database, possono verificarsi inconsistenze logiche tra i database.  
@@ -161,10 +166,13 @@ caps.handback.revision: 69
   
 -   Le transazioni che utilizzano [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
- Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md).  
+ Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)  
+ [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
+
+
+

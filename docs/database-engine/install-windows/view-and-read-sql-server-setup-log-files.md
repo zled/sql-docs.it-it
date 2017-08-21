@@ -1,30 +1,35 @@
 ---
-title: "Visualizzare e leggere i file di log del programma di installazione di SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visualizzazione di log"
-  - "visualizzazione dei file di log"
-  - "programma di installazione [SQL Server], log"
-  - "file di log dell'installazione [SQL Server]"
-  - "installazione di SQL Server, log"
-  - "errori [SQL Server], programma di installazione"
-  - "log [SQL Server], programma di installazione"
+title: Visualizzare e leggere i file di log del programma di installazione di SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing logs
+- displaying log files
+- Setup [SQL Server], logs
+- installation log files [SQL Server]
+- installing SQL Server, logs
+- errors [SQL Server], Setup
+- logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Visualizzare e leggere i file di log del programma di installazione di SQL Server
+# <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
   Ogni esecuzione del programma di installazione crea file di log e una nuova cartella dei log con indicazione di data e ora nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\. Il formato del nome della cartella dei log con indicazione di data e ora è AAAAMMGG_hhmmss. L'esecuzione del programma di installazione in modalità automatica determina la creazione dei file di log nel percorso % temp%\sqlsetup*.log. Tutti i file inclusi nella cartella dei log vengono archiviati nel file Log\*.cab nella rispettiva cartella dei log.  
   
  Una richiesta di installazione tipica viene eseguita in tre fasi:  
@@ -45,18 +50,18 @@ caps.handback.revision: 54
   
 -   Datastore  
   
- Nelle sezioni seguenti vengono illustrati i file di log del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nelle sezioni seguenti vengono illustrati i file di log del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Testo di riepilogo  
+## <a name="summary-text"></a>Testo di riepilogo  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Nel file sono indicati i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rilevati durante l'installazione, l'ambiente del sistema operativo, i valori dei parametri della riga di comando eventualmente specificati e lo stato globale di ogni MSI/MSP eseguito.  
   
  Il log è organizzato nelle sezioni seguenti:  
   
 -   Riepilogo globale dell'esecuzione.  
   
--   Proprietà e configurazione del computer in cui è stato eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Proprietà e configurazione del computer in cui è stato eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità del prodotto installate in precedenza nel computer  
   
@@ -76,98 +81,99 @@ caps.handback.revision: 54
   
 -   Percorso del file di report delle regole.  
   
-### Percorso  
+### <a name="location"></a>Percorso  
  Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\.  
   
  Per individuare gli errori nel file del testo di riepilogo, eseguire una ricerca nel file utilizzando le parole chiave "error" o "failed".  
   
-## Summary_engine-base_AAAAMMGG_HHMMss.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_AAAAMMGG_HHMMss.txt  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file di base summary_engine è simile al file di riepilogo e viene generato durante il flusso di lavoro principale.  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## Summary_engine-base_AAAAMMGG_HHMMss_ComponentUpdate.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_AAAAMMGG_HHMMss_ComponentUpdate.txt  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file di log di riepilogo relativo all'aggiornamento del componente è simile al file di riepilogo e viene generato durante il flusso di lavoro di aggiornamento del componente.  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## Summary_engine-base_\<NumeroVersione>MMDD_HHMMss_GlobalRules.txt  
+## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file di log di riepilogo relativo alle regole globali è simile al file di riepilogo e viene generato durante il flusso di lavoro delle regole globali.  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## Detail.txt  
+## <a name="detailtxt"></a>Detail.txt  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file Detail.txt viene generato per il flusso di lavoro principale, ad esempio installazione o aggiornamento, e fornisce i dettagli dell'esecuzione. Le registrazioni presenti nel file vengono generate in base al momento in cui viene richiamata ogni azione dell'installazione e indicano l'ordine in cui le azioni sono state eseguite, nonché le relative dipendenze.  
   
-### Percorso  
+### <a name="location"></a>Percorso  
  Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup  
   
  Bootstrap\Log\\<AAAAMMGG_HHMM>\Detail.txt.  
   
  Se si verifica un errore durante il processo di installazione, l'eccezione o l'errore verrà registrato alla fine di questo file. Per individuare gli errori in questo file, esaminare innanzitutto la parte finale del file, quindi eseguire una ricerca nel file delle parole chiave "error" o "exception".  
   
-## Detail_ComponentUpdate.txt  
+## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file Detail_ComponentUpdate.txt viene generato per il flusso di lavoro di aggiornamento del componente ed è simile al file Detail.txt.  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## Detail_GlobalRules.txt  
+## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file Detail_GlobalRules.txt viene generato per l'esecuzione delle regole globali ed è simile al file Detail.txt.  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## File di log MSI  
+## <a name="msi-log-files"></a>File di log MSI  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  I file di log MSI forniscono dettagli sul processo del pacchetto di installazione. Vengono generati da MSIEXEC durante l'installazione del pacchetto specificato.  
   
  Tipi di file di log MSI:  
   
--   \<Feature>_\<Architecture>\_\<Interation>.log  
+-   \<Funzionalità>_\<Architettura>\_\<Interazione>.log  
   
--   \<Feature>_\<Architecture>\_\<Language>\_\<Interation>.log  
+-   \<Funzionalità>_\<Architettura>\_\<Linguaggio>\_\<Interazione>.log  
   
--   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
+-   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro.log  
   
-### Percorso  
- I file di log MSI si trovano nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\<Nome\>.log.  
+### <a name="location"></a>Percorso  
+ I file di log MSI si trovano nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\<Nome\>.log.  
   
  Nella parte finale del file è incluso un riepilogo dell'esecuzione in cui sono indicati lo stato riuscito o non riuscito e le proprietà. Per individuare l'errore nel file MSI, eseguire la ricerca di "value 3", poiché gli errori si trovano in genere in prossimità di tale stringa.  
   
-## ConfigurationFile.ini  
+## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il file di configurazione contiene le impostazioni di input fornite durante l'installazione. Può essere utile riavviare l'installazione senza dover immettere manualmente le impostazioni. Nel file di configurazione non vengono tuttavia salvati le password degli account, i PID e alcuni parametri. Le impostazioni possono essere aggiunte al file o specificate tramite una riga di comando o l'interfaccia utente del programma di installazione. Per altre informazioni, vedere [Installare SQL Server 2016 tramite un file di configurazione](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## SystemConfigurationCheck_Report.htm  
+## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
   
-### Panoramica  
+### <a name="overview"></a>Panoramica  
  Il report di controllo della configurazione di sistema contiene una breve descrizione di ogni regola eseguita, nonché lo stato di esecuzione.  
   
-### Percorso  
- Si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
+### <a name="location"></a>Percorso  
+ Si trova nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\.  
   
-## Vedere anche  
- [Installare SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Installare SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

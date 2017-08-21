@@ -1,41 +1,46 @@
 ---
-title: "Accesso a SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server, accesso"
-  - "servizi [SQL Server], accesso"
-  - "Stringa di connessione TCP"
-  - "connessione al motore di database"
-  - "accesso [SQL Server], informazioni"
-  - "stringa di connessione del named pipe"
-  - "account di accesso [SQL Server]"
-  - "stringa di connessione della memoria condivisa"
-  - "accesso [SQL Server]"
-  - "account di accesso [SQL Server]"
+title: Accedere a SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server, logging in
+- services [SQL Server], logging in
+- TCP connection string
+- connecting to the Database Engine
+- logins [SQL Server], about logging in
+- named pipe connection string
+- log ins [SQL Server]
+- shared memory connection string
+- logging in [SQL Server]
+- logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4ed2e0c35921a717fc9447e62d469fb0153a74c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Accesso a SQL Server
+# <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
   È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
   
- Se si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno strumento di amministrazione a interfaccia grafica, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene richiesto di specificare il nome del server, un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password, se necessario. Se si accede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows non è necessario specificare un account di accesso di SQL Server ogni volta che si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza infatti l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente per eseguire automaticamente l'accesso. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in modalità mista (modalità di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows) e si sceglie di eseguire l'accesso usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password. Se possibile, usare l'autenticazione di Windows.  
+ Se si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno strumento di amministrazione a interfaccia grafica, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene richiesto di specificare il nome del server, un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password, se necessario. Se si accede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows non è necessario specificare un account di accesso di SQL Server ogni volta che si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza infatti l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente per eseguire automaticamente l'accesso. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in modalità mista (modalità di autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows) e si sceglie di eseguire l'accesso usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password. Se possibile, usare l'autenticazione di Windows.  
   
 > [!NOTE]  
->  Se al momento dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata selezionata una regola di confronto con distinzione tra maiuscole e minuscole, anche l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporterà la distinzione tra maiuscole e minuscole.  
+>  Se al momento dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è stata selezionata una regola di confronto con distinzione tra maiuscole e minuscole, anche l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporterà la distinzione tra maiuscole e minuscole.  
   
-## Formattare per specificare il nome di SQL Server  
+## <a name="format-for-specifying-the-name-of-sql-server"></a>Formattare per specificare il nome di SQL Server  
  Quando si stabilisce una connessione a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] è necessario specificare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde all'istanza predefinita (un'istanza senza nome), specificare il nome del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure l'indirizzo IP del computer. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'istanza denominata (come ad esempio SQLEXPRESS), specificare il nome del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure l'indirizzo IP del computer, quindi aggiungere una barra e il nome dell'istanza.  
   
  Negli esempi riportati di seguito viene effettuata una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione su un computer denominato APPHOST. In caso di specifica di un'istanza denominata, negli esempi viene utilizzato un nome di istanza SQLEXPRESS.  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |Connessione a un'stanza predefinita per nome, forzando una connessione di named pipe.|np:APPHOST|  
 |Connessione a un'stanza denominata per nome, forzando una connessione di named pipe.|np:APPHOST\SQLEXPRESS|  
   
-## Verifica del protocollo di connessione  
+## <a name="verifying-your-connection-protocol"></a>Verifica del protocollo di connessione  
  In caso di connessione a [!INCLUDE[ssDE](../../includes/ssde-md.md)], la query seguente restituirà il protocollo utilizzato per la connessione corrente, insieme al metodo di autenticazione (NTLM o Kerberos) e indicherà se la connessione è crittografata.  
   
 ```tsql  
@@ -76,7 +81,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## Attività correlate  
+## <a name="related-tasks"></a>Attività correlate  
  [Accedere a un'istanza di SQL Server &#40;prompt dei comandi&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Le risorse seguenti possono contribuire alla risoluzione di un problema di connessione.  
@@ -85,11 +90,11 @@ WHERE session_id = @@SPID;
   
 -   [Passaggi per risolvere i problemi di connettività di SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
-## Contenuto correlato  
+## <a name="related-content"></a>Contenuto correlato  
  [Scegliere una modalità di autenticazione](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Utilizzo dell'utilità sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md)  
+ [Utilizzo dell'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Creazione di un account di accesso](../../t-sql/creating-a-login.md)  
+ [Creazione di un account di accesso](../../t-sql/lesson-2-1-creating-a-login.md)  
   
   

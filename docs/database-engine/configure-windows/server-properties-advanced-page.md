@@ -1,35 +1,40 @@
 ---
-title: "Propriet&#224; server (pagina Avanzate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
+title: "Proprietà server (pagina Avanzate) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; server (pagina Avanzate)
+# <a name="server-properties---advanced-page"></a>Proprietà server (pagina Avanzate)
   Utilizzare questa pagina per visualizzare o modificare le impostazioni del server avanzate.  
   
  **Per visualizzare le pagine Proprietà server**  
   
 -   [Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## Indipendenza  
+## <a name="containment"></a>Indipendenza  
  Abilitazione di database indipendenti  
  Indica se questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente database indipendenti. Se **True**, il database indipendente può essere creato, ripristinato o collegato. Se **False**, il database indipendente non può essere creato, ripristinato o collegato all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La modifica della proprietà di indipendenza può influire sulla sicurezza del database. Se si abilitano i database indipendenti, ai relativi proprietari viene concesso l'accesso all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Disabilitando i database indipendenti è possibile impedire agli utenti di effettuare la connessione. Per informazioni sull'impatto della proprietà di indipendenza, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [Procedure consigliate per la sicurezza in database indipendenti](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **Livello di accesso FILESTREAM**  
  Indica il livello corrente del supporto FILESTREAM nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per modificare il livello di accesso, selezionare uno dei valori seguenti:  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 65
  **Nome condivisione FILESTREAM**  
  Consente di visualizzare il nome di sola lettura della condivisione di FILESTREAM selezionato durante l'installazione. Per altre informazioni, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
-## Varie  
+## <a name="miscellaneous"></a>Varie  
  **Consenti attivazione trigger da altri trigger**  
  Consente l'attivazione di trigger da altri trigger. I trigger possono essere nidificati fino a un massimo di 32 livelli. Per altre informazioni, vedere la sezione relativa ai trigger annidati in [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 65
  **Importa**  
  I cataloghi full-text vengono importati. Questa operazione è molto più rapida di **Ricompila**. Un catalogo full-text importato, tuttavia, non utilizza i nuovi word breaker ottimizzati introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Di conseguenza, potrebbe essere necessario ricompilare i cataloghi full-text.  
   
- Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  **Ricompilazione**  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere tempo e dopo l'aggiornamento potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
@@ -86,32 +91,32 @@ caps.handback.revision: 65
 > [!NOTE]  
 >  L'opzione di aggiornamento full-text può anche essere impostata con l'azione [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option.  
   
- Una volta collegato, ripristinato o copiato un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text**. Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa** e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text**, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Una volta collegato, ripristinato o copiato un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e viene aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Max Text Replication Size**  
- Specifica le dimensioni massime, in byte, di dati di tipo **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml** e **image** che è possibile aggiungere a una colonna replicata o acquisita tramite un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. La modifica dell'impostazione diventa effettiva immediatamente. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Specifica le dimensioni massime, in byte, di dati di tipo **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**e **image** che è possibile aggiungere a una colonna replicata o acquisita tramite un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. La modifica dell'impostazione diventa effettiva immediatamente. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Scan For Startup Procs**  
- Consente di specificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve eseguire un'analisi per l'esecuzione automatica di stored procedure all'avvio. Se questa opzione è impostata su **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procede all'analisi ed esegue automaticamente tutte le stored procedure definite nel server. Se è impostata su **False**, ovvero il valore predefinito, non viene eseguita alcuna analisi. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
+ Consente di specificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve eseguire un'analisi per l'esecuzione automatica di stored procedure all'avvio. Se questa opzione è impostata su **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procede all'analisi ed esegue automaticamente tutte le stored procedure definite nel server. Se è impostata su **False** , ovvero il valore predefinito, non viene eseguita alcuna analisi. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
   
  **Cambio data per anno a due cifre**  
  Indica il numero più alto che può essere immesso come anno a due cifre. L'anno indicato e i 99 anni precedenti possono essere immessi con due cifre. Tutti gli altri anni devono essere immessi con quattro cifre.  
   
  Ad esempio, l'impostazione predefinita 2049 indica che la data '14/03/49' verrà interpretata come 14 marzo 2049, mentre la data '14/03/50' verrà interpretata come 14 marzo 1950. Per altre informazioni, vedere [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## Rete  
+## <a name="network"></a>Rete  
  **Dimensioni pacchetto di rete**  
- Consente di impostare le dimensioni in byte del pacchetto utilizzate nell'intera rete. Le dimensioni predefinite del pacchetto sono pari a 4.096 byte. Se un'applicazione esegue operazioni di copia bulk o invia e riceve quantità elevate di dati **text** o **image**, l'utilizzo di pacchetti di dimensioni maggiori rispetto a quelle predefinite può determinare un miglioramento delle prestazioni, poiché riduce il numero di operazioni di lettura e scrittura di rete. Se un'applicazione invia e riceve quantità limitate di dati, è possibile impostare le dimensioni del pacchetto su 512 byte, un valore sufficiente per la maggior parte dei trasferimenti. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server network packet size](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
+ Consente di impostare le dimensioni in byte del pacchetto utilizzate nell'intera rete. Le dimensioni predefinite del pacchetto sono pari a 4.096 byte. Se un'applicazione esegue operazioni di copia bulk o invia e riceve quantità elevate di dati **text** o **image** , l'utilizzo di pacchetti di dimensioni maggiori rispetto a quelle predefinite può determinare un miglioramento delle prestazioni, poiché riduce il numero di operazioni di lettura e scrittura di rete. Se un'applicazione invia e riceve quantità limitate di dati, è possibile impostare le dimensioni del pacchetto su 512 byte, un valore sufficiente per la maggior parte dei trasferimenti. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server network packet size](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
   
 > [!NOTE]  
 >  È consigliabile modificare le dimensioni dei pacchetti solo se si è certi che l'operazione determinerà un miglioramento delle prestazioni. Per la maggior parte delle applicazioni, le dimensioni predefinite risultano ottimali.  
   
  **Remote Login Timeout**  
- Consente di specificare il numero di secondi di attesa dell'esito di un tentativo di accesso remoto non riuscito da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa impostazione ha effetto sulle connessioni a provider OLE DB create per l'esecuzione di query eterogenee. Il valore predefinito è 20 secondi. Il valore 0 determina un tempo di attesa infinito. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md).  
+ Consente di specificare il numero di secondi di attesa dell'esito di un tentativo di accesso remoto non riuscito da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa impostazione ha effetto sulle connessioni a provider OLE DB create per l'esecuzione di query eterogenee. Il valore predefinito è 20 secondi. Il valore 0 determina un tempo di attesa infinito. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md).  
   
  La modifica dell'impostazione diventa effettiva immediatamente.  
   
-## Parallelismo  
+## <a name="parallelism"></a>Parallelismo  
  **Cost Threshold for Parallelism**  
  Consente di specificare la soglia oltre la quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea ed esegue piani paralleli per le query. Il costo equivale al tempo (in secondi) stimato per l'esecuzione del piano seriale in una configurazione hardware specifica. Impostare questa opzione solo su multiprocessori simmetrici. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 65
  **Query Wait**  
  Consente di specificare il tempo in secondi (da 0 a 2.147.483.647) prima che si verifichi il timeout di una query in attesa di risorse. Se viene utilizzato il valore predefinito -1, il timeout viene impostato automaticamente su un valore pari a 25 volte il costo previsto della query. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

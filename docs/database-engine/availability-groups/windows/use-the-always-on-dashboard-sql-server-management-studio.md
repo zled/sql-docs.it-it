@@ -1,30 +1,35 @@
 ---
-title: "Usare il Dashboard Always On (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], criteri"
-  - "Gruppi di disponibilità [SQL Server], dashboard"
+title: "Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Usare il Dashboard Always On (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Gli amministratori del database usano il dashboard Always On per ottenere una vista immediata dell'integrità di un gruppo di disponibilità Always On e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Ecco alcuni degli utilizzi tipici del dashboard Always On:  
+  Gli amministratori del database usano il dashboard del gruppo di disponibilità Always On per ottenere una vista immediata dell'integrità di un gruppo di disponibilità e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alcuni degli utilizzi tipici del dashboard del gruppo di disponibilità sono i seguenti:  
   
 -   Scelta di una replica per un failover manuale.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   Valutazione dell'impatto sulle prestazioni di una replica secondaria con commit sincrono  
   
- Il dashboard Always On fornisce indicatori delle prestazioni e stati dei gruppi di disponibilità principali che facilitano le decisioni operative relative alla disponibilità elevata usando i tipi di informazioni seguenti.  
+ Il dashboard fornisce indicatori delle prestazioni e stati dei gruppi di disponibilità principali che facilitano le decisioni operative relative alla disponibilità elevata usando i tipi di informazioni seguenti.  
   
 -   Stato di rollup della replica  
   
@@ -49,34 +54,6 @@ caps.handback.revision: 30
 -   Modalità e stato di sincronizzazione  
   
 -   Tempo per il ripristino del log  
-  
- **Contenuto dell'argomento**  
-  
--   **Prima di iniziare:**  
-  
-     [Prerequisiti](#Prerequisites)  
-  
-     [Sicurezza](#Security)  
-  
-     [Autorizzazioni](#Permissions)  
-  
--   **Introduzione a:**  
-  
-     [Dashboard Always On](#SSMSProcedure)  
-  
-     [Per modificare le opzioni del dashboard Always On](#DashboardOptions)  
-  
--   **Riquadri del dashboard:**  
-  
-     [Riepilogo del gruppo di disponibilità](#AvGroupsView)  
-  
-     [Dettagli del gruppo di disponibilità](#AvGroupDetails)  
-  
-     [Dettagli replica di disponibilità](#AvReplicaDetails)  
-  
-     [Per raggruppare le informazioni su un gruppo di disponibilità](#AvDbDetails)  
-  
--   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -95,7 +72,7 @@ caps.handback.revision: 30
 2.  Espandere il nodo **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità****Mostra dashboard**.  
   
 ###  <a name="DashboardOptions"></a> Per modificare le opzioni del dashboard Always On  
- È possibile usare la finestra di dialogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opzioni** per configurare il comportamento del dashboard Always On di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ È possibile usare la finestra di dialogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opzioni** per configurare il comportamento del dashboard Always On di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Dal menu **Strumenti** scegliere **Opzioni**.  
   
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **Manuale**. Indica che non vi sono repliche in modalità di failover automatico.  
   
  **Problemi**  
- Fare clic sul collegamento **Problemi** per aprire la documentazione di risoluzione dei problemi relativa a un determinato problema. Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Fare clic sul collegamento **Problemi** per aprire la documentazione di risoluzione dei problemi relativa a un determinato problema. Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Fare clic sulle intestazioni di colonna per ordinare le informazioni sul gruppo di disponibilità in base al nome del gruppo di disponibilità, all'istanza primaria, alla modalità di failover o al problema.  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **Stato gruppo di disponibilità**  
  Visualizza lo stato di integrità del gruppo di disponibilità.  
   
- **Istanza primaria**  
+ **Primary instance**  
  Nome dell'istanza del server che ospita la replica primaria del gruppo di disponibilità.  
   
- **Modalità di failover**  
+ **Failover mode**  
  Visualizza la modalità di failover per cui è configurata la replica. I possibili valori per le modalità di failover sono:  
   
 -   **Automatico** Indica che una o più repliche sono in modalità di failover automatico.  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**. Stato sconosciuto. Si ottiene questo valore quando l'istanza del server locale non è in grado di comunicare con il cluster di failover WSFC, ovvero il nodo locale non fa parte del quorum WSFC.  
   
  **Problemi**  
- Indica il nome del problema. Questo valore è visualizzato per impostazione predefinita. Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Indica il nome del problema. Questo valore è visualizzato per impostazione predefinita. Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modalità di disponibilità**  
  Indica la proprietà della replica impostata separatamente per ogni replica di disponibilità. Questo valore è nascosto per impostazione predefinita. I valori possibili sono:  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **Database di disponibilità**  
   
--   **Stato di sincronizzazione**  
+-   **Synchronization state**  
   
 -   **Conformità del failover**  
   
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  Quando un database si trova nello stato INITIALIZING, il failover forzato sulla replica secondaria lascerà sempre il database in uno stato in cui non può essere avviato.  
   
- **Conformità failover**  
+ **Failover Readiness**  
  Indica per quale replica di disponibilità è possibile eseguire il failover con o senza la potenziale perdita di dati. Questa colonna viene visualizzata per impostazione predefinita. I valori possibili sono:  
   
 -   **Perdita di dati**  
@@ -304,7 +281,7 @@ caps.handback.revision: 30
   
 -   **Critico**. Fare clic per visualizzare i problemi critici.  
   
- Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Per un elenco dei problemi relativi ai criteri di Always On, vedere [Criteri Always On per problemi operativi con gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Sospeso**  
  Indica se il database è **Sospeso** o **Ripreso**. Questo valore è nascosto per impostazione predefinita.  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Usare i criteri Always On per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

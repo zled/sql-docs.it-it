@@ -1,54 +1,47 @@
 ---
-title: "Prerequisiti restrizioni e indicazioni per il mirroring del database | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mirroring del database [SQL Server], distribuzione"
-  - "partner [SQL Server]"
-  - "mirroring del database [SQL Server], prerequisiti"
-  - "mirroring del database [SQL Server], indicazioni"
-  - "mirroring del database [SQL Server], restrizioni"
-  - "mirroring del database [SQL Server], pianificazione"
-  - "mirroring del database [SQL Server], informazioni sul mirroring del database"
+title: Prerequisiti restrizioni e indicazioni per il mirroring del database | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- partners [SQL Server]
+- database mirroring [SQL Server], prerequisites
+- database mirroring [SQL Server], recommendations
+- database mirroring [SQL Server], restrictions
+- database mirroring [SQL Server], planning
+- database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d07bee6a462ed184e7bceabb4edcf7903110fd26
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Prerequisiti restrizioni e indicazioni per il mirroring del database
+# <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Prerequisiti restrizioni e indicazioni per il mirroring del database
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  In questo argomento vengono descritti i prerequisiti e le indicazioni per l'impostazione del mirroring del database. Per un'introduzione al mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- **Contenuto dell'argomento**  
-  
--   [Supporto per il mirroring del database](#DbmSupport)  
-  
--   [Prerequisiti](#Prerequisites)  
-  
--   [Restrizioni](#Restrictions)  
-  
--   [Indicazioni per la configurazione dei server partner](#RecommendationsForPartners)  
-  
--   [Indicazioni per la distribuzione del mirroring del database](#RecommendationsForDeploying)  
   
 ##  <a name="DbmSupport"></a> Supporto per il mirroring del database  
- Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Per informazioni sul supporto del mirroring del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Edizioni e funzionalità supportate in SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
- Si noti che il mirroring del database funziona con qualsiasi livello di compatibilità del database supportato. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità di ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Si noti che il mirroring del database funziona con qualsiasi livello di compatibilità del database supportato. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità di ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
   
@@ -71,7 +64,6 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  Se il mirroring del database è stato arrestato, prima di poterlo riavviare è necessario che eventuali backup di log successivi eseguiti sul database principale vengano applicati al database mirror.  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
 ##  <a name="Restrictions"></a> Restrizioni  
   
@@ -81,9 +73,8 @@ caps.handback.revision: 54
   
 -   Il mirroring del database non supporta FILESTREAM. Non è possibile creare un filegroup FILESTREAM nel server principale, né configurare il mirroring per un database in cui sono contenuti filegroup FILESTREAM.  
   
--   Il mirroring del database non è supportato né nelle transazioni tra database né nelle transazioni distribuite. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md).  
+-   Il mirroring del database non è supportato né nelle transazioni tra database né nelle transazioni distribuite. Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
 ##  <a name="RecommendationsForPartners"></a> Indicazioni per la configurazione dei server partner  
   
@@ -103,9 +94,8 @@ caps.handback.revision: 54
   
 -   Per ottimizzare le prestazioni, utilizzare per il mirroring una scheda di rete dedicata (scheda di interfaccia di rete).  
   
--   Non vengono date indicazioni sull'affidabilità di una rete WAN (Wide Area Network) per il mirroring del database in modalità a sicurezza elevata. Se si decide di utilizzare la modalità a protezione elevata in una rete WAN, fare attenzione in caso di aggiunta di un server di controllo del mirroring alla sessione, in quanto potrebbero verificarsi failover automatici indesiderati. Per altre informazioni, vedere [Indicazioni per la distribuzione del mirroring del database](#RecommendationsForDeploying) di seguito in questo argomento.  
+-   Non vengono date indicazioni sull'affidabilità di una rete WAN (Wide Area Network) per il mirroring del database in modalità a sicurezza elevata. Se si decide di utilizzare la modalità a protezione elevata in una rete WAN, fare attenzione in caso di aggiunta di un server di controllo del mirroring alla sessione, in quanto potrebbero verificarsi failover automatici indesiderati. Per altre informazioni, vedere [Indicazioni per la distribuzione del mirroring del database](#RecommendationsForDeploying)di seguito in questo argomento.  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
 ##  <a name="RecommendationsForDeploying"></a> Indicazioni per la distribuzione del mirroring del database  
  L'operazione asincrona consente di ottenere prestazioni ottimali per il mirroring del database. Le prestazioni di una sessione di mirroring che utilizza l'operazione asincrona possono essere rallentate quando il relativo carico di lavoro genera notevoli quantità di dati del log delle transazioni.  
@@ -123,14 +113,14 @@ caps.handback.revision: 54
   
 2.  Se l'operazione asincrona soddisfa le specifiche esigenze aziendali, è possibile utilizzarla per aumentare il livello di protezione dei dati. Durante il test del funzionamento del mirroring sincrono nell'ambiente utilizzato, è consigliabile iniziare dalla modalità a protezione elevata senza failover automatico. Lo scopo principale di questo test è valutare l'influenza dell'operazione sincrona sulle prestazioni del database. Per altre informazioni, vedere [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-3.  Prima di abilitare il failover automatico, verificare che la modalità a protezione elevata senza failover automatico soddisfi le esigenze dell'azienda e che gli errori di rete non danneggino il sistema. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+3.  Prima di abilitare il failover automatico, verificare che la modalità a protezione elevata senza failover automatico soddisfi le esigenze dell'azienda e che gli errori di rete non danneggino il sistema. Per altre informazioni, vedere [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)(Mirroring del database e log shipping).  
   
- [&#91;Torna all'inizio&#93;](#Top)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
+

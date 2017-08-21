@@ -1,48 +1,54 @@
 ---
-title: "Configurare le autorizzazioni del file system per l&#39;accesso al motore di database | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazioni del file system"
-  - "account del servizio [SQL Server], autorizzazioni del file system"
-  - "autorizzazioni [SQL Server], file system"
+title: Configurare le autorizzazioni del file system per l'accesso al motore di database | Microsoft Docs
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file system permissions
+- service account [SQL Server], file system permissions
+- permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc98fccf34dcc15cb255698502bf4ea4d0986249
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurare le autorizzazioni del file system per l&#39;accesso al motore di database
-  In questo argomento viene illustrato come concedere al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'accesso al file system nel percorso in cui sono archiviati i file di database. Il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve disporre dell'autorizzazione del file system di Windows per accedere alla cartella file in cui sono archiviati i file di database. L'autorizzazione per il percorso predefinito viene configurata durante l'installazione. Se si posizionano i file di database in un percorso diverso, potrebbe essere necessario seguire questi passaggi per concedere al [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'autorizzazione di controllo completo per il percorso in questione.  
+# <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
+  In questo argomento viene illustrato come concedere al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]l'accesso al file system nel percorso in cui sono archiviati i file di database. Il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve disporre dell'autorizzazione del file system di Windows per accedere alla cartella file in cui sono archiviati i file di database. L'autorizzazione per il percorso predefinito viene configurata durante l'installazione. Se si posizionano i file di database in un percorso diverso, potrebbe essere necessario seguire questi passaggi per concedere al [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'autorizzazione di controllo completo per il percorso in questione.  
   
- A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le autorizzazioni vengono assegnate al SID per servizio per ognuno dei relativi servizi. Tramite questo sistema viene fornito un livello elevato di isolamento e protezione del servizio. Il SID per servizio deriva dal nome del servizio ed è univoco per ogni servizio. L'argomento [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) descrive il SID per servizio e nella sezione **Privilegi e diritti di Windows** specifica i nomi. Si tratta del SID per servizio a cui deve essere assegnata l'autorizzazione di accesso per il percorso del file.  
+ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le autorizzazioni vengono assegnate al SID per servizio per ognuno dei relativi servizi. Tramite questo sistema viene fornito un livello elevato di isolamento e protezione del servizio. Il SID per servizio deriva dal nome del servizio ed è univoco per ogni servizio. L'argomento [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) descrive il SID per servizio e nella sezione **Privilegi e diritti di Windows**specifica i nomi. Si tratta del SID per servizio a cui deve essere assegnata l'autorizzazione di accesso per il percorso del file.  
   
-## Per concedere le autorizzazioni del file system al SID per servizio  
+## <a name="to-grant-file-system-permission-to-the-per-service-sid"></a>Per concedere le autorizzazioni del file system al SID per servizio  
   
 1.  Utilizzando Esplora risorse passare al percorso del file system in cui sono archiviati i file di database. Fare clic con il pulsante destro del mouse sulla cartella del file system e quindi scegliere **Proprietà**.  
   
-2.  Nella scheda **Sicurezza** fare clic su **Modifica** quindi su **Aggiungi**.  
+2.  Nella scheda **Sicurezza** fare clic su **Modifica**quindi su **Aggiungi**.  
   
-3.  Nella finestra di dialogo per la **selezione di utenti, computer, account del servizio o gruppi** fare clic su **Percorsi** sopra l'elenco di percorsi, selezionare il nome del computer e quindi fare clic su **OK**.  
+3.  Nella finestra di dialogo per la **selezione di utenti, computer, account del servizio o gruppi** fare clic su **Percorsi**sopra l'elenco di percorsi, selezionare il nome del computer e quindi fare clic su **OK**.  
   
-4.  Nella casella **Immettere i nomi degli oggetti da selezionare** digitare il nome del SID per servizio elencato nell'argomento [**Configurare account di servizio e autorizzazioni di Windows**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) della documentazione online. Come nome SID per servizio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] usare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita o **NT SERVICE\MSSQL$InstanceName** per un'istanza denominata.  
+4.  Nella casella **Immettere i nomi degli oggetti da selezionare** digitare il nome del SID per servizio elencato nell'argomento [**Configurare account di servizio e autorizzazioni di Windows**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)della documentazione online. Come nome SID per servizio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] usare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita o **NT SERVICE\MSSQL$InstanceName** per un'istanza denominata.  
   
-5.  Fare clic su **Controlla nomi** per convalidare la voce. Se la convalida ha esito negativo, potrebbe indicare che il nome non è stato trovato. Quando si fa clic su **OK**, viene visualizzata la finestra di dialogo **Trovati più nomi**. A questo punto selezionare il nome SID per servizio, **MSSQLSERVER** o **NT SERVICE\MSSQL$InstanceName**, quindi fare clic su **OK**.  Fare di nuovo clic su **OK** per tornare alla finestra di dialogo **Autorizzazioni**.   
+5.  Fare clic su **Controlla nomi** per convalidare la voce. Se la convalida ha esito negativo, potrebbe indicare che il nome non è stato trovato. Quando si fa clic su **OK**, viene visualizzata la finestra di dialogo **Trovati più nomi** . A questo punto selezionare il nome SID per servizio, **MSSQLSERVER** o **NT SERVICE\MSSQL$InstanceName**, quindi fare clic su **OK**.  Fare di nuovo clic su **OK** per tornare alla finestra di dialogo **Autorizzazioni** .   
 6.  Nella casella di nomi **Gruppo o utente** selezionare il SID per servizio e quindi nella casella **Autorizzazioni per** \<nome> selezionare la casella di controllo **Consenti** per **Controllo completo**.  
   
-7. Fare clic su **Applica** quindi due volte su **OK** per uscire.  
+7. Fare clic su **Applica**quindi due volte su **OK** per uscire.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire il servizio Motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md)   
  [Spostare database utente](../../relational-databases/databases/move-user-databases.md)  
   
   
+

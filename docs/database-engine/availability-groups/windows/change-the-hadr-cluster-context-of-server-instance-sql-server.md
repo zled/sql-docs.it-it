@@ -1,25 +1,30 @@
 ---
-title: "Modificare il contesto del cluster HADR dell&#39;istanza del server (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], cluster WSFC"
-  - "Repliche di disponibilità [SQL Server], modifica contesto cluster WSFC"
+title: Modificare il contesto del cluster HADR dell'istanza del server (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 29d356ca6c432963015a4c9f4a81702b97812c51
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modificare il contesto del cluster HADR dell&#39;istanza del server (SQL Server)
+# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Modificare il contesto del cluster HADR dell'istanza del server (SQL Server)
   In questo argomento viene descritto come cambiare il contesto del cluster HADR di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e versioni successive. Il *contesto del cluster HADR* determina il cluster WSFC (Windows Server Failover Clustering) che gestisce i metadati per le repliche di disponibilità ospitate dall'istanza del server.  
   
  Cambiare il contesto del cluster HADR solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] in un nuovo cluster WSFC. La migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta l'aggiornamento del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] con tempi di inattività minimi dei gruppi di disponibilità. Per altre informazioni, vedere [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade (Migrazione tra cluster di gruppi di disponibilità AlwaysOn per l'aggiornamento del sistema operativo)](http://msdn.microsoft.com/library/jj873730.aspx).  
@@ -34,9 +39,9 @@ caps.handback.revision: 31
   
      [Sicurezza](#Security)  
   
--   **Per cambiare il contesto del cluster di una replica di disponibilità mediante ** [Transact-SQL](#TsqlProcedure)  
+-   **Per cambiare il contesto del cluster di una replica di disponibilità mediante**  [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:** [ dopo aver cambiato il contesto del cluster di una replica di disponibilità](#FollowUp)  
+-   **Completamento:**  [dopo aver cambiato il contesto del cluster di una replica di disponibilità](#FollowUp)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 31
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 > [!CAUTION]  
->  Cambiare il contesto del cluster HADR solo durante la migrazione tra cluster di distribuzioni [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+>  Cambiare il contesto del cluster HADR solo durante la migrazione tra cluster di distribuzioni [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 31
   
 1.  Connettersi all'istanza del server che ospita la replica primaria o una replica secondaria del gruppo di disponibilità.  
   
-2.  Usare la clausola SET HADR CLUSTER CONTEXT dell'istruzione [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md), come segue:  
+2.  Usare la clausola SET HADR CLUSTER CONTEXT dell'istruzione [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) , come segue:  
   
      ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'***windows_cluster***'** | LOCAL }  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 31
      LOCAL  
      Cluster WSFC locale.  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  Nell'esempio seguente il contesto del cluster HADR viene cambiato in un cluster diverso. Per identificare il cluster WSFC di destinazione, `clus01`, nell'esempio viene specificato il nome completo dell'oggetto cluster, `clus01.xyz.com`.  
   
 ```  
@@ -131,7 +136,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
 ##  <a name="FollowUp"></a> Completamento: dopo aver cambiato il contesto del cluster di una replica di disponibilità  
  Il nuovo contesto del cluster HADR diviene effettivo immediatamente e non richiede il riavvio dell'istanza del server. L'impostazione del contesto del cluster HADR è di tipo persistente a livello di istanza e rimane invariata in caso di riavvio dell'istanza del server.  
   
- Confermare il nuovo contesto del cluster HADR eseguendo una query sulla vista a gestione dinamica (DMV) [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), come segue:  
+ Confermare il nuovo contesto del cluster HADR eseguendo una query sulla vista a gestione dinamica (DMV) [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) , come segue:  
   
 ```  
 SELECT cluster_name FROM sys.dm_hadr_cluster  
@@ -163,11 +168,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Articoli tecnici su SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

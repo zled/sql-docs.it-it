@@ -1,52 +1,47 @@
 ---
-title: "Utilizzare la Creazione guidata Gruppo di disponibilit&#224; (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.newagwizard.f1"
-  - "sql13.swb.newavgroupwiz.f1"
-helpviewer_keywords: 
-  - "Creazione guidata nuovo gruppo di disponibilità, repliche di disponibilità"
-  - "Gruppi di disponibilità [SQL Server], procedure guidate"
-  - "Gruppi di disponibilità [SQL Server], creazione"
+title: "Usare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.newagwizard.f1
+- sql13.swb.newavgroupwiz.f1
+helpviewer_keywords:
+- New Availability Group Wizard, availability replicas
+- Availability Groups [SQL Server], wizards
+- Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f4a3c46eaad9fcdb330210d18ed8b2a56e178043
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilizzare la Creazione guidata Gruppo di disponibilit&#224; (SQL Server Management Studio)
-  Questo argomento descrive come usare la Creazione guidata gruppo di disponibilità (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
+# <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
+  Questo argomento descrive come usare la **Creazione guidata gruppo di disponibilità** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
 >  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
--   **Prima di iniziare:**  
-  
-     [Prerequisiti, restrizioni e raccomandazioni](#Prerequisites)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per creare e configurare un gruppo di disponibilità usando:**  [Creazione guidata gruppo di disponibilità (SQL Server Management Studio)](#RunAGwiz)  
-  
-> [!NOTE]  
->  In alternativa all'utilizzo della Creazione guidata Gruppo di disponibilità, è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) o [Creare un gruppo di disponibilità &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
-  
+    
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Prima di iniziare a creare il primo gruppo di disponibilità, è consigliabile leggere questa sezione.  
   
 ###  <a name="Prerequisites"></a> Prerequisiti, restrizioni e raccomandazioni  
- Nella maggior parte dei casi, è possibile usare la Creazione guidata Gruppo di disponibilità per completare tutte le attività necessarie per la creazione e la configurazione di un gruppo di disponibilità. Potrebbe tuttavia essere necessario completare manualmente alcune attività.  
+
+Nella maggior parte dei casi, è possibile usare la Creazione guidata Gruppo di disponibilità per completare tutte le attività necessarie per la creazione e la configurazione di un gruppo di disponibilità. Potrebbe tuttavia essere necessario completare manualmente alcune attività.  
   
--   Prima di creare un gruppo di disponibilità, verificare che le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano repliche di disponibilità si trovino in un nodo del Clustering di failover di Windows Server (Windows Server Failover Clustering, WSFC) diverso all'interno dello stesso cluster di failover WSFC. Inoltre, verificare che ciascuna delle istanze del server soddisfi tutti gli altri prerequisiti [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni, si consiglia di leggere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+- Se si usa un tipo di cluster WSFC per ospitare il gruppo di disponibilità, verificare che le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano repliche di disponibilità si trovino in server (o nodi) cluster differenti all'interno dello stesso cluster WSFC. Verificare anche che ciascuna delle istanze del server soddisfi tutti gli altri prerequisiti [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni, si consiglia di leggere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Se un'istanza del server selezionata come host per una replica di disponibilità è in esecuzione in un account utente di dominio e non dispone ancora di un endpoint del mirroring del database, tramite la procedura guidata è possibile creare l'endpoint e concedere l'autorizzazione CONNECT all'account del servizio dell'istanza del server. Se, tuttavia, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario usare certificati per l'autenticazione dell'endpoint e non sarà possibile creare un endpoint del mirroring del database nell'istanza del server tramite la procedura guidata. In tal caso, è consigliabile creare gli endpoint del mirroring del database manualmente prima di avviare la Creazione guidata Gruppo di disponibilità.  
   
@@ -82,21 +77,23 @@ caps.handback.revision: 45
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria.  
   
-2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
 3.  Per avviare la Creazione guidata Gruppo di disponibilità, selezionare il comando **Creazione guidata Gruppo di disponibilità** .  
   
 4.  Quando si esegue la procedura guidata per la prima volta, viene visualizzata una pagina **Introduzione** . Per ignorare questa pagina in futuro, è possibile fare clic su **Non visualizzare più questa pagina**. Dopo avere letto questa pagina, fare clic su **Avanti**.  
   
-5.  Nella pagina **Specifica nome del gruppo di disponibilità** immettere il nome del nuovo gruppo di disponibilità nel campo **Nome gruppo di disponibilità** . Questo nome deve essere un identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido e univoco nel cluster di failover WSFC e nell'intero dominio. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri.  
-  
+5.  Nella pagina **Specifica opzioni del gruppo di disponibilità** immettere il nome del nuovo gruppo di disponibilità nel campo **Nome gruppo di disponibilità** . Questo nome deve essere un identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido e univoco nel cluster e nell'intero dominio. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri. e
+
+6. Successivamente, specificare il tipo di cluster. I tipi di cluster possibili dipendono dalla versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dal sistema operativo. Scegliere **WSFC**, **EXTERNAL** o **NONE**. Per altri dettagli, vedere [Pagina Specifica nome del gruppo di disponibilità](specify-availability-group-name-page.md)
+ 
 6.  Nella griglia della pagina **Seleziona database** sono elencati i database utente sull'istanza del server connessa idonei per diventare i *database di disponibilità*. Selezionare uno o più dei database elencati per usarli nel nuovo gruppo di disponibilità. Questi database diventeranno inizialmente i *database primari*iniziali.  
   
-     Per ogni database elencato, nella colonna **Dimensioni** viene visualizzata la dimensione del database, se nota. La colonna **Stato** indica se un determinato database soddisfa i [prerequisiti](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md) per i database di disponibilità. Se i prerequisiti non vengono soddisfatti, una breve descrizione dello stato indica il motivo per il database non è idoneo; ad esempio, se non usano il modello di recupero con registrazione completa. Per altre informazioni, fare clic sulla descrizione relativa allo stato.  
+     Per ogni database elencato, nella colonna **Dimensioni** viene visualizzata la dimensione del database, se nota. La colonna **Stato** indica se un determinato database soddisfa i [prerequisiti](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)per i database di disponibilità. Se i prerequisiti non vengono soddisfatti, una breve descrizione dello stato indica il motivo per il database non è idoneo; ad esempio, se non usano il modello di recupero con registrazione completa. Per altre informazioni, fare clic sulla descrizione relativa allo stato.  
   
      Se si modifica un database per renderlo idoneo, fare clic su **Aggiorna** per aggiornare la griglia dei database.  
   
-     Se il database contiene una chiave master di database, immettere la password per la chiave master di database nella colonna **Password**.  
+     Se il database contiene una chiave master di database, immettere la password per la chiave master di database nella colonna **Password** .  
   
 7.  Nella pagina **Specifica repliche** specificare e configurare una o più repliche per il nuovo gruppo di disponibilità. In questa pagina sono incluse quattro schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere l'argomento [Pagina Specifica repliche &#40;Creazione guidata Gruppo di disponibilità: Aggiungi replica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
@@ -109,7 +106,11 @@ caps.handback.revision: 45
   
 8.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Selezionare una delle opzioni seguenti:  
   
-    -   **Full**  
+    -   **Seeding automatico**  
+  
+         SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo. Disponibile in [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] e versioni successive. Vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](automatically-initialize-always-on-availability-group.md).
+    
+    -   **Backup completo di database e log**  
   
          Selezionare questa opzione se l'ambiente soddisfa i requisiti per l'avvio automatico della sincronizzazione dei dati iniziale. Per altre informazioni, vedere [Prerequisiti, restrizioni e raccomandazioni](#Prerequisites), più indietro in questo argomento.  
   
@@ -125,7 +126,7 @@ caps.handback.revision: 45
   
          Selezionare questa opzione se si desidera usare i backup dei database e del log dei database primari. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-9. Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della Creazione guidata Gruppo di disponibilità. Per apportare una modifica, fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida**, quindi fare clic su **Ripeti convalida**.  
+9. Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della Creazione guidata Gruppo di disponibilità. Per apportare una modifica, fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida** , quindi fare clic su **Ripeti convalida**.  
   
 10. Nella pagina **Riepilogo** rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una modifica, fare clic su **Indietro** per tornare alla pagina pertinente. Dopo avere apportato la modifica, fare clic su **Avanti** per tornare alla pagina **Riepilogo** .  
   
@@ -157,25 +158,25 @@ caps.handback.revision: 45
   
 -   [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [Creare un gruppo di disponibilità &#40; PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
+-   [Creare un gruppo di disponibilità &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
- **Per abilitare i gruppi di disponibilità AlwaysOn**  
+ **Per abilitare gruppi di disponibilità AlwaysOn**  
   
--   [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **Per configurare un endpoint del mirroring del database**  
   
--   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **Per risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn**  
+ **Per risolvere i problemi relativi alla configurazione dei gruppi di disponibilità AlwaysOn**  
   
--   [Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Risolvere i problemi relativi alla configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
 -   [Risolvere i problemi relativi a una operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
@@ -185,7 +186,7 @@ caps.handback.revision: 45
   
      [Pagina relativa alla serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
   
@@ -197,15 +198,20 @@ caps.handback.revision: 45
   
 -   **White paper:**  
   
-     [Pagine relative alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
-## Vedere anche  
+## <a name="alternate-ways-to-create-availability-groups"></a>Modalità alternative di creazione di un gruppo di disponibilità
+
+In alternativa all'utilizzo della Creazione guidata Gruppo di disponibilità, è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) o i cmdlet di PowerShell per [Creare un gruppo di disponibilità &#40; PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+
+
+## <a name="see-also"></a>Vedere anche  
  [Endpoint del mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-  
+

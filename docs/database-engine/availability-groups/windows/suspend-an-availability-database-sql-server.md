@@ -1,29 +1,34 @@
 ---
-title: "Sospendere un database di disponibilit&#224; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.suspenddatamove.f1"
-helpviewer_keywords: 
-  - "database secondari [SQL Server], in un gruppo di disponibilità"
-  - "database primari [SQL Server], in un gruppo di disponibilità"
-  - "Gruppi di disponibilità [SQL Server], sospensione di un database"
-  - "Gruppi di disponibilità [SQL Server], database"
+title: "Sospendere un database di disponibilità (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.suspenddatamove.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], suspending a database
+- Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 23d68367d77f5346dfb2873203b6c96c912fd5c5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Sospendere un database di disponibilit&#224; (SQL Server)
+# <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
   È possibile sospendere un database di disponibilità in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si noti che è necessario eseguire un comando di sospensione nell'istanza del server in cui viene ospitato il database da sospendere o riprendere.  
   
  L'effetto del comando di sospensione dipende dalla scelta di sospendere un database primario o secondario, come segue:  
@@ -81,11 +86,11 @@ caps.handback.revision: 51
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica di disponibilità in cui si desidera sospendere un database ed espandere l'albero del server. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.  
   
-2.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità**.  
+2.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità** .  
   
 3.  Espandere il gruppo di disponibilità.  
   
-4.  Espandere il nodo **Database di disponibilità**, fare clic con il pulsante destro del mouse sul database e scegliere **Sospendi spostamento dati**.  
+4.  Espandere il nodo **Database di disponibilità** , fare clic con il pulsante destro del mouse sul database e scegliere **Sospendi spostamento dati**.  
   
 5.  Nella finestra di dialogo **Sospendi spostamento dati** fare clic su **OK**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 51
   
 1.  Connettersi all'istanza del server che ospita la replica di cui si desidera sospendere il database. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.  
   
-2.  Sospendere il database usando l'istruzione [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)seguente:  
+2.  Sospendere il database usando l'istruzione [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)seguente:  
   
      ALTER DATABASE *nome_database* SET HADR SUSPEND  
   
@@ -124,14 +129,14 @@ caps.handback.revision: 51
   
 -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Completamento: Come evitare il riempimento del log delle transazioni  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  In genere, quando su un database viene eseguito un checkpoint automatico, il relativo log delle transazioni viene troncato in corrispondenza di tale checkpoint dopo il successivo backup del log. Tuttavia, quando un database secondario viene sospeso, tutti i record del log correnti rimangono attivi sul database primario. Se il log delle transazioni si riempie, perché raggiunge le dimensioni massime o l'istanza del server esaurisce lo spazio, il database non può eseguire ulteriori aggiornamenti.  
   
  Per evitare il problema, effettuare una delle azioni seguenti:  
   
 -   Aggiungere ulteriore spazio di log per il database primario.  
   
--   Riprendere il database secondario prima che il log si riempia. Per altre informazioni, vedere [Riprendere un database di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md).  
+-   Riprendere il database secondario prima che il log si riempia. Per ulteriori informazioni, vedere [Riprendere un database di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md).  
   
 -   Rimuovere il database secondario. Per altre informazioni, vedere [Rimuovere un database secondario da un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
@@ -143,8 +148,9 @@ caps.handback.revision: 51
   
 -   [Riprendere un database di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Riprendere un database di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
   
+

@@ -1,25 +1,30 @@
 ---
-title: "Apertura di Amministratore origine dati ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Amministratore origine dati ODBC"
-  - "apertura di Amministratore origine dati ODBC"
+title: Aprire Amministrazione origine dati ODBC | Microsoft Docs
+ms.custom: 
+ms.date: 11/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ODBC Data Source Administrator
+- opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1fd0e266e1b233d23f299aa5248fc015d98efb8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Apertura di Amministratore origine dati ODBC
+# <a name="open-the-odbc-data-source-administrator"></a>Apertura di Amministratore origine dati ODBC
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In questo argomento viene descritto come aprire Amministrazione origine dei dati ODBC. È un componente di Windows. Amministrazione origine dati ODBC consente di creare e gestire origini dati ODBC.  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Per aprire Amministrazione origine dati ODBC in Windows 10   
 
-1.  Nella pagina **iniziale** digitare **Origini dati ODBC**. Verrà visualizzata come scelta l'*app desktop Origini dati ODBC*. 
+1.  Nella pagina **iniziale** digitare **Origini dati ODBC**. Verrà visualizzata come scelta l' *app desktop Origini dati ODBC* . 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Per aprire Amministrazione origine dati ODBC in Windows 7  
@@ -52,3 +57,4 @@ caps.handback.revision: 16
  [Verifica della versione dei driver ODBC di SQL Server &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   
+

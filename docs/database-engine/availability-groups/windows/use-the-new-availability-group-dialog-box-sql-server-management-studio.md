@@ -1,28 +1,33 @@
 ---
-title: "Utilizzare la finestra di dialogo Nuovo gruppo di disponibilit&#224; (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gruppi di disponibilità [SQL Server], creazione"
+title: "Usare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], creating
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 13efc945406628f1f0423f0cba4977aabfbb5ab8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilizzare la finestra di dialogo Nuovo gruppo di disponibilit&#224; (SQL Server Management Studio)
+# <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio)
   In questo argomento sono incluse informazioni sulla modalità di uso della finestra di dialogo **Nuovo gruppo di disponibilità** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare un gruppo di disponibilità AlwaysOn nelle istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
->  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40; SQL Server &#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+>  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 -   **Prima di iniziare:**  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 40
   
      [Sicurezza](#Security)  
   
--   **Per creare un gruppo di disponibilità tramite: ** [Finestra di dialogo Nuovo gruppo di disponibilità](#SSMSProcedure)  
+-   **Per creare un gruppo di disponibilità tramite:**  [Finestra di dialogo Nuovo gruppo di disponibilità](#SSMSProcedure)  
   
 -   **Completamento:**  [Dopo aver usato la finestra di dialogo Nuovo gruppo di disponibilità per creare un gruppo di disponibilità](#FollowUp)  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 40
   
 ###  <a name="PrerequisitesRestrictions"></a> Prerequisiti  
   
--   Prima di creare un gruppo di disponibilità, verificare che le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano repliche di disponibilità si trovino in un nodo del Clustering di failover di Windows Server (Windows Server Failover Clustering, WSFC) diverso all'interno dello stesso cluster di failover WSFC. Inoltre, verificare che ciascuna delle istanze del server sia abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e soddisfi tutti gli altri prerequisiti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni, si consiglia di leggere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &40; SQL Server &#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+-   Prima di creare un gruppo di disponibilità, verificare che le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospitano repliche di disponibilità si trovino in un nodo del Clustering di failover di Windows Server (Windows Server Failover Clustering, WSFC) diverso all'interno dello stesso cluster di failover WSFC. Inoltre, verificare che ciascuna delle istanze del server sia abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e soddisfi tutti gli altri prerequisiti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per altre informazioni, si consiglia di leggere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
--   Prima di creare un gruppo di disponibilità, assicurarsi che in ogni istanza del server in cui sarà ospitata una replica di disponibilità sia disponibile un endpoint del mirroring del database completamente funzionante. Per altre informazioni, vedere [Endpoint del mirroring del database. &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+-   Prima di creare un gruppo di disponibilità, assicurarsi che in ogni istanza del server in cui sarà ospitata una replica di disponibilità sia disponibile un endpoint del mirroring del database completamente funzionante. Per altre informazioni, vedere [Endpoint del mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
--   Per utilizzare la finestra di dialogo **Nuovo gruppo di disponibilità** è necessario conoscere i nomi delle istanze del server in cui saranno ospitate le repliche di disponibilità. Inoltre, è necessario conoscere i nomi di qualsiasi database che si vuole aggiungere al nuovo gruppo di disponibilità, nonché assicurarsi che questi database soddisfino i prerequisiti del database di disponibilità e le restrizioni descritte in [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md). Se si immettono valori non validi, il nuovo gruppo di disponibilità non funzionerà.  
+-   Per utilizzare la finestra di dialogo **Nuovo gruppo di disponibilità** è necessario conoscere i nomi delle istanze del server in cui saranno ospitate le repliche di disponibilità. Inoltre, è necessario conoscere i nomi di qualsiasi database che si vuole aggiungere al nuovo gruppo di disponibilità, nonché assicurarsi che questi database soddisfino i prerequisiti del database di disponibilità e le restrizioni descritte in [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Se si immettono valori non validi, il nuovo gruppo di disponibilità non funzionerà.  
   
 ###  <a name="Limitations"></a> Limitazioni  
  Nella finestra di dialogo **Nuovo gruppo di disponibilità** non è possibile effettuare le operazioni seguenti:  
@@ -71,15 +76,15 @@ caps.handback.revision: 40
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui è ospitata la replica primaria e fare clic sul nome del server.  
   
-2.  Espandere il nodo **Disponibilità elevata AlwaysOn**.  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** .  
   
-3.  Fare clic con il pulsante destro del mouse su **Gruppi di disponibilità** e selezionare il comando **Nuovo gruppo di disponibilità**.  
+3.  Fare clic con il pulsante destro del mouse su **Gruppi di disponibilità** e selezionare il comando **Nuovo gruppo di disponibilità** .  
   
 4.  Tramite questo comando verrà aperta la finestra di dialogo **Nuovo gruppo di disponibilità** .  
   
 5.  Nel campo **Nome gruppo di disponibilità** della pagina **Generale** immettere un nome per il nuovo gruppo di disponibilità. Questo nome deve essere un identificatore di SQL Server valido univoco in tutti i gruppi di disponibilità del cluster WSFC. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri.  
   
-6.  Nella griglia **Database di disponibilità** fare clic su **Aggiungi** e immettere il nome di un database locale che si desidera appartenga a questo gruppo di disponibilità. Ripetere questa operazione per ogni database da aggiungere. Quando si fa clic su **OK**, tramite la finestra di dialogo viene verificato se il database specificato soddisfa i prerequisiti per poter appartenere a un gruppo di disponibilità. Per informazioni sui prerequisiti, vedere[Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+6.  Nella griglia **Database di disponibilità** fare clic su **Aggiungi** e immettere il nome di un database locale che si desidera appartenga a questo gruppo di disponibilità. Ripetere questa operazione per ogni database da aggiungere. Quando si fa clic su **OK**, tramite la finestra di dialogo viene verificato se il database specificato soddisfa i prerequisiti per poter appartenere a un gruppo di disponibilità. Per informazioni sui prerequisiti, vedere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 7.  Nella griglia **Database di disponibilità** fare clic su **Aggiungi** e immettere il nome di un'istanza del server per ospitare una replica secondaria. Non verrà effettuato il tentativo di connessione a queste istanze da parte della finestra di dialogo. Se si specifica un nome del server errato, verrà aggiunta una replica secondaria, tuttavia non sarà possibile effettuarvi una connessione.  
   
@@ -113,9 +118,9 @@ caps.handback.revision: 40
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
--   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -149,13 +154,13 @@ caps.handback.revision: 40
   
  **Per configurare un endpoint del mirroring del database**  
   
--   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn &#40;PowerShell SQL Server&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Per risolvere i problemi relativi alla configurazione dei gruppi di disponibilità AlwaysOn**  
   
@@ -167,10 +172,11 @@ caps.handback.revision: 40
   
 -   [Pagine relative alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
- [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

@@ -1,45 +1,41 @@
 ---
-title: "Specificare un indirizzo di rete del server (Mirroring del database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mirroring del database [SQL Server], distribuzione"
-  - "mirroring del database [SQL Server], endpoint"
-  - "endpoint [SQL Server], mirroring del database"
-  - "indirizzi di rete del server [SQL Server]"
+title: Specificare un indirizzo di rete del server (mirroring del database) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Specificare un indirizzo di rete del server (Mirroring del database)
+# <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
   Per impostare una sessione di mirroring del database, è necessario un indirizzo di rete del server per ogni istanza del server. Tale indirizzo deve identificare in maniera univoca l'istanza includendo un indirizzo di sistema e il numero di porta su cui l'istanza è in attesa.  
   
  Per poter specificare una porta in un indirizzo di rete del server, è necessario che l'endpoint del mirroring del database sia disponibile sull'istanza del server. Per altre informazioni, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
- **Contenuto dell'argomento**  
-  
--   [Sintassi per un indirizzo di rete del server](#Syntax)  
-  
--   [Individuazione del nome di dominio completo](#FindFqDn)  
-  
--   [Esempi](#Examples)  
-  
--   [Attività correlate](#RelatedTasks)  
   
 ##  <a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
  La sintassi per un indirizzo di rete del server presenta la struttura seguente:  
   
- TCP**://***\<indirizzo-sistema>***:***\<porta>*  
+ TCP**://***\<indirizzo_sistema>***:***\<porta>*  
   
  dove  
   
@@ -47,7 +43,7 @@ caps.handback.revision: 59
   
     -   Se i sistemi si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio: **[***<indirizzo_IPv6>***]**.  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[***<indirizzo_IPv6>***]**.  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
@@ -55,14 +51,14 @@ caps.handback.revision: 59
   
          *nome_computer* **.** *segmento_dominio*[...**.***segmento_dominio*]  
   
-         Dove *nome_computer* è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.***segmento_dominio*] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.***segmento_dominio*] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Se non si conosce il nome di dominio completo del server, consultare l'amministratore di sistema.  
   
         > [!NOTE]  
         >  Per informazioni sull'individuazione di un nome di dominio completo, vedere "Individuazione del nome di dominio completo" di seguito in questo argomento.  
   
--   *\<porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* è il numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner. Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel computer. Ogni numero di porta su un sistema di computer deve essere associato a un solo endpoint e ogni endpoint a una singola istanza del server. In questo modo, istanze del server diverse sullo stesso server restano in attesa su endpoint diversi con porte diverse. Pertanto, la parte specificata nell'indirizzo di rete del server quando si imposta una sessione di mirroring del database dirigerà la sessione sempre all'istanza del server il cui endpoint è associato a tale porta.  
   
@@ -76,39 +72,39 @@ caps.handback.revision: 59
     SELECT type_desc, port FROM sys.tcp_endpoints  
     ```  
   
-     Trovare la riga il cui valore **type_desc** è "DATABASE_MIRRORING" e usare il numero di porta corrispondente.  
+     Individuare la riga il cui valore **type_desc** è "DATABASE_MIRRORING" e usare il numero di porta corrispondente.  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
   
-#### A. Utilizzo di un nome di sistema  
+#### <a name="a-using-a-system-name"></a>A. Utilizzo di un nome di sistema  
  L'indirizzo di rete del server seguente specifica un nome di sistema, `SYSTEM46`, e la porta `7022`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### B. Utilizzo di un nome di dominio completo  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilizzo di un nome di dominio completo  
  L'indirizzo di rete del server seguente specifica un nome di dominio completo, `DBSERVER8.manufacturing.Adventure-Works.com`, e la porta `7024`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### C. Utilizzo di IPv4  
+#### <a name="c-using-ipv4"></a>C. Utilizzo di IPv4  
  L'indirizzo di rete del server seguente specifica un indirizzo IPv4, `10.193.9.134`, e la porta `7023`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### D. Utilizzo di IPv6  
+#### <a name="d-using-ipv6"></a>D. Utilizzo di IPv6  
  L'indirizzo di rete del server seguente include un indirizzo IPv6, `2001:4898:23:1002:20f:1fff:feff:b3a3`, e la porta `7022`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022';  
 ```  
   
-## Individuazione del nome di dominio completo  
+## <a name="finding-the-fully-qualified-domain-name"></a>Individuazione del nome di dominio completo  
  Per individuare il nome di dominio completo di un sistema, al prompt dei comandi di Windows immettere:  
   
  **IPCONFIG /ALL**  
@@ -140,7 +136,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

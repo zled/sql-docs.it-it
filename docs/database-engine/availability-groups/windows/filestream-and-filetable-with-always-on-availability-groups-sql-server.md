@@ -1,26 +1,31 @@
 ---
-title: "FILESTREAM e FileTable con i gruppi di disponibilit&#224; AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], gruppi di disponibilità"
-  - "FILESTREAM [SQL Server], gruppi di disponibilità"
-  - "Gruppi di disponibilità [SQL Server], interoperabilità"
+title: "FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], Availability Groups
+- FILESTREAM [SQL Server], Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cdd5119460d5b982c30c3e04e924e9a6b501f559
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# FILESTREAM e FileTable con i gruppi di disponibilit&#224; AlwaysOn (SQL Server)
+# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento sono contenute informazioni su come utilizzare le funzionalità FILESTREAM e FileTable con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -54,7 +59,7 @@ caps.handback.revision: 15
   
  Questa condivisione con ambito VNN viene creata quando si verifica uno degli eventi seguenti.  
   
--   Quando si aggiunge un database che contiene dati FILESTREAM a un gruppo di disponibilità AlwaysOn sulla replica primaria. In questo caso, la condivisione `\\<computer_name>\<filestream_share_name>` già esiste. Viene creata la condivisione `\\<VNN>\<filestream_share_name>`.  
+-   Quando si aggiunge un database che contiene dati FILESTREAM a un gruppo di disponibilità AlwaysOn sulla replica primaria. In questo caso, la condivisione `\\<computer_name>\<filestream_share_name>` già esiste. Viene creata la condivisione `\\<VNN>\<filestream_share_name>` .  
   
 -   Si abilita FILESTREAM per il file i/o o si trasmette l'accesso su una replica primaria che dispone di gruppi di disponibilità. Vengono create le seguenti condivisioni:  
   
@@ -78,14 +83,15 @@ caps.handback.revision: 15
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Abilitare e configurare FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Abilitazione dei prerequisiti per la tabella FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  nessuna.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

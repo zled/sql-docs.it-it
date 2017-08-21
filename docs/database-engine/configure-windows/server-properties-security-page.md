@@ -1,40 +1,45 @@
 ---
-title: "Propriet&#224; server (pagina sicurezza) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.security.f1"
+title: "Proprietà server (pagina Sicurezza) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfad12622d6f86101b5a9e8d192922424e5f7171
+ms.contentlocale: it-it
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propriet&#224; server (pagina sicurezza)
+# <a name="server-properties---security-page"></a>Proprietà server (pagina Sicurezza)
   Utilizzare questa pagina per visualizzare o modificare le opzioni di sicurezza del server.  
   
-## Autenticazione del server  
+## <a name="server-authentication"></a>Autenticazione del server  
  **Autenticazione di Windows**  
- Consente di utilizzare l'autenticazione di Windows per convalidare i tentativi di connessione. Se la password **sa** è vuota quando si modifica la modalità di sicurezza, all'utente viene chiesto di immettere una password **sa**.  
+ Consente di utilizzare l'autenticazione di Windows per convalidare i tentativi di connessione. Se la password **sa** è vuota quando si modifica la modalità di sicurezza, all'utente viene chiesto di immettere una password **sa** .  
   
 > [!IMPORTANT]  
 >  L'autenticazione di Windows offre una sicurezza decisamente maggiore rispetto all'autenticazione di SQL Server. Se possibile, utilizzare l'autenticazione di Windows.  
   
  **Autenticazione di SQL Server e di Windows**  
- Consente di utilizzare una modalità di autenticazione mista per la verifica dei tentativi di connessione. È disponibile per motivi di compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la password **sa** è vuota quando si modifica la modalità di sicurezza, all'utente viene chiesto di immettere una password **sa**.  
+ Consente di utilizzare una modalità di autenticazione mista per la verifica dei tentativi di connessione. È disponibile per motivi di compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se la password **sa** è vuota quando si modifica la modalità di sicurezza, all'utente viene chiesto di immettere una password **sa** .  
   
 > [!NOTE]  
 >  la modifica della configurazione di sicurezza richiede il riavvio del servizio. Quando si passa dall'autenticazione server a SQL Server e all'autenticazione di Windows, l'account SA non viene abilitato automaticamente. Per usare l'account SA, eseguire [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) con l'opzione ENABLE.  
   
-## Controllo accessi  
+## <a name="login-auditing"></a>Controllo accessi  
  **Nessuno**  
  Consente di disattivare il controllo degli accessi.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  la modifica del livello di controllo richiede il riavvio del server.  
   
-## Account proxy server  
+## <a name="server-proxy-account"></a>Account proxy server  
  **Abilita account proxy server**  
  Abilita un account per l'uso da parte di **xp_cmdshell**. Gli account proxy consentono la rappresentazione di account di accesso, ruoli del server e ruoli del database durante l'esecuzione di un comando del sistema operativo.  
   
@@ -63,14 +68,14 @@ caps.handback.revision: 31
  **Password**  
  Consente di specificare la password per l'account proxy.  
   
-## Opzioni  
+## <a name="options"></a>Opzioni  
  **Abilita traccia di controllo C2**  
  Consente di tenere traccia di tutti i tentativi di accesso a istruzioni e oggetti, nonché di registrarli in un file nella directory \MSSQL\Data per le istanze predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o nella directory \MSSQL$*nomeistanza*\Data per le istanze denominate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Opzione di configurazione del server c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
   
  **Concatenamento della proprietà tra database**  
  Selezionare questa opzione per impostare il database come origine o destinazione di un concatenamento di proprietà tra database. Per altre informazioni, vedere [Opzione di configurazione del server cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
