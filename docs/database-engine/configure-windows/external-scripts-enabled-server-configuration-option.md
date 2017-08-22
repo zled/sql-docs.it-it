@@ -2,7 +2,7 @@
 title: Opzione di configurazione del server external scripts enabled | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/15/2017
+ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,25 +21,25 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ead16dff7247d19161395237fc135472a61740c0
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: 282f50334b59e2d41e2fcac7e33835859bdffe12
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opzione di configurazione del server external scripts enabled
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Usare l'opzione **external scripts enabled** per abilitare l'esecuzione di script con determinate estensioni del linguaggio remote. Questa proprietà è disattivata per impostazione predefinita. Facoltativamente, il programma di installazione può impostare questa proprietà su true se è installato **Advanced Analytics Services** .  
+  Usare l'opzione **external scripts enabled** per abilitare l'esecuzione di script con determinate estensioni del linguaggio remote. Questa proprietà è DISATTIVATA per impostazione predefinita. Quando **Advanced Analytics Services** è installato, il programma di installazione può impostare facoltativamente questa proprietà su true.  
   
 
  È necessario abilitare l'opzione external script enabled prima di eseguire uno script esterno usando la procedura **sp_execute_external_script** . Usare **sp_execute_external_script** per eseguire gli script scritti in un linguaggio supportato, ad esempio R. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] è costituito da un componente server installato con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e da un set di strumenti della workstation e di librerie di connettività che connettono il data scientist all'ambiente ad alte prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Installare la funzionalità **Advanced Analytics Extensions** durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare l'esecuzione di script R. Per altre informazioni, vedere [Installing Previous Versions of SQL Server R Services](http://msdn.microsoft.com/library/48380645-9e72-4744-bebb-1c1fd8a18c43).  
   
- Eseguire questo script per abilitare gli script esterni.  
+ Per abilitare gli script esterni, eseguire lo script seguente:  
   
 ```  
 sp_configure 'external scripts enabled', 1;  
-RECONFIGURE;  
+RECONFIGURE WITH OVERRIDE;  
 ```  
   
  È necessario riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rendere effettiva questa modifica.  

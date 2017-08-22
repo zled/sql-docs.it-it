@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Controllo locale per la raccolta di dati relativi all'utilizzo di SQL Server
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 In Microsoft SQL Server sono disponibili funzionalità abilitate per Internet che sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo ("dati standard sul computer"). Il componente per il controllo locale della [raccolta di dati relativi all'utilizzo di SQL Server](http://support.microsoft.com/kb/3153756) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
 
-In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server ed SQL Server Analysis Services (SSAS). Il controllo locale per SQL Server Integration Services (SSIS) può essere configurato con il motore di database. Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati relativi all'utilizzo non è disponibile. 
+In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server ed SQL Server Analysis Services (SSAS). In SQL Server 2016 CU4 e SQL Server 2016 SP1 il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati relativi all'utilizzo non è disponibile. 
 
 ## <a name="prerequisites"></a>Prerequisiti 
 
@@ -61,7 +61,7 @@ Per ottenere l'account di accesso al servizio di telemetria di Analisi utilizzo 
  
 1. Avviare **Servizi** facendo clic sul pulsante **Windows**  e digitando *services.msc*. 
 
-2. Passare al servizio appropriato. Ad esempio, per il motore di database individuare **Servizio Analisi utilizzo software di SQL Server *nome istanza***. Per Analysis Services individuare **Analisi utilizzo software di SQL Server Analysis Services *nome istanza***. 
+2. Passare al servizio appropriato. Ad esempio, per il motore di database individuare **Servizio Analisi utilizzo software di SQL Server \<nome istanza\>**. Per Analysis Services individuare **Analisi utilizzo software di SQL Server Analysis Services \<nome istanza\>**. Per Integration Services individuare **SQL Server Integration Services CEIP servizio 13**.
 
 3. Fare clic con il pulsante destro del mouse sul servizio e scegliere **Proprietà**. 
 

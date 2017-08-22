@@ -89,10 +89,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 458c1eba94f31cc9577a82eb429749b1b22fc21f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: c30ab95ac8b543071c0136369b276442c0f81cfc
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
@@ -830,7 +830,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT|/ASSVCPASSWORD|/ASSVCSTARTUPTYPE|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT|/SQLSVCPASSWORD|/SQLSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT|/ISSVCPASSWORD|/ISSVCStartupType|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT|/RSSVCPASSWORD|/RSSVCStartupType|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT|/RSSVCPASSWORD|/RSSVCSTARTUPTYPE|  
   
 ##  <a name="Feature"></a> Parametri delle funzionalità  
  Per installare funzionalità specifiche, utilizzare il parametro /FEATURES e specificare la funzionalità padre oppure i valori delle funzionalità descritti nella tabella seguente. Per un elenco delle funzionalità supportate dalle edizioni di SQL Server, vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
@@ -846,6 +846,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||AdvancedAnalytics|Installa R Services (nel database).|  
 |AS||Vengono installati tutti i componenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |RS||Vengono installati tutti i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|RS_SHP||Installa i componenti [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per SharePoint.|  
+|RS_SHPWFE||Installa il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. |  
 |DQC||Viene installato [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Vengono installati tutti i componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |MDS||Viene installato [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
@@ -884,7 +886,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SPI_AS_NewFarm|Vengono installati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e il [!INCLUDE[ssDE](../../includes/ssde-md.md)] come istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una nuova farm Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] non configurata o in un server autonomo. Il programma di installazione di SQL Server consentirà la configurazione della farm durante l'installazione del ruolo della funzionalità.|Motore di calcolo di[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preconfigurato per l'elaborazione e l'archiviazione dei dati in memoria.<br /><br /> Pacchetti della soluzione[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> documentazione online di SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Strumenti di configurazione<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|Vengono installate tutte le funzionalità disponibili con l'edizione corrente.<br /><br /> Aggiunge l'utente corrente al ruolo predefinito del server **sysadmin** di SQL Server.<br /><br /> In [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o versione successiva e nei casi in cui il sistema operativo non è un controller di dominio, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]e in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene utilizzato per impostazione predefinita l'account NTAUTHORITY\NETWORK SERVICE e in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene utilizzato per impostazione predefinita l'account NTAUTHORITY\NETWORK SERVICE.<br /><br /> Questo ruolo è abilitato per impostazione predefinita nelle edizioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. In tutte le altre edizioni questo ruolo non è abilitato; è tuttavia possibile specificarlo tramite l'interfaccia utente o con i parametri della riga di comando.|Nelle edizioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]vengono installate solo le funzionalità disponibili per quella determinata edizione. Nelle altre edizioni vengono installate tutte le funzionalità di SQL Server.<br /><br /> Il parametro **AllFeatures_WithDefaults** può essere combinato con altri parametri che ignorano le impostazioni del parametro **AllFeatures_WithDefaults** . Ad esempio, se si usa il parametro **AllFeatures_WithDefaults** in combinazione con il parametro **/Features=RS** , il comando di installazione di tutte le funzionalità viene ignorato e viene installato solo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], mentre viene applicato il parametro **AllFeatures_WithDefaults** per l'utilizzo dell'account di servizio predefinito per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> In caso di utilizzo del parametro **AllFeatures_WithDefaults** insieme a **ADDCURRENTUSERASSQLADMIN=FALSE** , la finestra di dialogo del provisioning non viene popolata automaticamente con l'utente corrente. Aggiungere **/AGTSVCACCOUNT** e **/AGTSVCPASSWORD** per specificare un account di servizio e una password per SQL Server Agent.|  
   
-##  <a name="RollOwnership"></a> Controllo del comportamento di failover tramite il parametro /FAILOVERCLUSTERROLLOWNERSHIP  
+##  <a name="RollOwnership"></a> Controllo del comportamento di failover usando il parametro /FAILOVERCLUSTERROLLOWNERSHIP  
  Per aggiornare un cluster di failover di SQL Server a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è necessario eseguire il programma di installazione in un nodo del cluster di failover alla volta, a partire dai nodi passivi. Durante l'installazione viene stabilito il momento in cui eseguire il failover al nodo aggiornato, in base al numero complessivo di nodi nell'istanza del cluster di failover e a quello di nodi già aggiornati. Quando un numero di nodi uguale o maggiore della metà è già stato aggiornato, per impostazione predefinita verrà eseguito un failover a un nodo aggiornato. 
   
  Per controllare il comportamento di failover dei nodi del cluster durante il processo di aggiornamento prima che venga attivata la modalità offline per il nodo, eseguire l'operazione di aggiornamento dal prompt dei comandi e utilizzare il parametro /FAILOVERCLUSTERROLLOWNERSHIP. L'uso di questo parametro è il seguente:  
@@ -895,7 +897,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2 è l'impostazione predefinita che verrà utilizzata se questo parametro non viene specificato. Questa impostazione indica che il programma di installazione di SQL Server gestirà la proprietà del cluster (spostamento del gruppo) in base alle necessità. 
   
-##  <a name="InstanceID"></a> Configurazione dell'ID dell'istanza o di InstanceID  
+##  <a name="InstanceID"></a> Configurazione di Instance ID o di InstanceID  
  Il parametro Instance ID o /InstanceID viene utilizzato per specificare la posizione in cui è possibile installare i componenti dell'istanza e il percorso del Registro di sistema dell'istanza. Il valore di "INSTANCEID" è una stringa e deve essere univoco. 
   
 -   SQL Instance ID:MSSQL13.\<INSTANCEID>  
