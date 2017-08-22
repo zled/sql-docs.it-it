@@ -14,7 +14,6 @@
 ## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Concetti
-## [Seeding automatico](automatically-initialize-always-on-availability-group.md)  
 ## [Seeding automatico per le repliche secondarie](automatic-seeding-secondary-replicas.md)
 ## [Criteri per i gruppi di disponibilità](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [Modalità di disponibilità](availability-modes-always-on-availability-groups.md)  
@@ -55,6 +54,7 @@
 ## Configurare un gruppo di disponibilità 
 ### [Modificare la disponibilità della replica](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Modificare la modalità di failover della replica](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [Configurare il seeding automatico](automatically-initialize-always-on-availability-group.md)  
 ### [Configurare il backup su repliche](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configurare criteri di failover flessibili](configure-flexible-automatic-failover-policy.md)  
 ### [Configurare il backup su repliche](configure-backup-on-availability-replicas-sql-server.md)  
