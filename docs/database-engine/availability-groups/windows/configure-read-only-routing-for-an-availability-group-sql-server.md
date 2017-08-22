@@ -1,8 +1,9 @@
 ---
 title: "Configurare il routing di sola lettura per un gruppo di disponibilità (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 08/14/2017
+ms.prod:
+- sql-server-2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -22,15 +23,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9133508e63863bc4e73b9569108cb67c6c37d2f6
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: bd8372397bb6e33250456a8a617aa4f8e4cf45be
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurare il routing di sola lettura per un gruppo di disponibilità (SQL Server)
-  Per configurare un gruppo di disponibilità Always On in modo da supportare il routing di sola lettura in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. Con*routing di sola lettura* si intende la capacità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di instradare le richieste di connessione in sola lettura valide a una [replica secondaria leggibile](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) Always On, ovvero una replica configurata per consentire carichi di lavoro di sola lettura quando viene eseguita nel ruolo secondario. Per supportare il routing di sola lettura, il gruppo di disponibilità deve possedere un [listener del gruppo di disponibilità](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). I client in sola lettura devono indirizzare le richieste di connessione al listener e le stringhe di connessione del client devono specificare la finalità dell'applicazione come in sola lettura, ovvero devono essere *richieste di connessione con finalità di lettura*.  
-  
+  Per configurare un gruppo di disponibilità Always On in modo da supportare il routing di sola lettura in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. Con*routing di sola lettura* si intende la capacità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di instradare le richieste di connessione in sola lettura valide a una [replica secondaria leggibile](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) Always On, ovvero una replica configurata per consentire carichi di lavoro di sola lettura quando viene eseguita nel ruolo secondario. Per supportare il routing di sola lettura, il gruppo di disponibilità deve possedere un [listener del gruppo di disponibilità](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). I client in sola lettura devono indirizzare le richieste di connessione al listener e le stringhe di connessione del client devono specificare la finalità dell'applicazione come in sola lettura, ovvero devono essere *richieste di connessione con finalità di lettura*.  
+
+Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] e versioni successive.
+
 > [!NOTE]  
 >  Per informazioni su come configurare una replica secondaria leggibile, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
@@ -90,7 +93,7 @@ ms.lasthandoff: 08/02/2017
 |Per configurare le repliche durante la creazione di un gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare una replica di disponibilità|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configurare un elenco di routing di sola lettura  
  Usare la procedura seguente per configurare il routing di sola lettura con Transact-SQL. Per un esempio di codice, vedere [Esempio (Transact-SQL)](#TsqlExample), più avanti in questa sezione.  
@@ -180,7 +183,7 @@ GO
   
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configurare un elenco di routing di sola lettura  
  Usare la procedura seguente per configurare il routing di sola lettura con PowerShell. Per un esempio di codice, vedere [Esempio (PowerShell)](#PSExample), più avanti in questa sezione.  
@@ -252,47 +255,48 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>Se il routing di sola lettura non funziona correttamente  
  Per informazioni sulla risoluzione dei problemi di una configurazione di routing di sola lettura, vedere [Il routing di sola lettura non funziona correttamente](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
- **Per visualizzare le configurazioni del routing di sola lettura**  
+##  <a name="RelatedTasks"></a> Passaggi successivi 
+**Per visualizzare le configurazioni del routing di sola lettura**  
   
 -   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
   
 -   [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md) (colonna **read_only_routing_url**)  
   
- **Per configurare l'accesso alla connessione client**  
+**Per configurare l'accesso alla connessione client**  
   
 -   [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
- **Per utilizzare stringhe di connessione nelle applicazioni**  
+**Per utilizzare stringhe di connessione nelle applicazioni**  
   
 -   [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
 -   [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
-##  <a name="RelatedContent"></a> Contenuto correlato  
+**Blog:**  
   
--   **Blog:**  
+-    [Calcolo di read_only_routing_url per Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
-     [Calcolo di read_only_routing_url per Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
+-    [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-    [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
+**White paper:**  
   
--   **White paper:**  
+-    [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
-  
-     [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+-    [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
+
+**Contenuto aggiuntivo**
+
+- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+
+- [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+
+- [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+ 
+- [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

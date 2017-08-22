@@ -1,7 +1,7 @@
 ---
 title: Opzione di configurazione del server cross db ownership chaining | Microsoft Docs
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>Opzione di configurazione del server cross db ownership chaining
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   È possibile impostare il concatenamento della proprietà tra database per singoli database utilizzando la clausola SET dell'istruzione ALTER DATABASE. Se si intende creare un nuovo database, è possibile utilizzare l'istruzione CREATE DATABASE per impostare l'opzione di concatenamento della proprietà tra database per il nuovo database.  
   
      È consigliabile non impostare l'opzione **cross db ownership chaining** su 1, a meno che tutti i database ospitati dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non debbano essere inclusi nel concatenamento della proprietà tra database e si sia consapevoli delle implicazioni di questa impostazione in termini di sicurezza.  
-  
+
+Per determinare lo stato corrente del concatenamento della proprietà tra database, eseguire la query seguente:  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+Un risultato pari a 1 indica che il concatenamento della proprietà tra database è abilitato.
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>Controllo del concatenamento della proprietà tra database  
  Prima di attivare o disattivare il concatenamento della proprietà tra database, tenere presente quanto segue:  
   

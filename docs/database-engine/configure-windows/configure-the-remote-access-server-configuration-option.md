@@ -1,7 +1,7 @@
 ---
 title: Configurare l'opzione di configurazione del server remote access | Microsoft Docs
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9c974f6546e7065015dfa7313de0b29cfdd22c3
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 5736d22a7ce8bf9c1269677c6d5df02b1b1282d8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote access
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Questo argomento riguarda la funzionalità "Accesso remoto". Si tratta di una funzionalità di comunicazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poco nota e deprecata, che probabilmente non è opportuno usare. Se si è arrivati a questa pagina cercando una soluzione per i problemi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere invece uno degli argomenti seguenti:  
+  Questo argomento riguarda la funzionalità "Accesso remoto". Questa opzione di configurazione è una funzionalità di comunicazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poco nota e deprecata, che probabilmente non è opportuno usare. Se si è arrivati a questa pagina cercando una soluzione per i problemi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere invece uno degli argomenti seguenti:  
   
 -   [Esercitazione: Introduzione al motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
  In questo argomento si illustra come configurare l'opzione di configurazione del server **remote access** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **remote access** è possibile controllare l'esecuzione di stored procedure da server remoti o locali in cui sono in esecuzione istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il valore predefinito dell'opzione è 1. In questo modo si ottiene l'autorizzazione a eseguire stored procedure locali da server remoti o stored procedure remote dal server locale. Per impedire l'esecuzione di stored procedure locali da un server remoto o di stored procedure remote nel server locale, impostare l'opzione su 0.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Usare [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) in alternativa.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Usare [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) in alternativa. <br />Quando l'accesso remoto non è abilitato, l'esecuzione di una stored procedure in un server collegato ha esito negativo quando si usa la denominazione in quattro parti, ad esempio la sintassi `EXEC SQL01.TestDB.dbo.proc_test;`. Usare invece la sintassi `EXECUTE ... AT`, ad esempio `EXEC(N'TestDB.dbo.proc_test') AT [SQL01];`.
   
  **Contenuto dell'argomento**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 08/02/2017
 ####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-access-option"></a>Per configurare l'opzione remote access  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/02/2017
   
 3.  In **Connessioni remote**selezionare o deselezionare la casella di controllo **Consenti connessioni remote al server** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-configure-the-remote-access-option"></a>Per configurare l'opzione remote access  
   
@@ -112,7 +112,7 @@ GO
   
 ```  
   
- Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione remote access  
  Questa impostazione ha effetto solo dopo il riavvio di SQL Server.  
