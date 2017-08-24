@@ -45,7 +45,7 @@
 # [Proprietà personalizzate del file flat](flat-file-custom-properties.md)  
 # [Origine OData](odata-source.md)  
 ## [Esercitazione: uso dell'origine OData](tutorial-using-the-odata-source.md)  
-## [Modificare la query di origine OData in fase di esecuzione](modify-odata-source-query-at-runtime.md)  
+## [Fornire una query di origine OData in fase di esecuzione](modify-odata-source-query-at-runtime.md)  
 ## [Proprietà dell'origine OData](odata-source-properties.md)  
 # [Componenti di flusso ODBC](odbc-flow-components.md)  
 ## [Destinazione ODBC](odbc-destination.md)  
