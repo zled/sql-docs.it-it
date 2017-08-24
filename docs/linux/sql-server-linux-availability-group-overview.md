@@ -16,8 +16,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="availability-groups-for-sql-server-on-linux"></a>Gruppi di disponibilità per SQL Server in Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Un gruppo di disponibilità SQL Server Always On è a disponibilità elevata (HA), ripristino di emergenza (ripristino di emergenza) e di soluzione di scalabilità orizzontale. Fornisce disponibilità elevata per i gruppi di database in archiviazione collegata direttamente. Supporta più database secondari per integrato a disponibilità elevata e ripristino di emergenza, il rilevamento degli errori automatico, il failover rapido trasparente e il bilanciamento del carico di lettura. L'ampia gamma di funzionalità consente di ottenere una disponibilità ottimale i contratti di servizio per i carichi di lavoro.
 

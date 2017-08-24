@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procedura dettagliata per le caratteristiche di prestazioni di SQL Server in Linux
+
 Nel caso di un utente di Linux che è una novità di SQL Server, le attività seguenti illustrano alcune delle funzionalità di prestazioni. Queste non sono specifiche di Linux o univoco, ma consente di farsi un'idea delle aree per approfondire la verifica. In ogni esempio viene fornito un collegamento alla documentazione di profondità per tale area.
 
 > [!NOTE]

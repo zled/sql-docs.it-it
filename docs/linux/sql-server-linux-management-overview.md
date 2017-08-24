@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Scegliere lo strumento appropriato per la gestione di SQL Server in Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Esistono diversi modi per gestire SQL Server 2017 RC2 in Linux. Nella sezione seguente fornisce una rapida panoramica di gestione diversi strumenti e tecniche con puntatori a ulteriori risorse.
 
 ## <a name="mssql-conf"></a>MSSQL-conf 

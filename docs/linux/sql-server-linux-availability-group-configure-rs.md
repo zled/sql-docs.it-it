@@ -16,8 +16,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Configurare il gruppo di disponibilità di scalabilità orizzontale lettura per SQL Server in Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 È possibile configurare un gruppo di disponibilità di scalabilità orizzontale lettura per SQL Server in Linux. Esistono due architetture per i gruppi di disponibilità. Oggetto *la disponibilità elevata* architettura utilizza una gestione di cluster per assicurare la continuità aziendale migliorata. Questa architettura può anche includere letture repliche di scalabilità orizzontale. Per creare l'architettura a disponibilità elevata, vedere [configurare sempre nel gruppo di disponibilità per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md).
 

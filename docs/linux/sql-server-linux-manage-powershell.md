@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Utilizzo di PowerShell in Windows per la gestione di SQL Server in Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Questo argomento vengono presentate [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) e illustra alcuni esempi su come utilizzarlo con SQL Server 2017 RC2 in Linux. Supporto di PowerShell per SQL Server è attualmente disponibile in Windows, pertanto è possibile utilizzare quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Installare la versione più recente di SQL PowerShell in Windows

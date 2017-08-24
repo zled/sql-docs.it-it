@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server nel client Linux VDI specifica SDK
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Questo documento descrive le interfacce fornite da SQL Server in Linux virtual interface (VDI) client dispositivo SDK. Fornitori di software indipendenti (ISV) è possono utilizzare il Virtual Backup Device interfaccia API (Application Programming) per integrare i prodotti di SQL Server. In generale, un'infrastruttura VDI in Linux è simile alla VDI in Windows con le modifiche seguenti:
 
 - Memoria condivisa di Windows diventa memoria condivisa POSIX.

@@ -20,7 +20,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]in Linux possono usare Transport Layer Security (TLS) per crittografare i dati trasmessi in una rete tra un'applicazione client e un'istanza di [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]supporta gli stessi protocolli TLS in Windows e Linux: TLS 1.0, 1.1 e 1.2. Tuttavia, i passaggi per configurare TLS sono specifici del sistema operativo in cui [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] è in esecuzione.  
  

@@ -17,7 +17,8 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Posta elettronica database e gli avvisi di posta elettronica con SQL Agent in Linux
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 La procedura seguente mostra come impostare posta elettronica database e usarlo con SQL Server Agent (**mssql-server agent**) in Linux. 
 

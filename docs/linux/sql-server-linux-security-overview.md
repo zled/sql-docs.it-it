@@ -18,7 +18,9 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Limitazioni di sicurezza per SQL Server in Linux
 
-SQL Server in Linux attualmente presenta le limitazioni seguenti: 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
+SQL Server in Linux attualmente presenta le limitazioni seguenti:
 
 * Viene fornito un criterio password standard. MUST_CHANGE è l'unica opzione che è possibile configurare.  
 * Extensible Key Management non è supportata. 

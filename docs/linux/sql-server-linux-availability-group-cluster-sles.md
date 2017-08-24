@@ -16,8 +16,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare SLES Cluster per il gruppo di disponibilità di SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Questa guida vengono fornite istruzioni per creare un cluster di tre nodi per SQL Server su SUSE Linux Enterprise Server (SLES) 12 SP2. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su SUSE [estensione a disponibilità elevata (Georgiano)](https://www.suse.com/products/highavailability) compilato in cima [Pacemaker](http://clusterlabs.org/). 
 

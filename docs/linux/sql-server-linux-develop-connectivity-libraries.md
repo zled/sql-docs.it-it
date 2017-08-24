@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Librerie di connettività e altri framework per Microsoft SQL Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Estrarre il nostro [esercitazioni introduttive](http://aka.ms/sqldev) per iniziare a utilizzare linguaggi di programmazione quali c#, Java, Node.js, PHP e Python e compilare un'app usando SQL Server in Linux o di Windows o di Docker su macOS rapidamente.
 
 La tabella seguente elenca le librerie di connettività o *driver* utilizzata dalle applicazioni client da una vasta gamma di linguaggi per connettersi e utilizzare Microsoft SQL Server in esecuzione in locale o nel cloud, in Linux, Windows o Docker, nonché per Database SQL di Azure e Azure SQL Data Warehouse. 

@@ -16,8 +16,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurare RHEL Cluster per il gruppo di disponibilità di SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Questo documento illustra come creare un cluster di gruppo di disponibilità di tre nodi per SQL Server su Red Hat Enterprise Linux. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su Red Hat Enterprise Linux (RHEL) [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) compilato in cima [Pacemaker](http://clusterlabs.org/). 
 
