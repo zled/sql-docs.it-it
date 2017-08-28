@@ -1,7 +1,7 @@
 ---
-title: Connettersi a un'istanza da Esplora oggetti | Microsoft Docs
+title: Connettersi a SQL Server o al database SQL di Azure | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,45 +13,55 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connect-to-an-instance-from-object-explorer"></a>Connettersi a un'istanza da Esplora oggetti
-Per gestire oggetti tramite Esplora oggetti, è necessario connettere Esplora oggetti all'istanza che contiene gli oggetti. È possibile connettere Esplora oggetti a più istanze contemporaneamente.  
+# <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Connettersi a SQL Server o al database SQL di Azure
+
+Per usare server e database, è prima di tutto necessario connettersi al server. È possibile connettersi a più server contemporaneamente.
+
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) supporta diversi tipi di connessioni. Questo articolo fornisce dettagli per la connessione a SQL Server e al database SQL di Azure, ovvero per la connessione a un server logico di Azure SQL. Per informazioni sulle altre opzioni di connessione, vedere i [collegamenti](#see-also) nella parte inferiore della pagina.
   
-## <a name="connecting-object-explorer-to-a-server"></a>Connessione di Esplora oggetti a un server  
-Per utilizzare Esplora oggetti, è necessario connettersi innanzitutto a un server. Fare clic su **Connetti** sulla barra degli strumenti Esplora oggetti e selezionare il tipo di server desiderato dall'elenco a discesa. Verrà visualizzata la finestra di dialogo **Connetti al server** . Per eseguire la connessione è necessario specificare almeno il nome del server e le informazioni di autenticazione corrette.  
-  
-## <a name="optional-object-explorer-connection-settings"></a>Impostazioni di connessione facoltative di Esplora oggetti  
-Quando ci si collega a un server è possibile specificare altre informazioni nella finestra di dialogo **Connetti al server**. In **Connetti al server**questa finestra verranno mantenute le ultime impostazioni, che saranno utilizzate per le nuove connessioni, ad esempio per le nuove finestre dell'editor del codice.  
-  
-Per specificare impostazioni di connessione facoltative, eseguire la procedura seguente:  
-  
-1.  Fare clic su **Connetti** sulla barra degli strumenti Esplora oggetti e quindi sul tipo di server al quale collegarsi. Verrà visualizzata la finestra di dialogo **Connetti al server** .  
-  
-2.  Nella casella **Nome server** digitare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
-  
-3.  Fare clic su **Opzioni**. Nella finestra di dialogo **Connetti al server** verranno visualizzate opzioni aggiuntive.  
-  
-4.  Fare clic sulla scheda **Proprietà connessione** per configurare le impostazioni aggiuntive. Le impostazioni disponibili variano in base al tipo di server. Per [!INCLUDE[ssDE](../../includes/ssde_md.md)]sono disponibili le opzioni seguenti.  
-  
-    |Impostazione|Description|  
-    |-----------|---------------|  
-    |**Connetti al database**|Consente di eseguire selezioni dall'elenco dei database disponibili sul server. Questo elenco contiene solo i database che l'utente è autorizzato a visualizzare.|  
-    |**Protocollo di rete**|Consente di selezionare tra Shared Memory, TCP/IP o Named pipe.|  
-    |**Dimensioni pacchetto di rete**|La configurazione deve essere espressa in byte. L'impostazione predefinita è 4096 byte.|  
-    |**Timeout connessione**|La configurazione deve essere espressa in secondi. L'impostazione predefinita è 15 secondi.|  
-    |**Timeout esecuzione**|La configurazione deve essere espressa in secondi. L'impostazione predefinita (0) indica che l'esecuzione non andrà mai in timeout.|  
-    |**Crittografia connessione**|Forza la crittografia.|  
-  
-5.  Per aggiungere il server specificato all'elenco dei server registrati, fare clic sulla scheda **Server registrato** , scegliere la posizione desiderata per il nuovo server e quindi completare la connessione.  
-  
-> [!NOTE]  
-> Usare la pagina **Parametri aggiuntivi per la connessione** per aggiungere più parametri di connessione alla stringa di connessione. Per altre informazioni, vedere [Connetti al server &#40; pagina Parametri aggiuntivi per la connessione &#41;](../../ssms/f1-help/connect-to-server-additional-connection-parameters-page.md).  
-  
+## <a name="connecting-to-a-server"></a>Connessione a un server  
+
+1. In **Esplora oggetti** fare clic su **Connetti > Motore di database**.
+
+   ![connect](../media/connect-to-server/connect-db-engine.png)
+
+1. Compilare il modulo **Connetti al server** e fare clic su **Connetti**:
+
+   ![Connetti al server](../media/connect-to-server/connect.png)
+
+1. Se ci si connette a un server di Azure SQL, è possibile che venga richiesto l'accesso per la creazione di una regola del firewall. Fare clic su **Accedi**. Se non viene visualizzata alcuna richiesta, procedere al Passaggio 6 più avanti.
+
+   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+
+1. Dopo l'accesso, il form viene precompilato con l'indirizzo IP specifico. Se l'indirizzo IP specifico viene modificato spesso, potrebbe risultare più facile concedere l'accesso a un intervallo. Selezionare quindi l'opzione più adatta al proprio ambiente. 
+
+   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+
+1. Per creare la regola del firewall e connettersi al server fare clic su **OK**.
+
+1. Il server viene visualizzato in **Esplora oggetti** dopo il completamento della connessione:
+
+   ![Connessione completata](../media/connect-to-server/connected.png)
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Progettare, creare e aggiornare le tabelle](../visual-db-tools/design-tables-visual-database-tools.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
+[Scaricare SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
+[Archiviazione di Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
 
