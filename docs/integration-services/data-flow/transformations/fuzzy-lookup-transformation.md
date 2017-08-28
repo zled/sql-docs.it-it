@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurazione della trasformazione Ricerca fuzzy  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca fuzzy** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor trasformazione Ricerca fuzzy &#40;scheda Tabella di riferimento&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [Editor trasformazione Ricerca fuzzy &#40;scheda Avanzate&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -144,6 +139,83 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Tabella di riferimento)
+  Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per specificare la tabella di origine e l'indice da usare per la ricerca. Tale origine deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+> [!NOTE]  
+>  La trasformazione Ricerca fuzzy crea una copia di lavoro della tabella di riferimento. Gli indici descritti di seguito vengono creati su tale tabella di lavoro usando una tabella speciale invece di un normale indice [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La trasformazione non modifica le tabelle di origine esistenti, a meno che non sia stata selezionata l'opzione **Manutenzione indice archiviato**. In questo caso viene creato un trigger sulla tabella di riferimento che aggiorna la tabella di lavoro e la tabella dell'indice di ricerca in base alle modifiche apportate alla tabella di riferimento.  
+  
+> [!NOTE]  
+>  Le proprietà **Exhaustive** e **MaxMemoryUsage** della trasformazione Ricerca fuzzy non sono disponibili nell' **Editor trasformazione Ricerca fuzzy**, tuttavia possono essere impostate usando l' **Editor avanzato**. È anche possibile specificare un valore maggiore di 100 per **MaxOutputMatchesPerInput** solo nell' **Editor avanzato**. Per altre informazioni su queste proprietà, vedere la sezione relativa alla trasformazione Ricerca fuzzy in [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opzioni  
+ **gestione connessione OLE DB**  
+ Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
+  
+ **Nuova**  
+ Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
+  
+ **Genera nuovo indice**  
+ Consente di specificare che la trasformazione deve creare un nuovo indice da utilizzare per la ricerca.  
+  
+ **Nome tabella di riferimento**  
+ Consente di selezionare la tabella esistente da utilizzare come tabella di riferimento, ovvero di ricerca.  
+  
+ **Archivia nuovo indice**  
+ Selezionare questa opzione per salvare il nuovo indice di ricerca.  
+  
+ **Nome nuovo indice**  
+ Consente di digitare un nome descrittivo per il nuovo indice di ricerca da salvare.  
+  
+ **Manutenzione indice archiviato**  
+ Consente di specificare se la manutenzione dell'indice deve essere eseguita anche da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se si è scelto di salvare il nuovo indice di ricerca.  
+  
+> [!NOTE]  
+>  Se si seleziona **Manutenzione indice archiviato** nella scheda **Tabella di riferimento** di **Editor trasformazione Ricerca fuzzy**, la trasformazione utilizza stored procedure gestite per gestire l'indice. Queste stored procedure gestite usano la funzionalità di integrazione di Common Language Runtime (CLR) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'integrazione con CLR non è abilitata in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per utilizzare la funzionalità **Manutenzione indice archiviato** è necessario abilitare l'integrazione con CLR. Per altre informazioni, vedere [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>   
+>  Considerato che l'opzione **Manutenzione indice archiviato** richiede l'integrazione con CLR, questa funzionalità può essere usata solo se si seleziona una tabella di riferimento in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è abilitata l'integrazione con CLR.  
+  
+ **Usa indice esistente**  
+ Consente di specificare che la trasformazione deve utilizzare un indice esistente per la ricerca.  
+  
+ **Nome di un indice esistente**  
+ Consente di selezionare nell'elenco un indice di ricerca creato precedentemente.  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Colonne)
+  Utilizzare la scheda **Colonne** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per impostare le proprietà delle colonne di input e output.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Trascinare le colonne di input per collegarle alle colonne di ricerca disponibili. Queste colonne devono disporre di tipi di dati supportati e corrispondenti. Selezionare una riga di mapping e fare clic con il pulsante destro del mouse per modificare i mapping nella finestra di dialogo [Crea relazioni](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+  
+ **Nome**  
+ Consente di visualizzare i nomi delle colonne di input disponibili.  
+  
+ **Pass-through**  
+ Consente di indicare l'inclusione delle colonne di input nell'output della trasformazione.  
+  
+ **Colonne di ricerca disponibili**  
+ Utilizzare le caselle di controllo per selezionare le colonne su cui eseguire operazioni di ricerca fuzzy.  
+  
+ **Colonna di ricerca**  
+ Selezionare le colonne di ricerca dall'elenco delle colonne della tabella di riferimento disponibili. Queste selezioni si rifletteranno nelle selezioni delle caselle di controllo nella tabella **Colonne di ricerca disponibili** . La selezione di una colonna nella tabella **Colonne di ricerca disponibili** comporta la creazione di una colonna di output contenente il valore della colonna della tabella di riferimento per ogni riga corrispondente restituita.  
+  
+ **Alias di output**  
+ Consente di digitare un alias per l'output relativo a ogni colonna di ricerca. Per impostazione predefinita viene suggerito il nome della colonna di ricerca a cui è accodato un valore di indice numerico. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Avanzate)
+  Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per impostare i parametri relativi alla ricerca fuzzy.  
+  
+### <a name="options"></a>Opzioni  
+ **Numero massimo di corrispondenze da restituire per ricerca**  
+ Consente di specificare il numero massimo di corrispondenze restituite dalla trasformazione per ogni riga di input. L'impostazione predefinita è **1**.  
+  
+ **Soglia di somiglianza**  
+ Consente di impostare la soglia di somiglianza a livello di componente mediante il dispositivo di scorrimento. Più il valore è vicino a 1, maggiore deve essere la somiglianza tra il valore di ricerca e il valore di origine per essere considerata una corrispondenza. L'aumento della soglia può migliorare la velocità di confronto, poiché verrà considerato un numero minore di record candidati.  
+  
+ **Delimitatori token**  
+ Consente di specificare i delimitatori utilizzati dalla trasformazione per suddividere in token i valori delle colonne.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca](../../../integration-services/data-flow/transformations/lookup-transformation.md)   

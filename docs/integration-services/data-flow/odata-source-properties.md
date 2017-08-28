@@ -15,22 +15,24 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4f3283de9e26ce05849a34c8906a3095c229680
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 64e297a37c3b6449551968b5788f8c2c0ddd4ab6
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="odata-source-properties"></a>Proprietà dell'origine OData
-  Quando si fa clic con il pulsante destro del mouse su **Origine OData** nel flusso di dati e si sceglie **Proprietà**, vengono visualizzate le proprietà per il componente **Origine OData** nella finestra **Proprietà** .  
-  
-|||  
-|-|-|  
+Quando si fa clic su **origine OData** nel flusso di dati e fare clic su **proprietà**, per visualizzare le proprietà per il **origine OData** componente il **proprietà** finestra.  
+
+## <a name="properties"></a>Proprietà 
 |Proprietà|Description|  
-|CollectionName|Nome della raccolta che si desidera recuperare dal servizio OData. La proprietà **CollectionName** viene utilizzata quando **UseResourcePath** è False.<br /><br /> Questa proprietà ammette le espressioni e consente l'impostazione del valore in fase di esecuzione. Tuttavia, se i metadati della raccolta non corrispondono a quelli utilizzati in fase di progettazione, si verifica un errore di convalida e l'esecuzione del flusso di dati non viene completata.|  
+|-|-|  
+|CollectionName|Nome della raccolta da recuperare dal servizio OData. La proprietà **CollectionName** viene utilizzata quando **UseResourcePath** è False.<br /><br /> Questa proprietà è expressionable, che consente di impostare il valore in fase di esecuzione. Tuttavia, se i metadati della raccolta non corrispondono ai metadati esistenti in fase di progettazione, la convalida si verifica un errore, che causa l'errore di esecuzione del flusso di dati.|  
 |DefaultStringLength|Con questo valore viene specificata la lunghezza predefinita per le colonne stringa che sono prive della lunghezza massima.<br /><br /> **Valore predefinito:** 4000|  
-|Query|Parametri della query OData. Questa proprietà ammette le espressioni e può essere impostata in fase di esecuzione.|  
+|Query|Parametri della query OData. Questa proprietà è expressionable e può essere impostata in fase di esecuzione.|  
 |ResourcePath|Utilizzare questa proprietà quando è necessario specificare un percorso completo della risorsa, anziché selezionare semplicemente il nome di una raccolta. Questa proprietà viene utilizzata quando **UseResourcePath** è True.|  
 |UseResourcePath|Quando impostato su True, il valore di **ResourcePath** viene aggiunto all'URL di base per determinare il percorso del feed OData. Quando impostato su False, viene utilizzato il valore di **CollectionName** .<br /><br /> **Valore predefinito:** False|  
   
-  
+## <a name="see-also"></a>Vedere anche
+[Origine OData](odata-source.md)
+

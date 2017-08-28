@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
+- sql13.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort transformation
 - descending sorts
@@ -24,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sort-transformation"></a>Ordinamento - trasformazione
@@ -47,8 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-sort-transformation"></a>Configurazione della trasformazione Ordinamento  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ordinamento** , vedere [Editor trasformazione Ordinamento](../../../integration-services/data-flow/transformations/sort-transformation-editor.md).  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +59,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenuto correlato  
  Esempio relativo al [componente SSIS personalizzato SortDeDuplicateDelimitedString](http://go.microsoft.com/fwlink/?LinkId=220821)su codeplex.com.  
+  
+## <a name="sort-transformation-editor"></a>Editor trasformazione Ordinamento
+  Utilizzare la finestra di dialogo **Editor trasformazione Ordinamento** per selezionare le colonne da ordinare, impostare il tipo di ordinamento e specificare se rimuovere i duplicati.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di specificare le colonne da ordinare utilizzando le caselle di controllo.  
+  
+ **Nome**  
+ Consente di visualizzare il nome di ogni colonna di input disponibile.  
+  
+ **Pass-through**  
+ Indica se includere la colonna nell'output ordinato.  
+  
+ **Colonna di input**  
+ Consente di selezionare una colonna di input nell'elenco delle colonne di input disponibili per ogni riga. Le selezioni effettuate vengono riflesse nelle selezioni delle caselle di controllo nella tabella **Colonne di input disponibili** .  
+  
+ **Alias di output**  
+ Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+ **Tipo di ordinamento**  
+ Indica se eseguire l'ordinamento in ordine crescente o decrescente.  
+  
+ **Ordinamento**  
+ Indica l'ordine da utilizzare per l'ordinamento delle colonne. È possibile impostare questa opzione in modo manuale per ogni colonna.  
+  
+ **Flag di confronto**  
+ Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Rimuovi righe con valori di ordinamento duplicati**  
+ Indica se la trasformazione copia le righe duplicate nell'output della trasformazione o se invece crea un'unica voce per tutti i duplicati in base alla stringa specificata nelle opzioni di confronto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   

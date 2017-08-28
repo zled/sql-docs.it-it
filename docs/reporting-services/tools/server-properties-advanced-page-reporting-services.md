@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -124,6 +124,19 @@ PowerBI ReportServer consentono l'esportazione dei dati da oggetti visivi di Pow
 
 **EnableTestConnectionDetailedErrors**  
 Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.
+
+**AccessControlAllowCredentials**  
+Indica se la risposta alla richiesta del client può essere esposta quando il flag 'credenziali' è impostato su true. Il valore predefinito è **false**.
+
+**AccessControlAllowHeaders** un elenco separati da virgole delle intestazioni che il server consentirà quando un client effettua una richiesta. Questa proprietà può essere una stringa vuota, specifica * consentirà tutte le intestazioni.
+
+**AccessControlAllowMethods** un elenco separati da virgole dei metodi HTTP che il server consentirà quando un client effettua una richiesta. I valori predefiniti sono (GET, PUT, POST, PATCH, DELETE), specificando * consentirà a tutti i metodi.
+
+**AccessControlAllowOrigin** un elenco separati da virgole di origini che il server consentirà quando un client effettua una richiesta. Il valore predefinito è vuoto che impedisce tutte le richieste, specificando * consentirà tutte le origini quando le credenziali non sono impostate; Se vengono specificate credenziali, è necessario specificare un elenco esplicito di origine.
+
+**AccessControlExposeHeaders** un elenco separati da virgole delle intestazioni che il server dovrà esporre ai client. Il valore predefinito è vuoto.
+
+**AccessControlMaxAge** specifica il numero di secondi che possono essere memorizzati nella cache i risultati della richiesta preliminare. Il valore predefinito è 600 (10 minuti).
 
 ## <a name="see-also"></a>Vedere anche
 

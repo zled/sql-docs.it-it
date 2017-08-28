@@ -4,26 +4,29 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilizzare SQL Server Management Studio in Windows per la gestione di SQL Server in Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Questo argomento vengono presentate [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) e viene descritto un paio di attività comuni. SQL Server Management Studio è un'applicazione Windows, pertanto utilizzare SQL Server Management Studio, quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) fa parte di un gruppo di strumenti SQL che offerte Microsoft gratuitamente alle proprie esigenze di sviluppo e gestione. SQL Server Management Studio è un ambiente integrato per accedere, configurare, gestire, amministrare e sviluppare tutti i componenti di SQL Server in esecuzione in locale o nel cloud, Linux, Windows o Docker macOS e Database SQL di Azure e Azure SQL Data Warehouse. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per fornire l'accesso a SQL Server a sviluppatori e amministratori di tutti i livelli di.
 
 SQL Server Management Studio offre un'ampia gamma di funzionalità di sviluppo e gestione per SQL Server, inclusi gli strumenti per:
+
 - configurare, monitorare e amministrare una o più istanze di SQL Server
 - distribuire, monitorare e aggiornare i componenti di livello dati, ad esempio database e i data warehouse
 - backup e ripristino di database

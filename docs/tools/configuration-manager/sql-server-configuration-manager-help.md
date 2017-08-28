@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c3445dee2fe753506a02e9c828f1835664592a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: d12d9e8aa7c2a11dfe340897c4b63681591784d5
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-configuration-manager-help"></a>Guida di Gestione configurazione SQL Server
@@ -71,6 +71,12 @@ ms.lasthandoff: 08/02/2017
   
 -   Dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server** (versione), **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
   
+  
+ **Per accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Using Configuration Manager[!INCLUDE[win8](../../includes/win8-md.md)]**  
+  
+ Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene visualizzato come applicazione durante l'esecuzione di [!INCLUDE[win8](../../includes/win8-md.md)]. Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nell'icona promemoria **Cerca** in **App**digitare **SQLServerManager12.msc** (per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) o **SQLServerManager11.msc** per ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e quindi premere **INVIO**.  
+  
+
 ## <a name="see-also"></a>Vedere anche  
  [Servizi SQL Server](../../tools/configuration-manager/sql-server-services.md)   
  [Configurazione di rete SQL Server](../../tools/configuration-manager/sql-server-network-configuration.md)   

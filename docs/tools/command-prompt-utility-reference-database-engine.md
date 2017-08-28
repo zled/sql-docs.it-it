@@ -1,5 +1,5 @@
 ---
-title: "Riferimento all'utilità di prompt dei comandi (motore di Database) | Documenti Microsoft"
+title: "Utilità della riga di comando SQL (motore di Database) | Documenti Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 caps.latest.revision: 90
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12e1015034b5f933eff620c626ab363cdf5800e7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="command-prompt-utility-reference-database-engine"></a>Guida di riferimento alle utilità del prompt dei comandi (motore di database)
+# <a name="sql-command-prompt-utilities-database-engine"></a>Utilità della riga di comando SQL (motore di Database)
   Le utilità del prompt dei comandi consentono di generare script di operazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Nella tabella seguente è riportato l'elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Utility**|**Descrizione**|**Posizione di installazione**|  
@@ -50,14 +50,10 @@ ms.lasthandoff: 08/02/2017
 |[Utilità SqlLocalDB](../tools/sqllocaldb-utility.md)|Modalità di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destinata agli sviluppatori.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
 |[Utilità sqlmaint](../tools/sqlmaint-utility.md)|Utilizzata per eseguire i piani di manutenzione dei database creati nelle precedenti versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|\<unità >: \Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn|  
 |[Utilità sqlps](../tools/sqlps-utility.md)|Consente di eseguire comandi e script di PowerShell, nonché di caricare e registrare il provider e i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Applicazione sqlservr](../tools/sqlservr-application.md)|Consente di avviare e arrestare un'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] dal prompt dei comandi per la risoluzione dei problemi.|\<unità >: \Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr](../tools/sqlservr-application.md)|Consente di avviare e arrestare un'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] dal prompt dei comandi per la risoluzione dei problemi.|\<unità >: \Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn|  
 |[Utilità Ssms](../tools/sql-server-management-studio/ssms-utility.md)|Consente di avviare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dal prompt dei comandi.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[Utilità tablediff](../tools/tablediff-utility.md)|Consente di confrontare i dati di due tabelle e rilevare l'eventuale non convergenza dei dati. Risulta particolarmente utile per la risoluzione dei problemi relativi alla topologia di replica.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
-  
- **Per accedere a Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando [!INCLUDE[win8](../includes/win8-md.md)]**  
-  
- Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene visualizzato come applicazione durante l'esecuzione di [!INCLUDE[win8](../includes/win8-md.md)]. Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nell'icona promemoria **Cerca** in **App**digitare **SQLServerManager12.msc** (per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) o **SQLServerManager11.msc** per ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]) e quindi premere **INVIO**.  
-  
+
 ## <a name="command-prompt-utilities-syntax-conventions"></a>Convenzioni di sintassi per le utilità del del prompt dei comandi  
   
 |**Convenzione**|**Utilizzo**|  

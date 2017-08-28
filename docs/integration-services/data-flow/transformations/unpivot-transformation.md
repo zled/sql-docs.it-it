@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
+- sql13.dts.designer.unpivottransformation.f1
 helpviewer_keywords:
 - Unpivot transformation
 - more normalized data set [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d491bb19b4eb86bd0fe75a7b8ca8e7b6e5d226b5
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="unpivot-transformation"></a>UnPivot - trasformazione
@@ -48,10 +49,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione UnPivot** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation-editor.md)  
-  
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -59,5 +56,47 @@ ms.lasthandoff: 08/03/2017
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="unpivot-transformation-editor"></a>Editor trasformazione UnPivot
+  Utilizzare la finestra di dialogo **Editor trasformazione UnPivot** per selezionare le colonne da trasformare in righe tramite Pivot e specificare la colonna di dati e la nuova colonna di output per il valore pivot.  
+  
+> [!NOTE]  
+>  Per illustrare l'uso delle opzioni, questo argomento si basa sullo scenario UnPivot descritto in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) .  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di specificare le colonne da trasformare in righe tramite Pivot utilizzando le caselle di controllo.  
+  
+ **Nome**  
+ Consente di visualizzare il nome della colonna di input disponibile.  
+  
+ **Pass-through**  
+ Indica se includere la colonna nell'output trasformato tramite UnPivot.  
+  
+ **Colonna di input**  
+ Consente di selezionare una colonna di input nell'elenco delle colonne di input disponibili per ogni riga. Le selezioni effettuate vengono riflesse nelle selezioni delle caselle di controllo nella tabella **Colonne di input disponibili** .  
+  
+ Nello scenario UnPivot descritto in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), le colonne di input sono le colonne **Ham**, **Soda**, **Milk**, **Beer**e **Chips** .  
+  
+ **Colonna di destinazione**  
+ Consente di specificare un nome per la colonna di dati.  
+  
+ Nello scenario UnPivot descritto in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), la colonna di destinazione è la colonna delle quantità, ovvero**Qty**.  
+  
+ **Valore chiave pivot**  
+ Consente di specificare un nome per il valore pivot. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+ È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  
+  
+ Nello scenario UnPivot descritto in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), i valori pivot verranno visualizzati nella nuova colonna Product designata dall'opzione **Nome colonna valore chiave pivot** allo stesso modo dei valori di testo **Ham**, **Soda**, **Milk**, **Beer**e **Chips**.  
+  
+ **Nome colonna valore chiave pivot**  
+ Consente di specificare il nome per la colonna del valore pivot. L'impostazione predefinita è "Valore chiave pivot". È comunque possibile scegliere un nome descrittivo univoco.  
+  
+ Nello scenario UnPivot descritto in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), il Nome colonna valore chiave pivot è **Product** e designa la nuova colonna **Product** come la colonna in cui viene applicata la trasformazione tramite UnPivot alle colonne **Ham**, **Soda**, **Milk**, **Beer**e **Chips** .  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Trasformazione Pivot](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

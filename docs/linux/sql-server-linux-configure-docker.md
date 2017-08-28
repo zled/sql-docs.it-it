@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f87c28e4d2ba7689d422ccf2f1a903765a39f27a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurare le immagini contenitore di SQL Server 2017 in Docker
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In questo argomento viene illustrato come configurare e utilizzare il [immagine contenitore mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) con Docker. Questa immagine è costituito da SQL Server in esecuzione in base a 16.04 Ubuntu Linux. E può essere utilizzato con il motore Docker 1.8 + in Linux o in Docker per Mac e Windows.
 

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
+- sql13.dts.designer.cachetranscon.f1
+- sql13.dts.designer.cachetransmap.f1
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="cache-transform"></a>trasformazione Cache
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  In un pacchetto singolo, solo una trasformazione Cache può scrivere i dati nella stessa gestione connessione della cache. Se il pacchetto contiene più trasformazioni Cache, la prima ad essere chiamata quando il pacchetto viene eseguito è quella che scrive i dati nella gestione connessione. Le operazioni di scrittura delle trasformazioni Cache successive non vengono eseguite.  
   
- Per ulteriori informazioni, vedere [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) e [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+ Per ulteriori informazioni, vedere [gestione connessione della Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configurazione della trasformazione Cache  
  È possibile configurare la gestione connessione della cache in modo da salvare i dati in un file di cache (con estensione caw).  
@@ -58,6 +60,21 @@ ms.lasthandoff: 08/03/2017
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** , vedere [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="cache-transformation-editor-connection-manager-page"></a>Editor trasformazione cache (pagina Gestione connessioni)
+  Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione cache** per selezionare una gestione connessione esistente o crearne una nuova.  
+  
+ Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Cache connection manager**  
+ Consente di selezionare una gestione connessione della cache esistente utilizzando l'elenco o di creare una nuova connessione usando il pulsante **Nuova** .  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione nella finestra di dialogo Editor gestione connessione cache.  
+  
+ **Modifica**  
+ Consente di modificare una connessione esistente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

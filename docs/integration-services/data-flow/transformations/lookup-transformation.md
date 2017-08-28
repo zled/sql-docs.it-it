@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
+- sql13.dts.designer.lookuptransformation.general.f1
+- sql13.dts.designer.lookuptransformation.referencetable.f1
+- sql13.dts.designer.lookuptransformation.columns.f1
+- sql13.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup transformation
 - joining columns [Integration Services]
@@ -24,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
@@ -59,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  La trasformazione Ricerca tenta di eseguire un equijoin tra i valori nell'input della trasformazione e quelli nel set di dati di riferimento. Questo significa che a ogni riga nell'input della trasformazione deve corrispondere almeno una riga nel set di dati di riferimento. Se non è possibile eseguire un equijoin, viene eseguita una delle azioni seguenti:  
   
--   Se non esiste una voce corrispondente nel set di dati di riferimento, non viene eseguito alcun join. Per impostazione predefinita, le righe senza voci corrispondenti vengono gestite come errori dalla trasformazione Ricerca. Tuttavia, è possibile configurare la trasformazione Ricerca per reindirizzare tali righe a un output senza corrispondenza. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Generale&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md) e [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+-   Se non esiste una voce corrispondente nel set di dati di riferimento, non viene eseguito alcun join. Per impostazione predefinita, le righe senza voci corrispondenti vengono gestite come errori dalla trasformazione Ricerca. Tuttavia, è possibile configurare la trasformazione Ricerca per reindirizzare tali righe a un output senza corrispondenza.  
   
 -   Se nella tabella di riferimento sono presenti più corrispondenze, la trasformazione Ricerca restituisce solo la prima corrispondenza restituita dalla query di ricerca. Se vengono rilevate più corrispondenze, viene generato un errore o un avviso nella trasformazione Ricerca solo se questa è stata configurata in modo da caricare l'intero set di dati di riferimento nella cache. In questo caso, viene generato un avviso quando vengono individuate più corrispondenze durante il riempimento della cache.  
   
@@ -122,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Implementazione di una ricerca in modalità No Cache o Partial Cache](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -139,6 +143,139 @@ ms.lasthandoff: 08/03/2017
 -   Esempio [trasformazione Ricerca](http://go.microsoft.com/fwlink/?LinkId=267528), su msftisprodsamples.codeplex.com.  
   
      Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+  
+## <a name="lookup-transformation-editor-general-page"></a>Editor trasformazione Ricerca (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo Editor trasformazione Ricerca per selezionare la modalità di cache, selezionare il tipo di connessione e specificare la modalità di gestione delle righe senza voci corrispondenti.  
+  
+### <a name="options"></a>Opzioni  
+ **Full Cache**  
+ Generare e caricare il set di dati di riferimento nella cache prima dell'esecuzione della trasformazione Ricerca.  
+  
+ **Partial Cache**  
+ Generare il set di dati di riferimento durante l'esecuzione della trasformazione Ricerca. Caricare le righe con le voci corrispondenti nel set di dati di riferimento e le righe senza voci corrispondenti nel set di dati nella cache.  
+  
+ **No Cache**  
+ Generare il set di dati di riferimento durante l'esecuzione della trasformazione Ricerca. Non sono stati caricati dati in cache.  
+  
+ **gestione connessione della cache**  
+ Configurare la trasformazione Ricerca per l'utilizzo della gestione connessione della cache. L'opzione è disponibile solo se è stata selezionata anche l'opzione Full Cache.  
+  
+ **gestione connessione OLE DB**  
+ Configurare la trasformazione Ricerca per l'utilizzo della gestione connessione OLE DB.  
+  
+ **Specificare come gestire le righe senza voci corrispondenti**  
+ Selezionare un'opzione per la gestione delle righe che non dispongono di almeno una voce corrispondente nel set di dati di riferimento.  
+  
+ Quando si seleziona **Reindirizza righe all'output nessuna corrispondenza**, le righe vengono reindirizzate a un output senza corrispondenze e non vengono gestite come errori. L'opzione **Errore** nella pagina **Output errori** della finestra di dialogo **Editor trasformazione Ricerca** non è disponibile.  
+  
+ Quando si seleziona un'altra opzione nella casella di riepilogo **Specificare come gestire le righe senza voci corrispondenti** , le righe vengono gestite come errori. L'opzione **Errore** nella pagina **Output errori** è disponibile.  
+  
+### <a name="external-resources"></a>Risorse esterne  
+ Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-connection-page"></a>Editor trasformazione Ricerca (pagina Connessione)
+  Usare la pagina **Connessione** della finestra di dialogo **Editor trasformazione Ricerca** per selezionare una gestione connessione. Se si seleziona una gestione connessione OLE DB, viene anche selezionata anche una query, una tabella o una vista per generare il set di dati di riferimento.  
+  
+### <a name="options"></a>Opzioni  
+ Le opzioni seguenti sono disponibili quando si selezionano **Full cache** e **Gestione connessione della cache** nella pagina Generale della finestra di dialogo **Editor trasformazione Ricerca** .  
+  
+ **Gestione connessione della cache**  
+ Selezionare una gestione connessione della cache esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione nella finestra di dialogo **Editor gestione connessione della cache** .  
+  
+ Le opzioni seguenti sono disponibili quando si selezionano **Full cache**, **Partial cache**o **No cache**e **Gestione connessione OLE DB**nella pagina Generale della finestra di dialogo **Editor trasformazione Ricerca** .  
+  
+ **Gestione connessione OLE DB**  
+ Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
+  
+ **Nuova**  
+ Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
+  
+ **Tabella o vista**  
+ Consente di selezionare una tabella o vista esistente nell'elenco o di creare una nuova tabella facendo clic su **Nuova**.  
+  
+> [!NOTE]  
+>  Se si specifica un'istruzione SQL nella pagina **Avanzate** di **Editor trasformazione Ricerca**, tale istruzione sostituisce il nome di tabella selezionato, in quanto ha priorità su di esso. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Avanzate&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+  
+ **Nuova**  
+ Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
+  
+ **Usa i risultati di una query SQL**  
+ Questa opzione consente di visualizzare una query preesistente, compilare una nuova query, controllare la sintassi della query e visualizzare in anteprima i risultati della query.  
+  
+ **Compila query**  
+ Consente di creare l'istruzione Transact-SQL da usare per l'esecuzione tramite **Generatore query**, uno strumento grafico usato per creare query tramite la visualizzazione dei dati.  
+  
+ **Sfoglia**  
+ Utilizzare questa opzione per visualizzare una query preesistente salvata in un file.  
+  
+ **Analizza query**  
+ Consente di controllare la sintassi della query.  
+  
+ **Anteprima**  
+ Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . Questa opzione consente di visualizzare fino a 200 righe.  
+  
+### <a name="external-resources"></a>Risorse esterne  
+ Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-columns-page"></a>Editor trasformazione Ricerca (pagina Colonne)
+  Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Ricerca** per specificare il join tra la tabella di origine e la tabella di riferimento e selezionare colonne di ricerca nella tabella di riferimento.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di visualizzare l'elenco delle colonne di input disponibili. Le colonne di input sono le colonne nel flusso di dati provenienti da un'origine connessa. Le colonne di input e le colonne di ricerca devono contenere tipi di dati corrispondenti.  
+  
+ Effettuare un'operazione di trascinamento della selezione per eseguire il mapping delle colonne di input disponibili alle colonne di ricerca.  
+  
+ È anche possibile eseguire il mapping delle colonne di input alle colonne di ricerca mediante la tastiera, evidenziando una colonna nella tabella **Colonne di input disponibili** , premendo il tasto MENU SCELTA RAPIDA, quindi facendo clic su **Modifica mapping**.  
+  
+ **Colonne di ricerca disponibili**  
+ Consente di visualizzare l'elenco delle colonne di ricerca. Le colonne di ricerca sono colonne nella tabella di riferimento nelle quali si desidera cercare i valori corrispondenti alle colonne di input.  
+  
+ Eseguire un'operazione di trascinamento della selezione per eseguire il mapping delle colonne di ricerca disponibili alle colonne di input.  
+  
+ Utilizzare le caselle di controllo per selezionare le colonne di ricerca nella tabella di riferimento su cui eseguire operazioni di ricerca.  
+  
+ È anche possibile eseguire il mapping delle colonne di ricerca alle colonne di input mediante la tastiera, evidenziando una colonna nella tabella **Colonne di ricerca disponibili** , premendo il tasto MENU SCELTA RAPIDA, quindi facendo clic su **Modifica mapping**.  
+  
+ **Colonna di ricerca**  
+ Consente di visualizzare le colonne di ricerca selezionate. Le selezioni effettuate vengono riflesse nelle selezioni delle caselle di controllo nella tabella **Colonne di ricerca disponibili** .  
+  
+ **Operazione di ricerca**  
+ Consente di selezionare un'operazione di ricerca da eseguire sulla colonna di ricerca.  
+  
+ **Alias di output**  
+ Consente di digitare un alias per l'output relativo a ogni colonna di ricerca. Per impostazione predefinita viene suggerito il nome della colonna di ricerca. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+## <a name="lookup-transformation-editor-advanced-page"></a>Editor trasformazione Ricerca (pagina Avanzate)
+  La pagina **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca** consente di configurare la memorizzazione nella cache parziale e di modificare l'istruzione SQL della trasformazione Ricerca.  
+  
+### <a name="options"></a>Opzioni  
+ **Dimensioni cache (32 bit)**  
+ Consente di regolare le dimensioni della cache (in megabyte) per i computer a 32 bit. Il valore predefinito è 5 MB.  
+  
+ **Dimensioni cache (64 bit)**  
+ Consente di regolare le dimensioni della cache (in megabyte) per i computer a 64 bit. Il valore predefinito è 5 MB.  
+  
+ **Attivare cache per righe senza voci corrispondenti**  
+ Consente di memorizzare nella cache le righe senza voci corrispondenti nel set di dati di riferimento.  
+  
+ **Allocazione dalla cache**  
+ Consente di specificare la percentuale della cache da allocare per le righe senza voci corrispondenti nel set di dati di riferimento.  
+  
+ **Modifica istruzione SQL**  
+ Consente di modificare l'istruzione SQL utilizzata per generare il set di dati di riferimento.  
+  
+> [!NOTE]  
+>  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+  
+ **Impostazione dei parametri**  
+ Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query** .  
+  
+### <a name="external-resources"></a>Risorse esterne  
+ Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

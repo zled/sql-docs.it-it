@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
+- sql13.dts.designer.fileextractortransformation.columns.f1
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - exporting data
 - append options [Integration Services]
@@ -24,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="export-column-transformation"></a>Trasformazione Esporta colonna
@@ -65,14 +67,56 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Esportazione colonna**, vedere [Editor trasformazione Esportazione colonna &#40;pagina Colonne&#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md).  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="export-column-transformation-editor-columns-page"></a>Editor trasformazione Esportazione colonna (pagina Colonne)
+  Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le colonne nel flusso di dati da estrarre in file. È possibile indicare se la trasformazione Esporta colonna deve accodare i dati a un file oppure sovrascrivere un file esistente.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonna estrazione**  
+ Consente di eseguire una selezione dall'elenco di colonne di input contenenti dati di tipo text o image. In tutte le righe devono essere presenti definizioni per **Colonna estrazione** e **Colonna percorso file**.  
+  
+ **Colonna percorso file**  
+ Consente di eseguire una selezione dall'elenco di colonne di input contenenti nomi e percorsi di file. In tutte le righe devono essere presenti definizioni per **Colonna estrazione** e **Colonna percorso file**.  
+  
+ **Consenti accodamento**  
+ Consente di indicare se la trasformazione accoderà i dati ai file esistenti. Il valore predefinito è **false**.  
+  
+ **Forza troncamento**  
+ Consente di indicare se la trasformazione eliminerà il contenuto di file esistenti prima di scrivere i dati. Il valore predefinito è **false**.  
+  
+ **Scrivi indicatore ordine byte**  
+ Consente di specificare se scrivere un indicatore ordine byte (BOM) nel file. L'indicatore dell'ordine dei byte viene scritto solo se i dati hanno il tipo di dati **DT_NTEXT** o DT_WSTR e non sono accodati a un file di dati esistente.  
+  
+## <a name="export-column-transformation-editor-error-output-page"></a>Editor trasformazione Esportazione colonna (pagina Output degli errori)
+  Utilizzare la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le opzioni di gestione degli errori.  
+  
+### <a name="options"></a>Opzioni  
+ **Input/Output**  
+ Consente di visualizzare il nome dell'output. Fare clic sul nome per espandere la visualizzazione e includere le colonne.  
+  
+ **Colonna**  
+ Consente di visualizzare le colonne di output selezionate nella pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** .  
+  
+ **Errore**  
+ Consente di specificare l'azione che deve essere eseguita in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
+  
+ **Troncamento**  
+ Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
+  
+ **Description**  
+ Consente di visualizzare la descrizione dell'operazione.  
+  
+ **Imposta questo valore nelle celle selezionate**  
+ Consente di specificare l'azione che dovrà interessare tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Applica**  
+ Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
   

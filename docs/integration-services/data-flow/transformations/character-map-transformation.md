@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
+- sql13.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - mutually exclusive mapping [Integration Services]
 - mapping data [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
@@ -74,8 +75,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Mappa caratteri** , vedere [Editor trasformazione Mappa caratteri](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md).  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -86,6 +85,46 @@ ms.lasthandoff: 08/03/2017
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="character-map-transformation-editor"></a>Editor trasformazione Mappa caratteri
+  Usare la finestra di dialogo **Editor trasformazione Mappa caratteri** per selezionare le funzioni per i valori stringa da applicare ai dati di colonna e per specificare se il mapping è una modifica sul posto o viene aggiunto come nuova colonna.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Utilizzare le caselle di controllo per selezionare le colonne da trasformare utilizzando le funzioni per i valori stringa. Le selezioni verranno visualizzate nella tabella sottostante.  
+  
+ **Colonna di input**  
+ Consente di visualizzare le colonne di input selezionate nella tabella precedente. È inoltre possibile modificare o rimuovere una selezione utilizzando l'elenco di colonne di input disponibili.  
+  
+ **Destinazione**  
+ Consente di specificare se salvare i risultati delle operazioni di stringa sul posto, utilizzando la colonna esistente, o se salvare i dati modificati come nuova colonna.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
+|Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
+  
+ **Operazione**  
+ Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Minuscolo|Consente di convertire la stringa in caratteri minuscoli.|  
+|Maiuscolo|Consente di convertire la stringa in caratteri maiuscoli.|  
+|Inversione byte|Consente di eseguire la conversione invertendo l'ordine dei byte.|  
+|Hiragana|Consente di convertire i caratteri giapponesi katakana in caratteri hiragana.|  
+|Katakana|Consente di convertire i caratteri giapponesi hiragana in caratteri katakana.|  
+|Metà larghezza|Consente di convertire i caratteri a larghezza intera in caratteri a metà larghezza.|  
+|Larghezza intera|Consente di convertire i caratteri a metà larghezza in caratteri a larghezza intera.|  
+|Conversione da maiuscole a minuscole (e viceversa) basata sulla lingua|Consente di applicare le regole di conversione da maiuscole a minuscole (e viceversa) basata sulla lingua, ovvero il mapping Unicode semplice tra maiuscole e minuscole per il turco e altre impostazioni locali, al posto delle regole di sistema.|  
+|Cinese semplificato|Consente di convertire i caratteri in cinese tradizionale in caratteri in cinese semplificato.|  
+|Cinese tradizionale|Consente di convertire i caratteri in cinese semplificato in caratteri in cinese tradizionale.|  
+  
+ **Alias di output**  
+ Consente di digitare un alias per ogni colonna di output. L'impostazione predefinita è **Copia di** seguita dal nome della colonna di input.  È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+ **Configura output errori**  
+ Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per la trasformazione corrente.  
   
   

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+- sql13.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - IsBig property
 - aggregate functions [Integration Services]
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
@@ -114,12 +116,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Aggregazione** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor trasformazione Aggregazione &#40;scheda Aggregazioni&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
-  
--   [Editor trasformazione Aggregazione &#40;scheda Avanzate&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -135,7 +131,114 @@ ms.lasthandoff: 08/03/2017
 -   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Aggregazione di valori in un set di dati tramite la trasformazione aggregazione](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+  
+## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor trasformazione Aggregazione (scheda Aggregazioni)
+  Usare la scheda **Aggregazioni** della finestra di dialogo **Editor trasformazione Aggregazione** per specificare le colonne per l'aggregazione e le proprietà di aggregazione. È possibile applicare più aggregazioni. Questa trasformazione non genera output degli errori.  
+  
+> [!NOTE]  
+>  Le opzioni per il conteggio delle chiavi, la scala delle chiavi, il conteggio delle chiavi distinct e la scala delle chiavi distinct vengono applicate a livello di componente quando vengono specificate nella scheda **Avanzate** , a livello di output quando vengono specificate nella sezione delle opzioni avanzate della scheda **Aggregazioni** e a livello di colonna quando vengono specificate nell'elenco delle colonne nella parte inferiore della scheda **Aggregazioni** .  
+>   
+>  Nella trasformazione Aggregazione, **Chiavi** e **Scala chiavi** fanno riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by** . **Chiavi conteggio valori distinct** e **Scala conteggio valori distinct** fanno riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct count** .  
+  
+### <a name="options"></a>Opzioni  
+ **Avanzate/Standard**  
+ Consente di visualizzare o nascondere le opzioni per la configurazione di più aggregazioni per più output. Le opzioni avanzate sono nascoste per impostazione predefinita.  
+  
+ **Nome aggregazione**  
+ Consente di digitare un nome descrittivo per l'aggregazione nella sezione delle opzioni avanzate.  
+  
+ **Colonne GROUP BY**  
+ Nella sezione delle opzioni avanzate, selezionare le colonne da raggruppare usando l'elenco **Colonne di input disponibili** come descritto di seguito.  
+  
+ **Scala chiavi**  
+ Nella sezione delle opzioni avanzate è inoltre possibile specificare il numero approssimativo di chiavi che possono essere scritte dall'aggregazione. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se le proprietà **Scala chiavi** e **Chiavi** sono entrambe impostate, il valore della proprietà **Chiavi** ha la precedenza.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Non specificata|La proprietà Scala chiavi non viene utilizzata.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
+|Media|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
+|Alto|L'aggregazione può scrivere oltre 25.000.000 di chiavi.|  
+  
+ **Chiavi**  
+ Nella sezione delle opzioni avanzate è inoltre possibile specificare il numero esatto di chiavi che possono essere scritte dall'aggregazione. Se le proprietà **Scala chiavi** e **Chiavi** sono entrambe specificate, la proprietà **Chiavi** ha la precedenza.  
+  
+ **Colonne di input disponibili**  
+ Consente di selezionare le colonne di input nell'elenco delle colonne di input disponibili utilizzando le caselle controllo presenti nella tabella.  
+  
+ **Colonna di input**  
+ Consente di selezionare una colonna di input nell'elenco delle colonne di input disponibili.  
+  
+ **Alias di output**  
+ Consente di digitare un alias per ogni colonna. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+ **Operazione**  
+ Selezionare un'operazione nell'elenco delle operazioni disponibili utilizzando la tabella seguente come guida.  
+  
+|Operazione|Description|  
+|---------------|-----------------|  
+|**GroupBy**|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per ulteriori informazioni, vedere GROUP BY.|  
+|**Sum**|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per ulteriori informazioni, vedere SUM.|  
+|**Medio**|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per ulteriori informazioni, vedere AVG.|  
+|**Count**|Consente di restituire il numero di elementi di un gruppo. Per ulteriori informazioni, vedere COUNT.|  
+|**CountDistinct**|Consente di restituire il numero di valori non Null univoci di un gruppo. Per ulteriori informazioni, vedere COUNT e Distinct.|  
+|**Minimo**|Restituisce il valore minimo in un gruppo. Limitata soltanto ai tipi di dati numerici.|  
+|**Massimo**|Restituisce il valore massimo in un gruppo. Limitata soltanto ai tipi di dati numerici.|  
+  
+ **Flag di confronto**  
+ Se si scegliere **Group By**, usare le caselle di controllo per controllare la modalità con cui la trasformazione esegue il confronto. Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Count Distinct Scale**  
+ È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se le proprietà **CountDistinctScale** e **CountDistinctKeys** sono entrambe specificate, la proprietà **CountDistinctKeys** ha la precedenza.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Non specificata|La proprietà **CountDistinctScale** non viene usata.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
+|Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
+|Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
+  
+ **Count Distinct Keys**  
+ È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se le proprietà **CountDistinctScale** e **CountDistinctKeys** sono entrambe specificate, la proprietà **CountDistinctKeys** ha la precedenza.  
+  
+## <a name="aggregate-transformation-editor-advanced-tab"></a>Editor trasformazione Aggregazione (scheda Avanzate)
+  Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Aggregazione** per impostare le proprietà dei componenti, specificare le aggregazioni, nonché impostare le proprietà delle colonne di input e output.  
+  
+> [!NOTE]  
+>  Le opzioni per il conteggio delle chiavi, la scala delle chiavi, il conteggio delle chiavi distinct e la scala delle chiavi distinct vengono applicate a livello di componente quando vengono specificate nella scheda **Avanzate** , a livello di output quando vengono specificate nella sezione delle opzioni avanzate della scheda **Aggregazioni** e a livello di colonna quando vengono specificate nell'elenco delle colonne nella parte inferiore della scheda **Aggregazioni** .  
+>   
+>  Nella trasformazione Aggregazione, **Chiavi** e **Scala chiavi** fanno riferimento al numero di gruppi che dovrebbero risultare da un'operazione **Group by** . **Chiavi conteggio valori distinct** e **Scala conteggio valori distinct** fanno riferimento al numero di valori distinct che dovrebbero risultare da un'operazione **Distinct count** .  
+  
+### <a name="options"></a>Opzioni  
+ **Scala chiavi**  
+ Consente di specificare facoltativamente il numero approssimativo di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi** , quest'ultima ****  ha priorità.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Non specificata|La proprietà **Scala chiavi** non viene usata.|  
+|Basso|L'aggregazione può scrivere circa 500.000 chiavi.|  
+|Media|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
+|Alto|L'aggregazione può scrivere oltre 25.000.000 di chiavi.|  
+  
+ **Numero di chiavi**  
+ Consente di specificare facoltativamente il numero esatto di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi** , quest'ultima ****  ha priorità.  
+  
+ **Scala conteggio valori distinct**  
+ È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct** , quest'ultima ****  ha priorità.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Non specificata|La proprietà CountDistinctScale non viene utilizzata.|  
+|Basso|L'aggregazione può scrivere circa 500.000 valori distinct.|  
+|Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
+|Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
+  
+ **Chiavi conteggio valori distinct**  
+ È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct** , quest'ultima ****  ha priorità.  
+  
+ **Fattore di estensione automatica**  
+ Consente di utilizzare un valore compreso tra 1 e 100 per specificare la percentuale di estensione possibile della memoria durante l'aggregazione. Il valore predefinito di questa opzione è **25%**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   

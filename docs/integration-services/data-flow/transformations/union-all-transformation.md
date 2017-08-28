@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
+- sql13.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - combining datasets
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="union-all-transformation"></a>Unione input multipli - trasformazione
@@ -45,13 +46,24 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-union-all-transformation"></a>Configurazione della trasformazione Unione input multipli  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Unione** , vedere [Editor trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
-  
  Per altre informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="union-all-transformation-editor"></a>Editor trasformazione Unione input multipli
+  Utilizzare la finestra di dialogo **Editor trasformazione Unione input multipli** per unire diversi set di righe di input in un unico set di righe di output. Includendo la trasformazione Unione input multipli in un flusso di dati è possibile unire dati tratti da più flussi di dati, creare set di dati complessi nidificando più trasformazioni Unione input multipli e unire nuovamente le righe dopo la correzione degli errori nei dati.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome colonna di output**  
+ Consente di digitare un alias per ogni colonna. Per impostazione predefinita, viene suggerito il nome della colonna del primo input, ovvero l'input di riferimento. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+ **Input unione input multipli 1**  
+ Consente di selezionare nell'elenco di colonne di input disponibili nel primo input, ovvero l'input di riferimento. I metadati delle colonne mappate devono corrispondere.  
+  
+ **Input unione input multipli n**  
+ Consente di selezionare nell'elenco di colonne di input disponibili nel secondo input e negli input aggiuntivi. I metadati delle colonne mappate devono corrispondere.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Unione di dati tramite la trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  

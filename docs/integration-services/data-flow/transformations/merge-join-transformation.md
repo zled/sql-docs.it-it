@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
+- sql13.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - datasets [Integration Services]
 - Merge Join transformation
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd168d67b4be972be9c135e754abf3b925dae0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-join-transformation"></a>Trasformazione Merge join
@@ -63,10 +64,33 @@ ms.lasthandoff: 08/03/2017
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-join-transformation-editor"></a>Editor trasformazione Merge join
+  Utilizzare la finestra di dialogo **Editor trasformazione Merge join** per specificare il tipo di join, le colonne di join e le colonne di output per l'unione di due input combinati tramite un join.  
+  
+> [!IMPORTANT]  
+>  Per eseguire la trasformazione Merge join, è necessario che i relativi dati di input siano ordinati. Per altre informazioni su questo requisito importante, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Tipo di join**  
+ Consente di specificare se utilizzare un inner join, un outer join sinistro o un full join.  
+  
+ **Inverti ordine input**  
+ Il pulsante **Inverti ordine input** consente di invertire l'ordine degli input. Questa selezione può risultare utile in caso si scelga di utilizzare un outer join sinistro.  
+  
+ **Input**  
+ Per ogni colonna che si desidera includere nell'output unito, è innanzitutto necessario procedere a una selezione nell'elenco degli input disponibili.  
+  
+ Gli input vengono visualizzati in due tabelle separate. Selezionare le colonne da includere nell'output. Trascinare le colonne per creare un join tra le tabelle. Per eliminare un join, selezionarlo e quindi premere CANC.  
+  
+ **Colonna di input**  
+ Selezionare una colonna da includere nell'output unito dall'elenco delle colonne disponibili nell'input selezionato.  
+  
+ **Alias di output**  
+ Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
  [Trasformazione unione](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

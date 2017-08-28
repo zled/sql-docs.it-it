@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
+- sql13.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging data [Integration Services]
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-transformation"></a>Unione - trasformazione
@@ -60,8 +61,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-merge-transformation"></a>Configurazione della trasformazione Unione  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Unione** , vedere [Editor trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation-editor.md).  
-  
  Per ulteriori informazioni sulle proprietà che è possibile impostare a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,7 +72,23 @@ ms.lasthandoff: 08/03/2017
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-transformation-editor"></a>Editor trasformazione Unione
+  L' **Editor trasformazione Unione** consente di specificare le colonne di due set di dati ordinati di cui eseguire l'unione.  
+  
+> [!IMPORTANT]  
+>  Per eseguire la trasformazione Unione, è necessario che i relativi dati di input siano ordinati. Per altre informazioni su questo requisito importante, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Nome colonna di output**  
+ Consente di specificare il nome della colonna di output.  
+  
+ **Input unione 1**  
+ Consente di selezionare la colonna da unire come Input unione 1.  
+  
+ **Input unione 2**  
+ Consente di selezionare la colonna da unire come Input unione 2.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   

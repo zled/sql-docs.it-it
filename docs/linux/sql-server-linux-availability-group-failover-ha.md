@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6f060f110121bc744687b09a15e142112f48c86c
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Funzioni gruppo di disponibilità elevata per SQL Server in Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>Gruppo di disponibilità il failover
 
@@ -175,9 +176,6 @@ Prima di aggiornare un gruppo di disponibilità, esaminare le procedure consigli
 
 Le sezioni seguenti illustrano come eseguire un aggiornamento in sequenza con istanze di SQL Server in Linux con gruppi di disponibilità. 
 
->[!WARNING]
->In Linux, l'aggiornamento in sequenza a SQL Server 2017 RC2 non è supportata. Dopo aver aggiornato la replica secondaria, verrà disconnesso dalla replica primaria fino a quando non viene aggiornata la replica primaria. Microsoft prevede di risolvere il problema per una versione futura. 
-
 ### <a name="upgrade-steps-on-linux"></a>Passaggi di aggiornamento su Linux
 
 Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server in Linux, il tipo di cluster del gruppo di disponibilità è `EXTERNAL` o `NONE`. Un gruppo di disponibilità che è gestito da Gestione cluster di diversi da Windows Server Failover Cluster (WSFC) `EXTERNAL`. Pacemaker con Corosync è riportato un esempio di Gestione cluster esterno. Dispone di un gruppo di disponibilità con alcuna Gestione cluster di tipo cluster `NONE` i passaggi di aggiornamento descritti di seguito sono specifici per i gruppi di disponibilità di tipo cluster `EXTERNAL` o `NONE`.
@@ -185,12 +183,21 @@ Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server
 1. Prima di iniziare, eseguire il backup ogni database.
 2. Aggiornare le istanze di SQL Server di ospitare le repliche secondarie.
 
-    A. Prima di tutto aggiornare repliche secondarie asincrone.
+    a. Prima di tutto aggiornare repliche secondarie asincrone.
 
-    B. Aggiornare le repliche secondarie sincrone.
+    b. Aggiornare le repliche secondarie sincrone.
 
    >[!NOTE]
    >Se un gruppo di disponibilità dispone solo di asincrona repliche - per evitare eventuali perdite di dati modificare una replica sincrona e attendere fino a quando viene sincronizzata. Quindi aggiornare la replica.
+   
+   b. 1. Interrompere la risorsa nel nodo che ospita la replica secondaria di destinazione per l'aggiornamento
+   
+   Prima di eseguire il comando di aggiornamento, è possibile interrompere la risorsa in modo che il cluster non verrà monitorarlo e negativo inutilmente. Nell'esempio seguente aggiunge un vincolo di percorso sul nodo che si tradurrà sulla risorsa da arrestare. Aggiornamento `ag_cluster-master` con il nome della risorsa e `nodeName1` con il nodo che ospita la replica di destinazione per l'aggiornamento.
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b. 2. Aggiornamento di SQL Server nella replica secondaria
 
    Nell'esempio seguente viene aggiornata `mssql-server` e `mssql-server-ha` pacchetti.
 
@@ -198,11 +205,18 @@ Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b. 3. Rimuovere il vincolo di posizione
+
+   Prima di eseguire il comando di aggiornamento, è possibile interrompere la risorsa in modo che il cluster non verrà monitorarlo e negativo inutilmente. Nell'esempio seguente aggiunge un vincolo di percorso sul nodo che si tradurrà sulla risorsa da arrestare. Aggiornamento `ag_cluster-master` con il nome della risorsa e `nodeName1` con il nodo che ospita la replica di destinazione per l'aggiornamento.
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   Come procedura consigliata, verificare la risorsa sia stata avviata (utilizzando `pcs status` comando) e la replica secondaria è connesso e sincronizzato lo stato dopo l'aggiornamento.
 
 1. Dopo avere aggiornate tutte le repliche secondarie, eseguire manualmente il failover a una delle repliche secondarie sincrone.
 
    Per i gruppi di disponibilità con `EXTERNAL` tipo di cluster, utilizzare gli strumenti di gestione di cluster per eseguire il failover; gruppi di disponibilità con `NONE` tipo di cluster deve utilizzare Transact-SQL per eseguire il failover. 
-
    Nell'esempio seguente viene eseguito il failover di un gruppo di disponibilità con gli strumenti di gestione di cluster. Sostituire `<targetReplicaName>` con il nome della replica sincrona secondaria che diventerà principale:
 
    ```bash
@@ -211,28 +225,41 @@ Quando repliche del gruppo di disponibilità si trovano in istanze di SQL Server
    
    >[!IMPORTANT]
    >I passaggi seguenti si applicano solo ai gruppi di disponibilità che non dispongono di un gestore cluster.  
-
    Se il tipo di cluster di gruppo di disponibilità è `NONE`manualmente il failover. Completare i passaggi seguenti nell'ordine indicato:
 
-      A. Il comando seguente imposta la replica primaria a secondaria. Sostituire `AG1` con il nome del gruppo di disponibilità. Eseguire il comando Transact-SQL nell'istanza di SQL Server che ospita la replica primaria.
+      a. Il comando seguente imposta la replica primaria a secondaria. Sostituire `AG1` con il nome del gruppo di disponibilità. Eseguire il comando Transact-SQL nell'istanza di SQL Server che ospita la replica primaria.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. Il comando seguente imposta una replica secondaria asincrona primario. Il seguente comando Transact-SQL nell'istanza di destinazione di SQL Server - l'istanza che ospita la replica secondaria asincrona.
+      b. Il comando seguente imposta una replica secondaria asincrona primario. Il seguente comando Transact-SQL nell'istanza di destinazione di SQL Server - l'istanza che ospita la replica secondaria asincrona.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Dopo il failover, eseguire l'aggiornamento di SQL Server nella replica primaria precedente. 
+1. Dopo il failover, è possibile aggiornare SQL Server nella replica primaria precedente ripetendo la stessa procedura descritta nei passaggi da b. 1-b. 3 punto precedente.
 
    Nell'esempio seguente viene aggiornata `mssql-server` e `mssql-server-ha` pacchetti.
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. Per un gruppi di disponibilità con un cluster esterno manager - tipo di cluster in cui è esterno, il vincolo di percorso che è stato causato dal failover manuale di pulizia. 

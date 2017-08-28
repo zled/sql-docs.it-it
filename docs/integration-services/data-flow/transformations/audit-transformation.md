@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
+- sql13.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="audit-transformation"></a>Controllo - trasformazione
@@ -51,14 +52,34 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Controllo** , vedere [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md).  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="audit-transformation-editor"></a>Editor trasformazione Controllo
+  La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome colonna di output**  
+ Consente di specificare il nome di una nuova colonna di output che conterrà le informazioni di controllo.  
+  
+ **Tipo di controllo**  
+ Consente di selezionare una variabile di sistema disponibile per visualizzare le informazioni di controllo.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
+|**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  
+|**Nome pacchetto**|Consente di specificare il nome del pacchetto.|  
+|**ID versione**|Consente di specificare il GUID che identifica in modo univoco la versione del pacchetto.|  
+|**Ora di inizio esecuzione**|Consente di specificare l'ora di inizio dell'esecuzione del pacchetto.|  
+|**Nome computer**|Consente di specificare il nome del computer sul quale è stato avviato il pacchetto.|  
+|**Nome utente**|Consente di specificare il nome dell'account di accesso dell'utente che ha avviato il pacchetto.|  
+|**Nome attività**|Consente di specificare il nome dell'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
+|**ID attività**|Consente di specificare il GUID che identifica in modo univoco l'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
   
   

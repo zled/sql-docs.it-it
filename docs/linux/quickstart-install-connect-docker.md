@@ -10,13 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 77d8c7d01cd5d7a1787b9deddbe7003e09e32e6f
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 95c360dad72a9cd075f2a85d2581dc8021adf941
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Eseguire l'immagine di SQL Server 2017 contenitore con Docker
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In questa esercitazione introduttiva usare Docker pull ed eseguire l'immagine di contenitore di SQL Server 2017 RC2 [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Connettiti con **sqlcmd** per creare il primo database ed eseguire query.
 
@@ -150,7 +152,7 @@ La procedura seguente utilizza lo strumento da riga di comando di SQL Server, **
 
 1. Se la connessione viene eseguita correttamente, il prompt dei comandi **sqlcmd** sarà: `1>`.
 
-## <a name="create-and-query-data"></a>Creare i dati della query
+## <a name="create-and-query-data"></a>Creare i dati e recuperarli tramite query
 
 Nelle sezioni seguenti viene descritto l'uso di **sqlcmd** e Transact-SQL per creare un nuovo database, aggiungere dati ed eseguire una query semplice.
 
@@ -206,9 +208,9 @@ Creare poi una nuova tabella `Inventory` e inserire due nuove righe.
 
 ### <a name="select-data"></a>Selezionare i dati
 
-A questo punto, eseguire una query per restituire i dati della tabella `Inventory`.
+A questo punto, eseguire una query per restituire i dati dalla tabella `Inventory`.
 
-1. Dal **sqlcmd** prompt dei comandi, immettere una query che restituisce le righe di `Inventory` tabella in cui la quantità è maggiore di 152:
+1. Dal prompt dei comandi **sqlcmd** immettere una query che restituisca le righe dalla tabella `Inventory` che ne contiene oltre 152:
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;

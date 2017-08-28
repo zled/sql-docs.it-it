@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità &#39; s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ In questo argomento vengono descritte le funzionalità che sono stati aggiunti o aggiornate in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## <a name="improvements-grouped-by-category"></a>Miglioramenti raggruppati per categoria  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> Supporto per Always On nel catalogo SSIS  
  I gruppi di disponibilità Always On sono una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Un gruppo di disponibilità supporta un ambiente di failover per un set discreto di database utente, noti come database di disponibilità, su cui si verifica il failover. Per altre informazioni, vedere [Gruppi di disponibilità Always On](https://msdn.microsoft.com/library/hh510230.aspx).  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]SSIS introduce nuove funzionalità che consentono di distribuire facilmente a un catalogo SSIS centralizzato (ad esempio, il database utente SSISDB). Per garantire una disponibilità elevata per il database SSISDB e il relativo contenuto (progetti, pacchetti, log di esecuzione e così via) è possibile aggiungere il database SSISDB a un gruppo di disponibilità AlwaysOn, esattamente come qualsiasi altro database utente. Quando si verifica un failover, uno dei nodi secondari diventa automaticamente il nuovo nodo primario.  
+ In SQL Server 2016, SSIS introduce nuove funzionalità che consentono di distribuire facilmente a un catalogo SSIS centralizzato (ad esempio il database utente SSISDB). Per garantire una disponibilità elevata per il database SSISDB e il relativo contenuto (progetti, pacchetti, log di esecuzione e così via) è possibile aggiungere il database SSISDB a un gruppo di disponibilità AlwaysOn, esattamente come qualsiasi altro database utente. Quando si verifica un failover, uno dei nodi secondari diventa automaticamente il nuovo nodo primario.  
   
  Per una panoramica dettagliata e istruzioni dettagliate per l'abilitazione di AlwaysOn per SSISDB, vedere [catalogo SSIS](../integration-services/service/ssis-catalog.md).  
 
@@ -193,7 +193,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
  Il nuovo livello di registrazione **RuntimeLineage** nel catalogo SSIS raccoglie i dati necessari a tenere traccia delle informazioni di derivazione nel flusso di dati. È possibile analizzare queste informazioni di derivazione per mappare la relazione di derivazione tra attività. Gli ISV e sviluppatori possono creare strumenti personalizzati di mapping della derivazione con queste informazioni. 
 
 ####  <a name="CustomLogging"></a> Nuovo livello di registrazione personalizzato nel catalogo SSIS  
- Nelle versioni precedenti del catalogo SSIS era possibile scegliere tra quattro livelli di registrazione predefiniti quando si eseguiva un pacchetto: **Nessuno, Base, Prestazioni o Dettagliato**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] aggiunge il livello di registrazione **RuntimeLineage** . È ora possibile anche creare e salvare più livelli di registrazione personalizzati nel catalogo SSIS e selezionare il livello di registrazione da usare ogni volta che si esegue un pacchetto. Per ogni livello di registrazione personalizzato, selezionare solo le statistiche e gli eventi da acquisire. Includere facoltativamente il contesto dell'evento per visualizzare i valori delle variabili, le stringhe di connessione e le proprietà dell'attività. Per ulteriori informazioni, vedere [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Nelle versioni precedenti del catalogo SSIS era possibile scegliere tra quattro livelli di registrazione predefiniti quando si eseguiva un pacchetto: **Nessuno, Base, Prestazioni o Dettagliato**. SQL Server 2016 aggiunge il **RuntimeLineage** livello di registrazione. È ora possibile anche creare e salvare più livelli di registrazione personalizzati nel catalogo SSIS e selezionare il livello di registrazione da usare ogni volta che si esegue un pacchetto. Per ogni livello di registrazione personalizzato, selezionare solo le statistiche e gli eventi da acquisire. Includere facoltativamente il contesto dell'evento per visualizzare i valori delle variabili, le stringhe di connessione e le proprietà dell'attività. Per ulteriori informazioni, vedere [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Nomi di colonna per gli errori nel flusso di dati  
  Quando si reindirizza le righe nel flusso di dati contenenti errori a un output degli errori, l'output contiene un identificatore numerico per la colonna in cui si è verificato l'errore, ma non viene visualizzato il nome della colonna. Esistono diversi modi per trovare o visualizzare il nome della colonna in cui si è verificato l'errore.  
@@ -216,7 +216,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
   
  Il metodo GetIdentificationStringByLineageID è stato rinominato in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Per ulteriori informazioni, vedere [Nomi di colonna per gli errori nel flusso di dati](#ErrorColumn).  
   
- Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP&amp;3;.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Per altre informazioni su questa modifica e sui miglioramenti apportati alla colonna errore, vedere il seguente post di blog aggiornato. [Miglioramenti della colonna errore per il flusso di dati SSIS (aggiornato per la versione CTP&3;.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (in RC0, questo metodo è stato spostato nella nuova interfaccia di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Per altre informazioni, vedere [Nuova interfaccia IDTSComponentMetaData130 nell'API](#CMD130)).  
@@ -289,7 +289,7 @@ Sono stati rilasciati gli adattatori di destinazione per il caricamento dei dati
 ### <a name="expanded-connectivity-to-the-cloud"></a>Connettività estesa al cloud
 
 ####  <a name="AFP2016"></a> Azure Feature Pack per SSIS rilasciato per SQL Server 2016  
- Azure Feature Pack per Integration Services è stato rilasciato per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il Feature Pack contiene le gestioni connessioni per connettersi alle origini dati e alle attività di Azure per eseguire operazioni comuni di Azure. Per altre informazioni, vedere [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ Azure Feature Pack per Integration Services è stato rilasciato per SQL Server 2016. Il Feature Pack contiene le gestioni connessioni per connettersi alle origini dati e alle attività di Azure per eseguire operazioni comuni di Azure. Per altre informazioni, vedere [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 #### <a name="dynamics"></a> Supporto per le risorse online di Microsoft Dynamics rilasciato nel Service Pack 1
 

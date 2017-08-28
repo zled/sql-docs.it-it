@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
+- sql13.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -21,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ad8bb1bcb5ad02be3604ff0899074c4ced10cc96
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
@@ -49,10 +50,44 @@ ms.lasthandoff: 08/03/2017
  Questa trasformazione include un input, un output e un output degli errori.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni sull'utilizzo della trasformazione Conversione dati in Progettazione SSIS, vedere [Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) e [Editor trasformazione Conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md). Per informazioni sull'impostazione delle proprietà di questa trasformazione a livello di programmazione, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) e [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni sull'utilizzo della trasformazione conversione dati in Progettazione SSIS, vedere [convertire dati in un tipo di dati diverso utilizzando la trasformazione conversione dati](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Per informazioni sull'impostazione delle proprietà di questa trasformazione a livello di programmazione, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) e [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
+  
+## <a name="data-conversion-transformation-editor"></a>Editor trasformazione Conversione dati
+  Usare la finestra di dialogo **Editor trasformazione Conversione dati** per selezionare le colonne da convertire e i tipi di dati in cui convertire la colonna e impostare gli attributi di conversione.  
+  
+> [!NOTE]  
+>  La proprietà **FastParse** delle colonne di output della trasformazione Conversione dati non è disponibile nell' **Editor trasformazione Conversione dati**ma può essere impostata tramite l' **Editor avanzato**. Per altre informazioni su questa proprietà, vedere la sezione relativa alla trasformazione Conversione dati in [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di selezionare le colonne da convertire utilizzando le caselle di controllo. Le selezioni effettuate determinano l'aggiunta delle colonne di input nella tabella sottostante.  
+  
+ **Colonna di input**  
+ Consente di selezionare le colonne da convertire nell'elenco delle colonne di input disponibili. Le selezioni effettuate vengono riflesse nelle selezioni delle caselle di controllo descritte in precedenza.  
+  
+ **Alias di output**  
+ Consente di digitare un alias per ogni nuova colonna. L'impostazione predefinita è **Copia di** seguita dal nome della colonna di input.  È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
+  
+ **Tipo di dati**  
+ Consente di selezionare un tipo di dati disponibile nell'elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+  
+ **Length**  
+ Consente di selezionare la lunghezza della colonna per dati di tipo stringa.  
+  
+ **Precisione**  
+ Consente di impostare la precisione per dati numerici.  
+  
+ **Scala**  
+ Consente di impostare la scala per dati numerici.  
+  
+ **Tabella codici**  
+ Consente di selezionare la tabella codici appropriata per le colonne di tipo DT_STR.  
+  
+ **Configura output errori**  
+ Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analisi veloce](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
+- sql13.dts.designer.multicasttransformation.f1
 helpviewer_keywords:
 - multiple outputs
 - Multicast transformation
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8619a0ed02ffc73126eb151f4a83a0b6b24c4be8
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="multicast-transformation"></a>Multicast - trasformazione
@@ -40,12 +41,20 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-multicast-transformation"></a>Configurazione della trasformazione Multicast  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Multicast** , vedere [Editor trasformazione Multicast](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md).  
-  
  Per informazioni sulle proprietà che è possibile impostare a livello di codice, vedere [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="multicast-transformation-editor"></a>Editor trasformazione Multicast
+  Utilizzare la finestra di dialogo **Editor trasformazione Multicast** per visualizzare e impostare le proprietà per ogni output della trasformazione.  
+  
+### <a name="options"></a>Opzioni  
+ **Output**  
+ Selezionare un output a sinistra per visualizzare le proprietà corrispondenti nella tabella a destra.  
+  
+ **Proprietà**  
+ Tutte le proprietà di output elencate sono di sola lettura, ad eccezione di **Nome** e **Descrizione**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   

@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0a4240a8ae3f62ac986a871b198ffb2aefe78862
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22d5628b55be9b20ea86f0625be287568fd4ee8f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Avviare l'Importazione/Esportazione guidata SQL Server
@@ -43,6 +43,9 @@ Avviare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazion
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prerequisito: È la procedura guidata installata nel computer?
 Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+
+> [!NOTE]
+> Per utilizzare la versione a 64 bit di SQL Server di importazione / esportazione guidata, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installare solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
 
 ## <a name="startStart"></a> menu Start  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>Avviare SQL Server di importazione / esportazione guidata dal menu Start

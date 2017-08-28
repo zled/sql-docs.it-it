@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>Configurazione della trasformazione Raggruppamento fuzzy  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Gestione connessione&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Colonne&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Avanzate&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -104,7 +99,86 @@ ms.lasthandoff: 08/03/2017
   
 -   [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
--   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Gestione connessione)
+  Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** per selezionare una connessione esistente o crearne una nuova.  
+  
+> [!NOTE]  
+>  Sul server specificato dalla connessione deve essere in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La trasformazione Raggruppamento fuzzy crea in tempdb oggetti dati temporanei che possono avere le stesse dimensioni dell'intero input della trasformazione. Durante l'esecuzione della trasformazione vengono eseguite query del server su tali oggetti temporanei. Queste query possono influire sulle prestazioni generali del server.  
+  
+### <a name="options"></a>Opzioni  
+ **gestione connessione OLE DB**  
+ Consente di selezionare una gestione connessione OLE DB esistente usando la casella di riepilogo o di creare una nuova connessione tramite il pulsante **Nuova** .  
+  
+ **Nuova**  
+ Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Colonne)
+  Utilizzare la scheda **Colonne** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** per specificare le colonne utilizzate per raggruppare le righe contenenti valori duplicati  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di selezionare le colonne di input utilizzate per raggruppare le righe contenenti valori duplicati.  
+  
+ **Nome**  
+ Consente di visualizzare i nomi delle colonne di input disponibili.  
+  
+ **Pass-through**  
+ Consente di includere la colonna di input nell'output della trasformazione. Tutte le colonne utilizzate per il raggruppamento vengono copiate automaticamente nell'output. Selezionando questa colonna è possibile includere colonne aggiuntive.  
+  
+ **Colonna di input**  
+ Consente di selezionare una delle colonne di input selezionate precedentemente nell'elenco **Colonne di input disponibili** .  
+  
+ **Alias di output**  
+ Consente di immettere un nome descrittivo per la colonna di output corrispondente. Per impostazione predefinita, il nome della colonna di output corrisponde al nome della colonna di input.  
+  
+ **Alias di output gruppo**  
+ Consente di immettere un nome descrittivo per la colonna che conterrà il valore canonico per i duplicati raggruppati. Il nome predefinito di questa colonna di output è il nome della colonna di input con l'aggiunta di _clean.  
+  
+ **Tipo di corrispondenza**  
+ Consente di selezionare la corrispondenza fuzzy o esatta. Le righe vengono considerate duplicati se sono sufficientemente simili in tutte le colonne della corrispondenza fuzzy. Se inoltre si specifica la corrispondenza esatta su determinate colonne, vengono considerati possibili duplicati solo le righe contenenti valori identici nelle colonne della corrispondenza esatta. Se si sa pertanto che una determinata colonna non contiene errori o inconsistenze, è possibile specificare la corrispondenza esatta su tale colonna per aumentare la precisione della corrispondenza fuzzy su altre colonne.  
+  
+ **Somiglianza minima**  
+ Consente di impostare la soglia di somiglianza minima a livello di join tramite un dispositivo di scorrimento. Più il valore è vicino a 1, maggiore deve essere la somiglianza tra il valore di ricerca e il valore di origine per essere considerata una corrispondenza. L'aumento della soglia può migliorare la velocità di confronto, poiché verrà considerato un numero minore di record candidati.  
+  
+ **Alias di output somiglianza**  
+ Consente di specificare il nome di una nuova colonna di output contenente i punteggi di somiglianza per il join selezionato. Se non si specifica un valore, la colonna di output non viene creata.  
+  
+ **Numerali**  
+ Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Nessuno**|I numerali iniziali e finali non sono significativi.|  
+|**Iniziali**|Sono significativi solo i numerali iniziali.|  
+|**Finali**|Sono significativi solo i numerali finali.|  
+|**Iniziali e finali**|Sono significativi i numerali sia iniziali che finali.|  
+  
+ **Flag di confronto**  
+ Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Avanzate)
+  La scheda **Avanzate** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** consente di specificare le colonne di input e output, impostare le soglie di somiglianza e definire i delimitatori.  
+  
+> [!NOTE]  
+>  Le proprietà **Exhaustive** e **MaxMemoryUsage** della trasformazione Raggruppamento fuzzy non sono disponibili nell' **Editor trasformazione Raggruppamento fuzzy**, tuttavia possono essere impostate utilizzando l' **Editor avanzato**. Per ulteriori informazioni su queste proprietà, vedere la sezione relativa alla trasformazione Raggruppamento fuzzy in [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Nome colonna chiave di input**  
+ Consente di specificare il nome di una colonna di output contenente l'identificatore univoco per ogni riga di input. La colonna **_key_in** contiene un valore che identifica in modo univoco ogni riga.  
+  
+ **Nome colonna chiave di output**  
+ Consente di specificare il nome di una colonna di output contenente l'identificatore univoco per la riga canonica di un gruppo di righe duplicate. La colonna **_key_out** corrisponde al valore **_key_in** della riga di dati canonica.  
+  
+ **Nome colonna punteggio somiglianza**  
+ Consente di specificare un nome per la colonna contenente il punteggio di somiglianza. Il punteggio di somiglianza è un valore compreso tra 0 e 1 che indica la somiglianza della riga di input alla riga canonica. I punteggi più prossimi a 1 indicano una corrispondenza maggiore.  
+  
+ **Soglia di somiglianza**  
+ Consente di impostare la soglia di somiglianza mediante il dispositivo di scorrimento. Le soglie vicine a 1 indicano che le righe devono avere una somiglianza maggiore per poter essere considerate duplicati. L'aumento della soglia può incrementare la velocità di ricerca della corrispondenza in quanto viene considerato un minor numero di record candidati.  
+  
+ **Delimitatori token**  
+ La trasformazione genera un set predefinito di delimitatori per la suddivisione in token dei dati. È tuttavia possibile aggiungere o rimuovere i delimitatori in base alle esigenze modificando l'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
