@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a4b2f82ac904d58604b0c27d46624995878e8a35
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usare codice di Visual Studio per creare ed eseguire script Transact-SQL per SQL Server
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 
 In questo argomento viene illustrato come utilizzare il **mssql** estensione per Visual Studio Code (codice di Visual Studio) per lo sviluppo di database di SQL Server.
 
-Codice di Visual Studio è un editor di codice con interfaccia grafica per Linux, macOS e Windows che supporta le estensioni. Il [**mssql** estensione per il codice di Visual Studio]  consente di connettersi a SQL Server, query Transact-SQL (T-SQL) e visualizzare i risultati.
+Codice di Visual Studio è un editor di codice con interfaccia grafica per Linux, macOS e Windows che supporta le estensioni. Il [ **mssql** estensione per il codice di Visual Studio] consente di connettersi a SQL Server, query Transact-SQL (T-SQL) e visualizzare i risultati.
 
 ## <a name="install-vs-code"></a>Installare Visual Studio Code
 1. Se non è già installato Visual Studio Code, [scaricare e installare Visual Studio Code] nel computer.
@@ -106,7 +106,7 @@ La procedura seguente viene illustrato come connettersi a SQL Server con Visual 
 6. Premere il **ESC** tasto per chiudere il messaggio informativo che informa che il profilo viene creato e collegato.
 
    > [!TIP]
-   > Se si verifica un errore di connessione, tenta di diagnosticare il problema dal messaggio di errore nel **Output** pannello in Visual Studio Code (selezionare **Output** sul **vista** menu). Esaminare il [connessione indicazioni risoluzione].
+   > Se si verifica un errore di connessione, tenta di diagnosticare il problema dal messaggio di errore nel **Output** pannello in Visual Studio Code (selezionare **Output** sul **vista** menu). Rivedere poi i [consigli per la risoluzione dei problemi di connessione].
 
 7. Verificare la connessione nella barra di stato.
 
@@ -260,7 +260,7 @@ Per ulteriori informazioni sull'utilizzo di codice di Visual Studio, vedere il [
 [scaricare e installare Visual Studio Code]:https://code.visualstudio.com/Download
 [.Net Core istruzioni]:https://www.microsoft.com/net/core
 [gestire i profili di connessione]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
-[connessione indicazioni risoluzione]:./sql-server-linux-troubleshooting-guide.md#connection
+[consigli per la risoluzione dei problemi di connessione]:./sql-server-linux-troubleshooting-guide.md#connection
 [personalizzare i tasti di scelta rapida]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [esercitazione: scrittura di istruzioni Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [riferimento a Transact-SQL (motore di Database)]:https://msdn.microsoft.com/library/bb510741.aspx
