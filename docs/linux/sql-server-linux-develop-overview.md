@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Come iniziare a sviluppare applicazioni destinate a SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 È possibile creare applicazioni che si connettono e utilizzano SQL Server 2017 RC2 in Linux da una varietà di linguaggi di programmazione, ad esempio c#, Java, Node.js, PHP, Python, Ruby e C++. È inoltre possibile utilizzare Framework web più comuni e altri framework relazionale Mapping ORM (Object).
 

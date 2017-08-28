@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia bulk di dati con bcp per SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In questo argomento viene illustrato come utilizzare il [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) utilità della riga di comando di copia bulk dei dati tra un'istanza di SQL Server 2017 RC2 in Linux e un file di dati in un formato specificato dall'utente.
 

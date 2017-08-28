@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installare sqlcmd e bcp strumenti da riga di comando di SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 I passaggi seguenti installare gli strumenti da riga di comando, i driver ODBC di Microsoft e le relative dipendenze. Il **mssql strumenti** pacchetto contiene:
 

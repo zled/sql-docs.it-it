@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introduzione a Log Shipping in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 La distribuzione dei Log di SQL Server è una configurazione a disponibilità elevata in un database da un server primario verrà replicato in uno o più server secondari. In breve, un backup del database di origine viene ripristinato nel server secondario. Il server primario crea quindi i backup del log delle transazioni periodicamente e i server secondari ripristino, aggiornare la copia del database secondaria. 
 

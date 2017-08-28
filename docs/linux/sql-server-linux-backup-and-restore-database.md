@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e ripristino di database di SQL Server in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 È possibile eseguire i backup dei database SQL Server 2017 RC2 in Linux con gli stessi strumenti come altre piattaforme. In un server Linux, è possibile utilizzare `sqlcmd` per connettersi a SQL Server ed eseguire il backup. Da Windows, è possibile connettersi a SQL Server in Linux ed eseguire i backup con l'interfaccia utente. La funzionalità di backup è lo stesso tra le piattaforme. Ad esempio, è possibile eseguire il backup database in locale, in unità remote o a [servizio di archiviazione Blob di Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creare ed eseguire processi di SQL Server Agent in Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Processi di SQL Server vengono utilizzati per eseguire regolarmente la stessa sequenza di comandi nel database di SQL Server. In questo argomento vengono forniti esempi di come creare processi di SQL Server Agent in Linux tramite Transact-SQL e SQL Server Management Studio (SSMS).
 
