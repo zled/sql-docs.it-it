@@ -1,7 +1,7 @@
 ---
 title: "Motore di database - Connetti al server (pagina Proprietà connessione) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,26 +17,25 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Motore di database - Connetti al server (pagina Proprietà connessione)
-Usare questa scheda per visualizzare o specificare le opzioni per la connessione a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o alla registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solo durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Usare questa scheda per visualizzare o specificare le opzioni per la connessione a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o alla registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solo durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solo durante la registrazione del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-## <a name="options"></a>Opzioni  
 **Connetti al database**  
-Selezionare dall'elenco un database al quale connettersi. Se si seleziona **<default>**, verrà stabilita la connessione al database predefinito del server. Se si seleziona **<Browse server>**, sarà possibile cercare il database a cui connettersi tra quelli disponibili nel server.  
+Selezionare dall'elenco un database al quale connettersi. Se si seleziona **<default>**, viene stabilita la connessione al database predefinito del server. Se si seleziona **<Browse server>**, sarà possibile cercare il database a cui connettersi tra quelli disponibili nel server.  
   
 Quando si esegue una connessione a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e specificare un database nella scheda **Proprietà connessione** della finestra di dialogo **Connetti al server** . Assicurarsi di selezionare la casella di controllo **Crittografa connessione** .  
   
-Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si connette al **master**. Se si specifica un database utente, si vedranno solo quel database e i relativi oggetti in Esplora oggetti. Se si esegue la connessione al **master**, sarà possibile vedere tutti i database. Per altre informazioni, vedere la pagina relativa alla [panoramica dei database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si connette al **master**. Quando si esegue la connessione a [!INCLUDE[ssSDS](../../includes/sssds_md.md)], se si specifica un database utente, si vedranno solo quel database e i relativi oggetti in Esplora oggetti. Se si esegue la connessione al **master**, si è in grado di vedere tutti i database. Per altre informazioni, vedere la pagina relativa alla [panoramica dei database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Protocollo di rete**  
-Consente di selezionare un protocollo dall'elenco. I protocolli client disponibili sono i protocolli configurati tramite Configurazione SQL Native Client in Gestione computer.  
+Consente di selezionare un protocollo dall'elenco. I protocolli client disponibili sono i protocolli configurati tramite Configurazione di rete dei client in Gestione computer.  
   
 **Dimensioni pacchetto di rete**  
 Immettere la dimensione dei pacchetti di rete che devono essere inviati. Il valore predefinito è 4096 byte.  
@@ -47,7 +46,7 @@ Immettere il numero di secondi di attesa dell'attivazione di una connessione pri
 **Timeout esecuzione**  
 Immettere il numero massimo di secondi di attesa del completamento dell'esecuzione di un'attività nel server. Il valore predefinito è zero secondi, che indica l'assenza di un timeout.  
   
-**Crittografa connessione**  
+**Crittografia connessione**  
 Consente di forzare la crittografia della connessione.  
   
 **Utilizza colore personalizzato**  
@@ -59,6 +58,9 @@ Selezionare questa opzione per specificare il colore di sfondo per la barra di s
   
 -   Quando si sceglie **Nuovo** dal menu **File** e si fa clic su **Query del Motore di database**, il colore specificato nella finestra di dialogo **Connetti al server** verrà applicato alla finestra dell'editor di query.  
   
+**ID tenant o nome di dominio AD**  
+Quando si esegue la connessione con l'autenticazione **Active Directory - Universale con MFA**, specificare il dominio che esegue l'autenticazione. Questa opzione è disponibile solo quando si usa SSMS 17.2 o versione successiva. 
+
 **Reimposta tutto**  
 Consente di sostituire i valori predefiniti a tutti i valori delle proprietà di connessione immessi manualmente.  
   

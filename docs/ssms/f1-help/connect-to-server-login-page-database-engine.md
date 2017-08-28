@@ -2,7 +2,7 @@
 title: Motore di database - Connetti al server (pagina Account di accesso) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/30/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,20 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1556c7facc4a671767fe2d6c061b4f6655ba521b
+ms.translationtype: HT
+ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
+ms.openlocfilehash: 9c2ff0db7548aac98efa15c701bd283368512ea4
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Motore di database - Connetti al server (pagina Account di accesso)
-Usare questa scheda per visualizzare o specificare le opzioni per la connessione al [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
+Usare questa scheda per visualizzare o specificare le opzioni per la connessione al [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Nella maggior parte dei casi è possibile connettersi specificando il nome del computer del server di database nella casella **Nome server** e facendo clic su **Connetti**. Se si sta eseguendo la connessione a un'istanza denominata, usare il nome del computer seguito da una barra rovesciata e dal nome dell'istanza. Ad esempio, `mycomputer\myinstance`. Se ci si connette a [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], usare il nome del computer seguito da **\sqlexpress**.  
+  
+Molti fattori possono incidere sulla possibilità di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per informazioni, vedere le risorse seguenti:  
+- [Tutorial lezione 1: Connessione al motore di base](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [Risolvere i problemi di connessione al motore di database di SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+- [Risoluzione di errori di connettività a SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)    
   
 > [!NOTE]  
 > Per connettersi con l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sia configurato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e nella modalità di autenticazione di Windows. Per altre informazioni su come determinare e modificare la modalità di autenticazione, vedere [Procedura: Modifica della modalità di autenticazione del server](http://msdn.microsoft.com/en-us/79babcf8-19fd-4495-b8eb-453dc575cac0).  
@@ -36,52 +41,50 @@ Per la registrazione di un server da Esplora oggetti, selezionare il tipo di ser
   
 Quando si esegue una connessione a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e specificare un database nella scheda **Proprietà connessione** della finestra di dialogo **Connetti al server** . Assicurarsi di selezionare la casella di controllo **Crittografa connessione** .  
   
-Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si connette al **master**. Se si specifica un database utente, si vedranno solo quel database e i relativi oggetti in Esplora oggetti. Se si esegue la connessione al **master**, sarà possibile vedere tutti i database. Per altre informazioni, vedere la pagina relativa alla [panoramica dei database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si connette al **master**. Se si specifica un database utente, si vedranno solo quel database e i relativi oggetti in Esplora oggetti. Se si esegue la connessione al **master**, si è in grado di vedere tutti i database. Per altre informazioni, vedere la pagina relativa alla [panoramica dei database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Nome server**  
 Consente di selezionare l'istanza del server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
 **Autenticazione**  
-Per la connessione a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]sono disponibili due modalità di autenticazione.  
+La versione corrente di SSMS offre cinque modalità di autenticazione quando si esegue la connessione a un'istanza di [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Se la finestra di dialogo Autenticazione non corrisponde nell'elenco seguente, è possibile scaricare la versione più recente di SSMS da [Scaricare SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).     
   
 Quando si esegue una connessione a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tramite [!INCLUDE[ssSDS](../../includes/sssds_md.md)], è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e specificare un database nella scheda **Proprietà connessione** della finestra di dialogo **Connetti al server** . Assicurarsi di selezionare la casella di controllo **Crittografa connessione** .  
   
-Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si connette al **master**. Se si specifica un database utente, si vedranno solo quel database e i relativi oggetti in Esplora oggetti. Se si esegue la connessione al **master**, sarà possibile vedere tutti i database. Per altre informazioni, vedere la pagina relativa alla [panoramica dei database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si connette al **master**. Se si specifica un database utente quando si esegue una connessione a [!INCLUDE[ssSDS](../../includes/sssds_md.md)], si vedranno solo quel database e i relativi oggetti in Esplora oggetti. Se si esegue la connessione al **master**, si è in grado di vedere tutti i database. Per altre informazioni, vedere la pagina relativa alla [panoramica dei database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
-**Autenticazione di Windows**  
+  > **Autenticazione di Windows**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Tale modalità consente di connettersi tramite un account utente di Windows.  
   
-**autenticazione di SQL Server**  
-Quando un utente si connette con un nome account di accesso e una password specifici da una connessione non affidabile, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue l'autenticazione verificando che sia impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e che la password specificata corrisponda a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente.  
+  > **autenticazione di SQL Server**  
+Quando un utente si connette con un nome account di accesso e una password specifici da una connessione non affidabile, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue l'autenticazione verificando che sia impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e che la password specificata corrisponda a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente. Se possibile, usare l'autenticazione di Windows.  
   
-> [!IMPORTANT]  
-> Se possibile, usare l'autenticazione di Windows.  
+  > **Active Directory - Universale con supporto MFA**  
+Active Directory - Universale con supporto MFA è un flusso di lavoro interattivo che supporta Azure Multi-Factor Authentication (MFA). Azure MFA consente di salvaguardare l'accesso a dati e applicazioni soddisfacendo l'aspettativa dell'utente all'uso di un processo di accesso semplice. Offre autenticazione avanzata con una gamma di opzioni di verifica semplice, ad esempio telefonate, SMS, smart card con pin o notifiche di app mobili, consentendo agli utenti di scegliere il metodo preferito. Quando l'account utente è configurato per MFA il flusso di lavoro di autenticazione interattiva richiede intervento aggiuntivo dell'utente in finestre di dialogo popup, nell'uso di smart card e così via. Quando l'account utente è configurato per MFA, l'utente deve selezionare Autenticazione universale di Azure per la connessione. Se l'account utente non richiede MFA, l'utente può comunque usare le altre due opzioni di autenticazione di Azure Active Directory. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Se necessario, è possibile modificare il dominio che esegue l'autenticazione dell'accesso, facendo clic su **Opzioni**, selezionando la scheda **Proprietà connessione** e quindi completando la casella **ID tenant o nome di dominio AD**.  
+
+  > **Active Directory - Password**  
+L'autenticazione di Azure Active Directory è un meccanismo di connessione a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] tramite identità in Azure Active Directory (Azure AD).  Usare questo metodo per la connessione a [!INCLUDE[ssSDS](../../includes/sssds_md.md)] se si è connessi a Windows con le credenziali da un dominio che non è federato con Azure o se si usa l'autenticazione di Azure AD tramite Azure AD basato sul dominio iniziale o client. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
-**Autenticazione universale di Active Directory**  
-L'autenticazione universale di Active Directory è un flusso di lavoro interattivo che supporta Azure MFA (Multi-Factor Authentication, Autenticazione a più fattori). Azure MFA consente di salvaguardare l'accesso a dati e applicazioni soddisfacendo l'aspettativa dell'utente all'uso di un processo di accesso semplice. Offre autenticazione avanzata con una gamma di opzioni di verifica semplice, ad esempio telefonate, SMS, smart card con pin o notifiche di app mobili, consentendo agli utenti di scegliere il metodo preferito. Quando l'account utente è configurato per MFA il flusso di lavoro di autenticazione interattiva richiede intervento aggiuntivo dell'utente in finestre di dialogo popup, nell'uso di smart card e così via. Quando l'account utente è configurato per MFA, l'utente deve selezionare Autenticazione universale di Azure per la connessione. Se l'account utente non richiede MFA, l'utente può comunque usare le altre due opzioni di autenticazione di Azure Active Directory. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Richiede almeno SSMS versione 16.3 (rilasciata ad agosto 2016).
-  
-**Autenticazione della password Active Directory**  
-L'autenticazione di Azure Active Directory è un meccanismo di connessione a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] tramite identità in Azure Active Directory (Azure AD).  Usare questo metodo per la connessione a [!INCLUDE[ssSDS](../../includes/sssds_md.md)] se si è connessi a Windows con le credenziali da un dominio che non è federato con Azure, o se si usa l'autenticazione di Azure AD tramite Azure AD basato sul dominio iniziale o client. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
-  
-**Autenticazione integrata di Active Directory**  
+  > **Active Directory - Integrata**  
 L'autenticazione di Azure Active Directory è un meccanismo di connessione a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione a [!INCLUDE[ssSDS](../../includes/sssds_md.md)] se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
 **Nome utente**  
-Nome utente Windows per la connessione. Questa opzione è disponibile solo se si è scelto di connettersi tramite **Autenticazione della password Active Directory**. È di sola lettura quando si seleziona **Autenticazione di Windows**.  
+Nome utente Windows per la connessione. Questa opzione è disponibile solo se si è scelto di connettersi tramite **Autenticazione della password Active Directory**. È in sola lettura quando si seleziona **Autenticazione di Windows** o l'autenticazione **Active Directory - Integrata**.  
   
 **Account di accesso**  
-Immettere l'account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per la connessione.  
+Immettere l'account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di connettersi tramite Autenticazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Autenticazione della password di Active Directory.  
   
 **Password**  
-Immettere la password per l'account di accesso. Questa opzione è modificabile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per la connessione.  
+Immettere la password per l'account di accesso. Questa opzione è modificabile solo se si è scelto di connettersi tramite Autenticazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Autenticazione della password di Active Directory.  
   
 **Memorizza password**  
 Selezionare questa opzione affinché [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] archivi la password immessa. Questa opzione viene visualizzata solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per la connessione.  
   
 **Connetti**  
-Fare clic su questo pulsante per connettersi al server selezionato.  
+Fare clic per connettersi al server.  
   
 **Opzioni**  
-Fare clic su questo pulsante per modificare la finestra di dialogo e nascondere le opzioni aggiuntive per la connessione al server, ad esempio le opzioni per la memorizzazione della password.  
+Fare clic per visualizzare le schede **Proprietà connessione** e **Parametri aggiuntivi per la connessione**.  
+   
   
 
