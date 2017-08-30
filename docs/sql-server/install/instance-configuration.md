@@ -1,5 +1,5 @@
 ---
-title: Guida dell'installazione guidata | Microsoft Docs
+title: Guida dell'Installazione guidata | Microsoft Docs
 ms.custom: 
 ms.date: 2017-04-21
 ms.prod: sql-server-2016
@@ -28,7 +28,7 @@ ms.lasthandoff: 07/31/2017
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 
-In questo argomento vengono descritte alcune delle pagine di configurazione della procedura di installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Questo argomento descrive alcune pagine di configurazione della procedura di installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 ## <a name="instance-configuration"></a>Configurazione dell'istanza
 Utilizzare la pagina **Configurazione dell'istanza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare se creare un'istanza predefinita oppure un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è già installata, verrà creata un'istanza predefinita a meno che non si specifichi un'istanza denominata.  

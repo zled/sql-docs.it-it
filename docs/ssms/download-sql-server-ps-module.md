@@ -34,5 +34,5 @@ Il comando di PowerShell per installare il modulo di SQL Server è:
 
 Se esistono versioni precedenti dei moduli PowerShell di SQL Server nel computer, può essere necessario specificare il parametro "-AllowClobber".  
 
-Le versioni del modulo PowerShell di per SQL Server disponibili in PowerShell Gallery supportano il controllo delle versioni e richiedono PowerShell versione 5.0 o successiva.
+Le versioni del modulo PowerShell per SQL Server disponibili in PowerShell Gallery supportano il controllo delle versioni e richiedono PowerShell versione 5.0 o successiva.
 
