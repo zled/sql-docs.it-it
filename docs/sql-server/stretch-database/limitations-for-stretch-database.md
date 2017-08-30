@@ -62,8 +62,8 @@ Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.
   
 -   Tabelle con ottimizzazione per la memoria  
   
- ### <a name="data-types"></a>Tipi di dati  
- -   text, ntext e image  
+### <a name="data-types"></a>Tipi di dati  
+-   text, ntext e image  
   
 -   timestamp  
   
