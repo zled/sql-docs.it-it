@@ -2,7 +2,7 @@
 title: Opzioni della riga di comando nella Console SSMA (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,25 +16,25 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 caps.latest.revision: 11
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9f50d2b9f83758a604aad2fe0f7aed81c0ecd33f
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 827257d90042aa1655545edd9fc20d114952f426
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="command-line-options-in-ssma-console-accesstosql"></a>Opzioni della riga di comando nella Console SSMA (AccessToSQL)
-Microsoft offre un set affidabile opzioni riga di comando per eseguire e controllare le attività SSMA. In dettaglio le sezioni che seguono lo stesso.  
+# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opzioni della riga di comando della Console di SSMA (AccessToSQL)
+Microsoft offre una serie di opzioni della riga di comando per eseguire e controllare le attività SSMA affidabili. Le sezioni che seguono forniscono dettagli aggiuntivi.  
   
-## <a name="command-line-options-in-ssma-console"></a>Opzioni della riga di comando nella Console SSMA  
+## <a name="command-line-options-in-the-ssma-console"></a>Opzioni della riga di comando nella Console di SSMA  
 Descritti nel presente documento è la console di opzioni di comando.  
   
 In questa sezione, il termine 'option' è detta anche 'switch'.  
   
-Opzioni non sono tra maiuscole e minuscole e può iniziare con '**-**'o',**/**' caratteri.  
+Opzioni non sono tra maiuscole e minuscole e può iniziare con uno di '**-**'o'**/**' caratteri.  
   
-Se sono state specificate, diventa obbligatorio per specificare i parametri di opzione corrispondente.  
+Se sono state specificate, è obbligatorio specificare i parametri di opzione corrispondente.  
   
 I parametri di opzione devono essere separati dal carattere opzione da uno spazio vuoto.  
   
@@ -46,21 +46,21 @@ I parametri di opzione devono essere separati dal carattere opzione da uno spazi
   
 I nomi di cartella o file contenenti spazi devono essere specificati tra virgolette doppie.  
   
-L'output di voci di riga di comando e i messaggi di errore vengono archiviati in STDOUT o in un file specificato.  
+L'output dei messaggi di errore e le voci della riga di comando viene archiviato in STDOUT o in un file specificato.  
   
-### <a name="script-file-option-sscript"></a>Opzione di File di script: – s/script  
+### <a name="script-file-option-sscript"></a>Opzione del file di script: – s/script  
 Un parametro obbligatorio, il percorso/nome del file script specifica lo script di sequenze di comando da eseguire tramite SSMA.  
   
 **Esempi di sintassi:**  
   
 `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
   
-### <a name="variable-value-file-option-vvariable"></a>Opzione File valore variabile: variabile o – v  
-Questo file include le variabili utilizzate nel file di script. Questo è un parametro facoltativo. Se le variabili non dichiarate nel file variabile e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
+### <a name="variable-value-file-option-vvariable"></a>Opzione del file di valore della variabile: la variabile o – v  
+Il file con valori di variabile comprende le variabili utilizzate nel file di script. Il parametro è facoltativo. Se le variabili non dichiarate nel file variabile e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
   
 **Esempi di sintassi:**  
   
--   Variabili definite in più file di valore della variabile, ad esempio uno con un valore predefinito e un altro con un valore specifico dell'istanza quando applicabile. L'ultimo file di variabile specificato negli argomenti della riga di comando accetta la preferenza, in caso di una duplicazione delle variabili:  
+-   Variabili definite in più file di valore della variabile, ad esempio uno con un valore predefinito e un altro con un valore specifico dell'istanza, se applicabile. L'ultimo file di variabile specificato negli argomenti della riga di comando accetta la preferenza, in caso di una duplicazione delle variabili:  
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
@@ -68,14 +68,14 @@ Questo file include le variabili utilizzate nel file di script. Questo è un par
   
     `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
   
-### <a name="server-connection-file-option-cserverconnection"></a>Opzione di File di connessione server: c: / serverconnection  
-Questo file contiene informazioni sulla connessione di server per ogni server. Ogni definizione di server è identificato da un ID Server univoco. Gli ID del Server viene fatto riferimento nel file di script per la connessione comandi correlati.  
+### <a name="server-connection-file-option-cserverconnection"></a>Opzione file di connessione del server: / serverconnection-c  
+Questo file contiene informazioni sulla connessione di server per ogni server. Ogni definizione di server è identificato da un ID Server univoco. Gli ID del Server viene fatto riferimento nel file di script per i comandi correlati alla connessione.  
   
 Definizione di server può essere una parte del file di connessione del server e/o file di script. Id del server nel file di script ha la precedenza sul file di connessione del server, in caso di una ripetizione dell'id del server.  
   
 **Esempi di sintassi:**  
   
--   Gli ID dei server vengono utilizzati nel file di script e sono definiti in un file di connessione server separato, file di connessione del server utilizza le variabili definite nel file del valore della variabile:  
+-   Gli ID dei server vengono utilizzati nel file di script. Vengono definiti in un file di connessione server separato. Le variabili definite nel file del valore della variabile utilizzata dal file:  
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –v`  
   
@@ -87,12 +87,12 @@ Definizione di server può essere una parte del file di connessione del server e
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opzione di Output XML: - x / xmloutput [xmloutputfile]  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opzione di output XML: - x / xmloutput [xmloutputfile]  
 Questo comando viene utilizzato per i messaggi di output del comando in formato xml alla console o in un file xml di output.  
   
-Sono disponibili due opzioni per xmloutput, dei quali..,:  
+Sono disponibili due opzioni per xmloutput, vale a dire:  
   
--   Se è specificato alcun percorso dopo il cambio di xmloutput l'output viene reindirizzato al file.  
+-   Se il percorso di file non viene fornito dopo il cambio di xmloutput, l'output viene reindirizzato al file.  
   
     **Esempio di sintassi:**  
   
@@ -100,14 +100,14 @@ Sono disponibili due opzioni per xmloutput, dei quali..,:
   
     `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –x d:\xmloutput\project1output.xml`  
   
--   Se non viene fornito alcun filepath dopo il cambio di xmloutput il xmlout viene visualizzato nella console di se stesso.  
+-   Se non viene fornito alcun filepath dopo il cambio di xmloutput, il xmlout viene visualizzato nella console di se stesso.  
   
     **Esempio di sintassi:**  
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –xmloutput`  
   
-### <a name="log-file-option-llog"></a>Opzione del File di log: – l o di log  
-Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un file di log. Questo è un parametro facoltativo. Se un file di log e il relativo percorso vengono specificati nella riga di comando, viene generato il log nel percorso specificato. In caso contrario, è generato dal percorso predefinito.  
+### <a name="log-file-option-llog"></a>Opzione del file di log: – l o di log  
+Tutte le operazioni di SSMA nell'applicazione Console vengono registrate in un file di log e il parametro è facoltativo. Se un file di log e il relativo percorso vengono specificati nella riga di comando, viene generato il log nel percorso specificato. In caso contrario, è generato dal percorso predefinito.  
   
 **Esempio di sintassi:**  
   
@@ -115,8 +115,8 @@ Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un
   
 `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option-eprojectenvironment"></a>Opzione di cartella di progetto ambiente: e: / projectenvironment  
-Questo indica la cartella di impostazioni di ambiente di progetto per il progetto SSMA corrente. Questo parametro è facoltativo.  
+### <a name="project-environment-folder-option-eprojectenvironment"></a>Opzione di ambiente cartella del progetto: e: / projectenvironment  
+Questo parametro facoltativo indica la cartella di impostazioni di ambiente di progetto per il progetto SSMA corrente.  
   
 **Esempio di sintassi:**  
   
@@ -128,14 +128,14 @@ Questo indica la cartella di impostazioni di ambiente di progetto per il progett
 |-|  
 ||  
   
-### <a name="secure-password-option-psecurepassword"></a>Opzione Password sicura: – p/securepassword  
-Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione di qualsiasi script eseguito né consente di qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia di password per le connessioni del server utilizzato nel progetto di migrazione.  
+### <a name="secure-password-option-psecurepassword"></a>Proteggere l'opzione password: – p/securepassword  
+Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni, non eseguire qualsiasi script o della Guida in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia di password per le connessioni del server utilizzato nel progetto di migrazione.  
   
-È possibile immettere qualsiasi altra opzione o la password come il parametro della riga di comando. In caso contrario, generato un errore. Per ulteriori informazioni, vedere il [la gestione delle password](http://msdn.microsoft.com/en-us/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) sezione.  
+È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, generato un errore. Per ulteriori informazioni, vedere il [la gestione delle password](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) sezione.  
   
-Sono supportate le seguenti opzioni secondarie per `–p/securepassword`:  
+Sono supportate le seguenti le opzioni secondarie per `–p/securepassword`:  
   
--   Per aggiungere password protetta archiviazione per un ID di Server specificato o per tutti gli ID di Server definiti nel file di connessione del server. -Opzione per sovrascriverlo, seguito, gli aggiornamenti della password se esiste già:  
+-   Per aggiungere una password o aggiornare una password esistente, per l'archiviazione protetta per un ID di Server specificato o per tutti gli ID di Server definiti nel file di connessione del server:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
@@ -159,21 +159,21 @@ Sono supportate le seguenti opzioni secondarie per `–p/securepassword`:
   
     È possibile specificare più ID Server utilizzando separatori delle migliaia.  
   
-### <a name="help-option-help"></a>Opzione della Guida:-? /help  
+### <a name="help-option-help"></a>Help (opzione):-? /help  
 Visualizza il riepilogo della sintassi delle opzioni di SSMA Console:  
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-Per una visualizzazione tabulare delle opzioni della riga di comando SSMA Console, fare riferimento a [appendice - 1 &#40; AccessToSQL &#41; ](../../ssma/access/appendix-1-accesstosql.md).  
+Per una visualizzazione tabulare di opzioni della riga di comando SSMA Console, fare riferimento a [appendice - 1 &#40; AccessToSQL &#41; ](../../ssma/access/appendix-1-accesstosql.md).  
   
-### <a name="securepassword-help-option-securepassword--help"></a>Opzione SecurePassword Help:: securepassword-? /Help  
+### <a name="securepassword-help-option-securepassword--help"></a>Opzione della Guida SecurePassword:: securepassword-? /Help  
 Visualizza il riepilogo della sintassi delle opzioni di SSMA Console:  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-Per una visualizzazione tabulare delle opzioni della riga di comando SSMA Console, fare riferimento a [appendice - 1 &#40; AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+Per una visualizzazione tabulare di opzioni della riga di comando SSMA Console, fare riferimento a [appendice - 1 &#40; AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
-### <a name="next-step"></a>Passaggio successivo  
+### <a name="next-steps"></a>Passaggi successivi  
 Il passaggio successivo dipende dai requisiti del progetto:  
   
 1.  Per specificare una password o l'esportazione / importazione per le password, vedere [le password di gestione &#40; AccessToSQL &#41; ](../../ssma/access/managing-passwords-accesstosql.md).  

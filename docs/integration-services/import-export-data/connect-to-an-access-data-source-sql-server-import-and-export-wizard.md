@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2a5deb6e6ec95e6f6707abe9ad85374b2334e05
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 71bb3914e31259bc95a1116c2db03708c0442e8c
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati di accesso (SQL Server importazione / esportazione guidata)
@@ -44,9 +44,7 @@ L'elenco dei provider di dati può contenere diverse voci di Microsoft Access. S
 |Microsoft Access (motore di Database Microsoft Jet)|Versioni precedenti di Office 2007 di Office|
 
 > [!IMPORTANT]
-> È possibile scaricare e installare i file aggiuntivi per la connessione alla versione di accesso selezionato. Vedere [ottenere i file necessari per connettersi a accesso](#officeDownloads) in questa pagina per altre informazioni.
-
-Se si dispone di un problema quando si specifica una versione, provare a specificare una versione diversa, anche una versione precedente. Ad esempio, potrebbe non essere in grado di installare i provider di dati di Office 2016, perché si dispone di una sottoscrizione di Microsoft Office 365. È possibile installare solo i provider di dati per l'accesso 2016 ed Excel 2016 con una versione desktop di Microsoft Office. In questo caso, è possibile specificare Access 2013 anziché accesso 2016. Le due versioni del provider sono funzionalmente equivalenti. Questa limitazione del runtime di Office 2016 è menzionata nella [questo post di blog](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+> È possibile scaricare e installare i file aggiuntivi per la connessione al database di Access. Vedere [ottenere i file necessari per connettersi a accesso](#officeDownloads) in questa pagina per altre informazioni.
 
  **Nome file**  
 Specificare il percorso e il nome per il file di Access. Ad esempio, **c:\\MyData.mdb** per un file nel computer locale, o  **\\ \\Sales\\Database\\mdb** per un file in una condivisione di rete. In alternativa, fare clic su **Sfoglia**. 
@@ -70,20 +68,20 @@ Specificare le opzioni avanzate, ad esempio la password del database o un file d
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Non ho accesso nell'elenco delle origini dati
 Se l'accesso non viene visualizzato nell'elenco delle origini dati, si esegue la procedura guidata a 64 bit? I provider per Excel e Access sono in genere a 32 bit e non sono visibili nella procedura guidata a 64 bit. Eseguire la procedura guidata a 32 bit.
-  
+
+> [!NOTE]
+> Per utilizzare la versione a 64 bit di SQL Server di importazione / esportazione guidata, è necessario installare SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) sono applicazioni a 32 bit e installare solo i file a 32 bit, inclusa la versione a 32 bit della procedura guidata.
+
 ## <a name="officeDownloads"></a>Ottenere i file che necessari per connettersi a accesso  
-È possibile scaricare i componenti di connettività per le origini dati di Microsoft Office, tra cui Excel e Access, se non è già non sono installati.
+È possibile scaricare i componenti di connettività per le origini dati di Microsoft Office, incluso Access ed Excel, se non è già non sono installati. Scaricare la versione più recente dei componenti di connettività per l'accesso ed Excel file: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+  
+La versione più recente dei componenti è possibile aprire i file creati con versioni precedenti di Access.
 
-Le versioni più recenti dei componenti possono aprire file creati da versioni precedenti dei programmi. In molti casi, le versioni precedenti dei componenti inoltre possono aprire i file creati con versioni successive dei programmi. Ad esempio, se non è possibile installare i componenti di Office 2016, utilizzare invece i componenti di Office 2013. Le due versioni del provider sono funzionalmente equivalenti. Questa limitazione del runtime di Office 2016 è menzionata nella [questo post di blog](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+Se il computer dispone di una versione a 32 bit di Office, quindi è necessario installare la versione a 32 bit dei componenti ed è inoltre necessario assicurarsi di eseguire il pacchetto in modalità a 32 bit.
 
-Se il computer dispone di una versione a 32 bit di Office, è tipico, anche nei computer a 64 bit, è necessario installare la versione a 32 bit dei componenti. È inoltre necessario assicurarsi di eseguire la procedura guidata a 32 bit, o eseguire il pacchetto di SQL Server Integration Services che consente di creare la procedura guidata in modalità a 32 bit.
+Se si dispone di una sottoscrizione Office 365, assicurarsi di scaricare il pacchetto ridistribuibile di 2016 del motore di accesso Database e non Microsoft Access 2016 Runtime. Quando si esegue il programma di installazione, è possibile vedere un messaggio di errore che non è possibile installare il download side-by-side con componenti di Office a portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva, aprendo una finestra del prompt dei comandi ed eseguire il. File EXE scaricato con il `/quiet` passare. Esempio:
 
-|Versione di Microsoft Office|Scarica|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[Driver di Office System 2007: Componenti di connettività dei dati](https://www.microsoft.com/download/details.aspx?id=23734)|    
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="database_password"></a>È il file di database protetto da password?
 In alcuni casi, un database di Access è protetto da password, ma non sta utilizzando un file di informazioni sul gruppo di lavoro. Tutti gli utenti, sono necessario fornire la stessa password, ma non sono necessario immettere un nome utente. Per fornire una password del database, eseguire le operazioni seguenti.

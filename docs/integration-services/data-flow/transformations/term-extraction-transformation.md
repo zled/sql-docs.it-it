@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
+- sql13.dts.designer.termextraction.termextraction.f1
+- sql13.dts.designer.termextraction.inclusionexclusion.f1
+- sql13.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - word boundaries [Integration Services]
 - extracting data [Integration Services]
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
@@ -175,20 +178,85 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Estrazione termini** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor trasformazione Estrazione termini (scheda Estrazione termini)
+  Utilizzare la scheda **Estrazione termini** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare una colonna di testo contenente il testo da estrarre.  
   
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Utilizzando le caselle di controllo, selezionare un'unica colonna di testo da utilizzare per l'estrazione dei termini.  
+  
+ **Nome**  
+ Consente di digitare un nome per la colonna di output che conterrà i termini estratti.  
+  
+ **Punteggio**  
+ Consente di digitare un nome per la colonna di output che conterrà il punteggio per ogni termine estratto.  
+  
+ **Configura output errori**  
+ Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
+  
+## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor trasformazione Estrazione termini (scheda Esclusione)
+  Utilizzare la scheda **Esclusione** della finestra di dialogo **Editor trasformazione Estrazione termini** per impostare una connessione a una tabella di esclusione e specificare le colonne che contengono termini di esclusione.  
+  
+### <a name="options"></a>Opzioni  
+ **Usa termini di esclusione**  
+ Consente di indicare se escludere termini specifici durante l'estrazione dei termini specificando una colonna che contiene termini di esclusione. Se si sceglie di escludere termini, è necessario specificare le proprietà delle origini dei dati seguenti.  
+  
+ **gestione connessione OLE DB**  
+ Selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova**per creare una nuova connessione.  
+  
+ **Nuova**  
+ Consente di creare una nuova connessione a un database usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
+  
+ **Tabella o vista**  
+ Consente di specificare la tabella o la vista che contiene i termini di esclusione.  
+  
+ **Colonna**  
+ Consente di selezionare la colonna della tabella o della vista che contiene i termini di esclusione.  
+  
+ **Configura output errori**  
+ Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
+  
+## <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor trasformazione Estrazione termini (Scheda Avanzate)
+  Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare le proprietà per l'estrazione, ad esempio la frequenza, la lunghezza e le eventuali parole o frasi da estrarre.  
+  
+### <a name="options"></a>Opzioni  
+ **Sostantivo**  
+ Consente di specificare che la trasformazione estrarrà solo singoli sostantivi.  
+  
+ **Sintagma nominale**  
+ Consente di specificare che la trasformazione estrarrà solo sintagmi nominali.  
+  
+ **Sostantivo e sintagma nominale**  
+ Consente di specificare che la trasformazione estrarrà sia sostantivi che sintagmi nominali.  
+  
+ **Frequenza**  
+ Consente di specificare che il punteggio è rappresentato dalla frequenza del termine.  
+  
+ **TFIDF**  
+ Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto della frequenza dei termini e della frequenza inversa dei documenti, definito come: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
+  
+ **Soglia di frequenza**  
+ Consente di specificare il numero di volte in cui una parola o una frase deve ricorrere prima che venga estratta. Il valore predefinito è 2.  
+  
+ **Lunghezza massima termine**  
+ Consente di specificare la lunghezza massima in parole di una frase. Questa opzione ha effetto soltanto sui sintagmi nominali. Il valore predefinito è 12.  
+  
+ **Estrazione con distinzione maiuscole/minuscole**  
+ Consente di specificare se eseguire l'estrazione rilevando la distinzione tra maiuscole e minuscole. Il valore predefinito è **False**.  
+  
+ **Configura output errori**  
+ Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Trasformazione Ricerca termini](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+
+
