@@ -41,7 +41,7 @@ SELECT 2015 as year, 12 as month, 15 as day
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
 
- **Risultato ** con l'opzione **WITHOUT_ARRAY_WRAPPER**  
+ **Risultato**  con l'opzione **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 {
@@ -73,7 +73,7 @@ ORDER BY ModifiedDate
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
   
- **Risultato ** con l'opzione **WITHOUT_ARRAY_WRAPPER**  
+ **Risultato**  con l'opzione **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 {

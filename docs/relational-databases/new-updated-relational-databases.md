@@ -1,6 +1,6 @@
 ---
-title: 'Aggiornamento: documentazione dei database relazionali | Microsoft Docs'
-description: Visualizza frammenti di contenuto aggiornato per le modifiche recenti nella documentazione dei database relazionali.
+title: 'Articolo aggiornato: documentazione dei database relazionali | Microsoft Docs'
+description: Visualizza frammenti di contenuto aggiornato relativi alle modifiche recenti alla documentazione dei database relazionali.
 services: na
 documentationcenter: 
 author: MightyPen
@@ -26,11 +26,11 @@ ms.lasthandoff: 07/31/2017
 
 
 
-Microsoft aggiorna quasi quotidianamente alcuni degli articoli presenti nel sito Web della documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). Questo articolo contiene estratti degli articoli aggiornati di recente. Possono essere disponibili anche collegamenti a nuovi articoli.
+Microsoft aggiorna quasi quotidianamente alcuni degli articoli presenti nel sito Web della documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). Questo articolo contiene estratti degli articoli aggiornati di recente. Possono essere indicati anche collegamenti a nuovi articoli.
 
 Questo articolo è generato da un programma che viene rieseguito periodicamente. In alcuni casi un estratto può avere una formattazione imperfetta o essere visualizzato come markdown dell'articolo di origine. Qui le immagini non vengono mai visualizzate.
 
-Sono riportati gli aggiornamenti recenti relativi all'intervallo di date e all'area di interesse seguenti:
+Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 
@@ -75,9 +75,9 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 Questa sezione include gli estratti degli aggiornamenti raccolti dagli articoli a cui sono stati recentemente apportati aggiornamenti importanti.
 
-Gli estratti qui visualizzati risultano separati dal proprio contesto semantico esatto. Un estratto può inoltre talvolta essere separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti costituiscono solo indicazioni generali. Gli estratti consentono solo di comprendere se sia utile o meno visitare l'articolo vero e proprio.
+Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Inoltre è possibile che un estratto sia talvolta separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti costituiscono solo indicazioni generali. Gli estratti consentono solo di comprendere se sia utile o meno consultare l'articolo completo.
 
-Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità assoluta alcun estratto di testo. Vedere invece l'articolo vero e proprio.
+Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità assoluta alcun estratto di testo. Consultare gli articoli completi.
 
 
 
@@ -263,18 +263,18 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (4+4): **Advanced Analytics for SQL (Advanced Analytics per SQL)** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (2+0): **Analysis Services for SQL (Analysis Services per SQL)** Docs](../analysis-services/new-updated-analysis-services.md)
-- [Nuovo + aggiornato (1+2): **Connect to SQL (Connettersi a SQL)** Docs](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (6+0): **Database Engine for SQL (Motore di database per SQL)** Docs](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (13+2): **Linux for SQL (Linux per SQL)** Docs](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (1+0): **Master Data Services (MDS) for SQL (Master Data Services (MDS) per SQL)** Docs](../master-data-services/new-updated-master-data-services.md)
-- [Nuovo + aggiornato (1+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)**  Docs](../odbc/new-updated-odbc.md)
-- [Nuovo + aggiornato (8+4): **Database relazionali per SQL** Docs](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (2+2): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (0+1): **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (1+0): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
-- [Nuovo + aggiornato (1+0): **Tools for SQL (Strumenti per SQL)** Docs](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (4+4): documentazione di **Advanced Analytics per SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (2+0): documentazione di **Analysis Services per SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (1+2): documentazione di **Connetti a SQL Server**](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (6+0): documentazione di **Motore di database per SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (13+2): documentazione di **Linux per SQL**](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (1+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Nuovo + aggiornato (1+0): documentazione di **ODBC (Open Database Connectivity) per SQL**](../odbc/new-updated-odbc.md)
+- [Nuovo + aggiornato (8+4): documentazione di **Database relazionali per SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (2+2): documentazione di **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (0+1): documentazione di **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (1+0): documentazione di **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (1+0): documentazione degli **strumenti per SQL**](../tools/new-updated-tools.md)
 
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
@@ -282,12 +282,12 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
-- [Nuovo + aggiornato (0+0): **Integration Services for SQL (Integration Services per SQL)** Docs](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Integration Services per SQL**](../integration-services/new-updated-integration-services.md)
 - [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
-- [Nuovo + aggiornato (0+0): **Reporting Services for SQL (Reporting Services per SQL)** Docs](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Reporting Services per SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
-- [Nuovo + aggiornato (0+0): **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (0+0): documentazione di **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 

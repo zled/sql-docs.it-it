@@ -61,7 +61,7 @@ Clausola SELECT:
 
 -   Sottoquery scalari
     - **Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).
-      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le istruzioni scalari sono supportate per i moduli compilati in modo nativo.
+      A partire da [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le sottoquery scalari sono supportate per i moduli compilati in modo nativo.
 
 -   TOP*  
 

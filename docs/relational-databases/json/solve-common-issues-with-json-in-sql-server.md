@@ -39,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="create-a-nested-json-structure"></a>Creare una struttura JSON nidificata  
  **Domanda.** Si desidera produrre una struttura JSON complessa con numerose matrici sullo stesso livello. FOR JSON PATH è in grado di creare oggetti nidificati usando percorsi e FOR JSON AUTO crea livelli di nidificazione aggiuntivi per ciascuna tabella. Nessuna di queste due opzioni consente di generare l'output desiderato. Come è possibile creare un formato JSON personalizzato che le opzioni esistenti non supportano direttamente?  
   
- **Risposta.** È possibile creare qualsiasi struttura dei dati aggiungendo query FOR JSON come espressioni di colonna che restituiscono testo JSON. È anche possibile creare manualmente JSON tramite la funzione JSON_QUERY. Nell'esempio seguente vengono illustrate le tecniche seguenti.  
+ **Risposta.** È possibile creare qualsiasi struttura dei dati aggiungendo query FOR JSON come espressioni di colonna che restituiscono testo JSON. È anche possibile creare manualmente JSON tramite la funzione JSON_QUERY. Queste tecniche vengono illustrate nell'esempio seguente.  
   
 ```sql  
 SELECT col1, col2, col3,  
@@ -101,7 +101,7 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Input di OPENJSON e JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Restituire l'oggetto secondario JSON nidificato dal testo JSON con OPENJSON  
- **Domanda.** Non è possibile aprire una matrice di oggetti JSON complessi che contiene sia valori scalari sia oggetti, e matrici usando OPENJSON con uno schema esplicito. Quando si aggiunge un riferimento a una chiave nella clausola WITH, vengono restituiti solo i valori scalari. Oggetti e matrici vengono restituiti come valori null. Come è possibile estrarre oggetti o matrici come gli oggetti JSON?  
+ **Domanda.** Non è possibile aprire una matrice di oggetti JSON complessi che contiene sia valori scalari sia oggetti, e matrici usando OPENJSON con uno schema esplicito. Quando si aggiunge un riferimento a una chiave nella clausola WITH, vengono restituiti solo i valori scalari. Oggetti e matrici vengono restituiti come valori null. Come è possibile estrarre oggetti o matrici come oggetti JSON?  
   
  **Risposta.** Se si desidera restituire un oggetto o una matrice come colonna, usare l'opzione AS JSON nella definizione di colonna, come illustrato nell'esempio seguente.  
   

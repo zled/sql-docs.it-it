@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
 > [!NOTE]  
 >  Le informazioni più recenti sulla sicurezza a livello di trasporto (TSL1.2) sono disponibili nell'articolo [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
-È possibile utilizzare la crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connessioni, dati e stored procedure. Gli argomenti seguenti includono ulteriori informazioni sulla crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+È possibile utilizzare la crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connessioni, dati e stored procedure. Gli argomenti seguenti includono altre informazioni sulla crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
  [Gerarchia di crittografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informazioni sulla gerarchia di crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

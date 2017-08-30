@@ -104,7 +104,7 @@ ms.lasthandoff: 07/31/2017
       |-----------|-----------------|
       |**<default>**| Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o la vista è partizionata, viene usato il filegroup primario|
       |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|
-      *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per usare questo filegroup per il nuovo indice full-text.|   
+      *user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito, definito dall'utente, selezionarne il nome nell'elenco per usare questo filegroup per il nuovo indice full-text.|   
   
      
  11. **Selezione elenco di parole non significative full-text**  

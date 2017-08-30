@@ -51,7 +51,7 @@ ms.lasthandoff: 07/31/2017
   
 -   L'opzione di output (**-o**) specifica il file nel quale **sqlcmd** inserirà il proprio output.  
   
-## <a name="connect-to-the-sqlcmd-utility"></a>Connettere all'utilità sqlcmd  
+## <a name="connect-to-the-sqlcmd-utility"></a>Connettersi all'utilità sqlcmd  
   
 -   Connessione a un'istanza predefinita utilizzando l'autenticazione di Windows per eseguire in modo interattivo le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
