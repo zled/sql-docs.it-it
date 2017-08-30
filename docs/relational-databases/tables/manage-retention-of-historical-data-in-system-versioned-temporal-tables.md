@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="data-retention-management-for-history-table"></a>Gestione della conservazione dei dati per la tabella di cronologia  
  Per gestire la conservazione dei dati della tabella temporale, è prima di tutto necessario determinare il periodo di conservazione obbligatorio per ogni tabella temporale. Nella maggior parte dei casi, i criteri di conservazione devono essere considerati come parte della logica di business dell'applicazione che usa le tabelle temporali. Ad esempio, le applicazioni negli scenari di controllo dei dati e di spostamento cronologico prevedono requisiti rigorosi a livello di durata della disponibilità dei dati cronologici per le query online.  
   
- Dopo avere determinato il periodo di conservazione dei dati, è necessario sviluppare un piano per la gestione dei dati cronologici, per la modalità e la posizione di archiviazione dei dati cronologici e per l'eliminazione dei dati cronologici precedenti ai requisiti di conservazione. Sono disponibili i seguenti quattro possibili approcci per la gestione dei dati cronologici nella tabella di cronologia temporale:  
+ Dopo avere determinato il periodo di conservazione dei dati, è necessario sviluppare un piano per la gestione dei dati cronologici, per la modalità e la posizione di archiviazione dei dati cronologici e per l'eliminazione dei dati cronologici precedenti ai requisiti di conservazione. Per la gestione dei dati cronologici nella tabella di cronologia temporale sono disponibili i quattro approcci seguenti:  
   
 -   [Estensione database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
@@ -428,28 +428,28 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>Approccio criteri di conservazione di cronologia temporale
-> **Nota:** approccio utilizzando i criteri di conservazione della cronologia temporale si applica ai [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e 2017 di SQL Server a partire dalla versione CTP 1.3.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Uso dell'approccio con criteri di conservazione della cronologia temporale
+> **Nota:** l'uso dell'approccio con criteri di conservazione della cronologia temporale si applica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e a SQL Server 2017 a partire da CTP 1.3.  
 
-Periodo di memorizzazione cronologia temporale può essere configurato a livello di singola tabella, che consente agli utenti di creare degli oggetti eliminati flessibile criteri. L'applicazione di memorizzazione temporale è semplice: è necessario un solo parametro da impostare durante la modifica dello schema o di creazione tabella.
+La conservazione della cronologia temporale può essere configurata a livello di singola tabella. Ciò consente agli utenti di creare criteri di aging flessibili. L'applicazione della conservazione della cronologia temporale è semplice e richiede l'impostazione di un solo parametro durante la creazione della tabella o la modifica dello schema.
 
-Dopo aver definito i criteri di conservazione, Database SQL di Azure avvia verifica regolarmente se sono presenti righe cronologiche idonei per la pulizia automatica dei dati. Identificazione delle righe corrispondenti e la rimozione dalla tabella di cronologia si verificano in modo trasparente, l'attività in background pianificata, eseguire dal sistema. Condizione di validità per le righe della tabella di cronologia viene controllato in base alla colonna che rappresenta di fine del periodo SYSTEM_TIME. Se il periodo di memorizzazione, ad esempio, è impostato su sei mesi, idonei per la pulizia delle righe della tabella soddisfano la condizione seguente:
+Dopo che sono stati definiti i criteri di conservazione, il database SQL di Azure inizia a verificare periodicamente la presenza di righe di cronologia con i requisiti per la pulizia automatica dei dati. L'identificazione di righe corrispondenti e la loro rimozione dalla tabella di cronologia si verificano in modo trasparente nell'attività in background pianificata ed eseguita dal sistema. La condizione cronologica delle righe della tabella viene verificata in base alla colonna che rappresenta la fine del periodo SYSTEM_TIME. Se ad esempio il periodo di conservazione impostato è pari a sei mesi, le righe di tabella idonee per la rimozione soddisfano la condizione seguente:
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
-Nell'esempio precedente, si presuppone che la colonna ValidTo corrisponde alla fine del periodo SYSTEM_TIME.
+Nell'esempio precedente si presuppone che la colonna ValidTo corrisponda alla fine del periodo SYSTEM_TIME.
 ### <a name="how-to-configure-retention-policy"></a>Come configurare i criteri di conservazione?
-Prima di configurare criteri di conservazione per una tabella temporale, controllare innanzitutto se il mantenimento di cronologia temporale è abilitato a livello di database:
+Prima di configurare i criteri di conservazione per una tabella temporale, verificare se la conservazione cronologica temporale è abilitata a livello di database:
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-Flag del database **is_temporal_history_retention_enabled** è impostata su ON per impostazione predefinita, ma gli utenti possono modificare con l'istruzione ALTER DATABASE. Si è impostato su OFF anche automaticamente dopo il punto di ripristino di tempo. Per attivare la pulizia di memorizzazione cronologia temporale per il database, eseguire l'istruzione seguente:
+Il flag del database **is_temporal_history_retention_enabled** è ON per impostazione predefinita, ma gli utenti possono modificarlo con l'istruzione ALTER DATABASE. Il flag viene anche impostato automaticamente su OFF dopo l'operazione di ripristino temporizzato. Per impostare la pulizia della cronologia temporale per il database eseguire l'istruzione seguente:
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
 ```
-Criteri di conservazione viene configurato durante la creazione della tabella, specificando un valore per il parametro HISTORY_RETENTION_PERIOD:
+I criteri di conservazione vengono configurati durante la creazione della tabella specificando un valore per il parametro HISTORY_RETENTION_PERIOD:
 ```
 CREATE TABLE dbo.WebsiteUserInfo
 (  
@@ -469,13 +469,13 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-È possibile specificare il periodo di conservazione con unità di tempo diversi: giorni, settimane, mesi e anni. Se HISTORY_RETENTION_PERIOD viene omesso, viene utilizzata la memorizzazione INFINITA. È inoltre possibile utilizzare in modo esplicito infinito (parola chiave).
-In alcuni scenari, si consiglia di configurare retention dopo la creazione della tabella o per modificare in precedenza valore configurato. In questo caso usare l'istruzione ALTER TABLE:
+È possibile specificare il periodo di conservazione con unità di tempo diverse: DAYS, WEEKS, MONTHS e YEARS. Se HISTORY_RETENTION_PERIOD viene omesso, viene usata la conservazione INFINITE. È anche possibile usare esplicitamente la parola chiave INFINITE.
+In alcuni scenari risulta utile configurare la conservazione dopo la creazione della tabella o per modificare un valore configurato in precedenza. In questi casi usare l'istruzione ALTER TABLE:
 ```
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-Per esaminare lo stato corrente del criterio di conservazione, utilizzare la seguente query che unisce i flag di abilitazione della memorizzazione temporale a livello di database con periodi di memorizzazione per le singole tabelle:
+Per esaminare lo stato corrente del criterio di conservazione usare la seguente query, che unisce il flag di abilitazione della conservazione temporale a livello di database con i periodi di conservazione per le singole tabelle:
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -488,16 +488,16 @@ where name = DB_NAME()) AS DB
 LEFT JOIN sys.tables T2   
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
-### <a name="how-sql-database-deletes-aged-rows"></a>Il Database SQL consente di eliminare obsoleti righe?
-Il processo di pulizia dipende dal layout indice della tabella di cronologia. È importante notare che *solo le tabelle di cronologia con un indice cluster (albero B o columnstore) possono avere criteri di conservazione finito configurato*. Un'attività in background viene creata per eseguire la pulizia dei dati obsoleti per tutte le tabelle temporali con periodo di memorizzazione finito. Logica di pulizia per l'indice cluster rowstore (albero B) Elimina le righe obsolete in blocchi più piccoli (fino a 10 KB) riducendo al minimo l'utilizzo nei log del database e il sottosistema dei / o. Anche se viene utilizzata la logica di pulizia necessarie indice B-tree, ordine di eliminazione per le righe anteriore al periodo di conservazione non può essere garantito sia ben. Di conseguenza, *non accettano tutte le dipendenze nell'ordine di pulizia nelle applicazioni*.
+### <a name="how-sql-database-deletes-aged-rows"></a>Come vengono eliminate le righe obsolete nel database SQL?
+Il processo di pulizia dipende dal layout dell'indice della tabella di cronologia. È importante notare che *solo nelle tabelle di cronologia con un indice cluster (struttura albero B o columnstore) è possibile configurare i criteri di conservazione finiti*. Viene creata un'attività in background per eseguire la pulizia dei dati obsoleti per tutte le tabelle temporali con periodo di conservazione finito. Il codice di pulizia per l'indice rowstore cluster (albero B) elimina le righe obsolete in gruppi più piccoli (fino a 10000 unità), riducendo il carico di lavoro del log di database e del sottosistema I/O. Anche se il codice di pulizia usa l'indice albero B richiesto, l'ordine di eliminazione delle righe con durata superiore al periodo di conservazione non può essere garantito con certezza. Di conseguenza *evitare qualsiasi dipendenza dall'ordine di pulizia nelle applicazioni*.
 
-L'attività di pulizia per columnstore cluster rimuove i gruppi di intera riga in una sola volta (in genere contiene 1 milione di righe ogni), che è molto efficiente, in particolare quando i dati cronologici viene generati a un ritmo elevato.
+L'attività di pulizia per il columnstore cluster rimuove interi gruppi (ognuno in genere costituito da un milione di righe) in una sola operazione. Questo approccio è molto efficiente, soprattutto quando vengono generati dati cronologici a ritmi elevati.
 
-![Clustered columnstore conservazione](../../relational-databases/tables/media/cciretention.png "conservazione columnstore cluster")
+![Conservazione columnstore cluster](../../relational-databases/tables/media/cciretention.png "Conservazione columnstore cluster")
 
-Compressione dei dati eccellente e rende pulizia efficiente memorizzazione columnstore indice cluster la soluzione ottimale per gli scenari quando il carico di lavoro genera rapidamente elevate quantità di dati cronologici. Tale modello è tipico per i carichi di lavoro con utilizzo intensivo di elaborazione delle transazioni che utilizzano le tabelle temporali per il rilevamento delle modifiche e il controllo, l'analisi delle tendenze o IoT inserimento di dati.
+Un'ottima compressione dei dati e una pulizia efficiente dei dati conservati fanno dell'indice columnstore cluster la soluzione ottimale per gli scenari in cui il carico di lavoro genera rapidamente volumi elevati di dati cronologici. Questo scenario è tipico di carichi di lavoro di elaborazione transazioni intensiva, che usano le tabelle temporali per il rilevamento e il controllo delle modifiche, l'analisi dei trend o l'inserimento di dati IoT.
 
-Verificare [gestire i dati cronologici nelle tabelle temporali con criteri di conservazione](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) per altri dettagli.
+Per altre informazioni, vedere [Gestire i dati cronologici nelle tabelle temporali con criteri di conservazione](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   

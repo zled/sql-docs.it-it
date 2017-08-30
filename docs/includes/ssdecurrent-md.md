@@ -1,1 +1,1 @@
- Motore di Database SQL Server 2017 
+ Motore di database di SQL Server 2017 
