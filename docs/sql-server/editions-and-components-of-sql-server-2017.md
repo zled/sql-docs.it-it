@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
@@ -58,7 +58,7 @@ Per informazioni sulle versioni precedenti, vedere:
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
 >[!NOTE]
->Tutte le informazioni in questo articolo sono soggette a modifiche poiché si applicano a una versione preliminare di SQL Server 2017. 
+>Tutte le informazioni in questo articolo sono soggette a modifica poiché si applicano a una versione preliminare di SQL Server 2017. 
   
 I requisiti di installazione variano in base alle esigenze dell'applicazione. Le diverse edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consentono di soddisfare le esigenze specifiche di utenti e organizzazioni in termini di prezzo, esecuzione e prestazioni. I componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installati dipendono inoltre dai requisiti specifici. Nelle sezioni seguenti vengono fornite tutte le informazioni necessarie per adottare la scelta migliore tra le edizioni e i componenti disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -68,7 +68,7 @@ Per le note sulla versione più recenti e informazioni sulle novità, vedere qua
 - [Note sulla versione di SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
 - [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-### <a name="try-sql-server"></a>Provare SQL Server.    
+### <a name="try-sql-server"></a>Per provare SQL Server    
     
 > [![Download da Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Download di SQL Server 2017 CTP da Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
@@ -96,7 +96,7 @@ Per le note sulla versione più recenti e informazioni sulle novità, vedere qua
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Uso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con applicazioni client/server  
  È possibile installare solo i componenti client di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un computer in cui vengono eseguite applicazioni client/server connesse direttamente a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'installazione di componenti client rappresenta una scelta ottimale anche se si amministra un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in un server di database o se si prevede di sviluppare applicazioni basate su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- La scelta degli strumenti client comporta l'installazione delle seguenti funzionalità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : componenti per la compatibilità con le versioni precedenti, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], componenti di connettività, strumenti di gestione, Software Development Kit e componenti della documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [installazione di SQL Server](../database-engine/install-windows/install-sql-server.md).  
+ La scelta degli strumenti client comporta l'installazione delle seguenti funzionalità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : componenti per la compatibilità con le versioni precedenti, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], componenti di connettività, strumenti di gestione, Software Development Kit e componenti della documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni, vedere  [Installare SQL Server](../database-engine/install-windows/install-sql-server.md).  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>Scelta dei componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Per selezionare i componenti da includere in un'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilizzare la pagina di selezione delle funzionalità dell'Installazione guidata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per impostazione predefinita, non è selezionata alcuna funzionalità inclusa nell'albero.  
@@ -111,7 +111,7 @@ Per le note sulla versione più recenti e informazioni sulle novità, vedere qua
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è un set di strumenti grafici e oggetti programmabili per lo spostamento, la copia e la trasformazione di dati. È incluso, inoltre, il componente [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) è la soluzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la gestione dei dati master. MDS può essere configurato per gestire qualsiasi dominio (prodotti, clienti, account) e può includere gerarchie, sicurezza granulare, transazioni, controllo delle versioni dei dati e regole business e un [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] che può essere utilizzato per gestire dati.|  
 |Machine Learning Services (In-Database)|Machine Learning Services (In-Database) supporta soluzioni di Machine Learning distribuite e scalabili che usano origini dati aziendali. In SQL Server 2016 era supportato il linguaggio R. SQL Server 2017 supporta R e Python.|
-|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supporta la distribuzione di soluzioni di Machine Learning distribuite e scalabili su più piattaforme che usano origini dati aziendali, inclusi Linux, Hadoop e Teradata. In SQL Server 2016 era supportato il linguaggio R. SQL Server 2017 supporta R e Python.|
+|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supporta la distribuzione di soluzioni di Machine Learning distribuite e scalabili su più piattaforme che usano più origini dati aziendali, tra cui Linux, Hadoop e Teradata. In SQL Server 2016 era supportato il linguaggio R. SQL Server 2017 supporta R e Python.|
 
   
 |Strumenti di gestione|Description|  
@@ -131,7 +131,7 @@ Per le note sulla versione più recenti e informazioni sulle novità, vedere qua
 **Edizioni Developer ed Evaluation**  
 Per le funzionalità supportate dalle edizioni Developer ed Evaluation, vedere le funzionalità elencate per SQL Server Enterprise Edition nelle tabelle seguenti.
 
-L'edizione Developer continua a supportare solo 1 client per [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
+L'edizione Developer continua a supportare un solo client per la [riesecuzione distribuita di SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Limiti di scalabilità  
   
@@ -162,7 +162,7 @@ L'edizione Developer continua a supportare solo 1 client per [SQL Server Distrib
 |Gruppi di disponibilità di base <sup>2</sup>|No|Sì<br /><br /> Supporto per 2 nodi|No|No|No|
 |Ripristino di pagine e file online|Sì|No|No|No|No|
 |Indicizzazione online|Sì|No|No|No|No|
-|Ricompilazioni dell'indice online ripristinabili|Sì|No|No|No|No|
+|Ricompilazioni degli indici online ripristinabili|Sì|No|No|No|No|
 |Modifica dello schema online|Sì|No|No|No|No|
 |Recupero rapido|Sì|No|No|No|No|
 |Backup con mirroring|Sì|No|No|No|No|
@@ -173,7 +173,7 @@ L'edizione Developer continua a supportare solo 1 client per [SQL Server Distrib
 |Gruppo di disponibilità senza cluster|Sì|Sì|Sì|No|No|No|
 |Gruppo di disponibilità con commit di un numero minimo di repliche|Sì|Sì|Sì|No|No|No|
   
- <sup>1</sup> per ulteriori informazioni sull'installazione di SQL Server in Server Core, vedere [installazione di SQL Server in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
+ <sup>1</sup> Per altre informazioni sull'installazione di SQL Server in Server Core, vedere [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) (Installare SQL Server in Server Core). 
 
 <sup>2</sup> Per altre informazioni sui gruppi di disponibilità di base, vedere [Gruppi di disponibilità di base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
@@ -183,7 +183,7 @@ L'edizione Developer continua a supportare solo 1 client per [SQL Server Distrib
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Columnstore <sup>1</sup>|Sì|Sì|Sì|Sì|Sì|  
 |File binari di oggetti di grandi dimensioni in indici columnstore cluster|Sì|Sì|Sì|Sì|Sì|  
-|Ricompilazione dell'indice columnstore non cluster online|Sì|No|No|No|No|
+|Ricompilazione degli indici columnstore non cluster online|Sì|No|No|No|No|
 |OLTP in memoria <sup>1</sup>|Sì|Sì|Sì|Sì, <sup>2</sup>|Sì|
 |Estensione database|Sì|Sì|Sì|Sì|Sì|
 |Memoria principale persistente|Sì|Sì|Sì|Sì|Sì|
@@ -199,7 +199,8 @@ L'edizione Developer continua a supportare solo 1 client per [SQL Server Distrib
 |Durabilità posticipata|Sì|Sì|Sì|Sì|Sì|
 |Ottimizzazione automatica|Sì|No|No|No|No|
 |Join adattivi in modalità batch|Sì|No|No|No|No|
-|Commenti della concessione di memoria batch|Sì|No|No|No|No|
+|Feedback delle concessioni di memoria in modalità batch|Sì|No|No|No|No|
+|Esecuzione interleaved per funzioni con valori di tabella a più istruzioni|Sì|Sì|Sì|Sì|Sì|
 |Miglioramenti dell'inserimento bulk|Sì|Sì|Sì|Sì|Sì|
 
 
@@ -255,7 +256,7 @@ L'edizione Developer continua a supportare solo 1 client per [SQL Server Distrib
   
  <sup>2</sup> Ottimizzazione abilitata solo sulle funzionalità dell'edizione Standard.  
   
-##  <a name="RDBMSM"></a> Gestibilità RDBMS  
+##  <a name="RDBMSM"></a> Gestione RDBMS  
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -326,7 +327,7 @@ L'edizione Developer continua a supportare solo 1 client per [SQL Server Distrib
 Per informazioni sulle funzionalità di Integration Services (SSIS) supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], vedere [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md) (Funzionalità di Integration Services supportate dalle edizioni di SQL Server).
 
 ##  <a name="MDS"></a> Master Data Services  
- Per informazioni di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e Data Quality Services funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Master Data Services e Data Quality Services funzionalità supportate dalle edizioni di SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 
+ Per informazioni sulle funzionalità di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e Data Quality Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md) (Funzionalità di Master Data Services e Data Quality Services supportate dalle edizioni di SQL Server 2016). 
 
   
 ##  <a name="DW"></a> Data warehouse  
@@ -343,31 +344,31 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-Per informazioni sulle funzionalità di Analysis Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
+Per informazioni sulle funzionalità di Analysis Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Analysis Services supportate dalle edizioni di SQL Server). 
   
 ##  <a name="BIMD"></a> BI Semantic Model (multidimensionale)  
   
-Per informazioni sulle funzionalità di Analysis Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Per informazioni sulle funzionalità di Analysis Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Analysis Services supportate dalle edizioni di SQL Server).
    
 ##  <a name="BIT"></a> BI Semantic Model (tabulare)  
   
-Per informazioni sulle funzionalità di Analysis Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Per informazioni sulle funzionalità di Analysis Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Analysis Services supportate dalle edizioni di SQL Server).
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-Per informazioni su Power Pivot per le caratteristiche di SharePoint supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Per informazioni sulle funzionalità di PowerPivot per SharePoint supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Analysis Services supportate dalle edizioni di SQL Server).
   
 ##  <a name="DM"></a> Data mining  
   
-Per informazioni sulle funzionalità di Data Mining supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Per informazioni sulle funzionalità di data mining supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Analysis Services supportate dalle edizioni di SQL Server).
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-Per informazioni sulle funzionalità di Reporting Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Reporting Services funzionalità supportate dalle edizioni di SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Per informazioni sulle funzionalità di Reporting Services supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Reporting Services supportate dalle edizioni di SQL Server).
 
 ##  <a name="BIC"></a> Client di business intelligence  
 
-Per informazioni sulle funzionalità di Business Intelligence Client supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) o [Reporting Services funzionalità supportate dalle edizioni di SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Per informazioni sulle funzionalità del client di Business Intelligence supportate dalle edizioni di [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], vedere [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Analysis Services supportate dalle edizioni di SQL Server) o [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md) (Funzionalità di Reporting Services supportate dalle edizioni di SQL Server).
   
 ##  <a name="SLS"></a> Servizi spaziali e basati sulla posizione  
   
@@ -395,8 +396,8 @@ Per informazioni sulle funzionalità di Business Intelligence Client supportate 
 > [![Download di SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Scaricare la versione più recente di SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## <a name="next-steps"></a>Passaggi successivi 
- [Specifiche del prodotto per SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installazione per SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Documentazione tecnica di SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
+ [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md) (Installazione per SQL Server)  
  
   
   
