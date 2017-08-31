@@ -70,4 +70,3 @@ Prima di iniziare questa esercitazione è opportuno esaminare brevemente [!INCLU
 [Connettersi con Server registrati ed Esplora oggetti](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-
