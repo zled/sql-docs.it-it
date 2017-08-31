@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase Versioned Feature Summary (Riepilogo delle funzionalità con controllo delle versioni di PolyBase)
@@ -35,6 +35,7 @@ Riepilogo delle funzionalità di PolyBase disponibili per i prodotti e servizi d
 |Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sì|no|no|sì|
 |Importare dati da Hadoop|sì|no|no|sì|
 |Esportare dati in Hadoop  |sì|no|no| sì|
+|Eseguire query, importare da ed esportare in HDInsights |no|no|no|no
 |Eseguire il push down dei calcoli delle query in Hadoop|sì|no|no|sì|  
 |Importare dati dall'archivio BLOB di Azure|sì|no|sì|sì| 
 |Esportare dati nell'archivio BLOB di Azure|sì|no|sì|sì|  

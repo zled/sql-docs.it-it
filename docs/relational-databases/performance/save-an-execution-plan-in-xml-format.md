@@ -1,7 +1,7 @@
 ---
 title: Salvare un piano di esecuzione in formato XML | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvataggio di un piano di esecuzione in formato XML
@@ -36,25 +36,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aprire un editor di query e connettersi a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Attivare SHOWPLAN_XML con l'istruzione seguente:  
+2.  Attivare [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) con l'istruzione seguente:  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     Per abilitare STATISTICS XML, utilizzare l'istruzione seguente:  
+     Per attivare [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md), usare l'istruzione seguente:  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML genera informazioni di compilazione relative al piano di esecuzione della query, ma non esegue la query. STATISTICS XML genera informazioni di run-time relative al piano di esecuzione della query ed esegue la query.  
+     > [!NOTE] 
+     > SHOWPLAN_XML genera informazioni di compilazione relative al piano di esecuzione della query, ma non esegue la query. Questo piano è definito anche piano di esecuzione **stimato**. STATISTICS XML genera informazioni di runtime relative al piano di esecuzione della query ed esegue la query. Questo piano è definito anche piano di esecuzione **effettivo**.  
   
 3.  Eseguire una query. Esempio:  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Per salvare un piano di esecuzione utilizzando le opzioni di SQL Server Management Studio  
   
-1.  Generare un piano di esecuzione stimato o effettivo utilizzando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Visualizzare il piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md) o [Visualizzare un piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).  
+1.  Generare un piano di esecuzione stimato o effettivo utilizzando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Visualizzare il piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md) e [Visualizzare un piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).  
   
 2.  Nella scheda **Piano di esecuzione** del riquadro dei risultati fare clic con il pulsante destro del mouse sul piano di esecuzione grafico e scegliere **Salva piano di esecuzione con nome**.  
   
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
+

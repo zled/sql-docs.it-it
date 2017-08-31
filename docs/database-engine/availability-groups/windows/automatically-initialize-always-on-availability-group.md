@@ -1,8 +1,10 @@
 ---
 title: "Inizializzare automaticamente un gruppo di disponibilità Always On | Microsoft Docs"
 ms.custom: 
-ms.date: 11/14/2016
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,21 +17,22 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b30513c845d486875840eabd66506497182eb692
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 6184d0cfedb90d16f1a7c1af109003908e481a89
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inizializzare automaticamente un gruppo di disponibilità Always On
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+SQL Server 2016 introduce il seeding automatico dei gruppi di disponibilità. Quando si crea un gruppo di disponibilità con seeding automatico, SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Non è più necessario eseguire manualmente il backup e il ripristino delle repliche secondarie. Per abilitare il seeding automatico, creare il gruppo di disponibilità con T-SQL o usare la versione più recente di SQL Server Management Studio.
 
- SQL Server 2016 introduce il seeding automatico dei gruppi di disponibilità. Quando si crea un gruppo di disponibilità con seeding automatico, SQL Server crea automaticamente le repliche secondarie per ogni database nel gruppo. Con il seeding automatico non è più necessario eseguire manualmente il backup e il ripristino delle repliche secondarie. Per abilitare il seeding automatico, creare il gruppo di disponibilità con T-SQL.
+Per informazioni generali, vedere [Seeding automatico per le repliche secondarie](automatic-seeding-secondary-replicas.md).
  
 ## <a name="prerequisites"></a>Prerequisiti
 
-Il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo di disponibilità. 
+In SQL Server 2016 il seeding automatico richiede che il percorso dei dati e del file di log sia lo stesso in ogni istanza di SQL Server inclusa nel gruppo di disponibilità. In SQL Server 2017 è possibile usare percorsi diversi, ma Microsoft consiglia di usare gli stessi percorsi quando tutte le repliche sono ospitate nella stessa piattaforma, ad esempio Windows o Linux. I gruppi di disponibilità multipiattaforma hanno percorsi diversi per le repliche. Per informazioni dettagliate, vedere [Layout dei dischi](automatic-seeding-secondary-replicas.md#disklayout).
 
 Il seeding del gruppo di disponibilità comunica attraverso l'endpoint del mirroring del database. Aprire le regole del firewall in entrata per la porta dell'endpoint del mirroring in ogni server.
 
@@ -41,99 +44,103 @@ Per creare un gruppo di disponibilità con seeding automatico, impostare `SEEDIN
 
 L'esempio seguente crea un gruppo di disponibilità in un cluster di failover di un server Windows a due nodi. Prima di eseguire gli script, aggiornare i valori per l'ambiente.
 
-1. Creare gli endpoint. Ogni server deve avere un endpoint. Lo script seguente crea un endpoint che usa la porta TCP 5022 per il listener. Impostare `<endpoint_name>` e `LISTENER_PORT` in modo che corrispondano all'ambiente ed eseguire lo script:
+1. Creare gli endpoint. Ogni server necessita di un endpoint. Lo script seguente crea un endpoint che usa la porta TCP 5022 per il listener. Impostare `<endpoint_name>` e `LISTENER_PORT` in modo che corrispondano all'ambiente ed eseguire lo script in entrambi i server:
 
-    ```
-    --Create the endpoint on both servers
-    -- Run this script twice, once on each server. 
+    ```sql
     CREATE ENDPOINT [<endpoint_name>] 
-    STATE=STARTED
-    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
-    FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
+        STATE=STARTED
+        AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+        FOR DATA_MIRRORING (
+            ROLE = ALL, 
+            AUTHENTICATION = WINDOWS NEGOTIATE, 
+            ENCRYPTION = REQUIRED ALGORITHM AES
+            )
     GO
     ```
 
-1. Creare il gruppo di disponibilità. Lo script seguente crea il gruppo di disponibilità. Aggiornare i valori per il nome del gruppo, i nomi dei server e i nomi di dominio ed eseguirlo nell'istanza primaria di SQL Server.  
+1. Creare il gruppo di disponibilità. Lo script seguente crea il gruppo di disponibilità. Aggiornare i valori racchiusi tra parentesi acute `<>` per il nome del gruppo, i nomi dei server e i nomi di dominio ed eseguirlo nell'istanza primaria di SQL Server.  
 
-    ```
-    ---Run On Primary
+    ```sql
     CREATE AVAILABILITY GROUP [<availability_group_name>]
-    FOR DATABASE db1
-    REPLICA ON'<*primary_server*>'
-    WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC),
-    N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC);
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
     GO
     ``` 
 
-1. Aggiungere il server secondario al gruppo di disponibilità e concedere l'autorizzazione al gruppo di disponibilità per creare i database. Eseguire lo script seguente nell'istanza secondaria di SQL Server: 
+1. Aggiungere l'istanza del server secondario al gruppo di disponibilità e concedere l'autorizzazione per la creazione di database al gruppo di disponibilità. Aggiornare lo script seguente, sostituire i valori racchiusi tra parentesi acute `<>` per l'ambiente specifico ed eseguirlo nell'istanza della replica secondaria di SQL Server: 
  
-    ```
-    --Run on Secondary Replica to join to the availability group
+    ```sql
     ALTER AVAILABILITY GROUP [<availability_group_name>] JOIN
     GO  
     ALTER AVAILABILITY GROUP [<availability_group_name>] GRANT CREATE ANY DATABASE
     GO
     ```
 
-SQL Server creerà automaticamente la replica di database nel server secondario. Se il database è di grandi dimensioni, il completamento della sincronizzazione del database potrebbe richiedere del tempo. Se un database si trova in un gruppo di disponibilità configurato per il seeding automatico, è possibile eseguire query sulla vista di sistema `sys.dm_hadr_automatic_seeding` per monitorare il seeding. La query seguente restituisce una riga per ogni database incluso in un gruppo di disponibilità configurato per il seeding automatico.
+SQL Server crea automaticamente la replica di database nel server secondario. Se il database è di grandi dimensioni, il completamento della sincronizzazione del database potrebbe richiedere del tempo. Se un database si trova in un gruppo di disponibilità configurato per il seeding automatico, è possibile eseguire query sulla vista di sistema `sys.dm_hadr_automatic_seeding` per monitorare il seeding. La query seguente restituisce una riga per ogni database incluso in un gruppo di disponibilità configurato per il seeding automatico.
 
-```
- SELECT start_time,
-       ag.name,
-       db.database_name,
-       current_state,
-       performed_seeding,
-       failure_state,
-       failure_state_desc
- FROM sys.dm_hadr_automatic_seeding autos 
-    JOIN sys.availability_databases_cluster db ON autos.ag_db_id = db.group_database_id
-    JOIN sys.availability_groups ag ON autos.ag_id = ag.group_id
+```sql 
+SELECT start_time,
+    ag.name,
+    db.database_name,
+    current_state,
+    performed_seeding,
+    failure_state,
+    failure_state_desc
+FROM sys.dm_hadr_automatic_seeding autos 
+    JOIN sys.availability_databases_cluster db 
+        ON autos.ag_db_id = db.group_database_id
+    JOIN sys.availability_groups ag 
+        ON autos.ag_id = ag.group_id
 ```
 
 ## <a name="prevent-automatic-seeding-after-an-availability-group"></a>Impedire il seeding automatico per un gruppo di disponibilità
 
-Per impedire temporaneamente al database primario di eseguire il seeding di altri database nella replica secondaria, è possibile negare al gruppo di disponibilità l'autorizzazione per creare database. Eseguire la query seguente nell'istanza che ospita la replica secondaria per negare al gruppo di disponibilità l'autorizzazione per creare i database di replica.
+Per impedire temporaneamente alla replica primaria di eseguire il seeding di altri database nella replica secondaria, è possibile negare al gruppo di disponibilità l'autorizzazione per creare database. Eseguire la query seguente nell'istanza che ospita la replica secondaria per negare al gruppo di disponibilità l'autorizzazione per creare i database di replica.
 
-```
-ALTER AVAILABILITY GROUP [<availability_group_name>] DENY CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [<availability_group_name>] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
 
 ## <a name="enable-automatic-seeding-on-an-existing-availability-group"></a>Abilitare il seeding automatico in un gruppo di disponibilità esistente
 
-È possibile impostare il seeding automatico in un database esistente. Il comando seguente modifica un gruppo di disponibilità per consentire l'uso del seeding automatico. 
+È possibile impostare il seeding automatico in un database esistente. Il comando seguente modifica un gruppo di disponibilità per consentire l'uso del seeding automatico. Eseguire il comando seguente nella replica primaria.
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-MODIFY REPLICA ON '<primary_node>' WITH (SEEDING_MODE = AUTOMATIC)
+    MODIFY REPLICA ON '<secondary_node>' 
+    WITH (SEEDING_MODE = AUTOMATIC)
 GO
 ```
 
-Se necessario, questa operazione forza il riavvio del seeding in un database. Ad esempio, se seeding non riesce a causa di spazio su disco insufficiente nella replica secondaria, è possibile eseguire `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` per riavviare il seeding dopo aver aggiunto altro spazio.
+Il comando precedente impone il riavvio del seeding in un database, se necessario. Ad esempio, se seeding non riesce a causa di spazio su disco insufficiente nella replica secondaria, eseguire `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` per riavviare il seeding dopo aver aggiunto altro spazio.
 
 ## <a name="stop-automatic-seeding"></a>Arrestare il seeding automatico
 
-Per arrestare il seeding automatico per un gruppo di disponibilità, eseguire lo script seguente nell'istanza che ospita la replica primaria:
+Per arrestare il seeding automatico per un gruppo di disponibilità, eseguire lo script seguente nella replica primaria:
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-    MODIFY REPLICA ON '<primary_node>'   
+    MODIFY REPLICA ON '<secondary_node>'   
     WITH (SEEDING_MODE = MANUAL)
 GO
 ```
 
-Vengono annullate tutte le repliche attualmente sottoposte a seeding e si impedisce a SQL Server di inizializzare automaticamente le repliche in questo gruppo di disponibilità. La sincronizzazione non viene interrotta per le repliche già inizializzate. 
+Lo script precedente annulla tutte le repliche attualmente sottoposte a seeding e impedisce a SQL Server di inizializzare automaticamente le repliche in questo gruppo di disponibilità. Non interrompe la sincronizzazione per le repliche già inizializzate. 
 
 
 ## <a name="monitor-automatic-seeding-availability-group"></a>Monitorare un gruppo di disponibilità con seeding automatico
@@ -146,13 +153,13 @@ Le viste di sistema seguenti indicano lo stato del seeding automatico di SQL Ser
 
 Nella replica primaria eseguire una query su `sys.dm_hadr_automatic_seeding` per controllare lo stato del processo di seeding automatico. La vista restituisce una riga per ogni processo di seeding. Esempio:
 
-``` 
+```sql
 SELECT start_time, 
-        completion_time
-        is_source,
-        current_state,
-        failure_state,
-        failure_state_desc
+    completion_time
+    is_source,
+    current_state,
+    failure_state,
+    failure_state_desc
 FROM sys.dm_hadr_automatic_seeding
 ```
  
@@ -160,7 +167,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 Nella replica primaria eseguire una query sulla DMV `sys.dm_hadr_physical_seeding_stats` per visualizzare le statistiche fisiche per ogni processo di seeding attualmente in esecuzione. La query seguente restituisce le righe quando il seeding è in esecuzione:
 
-```
+```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
@@ -174,7 +181,7 @@ Il seeding automatico ora include nuovi eventi estesi per tenere traccia delle m
 
 Ad esempio, questo script crea una sessione di eventi estesi che acquisisce gli eventi correlati al seeding automatico: 
 
-```
+```sql
 CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -186,8 +193,20 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+            max_file_size=(5),
+            max_rollover_files=(4)
+        )
+WITH (
+    MAX_MEMORY=4096 KB,
+    EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+    MAX_DISPATCH_LATENCY=30 SECONDS,
+    MAX_EVENT_SIZE=0 KB,
+    MEMORY_PARTITION_MODE=NONE,
+    TRACK_CAUSALITY=OFF,
+    STARTUP_STATE=ON
+    )
 GO 
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START
@@ -216,22 +235,22 @@ La tabella seguente elenca gli eventi estesi correlati al seeding automatico:
 
 ### <a name="other-troubleshooting-considerations"></a>Altre considerazioni sulla risoluzione dei problemi
 
-**Monitorare il completamento del seeding automatico**
+**Monitorare il seeding automatico**
 
 Eseguire una query `sys.dm_hadr_physical_seeding_stats` per il processo di seeding automatico in esecuzione. La vista restituisce una riga per ogni database. Esempio:
 
-```
+```sql
 SELECT local_database_name, 
-       role_desc, 
-       internal_state_desc, 
-       transfer_rate_bytes_per_second, 
-       transferred_size_bytes, 
-       database_size_bytes, 
-       start_time_utc, 
-       end_time_utc, estimate_time_complete_utc, 
-       total_disk_io_wait_time_ms, 
-       total_network_wait_time_ms, 
-       is_compression_enabled 
+    role_desc, 
+    internal_state_desc, 
+    transfer_rate_bytes_per_second, 
+    transferred_size_bytes, 
+    database_size_bytes, 
+    start_time_utc, 
+    end_time_utc, estimate_time_complete_utc, 
+    total_disk_io_wait_time_ms, 
+    total_network_wait_time_ms, 
+    is_compression_enabled 
 FROM sys.dm_hadr_physical_seeding_stats
 ```
 
@@ -240,14 +259,14 @@ FROM sys.dm_hadr_physical_seeding_stats
 
 Quando un database non viene visualizzato in un gruppo di disponibilità con seeding automatico abilitato, è probabile che il seeding automatico non sia riuscito. Questo impedisce l'aggiunta del database al gruppo di disponibilità nella replica primaria e secondaria. Eseguire una query `sys.dm_hadr_automatic_seeding` sulle repliche primarie e secondarie. Ad esempio, eseguire la query seguente per identificare lo stato di errore del seeding automatico.
 
-```
+```sql
 SELECT start_time, 
-       completion_time, 
-       is_source, 
-       current_state, 
-       failure_state, 
-       failure_state_desc, 
-       error_code 
+    completion_time, 
+    is_source, 
+    current_state, 
+    failure_state, 
+    failure_state_desc, 
+    error_code 
 FROM sys.dm_hadr_automatic_seeding
 ```
 
@@ -265,7 +284,7 @@ Prima di aggiungere un database a un gruppo di disponibilità con seeding automa
 
 ## <a name="resources"></a>Risorse
 
-[CREATE AVAILABILITY GROUP (Transact-SQL) -](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
 
 [Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On](http://technet.microsoft.com/library/dn135328.aspx)
 

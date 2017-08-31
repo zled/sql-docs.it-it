@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>Guide di piano
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>Tipi di guide di piano  
  È possibile creare i seguenti tipi di guide di piano:  
   
- guida di piano di tipo OBJECT  
+ ### <a name="object-plan-guide"></a>guida di piano di tipo OBJECT  
  Una guida di piano di tipo OBJECT corrisponde alle query eseguite nel contesto di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , funzioni scalari definite dall'utente, funzioni con valori di tabella definite dall'utente con istruzioni multiple e trigger DML.  
   
- Si supponga che la seguente stored procedure, che accetta il parametro `@Country`_`region` , si trovi in un'applicazione di database distribuita sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+ Si supponga che la stored procedure seguente, che accetta il parametro `@Country_region`, si trovi in un'applicazione di database distribuita sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- Questa stored procedure è stata compilata e ottimizzata per `@Country`_`region = N'AU'` (Australia). Tuttavia, poiché sono presenti relativamente pochi ordini di vendita con origine in Australia, le prestazioni diminuiscono quando viene eseguita la query utilizzando i valori del parametro dei paesi con più ordini di vendita. Poiché il paese da cui proviene la maggior parte degli ordini di vendita sono gli Stati Uniti, un piano di query generato per `@Country`\_`region = N'US'` offrirebbe probabilmente prestazioni migliori per tutti i possibili valori del parametro `@Country`\_`region` .  
+ Si supponga che questa stored procedure è stata compilata e ottimizzata per `@Country_region = N'AU'` (Australia). Tuttavia, poiché sono presenti relativamente pochi ordini di vendita con origine in Australia, le prestazioni diminuiscono quando viene eseguita la query utilizzando i valori del parametro dei paesi con più ordini di vendita. Poiché la maggior parte degli ordini di vendita proviene dagli Stati Uniti, un piano di query generato per `@Country_region = N'US'` offrirebbe probabilmente prestazioni migliori per tutti i possibili valori del parametro `@Country_region`.  
   
  Per risolvere il problema è possibile modificare la stored procedure aggiungendo alla query l'hint `OPTIMIZE FOR` . Poiché la stored procedure si trova in un'applicazione distribuita, non è possibile modificare direttamente il codice dell'applicazione. È invece possibile creare la guida di piano seguente nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  Al momento dell'esecuzione della query specificata nell'istruzione `sp_create_plan_guide` , la query viene modificata prima dell'ottimizzazione per includere la clausola `OPTIMIZE FOR (@Country = N''US'')` .  
   
- Guida di piano di tipo SQL  
+ ### <a name="sql-plan-guide"></a>Guida di piano di tipo SQL  
  Una guida di piano di tipo SQL corrisponde alle query eseguite nel contesto di batch e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome che non fanno parte di un oggetto di database. Le guide di piano basate su SQL possono inoltre essere utilizzate per query con parametrizzazioni specifiche. Le guide di piano di tipo SQL vengono applicate a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] autonome e batch. Spesso tali istruzioni vengono inoltrate da un'applicazione mediante la stored procedure di sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Ad esempio, si consideri il batch autonomo seguente:  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Per impedire la generazione di un piano di esecuzione parallelo su questa query, creare la seguente guida di piano e impostare l'hint per la query `MAXDOP` su `1` nel parametro `@hints` .  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,25 +105,28 @@ sp_create_plan_guide
   
  È possibile creare guide di piano SQL anche per le query con parametrizzazione forzata quando l'opzione di database PARAMETERIZATION è impostata su FORCED, oppure quando si crea una guida di piano di tipo TEMPLATE per specificare la parametrizzazione di una classe di query.  
   
- TEMPLATE - guida di piano  
+ ### <a name="template-plan-guide"></a>TEMPLATE - guida di piano  
  Una guida di piano di tipo TEMPLATE corrisponde alle query autonome con parametrizzazioni specifiche. Tali guide di piano vengono utilizzate per sostituire l'opzione SET di database PARAMETERIZATION di un database per una classe di query.  
   
  È possibile creare una guida di piano di tipo TEMPLATE nelle seguenti situazioni:  
   
--   L'opzione di database PARAMETERIZATION è impostata su FORCED, ma si desidera compilare alcune query in base alle regole della parametrizzazione semplice.  
+-   L'opzione di database PARAMETERIZATION è impostata su FORCED, ma si vogliono compilare alcune query in base alle regole della [parametrizzazione semplice](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
--   L'opzione di database PARAMETERIZATION è impostata su SIMPLE (impostazione predefinita), ma si desidera che una classe di query venga sottoposta a parametrizzazione forzata.  
+-   L'opzione di database PARAMETERIZATION è impostata su SIMPLE (impostazione predefinita), ma si vuole che una classe di query venga sottoposta a [parametrizzazione forzata](../../relational-databases/query-processing-architecture-guide.md#ForcedParam).  
   
 ## <a name="plan-guide-matching-requirements"></a>Requisiti di corrispondenza per la guida di piano  
  Le guide di piano sono definite a livello di ambito del database in cui vengono create. Pertanto, è possibile far corrispondere alla query solo le guide di piano presenti nel database corrente al momento dell'esecuzione della query. Ad esempio, se [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è il database corrente e viene eseguita la query seguente:  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  È possibile far corrispondere alla query solo le guide di piano nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Se tuttavia il database corrente è [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e vengono eseguite le istruzioni seguenti:  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  È possibile far corrispondere alla query solo le guide di piano in `DB1` , poiché la query è in esecuzione nel contesto di `DB1`.  
   

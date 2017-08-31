@@ -1,7 +1,7 @@
 ---
 title: "Gruppi di disponibilità distribuiti (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 06/20/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: e390d6efa26dcb628da636bc9bcf7c8fac54af65
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
 ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
@@ -42,7 +42,8 @@ Un gruppo di disponibilità distribuito richiede la presenza di un listener per 
 
 La figura seguente mostra una panoramica generale di un gruppo di disponibilità distribuito che comprende due gruppi di disponibilità (AG 1 e AG 2), ognuno dei quali è configurato nel relativo cluster WSFC. Il gruppo di disponibilità distribuito ha un totale di quattro repliche, due in ogni gruppo di disponibilità. Ogni gruppo di disponibilità può supportare fino al numero massimo di repliche consentito. Quindi, un gruppo di disponibilità distribuito basato sulla Standard Edition può avere fino a quattro repliche, mentre uno basato sulla Enterprise Edition può avere fino a 18 repliche totali.
 
-<a name="fig1"></a> ![Panoramica generale di un gruppo di disponibilità distribuito][1]
+<a name="fig1"></a>
+![Panoramica generale di un gruppo di disponibilità distribuito][1]
 
 È possibile configurare lo spostamento dei dati nei gruppi di disponibilità distribuiti come sincrono o asincrono. Tuttavia, lo spostamento dei dati all'interno di gruppi di disponibilità distribuiti è leggermente diverso rispetto a quanto avviene in un gruppo di disponibilità tradizionale. Anche se ogni gruppo di disponibilità ha una replica primaria, solo una copia dei database fa parte di un gruppo di disponibilità distribuito che può accettare inserimenti, aggiornamenti ed eliminazioni. Come illustra la figura seguente, AG 1 è il gruppo di disponibilità primario. La relativa replica primaria invia transazioni sia alle repliche secondarie di AG 1 che alla replica primaria di AG 2. Successivamente, la replica primaria di AG 2 mantiene aggiornate le repliche secondarie di AG 2. 
 
@@ -119,7 +120,7 @@ I gruppi di disponibilità distribuiti supportano due configurazioni dei gruppi 
 
 La possibilità di eseguire la migrazione è particolarmente utile negli scenari in cui si modifica o si aggiorna il sistema operativo sottostante, mantenendo però la stessa versione di SQL Server. Anche se Windows Server 2016 consente l'aggiornamento in sequenza da Windows Server 2012 R2 nello stesso hardware, la maggior parte degli utenti sceglie di eseguire la distribuzione di nuovo hardware o macchine virtuali. 
 
-Per completare la migrazione alla nuova configurazione, alla fine del processo, arrestare tutto il traffico dei dati verso il gruppo di disponibilità originale e configurare il gruppo di disponibilità distribuito per lo spostamento dei dati sincrono. Questa operazione fa in modo che la replica primaria del secondo gruppo di disponibilità sia completamente sincronizzata ed elimina il rischio di perdita di dati. Dopo aver verificato la sincronizzazione, effettuare il failover del gruppo di disponibilità distribuito nel secondo gruppo di disponibilità, come illustrato nella sezione [Failover in un gruppo di disponibilità secondario](https://msdn.microsoft.com/en-US/library/mt651673.aspx).
+Per completare la migrazione alla nuova configurazione, alla fine del processo, arrestare tutto il traffico dei dati verso il gruppo di disponibilità originale e configurare il gruppo di disponibilità distribuito per lo spostamento dei dati sincrono. Questa operazione fa in modo che la replica primaria del secondo gruppo di disponibilità sia completamente sincronizzata ed elimina il rischio di perdita di dati. Dopo aver verificato la sincronizzazione, effettuare il failover del gruppo di disponibilità distribuito nel gruppo di disponibilità secondario. Per altre informazioni, vedere [Failover su un gruppo di disponibilità secondario](configure-distributed-availability-groups.md#failover).
 
 Dopo la migrazione, il secondo gruppo di disponibilità è ora il nuovo gruppo di disponibilità primario e potrebbe essere necessario eseguire una di queste operazioni:
 
@@ -174,75 +175,101 @@ Come accennato in precedenza, un gruppo di disponibilità distribuito è un cost
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG1                             DENNIS                Online Available Storage               GLEN                  Offline Cluster Group                   JY                    Online New_RoR                         DENNIS                Online Old_RoR                         DENNIS                Online SeedingAG                       DENNIS                Online
+AG1                             DENNIS                Online
+Available Storage               GLEN                  Offline
+Cluster Group                   JY                    Online
+New_RoR                         DENNIS                Online
+Old_RoR                         DENNIS                Online
+SeedingAG                       DENNIS                Online
 
 
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_B
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG2                             TOMMY                 Online Available Storage               JC                    Offline Cluster Group                   JC                    Online
+AG2                             TOMMY                 Online
+Available Storage               JC                    Offline
+Cluster Group                   JC                    Online
 ```
 
-All detailed information about a distributed availability group is in SQL Server, specifically in the availability-group dynamic management views. Currently, the only information shown in SQL Server Management Studio for a distributed availability group is on the primary replica for the availability groups. As shown in the following figure, under the Availability Groups folder, SQL Server Management Studio shows that there is a distributed availability group. The figure shows AG1 as a primary replica for an individual availability group that's local to that instance, not for a distributed availability group.
+Tutte le informazioni dettagliate su un gruppo di disponibilità distribuito sono disponibili in SQL Server, in particolare nelle viste a gestione dinamica del gruppo di disponibilità. Le uniche informazioni attualmente visualizzate in SQL Server Management Studio per un gruppo di disponibilità distribuito sono disponibili nella replica primaria per i gruppi di disponibilità. Come mostrato nella figura seguente, nella cartella Gruppi di disponibilità di SQL Server Management Studio è disponibile un gruppo di disponibilità distribuito. La figura mostra AG1 come replica primaria per un singolo gruppo di disponibilità locale per tale istanza, non per un gruppo di disponibilità distribuito.
 
-![View in SQL Server Management Studio of the primary replica on the first WSFC cluster of a distributed availability group][8]
+![Visualizzazione in SQL Server Management Studio della replica primaria sul primo cluster WSFC di un gruppo di disponibilità distribuito][8]
 
 
-However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it might change in a future version of SQL Server Management Studio.
+Se tuttavia si fa clic con il pulsante destro del mouse sul gruppo di disponibilità distribuito, non sono disponibili opzioni (vedere la figura seguente) e le cartelle Database di disponibilità, Listener gruppo di disponibilità e Repliche di disponibilità espanse sono tutte vuote. SQL Server Management Studio 16 mostra questo risultato, ma è possibile che tale comportamento venga modificato in una versione futura di SQL Server Management Studio.
 
-![No options available for action][9]
+![Nessuna opzione disponibile per l'azione][9]
 
-As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous [CLUSTER_A WSFC cluster](#fig7) image.
+Come mostrato nella figura seguente, le repliche secondarie non mostrano alcun valore in SQL Server Management Studio correlato al gruppo di disponibilità distribuito. I nomi di questi gruppi di disponibilità sono mappati ai ruoli mostrati nell'immagine precedente del [cluster CLUSTER_A WSFC](#fig7).
 
-![View in SQL Server Management Studio of a secondary replica][10]
+![Visualizzazione di una replica secondaria in SQL Server Management Studio][10]
 
-The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
+Gli stessi concetti sono validi quando si usano le viste a gestione dinamica. Usando la query seguente è possibile visualizzare tutti i gruppi di disponibilità (normali e distribuiti) e i rispettivi nodi. Questo risultato viene visualizzato solo se si esegue una query sulla replica primaria in uno dei cluster WSFC inclusi nel gruppo di disponibilità distribuito. Nella vista a gestione dinamica `sys.availability_groups` è disponibile una nuova colonna denominata `is_distributed`, che corrisponde a 1 quando il gruppo di disponibilità è un gruppo di disponibilità distribuito. Per visualizzare questa colonna:
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name' FROM    sys.availability_groups ag, sys.availability_replicas ar       
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
+FROM    sys.availability_groups ag, 
+    sys.availability_replicas ar       
 WHERE   ag.group_id = ar.group_id
 ```
 
-An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
+Un esempio di output dal secondo cluster WSFC incluso in un gruppo di disponibilità distribuito viene mostrato nella figura seguente. SPAG1 è costituito da due repliche: DENNIS e JY. Il gruppo di disponibilità distribuito denominato SPDistAG include tuttavia i nomi dei due gruppi di disponibilità inclusi (SPAG1 e SPAG2), invece dei nomi delle istanze, usati in un gruppo di disponibilità tradizionale. 
 
-![Example output of the preceding query][11]
+![Output di esempio della query precedente][11]
 
-In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
+In SQL Server Management Studio qualsiasi stato mostrato nel Dashboard e in altre aree è relativo solo alla sincronizzazione locale entro tale gruppo di disponibilità. Per visualizzare l'integrità di un gruppo di disponibilità distribuito, eseguire query nelle viste a gestione dinamica. La query di esempio seguente estende e perfeziona la query precedente:
 
-```
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status' FROM    sys.availability_groups ag, sys.availability_replicas ar,       
+```sql
+SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
+FROM    sys.availability_groups ag, 
+sys.availability_replicas ar,       
 sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id and     ag.group_id = ar.group_id and ag.is_distributed = 1
+WHERE   ar.replica_id = ars.replica_id
+and     ag.group_id = ar.group_id 
+and ag.is_distributed = 1
 ```
        
        
-![Distributed availability group status][12]
+![Stato del gruppo di disponibilità distribuito][12]
 
 
-To further extend the previous query, you can also see the underlying performance via the dynamic management views by adding in `sys.dm_hadr_database_replicas_states`. The dynamic management view currently stores information about the second availability group only. The following example query, run on the primary availability group, produces the sample output shown below:
+Per estendere ulteriormente la query precedente, è anche possibile visualizzare le prestazioni sottostanti tramite le viste a gestione dinamica aggiungendo `sys.dm_hadr_database_replicas_states`. La vista a gestione dinamica archivia attualmente informazioni solo sul secondo gruppo di disponibilità. La query di esempio seguente, eseguita sul gruppo di disponibilità primario, produce l'output di esempio mostrato di seguito:
 
 ```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate FROM    sys.databases dbs, sys.availability_groups ag, sys.availability_replicas ar, sys.dm_hadr_availability_replica_states ars, sys.dm_hadr_database_replica_states drs WHERE   drs.group_id = ag.group_id and ar.replica_id = ars.replica_id and ars.replica_id = drs.replica_id and dbs.database_id = drs.database_id and ag.is_distributed = 1
+SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
+FROM    sys.databases dbs,
+    sys.availability_groups ag,
+    sys.availability_replicas ar,
+    sys.dm_hadr_availability_replica_states ars,
+    sys.dm_hadr_database_replica_states drs
+WHERE   drs.group_id = ag.group_id
+and ar.replica_id = ars.replica_id
+and ars.replica_id = drs.replica_id
+and dbs.database_id = drs.database_id
+and ag.is_distributed = 1
 ```
 
-![Performance information for a distributed availability group][13]
+![Informazioni sulle prestazioni per un gruppo di disponibilità distribuito][13]
 
 
-### Next steps 
+### <a name="next-steps"></a>Passaggi successivi 
 
-* [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+* [Usare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
-* [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+* [Usare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
-* [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+* [Creare un gruppo di disponibilità con Transact-SQL](create-an-availability-group-transact-sql.md)
 
-This content was written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+Il contenuto di questo articolo è stato scritto da [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png
