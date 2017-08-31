@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Fire Event: ManageWeb  
   
- Per altre informazioni, vedere [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Per altre informazioni, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Uso degli script  
  **Creare file script (con estensione ps1)**  
