@@ -1,5 +1,5 @@
 ---
-title: Ripristinare database abilitati per l'estensione (Estensione database) | Microsoft Docs
+title: Ripristinare database abilitati per Stretch (Stretch Database) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4233db126530558a3183e410e1b96b50f57d1d27
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
 ms.contentlocale: it-it
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="restore-stretch-enabled-databases-stretch-database"></a>Ripristino di database abilitati per l'estensione (Estensione database)
+# <a name="restore-stretch-enabled-databases-stretch-database"></a>Ripristino di database abilitati per Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Ripristinare un database di cui è stato eseguito il backup quando necessario, per il ripristino da molti tipi di errori e guasti.
@@ -39,7 +39,7 @@ Dopo aver ripristinato il database di SQL Server, è necessario eseguire la stor
 ## <a name="restore-your-remote-azure-data"></a>Ripristinare i dati di Azure remoti
 
 ### <a name="recover-a-live-azure-database"></a>Ripristinare un database di Azure attivo
-Il servizio Estensione database di SQL Server in Azure crea snapshot di tutti i dati dinamici almeno ogni 8 ore usando snapshot di archiviazione di Azure. Questi snapshot sono mantenuti per 7 giorni. Questo consente di ripristinare i dati in uno degli almeno 21 punti temporali negli ultimi 7 giorni fino all'ora di creazione dell'ultimo snapshot.
+Il servizio SQL Server Stretch Database in Azure crea snapshot di tutti i dati dinamici almeno ogni 8 ore usando snapshot di Archiviazione di Azure. Questi snapshot sono mantenuti per 7 giorni. Questo consente di ripristinare i dati in uno degli almeno 21 punti temporali negli ultimi 7 giorni fino all'ora di creazione dell'ultimo snapshot.
 
 Per ripristinare un database di Azure attivo in un punto temporale precedente tramite il portale di Azure, effettuare le operazioni seguenti.
 
@@ -51,7 +51,7 @@ Per ripristinare un database di Azure attivo in un punto temporale precedente tr
 6. Il processo di ripristino del database inizierà e potrà essere monitorato tramite **Notifiche**.
 
 ### <a name="recover-a-deleted-azure-database"></a>Ripristinare un database di Azure eliminato
-Il servizio Estensione database di SQL Server in Azure crea uno snapshot del database prima dell'eliminazione del database e lo conserva per 7 giorni. Dopo l'eliminazione, gli snapshot del database attivo non vengono più conservati. Ciò consente di ripristinare un database eliminato nel punto in cui è stato eliminato.
+Il servizio SQL Server Stretch Database in Azure crea uno snapshot del database prima dell'eliminazione del database e lo conserva per 7 giorni. Dopo l'eliminazione, gli snapshot del database attivo non vengono più conservati. Ciò consente di ripristinare un database eliminato nel punto in cui è stato eliminato.
 
 Per ripristinare un database di Azure eliminato nel punto in cui è stato eliminato tramite il portale di Azure, effettuare le operazioni seguenti.
 
@@ -84,7 +84,7 @@ Per ripristinare un database di Azure eliminato nel punto in cui è stato elimin
     
   ## <a name="see-also"></a>Vedere anche  
  [Backup di database abilitati per l'estensione](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
- [Gestione e risoluzione dei problemi di Estensione database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
+ [Gestione e risoluzione dei problemi di Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
