@@ -4,6 +4,7 @@
 # [Procedura dettagliata: Installare il servizio di scalabilità orizzontale di Integration Services](walkthrough-set-up-integration-services-scale-out.md)
 # [Master di scalabilità orizzontale](integration-services-ssis-scale-out-master.md)
 # [Ruolo di lavoro di scalabilità orizzontale](integration-services-ssis-scale-out-worker.md)
+# [Gestione di Scale Out](integration-services-ssis-scale-out-manager.md)
 # [Eseguire pacchetti in Scale Out](run-packages-in-integration-services-ssis-scale-out.md)
 # [Modificare l'account per la registrazione di Scale Out](change-logdb-account.md)
 # [Gestire i certificati in Scale Out](deal-with-certificates-in-ssis-scale-out.md)
