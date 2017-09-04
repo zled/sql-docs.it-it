@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  Per un database, se è in esecuzione un processo di backup completo del database esistente, tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] si attende il completamento del processo corrente prima di eseguire un altro backup completo dello stesso database. Analogamente, solo un backup del log delle transazioni può essere in esecuzione in un determinato momento. Tuttavia, un backup completo del database e un backup del log delle transazioni possono essere eseguiti contemporaneamente. Gli errori vengono registrati come eventi estesi.  
   
  Se sono pianificati più di 10 backup completi del database simultanei, viene generato un avviso tramite il canale di debug di eventi estesi. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] viene quindi gestita una coda di priorità per i database rimanenti di cui deve essere eseguito un backup fino alla pianificazione e al completamento di tutti i backup.  
+
+> [!NOTE]
+> Il backup gestito di SQL Server non è supportato con i server proxy.
+>
   
 ##  <a name="support_limits"></a> Facilità di supporto  
  Le seguenti considerazioni e limitazioni del supporto sono specifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  

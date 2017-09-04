@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 3f87dec24a195cabd75fb653fcb5bcaf51e29db9
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
@@ -149,7 +149,7 @@ ms.lasthandoff: 08/02/2017
   
 -   \<Funzionalità>_\<Architettura>\_\<Linguaggio>\_\<Interazione>.log  
   
--   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro.log  
+-   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro>.log  
   
 ### <a name="location"></a>Percorso  
  I file di log MSI si trovano nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<AAAAMMGG_HHMM>\\<Nome\>.log.  

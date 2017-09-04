@@ -1,7 +1,7 @@
 ---
 title: Descrizione di indici cluster e non cluster | Microsoft Docs
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Il puntatore da una riga di indice non cluster a una riga di dati è denominato indicatore di posizione delle righe. La struttura dell'indicatore di posizione delle righe dipende dal tipo di archiviazione delle pagine di dati (heap o tabella cluster). Nel caso di un heap, l'indicatore di posizione delle righe è un puntatore alla riga. Nel caso di una tabella cluster, l'indicatore di posizione delle righe è la chiave di indice cluster.  
   
-    -   È possibile aggiungere colonne non chiave al livello foglia dell'indice non cluster per ignorare i limiti esistenti di 900 byte e 16 colonne chiave ed eseguire query indicizzate completamente coperte. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
+    -   È possibile aggiungere colonne non chiave al livello foglia dell'indice non cluster per ignorare i limiti esistenti ed eseguire query indicizzate completamente coperte. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md). Per informazioni dettagliate sui limiti delle chiavi dell'indice, vedere [Specifiche di capacità massima per SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md). 
   
  Sia gli indici cluster che non cluster possono essere univoci. In tal caso due righe possono avere lo stesso valore di chiave di indice. In caso contrario, l'indice non è univoco e più righe possono condividere lo stesso valore di chiave. Per altre informazioni, vedere [Creare indici univoci](../../relational-databases/indexes/create-unique-indexes.md).  
   

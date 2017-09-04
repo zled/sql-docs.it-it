@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
@@ -37,7 +37,7 @@ L'elaborazione di una singola istruzione SQL rappresenta la modalità più sempl
 
 Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` sono illustrati nel diagramma seguente: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Un'istruzione `SELECT` definisce soltanto gli elementi seguenti:  
 * Il formato del set di risultati. Questo elemento viene nella maggior parte dei casi specificato nell'elenco di selezione. Altre clausole, ad esempio `ORDER BY` e `GROUP BY` , possono tuttavia influire sul formato finale del set di risultati.
@@ -210,19 +210,19 @@ In Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vie
 > [!NOTE] 
 > Gli hint `READCOMMITTED` e `READCOMMITTEDLOCK` sono sempre considerati diversi in questo contesto, indipendentemente dal livello corrente di isolamento delle transazioni.
  
-Ad eccezione dei requisiti relativi alle opzioni `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. Per utilizzare una vista indicizzata, non è necessario specificare nient'altro nella query.
+Ad eccezione dei requisiti relativi alle opzioni `SET` e agli hint di tabella, si tratta delle stesse regole usate da Query Optimizer per determinare se l'indice di una tabella copre una query. Per utilizzare una vista indicizzata, non è necessario specificare nient'altro nella query.
 
-Non è necessario che una query faccia riferimento in modo esplicito a una vista indicizzata nella clausola `FROM` clause for the Query Optimizer to use the indexed view. Se la query include riferimenti alle colonne delle tabelle di base incluse anche nella vista indicizzata e tramite Query Optimizer viene determinato che l'utilizzo della vista indicizzata è il meccanismo di accesso più economico, in Query Optimizer viene scelta la vista indicizzata con modalità analoghe a quelle utilizzate per scegliere gli indici delle tabelle di base a cui non viene fatto riferimento diretto in una query. Query Optimizer potrebbe scegliere la vista anche se include colonne a cui non fa riferimento la query, a condizione che la vista stessa rappresenti la soluzione più economica ai fini della copertura di una o più colonne specificate nella query.
+Non è necessario che una query faccia riferimento in modo esplicito a una vista indicizzata nella clausola `FROM` affinché Query Optimizer usi la vista indicizzata. Se la query include riferimenti alle colonne delle tabelle di base incluse anche nella vista indicizzata e tramite Query Optimizer viene determinato che l'utilizzo della vista indicizzata è il meccanismo di accesso più economico, in Query Optimizer viene scelta la vista indicizzata con modalità analoghe a quelle utilizzate per scegliere gli indici delle tabelle di base a cui non viene fatto riferimento diretto in una query. Query Optimizer potrebbe scegliere la vista anche se include colonne a cui non fa riferimento la query, a condizione che la vista stessa rappresenti la soluzione più economica ai fini della copertura di una o più colonne specificate nella query.
 
-The Query Optimizer treats an indexed view referenced in the `FROM` come viste standard. Tramite Query Optimizer la definizione della vista viene espansa nella query all'inizio del processo di ottimizzazione. Viene quindi eseguita la ricerca della corrispondenza nella vista indicizzata. La vista indicizzata potrebbe essere usata nel piano di esecuzione finale selezionato da Query Optimizer oppure il piano può ottenere dalla vista i dati necessari accedendo alle tabelle di base a cui fa riferimento la vista. Tramite Query Optimizer viene scelta l'alternativa con il costo inferiore.
+Query Optimizer elabora le viste indicizzate a cui fa riferimento la clausola `FROM` come viste standard. Tramite Query Optimizer la definizione della vista viene espansa nella query all'inizio del processo di ottimizzazione. Viene quindi eseguita la ricerca della corrispondenza nella vista indicizzata. La vista indicizzata potrebbe essere usata nel piano di esecuzione finale selezionato da Query Optimizer oppure il piano può ottenere dalla vista i dati necessari accedendo alle tabelle di base a cui fa riferimento la vista. Tramite Query Optimizer viene scelta l'alternativa con il costo inferiore.
 
 #### <a name="using-hints-with-indexed-views"></a>Utilizzo di hint con viste indicizzate
 
 È possibile impedire l'uso delle viste indicizzate da parte di una query usando l'hint per la query `EXPAND VIEWS` oppure è possibile usare l'hint di tabella `NOEXPAND` per fare in modo che venga impiegato un indice per una vista indicizzata specificata nella clausola `FROM` di una query. È tuttavia consigliabile lasciar determinare in modo dinamico a Query Optimizer i metodi di accesso migliori da utilizzare per ogni query. Limitare l'uso degli hint `EXPAND` e `NOEXPAND` a casi specifici per i quali si è verificato che in tal modo è possibile ottenere un miglioramento significativo delle prestazioni.
 
-L'opzione `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+L'opzione `EXPAND VIEWS` specifica che in Query Optimizer non verranno usati indici delle viste per l'intera query. 
 
-Se per una vista viene specificata l'opzione `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. Se l'opzione`NOEXPAND` viene specificata con la clausola `INDEX()` clause forces the Query Optimizer to use the specified indexes. L'opzione`NOEXPAND` può essere specificata solo per le viste indicizzate e non è supportata per quelle non indicizzate.
+Se per una vista viene specificata l'opzione `NOEXPAND` , tramite Query Optimizer viene valuta l'opportunità di usare gli indici definiti per la vista. Se l'opzione`NOEXPAND` viene specificata con la clausola `INDEX()` facoltativa, Query Optimizer userà gli indici specificati. L'opzione`NOEXPAND` può essere specificata solo per le viste indicizzate e non è supportata per quelle non indicizzate.
 
 Quando non viene specificata né l'opzione `NOEXPAND` né `EXPAND VIEWS` in una query contenente una vista, la vista viene espansa per accedere alle tabelle sottostanti. Se la query che compone la vista contiene hint di tabella, tali hint vengono propagati alle tabelle sottostanti. Per altre informazioni su questo processo, vedere Risoluzione delle viste. Se i set di hint presenti nelle tabelle sottostanti della vista sono identici tra loro, la query può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. La maggior parte delle volte questi hint corrispondono tra loro in quanto vengono ereditati direttamente dalla vista. Se. tuttavia, la query fa riferimento a tabelle anziché a viste e gli hint applicati direttamente a tali tabelle non sono identici, la query non può essere utilizzata per la ricerca della corrispondenza con una vista indicizzata. Se gli hint `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`o `XLOCK` vengono applicati a tabelle a cui fa riferimento la query dopo l'espansione della vista, la query non può essere usata per la ricerca della corrispondenza con una vista indicizzata.
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 Durante l'elaborazione di istruzioni SQL complesse, è possibile che il motore relazionale incontri difficoltà nel determinare le espressioni che è possibile parametrizzare. Per aumentare la capacità del motore relazionale di associare le istruzioni SQL complesse ai piani di esecuzione esistenti e inutilizzati, è necessario specificare in modo esplicito i parametri tramite sp_executesql o i marcatori di parametro. 
 
 > [!NOTE]
-> Quando vengono usati gli operatori aritmetici +, -, *, /, o % per eseguire una conversione implicita o esplicita di valori costanti int, smallint, tinyint o bigint in tipi di dati float, real, decimal o numeric, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applica regole specifiche per calcolare il tipo e la precisione dei risultati dell'espressione. Queste regole, tuttavia, variano in base al fatto che la query includa o meno parametri. Espressioni simili nelle query possono pertanto in alcuni casi generare risultati diversi.
+> Quando vengono usati gli operatori aritmetici +, -, \*, / o % per eseguire una conversione implicita o esplicita di valori costanti int, smallint, tinyint o bigint in tipi di dati float, real, decimal o numeric, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applica regole specifiche per calcolare il tipo e la precisione dei risultati dell'espressione. Queste regole, tuttavia, variano in base al fatto che la query includa o meno parametri. Espressioni simili nelle query possono pertanto in alcuni casi generare risultati diversi.
 
 In base al comportamento predefinito della parametrizzazione semplice, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene parametrizzato un numero relativamente piccolo di query. È tuttavia possibile fare in modo che tutte le query in un database vengano parametrizzate, rispettando determinate limitazioni, impostando l'opzione `PARAMETERIZATION` del comando `ALTER DATABASE` su `FORCED`. In questo modo, è possibile migliorare le prestazioni dei database in cui viene eseguito un numero elevato di query simultanee riducendo la frequenza di compilazione delle query.
 
@@ -503,7 +503,7 @@ Le clausole di query seguenti sono inoltre senza parametri. Si noti che in quest
 * Argomento style di una clausola `CONVERT` .
 * Costante integer all'interno di una clausola `IDENTITY` .
 * Costanti specificate utilizzando la sintassi delle estensioni ODBC.
-* Espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione che rappresentano argomenti degli operatori +, -, *, / e %. Quando viene valutata l'idoneità per la parametrizzazione forzata, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un'espressione viene considerata come idonea per l'elaborazione delle costanti in fase di compilazione quando si verificano le condizioni seguenti:  
+* Espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione che rappresentano argomenti degli operatori +, -, \*, / e %. Quando viene valutata l'idoneità per la parametrizzazione forzata, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un'espressione viene considerata come idonea per l'elaborazione delle costanti in fase di compilazione quando si verificano le condizioni seguenti:  
   * Nell'espressione non è inclusa alcuna colonna, variabile o subquery.  
   * L'espressione contiene una clausola `CASE` .  
 * Argomenti delle clausole degli hint per le query. Sono inclusi l'argomento `number_of_rows` dell'hint per la query `FAST` , l'argomento `number_of_processors` dell'hint per la query `MAXDOP` e l'argomento del numero dell'hint della query `MAXRECURSION` .
