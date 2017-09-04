@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL e i requisiti di PILR | Documenti Microsoft
+title: Microsoft SQL e i requisiti RGPD | Microsoft Docs
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ caps.latest.revision: 2
 author: barbkess
 ms.author: ronitr
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
 ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Guida alla privacy migliorando e indirizzamento PILR requisiti con la piattaforma di Microsoft SQL
+# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Guida all'ottimizzazione della privacy e alla conformità ai requisiti RGPD con la piattaforma Microsoft SQL
 
 
 ## <a name="summary"></a>Riepilogo
-In 25 maggio 2018, un diritto europea sulla privacy è dovuto l'effetto che imposta una nuova barra globale per i diritti di privacy, sicurezza e conformità. Il regolamento di protezione dati generale o PILR, è fondamentalmente sulla protezione e l'abilitazione dei diritti di privacy dei singoli utenti e stabilisce i requisiti di privacy globale strict che controllano i dati personali come gestiti e protetto, rispettando singoli scelta. 
+Il 25 maggio 2018 entrerà in vigore una legge europea sulla privacy che stabilisce un nuovo standard globale per diritti di privacy, sicurezza e conformità. Il Regolamento generale sulla protezione dei dati, o RGPD, riguarda essenzialmente la protezione e il rispetto dei diritti delle persone alla privacy e stabilisce severi requisiti globali per la privacy che regolano il modo in cui dati personali vengono gestiti e protetti nel rispetto delle scelte individuali. 
 
-Clienti di Microsoft SQL sono PILR, se la gestione basata su cloud database locali e/o, sarà necessario verificare che qualifica i dati nei loro sistemi di database è appropriato gestito e protetto in base ai principi PILR. Ciò significa che molti clienti necessario rivedere o modificare la gestione di database e procedure di gestione dei dati particolarmente porre l'attenzione sulla protezione di elaborazione dei dati come stabilito nel PILR.
+I clienti di Microsoft SQL soggetti alle norme RGPD che gestiscono database locali e/o basati sul cloud dovranno verificare che i dati qualificanti nei loro sistemi di database siano gestiti e protetti in modo appropriato in base ai principi RGPD. Ciò significa che molti clienti dovranno rivedere o modificare le procedure di gestione dei database e dei dati, concentrandosi in particolare sulla sicurezza dell'elaborazione dei dati come stabilito nei requisiti RGPD.
 
-Basato su SQL tecnologie offrono numerose funzionalità di sicurezza incorporati che consentono di ridurre i rischi per i dati e migliorare la protezione e la gestione dei dati a livello di database e oltre. Questo articolo esamina queste funzionalità e condivide alcuni approcci di Microsoft utilizzando Microsoft SQL per raggiungere gli obiettivi di dati sulla privacy del PILR.
+Le tecnologie basate su Microsoft SQL offrono molte funzionalità di sicurezza predefinite che consentono di ridurre i rischi per i dati e di migliorare la protezione e la gestione dei dati a livello di database e oltre. Questo documento esamina queste funzionalità e illustra alcuni approcci di Microsoft in cui viene usato Microsoft SQL per raggiungere gli obiettivi indicati nelle norme RGPD in termini di privacy dei dati.
    
   
 **Autore:** Ronit Reger
 
-**Revisori tecnici:** Conor Cunningham; Hammer Joachim; Shai Kariv; Julie Koesmarno; Alice Kupcik; Ezio Matchoro; Gilad Mittelman; Dan Rediske; Weisberg te 
+**Revisori tecnici:** Conor Cunningham; Joachim Hammer; Shai Kariv; Julie Koesmarno; Alice Kupcik; Ron Matchoro; Gilad Mittelman; Dan Rediske; Tomer Weisberg 
   
 **Data di pubblicazione:** maggio 2017  
   
-**Si applica a:** (tutte le versioni) di SQL Server, Database SQL di Azure, Azure SQL Data Warehouse, Analitica Platform System 
+**Si applica a:** SQL Server (tutte le versioni), Azure SQL Database, Azure SQL Data Warehouse, piattaforma di strumenti analitici Microsoft 
   
-Per esaminare il documento, scaricare il [Guida sul miglioramento della privacy e requisiti PILR con la piattaforma di Microsoft SQL](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf) documento.   
+Per esaminare il documento, scaricare la [guida all'ottimizzazione della privacy e alla conformità ai requisiti RGPD con la piattaforma Microsoft SQL](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf).   
 

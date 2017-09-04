@@ -26,11 +26,11 @@ ms.lasthandoff: 07/31/2017
 
 
 
-Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo [Docs.Microsoft.com](http://docs.microsoft.com/) sito Web di documentazione. In questo articolo consente di visualizzare estratti dagli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
+Microsoft aggiorna quasi quotidianamente alcuni degli articoli presenti nel sito Web della documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). Questo articolo contiene estratti degli articoli aggiornati di recente. Possono essere indicati anche collegamenti a nuovi articoli.
 
-In questo articolo viene generato da un programma che viene eseguito di nuovo periodicamente. In alcuni casi un estratto può apparire con formattazione perfetto, o come markdown nell'articolo di origine. Le immagini non vengono mai visualizzate qui.
+Questo articolo è generato da un programma che viene rieseguito periodicamente. In alcuni casi un estratto può avere una formattazione imperfetta o essere visualizzato come markdown dell'articolo di origine. Qui le immagini non vengono mai visualizzate.
 
-Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'oggetto:
+Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 
@@ -47,23 +47,23 @@ Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'og
 I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
-1. [Modificare la registrazione di un server&#39; (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [Modificare il nome di un server registrato o di un gruppo di server registrati](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
-3. [Connettersi a un server registrato (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [Creare un server di gestione centrale e un gruppo di server](register-servers/create-a-central-management-server-and-server-group.md)
-5. [Creare un nuovo server registrato (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
-6. [Creare o modificare un gruppo di server (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
-7. [Disconnettersi da un server registrato (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [Eseguire simultaneamente istruzioni su più server](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
-9. [Esportare informazioni relative a server registrati (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
-10. [Importare informazioni relative a server registrati (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [Spostare un server registrato o un gruppo di server registrati](register-servers/move-a-registered-server-or-registered-server-group.md)
-12. [Registrare un server connesso (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
+1. [Modifica della registrazione di un server (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
+2. [Modifica del nome di un server registrato o di un gruppo di server registrati](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
+3. [Connessione a un server registrato (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
+4. [Creazione di un server di gestione centrale e di un gruppo di server](register-servers/create-a-central-management-server-and-server-group.md)
+5. [Creazione di un nuovo server registrato (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
+6. [Creazione o modifica di un gruppo di server (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
+7. [Disconnessione da un server registrato (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
+8. [Esecuzione simultanea di istruzioni su più server](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
+9. [Esportazione di informazioni relative a server registrati (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
+10. [Importazione di informazioni relative a server registrati (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
+11. [Spostamento di un server registrato o di un gruppo di server registrati](register-servers/move-a-registered-server-or-registered-server-group.md)
+12. [Registrazione di un server connesso (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
 13. [Guida sensibile al contesto di Server registrati](register-servers/registered-servers-f1-help.md)
 14. [Registrazione di server](register-servers/register-servers.md)
-15. [Rimuovere un server registrato (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
-16. [Rimuovere un gruppo di server (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [Visualizzare i server registrati in SQL Server Management Studio](register-servers/view-registered-servers-in-sql-server-management-studio.md)
+15. [Rimozione di un server registrato (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
+16. [Rimozione di un gruppo di server (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
+17. [Visualizzazione della finestra Server registrati in SQL Server Management Studio](register-servers/view-registered-servers-in-sql-server-management-studio.md)
 18. [Tasti di scelta rapida di SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)
 19. [Utilità Ssms](ssms-utility.md)
 20. [Lezione 1-1 - Avviare SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
@@ -87,7 +87,7 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 38. [Lezione 3-2 - Creare modelli personalizzati](tutorials/lesson-3-2-create-custom-templates.md)
 39. [Lezione 3-3 - Salvare gli script come progetti o soluzioni](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
 40. [Lezione 3-4 - Riepilogo: Soluzioni e progetti script](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [Lezione 3: Uso di modelli, soluzioni e progetti script](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
+41. [Lezione 3: Utilizzo di modelli, soluzioni e progetti script](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
 42. [Esercitazione su SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 
 
@@ -97,7 +97,7 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact elenco degli articoli aggiornato di recente
+## <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
 
 Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
@@ -107,11 +107,11 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 ## <a name="updated-articles-with-excerpts"></a>Articoli aggiornati con estratti
 
-In questa sezione vengono estratti gli aggiornamenti raccolti dagli articoli di cui si sono verificati recentemente un aggiornamento di grandi dimensioni.
+In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
-Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto semantica corretto Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che la racchiude nell'articolo effettivo. Di conseguenza questi estratti sono solo a scopo generale. Gli estratti consentono solo di sapere se i tuoi interessi garantiscono la necessità di fare clic e visitare l'articolo effettivo.
+Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Un estratto talvolta può anche essere separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti devono essere usati solo come indicazioni generali. Gli estratti consentono solo di sapere se per un argomento che interessa vale la pena fare clic e visitare l'articolo effettivo.
 
-Per queste e altre ragioni, non copiare da questi estratti di codice e non prendono come verità esatta qualsiasi testo estratto. In alternativa, visitare l'articolo effettivo.
+Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità assoluta ciò che si legge negli estratti. Consultare gli articoli completi.
 
 
 
@@ -136,31 +136,31 @@ Per queste e altre ragioni, non copiare da questi estratti di codice e non prend
 
 **SSMS versione 17.1**
 
-In genere disponibili | Numero di build: 14.0.17119.0
+Disponibile a livello generale | Numero di build: 14.0.17119.0
 
 **Miglioramenti**
 
 
-- Profiler: Guida > informazioni su Visualizza ora il numero di versione di rilascio (ad esempio, 17.1)
-- Gli utenti del servizio è possono aggiornare le credenziali per le origini dati per 1200 Analysis modelli TM e versioni successive dal menu di scelta rapida nell'origine dati
-- SSIS incorporata report ora Mostra log dall'esecuzione di scalabilità orizzontale SSIS CTP 2.1
-- Applicazione di gestione di scalabilità orizzontale di SSIS
-  - Consente di visualizzare le informazioni di base master di scalabilità orizzontale.
-  - Consente di aggiungere facilmente un thread di lavoro per la distribuzione con scalabilità orizzontale.
-  - Visualizzare tutti i processi di lavoro di scalabilità orizzontale e informazioni di base e può anche abilitarle o disabilitarle facilmente.
+- Profiler: Guida > Informazioni su visualizza ora il numero di versione (ad esempio, 17.1)
+- Gli utenti del servizio di analisi possono aggiornare le credenziali per le origini dati per i modelli TM 1200 e versioni successive dal menu di scelta rapida nell'origine dati
+- I report SSIS integrati visualizzano ora i log dell'esecuzione di scalabilità orizzontale SSIS in CTP 2.1
+- Applicazione di gestione della scalabilità orizzontale SSIS
+  - Visualizza le informazioni di base relative al master di scalabilità orizzontale.
+  - Consente di aggiungere facilmente un ruolo di lavoro alla distribuzione con scalabilità orizzontale.
+  - Visualizza tutti i processi di lavoro di scalabilità orizzontale e le relative informazioni di base e può anche abilitarle o disabilitarle facilmente.
 
 **Correzioni di bug**
 
 - Always On:
-  - Risolto un problema in cui le proprietà di una Replica di disponibilità è stata sempre visualizzato come "failover automatico" per estensivi WSFC.
-  - Risolto un problema in cui è stato sovrascritto l'elenco di routing di sola lettura quando si aggiorna il gruppo di disponibilità
-- Always Encrypted: risolto un problema di file di log generato mancante in cui le informazioni generate da DacFx.
-- ShowPlan: correzione problema in cui l'interfaccia utente è stata sempre con l'attributo di tipo di join effettivo per gli operatori di join non adattivo.
-- Programma di installazione:
-  - Risolto un problema in SSMS 17,0 stato interruzione SSDT Visual Studio 2013 [connettersi elemento 3133479]
-  - Risolto un problema in cui facendo clic su "Riavvia" alla fine del programma di installazione è stata non riavviare il computer
-- Script: temporaneamente impediscono SSMS eliminazione accidentale di oggetti di database di Azure durante il tentativo di script per l'eliminazione disabilitando tale opzione.  Correzione corretto sarà in una versione futura di SQL Server Management Studio.
-- Esplora oggetti: risolto un problema in cui il nodo "Database" non è stata espansa quando si è connessi a un database di Azure creato tramite "Copia AS"
+  - È stato risolto un problema in cui le proprietà di una replica di disponibilità erano sempre visualizzate come modalità di "failover automatico" per gruppi di disponibilità di WSFC.
+  - È stato risolto un problema in cui veniva sovrascritto l'elenco di routing di sola lettura durante l'aggiornamento del gruppo di disponibilità
+- Always Encrypted: è stato risolto un problema che causava l'assenza delle informazioni generate da DacFx nel file di log generato.
+- ShowPlan: è stato risolto un problema in cui nell'interfaccia utente era sempre visualizzato l'attributo Tipo di join effettivo per gli operatori di join non adattivi.
+- Installazione:
+  - È stato risolto un problema in cui SSMS 17.0 causava l'interruzione di SSDT in Visual Studio 2013 [argomento Connect 3133479]
+  - È stato risolto un problema per cui facendo clic su "Riavvia" al termine dell'installazione il computer non veniva riavviato
+- Scripting: impedisce temporaneamente a SSMS di eliminare accidentalmente oggetti di database di Azure durante il tentativo di eseguire lo script dell'eliminazione disabilitando tale opzione.  In una versione futura di SSMS sarà disponibile una correzione adeguata.
+- Esplora oggetti: è stato risolto un problema a causa del quale il nodo "database" non veniva espanso durante la connessione a un database di Azure creato usando "AS COPY"
 
 
 
@@ -179,18 +179,18 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Aree di interesse con articoli nuovi o aggiornati di recente
 
-- [Nuovo + aggiornato (4+4): **Advanced Analytics per SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (2+0): **Analysis Services per SQL** Docs](../analysis-services/new-updated-analysis-services.md)
-- [Nuovo + aggiornato (1+2): **Connetti a SQL Server** Docs](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (6+0): **Motore di database per SQL** Docs](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (13+2): **Linux per SQL** Docs](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (1+0): **Master Data Services (MDS) per SQL** Docs](../master-data-services/new-updated-master-data-services.md)
-- [Nuovo + aggiornato (1+0): **ODBC (Open Database Connectivity) per SQL** Docs](../odbc/new-updated-odbc.md)
-- [Nuovo + aggiornato (8+4): **Database relazionali per SQL** Docs](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (2+2): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (0+1): **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (1+0): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
-- [Nuovo + aggiornato (1+0): **Strumenti per SQL** Docs](../tools/new-updated-tools.md)
+- [Nuovo + aggiornato (4+4): documentazione di **Advanced Analytics per SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (2+0): documentazione di **Analysis Services per SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuovo + aggiornato (1+2): documentazione di **Connetti a SQL Server**](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (6+0): documentazione di **Motore di database per SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (13+2): documentazione di **Linux per SQL**](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (1+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Nuovo + aggiornato (1+0): documentazione di **ODBC (Open Database Connectivity) per SQL**](../odbc/new-updated-odbc.md)
+- [Nuovo + aggiornato (8+4): documentazione di **Database relazionali per SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (2+2): documentazione di **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (0+1): documentazione di **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (1+0): documentazione di **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (1+0): documentazione degli **strumenti per SQL**](../tools/new-updated-tools.md)
 
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Aree di interesse senza articoli nuovi o aggiornati di recente
@@ -198,12 +198,12 @@ In questa sezione sono elencati articoli molto simili ad articoli aggiornati di 
 - [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
 - [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
-- [Nuovo + aggiornato (0+0): **Integration Services per SQL** Docs](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Integration Services per SQL**](../integration-services/new-updated-integration-services.md)
 - [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
 - [Nuovo + aggiornato (0+0): **PowerShell for SQL (PowerShell per SQL)** Docs](../powershell/new-updated-powershell.md)
-- [Nuovo + aggiornato (0+0): **Reporting Services per SQL** Docs](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (0+0): documentazione di **Reporting Services per SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
-- [Nuovo + aggiornato (0+0): **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (0+0): documentazione di **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
 - [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 

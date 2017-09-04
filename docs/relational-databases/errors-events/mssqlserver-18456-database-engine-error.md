@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -77,10 +77,10 @@ Per aumentare il livello di sicurezza, il messaggio di errore restituito al clie
 |12|L'account di accesso è valido, ma l'accesso al server ha avuto esito negativo.|  
 |18|È necessario modificare la password.|  
 |38, 46|Impossibile trovare il database richiesto dall'utente.|
-|102 - 111|Errore AAD.|
-|122 - 124|Errore a causa di password o nome utente vuoto.|
+|102 - 111|Errore di AAD.|
+|122 - 124|Errore dovuto al campo di nome utente o password vuoto.|
 |126|Il database richiesto dall'utente non esiste.|
-|132 - 133|Errore AAD.|
+|132 - 133|Errore di AAD.|
   
 Esistono altri stati di errore che indicano un errore di elaborazione interno non previsto.  
   

@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
@@ -71,7 +71,7 @@ Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del m
 
 ## <a name="fixed-database-roles"></a>ruoli predefiniti del database
   
- La tabella seguente contiene i ruoli predefiniti del database e le rispettive caratteristiche. Questi ruoli esistono in tutti i database. Fatta eccezione per il **pubblica** ruolo del database, le autorizzazioni assegnate ai ruoli del database predefinito non può essere modificato.   
+ La tabella seguente contiene i ruoli predefiniti del database e le rispettive caratteristiche. Questi ruoli esistono in tutti i database. Fatta eccezione per il ruolo del database **pubblico**, non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del database.   
   
 |Nome del ruolo predefinito del database|Description|  
 |-------------------------------|-----------------|  

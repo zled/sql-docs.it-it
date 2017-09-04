@@ -16,10 +16,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 12dfc255364a410de1ad5c75f3abf38155d6d70f
 ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formattare l'output JSON annidato con la modalità PATH (SQL Server)
@@ -36,9 +36,9 @@ L'alternativa prevede l'uso dell'opzione **AUTO** per formattare l'output automa
 Di seguito sono riportati alcuni esempi della clausola **FOR JSON** con l'opzione **PATH** . Per formattare risultati annidati, usare nomi di colonna separati da punti oppure query annidate, come illustrato negli esempi seguenti. Per impostazione predefinita, i valori null non vengono inclusi nell'output **FOR JSON**.  
 
 ## <a name="example---dot-separated-column-names"></a>Esempio: nomi di colonna separati da punti  
-La query seguente formatta le prime cinque righe della tabella `Person` di AdventureWorks in JSON.  
+La query seguente formatta le prime cinque righe della tabella `Person` di AdventureWorks come JSON.  
 
-La clausola **FOR JSON PATH** usa l'alias o il nome di colonna per determinare il nome chiave nell'output JSON. Se un alias contiene punti, l'opzione PATH crea oggetti annidati.  
+La clausola **FOR JSON PATH** usa l'alias o il nome di colonna per determinare il nome della chiave nell'output JSON. Se un alias contiene punti, l'opzione PATH crea oggetti annidati.  
 
  **Query**  
   
@@ -89,7 +89,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>Esempio: più tabelle  
-Se nella query si fa riferimento a più tabelle, **FOR JSON PATH** annida ogni colonna tramite l'alias corrispondente. La query seguente crea un oggetto JSON per ogni coppia (OrderHeader,OrderDetails) unita in join nella query. 
+Se nella query si fa riferimento a più tabelle, **FOR JSON PATH** annida ogni colonna usando il relativo alias. La query seguente crea un oggetto JSON per ogni coppia (OrderHeader,OrderDetails) unita in join nella query. 
   
  **Query**  
   
@@ -126,8 +126,8 @@ FOR JSON PATH
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Acquisire familiarità con il supporto JSON integrato in SQL Server  
-Per un numero elevato di soluzioni specifiche, casi di utilizzo e indicazioni, vedere il [post di blog sul supporto JSON predefinito](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e Database SQL di Azure per Microsoft Program Manager Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
+Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
 
 ## <a name="see-also"></a>Vedere anche  
  [Clausola FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

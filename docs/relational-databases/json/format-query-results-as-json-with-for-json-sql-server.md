@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
 ms.contentlocale: it-it
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formattare i risultati delle query in formato JSON con FOR JSON (SQL Server)
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/20/2017
 
 È possibile formattare i risultati delle query come JSON o esportare i dati da SQL Server in formato JSON aggiungendo la clausola **FOR JSON** a un'istruzione **SELECT** . Usare la clausola **FOR JSON** per semplificare le applicazioni client delegando la formattazione dell'output JSON dell'app a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
- Quando si usa la clausola **FOR JSON** è possibile specificare la struttura dell'output JSON in modo esplicito o determinarla automaticamente in base alla struttura dell'istruzione SELECT.  
+ Quando si usa la clausola **FOR JSON** è possibile specificare la struttura dell'output JSON in modo esplicito o lasciare che l'output sia determinato dalla struttura dell'istruzione SELECT.  
   
 -   Usare **FOR JSON PATH** per mantenere il controllo completo sul formato dell'output JSON. È possibile creare oggetti wrapper e annidare proprietà complesse.  
   
@@ -41,7 +41,7 @@ Di seguito è riportato un esempio di istruzione **SELECT** con la clausola **FO
   
  ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
   
-## <a name="option-1---you-control-output-with-for-json-path"></a>Opzione 1 - Controllo dell'output con FOR JSON PATH
+## <a name="option-1---you-control-output-with-for-json-path"></a>Opzione 1: controllo dell'output con FOR JSON PATH
 In modalità **PATH** è possibile formattare l'output annidato usando la sintassi con il punto, ad esempio `'Item.Price'` .  
 
 Ecco una query di esempio che usa la modalità **PATH** con la clausola **FOR JSON** . L'esempio seguente usa anche l'opzione **ROOT** per specificare un elemento radice denominato. 
@@ -49,11 +49,11 @@ Ecco una query di esempio che usa la modalità **PATH** con la clausola **FOR JS
  ![Diagramma di flusso dell'output FOR JSON](../../relational-databases/json/media/forjson-example1.png "Diagramma di flusso dell'output FOR JSON")  
 
 ### <a name="more-info-about-for-json-path"></a>Altre informazioni su FOR JSON PATH
-Per ulteriori informazioni ed esempi, vedere [formattare l'Output JSON annidato con modalità PATH &#40; SQL Server &#41; ](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+Per informazioni dettagliate ed esempi, vedere [Formattare l'output JSON annidato con la modalità PATH &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
 
 Per la sintassi e l'uso, vedere [Clausola FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
 
-## <a name="option-2---select-statement-controls-output-with-for-json-auto"></a>Opzione 2 - L'istruzione SELECT controlla l'output con FOR JSON AUTO
+## <a name="option-2---select-statement-controls-output-with-for-json-auto"></a>Opzione 2: l'istruzione SELECT controlla l'output con FOR JSON AUTO
 In modalità **AUTO** il formato dell'output JSON è determinato dalla struttura dell'istruzione SELECT.
 
 Per impostazione predefinita, i valori **null** non vengono inclusi nell'output. È possibile usare **INCLUDE_NULL_VALUES** per modificare questo comportamento.  
@@ -80,42 +80,42 @@ FOR JSON AUTO
 ```
  
 ### <a name="more-info-about-for-json-auto"></a>Altre informazioni su FOR JSON AUTO
-Per ulteriori informazioni ed esempi, vedere [formato JSON Output automaticamente con la modalità AUTO &#40; SQL Server &#41; ](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
+Per informazioni dettagliate ed esempi, vedere [Formattare automaticamente l'output JSON con la modalità AUTO &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
 
 Per la sintassi e l'uso, vedere [Clausola FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
   
 ## <a name="control-other-json-output-options"></a>Controllare altre opzioni di output JSON  
-Controllare l'output del **FOR JSON** clausola utilizzando le seguenti opzioni aggiuntive.  
+Per controllare l'output della clausola **FOR JSON** è possibile usare le seguenti opzioni aggiuntive.  
   
--   **RADICE**. Per aggiungere un unico elemento di primo livello all'output JSON, specificare l'opzione **ROOT** . Se non si specifica questa opzione, l'output JSON non dispone di un elemento radice. Per altre informazioni, vedere [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41; (Aggiungere un nodo radice all'output JSON con l'opzione ROOT &#40;SQL Server&#41;)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
+-   **ROOT**. Per aggiungere un unico elemento di primo livello all'output JSON, specificare l'opzione **ROOT** . Se non si specifica questa opzione, l'output JSON non ha alcun elemento radice. Per altre informazioni, vedere [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41; (Aggiungere un nodo radice all'output JSON con l'opzione ROOT &#40;SQL Server&#41;)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
--   **INCLUDE_NULL_VALUES**. Per includere valori Null nell'output JSON, specificare l'opzione **INCLUDE_NULL_VALUES** . Se non si specifica questa opzione, l'output non include le proprietà JSON per i valori NULL nei risultati della query. Per altre informazioni, vedere [includono valori Null nell'Output JSON con l'opzione INCLUDE_NULL_VALUES &#40; SQL Server &#41; ](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
+-   **INCLUDE_NULL_VALUES**. Per includere valori Null nell'output JSON, specificare l'opzione **INCLUDE_NULL_VALUES** . Se non si specifica questa opzione, l'output non include le proprietà JSON per i valori NULL presenti nei risultati della query. Per altre informazioni, vedere [Includere valori in JSON - Opzione INCLUDE_NULL_VALUES](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
 
--   **WITHOUT_ARRAY_WRAPPER**. Per rimuovere le parentesi quadre che racchiudono l'output JSON della clausola **FOR JSON** per impostazione predefinita, specificare l'opzione **WITHOUT_ARRAY_WRAPPER** . Utilizzare questa opzione per generare un singolo oggetto JSON come output dal risultato di una singola riga. Se non si specifica questa opzione, l'output JSON viene formattato come matrice, vale a dire, viene racchiuso tra parentesi quadre. Per altre informazioni, vedere [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41; (Rimuovere le parentesi quadre dall'output JSON con l'opzione WITHOUT_ARRAY_WRAPPER &#40;SQL Server&#41;)](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
+-   **WITHOUT_ARRAY_WRAPPER**. Per rimuovere le parentesi quadre che racchiudono l'output JSON della clausola **FOR JSON** per impostazione predefinita, specificare l'opzione **WITHOUT_ARRAY_WRAPPER** . Usare questa opzione per generare un singolo oggetto JSON come output da un risultato a riga singola. Se non si specifica questa opzione, l'output JSON viene formattato come una matrice, ovvero è racchiuso tra parentesi quadre. Per altre informazioni, vedere [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41; (Rimuovere le parentesi quadre dall'output JSON con l'opzione WITHOUT_ARRAY_WRAPPER &#40;SQL Server&#41;)](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
    
 ## <a name="output-of-the-for-json-clause"></a>Output della clausola FOR JSON  
 L'output della clausola **FOR JSON** ha le caratteristiche seguenti:  
   
 1.  Il set di risultati contiene un'unica colonna.
     -   Un set di risultati di piccole dimensioni può contenere un'unica riga.
-    -   Un set di risultati di grandi dimensioni divide la stringa JSON lungo tra più righe.
-        -   Per impostazione predefinita, SQL Server Management Studio (SSMS) consente di concatenare i risultati in una singola riga quando l'impostazione di output è **risultati in formato griglia**. La barra di stato di SQL Server Management Studio consente di visualizzare il conteggio delle righe effettivo.
-        -   Altre applicazioni client possono richiedere codice per trasformare i risultati di grandi dimensioni in un'unica stringa JSON valida concatenando i contenuti di più righe. Per un esempio di questo codice in un'applicazione c#, vedere [usare per l'output JSON in un'app client c#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+    -   Un set di risultati di grandi dimensioni suddivide la stringa JSON su più righe.
+        -   Per impostazione predefinita, SQL Server Management Studio (SSMS) concatena i risultati in una singola riga quando l'impostazione dell'output è **Risultati in formato griglia**. La barra di stato di SQL Server Management Studio visualizza il conteggio effettivo delle righe.
+        -   Altre applicazioni client possono richiedere codice per ricombinare i risultati eccessivamente lunghi in un'unica stringa JSON valida concatenando i contenuti di più righe. Per un esempio di questo codice in un'applicazione C#, vedere [Usare l'output FOR JSON in un'app client C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
      ![Esempio di output FOR JSON](../../relational-databases/json/media/forjson-example2.png "Esempio di output FOR JSON")  
   
 2.  I risultati vengono formattati sotto forma di matrice di oggetti JSON.  
   
-    -   Il numero di elementi nella matrice JSON è uguale al numero di righe nei risultati dell'istruzione SELECT (prima di applicata la clausola FOR JSON). 
+    -   Il numero di elementi nella matrice JSON è uguale al numero di righe nei risultati dell'istruzione SELECT (prima che venga applicata la clausola FOR JSON). 
   
-    -   Ogni riga nei risultati dell'istruzione SELECT (prima di applicata la clausola FOR JSON) diventa un oggetto JSON separato nella matrice.  
+    -   Ogni riga nei risultati dell'istruzione SELECT (prima che venga applicata la clausola FOR JSON) diventa un oggetto JSON separato nella matrice.  
   
-    -   Ogni colonna nei risultati dell'istruzione SELECT (prima di FOR JSON clausola viene applicata) diventa una proprietà dell'oggetto JSON.  
+    -   Ogni colonna nei risultati dell'istruzione SELECT (prima che venga applicata la clausola FOR JSON) diventa una proprietà dell'oggetto JSON.  
   
 3.  I nomi delle colonne e i valori corrispondenti vengono sottoposti a escape in base alla sintassi JSON. Per altre informazioni, vedere [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41; (Sequenze di escape FOR JSON per i caratteri speciali e di controllo &#40;SQL Server&#41;)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
   
 ### <a name="example"></a>Esempio
-Di seguito è riportato un esempio che illustra come **FOR JSON** clausola Formatta l'output JSON.  
+Ecco un esempio che illustra come la clausola **FOR JSON** formatta l'output JSON.  
   
 **Risultati query**  
   
@@ -154,8 +154,8 @@ La clausola **FOR JSON** usa le regole descritte in questo argomento per convert
 -   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41; (Sequenze di escape FOR JSON per i caratteri speciali e di controllo &#40;SQL Server&#41;)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
  La clausola **FOR JSON** usa sequenze di escape per i caratteri speciali e rappresenta i caratteri di controllo nell'output JSON come descritto in questo argomento.  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Acquisire familiarità con il supporto JSON integrato in SQL Server  
-Per un numero elevato di soluzioni specifiche, casi di utilizzo e indicazioni, vedere il [post di blog sul supporto JSON predefinito](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e Database SQL di Azure per Microsoft Program Manager Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Altre informazioni sul supporto JSON integrato in SQL Server  
+Per soluzioni specifiche, casi d'uso e indicazioni, vedere i [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure redatti da Jovan Popovic, Microsoft Program Manager.
   
 ## <a name="see-also"></a>Vedere anche  
  [Clausola FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   

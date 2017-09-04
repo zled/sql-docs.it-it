@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminare le colonne da una tabella
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  In **Esplora oggetti**, individuare la tabella da cui si desidera eliminare colonne e si espande per esporre i nomi di colonna. 
+2.  In **Esplora oggetti** individuare la tabella da cui si vogliono eliminare colonne ed espanderla per esporre i nomi delle colonne. 
 
-3.  Fare clic sulla colonna che si desidera eliminare e scegliere **eliminare**.  
+3.  Fare clic con il pulsante destro del mouse sulla colonna da eliminare e scegliere **Elimina**.  
   
 3.  Nella finestra di dialogo **Elimina oggetto** fare clic su **OK**.  
   

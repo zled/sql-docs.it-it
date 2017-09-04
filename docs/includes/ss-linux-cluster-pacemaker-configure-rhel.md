@@ -1,4 +1,4 @@
-3. In tutti i nodi del cluster, aprire le porte del firewall Pacemaker. Per aprire queste porte con `firewalld`, eseguire il comando seguente:
+3. In tutti i nodi del cluster, aprire le porte del firewall di Pacemaker. Per aprire queste porte con `firewalld`, eseguire il comando seguente:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -16,7 +16,7 @@
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-2. Impostare la password per l'utente predefinito creato durante l'installazione dei pacchetti Corosync e Pacemaker. Utilizzare la stessa password in tutti i nodi. 
+2. Impostare la password per l'utente predefinito creato durante l'installazione dei pacchetti Pacemaker e Corosync. Usare la stessa password in tutti i nodi. 
 
    ```bash
    sudo passwd hacluster

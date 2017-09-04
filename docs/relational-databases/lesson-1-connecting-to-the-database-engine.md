@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al Motore di database
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
- > Per contenuti relativi a versioni precedenti di SQL Server, vedere [lezione 1: connessione al motore di Database](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Per il contenuto relativo alle versioni precedenti di SQL Server, vedere [Lezione 1: Connessione al Motore di database](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Gli strumenti che vengono installati con [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dipendono dall'edizione in uso e dalle opzioni di installazione selezionate. In questa lezione vengono illustrati gli strumenti principali e vengono descritte le procedure per la connessione e l'esecuzione di una funzione di base, ovvero la concessione di autorizzazione ad altri utenti.  
   
@@ -55,7 +55,7 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Per avviare Gestione configurazione SQL Server  
   
-- Nelle versioni correnti di Windows, nella pagina **iniziale** digitare **Gestione configurazione** e quindi fare clic su **Gestione configurazione SQL Server *versione***.   
+- Nelle versioni correnti di Windows, nella pagina **Start** digitare **Gestione configurazione**, quindi su **SQL Server *versione* Gestione configurazione**.   
 -   Se si usano versioni precedenti di Windows, dal menu **Start** scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.  
   
 ## <a name="connect"></a>Connessione con Management Studio  

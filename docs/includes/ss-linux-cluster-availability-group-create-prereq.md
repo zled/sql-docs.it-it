@@ -2,18 +2,18 @@
 
 Prima di creare il gruppo di disponibilità, è necessario:
 
-- Impostare l'ambiente in modo che possano comunicare tutti i server che ospiteranno le repliche di disponibilità
+- Impostare l'ambiente in modo che tutti i server che ospiteranno le repliche di disponibilità possano comunicare
 - Installare SQL Server
 
 >[!NOTE]
->In Linux, è necessario creare un gruppo di disponibilità prima di aggiungerlo come risorsa cluster da gestire con il cluster. Questo documento viene fornito un esempio che crea il gruppo di disponibilità. Per la distribuzione istruzioni specifiche per creare il cluster e aggiungere il gruppo di disponibilità come risorsa cluster, vedere i collegamenti in [passaggi successivi](#next-steps).
+>In Linux, è necessario creare un gruppo di disponibilità prima di aggiungerlo come risorsa cluster, da gestire con il cluster. Questo documento propone un esempio di creazione del gruppo di disponibilità. Per istruzioni specifiche sulla distribuzione per creare il cluster e aggiungere il gruppo di disponibilità come risorsa cluster, vedere i collegamenti in [Passaggi successivi](#next-steps).
 
 1. **Aggiornare il nome del computer per ogni host**
 
-   Ogni nome di SQL Server deve essere:
+   Ogni nome di SQL Server deve:
    
-   - 15 caratteri o meno
-   - Univoco all'interno della rete
+   - avere 15 caratteri o meno
+   - essere univoco all'interno della rete
    
    Per impostare il nome del computer, modificare `/etc/hostname`. Lo script seguente consente di modificare `/etc/hostname` con `vi`.
 
@@ -21,13 +21,13 @@ Prima di creare il gruppo di disponibilità, è necessario:
    sudo vi /etc/hostname
    ```
 
-1. **Configurare il file hosts**
+1. **Configurare il file host**
 
 >[!NOTE]
->Se i nomi host sono registrati con i relativi IP nel server DNS, non è necessario eseguire la procedura seguente. Verificare che tutti i nodi che sono faranno parte della configurazione del gruppo di disponibilità possono comunicare tra loro (esecuzione del ping il nome host deve rispondere con l'indirizzo IP corrispondente). Inoltre, assicurarsi che il file /etc/hosts non contiene un record che esegue il mapping di indirizzi IP di localhost 127.0.0.1 con il nome host del nodo.
+>Se i nomi host sono registrati con i relativi IP nel server DNS, non è necessario eseguire i passaggi seguenti. Verificare che tutti i nodi che faranno parte della configurazione del gruppo di disponibilità possano comunicare tra loro (l'esecuzione del ping del nome host dovrebbe ottenere come risposta l'indirizzo IP corrispondente). Inoltre, assicurarsi che il file /etc/hosts non contenga un record che esegue il mapping dell'indirizzo IP di localhost 127.0.0.1 con il nome host del nodo.
 
 
-   Il file hosts in ogni server contiene gli indirizzi IP e nomi di tutti i server che farà parte del gruppo di disponibilità. 
+   Il file hosts in ogni server contiene gli indirizzi IP e i nomi di tutti i server che faranno parte del gruppo di disponibilità. 
 
    Il comando seguente restituisce l'indirizzo IP del server corrente:
 
@@ -35,7 +35,7 @@ Prima di creare il gruppo di disponibilità, è necessario:
    sudo ip addr show
    ```
 
-   Aggiornamento `/etc/hosts`. Lo script seguente consente di modificare `/etc/hosts` con `vi`.
+   Aggiornare `/etc/hosts`. Lo script seguente consente di modificare `/etc/hosts` con `vi`.
 
    ```bash
    sudo vi /etc/hosts
@@ -54,7 +54,7 @@ Prima di creare il gruppo di disponibilità, è necessario:
 
 ### <a name="install-sql-server"></a>Installare SQL Server
 
-Installare SQL Server. I collegamenti seguenti puntano alle istruzioni di installazione di SQL Server per distribuzioni diverse. 
+Installare SQL Server. I collegamenti seguenti puntano alle istruzioni di installazione di SQL Server per varie distribuzioni. 
 
 - [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
@@ -62,7 +62,7 @@ Installare SQL Server. I collegamenti seguenti puntano alle istruzioni di instal
 
 - [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
-## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Abilitare gruppi di disponibilità Always On e riavviare SQL Server
+## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Abilitare la funzionalità Gruppi di disponibilità Always On e riavviare sqlserver
 
 Abilitare i gruppi di disponibilità Always On su ogni nodo che ospita un'istanza di SQL Server e riavviare `mssql-server`.  Eseguire lo script riportato di seguito:
 
@@ -71,7 +71,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##  <a name="enable-alwaysonhealth-event-session"></a>Abilitare la sessione di eventi AlwaysOn_health 
+##  <a name="enable-alwaysonhealth-event-session"></a>Abilitare la sessione eventi AlwaysOn_health 
 
 Facoltativamente, è possibile abilitare gli eventi estesi dei gruppi di disponibilità Always On per diagnosticare più facilmente la causa radice durante la risoluzione dei problemi che interessano un gruppo di disponibilità. Eseguire il comando seguente in ogni istanza di SQL Server. 
 
@@ -80,11 +80,11 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Per ulteriori informazioni sulla sessione XE, vedere [sempre in eventi estesi](http://msdn.microsoft.com/library/dn135324.aspx).
+Per altre informazioni su questa sessione XE, vedere [Eventi estesi di Always On](http://msdn.microsoft.com/library/dn135324.aspx).
 
-## <a name="create-db-mirroring-endpoint-user"></a>Creare l'utente dell'endpoint di mirroring del database
+## <a name="create-db-mirroring-endpoint-user"></a>Creare l'utente dell'endpoint del mirroring del database
 
-Lo script di Transact-SQL seguente crea un account di accesso denominato `dbm_login`e un utente denominato `dbm_user`. Aggiornare lo script con una password complessa. Eseguire il comando seguente in tutte le istanze di SQL per creare l'utente dell'endpoint di mirroring del database.
+Lo script di Transact-SQL seguente crea un account di accesso denominato `dbm_login`e un utente denominato `dbm_user`. Aggiornare lo script con una password complessa. Eseguire il comando seguente in tutte le istanze di SQL Server per creare l'utente dell'endpoint di mirroring del database.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -95,7 +95,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 Il servizio SQL Server in Linux usa i certificati per autenticare la comunicazione tra gli endpoint del mirroring. 
 
-Lo script Transact-SQL seguente crea una chiave master e certificato. Quindi eseguito il backup del certificato e consente di proteggere il file con una chiave privata. Aggiornare lo script con una password complessa. Connettersi all'istanza di Server SQL primaria ed eseguire lo Transact-SQL seguente per creare il certificato:
+Lo script di Transact-SQL seguente crea una chiave master e un certificato. Quindi esegue il backup del certificato e consente di proteggere il file con una chiave privata. Aggiornare lo script con password complesse. Connettersi all'istanza di SQL Server primaria ed eseguire il Transact-SQL seguente per creare il certificato:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -108,25 +108,25 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-A questo punto la replica di SQL Server primaria dispone di un certificato in `/var/opt/mssql/data/dbm_certificate.cer` un at chiave privata e `var/opt/mssql/data/dbm_certificate.pvk`. Copiare questi due file nello stesso percorso in tutti i server che ospiterà le repliche di disponibilità. Usare l'utente mssql o concedere l'autorizzazione all'utente mssql per accedere a tali file. 
+A questo punto la replica di SQL Server primaria dispone di un certificato in `/var/opt/mssql/data/dbm_certificate.cer` e di una chiave privata in `var/opt/mssql/data/dbm_certificate.pvk`. Copiare questi due file nello stesso percorso in tutti i server che ospiteranno le repliche di disponibilità. Usare l'utente mssql o concedere l'autorizzazione all'utente mssql per accedere a tali file. 
 
-Nel server di origine, ad esempio il comando seguente copia i file nel computer di destinazione. Sostituire il  **<node2>**  valori con i nomi delle istanze di SQL Server che ospiteranno le repliche. 
+Nel server di origine, ad esempio, il comando seguente copia i file nel computer di destinazione. Sostituire i valori **<node2>** con i nomi delle istanze di SQL Server che ospiteranno le repliche. 
 
 ```bash
 cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-Nel server di destinazione assegnare l'autorizzazione per accedere al certificato all'utente mssql.
+Su ciascun server di destinazione, assegnare l'autorizzazione per accedere al certificato all'utente mssql.
 
 ```bash
 cd /var/opt/mssql/data
 chown mssql:mssql dbm_certificate.*
 ```
 
-## <a name="create-the-certificate-on-secondary-servers"></a>Creare il certificato nel server secondario
+## <a name="create-the-certificate-on-secondary-servers"></a>Creare il certificato nei server secondari
 
-Lo script Transact-SQL seguente crea una chiave master e certificato da backup creati nella replica primaria di SQL Server. Inoltre, il comando autorizza l'utente per accedere al certificato. Aggiornare lo script con una password complessa. La password di decrittografia è la stessa password utilizzata per creare il file PVK in un passaggio precedente. Eseguire lo script seguente in tutti i server secondari per creare il certificato.
+Lo script di Transact-SQL seguente crea una chiave master e un certificato dal backup creato nella replica primaria di SQL Server. Inoltre, il comando autorizza l'utente ad accedere al certificato. Aggiornare lo script con password complesse. La password di decrittografia è la stessa password utilizzata per creare il file .pvk in un passaggio precedente. Eseguire lo script seguente in tutti i server secondari per creare il certificato.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -139,16 +139,16 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Creare endpoint in tutte le repliche di mirroring del database
+## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Creare endpoint di mirroring del database in tutte le repliche
 
 Gli endpoint del mirroring del database utilizzano il protocollo TCP (Transmission Control Protocol) per inviare e ricevere messaggi tra istanze del server che fanno parte di sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco. 
 
-L'istruzione Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avviare l'endpoint e dell'autorizzazione di connessione consente all'utente che ha creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`.
+Lo script di Transact-SQL seguente crea un endpoint di ascolto denominato `Hadr_endpoint` per il gruppo di disponibilità. Avvia l'endpoint e assegna l'autorizzazione di connessione all'utente creato. Prima di eseguire lo script, sostituire i valori compresi tra `**< ... >**`.
 
 >[!NOTE]
->Per questa versione, non utilizzare un indirizzo IP diverso per l'indirizzo IP del listener. Stiamo lavorando su una correzione per questo problema, ma l'unico valore accettabile per il momento è '0.0.0.0'.
+>Per questa versione, non usare un indirizzo IP diverso per l'IP del listener. Questo problema è in fase di correzione, tuttavia, l'unico valore accettabile per il momento è "0.0.0.0".
 
-Aggiornare il codice Transact-SQL per l'ambiente in tutte le istanze di SQL Server: 
+Aggiornare lo script di Transact-SQL seguente per il proprio ambiente in tutte le istanze di SQL Server: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -166,6 +166,6 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 >La porta TCP sul firewall deve essere aperta per la porta del listener.
 
 >[!IMPORTANT]
->In SQL Server 2017 l'unico metodo di autenticazione supportato per l'endpoint di mirroring del database è `CERTIFICATE`. L'opzione `WINDOWS` sarà abilitata in una versione futura.
+>In SQL Server 2017, l'unico metodo di autenticazione supportato per l'endpoint di mirroring del database è `CERTIFICATE`. L'opzione `WINDOWS` sarà abilitata in una versione futura.
 
-Per ulteriori informazioni, vedere [l'Endpoint del Mirroring Database (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Per informazioni complete, vedere [Endpoint del mirroring del database (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
