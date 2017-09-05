@@ -1,7 +1,7 @@
 ---
 title: "Novità di SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
+ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
+ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
@@ -26,20 +26,10 @@ SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che
 
 **Per provarlo:** [Scaricare SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**Eseguire SQL Server in Linux.** Per altre informazioni, vedere [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) (Documentazione di SQL Server in Linux) e [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new) (Novità di SQL Server 2017 in Linux).
+>**Eseguire SQL Server in Linux.** Per altre informazioni, vedere la documentazione di [SQL Server in Linux](https://docs.microsoft.com/sql/linux/).
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>Ultima versione: SQL Server 2017 Release Candidate (RC1, luglio 2017)
-
-### <a name="sql-server-database-engine"></a>Motore di database di SQL Server    
-- Gli assembly CLR possono ora essere aggiunti a un elenco elementi consentiti come soluzione alternativa per la funzionalità `clr strict security` descritta in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) sono aggiunti per supportare l'elenco elementi consentiti di assembly attendibili.  
-
-### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-- La nuova funzionalità **Scalabilità orizzontale** di SSIS include nella versione RC1 le seguenti funzionalità nuove e modificate. Per altre informazioni, vedere [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Novità di Integration Services in SQL Server 2017).
-    -   Il master di scalabilità orizzontale supporta ora la disponibilità elevata.
-    -   La gestione del failover dei log di esecuzione dai ruoli di lavoro di scalabilità orizzontale è stata migliorata.
-    -   Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità.
-    -   Il catalogo SSIS include una nuova proprietà globale che consente di specificare la modalità predefinita per l'esecuzione dei pacchetti SSIS.
+## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>Ultima versione: SQL Server 2017 Release Candidate (RC2, agosto 2017)
+Questa versione contiene correzioni di bug e miglioramenti delle prestazioni.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
 - L'esperienza e le prestazioni di aggiornamento sono state migliorate per l'aggiornamento a SQL Server 2017 Master Data Services dalle seguenti versioni di SQL Server.
@@ -47,9 +37,9 @@ SQL Server 2017 rappresenta un importante passo avanti verso una piattaforma che
     - SQL Server 2014
     - SQL Server 2016
 
-
 ## <a name="sql-server-database-engine"></a>Motore di database di SQL Server  
 SQL Server 2017 include numerose nuove funzionalità del motore di database, miglioramenti e aumenti delle prestazioni. 
+- Gli **assembly CLR** possono ora essere aggiunti a un elenco elementi consentiti come soluzione alternativa per la funzionalità `clr strict security` descritta in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) sono stati aggiunti per supportare l'elenco elementi consentiti di assembly attendibili (RC1).  
 - La **ricompilazione dell'indice online ripristinabile** consente di ripristinare un'operazione di ricompilazione dell'indice online dal punto in cui è stata arrestata a causa di un errore, ad esempio un failover in una replica o lo spazio su disco insufficiente, o di sospendere e successivamente ripristinare l'operazione. Vedere [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Linee guida per le operazioni sugli indici online](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - L'opzione **IDENTITY_CACHE** per ALTER DATABASE SCOPED CONFIGURATION consente di evitare gap nei valori delle colonne Identity nel caso in cui un server viene riavviato in modo imprevisto o esegue un failover in un server secondario. Vedere [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - L'**ottimizzazione di database automatica** offre informazioni su potenziali problemi di prestazioni delle query, suggerisce soluzioni e consente di correggere automaticamente i problemi rilevati. Vedere [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Ottimizzazione automatica). (CTP 2.0)
@@ -119,13 +109,27 @@ A partire dalla versione CTP 2.1, SSRS non può più essere installato tramite l
 Per altre informazioni, vedere [Novità di SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning Services
-SQL Server R Services è stato rinominato **SQL Server Machine Learning Services** per indicare il nuovo supporto per Python in aggiunta ai linguaggi R. È possibile usare Machine Learning Services (In-Database) per eseguire script R o Python in SQL Server o installare Microsoft Machine Learning Server (Standalone) per distribuire e usare modelli R e Python che non richiedono SQL Server. Entrambe le piattaforme includono nuovi algoritmi MicrosoftML per il machine learning distribuito e la versione più recente di Microsoft R (versione 9.1.0). (CTP 2.0)
-- Machine Learning con Python include il modulo **revoscalepy** che supporta un subset di algoritmi distribuiti e contesti di calcolo inclusi in RevoScaleR. 
-- È possibile creare facilmente più modelli in parallelo da R usando la nuova funzione **rxExecBy**. I contesti di calcolo supportati includono RxSpark e RxInSQLServer. (CTP 2.0)
+SQL Server R Services è stato rinominato **SQL Server Machine Learning Services** per indicare il supporto per Python in aggiunta al linguaggio R. È possibile usare Machine Learning Services (In-Database) per eseguire script R o Python in SQL Server. In alternativa, installare **Microsoft Machine Learning Server (Standalone)** per distribuire e utilizzare modelli R e Python che non richiedono SQL Server. 
+
+Gli sviluppatori di SQL Server ora hanno accesso alle ampie librerie Python di Machine Learning e intelligenza artificiale disponibili nell'ecosistema open source insieme alle innovazioni più recenti da Microsoft: 
+
++ **revoscalepy**: questa versione Python di RevoScaleR include algoritmi paralleli per la regressione lineare e logistica, albero delle decisioni, alberi con boosting e foreste casuali, nonché una vasta gamma di API per la trasformazione e lo spostamento dei dati, contesti di calcolo remoti e origini dati.
+
++ **microsoftml**: questo pacchetto all'avanguardia di algoritmi di apprendimento automatico e trasformazioni con associazioni Python include reti neurali profonde, alberi delle decisioni e foreste delle decisioni veloci, algoritmi ottimizzati per la regressione lineare e logistica. Vengono anche modelli già sottoposti a training basati su modelli ResNet che è possibile usare per l'estrazione di immagini o l'analisi del sentiment.
+
++ **Messa in funzione di Python con T-SQL**: è possibile distribuire facilmente il codice Python con la stored procedure `sp_execute_external_script`. Il flusso dei dati dai processi SQL ai processi Python e la parallelizzazione dei segnali MPI permettono di ottenere prestazioni ottimali.
+
++ **Python in contesti di calcolo di SQL Server**: data scientist e sviluppatori possono eseguire il codice Python in remoto dai relativi ambienti di sviluppo per esplorare i dati e sviluppare modelli senza dover spostare i dati.
 
 Per altre informazioni, vedere [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) (Novità di SQL Server Machine Learning Services).
 
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Coinvolgimento del team di progettazione di SQL Server 
+- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/) (Discussione generale su SQL Server)
+
 ## <a name="next-steps"></a>Passaggi successivi
 - Vedere [Note sulla versione di SQL Server 2017](sql-server-2017-release-notes.md).
+- Vedere [Novità di SQL Server 2017 su Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Vedere [Novità di SQL Server 2016](what-s-new-in-sql-server-2016.md).
-
