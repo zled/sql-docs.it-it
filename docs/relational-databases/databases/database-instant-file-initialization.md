@@ -1,7 +1,7 @@
 ---
 title: Inizializzazione immediata dei file di database | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="database-instant-file-initialization"></a>Inizializzazione immediata dei file di database
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Creazione di un database.  
   
--   Aggiunta di file, log o dati a un database esistente.  
+-   Aggiungere dati o file di log a un database esistente.  
   
 -   Aumento delle dimensioni di un file esistente (incluse operazioni di aumento automatico delle dimensioni).  
   
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/22/2017
  L'inizializzazione dei file richiede una quantità di tempo maggiore per l'esecuzione di tali operazioni. Quando i dati vengono scritti nei file per la prima volta, tuttavia, il sistema operativo non deve riempire i file con zeri.  
   
 ## <a name="instant-file-initialization"></a>Inizializzazione dei file immediata  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i file di dati possono essere inizializzati immediatamente. Questa caratteristica consente l'esecuzione rapida delle operazioni sui file indicate in precedenza. Tramite l'inizializzazione dei file immediata infatti viene recuperato lo spazio su disco in uso evitando il riempimento di tale spazio con zeri. Il contenuto del disco viene invece sovrascritto via via che nuovi dati vengono scritti nei file. Per i file di log non è possibile eseguire l'inizializzazione immediata.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i file di dati possono essere inizializzati immediatamente. L'inizializzazione istantanea dei file consente l'esecuzione rapida delle operazioni sui file indicate in precedenza. Tramite l'inizializzazione dei file immediata infatti viene recuperato lo spazio su disco in uso evitando il riempimento di tale spazio con zeri. Il contenuto del disco viene invece sovrascritto via via che nuovi dati vengono scritti nei file. Per i file di log non è possibile eseguire l'inizializzazione immediata.  
   
 > [!NOTE]  
 >  L'inizializzazione immediata dei file è disponibile solo in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] o [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] o versioni successive.  
   
  L'inizializzazione immediata dei file è disponibile solo se all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) è stato concesso il diritto SE_MANAGE_VOLUME_NAME. I membri del gruppo Administrator di Windows dispongono di questo diritto e possono concederlo ad altri utenti aggiungendoli ai criteri di sicurezza **Esecuzione attività di manutenzione volume** . Per altre informazioni sull'assegnazione di diritti utente, vedere la documentazione di Windows.  
   
- L'inizializzazione immediata dei file non è disponibile quando è abilitata la crittografia TDE.  
+Alcune condizioni, ad esempio Transparent Data Encryption, possono impedire l'inizializzazione immediata dei File.  
   
  Per concedere l'autorizzazione `Perform volume maintenance tasks` a un account:  
   
@@ -62,9 +62,9 @@ ms.lasthandoff: 06/22/2017
 5.  Fare clic su **Applica**, quindi chiudere tutte le finestre di dialogo di **Criteri di sicurezza locali** .  
   
 ### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
- Poiché il contenuto eliminato del disco viene sovrascritto solo quando vengono scritti nuovi dati nei file, il contenuto eliminato potrebbe essere accessibile a utenti o servizi non autorizzati. Finché il file di database è collegato all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa minaccia di accesso alle informazioni è ridotta dall'elenco di controllo di accesso discrezionale (DACL) per il file. Questo elenco consente l'accesso al file solo all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'amministratore locale. Quando il file viene scollegato, tuttavia, diventa accessibile a un utente o a un servizio privo del diritto SE_MANAGE_VOLUME_NAME. Una minaccia analoga è presente quando si esegue il backup del database. Il contenuto eliminato può diventare disponibile a un utente o a un servizio non autorizzato se il file di backup non è protetto con un elenco di controllo di accesso discrezionale (DACL) appropriato.  
+ Poiché il contenuto eliminato del disco viene sovrascritto solo quando vengono scritti nuovi dati nei file, il contenuto eliminato potrebbe essere accessibile a utenti o servizi non autorizzati. Finché il file di database è collegato all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa minaccia di accesso alle informazioni è ridotta dall'elenco di controllo di accesso discrezionale (DACL) per il file. Questo elenco consente l'accesso al file solo all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'amministratore locale. Quando il file viene scollegato, tuttavia, diventa accessibile a un utente o a un servizio privo del diritto SE_MANAGE_VOLUME_NAME. Una minaccia analoga è presente quando si esegue il backup del database. Se il file di backup non è protetto con un elenco di controllo di accesso discrezionale (DACL) appropriato, il contenuto eliminato può diventare disponibile a un utente o a un servizio non autorizzato.  
   
- Se la potenziale diffusione del contenuto eliminato rappresenta un problema, è consigliabile eseguire una o entrambe le operazioni seguenti:  
+ Se la potenziale diffusione del contenuto eliminato rappresenta un problema, è consigliabile procedere con una o con entrambe le azioni seguenti:  
   
 -   Assicurarsi sempre che i file di dati e i file di backup scollegati presentino elenchi di controllo di accesso discrezionale (DACL) restrittivi.  
   
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

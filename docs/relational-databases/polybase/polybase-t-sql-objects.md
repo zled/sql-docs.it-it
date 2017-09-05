@@ -2,7 +2,7 @@
 title: Oggetti T-SQL PolyBase | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>Oggetti T-SQL PolyBase
@@ -47,7 +46,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="prerequisites"></a>Prerequisiti  
  Configurare PolyBase. Vedere [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## <a name="create-external-tables-for-hadoop"></a>Creare tabelle esterne per Hadoop  
+## <a name="create-external-tables-for-hadoop"></a>Creare tabelle esterne per Hadoop
+Si applica a: SQL Server (a partire dalla versione 2016), Parallel Data Warehouse
+  
  **1. Creare credenziali con ambito database**  
   
  Questo passaggio è obbligatorio solo per i cluster Hadoop protetti da Kerberos.  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Creare tabelle esterne per l'archiviazione BLOB di Azure  
+Si applica a: SQL Server (a partire dalla versione 2016) SQL Data Warehouse, Parallel Data Warehouse
+
  **1. Creare credenziali con ambito database**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Creare tabelle esterne per Azure Data Lake Store
-Azure Data Lake Store è supportato solo da PolyBase in SQL Data Warehouse.
-Per altre informazioni su ADLS e Azure SQL Data Warehouse, vedere [Caricare dati da Azure Data Lake Store a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+Si applica a: Azure SQL Data Warehouse
+
+Per altre informazioni, vedere [Caricare con Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
- **1. Creare credenziali con ambito database**  
-  
+ **1. Creare credenziali con ambito database**   
 
 ```sql
 -- Create a Database Master Key.

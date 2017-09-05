@@ -1,7 +1,7 @@
 ---
 title: Funzioni deterministiche e non deterministiche | Microsoft Docs
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funzioni deterministiche e non deterministiche
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>Chiamata di stored procedure estese da funzioni  
  Le funzioni che chiamano stored procedure estese sono non deterministiche, in quanto le stored procedure estese possono avere effetti collaterali sul database, ovvero possono comportare modifiche di uno stato globale del database, quale un aggiornamento di una tabella o di una risorsa esterna, come un file o la rete, tramite, ad esempio, la modifica di un file o l'invio di un messaggio di posta elettronica. Quando si esegue una stored procedure estesa da una funzione definita dall'utente, il set di risultati restituito potrebbe non essere coerente. Le funzioni definite dall'utente che creano effetti collaterali sul database non sono consigliate.  
   
- Quando viene chiamata dall'interno di una funzione, una stored procedure estesa non può restituire set di risultati al client. Qualsiasi API ODS che restituisca set di risultati al client restituirà il codice FAIL.  
+ Quando viene chiamata dall'interno di una funzione, una stored procedure estesa non può restituire set di risultati al client. Qualsiasi API ODS che restituisca set di risultati al client è in possesso di un codice FAIL.  
   
  La stored procedure estesa può connettersi nuovamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la procedura non può unire in join la stessa transazione della funzione originale che ha richiamato la stored procedure estesa.  
   
- In modo analogo a una chiamata da un batch o da una stored procedure, la stored procedure estesa viene eseguita nel contesto dell'account di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo aspetto deve essere tenuto presente dal proprietario della stored procedure estesa quando vengono concesse ad altri utenti le autorizzazioni per eseguire la procedura.  
+ In modo analogo a una chiamata da un batch o da una stored procedure, la stored procedure estesa viene eseguita nel contesto dell'account di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni di questo contesto di protezione devono essere tenute presenti dal proprietario della stored procedure estesa quando vengono concesse ad altri utenti le autorizzazioni per eseguire la procedura.  
   
   
 
