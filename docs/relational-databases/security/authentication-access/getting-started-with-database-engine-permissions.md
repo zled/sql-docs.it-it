@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Per una rappresentazione grafica delle relazioni tra le entità del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e gli oggetti server e di database, vedere [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Autorizzazioni e ruoli predefiniti del server e ruoli predefiniti del database  
- Le autorizzazioni dei ruoli predefiniti del server e dei ruoli predefiniti del database sono simili ma non esattamente uguali alle autorizzazioni granulari. Ad esempio, i membri del ruolo predefinito del server `sysadmin` hanno tutte le autorizzazioni per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come gli account di accesso con l'autorizzazione `CONTROL SERVER` . Ma concedere l'autorizzazione `CONTROL SERVER` non significa che un account di accesso diventa membro del ruolo predefinito del server sysadmin e aggiungere un account di accesso al ruolo predefinito del server  `sysadmin` non significa che all'account di accesso viene concessa in modo esplicito l'autorizzazione  `CONTROL SERVER` . Una stored procedure potrebbe talvolta verificare le autorizzazioni controllando il ruolo predefinito e non controllando l'autorizzazione granulare. Ad esempio, per scollegare un database è necessaria l'appartenenza al ruolo predefinito del database `db_owner` . L'autorizzazione `CONTROL DATABASE` equivalente non è sufficiente. Questi due sistemi operano in parallelo ma raramente interagiscono tra loro. Se possibile, Microsoft consiglia di usare il sistema più recente di autorizzazioni granulari anziché i ruoli predefiniti.  
+ Le autorizzazioni dei ruoli predefiniti del server e dei ruoli predefiniti del database sono simili ma non esattamente uguali alle autorizzazioni granulari. Ad esempio, i membri del ruolo predefinito del server `sysadmin` hanno tutte le autorizzazioni per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come gli account di accesso con l'autorizzazione `CONTROL SERVER` . Ma concedere l'autorizzazione `CONTROL SERVER` non rende un account di accesso membro del ruolo predefinito del server sysadmin e aggiungere un account di accesso al ruolo predefinito del server `sysadmin` non concede in modo esplicito l'autorizzazione `CONTROL SERVER` all'account di accesso. Una stored procedure potrebbe talvolta verificare le autorizzazioni controllando il ruolo predefinito e non controllando l'autorizzazione granulare. Ad esempio, per scollegare un database è necessaria l'appartenenza al ruolo predefinito del database `db_owner` . L'autorizzazione `CONTROL DATABASE` equivalente non è sufficiente. Questi due sistemi operano in parallelo ma raramente interagiscono tra loro. Se possibile, Microsoft consiglia di usare il sistema più recente di autorizzazioni granulari anziché i ruoli predefiniti.
   
 ## <a name="monitoring-permissions"></a>Monitoraggio delle autorizzazioni  
  Le viste seguenti restituiscono informazioni sulla sicurezza.  

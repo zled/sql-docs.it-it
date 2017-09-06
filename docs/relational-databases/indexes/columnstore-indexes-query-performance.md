@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹Si applica a SQL Server 2016, database SQL V12 Premium Edition e SQL Data Warehouse    
     
 ### <a name="aggregate-pushdown"></a>Distribuzione dell'aggregazione    
- Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch.  Questo metodo offre buone prestazioni, ma con SQL Server 2016 è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti    
-    
--   Gli operatori di aggregazione supportati sono MIN, MAX, SUM, COUNT, AVG    
-    
--   È supportato qualsiasi tipo di dati <= 64 bit.  Ad esempio, bigint è supportato perché le sue dimensioni sono di 8 byte, mentre decimal (38,6) non è supportato perché è di 17 byte. Non sono inoltre supportati i tipi stringa    
-    
--   L'operatore di aggregazione deve essere sopra il nodo SCAN o il nodo SCAN con GROUP BY    
+ Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch.  Questo metodo offre buone prestazioni, ma con SQL Server 2016 è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti 
+ 
+-    Le aggregazioni sono MIN, MAX, SUM, COUNT e COUNT(*). 
+-  L'operatore di aggregazione deve essere sopra il nodo SCAN o il nodo SCAN con GROUP BY.
+-  L'aggregazione non è un'aggregazione distinta.
+-  La colonna di aggregazione non è una colonna stringa.
+-  La colonna di aggregazione non è una colonna virtuale. 
+-  Il tipo di dati di input e di output deve essere uno dei seguenti e deve rientrare nei 64 bit:
+    -  tiny int, int, big int, small int, bit
+    -  small money, money, decimale e numerico con precisione <= 18
+    -  small date, date, datetime, datetime2, time
     
  La distribuzione dell'aggregazione viene ulteriormente accelerata da un'aggregazione efficiente dei dati compressi/codificati durante un'esecuzione di facile integrazione con la cache e sfruttando SIMD    
     

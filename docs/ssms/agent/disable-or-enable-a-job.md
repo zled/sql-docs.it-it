@@ -69,7 +69,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
 3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
-    -- changes the name, description, and enables status of the job NightlyBackups.  
+    -- changes the name, description, and disables status of the job NightlyBackups.  
     USE msdb ;  
     GO  
   
@@ -77,7 +77,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
         @job_name = N'NightlyBackups',  
         @new_name = N'NightlyBackups -- Disabled',  
         @description = N'Nightly backups disabled during server migration.',  
-        @enabled = 1 ;  
+        @enabled = 0 ;  
     GO  
     ```  
   

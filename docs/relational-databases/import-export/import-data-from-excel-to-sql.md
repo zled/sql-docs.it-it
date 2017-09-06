@@ -1,11 +1,10 @@
 ---
 title: Importare dati da Excel a SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/27/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.assetid: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,23 +13,29 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 3a978076b9776b57ffc996404c5f7773d7cf9094
+ms.sourcegitcommit: ab792aed71ab2e7837da9cf0073d4ff191ce5184
+ms.openlocfilehash: ce462c238c81a4a9fc82869a856ac13e9f112aee
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importare dati da Excel a SQL Server o al database SQL di Azure
-Sono disponibili vari modi per importare dati da file di Excel a SQL Server o al database SQL di Azure.
--   Si possono importare i dati direttamente da Excel tramite l'Importazione/Esportazione guidata SQL Server, Integration Services (SSIS) o la funzione OPENROWSET. 
--   È possibile salvare i dati di Excel come testo e quindi usare l'istruzione BULK INSERT, BCP o Azure Data Factory. In questo articolo sono riepilogate le varie opzioni con collegamenti a istruzioni più dettagliate.
+Sono disponibili vari modi per importare dati da file di Excel a SQL Server o al database SQL di Azure. Questo articolo contiene un riepilogo di ogni opzione e collegamenti a istruzioni più dettagliate.
+-   È possibile importare i dati in un unico passaggio da Excel a SQL usando uno degli strumenti seguenti:
+    -   Importazione/Esportazione guidata SQL Server
+    -   SQL Server Integration Services (SSIS)
+    -   Funzione OPENROWSET
+-   È possibile importare i dati in due passaggi, salvandoli come testo e quindi usando uno degli strumenti seguenti:
+    -   Istruzione BULK INSERT
+    -   BCP
+    -   Azure Data Factory
 
-> [!NOTE]
-> Una descrizione completa di strumenti e servizi complessi come Azure Data Factory o SSIS esula dagli scopi di questa panoramica. Per scoprire di più sulla soluzione a cui si è interessati, seguire i collegamenti per le esercitazioni e per altre informazioni.
+> [!IMPORTANT]
+> Una descrizione completa di strumenti e servizi complessi come Azure Data Factory o SSIS esula dagli scopi di questa panoramica. Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati.
 
 ## <a name="sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
 
-È possibile importare i dati direttamente dai file di Excel seguendo le varie pagine di una procedura guidata. Facoltativamente, è possibile salvare le impostazioni di importazione/esportazione come pacchetto di SQL Server Integration Services (SSIS) che è possibile personalizzare e riutilizzare.
+È possibile importare i dati direttamente dai file di Excel scorrendo le pagine dell'Importazione/Esportazione guidata SQL Server. Facoltativamente, è possibile salvare le impostazioni di importazione/esportazione come pacchetto di SQL Server Integration Services (SSIS) che è possibile personalizzare e riutilizzare.
 
 ![Connettersi a un'origine dati Excel](media/excel-connection.png)
 
@@ -42,7 +47,7 @@ Se si ha familiarità con SSIS e si preferisce non eseguire l'Importazione/Espor
 
 ![Componenti del flusso di dati](media/excel-to-sql-data-flow.png)
 
-Per altre informazioni su questi componenti di SSIS, vedere gli argomenti seguenti.
+Per altre informazioni su questi componenti di SSIS, vedere gli argomenti seguenti:
 -   [Origine Excel](../../integration-services/data-flow/excel-source.md)
 -   [Destinazione SQL Server](../../integration-services/data-flow/sql-server-destination.md)
 
@@ -50,9 +55,11 @@ Per istruzioni su come creare pacchetti SSIS, vedere l'esercitazione [Creazione 
 
 ## <a name="openrowset-and-linked-servers"></a>OPENROWSET e server collegati
 > [!NOTE]
-> Il provider ACE (in precedenza provider Jet) che si connette ai file di Excel è destinato all'uso interattivo sul lato client. Se si usa il provider ACE nel server, in particolare in processi automatizzati o processi in esecuzione in parallelo, si possono ottenere risultati imprevisti.
+> Il provider ACE (in precedenza provider Jet) che si connette alle origini dati di Excel è destinato all'uso interattivo sul lato client. Se si usa il provider ACE nel server, in particolare in processi automatizzati o processi in esecuzione in parallelo, si possono ottenere risultati imprevisti.
 
-Importare i dati direttamente dai file di Excel usando la funzione `OPENROWSET` o `OPENDATASOURCE`. Questo utilizzo è noto come *query distribuita*.
+### <a name="distributed-queries"></a>Query distribuite
+
+Importare i dati direttamente dai file di Excel usando la funzione `OPENROWSET` o `OPENDATASOURCE` di Transact-SQL. Questo utilizzo è noto come *query distribuita*.
 
 Prima di eseguire una query distribuita, è necessario abilitare l'opzione di configurazione del server `ad hoc distributed queries`, come illustrato nell'esempio seguente. Per altre informazioni, vedere [Opzione di configurazione del server ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
 
@@ -65,7 +72,7 @@ RECONFIGURE;
 GO
 ```
 
-L'esempio di codice seguente importa i dati dal foglio di lavoro di Excel `Customers` in una nuova tabella di SQL Server con `OPENROWSET`.
+L'esempio di codice seguente usa `OPENROWSET` per importare i dati dal foglio di lavoro di Excel `Data` in una nuova tabella di database.
 
 ```sql
 USE ImportFromExcel;
@@ -89,14 +96,16 @@ GO
 
 Per *aggiungere* i dati importati a una tabella *esistente* invece di creare una nuova tabella, usare la sintassi `INSERT INTO ... SELECT ... FROM ...` al posto della sintassi `SELECT ... INTO ... FROM ...` usata negli esempi precedenti.
 
-Per selezionare i dati di Excel senza importarli, usare semplicemente la sintassi `SELECT ... FROM ...`.
+Per eseguire una query sui dati di Excel senza eseguirne l'importazione, usare la sintassi standard `SELECT ... FROM ...`.
 
-Per altre informazioni sulle query distribuite, vedere gli argomenti seguenti.
+Per altre informazioni sulle query distribuite, vedere gli argomenti seguenti:
 -   [Query distribuite](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (Le query distribuite sono ancora supportate in SQL Server 2016, ma la documentazione relativa a questa funzionalità non è stata aggiornata.)
 -   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 -   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
-È anche possibile configurare una connessione permanente al file di Excel come *server collegato*. L'esempio seguente importa i dati dal foglio di lavoro `Data` nel server collegato di Excel esistente `EXCELLINK` in una nuova tabella di SQL Server denominata `Data_ls`.
+### <a name="linked-servers"></a>Server collegati
+
+È anche possibile configurare una connessione permanente al file di Excel come *server collegato*. L'esempio seguente importa i dati dal foglio di lavoro `Data` nel server collegato di Excel esistente `EXCELLINK` in una nuova tabella di database denominata `Data_ls`.
 
 ```sql
 USE ImportFromExcel;
@@ -129,11 +138,11 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 @datasrc, @location, @provstr, @catalog
 ```
 
-Per altre informazioni sui server collegati, vedere gli argomenti seguenti.
+Per altre informazioni sui server collegati, vedere gli argomenti seguenti:
 -   [Creare server collegati](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
 -   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
-Per altri esempi e informazioni sia sui server collegati che sulle query distribuite, vedere gli argomenti seguenti.
+Per altri esempi e informazioni sia sui server collegati che sulle query distribuite, vedere gli argomenti seguenti:
 -   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries) (Come usare Excel con server collegati e query distribuite di SQL Server)
 -   [Come importare dati da Excel a SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
@@ -147,7 +156,7 @@ In Excel selezionare **File | Salva con nome** e quindi selezionare **Testo (con
 
 ## <a name="bulk-insert-command"></a>Comando BULK INSERT
 
-`BULK INSERT` è un comando che è possibile eseguire da SQL Server Management Studio. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` in una tabella esistente.
+`BULK INSERT` è un comando Transact-SQL che è possibile eseguire da SQL Server Management Studio. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` in una tabella di database esistente.
 
 ```sql
 USE ImportFromExcel;
@@ -160,37 +169,43 @@ BULK INSERT Data_bi FROM 'D:\Desktop\data.csv'
 GO
 ```
 
-Per altre informazioni, vedere gli argomenti seguenti.
+Per altre informazioni, vedere gli argomenti seguenti:
 -   [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET (BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 -   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
 ## <a name="bcp-tool"></a>Strumento BCP
 
-BCP è uno strumento di SQL Server eseguibile dal prompt dei comandi. L'esempio seguente carica i dati dal file CSV `Data.csv` nella tabella `Data_bcp` esistente in SQL Server.
+BCP è un programma eseguibile dal prompt dei comandi. L'esempio seguente carica i dati dal file con valori delimitati da virgole `Data.csv` nella tabella di database `Data_bcp` esistente.
 
 ```sql
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ```
 
-Per altre informazioni, vedere gli argomenti seguenti.
+Per altre informazioni su BCP, vedere gli argomenti seguenti:
 -   [Importare ed esportare dati per operazioni bulk usando l'utilità bcp](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 -   [Utilità bcp](../../tools/bcp-utility.md)
 -   [Preparare i dati per l'importazione o l'esportazione bulk](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
 ## <a name="copy-wizard-azure-data-factory"></a>Copia guidata (Azure Data Factory)
-È possibile importare i dati salvati come file di testo seguendo le varie pagine di una procedura guidata. Per altre informazioni sulla Copia guidata, vedere gli argomenti seguenti.
+È possibile importare i dati salvati come file di testo scorrendo le pagine della Copia guidata.
+
+Per altre informazioni sulla Copia guidata, vedere gli argomenti seguenti:
 -   [Copia guidata di Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [Esercitazione: Creare una pipeline con l'attività di copia usando la Copia guidata di Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="azure-data-factory"></a>Azure Data Factory
-Se si ha familiarità con Azure Data Factory e si preferisce non eseguire la Copia guidata di Azure Data Factory, creare una pipeline con un'attività di copia dal file di testo in un percorso di archiviazione di file a SQL Server o al database SQL di Azure.
+Se si ha familiarità con Azure Data Factory e si preferisce non eseguire la Copia guidata, creare una pipeline con un'attività di copia dal file di testo a SQL Server o al database SQL di Azure.
 
-Per altre informazioni sull'uso di questi sink e origini di Data Factory, vedere gli argomenti seguenti.
+Per altre informazioni sull'uso di questi sink e origini di Data Factory, vedere gli argomenti seguenti:
 -   [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 -   [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
 -   [Database SQL di Azure](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
-Per istruzioni su come copiare dati con Azure Data Factory, vedere gli argomenti seguenti.
+Per istruzioni su come copiare dati con Azure Data Factory, vedere gli argomenti seguenti:
 -   [Spostare dati con l'attività di copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database) (Esercitazione: Creare una pipeline con l'attività di copia usando il portale di Azure)
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati.
 
