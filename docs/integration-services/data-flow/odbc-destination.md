@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
@@ -77,16 +80,109 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo Editor avanzato, vedere [Proprietà personalizzate della destinazione ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
-  
--   [Editor destinazione ODBC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [Editor destinazione ODBC &#40; Pagina mapping &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [Editor destinazione ODBC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Caricare dati tramite la destinazione ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [Proprietà personalizzate della destinazione ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>Editor destinazione ODBC (pagina Gestione connessione)
+  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Destination Editor** per selezionare la gestione connessione ODBC per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database  
   
+ **Per aprire ODBC Destination Editor (pagina Gestione connessione)**  
+  
+### <a name="task-list"></a>Elenco attività  
+  
+-   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] con la destinazione ODBC.  
+  
+-   Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ODBC.  
+  
+-   In **ODBC Destination Editor**, fare clic su **Gestione connessione**.  
+  
+### <a name="options"></a>Opzioni  
+  
+#### <a name="connection-manager"></a>Gestione connessione  
+ Consente di selezionare una gestione connessione ODBC esistente nell'elenco o di creare una nuova connessione facendo clic su Nuova. La connessione può essere a qualsiasi database supportato da ODBC.  
+  
+#### <a name="new"></a>Nuova  
+ Fare clic su **Nuovo**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione.  
+  
+#### <a name="data-access-mode"></a>Modalità di accesso ai dati  
+ Consente di selezionare il metodo di caricamento dei dati nella destinazione. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
+  
+|Opzione|Description|  
+|------------|-----------------|  
+|Nome tabella - Batch|Selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Se si seleziona questa opzione, sono disponibili le opzioni seguenti.|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: digitare la dimensione del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
+|Nome tabella - Riga per riga|Selezionare questa opzione per configurare la destinazione ODBC per l'inserimento di una riga per volta nella tabella di destinazione. Se si seleziona questa opzione, è disponibile l'opzione seguente.|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile del database dall'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
+  
+#### <a name="preview"></a>Anteprima  
+ Fare clic su **Anteprima** per visualizzare fino a 200 dati per la tabella selezionata.  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>ODBC Destination Editor (pagina Mapping)
+  Utilizzare la pagina **Mapping** della finestra di dialogo **ODBC Destination Editor** per eseguire il mapping tra colonne di input e colonne di destinazione.  
+  
+### <a name="options"></a>Opzioni  
+  
+#### <a name="available-input-columns"></a>Colonne di input disponibili  
+ Elenco delle colonne di input disponibili. Trascinare un colonna di input in una colonna di destinazione disponibile per eseguire il mapping tra le colonne.  
+  
+#### <a name="available-destination-columns"></a>Colonne di destinazione disponibili  
+ Elenco delle colonne di destinazione disponibili. Trascinare un colonna di destinazione in una colonna di input disponibile per eseguire il mapping tra le colonne.  
+  
+#### <a name="input-column"></a>Colonna di input  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando  **\<ignorare >** per escludere colonne dall'output.  
+  
+#### <a name="destination-column"></a>Colonna di destinazione  
+ Consente di visualizzare tutte le colonne di destinazione disponibili, con o senza mapping eseguito.  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>Editor destinazione ODBC (pagina Output errori)
+  Utilizzare la pagina **Output degli errori** della finestra di dialogo **ODBC Destination Editor** per selezionare le opzioni di gestione degli errori.  
+  
+ **Per aprire ODBC Destination Editor (pagina Output degli errori)**  
+  
+### <a name="task-list"></a>Elenco attività  
+  
+-   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] con la destinazione ODBC.  
+  
+-   Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ODBC.  
+  
+-   In **ODBC Destination Editor**, fare clic su **Output degli errori**.  
+  
+### <a name="options"></a>Opzioni  
+  
+#### <a name="inputoutput"></a>Input/Output  
+ Consente di visualizzare il nome dell'origine dei dati.  
+  
+#### <a name="column"></a>Colonna  
+ Non usato.  
+  
+#### <a name="error"></a>Errore  
+ Consente di selezionare il modo in cui la destinazione ODBC deve gestire gli errori in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+#### <a name="truncation"></a>Troncamento  
+ Consente di selezionare il modo in cui la destinazione ODBC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+#### <a name="description"></a>Description  
+ Consente di visualizzare una descrizione dell'errore.  
+  
+#### <a name="set-this-value-to-selected-cells"></a>Imposta questo valore nelle celle selezionate  
+ Consente di selezionare il modo in cui la destinazione ODBC gestisce tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+#### <a name="apply"></a>Applica  
+ Consente di applicare le opzioni di gestione degli errori alle celle selezionate.  
+  
+### <a name="error-handling-options"></a>Opzioni di gestione degli errori  
+ Utilizzare le opzioni seguenti per configurare il modo in cui la destinazione ODBC gestisce errori e troncamenti.  
+  
+#### <a name="fail-component"></a>Interrompi componente  
+ Quando si verifica un errore o un troncamento l'attività Flusso di dati viene interrotta. Questo è il comportamento predefinito.  
+  
+#### <a name="ignore-failure"></a>Ignora errore  
+ L'errore o il troncamento vengono ignorati.  
+  
+#### <a name="redirect-flow"></a>Reindirizza flusso  
+ La riga che determina l'errore o il troncamento viene inviata all'output degli errori della destinazione ODBC. Per ulteriori informazioni, vedere Destinazione ODBC.  
+  
+

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
+- sql13.dts.designer.transfererrormessagestask.general.f1
+- sql13.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-error-messages-task"></a>Attività Trasferisci messaggi di errore
@@ -67,11 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>Configurazione dell'attività Trasferisci messaggi di errore  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Trasferisci messaggi di errore &#40;pagina Generale&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [Editor attività Trasferisci messaggi di errore &#40;pagina Messaggi&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -82,7 +80,55 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-error-messages-task-editor-general-page"></a>Editor attività Trasferisci messaggi di errore (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci messaggi di errore** per assegnare un nome e una descrizione all'attività Trasferisci messaggi di errore. L'attività Trasferisci messaggi di errore consente di trasferire uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di digitare un nome univoco per l'attività Trasferisci messaggi di errore. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Trasferisci messaggi di errore.  
+  
+## <a name="transfer-error-messages-task-editor-messages-page"></a>Editor attività Trasferisci messaggi di errore (pagina Messaggi)
+  Usare la pagina **Messaggi** della finestra di dialogo **Editor attività Trasferisci messaggi di errore** per specificare le proprietà relative alla copia di uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  
+### <a name="options"></a>Opzioni  
+ **SourceConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di origine.  
+  
+ **DestinationConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di destinazione.  
+  
+ **IfObjectExists**  
+ Indicare se l'attività deve sovrascrivere i messaggi di errore definiti dall'utente esistenti, ignorare i messaggi esistenti oppure interrompersi in caso nel server di destinazione esistano già messaggi di errore con lo stesso nome.  
+  
+ **TransferAllErrorMessages**  
+ Indicare se l'attività deve copiare dal server di origine al server di destinazione tutti i messaggi di errore definiti dall'utente o solo quelli specificati.  
+  
+ Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**True**|Copia tutti i messaggi definiti dall'utente.|  
+|**False**|Copia solo i messaggi definiti dall'utente specificati.|  
+  
+ **ErrorMessagesList**  
+ Fare clic sui puntini di sospensione **(…)** per selezionare i messaggi di errore da copiare.  
+  
+> [!NOTE]  
+>  È necessario specificare la proprietà **SourceConnection** prima di poter selezionare i messaggi di errore di cui eseguire la copia.  
+  
+ **ErrorMessageLanguagesList**  
+ Fare clic sui puntini di sospensione **(…)** per selezionare le lingue per cui copiare i messaggi di errore definiti dall'utente nel server di destinazione. Per poter trasferire versioni del messaggio in altre lingue nel server di destinazione, è necessario che in tale server esista una versione us_english (tabella codici 1033) del messaggio.  
+  
+> [!NOTE]  
+>  È necessario specificare la proprietà **SourceConnection** prima di poter selezionare i messaggi di errore di cui eseguire la copia.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

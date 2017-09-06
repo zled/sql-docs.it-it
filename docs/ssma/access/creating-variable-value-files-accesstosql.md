@@ -2,7 +2,7 @@
 title: Creazione di file di valore della variabile (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,21 +16,21 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 caps.latest.revision: 15
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ebc00ea1b5fc7eb9ca2383d8887b522f59428d1
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
-File valore variabile è un file XML che include i valori dei parametri dei comandi ad esempio, il nome del server di origine o di destinazione che cambiano spesso dalla migrazione di un server a un altro. Quando si verifica un numero elevato di migrazioni di database, verranno creati e a cui fa riferimento in un file di script master con più file di variabile per archiviare il valore di ogni server di origine di **– v** passare alla riga di comando. Ciò consente di mantenere i valori statici, in alcuni file di script con i valori delle variabili in più file di variabile.  
+Un File di valore di variabile è un file XML che include i valori dei parametri dei comandi (ad esempio il nome di server di origine o di destinazione) che cambiano spesso tra le migrazioni a server. Quando si verifica un numero elevato di migrazioni di database, più file di variabile per archiviare il valore di ogni server di origine vengono creati e a cui fa riferimento in un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere i valori statici, in alcuni file di script con i valori delle variabili in più file di variabile.  
   
 > [!NOTE]  
-> 1.  I nomi delle variabili sono preceduti e seguiti da un simbolo di dollaro $. Se le variabili non vengono assegnate un valore nel file del valore della variabile, si verificherà un errore durante l'analisi del file script risultante in bloccare il processo di esecuzione della console.  
-> 2.  The escape character for **$** is **$$**. Se il valore di un valore statico o variabile di un parametro contiene  **$**  simbolo (dollaro), quindi  **$$**  deve essere specificata di considerarlo come un carattere anziché una variabile.  
-> 3.  Per motivi di manutenzione, le variabili possono essere dichiarate all'interno di `‘variable-group’` le variabili definite elementi per la separazione logica dell'utente.  Utilizzo di questo elemento non è obbligatorio.  
+> -  I nomi delle variabili sono preceduti e seguiti da un simbolo di dollaro $. Se una variabile non viene assegnata un valore nel file del valore della variabile, verificherà un errore durante l'analisi del file di script, risultante in bloccare il processo di esecuzione della console.  
+> -  The escape character for **$** is **$$**. Se il valore di un valore statico o variabile di un parametro contiene un  **$**  simbolo (dollaro), quindi  **$$**  deve essere specificata di considerarlo come un carattere anziché una variabile.  
+> -  Per motivi di manutenzione, le variabili possono essere dichiarate all'interno di `‘variable-group’` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
   
 **Esempi:**  
   
@@ -95,13 +95,13 @@ File valore variabile è un file XML che include i valori dei parametri dei coma
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>Valore della variabile File convalida  
+## <a name="variable-value-file-validation"></a>Convalida file di valore della variabile  
 L'utente facilmente è in grado di convalidare il file di valore della variabile nel file di definizione dello schema **ConsoleScriptVariablesSchema.xsd** disponibile nella cartella 'Schemi'.  
   
 ## <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo nella console di gestione è [creare i file di connessione del Server &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione dei file di connessione del Server (accesso)](http://msdn.microsoft.com/en-us/829153be-aa8e-4162-87e8-69882feecf19)  
+[Creazione dei file di connessione del Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
 

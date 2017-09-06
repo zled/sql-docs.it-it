@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetdest.f1
+- sql13.dts.designer.adonetdest.connection.f1
+- sql13.dts.designer.adonetdest.mappings.f1
+- sql13.dts.designer.adonetdest.erroroutput.f1
 helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dc271dee6898d253f51be7c49efe7f0aaa5e7a
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-destination"></a>Destinazione ADO NET
@@ -49,14 +52,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor destinazione ADO NET** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)  
-  
--   [Editor destinazione ADO NET &#40;pagina Mapping&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
-  
--   [Editor destinazione ADO NET &#40;pagina Output errori&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -64,5 +59,116 @@ ms.lasthandoff: 08/03/2017
 -   [Proprietà personalizzate ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="ado-net-destination-editor-connection-manager-page"></a>Editor destinazione ADO NET (pagina Gestione connessione)
+  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione ADO NET** per selezionare la connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
+  
+ **Per aprire la pagina Gestione connessione**  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con la destinazione ADO NET.  
+  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ADO NET.  
+  
+3.  In **Editor destinazione ADO NET**fare clic su **Gestione connessione**.  
+  
+### <a name="static-options"></a>Opzioni statiche  
+ **Connection manager**  
+ Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione ADO.NET** .  
+  
+ **Tabella o vista**  
+ Consente di selezionare una tabella o vista esistente nell'elenco oppure di creare una nuova tabella facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una nuova tabella o vista usando la finestra di dialogo **Crea tabella** .  
+  
+> [!NOTE]  
+>  Quando si fa clic su **Nuova**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella**. Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Anteprima**  
+ Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
+  
+ **Utilizza inserimento bulk, se disponibile**  
+ Specificare se usare l'interfaccia <xref:System.Data.SqlClient.SqlBulkCopy> per migliorare le prestazioni delle operazioni di inserimento bulk.  
+  
+ Solo i provider ADO.NET che restituiscono un oggetto <xref:System.Data.SqlClient.SqlConnection> supportano l'uso dell'interfaccia <xref:System.Data.SqlClient.SqlBulkCopy> . Il provider di dati .NET per SQL Server (SqlClient) restituisce un oggetto <xref:System.Data.SqlClient.SqlConnection> e un provider personalizzato può restituire un oggetto <xref:System.Data.SqlClient.SqlConnection> .  
+  
+ È possibile usare il provider di dati .NET per SQL Server (SqlClient) per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  
+ Se si seleziona **Usa Inserimento bulk quando possibile**e si imposta l'opzione **Errore** su **Reindirizza riga**, il batch di dati che la destinazione reindirizza all'output degli errori può includere righe corrette. Per altre informazioni sulla gestione degli errori nelle operazioni bulk, vedere [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md). Per altre informazioni sull'opzione **Errore** , vedere [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+  
+> [!NOTE]  
+>  Se una tabella di origine di SQL Server o Sybase include una colonna identity, è necessario utilizzare l'attività Esegui SQL per abilitare IDENTITY_INSERT prima la destinazione ADO NET e disabilitarla nuovamente in seguito. (La proprietà della colonna identity specifica un valore incrementale per la colonna. L'istruzione SET IDENTITY_INSERT consente valori espliciti dalla tabella di origine da inserire nella colonna identity nella tabella di destinazione.)  
+>   
+>   Per eseguire le istruzioni SET IDENTITY_INSERT e i dati caricato correttamente, è necessario eseguire le operazioni seguenti.
+>       1. Utilizzare la stessa gestione connessione ADO.NET per l'attività Esegui SQL e per la destinazione ADO.NET.
+>       2. Gestione connessione, impostare il **RetainSameConnection** proprietà e **MultipleActiveResultSets** proprietà su True.
+>       3. La destinazione ADO.NET, impostare il **UseBulkInsertWhenPossible** la proprietà su False.
+>
+>  Per altre informazioni, vedere [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) e [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
+  
+## <a name="external-resources"></a>Risorse esterne  
+ Articolo tecnico [Loading data to Windows Azure SQL Database the fast way](http://go.microsoft.com/fwlink/?LinkId=244333)(Modalità rapida di caricamento di dati nel database SQL di Windows Azure) nel sito Web sqlcat.com  
+  
+## <a name="ado-net-destination-editor-mappings-page"></a>Editor destinazione ADO NET (pagina Mapping)
+  Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione ADO NET** per eseguire il mapping tra colonne di input e colonne di destinazione.  
+  
+ **Per aprire la pagina Mapping**  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con la destinazione ADO NET.  
+  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ADO NET.  
+  
+3.  In **Editor destinazione ADO NET**, fare clic su **Mapping**.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di visualizzare l'elenco delle colonne di input disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di input disponibili nella tabella e le colonne di destinazione.  
+  
+ **Colonne di destinazione disponibili**  
+ Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
+  
+ **Colonna di input**  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando  **\<ignorare >** per escludere colonne dall'output.  
+  
+ **Colonna di destinazione**  
+ Consente di visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che sia mappata o meno.  
+  
+## <a name="ado-net-destination-editor-error-output-page"></a>Editor destinazione ADO NET (pagina Output errori)
+  Usare la pagina **Output errori** della finestra di dialogo **Editor destinazione ADO NET** per specificare le opzioni di gestione degli errori.  
+  
+ **Per aprire la pagina Output errori**  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con la destinazione ADO NET.  
+  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione ADO NET.  
+  
+3.  In **Editor destinazione ADO NET**fare clic su **Output errori**.  
+  
+### <a name="options"></a>Opzioni  
+ **Input o output**  
+ Consente di visualizzare il nome dell'input.  
+  
+ **Colonna**  
+ Non usato.  
+  
+ **Errore**  
+ Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncamento**  
+ Non usato.  
+  
+ **Description**  
+ Consente di visualizzare la descrizione dell'operazione.  
+  
+ **Imposta questo valore nelle celle selezionate**  
+ Consente di specificare l'azione che dovrà interessare tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Applica**  
+ Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
   

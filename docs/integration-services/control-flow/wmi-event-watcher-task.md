@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmieventwatchertask.f1
+- sql13.dts.designer.wmieventwatcher.general.f1
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-event-watcher-task"></a>Attività Monitoraggio eventi WMI
@@ -93,11 +95,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Monitoraggio eventi WMI &#40;pagina Generale&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
-  
--   [Editor attività Monitoraggio eventi WMI &#40;pagina Opzioni WMI&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -110,4 +108,75 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   
+## <a name="wmi-event-watcher-task-editor-general-page"></a>Editor attività Monitoraggio eventi WMI (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Monitoraggio eventi WMI** per specificare un nome e una descrizione per l'attività Monitoraggio eventi WMI.  
   
+ Per altre informazioni su WQL (WMI Query Language), vedere l'argomento relativo a WMI (Windows Management Instrumentation) [Query con WQL](http://go.microsoft.com/fwlink/?LinkId=79045)in MSDN Library.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Monitoraggio eventi WMI. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Monitoraggio eventi WMI.  
+  
+## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor attività Monitoraggio eventi WMI (pagina Opzioni WMI)
+  Usare la pagina **Opzioni WMI** della finestra di dialogo **Editor attività Monitoraggio eventi WM** per specificare l'origine della query WQL e la modalità di risposta dell'attività Monitoraggio eventi WMI agli eventi del servizio Strumentazione Gestione Windows (WMI).  
+  
+ Per altre informazioni su WQL (WMI Query Language), vedere l'argomento relativo a WMI (Windows Management Instrumentation) [Query con WQL](http://go.microsoft.com/fwlink/?LinkId=79045)in MSDN Library.  
+  
+### <a name="static-options"></a>Opzioni statiche  
+ **WMIConnectionName**  
+ Selezionare una gestione connessione WMI nell'elenco oppure fare clic su \< **nuova connessione WMI...** > per creare una nuova gestione connessione.  
+  
+ **Argomenti correlati**: [Gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Consente di selezionare il tipo di origine della query WQL eseguita dall'attività. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Input diretto**|Consente di impostare l'origine su una query WQL. Selezionando questo valore viene visualizzata l'opzione dinamica **WQLQuerySource**.|  
+|**Connessione file**|Consente di selezionare un file contenente la query WQL. Selezionando questo valore viene visualizzata l'opzione dinamica **WQLQuerySource**.|  
+|**Variabile**|Consente di impostare l'origine su una variabile che definisce la query WQL. Selezionando questo valore viene visualizzata l'opzione dinamica **WQLQuerySource**.|  
+  
+ **ActionAtEvent**  
+ Consente di specificare se l'evento WMI registra l'evento e inizia un'azione [!INCLUDE[ssIS](../../includes/ssis-md.md)] oppure se si limita a registrare l'evento.  
+  
+ **AfterEvent**  
+ Consente di specificare se l'attività ha esito positivo o negativo dopo avere ricevuto l'evento WMI oppure se deve continuare a monitorare l'evento per controllare se viene generato nuovamente.  
+  
+ **ActionAtTimeout**  
+ Consente di specificare se l'attività registra un timeout della query WMI e inizia un evento [!INCLUDE[ssIS](../../includes/ssis-md.md)] in risposta oppure se si limita a registrare il timeout.  
+  
+ **AfterTimeout**  
+ Consente di specificare se l'attività ha esito positivo o negativo in risposta a un timeout oppure se deve continuare il monitoraggio per controllare se viene generato un altro timeout.  
+  
+ **NumberOfEvents**  
+ Consente di specificare il numero di eventi da monitorare.  
+  
+ **Timeout**  
+ Consente di specificare il numero di secondi di attesa per la generazione dell'evento. Un valore pari a 0 significa che non è attivo alcun timeout.  
+  
+### <a name="wqlquerysource-dynamic-options"></a>Opzioni dinamiche di WQLQuerySource  
+  
+#### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Input diretto  
+ **WQLQuerySource**  
+ Consente di specificare una query o di immettere una query nella finestra di dialogo **Query WQL** visualizzata facendo clic sul pulsante (...).  
+  
+#### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Connessione file  
+ **WQLQuerySource**  
+ Selezionare una gestione connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+  
+ **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variabile  
+ **WQLQuerySource**  
+ Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+

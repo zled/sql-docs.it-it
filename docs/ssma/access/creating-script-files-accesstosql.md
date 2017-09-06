@@ -2,7 +2,7 @@
 title: Creazione di file di Script (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,15 +16,15 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="creating-script-files-accesstosql"></a>Creazione di file di Script (AccessToSQL)
+# <a name="creating-script-files-accesstosql"></a>Creazione di file di script (AccessToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e se è necessario creare il file di valore della variabile e il file di connessione del server.  
   
 Il file di script può essere suddiviso in tre sezioni, dei quali..,:  
@@ -37,14 +37,14 @@ Il file di script può essere suddiviso in tre sezioni, dei quali..,:
   
 Ogni sezione viene descritta in dettaglio di seguito:  
   
-## <a name="configuring-access-console-settings"></a>Configurazione delle impostazioni di accesso Console  
+## <a name="configuring-access-console-settings"></a>Configurazione delle impostazioni di accesso console  
 Le configurazioni di uno script vengono visualizzate nel file di script della console.  
   
 Se viene specificato uno degli elementi nel nodo configurazione, vengono impostate come l'impostazione globale, ovvero sono applicabili per tutti i comandi di script. Tali elementi di configurazione possono essere impostati anche all'interno di ogni comando della sezione del comando script se l'utente desidera eseguire l'override dell'impostazione globale.  
   
 Le opzioni configurabili dall'utente includono:  
   
-1.  **Provider di finestra di output:** se messaggi esclusione di attributo è impostato su 'true', il comando specifica i messaggi non viene visualizzati nella console. La descrizione degli attributi è indicata di seguito:  
+1.  **Il provider di finestra di output:** se messaggi esclusione di attributo è impostato su 'true', il comando specifica i messaggi non viene visualizzati nella console. La descrizione degli attributi è indicata di seguito:  
   
     -   destinazione: Specifica se l'output è necessario ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
   
@@ -353,7 +353,7 @@ Il file script contiene una sequenza di comandi del flusso di lavoro di migrazio
   
 Ad esempio, una migrazione di dati tipici di una tabella specifica in un database di Access segue la gerarchia di: Database -&gt; tabella.  
   
-Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statica con informazioni sulla variabile contenuti in un [file valore variabile](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
+Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statica con informazioni sulla variabile contenuti in un [file valore variabile](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
   
 **Esempio:**  
   
@@ -394,10 +394,10 @@ Modelli costituito da 3 file di script (per l'esecuzione di vari scenari di), fi
   
 Elenco completo dei comandi di script è reperibile [in esecuzione la Console di SSMA &#40; AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="script-file-validation"></a>Convalida File di script  
+## <a name="script-file-validation"></a>Convalida file di script  
 L'utente può facilmente convalidare il file di script nel file di definizione dello schema **'A2SSConsoleScriptSchema.xsd'** disponibile nella cartella 'Schemi'.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>Passaggio successivo
 Il passaggio successivo nella console di gestione è [creazione di file di valore variabile &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
+- sql13.dts.designer.dimprocessingtransformation.connection.f1
+- sql13.dts.designer.dimprocessingtransformation.mappings.f1
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing destination
 - loading dimensions
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32a1d596ff1395a693f8316d7a6ee1f0d8aa918
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dimension-processing-destination"></a>destinazione elaborazione dimensione
@@ -48,19 +51,123 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor destinazione elaborazione dimensione** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor destinazione elaborazione dimensione &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)  
-  
--   [Editor destinazione elaborazione dimensione &#40;pagina Mapping&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
-  
--   [Editor destinazione elaborazione dimensione &#40;pagina Avanzate&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di programmazione, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione dimensione (pagina Gestione connessione)
+  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione dimensione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  
+### <a name="options"></a>Opzioni  
+ **Connection manager**  
+ Consente di selezionare una gestione connessione esistente nell'elenco o di creare una nuova gestione connessione facendo clic su **Nuova** .  
+  
+ **Nuova**  
+ Consente di creare una nuova connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
+  
+ **Elenco delle dimensioni disponibili**  
+ Consente di selezionare la dimensione da elaborare.  
+  
+ **Metodo di elaborazione**  
+ Consente di selezionare la modalità di elaborazione da applicare alla dimensione selezionata nell'elenco. Il valore predefinito di questa opzione è **Completo**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Aggiunta (incrementale)**|Consente di eseguire un'elaborazione incrementale della dimensione.|  
+|**Completo**|Consente di eseguire un'elaborazione completa della dimensione.|  
+|**Update**|Consente di eseguire un'elaborazione di aggiornamento della dimensione.|  
+  
+## <a name="dimension-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione dimensione (pagina Mapping)
+  Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione elaborazione dimensione** per eseguire il mapping tra le colonne di input e le colonne delle dimensioni.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di visualizzare l'elenco delle colonne di input disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di input disponibili nella tabella e le colonne di destinazione.  
+  
+ **Colonne di destinazione disponibili**  
+ Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
+  
+ **Colonna di input**  
+ Consente di visualizzare le colonne di input selezionate nella tabella precedente. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**.  
+  
+ **Colonna di destinazione**  
+ Consente di visualizzare tutte le colonne di destinazione disponibili, indicando se sono mappate o meno.  
+  
+## <a name="dimension-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione dimensione (pagina Avanzate)
+  Usare la pagina **Avanzate** della finestra di dialogo **Editor destinazione elaborazione dimensione** per configurare la gestione degli errori.  
+  
+### <a name="options"></a>Opzioni  
+ **Usa configurazione errori predefinita**  
+ Consente di specificare se utilizzare la gestione degli errori predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il valore predefinito è **True**.  
+  
+ **Azione per errore chiave**  
+ Consente di specificare la modalità di gestione dei record che hanno valori di chiave non validi.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Consente di convertire il valore di chiave non valido nel valore **UnknownMember** .|  
+|**DiscardRecord**|Consente di scartare il record.|  
+  
+ **Ignora errori**  
+ Consente di specificare che gli errori devono essere ignorati.  
+  
+ **Arresta in caso di errore**  
+ Consente di specificare che l'elaborazione deve essere arrestata al verificarsi di un errore.  
+  
+ **Numero di errori**  
+ Consente di specificare la soglia di errore alla quale l'elaborazione deve arrestarsi quando è stata selezionata l'opzione **Arresta in caso di errore**.  
+  
+ **Azione in caso di errore**  
+ Consente di specificare l'azione che deve essere intrapresa al raggiungimento della soglia di errore quando è stata selezionata l'opzione **Arresta in caso di errore**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Consente di arrestare l'elaborazione.|  
+|**StopLogging**|Consente di arrestare la registrazione degli errori.|  
+  
+ **Chiave non trovata**  
+ Consente di specificare l'azione che deve essere intrapresa per un errore di chiave non trovata. Il valore predefinito è **ReportAndContinue**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Chiave duplicata**  
+ Consente di specificare l'azione che deve essere intrapresa per un errore di chiave duplicata. Il valore predefinito è **IgnoreError**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Chiave Null convertita in sconosciuta**  
+ Consente di specificare l'azione che deve essere intrapresa quando una chiave Null è stata convertita nel valore **UnknownMember** . Il valore predefinito è **IgnoreError**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Chiave Null non consentita**  
+ Consente di specificare l'azione che deve essere intrapresa quando viene incontrata una chiave Null e le chiavi Null non sono consentite. Il valore predefinito è **ReportAndContinue**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Percorso log degli errori**  
+ Consente di digitare il percorso del log degli errori o di selezionare una destinazione mediante il pulsante **Sfoglia (…)** .  
+  
+ **Sfoglia (...)**  
+ Consente di selezionare il percorso del log degli errori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)   

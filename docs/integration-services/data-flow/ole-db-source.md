@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
+- sql13.dts.designer.oledbsourceadapter.connection.f1
+- sql13.dts.designer.oledbsourceadapter.columns.f1
+- sql13.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
@@ -95,14 +98,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-source"></a>Configurazione dell'origine OLE DB  
  È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine OLE DB** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
-  
--   [Editor origine OLE DB &#40;pagina Colonne&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)  
-  
--   [Editor origine OLE DB &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -121,6 +116,118 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo di Wiki sui [connettori SSIS con Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)sul sito Web social.technet.microsoft.com.  
+  
+## <a name="ole-db-source-editor-connection-manager-page"></a>Editor origine OLE DB (pagina Gestione connessione)
+  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine OLE DB** per selezionare la gestione connessione OLE DB per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
+  
+> [!NOTE]  
+>  Per caricare dati da un'origine dati basata su [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, usare un'origine OLE DB. Non è possibile utilizzare un'origine Excel per caricare dati da un'origine dei dati Excel 2007. Per altre informazioni, vedere [Configura gestione connessione OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>   
+>  Per caricare dati da un'origine dei dati che utilizza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 o versione precedente, utilizzare un'origine Excel. Per altre informazioni, vedere [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+  
+> [!NOTE]  
+>  La proprietà **CommandTimeout** dell'origine OLE DB non è disponibile nell'**Editor origine OLE DB**, tuttavia può essere impostata usando l'**Editor avanzato**. Per ulteriori informazioni su questa proprietà, vedere la sezione relativa all'origine Excel in [Proprietà personalizzate OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Aprire l'Editor origine OLE DB (pagina Gestione connessione)  
+  
+1.  Aggiungere l'origine OLE DB al pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Fare clic con il pulsante destro del mouse sul componente di origine, quindi scegliere **Modifica**.  
+  
+3.  Fare clic su **Gestione connessione**.  
+  
+### <a name="static-options"></a>Opzioni statiche  
+ **gestione connessione OLE DB**  
+ Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
+  
+ **Modalità di accesso ai dati**  
+ Consente di specificare il metodo per la selezione dei dati dall'origine.  
+  
+|Opzione|Description|  
+|------------|-----------------|  
+|Tabella o vista|Consente di recuperare dati da una tabella o da una vista nell'origine dei dati OLE DB.|  
+|Variabile nome vista o nome tabella|Consente di specificare il nome della vista o della tabella in una variabile.<br /><br /> **Informazioni correlate:** [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Comando SQL|Consente di recuperare dati dall'origine dei dati OLE DB utilizzando una query SQL.|  
+|Comando SQL da variabile|Consente di specificare il testo della query SQL in una variabile.|  
+  
+ **Anteprima**  
+ Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'**anteprima** supporta la visualizzazione di un massimo di 200 righe.  
+  
+> [!NOTE]  
+>  Quando vengono visualizzati i dati in anteprima, le colonne con tipo definito dall'utente CLR (UDT) non contengono dati. Invece i valori \<valore troppo grande per essere visualizzato > o System. Byte []. Il primo viene visualizzato se si accede all'origine dati mediante il provider SQL OLE DB, il secondo se si usa il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Opzioni dinamiche relative alla modalità di accesso ai dati  
+  
+#### <a name="data-access-mode--table-or-view"></a>Modalità di accesso ai dati = Tabella o vista  
+ **Nome tabella o vista**  
+ Consente di selezionare il nome della tabella o della vista nell'elenco dei nomi disponibili nell'origine dei dati.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modalità di accesso ai dati = Variabile nome vista o nome tabella  
+ **Nome variabile**  
+ Consente di selezionare la variabile che contiene il nome della tabella o vista.  
+  
+#### <a name="data-access-mode--sql-command"></a>Modalità di accesso ai dati = Comando SQL  
+ **Testo comando SQL**  
+ Immettere il testo di una query SQL, fare clic su **Compila query**per compilare la query o fare clic su **Sfoglia**per individuare il file che contiene il testo della query.  
+  
+ **Parametri**  
+ Se è stata immessa una query con parametri utilizzando ? come segnaposto per il parametro nel testo della query, usare la finestra di dialogo **Imposta parametri query** per eseguire il mapping tra i parametri di input della query e le variabili del pacchetto.  
+  
+ **Build query**  
+ Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici.  
+  
+ **Sfoglia**  
+ Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
+  
+ **Analizza query**  
+ Consente di verificare la sintassi del testo della query.  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>Modalità di accesso ai dati = Comando SQL da variabile  
+ **Nome variabile**  
+ Consente di selezionare la variabile contenente il testo della query SQL.  
+  
+## <a name="ole-db-source-editor-columns-page"></a>Editor origine OLE DB (pagina Colonne)
+  Usare la pagina **Colonne** della finestra di dialogo **Editor origine OLE DB** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne esterne disponibili**  
+ Consente di visualizzare l'elenco delle colonne esterne disponibili nell'origine dei dati. Non è possibile utilizzare questa tabella per l'aggiunta o l'eliminazione di colonne.  
+  
+ **Colonna esterna**  
+ Consente di visualizzare le colonne esterne (di origine) nell'ordine in cui verranno presentate durante la configurazione di componenti che utilizzano i dati dell'origine. È possibile modificare l'ordine deselezionando innanzitutto le colonne della tabella selezionate e quindi selezionando dall'elenco le colonne esterne in un ordine diverso.  
+  
+ **Colonna di output**  
+ Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione SSIS.  
+  
+## <a name="ole-db-source-editor-error-output-page"></a>Editor origine OLE DB (pagina Output degli errori)
+  Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine OLE DB** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
+  
+### <a name="options"></a>Opzioni  
+ **Input/Output**  
+ Consente di visualizzare il nome dell'origine dei dati.  
+  
+ **Colonna**  
+ Consente di visualizzare le colonne esterne (origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine OLE DB**.  
+  
+ **Errore**  
+ Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncamento**  
+ Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Description**  
+ Consente di visualizzare la descrizione dell'errore.  
+  
+ **Imposta questo valore nelle celle selezionate**  
+ Consente di specificare l'azione che dovrà interessare tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Applica**  
+ Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](../../integration-services/data-flow/ole-db-destination.md)   

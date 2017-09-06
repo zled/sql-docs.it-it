@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Query di data mining &#40;scheda Modello di data mining&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [Editor attività Query di data mining &#40;scheda Query&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [Editor attività Query di data mining &#40;scheda Output&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  L'Editor attività Query di data mining non include la pagina Espressioni. È tuttavia possibile usare la finestra **Proprietà** per accedere agli strumenti per la creazione e la gestione di espressioni di proprietà per le proprietà dell'attività Query di data mining.  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor attività Query di data mining (scheda Modello di data mining)
+  Utilizzare la scheda **Modello di data mining** della finestra di dialogo **Editor attività Query di data mining** per specificare la struttura e il modello di data mining da utilizzare.  
   
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Opzioni generali  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Query di data mining. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Query di data mining.  
+  
+### <a name="mining-model-tab-options"></a>Opzioni della scheda Modello di data mining  
+ **Connessione**  
+ Consente di selezionare una gestione connessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'elenco o di creare una nuova gestione connessione facendo clic sul pulsante **Nuova** .  
+  
+ **Argomenti correlati:**  [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  
+ **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Struttura di data mining**  
+ Consente di selezionare una struttura di data mining nell'elenco.  
+  
+ **Modelli di data mining**  
+ Consente di selezionare un modello di data mining compilato in base alla struttura di data mining selezionata.  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>Editor attività Query di data mining (scheda Query)
+  Usare la scheda **Query** della finestra di dialogo **Attività Query di data mining** per creare query di stima basate su un modello di data mining. In questa finestra di dialogo è inoltre possibile associare parametri e set di risultati a variabili.  
+  
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Opzioni generali  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Query di data mining. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Query di data mining.  
+  
+### <a name="build-query-tab-options"></a>Opzioni della scheda Compila query  
+ **Query di data mining**  
+ Consente di digitare una query di data mining.  
+  
+ **Argomenti correlati:**  [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **Compila nuova query**  
+ Consente di creare una query di data mining utilizzando uno strumento grafico.  
+  
+ **Argomenti correlati:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>Opzioni della scheda Mapping parametri  
+ **Nome parametro**  
+ Se lo si desidera, consente di aggiornare il nome del parametro. Eseguire il mapping del parametro a una variabile selezionando una variabile nell'elenco **Nome variabile** .  
+  
+ **Nome variabile**  
+ Consente di selezionare una variabile nell'elenco per mapparla al parametro.  
+  
+ **Aggiungi**  
+ Consente di aggiungere un parametro all'elenco.  
+  
+ **Rimuovi**  
+ Selezionare un parametro e quindi fare clic su **Rimuovi**.  
+  
+### <a name="result-set-tab-options"></a>Opzioni della scheda Set dei risultati  
+ **Nome risultato**  
+ Se lo si desidera, consente di aggiornare il nome del set di risultati. Eseguire il mapping del risultato a una variabile selezionando una variabile nell'elenco **Nome variabile** .  
+  
+ Dopo aver aggiunto un risultato facendo clic su **Aggiungi**, specificare un nome univoco per il risultato.  
+  
+ **Nome variabile**  
+ Consente di selezionare una variabile nell'elenco per mapparla al set dei risultati.  
+  
+ **Tipo di risultato**  
+ Consente di indicare se restituire un singola riga o un set di risultati completo.  
+  
+ **Aggiungi**  
+ Consente di aggiungere il set di risultati all'elenco.  
+  
+ **Rimuovi**  
+ Selezionare un risultato e quindi fare clic su **Rimuovi**.  
+## <a name="data-mining-query-task-editor-output-tab"></a>Editor attività Query di data mining (Scheda Output)
+  Utilizzare la scheda **Output** della finestra di dialogo **Editor attività Query di data mining** per specificare la destinazione della query di stima.  
+  
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md) e [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Opzioni generali  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Query di data mining. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Query di data mining.  
+  
+### <a name="output-tab-options"></a>Opzioni della scheda Output  
+ **Connessione**  
+ Selezionare una gestione connessione nell'elenco oppure fare clic su **Nuova** per creare una nuova gestione connessione.  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione. È possibile utilizzare solo i tipi di gestione connessione ADO.NET e OLE DB.  
+  
+ **Tabella di output**  
+ Consente di specificare la tabella in cui la query di stima scrive i risultati.  
+  
+ **Elimina e ricrea tabella di output**  
+ Consente di indicare se la query di stima deve sovrascrivere il contenuto nella tabella di destinazione, eliminando e quindi creando di nuovo la tabella.  
+  
+

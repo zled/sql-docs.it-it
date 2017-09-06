@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
+- sql13.dts.designer.sendmailtask.general.f1
+- sql13.dts.designer.sendmailtask.mail.f1
 helpviewer_keywords:
 - mail [Integration Services]
 - Send Mail task
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
@@ -71,11 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-send-mail-task"></a>Configurazione dell'attività Invia messaggi  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Invia messaggi &#40;pagina Generale&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
-  
--   [Editor attività Invia messaggi &#40;pagina Messaggio&#41;](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
+ Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -89,6 +87,81 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](http://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
+  
+## <a name="send-mail-task-editor-general-page"></a>Editor attività Invia messaggi (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Invia messaggi** per assegnare un nome all'attività Invia messaggi e descriverla.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Invia messaggi. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+ **Nota** i nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Invia messaggi.  
+  
+## <a name="send-mail-task-editor-mail-page"></a>Editor attività Invia messaggi (pagina Messaggio)
+  Usare la pagina **Messaggio** della finestra di dialogo **Editor attività Invia messaggi** per specificare i destinatari, il tipo di messaggio e la priorità relativi a un messaggio. È inoltre possibile allegare file al messaggio. Il testo del messaggio può essere una stringa specificata, una connessione a un file che contiene il testo o il nome di una variabile che contiene il testo.  
+  
+### <a name="options"></a>Opzioni  
+ **SMTPConnection**  
+ Selezionare una gestione connessione SMTP nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova gestione connessione.  
+  
+> [!IMPORTANT]  
+>  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
+  
+ **Argomenti correlati:** [Gestione connessione SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)  
+  
+ **From**  
+ Consente di specificare l'indirizzo di posta elettronica del mittente.  
+  
+ **Per**  
+ Consente di specificare gli indirizzi di posta elettronica dei destinatari, separati da punti e virgola.  
+  
+ **Cc**  
+ Consente di specificare gli indirizzi di posta elettronica, separati da punti e virgola, di altri destinatari che riceveranno copie del messaggio.  
+  
+ **Bcc**  
+ Consente di specificare gli indirizzi di posta elettronica, separati da punti e virgola, di destinatari in copia nascosta che riceveranno copie del messaggio.  
+  
+ **Oggetto**  
+ Consente di specificare l'oggetto del messaggio di posta elettronica.  
+  
+ **MessageSourceType**  
+ Consente di selezionare il tipo di origine del messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Input diretto**|Consente di impostare l'origine sul testo del messaggio. Selezionando questo valore, verrà visualizzata l'opzione dinamica **MessageSource**.|  
+|**Connessione file**|Consente di impostare l'origine sul file contenente il testo del messaggio. Selezionando questo valore, verrà visualizzata l'opzione dinamica **MessageSource**.|  
+|**Variabile**|Consente di impostare l'origine su una variabile contenente il testo del messaggio. Selezionando questo valore, verrà visualizzata l'opzione dinamica **MessageSource**.|  
+  
+ **Priorità**  
+ Consente di impostare il livello di priorità del messaggio.  
+  
+ **Allegati**  
+ Consente di specificare i nomi file degli allegati del messaggio di posta elettronica, separati dal carattere di barra verticale (|).  
+  
+> [!NOTE]  
+>  Le righe A, Cc e Ccn sono limitate a 256 caratteri, in conformità con gli standard Internet.  
+  
+### <a name="messagesourcetype-dynamic-options"></a>Opzioni dinamiche MessageSourceType  
+  
+#### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Input diretto  
+ **MessageSource**  
+ Digitare il testo del messaggio oppure fare clic sul pulsante Sfoglia (…), quindi digitare il messaggio nella finestra di dialogo **Origine messaggio** .  
+  
+#### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Connessione file  
+ **MessageSource**  
+ Selezionare una gestione connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+  
+ **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="messagesourcetype--variable"></a>MessageSourceType = Variabile  
+ **MessageSource**  
+ Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

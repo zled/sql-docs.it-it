@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
+- sql13.dts.designer.bulkinserttask.connection.f1
+- sql13.dts.designer.bulkinserttask.general.f1
+- sql13.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
@@ -91,13 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Inserimento bulk &#40;pagina Generale&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [Editor attività Inserimento bulk &#40;Pagina Connessione&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [Editor attività Inserimento bulk &#40;pagina Opzioni&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -121,4 +118,103 @@ ms.lasthandoff: 08/03/2017
   
 -   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](http://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
   
+## <a name="bulk-insert-task-editor-connection-page"></a>Editor attività Inserimento bulk (pagina Connessione)
+  Usare la pagina **Connessione** della finestra di dialogo **Editor attività Inserimento bulk** per specificare l'origine e la destinazione dell'operazione di inserimento bulk e il formato da usare.  
   
+ Per altre informazioni sulle operazioni di inserimento bulk, vedere [Attività Inserimento bulk](../../integration-services/control-flow/bulk-insert-task.md) e [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Connessione**  
+ Selezionare una gestione connessione OLE DB nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova connessione.  
+  
+ **Argomenti correlati:** [gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **DestinationTable**  
+ Consente di digitare il nome della tabella o della vista di destinazione o di selezionare una tabella o una vista nell'elenco.  
+  
+ **Formato**  
+ Consente di selezionare l'origine del formato per l'inserimento bulk. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Usa file**|Consente di selezionare un file contenente la specifica di formato. Selezionando questa opzione viene visualizzata l'opzione dinamica **FormatFile**.|  
+|**Specifica**|Consente di specificare il formato. Selezionando questa opzione vengono visualizzate le opzioni dinamiche **RowDelimiter** e **ColumnDelimiter**.|  
+  
+ **File**  
+ Selezionare una gestione connessione File o File Flat nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova connessione.  
+  
+ Il percorso del file è relativo al Motore di database di SQL Server specificato nella gestione connessione per questa attività. Il file di testo deve essere accessibile dal Motore di database di SQL Server in un disco rigido locale sul server oppure tramite un'unità condivisa o di cui è stato eseguito il mapping a SQL Server. Non è possibile accedere al file tramite SSIS Runtime.  
+  
+ Se si accede al file di origine utilizzando una gestione connessione file flat, l'attività Inserimento bulk non utilizzerà il formato specificato nella gestione connessione file flat, ma userà il formato specificato in un file di formato o i valori delle proprietà RowDelimiter e ColumnDelimiter dell'attività.  
+  
+ **Argomenti correlati:** [gestione connessione File](../../integration-services/connection-manager/file-connection-manager.md), [gestione connessione File Flat](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **Aggiorna tabelle**  
+ Consente di aggiornare l'elenco di tabelle e di viste.  
+  
+### <a name="format-dynamic-options"></a>Opzioni dinamiche di Format  
+  
+#### <a name="format--use-file"></a>Format = Usa file  
+ **FormatFile**  
+ Digitare il percorso del file di formato oppure fare clic sui puntini di sospensione **(…)** per trovare il file di formato.  
+  
+#### <a name="format--specify"></a>Format = Specifica  
+ **RowDelimiter**  
+ Consente di specificare il delimitatore di riga nel file di origine. Il valore predefinito è **{CR}{LF}**.  
+  
+ **ColumnDelimiter**  
+ Consente di specificare il delimitatore di colonna nel file di origine. Il valore predefinito è **Tabulazione**.  
+  
+## <a name="bulk-insert-task-editor-general-page"></a>Editor attività Inserimento bulk (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Inserimento bulk** per assegnare un nome e una descrizione all'attività Inserimento bulk.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Inserimento bulk. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Inserimento bulk.  
+ 
+## <a name="bulk-insert-task-editor-options-page"></a>Editor attività Inserimento bulk (pagina Opzioni)
+  Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk consente di copiare grandi quantità di dati all'interno di una vista o tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+ Per altre informazioni sull'uso degli inserimenti di massa, vedere [Attività Inserimento bulk](../../integration-services/control-flow/bulk-insert-task.md) e [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+  
+### <a name="options"></a>Opzioni  
+ **CodePage**  
+ Consente di specificare la tabella codici dei dati contenuti nel file.  
+  
+ **DataFileType**  
+ Consente di specificare il valore di tipo di dati da utilizzare nell'operazione di caricamento.  
+  
+ **BatchSize**  
+ Consente di specificare il numero di righe di un batch. Il valore predefinito è l'intero file di dati. Se si imposta **BatchSize** su zero, i dati vengono caricati in un singolo batch.  
+  
+ **LastRow**  
+ Consente di specificare l'ultima riga da copiare.  
+  
+ **FirstRow**  
+ Consente di specificare la riga dalla quale iniziare la copia.  
+  
+ **Opzioni**  
+ |Nome|Definizione|  
+|----------|----------------|  
+|**Vincoli CHECK**|Selezionare questa opzione per verificare i vincoli di colonna e tabella.|  
+|**Mantieni valori Null**|Selezionare questa opzione per mantenere i valori Null durante l'operazione di inserimento bulk anziché inserire tutti i valori predefiniti per le colonne vuote.|  
+|**Consenti IDENTITY_INSERT**|Selezionare questa opzione per inserire valori esistenti in una colonna Identity.|  
+|**Blocco a livello di tabella**|Selezionare questa opzione per bloccare la tabella durante l'inserimento bulk.|  
+|**Attive trigger**|Selezionare questa opzione per attivare tutti i trigger di eliminazione, aggiornamento o inserimento nella tabella.|  
+  
+ **SortedData**  
+ Consente di specificare la clausola ORDER BY nell'istruzione di inserimento bulk. Il nome della colonna deve corrispondere a una colonna valida della tabella di destinazione. Il valore predefinito è **false**. Questo valore implica che i dati non vengono ordinati da una clausola ORDER BY.  
+  
+ **MaxErrors**  
+ Consente di specificare il numero massimo di errori che possono verificarsi prima dell'annullamento dell'operazione di inserimento bulk. Un valore pari a 0 indica che è consentito un numero infinito di errori.  
+  
+> [!NOTE]  
+>  Ogni riga che non è possibile importare tramite l'operazione di caricamento bulk viene considerata un errore.  
+  
+

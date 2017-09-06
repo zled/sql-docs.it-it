@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], Flat File
 - text file reading [Integration Services]
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d3dd55338815b6b99ce0a1002a174af11984
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-source"></a>origine file flat
@@ -57,14 +60,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-source"></a>Configurazione dell'origine file flat  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine file flat** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor origine file flat &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)  
-  
--   [Editor origine file flat &#40;pagina Colonne&#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)  
-  
--   [Editor origine file flat &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,6 +68,71 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostare le proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="flat-file-source-editor-connection-manager-page"></a>Editor origine file flat (pagina Gestione connessione)
+  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor origine file flat** per selezionare la gestione connessione file flat per l'origine da utilizzare. L'origine file flat legge i dati da un file di testo. I dati possono essere in formato delimitato, a larghezza fissa o misto.  
+  
+ Un'origine file flat può utilizzare uno dei tipi seguenti di gestione connessione:  
+  
+-   Gestione connessione file flat se l'origine è un singolo file flat. Per ulteriori informazioni, vedere [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+-   Gestione connessione per più file flat se l'origine è data da più file flat e l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file. Per ulteriori informazioni, vedere [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Flat file connection manager**  
+ Consente di selezionare una gestione connessione esistente nell'elenco o di creare una nuova gestione connessione facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una nuova gestione connessione usando la finestra di dialogo **Editor gestione connessione file flat** .  
+  
+ **Mantieni i valori Null dell'origine come valori Null nel flusso di dati**  
+ Consente di specificare se mantenere i valori Null durante l'estrazione dei dati. Il valore predefinito della proprietà è **false**. Quando questo valore è f**alse**, l'origine del file flat sostituisce i valori Null dai dati di origine con i valori predefiniti corretti per ogni colonna, ad esempio stringhe vuote per colonne con stringhe e zero per colonne numeriche.  
+  
+ **Anteprima**  
+ Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
+  
+## <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
+  Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
+  
+> [!NOTE]  
+>  La proprietà **FileNameColumnName** dell'origine file flat e la proprietà **FastParse** delle relative colonne di output non sono disponibili nell' **Editor origine file flat**, tuttavia possono essere impostate utilizzando l' **Editor avanzato**. Per ulteriori informazioni su queste proprietà, vedere la sezione relativa all'origine file flat in [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne esterne disponibili**  
+ Consente di visualizzare l'elenco delle colonne esterne disponibili nell'origine dei dati. Non è possibile utilizzare questa tabella per l'aggiunta o l'eliminazione di colonne.  
+  
+ **Colonna esterna**  
+ Consente di visualizzare le colonne esterne (origine) nell'ordine in cui verranno lette dall'attività. È possibile modificare l'ordine deselezionando innanzitutto le colonne della tabella selezionate e quindi selezionando dall'elenco le colonne esterne in un ordine diverso.  
+  
+ **Colonna di output**  
+ Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="flat-file-source-editor-error-output-page"></a>Editor origine file flat (pagina Output degli errori)
+  Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine file flat** per selezionare le opzioni di gestione degli errori e impostare le proprietà nelle colonne di output degli errori.\  
+  
+### <a name="options"></a>Opzioni  
+ **Input/Output**  
+ Consente di visualizzare il nome dell'origine dei dati.  
+  
+ **Colonna**  
+ Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine file flat**.  
+  
+ **Errore**  
+ Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncamento**  
+ Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Description**  
+ Consente di visualizzare la descrizione dell'errore.  
+  
+ **Imposta questo valore nelle celle selezionate**  
+ Consente di specificare l'azione che dovrà interessare tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Applica**  
+ Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione file flat](../../integration-services/data-flow/flat-file-destination.md)   

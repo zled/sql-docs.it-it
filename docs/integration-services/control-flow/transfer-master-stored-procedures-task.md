@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
+- sql13.dts.designer.transferstoredprocedurestask.general.f1
+- sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309790e8ac39e9ac978c56bc451cfd68c5e3c75
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 83001193fc8cedf13bf7425d6b8bae88ac09c987
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Attività Trasferisci stored procedure master
@@ -66,11 +68,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Configurazione dell'attività Trasferisci stored procedure master  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Trasferisci stored procedure master &#40;pagina Generale&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
-  
--   [Editor attività Trasferisci stored procedure master &#40;pagina Stored procedure&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+ Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -83,7 +81,58 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor attività Trasferisci stored procedure master (pagina Generale)
+  Usare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci stored procedure master** per assegnare un nome e una descrizione all'attività Trasferisci stored procedure master.  
+  
+> [!NOTE]  
+>  L'attività consente solo il trasferimento di stored procedure appartenenti a **dbo** da un database **master** del server di origine a un database **master** del server di destinazione. Per poter creare stored procedure nel server di destinazione, gli utenti devono disporre dell'autorizzazione CREATE PROCEDURE nel database **master** del server di destinazione o essere membri del ruolo predefinito del server **sysadmin** nel server di destinazione.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di digitare un nome univoco per l'attività Trasferisci stored procedure master. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Trasferisci stored procedure master.  
+  
+## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor attività Trasferisci stored procedure master (pagina Stored procedure)
+  Usare la pagina **Stored procedure** della finestra di dialogo **Editor attività Trasferisci stored procedure master** per specificare le proprietà per la copia di una o più stored procedure definite dall'utente dal database **master** di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un database **master** di un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+> [!NOTE]  
+>  L'attività consente solo il trasferimento di stored procedure appartenenti a **dbo** da un database **master** del server di origine a un database **master** del server di destinazione. Per poter creare stored procedure nel server di destinazione, gli utenti devono disporre dell'autorizzazione CREATE PROCEDURE nel database **master** del server di destinazione o essere membri del ruolo predefinito del server **sysadmin** nel server di destinazione.  
+  
+### <a name="options"></a>Opzioni  
+ **SourceConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di origine.  
+  
+ **DestinationConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di destinazione.  
+  
+ **IfObjectExists**  
+ Selezionare la modalità con cui l'attività deve gestire le stored procedure definite dall'utente che hanno lo stesso nome di stored procedure già esistenti nel database **master** del server di destinazione.  
+  
+ Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**FailTask**|L'attività viene interrotta se nel database **master** del server di destinazione esistono già stored procedure con lo stesso nome.|  
+|**Overwrite**|L'attività sovrascrive le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
+|**Skip**|L'attività ignora le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
+  
+ **TransferAllStoredProcedures**  
+ Selezionare un valore per indicare se nel server di destinazione debbano essere copiate tutte le stored procedure definite dall'utente nel database **master** del server di origine.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**True**|Copia tutte le stored procedure definite dall'utente nel database **master** .|  
+|**False**|Copia solo le stored procedure specificate.|  
+  
+ **StoredProceduresList**  
+ Selezionare le stored procedure definite dall'utente nel database **master** del server di origine da copiare nel database **master** del server di destinazione. Questa opzione è disponibile solo quando la proprietà **TransferAllStoredProcedures** è impostata su **False**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Trasferisci oggetti di SQL Server](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   

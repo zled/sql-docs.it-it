@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Attività Esegui DDL Analysis Services
@@ -220,11 +222,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Configurazione dell'attività Esegui DDL Analysis Services  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Esegui DDL Analysis Services &#40;pagina Generale&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Editor attività Esegui DDL Analysis Services &#40;pagina DDL&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -237,4 +235,53 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor attività Esegui DDL Analysis Services (pagina Generale)
+  Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** per assegnare un nome e una descrizione all'attività Esegui DDL [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Esegui DDL [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione per l'attività Esegui DDL Analysis Services di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor attività Esegui DDL Analysis Services (pagina DDL)
+  La pagina **DDL** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** consente di specificare una connessione a un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per offrire informazioni sull'origine delle istruzioni DDL (Data Definition Language).  
+  
+### <a name="static-options"></a>Opzioni statiche  
+ **Connessione**  
+ Selezionare un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto o un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gestione connessione nell'elenco oppure fare clic su \< **nuova connessione...** > e utilizzare il **Aggiungi gestione connessione Analysis Services** la finestra di dialogo per creare una nuova connessione.  
+  
+ **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ Consente di specificare il tipo di origine delle istruzioni DDL. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Direct Input**|Consente di impostare l'origine sull'istruzione DDL archiviata nella casella di testo **SourceDirect** . Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche illustrate nella sezione seguente.|  
+|**File Connection**|Consente di impostare l'origine su un file contenente l'istruzione DDL. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche illustrate nella sezione seguente.|  
+|**Variabile**|Consente di impostare l'origine su una variabile. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche illustrate nella sezione seguente.|  
+  
+### <a name="dynamic-options"></a>Opzioni dinamiche  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = Direct Input  
+ **Origine**  
+ Digitare le istruzioni DDL o fare clic sul pulsante con i puntini di sospensione **(…)** e quindi digitare le istruzioni nella finestra di dialogo **Istruzioni DDL** .  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
+ **Origine**  
+ Selezionare una connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > e utilizzare il **gestione connessione File** la finestra di dialogo per creare una nuova connessione.  
+  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = Variable  
+ **Origine**  
+ Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...** > e utilizzare il **Aggiungi variabile** la finestra di dialogo per creare una nuova variabile.  
+  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
+  
+

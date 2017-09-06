@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
+- sql13.dts.designer.executeprocesstask.general.f1
+- sql13.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
@@ -40,12 +42,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="configuration-of-the-execute-process-task"></a>Configurazione dell'attività Esegui processo  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
-  
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Esegui processo &#40;pagina Generale&#41;](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
-  
--   [Editor attività Esegui processo &#40;pagina Processo&#41;](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
@@ -89,6 +85,61 @@ ms.lasthandoff: 08/03/2017
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
+  
+## <a name="execute-process-task-editor-general-page"></a>Editor attività Esegui processo (pagina Generale)
+  Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui processo** per assegnare un nome e una descrizione all'attività Esegui processo.  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Esegui processo. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Esegui processo.  
+  
+## <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
+  Utilizzare la pagina **Processo** della finestra di dialogo **Editor attività Esegui processo** per configurare le opzioni di esecuzione del processo. Tali opzioni includono il file eseguibile da avviare, il relativo percorso, gli argomenti del prompt dei comandi, nonché le variabili per la generazione dell'input e l'acquisizione dell'output.  
+  
+### <a name="options"></a>Opzioni  
+ **RequireFullFileName**  
+ Consente di indicare se l'attività deve avere esito negativo nel caso in cui il file eseguibile non venga trovato nel percorso specificato.  
+  
+ **File eseguibile**  
+ Consente di digitare il nome del file eseguibile da avviare.  
+  
+ **Argomenti**  
+ Consente di specificare gli argomenti del prompt dei comandi.  
+  
+ **WorkingDirectory**  
+ Consente di digitare il percorso della cartella contenente il file eseguibile. È inoltre possibile fare clic sul pulsante con i puntini di sospensione **(…)** per selezionare la cartella.  
+  
+ **StandardInputVariable**  
+ Selezionare una variabile per fornire input per il processo, fare clic su \< **nuova variabile...** > per creare una nuova variabile:  
+  
+ **Argomenti correlati:** [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+ **StandardOutputVariable**  
+ Selezionare una variabile per acquisire l'output del processo, fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+  
+ **StandardErrorVariable**  
+ Selezionare una variabile per acquisire l'output degli errori di elaborazione, fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+  
+ **FailTaskIfReturnCodeIsNotSuccessValue**  
+ Consente di indicare se l'attività deve avere esito negativo nel caso in cui il codice di uscita del processo non corrisponda al valore specificato in **SuccessValue**.  
+  
+ **SuccessValue**  
+ Consente di specificare il valore restituito dal file eseguibile per segnalare l'esito positivo. Per impostazione predefinita, questo valore è impostato su **0**.  
+  
+ **TimeOut**  
+ Consente di specificare il numero di secondi di esecuzione del processo. Il valore **0** indica che non è previsto alcun timeout e il processo viene eseguito fino al completamento o finché non si verifica un errore.  
+  
+ **TerminateProcessAfterTimeOut**  
+ Consente di indicare se il processo deve essere terminato allo scadere del periodo di timeout specificato nell'opzione **TimeOut** . Questa opzione è disponibile solo se **TimeOut** non è impostata su **0**.  
+  
+ **WindowStyle**  
+ Consente di specificare lo stile della finestra in cui viene eseguito il processo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

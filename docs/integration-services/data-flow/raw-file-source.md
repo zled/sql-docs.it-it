@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfilesource.f1
+- sql13.dts.designer.rawfilesourceconnectionmanager.f1
+- sql13.dts.designer.rawfilesourcecolumns.f1
 helpviewer_keywords:
 - sources [Integration Services], Raw File
 - raw data [Integration Services]
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ea51c506ebda4ea06da6938f68ae91c655bb3ce
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 14608c3bbf570ecfa4cbc0d45d2961ea7ab48a4d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-source"></a>origine file non elaborato
@@ -57,6 +59,10 @@ ms.lasthandoff: 08/03/2017
   
 -   Post di blog sugli [aspetti positivi dei file non elaborati](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)nel sito Web sqlservercentral.com.  
   
+## <a name="raw-file-source-editor-connection-manager-page"></a>Editor origine file non elaborato (pagina Gestione connessione)
+  L'origine file non elaborato legge i dati non elaborati da un file. Poiché la rappresentazione dei dati è nativa per l'origine, non è necessaria alcuna conversione e quasi nessuna analisi dei dati.   
+## <a name="raw-file-source-editor-columns-page"></a>Editor origine file non elaborato (pagina Colonne)
+  L'origine file non elaborato legge i dati non elaborati da un file. Poiché la rappresentazione dei dati è nativa per l'origine, non è necessaria alcuna conversione e quasi nessuna analisi dei dati.   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione file non elaborato](../../integration-services/data-flow/raw-file-destination.md)   
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  

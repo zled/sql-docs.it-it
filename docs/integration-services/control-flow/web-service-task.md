@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
@@ -66,13 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Servizio Web &#40;pagina Generale&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Editor attività Servizio Web &#40;pagina Input&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Editor attività Servizio Web &#40;pagina Output&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +81,107 @@ ms.lasthandoff: 08/03/2017
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
+  
+## <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
+  Usare la pagina **Generale** della finestra di dialogo **Editor attività Servizio Web** per specificare una gestione connessione HTTP e il percorso del file WSDL (Web Services Description Language) usato dall'attività Servizio Web, descrivere l'attività Servizio Web e scaricare il file WSDL.  
+  
+### <a name="options"></a>Opzioni  
+ **HTTPConnection**  
+ Selezionare una gestione connessione nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+  
+> [!IMPORTANT]  
+>  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
+  
+ **Argomenti correlati**: [Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **WSDLFile**  
+ Consente di digitare il percorso completo di un file WSDL presente localmente nel computer o di trovare il file usando il pulsante Sfoglia **(…)** .  
+  
+ Sezionare il file WSDL presente nel computer, se è già stato scaricato manualmente. Se invece il file WSDL non è stato ancora scaricato, attenersi alla seguente procedura:  
+  
+-   Creare un file vuoto con l'estensione di file "wsdl".  
+  
+-   Selezionare questo file vuoto per l'opzione **WSDLFile** .  
+  
+-   Impostare il valore di **OverwriteWSDLFile** su **True** per consentire al file vuoto di essere sovrascritto con il file WSDL effettivo.  
+  
+-   Fare clic su **Scarica WSDL** per scaricare il file WSDL effettivo e sovrascrivere il file vuoto.  
+  
+    > [!NOTE]  
+    >  L'opzione **Scarica WSDL** non è abilitato fino a quando non si fornisce il nome di un file locale esistente nella casella **WSDLFile** .  
+  
+ **OverwriteWSDLFile**  
+ Consente di specificare se il file WSDL per l'attività Servizio Web può essere sovrascritto.  
+  
+ Se si intende scaricare il file WSDL tramite il pulsante **Scarica WSDL** , impostare questo valore su **True**.  
+  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività Servizio Web. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Servizio Web.  
+  
+ **Scarica WSDL**  
+ Consente di scaricare il file WSDL.  
+  
+ Questo pulsante non è attivato fino a quando non si fornisce il nome di un file locale esistente nella casella **WSDLFile** .  
+  
+## <a name="web-service-task-editor-input-page"></a>Editor attività Servizio Web (pagina Input)
+  Utilizzare la pagina **Input** della finestra di dialogo **Editor attività Servizio Web** per specificare il servizio Web, il metodo Web e i valori da fornire come input al metodo Web. I valori possono essere immessi digitando direttamente le stringhe nella colonna Valore o selezionando le variabili nella colonna Valore.  
+  
+### <a name="options"></a>Opzioni  
+ **Servizio**  
+ Consente di selezionare un servizio Web nell'elenco da utilizzare per l'esecuzione del metodo Web.  
+  
+ **Metodo**  
+ Consente di selezionare nell'elenco il metodo Web che l'attività deve eseguire.  
+  
+ **WebMethodDocumentation**  
+ Digitare la descrizione del metodo Web oppure fare clic sul pulsante Sfoglia **(…)** e quindi digitare la descrizione nella finestra di dialogo **Documentazione metodo Web** .  
+  
+ **Nome**  
+ Elenca i nomi degli input per il metodo Web.  
+  
+ **Tipo**  
+ Elenca il tipo di dati degli input.  
+  
+> [!NOTE]  
+>  L'attività Servizio Web supporta unicamente i parametri dei tipi di dati seguenti: tipi primitivi come ad esempio valori integer e stringhe, matrici e sequenze di tipi primitivi ed enumerazioni.  
+  
+ **Variabile**  
+ Selezionare le caselle di controllo per utilizzare le variabili per l'invio degli input.  
+  
+ **Valore**  
+ Se le caselle di controllo Variabile sono selezionate, selezionare le variabili nell'elenco per l'invio degli input. In caso contrario, digitare i valori da utilizzare negli input.  
+  
+## <a name="web-service-task-editor-output-page"></a>Editor attività Servizio Web (pagina Output)
+  Usare la pagina **Output** della finestra di dialogo **Editor attività Servizio Web** per specificare la posizione in cui archiviare il risultato restituito dal metodo Web.  
+  
+### <a name="static-options"></a>Opzioni statiche  
+ **OutputType**  
+ Consente di selezionare il tipo di archiviazione da utilizzare per l'archiviazione dei risultati. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**File Connection**|Consente di archiviare i risultati in un file. La selezione di questo valore determina la visualizzazione dell'opzione dinamica **File**.|  
+|**Variabile**|Consente di archiviare i risultati in una variabile. La selezione di questo valore determina la visualizzazione dell'opzione dinamica **Variabile**.|  
+  
+### <a name="outputtype-dynamic-options"></a>Opzioni dinamiche di OutputType  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = Connessione file  
+ **File**  
+ Selezionare una gestione connessione File nell'elenco oppure fare clic su \< **nuova connessione...** > per creare una nuova gestione connessione.  
+  
+ **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = Variabile  
+ **Variabile**  
+ Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...** > per creare una nuova variabile.  
+  
+ **Argomenti correlati:**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642)sul sito technet.microsoft.com.  

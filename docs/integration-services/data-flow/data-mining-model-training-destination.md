@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
+- sql13.dts.designer.dmmtrainingtransformation.connection.f1
+- sql13.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - destinations [Integration Services], Data Mining Model Training
 - Data Mining Model Training destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="data-mining-model-training-destination"></a>Training modello di data mining - destinazione
@@ -43,12 +45,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor training modelli di data mining** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor training modelli di data mining &#40;scheda Connessione&#41;](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [Editor training modelli di data mining &#40;scheda Colonne&#41;](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -57,4 +53,39 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-model-training-editor-connection-tab"></a>Editor training modelli di data mining (scheda Connessione)
+  Utilizzare la pagina **Connessione** della finestra di dialogo **Editor training modelli di data mining** per selezionare un modello di mining per cui eseguire il training.  
   
+### <a name="options"></a>Opzioni  
+ **Gestione connessione**  
+ Selezionare una connessione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente dall'elenco oppure creare una nuova connessione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando il pulsante **Nuova** descritto di seguito.  
+  
+ **Nuova**  
+ Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
+  
+ **Struttura di data mining**  
+ Selezionare una struttura di data mining dall'elenco di quelle disponibili oppure creare una nuova struttura facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una nuova struttura e un nuovo modello di data mining mediante la **Creazione guidata modello di data mining**.  
+  
+ **Modelli di data mining**  
+ Consente di visualizzare l'elenco dei modelli di data mining associati alla struttura di data mining selezionata.  
+  
+## <a name="data-mining-model-training-editor-columns-tab"></a>Editor training modelli di data mining (scheda Colonne)
+  Utilizzare la pagina **Colonne** della finestra di dialogo **Editor training modelli di data mining** per eseguire il mapping tra le colonne di input e le colonne della struttura di data mining.  
+  
+## <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di visualizzare l'elenco delle colonne di input disponibili. Trascinare le colonne di input per eseguirne il mapping alle colonne della struttura di data mining.  
+  
+ **Colonne della struttura di data mining**  
+ Consente di visualizzare l'elenco delle colonne della struttura di data mining. Trascinare le colonne della struttura di data mining per eseguirne il mapping alle colonne di input disponibili.  
+  
+ **Colonna di input**  
+ Consente di visualizzare le colonne di input selezionate nella tabella precedente. Per modificare o eliminare una selezione di mapping, utilizzare l'elenco **Colonne di input disponibili**.  
+  
+ **Colonne della struttura di data mining**  
+ Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che ne venga eseguito il mapping.  
+  
+

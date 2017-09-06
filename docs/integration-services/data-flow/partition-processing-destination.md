@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
+- sql13.dts.designer.partprocessingtransformation.connection.f1
+- sql13.dts.designer.partprocessingtransformation.mapping.f1
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - partitions [Analysis Services], processing
 - Partition Processing destination [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036b792f9895c6b5d56438ce52455aeb5622e0ba
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="partition-processing-destination"></a>Destinazione elaborazione partizione
@@ -50,14 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor destinazione elaborazione partizione** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor destinazione elaborazione partizione &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md)  
-  
--   [Editor destinazione elaborazione partizione &#40;pagina Mapping&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
-  
--   [Editor destinazione elaborazione partizione &#40;pagina Avanzate&#41;](../../integration-services/data-flow/partition-processing-destination-editor-advanced-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -66,4 +61,127 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione partizione (pagina Gestione connessione)
+  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione partizione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
+> [!NOTE]  
+>  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
+  
+### <a name="options"></a>Opzioni  
+ **Connection manager**  
+ Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
+  
+ **Elenco delle partizioni disponibili**  
+ Consente di selezionare la partizione da elaborare.  
+  
+ **Metodo di elaborazione**  
+ Consente di selezionare il metodo di elaborazione. Il valore predefinito di questa opzione è **Completo**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Aggiunta (incrementale)|Consente di eseguire un'elaborazione incrementale della partizione.|  
+|Completo|Consente di eseguire l'elaborazione completa della partizione.|  
+|Solo dati|Consente di eseguire un'elaborazione di aggiornamento della partizione.|  
+  
+## <a name="partition-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione partizione (pagina Mapping)
+  Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione elaborazione partizione** per eseguire il mapping tra le colonne di input e le colonne di partizione.  
+  
+> [!NOTE]  
+>  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di visualizzare l'elenco delle colonne di input disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di input disponibili nella tabella e le colonne di destinazione.  
+  
+ **Colonne di destinazione disponibili**  
+ Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
+  
+ **Colonna di input**  
+ Consente di visualizzare le colonne di input selezionate nella tabella precedente. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**.  
+  
+ **Colonna di destinazione**  
+ Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
+  
+## <a name="partition-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione partizione (pagina Avanzate)
+  Utilizzare la pagina **Avanzate** della finestra di dialogo **Editor destinazione elaborazione partizione** per configurare la gestione degli errori.  
+  
+> [!NOTE]  
+>  Le attività qui descritte non si applicano ai modelli tabulari di Analysis Services.  Non è possibile eseguire il mapping di colonne di input a colonne di partizione per i modelli tabulari. È possibile utilizzare invece l'attività Esegui DDL Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) per elaborare la partizione.  
+  
+### <a name="options"></a>Opzioni  
+ **Usa configurazione errori predefinita**  
+ Consente di specificare se utilizzare la gestione degli errori predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il valore predefinito è **True**.  
+  
+ **Azione per errore chiave**  
+ Consente di specificare la modalità di gestione dei record che hanno valori di chiave non validi.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Consente di convertire il valore di chiave non valido nel valore Sconosciuto.|  
+|**DiscardRecord**|Consente di scartare il record.|  
+  
+ **Ignora errori**  
+ Consente di specificare che gli errori devono essere ignorati.  
+  
+ **Arresta in caso di errore**  
+ Consente di specificare che l'elaborazione deve essere arrestata al verificarsi di un errore.  
+  
+ **Numero di errori**  
+ Consente di specificare la soglia di errore alla quale l'elaborazione deve arrestarsi quando è stata selezionata l'opzione **Arresta in caso di errore**.  
+  
+ **Azione in caso di errore**  
+ Consente di specificare l'azione che deve essere intrapresa al raggiungimento della soglia di errore quando è stata selezionata l'opzione **Arresta in caso di errore**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Consente di arrestare l'elaborazione.|  
+|**StopLogging**|Consente di arrestare la registrazione degli errori.|  
+  
+ **Chiave non trovata**  
+ Consente di specificare l'azione che deve essere intrapresa per un errore di chiave non trovata. Il valore predefinito è **ReportAndContinue**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Chiave duplicata**  
+ Consente di specificare l'azione che deve essere intrapresa per un errore di chiave duplicata. Il valore predefinito è **IgnoreError**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Chiave Null convertita in sconosciuta**  
+ Consente di specificare l'azione che deve essere intrapresa quando una chiave Null è stata convertita nel valore Sconosciuto. Il valore predefinito è **IgnoreError**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Chiave Null non consentita**  
+ Consente di specificare l'azione che deve essere intrapresa quando viene incontrata una chiave Null e le chiavi Null non sono consentite. Il valore predefinito è **ReportAndContinue**.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
+|**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
+|**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
+  
+ **Percorso log degli errori**  
+ Consente di digitare il percorso del log degli errori o di selezionare una destinazione usando il pulsante Sfoglia **(...)** .  
+  
+ **Sfoglia (...)**  
+ Consente di selezionare il percorso del log degli errori.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Errori di Integration Services e riferimento ai messaggi](../../integration-services/integration-services-error-and-message-reference.md)   
+

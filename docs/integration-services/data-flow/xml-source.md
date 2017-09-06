@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>Origine XML
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine XML** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor origine XML &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [Editor origine XML &#40;pagina Colonne&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [Editor origine XML &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -94,6 +89,88 @@ ms.lasthandoff: 08/03/2017
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
 -   [Impostare le proprietà di un componente del flusso di dati](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="xml-source-editor-connection-manager-page"></a>Editor origine XML (pagina Gestione connessione)
+  Utilizzare la pagina **Gestione connessione** di **Editor origine XML** per specificare un file XML e il file XSD che trasforma i dati XML.  
+  
+### <a name="static-options"></a>Opzioni statiche  
+ **Modalità di accesso ai dati**  
+ Consente di specificare il metodo per la selezione dei dati dall'origine.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|Percorso file XML|Consente di recuperare i dati da un file XML.|  
+|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Dati XML da variabile|Consente di recuperare i dati XML da una variabile.|  
+  
+ **Usa schema inline**  
+ Consente di specificare se i dati di origine XML contengono lo schema XSD che ne definisce e ne convalida la struttura e i dati.  
+  
+ **Percorso XSD**  
+ Consente di digitare il percorso e il nome del file dello schema XSD o di individuare il file selezionando **Sfoglia**.  
+  
+ **Sfoglia**  
+ Usare la finestra di dialogo **Apri** per individuare il file di schema XSD.  
+  
+ **Genera XSD**  
+ Usare la finestra di dialogo **Salva con nome** per selezionare un percorso per il file di schema XSD creato automaticamente. L'editor deduce lo schema dalla struttura dei dati XML.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Opzioni dinamiche relative alla modalità di accesso ai dati  
+  
+#### <a name="data-access-mode--xml-file-location"></a>Modalità di accesso ai dati = Percorso file XML  
+ **Percorso XML**  
+ Consente di digitare il percorso e il nome del file di dati XML o di individuare il file scegliendo **Sfoglia**.  
+  
+ **Sfoglia**  
+ Usare la finestra di dialogo **Apri** per individuare il file di dati XML.  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>Modalità di accesso ai dati = File XML da variabile  
+ **Nome variabile**  
+ Consente di selezionare la variabile contenente il percorso e il nome del file XML.  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>Modalità di accesso ai dati = Dati XML da variabile  
+ **Nome variabile**  
+ Consente di selezionare la variabile contenente i dati XML.  
+  
+## <a name="xml-source-editor-columns-page"></a>Editor origine XML (pagina Colonne)
+  Usare il nodo **Colonne** della finestra di dialogo **Editor origine XML** per eseguire il mapping tra una colonna di output e una colonna (di origine) esterna.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne esterne disponibili**  
+ Consente di visualizzare l'elenco delle colonne esterne disponibili nell'origine dei dati. Non è possibile utilizzare questa tabella per l'aggiunta o l'eliminazione di colonne.  
+  
+ **Colonna esterna**  
+ Consente di visualizzare le colonne esterne (origine) nell'ordine in cui verranno lette dall'attività. È possibile modificare l'ordine deselezionando innanzitutto le colonne selezionate nella tabella visualizzata nell'editor e quindi selezionando le colonne esterne nell'elenco secondo un ordine diverso.  
+  
+ **Colonna di output**  
+ Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="xml-source-editor-error-output-page"></a>Editor origine XML (pagina Output degli errori)
+  Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine XML** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
+  
+### <a name="options"></a>Opzioni  
+ **Input/Output**  
+ Consente di visualizzare il nome dell'origine dei dati.  
+  
+ **Colonna**  
+ Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine XML**.  
+  
+ **Errore**  
+ Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncamento**  
+ Consente di specificare l'azione da eseguire in caso di troncamenti, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Description**  
+ Consente di visualizzare la descrizione dell'errore.  
+  
+ **Imposta questo valore nelle celle selezionate**  
+ Consente di specificare l'azione che dovrà interessare tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+ **Applica**  
+ Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Estrarre i dati tramite l'origine XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

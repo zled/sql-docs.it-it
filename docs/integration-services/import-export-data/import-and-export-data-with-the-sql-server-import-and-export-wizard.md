@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7b9fae76cd6ffaee5679bc2d0ba7fa7b44f9aa65
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importare ed esportare dati con l'Importazione/Esportazione guidata SQL Server
@@ -55,7 +55,7 @@ Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes
 |-------------|-----------------------------------------|
 |**Database aziendali**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e altri.|SQL Server o SQL Server Data Tools (SSDT) vengono installati i file che si devono connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ma SSDT non installa tutti i file necessari per connettersi ad altri database aziendali, ad esempio Oracle o IBM DB2.<br/><br/>Per connettersi a un database dell'organizzazione, in genere è necessario disporre di due operazioni:<br/><br/>1. **Il software client**. Se il software client relativo al proprio database aziendale è già installato, non sono generalmente necessari altri componenti per eseguire la connessione. Se invece il software client non è installato, chiedere all'amministratore del database come poterne installare una copia con licenza.<br/><br/>2. **I driver o provider**. Microsoft consente di installare i driver e provider per la connessione a Oracle. Per connettersi a IBM DB2, ottenere il Provider di Microsoft® OLE DB per DB2 v 5.0 per Microsoft SQL Server dal [Feature Pack di Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).|
 |**File di testo** (file flat)|Non sono necessari file aggiuntivi.|
-|**File di Microsoft Excel e Microsoft Access**|Microsoft Office non installa tutti i file necessari per eseguire la connessione a file Excel e Access come origini dati. È necessario scaricare [Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040).<br/><br/>Per altre informazioni, vedere [Connetti a un'origine dati di Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) o [connessione a un'origine dati accesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
+|**File di Microsoft Excel e Microsoft Access**|Microsoft Office non installa tutti i file necessari per eseguire la connessione a file Excel e Access come origini dati. Scarica il programma seguente - [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Per altre informazioni, vedere [Connetti a un'origine dati di Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) o [connessione a un'origine dati accesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Origini dati di Azure**<br/>Attualmente solo Archiviazione BLOB di Azure.|SQL Server Data Tools non installare i file che si devono connettersi all'archiviazione Blob di Azure come origine dati. È necessario scaricare [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Per altre informazioni, vedere [Connect per l'archiviazione BLOB di Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
 |**Database open source**<br/>PostgreSQL, MySql e altri.|È necessario scaricare file aggiuntivi per eseguire la connessione a queste origini dati.<br/><br/>-Per **PostgreSQL**, vedere [connessione a un'origine dati PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>-Per **MySql**, vedere [connessione a un'origine dati MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
 |**Qualsiasi altra origine dati per cui è disponibile un driver o un provider**|In genere è necessario scaricare file aggiuntivi per eseguire la connessione ai tipi di origine dati seguenti.<br/><br/>- Qualsiasi origine per la quale è disponibile un **driver ODBC** . Per altre informazioni, vedere [connettersi a un'origine dati ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Qualsiasi origine per la quale è disponibile un **provider di dati .NET Framework** .<br/>- Qualsiasi origine per la quale è disponibile un **provider OLE DB** .<br/><br/>Componenti di terze parti che forniscono funzionalità di origine e di destinazione per le altre origini dati sono a volte commercializzati come prodotti aggiuntivi per SQL Server Integration Services (SSIS).|
@@ -103,8 +103,8 @@ Per altre informazioni su SSIS, vedere [SQL Server Integration Services](../../i
  Avviare la procedura guidata. Per altre informazioni, vedere [Avviare SQL Server importazione / esportazione guidata](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Vedere anche
-[Iniziare con questo semplice esempio di importazione / esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
-[Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+[Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
+[Mapping dei tipi di dati nell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 
 
 

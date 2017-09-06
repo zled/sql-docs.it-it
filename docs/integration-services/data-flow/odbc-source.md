@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcsource.f1
+- sql13.ssis.designer.odbcsource.connection.f1
+- sql13.ssis.designer.odbcsource.columns.f1
+- sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa8fcf2545618602bcf9f574a52ba51d0074a850
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-source"></a>Origine ODBC
@@ -72,14 +75,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-odbc-source"></a>Configurazione dell'origine ODBC  
  È possibile configurare l'origine ODBC a livello di codice o tramite Progettazione SSIS.  
   
- Per ulteriori informazioni, vedere uno degli argomenti seguenti:  
-  
--   [Editor origine ODBC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
--   [Editor origine ODBC &#40; Pagina colonne &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
-  
--   [Editor origine ODBC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
  Per aprire la finestra di dialogo **Editor avanzato** :  
@@ -90,14 +85,114 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Editor origine ODBC &#40; Pagina Output degli errori &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
--   [Editor origine ODBC &#40; Pagina colonne &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
-  
--   [Editor origine ODBC &#40; Pagina Gestione connessione &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
 -   [Estrarre dati utilizzando l'origine ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+  
+## <a name="odbc-source-editor-connection-manager-page"></a>Editor origine ODBC (pagina Gestione connessione)
+  Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Source Editor** per selezionare la gestione connessione ODBC per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
+  
+### <a name="task-list"></a>Elenco attività  
+ **Per aprire ODBC Source Editor (pagina Gestione connessione)**  
+  
+-   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] che contiene l'origine ODBC.  
+  
+-   Nella scheda **Flusso di dati** fare doppio clic sull'origine ODBC.  
+  
+### <a name="options"></a>Opzioni  
+  
+#### <a name="connection-manager"></a>Gestione connessione  
+ Consente di selezionare una gestione connessione ODBC esistente nell'elenco o di creare una nuova connessione facendo clic su **Nuova** . La connessione può essere a qualsiasi database supportato da ODBC.  
+  
+#### <a name="new"></a>Nuova  
+ Fare clic su **Nuovo**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione ODBC.  
+  
+#### <a name="data-access-mode"></a>Modalità di accesso ai dati  
+ Consente di selezionare il metodo per la selezione dei dati dall'origine. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
+  
+|Opzione|Description|  
+|------------|-----------------|  
+|Nome tabella|Consente di recuperare dati da una tabella o da una vista nell'origine dati ODBC. Se si seleziona questa opzione, scegliere un valore nell'elenco per le opzioni seguenti:|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco o digitare un'espressione regolare per identificare la tabella.|  
+||Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
+|Comando SQL|Consente di recuperare dati dall'origine dati ODBC utilizzando una query SQL. Scrivere la query nella sintassi del database di origine che si sta utilizzando. Se si seleziona questa opzione, immettere una query in uno dei modi seguenti:|  
+||Immettere il testo della query SQL nel campo **Testo comando SQL** .|  
+||Fare clic su **Sfoglia** per caricare la query SQL da un file di testo.|  
+||Fare clic su **Analizza query** per verificare la sintassi del testo della query.|  
+  
+#### <a name="preview"></a>Anteprima  
+ Fare clic su **Anteprima** per visualizzare un massimo di 200 righe dei dati estratti dalla tabella o dalla vista selezionata.  
+  
+## <a name="odbc-source-editor-columns-page"></a>Editor origine ODBC (pagina Colonne)
+  Usare la pagina **Colonne** della finestra di dialogo **Editor origine ODBC** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
+  
+### <a name="task-list"></a>Elenco attività  
+ **Per aprire ODBC Source Editor (pagina Colonne)**  
+  
+1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] che contiene l'origine ODBC.  
+  
+2.  Nella scheda **Flusso di dati** fare doppio clic sull'origine ODBC.  
+  
+3.  In **ODBC Source Editor**, fare clic su **Colonne**.  
+  
+### <a name="options"></a>Opzioni  
+  
+#### <a name="available-external-columns"></a>Colonne esterne disponibili  
+ Elenco delle colonne esterne disponibili nell'origine dei dati. Non è possibile utilizzare questa tabella per l'aggiunta o l'eliminazione di colonne. Selezionare le colonne da utilizzare dall'origine. Le colonne scelte vengono aggiunte all'elenco **Colonna esterna** nell'ordine in cui vengono selezionate.  
+  
+ Selezionare la casella di controllo **Seleziona tutto** per selezionare tutte le colonne.  
+  
+#### <a name="external-column"></a>Colonna esterna  
+ Una vista delle colonne esterne (di origine) nell'ordine in cui vengono presentate durante la configurazione di componenti che utilizzano i dati dell'origine ODBC.  
+  
+#### <a name="output-column"></a>Colonna di output  
+ Consente di immettere un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome immesso viene visualizzato in Progettazione SSIS.  
+  
+## <a name="odbc-source-editor-error-output-page"></a>Editor origine ODBC (pagina Output degli errori)
+  Usare la pagina **Output degli errori** della finestra di dialogo **ODBC Source Editor** (Editor origine ODBC) per selezionare le opzioni di gestione degli errori.  
+  
+### <a name="task-list"></a>Elenco attività  
+ **Per aprire ODBC Source Editor (pagina Output degli errori)**  
+  
+-   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] che contiene l'origine ODBC.  
+  
+-   Nella scheda **Flusso di dati** fare doppio clic sull'origine ODBC.  
+  
+-   In **ODBC Source Editor**(Editor origine ODBC) fare clic su **Output degli errori**.  
+  
+### <a name="options"></a>Opzioni  
+  
+#### <a name="inputoutput"></a>Input/Output  
+ Consente di visualizzare il nome dell'origine dei dati.  
+  
+#### <a name="column"></a>Colonna  
+ Non usato.  
+  
+#### <a name="error"></a>Errore  
+ Consente di selezionare il modo in cui l'origine ODBC deve gestire gli errori in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+#### <a name="truncation"></a>Troncamento  
+ Consente di selezionare il modo in cui l'origine ODBC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+#### <a name="description"></a>Description  
+ Non usato.  
+  
+#### <a name="set-this-value-to-selected-cells"></a>Imposta questo valore nelle celle selezionate  
+ Consente di selezionare il modo in cui l'origine ODBC gestisce tutte le celle selezionate in caso di errore o troncamento: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
+  
+#### <a name="apply"></a>Applica  
+ Consente di applicare le opzioni di gestione degli errori alle celle selezionate.  
+  
+### <a name="error-handling-options"></a>Opzioni di gestione degli errori  
+ Utilizzare le opzioni seguenti per configurare il modo in cui l'origine ODBC gestisce errori e troncamenti.  
+  
+#### <a name="fail-component"></a>Interrompi componente  
+ Quando si verifica un errore o un troncamento l'attività Flusso di dati viene interrotta. Questo è il comportamento predefinito.  
+  
+#### <a name="ignore-failure"></a>Ignora errore  
+ L'errore o il troncamento vengono ignorati.  
+  
+#### <a name="redirect-flow"></a>Reindirizza flusso  
+ La riga che determina l'errore o il troncamento viene inviata all'output degli errori dell'origine ODBC.  
   
   

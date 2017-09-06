@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
+- sql13.dts.designer.ftptask.general.f1
+- sql13.dts.designer.ftptask.filetransfer.f1
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="ftp-task"></a>Attività FTP
@@ -78,9 +80,99 @@ ms.lasthandoff: 08/03/2017
   
  Per altre informazioni sull'impostazione di queste proprietà a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
+## <a name="ftp-task-editor-general-page"></a>Editor attività FTP (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività FTP** per specificare la gestione connessione FTP tramite cui viene stabilita la connessione al server FTP con cui comunica l'attività. È inoltre possibile specificare un nome e una descrizione per l'attività FTP.  
+  
+### <a name="options"></a>Opzioni  
+ **FtpConnection**  
+ Selezionare una gestione connessione FTP esistente o fare clic su \< **nuova connessione...** > per creare una gestione connessione.  
+  
+> [!IMPORTANT]  
+>  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
+  
+ **Argomenti correlati**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+ **StopOnFailure**  
+ Consente di specificare il termine dell'attività FTP in caso di esito negativo di un'operazione FTP.  
+  
+ **Nome**  
+ Consente di specificare un nome univoco per l'attività FTP. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività FTP.  
+  
+## <a name="ftp-task-editor-file-transfer-page"></a>Editor attività FTP (pagina Trasferimento file)
+  Usare la pagina **Trasferimento file** della finestra di dialogo **Editor attività FTP** per configurare l'operazione FTP eseguita dall'attività.  
+  
+### <a name="options"></a>Opzioni  
+ **IsRemotePathVariable**  
+ Consente di specificare se il percorso remoto è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **RemoteVariable**.|  
+|**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **RemotePath**.|  
+  
+ **OverwriteFileAtDestination**  
+ Consente di specificare se è possibile sovrascrivere un file nella destinazione.  
+  
+ **IsLocalPathVariable**  
+ Consente di specificare se il percorso locale è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **LocalVariable**.|  
+|**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **LocalPath**.|  
+  
+ **Operazione**  
+ Consente di selezionare l'operazione FTP da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**Invia file**|Consente di inviare i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  
+|**Ricevi file**|Consente di ricevere i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  
+|**Crea directory locale**|Consente di creare una directory locale. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable** e **LocalPath**.|  
+|**Crea directory remota**|Consente di creare una directory remota. Selezionando questo valore vengono visualizzate le opzioni dinamiche **RemoteVariable** e **RemotelPath**.|  
+|**Rimuovi directory locale**|Consente di rimuovere una directory locale. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable** e **LocalPath**.|  
+|**Rimuovi directory remota**|Consente di rimuovere una directory remota. Selezionando questo valore vengono visualizzate le opzioni dinamiche **RemoteVariable** e **RemotePath**.|  
+|**Elimina file locali**|Consente di eliminare file locali. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable** e **LocalPath**.|  
+|**Elimina file remoti**|Consente di eliminare file remoti. Selezionando questo valore vengono visualizzate le opzioni dinamiche **RemoteVariable** e **RemotePath**.|  
+  
+ **IsTransferASCII**  
+ Consente di specificare se i file ricevuti e inviati dal server FTP remoto devono essere trasferiti in modalità ASCII.  
+  
+### <a name="isremotepathvariable-dynamic-options"></a>Opzioni dinamiche di IsRemotePathVariable  
+  
+#### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
+ **RemoteVariable**  
+ Selezionare una variabile definita dall'utente esistente oppure fare clic su \< **nuova variabile...** > per creare una variabile definita dall'utente.  
+  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungi variabile  
+  
+#### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
+ **RemotePath**  
+ Selezionare una gestione connessione FTP esistente o fare clic su \< **nuova connessione...** > per creare una gestione connessione.  
+  
+ **Argomenti correlati:** [Gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+### <a name="islocalpathvariable-dynamic-options"></a>Opzioni dinamiche di IsLocalPathVariable  
+  
+#### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
+ **LocalVariable**  
+ Selezionare una variabile definita dall'utente esistente oppure fare clic su \< **nuova variabile...** > per creare una variabile.  
+  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungi variabile  
+  
+#### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
+ **LocalPath**  
+ Selezionare una gestione connessione File esistente oppure fare clic su \< **nuova connessione...** > per creare una gestione connessione.  
+  
+ **Argomenti correlati**: [gestione connessione File Flat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+  
 ## <a name="see-also"></a>Vedere anche  
- [Editor attività FTP &#40;pagina Generale&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [Editor attività FTP &#40; Pagina di trasferimento di file &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)  
   
