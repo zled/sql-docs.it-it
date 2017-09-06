@@ -1,7 +1,7 @@
 ---
 title: Record di SQL Server Audit | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,30 +16,30 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.translationtype: HT
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: ef3a6055836ea2b54d68f162b07b16eb3357a3dd
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
   La caratteristica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- I controlli sono costituiti da zero o più attività di controllo, che vengono registrate in una *destinazione*del controllo. La destinazione del controllo può essere un file binario, il registro eventi applicazioni di Windows o il registro eventi di sicurezza di Windows. I record inviati alla destinazione possono contenere gli elementi descritti nella tabella seguente.  
+ I controlli sono costituiti da zero o più attività di controllo, che vengono registrate in una *destinazione*del controllo. La destinazione del controllo può essere un file binario, il registro eventi applicazioni di Windows o il registro eventi di sicurezza di Windows. I record inviati alla destinazione possono contenere gli elementi descritti nella tabella seguente:  
   
 |Nome colonna|Descrizione|Tipo|Sempre disponibile|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data e ora di generazione dell'azione controllabile.|**datetime2**|Sì|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|**int**|Sì|  
 |**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
-|**succeeded**|Indica se l'azione che ha generato l'evento ha avuto esito positivo|**bit** - 1 = Esito positivo, 0 = Esito negativo|Sì|  
+|**succeeded**|Indica se il controllo delle autorizzazioni dell'azione che attiva l'evento di controllo è riuscito o meno. |**bit**<br /> - 1 = esito positivo <br />0 = esito negativo|Sì|  
 |**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|**bigint**|No|  
-|**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|**bit** - 1 = True, 0 = False|No|  
+|**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|**bit** <br />- 1 = True <br />0 = False|No|  
 |**session_id**|ID della sessione in cui si è verificato l'evento.|**int**|Sì|  
 |**server_principal_id**|ID del contesto dell'account di accesso utilizzato per eseguire l'azione.|**int**|Sì|  
 |**database_principal_id**|ID del contesto dell'utente del database in cui viene eseguita l'azione.|**int**|No|  
-|**object_id**|ID primario dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|**int**|No|  
+|**object_id**|ID primario dell'entità in cui si è verificato il controllo. L'ID può essere:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|**int**|No|  
 |**target_server_principal_id**|Entità server cui si applica l'azione controllabile.|**int**|Sì|  
 |**target_database_principal_id**|Entità di database cui si applica l'azione controllabile.|**int**|No|  
 |**class_type**|Tipo di entità controllabile in cui si verifica il controllo.|**varchar(2)**|Sì|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 |**server_instance_name**|Nome dell'istanza del server in cui si è verificato il controllo. Viene utilizzato il formato standard computer\istanza.|**nvarchar(120)**|Sì|  
 |**database_name**|Contesto del database in cui si è verificata l'azione.|**sysname**|No|  
 |**schema_name**|Contesto dello schema in cui si è verificata l'azione.|**sysname**|No|  
-|**object_name**|Nome dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|**sysname**|No|  
+|**object_name**|Nome dell'entità in cui si è verificato il controllo. Il nome può essere:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|**sysname**|No|  
 |**istruzione**|istruzione TSQL (se presente)|**nvarchar(4000)**|No|  
 |**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|**nvarchar(4000)**|No|  
   
@@ -114,3 +114,4 @@ ms.lasthandoff: 06/22/2017
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

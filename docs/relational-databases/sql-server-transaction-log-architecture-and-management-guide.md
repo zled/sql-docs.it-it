@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
@@ -187,9 +187,9 @@ Per altre informazioni sull'impostazione dell'intervallo di recupero, vedere [Co
 > [!TIP]  
 >  L'opzione di impostazione avanzata -k di SQL Server consente all'amministratore del database di limitare il comportamento di I/O del checkpoint in base alla velocità effettiva del sottosistema di I/O per alcuni tipi di checkpoint. L'opzione di impostazione -k si applica ai checkpoint automatici e ai checkpoint senza limitazione. 
  
-I checkpoint automatici troncano la parte non utilizzata del log delle transazioni se il database utilizza il modello di recupero con registrazione minima, ma non se il database utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
+I checkpoint automatici troncano la parte non utilizzata del log delle transazioni se il database utilizza il modello di recupero con registrazione minima, ma non se il database utilizza il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Per altre informazioni, vedere [Log delle transazioni &amp;#40;SQL Server&amp;#41;](../relational-databases/logs/the-transaction-log-sql-server.md). 
 
-L'istruzione CHECKPOINT offre ora l'argomento facoltativo checkpoint_duration che specifica il tempo necessario in secondi per il completamento dei checkpoint. Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../t-sql/language-elements/checkpoint-transact-sql.md).
+L'istruzione CHECKPOINT offre ora l'argomento facoltativo checkpoint_duration che specifica il tempo necessario in secondi per il completamento dei checkpoint. Per altre informazioni, vedere [CHECKPOINT &amp;#40;Transact-SQL&amp;#41;](../t-sql/language-elements/checkpoint-transact-sql.md).
 
 
 ### <a name="active-log"></a>log attivo
