@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51c7de44c90a78293fc3777a92261e30fbc5f28c
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Condizioni di Licenza
@@ -110,11 +110,13 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
   
 **11.   EFFETTI GIURIDICI.** Con il presente contratto vengono concessi alcuni diritti. Al licenziatario potranno essere concessi altri diritti ai sensi della legge del paese di residenza. Il licenziatario potrebbe, inoltre, avere ulteriori diritti direttamente nei confronti del soggetto da cui ha acquistato il software. Il presente contratto non modifica i diritti del licenziatario che la legge del Paese di residenza del licenziatario non consente di modificare.  
   
-**12.   ESCLUSIONE DI GARANZIE. Il software viene concesso in licenza "così com'è". L'utente accetta di usarle a proprio rischio. Microsoft non riconosce garanzie o condizioni esplicite. Il presente contratto non modifica eventuali ulteriori diritti dei consumatori o garanzie di legge riconosciuti al licenziatario dalla legge locale. Nella misura massima consentita dalla legge applicabile, Microsoft esclude eventuali garanzie implicite di commerciabilità, idoneità per uno scopo specifico e non violazione dei diritti altrui.**  
+**12.   Il software può includere le versioni in anteprima, beta o altre versioni non definitive di funzionalità o software, offerte da Microsoft, come descritto nella documentazione. LE ANTEPRIME VENGONO FORNITE "COME SONO", "CON TUTTI I DIFETTI" E "COME DISPONIBILI" E SONO ESCLUSE DAI CONTRATTI DI SERVIZIO E DALLA GARANZIA LIMITATA. Per le Anteprime potrebbe non essere previsto il servizio di supporto tecnico clienti. Le Anteprime potranno essere soggette a impegni minori o differenti per garantire il diritto alla protezione dei dati personali, alla conformità e alla sicurezza. Microsoft potrà apportare modifiche o interrompere le Anteprime in qualsiasi momento senza preavviso. Potrà inoltre decidere di non dichiarare la "Disponibilità Generale" di un'Anteprima.**
+
+**13.   ESCLUSIONE DI GARANZIE. Il software viene concesso in licenza "così com'è". L'utente accetta di usarle a proprio rischio. Microsoft non riconosce garanzie o condizioni esplicite. Il presente contratto non modifica eventuali ulteriori diritti dei consumatori o garanzie di legge riconosciuti al licenziatario dalla legge locale. Nella misura massima consentita dalla legge applicabile, Microsoft esclude eventuali garanzie implicite di commerciabilità, idoneità per uno scopo specifico e non violazione dei diritti altrui.**  
   
 **PER L'AUSTRALIA. Il licenziatario è soggetto alle garanzie di legge previste ai sensi della Legge Australiana a Tutela dei Consumatori (Australian Consumer Law) e nessuna disposizione contenuta nelle presenti condizioni influisce su tali diritti.**  
   
-**13.   LIMITAZIONE DI RESPONSABILITÀ ED ESCLUSIONE DI MEZZI DI TUTELA E DANNI. Il licenziatario può richiedere a Microsoft e ai suoi fornitori il solo risarcimento per i danni diretti nel limite di cinque dollari (USD 5,00). Il licenziatario non potrà richiedere il risarcimento per eventuali altri danni, inclusi i danni consequenziali, speciali, indiretti o incidentali oppure relativi alla perdita di profitti.**  
+**14.   LIMITAZIONE DI RESPONSABILITÀ ED ESCLUSIONE DI MEZZI DI TUTELA E DANNI. Il licenziatario può richiedere a Microsoft e ai suoi fornitori il solo risarcimento per i danni diretti nel limite di cinque dollari (USD 5,00). Il licenziatario non potrà richiedere il risarcimento per eventuali altri danni, inclusi i danni consequenziali, speciali, indiretti o incidentali oppure relativi alla perdita di profitti.**  
 Questa limitazione si applica a  
 * qualsiasi questione relativa al software, ai servizi, al contenuto (incluso il codice) sui siti Internet o i programmi di terzi e  
 * controversie relative a responsabilità contrattuale, violazioni di garanzia e delle condizioni, responsabilità oggettiva, negligenza o altra colpa nella misura massima consentita dalla legge applicabile.  

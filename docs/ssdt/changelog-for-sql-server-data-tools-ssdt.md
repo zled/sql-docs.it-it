@@ -1,7 +1,7 @@
 ---
 title: Log delle modifiche per SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,18 +13,68 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
 ms.contentlocale: it-it
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 Questo log delle modifiche è per [SQL Server Data Tools (SSDT) per Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-Per i post dettagliati sulle novità e sulle modifiche, vedere [il blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+
+## <a name="ssdt-172"></a>SSDT 17.2
+Numero di build: 14.0.61707.300
+
+### <a name="whats-new"></a>Novità
+
+
+**Progetti AS:**
+- Ora è possibile configurare la sicurezza a livello di oggetto nella finestra di dialogo *Ruoli* per la sicurezza avanzata nei modelli tabulari con livello di compatibilità 1400.
+- Nuova selezione di membri del ruolo AAD per gli utenti senza indirizzi di posta elettronica nei modelli di Azure Analysis Services nei progetti SSDT Analysis Services per Visual Studio 2017.
+- Nuova proprietà del progetto "Chiedi sempre conferma" di Azure Analysis Services nei progetti tabulari di SSDT Analysis Services per personalizzare il comportamento di memorizzazione nella cache delle credenziali ADAL.
+
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**Generale**
+- Aggiornati i riferimenti di personalizzazione per SQL Server 2017.
+
+**Progetti AS**
+- Notevole miglioramento delle prestazioni per migliorare l'esperienza durante il commit di modifiche delle misure DAX e altre modifiche al modello.
+- Risolti alcuni problemi di integrazione di Power Query nei progetti di Analysis Services che usano i modelli tabulari con livello di compatibilità 1400.
+- Risolto un problema relativo ai progetti multidimensionali limitato a Visual Studio 2017 che poteva impedire il caricamento della finestra di progettazione Progetta aggregazioni.
+- Risolto un problema per cui il trascinamento di un elemento nel diagramma vista origine dati multidimensionale di Analysis Services poteva causare un arresto anomalo di Visual Studio 2017.
+- Risolto un problema nei progetti di Analysis Services per cui la finestra di dialogo di distribuzione non era sempre in primo piano nella parte superiore di Visual Studio.
+- Rimossa l'importazione di Analysis Services dal Marketplace dati come origine dati perché il servizio è stato rimosso.
+- Risolto un problema che lasciava disabilitata la finestra di progettazione tabelle dopo aver selezionato Importa nuove tabelle dall'origine dati esistente tramite Esplora modelli tabulari.
+- Risolto un problema che poteva lasciare nascoste nel contesto errato le voci Importa da origine dati/Aggiungi origine dati del menu Modello.
+- Esperienza migliorata durante la creazione di una misura da Esplora modelli tabulari per evitare che lo stato attivo torni alla colonna usata per creare una misura.
+- Quando si passa dall'area di lavoro integrata nei progetti tabulari di Analysis Services a un server dell'area di lavoro esplicito, ora è possibile eseguire la pulizia dei file di database precedenti.
+- Risolto un problema nei progetti di modelli tabulari 1400 di Analysis Services per cui lo stato dell'interfaccia utente della casella di controllo Sicurezza a livello di riga veniva inizialmente visualizzato come deselezionato, indipendentemente dallo stato effettivo dell'oggetto sottostante.
+- Corretto un arresto anomalo che poteva verificarsi durante l'importazione di file di testo o file di Excel in modelli tabulari con livello di compatibilità 1400 che usano Power Query e generano un'eccezione non gestita.
+- Risolto un problema che poteva verificarsi con il cursore della barra di scorrimento nel controllo di modifica della formula DAX, nella finestra di progettazione di modelli tabulari di Analysis Services.
+- Risolto un problema che impediva la modifica di un'origine dati di mashup di Power Query quando conteneva un'autenticazione di nome utente/password.
+- Risolto un problema che poteva impedire la connessione di un'origine dati quando venivano impostate proprietà aggiuntive nella stringa di connessione.
+- Risolto un problema che poteva causare l'arresto anomalo di Visual Studio durante il caricamento di più progetti di modelli tabulari di Analysis Services e la chiusura della seconda finestra di progettazione modelli senza prima interagire con il contenuto della finestra di progettazione.
+- Risolto un problema per cui in alcuni casi le modifiche apportate alla formattazione degli indicatori KPI non venivano mantenute.
+- Risolto un problema con l'interfaccia utente di Power Query che mostrava lo stato selezionato del menu errato per la visualizzazione o meno della barra della formula.
+- Risolto un problema con le origini dati di Power Query nei progetti tabulari con livello di compatibilità 1400 di Analysis Services che poteva causare l'arresto anomalo di Visual Studio quando si selezionava il menu Modifica origine dati da Esplora modelli tabulari.
+- Risolto un problema saltuario per cui il caricamento di un modello tabulare 1400 poteva restituire il messaggio di errore *Impossibile caricare il file o l'assembly 'Microsoft.ProBI.MashupLibrary'*.
+
+**Progetti RS**
+- Le preferenze utente per lo stato di selezione delle impostazioni relative a Righello e Parametro in RS vengono memorizzate correttamente nelle sessioni.
+
+**Progetti IS**
+- Risolto un problema per cui il contenitore ADO/ADO.NET ForEachLoop non veniva visualizzato correttamente.
+- Risolto un problema con alcune attività, componenti e procedure guidate non localizzati.
+- L'oggetto *TargetServerVersion* più recente è stato modificato da "SQL Server vNext" a "SQL Server 2017".
+
 
 ## <a name="ssdt-171"></a>SSDT 17.1
 Numero di build: 14.0.61705.170
@@ -33,8 +83,8 @@ Numero di build: 14.0.61705.170
 **Progetti AS:**
 - Gli utenti possono impostare gli hint di codifica per le colonne dell'interfaccia utente nei modelli 1400
 - La funzionalità IntelliSense non correlata al modello è ora disponibile in modalità offline
-- Esplora modelli tabulari ora contiene un nodo per rappresentare le espressioni M denominate disponibili nel modello (modelli tabulari con livello di compatibilità 1400)
-- La funzionalità Selezione utenti di Azure Active Directory, simile alla gestione delle identità e degli accessi del portale di Microsoft Azure, è ora disponibile quando si impostano i membri ruolo nei modelli tabulari
+- Esplora modelli tabulari ora contiene un nodo per rappresentare le espressioni M denominate disponibili nel modello (modelli tabulari con livello di compatibilità 1400).
+- La funzionalità Selezione utenti di Azure Active Directory, simile alla gestione delle identità e degli accessi del portale di Microsoft Azure, è ora disponibile quando si impostano i membri dei ruoli nei modelli tabulari.
 
 **Progetti di database:**
 - Aggiornamento a DacFx 17.1
@@ -42,7 +92,7 @@ Numero di build: 14.0.61705.170
 ### <a name="bug-fixes"></a>Correzioni di bug
 - Risolto un problema che causava la visualizzazione non corretta del nome del gruppo Finestre di progettazione di Business Intelligence nelle opzioni di Visual Studio in VS2017
 - Risolto un problema che poteva causare un arresto anomalo del sistema durante la generazione di una mappa del codice per una soluzione con un progetto report o un progetto di Analysis Services
-- Risolti alcuni problemi di integrazione di PowerQuery per i modelli tabulari di Analysis Services con livello di compatibilità 1400
+- Risolti alcuni problemi di integrazione di Power Query nei modelli tabulari con livello di compatibilità 1400 di Analysis Services.
 - Risolto un problema nella nuova finestra degli strumenti dell'editor DAX per cui l'operatore di assegnazione non poteva essere su una riga separata durante la definizione di una misura
 - Risolto un problema che impediva l'aggiornamento della visualizzazione delle misure tabulari quando si assegnavano nuovi nomi alle misure nella prospettiva
 - Aggiornati il motore dell'area di lavoro integrata di Analysis Services e il modello a oggetti tabulare con correzione di una regressione che causava l'esito negativo della distribuzione dei progetti tabulari 1200 contenenti traduzioni al server di Analysis Services in SQL Server 2016
@@ -72,7 +122,7 @@ Numero di build: 14.0.61704.140
 - È stato aggiunto il supporto per Attività di controllo CDC, CDC Splitter e Origine CDC quando la destinazione è SQL Server 2017. 
 
 **Progetti AS:**
-- Integrazione della funzionalità PowerQuery di Analysis Services (modelli tabulari con livello di compatibilità 1400):
+- Integrazione di Power Query per Analysis Services (modelli tabulari con livello di compatibilità 1400):
     - DirectQuery è disponibile per SQL Oracle e Teradata se l'utente ha installato driver di terze parti
     - Aggiunta di colonne in base all'esempio in PowerQuery
     - Opzioni di accesso ai dati nei modelli 1400 (proprietà a livello di modello usate dal motore M)
@@ -122,7 +172,7 @@ Numero di build: 14.0.61704.140
 - La Distribuzione guidata deve applicare le modifiche alle partizioni di tabelle calcolate anche se è stata abilitata l'opzione per mantenere le partizioni
 - È stato risolto un problema a causa del quale la finestra di dialogo Proprietà avanzate in una connessione AS esistente non visualizzava l'elenco completo a meno che non venisse riselezionata
 - Risolti alcuni problemi che causavano la visualizzazione di stringhe dell'interfaccia utente incomplete in alcune versioni localizzate
-- Risolti alcuni problemi di integrazione di PowerQuery nei modelli tabulari di Analysis Services con livello di compatibilità 1400
+- Risolti alcuni problemi di integrazione di Power Query nei modelli tabulari con livello di compatibilità 1400 di Analysis Services.
 - Risolto un problema che causava la visualizzazione non corrette dei modelli di stile della Creazione guidata report
 - Risolto un problema della Creazione guidata report che poteva provocare impostazioni non corrette dell'origine dati durante il passaggio da SQL ad AS
 - Risolto un problema che causava un errore di compilazione dei progetti di Analysis Services (tabulari) dalla riga di comando (devenv.com\exe)
@@ -373,7 +423,7 @@ Numero di build: 14.0.60629.0
     * Correzione di un'eccezione relativa a un riferimento a un oggetto non impostato durante la visualizzazione delle proprietà del file di progetto model.bim in visualizzazione codice. 
     * Correzione di un problema per cui quando si incollano dati nella griglia di un modello di Analysis Services per creare una tabella incollata, vengono restituiti valori non corretti nelle impostazioni locali che usano la virgola come separatore decimale. 
     * Correzione di un problema relativo all'apertura di un progetto di SQL 2008 RS in SSDT quando si sceglie di non aggiornarlo. 
-    * Correzione di un problema nell'interfaccia utente delle tabelle calcolate dei modelli di livello di compatibilità 1200 durante l'uso della formattazione predefinita per il tipo di colonna per permettere la modifica del tipo di formattazione dall'interfaccia utente. 
+    * Correzione di un problema nell'interfaccia utente delle tabelle calcolate dei modelli con livello di compatibilità 1200 durante l'uso della formattazione predefinita per il tipo di colonna, per permettere la modifica del tipo di formattazione dall'interfaccia utente. 
     
 
 ## <a name="ssdt-june-for-sql-server-2016"></a>Versione di giugno di SSDT (per SQL Server 2016)  
@@ -383,135 +433,10 @@ Numero di build: 14.0.60525.0
 
 È ora disponibile la versione di SSDT con disponibilità generale. L'aggiornamento alla versione con disponibilità generale di SSDT per giugno 2016 aggiunge il supporto per gli aggiornamenti più recenti di SQL Server 2016 RTM e diverse correzioni di bug. Per informazioni dettagliate, vedere [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/) (Aggiornamento della versione disponibile a livello generale di SQL Server Data Tools per giugno 2016).
 
-      
-
-## <a name="ssdt-april-for-sql-server-2016-rc3"></a>Versione di aprile di SSDT (per SQL Server 2016 RC3)  
-Data di rilascio: 15 aprile 2016  
-  
-Numero di build: 14.0.60413.0  
-  
-**Database SQL Server**  
-* **Supporto per Always Encrypted:** per i database che contengono colonne Always Encrypted, SSDT e DacFx permettono la visualizzazione e la modifica dei database e la pubblicazione da un progetto del database a questi database. Si noti che il supporto per la modifica di colonne con crittografia di colonna presente verrà reso disponibile in una versione successiva.  
-* **Finestra di dialogo Connessione ed Esplora oggetti di SQL Server**: più correzioni e miglioramenti.  
-    * La pagina Dettagli che elenca le proprietà di connessione avanzate era stata modificata per mostrare la stringa di connessione completa in una casella a più righe e per migliorare il supporto nei computer con valori DPI alti.  
-    * È stata ripristinata la finestra di dialogo di errore tradizionale, con gli errori di connessione dettagliati. Questa finestra è utile per la diagnosi di problemi di accesso grazie a messaggi di errore più chiari e a un'analisi dello stack, in modo che i DBA o CSS possano ottenere le informazioni necessarie per diagnosticare i problemi.  
-    * Per gli utenti con autorizzazioni minime, sono stati corretti diversi errori relativi agli elenchi di database nella finestra di dialogo Connessione e in Esplora oggetti di SQL Server, alla visualizzazione della cartella Sicurezza e ad altri problemi.  
-    * Sono state migliorate le prestazioni del database SQL di Azure durante l'espansione del nodo dei database per elencare tutti i database.  
-* **Programma di installazione di SSDT:**  
-    * Correzione di un problema per cui viene scaricato .NET alla disinstallazione.  
-    * Le dimensioni del programma di installazione sono ora impostate correttamente in computer con valori DPI alti.  
-    * È stato rimosso il controllo delle versioni che blocca l'installazione di SSDT se è presente una nuova versione di SQL Server.  
-    * Confronto schema: è stato corretto un problema di prestazioni per cui la selezione/deselezione di più elementi richiede molto tempo in Visual Studio.  
-    * Supporto per l'uso di LocalDB 2014 su computer x86, poiché non esiste una versione x86 di SQL Server 2016.  
-* **Compilazione e distribuzione:**  
-    * Correzione di un problema per cui le colonne calcolate non sono supportate nelle tabella temporali.  
-    * L'opzione "Esegui script di distribuzione in modalità utente singolo" viene ignorata durante la distribuzione in Azure V12, perché non è supportata in scenari cloud.  
   
   
-## <a name="ssdt-hotfix-for-sql-server-2016-rc2"></a>Hotfix per SSDT (per SQL Server 2016 RC2)  
-Data di rilascio: 5 aprile 2016  
+## <a name="additional-resources"></a>Risorse aggiuntive
   
-Numero di build: 14.0.60329.0  
-  
-Questa build contiene un hotfix per la versione di SSDT che include funzionalità per SQL Server Integration Services. La build 14.0.60316.0 può anche essere usata con Analysis Services e Reporting Services in SQL Server 2016.   
-  
-Per ottenere questo hotfix, usare i [collegamenti per il download in questo post di blog](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/).  
-  
-Per gli sviluppatori di report: se si compilano nuovi report usando questa build di SSDT, [leggere il problema noto e la soluzione alternativa](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/) per un problema temporaneo nei report di SSRS, la cui soluzione è disponibile solo in questo hotfix.  
-  
-## <a name="ssdt-hotfix-for-sql-server-2016-rc0"></a>Hotfix per SSDT (per SQL Server 2016 RC0)  
-Data di rilascio: 18 marzo 2016  
-  
-Numero di build: 14.0.60316.0  
-  
-Questa build contiene un hotfix per la versione di SSDT che include funzionalità per SQL Server 2016 RC0. Attualmente non esiste la versione RC1 di SSDT. La build 14.0.60316.0 può essere usata con la versione RC0 o RC1 di SQL Server 2016.  
-      
-## <a name="ssdt-february-2016-preview-for-sql-server-2016-rc0"></a>Anteprima di febbraio 2016 di SSDT (per SQL Server 2016 RC0)  
-Data di rilascio: 7 marzo 2016  
-  
-Numero di build: 14.0.60305.0  
-  
--   **Modelli di progetto di SQL Server**  
-  
-    Nessun annuncio per questa versione di anteprima di SSDT. Per informazioni su altre funzionalità di questa versione, vedere [Novità del motore di database](https://msdn.microsoft.com/library/bb510411.aspx).  
-  
--   **Modelli di progetto dei pacchetti SSIS**  
-  
-    Progettazione SSIS crea e gestisce pacchetti per SQL Server 2016, 2014 o 2012. Nuovi modelli rinominati come parti. Il connettore Hadoop di SSIS supporta il formato ORC. Per informazioni dettagliate, vedere [Novità di Integration Services](https://msdn.microsoft.com/library/bb522534.aspx).  
-  
--   **Modelli di progetto SSAS (progetti di modello tabulare)**  
-  
-    L'aggiornamento di questo mese per Analysis Services offre il supporto per la visualizzazione di tabelle per i modelli tabulari e tutti i modelli creati con il nuovo livello di compatibilità di SQL Server 2016 sono ora supportati nei pacchetti SSIS. Per altre informazioni. Per informazioni dettagliate, vedere il post di blog sulle [novità di Analysis Services](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx) .  
-  
--   **Modelli di progetto report di SSRS**  
-  
-    Nessun annuncio per questa versione di anteprima di SSDT. Per informazioni su altre funzionalità di questa versione, vedere [Novità di SQL Server Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx).  
-  
-## <a name="ssdt-january-2016-preview"></a>Anteprima di SSMS di gennaio 2016  
-Data di rilascio: 4 febbraio 2016  
-  
-Numero di build: 14.0.60203.0  
-  
--   **Modelli di progetto di SQL Server**  
-  
-    Nessun annuncio per questa versione di anteprima di SSDT. Per informazioni su altre funzionalità di questa versione TCP, vedere [Novità del motore di database](https://msdn.microsoft.com/library/bb510411.aspx)  
-  
--   **Modelli di progetto dei pacchetti SSIS**  
-  
-    Sono stati aggiunti il supporto per componenti di origine e destinazione ODBC, un'attività di controllo CDC,  
-      un componente di origine e splitter CDC, Microsoft Connector per SAP BW e Integration Services Feature Pack per Azure. Per informazioni dettagliate, vedere [Novità di Integration Services](https://msdn.microsoft.com/library/bb522534.aspx).  
-  
--   **Modelli di progetto di SSAS**  
-  
-    Include miglioramenti per i modelli tabulari a livello di compatibilità 1200, colonne calcolate e sicurezza a livello di riga per i modelli in modalità DirectQuery, traduzioni dei metadati del modello, esecuzione di script TMSL nell'attività Esegui DDL Analysis Services di SSIS e numerose correzioni di bug.  
-    Per informazioni dettagliate, vedere [Novità di Analysis Services (MSDN)](https://msdn.microsoft.com/library/bb522628.aspx) o il [post di blog sulle novità di Analysis Services](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx).  
-  
--   **Modelli di progetto report di SSRS**  
-  
-    Nessun annuncio per questa versione di anteprima di SSDT. Per informazioni su altre funzionalità di questa versione TCP, vedere [Novità di Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx).  
-  
-## <a name="ssdt-december-2015-preview"></a>Anteprima di dicembre 2015 di SSDT  
-  
--   I **modelli di progetto di SQL Server** includono correzioni di bug per la finestra di dialogo Connessione, elenchi della cronologia recente e uso corretto del contesto di autenticazione impostato nella proprietà di connessione durante il caricamento di un elenco di database.  
-  
-    -   Valore di timeout del test di connessione modificato in 15 secondi.  
-  
-    -   Se l'indirizzo IP del client non viene registrato durante il caricamento di un elenco di database, creare una regola firewall del server del database SQL di Azure.  
-  
-    -   Supporto di programmabilità delle funzionalità di SQL Server 2016 CTP3.2.  
-  
--   I **modelli di progetto di SSAS** aggiungono il supporto per la creazione di tabelle calcolate in base alle espressioni DAX e ad altri oggetti già definiti nel modello.  
-  
--   I **modelli di progetto dei pacchetti SSIS** aggiungono il supporto del connettore Hadoop di SSIS per il formato di file Avro e l'autenticazione Kerberos.   
-    Si noti che la finestra di progettazione SSIS per SSIS 2012 e 2014 non è ancora inclusa in questo aggiornamento.  
-  
-## <a name="ssdt-november-2015-preview"></a>Anteprima di novembre 2015 di SSDT  
-  
--   **Modelli di progetto di SQL Server**. Anteprima dell'esperienza di connessione migliorata per SQL Server e il database SQL di Azure.  
-  
--   **Modelli di progetto dei pacchetti SSIS**. Miglioramento delle prestazioni del catalogo SSIS: le prestazioni della maggior parte delle visualizzazioni del catalogo SSIS per l'utente non amministratore di ssis sono state migliorate.  
-  
--   I **modelli di progetto di SSAS** includono miglioramenti per i progetti di modello tabulare in Analysis Services. È possibile usare il comando **Visualizza codice** per visualizzare la definizione del modello in JSON. Se non si usa una versione completa di Visual Studio 2015, è necessario installarla per disporre dell'editor JSON. È possibile scaricare [Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) gratuitamente.  
-  
-## <a name="ssdt-october-2015-preview"></a>Anteprima di ottobre 2015 di SSDT  
-  
--   Nuovi modelli di progetto per BI (modelli di Analysis Services, report di Reporting Services e pacchetti di Integration Services). Tutti i modelli di progetto di SQL Server sono ora inclusi in un unico SSDT.  
-  
--   Nuove funzionalità SSIS, inclusi il connettore Hadoop, il modello di flusso di controllo e dimensione massima del buffer ampliata dell'attività flusso di dati.  
-  
--   Supporto delle funzionalità di SQL Server 2016 CTP 3.0 per i progetti di database relazionale.  
-  
--   Varie correzioni di bug in SSIS e supporto per il sistema operativo Windows 7.  
-  
-## <a name="ssdt-september-2015-preview"></a>Anteprima di settembre 2015 di SSDT  
-  
--   Nuovo supporto multilingue in questa versione di anteprima.  
-  
-## <a name="ssdt-august-2015-preview"></a>Anteprima di agosto 2015 di SSDT  
-  
--   Nuovo programma Setup.exe autonomo per l'installazione di SSDT.  Non è più necessario usare una versione modificata del programma di installazione di SQL Server. Questa versione di SSDT include un modello di progetto per la creazione di database relazionali distribuiti al database SQL di Azure o a SQL Server.  
-  
-## <a name="see-also"></a>Vedere anche  
 [Scaricare SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Versioni precedenti di SQL Server Data Tools &#40;SSDT e SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [Novità del motore di database](https://msdn.microsoft.com/library/bb510411.aspx)  
