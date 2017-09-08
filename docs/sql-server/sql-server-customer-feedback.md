@@ -164,4 +164,4 @@ Durante l'installazione, SQL Server 2016 Analysis Services aggiunge un account s
 
 È possibile configurare il servizio in modo che non invii dati di utilizzo, come descritto nella sezione "Impostare le sottochiavi del Registro di sistema nel server". In questo modo, tuttavia, non viene rimosso l'account del servizio. 
  
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
