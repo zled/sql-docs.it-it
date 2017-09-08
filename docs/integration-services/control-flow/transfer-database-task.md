@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferdatabasetask.f1
+- sql13.dts.designer.transferdatabasetask.general.f1
+- sql13.dts.designer.transferdatabasetask.database.f1
+- sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
+- sql13.dts.designer.transferdatabasetask.destdbfiles.f1
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
@@ -19,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 86e2b602632d1492d3889981af041c5ee38cfb6b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
@@ -73,11 +77,7 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Trasferisci database &#40;pagina Generale&#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)  
-  
--   [Editor attività Trasferisci database &#40;pagina Database&#41;](../../integration-services/control-flow/transfer-database-task-editor-databases-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -90,4 +90,124 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  
   
+## <a name="transfer-database-task-editor-general-page"></a>Editor attività Trasferisci database (pagina Generale)
+  Utilizzare la pagina **Generale** dell' **Editor attività Trasferisci database** per assegnare un nome all'attività Trasferisci database e descriverla. Questa attività consente di copiare o spostare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.   
   
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di digitare un nome univoco per l'attività Trasferisci database. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Trasferisci database.  
+  
+## <a name="transfer-database-task-editor-databases-page"></a>Editor attività Trasferisci database (pagina Database)
+  Utilizzare la pagina **Database** della finestra di dialogo **Editor attività Trasferisci database** per specificare le proprietà relative ai database di origine e destinazione interessati dall'attività Trasferisci database. Questa attività consente di copiare o spostare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.  
+  
+### <a name="options"></a>Opzioni  
+ **SourceConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di origine.  
+  
+ **DestinationConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di destinazione.  
+  
+ **DestinationDatabaseName**  
+ Specificare il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server di destinazione.  
+  
+ Per inserire automaticamente il nome del database di origine in questo campo, specificare innanzitutto **SourceConnection** e **SourceDatabaseName** .  
+  
+ Per rinominare il database nel server di destinazione, digitare il nuovo nome in questo campo.  
+  
+ **DestinationDatabaseFiles**  
+ Indica i nomi e i percorsi dei file di database nel server di destinazione.  
+  
+ Per inserire automaticamente i nomi e i percorsi dei file del database di origine in questo campo, specificare innanzitutto **SourceConnection**, **SourceDatabaseName**e **SourceDatabaseFiles** .  
+  
+ Per rinominare i file di database o specificare i nuovi percorsi nel server di destinazione, inserire in questo campo le informazioni sul database di origine e quindi fare clic sul pulsante Sfoglia. Nella finestra di dialogo **File di database di destinazione** modificare **File di destinazione**, **Cartella di destinazione**o **Condivisione file di rete**.  
+  
+> [!NOTE]  
+>  Se i file di database vengono individuati tramite il pulsante Sfoglia, il percorso dei file viene immesso usando l'annotazione dell'unità locale, ad esempio c:\\. È necessario sostituire questa annotazione con quella di condivisione di rete, includendo il nome del computer e il nome di condivisione. In caso di condivisione amministrativa predefinita, è necessario utilizzare l'annotazione $ e disporre di accesso amministrativo alla condivisione.  
+  
+ **DestinationOverwrite**  
+ Indicare se il database nel server di destinazione può essere sovrascritto.  
+  
+ Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**True**|Sovrascrive il database del server di destinazione.|  
+|**False**|Non sovrascrive il database del server di destinazione.|  
+  
+> [!CAUTION]  
+>  Se si specifica **True** per la proprietà **DestinationOverwrite**, i dati inclusi nel database del server di destinazione verranno sovrascritti ed è possibile che si verifichi una perdita di dati. Per evitare che i dati vadano perduti, procedere a un backup del database del server di destinazione in un'altra posizione prima di eseguire l'attività Trasferisci database.  
+  
+ **Azione**  
+ Indicare se l'attività eseguirà il comando **Copia** o **Sposta** il database nel server di destinazione.  
+  
+ **Metodo**  
+ Indicare se l'attività deve essere eseguita quando il database nel server di origine è in modalità online o offline.  
+  
+ Per trasferire un database in modalità offline, l'utente che esegue il pacchetto deve essere un membro del ruolo predefinito del server **sysadmin** .  
+  
+ Per trasferire un database in modalità online, l'utente che esegue il pacchetto deve essere un membro del ruolo predefinito del server **sysadmin** o il proprietario (**dbo**) del database selezionato.  
+  
+ **SourceDatabaseName**  
+ Selezionare il nome del database da copiare o spostare.  
+  
+ **SourceDatabaseFiles**  
+ Fare clic sul pulsante Sfoglia per selezionare i file di database.  
+  
+ **ReattachSourceDatabase**  
+ Indicare se l'attività tenterà di ricollegare il database di origine in caso di errore.  
+  
+ Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**True**|Ricollega il database di origine.|  
+|**False**|Non ricollega il database di origine.|  
+
+## <a name="source-database-files"></a>File di database di origine
+  Utilizzare la finestra di dialogo **File di database di origine** per visualizzare i nomi e i percorsi dei file di database nel server di origine oppure per specificare il percorso di condivisione dei file in rete per l'attività Trasferisci database.   
+  
+ Per popolare questa finestra di dialogo con i nomi e i percorsi dei file di database nel server di origine, impostare innanzitutto le opzioni **SourceConnection** e **SourceDatabaseName** nelle pagine **Database** della finestra di dialogo **Editor attività Trasferisci database** .  
+  
+### <a name="options"></a>Opzioni  
+ **File di origine**  
+ Nomi dei file di database nel server di origine che verranno trasferiti. Il valore**File di origine** è di sola lettura.  
+  
+ **Cartella di origine**  
+ Cartella nel server di origine in cui si trovano i file di database da trasferire. Il valore**Cartella di origine** è di sola lettura.  
+  
+ **Condivisione file di rete**  
+ Cartella di rete condivisa nel server di origine da cui verranno trasferiti i file di database. Utilizzare **Condivisione file di rete** quando si trasferisce un database in modalità offline impostando l'opzione **DatabaseOffline** per **Metodo** nella pagina **Database** della finestra di dialogo **Editor attività Trasferisci database** .  
+  
+ Digitare il percorso della condivisione file di rete oppure fare clic sul pulsante Sfoglia **(…)** per individuarlo.  
+  
+ Quando si trasferisce un database in modalità offline, i rispettivi file vengono copiati nel percorso specificato in **Condivisione file di rete** nel server di origine prima di essere trasferiti al server di destinazione.  
+
+## <a name="destination-database-files"></a>File di database di destinazione
+  Utilizzare la finestra di dialogo **File di database di destinazione** per visualizzare o modificare i percorsi e i nomi dei file di database nel server di destinazione oppure per specificare un percorso di file di rete per l'attività Trasferisci database.  
+  
+ Per inserire automaticamente i percorsi e i nomi dei file di database del server di origine in questa finestra di dialogo, specificare innanzitutto le proprietà **SourceConnection**, **SourceDatabaseName**e **SourceDatabaseFiles** nella pagina **Database** della finestra di dialogo **Editor attività Trasferisci database** .  
+  
+### <a name="options"></a>Opzioni  
+ **File di destinazione**  
+ Nomi dei file di database trasferiti nel server di destinazione.  
+  
+ Immettere il nome del file o fare clic sul nome del file per modificarlo.  
+  
+ **Cartella di destinazione**  
+ Cartella del server di destinazione in cui verranno trasferiti i file di database.  
+  
+ Immettere il percorso della cartella, fare clic su tale percorso per modificarlo oppure fare clic su Sfoglia per individuare la cartella del server di destinazione in cui trasferire i file di database.  
+  
+ **Condivisione file di rete**  
+ Cartella di condivisione dei file di rete del server di destinazione in cui verranno trasferiti i file di database. Utilizzare **Condivisione file di rete** quando si trasferisce un database in modalità offline specificando **DatabaseOffline** per **Metodo** nella pagina **Database** della finestra di dialogo **Editor attività Trasferisci database** .  
+  
+ Immettere il percorso di condivisione dei file di rete o fare clic su Sfoglia per individuarlo.  
+  
+ Durante il trasferimento di un database in modalità offline, prima di essere trasferiti nella posizione **Cartella di destinazione** , i file di database vengono copiati nella cartella **Condivisione file di rete** .  
+

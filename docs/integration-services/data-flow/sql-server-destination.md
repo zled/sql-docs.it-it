@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>Destinazione SQL Server
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor destinazione SQL Server** , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor destinazione SQL &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [Editor destinazione SQL &#40;pagina Mapping&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [Editor destinazione SQL &#40;pagina Avanzate&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
 -   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,7 +120,88 @@ ms.lasthandoff: 08/03/2017
   
 -   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](http://go.microsoft.com/fwlink/?LinkId=233700)sul sito msdn.microsoft.com.  
   
--   Articolo tecnico [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(Uso di SQL Server Integration Services per il caricamento bulk dei dati) nel sito Web simple-talk.com.  
+-   Articolo tecnico relativo all' [utilizzo di SQL Server Integration Services per il caricamento bulk dei dati](http://go.microsoft.com/fwlink/?LinkId=233701)sul sito Web simple-talk.com.  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>Editor destinazione SQL Server (pagina Gestione connessione)
+  Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione SQL** per specificare le informazioni sull'origine dei dati e visualizzare un'anteprima dei risultati. La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica i dati in tabelle o viste di un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+### <a name="options"></a>Opzioni  
+ **gestione connessione OLE DB**  
+ Selezionare una connessione esistente nell'elenco oppure fare clic su **Nuova**per creare una nuova connessione.  
+  
+ **Nuova**  
+ Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
+  
+ **Tabella o vista**  
+ Consente di selezionare una tabella o vista esistente nell'elenco oppure di creare una nuova connessione facendo clic su **Nuova**.  
+  
+ **Nuova**  
+ Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
+  
+> [!NOTE]  
+>  Quando si fa clic su **Nuova**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella**. Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Anteprima**  
+ Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Anteprima risultati query** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
+  
+## <a name="sql-destination-editor-mappings-page"></a>Editor destinazione SQL Server (pagina Mapping)
+  Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione SQL** per eseguire il mapping tra colonne di input e colonne di destinazione.  
+  
+### <a name="options"></a>Opzioni  
+ **Colonne di input disponibili**  
+ Consente di visualizzare l'elenco delle colonne di input disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di input disponibili nella tabella e le colonne di destinazione.  
+  
+ **Colonne di destinazione disponibili**  
+ Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
+  
+ **Colonna di input**  
+ Consente di visualizzare le colonne di input selezionate nella tabella precedente. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**.  
+  
+ **Colonna di destinazione**  
+ Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
+  
+## <a name="sql-destination-editor-advanced-page"></a>Editor destinazione SQL Server (pagina Avanzate)
+  Usare la pagina **Avanzate** della finestra di dialogo **Editor destinazione SQL** per specificare le opzioni di inserimento bulk avanzate.  
+  
+### <a name="options"></a>Opzioni  
+ **Mantieni valori Identity**  
+ Consente di specificare se l'attività deve inserire valori nelle colonne Identity. Il valore predefinito di questa proprietà è **False**.  
+  
+ **Mantieni valori Null**  
+ Consente di specificare se l'attività deve mantenere i valori Null. Il valore predefinito di questa proprietà è **False**.  
+  
+ **Blocco a livello di tabella**  
+ Consente di specificare se la tabella viene bloccata durante il caricamento dei dati. Il valore predefinito di questa proprietà è **True**.  
+  
+ **Vincoli CHECK**  
+ Consente di specificare se l'attività deve verificare i vincoli. Il valore predefinito di questa proprietà è **True**.  
+  
+ **Attive trigger**  
+ Consente di specificare se l'inserimento bulk deve attivare i trigger nelle tabelle. Il valore predefinito di questa proprietà è **False**.  
+  
+ **Prima riga**  
+ Consente di specificare la prima riga da inserire. Il valore predefinito della proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
+  
+> [!NOTE]  
+>  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
+  
+ **Ultima riga**  
+ Consente di specificare l'ultima riga da inserire. Il valore predefinito della proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
+  
+> [!NOTE]  
+>  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
+  
+ **Numero massimo di errori**  
+ Consente di specificare il numero massimo di errori che possono verificarsi prima dell'arresto dell'inserimento bulk. Il valore predefinito della proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
+  
+> [!NOTE]  
+>  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
+  
+ **Timeout**  
+ Consente di specificare il numero di secondi di attesa prima che l'inserimento bulk venga arrestato a causa di un timeout.  
+  
+ **Colonne di ordinamento**  
+ Consente di digitare i nomi delle colonne di ordinamento. È possibile ordinare ogni colonna in ordine crescente o decrescente. Se si utilizzando più colonne di ordinamento, delimitare l'elenco con virgole.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  

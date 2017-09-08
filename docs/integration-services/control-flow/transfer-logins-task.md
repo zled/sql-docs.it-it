@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
+- sql13.dts.designer.transferloginstask.general.f1
+- sql13.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02215c15fbbbcb4f7fd5ee5638afa4e0092e86c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso
@@ -70,11 +72,7 @@ ms.lasthandoff: 08/03/2017
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
-  
--   [Editor attività Trasferisci account di accesso &#40;pagina Generale&#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)  
-  
--   [Editor attività Trasferisci account di accesso &#40;pagina Account di accesso&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)  
+ Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -87,4 +85,59 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask>  
   
+## <a name="transfer-logins-task-editor-general-page"></a>Editor attività Trasferisci account di accesso (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci account di accesso** per assegnare un nome e una descrizione all'attività Trasferisci account di accesso.  
   
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di digitare un nome univoco per l'attività Trasferisci account di accesso. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Trasferisci account di accesso.  
+  
+## <a name="transfer-logins-task-editor-logins-page"></a>Editor attività Trasferisci account di accesso (pagina Account di accesso)
+  Usare la pagina **Account di accesso** della finestra di dialogo **Editor attività Trasferisci account di accesso** per impostare le proprietà per la copia di uno o più account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un altra.  
+  
+> [!IMPORTANT]  
+>  Durante l'esecuzione di questa attività, sul server di destinazione vengono creati gli account di accesso con password casuali e le password vengono disabilitate. Per usare questi account di accesso, è necessario che un membro del ruolo predefinito del server **sysadmin** cambi le password e quindi le attivi. L'account di accesso **sa** non può essere trasferito.  
+  
+### <a name="options"></a>Opzioni  
+ **SourceConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di origine.  
+  
+ **DestinationConnection**  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su  **\<nuova connessione >** per creare una nuova connessione al server di destinazione.  
+  
+ **LoginsToTransfer**  
+ Consente di selezionare gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da copiare dal server di origine a quello di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**AllLogins**|Tutti gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server di origine verranno copiati in quello di destinazione.|  
+|**SelectedLogins**|Solo gli account di accesso specificati in **LoginsList** verranno copiati nel server di destinazione.|  
+|**AllLoginsFromSelectedDatabases**|Tutti gli account di accesso nel database specificato in **DatabasesList** verranno copiati nel server di destinazione.|  
+  
+ **LoginsList**  
+ Consente di selezionare gli account di accesso nel server di origine da copiare in quello di destinazione. Questa opzione è disponibile solo se è selezionata **SelectedLogins** per **LoginsToTransfer**.  
+  
+ **DatabasesList**  
+ Consente di selezionare i database nel server di origine contenenti gli account di accesso da copiare sul server di destinazione. Questa opzione è disponibile solo se è selezionata **AllLoginsFromSelectedDatabases** per **LoginsToTransfer**.  
+  
+ **IfObjectExists**  
+ Consente di selezionare la modalità di gestione dei nomi già esistenti nel server di destinazione da parte dell'attività  
+  
+ Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
+  
+|Valore|Description|  
+|-----------|-----------------|  
+|**FailTask**|L'attività ha esito negativo se esistono già account di accesso con lo stesso nome nel server di destinazione.|  
+|**Overwrite**|L'attività sovrascrive gli account di accesso con lo stesso nome nel server di destinazione.|  
+|**Skip**|L'attività ignora gli account di accesso con lo stesso nome nel server di destinazione.|  
+  
+ **CopySids**  
+ Consente di indicare se gli identificatori di sicurezza associati agli account di accesso devono essere copiati sul server di destinazione. L'opzione**CopySids** deve essere impostata su **True** se l'attività Trasferisci account di accesso viene usata contestualmente all'attività Trasferisci database. In caso contrario, gli account di accesso copiati non verranno riconosciuti dal database trasferito.  
+  
+

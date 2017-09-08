@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scripttask.f1
+- sql13.dts.designer.scripttask.general.f1
+- sql13.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - scripts [Integration Services], tasks
 - Script task [Integration Services], about Script task
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 0ab143db0dfc6cda94bd0ba5e51fec66da7b46be
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="script-task"></a>Attività Script
@@ -90,6 +92,57 @@ ms.lasthandoff: 08/03/2017
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, vedere l'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
+  
+## <a name="script-task-editor-general-page"></a>Editor attività Script (pagina Generale)
+  Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Script** per assegnare un nome e una descrizione all'attività Script.  
+  
+ Per ulteriori informazioni sull'attività Script, vedere [attività Script](../../integration-services/control-flow/script-task.md) e [configurazione dell'attività Script nell'Editor attività Script](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [estensione del pacchetto con l'attività Script](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>Opzioni  
+ **Nome**  
+ Consente di digitare un nome univoco per l'attività Script. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
+  
+> [!NOTE]  
+>  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
+  
+ **Description**  
+ Consente di digitare una descrizione dell'attività Script.  
+  
+## <a name="script-task-editor-script-page"></a>Editor attività Script (pagina Script)
+  Utilizzare la pagina **Script** della finestra di dialogo **Editor attività Script** per impostare le proprietà dello script e specificare le variabili accessibili per lo script.  
+  
+> [!NOTE]  
+>  In [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] e versioni successive, tutti gli script sono precompilati. Nelle versioni precedenti, si imposta una proprietà **PrecompileScriptIntoBinaryCode** per specificare che lo script è stato precompilato.  
+  
+ Per ulteriori informazioni sull'attività Script, vedere [Script Task](../../integration-services/control-flow/script-task.md) e [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [estensione del pacchetto con l'attività Script](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>Opzioni  
+ **ScriptLanguage**  
+ Selezionare il linguaggio di scripting per l'attività, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
+  
+ Dopo avere creato uno script per l'attività, non è possibile modificare il valore della proprietà **ScriptLanguage** .  
+  
+ Per impostare il linguaggio di scripting predefinito per l'attività Script, utilizzare l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni** . Per ulteriori informazioni, vedere [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+  
+ **EntryPoint**  
+ Specificare il metodo chiamato dal runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] come punto di ingresso nel codice dell'attività Script. Il metodo specificato deve essere nella classe ScriptMain del progetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain è la classe predefinita generata dai modelli di script.  
+  
+ Se si modifica il nome del metodo nel progetto VSTA, è necessario modificare il valore della proprietà **EntryPoint** .  
+  
+ **ReadOnlyVariables**  
+ Digitare un elenco delimitato da virgole di variabili di sola lettura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**…**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili** .  
+  
+> [!NOTE]  
+>  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
+  
+ **ReadWriteVariables**  
+ Digitare un elenco delimitato da virgole di variabili di lettura/scrittura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**…**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili** .  
+  
+> [!NOTE]  
+>  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
+  
+ **Modifica script**  
+ Apre VSTA IDE, dove è possibile creare o modificare lo script.  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
